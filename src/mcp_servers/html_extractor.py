@@ -557,7 +557,7 @@ if __name__ == "__main__":
         # 检查是否是服务器模式
         if sys.argv[1] == "--server":
             print("启动MCP服务器...")
-            uvicorn.run(app, host="0.0.0.0", port=8003)
+            uvicorn.run(app, host="0.0.0.0", port=8080)
         elif len(sys.argv) == 2:
             # 只提供URL
             url = sys.argv[1]
@@ -589,10 +589,10 @@ if __name__ == "__main__":
                 print(json.dumps(result, ensure_ascii=False, indent=2))
             else:
                 print("启动MCP服务器...")
-                uvicorn.run(app, host="0.0.0.0", port=8003)
+                uvicorn.run(app, host="0.0.0.0", port=8080)
         except (KeyboardInterrupt, EOFError):
             print("\n启动MCP服务器...")
-            uvicorn.run(app, host="0.0.0.0", port=8003)
+            uvicorn.run(app, host="0.0.0.0", port=8080)
 
 
             
