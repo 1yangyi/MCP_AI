@@ -105,7 +105,7 @@ async def process_whu():
                 for link in parsed_data["links"]:
                     link_text = link.get("text", "")
                     # 扩大匹配范围，检查链接文本是否包含"院系"或URL是否包含"yxsz"
-                    if "院系" in link_text or "yxsz" in link.get("url", ""):
+                    if "?" in link_text or "yxsz" in link.get("url", ""):
                         print(f"找到院系相关链接: {link_text} ({link.get('url', '')})")
                         # 构建完整 URL
                         click_url = link.get("url")
