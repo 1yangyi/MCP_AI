@@ -393,7 +393,7 @@ def main(url=None, output_prefix=None, output_dir="."):
             domain = parsed_url.netloc.replace('www.', '').replace('.', '_')
             output_prefix = domain if domain else "result"
     
-    # 处理输出目录
+    处理输出目录
     output_dir = Path(output_dir)
     if not output_dir.exists():
         output_dir.mkdir(parents=True, exist_ok=True)
@@ -402,6 +402,9 @@ def main(url=None, output_prefix=None, output_dir="."):
     txt_file = output_dir / f"{output_prefix}.txt"
     json_file = output_dir / f"{output_prefix}.json"
     middle_file = output_dir / f"{output_prefix}_middle_file.txt"
+    # txt_file = f"D:\project08\MCP_AI\data\output\{output_prefix}.txt"
+    # json_file = f"D:\project08\MCP_AI\data\output\{output_prefix}.json"
+    # middle_file = f"D:\project08\MCP_AI\data\output\{output_prefix}_middle_file.txt"
     
     try:
         output = extract_clickable_buttons_tree(url, str(txt_file))
