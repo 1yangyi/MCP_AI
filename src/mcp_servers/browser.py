@@ -9,6 +9,8 @@ from playwright.async_api import async_playwright, Browser, BrowserContext, Page
 
 app = FastAPI(title="Browser MCP Server")
 
+# python -m src.mcp_servers.browser
+
 # 配置日志
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

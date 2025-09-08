@@ -16,6 +16,11 @@ from pydantic import BaseModel
 
 app = FastAPI(title="HTML Parser Updated MCP Server (original_htmlParser based)")
 
+
+# python -m src.mcp_servers.html_extractor --server
+
+
+
 # 配置日志
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -393,7 +398,7 @@ def main(url=None, output_prefix=None, output_dir="."):
             domain = parsed_url.netloc.replace('www.', '').replace('.', '_')
             output_prefix = domain if domain else "result"
     
-    处理输出目录
+    # 处理输出目录
     output_dir = Path(output_dir)
     if not output_dir.exists():
         output_dir.mkdir(parents=True, exist_ok=True)

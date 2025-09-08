@@ -5,11 +5,52 @@ from typing import Any
 
 
 def read_json_file(filename: str) -> Any:
-    """读取与本文件同目录下的 JSON 文件并返回其 Python 对象"""
-    base = Path(__file__).parent
-    file_path = (base / filename).resolve()
-    with open(file_path, "r", encoding="utf-8") as f:
-        return json.load(f)
+    """读取JSON文件并返回其Python对象，按以下顺序查找文件：
+    1. 如果是绝对路径，直接读取
+    2. 中间文件目录
+    3. 项目根目录
+    4. 与本文件同目录
+    """
+    # 检查是否是绝对路径
+    if os.path.isabs(filename):
+        file_path = Path(filename)
+        if file_path.exists():
+            try:
+                with open(file_path, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except UnicodeDecodeError:
+                with open(file_path, "r", encoding="utf-16") as f:
+                    return json.load(f)
+            except Exception as e:
+                raise ValueError(f"读取文件 {filename} 失败: {e}")
+    
+    # 尝试在不同位置查找文件
+    # 删除这里的 from pathlib import Path 导入语句
+    project_root = Path(__file__).parent.parent.parent
+    middle_file_dir = project_root / "middle_file"
+    
+    base_paths = [
+        middle_file_dir,                # 中间文件目录
+        project_root,                   # 项目根目录
+        Path(__file__).parent           # 与本文件同目录
+    ]
+    
+    for base in base_paths:
+        file_path = (base / filename).resolve()
+        if file_path.exists():
+            try:
+                with open(file_path, "r", encoding="utf-8") as f:
+                    return json.load(f)
+            except UnicodeDecodeError:
+                # 尝试其他编码
+                with open(file_path, "r", encoding="utf-16") as f:
+                    return json.load(f)
+            except Exception:
+                # 如果这个位置的文件读取失败，继续尝试下一个位置
+                continue
+    
+    # 所有位置都找不到文件
+    raise FileNotFoundError(f"找不到文件 {filename}，已尝试以下位置: {[str(p) for p in base_paths]}")
 
 
 def _safe_json_dumps(data: Any) -> str:
@@ -97,7 +138,7 @@ def extract_entities_with_deepseek(api_key: str, text: str, example: str) -> dic
     try:
         client = OpenAI(
             api_key=api_key,
-            base_url="https://api.deepseek.com/v1",
+            base_url="https://api.deepseek.com/v1",  # 修正为正确的 URL
         )
     except Exception as e:
         return {"status": "error", "message": f"初始化客户端失败: {e}"}
@@ -109,8 +150,8 @@ def extract_entities_with_deepseek(api_key: str, text: str, example: str) -> dic
                 {"role": "system", "content": "你是一个专业的助手，严格按要求输出按钮文本。"},
                 {"role": "user", "content": prompt},
             ],
-            temperature=0.2,
-            max_tokens=512,
+            temperature=0.2,  # 降低温度以获得更确定性的输出
+            max_tokens=4096,
         )
 
         # 获取模型返回的内容

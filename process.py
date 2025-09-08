@@ -5,12 +5,17 @@ import time
 from datetime import datetime
 from pathlib import Path
 from src.mcp_servers.ai import extract_entities_with_deepseek,read_json_file,_safe_json_dumps,extract_schools_with_deepseek
-# 从配置文件导入服务器URL
-from src.config import BROWSER_MCP_URL, HTML_PARSER_URL
+# 从配置文件导入服务器URL和目录配置
+from src.config import BROWSER_MCP_URL, HTML_PARSER_URL, OUTPUT_DIR, PROJECT_ROOT
 
 # 确保输出目录存在
-RESULTS_DIR = Path("output")
-RESULTS_DIR.mkdir(exist_ok=True)
+RESULTS_DIR = OUTPUT_DIR
+RESULTS_DIR.mkdir(exist_ok=True, parents=True)
+
+# 创建中间文件目录
+MIDDLE_FILE_DIR = PROJECT_ROOT / "middle_file"
+MIDDLE_FILE_DIR.mkdir(exist_ok=True)
+
 DEEPSEEK_API_KEY = "sk-08356d9d33304343a40de1d6d26520f9"
 
 def process_university_website(university_name: str, university_url: str):
@@ -69,7 +74,8 @@ def process_university_website(university_name: str, university_url: str):
             f"{HTML_PARSER_URL}/parse",
             json={
                 "url": current_url,
-                "output_prefix": university_name
+                "output_prefix": university_name,
+                "output_dir": str(MIDDLE_FILE_DIR)  # 明确指定输出到中间文件目录
             }
         )
         
@@ -84,8 +90,9 @@ def process_university_website(university_name: str, university_url: str):
         # 步骤4: 查找包含"院系"的链接
         print("\n4. 查找包含院系的链接...")
 
+        # 从中间文件目录读取文件
         example_obj = read_json_file("example.json")
-        text_obj = read_json_file(f"{university_name}.json")
+        text_obj = read_json_file(str(MIDDLE_FILE_DIR / f"{university_name}.json"))
         example_text = _safe_json_dumps(example_obj)
         text = _safe_json_dumps(text_obj)
 
@@ -138,7 +145,8 @@ def process_university_website(university_name: str, university_url: str):
             f"{HTML_PARSER_URL}/parse",
             json={
                 "url": click_data['url'],
-                "output_prefix": f"{university_name}_schools"
+                "output_prefix": f"{university_name}_schools",
+                "output_dir": str(MIDDLE_FILE_DIR)  # 明确指定输出到中间文件目录
             }
         )
         
@@ -147,7 +155,7 @@ def process_university_website(university_name: str, university_url: str):
         print(f"院系页面解析成功")
         
 
-        schools_obj = read_json_file(f"{university_name}_schools.json")
+        schools_obj = read_json_file(str(MIDDLE_FILE_DIR / f"{university_name}_schools.json"))
         schools_text = _safe_json_dumps(schools_obj)
         schools_result = extract_schools_with_deepseek(
             api_key=DEEPSEEK_API_KEY,
@@ -156,13 +164,18 @@ def process_university_website(university_name: str, university_url: str):
         # print(f"schools_result:{schools_result}")
         schools_list = schools_result.get("schools")
 
-        # 指定保存路径
-        file_path = f"output/{university_name}_schools_result.json"  # 请替换为实际路径
+        # 指定保存路径到输出目录
+        file_path = RESULTS_DIR / f"{university_name}_schools_result.json"
 
         # 将字符串数据保存为JSON文件
         try:
-            # 解析JSON字符串
-            data = json.loads(schools_list)
+            # 检查 schools_list 是否为空或只包含空白字符
+            if not schools_list or schools_list.strip() == "":
+                print("警告: schools_list 为空，使用空列表作为默认值")
+                data = []
+            else:
+                # 解析JSON字符串
+                data = json.loads(schools_list)
             
             # 确保目录存在
             directory = os.path.dirname(file_path)
@@ -176,6 +189,10 @@ def process_university_website(university_name: str, university_url: str):
             print(f"JSON数据已成功写入文件: {file_path}")
         except json.JSONDecodeError as e:
             print(f"JSON解析错误: {e}")
+            # 写入空列表作为回退值
+            with open(file_path, 'w', encoding='utf-8') as file:
+                json.dump([], file, ensure_ascii=False, indent=2)
+            print(f"已写入空列表作为回退值到: {file_path}")
         except IOError as e:
             print(f"写入文件时出错: {e}")
         except Exception as e:
@@ -188,7 +205,8 @@ def process_university_website(university_name: str, university_url: str):
         print(traceback.format_exc())
 
 if __name__ == "__main__":
-    # process_university_website("麻省理工学院", "http://web.mit.edu/")
+    # 处理武汉大学网站
+    process_university_website("华中科技大学", "https://www.hust.edu.cn/")
 
     def read_school_json(file_path):
         """
@@ -228,6 +246,8 @@ if __name__ == "__main__":
             return None
 
 
+    # 批量处理代码 - 已注释
+    '''
     # 指定文件路径
     json_file_path = r"D:\project08\MCP_AI\data\input\top500_school_websites.json"
     
@@ -245,3 +265,4 @@ if __name__ == "__main__":
         
         # 可选：打印进度
         print(f"已处理 {index + 1}/100 所学校: {school}")
+    '''
