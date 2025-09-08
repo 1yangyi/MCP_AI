@@ -16,6 +16,11 @@ from pydantic import BaseModel
 
 app = FastAPI(title="HTML Parser Updated MCP Server (original_htmlParser based)")
 
+
+# python -m src.mcp_servers.html_extractor --server
+
+
+
 # 配置日志
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -402,6 +407,9 @@ def main(url=None, output_prefix=None, output_dir="."):
     txt_file = output_dir / f"{output_prefix}.txt"
     json_file = output_dir / f"{output_prefix}.json"
     middle_file = output_dir / f"{output_prefix}_middle_file.txt"
+    # txt_file = f"D:\project08\MCP_AI\data\output\{output_prefix}.txt"
+    # json_file = f"D:\project08\MCP_AI\data\output\{output_prefix}.json"
+    # middle_file = f"D:\project08\MCP_AI\data\output\{output_prefix}_middle_file.txt"
     
     try:
         output = extract_clickable_buttons_tree(url, str(txt_file))
@@ -557,7 +565,7 @@ if __name__ == "__main__":
         # 检查是否是服务器模式
         if sys.argv[1] == "--server":
             print("启动MCP服务器...")
-            uvicorn.run(app, host="0.0.0.0", port=8003)
+            uvicorn.run(app, host="0.0.0.0", port=8080)
         elif len(sys.argv) == 2:
             # 只提供URL
             url = sys.argv[1]
@@ -589,10 +597,10 @@ if __name__ == "__main__":
                 print(json.dumps(result, ensure_ascii=False, indent=2))
             else:
                 print("启动MCP服务器...")
-                uvicorn.run(app, host="0.0.0.0", port=8003)
+                uvicorn.run(app, host="0.0.0.0", port=8080)
         except (KeyboardInterrupt, EOFError):
             print("\n启动MCP服务器...")
-            uvicorn.run(app, host="0.0.0.0", port=8003)
+            uvicorn.run(app, host="0.0.0.0", port=8080)
 
 
             

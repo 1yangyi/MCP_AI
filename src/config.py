@@ -25,8 +25,8 @@ LOGS_DIR = LOG_DIR  # 别名
 
 # MCP服务器URL配置
 SEARCH_MCP_URL = os.getenv("SEARCH_MCP_URL", "http://localhost:8001")
-BROWSER_MCP_URL = os.getenv("BROWSER_MCP_URL", "http://localhost:8000")
-HTML_PARSER_URL = os.getenv("HTML_PARSER_URL", "http://localhost:8002")
+BROWSER_MCP_URL = os.getenv("BROWSER_MCP_URL", "http://localhost:8002")  
+HTML_PARSER_URL = os.getenv("HTML_PARSER_URL", "http://localhost:8080") 
 DECISION_MODEL_URL = os.getenv("DECISION_MODEL_URL", "http://localhost:8003")
 
 # 处理配置
@@ -221,3 +221,6 @@ if __name__ == "__main__":
         
     except ValueError as e:
         print(f"配置验证失败: {e}")
+
+# 在现有的目录配置下添加
+MIDDLE_FILE_DIR = PROJECT_ROOT / "middle_file"  # 中间文件目录

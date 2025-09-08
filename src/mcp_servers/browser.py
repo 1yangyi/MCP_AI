@@ -9,6 +9,8 @@ from playwright.async_api import async_playwright, Browser, BrowserContext, Page
 
 app = FastAPI(title="Browser MCP Server")
 
+# python -m src.mcp_servers.browser
+
 # 配置日志
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -114,7 +116,7 @@ async def navigate_to_url(request: NavigateRequest):
         })
         
         # 导航到URL
-        await page.goto(request.url, wait_until='networkidle', timeout=30000)
+        await page.goto(request.url, wait_until='domcontentloaded', timeout=60000)
         
         # 等待页面加载
         await asyncio.sleep(request.wait_time)
@@ -311,4 +313,8 @@ async def health_check():
     }
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8001)
+    uvicorn.run(app, host="0.0.0.0", port=8002)
+
+
+
+
