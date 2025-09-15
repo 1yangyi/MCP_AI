@@ -4,7 +4,7 @@ import os
 import time
 from datetime import datetime
 from pathlib import Path
-from src.mcp_servers.ai import extract_entities_with_deepseek,read_json_file,_safe_json_dumps,extract_schools_with_deepseek
+from src.mcp_servers.ai import extract_entities_with_deepseek,read_json_file,_safe_json_dumps,extract_schools_with_deepseek,decide_click_or_extrect
 # 从配置文件导入服务器URL和目录配置
 from src.config import BROWSER_MCP_URL, HTML_PARSER_URL, OUTPUT_DIR, PROJECT_ROOT
 
@@ -155,13 +155,50 @@ def process_university_website(university_name: str, university_url: str):
         print(f"院系页面解析成功")
         
 
+        html1 = read_json_file(str(MIDDLE_FILE_DIR / f"{university_name}_schools.json"))
+        html_text = _safe_json_dumps(html1)
+        result1 = decide_click_or_extrect(
+            api_key=DEEPSEEK_API_KEY,
+            text=html_text.replace("\n", "")
+        )
+        
+        Identity_result = result1.get("message")
+        print("Identity_result: ",Identity_result)
+
+        # 循环
+        while Identity_result != 'True':
+            if not Identity_result.startswith("http"):
+                base_url = university_url if university_url.endswith("/") else f"{university_url}/"
+                Identity_result = base_url + Identity_result
+            print("正在解析页面:",Identity_result)
+
+            new_parse_response = requests.post(
+            f"{HTML_PARSER_URL}/parse",
+            json={
+                "url": Identity_result,
+                "output_prefix": f"{university_name}_schools",
+                "output_dir": str(MIDDLE_FILE_DIR)  # 明确指定输出到中间文件目录
+                }
+            )
+            html1 = read_json_file(str(MIDDLE_FILE_DIR / f"{university_name}_schools.json"))
+            html_text = _safe_json_dumps(html1)
+            print('新页面已解析完成...')
+            result1 = decide_click_or_extrect(
+                api_key=DEEPSEEK_API_KEY,
+                text=html_text.replace("\n", "")
+            )
+            
+            Identity_result = result1.get("message")
+            print("新的Identity_result: ",Identity_result)
+
+
         schools_obj = read_json_file(str(MIDDLE_FILE_DIR / f"{university_name}_schools.json"))
         schools_text = _safe_json_dumps(schools_obj)
         schools_result = extract_schools_with_deepseek(
             api_key=DEEPSEEK_API_KEY,
             text=schools_text.replace("\n", "")
         )
-        # print(f"schools_result:{schools_result}")
+        print(f"schools_result:{schools_result}")
         schools_list = schools_result.get("schools")
 
         # 指定保存路径到输出目录
@@ -206,7 +243,7 @@ def process_university_website(university_name: str, university_url: str):
 
 if __name__ == "__main__":
     # 处理武汉大学网站
-    process_university_website("华中科技大学", "https://www.hust.edu.cn/")
+    # process_university_website("麻省理工学院", "http://web.mit.edu/")
 
     def read_school_json(file_path):
         """
@@ -246,8 +283,7 @@ if __name__ == "__main__":
             return None
 
 
-    # 批量处理代码 - 已注释
-    '''
+    # 批量处理代码
     # 指定文件路径
     json_file_path = r"D:\project08\MCP_AI\data\input\top500_school_websites.json"
     
@@ -256,8 +292,8 @@ if __name__ == "__main__":
     # 假设 school_data 是一个包含学校信息的列表
     for index, item in enumerate(school_data):
         # 只处理前100个项目
-        if index >= 100:
-            break
+        # if index >= 100:
+        #     break
             
         school = item["school"]
         website = item["website"]
@@ -265,4 +301,4 @@ if __name__ == "__main__":
         
         # 可选：打印进度
         print(f"已处理 {index + 1}/100 所学校: {school}")
-    '''
+

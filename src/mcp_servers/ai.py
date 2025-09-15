@@ -180,7 +180,6 @@ def extract_schools_with_deepseek(api_key: str, text: str) -> dict:
     参数:
         api_key (str): DeepSeek API密钥（不应硬编码，建议使用环境变量 DEEPSEEK_API_KEY）
         text (str): 网页结构化列表（建议提供JSON字符串）
-        example (str): 示例文本（建议提供JSON字符串）
 
     返回:
         dict: {status, entities(str|Any), raw_response(str|Any) 或 message}
@@ -196,9 +195,10 @@ def extract_schools_with_deepseek(api_key: str, text: str) -> dict:
 
     # 构造提示词
     prompt = f"""
-    你是一个数据收集助手，协助收集高校所有二级学院信息。
-    请从以下网页结构化列表中识别出该学校所有二级学院的名称和URL。列表内容如下：
+    你是一个数据收集助手，协助收集高校所有学院信息。
+    请从以下网页结构化列表中识别出该学校所有学院的名称和URL。列表内容如下：
     {text}
+    注意：如果某些学院属于更上层的学部（例如“社会科学学部”下属多个子学院或学系），应提取具体的子学院信息（如“文学院”、“历史学系”等），而非仅提取上级学部。
     请以json格式直接返回该学校所有二级学院的名称和URL。
     注意：仅输出结果的json格式，不要附加解释。每个学院的格式为：{{"name": "", "URL": ""}}。
     如果未识别出学院信息，则返回空字典。"""
@@ -238,6 +238,76 @@ def extract_schools_with_deepseek(api_key: str, text: str) -> dict:
             "status": "error",
             "message": f"API请求失败: {str(e)}",
         }
+
+
+def decide_click_or_extrect(api_key: str, text: str) -> dict:
+    """
+    使用DeepSeek API从网页结构化列表中判断是否包含该学校所有下属学院的信息
+
+    参数:
+        api_key (str): DeepSeek API密钥（不应硬编码，建议使用环境变量 DEEPSEEK_API_KEY）
+        text (str): 网页结构化列表（建议提供JSON字符串）
+
+    返回:
+        dict: {status, message}
+    """
+    # 延迟导入，避免无 openai 依赖时导致整个模块无法导入
+    try:
+        from openai import OpenAI  # type: ignore
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": f"缺少openai依赖或导入失败: {e}"
+        }
+
+    # 构造提示词
+    prompt = f"""
+    你是一个数据收集助手，用于识别网页内容是否包含某高校的全部学院名称及对应URL。
+    请根据以下结构化内容进行判断：
+    {text}
+    若当前列表已完整包含该学校所有学院的名称和URL，则返回：True
+    若列表仅包含系部信息（如“理学部”、“工学部”等）而未列出具体学院（如“物理学院”、“计算机学院”等），
+    则需要你从列表中判断具体学院信息所在的下一级页面，并返回该页面的URL，以便进一步获取所有学院的信息。
+
+    注意：仅输出结果文本（True 或一个URL），无需任何解释,且不要出现除True或URL以外的任何内容。
+    """
+    
+    # 初始化客户端（DeepSeek 兼容 OpenAI SDK）
+    try:
+        client = OpenAI(
+            api_key=api_key,
+            base_url="https://api.deepseek.com",
+        )
+    except Exception as e:
+        return {"status": "error", "message": f"初始化客户端失败: {e}"}
+
+    try:
+        completion = client.chat.completions.create(
+            model="deepseek-chat",
+            messages=[
+                {"role": "system", "content": "你是一个专业的助手，严格按要求输出按钮文本。"},
+                {"role": "user", "content": prompt},
+            ],
+            temperature=1.0,
+            max_tokens=4096,
+        )
+
+        # 获取模型返回的内容
+        content = completion.choices[0].message.content if completion.choices else ""
+        if not content:
+            return {"status": "error", "message": "模型未返回内容"}
+
+        return {
+            "status": "success",
+            "message": content,
+        }
+
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": f"API请求失败: {str(e)}",
+        }
+
 # if __name__ == "__main__":
 #     # 建议使用环境变量提供API密钥，避免在代码中硬编码
 #     DEEPSEEK_API_KEY = "sk-08356d9d33304343a40de1d6d26520f9"

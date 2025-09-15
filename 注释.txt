@@ -1,0 +1,26 @@
+1. 启动 browserMCP: python 路径\browser.py
+
+2. 启动 html_extractor: python 路径\html_extractor.py --server
+
+3. 前两者都ok下 python process_whu.py
+
+
+git checkout master
+git fetch origin
+git pull
+
+
+
+* process_whu作为简单的main_controller 模板，每一个大学都有对应的output/uni JSON文件。
+* 武大为例，先存储 whu.edu.cn的HTML JSON, 然后使用decison.py 调用外部大模型
+
+输入指令一： 找出二级学院button -> e.g. 返回“院系设置“
+click "院系设置", 存储JSON到output
+
+输入指令二： 找出各级学院的链接，忽略其余的button
+
+输入指令三： 找出老师以及联系方式，重复上述操作
+
+
+
+
