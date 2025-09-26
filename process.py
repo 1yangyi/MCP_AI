@@ -2,6 +2,7 @@ import requests
 import json
 import os
 import time
+import re
 from datetime import datetime
 from pathlib import Path
 from src.mcp_servers.ai import extract_entities_with_deepseek,read_json_file,_safe_json_dumps,extract_schools_with_deepseek,decide_click_or_extrect
@@ -18,7 +19,7 @@ MIDDLE_FILE_DIR.mkdir(exist_ok=True)
 
 DEEPSEEK_API_KEY = "sk-08356d9d33304343a40de1d6d26520f9"
 
-def process_university_website(university_name: str, university_url: str):
+def process_university_website(university_name: str, university_url: str, rank: int):
     print(f"开始处理{university_name}网站({university_url})")
     
     result = {
@@ -105,6 +106,7 @@ def process_university_website(university_name: str, university_url: str):
         parts = result_link.get("button_text").split('@', 1)
         button_text = parts[0]
         click_url = parts[1]
+        click_url = click_url.lstrip('/')
         
         if result_link.get("status") == "success":
             print("识别结果(按钮文本):", button_text)
@@ -114,10 +116,12 @@ def process_university_website(university_name: str, university_url: str):
                 print("模型原始返回:", result_link.get("raw_response"))
 
 
-        if not click_url.startswith("http"):
+        if not click_url.startswith("http") and not click_url.startswith("www."):
             base_url = university_url if university_url.endswith("/") else f"{university_url}/"
             click_url = base_url + click_url
-        
+        if click_url.startswith("www."):
+            click_url = "https://" + click_url
+
         print(f"导航到URL: {click_url}")
         # 直接导航到URL
         click_response = requests.post(
@@ -166,16 +170,42 @@ def process_university_website(university_name: str, university_url: str):
         print("Identity_result: ",Identity_result)
 
         # 循环
+        count = 0
         while Identity_result != 'True':
-            if not Identity_result.startswith("http"):
+            count += 1
+            if count > 2:
+                break
+            result_link = extract_entities_with_deepseek(
+                api_key=DEEPSEEK_API_KEY,
+                text=html_text.replace("\n", ""),
+                example=example_text,
+                )
+            print(f"result_link:{result_link}")
+            parts = result_link.get("button_text").split('@', 1)
+            button_text = parts[0]
+            click_url = parts[1]
+            click_url = click_url.lstrip('/')
+            
+            if result_link.get("status") == "success":
+                print("下一个点击的按钮:", button_text)
+            else:
+                print("抽取失败:", result_link.get("message", "未知错误"))
+                if "raw_response" in result_link:
+                    print("模型原始返回:", result_link.get("raw_response"))
+
+            # 将click_url转换为绝对URL
+            if not click_url.startswith("http") and not click_url.startswith("www."):
                 base_url = university_url if university_url.endswith("/") else f"{university_url}/"
-                Identity_result = base_url + Identity_result
-            print("正在解析页面:",Identity_result)
+                click_url = base_url + click_url
+            if click_url.startswith("www."):
+                click_url = "https://" + click_url
+            
+            print("正在解析页面:",click_url)
 
             new_parse_response = requests.post(
             f"{HTML_PARSER_URL}/parse",
             json={
-                "url": Identity_result,
+                "url": click_url,
                 "output_prefix": f"{university_name}_schools",
                 "output_dir": str(MIDDLE_FILE_DIR)  # 明确指定输出到中间文件目录
                 }
@@ -198,31 +228,65 @@ def process_university_website(university_name: str, university_url: str):
             api_key=DEEPSEEK_API_KEY,
             text=schools_text.replace("\n", "")
         )
-        print(f"schools_result:{schools_result}")
+        
         schools_list = schools_result.get("schools")
 
         # 指定保存路径到输出目录
-        file_path = RESULTS_DIR / f"{university_name}_schools_result.json"
+        file_path = RESULTS_DIR / f"{rank}_{university_name}_schools_result.json"
 
         # 将字符串数据保存为JSON文件
         try:
-            # 检查 schools_list 是否为空或只包含空白字符
-            if not schools_list or schools_list.strip() == "":
-                print("警告: schools_list 为空，使用空列表作为默认值")
-                data = []
+            # 如果已经是列表/字典，直接使用
+            if isinstance(schools_list, (list, dict)):
+                data = schools_list if isinstance(schools_list, list) else [schools_list]
             else:
-                # 解析JSON字符串
-                data = json.loads(schools_list)
-            
+                raw_text = (schools_list or "").lstrip('\ufeff').strip()
+                # 去除代码块包裹 ```json ... ``` 或 ``` ... ```
+                fence_match = re.match(r"^```(?:json)?\s*([\s\S]*?)\s*```$", raw_text)
+                if fence_match:
+                    raw_text = fence_match.group(1).strip()
+                # 如果仍包含围栏，清理所有反引号
+                if raw_text.startswith("```"):
+                    raw_text = raw_text.replace("```json", "").replace("```", "").strip()
+                # 去掉所有孤立反引号（例如 URL 中的 `...`）
+                raw_text = raw_text.replace("`", "")
+                # 裁剪到首个 [ 与最后一个 ] 之间，去除模型多余描述
+                if '[' in raw_text and ']' in raw_text:
+                    raw_text = raw_text[raw_text.find('['): raw_text.rfind(']') + 1]
+                # 首选严格 JSON 解析
+                try:
+                    data = json.loads(raw_text)
+                except Exception:
+                    # 兼容单引号/尾逗号等 Python 风格
+                    try:
+                        data = ast.literal_eval(raw_text)
+                    except Exception:
+                        # 解析失败则使用空列表
+                        data = []
+            # 归一化清洗字段
+            norm = []
+            if isinstance(data, list):
+                for item in data:
+                    if isinstance(item, dict):
+                        name = item.get('name')
+                        url = item.get('URL') or item.get('url') or item.get('link')
+                        if isinstance(url, str):
+                            u = url.strip().strip('`').strip().strip('"').strip("'")
+                            norm.append({"name": name, "URL": u})
+                        else:
+                            norm.append({"name": name, "URL": url})
+            else:
+                norm = []
+
             # 确保目录存在
             directory = os.path.dirname(file_path)
             if directory and not os.path.exists(directory):
                 os.makedirs(directory)
-            
+
             # 写入JSON文件
             with open(file_path, 'w', encoding='utf-8') as file:
-                json.dump(data, file, ensure_ascii=False, indent=2)
-            
+                json.dump(norm, file, ensure_ascii=False, indent=2)
+
             print(f"JSON数据已成功写入文件: {file_path}")
         except json.JSONDecodeError as e:
             print(f"JSON解析错误: {e}")
@@ -235,70 +299,80 @@ def process_university_website(university_name: str, university_url: str):
         except Exception as e:
             print(f"处理数据时出错: {e}")
 
-
     except Exception as e:
         print(f"处理过程中出错: {str(e)}")
         import traceback
         print(traceback.format_exc())
 
 if __name__ == "__main__":
-    # 处理武汉大学网站
-    # process_university_website("麻省理工学院", "http://web.mit.edu/")
+    # process_university_website("苏黎世联邦理工大学", "https://ethz.ch/")
+    from get_null import get_null_list
+    null_list = get_null_list()
+    i = 0
+    for item in null_list:
+        if item[0]<495:
+            continue
+        print(f"正在处理第{i+1}/{len(null_list)}个学校: Rank: {item[0]}, School: {item[1]}, Website: {item[2]}")
+        process_university_website(item[1], item[2], item[0])
+        i += 1
+        print(f"第{i}/{len(null_list)}个学校: {item[0]}_{item[1]} 已处理完成")
 
-    def read_school_json(file_path):
-        """
-        读取指定的school.json文件
+
+    # def read_school_json(file_path):
+    #     """
+    #     读取指定的school.json文件
         
-        参数:
-        file_path (str): JSON文件的完整路径
+    #     参数:
+    #     file_path (str): JSON文件的完整路径
         
-        返回:
-        dict: 解析后的JSON数据，如果出错则返回None
-        """
-        try:
-            # 将路径转换为Path对象
-            json_file = Path(file_path)
+    #     返回:
+    #     dict: 解析后的JSON数据，如果出错则返回None
+    #     """
+    #     try:
+    #         # 将路径转换为Path对象
+    #         json_file = Path(file_path)
             
-            # 检查文件是否存在
-            if not json_file.exists():
-                print(f"错误: 文件 '{file_path}' 不存在")
-                return None
+    #         # 检查文件是否存在
+    #         if not json_file.exists():
+    #             print(f"错误: 文件 '{file_path}' 不存在")
+    #             return None
             
-            # 检查是否为JSON文件
-            if json_file.suffix.lower() != '.json':
-                print(f"错误: 文件 '{file_path}' 不是JSON文件")
-                return None
+    #         # 检查是否为JSON文件
+    #         if json_file.suffix.lower() != '.json':
+    #             print(f"错误: 文件 '{file_path}' 不是JSON文件")
+    #             return None
             
-            # 读取JSON文件
-            with open(json_file, 'r', encoding='utf-8') as file:
-                data = json.load(file)
-                print(f"成功读取文件: {json_file.name}")
-                return data
+    #         # 读取JSON文件
+    #         with open(json_file, 'r', encoding='utf-8') as file:
+    #             data = json.load(file)
+    #             print(f"成功读取文件: {json_file.name}")
+    #             return data
                 
-        except json.JSONDecodeError as e:
-            print(f"错误: 文件 '{json_file.name}' 不是有效的JSON格式 - {str(e)}")
-            return None
-        except Exception as e:
-            print(f"读取文件 '{json_file.name}' 时出错: {str(e)}")
-            return None
+    #     except json.JSONDecodeError as e:
+    #         print(f"错误: 文件 '{json_file.name}' 不是有效的JSON格式 - {str(e)}")
+    #         return None
+    #     except Exception as e:
+    #         print(f"读取文件 '{json_file.name}' 时出错: {str(e)}")
+    #         return None
 
 
-    # 批量处理代码
-    # 指定文件路径
-    json_file_path = r"D:\project08\MCP_AI\data\input\top500_school_websites.json"
+    # # 批量处理代码
+    # # 指定文件路径
+    # json_file_path = r"D:\project08\MCP_AI\data\input\top500_school_websites.json"
     
-    # 读取JSON文件
-    school_data = read_school_json(json_file_path)
-    # 假设 school_data 是一个包含学校信息的列表
-    for index, item in enumerate(school_data):
-        # 只处理前100个项目
-        # if index >= 100:
-        #     break
+    # # 读取JSON文件
+    # school_data = read_school_json(json_file_path)
+    # # 假设 school_data 是一个包含学校信息的列表
+    # for index, item in enumerate(school_data):
+
+    #     if index < 420:
+    #         continue
             
-        school = item["school"]
-        website = item["website"]
-        process_university_website(school, website)
+    #     school = item["school"]
+    #     website = item["website"]
+    #     num = item["rank"]
+    #     process_university_website(school, website, num)
         
-        # 可选：打印进度
-        print(f"已处理 {index + 1}/100 所学校: {school}")
+    #     # 可选：打印进度
+    #     print(f"第 {index + 1} 所学校: {school} 已处理完成")
 

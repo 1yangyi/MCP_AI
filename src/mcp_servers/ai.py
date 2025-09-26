@@ -123,16 +123,31 @@ def extract_entities_with_deepseek(api_key: str, text: str, example: str) -> dic
             "status": "error",
             "message": f"缺少openai依赖或导入失败: {e}"
         }
-
+        
+    prompt = ''
     # 构造提示词
-    prompt = f"""
-    你是一个数据收集助手，协助收集高校所有二级学院信息。
-    请从以下网页结构化列表中识别出该学校所有二级学院所在的位置（按钮）。列表内容如下：
-    {text}
-    请以字符串格式直接返回该学校所有二级学院所在的位置（按钮）的文本和URL。格式为"文本@URL"。
-    注意：仅输出一个最可能的按钮文本，不要附加解释。
-    例如，给定示例：{example}，输出应为："院系设置@yxsz.htm"。
-    """
+    if example != '':
+        
+        prompt = f"""
+        你是一个数据收集助手，协助收集高校所有学院或学术部门信息。
+        现在你需要根据以下页面网页结构化列表，判断哪一个最可能引导至包含所有学院或学术部门信息的页面，并直接返回该按钮的文本和对应URL。
+        链接列表：
+        {text}
+        请严格按以下格式输出一个最可能的按钮文本，不要任何额外解释：
+        按钮文本@URL
+        例如，给定示例：{example}，输出应为："院系设置@yxsz.htm"。
+        注意：优先选择类似“院系设置”、“学院一览”、“View Colleges”、“Explore Departments”、“Academic Units”等明确指向学院或学术结构的链接。
+        """
+    else:
+        prompt = f"""
+        你是一个数据收集助手，协助收集高校所有学院或学术部门信息。
+        现在你需要根据以下页面网页结构化列表，判断哪一个最可能引导至包含所有学院或学术部门信息的页面，并直接返回该按钮的文本和对应URL。
+        链接列表：
+        {text}
+        请严格按以下格式输出一个最可能的按钮文本，不要任何额外解释：
+        按钮文本@URL
+        注意：优先选择类似“院系设置”、“学院一览”、“View Colleges”、“Explore Departments”、“Academic Units”等明确指向学院或学术结构的链接。
+        """
 
     # 初始化客户端（DeepSeek 兼容 OpenAI SDK）
     try:
@@ -150,8 +165,7 @@ def extract_entities_with_deepseek(api_key: str, text: str, example: str) -> dic
                 {"role": "system", "content": "你是一个专业的助手，严格按要求输出按钮文本。"},
                 {"role": "user", "content": prompt},
             ],
-            temperature=0.2,  # 降低温度以获得更确定性的输出
-            max_tokens=4096,
+            temperature=0.0,  # 降低温度以获得更确定性的输出
         )
 
         # 获取模型返回的内容
@@ -196,12 +210,12 @@ def extract_schools_with_deepseek(api_key: str, text: str) -> dict:
     # 构造提示词
     prompt = f"""
     你是一个数据收集助手，协助收集高校所有学院信息。
-    请从以下网页结构化列表中识别出该学校所有学院的名称和URL。列表内容如下：
+    请从以下网页结构化列表中识别出该学校所有学院或学术部门的名称和URL。列表内容如下：
     {text}
-    注意：如果某些学院属于更上层的学部（例如“社会科学学部”下属多个子学院或学系），应提取具体的子学院信息（如“文学院”、“历史学系”等），而非仅提取上级学部。
-    请以json格式直接返回该学校所有二级学院的名称和URL。
-    注意：仅输出结果的json格式，不要附加解释。每个学院的格式为：{{"name": "", "URL": ""}}。
-    如果未识别出学院信息，则返回空字典。"""
+    注意：如果某些学院属于更上层的学部（例如“School of Engineering”下属多个子学院或学系），应提取具体的子学院信息（如“Aeronautics and Astronautics”、“Biological Engineering”等），而非仅提取上级学部。
+    请以json格式直接返回该学校所有学院或学术部门的名称和URL。
+    注意：仅输出结果的json格式，不要附加解释。每个学院或学术部门的格式为：{{"name": "", "URL": ""}}。
+    如果未识别出学院或学术部门信息，则返回空字典。"""
     
     # 初始化客户端（DeepSeek 兼容 OpenAI SDK）
     try:
@@ -220,7 +234,6 @@ def extract_schools_with_deepseek(api_key: str, text: str) -> dict:
                 {"role": "user", "content": prompt},
             ],
             temperature=1.0,
-            max_tokens=4096,
         )
 
         # 获取模型返回的内容
@@ -261,17 +274,24 @@ def decide_click_or_extrect(api_key: str, text: str) -> dict:
         }
 
     # 构造提示词
+    # prompt = f"""
+    # 你是一个数据收集助手，用于识别网页内容是否包含某高校的全部学院名称及对应URL。
+    # 请根据以下结构化内容进行判断：
+    # {text}
+    # 若当前列表已完整包含该学校所有学院的名称和URL，则返回：True
+    # 若列表仅包含系部信息（如“理学部”、“工学部”等）而未列出具体学院（如“物理学院”、“计算机学院”等），
+    # 则需要你从列表中判断具体学院信息所在的下一级页面，并返回该页面的URL，以便进一步获取所有学院的信息。
+
+    # 注意：仅输出结果文本（True 或一个URL），无需任何解释,且不要出现除True或URL以外的任何内容。
+    # """
     prompt = f"""
     你是一个数据收集助手，用于识别网页内容是否包含某高校的全部学院名称及对应URL。
     请根据以下结构化内容进行判断：
     {text}
-    若当前列表已完整包含该学校所有学院的名称和URL，则返回：True
-    若列表仅包含系部信息（如“理学部”、“工学部”等）而未列出具体学院（如“物理学院”、“计算机学院”等），
-    则需要你从列表中判断具体学院信息所在的下一级页面，并返回该页面的URL，以便进一步获取所有学院的信息。
-
-    注意：仅输出结果文本（True 或一个URL），无需任何解释,且不要出现除True或URL以外的任何内容。
+    若当前列表已完整包含该学校所有学院或学术部门的名称和URL，则返回：True
+    若列表仅包含高级学部信息（如“理学部”、“工学部”）而未列出其下的具体学院或学术部门，则返回：False
+    注意：仅输出结果文本（True 或 False），无需任何解释,且不要出现除True或False以外的任何内容。
     """
-    
     # 初始化客户端（DeepSeek 兼容 OpenAI SDK）
     try:
         client = OpenAI(
@@ -288,8 +308,7 @@ def decide_click_or_extrect(api_key: str, text: str) -> dict:
                 {"role": "system", "content": "你是一个专业的助手，严格按要求输出按钮文本。"},
                 {"role": "user", "content": prompt},
             ],
-            temperature=1.0,
-            max_tokens=4096,
+            temperature=0.0,
         )
 
         # 获取模型返回的内容
