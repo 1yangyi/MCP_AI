@@ -67,45 +67,57 @@ def check_next_page(api_key: str, text: str) -> dict:
         return {"status": "error", "has_next": False, "next_url": ""}
 
 
-def check_similar_page(api_key: str, text: str,button_url: str) -> dict:
+def check_similar_page(api_key: str, text: str, button_url: str) -> dict:
     """检查是否存在与当前页面相似的页面"""
     client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
-    # prompt = f"""
-    # 你是一个数据分析助手，请从以下网页内容中识别是否存在其它可能引导至教师信息的按钮或链接，例如："院士"、"兼职教授"、"博士后"、“专业教师”等。
-    # 网页内容如下：
-    # {text}
-    # 请特别关注与当前按钮或链接处于相近位置的页面。当前按钮或链接的URL为：{button_url}
-    # 如果存在这样的按钮或链接，请提取所有按钮的名称和URL，并以列表格式返回：{[{"name": "页面名称1", "url": "链接URL1"}, {"name": "页面名称2", "url": "链接URL2"}, ...]}
-    # 如果不存在这样的按钮或链接，请返回空列表[]
-    # 注意：仅输出列表格式结果，不要附加解释。
-    # """
+    
+    # 简化提示词，更明确地指出要查找的内容
     prompt = f"""
-    你是一个数据分析助手，请从以下网页内容中找到与{button_url}处于相同children的其它button。
+    你是一个数据分析助手，请从以下JSON格式的网页内容中找出与"师资队伍"相关的其他按钮或链接。
+    特别关注这些关键词："杰出人才"、"特聘教师"、"博士后"、"教授"等。
+    
+    当前页面URL为：{button_url}
+    
     网页内容如下：
     {text}
-    比如，当前在"师资队伍"页面，需要找到与"师资队伍"处于相同children的其它button：杰出人才、特聘教师、博士后。
-    <a href="../../jcrc.htm" title="杰出人才">杰出人才</a>
-    <a href="lcjycpjs.htm" title="师资队伍">师资队伍</a>
-    <a href="../../tpjs.htm" title="特聘教师">特聘教师</a>
-    <a href="../../bsh/jj1.htm" title="博士后">博士后</a>
-    <a href="../../rczp.htm" title="人才招聘">人才招聘</a>
-    如果存在这样的按钮或链接，请提取所有按钮的名称和URL，并以列表格式返回：{[{"name": "页面名称1", "url": "链接URL1"}, {"name": "页面名称2", "url": "链接URL2"}, ...]}
-    如果不存在这样的按钮或链接，请返回空列表[]
-    注意：仅输出列表格式结果，不要附加解释。
+    
+    请提取所有可能包含教师信息的按钮，并以JSON数组格式返回：
+    [
+      {{"name": "按钮名称1", "url": "链接URL1"}},
+      {{"name": "按钮名称2", "url": "链接URL2"}}
+    ]
+    
+    如果没有找到相关按钮，请返回空数组 []
     """
-    completion = client.chat.completions.create(
-        model="deepseek-chat",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.1
-    )
-    content = completion.choices[0].message.content
-    # 清理 content
-    content = re.sub(r'^```json\s*|\s*```$', '', content).strip()
+    
     try:
-        result = json.loads(content)
-        return {"status": "success", "has_next": len(result) > 0, "next_urls": result}
-    except json.JSONDecodeError:
-        return {"status": "error", "has_next": False, "next_urls": []}
+        completion = client.chat.completions.create(
+            model="deepseek-chat",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.5  
+            # do not know why here 0.5 is optimal?
+        )
+        
+        content = completion.choices[0].message.content
+        print(f"API原始返回: {content}")  
+        
+        # 尝试清理内容并解析JSON
+        content = re.sub(r'^```json\s*|\s*```$', '', content).strip()
+        try:
+            result = json.loads(content)
+            return {"status": "success", "has_next": len(result) > 0, "next_urls": result}
+        except json.JSONDecodeError as e:
+            print(f"JSON解析错误: {e}")
+            # 尝试更宽松的解析方式
+            pattern = r'"name"\s*:\s*"([^"]+)"\s*,\s*"url"\s*:\s*"([^"]+)"'
+            matches = re.findall(pattern, content)
+            if matches:
+                result = [{"name": name, "url": url} for name, url in matches]
+                return {"status": "success", "has_next": len(result) > 0, "next_urls": result}
+            return {"status": "error", "has_next": False, "next_urls": [], "raw_content": content}
+    except Exception as e:
+        print(f"API调用错误: {e}")
+        return {"status": "error", "has_next": False, "next_urls": [], "error": str(e)}
 
 
 def decide_if_teacher_list(api_key: str, text: str) -> dict:
@@ -303,15 +315,59 @@ def process_college_teachers(college_name: str, college_url: str, output_dir: Pa
     print(f"当前按钮或链接的URL为：{button_url}")
     similar_page_result = check_similar_page(DEEPSEEK_API_KEY, first_html_text,button_url)
     print(f"检查相似页面结果: {similar_page_result}")
+    
+# part to modify:
     if similar_page_result.get("status") == "success" and similar_page_result["has_next"]:
         for similar in similar_page_result["next_urls"]:
             similar_url = similar["url"]
             similar_name = similar["name"]
+            original_url = similar_url  # 保存原始URL用于调试
+
+            # 标准化URL路径
             if not similar_url.startswith("http"):
-                similar_url = urljoin(current_url, similar_url)
+                # 对于包含../的路径，需要从当前URL中提取正确的基础URL
+                if "../" in similar_url:
+                    # 获取当前URL的各部分
+                    parts = current_url.split("/")
+                    domain = "/".join(parts[:3])  # 例如 https://www.scm.tsinghua.edu.cn
+                    
+                    # 获取当前路径（不包括文件名）
+                    path_parts = parts[3:-1]  # 例如 ["szll", "szdw", "lcjyxl"]
+                    
+                    # 计算需要向上回退的层级数
+                    levels = similar_url.count("../")
+                    
+                    # 移除相应数量的路径段
+                    if levels <= len(path_parts):
+                        new_path_parts = path_parts[:-levels]
+                        base_url = f"{domain}/{'/'.join(new_path_parts)}" if new_path_parts else domain
+                    else:
+                        base_url = domain
+                    
+                    # 移除相对路径标记
+                    clean_url = similar_url
+                    for _ in range(levels):
+                        clean_url = clean_url.replace("../", "", 1)
+                    
+                    similar_url = f"{base_url}/{clean_url}"
+                else:
+                    # 对于普通相对路径
+                    base_url = "/".join(current_url.split("/")[:-1])
+                    similar_url = f"{base_url}/{similar_url}"
+            
+            # 确保URL格式正确
+            similar_url = similar_url.replace("//", "/").replace(":/", "://")
+            
             if similar_url.startswith('http://'):
                 similar_url = 'https://' + similar_url[7:]
+            
+            print(f"原始相似页面URL: {original_url}")
+            print(f"处理后的相似页面URL: {similar_url}")
             print(f"发现相似页面 '{similar_name}'，导航到: {similar_url}")
+            
+            
+## part ended
+            
             # 导航到相似页面
             navigate_response = requests.post(f"{BROWSER_MCP_URL}/navigate", json={"url": similar_url, "wait_time": 3})
             if navigate_response.status_code != 200:
