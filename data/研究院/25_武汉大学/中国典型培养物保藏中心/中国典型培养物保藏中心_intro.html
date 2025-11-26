@@ -1,0 +1,400 @@
+<!DOCTYPE html><html lang="zh"><head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' http: https:;">-->
+    <link rel="stylesheet" type="text/css" href="/themes/home/public/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/themes/home/public/css/swiper-4.3.5.min.css">
+    <link rel="stylesheet" type="text/css" href="/themes/home/public/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/themes/home/public/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/themes/home/public/css/centerAbout.css">
+    <link rel="stylesheet" type="text/css" href="/themes/home/public/css/serviceProject.css">
+    <link rel="stylesheet" type="text/css" href="/themes/home/public/css/loadCenter.css">
+	<link rel="stylesheet" type="text/css" href="/themes/home/public/layui/css/layui.css">
+
+    <link rel="stylesheet" type="text/css" href="/themes/home/public/toastr/toastr.css">
+    <!--<link rel="stylesheet" type="text/css" href="/themes/home/public/css/bootstrap.min.css"/>-->
+    <script type="text/javascript" async="" defer="" src="//analytics.escience.org.cn/piwik.js"></script><script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&amp;ak=PpEZA79o2G5PqwTN1pBFPa4pP51mF8nG"></script>
+    <title>中国典型培养物保藏中心</title>
+</head>
+<body>
+<!-- 顶部 -->
+<div class="header">
+   <!-- <div class="header-top">
+        <div class="top">
+            <div class="right">
+                <div class="language">
+                    <img class="flag" src="/themes/home/public/images/flag.png" >
+                    <a href="javascript:void(0);">中文</a>
+                    <span>/</span>
+                    <a href="javascript:void(0);">英文</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="header-middle">
+        <img src="/themes/home/public/images/header.png">
+		<div class="flag">
+			<!--<img src="/themes/home/public/images/flag.png" >-->
+			<p style=""><a href="https://cctcc-en.whu.edu.cn" style="color: #ffff00;font-size: 16px;font-weight: bold">English</a></p>
+		</div>
+    </div>
+</div>
+
+
+<!-- 导航 -->
+<div class="menu-nav-box">
+    <ul class="munu-list">
+        <li><a href="/portal/Index/index">首页</a></li>
+        <li><a href="/portal/article/about/id/182">中心介绍</a></li>
+        <li><a href="/portal/service_project/zlpywbc.html">服务项目</a></li>
+        <li><a href="/portal/service_project/dg">在线订购</a></li>
+        <li><a href="/portal/article/showlist/id/10.html">下载中心</a></li>
+        <li><a href="/portal/article/showlist/id/9.html">学习资源</a></li>
+        <li><a href="/portal/article/showlist/id/11.html">科学研究</a></li>
+        <li><a href="/portal/article/showlist/id/12.html">联系方式</a></li>
+        <li><a href="/portal/user_center/index_header/cate_id/198.html">个人中心</a></li>
+    </ul>
+	<div class="btn-box">
+				<a type="button" style="color: white; background-color: #00448c;padding: 2px 4px;" href="/portal/index/login.html">登录</a>
+		<span>|</span>
+			<a style="color: white; background-color: #00448c;padding: 2px 4px;" href="/portal/index/reg.html">注册</a>
+				</div>
+	<form action="/portal/index/search.html" name="actionForm" method="post">
+	    <div class="search-box sub-right-main-title">
+	        <img src="/themes/home/public/images/search.png" class="icon">
+	        <input type="search" class="search-input" name="keyword" id="search" placeholder="全站搜索">
+	        <span class="head_search"><a href="javascript:formSubmit()">搜索</a></span>
+	    </div>
+	</form>
+</div>
+<script src="/themes/home/public/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+function my_search() {
+
+        $.ajax({
+            url: "/portal/index/search.html",//这里写你的url
+            type: 'POST',
+            data: {
+                keyword:$('#search').val()
+            },
+
+            dataType: 'json',
+            success: function (data) {
+                data = JSON.parse(data);//提交成功后自动执行的处理函数，参数data就是服务器返回的数据。
+                console.log(data);
+                if (data.code == 202) {
+                    location.reload();
+                    alert(data.msg);
+                }
+            },
+            error: function (data, status, e) {  //提交失败自动执行的处理函数。
+                console.error(e);
+            }
+        });
+
+}
+function formSubmit(){
+document.actionForm.action = "/portal/index/search.html";
+document.actionForm.submit();
+ }
+</script>
+
+<!-- banner -->
+
+
+
+	<!-- 主体部分 -->
+	<div class="sub-main-content">
+		<div class="left-menu-box">
+			<p class="top-title">中心介绍</p>
+			<ul class="menu-list">
+				<li class="active"><a href="javascript:void(0);"><p class="text">中心简介</p><img class="right-arrow" src="/themes/home/public/icon/right_arrow_active.png"></a></li>
+				<li><a href="/portal/article/about/id/183"><p class="text">资质认证</p><img class="right-arrow" src="/themes/home/public/icon/right_arrow.png"></a></li>
+				<li><a href="/portal/article/about/id/184"><p class="text">历史沿革</p><img class="right-arrow" src="/themes/home/public/icon/right_arrow.png"></a></li>
+				<li><a href="/portal/article/about/id/122"><p class="text">机构设置</p><img class="right-arrow" src="/themes/home/public/icon/right_arrow.png"></a></li>
+				<li><a href="/portal/index/position.html"><p class="text">地理位置</p><img class="right-arrow" src="/themes/home/public/icon/right_arrow.png"></a></li>
+			</ul>
+		</div>
+		<div class="sub-right-main-box">
+			<!-- 面包屑 -->
+			<div class="bread-crumbs-box">
+				<img class="icon" src="/themes/home/public/icon/crumbs_icon.png">
+				<p>您当前的位置：</p>
+				<a href="javascript:void(0);">中心介绍</a>
+				<span>&gt;</span>
+				<a href="javascript:void(0);">中心简介</a>
+			</div>
+			<!-- 标题 -->
+			<p class="sub-right-main-title">中国典型培养物保藏中心（CCTCC）简介</p>
+			<!-- 内容 -->
+			<div class="editor-content center-about-content">
+            				 
+<p class="title first" style="margin-top: 0px; margin-bottom: 0px; padding: 0px; box-sizing: border-box; outline: 0px; -webkit-tap-highlight-color: transparent; font-size: medium; font-weight: 600; color: rgb(51, 51, 51); text-align: center;"><video class="edui-upload-video  vjs-default-skin                                        video-js" controls="" preload="none" width="432" height="380" src="/16d2969c307021359430579100d0b5a6.mp4"><source src="/16d2969c307021359430579100d0b5a6.mp4" type="video/mp4"></video></p>
+<p class="title first" style="margin-top: 0px; margin-bottom: 0px; padding: 0px; box-sizing: border-box; outline: 0px; -webkit-tap-highlight-color: transparent; font-size: medium; font-weight: 600; color: rgb(51, 51, 51); text-align: center;">藏在武汉大学的生物银行（CCTCC）</p>
+<p class="title first" style="margin-top: 0px; margin-bottom: 0px; padding: 0px; box-sizing: border-box; outline: 0px; -webkit-tap-highlight-color: transparent; font-size: medium; font-weight: 600; color: rgb(51, 51, 51);"><br></p>
+<p class="title first" style="margin-top: 0px; margin-bottom: 0px; padding: 0px; box-sizing: border-box; outline: 0px; -webkit-tap-highlight-color: transparent; font-size: medium; font-weight: 600; color: rgb(51, 51, 51);"><br></p>
+<p class="title first" style="margin-top: 0px; margin-bottom: 0px; padding: 0px; box-sizing: border-box; outline: 0px; -webkit-tap-highlight-color: transparent; font-size: medium; font-weight: 600; color: rgb(51, 51, 51); text-align: center;"><video class="edui-upload-video  vjs-default-skin                                        video-js" controls="" preload="none" width="336" height="288" src="/upload/default/20210305/3f908cbd61fe684cb430fae6c4188ab9.mp4"><source src="/upload/default/20210305/3f908cbd61fe684cb430fae6c4188ab9.mp4" type="video/mp4"></video>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<video class="edui-upload-video  vjs-default-skin                                        video-js" controls="" preload="none" width="332" height="280" src="/upload/default/20210305/bd64062a49108c0d9ed9aadc9898a310.mp4"><source src="/upload/default/20210305/bd64062a49108c0d9ed9aadc9898a310.mp4" type="video/mp4"></video></p>
+<p class="title first" style="margin-top: 0px; margin-bottom: 0px; padding: 0px; box-sizing: border-box; outline: 0px; -webkit-tap-highlight-color: transparent; font-size: medium; font-weight: 600; color: rgb(51, 51, 51); text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 中国典型培养物保藏中心宣传视频&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 微生物保藏---科技之光</p>
+<p class="title first" style="margin-top: 0px; margin-bottom: 0px; padding: 0px; box-sizing: border-box; outline: 0px; -webkit-tap-highlight-color: transparent; font-size: medium; font-weight: 600; color: rgb(51, 51, 51);"><br></p>
+<p class="title first" style="margin-top: 0px; margin-bottom: 0px; padding: 0px; box-sizing: border-box; outline: 0px; -webkit-tap-highlight-color: transparent; font-size: medium; font-weight: 600; color: rgb(51, 51, 51); font-family: ">具有IDA资质的保藏机构</p>
+<p class="des" style="margin-top: 0px; margin-bottom: 0px; padding: 10px 0px 0px; box-sizing: border-box; outline: 0px; -webkit-tap-highlight-color: transparent; font-size: medium; color: rgb(102, 102, 102); line-height: 27px; text-indent: 32px; text-align: justify; font-family: ">中国典型培养物保藏中心（China Center for Type Culture Collection，CCTCC）是1985年经国家专利局、教育部批准成立的专业培养物保藏机构。1987年，CCTCC加入了世界培养物保藏联盟(World Federation for Culture Collections, WFCC)，1995年CCTCC经世界知识产权组织(World Intellectual Property Organization, WIPO)批准，成为布达佩斯条约（Budapest Treaty） 确认的国际培养物保藏单位(International Depository Authority, IDA)，在国际上具有保藏专利培养物的资质。目前全世界共有48个这样的国际培养物保藏单位（IDA），分布在26个国家或地区，中国目前有3个IDA，除CCTCC外，另两个分别是设在中科院微生物所的中国普通微生物菌种保藏管理中心(CGMCC)和2016年新增的广东微生物所保藏中心。</p>
+<p class="title" style="margin-top: 0px; margin-bottom: 0px; padding: 20px 0px 0px; box-sizing: border-box; outline: 0px; -webkit-tap-highlight-color: transparent; font-size: medium; font-weight: 600; color: rgb(51, 51, 51); font-family: ">隶属国家微生物资源平台，服务范围广，具有辐射示范效应</p>
+<p class="des" style="margin-top: 0px; margin-bottom: 0px; padding: 10px 0px 0px; box-sizing: border-box; outline: 0px; -webkit-tap-highlight-color: transparent; font-size: medium; color: rgb(102, 102, 102); line-height: 27px; text-indent: 32px; text-align: justify; font-family: ">2011年，CCTCC分别获批加入“国家微生物资源”和“实验细胞资源”两个科技部的基础平台。CCTCC作为教学实验微生物资源子平台的承担单位，其参加单位还包括南开大学、山东大学、四川大学、云南大学、新疆大学等10所高校，以平台运行模式为社会提供微生物的实物、信息和技术服务。每年涉及200-300家高校和企业单位，并组织培训参观科普等活动传播新技术知识，提高服务质量。</p>
+<p class="title" style="margin-top: 0px; margin-bottom: 0px; padding: 20px 0px 0px; box-sizing: border-box; outline: 0px; -webkit-tap-highlight-color: transparent; font-size: medium; font-weight: 600; color: rgb(51, 51, 51); font-family: ">保藏大量微生物，包括模式微生物和专利微生物</p>
+<p class="des" style="margin-top: 0px; margin-bottom: 0px; padding: 10px 0px 0px; box-sizing: border-box; outline: 0px; -webkit-tap-highlight-color: transparent; font-size: medium; color: rgb(102, 102, 102); line-height: 27px; text-indent: 32px; text-align: justify; font-family: ">CCTCC的保藏范围很广，包括细菌、放线菌、真菌、单细胞藻类、动植物病毒、噬菌体、人和动物细胞系、转基因修饰细胞系、杂交瘤、植物组织培养、植物种子、克隆载体、基因片段和基因文库等生物材料。迄今为止，已保藏有来自27个国家和地区的各类培养物40,000余株，其中专利培养物12000余株，非专利培养物中微生物菌种30,000余株，微生物模式菌株（Type strain ）1,500余株，<a href="http://www.baidu.com" target="_blank">动物细胞</a>系1,500余株，动植物病毒 300余株，克隆载体、基因片段和基因文库400余份；</p>
+<p><br></p>
+	</div>
+		</div>
+	</div>
+	
+	<div class="link_title"><span>友情链接</span></div>
+<div class="links">
+ 
+   <a href="http://www.bio.whu.edu.cn" target="_blank">武汉大学生命科学学院</a>&nbsp;
+
+
+   <a href="http://www.whu.edu.cn" target="_blank">武汉大学</a>&nbsp;
+
+</div>
+<div class="login-footer footer-box">
+    <div class="footer">
+        <div class="left">
+            <p class="copyright">Copyright © 2004-2019 cctcc.whu.edu.cn ALL Rights Reserved.</p>
+            <p class="des">中国典型培养物保藏中心（武汉大学）版权所有</p>
+        </div>
+        <div class="right">
+            <p class="address">地址：湖北省武汉市武昌区八一路299号</p>
+            <p class="postcode">邮编：430072</p>
+            <p class="phone">电话：微生物组电话 (027)-6875 2319  细胞组电话(027)-68754712</p>
+        </div>
+     
+    </div>
+</div>
+ <!-- Piwik -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.escience.org.cn/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '28']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+	
+	
+<script src="/themes/home/public/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/themes/home/public/js/swiper-4.3.5.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var mySwiper = new Swiper ('.swiper-container', {
+		loop: true, // 循环模式选项
+		autoplay: true,
+		
+		// 如果需要分页器
+		pagination: {
+			el: '.banner-pagination',
+		}
+	}) 
+</script>
+<div id="think_page_trace" style="position: fixed;bottom:0;right:0;font-size:14px;width:100%;z-index: 999999;color: #000;text-align:left;font-family:'微软雅黑';">
+    <div id="think_page_trace_tab" style="display: none;background:white;margin:0;height: 250px;">
+        <div id="think_page_trace_tab_tit" style="height:30px;padding: 6px 12px 0;border-bottom:1px solid #ececec;border-top:1px solid #ececec;font-size:16px">
+                        <span style="color: rgb(0, 0, 0); padding-right: 12px; height: 30px; line-height: 30px; display: inline-block; margin-right: 3px; cursor: pointer; font-weight: 700;">基本</span>
+                        <span style="color: rgb(153, 153, 153); padding-right: 12px; height: 30px; line-height: 30px; display: inline-block; margin-right: 3px; cursor: pointer; font-weight: 700;">文件</span>
+                        <span style="color: rgb(153, 153, 153); padding-right: 12px; height: 30px; line-height: 30px; display: inline-block; margin-right: 3px; cursor: pointer; font-weight: 700;">流程</span>
+                        <span style="color: rgb(153, 153, 153); padding-right: 12px; height: 30px; line-height: 30px; display: inline-block; margin-right: 3px; cursor: pointer; font-weight: 700;">错误</span>
+                        <span style="color: rgb(153, 153, 153); padding-right: 12px; height: 30px; line-height: 30px; display: inline-block; margin-right: 3px; cursor: pointer; font-weight: 700;">SQL</span>
+                        <span style="color: rgb(153, 153, 153); padding-right: 12px; height: 30px; line-height: 30px; display: inline-block; margin-right: 3px; cursor: pointer; font-weight: 700;">调试</span>
+                    </div>
+        <div id="think_page_trace_tab_cont" style="overflow:auto;height:212px;padding:0;line-height: 24px">
+                        <div style="display: block;">
+                <ol style="padding: 0; margin:0">
+                    <li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">请求信息 : 2025-10-23 01:02:01 HTTP/1.0 GET : https://cctcc.whu.edu.cn/portal/article/about/id/182</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">运行时间 : 0.094778s [ 吞吐率：10.55req/s ] 内存消耗：1,100.71kb 文件加载：182</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">查询信息 : 14 queries 1 writes </li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">缓存信息 : 17 reads,0 writes</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">会话信息 : SESSION_ID=qrtnmh55g6479vum5jv5pnpds2</li>                </ol>
+            </div>
+                        <div style="display:none;">
+                <ol style="padding: 0; margin:0">
+                    <li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/public/index.php ( 1.00 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/base.php ( 1.76 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Loader.php ( 13.10 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/composer/autoload_static.php ( 14.27 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Error.php ( 4.15 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Container.php ( 16.08 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf/src/App.php ( 30.42 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Env.php ( 2.96 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Config.php ( 10.09 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/convention.php ( 12.06 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/app/common.php ( 1.51 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/helper.php ( 21.11 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf-app/src/app.php ( 5.45 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf-app/src/database.php ( 0.92 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf-app/src/template.php ( 2.07 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf-app/src/paginate.php ( 0.18 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf-app/src/tags.php ( 1.39 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Hook.php ( 5.80 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/data/config/database.php ( 0.54 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/data/config/dictionary.php ( 0.30 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/data/config/email.php ( 25.33 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/data/config/file.php ( 1.37 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/data/config/template.php ( 0.09 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/ezyang/htmlpurifier/library/HTMLPurifier.composer.php ( 0.10 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/topthink/think-captcha/src/helper.php ( 1.59 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/facade/Route.php ( 3.89 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Facade.php ( 3.56 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Route.php ( 26.76 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Request.php ( 59.80 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/route/Domain.php ( 7.30 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/route/RuleGroup.php ( 17.04 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/route/Rule.php ( 30.02 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/route/RuleItem.php ( 9.13 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/route/RuleName.php ( 4.06 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/facade/Validate.php ( 4.91 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Validate.php ( 45.36 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf/src/common.php ( 63.81 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/abs.php ( 0.81 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/acos.php ( 1.04 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/acosh.php ( 0.90 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/acot.php ( 0.74 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/acoth.php ( 0.76 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/acsc.php ( 0.83 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/acsch.php ( 0.86 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/argument.php ( 0.81 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/asec.php ( 0.83 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/asech.php ( 0.85 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/asin.php ( 1.01 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/asinh.php ( 0.91 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/atan.php ( 1.34 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/atanh.php ( 1.08 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/conjugate.php ( 0.74 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/cos.php ( 0.92 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/cosh.php ( 0.90 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/cot.php ( 0.83 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/coth.php ( 0.74 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/csc.php ( 0.82 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/csch.php ( 0.84 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/exp.php ( 0.92 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/inverse.php ( 0.87 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/ln.php ( 0.94 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/log2.php ( 1.06 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/log10.php ( 1.08 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/negative.php ( 0.76 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/pow.php ( 1.27 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/rho.php ( 0.84 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/sec.php ( 0.71 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/sech.php ( 0.74 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/sin.php ( 0.87 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/sinh.php ( 0.90 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/sqrt.php ( 0.81 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/tan.php ( 1.21 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/tanh.php ( 1.11 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/functions/theta.php ( 1.25 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/operations/add.php ( 1.26 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/operations/subtract.php ( 1.28 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/operations/multiply.php ( 1.41 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/operations/divideby.php ( 1.75 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/complex/classes/src/operations/divideinto.php ( 1.75 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/matrix/classes/src/functions/adjoint.php ( 0.69 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/matrix/classes/src/functions/antidiagonal.php ( 0.74 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/matrix/classes/src/functions/cofactors.php ( 0.70 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/matrix/classes/src/functions/determinant.php ( 0.71 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/matrix/classes/src/functions/diagonal.php ( 0.70 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/matrix/classes/src/functions/identity.php ( 0.70 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/matrix/classes/src/functions/inverse.php ( 0.69 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/matrix/classes/src/functions/minors.php ( 0.69 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/matrix/classes/src/functions/trace.php ( 0.69 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/matrix/classes/src/functions/transpose.php ( 0.71 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/matrix/classes/src/operations/add.php ( 0.93 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/matrix/classes/src/operations/directsum.php ( 0.95 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/matrix/classes/src/operations/subtract.php ( 0.96 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/matrix/classes/src/operations/multiply.php ( 0.98 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/matrix/classes/src/operations/divideby.php ( 0.96 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/markbaker/matrix/classes/src/operations/divideinto.php ( 0.96 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/topthink/think-helper/src/helper.php ( 2.97 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Db.php ( 7.87 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Lang.php ( 7.66 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf/src/Log.php ( 9.34 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/log/driver/File.php ( 9.25 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/lang/zh-cn.php ( 12.72 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/data/route/route.php ( 0.02 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf/src/behavior/InitHookBehavior.php ( 2.12 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/facade/Cache.php ( 2.10 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Cache.php ( 3.40 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/cache/driver/File.php ( 8.21 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/cache/Driver.php ( 8.99 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/facade/Hook.php ( 1.50 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/route/dispatch/Url.php ( 5.40 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/route/Dispatch.php ( 9.62 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf/src/route/dispatch/Module.php ( 5.28 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Middleware.php ( 5.54 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Cookie.php ( 7.61 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/View.php ( 5.99 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/view/driver/Think.php ( 6.31 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Template.php ( 48.60 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/template/driver/File.php ( 2.38 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Session.php ( 14.69 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Debug.php ( 7.84 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/app/portal/lang/zh-cn.php ( 0.93 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf/src/behavior/LangBehavior.php ( 2.53 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/facade/Lang.php ( 1.79 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf/src/lang/zh-cn.php ( 3.20 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/facade/Env.php ( 1.20 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf-app/src/admin/lang/zh-cn.php ( 9.47 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf-app/src/admin/lang/zh-cn/common.php ( 0.61 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf-app/src/user/lang/zh-cn.php ( 4.20 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/app/portal/lang/zh-cn/common.php ( 0.76 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/app/server_apply/lang/zh-cn/common.php ( 0.76 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/app/server_data/lang/zh-cn/common.php ( 0.76 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf/src/behavior/InitAppHookBehavior.php ( 2.07 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Collection.php ( 14.13 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/app/portal/controller/ArticleController.php ( 14.11 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf/src/controller/HomeBaseController.php ( 8.84 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf/src/controller/BaseController.php ( 2.32 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Controller.php ( 7.81 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/traits/controller/Jump.php ( 4.93 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/facade/Config.php ( 1.56 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/facade/Cookie.php ( 1.62 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/facade/View.php ( 1.80 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf/src/behavior/HomeLangBehavior.php ( 1.56 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/app/portal/lang/zh-cn/home.php ( 0.62 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/app/server_apply/lang/zh-cn/home.php ( 0.62 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/app/server_data/lang/zh-cn/home.php ( 0.62 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/app/portal/service/PostService.php ( 9.06 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/app/portal/model/PortalPostModel.php ( 11.49 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Model.php ( 28.34 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/model/concern/Attribute.php ( 18.28 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/model/concern/RelationShip.php ( 20.51 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/model/concern/ModelEvent.php ( 6.27 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/model/concern/TimeStamp.php ( 2.67 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/model/concern/Conversion.php ( 8.10 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/db/Connection.php ( 61.03 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/db/connector/Mysql.php ( 6.46 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/db/builder/Mysql.php ( 5.73 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/db/Builder.php ( 37.86 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/db/Query.php ( 108.23 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf-app/src/admin/model/ThemeModel.php ( 8.32 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/data/runtime/temp/d85682f165c231963bf661700707a596.php ( 10.27 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf-app/src/admin/model/RouteModel.php ( 7.29 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/app/portal/url.php ( 1.55 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf-app/src/user/url.php ( 1.01 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/facade/Url.php ( 1.17 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Url.php ( 13.46 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/facade/Session.php ( 2.10 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/electrolinux/phpquery/phpQuery/phpQuery.php ( 43.08 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/electrolinux/phpquery/phpQuery/phpQuery/DOMEvent.php ( 2.36 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/electrolinux/phpquery/phpQuery/phpQuery/DOMDocumentWrapper.php ( 23.12 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/electrolinux/phpquery/phpQuery/phpQuery/phpQueryEvents.php ( 5.00 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/electrolinux/phpquery/phpQuery/phpQuery/Callback.php ( 4.17 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/electrolinux/phpquery/phpQuery/phpQuery/phpQueryObject.php ( 90.89 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/electrolinux/phpquery/phpQuery/phpQuery/compat/mbstring.php ( 1.60 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/exception/ErrorException.php ( 1.74 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Exception.php ( 1.67 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/exception/Handle.php ( 9.26 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf/src/lib/Storage.php ( 4.04 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf/src/lib/storage/Local.php ( 2.97 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkcmf/cmf-app/src/admin/service/ApiService.php ( 1.37 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/Response.php ( 10.10 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/response/View.php ( 2.89 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/data/runtime/temp/137683405e3613719a97f8aee9f90f12.php ( 14.73 KB )</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">/home/www/cctcc/vendor/thinkphp/library/think/debug/Html.php ( 4.12 KB )</li>                </ol>
+            </div>
+                        <div style="display:none;">
+                <ol style="padding: 0; margin:0">
+                    <li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ LANG ] /home/www/cctcc/vendor/thinkphp/lang/zh-cn.php</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ LANG ] /home/www/cctcc/app/portal//lang/zh-cn.php</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ ROUTE ] array (
+)</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ HEADER ] array (
+  'cookie' =&gt; 'PHPSESSID=qrtnmh55g6479vum5jv5pnpds2; thinkphp_show_page_trace=0|0; _pk_id.28.dd14=48785398096d56a2.1761152515.; _pk_ses.28.dd14=1',
+  'accept-encoding' =&gt; 'gzip, deflate, br, zstd',
+  'sec-fetch-dest' =&gt; 'document',
+  'sec-fetch-user' =&gt; '?1',
+  'sec-fetch-mode' =&gt; 'navigate',
+  'sec-fetch-site' =&gt; 'none',
+  'accept' =&gt; 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' =&gt; 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+  'upgrade-insecure-requests' =&gt; '1',
+  'sec-ch-ua-platform' =&gt; '"Windows"',
+  'sec-ch-ua-mobile' =&gt; '?0',
+  'sec-ch-ua' =&gt; '"Not;A=Brand";v="99", "HeadlessChrome";v="139", "Chromium";v="139"',
+  'connection' =&gt; 'close',
+  'x-forwarded-proto' =&gt; 'https',
+  'x-forwarded-for' =&gt; '10.131.180.156',
+  'x-real-ip' =&gt; '10.131.180.156',
+  'host' =&gt; 'cctcc.whu.edu.cn',
+  'content-type' =&gt; '',
+  'content-length' =&gt; '',
+)</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ PARAM ] array (
+  'id' =&gt; '182',
+)</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ LANG ] /home/www/cctcc/vendor/thinkcmf/cmf/src/behavior/../lang/zh-cn.php</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ LANG ] /home/www/cctcc/vendor/thinkcmf/cmf-app/src/admin/lang/zh-cn.php</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ LANG ] /home/www/cctcc/vendor/thinkcmf/cmf-app/src/admin/lang/zh-cn/common.php</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ LANG ] /home/www/cctcc/vendor/thinkcmf/cmf-app/src/user/lang/zh-cn.php</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ LANG ] /home/www/cctcc/app/portal/lang/zh-cn/common.php</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ LANG ] /home/www/cctcc/app/server_apply/lang/zh-cn/common.php</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ LANG ] /home/www/cctcc/app/server_data/lang/zh-cn/common.php</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ LANG ] /home/www/cctcc/app/portal/lang/zh-cn/home.php</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ LANG ] /home/www/cctcc/app/server_apply/lang/zh-cn/home.php</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ LANG ] /home/www/cctcc/app/server_data/lang/zh-cn/home.php</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ DB ] INIT mysql</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ VIEW ] /home/www/cctcc/public/themes/home/portal/centerInfo.html [ array (
+  0 =&gt; 'site_info',
+  1 =&gt; 'active_nav',
+  2 =&gt; 'active_nav_id',
+  3 =&gt; 'navs',
+  4 =&gt; 'actfl',
+  5 =&gt; 'actfl_name',
+  6 =&gt; 'article',
+  7 =&gt; 'theme_vars',
+  8 =&gt; 'theme_widgets',
+) ]</li>                </ol>
+            </div>
+                        <div style="display:none;">
+                <ol style="padding: 0; margin:0">
+                    <li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[2]DOMDocument::loadHTML(): Tag video invalid in Entity, line: 3[/home/www/cctcc/vendor/electrolinux/phpquery/phpQuery/phpQuery/DOMDocumentWrapper.php:200]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[2]DOMDocument::loadHTML(): Tag source invalid in Entity, line: 3[/home/www/cctcc/vendor/electrolinux/phpquery/phpQuery/phpQuery/DOMDocumentWrapper.php:200]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[2]DOMDocument::loadHTML(): Tag video invalid in Entity, line: 7[/home/www/cctcc/vendor/electrolinux/phpquery/phpQuery/phpQuery/DOMDocumentWrapper.php:200]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[2]DOMDocument::loadHTML(): Tag source invalid in Entity, line: 7[/home/www/cctcc/vendor/electrolinux/phpquery/phpQuery/phpQuery/DOMDocumentWrapper.php:200]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[2]DOMDocument::loadHTML(): Tag video invalid in Entity, line: 7[/home/www/cctcc/vendor/electrolinux/phpquery/phpQuery/phpQuery/DOMDocumentWrapper.php:200]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[2]DOMDocument::loadHTML(): Tag source invalid in Entity, line: 7[/home/www/cctcc/vendor/electrolinux/phpquery/phpQuery/phpQuery/DOMDocumentWrapper.php:200]</li>                </ol>
+            </div>
+                        <div style="display:none;">
+                <ol style="padding: 0; margin:0">
+                    <li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ DB ] CONNECT:[ UseTime:0.000400s ] mysql:host=0.0.0.0;port=3306;dbname=cctcc_whu_edu_cn;charset=utf8</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ SQL ] SHOW COLUMNS FROM `cmf_portal_post` [ RunTime:0.001331s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ SQL ] SELECT `post`.* FROM `cmf_portal_post` `post` WHERE  `post`.`post_type` = 1  AND `post`.`post_status` = 1  AND `post`.`delete_time` = 0  AND `post`.`id` = 182  AND ( `post`.`published_time` &lt;  1761152521 and `post`.`published_time` &gt;  0 ) LIMIT 1 [ RunTime:0.000568s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ EXPLAIN : array (
+  'id' =&gt; 1,
+  'select_type' =&gt; 'SIMPLE',
+  'table' =&gt; 'post',
+  'type' =&gt; 'const',
+  'possible_keys' =&gt; 'PRIMARY,type_status_date',
+  'key' =&gt; 'PRIMARY',
+  'key_len' =&gt; '8',
+  'ref' =&gt; 'const',
+  'rows' =&gt; 1,
+  'extra' =&gt; NULL,
+) ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ SQL ] SHOW COLUMNS FROM `cmf_portal_category_post` [ RunTime:0.000920s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ SQL ] SELECT `category_id` FROM `cmf_portal_category_post` WHERE  `post_id` = 182 LIMIT 1 [ RunTime:0.000252s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ EXPLAIN : array (
+  'id' =&gt; 1,
+  'select_type' =&gt; 'SIMPLE',
+  'table' =&gt; 'cmf_portal_category_post',
+  'type' =&gt; 'ALL',
+  'possible_keys' =&gt; NULL,
+  'key' =&gt; NULL,
+  'key_len' =&gt; NULL,
+  'ref' =&gt; NULL,
+  'rows' =&gt; 186,
+  'extra' =&gt; 'Using where',
+) ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ SQL ] SHOW COLUMNS FROM `cmf_portal_category` [ RunTime:0.000950s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ SQL ] SELECT `name`,`id`,`parent_id` FROM `cmf_portal_category` WHERE  `id` = 68 LIMIT 1 [ RunTime:0.000209s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ EXPLAIN : array (
+  'id' =&gt; 1,
+  'select_type' =&gt; 'SIMPLE',
+  'table' =&gt; 'cmf_portal_category',
+  'type' =&gt; 'const',
+  'possible_keys' =&gt; 'PRIMARY',
+  'key' =&gt; 'PRIMARY',
+  'key_len' =&gt; '8',
+  'ref' =&gt; 'const',
+  'rows' =&gt; 1,
+  'extra' =&gt; NULL,
+) ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ SQL ] SHOW COLUMNS FROM `cmf_theme_file` [ RunTime:0.001247s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ SQL ] SELECT * FROM `cmf_theme_file` WHERE  `theme` = 'home' [ RunTime:0.000266s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ EXPLAIN : array (
+  'id' =&gt; 1,
+  'select_type' =&gt; 'SIMPLE',
+  'table' =&gt; 'cmf_theme_file',
+  'type' =&gt; 'ALL',
+  'possible_keys' =&gt; NULL,
+  'key' =&gt; NULL,
+  'key_len' =&gt; NULL,
+  'ref' =&gt; NULL,
+  'rows' =&gt; 1,
+  'extra' =&gt; 'Using where',
+) ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ SQL ] SHOW COLUMNS FROM `cmf_theme` [ RunTime:0.000964s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ SQL ] UPDATE `cmf_theme`  SET `name` = 'quick_start' , `version` = '1.0.0' , `demo_url` = 'http://demo.thinkcmf.com' , `author` = 'ThinkCMF' , `lang` = 'zh-cn' , `author_url` = 'http://www.thinkcmf.com' , `keywords` = 'ThinkCMF模板' , `description` = 'ThinkCMF快速入门演示模板'  WHERE  `theme` = 'home' [ RunTime:0.000250s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ SQL ] SELECT `more` FROM `cmf_theme_file` WHERE  `theme` = 'home'  AND (  `is_public` = 1 OR `file` = 'portal/centerInfo' ) [ RunTime:0.000226s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ EXPLAIN : array (
+  'id' =&gt; 1,
+  'select_type' =&gt; 'SIMPLE',
+  'table' =&gt; 'cmf_theme_file',
+  'type' =&gt; 'ALL',
+  'possible_keys' =&gt; NULL,
+  'key' =&gt; NULL,
+  'key_len' =&gt; NULL,
+  'ref' =&gt; NULL,
+  'rows' =&gt; 1,
+  'extra' =&gt; 'Using where',
+) ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ SQL ] SHOW COLUMNS FROM `cmf_option` [ RunTime:0.001174s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ SQL ] SELECT `option_value` FROM `cmf_option` WHERE  `option_name` = 'storage' LIMIT 1 [ RunTime:0.000236s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ EXPLAIN : array (
+  'id' =&gt; 1,
+  'select_type' =&gt; 'SIMPLE',
+  'table' =&gt; NULL,
+  'type' =&gt; NULL,
+  'possible_keys' =&gt; NULL,
+  'key' =&gt; NULL,
+  'key_len' =&gt; NULL,
+  'ref' =&gt; NULL,
+  'rows' =&gt; NULL,
+  'extra' =&gt; 'Impossible WHERE noticed after reading const tables',
+) ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ SQL ] SHOW COLUMNS FROM `cmf_link` [ RunTime:0.000946s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ SQL ] SELECT * FROM `cmf_link` WHERE  `status` = 1 ORDER BY `list_order` ASC [ RunTime:0.000308s ]</li><li style="border-bottom:1px solid #EEE;font-size:14px;padding:0 12px">[ EXPLAIN : array (
+  'id' =&gt; 1,
+  'select_type' =&gt; 'SIMPLE',
+  'table' =&gt; 'cmf_link',
+  'type' =&gt; 'ref',
+  'possible_keys' =&gt; 'status',
+  'key' =&gt; 'status',
+  'key_len' =&gt; '1',
+  'ref' =&gt; 'const',
+  'rows' =&gt; 2,
+  'extra' =&gt; 'Using where; Using filesort',
+) ]</li>                </ol>
+            </div>
+                        <div style="display:none;">
+                <ol style="padding: 0; margin:0">
+                                    </ol>
+            </div>
+                    </div>
+    </div>
+    <div id="think_page_trace_close" style="display:none;text-align:right;height:15px;position:absolute;top:10px;right:12px;cursor:pointer;"><img style="vertical-align:top;" src="data:image/gif;base64,R0lGODlhDwAPAJEAAAAAAAMDA////wAAACH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MUQxMjc1MUJCQUJDMTFFMTk0OUVGRjc3QzU4RURFNkEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MUQxMjc1MUNCQUJDMTFFMTk0OUVGRjc3QzU4RURFNkEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxRDEyNzUxOUJBQkMxMUUxOTQ5RUZGNzdDNThFREU2QSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxRDEyNzUxQUJBQkMxMUUxOTQ5RUZGNzdDNThFREU2QSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8eHRwbGhkYFxYVFBMSERAPDg0MCwoJCAcGBQQDAgEAACH5BAAAAAAALAAAAAAPAA8AAAIdjI6JZqotoJPR1fnsgRR3C2jZl3Ai9aWZZooV+RQAOw=="></div>
+</div>
+<div id="think_page_trace_open" style="height:30px;float:right;text-align:right;overflow:hidden;position:fixed;bottom:0;right:0;color:#000;line-height:30px;cursor:pointer;">
+    <div style="background:#232323;color:#FFF;padding:0 6px;float:right;line-height:30px;font-size:14px">0.109594s </div>
+    <img width="30" style="" title="ShowPageTrace" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjVERDVENkZGQjkyNDExRTE5REY3RDQ5RTQ2RTRDQUJCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjVERDVENzAwQjkyNDExRTE5REY3RDQ5RTQ2RTRDQUJCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NURENUQ2RkRCOTI0MTFFMTlERjdENDlFNDZFNENBQkIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NURENUQ2RkVCOTI0MTFFMTlERjdENDlFNDZFNENBQkIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5fx6IRAAAMCElEQVR42sxae3BU1Rk/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">
+</div>
+
+<script type="text/javascript">
+    (function(){
+        var tab_tit  = document.getElementById('think_page_trace_tab_tit').getElementsByTagName('span');
+        var tab_cont = document.getElementById('think_page_trace_tab_cont').getElementsByTagName('div');
+        var open     = document.getElementById('think_page_trace_open');
+        var close    = document.getElementById('think_page_trace_close').children[0];
+        var trace    = document.getElementById('think_page_trace_tab');
+        var cookie   = document.cookie.match(/thinkphp_show_page_trace=(\d\|\d)/);
+        var history  = (cookie && typeof cookie[1] != 'undefined' && cookie[1].split('|')) || [0,0];
+        open.onclick = function(){
+            trace.style.display = 'block';
+            this.style.display = 'none';
+            close.parentNode.style.display = 'block';
+            history[0] = 1;
+            document.cookie = 'thinkphp_show_page_trace='+history.join('|')
+        }
+        close.onclick = function(){
+            trace.style.display = 'none';
+            this.parentNode.style.display = 'none';
+            open.style.display = 'block';
+            history[0] = 0;
+            document.cookie = 'thinkphp_show_page_trace='+history.join('|')
+        }
+        for(var i = 0; i < tab_tit.length; i++){
+            tab_tit[i].onclick = (function(i){
+                return function(){
+                    for(var j = 0; j < tab_cont.length; j++){
+                        tab_cont[j].style.display = 'none';
+                        tab_tit[j].style.color = '#999';
+                    }
+                    tab_cont[i].style.display = 'block';
+                    tab_tit[i].style.color = '#000';
+                    history[1] = i;
+                    document.cookie = 'thinkphp_show_page_trace='+history.join('|')
+                }
+            })(i)
+        }
+        parseInt(history[0]) && open.click();
+        tab_tit[history[1]].click();
+    })();
+</script>
+
+</body></html>

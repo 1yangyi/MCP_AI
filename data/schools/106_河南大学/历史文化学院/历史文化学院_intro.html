@@ -1,0 +1,1206 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学院简介-历史文化学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="历史文化学院,学院简介">
+
+    <link rel="shortcut icon" href="../../static/images/pc/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../static/css/animate.min.css">
+    <link rel="stylesheet" href="../../static/css/normalize.css">
+    <!-- 页面公共样式 -->
+    <link rel="stylesheet" href="../../static/css/common.css">
+    <link rel="stylesheet" href="../../static/css/collegeProfile.css">
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e7a475153535742000400014156 -->
+<link rel="stylesheet" type="text/css" href="../../collegeProfile.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1130,'/collegeProfile.jsp',-1,1363647578)</script>
+</head>
+<body>
+    <!-- 网站头部部分开始 -->
+    <header class="header spaceBetween">
+        <div class="logo">
+            <a href="../../index.htm">
+                <img src="../../static/images/pc/index_logo.png" alt="">
+            </a>
+        </div>
+        <div class="topR spaceBetween">
+            <!-- 功能菜单 -->
+            <ul class="topTools spaceBetween">
+                <li>
+                    <a href="../../index.htm" class="alignCenter">
+                        <img src="../../static/images/pc/index_top_ico01.png" alt="">
+                        <span>中文</span>
+                    </a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="https://lsxyen.henu.edu.cn/" class="alignCenter">
+                        <img src="../../static/images/pc/index_top_ico02.png" alt="">
+                        <span>ENGLISH</span>
+                    </a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="../xzzxnew.htm" class="alignCenter">
+                        <img src="../../static/images/pc/index_top_ico03.png" alt="">
+                        <span>下载中心</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- 搜索表单 -->
+            <div class="searchForm">
+                
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><input name="words" autocomplete="off" placeholder="请输入关键词搜索" class="searchInput"> <input type="submit" value="" class="searchBtn"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+        
+        <input class="searchInput" name="words" autocomplete="off" placeholder="请输入关键词搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" />
+                    <input class="searchBtn" type="submit" value=""  v-on:click="onSubmit()"/>
+         
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1363647578";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+            </div>
+        </div>
+        <div class="headerTools alignCenter">
+            <div class="en"><a href="../../Home.htm" class="alignCenter" target="">EN</a></div>
+            <div class="en"><a href="../../jbb.htm" class="alignCenter" target="">旧版</a></div>
+            <img class="menuIcon" src="../../static/images/mo/mo_tu1.png" alt="">
+            <img class="closeIcon" src="../../static/images/mo/mo_tu1_hover.png" alt="">
+        </div>
+    </header>
+    <!-- 网站头部部分结束 -->
+
+    <!-- pc导航部分开始 -->
+    <nav class="navPC">
+        <div class="navList spaceBetween firstN">
+            <div class="navItem">
+    <a href="https://lsxy.henu.edu.cn/">首页</a>
+</div>
+        <div class="navItem">
+            <a href="">学院概况</a>
+                <!--是否有二级栏目-->    
+                   
+                        <ul class="secondN">
+                            <li>
+                                <a href="xyjj.htm">学院简介</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="xrld.htm">现任领导</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="xujg.htm">学院机构</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="lrld.htm">历任领导</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                           
+                        </ul>
+                    
+            
+        </div>     
+        <div class="navItem">
+            <a href="../szdwnew/qbxr.htm">师资团队</a>
+                <!--是否有二级栏目-->    
+                   
+                        <ul class="secondN">
+                            <li>
+                                <a href="../szdwnew/qbxr.htm">前辈学人</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../szdwnew/zzjs.htm">在职教师</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../szdwnew/zgsx/gdsjys.htm">中国史系</a>
+                                <!--是否有三级栏目-->    
+                                     <ul class="thirdN">
+                                            <li><a href="../szdwnew/zgsx/gdsjys.htm">古代史教研室</a></li>
+                                            <li><a href="../szdwnew/zgsx/jxdsjys.htm">近现代史教研室</a></li>
+                                    </ul>
+                               
+                            </li>
+                            <li>
+                                <a href="../szdwnew/sjsx/sjsjys.htm">世界史系</a>
+                                <!--是否有三级栏目-->    
+                                     <ul class="thirdN">
+                                            <li><a href="../szdwnew/sjsx/sjsjys.htm">世界史教研室</a></li>
+                                    </ul>
+                               
+                            </li>
+                            <li>
+                                <a href="../szdwnew/kgwbx/kgwbjys.htm">考古文博系</a>
+                                <!--是否有三级栏目-->    
+                                     <ul class="thirdN">
+                                            <li><a href="../szdwnew/kgwbx/kgwbjys.htm">考古文博教研室</a></li>
+                                    </ul>
+                               
+                            </li>
+                            <li>
+                                <a href="../szdwnew/lsxsfjyjys.htm">历史学师范教育教研室</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../szdwnew/wpzj.htm">外聘专家</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../szdwnew/rxjs.htm">荣休教师</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                           
+                        </ul>
+                    
+            
+        </div>     
+        <div class="navItem">
+            <a href="../zsjynew/bkszs.htm">招生就业</a>
+                <!--是否有二级栏目-->    
+                   
+                        <ul class="secondN">
+                            <li>
+                                <a href="../zsjynew/bkszs.htm">本科生招生</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../zsjynew/yjszs.htm">研究生招生</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../zsjynew/jxjyzs.htm">继续教育招生</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../zsjynew/jyzd.htm">就业指导</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                           
+                        </ul>
+                    
+            
+        </div>     
+        <div class="navItem">
+            <a href="../rcpynew/bksjynew/zyjs.htm">人才培养</a>
+                <!--是否有二级栏目-->    
+                   
+                        <ul class="secondN">
+                            <li>
+                                <a href="../rcpynew/bksjynew/zyjs.htm">本科生教育</a>
+                                <!--是否有三级栏目-->    
+                                     <ul class="thirdN">
+                                            <li><a href="../rcpynew/bksjynew/zyjs.htm">专业介绍</a></li>
+                                            <li><a href="../rcpynew/bksjynew/pyjy.htm">培养教育</a></li>
+                                    </ul>
+                               
+                            </li>
+                            <li>
+                                <a href="../rcpynew/yjsjy.htm">研究生教育</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../rcpynew/jxjy.htm">继续教育</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                           
+                        </ul>
+                    
+            
+        </div>     
+        <div class="navItem">
+            <a href="../jxkynew.htm">教学科研</a>
+                <!--是否有二级栏目-->    
+                   
+                        <ul class="secondN">
+                            <li>
+                                <a href="../jxkynew/jxgz/jxgl.htm">教学工作</a>
+                                <!--是否有三级栏目-->    
+                                     <ul class="thirdN">
+                                            <li><a href="../jxkynew/jxgz/jxgl.htm">教学管理</a></li>
+                                            <li><a href="../jxkynew/jxgz/jxyj.htm">教学研究</a></li>
+                                            <li><a href="../jxkynew/jxgz/zlgc.htm">质量工程</a></li>
+                                    </ul>
+                               
+                            </li>
+                            <li>
+                                <a href="../jxkynew/xkjs/bsdjs.htm">学科介绍</a>
+                                <!--是否有三级栏目-->    
+                                     <ul class="thirdN">
+                                            <li><a href="../jxkynew/xkjs/bsdjs.htm">博硕点介绍</a></li>
+                                            <li><a href="../jxkynew/xkjs/ystsxkjs.htm">优势特色学科介绍</a></li>
+                                            <li><a href="../jxkynew/xkjs/bshldz.htm">博士后流动站</a></li>
+                                    </ul>
+                               
+                            </li>
+                            <li>
+                                <a href="../jxkynew/kyjs/swhyjy.htm">科研机构</a>
+                                <!--是否有三级栏目-->    
+                                     <ul class="thirdN">
+                                            <li><a href="../jxkynew/kyjs/swhyjy.htm">宋文化研究院</a></li>
+                                            <li><a href="../jxkynew/kyjs/zggdsyjzx.htm">中国古代史研究中心</a></li>
+                                            <li><a href="../jxkynew/kyjs/yslyjzx.htm">以色列研究中心</a></li>
+                                            <li><a href="../jxkynew/kyjs/zgjxdshzxyjzx.htm">中国近现代社会转型研究中心</a></li>
+                                            <li><a href="../jxkynew/kyjs/qyygbyjy.htm">区域与国别研究院</a></li>
+                                            <li><a href="../jxkynew/kyjs/jxdzggjzlyjzx.htm">近现代中国国家治理研究中心</a></li>
+                                            <li><a href="../jxkynew/kyjs/sdyjs.htm">宋代研究所</a></li>
+                                            <li><a href="../jxkynew/kyjs/gdwmyjzx.htm">古代文明研究中心</a></li>
+                                            <li><a href="../jxkynew/kyjs/jdzgyjs.htm">近代中国研究所</a></li>
+                                            <li><a href="../jxkynew/kyjs/jdwxywwszhsys.htm">经典文献与文物数字化实验室</a></li>
+                                            <li><a href="../jxkynew/kyjs/hnsswkgsys.htm">河南省生物考古实验室</a></li>
+                                    </ul>
+                               
+                            </li>
+                            <li>
+                                <a href="../jxkynew/kycg.htm">科研成果</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../jxkynew/zhswmszsys.htm">中华水文明数智实验室</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                           
+                        </ul>
+                    
+            
+        </div>     
+        <div class="navItem">
+            <a href="../jlhznew/gnxsjl.htm">交流合作</a>
+                <!--是否有二级栏目-->    
+                   
+                        <ul class="secondN">
+                            <li>
+                                <a href="../jlhznew/gnxsjl.htm">国内学术交流</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../jlhznew/gwxsjl.htm">国外学术交流</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../jlhznew/gatxsjl.htm">港澳台学术交流</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../jlhznew/hzxm.htm">合作项目</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                           
+                        </ul>
+                    
+            
+        </div>     
+        <div class="navItem">
+            <a href="">党团建设</a>
+                <!--是否有二级栏目-->    
+                   
+                        <ul class="secondN">
+                            <li>
+                                <a href="../dtjs/djsz.htm">党建思政</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../dtjs/xsgz.htm">学生工作</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../dtjs/ghhd.htm">工会活动</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                           
+                        </ul>
+                    
+            
+        </div>     
+        <div class="navItem">
+            <a href="../zdjsnew.htm">制度建设</a>
+                <!--是否有二级栏目-->    
+            
+        </div>     
+        <div class="navItem">
+            <a href="../sfjy/sfjt.htm">师范教育</a>
+                <!--是否有二级栏目-->    
+                   
+                        <ul class="secondN">
+                            <li>
+                                <a href="../sfjy/sfjt.htm">师范讲坛</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../sfjy/jxxx.htm">教学信息</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../sfjy/jypt.htm">教研平台</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../sfjy/sfsj.htm">师范实践</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                           
+                        </ul>
+                    
+            
+        </div>     
+        <div class="navItem">
+            <a href="">博雅记忆</a>
+                <!--是否有二级栏目-->    
+                   
+                        <ul class="secondN">
+                            <li>
+                                <a href="../byjy/qbjs.htm">前辈教授</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../byjy/xyzj/xydt.htm">系友之家</a>
+                                <!--是否有三级栏目-->    
+                                     <ul class="thirdN">
+                                            <li><a href="../byjy/xyzj/xydt.htm">系友动态</a></li>
+                                            <li><a href="../byjy/xyzj/xyfc.htm">系友风采</a></li>
+                                            <li><a href="../byjy/xyzj/byln.htm">毕业留念</a></li>
+                                    </ul>
+                               
+                            </li>
+                           
+                        </ul>
+                    
+            
+        </div>     
+
+        </div>
+    </nav>
+    <!-- pc导航部分结束 -->
+
+    <!-- mo导航部分开始 -->
+    <nav class="navMO">
+        <div class="navMoT alignCenter">
+            <!-- 搜索表单 -->
+            <div class="searchForm">
+               
+
+
+<style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2">
+    <div id="appu2"><div><div><input placeholder="请输入关键词搜索" autocomplete="off" class="seaInput"> <input type="submit" align="absmiddle" value="" class="searchIcon"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+        
+        <div>
+<input class="seaInput" placeholder="请输入关键词搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+ <input class="searchIcon" type="submit" align="absmiddle" value="" style="cursor: hand"  v-on:click="onSubmit()">
+ </div>
+         
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1363647578";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultmobile/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+            </div>
+            <div class="downLoad">
+                <a href="../xzzxnew.htm" class="spaceCenter">
+                    <img src="../../static/images/pc/index_top_ico03.png" alt="">
+                    <p>下载中心</p>
+                </a>
+            </div>
+        </div>
+        <div class="menuList firstM">
+        <div class="menuItem">
+    <a href="https://lsxy.henu.edu.cn/" class="spaceBetween">
+     <h3>首页</h3>
+     <img src="../../static/images/mo/mo_tu5.png" alt="">
+    <img src="../../static/images/mo/mo_tu5_hover.png" alt="">
+    </a>
+</div>
+        <div class="menuItem">
+            
+                <!--是否有二级栏目-->    
+                   <a href="Javascript:void(0)" class="spaceBetween">
+                     <h3>学院概况</h3>
+                    <img src="../../static/images/mo/mo_tu5.png" alt="">
+                    <img src="../../static/images/mo/mo_tu5_hover.png" alt="">
+                    </a>
+                        <ul class="secondM">
+                            <li>
+                                <a href="xyjj.htm">学院简介</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="xrld.htm">现任领导</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="xujg.htm">学院机构</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="lrld.htm">历任领导</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                           
+                        </ul>
+            
+        </div>     
+        <div class="menuItem">
+            
+                <!--是否有二级栏目-->    
+                   <a href="Javascript:void(0)" class="spaceBetween">
+                     <h3>师资团队</h3>
+                    <img src="../../static/images/mo/mo_tu5.png" alt="">
+                    <img src="../../static/images/mo/mo_tu5_hover.png" alt="">
+                    </a>
+                        <ul class="secondM">
+                            <li>
+                                <a href="../szdwnew/qbxr.htm">前辈学人</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../szdwnew/zzjs.htm">在职教师</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../szdwnew/zgsx/gdsjys.htm">中国史系</a>
+                                <!--是否有三级栏目-->    
+                                     <ul class="thirdN">
+                                            <li><a href="../szdwnew/zgsx/gdsjys.htm">古代史教研室</a></li>
+                                            <li><a href="../szdwnew/zgsx/jxdsjys.htm">近现代史教研室</a></li>
+                                    </ul>
+                               
+                            </li>
+                            <li>
+                                <a href="../szdwnew/sjsx/sjsjys.htm">世界史系</a>
+                                <!--是否有三级栏目-->    
+                                     <ul class="thirdN">
+                                            <li><a href="../szdwnew/sjsx/sjsjys.htm">世界史教研室</a></li>
+                                    </ul>
+                               
+                            </li>
+                            <li>
+                                <a href="../szdwnew/kgwbx/kgwbjys.htm">考古文博系</a>
+                                <!--是否有三级栏目-->    
+                                     <ul class="thirdN">
+                                            <li><a href="../szdwnew/kgwbx/kgwbjys.htm">考古文博教研室</a></li>
+                                    </ul>
+                               
+                            </li>
+                            <li>
+                                <a href="../szdwnew/lsxsfjyjys.htm">历史学师范教育教研室</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../szdwnew/wpzj.htm">外聘专家</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../szdwnew/rxjs.htm">荣休教师</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                           
+                        </ul>
+            
+        </div>     
+        <div class="menuItem">
+            
+                <!--是否有二级栏目-->    
+                   <a href="Javascript:void(0)" class="spaceBetween">
+                     <h3>招生就业</h3>
+                    <img src="../../static/images/mo/mo_tu5.png" alt="">
+                    <img src="../../static/images/mo/mo_tu5_hover.png" alt="">
+                    </a>
+                        <ul class="secondM">
+                            <li>
+                                <a href="../zsjynew/bkszs.htm">本科生招生</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../zsjynew/yjszs.htm">研究生招生</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../zsjynew/jxjyzs.htm">继续教育招生</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../zsjynew/jyzd.htm">就业指导</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                           
+                        </ul>
+            
+        </div>     
+        <div class="menuItem">
+            
+                <!--是否有二级栏目-->    
+                   <a href="Javascript:void(0)" class="spaceBetween">
+                     <h3>人才培养</h3>
+                    <img src="../../static/images/mo/mo_tu5.png" alt="">
+                    <img src="../../static/images/mo/mo_tu5_hover.png" alt="">
+                    </a>
+                        <ul class="secondM">
+                            <li>
+                                <a href="../rcpynew/bksjynew/zyjs.htm">本科生教育</a>
+                                <!--是否有三级栏目-->    
+                                     <ul class="thirdN">
+                                            <li><a href="../rcpynew/bksjynew/zyjs.htm">专业介绍</a></li>
+                                            <li><a href="../rcpynew/bksjynew/pyjy.htm">培养教育</a></li>
+                                    </ul>
+                               
+                            </li>
+                            <li>
+                                <a href="../rcpynew/yjsjy.htm">研究生教育</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../rcpynew/jxjy.htm">继续教育</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                           
+                        </ul>
+            
+        </div>     
+        <div class="menuItem">
+            
+                <!--是否有二级栏目-->    
+                   <a href="Javascript:void(0)" class="spaceBetween">
+                     <h3>教学科研</h3>
+                    <img src="../../static/images/mo/mo_tu5.png" alt="">
+                    <img src="../../static/images/mo/mo_tu5_hover.png" alt="">
+                    </a>
+                        <ul class="secondM">
+                            <li>
+                                <a href="../jxkynew/jxgz/jxgl.htm">教学工作</a>
+                                <!--是否有三级栏目-->    
+                                     <ul class="thirdN">
+                                            <li><a href="../jxkynew/jxgz/jxgl.htm">教学管理</a></li>
+                                            <li><a href="../jxkynew/jxgz/jxyj.htm">教学研究</a></li>
+                                            <li><a href="../jxkynew/jxgz/zlgc.htm">质量工程</a></li>
+                                    </ul>
+                               
+                            </li>
+                            <li>
+                                <a href="../jxkynew/xkjs/bsdjs.htm">学科介绍</a>
+                                <!--是否有三级栏目-->    
+                                     <ul class="thirdN">
+                                            <li><a href="../jxkynew/xkjs/bsdjs.htm">博硕点介绍</a></li>
+                                            <li><a href="../jxkynew/xkjs/ystsxkjs.htm">优势特色学科介绍</a></li>
+                                            <li><a href="../jxkynew/xkjs/bshldz.htm">博士后流动站</a></li>
+                                    </ul>
+                               
+                            </li>
+                            <li>
+                                <a href="../jxkynew/kyjs/swhyjy.htm">科研机构</a>
+                                <!--是否有三级栏目-->    
+                                     <ul class="thirdN">
+                                            <li><a href="../jxkynew/kyjs/swhyjy.htm">宋文化研究院</a></li>
+                                            <li><a href="../jxkynew/kyjs/zggdsyjzx.htm">中国古代史研究中心</a></li>
+                                            <li><a href="../jxkynew/kyjs/yslyjzx.htm">以色列研究中心</a></li>
+                                            <li><a href="../jxkynew/kyjs/zgjxdshzxyjzx.htm">中国近现代社会转型研究中心</a></li>
+                                            <li><a href="../jxkynew/kyjs/qyygbyjy.htm">区域与国别研究院</a></li>
+                                            <li><a href="../jxkynew/kyjs/jxdzggjzlyjzx.htm">近现代中国国家治理研究中心</a></li>
+                                            <li><a href="../jxkynew/kyjs/sdyjs.htm">宋代研究所</a></li>
+                                            <li><a href="../jxkynew/kyjs/gdwmyjzx.htm">古代文明研究中心</a></li>
+                                            <li><a href="../jxkynew/kyjs/jdzgyjs.htm">近代中国研究所</a></li>
+                                            <li><a href="../jxkynew/kyjs/jdwxywwszhsys.htm">经典文献与文物数字化实验室</a></li>
+                                            <li><a href="../jxkynew/kyjs/hnsswkgsys.htm">河南省生物考古实验室</a></li>
+                                    </ul>
+                               
+                            </li>
+                            <li>
+                                <a href="../jxkynew/kycg.htm">科研成果</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../jxkynew/zhswmszsys.htm">中华水文明数智实验室</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                           
+                        </ul>
+            
+        </div>     
+        <div class="menuItem">
+            
+                <!--是否有二级栏目-->    
+                   <a href="Javascript:void(0)" class="spaceBetween">
+                     <h3>交流合作</h3>
+                    <img src="../../static/images/mo/mo_tu5.png" alt="">
+                    <img src="../../static/images/mo/mo_tu5_hover.png" alt="">
+                    </a>
+                        <ul class="secondM">
+                            <li>
+                                <a href="../jlhznew/gnxsjl.htm">国内学术交流</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../jlhznew/gwxsjl.htm">国外学术交流</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../jlhznew/gatxsjl.htm">港澳台学术交流</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../jlhznew/hzxm.htm">合作项目</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                           
+                        </ul>
+            
+        </div>     
+        <div class="menuItem">
+            
+                <!--是否有二级栏目-->    
+                   <a href="Javascript:void(0)" class="spaceBetween">
+                     <h3>党团建设</h3>
+                    <img src="../../static/images/mo/mo_tu5.png" alt="">
+                    <img src="../../static/images/mo/mo_tu5_hover.png" alt="">
+                    </a>
+                        <ul class="secondM">
+                            <li>
+                                <a href="../dtjs/djsz.htm">党建思政</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../dtjs/xsgz.htm">学生工作</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../dtjs/ghhd.htm">工会活动</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                           
+                        </ul>
+            
+        </div>     
+        <div class="menuItem">
+            
+                <!--是否有二级栏目-->    
+                <!--没有有二级栏目-->
+                    <a href="../zdjsnew.htm" class="spaceBetween">
+                     <h3>制度建设</h3>
+                    <img src="../../static/images/mo/mo_tu5.png" alt="">
+                    <img src="../../static/images/mo/mo_tu5_hover.png" alt="">
+                    </a> 
+            
+        </div>     
+        <div class="menuItem">
+            
+                <!--是否有二级栏目-->    
+                   <a href="Javascript:void(0)" class="spaceBetween">
+                     <h3>师范教育</h3>
+                    <img src="../../static/images/mo/mo_tu5.png" alt="">
+                    <img src="../../static/images/mo/mo_tu5_hover.png" alt="">
+                    </a>
+                        <ul class="secondM">
+                            <li>
+                                <a href="../sfjy/sfjt.htm">师范讲坛</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../sfjy/jxxx.htm">教学信息</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../sfjy/jypt.htm">教研平台</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../sfjy/sfsj.htm">师范实践</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                           
+                        </ul>
+            
+        </div>     
+        <div class="menuItem">
+            
+                <!--是否有二级栏目-->    
+                   <a href="Javascript:void(0)" class="spaceBetween">
+                     <h3>博雅记忆</h3>
+                    <img src="../../static/images/mo/mo_tu5.png" alt="">
+                    <img src="../../static/images/mo/mo_tu5_hover.png" alt="">
+                    </a>
+                        <ul class="secondM">
+                            <li>
+                                <a href="../byjy/qbjs.htm">前辈教授</a>
+                                <!--是否有三级栏目-->    
+                               
+                            </li>
+                            <li>
+                                <a href="../byjy/xyzj/xydt.htm">系友之家</a>
+                                <!--是否有三级栏目-->    
+                                     <ul class="thirdN">
+                                            <li><a href="../byjy/xyzj/xydt.htm">系友动态</a></li>
+                                            <li><a href="../byjy/xyzj/xyfc.htm">系友风采</a></li>
+                                            <li><a href="../byjy/xyzj/byln.htm">毕业留念</a></li>
+                                    </ul>
+                               
+                            </li>
+                           
+                        </ul>
+            
+        </div>     
+
+            
+        </div>
+    </nav>
+    <!-- mo导航部分结束 -->
+
+    <!-- banner部分开始 -->
+    <div class="banner">
+        <img src="../../static/images/pc/xueyuangaikuang.jpg" width="1880" height="330" border="0">
+        <div class="bannerT alignCenter">
+            <img src="../../static/images/pc/ny_left_nav02.png" alt="">
+            <p>  
+</p><table class="winstyle282348" cellspacing="0" cellpadding="0"><tbody><tr><td nowrap="">当前位置：   
+<a href="../../sy2022.htm"><span class="fontstyle282348">首页</span></a><span class="splitflagstyle282348">&gt;&gt;</span><span class="fontstyle282348">学院概况</span><span class="splitflagstyle282348">&gt;&gt;</span><a href="xyjj.htm"><span class="fontstyle282348">学院简介</span></a></td></tr></tbody></table><p></p>
+        </div>
+    </div>
+    <!-- banner部分结束 -->
+
+    <!-- 正文部分开始 -->
+    <div class="main flex">
+        <div class="mainL">
+            <div class="menuTitle spaceBetween">
+                <p>
+学院概况</p>
+                <img id="menuIconMo" src="../../static/images/mo/mo_tu1.png" alt="">
+            </div>
+            <ul class="firstL">    <li class="activeFirstL">
+        <a href="xyjj.htm" class="spaceBetween">
+            <p>学院简介</p>
+            <img src="../.././static/images/pc/ny_left_nav01.png" alt="">
+            <img src="../.././static/images/pc/ny_left_nav01_hover.png" alt="">
+        </a>
+    </li>              
+    <li>
+        <a href="xrld.htm" class="spaceBetween">
+            <p>现任领导</p>
+            <img src="../.././static/images/pc/ny_left_nav01.png" alt="">
+            <img src="../.././static/images/pc/ny_left_nav01_hover.png" alt="">
+        </a>
+    </li>              
+    <li>
+        <a href="xujg.htm" class="spaceBetween">
+            <p>学院机构</p>
+            <img src="../.././static/images/pc/ny_left_nav01.png" alt="">
+            <img src="../.././static/images/pc/ny_left_nav01_hover.png" alt="">
+        </a>
+    </li>              
+    <li>
+        <a href="lrld.htm" class="spaceBetween">
+            <p>历任领导</p>
+            <img src="../.././static/images/pc/ny_left_nav01.png" alt="">
+            <img src="../.././static/images/pc/ny_left_nav01_hover.png" alt="">
+        </a>
+    </li>              
+</ul>
+        </div>
+        <div class="mainR">
+            <div class="conTitle spaceBetween">
+                <h3>
+学院简介</h3>
+                <div class="alignCenter">
+                    <img src="../../static/images/pc/ny_left_nav02.png" alt="">
+                    <p>  
+</p><table class="winstyle282348" cellspacing="0" cellpadding="0"><tbody><tr><td nowrap="">当前位置：   
+<a href="../../sy2022.htm"><span class="fontstyle282348">首页</span></a><span class="splitflagstyle282348">&gt;&gt;</span><span class="fontstyle282348">学院概况</span><span class="splitflagstyle282348">&gt;&gt;</span><a href="xyjj.htm"><span class="fontstyle282348">学院简介</span></a></td></tr></tbody></table><p></p>
+                </div>
+            </div>
+            <div class="changeBox animate__animated animate__fadeInUp">
+                <div class="xyjj">
+
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1363647578,'wbnews','u10')</script>
+<script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1363647578,6800)</script>
+
+   
+<div id="vsb_content_6800_u101"><div id="vsb_content"><p style="text-align: justify; text-indent: 2em; line-height: 1.75em;"><span style="font-family: 宋体, SimSun;">历史文化学院，创建于1925年，是河南大学设立最早的院系之一。曾有董作宾、范文澜、蒙文通、嵇文甫、萧一山、郭绍虞、徐旭升、马非百、姜亮夫、姚从吾、赵俪生、朱芳圃、孙海波、孙作云等前辈学者在此执教，培养了韩儒林、白寿彝、尹达、石璋如等著名的历史学家和考古学家。</span></p><p style="text-indent: 2em; text-align: justify; line-height: 1.75em;"><span style="font-family: 宋体, SimSun;">历史文化学院现有教职工108人，博士生导师44人（含中国社科院、国家博物馆、河南省博物院、河南省文物考古研究院合作导师），硕士生导师64人，教授、副教授56人，具有博士学位者95人；拥有中国社科院学部委员1人，国家“万人计划”领军人才3人，国家教材委员会委员、教育部历史学教学指导委员会委员各1人，全国师德标兵、优秀教师各1人，享受国务院特殊津贴者4人，国家社科基金会评专家3人，国家社科基金重大项目首席专家13人，担任全国性专业学会会长、副会长者7人，省级以上高层次人才称号获得者39人。近五年，学院教师主持国家社会科学基金项目52项，其中国家社科基金重大项目8项、重点项目6项，出版专著60余部，在《中国社会科学》《历史研究》《考古》《哲学研究》《世界宗教研究》《中国史研究》《近代史研究》《世界历史》等核心期刊发表高水平论文300余篇。近十年，有3部著作入选国家哲学社会科学成果文库。中国史入选河南大学“1+5”筑峰学科支持计划和河南省特色骨干学科，在国内同类学科排名中，稳居全国前10位。</span></p><p style="text-indent: 2em; text-align: justify; line-height: 1.75em;"><span style="font-family: 宋体, SimSun;">学院设有历史学、世界历史、考古学、文物与博物馆学等四个本科专业，其中其中历史学、文物与博物馆是国家级一流专业建设点，历史学还是国家级特色专业；拥有中国史、世界史和考古学3个一级学科博士点和博士后科研流动站。现有多项省级以上教学资源，拥有《&lt; 孙子兵法&gt;解读》《秦汉考古》《中国博物馆学基础》《中学历史教师职业技能训练》等4门国家级精品课和一流课程，《中国古代史》《中国近现代史》为河南省精品课程，《世界历史文献选读》为省级双语示范课程；中国古代史、中国近现代史教学团队为省级教学团队，拥有宋代历史文化研究、中国近现代历史研究、明清文献整理与历史研究、中国近现代治理研究等7个河南省高校哲学社会科学创新团队。目前，学院与中国社会科学院研究生院、中国科学院研究生院、中国国家博物馆、河南博物院、韩国崇实大学、以色列本·古里安大学、白俄罗斯国立大学等国内外单位联合培养硕士、博士研究生。学院现有博士、硕士研究生600余名，本科生800余名。</span></p><p style="text-indent: 2em; text-align: justify; line-height: 1.75em;"><span style="font-family: 宋体, SimSun;">学院拥有考古与文物数字化省部共建实验室、考古与文化遗产保护河南省实验教学示范中心、黄泛区考古与文物保护河南省虚拟仿真实验项目等三个省部级以上教学平台；中国古代史研究中心、以色列研究中心、中国近现代社会转型研究中心是河南省高校人文社科重点研究基地，河南省宋文化研究院是省委宣传部直属研究平台。中国史、考古学学科为教育部人文社科重点研究基地黄河文明与可持续发展研究中心和省部共建黄河文明协同创新中心两个国家级科研平台的重要支撑学科。</span></p></div></div>
+<span id="vsb_content_6800_u10" name="vsb_content_6800_u10"></span><br><br>
+
+
+</div>
+            </div>
+        </div>
+    </div>
+    <!-- 正文部分结束 -->
+
+    <!-- footer部分开始 -->
+    <footer class="footer">
+        <div class="footerT">
+            <div class="footerC flex">
+                <div class="footerL">
+                    <div class="links">
+                        <ul class="spaceBetween"><li><a href="">学院概况</a></li>
+                            
+<li><a href="../szdwnew/qbxr.htm">师资团队</a></li>
+                            
+<li><a href="../zsjynew/bkszs.htm">招生就业</a></li>
+                            
+<li><a href="../rcpynew/bksjynew/zyjs.htm">人才培养</a></li>
+                            
+<li><a href="../jxkynew.htm">教学科研</a></li>
+                            
+<li><a href="../jlhznew/gnxsjl.htm">交流合作</a></li>
+                            
+<li><a href="">党团建设</a></li>
+                            
+<li><a href="../zdjsnew.htm">制度建设</a></li>
+                            
+<li><a href="../sfjy/sfjt.htm">师范教育</a></li>
+                            
+<li><a href="">博雅记忆</a></li>
+                            
+</ul>
+                    </div>
+                    <div class="contact alignCenter">
+                        <div class="conItem alignCenter">
+                            <img src="../../static/images/pc/index_tu13.png" alt="">
+                            <p>地址：中国 河南 开封.明伦街/金明大道</p>
+                        </div>
+                        <div class="conItem alignCenter">
+                            <img src="../../static/images/pc/index_tu14.png" alt="">
+                            <p>邮编：475001/475004</p>
+                        </div>
+                        <div class="conItem alignCenter">
+                            <img src="../../static/images/pc/index_tu15.png" alt="">
+                            <p>总机号码：0371—22868833</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footerR spaceBetween">
+                    <div class="microBlog qrCode">
+                        <img src="../../static/images/pc/index_tu16.png" alt="">
+                        <p>关注官方微博</p>
+                    </div>
+                    <div class="WeChat qrCode">
+                        <img src="../../static/images/pc/index_tu17.png" alt="">
+                        <p>关注官方微信</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footerLin">
+                <ul class="spaceCenter"><script language="javascript" src="/system/resource/js/openlink.js"></script><li><a href="https://sxyk.henu.edu.cn/">史学月刊</a></li>
+                    
+<li><a href="https://lsxy.henu.edu.cn/info/1214/9180.htm">河南省历史学会</a></li>
+                    
+<li><a href="https://yrcsd.henu.edu.cn/">黄河文明与可持续发展研究中心</a></li>
+                    
+<li><a href="https://yrc.henu.edu.cn/">黄河文明协同创新中心</a></li>
+                    
+<li><a href="http://gyy.buaa.edu.cn/">人文社科高等研究院</a></li>
+                    
+</ul>
+            </div>
+        </div>
+        <div class="footerB spaceCenter">
+            <p>Reserved.Copyright © 2016-2018 河南大学历史文化学院</p>
+            <p><a href="https://www.e00.com.cn/">技术支持：蓝创科技</a></p>
+        </div>
+    </footer>
+    <!-- footer部分结束 -->
+
+
+    <script src="../../static/js/jquery-min.js"></script>
+    <script src="../../static/swiper/js/swiper.min.js"></script>
+    <script src="../../static/js/common.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+
+    <title>法律史学术网</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="/templates/flswxw/css/common.css">
+<link rel="stylesheet" href="/templates/flswxw/css/swiper.min.css">
+<script src="/templates/flswxw/js/jquery.min.js"></script>
+<script src="/templates/flswxw/js/swiper.min.js"></script>
+ <script src="/scripts/web_extend.js" type="text/javascript"></script>
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"KQrO0QNAfThLsJUS",ck:"KQrO0QNAfThLsJUS"})</script>
+</head>
+<body>
+    <!-- header -->
+<div class="header">
+    <div class="menu-btn"><span></span><span></span><span></span></div>
+    <div class="top">
+        <div class="w1200">
+            <div class="welcome">欢迎访问中南财经政法大学法律史学网！</div>
+            <form class="search">
+                <input class="text-input" id="txtsearch" type="text" name="" value="" placeholder="请输入关键词">
+                <input class="sub-btn" id="btnSubmit" type="button" name="" value="搜索">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $("#btnSubmit").click(function () {
+                var txt = $("#txtsearch").val();
+                if (txt != "") {
+                    window.location.href = "search.html?keyword=" + txt;
+                }
+            });
+            document.onkeyup = function (e) {      //onkeyup是javascript的一个事件、当按下某个键弹起 var _key;                                                 //的时触发
+                if (e == null) { // ie
+                    _key = event.keyCode;
+                } else { // firefox              //获取你按下键的keyCode
+                    _key = e.which;          //每个键的keyCode是不一样的
+                }
+                if (_key == 13) {   //判断keyCode是否是13，也就是回车键(回车的keyCode是13)
+                    $("#btnSubmit").click();
+                }
+            }
+        });
+
+    </script>
+
+
+    <div class="banner">
+        <img class="logo-banner" src="/templates/flswxw/images/logo_banner.jpg" alt="">
+        <img class="text1" src="/templates/flswxw/images/banner_text1.png" alt="">
+        <img class="text2" src="/templates/flswxw/images/banner_text2.png" alt="">
+    </div>
+    
+    <div class="nav-box">
+        <ul class="nav w1240">
+            <li><a href="/index.html">首页</a></li>
+
+            
+            <li class="on"><a href="/flwhyjy/about-1.html">法律文化研究院</a>
+                
+                <!--二级栏目列表-->
+                
+               <ul class="nav-2nd">
+                    
+                    <li><a href="/flwhyjy/about-1.html">研究院简介</a></li>
+                    
+                    <li><a href="/person/list-2.html">研究队伍</a></li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li><a href="/yjydt/list-3.html">研究院动态</a>
+                
+                <!--二级栏目列表-->
+                
+            </li>
+            
+            <li><a href="/fslw/list-4.html">法史论文</a>
+                
+                <!--二级栏目列表-->
+                
+               <ul class="nav-2nd">
+                    
+                    <li><a href="/fslw/list-4.html">中国法律史</a></li>
+                    
+                    <li><a href="/fslw/list-5.html">外国法律史</a></li>
+                    
+                </ul>
+                
+            </li>
+            
+            <li><a href="/fsal/list-6.html">法史案例</a>
+                
+                <!--二级栏目列表-->
+                
+            </li>
+            
+            <li><a href="/fstp/list-7.html">法史图片</a>
+                
+                <!--二级栏目列表-->
+                
+            </li>
+            
+            <li><a href="/fsnk/list-8.html">法史年刊</a>
+                
+                <!--二级栏目列表-->
+                
+            </li>
+            
+            <li><a href="/fszx/list-9.html">法史资讯</a>
+                
+                <!--二级栏目列表-->
+                
+            </li>
+            
+            <li><a href="/zhfzwmyj/about-10.html">中华法制文明研究</a>
+                
+                <!--二级栏目列表-->
+                
+               <ul class="nav-2nd">
+                    
+                    <li><a href="/zhfzwmyj/about-10.html">研究简介</a></li>
+                    
+                    <li><a href="/zhfzwmyj/list-11.html">研究论文</a></li>
+                    
+                    <li><a href="/zhfzwmyj/list-12.html">研究动态</a></li>
+                    
+                </ul>
+                
+            </li>
+            
+        </ul>
+    </div>
+</div>
+<script>
+	var windowWidth = $(window).width();  //注：该值为不包含自定义右侧滚动条时的宽度
+	if(windowWidth > 1024){
+		//PC端
+		$(".nav li").hover(
+			function(){
+				$(this).children('.nav-2nd').stop(true,true).slideDown('fast');
+		},
+			function(){
+				$(this).children('.nav-2nd').stop(true,true).slideUp('fast');
+			}
+		)
+	}else{
+		//移动端
+		$(".nav li").click(function(){
+			var this2nd = $(this).children('.nav-2nd');
+			var this2ndStat = this2nd.css('display');
+			if(this2ndStat == 'none'){
+				$(this).addClass('on').siblings().removeClass('on').children('.nav-2nd').slideUp();
+				this2nd.slideDown();
+			}else{
+				$(this).removeClass('on');
+				this2nd.slideUp();
+			}
+		})
+		$(".menu-btn").click(function(){
+			var navStat = $(".nav-box").css('display');
+			if(navStat == 'none'){
+				$(".nav-box").slideDown();
+				$(this).addClass('close');
+				//阻止弹层背景滚动，但会回到页面顶部
+				$("html,body").css({
+					height:100+'%',
+					overflow:'hidden'
+				})
+			}else{
+				$(".nav-box").slideUp();
+				$(this).removeClass('close');
+				$("html,body").css({
+					height:'auto',
+					overflow:'visible'
+				})
+			}
+		})
+
+    }
+
+    //$(".nav li").hover(
+    //    function () {
+    //        $(this).children().next().stop().slideDown('fast');
+    //    },
+    //    function () {
+    //        $(this).children().next().stop().slideUp('fast');
+    //    }
+    //)
+</script>
+<!-- header end -->
+
+    <!-- 主体部分 -->
+    <div class="container">
+        <div class="w1240">
+            <!--侧栏菜单-->
+<div class="bread">
+    当前位置：
+    
+    <a href="/index.html" class="home">首页</a> <a href="/flwhyjy/about-1.html">法律文化研究院</a>  <a class="on" href="javascript:void(0)">研究院简介</a>
+
+</div>
+<!--侧栏菜单结束-->   
+            <div class="inner-title">
+                <div class="name">
+                    <div class="en">Brief Introduction Of Research</div>
+                    <div class="cn">研究院简介</div>
+                </div>
+            </div>
+            <div class="single-page">
+                
+
+                <div class="title">研究院简介</div>
+                <p style="text-align:center"><img alt="" border="0" height="335" src="/upload/20190704/201907041540224184.jpg" style="width: 558px; height: 335px;" title="" vspace="0" width="558"></p>
+
+<p style="text-align: left;">&nbsp; &nbsp; &nbsp;&nbsp; 中南财经政法大学法律文化研究院是我校科学研究体制创新的一个尝试，是学校领导集体高度重视法学基础学术研究的结果。研究院旨在用现实的眼光洞察法史，于法史研究中体悟现实，究中外法制之源，通古今法律之变，总结中西法律传统的利弊得失与相异相通之处，继承并弘扬中外传统法律文化的优秀遗产，更好服务于当代中国法律文化建设。研究院成立于2006年，首任院长范忠信教授。自成立以来，研究院的主体一直依托我校法律史学科组，现有教授6名，副教授7名，另外还聘请了客座教授黄源盛先生与一些校外研究人员。</p>
+
+<p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; 研究院自成立以来，先后举办过第一届、第六届和第十一届“湖北省法律文化研究会年会”（2007，2012，2017）和首届 “法律文化全国博士生论坛”（2007）等多起博士生论坛。研究院前后邀请过中国大陆与中国台湾的20多位学者前来讲座，其中先后来讲座的大陆学者有北京大学李贵连教授、李启成教授、中山大学刘星教授、原人民大学法学院荣誉院长曾宪义教授（已去世）、清华大学许章润教授、高鸿钧教授、苏亦工教授、北京大学贺卫方教授、中国社会科学院法学所徐立志研究员、厦门大学徐国栋教授、华东政法大学何勤华教授、中国政法大学曾尔恕教授、清华大学、西北政法大学汪世荣教授、中国法学会法律史研究会秘书长张少瑜教授、中国政法大学张晋藩教授、华中科技大学俞江教授、李红海教授、杭州师范大学范忠信教授、中国政法大学杨玉圣教授、山东师范大学程汉大教授、武汉大学陈伟教授、人民大学赵晓耕教授、复旦大学王志强教授、南京大学张仁善教授。先后受邀来讲座的台湾学者有黄静嘉先生、黄源盛先生，那思陆先生和张伟仁先生。</p>
+
+<p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; 研究院有三个研究方向：中国法律文化传统、外国法律文化传统、中西法律文化传统比较。在中国法律文化传统方向，研究院对唐宋法律、明清法律、近代法律制度与法律思想、中国商事法律、中国古代纠纷解决机制都有比较深入的研究。近年先后承担国家社科基金项目课题“宋代司法传统中的理性与经验”、教育部人文社科基地重大项目“法律史视野下的唐宋社会变革”，教育部一般课题“中国古代契约制度及文化研究”、“传统中国的能动司法模式研究”、“国家法与民间法的冲突及历史与现实中的平衡实践”，司法部课题“民间与国家解决纠纷的联接机制研究”, 湖北省社科基金课题“当代中国信访制度困境与出路”。近年在《法学研究》上发表《用现实的眼光洞察法史,于法史研究中体悟现实》、《中国法学知识体系的建构必须重视从中华法制文明中寻求资源》、《法家治国方略与秦朝速亡关系的再考察》、《明清时期田土买卖过程中的找价回赎纠纷及其解决》论文。近年出版了《地缘社会解纷机制研究》、《晚清乡土社会民事纠纷调解制度研究》、《中国法律现代化的路径分析》、《清代商业社会的规则与秩序》等专著。近年还自编了《中国法制史》等教材。</p>
+
+<p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; 在外国法律文化传统方向，研究院对英美法律史、西方宪政史等方面有较深入的研究。近年先后承担国家社会基金课题“政治与法律的良性互动--英国法治道路的成功经验及借鉴”、“《布拉克顿》研究”，教育部课题“英美法系的司法方法研究”。近年来在《法学》、《环球法律评论》、《法商研究》等杂志发表《劳动争议的二元结构与我国劳动争议处理制度的重构》、《英美依托财产权难以融入大陆法物权体系的根源》、《英国普通法的“技艺理性”》、《试析英国的封建制度及其宪政之生成》等论文。近年出版了《通过司法限制权力--英格兰司法的成长与宪政的生成》、《普通法的中世纪渊源》等专著。近年还自编了《外国法制史》、《比较法总论》教材。</p>
+
+<p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; 研究院现任院长陈景良教授，现任副院长郑祝君教授与武乾副教授。研究院负责管理下属的《中西法律文化传统》学术年刊、“法律史学术网”和“洪范学术论坛”等各项工作。《中西法律传统》创刊于2001年，至今已出版八卷，其中第1至5卷由中国政法大学出版社出版，第6至8卷改由北京大学出版社出版。《中西法律传统》是法律史专业学术阵地的系列出版物，在中国法律史学界享有良好的学术声誉，所刊载的文章有多篇被《中国社会科学文摘》、《高等学校文科学术文摘》摘要转载，其影响力已逐渐扩展至台港澳地区甚至国外学界。</p>
+
+<p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 法律史学术网”创设于2002年初，是中国法律史学界的第一个学术网站。该网的宗旨是为研究院和全国法律史学界同仁服务，帮助宣传中南和国内法律史学界的一些最新成果，充当法律史学界的学术交流园地，沟通信息、增进友谊。该网站自设立以来先后多次改版完善，现设有以下栏目：“研究院简介”、“研究队伍”、“研究院动态”、“法史论文”、“法律史料”、“法史图片”、“法史年刊”、“学术信息”、“湖北法律文化研究会”。</p>
+
+<p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; “洪范学术论坛”创始于2005年初，前身是中南财经政法大学法律史专业博士研究生自发举办的“月旦法史”论坛。目前，论坛已经发展成为依托中南财经政法大学法律文化研究院和法律史学科点，以中南财经政法大学法律史专业研究生为主体的学术组织和活动形式。论坛以“尊崇学术、关注社会、省察人生”为基本宗旨。自2005年始建以来已经成功举办了20多期学术交流活动。</p>
+
+<p style="text-align: left;">&nbsp;</p>
+                
+            </div>
+        </div>
+    </div>
+    <!-- 主体部分 end -->
+    <!-- footer -->
+<div class="footer">
+	<div class="cr w1200">
+        <p> Copyright © 中南财经政法大学法律史学术网 All rights reserved <a href="https://beian.miit.gov.cn/" style="color:#fff">鄂ICP备09005423号-7</a></p>
+        <p>地址： 湖北省武汉市东湖高新技术开发区南湖大道182号 </p>
+	</div>
+</div>
+<!-- footer end -->
+
+
+</body></html>

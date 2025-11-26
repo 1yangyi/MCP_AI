@@ -1,0 +1,391 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+
+<title>中心简介-有机硅化合物及材料教育部工程研究中心</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="中心简介">
+<meta name="keywords" content="有机硅化合物及材料教育部工程研究中心">
+
+
+<!--轮播图样式-->
+<link href="../js/royalslider/css/reset.css" rel="stylesheet">
+<link href="../js/royalslider/css/royalslider.css" rel="stylesheet">
+<script src="../js/royalslider/js/jquery.min.js"></script>
+<script src="../js/royalslider/js/jquery.royalslider.min.js"></script>
+
+<!--轮播图样式结束-->
+<link href="../css/main.css" rel="stylesheet">
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1009,'/about.jsp',-1,1393670597)</script>
+</head>
+
+<body>
+<!--头部内容-->
+<div class="header">
+  <div class="container clearfix">
+    <a href="../index.htm">
+        
+<div class="logo">
+    <img src="../images/logo.png">
+</div>
+       
+        <div class="header_m">
+    <img src="../images/header_m.png">
+</div>
+    </a>
+    
+  
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu2">
+    <div id="appu2"><div class="header_search"><input type="text" placeholder="请输入搜索内容" id="search_kang" autocomplete="off"> <input type="image" src="../images/search.png"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError" class="header_search">
+        
+        <input type="text"  placeholder="请输入搜索内容"  id="search_kang" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+        <input type="image"  src="../images/search.png"  v-on:click="onSubmit()">
+        
+        
+     
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1393670597";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+    
+  </div>
+</div>
+<!--头部结束-->
+
+<!--网页导航-->
+<div class="nav clearfix">
+    <div class="container clearfix">
+        <ul class="clearfix">
+                        <li>
+                <a href="../index.htm">首页</a>
+            </li>
+            <li class="selected">
+                <a href="zxjj.htm">中心概况</a>
+                <ul class="nav_1">
+                    <div class="container clearfix">
+                        <li class="selected">
+                            <a href="zxjj.htm">中心简介</a>
+                        </li>
+                        <li>
+                            <a href="zxzz.htm">中心宗旨</a>
+                        </li>
+                        <li>
+                            <a href="zxln.htm">中心理念</a>
+                        </li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <a href="../zzjg/ldcy.htm">组织结构</a>
+                <ul class="nav_1">
+                    <div class="container clearfix">
+                        <li>
+                            <a href="../zzjg/ldcy.htm">领导成员</a>
+                        </li>
+                        <li>
+                            <a href="../zzjg/jswyh.htm">技术委员会</a>
+                        </li>
+                        <li>
+                            <a href="../zzjg/yjdw.htm">研究队伍</a>
+                        </li>
+                        <li>
+                            <a href="../zzjg/yjfs.htm">研究分室</a>
+                        </li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <a href="../kxyj/yjfx/yjghxjcyj.htm">科学研究</a>
+                <ul class="nav_1">
+                    <div class="container clearfix">
+                        <li>
+                            <a href="../kxyj/yjfx/yjghxjcyj.htm">研究方向</a>
+                            <ul class="clearfix">
+                                <li><a href="../kxyj/yjfx/yjghxjcyj.htm">有机硅化学基础研究</a></li>
+                                <li><a href="../kxyj/yjfx/yjghxyyjcyj.htm">有机硅化学应用基础研究</a></li>
+                                <li><a href="../kxyj/yjfx/yjghxgcyyyj.htm">有机硅化学工程应用研究</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../kxyj/yjcg/zllz.htm">研究成果</a>
+                            <ul class="clearfix">
+                                <li><a href="../kxyj/yjcg/zllz.htm">专利论著</a></li>
+                                <li><a href="../kxyj/yjcg/yycg.htm">应用成果</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <a href="../shfw/zzhzdxm.htm">社会服务</a>
+                <ul class="nav_1">
+                    <div class="container clearfix">
+                        <li>
+                            <a href="../shfw/zzhzdxm.htm">正在合作的项目</a>
+                        </li>
+                        <li>
+                            <a href="../shfw/kzrdxm.htm">可转让的项目</a>
+                        </li>
+                        <li>
+                            <a href="../shfw/khzdxm.htm">可合作的项目</a>
+                        </li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <a href="../jlhz/xsjl.htm">交流合作</a>
+                <ul class="nav_1">
+                    <div class="container clearfix">
+                        <li>
+                            <a href="../jlhz/xsjl.htm">学术交流</a>
+                        </li>
+                        <li>
+                            <a href="../jlhz/jspx.htm">技术培训</a>
+                        </li>
+                        <li>
+                            <a href="../jlhz/jszx.htm">技术咨询</a>
+                        </li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <a href="../yqsb/zxyqsbylb.htm">仪器设备</a>
+                <ul class="nav_1">
+                    <div class="container clearfix">
+                        <li>
+                            <a href="../yqsb/zxyqsbylb.htm">中心仪器设备一览表</a>
+                        </li>
+                        <li>
+                            <a href="../yqsb/hxxyptyqsbylb.htm">化学学院平台仪器设备一览表</a>
+                        </li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <a href="http://info.whu.edu.cn/">信息公开</a>
+            </li>
+            <li>
+                <a href="../xzzx/dwjsfwdjb.htm">下载中心</a>
+                <ul class="nav_1">
+                    <div class="container clearfix">
+                        <li>
+                            <a href="../xzzx/dwjsfwdjb.htm">对外技术服务登记表</a>
+                        </li>
+                        <li>
+                            <a href="../xzzx/dwpxfwdjb.htm">对外培训服务登记表</a>
+                        </li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <a href="../lxwm.htm">联系我们</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--网页导航结束-->
+
+
+<div class="list">
+    <div class="container">
+        <div class="location">
+    当前位置：
+                        <a href="../index.htm">首页</a>
+        
+                &gt;
+                <a href="zxjj.htm" class="on">中心概况</a>
+        
+                &gt;
+                <a href="zxjj.htm" class="on">中心简介</a>
+        
+</div>
+
+        <div class="about clearfix">
+            <div class="about_left">
+                
+<h3>中心概况</h3>
+                <ul>
+
+        <li class="Collapsing current    ">
+        <a href="zxjj.htm"><span></span>中心简介</a>
+         </li>    
+
+        <li class="Collapsing   ">
+        <a href="zxzz.htm"><span></span>中心宗旨</a>
+         </li>    
+
+        <li class="Collapsing   ">
+        <a href="zxln.htm"><span></span>中心理念</a>
+         </li>    
+   </ul>
+    <script type="text/javascript">
+$(function(){
+    
+    $(".Collapsing").click(function(){
+        if ($(this).find('ul').length == 0) {
+             $(this).siblings().children(".coll_body").slideUp(500);
+             $(this).addClass("current").siblings('.Collapsing').removeClass("current");
+        }
+        else{
+        $(this).addClass("current").siblings('.Collapsing').removeClass("current");//切换图标
+        $(this).toggleClass("arrow_on").siblings('.Collapsing').removeClass("arrow_on");
+        $(this).children(".coll_body").slideToggle(500);
+        $(this).siblings().children(".coll_body").slideUp(500);
+            
+        }
+        
+    });
+});
+</script>
+
+            
+            </div>
+            
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1393670597,'wbnews','u7')</script>
+<script>function seeContenta7(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1393670597,1001)</script>
+<div class="about_right">
+
+                <h6>中心简介</h6>
+                
+                <div class="content">
+			<div id="vsb_content_1001_u71"><div id="vsb_content"><p style="text-indent: 37px;"><span lang="EN-US" style="font-size: 19px;"><span style="font-family: Calibri;"></span></span>有机硅化合物及材料教育部工程研究中心是2001年4月由教育部批准、以武汉大学有机硅基础应用研究和产业化为基础成立的专门从事有机硅化合物及材料研究开发并实施转化的研究机构，是我国有机硅行业技术创新和高新技术产业化的重要基地和代表性单位之一。<br> &nbsp; &nbsp; &nbsp; &nbsp;武汉大学从上世纪50年代开始进行有机硅的研究和教学工作，经过几十年教学、科研、产业相结合的良性发展，在基础研究、应用开发、产业化实施、全球市场开拓等方面探索出了优势特色、可持续发展的运行模式，建立了独具特色的精细有机硅化合物及材料研发体系和产业体系。<br> &nbsp; &nbsp; &nbsp; &nbsp;几十年来，武汉大学在硅橡胶、硅油、硅树脂和硅烷化合物等方向积累了坚实的理论基础和实践经验，几代研发团队研究了硅氢化反应、金属有机介入的有机硅化合物反应、硅/醇直接法合成烷氧基硅烷、基团转换反应、开环聚合反应、杂缩聚反应、溶胶-凝胶反应、超临界合成及干燥等技术制备有机硅化合物及材料，涉及硅烷化合物、室温硫化硅橡胶、高温硫化硅橡胶、加成型硅橡胶、光敏固化有机硅材料、硅树脂、有机硅表面活性剂、有机硅液晶材料、MQ硅树脂、功能有机硅聚合物、超纯超细SiO2粉体材料、有机硅文物及建筑保护材料等领域。多年来，在有机硅领域获得国家科学大会奖、国家发明奖、国家重大技术装备成果奖、国家和省部级科技进步奖等10多项，通过省、部级鉴定成果20多项，承担国家高新技术产业化示范工程项目、国家级火炬计划项目、国家创新基金项目、国家科技成果重点推广计划项目、湖北省科技攻关项目以及参与国家863计划项目、国家科技支撑计划项目等10多项，主编和参与撰写专著5部。工程中心开发的项目成果绝大部分实现了产业化，通过技术转让、合作开发、技术服务等各种方式帮助国内上百家企业发展有机硅项目，同时也建立了武汉大学控股的核心企业。 工程中心下设应用基础研究分中心、工程化技术研究分中心和应用服务研究分中心等三个分中心和中试基地，由17位教授和1位副教授及其课题组人员组成强大的研究队伍。2004年，中国氟硅有机材料工业协会技术培训中心在武汉大学成立，每年为我国培养大批的有机硅专业人才。<br> &nbsp; &nbsp; &nbsp; &nbsp;作为我国高校有机硅研究和产业化机构代表，工程中心参与了中国有机硅“十一•五”“十二•五”“十三•五”发展规划的制订、国家相关行业产业结构调整建议制订、中国化工通史编撰、国家和行业标准制订、亚洲和全球硅化学会议筹办等工作，为我国有机硅行业的发展作出了突出的贡献。<span style="color: black; font-family: 宋体; font-size: 19px;"></span></p>
+<p>&nbsp;</p></div></div>
+           
+		</div>
+     </div>
+    
+    </div>
+
+
+
+</div>
+
+
+
+<div class="footer">
+     <div class="footer_bottom">
+        <div class="container clearfix">
+            <div class="footer_img_1">
+                <img src="../images/bottom_logo.png">
+            </div>
+            <div class="footer_wenzi">
+                <p>地址：湖北省武汉市武昌区八一路299号&nbsp;&nbsp;&nbsp;&nbsp;化学与分子科学院 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邮编：430072 </p>
+                <p>E-mail：yzx867@163.com&nbsp;&nbsp;</p>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

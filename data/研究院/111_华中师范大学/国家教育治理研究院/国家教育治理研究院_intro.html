@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><title>研究院简介-国家教育治理研究院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="研究院简介">
+<meta name="keywords" content="国家教育治理研究院,中心简介">
+
+
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=1000, initial-scale=0.9">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta name="renderer" content="webkit">
+<meta name="description" content="湖北教育政策研究中心。">
+<link rel="stylesheet" href="../css/style.css"><link rel="ICON" href="../favicon.ico">
+<script type="text/javascript" src="../js/jquery-latest.min.js"></script><script type="text/javascript" src="../js/time.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475c50575742000400034456 -->
+<link rel="stylesheet" type="text/css" href="../jj_list.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1064,'/jj_list.jsp',-1,1348319413)</script>
+</head>
+<body style="zoom: 1"><!-- header开始 -->
+<div class="header center clear"><!-- 左logo -->
+<div class="logo fl">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="国家教育治理研究院"><img src="../images/logo.png" width="520" height="80" border="0" alt="国家教育治理研究院" title="国家教育治理研究院"></a></div><!-- 右部 -->
+<div class="rightTool fr">
+<div>
+<div class="lang fr"></div></div>
+<div class="clear"></div>
+<div class="searchAndSns">
+<div class="search fl">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{}
+    #appu1 .tj{}
+</style>
+<div id="divu1">
+    <div id="appu1"><div><input type="text" placeholder="请输入关键字" autocomplete="off" class="qwss"> <input name="submit_button" type="button" value="" class="tj"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="请输入关键字" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1348319413";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+</div></div></div></div><!-- header结束 -->
+<style>    
+        
+        .nav{
+            border-top: 0px solid #004681;}
+         
+    </style>
+<script>
+    var newimg1 = new Image();
+    newimg1.src = "/system/resource/images/nav/imgnav_vsb_level1_bg_1.gif";
+    var newimg2 = new Image();
+    newimg2.src = "/system/resource/images/nav/imgnav_vsb_level1_bg_2.gif";
+    var newimg3 = new Image();
+    newimg3.src = "/system/resource/images/nav/imgnav_vsb_level2_bg_1.png";
+</script>
+<!--[if IE 6]> <style>#c163410{behavior: url("/system/resource/js/hover.htc");}</style><![endif]--> 
+<div style="width: 100%;height: 42px;font-size: 16px;color: #fff;background: #006699;margin-top: 10px;"> 
+<div id="c163410" style="width: 1170px;height: 42px;font-size: 16px;color: #fff;background: #006699;margin: 0 auto;"> 
+<ul>
+<li><a href="../index.htm">首页</a>
+</li>
+<li><a id="current" href="yjyjj.htm">研究院建设</a>
+<ul>
+  <li><a href="yjyjj.htm">研究院简介</a></li>
+  <li><a href="jgsz.htm">机构设置</a></li>
+  <li><a href="zrjy.htm">主任寄语</a></li>
+  <li><a href="fzgh.htm">发展规划</a></li>
+  <li><a href="lxwm.htm">联系我们</a></li>
+</ul>
+</li>
+<li><a href="../xsdw/xsdw.htm">学术队伍</a>
+<ul>
+  <li><a href="../xsdw/xsdw.htm">学术队伍</a></li>
+</ul>
+</li>
+<li><a href="../kxyj/kyzd.htm">科学研究</a>
+<ul>
+  <li><a href="../kxyj/kyxm.htm">科研项目</a></li>
+  <li><a href="../kxyj/kyzd.htm">科研制度</a></li>
+  <li><a href="../kxyj/yjcg.htm">研究成果</a></li>
+  <li><a href="../kxyj/hjqk.htm">获奖情况</a></li>
+</ul>
+</li>
+<li><a href="../shfw/zczx.htm">社会服务</a>
+<ul>
+  <li><a href="../shfw/zczx.htm">政策咨询</a></li>
+  <li><a href="../shfw/gyfw.htm">公益服务</a></li>
+  <li><a href="../shfw/yxxm.htm">研修项目</a></li>
+</ul>
+</li>
+<li><a href="../zxhd/jddt.htm">资讯互动</a>
+<ul>
+  <li><a href="../zxhd/jddt.htm">基地动态</a></li>
+  <li><a href="../zxhd/yjfc.htm">业界风采</a></li>
+  <li><a href="../zxhd/wxxz.htm">文献下载</a></li>
+  <li><a href="../zxhd/hdly.htm">互动留言</a></li>
+</ul>
+</li>
+</ul>
+
+<span id="currentDate" style="line-height: 42px;font-size:14px;text-align:center">今天是: 2025年10月23日 星期四</span>
+</div></div>
+    
+    <div class="wrap clear">
+        <div class="leftBar">
+            <h3>
+                <span>
+<h2>研究院建设</h2>
+</span>
+            </h3>
+            <ul class="level1">
+                <li class="current"><a href="yjyjj.htm">研究院简介</a></li>
+<li><a href="jgsz.htm">机构设置</a></li>
+<li><a href="zrjy.htm">主任寄语</a></li>
+<li><a href="fzgh.htm">发展规划</a></li>
+<li><a href="lxwm.htm">联系我们</a></li>
+
+                
+            </ul>
+        </div>
+        <div class="cenContent" id="pageContent">
+          
+<table cellspacing="0" cellpadding="0"><tbody><tr><td nowrap="">当前位置：   
+<a href="../index.htm"><span>首页</span></a><span class="splitflagstyle163426">&gt;&gt;</span><a href="yjyjj.htm"><span>研究院建设</span></a><span class="splitflagstyle163426">&gt;&gt;</span><a href="yjyjj.htm"><span>研究院简介</span></a></td></tr></tbody></table>
+        
+<div class="nr_content">
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1348319413,'wbnews','u6')</script>
+<script>function seeContenta6(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta6('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1348319413,1051)</script>
+<p>
+    </p><div id="vsb_content_1051_u61"><div id="vsb_content"><style><!--  /* Font Definitions */  @font-face {font-family:"MS Mincho"; panose-1:2 2 6 9 4 2 5 8 3 4;} @font-face {font-family:宋体; panose-1:2 1 6 0 3 1 1 1 1 1;} @font-face {font-family:"Cambria Math"; panose-1:2 4 5 3 5 4 6 3 2 4;} @font-face {font-family:"\@宋体"; panose-1:2 1 6 0 3 1 1 1 1 1;} @font-face {font-family:"\@MS Mincho"; panose-1:2 2 6 9 4 2 5 8 3 4;}  /* Style Definitions */  p.MsoNormal, li.MsoNormal, div.MsoNormal {margin:0cm; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:10.5pt; font-family:"Calibri",sans-serif;} .MsoChpDefault {font-family:"Calibri",sans-serif;}  /* Page Definitions */  @page WordSection1 {size:595.3pt 841.9pt; margin:72.0pt 90.0pt 72.0pt 90.0pt; vsb_temp:15.6pt;} div.WordSection1 {page:WordSection1;} --></style>
+<p class="MsoNormal"><span style="font-family: 宋体; font-size: 12pt;">&nbsp;</span></p>
+<p>华中师范大学国家教育治理研究院（Institute for Educational Governence Studies）初创于2006年，正式设立于2017年，是湖北省人文社会科学重点研究基地。国家教育治理研究院简称“教育治理院”。</p>
+<p>教育治理院秉持“全球视野、中国立场、专业精神、实践导向”的价值追求，奉行“顺势、明道、优术、践行”的办院风格，以“服务国家战略需求,专注教育治理研究”为根本任务，以“建成服务教育决策思想高地,打造教育治理研究高端智库”为最终目标，立足时代高度，着眼于建设高质量教育体系、推进教育现代化、建设教育强国，结合国家教育改革发展中重大理论问题、政策问题、实践问题，积极对接国家重大战略需求、创新研究体制机制、凝练教育研究方向、开展跨学校、跨学科协同合作；聚焦教育治理理论创新，为国家教育战略决策、第三方评估贡献专业智慧并提供可行性方案；建设教育治理与智库研究数据库，提升研究保障能力。努力贡献既有战略性、全局性、前瞻性，又有针对性、可行性和可操作性的研究成果，致力于建成教育治理研究领域国内一流并具有国际影响的研究高地与高端智库。</p>
+<p><br></p>
+<p>使命：推进国家教育治理体系与教育治理能力现代化</p>
+<p><br></p>
+<p>目标：</p>
+<p>1. 建成教育治理与教育政策研究中心</p>
+<p>2. 建成教育智库与战略规划研究中心</p>
+<p>3. 建成教育发展研究评估与发布中心</p>
+<p>4．建成教育质量与舆情监测研究中心</p>
+<p>5. 建成人工智能与未来教育研究中心</p>
+<p>6. 建成教育治理与智库人才培养中心</p>
+<p><br></p>
+<p>院训：“全球视野、中国立场、专业精神、实践导向”</p>
+<p>院风：“顺势、明道、优术、践行”</p>
+<p>理念：“民间立场、建设态度、专业精神”、“工作研究化、研究理论化、理论实践化”</p></div></div>
+    <span id="vsb_content_1051_u6" name="vsb_content_1051_u6"></span><br><br>
+    
+<p></p>
+</div>
+
+        
+        </div>
+
+        
+    </div>
+ 
+
+
+    <!-- 网页底部footer模块 -->
+    <div class="footer">
+        
+
+ 
+    
+    <!-- 网页底部footer模块 -->
+<div class="footer" style="margin-top:0px">
+    <div class="center" style="background-color: #CCC">
+        <p><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+</p><p>版权所有：国家教育治理研究院<br>电话：027-67863260&nbsp;&nbsp;&nbsp;&nbsp; 传真：027-67863260<br>E-mail：jyzc@mail.ccnu.edu.cn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 邮编：430079<br>地址：湖北省武汉市洪山区珞喻路152号华中师范大学</p><p></p>
+    </div>
+    </div>
+
+
+
+    </div>
+    
+
+
+</body></html>

@@ -1,0 +1,716 @@
+<!DOCTYPE html><html><head>
+        <meta charset="UTF-8">
+        <!-- 为移动设备添加 viewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>学院简介-马克思主义学院（2020）</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="马克思主义学院（2020）,学院简介">
+
+        <link rel="stylesheet" href="../css/swiper.css">
+        <link rel="stylesheet" href="../css/common.css">
+        <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+        <script type="text/javascript" src="../js/jquery.js"></script>
+        <script type="text/javascript" src="../js/swiper.js"></script>
+        <script src="../js/common.js"></script>
+    <!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f465553525742000400034351 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1003,'/dpzw.jsp',-1,1676530688)</script>
+</head>
+    <body>
+       <div class="inpageTop">
+            <div class="w1220 clearfix">
+                <div class="fl">欢迎来到华中农业大学马克思主义学院<span>现在时间是：<em class="timeD">2025-10-18  04:22:54</em></span></div>
+                <div class="fr">
+                 <!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script>
+<div id="divu0">
+    <div id="appu0"><div><input type="text" placeholder="SEARCH" autocomplete="off"> <button type="submit" class="btn"></button></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+        
+        <input type="text" placeholder="SEARCH"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"/>
+                        <button class="btn" type="submit" v-on:click="onSubmit()"></button>
+        
+         
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1676530688";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu0 = document.querySelector("#appu0");
+   if (appElementu0 && appElementu0.__vue__) {
+
+   } else {
+      $("#divu0").html($("#htmlu0").text());
+      var appOwner = "1676530688";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou0 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu0(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu0();
+        }
+      };
+
+      function onSubmitu0(e) {
+        queryInfou0.query.keyWord= $("#appu0  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou0.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script>
+                </div>
+            </div>
+        </div>
+        <script>
+            getDate()
+            function getDate() {
+                var timezone = 8;
+                var offset_GMT = new Date().getTimezoneOffset();
+                var nowDate = new Date().getTime();
+                var today = new Date(nowDate + offset_GMT * 60 * 1000 + timezone * 60 * 60 * 1000);
+                var date = today.getFullYear() + "-" + twoDigits(today.getMonth() + 1) + "-" + twoDigits(today.getDate());
+                var time = twoDigits(today.getHours()) + ":" + twoDigits(today.getMinutes()) + ":" + twoDigits(today.getSeconds());
+                $(".timeD").html(date + '  ' + time);
+            }
+            
+            function twoDigits(val) {
+                if (val < 10) return "0" + val;
+                return val;
+            }
+            $(function() {
+                setInterval(getDate, 1000);
+            });
+        </script>
+        <!--header-->
+        <div class="header">
+            <div class="w1220 headerBox">
+                <a class="logo" href="../index.htm"><img src="../images/logo.png"></a>
+                <!--手机端导航图标-->
+                <div class="navIcon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!--end-->
+       <!--导航-->
+        <div class="navBox">
+          <!--手机端搜索框-->
+            <div class="searchbox">
+               <!-- 3.1.3版本 -->
+
+
+
+<div id="divu1">
+    <div id="appu1"><div><input type="text" placeholder="输入关键字" autocomplete="off"> <button type="submit" align="absmiddle" class="btn">提交</button></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+        
+    
+
+  
+                    <input type="text"  placeholder="输入关键字" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" />
+                    <button class="btn" type="submit" align="absmiddle" style="cursor: hand"  v-on:click="onSubmit()">提交</button>
+                
+
+        
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1676530688";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu1 = document.querySelector("#appu1");
+   if (appElementu1 && appElementu1.__vue__) {
+
+   } else {
+      $("#divu1").html($("#htmlu1").text());
+      var appOwner = "1676530688";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou1 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu1(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu1();
+        }
+      };
+
+      function onSubmitu1(e) {
+        queryInfou1.query.keyWord= $("#appu1  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou1.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script>
+               
+            </div>
+            <!--手机端搜索框结束-->
+                    <div class="w1220">
+                <ul class="nav">
+                                    <li>
+                        <a href="../index.htm">首页</a>  
+                    </li>                   
+                    <li class="on">
+                        <a href="xyjj.htm">概况</a>  
+                        <em>+</em>                       
+                        <dl class="sub_nav">
+                            <dd><a href="xyjj.htm">学院简介</a></dd>
+                            <dd><a href="jgsz.htm">机构设置</a></dd>
+                            <dd><a href="xrld.htm">现任领导</a></dd>
+                            <dd><a href="lrld.htm">历任领导</a></dd>
+                            <dd><a href="xybgs.htm">学院办公室</a></dd>
+                        </dl>
+                    </li>                   
+                    <li>
+                        <a href="../xz/jsml.htm">学者</a>  
+                        <em>+</em>                       
+                        <dl class="sub_nav">
+                            <dd><a href="../xz/jsml.htm">教师名录</a></dd>
+                            <dd><a href="../xz/jsfc.htm">教师风采</a></dd>
+                            <dd><a href="../xz/jzjs.htm">兼职教授</a></dd>
+                            <dd><a href="../xz/dsjj.htm">导师简介</a></dd>
+                            <dd><a href="../xz/dwjs.htm">队伍建设</a></dd>
+                        </dl>
+                    </li>                   
+                    <li>
+                        <a href="../xk/xkjs.htm">学科</a>  
+                        <em>+</em>                       
+                        <dl class="sub_nav">
+                            <dd><a href="../xk/xkjs.htm">学科介绍</a></dd>
+                            <dd><a href="../xk/xkdjs.htm">学科点建设</a></dd>
+                            <dd><a href="../xk/xktd.htm">学科团队</a></dd>
+                            <dd><a href="../xk/shfw.htm">社会服务</a></dd>
+                        </dl>
+                    </li>                   
+                    <li>
+                        <a href="../xs/xsdt.htm">学术</a>  
+                        <em>+</em>                       
+                        <dl class="sub_nav">
+                            <dd><a href="../xs/xsdt.htm">学术动态</a></dd>
+                            <dd><a href="../xs/xscg.htm">学术成果</a></dd>
+                            <dd><a href="../xs/xsjl.htm">学术交流</a></dd>
+                            <dd><a href="../xs/jdjj.htm">精读精讲</a></dd>
+                        </dl>
+                    </li>                   
+                    <li>
+                        <a href="../jx/szkjx.htm">教学</a>  
+                        <em>+</em>                       
+                        <dl class="sub_nav">
+                            <dd><a href="../jx/szkjx.htm">思政课教学</a></dd>
+                            <dd><a href="../jx/yjsjy.htm">研究生教育</a></dd>
+                            <dd><a href="../jx/jxgl.htm">教学管理</a></dd>
+                        </dl>
+                    </li>                   
+                    <li>
+                        <a href="../xs1/xgdt.htm">学生</a>  
+                        <em>+</em>                       
+                        <dl class="sub_nav">
+                            <dd><a href="../xs1/xgdt.htm">学工动态</a></dd>
+                            <dd><a href="../xs1/xsyd.htm">学生园地</a></dd>
+                            <dd><a href="../xs1/xzfc.htm">学子风采</a></dd>
+                        </dl>
+                    </li>                   
+                    <li>
+                        <a href="../dj/_sc_gz.htm">党建</a>  
+                        <em>+</em>                       
+                        <dl class="sub_nav">
+                            <dd><a href="../dj/djdt.htm">党建动态</a></dd>
+                            <dd><a href="../dj/xxddesd.htm">学习党的二十大</a></dd>
+                            <dd><a href="../dj/dsjy.htm">党史教育</a></dd>
+                            <dd><a href="../dj/_sc_gz.htm">“双创”工作</a></dd>
+                            <dd><a href="../dj/jdjj.htm">精读精讲</a></dd>
+                            <dd><a href="../dj/dwzx.htm">党务在线</a></dd>
+                            <dd><a href="../dj/jgzj.htm">教工之家</a></dd>
+                        </dl>
+                    </li>                   
+                    <li>
+                        <a href="../xz1.htm">下载</a>  
+                    </li>                   
+                </ul>
+            </div>
+        
+
+</div>
+        <!--end-->
+        <script>
+            var windowWidth = $(window).width();
+            if(windowWidth > 1200){
+                //PC端 二级显示&隐藏
+                $(".nav li").hover(
+                    function(){
+                        $(this).children('.sub_nav').stop(true,true).slideDown('fast');
+                },
+                    function(){
+                        $(this).children('.sub_nav').stop(true,true).slideUp('fast');
+                        
+                    }
+                )
+            }else{
+                $(".nav li em").click(function(){
+                  var dl = $(this).siblings('.sub_nav');
+                  if(dl.css("display")=="none"){
+                        $(this).siblings('.sub_nav').slideDown();
+                        $(this).parent('li').siblings('li').find('.sub_nav').slideUp();
+                        $(this).parent('li').siblings('li').find('em').html("+");
+                        $(this).html("-");
+                   }else{
+                        $(this).siblings('.sub_nav').slideUp();
+                        $(this).html("+");
+                                
+                    }
+                });
+            }
+            $(".navIcon").click(function(){
+                var navStat = $(".navBox").css('display');
+                if(navStat == 'none'){
+                    $(".navBox").slideDown();
+                    $(this).addClass('on');
+                }else{
+                    $(".navBox").slideUp();
+                    $(this).removeClass('on');
+                }
+            })
+        </script>
+        
+<!--内页banner-->
+        <div class="nBan">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>   <em style="background-image: url(../images/nBan.jpg);"></em>
+</div>
+        
+        <div class="inpagecontent">
+            <div class="w1220 inpageBox clearfix">
+                 <!--左侧-->
+                <div class="meun fl">
+                    <div class="tit">
+                        <h3>
+概况</h3>
+                        <span><span>ABOUT US</span></span>
+                    </div>
+                    <ul class="menuList"><li class="on">
+      <a href="xyjj.htm">学院简介</a>
+</li>
+                        
+<li>
+      <a href="jgsz.htm">机构设置</a>
+</li>
+                        
+<li>
+      <a href="xrld.htm">现任领导</a>
+</li>
+                        
+<li>
+      <a href="lrld.htm">历任领导</a>
+</li>
+                        
+<li>
+      <a href="xybgs.htm">学院办公室</a>
+</li>
+                        
+</ul>
+                    <div class="menuNotice">
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="txt">通知公告</div>
+       <ul class="list">
+                   <li>
+               <a class="TXTovehid" href="../info/1034/11508.htm">马院党委书记、院长网络意见收集及教师师德师风监督举报信箱</a>
+           </li>
+           <li>
+               <a class="TXTovehid" href="../info/1034/10048.htm">华中农业大学马克思主义学院2025年专任教师招聘公告</a>
+           </li>
+           <li>
+               <a class="TXTovehid" href="../info/1034/13938.htm">马克思主义学院2025年研究生学业奖学金评审拟评定等级名单公示</a>
+           </li>
+           <li>
+               <a class="TXTovehid" href="../info/1034/13928.htm">马克思主义学院2025年研究生国家奖学金评审拟定候选人名单公示</a>
+           </li>
+           <li>
+               <a class="TXTovehid" href="../info/1034/11918.htm">【马习班第5期】教育：百年嬗变与时代之思</a>
+           </li>
+           <li>
+               <a class="TXTovehid" href="../info/1034/11928.htm">就业分享会（第二期）</a>
+           </li>
+           <li>
+               <a class="TXTovehid" href="../info/1034/11878.htm">【活动预告】青马论坛第221期：世界社会主义研究中值得关注的几个问题</a>
+           </li>
+           <li>
+               <a class="TXTovehid" href="../info/1034/11698.htm">【活动预告】“启微”读书沙龙2025年第四期</a>
+           </li>
+           <li>
+               <a class="TXTovehid" href="../info/1034/11688.htm">【活动预告】马院-公管就业分享会</a>
+           </li>
+           <li>
+               <a class="TXTovehid" href="../info/1034/11418.htm">【活动预告】“书香铸盾·阅护山河”--国家安全教育主题读书会</a>
+           </li>
+      </ul><script>_showDynClickBatch(['dynclicks_u7_11508','dynclicks_u7_10048','dynclicks_u7_13938','dynclicks_u7_13928','dynclicks_u7_11918','dynclicks_u7_11928','dynclicks_u7_11878','dynclicks_u7_11698','dynclicks_u7_11688','dynclicks_u7_11418'],[11508,10048,13938,13928,11918,11928,11878,11698,11688,11418],"wbnews", 1676530688)</script>
+</div>
+                </div>
+                <!--end-->
+                <!--右侧内容-->
+                <div class="inpageCon fr">
+                   <div class="clib clearfix">
+                        <b class="tit">
+学院简介</b>
+                        <div class="clibLink fr">当前所在位置：
+    <a href="../index.htm">首页</a>                           
+       --
+    <a href="xyjj.htm">概况</a>                           
+       --
+    <a href="xyjj.htm">学院简介</a>                           
+</div>
+                    </div>
+                    
+                    <div class="inpageWord">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1676530688,'wbnews','u10')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1676530688,8547)</script>
+    <div id="vsb_content_4_8547_u101"><div id="vsb_content_4"><p class="vsbcontent_start" style="text-align: center;"><span style="color: rgb(192, 0, 0); font-size: 21px;"><strong> <br></strong></span></p><p class="vsbcontent_start" style="text-align: center;"><span style="color: rgb(192, 0, 0); font-size: 21px;"><strong>华中农业大学马克思主义学院简介</strong></span></p><p class="vsbcontent_start"><span style="color: rgb(192, 0, 0); font-size: 21px;"><strong><br></strong></span></p><p><span style="font-size: 16px;">华中农业大学马克思主义学院成立于2012年3月，其前身为1952年华中农学院成立时组建的马列主义教研组。1984年学校成立马列主义理论课部，2008年5月思想政治理论课部被确定为正处级建制；2012年3月，学校在思想政治理论课部基础上组建独立建制的马克思主义学院。学院成立以来，坚持育人为本、特色立院，加强党的建设、队伍建设、学科建设、科学研究、课程建设和制度建设，全院教职员工和衷共济、协同育人、克难奋进、开拓创新，扎实推进学院事业又好又快发展。</span></p><p style="text-align: justify;"><span style="color: rgb(192, 0, 0); font-size: 16px;"><strong>党的建设。</strong></span><span style="font-size: 16px;">全面贯彻党的教育方针，坚持马克思主义指导地位，贯彻落实习近平新时代中国特色社会主义思想，</span><span style="font-size:16px">深刻领悟“两个确立”的决定性意义，增强“四个意识”、坚定“四个自信”、做到“两个维护”，</span><span style="font-size: 16px;">坚持“马院姓马，在马言马”的鲜明导向和办学原则，努力培养担当民族复兴大任的时代新人，培养德智体美劳全面发展的社会主义建设者和接班人。2012年以来，学院多个党支部获评“优秀党支部”“支部好案例”，1个研究生党支部入选全国党建“样板支部”培育创建单位，1名党员获评湖北省“优秀共产党员”，</span><span style="font-size: 16px; text-indent: 32px;">1名党员获评湖北省“优秀思想政治工作者”，</span><span style="font-size: 16px;">先后有12名党员获评学校“优秀共产党员”，学院党委获评优秀基层党组织。依托校廉政建设研究中心开展党风廉政教育和研究工作，2项成果荣获湖北省纪检监察优秀调研成果二、三等奖，3件作品入选。</span></p><p style="text-align: justify;"><span style="color: rgb(192, 0, 0); font-size: 16px;"><strong>师资队伍。</strong></span><span style="font-size: 16px;">学院现有教职工</span><span style="font-size: 16px;">103</span><span style="font-size: 16px;">人，其中专任教师</span><span style="font-size: 16px;">98</span><span style="font-size: 16px;">人。教师中有教授和研究员</span><span style="font-size: 16px;">14</span><span style="font-size: 16px;">人，博士生导师</span><span style="font-size: 16px;">4</span><span style="font-size: 16px;">人、硕士生导师</span><span style="font-size: 16px;">27</span><span style="font-size: 16px;">人，专任教师博士率达到</span><span style="font-size: 16px;">80%</span><span style="font-size: 16px;">以上。</span><span style="font-size: 16px;">2012</span><span style="font-size: 16px;">年以来，共支持教师</span><span style="font-size: 16px;">17</span><span style="font-size: 16px;">人出国研修，资助</span><span style="font-size: 16px;">40</span><span style="font-size: 16px;">人次到国内培训研修，资助</span><span style="font-size: 16px;">130</span><span style="font-size: 16px;">人次教师参加国际学术会议。大力培育高层次人才和优秀团队，学院入选各类人才计划</span><span style="font-size: 16px;">35</span><span style="font-size: 16px;">人次，其中，中央“马工程”专家</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">人、教育部高校马克思主义理论类专业教学指导委员会委员</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">人、教育部全国高校思想政治理论课“研究生思想政治理论课”分教学指导委员会委员</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">人、教育部全国高校思想政治理论课“概论”分教学指导委员会委员</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">人、全国高校优秀中青年思政课教师择优资助计划</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">人、全国“高校思政课教师年度影响力人物”</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">人、全国“高校思政课教师年度影响力提名人物”</span><span style="font-size: 16px;">2</span><span style="font-size: 16px;">人、湖北省高校马克思主义中青年理论家培育计划</span><span style="font-size: 16px;">13</span><span style="font-size: 16px;">人、湖北省高校思想政治理论课教学指导委员会委员</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">人、湖北省高校优秀思政课教师择优资助计划</span><span style="font-size: 16px;">2</span><span style="font-size: 16px;">人、校“狮山硕彦计划”13</span><span style="font-size: 16px;">人。</span></p><p style="text-align: justify;"><span style="color: rgb(192, 0, 0); font-size: 16px;"><strong>科学研究。</strong></span><span style="font-size: 16px;">在科学研究上，坚持强主流与创特色相结合，彰显学科交叉优势，注重农村长线观测点建设并坚持驻村调查，注重理论研究的现实指向和实证研究的理论价值，开展马克思主义中国化重大理论与实践问题研究，形成了以问题为导向、规范与实证相结合的综合研究特色。学院成立以来，获批国家社会科学基金项目</span><span style="font-size: 16px;">26</span><span style="font-size: 16px;">项（其中重点项目</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">项），国家自然科学基金项目</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">项，教育部哲学社会科学重大课题攻关项目</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">项，教育部、农业农村部等部级项目</span><span style="font-size: 16px;">20</span><span style="font-size: 16px;">余项，省社科及各类省厅项目</span><span style="font-size: 16px;">40</span><span style="font-size: 16px;">余项；在《马克思主义研究》《马克思主义与现实》《思想理论教育导刊》等</span><span style="font-size: 16px;">CSSCI</span><span style="font-size: 16px;">来源期刊发表论文</span><span style="font-size: 16px;">400</span><span style="font-size: 16px;">余篇，在人民出版社、中国社会科学出版社等出版社出版专著</span><span style="font-size: 16px;">30</span><span style="font-size: 16px;">余部；获政府、学会等各类奖项</span><span style="font-size: 16px;">30</span><span style="font-size: 16px;">余项，其中湖北省社会科学优秀成果二等奖</span><span style="font-size: 16px;">2</span><span style="font-size: 16px;">项、三等奖</span><span style="font-size: 16px;">2</span><span style="font-size: 16px;">项，武汉市社会科学优秀成果二等奖</span><span style="font-size: 16px;">2</span><span style="font-size: 16px;">项、三等奖</span><span style="font-size: 16px;">7</span><span style="font-size: 16px;">项，湖北省纪检监察优秀调研成果二、三等奖各</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">项，</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">篇论文入选中</span><span style="font-size: 16px;">宣部庆祝中国共产党成立100周年理论研讨会论文集。学院教师在人民日报、光明日报、中国社会科学报等报刊</span><span style="font-size: 16px;">媒体发表理论文章</span><span style="font-size: 16px;">160</span><span style="font-size: 16px;">余篇。</span><br><span style="font-size: 16px;"></span></p><p abs_visibility="true" style="text-align: justify;"><span style="color: rgb(192, 0, 0); font-size: 16px;"><strong>思政课建设。</strong></span><span style="font-size: 16px;">承担全校</span><span style="font-size: 16px;">34000</span><span style="font-size: 16px;">余名在校生思想政治理论课教学工作，开设“耕读中国”“绿色中国”“中国农业文明史”等</span><span style="font-size: 16px;">20</span><span style="font-size: 16px;">余门思想政治理论课特色课程。</span><span style="font-size: 16px;">2012</span><span style="font-size: 16px;">年以来，共主持省部级以上教改项目</span><span style="font-size: 16px;">16</span><span style="font-size: 16px;">项，农业农村部“十四五”规划教材项目</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">项，</span><span style="font-size: 16px;">39</span><span style="font-size: 16px;">项校级教学研究项目，教师发表教学研究论文</span><span style="font-size: 16px;">40</span><span style="font-size: 16px;">余篇。湖北省一流课程</span><span style="font-size: 16px;">5</span><span style="font-size: 16px;">门，精品课程</span><span style="font-size: 16px;">2</span><span style="font-size: 16px;">门，湖北省精品资源共享课</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">门，湖北省精品视频公开课</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">门。 “马克思主义政治经济学概论”入选教育部马克思主义理论研究和建设工程重点教材相应课程“精彩一课”。获湖北省高校教学成果一等奖、二等奖、三等奖各</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">项。获湖北省高校思政课教学竞赛“马克思主义基本原理”课特等奖</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">项，省青年教师讲课竞赛一等奖</span><span style="font-size: 16px;">1人</span><span style="font-size: 16px;">、二等奖</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">人、三等奖</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">人，获湖北省教师教学创新大赛二等奖</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">人，获校教学质量优秀一等奖</span><span style="font-size: 16px;">8</span><span style="font-size: 16px;">人次。教师指导学生获教育部领航计划一等奖</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">人、三等奖</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">人、优秀奖</span><span style="font-size: 16px;">2</span><span style="font-size: 16px;">人。教学活动和经验被央视新闻联播、教育部网站、光明日报、农民日报、中国社会科学报、湖北日报、光明网、中国文明网、全国党建网等媒体报道</span><span style="font-size: 16px;">60</span><span style="font-size: 16px;">余次。学院立体协同型思政课教学团队获批</span><span style="font-size: 16px;">2020</span><span style="font-size: 16px;">年湖北高校省级教学团队，中国化马克思主义系、中国近现代史系、马克思主义基本原理系获校级优秀基层教学组织。</span><br><span abs_visibility="true" style="font-size: 16px;"></span></p><p style="text-align: justify;"><span style="color: rgb(192, 0, 0); font-size: 16px;"><strong>人才培养。</strong></span><span abs_visibility="true" style="font-size: 16px;">建有马克思主义理论一级学科硕士点，在马克思主义基本原理、马克思主义中国化研究、思想政治教育、中国近现代史基本问题研究方向招收学术型硕士研究生。2012年以来，学院共招收硕士研究生297人，目前在读研究生108人。获评省级、校级优秀硕士学位论文13篇，学位论文匿名评审通过率100%；研究生公开发表CSSCI来源期刊论文70篇；毕业200余人，毕业生就业良好，毕业生一次性就业率平均达到95%以上，主要在企事业单位从事教育、科研、党政管理等工作。研究生获评国家奖学金9人次，校三好研究生85人次，校优秀研究生干部75人次，校优秀毕业生26人次，校优秀导师2人，获中国马克思主义研究基金会第一届全国马克思主义理论学科研究生优秀论文二等奖1人次，其他奖励和荣誉150余人次。启动研究生海外访学项目，2019年9月－11月，选派3名研究生赴美国堪萨斯大学进行为期3个月的交流学习。开办“马克思主义理论研习班”，自2018年开始，学院每年从全校大一、大二本科生中遴选出25人左右、进行为期2年、共计140学时的教育教学培训，针对性、专业性培养青年马克思主义者，现已成功举办四届，共招收106名学员，研习班为培养青年马克思主义者做出了贡献，受到学生欢迎。新建大学生思想政治理论教育实践基地2个，研究生培养实践基地6个，2021年8月获批建设省级研究生工作站。1个作品获第十九届“挑战杯”全国大学生课外学术科技作品竞赛2024年度“揭榜挂帅”专项赛三等奖。</span><br><span style="color: rgb(192, 0, 0); font-size: 16px;"></span></p><p abs_visibility="true" style="text-align: justify;"><span style="color: rgb(192, 0, 0); font-size: 16px;"><strong>社会服务。</strong></span><span style="font-size: 16px;">学院在荆门市东宝区牌楼镇建有湖北省理论热点面对面示范点、在新洲区建有武汉市理论热点面对面实践基地，经常组织专家教授深入城乡社区和田间地头，开展党的理论路线方针政策宣讲、传统文化宣讲、社情民意调研和农业技术咨询服务，并积极开展咨政服务，获评优秀示范点</span><span style="font-size: 16px;">4</span><span style="font-size: 16px;">次，荣获湖北省优秀理论宣讲报告一等奖、优秀志愿宣讲团队、全省基层理论宣讲先进集体等荣誉。学院有湖北省委讲师团理论宣讲专家</span><span style="font-size: 16px;">3</span><span style="font-size: 16px;">人，武汉市委讲师团理论宣讲专家</span><span style="font-size: 16px;">8</span><span style="font-size: 16px;">人、团中央讲师团</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">人。围绕重大理论和现实问题开展调查研究，撰写的咨政报告</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">份被收入联合国</span><span style="font-size: 16px;">UNESCAP</span><span style="font-size: 16px;">在线智库，</span><span style="font-size: 16px;">2</span><span style="font-size: 16px;">份被教育部采用、</span><span style="font-size: 16px;">5</span><span style="font-size: 16px;">份被湖北省委及中央有关部门采用</span><span style="font-size: 16px;">,1</span><span style="font-size: 16px;">份被湖南省委有关部门采纳，</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">份入选《领导参阅》，</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">份被《国家社会科学基金项目成果要报》</span><span style="font-size: 16px;">2021</span><span style="font-size: 16px;">年第</span><span style="font-size: 16px;">11</span><span style="font-size: 16px;">期采用，</span><span style="font-size: 16px;">1</span><span style="font-size: 16px;">份调研报告获湖北省优秀调研成果二等奖，</span><span style="font-size: 16px;">3</span><span style="font-size: 16px;">份社情民意调研报告获评湖北省理论热点面对面优秀调研报告。</span></p><p abs_visibility="true" style="text-align: justify;"><span style="color: rgb(192, 0, 0); font-size: 16px;"><strong>合作交流。</strong></span><span style="font-size: 16px;">长期坚持与国内外兄弟院校、科研院所开展合作交流活动。邀请同行知名专家教授来校进行学术交流，共举办学术报告200余场次，参加全国性学术会议100余人次，赴国（境）外访学研修20余人，启动研究生海外访学项目，选派研究生赴美国堪萨斯大学进行为期3个月的交流学习。学院2015年承办全国高等农林院校“教育自觉与提高思想政治理论课实效性”研讨会，2017年承办湖北高校第三届马克思主义理论学科研究生论坛，2018年承办湖北省学习习近平新时代中国特色社会主义思想系列研讨会之“建设美丽中国”专题研讨会，2019年主</span><span abs_visibility="true" style="font-size: 16px;">办新时代中国共产党乡村振兴理论与实践研讨会，2020年主办新冠肺炎疫情防控与马克思主义理论学科建设专题研讨会，2021年主办中国共产党百年历史与以人民为中心的理论实</span><span style="font-size: 16px;">践探索研讨会，2022年承办中国式现代化新道路理论研讨会，</span><span lang="EN-US" style="font-size: 16px; line-height: 145%;">2023</span><span style="font-size: 16px; line-height: 145%;">年主办“两个结合”与农业农村现代化理论研讨会，2024年主办全国高等农林院校“马克思主义理论学科建设与人才培养”论坛、深入学习贯彻习近平总书记对学校思政课建设的重要指示研讨会，承办“中国高校经济理论与思政教改研究会”第37届论坛。</span><br><span style="color: rgb(192, 0, 0); font-size: 16px;"></span></p><p style="text-align: justify;"><span style="font-size: 16px;"><span style="font-size: 16px;">（数据截止： 2025年1月1日）</span></span></p><p><span style="font-size: 16px;"><br></span></p><p style="text-align: center;"><span style="color: rgb(192, 0, 0); font-size: 18px;"><strong>马院成立以来获批国家社科基金项目</strong></span></p><table abs_visibility="true" align="center" style="width: 797px; table-layout: fixed;"><colgroup><col data-offset-left="80.33333587646484" data-offset-right="135.56250381469727" data-resize-pixel="55.22916793823242" data-resize-percent="6.929632112701683" style="width: 6.9296%;"><col data-offset-left="135.5625" data-offset-right="403.09375" data-resize-pixel="267.53125" data-resize-percent="33.56728356336261" style="width: 33.5673%;"><col data-offset-left="403.09375" data-offset-right="472.8125" data-resize-pixel="69.71875" data-resize-percent="8.747647427854455" style="width: 8.7476%;"><col data-offset-left="472.8125" data-offset-right="595.8854217529297" data-resize-pixel="123.07292175292969" data-resize-percent="15.442022804633588" style="width: 15.442%;"><col data-offset-left="595.8854370117188" data-offset-right="788.5937805175781" data-resize-pixel="192.70834350585938" data-resize-percent="24.179214994461653" style="width: 24.1792%;"><col data-offset-left="788.59375" data-offset-right="875" data-resize-pixel="86.40625" data-resize-percent="10.841436637390213" style="width: 10.8414%;"></colgroup><tbody abs_visibility="true"><tr class="firstRow"><td valign="top"><p><strong><span style="font-size: 14px;">序号</span></strong></p></td><td valign="top"><p><span style="font-size: 14px;"><strong>名称</strong></span></p></td><td valign="top"><p><span style="font-size: 14px;"><strong>经费</strong></span></p><p><span style="font-size: 14px;"><strong>（万元）</strong></span></p></td><td valign="top"><p><span style="font-size: 14px;"><strong>项目起讫时间（年）</strong></span></p></td><td valign="top"><p><span style="font-size: 14px;"><strong>课题来源</strong></span></p></td><td valign="top"><p><span style="font-size: 14px;"><strong>主持人</strong></span></p></td></tr><tr><td valign="top" colspan="1" rowspan="1" height="21" style="word-break: break-all;"><p style="text-indent: 0em;"><span style="font-size: 14px;">&nbsp; 1</span></p></td><td valign="top" colspan="1" rowspan="1" height="21" style="word-break: break-all;"><span style="font-size: 14px;">明代荆州王府的权势与财源研究</span></td><td valign="top" colspan="1" rowspan="1" height="21" style="word-break: break-all;"><span style="font-size: 14px;">20</span></td><td valign="top" colspan="1" rowspan="1" height="21" style="word-break: break-all;">2024-2027</td><td valign="top" colspan="1" rowspan="1" height="21" style="word-break: break-all;"><span style="font-size: 14px;">国家社科基金后期资助暨优秀博士论文出版项目</span></td><td valign="top" colspan="1" rowspan="1" height="21" style="word-break: break-all;"><span style="font-size: 14px;">谢宁静</span></td></tr><tr><td valign="top" colspan="1" rowspan="1" height="40" style="word-break: break-all;"><p style="text-indent: 2em;">&nbsp; &nbsp; <span style="font-size: 14px;">2</span></p></td><td valign="top" colspan="1" rowspan="1" height="40" style="word-break: break-all;"><span style="font-size: 14px;">思想政治教育话语建设一体化发展研究</span></td><td valign="top" colspan="1" rowspan="1" height="40" style="word-break: break-all;">20</td><td valign="top" colspan="1" rowspan="1" height="40" style="word-break: break-all;">2024-2027</td><td valign="top" colspan="1" rowspan="1" height="40" style="word-break: break-all;"><span style="font-size: 14px;">国家社科基金青年项目</span></td><td valign="top" colspan="1" rowspan="1" height="40" style="word-break: break-all;"><span style="font-size: 14px;">陈帅</span></td></tr><tr><td valign="top" colspan="1" rowspan="1" style="word-break: break-all;"><p style="font-size: 14px; text-indent: 0em;">3</p></td><td valign="top" colspan="1" rowspan="1" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">马克思东方社会理论与人类文明新形态研究</span></p></td><td valign="top" colspan="1" rowspan="1" style="word-break: break-all;"><p style="text-indent: 0em;">20</p></td><td valign="top" colspan="1" rowspan="1" style="word-break: break-all;">2023-2026</td><td valign="top" colspan="1" rowspan="1" style="word-break: break-all;"><span style="font-size: 14px; text-indent: 28px;">国家社科基金一般项目</span></td><td valign="top" colspan="1" rowspan="1" style="word-break: break-all;"><span style="font-size: 14px;">但昭明</span></td></tr><tr><td valign="top" colspan="1" rowspan="1" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">4</span></p></td><td valign="top" colspan="1" rowspan="1" style="word-break: break-all;"><span style="font-size: 14px;">经济社会学视角下绿色农业产业发展的机制与路径研究</span></td><td valign="top" colspan="1" rowspan="1" style="word-break: break-all;"><p style="text-indent: 0em;">20</p></td><td valign="top" colspan="1" rowspan="1" style="word-break: break-all;">2023-2026</td><td valign="top" colspan="1" rowspan="1" style="word-break: break-all;"><span style="font-size: 14px; text-indent: 28px;">国家社科基金青年项目</span></td><td valign="top" colspan="1" rowspan="1" style="word-break: break-all;"><span style="font-size: 14px;">李敏</span></td></tr><tr><td valign="top" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">5</span></p></td><td valign="top" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">治理现代化</span><span style="font-size: 14px;">目标下生态文明制度的农村落实机制研究</span></p></td><td valign="top" style="word-break: break-all;"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">20</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">2022-2025</span></p></td><td valign="top" style="word-break: break-all;"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金一般项目</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">石绍成</span></p></td></tr><tr><td valign="top" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">6</span></p></td><td valign="top" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">农业信息化驱动下的江汉平原农业产业结构测度与优化升级</span></p></td><td valign="top" style="word-break: break-all;"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">30</span></p></td><td valign="top" style="word-break: break-all;"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">2023-2025</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家自然科学青年科学基金项目</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">田甜</span></p></td></tr><tr abs_visibility="true"><td valign="top" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">7</span></p></td><td valign="top"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">《资本论》中的正义思想研究</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">20</span></p></td><td valign="top" abs_visibility="true"><p style="text-indent: 2em; font-size: 14px;"><span abs_visibility="true" style="font-size: 14px;">2021-2022</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金后期资助暨优秀博士论文出版项目</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">王晶</span></p></td></tr><tr abs_visibility="true"><td valign="top" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">8</span></p></td><td valign="top"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">延迟退休影响下生育政策效果的角色结构仿真研究</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">20</span></p></td><td valign="top" abs_visibility="true"><p style="text-indent: 2em; font-size: 14px;"><span abs_visibility="true" style="font-size: 14px;">2021-2025</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金一般项目</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">陈雯</span></p></td></tr><tr abs_visibility="true"><td valign="top" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">9</span></p></td><td valign="top"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">脱贫攻坚与乡村振兴战略有效衔接的机制和路径研究</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">20</span></p></td><td valign="top" abs_visibility="true"><p style="text-indent: 2em; font-size: 14px;"><span abs_visibility="true" style="font-size: 14px;">2021-2024</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金一般项目</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">梁伟军</span></p></td></tr><tr abs_visibility="true"><td valign="top" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">10</span></p></td><td valign="top"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">宋元时期江南区域诉讼</span><span style="font-size: 14px;">社会史研究</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">20</span></p></td><td valign="top" abs_visibility="true"><p style="text-indent: 2em; font-size: 14px;"><span abs_visibility="true" style="font-size: 14px;">2021-2024</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金青年项目</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">郑鹏</span></p></td></tr><tr abs_visibility="true"><td valign="top" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">11</span></p></td><td valign="top"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">中国共产党百年妇女思想政治工作的历史与经验研究</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">20</span></p></td><td valign="top" abs_visibility="true"><p style="text-indent: 2em; font-size: 14px;"><span abs_visibility="true" style="font-size: 14px;">2021-2024</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金高校思政课研究专项</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">王晓慧</span></p></td></tr><tr><td valign="top" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">12</span></p></td><td valign="top"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">马克思的劳动正义思想及其新时代价值研究</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">20</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">2020-2024</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金一般项目</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">彭文刚</span></p></td></tr><tr><td valign="top" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">13</span></p></td><td valign="top"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">新时代农村基层党组织引领乡村治理的机制和路径研究</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">20</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">2020-2023</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金一般项目</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">霍军亮</span></p></td></tr><tr><td valign="top" rowspan="1" colspan="1" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">14</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">马克思主义视野下农民互助新论的中国式建构研究</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">35</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">2019-2023</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金重点项目</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">吴春梅</span></p></td></tr><tr><td valign="top" rowspan="1" colspan="1" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">15</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">新解放区农村党组织建设的实践和历史经验研究（1949—1956）</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">20</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">2019-2022</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金一般项目</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">石武英</span></p></td></tr><tr><td valign="top" rowspan="1" colspan="1" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">16</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">网络社会思潮的传播</span><span style="font-size: 14px;">及引导研究</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">20</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">2017-2020</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金一般项目</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">王娟</span></p></td></tr><tr><td valign="top" rowspan="1" colspan="1" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">17</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">精准扶贫背景下农村居民心理健康促进策略研究</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">20</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">2017-2020</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金一般项目</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">李凤兰</span></p></td></tr><tr><td valign="top" rowspan="1" colspan="1" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">18</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">基于心理契约的乡村教师队伍建设研究</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">20</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">2016-2019</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金一般项目</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">李恺</span></p></td></tr><tr><td valign="top" rowspan="1" colspan="1" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">19</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">理性选择视阈下农民的社会主义核心价值观认同研究</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">20</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">2014-2018</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金一般项目</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">吴春梅</span></p></td></tr><tr><td valign="top" rowspan="1" colspan="1" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">20</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">延迟退休背景下老年人生产性角色定位问题研究</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">20</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">2014-2018</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金青年项目</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">陈雯</span></p></td></tr><tr><td valign="top" rowspan="1" colspan="1" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">21</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">瞿秋白与早期马克思主义中国化研究</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">18</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">2013-2018</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金青年项目</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">胡丰顺</span></p></td></tr><tr><td valign="top" rowspan="1" colspan="1" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">22</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">交易成本视角下的农民工与受雇私营企业劳动关系研究</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">18</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">2013-2018</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金一般项目</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">梁伟军</span></p></td></tr><tr><td valign="top" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">23</span></p></td><td valign="top"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">代际正义论研究</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">18</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">2013-2018</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金青年项目</span></p></td><td valign="top"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">郭琰</span></p></td></tr><tr><td valign="top" rowspan="1" colspan="1" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">24</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">农村社会保障制度的伦理问题研究</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">18</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">2013-2018</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金一般项目</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">方菲</span></p></td></tr><tr abs_visibility="true"><td valign="top" rowspan="1" colspan="1" abs_visibility="true" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span abs_visibility="true" style="font-size: 14px;">25</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">包容性发展视阈下我国农村社会管理创新研究</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">18</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">2013-2018</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金一般项目</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">许远旺</span></p></td></tr><tr><td valign="top" rowspan="1" colspan="1" style="word-break: break-all;"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">26</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 0em; font-size: 14px;"><span style="font-size: 14px;">1950年代中国共产党应对自然灾害的实践和历史经验研究</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">15</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">2012-2018</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">国家社科基金青年项目</span></p></td><td valign="top" rowspan="1" colspan="1"><p style="text-indent: 2em; font-size: 14px;"><span style="font-size: 14px;">石武英</span></p></td></tr></tbody></table><p><br></p><p style="text-align: center;"><span style="color: rgb(192, 0, 0); font-size: 18px;"><strong>马院成立以来主要科研获奖</strong></span></p><table><tbody><tr class="firstRow"><td width="33" valign="top"><p><strong><span style="font-size: 14px;">序号</span></strong></p></td><td width="258" valign="top"><p><strong><span style="font-size: 14px;">成果名称</span></strong></p></td><td width="147" valign="top"><p><strong><span style="font-size: 14px;">获奖时间</span></strong></p></td><td width="163" valign="top"><p><strong><span style="font-size: 14px;">获奖情况</span></strong></p></td><td width="130" valign="top"><p><strong><span style="font-size: 14px;">作者</span></strong></p></td></tr><tr><td width="33" height="41" valign="top"><p><span style="font-size: 14px;">1</span></p></td><td width="258" height="41" valign="top"><p><span style="font-size: 14px;">中国马克思主义启蒙与社会主义核心价值观（论文）</span></p></td><td width="147" height="41" valign="top"><p><span style="font-size: 14px;">2018</span></p></td><td width="162" height="41" valign="top"><p><span style="font-size: 14px;">湖北省社会科学优秀成果二等奖</span></p></td><td width="130" height="41" valign="top"><p><span style="font-size: 14px;">吴春梅等</span></p></td></tr><tr><td width="33" height="31" valign="top"><p><span style="font-size: 14px;">2</span></p></td><td width="258" height="31" valign="top"><p><span style="font-size: 14px;">政治社会化路径下农民工主流意识形态认同的实证分析（论文）</span></p></td><td width="147" height="31" valign="top"><p><span style="font-size: 14px;">2016</span></p></td><td width="163" height="31" valign="top"><p><span style="font-size: 14px;">湖北省社会科学优秀成果三等奖</span></p></td><td width="130" height="31" valign="top"><p><span style="font-size: 14px;">吴春梅等</span></p></td></tr><tr><td width="33" valign="top"><p><span style="font-size: 14px;">3</span></p></td><td width="258" valign="top"><p><span style="font-size: 14px;">民主与效率关系：实证与理论（论文）</span></p></td><td width="147" valign="top"><p><span style="font-size: 14px;">2015</span></p></td><td width="163" valign="top"><p><span style="font-size: 14px;">湖北省社会科学优秀成果二等奖</span></p></td><td width="130" valign="top"><p><span style="font-size: 14px;">吴春梅等</span></p></td></tr><tr><td width="33" valign="top"><p><span style="font-size: 14px;">4</span></p></td><td width="258" valign="top"><p><span style="font-size: 14px;">规划性变迁：机制与限度——中国农村社区建设的路径分析（专著）</span></p></td><td width="147" valign="top"><p><span style="font-size: 14px;">2014</span></p></td><td width="163" valign="top"><p><span style="font-size: 14px;">湖北省社会科学优秀成果三等奖</span></p></td><td width="130" valign="top"><p><span style="font-size: 14px;">许远旺</span></p></td></tr><tr><td width="33" valign="top"><p><span style="font-size: 14px;">5</span></p></td><td width="258" valign="top"><p><span style="font-size: 14px;">1951-1954年湖北省整党运动研究</span></p></td><td width="147" valign="top"><p><span style="font-size: 14px;">2020</span></p></td><td width="163" valign="top"><p><span style="font-size: 14px;">武汉市社会科学优秀成果二等奖</span></p></td><td width="130" valign="top"><p><span style="font-size: 14px;">聂继红</span></p></td></tr><tr><td width="33" valign="top"><p><span style="font-size: 14px;">6</span></p></td><td width="258" valign="top"><p><span style="font-size: 14px;">社会变迁视野下农村党员思想政治教育研究（调研报告）</span></p></td><td width="147" valign="top"><p><span style="font-size: 14px;">2019</span></p></td><td width="163" valign="top"><p><span style="font-size: 14px;">湖北省社会科学优秀成果三等奖</span></p></td><td width="130" valign="top"><p><span style="font-size: 14px;">霍军亮</span></p></td></tr><tr><td width="33" valign="top"><p><span style="font-size: 14px;">7</span></p></td><td width="258" valign="top"><p><span style="font-size: 14px;">社会转型期农村基层党员思想建设研究——基于对鄂中东溪镇的考察(专著)</span></p></td><td width="147" valign="top"><p><span style="font-size: 14px;">2017</span></p></td><td width="163" valign="top"><p><span style="font-size: 14px;">湖北省社会科学优秀成果三等奖</span></p></td><td width="130" valign="top"><p><span style="font-size: 14px;">霍军亮</span></p></td></tr><tr><td width="33" valign="top"><p><span style="font-size: 14px;">8</span></p></td><td width="258" valign="top"><p><span style="font-size: 14px;">专著：湖北省抗洪救灾研究（1949-1956）</span></p></td><td width="147" valign="top"><p><span style="font-size: 14px;">2017</span></p></td><td width="163" valign="top"><p><span style="font-size: 14px;">武汉市社会科学优秀成果奖优秀奖</span></p></td><td width="130" valign="top"><p><span style="font-size: 14px;">石武英</span></p></td></tr><tr><td width="33" valign="top" rowspan="1" colspan="1"><p><span style="font-size: 14px;">9</span></p></td><td width="111" valign="top" rowspan="1" colspan="1"><p><span style="font-size: 14px;">多元文化视域下的农村基层党员队伍思想建设探究（论文）</span></p></td><td valign="top" rowspan="1" colspan="1"><p><span style="font-size: 14px;">2015</span></p></td><td width="16" valign="top" rowspan="1" colspan="1"><p><span style="font-size: 14px;">武汉市社会科学优秀成果三等奖</span></p></td><td width="130" valign="top" rowspan="1" colspan="1"><p><span style="font-size: 14px;">霍军亮</span></p></td></tr><tr><td width="33" valign="top" rowspan="1" colspan="1"><p><span style="font-size: 14px;">10</span></p></td><td width="111" valign="top" rowspan="1" colspan="1"><p><span style="font-size: 14px;">规划性变迁：机制与限度——中国农村社区建设的路径分析（专著）</span></p></td><td valign="top" rowspan="1" colspan="1"><p><span style="font-size: 14px;">2015</span></p></td><td width="16" valign="top" rowspan="1" colspan="1"><p><span style="font-size: 14px;">武汉市社会科学优秀成果二等奖</span></p></td><td width="130" valign="top" rowspan="1" colspan="1"><p><span style="font-size: 14px;">许远旺</span></p></td></tr><tr><td width="33" valign="top" rowspan="1" colspan="1"><p><span style="font-size: 14px;">11</span></p></td><td width="111" valign="top" rowspan="1" colspan="1"><p><span style="font-size: 14px;">民主与效率：冲突抑或协调（论文）</span></p></td><td valign="top" rowspan="1" colspan="1"><p><span style="font-size: 14px;">2013</span></p></td><td width="16" valign="top" rowspan="1" colspan="1"><p><span style="font-size: 14px;">武汉市社会科学优秀成果三等奖</span></p></td><td width="130" valign="top" rowspan="1" colspan="1"><p><span style="font-size: 14px;">吴春梅等</span></p></td></tr><tr><td width="33" valign="top"><p><span style="font-size: 14px;">12</span></p></td><td width="258" valign="top"><p><span style="font-size: 14px;">产业融合与现代农业发展</span></p></td><td width="147" valign="top"><p><span style="font-size: 14px;">2013</span></p></td><td width="163" valign="top"><p><span style="font-size: 14px;">武汉市社会科学优秀成果三等奖</span></p></td><td width="130" valign="top"><p><span style="font-size: 14px;">梁伟军</span></p></td></tr></tbody></table><p><br></p><p><br></p><p style="text-align: center;"><img width="500" src="/__local/1/10/7F/1A6FF55B7250E578BE4FF75DA1F_A11D27AF_3D956.png" vwidth="500" vheight="" vurl="/_vsl/1107F1A6FF55B7250E578BE4FF75DA1F/A11D27AF/3D956" vsbhref="vurl" orisrc="/__local/1/10/7F/1A6FF55B7250E578BE4FF75DA1F_A11D27AF_3D956.png" class="img_vsb_content"></p><p style="text-align: center;"><img width="600" src="/__local/1/0F/02/644E69EA4C8E1738C53AF07A94D_FC69336C_29D4F.jpg" vwidth="600" vheight="" vurl="/_vsl/10F02644E69EA4C8E1738C53AF07A94D/FC69336C/29D4F" vsbhref="vurl" orisrc="/__local/1/0F/02/644E69EA4C8E1738C53AF07A94D_FC69336C_29D4F.jpg" class="img_vsb_content"><br></p><p class="vsbcontent_end" style="text-align: center;"><span style="font-size: 16px;">2012年3月15日，时任校长邓秀新院士、校党委书记李忠云为马克思主义学院成立揭牌</span></p></div></div>
+</div>
+                    
+                </div>
+                <!--end-->
+            </div>
+        </div>
+        
+        
+        <!--尾部-->
+        <div class="footer">
+            <div class="w1220 clearfix">
+                <div class="fl left">
+                    <img src="../images/foorLogo.png">
+                </div>
+                 <div class="fr right">
+                    <div class="footNav"><a href="../index.htm">首页</a>
+<a href="xyjj.htm">概况</a>
+<a href="../xz/jsml.htm">学者</a>
+<a href="../xk/xkjs.htm">学科</a>
+<a href="../xs/xsdt.htm">学术</a>
+<a href="../jx/szkjx.htm">教学</a>
+<a href="../xs1/xgdt.htm">学生</a>
+<a href="../dj/_sc_gz.htm">党建</a>
+<a href="../xz1.htm">下载</a>
+</div>
+                    <div class="p">
+<span>地址：湖北省武汉市洪山区狮子山街1号西大门口创业楼</span> 
+<span>邮箱：my2012@mail.hzau.edu.cn</span> 
+<span>电话：027-87280964</span></div>
+                    <div class="p">
+                        <span><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+©2012-2020 &nbsp;&nbsp;版权所有&nbsp;&nbsp; 华中农业大学马克思主义学院</span>
+                    </div>
+                    
+                    <div class="selectBox"><script language="javascript" src="/system/resource/js/openlink.js"></script>友情链接：
+                        <div class="item" id="selected">
+                            <span>华中农业大学</span>
+                            <ul>
+<li><a target="_blank" href="http://www.hzau.edu.cn">华中农业大学</a></li>
+                                
+<li><a target="_blank" href="http://lib.hzau.edu.cn/">图书馆</a></li>
+                                
+</ul>
+                        </div></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $('.selectBox .item span').click(function(){
+                $(this).siblings('ul').slideToggle('fast')
+            })
+            $('.selectBox .item ul li a').click(function(){
+                var text = $(this).html()
+                $(this).parents('ul').siblings('span').html(text)
+                $(this).parents('ul').slideUp()
+            })
+            $(document).bind("click", function(e) {
+                var e = e || window.event; //事件对象，兼容IE
+                var target = e.target || e.srcElement; //源对象，兼容火狐和IE
+                while (target) {
+                    if (target.id && target.id == "selected") { //循环判断至根节点，防止点击的是#selected和它的子元素
+                        return;
+                    }
+                    target = target.parentNode;
+                }
+                $("#selected ul").slideUp(); //点击的不是#selected和它的子元素，隐藏下拉菜单
+            })
+        </script>
+        <!--end-->
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

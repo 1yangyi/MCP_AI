@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+<title>北京市语言测试中心</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="../../css/base.css" type="text/css" rel="stylesheet">
+<link href="../../css/style.css" type="text/css" rel="stylesheet">
+<!--IE6透明代码-->
+<!--[if IE 6]>
+<script src="../../js/pngAlaph.js"></script>
+<script>
+DD_belatedPNG.fix('.logo, img');
+</script>
+<![endif]-->
+<script type="text/javascript">
+window.onload=function(){
+    //focusImg('banner');   
+        function getByClass(sClass,parent){
+        
+        var aEles = (parent||document).getElementsByTagName('*');
+        var arr = [];
+        
+        for(var i=0; i<aEles.length; i++){
+            
+            var aClass = aEles[i].className.split(' ');
+            
+            for(var j=0; j<aClass.length; j++){
+                
+                if( aClass[j] == sClass ){
+                
+                    arr.push( aEles[i] );
+                    break;
+                    
+                }   
+            }
+        }
+        return arr;
+    }
+    
+    var arr = getByClass('linkList');
+    var arr2 = getByClass('son_linkList');
+    var that = null;
+    var onoff = true;
+    
+    for(var i=0;i<arr.length;i++)
+    {
+        arr[i].index = i;
+        arr[i].onclick = function(ev) {
+            var e = ev || event;
+            e.cancelBubble = true;
+            for(var i=0;i<arr.length;i++)
+            {
+                if(i!=this.index)
+                {
+                    arr2[this.index].style.display = 'block';
+                    arr2[i].style.display = 'none';
+                }
+            };
+            if(onoff)
+            {
+                arr2[this.index].style.display = 'block';
+                onoff = false;
+            }else
+            {
+                arr2[this.index].style.display = 'none';
+                onoff = true;
+            };
+            that = this.index;
+            document.onclick = function() {
+                arr2[that].style.display = 'none';
+                onoff = true;
+            }
+        }
+    };
+};
+</script>
+</head>
+
+<body>
+<div class="header">
+    	
+<div class="top">        	
+        	<div class="logo">
+        		<a href="../../index.htm" class="logo_link">
+                    <img src="../../images/logo_03.png" alt="">
+                </a>
+            </div>
+            <div class="search">
+           		<form name="dataForm" action="/cms/web/search/index.jsp" target="_blank" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
+                    <input name="siteID" value="139" type="hidden">
+                    <input class="notxt" value="站内搜索" name="query" type="text" id="keywords" onfocus="if(value==defaultValue){value='';}" onblur="if(!value){value=defaultValue;}" onclick="if(this.value=='站内搜索'){this.value='';this.form.keywords.style.color='#3c98cc'}">
+                    <input class="notxt1" name="Submit" type="submit" value="">
+                </form>
+       		</div>
+        </div>
+        <div class="nav">
+        	<ul id="nav">
+            	<li><a href="../../index.htm">首页</a></li>
+																<li><a href="index.htm">中心概况</a>
+				 <div class="subNav">
+                       				 <dl>
+														<dd><a href="index.htm">中心简介</a></dd>
+														<dd><a href="../zzjg/index.htm">组织机构</a></dd>
+														<dd><a href="../zxcy/index.htm">中心成员</a></dd>
+													</dl>
+				 </div>
+				</li>
+																				<li><a href="../../gzzd/index.htm">规章制度</a></li>
+																				<li><a href="../../pthspcs/yjjdcs/index.htm">普通话水平测试</a>
+				 <div class="subNav">
+                       				 <dl>
+														<dd><a href="../../pthspcs/yjjdcs/index.htm">一级甲等测试</a></dd>
+														<dd><a href="../../pthspcs/jsjfzcs/index.htm">计算机辅助测试</a></dd>
+													</dl>
+				 </div>
+				</li>
+																								<li><a href="../../hzyyspcs/csgg/index.htm">汉字应用水平测试</a>
+				 <div class="subNav">
+                       				 <dl>
+														<dd><a href="../../hzyyspcs/csgg/index.htm">测试公告</a></dd>
+														<dd><a href="../../hzyyspcs/ksgz/index.htm">考生关注</a></dd>
+														<dd><a href="../../hzyyspcs/csdt/index.htm">测试动态</a></dd>
+													</dl>
+				 </div>
+				</li>
+																								<li><a href="../../qtcs/hykyspcs/index.htm">其他测试</a>
+				 <div class="subNav">
+                       				 <dl>
+														<dd><a href="../../qtcs/hykyspcs/index.htm">汉语口语水平测试</a></dd>
+														<dd><a href="../../qtcs/hynlcs/index.htm">汉语能力测试</a></dd>
+														<dd><a href="../../qtcs/zyhynlcs/index.htm">职业汉语能力测试</a></dd>
+													</dl>
+				 </div>
+				</li>
+																								<li><a href="../../pxgl/kspx/index.htm">培训管理</a>
+				 <div class="subNav">
+                       				 <dl>
+														<dd><a href="../../pxgl/kspx/index.htm">考生培训</a></dd>
+														<dd><a href="../../pxgl/csypx/index.htm">测试员培训</a></dd>
+														<dd><a href="../../pxgl/qtpx/index.htm">其他培训</a></dd>
+													</dl>
+				 </div>
+				</li>
+																								<li><a href="../../kxyj/kydt/index.htm">科学研究</a>
+				 <div class="subNav">
+                       				 <dl>
+														<dd><a href="../../kxyj/kydt/index.htm">科研动态</a></dd>
+														<dd><a href="../../kxyj/ztyj/index.htm">专题研究</a></dd>
+														<dd><a href="../../kxyj/zjdw/index.htm">专家队伍</a></dd>
+													</dl>
+				 </div>
+				</li>
+																				<li><a href="../../tpxz/index.htm">推普宣传</a></li>
+																				<li><a href="../../xgxz/pthspcszlxz/index.htm">相关下载</a>
+				 <div class="subNav">
+                       				 <dl>
+														<dd><a href="../../xgxz/pthspcszlxz/index.htm">普通话水平测试资料下载</a></dd>
+														<dd><a href="../../xgxz/hzyyspcszlxz/index.htm">汉字应用水平测试资料下载</a></dd>
+														<dd><a href="../../xgxz/pxzlxz/index.htm">培训资料下载</a></dd>
+														<dd><a href="../../xgxz/qtzlxz/index.htm">其他资料下载</a></dd>
+													</dl>
+				 </div>
+				</li>
+																				<li><a href="../../lxwm/index.htm">联系我们</a></li>
+								                
+            </ul>       
+      </div>
+      <div class="erji">
+          
+      </div></div>
+<div class="subPage">
+	 <!-- <div class="pageBanner">
+    	<img src="../../images/listBanner_03.jpg" width="1200" height="300" />
+    </div> --> 
+    <!--conLeft开始-->
+    <div class="conLeft">
+			
+
+			<div class="title">
+            	<h3>中心概况</h3>
+            </div>
+            <ul>
+									<li class="current"><a href="index.htm" title="中心简介">中心简介</a></li>
+												<li><a href="../zzjg/index.htm" title="组织机构">组织机构</a></li>
+												<li><a href="../zxcy/index.htm" title="中心成员">中心成员</a></li>
+						            </ul>
+			    </div>
+    <!--conLeft开始-->
+
+    <!--conRight开始-->
+    <div class="conRight">
+    <div class="Bread rightBread">
+    	 您目前的位置：                 <a href="../../index.htm">首页</a>»
+                 <a href="../index.htm">中心概况</a>»
+        中心简介
+    </div>
+    
+    <div class="pageArticle">
+	    </div>
+    
+    </div>
+    <!--conRight结束-->
+  
+    
+</div>
+<div class="footer">
+    
+<div class="copyRight">
+        <div class="footer_left">
+            问卷调查<br>
+            总访问量： <script type="text/javascript" src="/cms/web/channelVisitLog.jsp?paren.id=7880"></script>人次<br>
+			
+            地址：北京海淀区西三环北路83号综合楼       邮编：100089<a href="https://beian.miit.gov.cn" style="color:#fff">京ICP备05082108号-1 </a>&nbsp;     京公网安备:110402430068号
+        </div>
+		<script type="text/javascript" src="/cms/web/writeLog.jsp?siteID=139&amp;channe.id=7880"></script>189085
+        <div class="footer_right">
+            <div class="linkList" style="z-index:9999;">友情链接
+                                <div class="son_linkList">
+								                                </div>
+                            </div>
+        </div>
+    </div></div>
+<script type="text/javascript" src="../../js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="../../js/script.js"></script>
+<script type="text/javascript">
+    Nav('#nav');
+</script><script type="text/javascript" src="../../g_style/g_list.js"></script>
+</body></html>

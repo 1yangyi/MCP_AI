@@ -1,0 +1,853 @@
+<!DOCTYPE html><html lang="zh"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学院简介-大连理工大学数学科学学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="大连理工大学数学科学学院,学院简介">
+
+
+    <link href="../style/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/slick.css">
+    <link rel="stylesheet" href="../style/slick-theme.css">
+    <link rel="stylesheet" href="../style/public.css">
+    <link rel="stylesheet" href="../style/ny.css">
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/slick.js"></script>
+    <script src="../js/public.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307973475c50555742000300034056 -->
+<link rel="stylesheet" type="text/css" href="../jjy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1004,'/jjy.jsp',-1,2076117683)</script>
+</head>
+
+<body>
+    <!-- pc导航 -->
+    <div class="pc">
+        <div class="wp">
+            <div class="head flex">
+                <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+
+<a href="../index.htm"><img src="../images/logo.png" alt=""></a></div>
+                    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+                   <img src="../images/top-zi.png" alt="" class="top-zi" onclick="_addDynClicks(&quot;wbimage&quot;, 2076117683, 1015538)">
+                   
+
+                <div class="head-r">
+              
+                   <script language="javascript" src="/system/resource/js/openlink.js"></script>  <div class="head-en">
+ <a href="https://math.dlut.edu.cn/English.htm" onclick="_addDynClicks(&quot;wburl&quot;, 2076117683, 100280)">ENGLISH</a>
+   
+
+                        <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script>
+<div id="divu3">
+    <div id="appu3"><div><input type="text" name="" id="" value="" placeholder="请输入搜索关键字" autocomplete="off" class="text"> <input type="submit" name="submit" id="" value="" class="button"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError">
+           <input type="text" name="" id="" value="" placeholder="请输入搜索关键字" class="text" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"/>
+           <input type="submit" name="submit" id="" value="" class="button" v-on:click="onSubmit()"/>
+                            
+           
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "2076117683";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav"><ul class="flex">
+    <li>
+       
+                        <a href="../index.htm">首页</a>
+                    </li>
+  
+
+    <li class="active">
+       
+                        <a href="xyjj.htm">学院概况</a>
+                               <div>
+                            <ul>
+                                  <li>
+                                    <a href="xyjj.htm">学院简介</a>
+                                </li>
+                                  <li>
+                                    <a href="xrld.htm">现任领导</a>
+                                </li>
+                                  <li>
+                                    <a href="lrld.htm">历任领导</a>
+                                </li>
+                                  <li>
+                                    <a href="lsyg.htm">历史沿革</a>
+                                </li>
+                                  <li>
+                                    <a href="jgsz1/jyjg1/yjs.htm">机构设置</a>
+                                </li>
+                               
+                              
+                            </ul>
+                        </div>
+                    </li>
+  
+
+    <li>
+       
+                        <a href="../szdw/szgk.htm">师资队伍</a>
+                               <div>
+                            <ul>
+                                  <li>
+                                    <a href="../szdw/szgk.htm">师资概况</a>
+                                </li>
+                                  <li>
+                                    <a href="../szdw/szxx2.htm">师资信息</a>
+                                </li>
+                                  <li>
+                                    <a href="../szdw/rczp.htm">人才招聘</a>
+                                </li>
+                                  <li>
+                                    <a href="../szdw/ltxjs.htm">离退休教师</a>
+                                </li>
+                                  <li>
+                                    <a href="../szdw/yyhn.htm">永远怀念</a>
+                                </li>
+                               
+                              
+                            </ul>
+                        </div>
+                    </li>
+  
+
+    <li>
+       
+                        <a href="../kxyj/kyxw.htm">科学研究</a>
+                               <div>
+                            <ul>
+                                  <li>
+                                    <a href="../kxyj/kyxw.htm">科研新闻</a>
+                                </li>
+                                  <li>
+                                    <a href="../kxyj/xsbg1/ztbg.htm">学术报告</a>
+                                </li>
+                                  <li>
+                                    <a href="../kxyj/kyxmtz.htm">科研项目通知</a>
+                                </li>
+                                  <li>
+                                    <a href="../kxyj/kypt.htm">科研平台</a>
+                                </li>
+                               
+                              
+                            </ul>
+                        </div>
+                    </li>
+  
+
+    <li>
+       
+                        <a href="../bksjy/zyjs.htm">本科生教育</a>
+                               <div>
+                            <ul>
+                                  <li>
+                                    <a href="../bksjy/zyjs.htm">专业介绍</a>
+                                </li>
+                                  <li>
+                                    <a href="../bksjy/bjrcpy.htm">拔尖人才培养</a>
+                                </li>
+                                  <li>
+                                    <a href="../bksjy/tzgg.htm">通知公告</a>
+                                </li>
+                               
+                              
+                            </ul>
+                        </div>
+                    </li>
+  
+
+    <li>
+       
+                        <a href="../yjsjy/yjszs.htm">研究生教育</a>
+                               <div>
+                            <ul>
+                                  <li>
+                                    <a href="../yjsjy/yjszs.htm">研究生招生</a>
+                                </li>
+                                  <li>
+                                    <a href="../yjsjy/yjspy.htm">研究生培养</a>
+                                </li>
+                                  <li>
+                                    <a href="../yjsjy/tzgg.htm">通知公告</a>
+                                </li>
+                                  <li>
+                                    <a href="../yjsjy/wjxz.htm">文件下载</a>
+                                </li>
+                               
+                              
+                            </ul>
+                        </div>
+                    </li>
+  
+
+    <li>
+       
+                        <a href="../djgz/tzgg.htm">党建工作</a>
+                               <div>
+                            <ul>
+                                  <li>
+                                    <a href="../djgz/tzgg.htm">通知公告</a>
+                                </li>
+                                  <li>
+                                    <a href="../djgz/djxw.htm">党建新闻</a>
+                                </li>
+                                  <li>
+                                    <a href="../djgz/djzd.htm">党建阵地</a>
+                                </li>
+                                  <li>
+                                    <a href="../djgz/wjxz.htm">文件下载</a>
+                                </li>
+                               
+                              
+                            </ul>
+                        </div>
+                    </li>
+  
+
+    <li>
+       
+                        <a href="../szjy/tzgg.htm">思政教育</a>
+                               <div>
+                            <ul>
+                                  <li>
+                                    <a href="../szjy/tzgg.htm">通知公告</a>
+                                </li>
+                                  <li>
+                                    <a href="../szjy/xwzx.htm">新闻中心</a>
+                                </li>
+                                  <li>
+                                    <a href="../szjy/wjxz.htm">文件下载</a>
+                                </li>
+                               
+                              
+                            </ul>
+                        </div>
+                    </li>
+  
+
+    <li>
+       
+                        <a href="../jgfc/ghhd.htm">教工风采</a>
+                               <div>
+                            <ul>
+                                  <li>
+                                    <a href="../jgfc/ghhd.htm">工会活动</a>
+                                </li>
+                                  <li>
+                                    <a href="../jgfc/fczs.htm">风采展示</a>
+                                </li>
+                               
+                              
+                            </ul>
+                        </div>
+                    </li>
+  
+
+    <li>
+       
+                        <a href="../yyzj/tzgg.htm">院友之家</a>
+                               <div>
+                            <ul>
+                                  <li>
+                                    <a href="../yyzj/tzgg.htm">通知公告</a>
+                                </li>
+                                  <li>
+                                    <a href="../yyzj/xwzx.htm">新闻中心</a>
+                                </li>
+                               
+                              
+                            </ul>
+                        </div>
+                    </li>
+  
+
+    <li>
+       
+                        <a href="http://jmre.ijournals.cn/en/ch/index.aspx" target="_blank">学术期刊</a>
+                    </li>
+  
+ </ul></div>
+        </div>
+    </div>
+
+    <!-- 移动端导航 -->
+    <div class="m-top">
+        <div class="wap wap-menu">
+            <img src="../images/menu.png" class="menu" alt="">
+            <img src="../images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+
+    <div class="wap m-head">
+        <div class="m-logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+
+<a href="../index.htm"><img src="../images/logo.png" alt=""></a></div>
+        <div class="m-nav">
+            <div class="m-tlink"><ul>
+<a href="https://math.dlut.edu.cn/English.htm" onclick="_addDynClicks(&quot;wburl&quot;, 2076117683, 100280)">ENGLISH</a>
+  
+</ul></div>
+            <div class="m-search">
+
+
+<div id="divu7">
+    <div id="appu7"><div><input type="text" placeholder="" autocomplete="off"> <input type="image" src="../images/fdj2.png"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu7">
+    <div id="appu7">
+        <div v-if="!isError">
+        <input type="text" placeholder="" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+        <input type="image" src="../images/fdj2.png" v-on:click="onSubmit()">
+                
+           
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu7").html($("#htmlu7").text());
+</script>
+<script>
+    var appOwner = "2076117683";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu7",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultmobile/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+            <ul class="clearfix"> <li>
+                   <a href="../index.htm">首页</a>
+                </li>
+
+ <li>
+                   <a href="xyjj.htm">学院概况</a>
+                   <span></span>
+                    <ul>
+                           <li>
+                             <a href="xyjj.htm">学院简介</a>
+                        </li>
+                           <li>
+                             <a href="xrld.htm">现任领导</a>
+                        </li>
+                           <li>
+                             <a href="lrld.htm">历任领导</a>
+                        </li>
+                           <li>
+                             <a href="lsyg.htm">历史沿革</a>
+                        </li>
+                           <li>
+                             <a href="jgsz1/jyjg1/yjs.htm">机构设置</a>
+                        </li>
+                     
+                    </ul>
+                </li>
+
+ <li>
+                   <a href="../szdw/szgk.htm">师资队伍</a>
+                   <span></span>
+                    <ul>
+                           <li>
+                             <a href="../szdw/szgk.htm">师资概况</a>
+                        </li>
+                           <li>
+                             <a href="../szdw/szxx2.htm">师资信息</a>
+                        </li>
+                           <li>
+                             <a href="../szdw/rczp.htm">人才招聘</a>
+                        </li>
+                           <li>
+                             <a href="../szdw/ltxjs.htm">离退休教师</a>
+                        </li>
+                           <li>
+                             <a href="../szdw/yyhn.htm">永远怀念</a>
+                        </li>
+                     
+                    </ul>
+                </li>
+
+ <li>
+                   <a href="../kxyj/kyxw.htm">科学研究</a>
+                   <span></span>
+                    <ul>
+                           <li>
+                             <a href="../kxyj/kyxw.htm">科研新闻</a>
+                        </li>
+                           <li>
+                             <a href="../kxyj/xsbg1/ztbg.htm">学术报告</a>
+                        </li>
+                           <li>
+                             <a href="../kxyj/kyxmtz.htm">科研项目通知</a>
+                        </li>
+                           <li>
+                             <a href="../kxyj/kypt.htm">科研平台</a>
+                        </li>
+                     
+                    </ul>
+                </li>
+
+ <li>
+                   <a href="../bksjy/zyjs.htm">本科生教育</a>
+                   <span></span>
+                    <ul>
+                           <li>
+                             <a href="../bksjy/zyjs.htm">专业介绍</a>
+                        </li>
+                           <li>
+                             <a href="../bksjy/bjrcpy.htm">拔尖人才培养</a>
+                        </li>
+                           <li>
+                             <a href="../bksjy/tzgg.htm">通知公告</a>
+                        </li>
+                     
+                    </ul>
+                </li>
+
+ <li>
+                   <a href="../yjsjy/yjszs.htm">研究生教育</a>
+                   <span></span>
+                    <ul>
+                           <li>
+                             <a href="../yjsjy/yjszs.htm">研究生招生</a>
+                        </li>
+                           <li>
+                             <a href="../yjsjy/yjspy.htm">研究生培养</a>
+                        </li>
+                           <li>
+                             <a href="../yjsjy/tzgg.htm">通知公告</a>
+                        </li>
+                           <li>
+                             <a href="../yjsjy/wjxz.htm">文件下载</a>
+                        </li>
+                     
+                    </ul>
+                </li>
+
+ <li>
+                   <a href="../djgz/tzgg.htm">党建工作</a>
+                   <span></span>
+                    <ul>
+                           <li>
+                             <a href="../djgz/tzgg.htm">通知公告</a>
+                        </li>
+                           <li>
+                             <a href="../djgz/djxw.htm">党建新闻</a>
+                        </li>
+                           <li>
+                             <a href="../djgz/djzd.htm">党建阵地</a>
+                        </li>
+                           <li>
+                             <a href="../djgz/wjxz.htm">文件下载</a>
+                        </li>
+                     
+                    </ul>
+                </li>
+
+ <li>
+                   <a href="../szjy/tzgg.htm">思政教育</a>
+                   <span></span>
+                    <ul>
+                           <li>
+                             <a href="../szjy/tzgg.htm">通知公告</a>
+                        </li>
+                           <li>
+                             <a href="../szjy/xwzx.htm">新闻中心</a>
+                        </li>
+                           <li>
+                             <a href="../szjy/wjxz.htm">文件下载</a>
+                        </li>
+                     
+                    </ul>
+                </li>
+
+ <li>
+                   <a href="../jgfc/ghhd.htm">教工风采</a>
+                   <span></span>
+                    <ul>
+                           <li>
+                             <a href="../jgfc/ghhd.htm">工会活动</a>
+                        </li>
+                           <li>
+                             <a href="../jgfc/fczs.htm">风采展示</a>
+                        </li>
+                     
+                    </ul>
+                </li>
+
+ <li>
+                   <a href="../yyzj/tzgg.htm">院友之家</a>
+                   <span></span>
+                    <ul>
+                           <li>
+                             <a href="../yyzj/tzgg.htm">通知公告</a>
+                        </li>
+                           <li>
+                             <a href="../yyzj/xwzx.htm">新闻中心</a>
+                        </li>
+                     
+                    </ul>
+                </li>
+
+ <li>
+                   <a href="http://jmre.ijournals.cn/en/ch/index.aspx" target="_blank">学术期刊</a>
+                </li>
+
+</ul>
+        </div>
+    </div>
+    <!-- banner -->
+    <div class="banner">
+        <img src="../images/nybanner1218.png">
+    </div>
+
+    <!-- 主体 -->
+    <div class="nymain">
+        <div class="wp clearfix">
+            <div class="channl-menu leftNav">
+               <h2 class="wow fadeInUp">
+学院概况<span></span></h2>
+                <ul class="wow fadeInUp"><li class="active on">
+                        <a href="xyjj.htm">学院简介</a>
+                    </li>
+                    
+   
+<li>
+                        <a href="xrld.htm">现任领导</a>
+                    </li>
+                    
+   
+<li>
+                        <a href="lrld.htm">历任领导</a>
+                    </li>
+                    
+   
+<li>
+                        <a href="lsyg.htm">历史沿革</a>
+                    </li>
+                    
+   
+<li>
+                        <a href="javascript:;">机构设置</a>
+                        <ul>
+                                <li>
+                                <a href="jgsz1/jyjg1/yjs.htm">教研机构</a>
+                                          <ul>
+                                                  <li>  <a href="jgsz1/jyjg1/yjs.htm">研究所</a></li>
+                                                  <li>  <a href="jgsz1/jyjg1/syjd.htm">实验基地</a></li>
+                                                  <li>  <a href="http://jmre.ijournals.cn/en/ch/index.aspx" target="_blank">编辑部</a></li>
+                                </ul>
+                              
+                            </li>
+                                <li>
+                                <a href="jgsz1/xszz1/xswyh.htm">学术组织</a>
+                                          <ul>
+                                                  <li>  <a href="jgsz1/xszz1/xswyh.htm">学术委员会</a></li>
+                                                  <li>  <a href="jgsz1/xszz1/xwwyh.htm">学位委员会</a></li>
+                                                  <li>  <a href="jgsz1/xszz1/rcrsgzxz.htm">人才人事工作小组</a></li>
+                                                  <li>  <a href="jgsz1/xszz1/jxzdwyh.htm">教学指导委员会</a></li>
+                                </ul>
+                              
+                            </li>
+                                <li>
+                                <a href="jgsz1/xzzz1/dzbz.htm">行政组织</a>
+                                          <ul>
+                                                  <li>  <a href="jgsz1/xzzz1/dzbz.htm">党政班子</a></li>
+                                                  <li>  <a href="jgsz1/xzzz1/dwbgs.htm">党委办公室</a></li>
+                                                  <li>  <a href="jgsz1/xzzz1/xybgs.htm">学院办公室</a></li>
+                                                  <li>  <a href="jgsz1/xzzz1/xsgzbgs.htm">学生工作办公室</a></li>
+                                </ul>
+                              
+                            </li>
+                            </ul>
+                    </li>
+                    
+   
+</ul>
+            </div>
+            <div class="ny-right">
+                <div class="position wow fadeInUp">
+                    <div class="">
+                          <h3>
+学院简介</h3>
+                      <img src="../images/weizhi.png" alt="">
+                <a href="../index.htm">首页</a>
+               <span>&gt;</span>
+                <a href="xyjj.htm">学院概况</a>
+               <span>&gt;</span>
+                <a href="xyjj.htm">学院简介</a>
+
+                    </div>
+                </div>
+                <div class="art-main ts-art">
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',2076117683,'wbnews','u14')</script>
+<script>function seeContenta14(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta14('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',2076117683,1021)</script>
+
+    <div id="vsb_content_1021_u141"><div id="vsb_content"><div class="art-body wow fadeInUp"><p style="text-indent: 2em;">大连理工大学原应用数学系创建于1949年；1958年全国性院系调整时被取消，成立应用数学专业，隶属数理力学系；1979年应用数学系得以恢复重建，设应用数学本科专业，同年开始招收硕士研究生。1986年计算数学专业获得博士学位授予权；1988年被批准设立数学博士后流动站；1998年运筹学与控制论专业获得博士学位授予权；2002年计算数学博士点被评为国家重点学科；2003年获数学一级学科博士学位授予权，涵盖基础数学、计算数学、概率论与数理统计、应用数学和运筹学与控制论5个二级学科博士点，并经教育部批准自主增设金融数学与保险精算博士点；2008年被批准为辽宁省重点一级学科，同年被批准为“国家理科基础科学研究和教学人才培养基地”。2009年，数学科学学院成立。2012年与中国科学院数学与系统科学研究院联合设立华罗庚班；2019年，数学与应用数学专业获批教育部首批“双万计划”国家一流本科专业建设点，“计算数学与数据智能重点实验室”获批辽宁省重点实验室；2020年，数学与应用数学专业入选教育部“强基计划”，信息与计算科学专业获批教育部“双万计划”国家一流本科专业建设点，辽宁省科技厅批准大连理工大学成立“辽宁应用数学中心”；2021年，“华罗庚数学拔尖学生培养基地”获批教育部“基础学科拔尖学生培养计划2.0基地”；2023年，入选本科教育教学改革试点工作计划（101计划）。</p><p style="text-align: center"><img src="/__local/E/9E/59/C4843069D5909C69CEE9F63A354_B2455007_80917.jpg" width="500" vsbhref="vurl" vurl="/_vsl/E9E59C4843069D5909C69CEE9F63A354/B2455007/80917" vheight="" vwidth="500" orisrc="/__local/4/41/BD/B5C67EC36C0FF81A617B4407AD7_B54C38EF_124B57.jpg" class="img_vsb_content"></p><p style="text-indent: 2em;">经过几代人不懈努力，特别是近年来通过“211工程”、“985工程”和“双一流”建设的实施，学科的学术水平和综合能力得到明显提高。ESI国际学科排名前1%,QS世界排名350位左右。学院近5年承担国家自然科学基金项目和省部级科研项目100余项，在数学若干重要前沿领域取得具有国际水平的成果。</p><div class="jjbox"><ul class=" list-paddingleft-2"><li><div class="jjicon"><img src="/__local/4/6C/2C/A836F5801DCDC50492467DC4359_D0CA7EA5_5F8.png" alt="" vsbhref="vurl" vurl="/_vsl/46C2CA836F5801DCDC50492467DC4359/D0CA7EA5/5F8" vheight="" vwidth="" orisrc="/__local/4/6C/2C/A836F5801DCDC50492467DC4359_D0CA7EA5_5F8.png" class="img_vsb_content"></div><div class="tx"><p><strong>5</strong>个研究所</p><p>数学研究所、计算科学研究所、统计与金融研究所、应用数学研究所、运筹学与控制论研究所</p></div></li><li><div class="jjicon"><img src="/__local/F/8E/31/DF9CF2F77E65C551CFF1A90BAF7_A4E5984A_62F.png" alt="" vsbhref="vurl" vurl="/_vsl/F8E31DF9CF2F77E65C551CFF1A90BAF7/A4E5984A/62F" vheight="" vwidth="" orisrc="/__local/F/8E/31/DF9CF2F77E65C551CFF1A90BAF7_A4E5984A_62F.png" class="img_vsb_content"></div><div class="tx"><p><strong>1%</strong>ESI国际学科排名</p><p>QS世界排名350位左右</p></div></li><li><div class="jjicon"><img src="/__local/C/2C/82/BB5E8B23BBFC7C98F740EA7F1A0_C63E0496_78F.png" alt="" vsbhref="vurl" vurl="/_vsl/C2C82BB5E8B23BBFC7C98F740EA7F1A0/C63E0496/78F" vheight="" vwidth="" orisrc="/__local/C/2C/82/BB5E8B23BBFC7C98F740EA7F1A0_C63E0496_78F.png" class="img_vsb_content"></div><div class="tx"><p><strong>3</strong>个中心</p><p>辽宁应用数学中心、</p><p>数学教学中心和数学研究中心</p></div></li><li><div class="jjicon"><img src="/__local/8/97/1A/E9DF031E699B1024363A9DB9AB0_2996B6C9_3DD.png" alt="" vsbhref="vurl" vurl="/_vsl/8971AE9DF031E699B1024363A9DB9AB0/2996B6C9/3DD" vheight="" vwidth="" orisrc="/__local/8/97/1A/E9DF031E699B1024363A9DB9AB0_2996B6C9_3DD.png" class="img_vsb_content"></div><div class="tx"><p><strong>2</strong>个实验室</p><p>辽宁省计算数学与数据智能重点实验室</p><p>计算几何与图形图像实验室</p></div></li></ul></div><p style="text-indent: 2em;">数学科学学院现有5个研究所：数学研究所、计算科学研究所、统计与金融研究所、应用数学研究所、运筹学与控制论研究所；3个中心：辽宁应用数学中心、数学教学中心和数学研究中心；2个实验室：辽宁省计算数学与数据智能重点实验室、计算几何与图形图像实验室。主办核心学术期刊《数学研究及应用》（英文版）。数学科学学院现有专任教师93人，其中教授44人、副教授44人、讲师2人、助理教授3人、正编审1人，其中国务院学科评议组成员1人、教育部数学基础课教学指导委员会委员1人、国家教学名师2人、辽宁省数学类专业教指委主任委员1人、辽宁省教学名师5人、宝钢优秀教师奖获得者7人；国家杰出青年科学基金获得者1人、国家级青年人才8人、教育部跨世纪人才1人、教育部新世纪人才4人。</p><p style="text-align: right;">2024.12</p></div></div></div>
+
+    <span id="vsb_content_1021_u14" name="vsb_content_1021_u14"></span>
+    
+
+</div>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="foot">
+        <div class="wp">
+            <img src="../images/logo.png" class="foot-logo">
+                
+                   <img src="../images/foot-zi.png" alt="" class="top-zi" onclick="_addDynClicks(&quot;wbimage&quot;, 2076117683, 1015546)">
+                   
+
+           <div>
+<div class="foot-dz">
+ <p>邮编：116024</p>
+ <p>电话：0411-84708354</p>
+ <p>地址：大连市甘井子区凌工路2号</p>
+</div></div>
+            <div class="foot-media1">    
+                 <div>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1" width="22.237289428710938" height="18.067794799804688" viewBox="0 0 22.237289428710938 18.067794799804688">
+                            <g>
+                                <path d="M6.43908,0.139573C-0.124149,1.29264,-2.31189,8.58643,2.90869,11.9249C3.19495,12.1059,3.19495,12.0858,2.76554,13.3462L2.39753,14.4255L3.71973,13.7283L5.04192,13.0312L5.74392,13.1988C6.47993,13.3797,7.4205,13.5071,8.04748,13.5071L8.42237,13.5071L8.29283,13.0177C7.26373,9.29038,10.8213,5.59656,15.449,5.59656L16.0761,5.59656L15.9466,5.15412C14.931,1.66135,10.6442,-0.597834,6.43908,0.139573ZM5.86657,3.40434C6.56173,3.86696,6.60263,4.86582,5.9347,5.29488C4.85108,5.99205,3.58341,4.76524,4.31263,3.71942C4.63296,3.25019,5.40315,3.09599,5.86657,3.40434ZM11.4552,3.40434C12.6002,4.16192,11.7415,5.91158,10.4601,5.42891C9.53328,5.08032,9.42419,3.82673,10.2897,3.37756C10.6305,3.19657,11.1621,3.20996,11.4552,3.40434ZM13.9837,6.16637C10.7328,6.74957,8.47683,9.17635,8.60638,11.9651C8.77676,15.6992,13.2272,18.2734,17.5005,17.1204L18.0048,16.9863L19.068,17.5495C19.6541,17.8646,20.1448,18.0925,20.1585,18.0657C20.1721,18.0321,20.0563,17.6299,19.9063,17.1674C19.5656,16.1349,19.5588,16.2087,20.0154,15.8869C25.1541,12.2601,20.6424,4.97979,13.9837,6.16637ZM13.8542,9.17635C14.1404,9.36407,14.2904,9.83335,14.1677,10.1752C13.9087,10.9059,12.7979,10.9595,12.4979,10.2557C12.1572,9.44453,13.0977,8.69368,13.8542,9.17635ZM18.4069,9.25687C18.8567,9.67915,18.7817,10.3965,18.257,10.6646C17.4527,11.0668,16.6077,10.2624,17.0234,9.49149C17.296,8.99536,17.998,8.87472,18.4069,9.25687Z" fill="#fff" fill-opacity="1"></path>
+                            </g>
+                        </svg>
+                    </span>
+                  
+                      
+                    <div>
+                        <img src="../images/wx.jpg" alt="">
+                    </div>
+                </div>
+              
+               <div>
+                  
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1" width="17.372882843017578" height="21.542373657226562" viewBox="0 0 17.372882843017578 21.542373657226562">
+                            <g>
+                                <path d="M17.3485,8.91779C15.6382,8.91779,13.9749,8.34346,12.6067,7.28107L12.6067,14.6926C12.6067,18.4772,9.78485,21.5424,6.30335,21.5424C2.82185,21.5424,0,18.4772,0,14.6926C0,10.9079,2.82185,7.84277,6.30335,7.84277C6.6515,7.84277,6.98947,7.87433,7.31929,7.93323L7.31929,11.8588C7.00372,11.7305,6.66778,11.6653,6.32981,11.6653C4.77637,11.6653,3.51611,13.0327,3.51611,14.722C3.51611,16.4092,4.77637,17.7788,6.32981,17.7788C7.88122,17.7788,9.14148,16.4092,9.14148,14.722L9.14148,0L12.6576,0C12.6576,2.82954,14.7689,5.12262,17.3729,5.12262L17.3729,8.91568L17.3485,8.91779Z" fill="#FFFFFF" fill-opacity="1"></path>
+                            </g>
+                        </svg>
+                    </span>
+                      
+                    <div>
+                        <img src="../images/wx.jpg" alt="">
+                    </div>
+                </div>
+              
+               <div>
+                  
+                  
+                          <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1" width="20.84745979309082" height="18.067794799804688" viewBox="0 0 20.84745979309082 18.067794799804688">
+                            <g>
+                                <path d="M16.7943,9.70343Q17.301,10.111,17.5074,10.6835Q17.7138,11.256,17.6762,11.877Q17.6387,12.498,17.4135,13.119Q17.1884,13.7401,16.8318,14.2446Q16.1938,15.1568,15.387,15.7972Q14.5801,16.4376,13.7169,16.8646Q12.8537,17.2915,11.9812,17.5341Q11.1086,17.7767,10.3393,17.8931Q9.56994,18.0096,8.96009,18.0387Q8.35024,18.0678,8.01248,18.0678Q7.67472,18.0678,7.11178,18.0193Q6.54884,17.9708,5.86393,17.8252Q5.17903,17.6797,4.42844,17.4177Q3.67786,17.1557,2.96481,16.7287Q2.25175,16.3018,1.60437,15.6808Q0.956994,15.0597,0.506644,14.1864Q0.206411,13.6236,0.103205,12.9832Q0,12.3428,0,11.353Q0,10.9261,0.140734,10.3827Q0.281469,9.83928,0.637996,9.17945Q0.994523,8.51962,1.61375,7.74334Q2.23299,6.96706,3.18998,6.03554Q4.12821,5.12341,5.13212,4.41506Q6.13602,3.70671,7.28066,3.31857Q7.80607,3.12451,8.44407,3.1051Q9.08206,3.08569,9.49488,3.31857Q9.68253,3.53205,9.85141,3.75523Q10.0203,3.97841,10.0766,4.30832Q10.1329,4.58002,10.086,4.83231Q10.0391,5.0846,9.98276,5.33689Q9.92647,5.58918,9.88894,5.82206Q9.85141,6.05494,9.92647,6.24901Q10.2455,6.28783,10.5457,6.2199Q10.8459,6.15198,11.1274,6.04524Q11.4089,5.9385,11.6997,5.82206Q11.9906,5.70562,12.3096,5.6474Q12.8162,5.55036,13.3135,5.56007Q13.8107,5.56977,14.2142,5.70562Q14.6176,5.84147,14.8803,6.12287Q15.143,6.40426,15.1993,6.85062Q15.2369,7.12232,15.1618,7.3552Q15.0867,7.58808,15.0023,7.79186Q14.9179,7.99563,14.8709,8.2091Q14.824,8.42258,14.8991,8.65546Q14.9554,8.79131,15.1712,8.90775Q15.387,9.02419,15.6684,9.14063Q15.9499,9.25707,16.2595,9.39292Q16.5691,9.52877,16.7943,9.70343ZM12.0656,15.739Q12.5535,15.4285,13.0508,14.8851Q13.548,14.3417,13.8577,13.6721Q14.1673,13.0026,14.2048,12.236Q14.2423,11.4695,13.8295,10.6932Q13.473,10.0528,12.957,9.6064Q12.4409,9.16004,11.8029,8.89805Q11.1649,8.63606,10.4425,8.51962Q9.72006,8.40318,8.96948,8.40317Q7.5246,8.40317,6.40811,8.71368Q5.29161,9.02419,4.47535,9.52877Q3.6591,10.0334,3.15245,10.6738Q2.64581,11.3142,2.4394,11.974Q2.23299,12.6145,2.31743,13.2452Q2.40187,13.8759,2.7021,14.4387Q3.00233,15.0015,3.48083,15.4479Q3.95933,15.8942,4.54103,16.1659Q5.61061,16.6511,6.72711,16.7772Q7.8436,16.9034,8.85689,16.7869Q9.87018,16.6705,10.7052,16.3794Q11.5402,16.0883,12.0656,15.739ZM9.60747,9.6064Q9.98276,9.76166,10.3205,9.95572Q10.6583,10.1498,10.921,10.4797Q11.1086,10.7126,11.2494,11.0619Q11.3901,11.4112,11.4464,11.8091Q11.5027,12.2069,11.4745,12.6145Q11.4464,13.022,11.2963,13.3519Q11.1462,13.7012,10.9304,14.0603Q10.7146,14.4193,10.405,14.7298Q10.0954,15.0403,9.66376,15.2829Q9.23218,15.5255,8.61295,15.6419Q7.48707,15.8554,6.45502,15.4285Q5.42297,15.0015,4.84126,14.0118Q4.61609,13.2549,4.59732,12.6727Q4.57856,12.0905,4.89756,11.4112Q5.1415,10.8873,5.63876,10.4312Q6.13602,9.97513,6.7834,9.69373Q7.43078,9.41233,8.1626,9.36381Q8.89442,9.3153,9.60747,9.6064ZM6.6239,14.3805Q7.31819,14.4387,7.6841,14.0312Q8.05001,13.6236,8.07816,13.119Q8.1063,12.6145,7.79669,12.2166Q7.48707,11.8188,6.83031,11.8964Q6.32367,11.9546,6.0422,12.3428Q5.76073,12.7309,5.7232,13.1676Q5.68567,13.6042,5.90146,13.9729Q6.11726,14.3417,6.6239,14.3805ZM14.2986,0Q15.6684,0,16.86,0.378434Q18.0515,0.756868,18.9429,1.47492Q19.8342,2.19298,20.3408,3.22154Q20.8475,4.2501,20.8475,5.55036Q20.8475,6.19079,20.5472,6.511Q20.247,6.83122,19.8998,6.84092Q19.5527,6.85062,19.2525,6.56922Q18.9522,6.28783,18.9522,5.70562Q18.9522,4.92934,18.5394,4.2307Q18.1266,3.53205,17.4511,3.00806Q16.7755,2.48408,15.903,2.18327Q15.0304,1.88247,14.1297,1.88247Q13.548,1.88247,13.2666,1.59136Q12.9851,1.30026,13.0039,0.941233Q13.0226,0.582206,13.351,0.291103Q13.6794,-4.88e-7,14.2986,0L14.2986,0ZM14.2986,3.1051Q16.0437,3.1051,16.9444,4.02693Q17.8451,4.94875,17.8451,6.81181Q17.8451,7.39402,17.6575,7.6366Q17.4698,7.87919,17.2447,7.85008Q17.0195,7.82097,16.8318,7.56868Q16.6442,7.31639,16.6442,6.88944Q16.6442,5.74443,16.0062,5.06519Q15.3682,4.38595,14.2986,4.38595Q13.9421,4.38595,13.7732,4.18218Q13.6043,3.97841,13.6043,3.74553Q13.6043,3.51264,13.7826,3.30887Q13.9609,3.1051,14.2986,3.1051Z" fill="#FFFFFF" fill-opacity="1"></path>
+                            </g>
+                        </svg>
+                    </span>
+                    <div>
+                        <img src="../images/wx.jpg" alt="">
+                    </div>
+                </div>
+              
+</div>
+        </div>
+        <div class="foot-bq"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>Copyright©&nbsp;大连理工大学数学科学学院2024 &nbsp;&nbsp;&nbsp;&nbsp; 辽ICP备05001357号</p></div>
+    </div>
+    <script type="text/javascript" src="../js/wow.min.js"></script>
+    <script>
+        $(function () {
+            var docWidth = $(document).width();
+            if (docWidth > 1024) {
+                // new WOW().init();
+            }
+        })
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,1417 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>体育教研部</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="体育教研部">
+<META Name="keywords" Content="体育教研部" />
+
+
+    <link href="style/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/slick.css">
+    <link rel="stylesheet" href="style/slick-theme.css">
+    <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="shortcut icon" href="#" />
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e78475153505742000400014153 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,2125351268)</script>
+</head>
+
+<body>
+
+    <!-- pc导航 -->
+    <div class="pc">
+        <div class="head flex">
+            <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="体育教研部"><img src="images/logo2.png" alt=""></a></div>
+            <div class="head-r">
+                <div class="head-en">
+                    <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>
+   <a href="https://www.bfsu.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2125351268, 107807)">学校主页</a></li>
+
+                    <div class="search-con">
+                        <button><img src="images/fdj.png" /></button>
+                        <div class="yc-search">
+                            <div class="yc-search-bg"></div>
+                            <div class="search"><!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+<input type="text" name="" id="" value="" placeholder="请输入搜索关键字" class="text" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"/>
+<input type="submit" name="submit" id="" value="" class="button" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "2125351268";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu2 = document.querySelector("#appu2");
+   if (appElementu2 && appElementu2.__vue__) {
+
+   } else {
+      $("#divu2").html($("#htmlu2").text());
+      var appOwner = "2125351268";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou2 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu2(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu2();
+        }
+      };
+
+      function onSubmitu2(e) {
+        queryInfou2.query.keyWord= $("#appu2  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou2.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav"><ul class="flex">
+                        <li class="active">
+                            <a href="index.htm" title="首页">首页</a>
+                        </li>
+                        <li>
+                            <a href="xwzx/xwdt.htm" title="新闻资讯">新闻资讯</a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="xwzx/xwdt.htm" title="新闻动态">新闻动态</a>
+                                    </li>
+                                    <li>
+                                        <a href="xwzx/jyjx.htm" title="教育教学">教育教学</a>
+                                    </li>
+                                    <li>
+                                        <a href="xwzx/xsky.htm" title="学术科研">学术科研</a>
+                                    </li>
+                                    <li>
+                                        <a href="xwzx/xyty.htm" title="校园体育">校园体育</a>
+                                    </li>
+                                    <li>
+                                        <a href="xwzx/xljs.htm" title="训练竞赛">训练竞赛</a>
+                                    </li>
+                                    <li>
+                                        <a href="xwzx/bmhd.htm" title="部门活动">部门活动</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="tzgg.htm" title="通知公告">通知公告</a>
+                        </li>
+                        <li>
+                            <a href="bmgk1.htm" title="部门概况">部门概况</a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="bmgk1/bmjj.htm" title="部门简介">部门简介</a>
+                                    </li>
+                                    <li>
+                                        <a href="bmgk1/zzjg.htm" title="组织架构">组织架构</a>
+                                    </li>
+                                    <li>
+                                        <a href="bmgk1/szdw.htm" title="师资队伍">师资队伍</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="jyjx1.htm" title="教育教学">教育教学</a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="jyjx1/bks.htm" title="本科生">本科生</a>
+                                    </li>
+                                    <li>
+                                        <a href="jyjx1/yjs.htm" title="研究生">研究生</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="xsky.htm" title="学术科研">学术科研</a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="xsky/xshy.htm" title="学术会议">学术会议</a>
+                                    </li>
+                                    <li>
+                                        <a href="xsky/xsjz.htm" title="学术讲座">学术讲座</a>
+                                    </li>
+                                    <li>
+                                        <a href="xsky/yjxm.htm" title="研究项目">研究项目</a>
+                                    </li>
+                                    <li>
+                                        <a href="xsky/yjzx.htm" title="研究中心">研究中心</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="xyty.htm" title="校园体育">校园体育</a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="xyty/xytyhd.htm" title="校园体育活动">校园体育活动</a>
+                                    </li>
+                                    <li>
+                                        <a href="xyty/tyst.htm" title="体育社团">体育社团</a>
+                                    </li>
+                                    <li>
+                                        <a href="xyty/kwtydl.htm" title="课外体育锻炼">课外体育锻炼</a>
+                                    </li>
+                                    <li>
+                                        <a href="xyty/tzjkcs.htm" title="体质健康测试">体质健康测试</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="xljs1.htm" title="训练竞赛">训练竞赛</a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="xljs1/gspydd.htm" title="高水平运动队">高水平运动队</a>
+                                    </li>
+                                    <li>
+                                        <a href="xljs1/ptsdbd.htm" title="普通生代表队">普通生代表队</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="hzjl.htm" title="合作交流">合作交流</a>
+                        </li>
+                        <li>
+                            <a href="djgz.htm" title="党建工作">党建工作</a>
+                        </li>
+                        <li>
+                            <a href="xxpt1.htm" title="信息平台">信息平台</a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="xxpt1/xgzc_zd_.htm" title="相关政策(制度)">相关政策(制度)</a>
+                                    </li>
+                                    <li>
+                                        <a href="xxpt1/xzzq.htm" title="下载专区">下载专区</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li style="display:none;">
+                            <a href="xshd.htm" title="学术活动">学术活动</a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="xshd/xshy.htm" title="学术会议">学术会议</a>
+                                    </li>
+                                    <li>
+                                        <a href="xshd/xsjz.htm" title="学术讲座">学术讲座</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li style="display:none;">
+                            <a href="xmcg.htm" title="项目成果">项目成果</a>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <a href="xmcg/yjxm.htm" title="研究项目">研究项目</a>
+                                    </li>
+                                    <li>
+                                        <a href="xmcg/yjzx.htm" title="研究中心">研究中心</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+</ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 移动端导航 -->
+    <div class="m-top">
+        <div class="wap wap-menu">
+            <img src="images/menu.png" class="menu" alt="">
+            <img src="images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+
+    <div class="wap m-head">
+        <div class="m-logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="体育教研部"><img src="images/logo2.png" alt=""></a></div>
+        <div class="m-nav">
+            <div class="m-tlink">
+   <a href="https://www.bfsu.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2125351268, 107807)">学校主页</a></li>
+</div>
+            <div class="m-search"><!-- 3.1.3版本 -->
+
+
+
+<div id="divu6"></div>
+<script type="text/html" id="htmlu6">
+    <div id="appu6">
+        <div v-if="!isError">
+<input type="text" placeholder="" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+<input type="image" src="images/fdj.png" v-on:click="onSubmit()">
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu6").html($("#htmlu6").text());
+</script>
+<script>
+    var appOwner = "2125351268";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu6",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultmobile/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu6 = document.querySelector("#appu6");
+   if (appElementu6 && appElementu6.__vue__) {
+
+   } else {
+      $("#divu6").html($("#htmlu6").text());
+      var appOwner = "2125351268";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou6 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu6(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu6();
+        }
+      };
+
+      function onSubmitu6(e) {
+        queryInfou6.query.keyWord= $("#appu6  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultmobile/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou6.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script></div>
+            <ul class="clearfix">                <li>
+                    <a href="index.htm" title="首页">首页</a>
+                </li>
+                <li>
+                    <a href="xwzx/xwdt.htm" title="新闻资讯">新闻资讯</a>
+                    <span></span>
+                    <ul>
+                        <li>
+                            <a href="xwzx/xwdt.htm" title="新闻动态">新闻动态</a>
+                        </li>
+                        <li>
+                            <a href="xwzx/jyjx.htm" title="教育教学">教育教学</a>
+                        </li>
+                        <li>
+                            <a href="xwzx/xsky.htm" title="学术科研">学术科研</a>
+                        </li>
+                        <li>
+                            <a href="xwzx/xyty.htm" title="校园体育">校园体育</a>
+                        </li>
+                        <li>
+                            <a href="xwzx/xljs.htm" title="训练竞赛">训练竞赛</a>
+                        </li>
+                        <li>
+                            <a href="xwzx/bmhd.htm" title="部门活动">部门活动</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="tzgg.htm" title="通知公告">通知公告</a>
+                </li>
+                <li>
+                    <a href="bmgk1.htm" title="部门概况">部门概况</a>
+                    <span></span>
+                    <ul>
+                        <li>
+                            <a href="bmgk1/bmjj.htm" title="部门简介">部门简介</a>
+                        </li>
+                        <li>
+                            <a href="bmgk1/zzjg.htm" title="组织架构">组织架构</a>
+                        </li>
+                        <li>
+                            <a href="bmgk1/szdw.htm" title="师资队伍">师资队伍</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="jyjx1.htm" title="教育教学">教育教学</a>
+                    <span></span>
+                    <ul>
+                        <li>
+                            <a href="jyjx1/bks.htm" title="本科生">本科生</a>
+                        </li>
+                        <li>
+                            <a href="jyjx1/yjs.htm" title="研究生">研究生</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="xsky.htm" title="学术科研">学术科研</a>
+                    <span></span>
+                    <ul>
+                        <li>
+                            <a href="xsky/xshy.htm" title="学术会议">学术会议</a>
+                        </li>
+                        <li>
+                            <a href="xsky/xsjz.htm" title="学术讲座">学术讲座</a>
+                        </li>
+                        <li>
+                            <a href="xsky/yjxm.htm" title="研究项目">研究项目</a>
+                        </li>
+                        <li>
+                            <a href="xsky/yjzx.htm" title="研究中心">研究中心</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="xyty.htm" title="校园体育">校园体育</a>
+                    <span></span>
+                    <ul>
+                        <li>
+                            <a href="xyty/xytyhd.htm" title="校园体育活动">校园体育活动</a>
+                        </li>
+                        <li>
+                            <a href="xyty/tyst.htm" title="体育社团">体育社团</a>
+                        </li>
+                        <li>
+                            <a href="xyty/kwtydl.htm" title="课外体育锻炼">课外体育锻炼</a>
+                        </li>
+                        <li>
+                            <a href="xyty/tzjkcs.htm" title="体质健康测试">体质健康测试</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="xljs1.htm" title="训练竞赛">训练竞赛</a>
+                    <span></span>
+                    <ul>
+                        <li>
+                            <a href="xljs1/gspydd.htm" title="高水平运动队">高水平运动队</a>
+                        </li>
+                        <li>
+                            <a href="xljs1/ptsdbd.htm" title="普通生代表队">普通生代表队</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="hzjl.htm" title="合作交流">合作交流</a>
+                </li>
+                <li>
+                    <a href="djgz.htm" title="党建工作">党建工作</a>
+                </li>
+                <li>
+                    <a href="xxpt1.htm" title="信息平台">信息平台</a>
+                    <span></span>
+                    <ul>
+                        <li>
+                            <a href="xxpt1/xgzc_zd_.htm" title="相关政策(制度)">相关政策(制度)</a>
+                        </li>
+                        <li>
+                            <a href="xxpt1/xzzq.htm" title="下载专区">下载专区</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="xshd.htm" title="学术活动">学术活动</a>
+                    <span></span>
+                    <ul>
+                        <li>
+                            <a href="xshd/xshy.htm" title="学术会议">学术会议</a>
+                        </li>
+                        <li>
+                            <a href="xshd/xsjz.htm" title="学术讲座">学术讲座</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="xmcg.htm" title="项目成果">项目成果</a>
+                    <span></span>
+                    <ul>
+                        <li>
+                            <a href="xmcg/yjxm.htm" title="研究项目">研究项目</a>
+                        </li>
+                        <li>
+                            <a href="xmcg/yjzx.htm" title="研究中心">研究中心</a>
+                        </li>
+                    </ul>
+                </li>
+</ul>
+        </div>
+    </div>
+
+    <div class="banner-k">    <div class="slider banner">
+            <div>
+                <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 2125351268, 1019318)">
+                   <img src="images/yundonghuishengqi.png">
+                </a> 
+            </div>
+            <div>
+                <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 2125351268, 1019294)">
+                   <img src="images/gaoxiaoyundonghui2025.png">
+                </a> 
+            </div>
+            <div>
+                <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 2125351268, 1019295)">
+                   <img src="images/gaoduanluntan1.png">
+                </a> 
+            </div>
+            <div>
+                <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 2125351268, 1019298)">
+                   <img src="images/chenlong.png">
+                </a> 
+            </div>
+</div>
+        <div class="down-page">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewbox="0 0 50 50">
+                <circle fill="transparent" class="pie-bg" stroke-width="1" cx="25" cy="25" r="20"></circle>
+                <circle fill="transparent" class="pie-bar" stroke-width="1" cx="25" cy="25" r="20" style="stroke-dasharray: 0, 125.664;"></circle>
+            </svg>
+            <img src="images/down_page.png" alt="">
+        </div></div>
+
+    <div class="section1">
+        <div class="wp">
+            <div class="s1-c flex">
+                <div class="s1-l wow fadeInUp">
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script>                    <div class="title">
+                        <h3>
+                            <b>新闻<em>动态</em></b>
+                            <span class="titen">NEWS</span>
+                        </h3>
+                        <div class="more"><a href="xwzx/xwdt.htm">更多+</a></div>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="info/1171/6261.htm" title="体育教研部组织开展“赓续前行，迎新聚力”主题活动">
+                                <div class="bg_img">
+                                    <span class="a" style="background-image: url(/__local/7/FC/C2/A0425043F27853A6077F4097F03_CF52EAA3_27B8E.png);"></span>
+                                    <div class="jdt-date">
+                                        <p>17</p>
+                                        <span>2025-09</span>
+                                    </div>
+                                </div>
+                                <div class="s1-ltx">
+                                    <h3 style="font-weight:bold;">体育教研部组织开展“赓续前行，迎新聚力”主题活动</h3>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="info/1171/6231.htm" title="体育教研部招募研究生助管!">
+                                <div class="bg_img">
+                                    <span class="a" style="background-image: url(/__local/E/CC/38/CD948DFF4C9858F7BF36C37D42E_8A87F76B_F980.jpg);"></span>
+                                    <div class="jdt-date">
+                                        <p>17</p>
+                                        <span>2025-09</span>
+                                    </div>
+                                </div>
+                                <div class="s1-ltx">
+                                    <h3 style="font-weight:bold;">体育教研部招募研究生助管!</h3>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="info/1171/6201.htm" title="体育必修课新开课介绍">
+                                <div class="bg_img">
+                                    <span class="a" style="background-image: url(/__local/1/94/37/BBDAA54E06ECFB3294A2004CE1D_A243DEFF_609D.jpg);"></span>
+                                    <div class="jdt-date">
+                                        <p>12</p>
+                                        <span>2025-09</span>
+                                    </div>
+                                </div>
+                                <div class="s1-ltx">
+                                    <h3 style="font-weight:bold;">体育必修课新开课介绍</h3>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="s1-ld">
+                        <ul>
+                            <li>
+                                <a href="info/1171/6121.htm" title="2025年秋季学期开设硕士、博士研究生体育课程">
+                                    <h3 style="font-weight:bold;">2025年秋季学期开设硕士、博士研究生体育课程</h3>
+                                    <span>2025-09-11</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1171/6071.htm" title="关于2025级本科生实施课外体育锻炼方案的通知">
+                                    <h3 style="font-weight:bold;">关于2025级本科生实施课外体育锻炼方案的通知</h3>
+                                    <span>2025-09-08</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><script>_showDynClickBatch(['dynclicks_u9_6261','dynclicks_u9_6231','dynclicks_u9_6201','dynclicks_u9_6121','dynclicks_u9_6071'],[6261,6231,6201,6121,6071],"wbnews", 2125351268)</script>
+
+</div>
+                <div class="s1-r wow fadeInUp">
+
+                    <div class="title">
+                        <h3>
+                            <b>媒体<em>报道</em></b>
+                            <span class="titen">MEDIA COVERAGE</span>
+                        </h3>
+                        <div class="more"><a href="mtbd.htm">更多+</a></div>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="info/1741/6031.htm" title="国家体育总局青少司向我校发来感谢信">
+                                <div class="s1-rdate">
+                                    <p>03</p>
+                                    <span>2025-09</span>
+                                </div>
+                                <div class="s1-rtx" style="font-weight:bold;">国家体育总局青少司向我校发来感谢信</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="info/1741/5351.htm" title="北外校友网羽协会成立仪式暨校友网羽友谊赛举行">
+                                <div class="s1-rdate">
+                                    <p>29</p>
+                                    <span>2025-06</span>
+                                </div>
+                                <div class="s1-rtx" style="font-weight:bold;">北外校友网羽协会成立仪式暨校友网羽友谊赛举行</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="info/1741/6001.htm" title="北外网球队在第27届中国大学生网球锦标赛分区赛 （华北赛区）中取得佳绩">
+                                <div class="s1-rdate">
+                                    <p>02</p>
+                                    <span>2025-06</span>
+                                </div>
+                                <div class="s1-rtx" style="font-weight:bold;">北外网球队在第27届中国大学生网球锦标赛分区赛 （华北赛区）中取得佳绩</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="info/1741/5471.htm" title="“北外运动与健康讲堂”第五期 —— 风起正是扬帆时—奥运四十年与中国竞技体育的发展">
+                                <div class="s1-rdate">
+                                    <p>16</p>
+                                    <span>2025-05</span>
+                                </div>
+                                <div class="s1-rtx" style="font-weight:bold;">“北外运动与健康讲堂”第五期 —— 风起正是扬帆时—奥运四十年与中国竞技体育的发展</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="info/1741/5421.htm" title="“北外运动与健康讲堂”第四期 —— 体重管控的科学认知与运动营养方案">
+                                <div class="s1-rdate">
+                                    <p>08</p>
+                                    <span>2025-05</span>
+                                </div>
+                                <div class="s1-rtx" style="font-weight:bold;">“北外运动与健康讲堂”第四期 —— 体重管控的科学认知与运动营养方案</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="info/1741/5251.htm" title="“北外运动与健康讲堂”第三期——跑步运动常见损伤及急救处理">
+                                <div class="s1-rdate">
+                                    <p>17</p>
+                                    <span>2025-04</span>
+                                </div>
+                                <div class="s1-rtx" style="font-weight:bold;">“北外运动与健康讲堂”第三期——跑步运动常见损伤及急救处理</div>
+                            </a>
+                        </li>
+                    </ul><script>_showDynClickBatch(['dynclicks_u10_6031','dynclicks_u10_5351','dynclicks_u10_6001','dynclicks_u10_5471','dynclicks_u10_5421','dynclicks_u10_5251'],[6031,5351,6001,5471,5421,5251],"wbnews", 2125351268)</script>
+
+</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section2">
+        <div class="wp">
+
+            <div class="title wow fadeInUp">
+                <h3>
+                    <b>通知<em>公告</em></b>
+                    <span class="titen">NOTICE</span>
+                </h3>
+                <div class="more"><a href="tzgg.htm">更多+</a></div>
+            </div>
+            <div class="s2-c wow fadeInUp">
+                <ul>
+                    <li>
+                        <a href="info/1231/6241.htm" title="体育教研部招募研究生助管!">
+                            <div class="s2-cdate"><span>17</span> /2025-09</div>
+                            <h3 style="font-weight:bold;">体育教研部招募研究生助管!</h3>
+                            <div class="s2-cmore">more+</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info/1231/6141.htm" title="2025年秋季学期开设硕士、博士研究生体育课程">
+                            <div class="s2-cdate"><span>11</span> /2025-09</div>
+                            <h3 style="font-weight:bold;">2025年秋季学期开设硕士、博士研究生体育课程</h3>
+                            <div class="s2-cmore">more+</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info/1231/6081.htm" title="关于2025级本科生实施课外体育锻炼方案的通知">
+                            <div class="s2-cdate"><span>08</span> /2025-09</div>
+                            <h3 style="font-weight:bold;">关于2025级本科生实施课外体育锻炼方案的通知</h3>
+                            <div class="s2-cmore">more+</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info/1231/5941.htm" title="关于2024级全日制本科生打卡说明">
+                            <div class="s2-cdate"><span>03</span> /2025-09</div>
+                            <h3 style="font-weight:bold;">关于2024级全日制本科生打卡说明</h3>
+                            <div class="s2-cmore">more+</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info/1231/5851.htm" title="关于北京外国语大学“体育公益广告和中华体育故事”征集活动评选结果的通知">
+                            <div class="s2-cdate"><span>01</span> /2025-09</div>
+                            <h3 style="font-weight:bold;">关于北京外国语大学“体育公益广告和中华体育故事”征集活动评选结果的通知</h3>
+                            <div class="s2-cmore">more+</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info/1231/5781.htm" title="关于开展北京外国语大学“体育公益广告和中华体育故事”征集活动的通知">
+                            <div class="s2-cdate"><span>20</span> /2025-08</div>
+                            <h3 style="font-weight:bold;">关于开展北京外国语大学“体育公益广告和中华体育故事”征集活动的通知</h3>
+                            <div class="s2-cmore">more+</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info/1231/5061.htm" title="北京外国语大学体育教研部2024年教学科研岗招聘公告">
+                            <div class="s2-cdate"><span>16</span> /2024-05</div>
+                            <h3 style="font-weight:bold;">北京外国语大学体育教研部2024年教学科研岗招聘公告</h3>
+                            <div class="s2-cmore">more+</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info/1231/2651.htm" title="2024年春季学期学生游泳达标测试通知">
+                            <div class="s2-cdate"><span>10</span> /2024-05</div>
+                            <h3 style="font-weight:bold;">2024年春季学期学生游泳达标测试通知</h3>
+                            <div class="s2-cmore">more+</div>
+                        </a>
+                    </li>
+                </ul>
+            </div><script>_showDynClickBatch(['dynclicks_u11_6241','dynclicks_u11_6141','dynclicks_u11_6081','dynclicks_u11_5941','dynclicks_u11_5851','dynclicks_u11_5781','dynclicks_u11_5061','dynclicks_u11_2651'],[6241,6141,6081,5941,5851,5781,5061,2651],"wbnews", 2125351268)</script>
+
+</div>
+    </div>
+
+<div class="section5">
+        <div class="s5-c wp flex">
+            <div class="s5-l wow fadeInUp">
+
+                <div class="title">
+                    <h3>
+                        <b>本科<em>教学</em></b>
+                        <span class="titen">UNDERGRADUATE TEACHING</span>
+                    </h3>
+                    <div class="more"><a href="jyjx1/bks.htm">更多+</a></div>
+                </div>
+                <div class="s5-lt">
+                    <a href="info/1291/6221.htm" title="体育必修课新开课介绍">
+                        <div class="bg_img">
+                            <span class="a" style="background-image: url(/__local/1/94/37/BBDAA54E06ECFB3294A2004CE1D_A243DEFF_609D.jpg);"></span>
+                        </div>
+                        <h3 style="font-weight:bold;">体育必修课新开课介绍</h3>
+                    </a>
+                </div>
+                <ul class="gg-list">
+                    <li>
+                        <span>2024-05-13</span>
+                        <a href="info/1291/5011.htm" title="“PE优改”工作坊——公共体育课程改革师生座谈会圆满召开" style="font-weight:bold;">“PE优改”工作坊——公共体育课程改革师生座谈会圆满召开</a>
+                    </li>
+                    <li>
+                        <span>2020-12-10</span>
+                        <a href="info/1291/5531.htm" title="体育教研部一门课程获评首批国家级一流本科课程" style="font-weight:bold;">体育教研部一门课程获评首批国家级一流本科课程</a>
+                    </li>
+                </ul><script>_showDynClickBatch(['dynclicks_u12_6221','dynclicks_u12_5011','dynclicks_u12_5531'],[6221,5011,5531],"wbnews", 2125351268)</script>
+
+</div>
+            <div class="s5-l s5-r wow fadeInUp">
+
+                <div class="title">
+                    <h3>
+                        <b>研究生<em>教学</em></b>
+                        <span class="titen">GRADUATE TEACHING</span>
+                    </h3>
+                    <div class="more"><a href="jyjx1/yjs.htm">更多+</a></div>
+                </div>
+                <div class="s5-lt">
+                    <a href="info/1301/6251.htm" title="体育教研部招募研究生助管!">
+                        <div class="bg_img">
+                            <span class="a" style="background-image: url(/__local/E/CC/38/CD948DFF4C9858F7BF36C37D42E_8A87F76B_F980.jpg);"></span>
+                        </div>
+                        <h3 style="font-weight:bold;">体育教研部招募研究生助管!</h3>
+                    </a>
+                </div>
+                <ul class="gg-list">
+                    <li>
+                        <span>2025-09-11</span>
+                        <a href="info/1301/6151.htm" title="2025年秋季学期开设硕士、博士研究生体育课程" style="font-weight:bold;">2025年秋季学期开设硕士、博士研究生体育课程</a>
+                    </li>
+                </ul><script>_showDynClickBatch(['dynclicks_u13_6251','dynclicks_u13_6151'],[6251,6151],"wbnews", 2125351268)</script>
+
+</div>
+        </div>
+    </div>
+    <div class="section3">
+
+        <div class="s3-c">
+            <div class="s3-r wow fadeInUp">
+                <ul>
+                    <li>
+                        <a href="info/1701/6061.htm" title="关于2025级本科生实施课外体育锻炼方案的通知">
+                            <div class="pic">
+<img src="/__local/2/60/57/5A81C97DFE9C8B55761161612FC_562F5F88_CF33.jpg" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info/1701/5921.htm" title="关于2024级全日制本科生打卡说明">
+                            <div class="pic">
+<img src="/__local/F/3B/E3/BB04E71691AA39FB9970BB24D77_09D13B74_6CAE.jpg" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info/1731/5971.htm" title="北外网球队在第27届中国大学生网球锦标赛分区赛 （华北赛区）中取得佳绩">
+                            <div class="pic">
+<img src="/__local/9/05/FB/170D1ED37618726ECE05D7081F7_6D70977B_5C803.jpg?e=.jpg" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info/1721/5691.htm" title="北外高水平游泳队在中国大学生游泳锦标赛（北方赛区）中斩获佳绩">
+                            <div class="pic">
+<img src="/__local/5/3B/30/A95069754656CF1D5847F47C108_59C89074_625DA.jpg?e=.jpg" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="info/1701/4971.htm" title="2024年春季学期学生游泳达标测试通知">
+                            <div class="pic">
+<img src="/__local/D/7B/94/DA465EC7F9CEE28B464A9EC8893_54B895BA_3164F.png" alt="" />
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="title wp wow fadeInUp">
+                <h3>
+                    <b>群体、<em>竞赛</em></b>
+                    <span class="titen">Group competition</span>
+                </h3>
+                <div class="more"><a href="index/qt_js.htm">更多+</a></div>
+            </div>
+        </div>
+        <div class="s3-d wp">
+            <ul>
+                <li>
+                    <a href="info/1701/6061.htm" title="关于2025级本科生实施课外体育锻炼方案的通知">
+                        <div class="pic">
+<img src="/__local/2/60/57/5A81C97DFE9C8B55761161612FC_562F5F88_CF33.jpg" alt="" />
+                            <h3 style="font-weight:bold;">关于2025级本科生实施课外体育锻炼方案的通知</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="info/1701/5921.htm" title="关于2024级全日制本科生打卡说明">
+                        <div class="pic">
+<img src="/__local/F/3B/E3/BB04E71691AA39FB9970BB24D77_09D13B74_6CAE.jpg" alt="" />
+                            <h3 style="font-weight:bold;">关于2024级全日制本科生打卡说明</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="info/1731/5971.htm" title="北外网球队在第27届中国大学生网球锦标赛分区赛 （华北赛区）中取得佳绩">
+                        <div class="pic">
+<img src="/__local/9/05/FB/170D1ED37618726ECE05D7081F7_6D70977B_5C803.jpg?e=.jpg" alt="" />
+                            <h3 style="font-weight:bold;">北外网球队在第27届中国大学生网球锦标赛分区赛 （华北赛区）中取得佳绩</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="info/1721/5691.htm" title="北外高水平游泳队在中国大学生游泳锦标赛（北方赛区）中斩获佳绩">
+                        <div class="pic">
+<img src="/__local/5/3B/30/A95069754656CF1D5847F47C108_59C89074_625DA.jpg?e=.jpg" alt="" />
+                            <h3 style="font-weight:bold;">北外高水平游泳队在中国大学生游泳锦标赛（北方赛区）中斩获佳绩</h3>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="info/1701/4971.htm" title="2024年春季学期学生游泳达标测试通知">
+                        <div class="pic">
+<img src="/__local/D/7B/94/DA465EC7F9CEE28B464A9EC8893_54B895BA_3164F.png" alt="" />
+                            <h3 style="font-weight:bold;">2024年春季学期学生游泳达标测试通知</h3>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+            
+<script>_showDynClickBatch(['dynclicks_u14_6061','dynclicks_u14_5921','dynclicks_u14_5971','dynclicks_u14_5691','dynclicks_u14_4971'],[6061,5921,5971,5691,4971],"wbnews", 2125351268)</script>
+
+</div>
+
+    <div class="section4">
+        <div class="wp">
+            <div class="s4-c flex">
+                <div class="s4-l wow fadeInUp">
+
+                    <div class="title">
+                        <h3>
+                            <b>学术<em>活动</em></b>
+                            <span class="titen">Academic activities</span>
+                        </h3>
+                        <div class="more"><a href="xshd.htm">更多+</a></div>
+                    </div>
+                    <div class="s4-lbox flex">
+                        <div class="s4-l-l">
+                            <a href="info/1331/5481.htm" title="“北外运动与健康讲堂”第五期 —— 风起正是扬帆时—奥运四十年与中国竞技体育的发展">
+                                <div class="bg_img">
+                                    <span class="a" style="background-image: url(/__local/0/E5/55/F34E8C981591A037CBF8AE690BB_8D10E262_257DF8.jpg?e=.jpg);"></span>
+                                </div>
+                                <div class="s4-rtx">
+                                    <h3 style="font-weight:bold;">“北外运动与健康讲堂”第五期 —— 风起正是扬帆时—奥运四十年与中国竞技体育的发展</h3>
+                                    <p> 5月13日，体育教研部在图书馆三层学术报告厅成功举办第五期“北外运动与健康大讲堂”。本期讲座以“风起正是扬帆时—奥运四十年与中国竞技体育的发展”为主题，特邀教育学博士、中国体育博物馆研究馆员、享受政府特殊津贴专家崔乐泉教授担任主讲嘉宾，讲座由体育教研部副主任迟小鹏主持。 讲座中，崔教授通过对1910年“奥运三问”的解答，讲述了我国从1932年第一次派出运动员参加奥运会，到1984年获得首枚奥运金牌，再到2008年北京第29届夏季奥运会的举办，...</p>
+                                    <span>2025-05-16</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="s4-l-r">
+                            <ul>
+                                <li>
+                                    <a href="info/1331/5431.htm" title="“北外运动与健康讲堂”第四期 —— 体重管控的科学认知与运动营养方案">
+                                        <h3 style="font-weight:bold;">“北外运动与健康讲堂”第四期 —— 体重管控的科学认知与运动营养方案</h3>
+                                        <span>2025-05-08</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="info/1331/5261.htm" title="“北外运动与健康讲堂”第三期——跑步运动常见损伤及急救处理">
+                                        <h3 style="font-weight:bold;">“北外运动与健康讲堂”第三期——跑步运动常见损伤及急救处理</h3>
+                                        <span>2025-04-17</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="info/1331/5211.htm" title="“北外运动与健康讲堂”第二期 ——运动：促进心理健康的一剂良药">
+                                        <h3 style="font-weight:bold;">“北外运动与健康讲堂”第二期 ——运动：促进心理健康的一剂良药</h3>
+                                        <span>2024-11-29</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><script>_showDynClickBatch(['dynclicks_u15_5481','dynclicks_u15_5431','dynclicks_u15_5261','dynclicks_u15_5211'],[5481,5431,5261,5211],"wbnews", 2125351268)</script>
+
+</div>
+                <div class="s4-r wow fadeInUp">
+
+                    <div class="title">
+                        <h3>
+                            <b>项目<em>成果</em></b>
+                            <span class="titen">Project Results</span>
+                        </h3>
+                        <div class="more"><a href="xmcg.htm">更多+</a></div>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="info/1341/5621.htm" title="体育教研部获批一项2025年北京外国语大学基本科研业务费自主选题项目">
+                                <div class="bg_img">
+                                    <span class="a" style="background-image: url(/__local/6/A5/1E/DAD18069C3284E2A65499EF0374_83031081_478F.png);"></span>
+                                </div>
+                                <div class="s4-rtx">
+                                    <h3 style="font-weight:bold;">体育教研部获批一项2025年北京外国语大学基本科研业务费自主选题项目</h3>
+                                    <p>    近日，2025年北京外国语大学基本科研业务费区域国别研究专项项目、自主选题项目立项名单公布。体育教研部迟小鹏副教授申报的项目获基本科研业务费自主选题项目立项。北京外国语大学2025年基本科研业务费自主选题项目立项名单项目名称项目类别申请人所属单位中外身体素养评价体系比较研究一般项目迟小鹏体育教研部</p>
+                                    <span>2025-04-15</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="info/1341/5331.htm" title="体育教研部获批一项2024年度教育部人文社会科学研究规划基金项目">
+                                <div class="bg_img">
+                                    <span class="a" style="background-image: url(/__local/8/55/FA/108708E0EE50412EA8079C3B39E_1F5B2F43_2C3F.png);"></span>
+                                </div>
+                                <div class="s4-rtx">
+                                    <h3 style="font-weight:bold;">体育教研部获批一项2024年度教育部人文社会科学研究规划基金项目</h3>
+                                    <p>    近日，2024年度教育部人文社会科学研究一般项目立项名单正式公布。体育教研部迟小鹏副教授申报的项目获教育部人文社会科学研究规划基金项目立项。         该项目旨在撰写大型体育赛事大学生志愿服务工作口述史，深入总结体育赛事大学生志愿服务工作的成就与经验，为我国大学生志愿服务工作的未来发展提供历史借鉴。    教育部人文社会科学研究项目是教育部面向全国普通高等学校设立的人文社会科学研究项目，旨在支持关注新发展阶段中的重大理论和现实问题的研究，...</p>
+                                    <span>2024-10-01</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="info/1341/5551.htm" title="体育教研部一门课程获评首批国家级一流本科课程">
+                                <div class="bg_img">
+                                    <span class="a" style="background-image: url(/__local/0/B1/DD/B5469A79004FF09D2C929E5875C_7D47130E_124E1D.jpg);"></span>
+                                </div>
+                                <div class="s4-rtx">
+                                    <h3 style="font-weight:bold;">体育教研部一门课程获评首批国家级一流本科课程</h3>
+                                    <p>  根据《教育部关于公布首批国家级一流本科课程认定结果的通知》，体育教研部迟小鹏副教授申报的课程获评首批国家级一流本科课程。2020年首批国家级一流本科课程名单课程类别课程负责人课程主要成员课程名称线下课程迟小鹏于悦、李全生体育、运动、竞技与大学生身心健康发展</p>
+                                    <span>2020-12-10</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul><script>_showDynClickBatch(['dynclicks_u16_5621','dynclicks_u16_5331','dynclicks_u16_5551'],[5621,5331,5551],"wbnews", 2125351268)</script>
+
+</div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="section5">
+        <div class="s5-c wp flex">
+            <div class="s5-l wow fadeInUp">
+
+                <div class="title">
+                    <h3>
+                        <b>合作<em>交流</em></b>
+                        <span class="titen">Cooperation and communication</span>
+                    </h3>
+                    <div class="more"><a href="hzjl.htm">更多+</a></div>
+                </div>
+                <div class="s5-lt">
+                    <a href="info/1441/6041.htm" title="国家体育总局青少司向我校发来感谢信">
+                        <div class="bg_img">
+                            <span class="a" style="background-image: url(/__local/A/F5/4B/2BC156120BC5069780FF422680D_AB10EA5F_1F306.png);"></span>
+                        </div>
+                        <h3 style="font-weight:bold;">国家体育总局青少司向我校发来感谢信</h3>
+                    </a>
+                </div>
+                <ul class="gg-list">
+                    <li>
+                        <span>2025-06-29</span>
+                        <a href="info/1441/5361.htm" title="北外校友网羽协会成立仪式暨校友网羽友谊赛举行" style="font-weight:bold;">北外校友网羽协会成立仪式暨校友网羽友谊赛举行</a>
+                    </li>
+                    <li>
+                        <span>2024-10-31</span>
+                        <a href="info/1441/5681.htm" title="体育教研部赴北京交通大学开展调研交流" style="font-weight:bold;">体育教研部赴北京交通大学开展调研交流</a>
+                    </li>
+                    <li>
+                        <span>2024-05-08</span>
+                        <a href="info/1441/4951.htm" title="北外体育教研部荣获“第31届世界大学生夏季运动会先进集体”称号" style="font-weight:bold;">北外体育教研部荣获“第31届世界大学生夏季运动会先进集体”称号</a>
+                    </li>
+                </ul><script>_showDynClickBatch(['dynclicks_u17_6041','dynclicks_u17_5361','dynclicks_u17_5681','dynclicks_u17_4951'],[6041,5361,5681,4951],"wbnews", 2125351268)</script>
+
+</div>
+            <div class="s5-l s5-r wow fadeInUp">
+
+                <div class="title">
+                    <h3>
+                        <b>党建<em>工作</em></b>
+                        <span class="titen">PARTY BUILDING WORK</span>
+                    </h3>
+                    <div class="more"><a href="djgz.htm">更多+</a></div>
+                </div>
+                <div class="s5-lt">
+                    <a href="info/1451/6271.htm" title="体育教研部组织开展“赓续前行，迎新聚力”主题活动">
+                        <div class="bg_img">
+                            <span class="a" style="background-image: url(/__local/7/FC/C2/A0425043F27853A6077F4097F03_CF52EAA3_27B8E.png);"></span>
+                        </div>
+                        <h3 style="font-weight:bold;">体育教研部组织开展“赓续前行，迎新聚力”主题活动</h3>
+                    </a>
+                </div>
+                <ul class="gg-list">
+                    <li>
+                        <span>2024-12-19</span>
+                        <a href="info/1451/5291.htm" title="体育教研部直属党支部召开预备党员转正大会" style="font-weight:bold;">体育教研部直属党支部召开预备党员转正大会</a>
+                    </li>
+                </ul><script>_showDynClickBatch(['dynclicks_u18_6271','dynclicks_u18_5291'],[6271,5291],"wbnews", 2125351268)</script>
+
+</div>
+        </div>
+    </div>
+    <div class="section5">
+        <div class="s5-c wp flex">
+            <div class="s5-l wow fadeInUp">
+
+                <div class="title">
+                    <h3>
+                        <b>相关<em>政策/制度</em></b>
+                        <span class="titen">Related policies/system</span>
+                    </h3>
+                    <div class="more"><a href="xxpt1/xgzc_zd_.htm">更多+</a></div>
+                </div>
+                <div class="s5-lt">
+                    <a href="info/1471/6101.htm" title="关于2025级本科生实施课外体育锻炼方案的通知">
+                        <div class="bg_img">
+                            <span class="a" style="background-image: url(/__local/2/60/57/5A81C97DFE9C8B55761161612FC_562F5F88_CF33.jpg);"></span>
+                        </div>
+                        <h3 style="font-weight:bold;">关于2025级本科生实施课外体育锻炼方案的通知</h3>
+                    </a>
+                </div>
+                <ul class="gg-list">
+                    <li>
+                        <span>2025-09-03</span>
+                        <a href="info/1471/5961.htm" title="关于2024级全日制本科生打卡说明" style="font-weight:bold;">关于2024级全日制本科生打卡说明</a>
+                    </li>
+                </ul><script>_showDynClickBatch(['dynclicks_u19_6101','dynclicks_u19_5961'],[6101,5961],"wbnews", 2125351268)</script>
+
+</div>
+            <div class="s5-l s5-r wow fadeInUp">
+
+                <div class="title">
+                    <h3>
+                        <b>下载<em>专区</em></b>
+                        <span class="titen">Download area</span>
+                    </h3>
+                    <div class="more"><a href="xxpt1/xzzq.htm">更多+</a></div>
+                </div>
+                <div class="s5-lt">
+                    <a href="info/1481/5801.htm" title="免予执行体测申请表">
+                        <div class="bg_img">
+                            <span class="a" style="background-image: url(/__local/9/A6/EC/9609E4011E7F72D4D7C1C1650CC_F5F64EEA_3B92.jpeg);"></span>
+                        </div>
+                        <h3>免予执行体测申请表</h3>
+                    </a>
+                </div>
+                <ul class="gg-list">
+                </ul><script>_showDynClickBatch(['dynclicks_u20_5801'],[5801],"wbnews", 2125351268)</script>
+
+</div>
+        </div>
+    </div>
+
+    <div class="foot">
+        <div class="wp">
+                <img src="images/logo2.png" alt="" class="foot-logo">
+
+            <div class="foot-t flex">
+                <div class="foot-l"><h3>友情链接：</h3>
+<div class="foot-link">
+    <a href="https://wangzhan.nssc.org.cn/web/index.shtml" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2125351268, 97534)">中国学生体育联合会</a>
+    <a href="https://www.sports.edu.cn" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2125351268, 97535)">中国学生体育网</a>
+    <a href="#" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2125351268, 97536)">友情链接</a>
+    <a href="#" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2125351268, 97537)">友情链接</a>
+    <a href="#" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2125351268, 97538)">友情链接</a>
+</div></div>
+                <div class="foot-dz"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：北京市海淀区西三环北路2号东校区体育馆</p><p>电话：010-88816667</p><p>邮箱：bwtyb@bfsu.edu.cn</p><p>Copyright @ BFSU. 北京外国语大学版权所有. 100089 &nbsp;Supported by BFSU ITC</p></div>
+                <div class="foot-r">    <img src="images/25/06/10/1989jw2j84/ewm.png" alt="">
+<p>官方公众号</p>
+</div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/public.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/f.js"></script>
+    <script>
+        $(function () {
+            var docWidth = $(document).width();
+            if (docWidth > 1024) {
+                new WOW().init();
+            };
+
+            $('.s6-c').append('<div></div><div></div><div></div>')
+        })
+    </script>
+    <style type="text/css">
+#browser-modal{width:100%;height:100%;top:0;left:0;text-align:center;color:#303233;position:fixed;z-index:9999;display: none;}
+#browser-modal .browser-modal-cover{position:fixed;left:0;top:0;height:100%;width:100%;background-color:#111;opacity:.9;z-index:-1;}
+#browser-modal .browser-content{width:700px;margin-top:120px;margin-left:auto;margin-right:auto;padding-bottom:80px;padding-top:30px;background-color:#fff;border-radius:5px;}
+#browser-modal .browser-content .browser-dpc-logo img{height:62px;margin:45px auto 30px;}
+#browser-modal .browser-content .browser-text-title{text-transform:uppercase;font-size:24px;}
+#browser-modal .browser-content .browser-text-desc{margin-top:30px;margin-bottom:40px;font-size:14px;}
+#browser-modal .browser-content .browser-list{width:600px;margin:40px auto;height:130px;}
+#browser-modal .browser-content .browser-item{float:left;width:150px;padding-top:20px;padding-bottom:20px;margin-left:auto;margin-right:auto;}
+#browser-modal .browser-content .browser-item .iconfont{width:100px;height:100px;margin:0 auto;font-size:80px;line-height:80px;margin-bottom:30px;}
+#browser-modal .browser-content .browser-item a{color:#921041;cursor:pointer;display:block;}
+#browser-modal .browser-content .browser-item a img{display:block;margin:0 auto;max-width:100px;width:100px;height:100px;}
+#browser-modal .browser-content .browser-item a h4{text-align:center;margin-top:20px;font-size:18px;font-weight:700;}
+.fixedok .banner {opacity:0;}
+
+#browser-modal .browser-content .browser-item .iconchrome{background:url(images/bro.png) no-repeat 0 0;}
+#browser-modal .browser-content .browser-item .iconfirefox{background:url(images/bro.png) no-repeat 0 -100px;}
+#browser-modal .browser-content .browser-item .iconopera{background:url(images/bro.png) no-repeat 0 -200px;}
+#browser-modal .browser-content .browser-item .iconEdge{background:url(images/bro.png) no-repeat 0 -300px;}
+
+
+</style>
+<div id="browser-modal">
+    <div class="browser-modal-cover">
+    </div>
+    <div class="browser-content">
+        <div class="browser-text">
+            
+            <h3 class="browser-text-title">请升级浏览器版本</h3>
+            <p class="browser-text-desc">
+        你正在使用旧版本浏览器。请升级浏览器以获得更好的体验。
+            </p>
+        </div>
+        <div class="browser-list">
+            <div class="browser-item">
+                <a href="https://www.google.cn/intl/zh-CN/chrome/" target="_blank">
+                <div class="iconfont iconchrome">
+                </div>
+                <h4>Chrome</h4>
+                </a>
+            </div>
+            <div class="browser-item">
+                <a href="http://www.firefox.com.cn/" target="_blank">
+                <div class="iconfont iconfirefox">
+                </div>
+                <h4>Firefox</h4>
+                </a>
+            </div>
+            <div class="browser-item">
+                <a href="https://www.opera.com/zh-cn" target="_blank">
+                <div class="iconfont iconopera">
+                </div>
+                <h4>Opera</h4>
+                </a>
+            </div>
+            <div class="browser-item">
+                <a href="https://www.microsoft.com/zh-cn/edge" target="_blank">
+                <div class="iconfont iconEdge">
+                </div>
+                <h4>Edge</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+    if(!!window.ActiveXObject || "ActiveXObject" in window){
+
+           document.getElementById("browser-modal").style.display = "block";
+
+    }
+        if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE","")) < 11){
+            document.getElementById('browser-modal').style.display='block';
+            console.log("您的浏览器版本过低，请使用其他版本");
+    }
+    </script>
+</div>
+</body>
+
+</html>
+
+

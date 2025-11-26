@@ -1,0 +1,411 @@
+<!DOCTYPE html><html><head>
+
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/common.css" rel="stylesheet">
+  <title>中心概况-国家食用菌加工技术研发专业中心</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="中心概况">
+<meta name="keywords" content="国家食用菌加工技术研发专业中心,实验室概况">
+
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e7a475153535742000400014156 -->
+<link rel="stylesheet" type="text/css" href="list.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1002,'/list.jsp',-1,1611360171)</script>
+</head>
+
+<body>
+  <div class="container-fluid">
+
+    <div class="header" style="width: 100%;">
+      <div class="banner" style="width: 100%;">
+        <div class="logo"><div align="right"><div class="logo2"></div></div></div>
+        <div class="title">
+          <ul style="display: flex; flex-direction: column; padding-inline-start: 0px;">
+            <li class="title-chinese">国家食用菌加工技术研发专业中心</li>
+            <li class="title-english">National R&amp;D Center for Edible Fungus Processing Technlogy</li>
+
+          </ul>
+        </div>
+        <ul style="list-style: none; margin-left: 30px; border-left-color: rgb(1, 146, 63); border-left-width: 3px; border-left-style: solid;">
+                            <li class="title-english" style="font-size: 13px; margin-top: 3px;">河南省功能食品工程技术研究中心</li>
+                            <li class="title-english" style="font-size: 13px; margin-top: 15px;">河南省药食两用资源功能研究国际联合实验室</li>
+                            <li class="title-english" style="font-size: 13px; margin-top: 15px;">河南省食用菌精深加工产业技术创新战略联盟</li>
+         </ul>
+        <div class="banner_r">
+          <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><input id="search" autocomplete="off"> <button id="search_btn"></button></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+        <input id="search" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"></input>
+            <button id="search_btn" v-on:click="onSubmit()"></button>
+        
+           
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1611360171";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+          <div class="english-edition">
+            <a href="#" style="color: black;">English Edition</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-md bg-green navbar-dark" style="padding: 0px; margin-right: -15px; margin-left: -15px;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="border: currentColor; border-image: none;">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar" style="height: auto;">
+        <ul class="navbar-nav"><li class="nav-item  ">
+            <a class="navbtn  " href="index.htm">首页</a>
+          </li>
+          
+<li class="nav-item  dropdown">
+            <a class="navbtn  dropdown-toggle text-white" href="zxgk.htm">中心概况</a>
+            <div class="dropdown-menu bg-f9f9f9">
+
+              <a class="dropdown-item" href="zxgk/zzjg_.htm">组织结构 </a>
+
+              <a class="dropdown-item" href="zxgk/gztl_.htm">工作条例 </a>
+
+              <a class="dropdown-item" href="info/1091/1437.htm">实验室简介</a>
+            </div>
+          </li>
+          
+<li class="nav-item  dropdown">
+            <a class="navbtn  dropdown-toggle text-white" href="xwzx.htm">新闻资讯</a>
+            <div class="dropdown-menu bg-f9f9f9">
+
+              <a class="dropdown-item" href="xwzx/zxzx_.htm">最新资讯 </a>
+
+              <a class="dropdown-item" href="xwzx/xydt_.htm">行业动态 </a>
+
+              <a class="dropdown-item" href="xwzx/tzgg_.htm">通知公告 </a>
+
+              <a class="dropdown-item" href="xwzx/ky_.htm">科研进展</a>
+            </div>
+          </li>
+          
+<li class="nav-item  ">
+            <a class="navbtn  " href="tuandui.htm">团队</a>
+          </li>
+          
+<li class="nav-item  dropdown">
+            <a class="navbtn  dropdown-toggle text-white" href="kxyj.htm">科学研究</a>
+            <div class="dropdown-menu bg-f9f9f9">
+
+              <a class="dropdown-item" href="kxyj/cdxm_.htm">承担项目 </a>
+
+              <a class="dropdown-item" href="kxyj/yjcg_.htm">研究成果 </a>
+
+              <a class="dropdown-item" href="kxyj/yjfx_.htm">研究方向 </a>
+            </div>
+          </li>
+          
+<li class="nav-item  dropdown">
+            <a class="navbtn  dropdown-toggle text-white" href="fhpt.htm">孵化平台</a>
+            <div class="dropdown-menu bg-f9f9f9">
+
+              <a class="dropdown-item" href="fhpt/lfsy.htm">龙丰实业</a>
+
+              <a class="dropdown-item" href="fhpt/zdhy.htm">中大恒源</a>
+            </div>
+          </li>
+          
+<li class="nav-item  dropdown">
+            <a class="navbtn  dropdown-toggle text-white" href="jlhz.htm">交流合作</a>
+            <div class="dropdown-menu bg-f9f9f9">
+
+              <a class="dropdown-item" href="jlhz/xshy.htm">学术会议</a>
+
+              <a class="dropdown-item" href="jlhz/xshd.htm">学术活动</a>
+
+              <a class="dropdown-item" href="jlhz/gjhz.htm">国际合作</a>
+            </div>
+          </li>
+          
+<li class="nav-item  dropdown">
+            <a class="navbtn  dropdown-toggle text-white" href="rcpy.htm">人才培养</a>
+            <div class="dropdown-menu bg-f9f9f9">
+
+              <a class="dropdown-item" href="rcpy/yjszs_.htm">研究生招生 </a>
+
+              <a class="dropdown-item" href="rcpy/yjspy_.htm">研究生培养 </a>
+
+              <a class="dropdown-item" href="rcpy/rczp_.htm">人才招聘 </a>
+            </div>
+          </li>
+          
+<li class="nav-item  dropdown">
+            <a class="navbtn  dropdown-toggle text-white" href="ystyyw.htm">药食同源(英文)</a>
+            <div class="dropdown-menu bg-f9f9f9">
+
+              <a class="dropdown-item" href="info/1093/2016.htm">期刊介绍</a>
+
+              <a class="dropdown-item" href="ystyyw/zxzx.htm">最新资讯</a>
+            </div>
+          </li>
+          
+<li class="nav-item  dropdown">
+            <a class="navbtn  dropdown-toggle text-white" href="cylm.htm">产业联盟</a>
+            <div class="dropdown-menu bg-f9f9f9">
+
+              <a class="dropdown-item" href="info/1086/1428.htm">介绍</a>
+
+              <a class="dropdown-item" href="cylm/zzkj.htm">组织框架</a>
+
+              <a class="dropdown-item" href="cylm/zxzx.htm">最新资讯</a>
+            </div>
+          </li>
+          
+</ul>
+      </div>
+    </nav>
+    
+    <div class="row">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+
+      <div class="article-background" style="background-image: url(img/article_background.jpg);">
+      </div>
+    
+
+</div>
+
+    <div class="content-wrapper">
+      <div class="row">
+        <div class="col-md-12" style="margin-top: -50px;">
+          <div class="shadow-sm content-box">
+            <div style="padding-top: 10px; margin-left: 20px;">
+              <div style="color: rgb(108, 117, 125); display: inline-block;">您的位置:</div>
+              <nav style="display: inline-block;">
+                <ol class="breadcrumb" style="background-color: white;">      <li class="breadcrumb-item">
+                    <a href="index.htm">首页</a>
+                  </li>
+     
+   
+      <li class="breadcrumb-item">
+                    <a href="zxgk.htm">中心概况</a>
+                  </li>
+     
+</ol>
+              </nav>
+            </div>
+
+            <div class="row" style="margin: 0px;">
+              <div class="col-md-3">
+                <div class="menu-box">
+                  <h1 class="menu-box-title">中心概况
+</h1>
+                  <div class="menu-box-item ">
+                    <a href="zxgk/zzjg_.htm" title="组织结构 " target="_blank">组织结构 </a>
+                    </div>                  
+
+<div class="menu-box-item ">
+                    <a href="zxgk/gztl_.htm" title="工作条例 " target="_blank">工作条例 </a>
+                    </div>                  
+
+<div class="menu-box-item ">
+                    <a href="info/1091/1437.htm" title="实验室简介" target="_blank">实验室简介</a>
+                    </div>                  
+
+
+                  
+                </div>
+              </div>
+              <div class="col-md-9">
+                <div class="article-listbox">
+                  <span class="article-listbox-title">
+中心概况</span>
+                  <div class="dash-line"></div>
+                  
+
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script>                  <div class="pagination">
+                    
+  <input type="hidden" name="actiontype" value=""><input type="hidden" name="_scode_" value="1761200305171"><input type="hidden" name="urltype" value="tree.TreeTempUrl"><input type="hidden" name="wbtreeid" value="1002"><input type="hidden" name="outFlag" value="false">
+<style type="text/css">
+.headStyle18nz9asbfc, .headStyle18nz9asbfc td, .headStyle18nz9asbfc div {font-size: 12px;font-family:宋体; color: #000000; margin-left: auto; margin-right: auto; line-height:14px;}
+.defaultButtonStyle {font-size: 12px;font-family:宋体; height:20px;color: #000000;BORDER: #AFD5F5 1px solid; margin: 0px;padding: 0px; FILTER:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#ffffff, EndColorStr=#BDDBF7);  CURSOR: pointer; line-height:14px;background:-webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#BDDBF7));background: -moz-linear-gradient( top,#ffffff,#BDDBF7);background:-ms-linear-gradient(top,#ffffff 0%,#bddbf7 100%);}
+.defaultinputStyle {font-size: 12px;font-family:宋体; height:20px; border:1px solid #AFD5F5; line-height:14px;}
+.colHeader {font-size: 12px;font-family:宋体; line-height:14px;}
+.headStyle18nz9asbfc a, .pageList .this-page {font-size: 12px;font-family:宋体; display:inline-block; height:14px; padding: 2px 4px; border: solid 1px #AFD5F5; background: #fff; text-decoration: none; MARGIN-RIGHT: 1px;line-height:14px;}
+.headStyle18nz9asbfc a:visited {font-size: 12px;font-family:宋体; color: #000000; text-decoration: none; line-height:14px;}
+.headStyle18nz9asbfc .PrevDisabled {font-size: 12px;font-family:宋体; display:inline-block;height:14px;  margin-right: 3px; padding: 2px 4px; background: #fff;color:#ccc;border: solid 1px #AFD5F5; line-height:14px;}
+.headStyle18nz9asbfc .SelectList {font-size: 12px;font-family:宋体;line-height:14px;}
+.headStyle18nz9asbfc .Prev { font-size: 12px;font-family:宋体; margin-right: 3px; padding: 2px 4px;line-height:14px;}
+.headStyle18nz9asbfc .break {font-size: 12px;font-family:宋体; border: none; text-decoration: none; line-height:14px;}
+.headStyle18nz9asbfc .NextDisabled { font-size: 12px;font-family:宋体;display:inline-block; height:14px; margin-left: 2px; padding: 2px 4px;background: #fff;color:#ccc;border: solid 1px #AFD5F5; line-height:14px;}
+.headStyle18nz9asbfc .Next { font-size: 12px;font-family:宋体; margin-left: 2px; padding: 2px 4px;line-height:14px;}
+.headStyle18nz9asbfc .this-page {font-size: 12px;font-family:宋体;display:inline-block;height:14px;padding: 2px 4px; border: solid 1px #AFD5F5; background: #E1F0FD; font-weight: bold; color:black; MARGIN-RIGHT: 1px;line-height:14px;}
+.headStyle18nz9asbfc a:hover {font-size: 12px;font-family:宋体;color: black; background: #EFF7FE; border-color: #AFD5F5; text-decoration: none;line-height:14px;}
+.headStyle18nz9asbfc a:link {font-size: 12px;font-family:宋体;color: #000000; text-decoration: none;line-height:14px;}
+.headStyle18nz9asbfc a:active { font-size: 12px;font-family:宋体;color: black; text-decoration: none; background: #EFF7FE; line-height:14px;}
+</style><script language="javascript" src="/system/resource/js/gotopage.js"></script><script type="text/javascript">function a161601_gopage_fun(){_simple_list_gotopage_fun(0,'a161601GOPAGE',2)}</script><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td colspan="0"><table cellspacing="0" class="headStyle18nz9asbfc" width="100%" cellpadding="1"><tbody><tr valign="middle"><td nowrap="" align="left" width="1%" id="fanye161601">共0条&nbsp;&nbsp;0/0&nbsp;</td><td nowrap="" align="left"><div></div></td></tr></tbody></table></td></tr></tbody></table>
+
+                  </div>
+                  
+
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row footer">
+      <div class="col-md-12">
+        <div class="footer-content">
+          <p>Copyright©2018-2020 国家食用菌加工技术研发专业中心</p>
+          <p>地址：河南省开封市金明大道北段</p>
+          <p>联系电话：0371-23880680</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+  <!--end of body-->
+  <script src="js/jquer.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

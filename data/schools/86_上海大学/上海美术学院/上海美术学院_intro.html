@@ -1,0 +1,635 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>学院介绍-上海大学上海美术学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院介绍">
+<meta name="keywords" content="上海大学上海美术学院,学院介绍">
+
+    <link rel="stylesheet" href="../../css/index.css">
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/index.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307468475d53575742000200034554 -->
+<link rel="stylesheet" type="text/css" href="../../jjy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1108,'/jjy.jsp',-1,1676726341)</script>
+</head>
+<body id="erPage">
+<div id="header-top">
+  
+</div>
+<div id="header">
+    <div class="header container">
+        <img src="../../img/logo.png" class="verticalMid">
+        <img src="../../img/sjnavIcon.png" class="sjNavIcon">
+        
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu0">
+    <div id="appu0"><div class="clearfix fr search"><input type="text" placeholder="搜索..." autocomplete="off" class="write fl"> <input value="" name="submit_button" type="submit" class="search fr"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError" class="clearfix fr search">
+            <input type="text" class="write fl"  placeholder="搜索..." autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="search fr" value=""   name="submit_button" type="submit"  v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1676726341";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://2022openlab.shu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+    </div>
+    <div class="nav navEr container">
+            <ul class="fNav clearfix">
+
+                <li><a href="../../index.htm">首页</a></li>
+
+                <li class="active"><a href="../../mygk.htm">美院概况</a></li>
+
+                <li><a href="../../szdw.htm">师资队伍</a></li>
+
+                <li><a href="../../rcpy.htm">人才培养</a></li>
+
+                <li><a href="../../kycz.htm">科研创作</a></li>
+
+                <li><a href="../../zsjy.htm">招生就业</a></li>
+
+                <li><a href="../../dwgk.htm">党务公开</a></li>
+
+                <li><a href="../../xywh.htm">校园文化</a></li>
+
+                <li><a href="../../SAFA_Global.htm">SAFA Global</a></li>
+
+                <li><a href="../../xyzj.htm">校友之家</a></li>
+               
+            </ul>
+    </div>
+</div>
+<div id="erNav" class="container">
+    <div class="erNavBox">
+        <ul class="erNav">
+            <li style="width: 172.8px;"><a href="../xyjj.htm">学院简介</a>
+
+                <ul class="tdNav">
+
+                    <li class="active" style="width: 172.8px;"><a href="xyjs.htm">学院介绍</a>
+
+                    </li><li style="width: 172.8px;"><a href="ldgh.htm">领导关怀</a>
+
+                    </li><li style="width: 172.8px;"><a href="dwld.htm">党委领导</a>
+
+                    </li><li style="width: 172.8px;"><a href="xzld.htm">行政领导</a>
+
+                    </li><li style="width: 172.8px;"><a href="lxwm.htm">联系我们</a>
+                    </li>
+                </ul>
+
+            </li>
+            <li style="width: 172.8px;"><a href="../xbjs.htm">系部介绍</a>
+
+                <ul class="tdNav">
+
+                    <li style="width: 172.8px;"><a href="../xbjs/zghx.htm">中国画系</a>
+
+                    </li><li style="width: 172.8px;"><a href="../xbjs/yhx.htm">油画系</a>
+
+                    </li><li style="width: 172.8px;"><a href="../xbjs/bhx.htm">版画系</a>
+
+                    </li><li style="width: 172.8px;"><a href="../xbjs/dsx.htm">雕塑系</a>
+
+                    </li><li style="width: 172.8px;"><a href="../xbjs/smx.htm">数码系</a>
+
+                    </li><li style="width: 172.8px;"><a href="../xbjs/sjx.htm">设计系</a>
+
+                    </li><li style="width: 172.8px;"><a href="../xbjs/slx.htm">史论系</a>
+
+                    </li><li style="width: 172.8px;"><a href="../xbjs/jzx.htm">建筑系</a>
+
+                    </li><li style="width: 172.8px;"><a href="../xbjs/ggysjssyjxzx.htm">公共艺术技术实验教学中心</a>
+                    </li>
+                </ul>
+
+            </li>
+            <li style="width: 172.8px;"><a href="../xkpt.htm">学科平台</a>
+
+                <ul class="tdNav">
+
+                    <li style="width: 172.8px;"><a href="../xkpt/shmsxymsg.htm">上海美术学院美术馆</a>
+
+                    </li><li style="width: 172.8px;"><a href="../xkpt/shdxysyjy.htm">上海大学艺术研究院</a>
+
+                    </li><li style="width: 172.8px;"><a href="../xkpt/shggysxtcxzx.htm">上海公共艺术协同创新中心</a>
+
+                    </li><li style="width: 172.8px;"><a href="../xkpt/xyqk.htm">学院期刊</a>
+
+                    </li><li style="width: 172.8px;"><a href="../xkpt/gzs.htm">工作室</a>
+                    </li>
+                </ul>
+
+            </li>
+            <li style="width: 172.8px;"><a href="../xyjg.htm">学院机构</a>
+
+                <ul class="tdNav">
+
+                    <li style="width: 172.8px;"><a href="../xyjg/xzglzx.htm">行政管理中心</a>
+
+                    </li><li style="width: 172.8px;"><a href="../xyjg/jxglzx.htm">教学管理中心</a>
+
+                    </li><li style="width: 172.8px;"><a href="../xyjg/kyglzx.htm">科研管理中心</a>
+
+                    </li><li style="width: 172.8px;"><a href="../xyjg/xsglzho.htm">学生管理中心</a>
+
+                    </li><li style="width: 172.8px;"><a href="../xyjg/gjjlzx.htm">国际交流中心</a>
+                    </li>
+                </ul>
+
+            </li>
+            <li style="width: 172.8px;"><a href="../xgxz.htm">相关下载</a>
+
+                <ul class="tdNav">
+
+                    <li style="width: 172.8px;"><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1251">党务下载</a>
+
+                    </li><li style="width: 172.8px;"><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1232">人事下载</a>
+
+                    </li><li style="width: 172.8px;"><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1233">财务下载</a>
+
+                    </li><li style="width: 172.8px;"><a href="../xgxz/smVI.htm">上美VI</a>
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="erImg">
+    <img src="../../img/sjerImg.png">
+</div>
+<div class="sjNav" style="height: 720px;">
+    <div class="sjNavZz"></div>
+    <div class="sjNavBox">
+        <div class="topLogo">
+            <img src="../../img/sjnavLogo.png">
+        </div>
+        <ul class="sjNavList">
+            <li><a href="../../index.htm">首页</a>
+            </li>
+            <li><a href="../../mygk.htm">美院概况</a>
+<i></i>
+                <ul class="sjSecNav">
+                    <li>
+                        <a href="../xyjj.htm">学院简介</a>
+<i></i>
+                <ul class="sjtirNav">
+                    <li>
+                        <a href="xyjs.htm">学院介绍</a>
+                    </li>
+                    <li>
+                        <a href="ldgh.htm">领导关怀</a>
+                    </li>
+                    <li>
+                        <a href="dwld.htm">党委领导</a>
+                    </li>
+                    <li>
+                        <a href="xzld.htm">行政领导</a>
+                    </li>
+                    <li>
+                        <a href="lxwm.htm">联系我们</a>
+                    </li>
+                </ul>
+                    </li>
+                    <li>
+                        <a href="../xbjs.htm">系部介绍</a>
+<i></i>
+                <ul class="sjtirNav">
+                    <li>
+                        <a href="../xbjs/zghx.htm">中国画系</a>
+                    </li>
+                    <li>
+                        <a href="../xbjs/yhx.htm">油画系</a>
+                    </li>
+                    <li>
+                        <a href="../xbjs/bhx.htm">版画系</a>
+                    </li>
+                    <li>
+                        <a href="../xbjs/dsx.htm">雕塑系</a>
+                    </li>
+                    <li>
+                        <a href="../xbjs/smx.htm">数码系</a>
+                    </li>
+                    <li>
+                        <a href="../xbjs/sjx.htm">设计系</a>
+                    </li>
+                    <li>
+                        <a href="../xbjs/slx.htm">史论系</a>
+                    </li>
+                    <li>
+                        <a href="../xbjs/jzx.htm">建筑系</a>
+                    </li>
+                    <li>
+                        <a href="../xbjs/ggysjssyjxzx.htm">公共艺术技术实验教学中心</a>
+                    </li>
+                </ul>
+                    </li>
+                    <li>
+                        <a href="../xkpt.htm">学科平台</a>
+<i></i>
+                <ul class="sjtirNav">
+                    <li>
+                        <a href="../xkpt/shmsxymsg.htm">上海美术学院美术馆</a>
+                    </li>
+                    <li>
+                        <a href="../xkpt/shdxysyjy.htm">上海大学艺术研究院</a>
+                    </li>
+                    <li>
+                        <a href="../xkpt/shggysxtcxzx.htm">上海公共艺术协同创新中心</a>
+                    </li>
+                    <li>
+                        <a href="../xkpt/xyqk.htm">学院期刊</a>
+                    </li>
+                    <li>
+                        <a href="../xkpt/gzs.htm">工作室</a>
+                    </li>
+                </ul>
+                    </li>
+                    <li>
+                        <a href="../xyjg.htm">学院机构</a>
+<i></i>
+                <ul class="sjtirNav">
+                    <li>
+                        <a href="../xyjg/xzglzx.htm">行政管理中心</a>
+                    </li>
+                    <li>
+                        <a href="../xyjg/jxglzx.htm">教学管理中心</a>
+                    </li>
+                    <li>
+                        <a href="../xyjg/kyglzx.htm">科研管理中心</a>
+                    </li>
+                    <li>
+                        <a href="../xyjg/xsglzho.htm">学生管理中心</a>
+                    </li>
+                    <li>
+                        <a href="../xyjg/gjjlzx.htm">国际交流中心</a>
+                    </li>
+                </ul>
+                    </li>
+                    <li>
+                        <a href="../xgxz.htm">相关下载</a>
+<i></i>
+                <ul class="sjtirNav">
+                    <li>
+                        <a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1251">党务下载</a>
+                    </li>
+                    <li>
+                        <a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1232">人事下载</a>
+                    </li>
+                    <li>
+                        <a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1233">财务下载</a>
+                    </li>
+                    <li>
+                        <a href="../xgxz/smVI.htm">上美VI</a>
+                    </li>
+                </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="../../szdw.htm">师资队伍</a>
+<i></i>
+                <ul class="sjSecNav">
+                    <li>
+                        <a href="../../szdw/js.htm">教授</a>
+                    </li>
+                    <li>
+                        <a href="../../szdw/fjs.htm">副教授</a>
+                    </li>
+                    <li>
+                        <a href="../../szdw/js1.htm">讲师</a>
+                    </li>
+                    <li>
+                        <a href="../../szdw/tpjs.htm">特聘教授</a>
+                    </li>
+                    <li>
+                        <a href="../../szdw/wpds.htm">外聘导师</a>
+                    </li>
+                    <li>
+                        <a href="../../szdw/jsfc.htm">教师风采</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="../../rcpy.htm">人才培养</a>
+<i></i>
+                <ul class="sjSecNav">
+                    <li>
+                        <a href="../../rcpy/bkspy.htm">本科生培养</a>
+<i></i>
+                <ul class="sjtirNav">
+                    <li>
+                        <a href="../../rcpy/bkspy/jxjs.htm">教学建设</a>
+                    </li>
+                    <li>
+                        <a href="../../rcpy/bkspy/tzgg.htm">通知公告</a>
+                    </li>
+                    <li>
+                        <a href="../../rcpy/bkspy/xgxz.htm">相关下载</a>
+                    </li>
+                </ul>
+                    </li>
+                    <li>
+                        <a href="../../rcpy/yjspy.htm">研究生培养</a>
+<i></i>
+                <ul class="sjtirNav">
+                    <li>
+                        <a href="../../rcpy/yjspy/tzgg.htm">通知公告</a>
+                    </li>
+                    <li>
+                        <a href="../../rcpy/yjspy/xgxz.htm">相关下载</a>
+                    </li>
+                </ul>
+                    </li>
+                    <li>
+                        <a href="../../rcpy/xsgz.htm">学生工作</a>
+<i></i>
+                <ul class="sjtirNav">
+                    <li>
+                        <a href="../../rcpy/xsgz/tzgg.htm">通知公告</a>
+                    </li>
+                    <li>
+                        <a href="../../rcpy/xsgz/xgxz.htm">相关下载</a>
+                    </li>
+                </ul>
+                    </li>
+                    <li>
+                        <a href="../../rcpy/xsfc.htm">学生风采</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="../../kycz.htm">科研创作</a>
+<i></i>
+                <ul class="sjSecNav">
+                    <li>
+                        <a href="../../kycz/kycg.htm">科研成果</a>
+                    </li>
+                    <li>
+                        <a href="../../kycz/tzgg.htm">通知公告</a>
+                    </li>
+                    <li>
+                        <a href="../../kycz/xgxz.htm">相关下载</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="../../zsjy.htm">招生就业</a>
+<i></i>
+                <ul class="sjSecNav">
+                    <li>
+                        <a href="../../zsjy/bkzs.htm">本科招生</a>
+                    </li>
+                    <li>
+                        <a href="../../zsjy/yjszs.htm">研究生招生</a>
+                    </li>
+                    <li>
+                        <a href="../../zsjy/gjxszs.htm">国际学生招生</a>
+<i></i>
+                <ul class="sjtirNav">
+                    <li>
+                        <a href="../../zsjy/gjxszs/ss.htm">硕士</a>
+                    </li>
+                    <li>
+                        <a href="../../zsjy/gjxszs/bs.htm">博士</a>
+                    </li>
+                    <li>
+                        <a href="../../zsjy/gjxszs/dsmd.htm">导师名单</a>
+                    </li>
+                </ul>
+                    </li>
+                    <li>
+                        <a href="../../zsjy/xsjy.htm">学生就业</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="../../dwgk.htm">党务公开</a>
+<i></i>
+                <ul class="sjSecNav">
+                    <li>
+                        <a href="../../dwgk/jczz.htm">基层组织</a>
+                    </li>
+                    <li>
+                        <a href="../../dwgk/djpp.htm">党建品牌</a>
+                    </li>
+                    <li>
+                        <a href="../../dwgk/dyfc.htm">党员风采</a>
+                    </li>
+                    <li>
+                        <a href="../../dwgk/tzgg.htm">通知公告</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="../../xywh.htm">校园文化</a>
+<i></i>
+                <ul class="sjSecNav">
+                    <li>
+                        <a href="../../xywh/txhd.htm">团学活动</a>
+                    </li>
+                    <li>
+                        <a href="../../xywh/cxcy.htm">创新创业</a>
+                    </li>
+                    <li>
+                        <a href="../../xywh/tzgg.htm">通知公告</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="../../SAFA_Global.htm">SAFA Global</a>
+<i></i>
+                <ul class="sjSecNav">
+                    <li>
+                        <a href="../../SAFA_Global/Int_l_Partners.htm">Int’l Partners</a>
+                    </li>
+                    <li>
+                        <a href="../../SAFA_Global/Int_l_Events.htm">Int’l Events</a>
+                    </li>
+                    <li>
+                        <a href="../../SAFA_Global/Int_l_Students.htm">Int’l Students</a>
+                    </li>
+                    <li>
+                        <a href="../../SAFA_Global/Joint_Programs.htm">Joint Programs</a>
+                    </li>
+                    <li>
+                        <a href="../../SAFA_Global/Study_Abroad.htm">Study Abroad</a>
+                    </li>
+                    <li>
+                        <a href="../../SAFA_Global/Notice___News_.htm">Notice &amp; News </a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="../../xyzj.htm">校友之家</a>
+<i></i>
+                <ul class="sjSecNav">
+                    <li>
+                        <a href="../../xyzj/xylsh.htm">校友理事会</a>
+                    </li>
+                    <li>
+                        <a href="../../xyzj/xyfc.htm">校友风采</a>
+                    </li>
+                    <li>
+                        <a href="../../xyzj/xylsh1.htm">校友理事会</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="body" class="container">
+    <div class="blog">
+        <div class="titleLine clearfix">
+            <div class="title fl">
+                
+学院介绍
+            </div>
+            <div class="location fr">
+                        
+                <a href="../../index.htm">首页</a>
+
+                -
+                <a href="../../mygk.htm">美院概况</a>
+
+                -
+                <a href="../xyjj.htm">学院简介</a>
+
+                -
+                <a href="xyjs.htm">学院介绍</a>
+
+            </div>
+        </div>
+        <div class="erJjy">
+            
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1676726341,'wbnews','u6')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta6(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta6('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1676726341,6882)</script>
+<p>
+   
+    </p><div id="vsb_content_2_6882_u61"><div id="vsb_content_2"><p>上海大学上海美术学院传承了<span lang="EN-US">1912</span>年刘海粟创办的<span lang="EN-US">“</span>上海美专<span lang="EN-US">”</span>的海派美术精神，<span lang="EN-US">1959</span>年上海市人民政府重建上海市美术专科学校（本科），<span lang="EN-US">1983</span>年并入新组建的上海大学，命名为上海大学美术学院。<span lang="EN-US">2016</span>年<span lang="EN-US">12</span>月，正式挂牌为上海大学上海美术学院。现任院长为上海市美术家协会主席、中国雕塑学会会长曾成钢。</p><p>学院拥有<span lang="EN-US">4</span>个一级学科博士点（艺术学、设计学、美术与书法、设计），<span lang="EN-US">1</span>个二级交叉学科博士点（城市更新），<span lang="EN-US">1</span>个一级学科硕士点（建筑学），<span lang="EN-US">2</span>个专业硕士学位点（美术、艺术设计），<span lang="EN-US">2</span>个博士后流动站（美术学、艺术学）。学院现有中国画、绘画、雕塑、美术学、视觉传达设计、环境设计、艺术与科技、数字媒体艺术、建筑学、城乡规划、产品设计、工艺美术、实验艺术、书法学、艺术管理<span lang="EN-US">15</span>个本科专业，其中<span lang="EN-US">7</span>个国家级一流本科专业建设点，<span lang="EN-US">3</span>个省级一流本科专业建设点。学院下设<span lang="EN-US">8</span>个教学系、<span lang="EN-US">1</span>个国家级实验教学示范中心<span lang="EN-US">“</span>公共艺术技术实验教学中心<span lang="EN-US">”</span>、<span lang="EN-US">1</span>个首批市级协同创新中心“上海公共艺术协同创新中心”、<span lang="EN-US">1</span>个研究院<span lang="EN-US">“</span>上海城市更新与可持续发展研究院<span lang="EN-US">”</span>。</p><p>学院紧密围绕“为人民、为艺术、为生活、为城市”的办学理念，以“擎起‘新海派’旗帜，创造性继承申学传统，创新性发展海派文化，创意性提升上海人文”为使命，以“构建国际都市艺术中国坐标，深美中国”为愿景，为建设与具有世界影响力的社会主义现代化国际大都市相匹配的世界一流美术学院而奋斗。</p><p style="text-align: center"><br></p><p style="text-align: center"><img src="/__local/E/59/DE/4924E808E1295BB708D15535758_EED25447_4ADED.jpg" width="500" vsbhref="vurl" vurl="/_vsl/E59DE4924E808E1295BB708D15535758/EED25447/4ADED" vheight="" vwidth="500" orisrc="/__local/5/50/9C/B27FAA68706AD9F8900BE52D046_DCBA3589_9E53E9.jpg" class="img_vsb_content"></p><p style="text-align: center;">上海美术学院宝山校区</p><p style="text-align: center"><img src="/__local/C/18/DC/796A9E4A134599B430E95D6C250_B7255E61_8AC15.jpg" width="500" vsbhref="vurl" vurl="/_vsl/C18DC796A9E4A134599B430E95D6C250/B7255E61/8AC15" vheight="" vwidth="500" orisrc="/__local/6/D5/C7/E76698ED521198AF4BBABAF5208_E4D09435_C467B.jpg" class="img_vsb_content"></p><p style="text-align: center;">上海美术学院延长校区</p><p style="text-align: center"><img src="/__local/0/5F/8F/48C125153261F7270BFDD3A022C_928CECC5_6CDE1.png" width="500" alt="6CDE1" vsbhref="vurl" vurl="/_vsl/05F8F48C125153261F7270BFDD3A022C/928CECC5/6CDE1" vheight="" vwidth="500" orisrc="/__local/5/47/05/88BDE93C7DE5CE283877169EC6E_8B0098E9_1D9B01.png" class="img_vsb_content"></p><p style="text-align: center;">上海美术学院宝武主校区</p><p><br></p></div></div>
+    <span id="vsb_content_2_6882_u6" name="vsb_content_2_6882_u6"></span><br><br>
+    
+<p></p>
+
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div class="container">
+        <div class="links">
+            <script language="javascript" src="/system/resource/js/openlink.js"></script><ul class="clearfix">
+               
+            </ul>
+
+        </div>
+        <div class="copy">
+            <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">&nbsp;版权所有 ©</span><a href="http://www.shu.edu.cn/" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal;">&nbsp;上海大学</a><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">&nbsp;&nbsp;&nbsp;</span><a href="http://beian.miit.gov.cn/" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal;">沪ICP备09014157&nbsp;</a><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">&nbsp;&nbsp;</span><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31009102000049" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal;">沪公网安备31009102000049号</a><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">&nbsp;&nbsp;地址：上海市宝山区上大路99号&nbsp;&nbsp; &nbsp;邮编：200444 &nbsp;&nbsp;</span><a href="http://www.shu.edu.cn/dhcx.htm" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal;">电话查询</a><br style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal; background-color: rgb(27, 70, 123);"><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">&nbsp;技术支持：</span><a href="https://its.shu.edu.cn/" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal;">上海大学信息化工作办公室&nbsp;&nbsp;&nbsp;</a><a href="mailto:info@shu.edu.cn" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal;">联系我们</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

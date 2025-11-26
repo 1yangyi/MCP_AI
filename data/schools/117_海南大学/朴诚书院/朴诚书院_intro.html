@@ -1,0 +1,531 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>朴诚简介-朴诚书院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="朴诚简介">
+<meta name="keywords" content="朴诚书院,书院简介">
+
+<meta name="description" content="海南大学朴诚书院 | Hainan University">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307c784750505b5742000300004354 -->
+<link rel="stylesheet" type="text/css" href="../dy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1011,'/dy.jsp',-1,1855259224)</script>
+</head>
+<body class="bodyIn">
+
+
+<link href="../home2022/css/z2022.css?202533" rel="stylesheet" media="screen" type="text/css">
+<link href="../home2022/font470/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script language="javascript" type="text/javascript" src="../home2022/js/jquery-min.js"></script>
+<script language="javascript" type="text/javascript" src="../home2022/js/jquery.SuperSlide.js"></script> 
+
+
+
+<header class="header-w min-w">
+<dl class="header">
+    <div class="header-left">
+<a href="../index.htm" target="_self"><img src="../home2022/imgs/logo2023.png"></a></div> 
+    <div class="header-right">
+        <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><dl class="top-tis">
+            <a href="https://www.hainanu.edu.cn/" target="_blank">海大首页</a>
+            <a href="https://ehall.hainanu.edu.cn/ywtb-portal/Lite/index.html#/work_bench/Lite_workbench" target="_blank">网上服务大厅</a>
+</dl>
+       
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu3 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu3 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu3">
+    <div id="appu3"><div><dl class="search-web"><div id="search-form"><input type="search" placeholder="请输入搜索内容" autocomplete="off"> <button><i class="fa fa-search"></i></button></div></dl></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError">
+      
+<dl class="search-web">
+<div id="search-form" >
+<input   type="search" placeholder="请输入搜索内容" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" />
+<button v-on:click="onSubmit()"><i class="fa fa-search"></i></button>
+</div>
+</dl>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "1855259224";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+    </div>
+</dl>
+</header>
+<script language="javascript" type="text/javascript" src="../home2022/js/jquery-min.js"></script>
+<script language="javascript" type="text/javascript" src="../home2022/js/jquery.SuperSlide.js"></script> 
+<link rel="stylesheet" href="../home2022/css/jQueryNav.css?2022" )}"="">
+<div class="min_w headmenu">
+<div class="w3">
+    <div id="cssmenu">
+    <ul>
+     
+     
+    <li><a href="../zjpc.htm" title="走进朴诚">走进朴诚</a>
+          <ul class="cssmenu-1">
+                <li><a href="pcjj.htm">朴诚简介</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="syld.htm">书院领导</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="pcbs.htm">朴诚标识</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="szpc.htm">数字朴诚</a>
+                <ul>
+                </ul>
+                </li>
+          </ul>
+       </li>
+     
+     
+    <li><a href="../dw/fdy.htm" title="队伍建设">队伍建设</a>
+          <ul class="cssmenu-1">
+                <li><a href="../dw/fdy.htm">辅导员</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../dw/xwfdy.htm">校外辅导员</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../dw/xwds.htm">校外导师</a>
+                <ul>
+                </ul>
+                </li>
+                <li class="has-sub"><a href="../dw/xszz.htm">学生组织</a>
+                <ul>
+                           <li><a href="../dw/xszz/txqzz.htm">团学青组织</a></li>
+                           <li><a href="../dw/xszz/djfwzx.htm">党建服务中心</a></li>
+                           <li><a href="../dw/xszz/zgwyh.htm">自管委员会</a></li>
+                </ul>
+                </li>
+          </ul>
+       </li>
+     
+     
+    <li><a href="../szjy.htm" title="思政教育">思政教育</a>
+          <ul class="cssmenu-1">
+                <li><a href="../szjy/lxxnjy.htm">理想信念教育</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../szjy/gjaqjy.htm">国家安全教育</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../szjy/qljy.htm">清廉教育</a>
+                <ul>
+                </ul>
+                </li>
+                <li class="has-sub"><a href="../szjy/gfjy.htm">国防教育</a>
+                <ul>
+                           <li><a href="../szjy/gfjy/zbxc.htm">征兵宣传</a></li>
+                           <li><a href="../szjy/gfjy/twdxsfc.htm">退伍大学生风采</a></li>
+                           <li><a href="../szjy/gfjy/gfjyb.htm">国防教育班</a></li>
+                           <li><a href="../szjy/gfjy/qt.htm">其他</a></li>
+                </ul>
+                </li>
+                <li><a href="../szjy/qt.htm">其他</a>
+                <ul>
+                </ul>
+                </li>
+          </ul>
+       </li>
+     
+     
+    <li><a href="../djyl.htm" title="党建引领">党建引领</a>
+          <ul class="cssmenu-1">
+                <li><a href="../djyl/dwgz.htm">党委工作</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../djyl/dyfz.htm">党员发展</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../djyl/shyk.htm">三会一课</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../djyl/drhd.htm">党日活动</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../djyl/qt.htm">其他</a>
+                <ul>
+                </ul>
+                </li>
+          </ul>
+       </li>
+     
+     
+    <li><a href="../aqjy.htm" title="安全教育">安全教育</a>
+          <ul class="cssmenu-1">
+                <li><a href="../aqjy/wsjk.htm">卫生健康</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../aqjy/fzftdg.htm">反诈反套代购</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../aqjy/jdfa.htm">禁毒防艾</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../aqjy/qt.htm">其他</a>
+                <ul>
+                </ul>
+                </li>
+          </ul>
+       </li>
+     
+     
+    <li><a href="../rcgl.htm" title="日常管理">日常管理</a>
+          <ul class="cssmenu-1">
+                <li><a href="../rcgl/jqgl.htm">假期管理</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../rcgl/ssgl.htm">宿舍管理</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../rcgl/xfjs.htm">学风建设</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../rcgl/wjwg.htm">违纪违规</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../rcgl/qt.htm">其他</a>
+                <ul>
+                </ul>
+                </li>
+          </ul>
+       </li>
+     
+     
+    <li><a href="../jqzd.htm" title="奖勤助贷">奖勤助贷</a>
+          <ul class="cssmenu-1">
+                <li><a href="../jqzd/pjpy.htm">评奖评优</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../jqzd/qgzx.htm">勤工助学</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../jqzd/zzbz.htm">资助补助</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../jqzd/zxdk.htm">助学贷款</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../jqzd/qt.htm">其他</a>
+                <ul>
+                </ul>
+                </li>
+          </ul>
+       </li>
+     
+     
+    <li><a href="../xljk.htm" title="心理健康">心理健康</a>
+          <ul class="cssmenu-1">
+                <li><a href="../xljk/xlyz.htm">心灵驿站</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../xljk/xljyhd.htm">心理教育活动</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../xljk/qt.htm">其他</a>
+                <ul>
+                </ul>
+                </li>
+          </ul>
+       </li>
+     
+     
+    <li><a href="../jyzd.htm" title="就业指导">就业指导</a>
+          <ul class="cssmenu-1">
+                <li><a href="../jyzd/jyzc.htm">就业政策</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../jyzd/zpxx.htm">招聘信息</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../jyzd/sygh.htm">生涯规划</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../jyzd/qt.htm">其他</a>
+                <ul>
+                </ul>
+                </li>
+          </ul>
+       </li>
+     
+     
+    <li><a href="../txgz.htm" title="团学工作">团学工作</a>
+          <ul class="cssmenu-1">
+                <li><a href="../txgz/xywh.htm">校园文化</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../txgz/zyfw.htm">志愿服务</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../txgz/shsj.htm">社会实践</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../txgz/cxcy.htm">创新创业</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../txgz/sthd.htm">社团活动</a>
+                <ul>
+                </ul>
+                </li>
+                <li><a href="../txgz/qt.htm">其他</a>
+                <ul>
+                </ul>
+                </li>
+          </ul>
+       </li>
+     
+     
+    <li><a href="../zdgf.htm" title="制度规范">制度规范</a>
+       </li>
+     
+     
+    <li><a href="../xzzq.htm" title="下载专区">下载专区</a>
+       </li>
+    </ul>
+    </div>
+</div>
+</div>
+
+    <!--banne幻灯片\-->
+    
+
+
+<div class="lmdaohang" style="background:url(../home2022/imgc/nbj.jpg) no-repeat center"></div>
+
+<div class="m2atcConWpr">
+<div class="m2atcCon">
+    <div class="m2atcMenu">
+        <div class="news-list-vertical nei_tu">
+            
+<span>
+<em><b>走进朴诚</b></em>
+</span>
+
+        </div>
+<div class="m_new3">
+<ul>
+    <li class="on"><a href="pcjj.htm" title="朴诚简介">朴诚简介</a></li>
+    <li><a href="syld.htm" title="书院领导">书院领导</a></li>
+    <li><a href="pcbs.htm" title="朴诚标识">朴诚标识</a></li>
+    <li><a href="szpc.htm" title="数字朴诚">数字朴诚</a></li>
+</ul>
+</div>  
+<div class="left-dbbj"></div>
+    </div>
+    <div class="m2atcRcon">
+        <div class="fdiv muc">
+            
+<ul><span>朴诚简介</span></ul>
+             <div class="current-w">
+            
+<span>
+    当前位置: 
+                        <a href="../index.htm">首页</a>
+                &gt;&gt;
+                <a href="../zjpc.htm">走进朴诚</a>
+                &gt;&gt;
+                <a href="pcjj.htm">朴诚简介</a>
+</span>
+
+    </div>  
+        </div>  
+        <!--单页-->
+        <div class="kanz">
+        
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1855259224,'wbnews','u10')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format7.css"><script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1855259224,1361)</script>
+    <div class="lnmu">
+    <ul>前进中的海南大学朴诚书院</ul>
+    </div>
+<div class="InfoContent neirong">
+    <div id="vsb_content_7_1361_u101"><div id="vsb_content_7"><p>朴诚书院成立于2022年4月，辖71个班级、3150名本科生，覆盖21个学院和经济学、法学、理学、工学、农学、管理学等6个学科门类。</p><p>“朴”取质朴、朴实义，“诚”取真诚、诚实义，象征海大学子抱朴含真、诚实守信、忠诚祖国、精诚励行的品质。朴诚书院坚持“<strong>质朴为人，至诚为学</strong>”的院训和“<strong>忠诚、朴实、勤勉、向善</strong>”的院风，致力于培养学生老老实实做人、踏踏实实做学问的优秀品格，引导学生忠于祖国和人民、保持纯朴务实的作风、勤奋努力、与人为善，树立真善美的价值追求。</p><p>朴诚书院始终坚持立德树人根本任务，紧紧围绕学生、服务学生、关照学生，形成以党建为引领、以文化聚人心、以品牌促发展、以安全强根基的发展思路，大力实施“红色朴诚”“书香朴诚”“活力朴诚”“明亮朴诚”“和谐朴诚”“清正朴诚”六大工程，积极探索“双导协同”育人路径，努力培养有理想、敢担当、能吃苦、肯奋斗的新时代好青年。</p><p>朴诚书院积极为学生搭建成长平台，先后举办了青年成长讲堂、校园体育文化节、辅学课堂、“榜样•青年说”分享交流会、“悦读悦享”读书会、“光影铸心”观影活动等多项校园文化品牌，建设了中华传统文化走廊、文化厅堂、休闲庭院、至诚书屋、图书角等文化场域，组建了“学习·知行”红色记忆寻访团、“铁血荣光”退伍大学生宣讲团，潜移默化浸润学生思想，塑造学生品行。广大党员、学生骨干在疫情防控、多校区流转、防范台风“摩羯”及灾后重建、文明校园建设等重要任务面前，主动担当作为，争做先锋表率。2023年以来，多名学生考取清华大学、北京大学、上海交通大学、华中科技大学、西安交通大学、中国科学院大学、中国社会科学院大学等高校攻读硕士研究生；5人获评海南大学本科生年度人物，1人获团队奖、6人获提名奖；多名学生荣获中国国际大学生创新大赛（2023）全国总决赛“高教主赛道”金奖和“青年红色筑梦之旅”赛道金奖、第二十七届中国机器人及人工智能大赛全国总决赛一等奖等。</p><p>朴诚书院现有专职辅导员14人，全部入驻学生公寓开展思想政治教育工作；其中，有全国高校辅导员年度人物1人、全国教育基金工作先进个人1人、中国国际大学生创新大赛全国总决赛优秀指导教师1人、“镜头中的三下乡”征集活动优秀指导教师1人、海南省政务信息工作先进个人1人、海南省暑期文化科技卫生“三下乡”社会实践优秀指导教师3人、海南大学优秀共产党员1人、海南大学优秀党务工作者2人、海南大学创新创业教育工作先进个人1人。</p><p>朴诚书院现有团委、学生会、青年志愿者协会、大学生科学技术协会、学生自主管理委员会、学生党建服务中心等6个学生组织，7个本科生党支部、1个研究生党支部和3个学生社团；其中，研究生党支部（前身为外国语学院研究生第一党支部）被评为全国高校百个研究生样板党支部，学生第四党支部被评为海南大学先进基层党组织，书院被评为海南大学创新创业教育工作先进集体，团委被评为海南大学五四红旗团委，四维创意DIY协会在海南省高校“活力社团”TOP100榜第二名，书院微信公众号“海南大学朴诚书院”被评为海南大学优秀团属融媒体平台。</p><p>朴诚书院将持续学习贯彻习近平新时代中国特色社会主义思想，开拓进取，求实创新，乘着海南自贸港建设的东风，踏着世界一流大学建设的浪潮，凝心聚力，扬帆远航！</p><p><br></p><p class="vsbcontent_img"><img src="/__local/F/89/E1/CAF41382CE82DCD47A9FCAD3DA6_790F815C_18562.jpg" width="650" vsbhref="vurl" vurl="/_vsl/F89E1CAF41382CE82DCD47A9FCAD3DA6/790F815C/18562" vheight="" vwidth="650" orisrc="/__local/9/B0/FE/F520CD75EAE76FC5D3FEB27FD47_41B428AA_5999D.jpg" class="img_vsb_content"></p><p class="vsbcontent_img"><br></p><p class="vsbcontent_end">（以上数据截至2025年8月27日）</p></div></div>
+    <span id="vsb_content_7_1361_u10" name="vsb_content_7_1361_u10"></span><br><br>
+    
+</div>
+
+        </div>
+
+    
+    </div>      
+</div>
+</div>
+
+
+
+
+<footer class="footer footx">
+    <div class="w1">
+    <ul>
+        <dl class="foot-d3">
+            <li>版权所有2022©海南大学朴诚书院</li>
+            <li>地址：海南省海口市人民大道58号海南大学朴诚书院</li>
+            <li>邮编：570228</li>
+            <li>电话：0898-66181215</li>
+            <li>美工支持/中旗网络</li><li>
+        </li></dl>
+    </ul>
+    <article><img src="../home2022/imgs/logo.png"></article>
+    <ol>
+        <h1>关注我们</h1>
+        <li>
+            <span><img src="../home2022/imgs/wx1.jpg"><b>朴诚书院公众号</b></span>
+            <span><img src="../home2022/imgs/wx2.jpg"><b>朴诚书院视频号</b></span>
+        </li>
+    </ol>
+    </div>
+</footer>
+<script src="../home2022/js/app.js"></script>
+<script src="../home2022/js/common.js"></script>
+
+
+</body></html>

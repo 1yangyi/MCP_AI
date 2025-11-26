@@ -1,0 +1,949 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/slick-theme.css">
+    <link rel="stylesheet" href="style/slick.css">
+    <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/index.css">
+    <script src="js/jquery.js"></script>
+    <title>金陵女子学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="金陵女子学院">
+<META Name="keywords" Content="金陵女子学院" />
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230776447525055574200030003475c -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1783453918)</script>
+</head>
+
+<body>
+<div style="position:fixed;top:750px;z-index:9"><a href="info/1059/5024.htm"><img src="images/piao.png" style="width:80%" /></a></div>
+    <div class="header px1400">
+    
+    <div class="head-l"><a href="index.htm"><img src="images/logo20250214.png" alt=""></a></div>
+        <div class="head-r">
+            <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><div> 
+   <a href="http://www.nnu.edu.cn/index.htm" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 74994)">学校主页</a><span>| </span>
+   <a href="http://jny.njnu.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 75152)">返回旧版</a><span>| </span>
+   <a href="index/sjyzxx.htm" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 76793)">书记院长信箱</a><span></span>
+</div>
+
+            
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+        <div class="search"><input type="text" placeholder="输入关键词...." autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"><input type="image" src="images/search.png" v-on:click="onSubmit()"></div>
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1783453918";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://223.2.9.5:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+        </div>
+    </div>
+    <div id="nav">
+        <div class="nav px1400">
+            <ul>
+ <li><a href="index.htm">首页</a>
+                </li>
+
+ <li><a href="xygk/xyjj.htm">学院概况</a>
+                    <ul>
+
+                        <li><a href="xygk/xyjj.htm">学院简介</a></li>
+
+                        <li><a href="xygk/lrld.htm">历任领导</a></li>
+
+                        <li><a href="xygk/xrld.htm">现任领导</a></li>
+
+                        <li><a href="xygk/szdw.htm">师资队伍</a></li>
+
+                        <li><a href="xygk/xksz.htm">系科设置</a></li>
+
+                        <li><a href="xygk/yhyxyg.htm">院徽院训院歌</a></li>
+                    </ul>
+                </li>
+
+ <li><a href="bksjx/tzgg.htm">本科生教学</a>
+                    <ul>
+
+                        <li><a href="bksjx/tzgg.htm">通知公告</a></li>
+
+                        <li><a href="bksjx/zysz.htm">专业设置</a></li>
+
+                        <li><a href="bksjx/bysx.htm">毕业实习</a></li>
+
+                        <li><a href="bksjx/bylw.htm">毕业论文</a></li>
+
+                        <li><a href="bksjx/dxscxxlxm.htm">大学生创新训练项目</a></li>
+
+                        <li><a href="bksjx/yfsy.htm">贻芳书院</a></li>
+
+                        <li><a href="bksjx/gjjl.htm">国际交流</a></li>
+                    </ul>
+                </li>
+
+ <li><a href="bksgz/tzgg.htm">本科生工作</a>
+                    <ul>
+
+                        <li><a href="bksgz/tzgg.htm">通知公告</a></li>
+
+                        <li><a href="bksgz/btjs.htm">班团建设</a></li>
+
+                        <li><a href="bksgz/xszz.htm">学生组织</a></li>
+
+                        <li><a href="bksgz/xljk.htm">心理健康</a></li>
+
+                        <li><a href="bksgz/zyfw.htm">志愿服务</a></li>
+
+                        <li><a href="bksgz/xzfc.htm">学子风采</a></li>
+
+                        <li><a href="bksgz/zsjy.htm">招生就业</a></li>
+                    </ul>
+                </li>
+
+ <li><a href="yjspy/tzgg.htm">研究生培养</a>
+                    <ul>
+
+                        <li><a href="yjspy/tzgg.htm">通知公告</a></li>
+
+                        <li><a href="yjspy/zsyjy.htm">招生与就业</a></li>
+
+                        <li><a href="yjspy/xwypy.htm">学位与培养</a></li>
+
+                        <li><a href="yjspy/xshd.htm">学生活动</a></li>
+
+                        <li><a href="yjspy/xzfc.htm">学子风采</a></li>
+                    </ul>
+                </li>
+
+ <li><a href="xsyj/xsdt.htm">学术研究</a>
+                    <ul>
+
+                        <li><a href="xsyj/xsdt.htm">学术动态</a></li>
+
+                        <li><a href="xsyj/yfjt.htm">贻芳讲坛</a></li>
+
+                        <li><a href="xsyj/jsfzzxlt.htm">教师发展中心论坛</a></li>
+
+                        <li><a href="xsyj/kyjg1/qgflfn_xbyjypxjd.htm">科研机构</a></li>
+
+                        <li><a href="xsyj/zcwj.htm">政策文件</a></li>
+                    </ul>
+                </li>
+
+ <li><a href="djgz/djdt.htm">党建工作</a>
+                    <ul>
+
+                        <li><a href="djgz/djdt.htm">党建动态</a></li>
+
+                        <li><a href="djgz/tzgz.htm">统战工作</a></li>
+
+                        <li><a href="djgz/ghgz.htm">工会工作</a></li>
+                    </ul>
+                </li>
+
+ <li><a href="rsgz/rczp.htm">人事工作</a>
+                    <ul>
+
+                        <li><a href="rsgz/rczp.htm">人才招聘</a></li>
+
+                        <li><a href="rsgz/gzzd.htm">规章制度</a></li>
+                    </ul>
+                </li>
+
+ <li><a href="shfw1.htm">社会服务</a>
+                </li>
+
+ <li><a href="dwjl1.htm">对外交流</a>
+                </li>
+
+ <li><a href="xyh1.htm">校友会</a>
+                    <ul>
+
+                        <li><a href="xyh1/xyzz.htm">校友组织</a></li>
+
+                        <li><a href="xyh1/xyhhd.htm">校友会活动</a></li>
+
+                        <li><a href="xyh1/hsjt.htm">厚生讲坛</a></li>
+
+                        <li><a href="xyh1/xyfc.htm">校友风采</a></li>
+
+                        <li><a href="xyh1/xyzz1.htm">校友资助</a></li>
+
+                        <li><a href="xyh1/xytx.htm">校友通讯</a></li>
+
+                        <li><a href="xyh1/xygq.htm">校园歌曲</a></li>
+
+                        <li><a href="xyh1/xymd.htm">校友名单</a></li>
+                    </ul>
+                </li>
+
+<div class="clear"></div>
+</ul>
+        </div>
+    </div>
+        <div class="banner">
+        
+           <div style="width:100%">
+            <a href="#" onclick="_addDynClicks(&#34;wbimage&#34;, 1783453918, 63733)"><img src="images/banner.jpg" alt=""></a>
+        </div>
+               
+                        
+                
+                 
+            
+        
+    
+        
+           <div style="width:100%">
+            <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 1783453918, 79733)"><img src="images/tu3.png" alt=""></a>
+        </div>
+               
+                        
+                
+                 
+            
+        
+    
+        
+           <div style="width:100%">
+            <a href="#" onclick="_addDynClicks(&#34;wbimage&#34;, 1783453918, 72587)"><img src="images/22/11/10/1u5q35x8zi/img.jpg" alt=""></a>
+        </div>
+               
+                        
+                
+                 
+            
+        
+    
+        
+           <div style="width:100%">
+            <a href="" onclick="_addDynClicks(&#34;wbimage&#34;, 1783453918, 70030)"><img src="images/22/10/20/1o58io1o5v/banner1.png" alt=""></a>
+        </div>
+               
+                        
+                
+                 
+            
+        
+    
+      </div>
+
+    <div class="section1">
+        <div class="sect1 px1400">
+            
+
+
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="sect1-l">
+         <div>
+                    <a href="info/1037/14485.htm">                                
+                         <img src="/__local/6/44/1A/35782B949D14FD52EA4E77347D8_E789F821_2C3E.jpg">
+                        <p>南京师范大学金陵女子学院110周年院庆公告   （第一号）</p>
+                    </a>
+                </div>
+  
+         <div>
+                    <a href="info/1037/15075.htm">                                
+                         <img src="/__local/B/D0/F3/5E75562B88A1C9E3372735BAF2F_E33BDE9F_10792.jpg">
+                        <p>贻芳讲坛第四十五期  “社会调查常用方法与技巧”顺利举办</p>
+                    </a>
+                </div>
+  
+         <div>
+                    <a href="info/1037/15045.htm">                                
+                         <img src="/__local/9/15/63/BF0C1B982B6A5D3C85F0C80F7A5_F53208A1_16705.jpg">
+                        <p>贻芳讲坛第四十四期“把社会研究做在田野乡村”讲座顺利举办</p>
+                    </a>
+                </div>
+  
+         <div>
+                    <a href="info/1037/15025.htm">                                
+                         <img src="/__local/7/D2/F7/357797E2C6BA794548F46FD93B3_6C91FD06_F7A0.jpg">
+                        <p>厚生讲坛第十五期“将‘问题’作为方法：调查研究中的选题与...</p>
+                    </a>
+                </div>
+  
+         <div>
+                    <a href="info/1037/15015.htm">                                
+                         <img src="/__local/0/32/94/38AF558B1AB32C97D451B629A57_A144F0CA_11F67.jpeg">
+                        <p>金陵女子学院女大学生就业创业讲堂顺利举办</p>
+                    </a>
+                </div>
+  
+    </div><script>_showDynClickBatch(['dynclicks_u5_14485','dynclicks_u5_15075','dynclicks_u5_15045','dynclicks_u5_15025','dynclicks_u5_15015'],[14485,15075,15045,15025,15015],"wbnews", 1783453918)</script>
+
+            <div class="sect1-r">
+                <div class="title">
+                    <h2><img src="images/xw.png" alt=""><span>学院新闻</span><i>/News</i></h2><a href="xyxw.htm">more></a>
+                </div>
+               
+
+
+
+
+
+
+
+<ul>
+<li class="on "><a href="info/1037/14485.htm" target="_blank" title="南京师范大学金陵女子学院110周年院庆公告   （第一号）">南京师范大学金陵女子学院110周年院庆公告   （第一号）</a>
+                        <p class="active">百十春秋传厚生，万千芳华誉神州。2025年12月20日，南京师范大学金陵女子学院将迎来110周年华诞，届时，学院将举行庆祝金陵女子学院（原...</p><span>2025-09-27</span></li>
+
+<li><a href="info/1037/15075.htm" target="_blank" title="贻芳讲坛第四十五期  “社会调查常用方法与技巧”顺利举办">贻芳讲坛第四十五期  “社会调查常用方法与技巧”顺利举办</a>
+                        <p class="active">2025年10月27日晚上7点，金陵女子学院特邀教育部青年长江学者南京大学社会学院教授、博士生导师许琪于随园校区电教楼313开展第四十五期...</p><span>2025-10-30</span></li>
+
+<li><a href="info/1037/15045.htm" target="_blank" title="贻芳讲坛第四十四期“把社会研究做在田野乡村”讲座顺利举办">贻芳讲坛第四十四期“把社会研究做在田野乡村”讲座顺利举办</a>
+                        <p class="active">   10月26日下午2点，金陵女子学院特邀教育部长江学者中国农业大学人文与发展学院教授、博士生导师叶敬忠老师于随园校区电教楼313教室开...</p><span>2025-10-30</span></li>
+
+<li><a href="info/1037/15025.htm" target="_blank" title="厚生讲坛第十五期“将‘问题’作为方法：调查研究中的选题与实践”顺利举办">厚生讲坛第十五期“将‘问题’作为方法：调查研究中的选题与...</a>
+                        <p class="active">10月26日下午4点，金陵女子学院特邀南京师范大学社会学与社会保障系王晓焘副教授于随园校区电教楼313教室开展第十五期厚生讲坛活动，讲...</p><span>2025-10-30</span></li>
+
+<li><a href="info/1037/15015.htm" target="_blank" title="金陵女子学院女大学生就业创业讲堂顺利举办">金陵女子学院女大学生就业创业讲堂顺利举办</a>
+                        <p class="active">为引导女大学生树立“四自”精神，强化女大学生创业意识，提升职业竞争力与创新思维，10月24日上午，金陵女子学院特邀南京市女企业家协...</p><span>2025-10-29</span></li>
+
+<li><a href="info/1037/15005.htm" target="_blank" title="金陵女子学院召开2025年青年教师座谈会">金陵女子学院召开2025年青年教师座谈会</a>
+                        <p class="active">  10月29日下午，学院组织召开2025年青年教师座谈会。聚焦青年教师在教学、科研、生活等方面的实际问题和学院建设发展，学院党政领导班...</p><span>2025-10-29</span></li>
+
+<li><a href="info/1037/14995.htm" target="_blank" title="金陵女子学院/社会学院/会计学院成功举办成长导师聘任仪式暨老少党团支部结对共建活动">金陵女子学院/社会学院/会计学院成功举办成长导师聘任仪式暨...</a>
+                        <p class="active">为传承学院厚生精神，加强新时代人才培养，推动关心下一代工作深入开展，2025年10月24日上午，金陵女子学院/社会学院/会计学院在随园校...</p><span>2025-10-29</span></li>
+
+<li><a href="info/1037/14965.htm" target="_blank" title="金陵女子学院党委理论学习中心组召开专题学习会">金陵女子学院党委理论学习中心组召开专题学习会</a>
+                        <p class="active">  10月27日下午，金陵女子学院党委理论学习中心组召开专题学习会，专题学习习近平总书记在全球妇女峰会开幕式上的主旨讲话。学院领导班...</p><span>2025-10-29</span></li>
+
+</ul><script>_showDynClickBatch(['dynclicks_u6_14485','dynclicks_u6_15075','dynclicks_u6_15045','dynclicks_u6_15025','dynclicks_u6_15015','dynclicks_u6_15005','dynclicks_u6_14995','dynclicks_u6_14965'],[14485,15075,15045,15025,15015,15005,14995,14965],"wbnews", 1783453918)</script>
+
+
+            </div>
+        </div>
+ <div class="zs">
+                    <ul>
+    
+           <li class="on">
+                    <a href="zsxx/bkzs.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1783453918, 64374)"><img src="images/zl1.png"> 招生信息
+                    </a>
+                </li>
+               
+                      
+                
+                 
+            
+        
+           <li>
+                    <a href="#" onclick="_addDynClicks(&#34;wbimage&#34;, 1783453918, 64373)"><img src="images/zl1.png"> 招生信息
+                    </a>
+                </li>
+               
+                      
+                
+                 
+            
+        
+    
+    
+    
+           <li>
+                    <a href="#" onclick="_addDynClicks(&#34;wbimage&#34;, 1783453918, 64372)"><img src="images/zl1.png"> 招生信息
+                    </a>
+                </li>
+               
+                      
+                
+                 
+            
+        
+           <li>
+                    <a href="#" onclick="_addDynClicks(&#34;wbimage&#34;, 1783453918, 64371)"><img src="images/zl1.png"> 招生信息
+                    </a>
+                </li>
+               
+                      
+                
+                 
+            
+        
+    
+    
+    
+           <li>
+                    <a href="#" onclick="_addDynClicks(&#34;wbimage&#34;, 1783453918, 64370)"><img src="images/zl1.png"> 招生信息
+                    </a>
+                </li>
+               
+                      
+                
+                 
+            
+        
+           <li>
+                    <a href="#" onclick="_addDynClicks(&#34;wbimage&#34;, 1783453918, 64369)"><img src="images/zl1.png"> 招生信息
+                    </a>
+                </li>
+               
+                      
+                
+                 
+            
+        
+    
+     </ul>
+        </div>
+    </div>
+    <div class="section2">
+        <div class="sect2 px1400">
+            <ul>
+                <li>
+                    <div class="title">
+                        <h2><img src="images/tz.png" alt=""><span>通知公告</span><i>/Notice</i></h2><a href="tzgg.htm">more></a>
+                    </div>
+                    <ul>
+
+
+
+
+
+
+
+   <li><a href="info/1038/14885.htm">南京师范大学金陵女子学院/社会学院/会计学院2026年硕士研究...</a><span>2025-10-25</span></li>
+   <li><a href="info/1038/14875.htm">第三届“中国会计发展：方向与路径”专题研讨会征文公告</a><span>2025-10-24</span></li>
+   <li><a href="info/1038/14745.htm">“厚生永铭，芳华如贻”纪念吴贻芳先生逝世40周年研讨会征稿...</a><span>2025-10-23</span></li>
+   <li><a href="info/1038/14505.htm">金陵女子学院/社会学院/会计学院2026年接收推荐免试研究生名...</a><span>2025-10-10</span></li>
+   <li><a href="info/1038/14415.htm">金陵女子学院/社会学院/会计学院  2026年接收推荐免试攻读研...</a><span>2025-09-17</span></li>
+   <li><a href="info/1038/14385.htm">随园校区20号楼加装电梯配套工程采购公告</a><span>2025-09-16</span></li>
+   <li><a href="info/1038/14305.htm">金陵女子学院/社会学院/会计学院2026年接收推荐免试攻读研究...</a><span>2025-09-10</span></li>
+<script>_showDynClickBatch(['dynclicks_u8_14885','dynclicks_u8_14875','dynclicks_u8_14745','dynclicks_u8_14505','dynclicks_u8_14415','dynclicks_u8_14385','dynclicks_u8_14305'],[14885,14875,14745,14505,14415,14385,14305],"wbnews", 1783453918)</script>
+</ul>
+                </li>
+                <li>
+                    <div class="title">
+                        <h2><img src="images/tz.png" alt=""><span>学术动态</span><i>/learning</i></h2><a href="xsyj/xsdt.htm">more></a>
+                    </div>
+                    <ul>
+
+
+
+
+
+
+
+   <li><a href="info/1052/15085.htm">贻芳讲坛第四十五期  “社会调查常用方法与技巧”顺利举办</a><span>2025-10-30</span></li>
+   <li><a href="info/1052/15055.htm">贻芳讲坛第四十四期“把社会研究做在田野乡村”讲座顺利举办</a><span>2025-10-30</span></li>
+   <li><a href="info/1052/15035.htm">厚生讲坛第十五期“将‘问题’作为方法：调查研究中的选...</a><span>2025-10-30</span></li>
+   <li><a href="info/1052/14855.htm">贻芳讲坛第四十三期“数据资产化的企业价值效应分析”专...</a><span>2025-10-24</span></li>
+   <li><a href="info/1052/14825.htm">贻芳讲坛第四十一期“医保支付方式改革背景下公立医院精...</a><span>2025-10-24</span></li>
+   <li><a href="info/1052/14135.htm">“金陵家政学译丛”在南京师范大学出版社出版</a><span>2025-09-08</span></li>
+   <li><a href="info/1052/14405.htm">生动 生长 生态——儿童的生命成长与儿童艺术教育的生态...</a><span>2025-06-30</span></li>
+<script>_showDynClickBatch(['dynclicks_u9_15085','dynclicks_u9_15055','dynclicks_u9_15035','dynclicks_u9_14855','dynclicks_u9_14825','dynclicks_u9_14135','dynclicks_u9_14405'],[15085,15055,15035,14855,14825,14135,14405],"wbnews", 1783453918)</script>
+</ul>
+                </li>
+                <li>
+                    <div class="title">
+                        <h2><img src="images/tz.png" alt=""><span>党建动态</span><i>/party building</i></h2><a href="djgz/djdt.htm">more></a>
+                    </div>
+                    <ul>
+
+
+
+
+
+
+
+   <li><a href="info/1056/14975.htm">金陵女子学院党委理论学习中心组召开专题学习会</a><span>2025-10-29</span></li>
+   <li><a href="info/1056/14625.htm">金女院举行党员教育培训下半年第一次集中大课</a><span>2025-10-16</span></li>
+   <li><a href="info/1056/14355.htm">铭记历史 开创未来——金女院组织师生集中观看纪念中国人民抗...</a><span>2025-09-03</span></li>
+   <li><a href="info/1056/14345.htm">金陵女子学院/社会学院/会计学院党委召开理论学习中心组学习...</a><span>2025-07-19</span></li>
+   <li><a href="info/1056/14335.htm">金陵女子学院/社会学院/会计学院召开期末教职工大会暨党委书...</a><span>2025-07-04</span></li>
+   <li><a href="info/1056/14365.htm">金陵女子学院/社会学院/会计学院开展 2025届毕业生最后一次党...</a><span>2025-06-20</span></li>
+   <li><a href="info/1056/12305.htm">金陵女子学院召开2024年度民主生活会</a><span>2025-02-26</span></li>
+<script>_showDynClickBatch(['dynclicks_u10_14975','dynclicks_u10_14625','dynclicks_u10_14355','dynclicks_u10_14345','dynclicks_u10_14335','dynclicks_u10_14365','dynclicks_u10_12305'],[14975,14625,14355,14345,14335,14365,12305],"wbnews", 1783453918)</script>
+</ul>
+                </li>
+                <div class="clear"></div>
+            </ul>
+            <div class="xq">
+                       <ul>
+    
+                 <li>
+                        <a href="http://mpacc.njnu.edu.cn" onclick="_addDynClicks(&#34;wbimage&#34;, 1783453918, 64365)">
+                            <div class="tb"><img src="images/tb6.png"></div>
+                            <p> <span>MPAcc中心</span>
+                            </p>
+                        </a>
+                    </li>
+               
+                      
+                
+                 
+            
+        
+    
+
+    
+                 <li>
+                        <a href="xsyj/kyjg1/hjycwfzyjzx.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1783453918, 65925)">
+                            <div class="tb"><img src="images/czj1.png"></div>
+                            <p> <span>会计与财务发展研究中心</span>
+                            </p>
+                        </a>
+                    </li>
+               
+                      
+                
+                 
+            
+        
+    
+
+    
+                 <li>
+                        <a href="xsyj/kyjg1/qgflfn_xbyjypxjd.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1783453918, 63734)">
+                            <div class="tb"><img src="images/tb1.png"></div>
+                            <p> <span>全国妇联妇女/性别研究与培训基地</span>
+                            </p>
+                        </a>
+                    </li>
+               
+                      
+                
+                 
+            
+        
+    
+
+    
+                 <li>
+                        <a href="xsyj/kyjg1/wyfyjzx.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1783453918, 63736)">
+                            <div class="tb"><img src="images/-cd041503ce4e.png"></div>
+                            <p> <span>吴贻芳研究中心</span>
+                            </p>
+                        </a>
+                    </li>
+               
+                      
+                
+                 
+            
+        
+    
+
+    
+                 <li>
+                        <a href="xsyj/kyjg1/jsslnxyjjd.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1783453918, 63735)">
+                            <div class="tb"><img src="images/tb2.png"></div>
+                            <p> <span>江苏省老年学研究基地</span>
+                            </p>
+                        </a>
+                    </li>
+               
+                      
+                
+                 
+            
+        
+    
+
+    
+                 <li>
+                        <a href="xsyj/kyjg1/jssjzxh.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1783453918, 64364)">
+                            <div class="tb"><img src="images/tb5.png"></div>
+                            <p> <span>江苏省家政学会</span>
+                            </p>
+                        </a>
+                    </li>
+               
+                      
+                
+                 
+            
+        
+    
+
+    
+                 <li>
+                        <a href="#" onclick="_addDynClicks(&#34;wbimage&#34;, 1783453918, 64366)">
+                            <div class="tb"><img src="images/tb4.png"></div>
+                            <p> <span>江苏省家政发展研究院</span>
+                            </p>
+                        </a>
+                    </li>
+               
+                      
+                
+                 
+            
+        
+    
+       <div class="clear"></div>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="section3">
+        <div class="sect3 px1400">
+            
+
+
+
+
+
+
+
+<div class="picMarquee-left">
+            <div class="hd">
+                <a class="next"></a>
+                <a class="prev"></a>
+            </div>
+            <div class="bd">
+                <ul class="picList">
+ <li>
+                    <a href="info/1039/4433.htm">
+                        <div class="sect3-pic pic"><img src="/__local/0/20/FA/024F1717B42376B7C9BB62FD3DD_F2F9F441_DCE13.jpg"></div>
+                        <p style=" padding-top:10px;">金女大学生上家政课</p>
+                    </a>
+
+                </li>
+
+ <li>
+                    <a href="info/1039/4432.htm">
+                        <div class="sect3-pic pic"><img src="/__local/6/64/92/37F49D12ADBA2C467732604AECB_E0624EDA_2FD4DB.jpg"></div>
+                        <p style=" padding-top:10px;">2015年金陵女子学院建院一百...</p>
+                    </a>
+
+                </li>
+
+ <li>
+                    <a href="info/1039/1197.htm">
+                        <div class="sect3-pic pic"><img src="/__local/A/69/66/F6C9C3223CC9082F76BD50F929C_389E2613_9B7F.jpg"></div>
+                        <p style=" padding-top:10px;">抗战时期金女大吴贻芳校长陪...</p>
+                    </a>
+
+                </li>
+
+ <li>
+                    <a href="info/1039/1198.htm">
+                        <div class="sect3-pic pic"><img src="/__local/9/A6/D6/7041533C12389AF7E50248C57F9_15AB4C84_B940.jpg"></div>
+                        <p style=" padding-top:10px;">金女大学生体育跳舞表演</p>
+                    </a>
+
+                </li>
+
+ <li>
+                    <a href="info/1039/1199.htm">
+                        <div class="sect3-pic pic"><img src="/__local/9/27/48/A126E90F119CB91170C4595C230_E03B435A_BB7B.jpg"></div>
+                        <p style=" padding-top:10px;">金女大学生上体育课学射箭</p>
+                    </a>
+
+                </li>
+
+ <li>
+                    <a href="info/1039/1200.htm">
+                        <div class="sect3-pic pic"><img src="/__local/8/86/97/524589A0F06CA2637D3DA68788D_759E2CB2_A59A.jpg"></div>
+                        <p style=" padding-top:10px;">金陵女子大学口语课</p>
+                    </a>
+
+                </li>
+
+ <li>
+                    <a href="info/1039/1201.htm">
+                        <div class="sect3-pic pic"><img src="/__local/E/22/A6/D180D2E775FE20EF9905C869431_2A65F24B_1D4E7.jpg"></div>
+                        <p style=" padding-top:10px;">金陵女子大学第一块校牌</p>
+                    </a>
+
+                </li>
+
+ <li>
+                    <a href="info/1039/1202.htm">
+                        <div class="sect3-pic pic"><img src="/__local/7/DE/E5/BE62C7539FD2808F98BFC3046B8_3808B736_C315.jpg"></div>
+                        <p style=" padding-top:10px;">2012年6月金陵女子学院承办第...</p>
+                    </a>
+
+                </li>
+
+ <li>
+                    <a href="info/1039/1203.htm">
+                        <div class="sect3-pic pic"><img src="/__local/0/1E/9B/74A88849B96F9AAA0A89D73C2C0_E05D55F2_10419.jpg"></div>
+                        <p style=" padding-top:10px;">1945年6月26日金女大校长吴贻...</p>
+                    </a>
+
+                </li>
+
+ <li>
+                    <a href="info/1039/1204.htm">
+                        <div class="sect3-pic pic"><img src="/__local/B/78/8C/F3B8FB71FEA58ACF4992AFDD0A7_350C28BA_8A85.jpg"></div>
+                        <p style=" padding-top:10px;">1919年金女大首届毕业生的学...</p>
+                    </a>
+
+                </li>
+
+  
+    </ul>
+            </div>
+        </div><script>_showDynClickBatch(['dynclicks_u12_4433','dynclicks_u12_4432','dynclicks_u12_1197','dynclicks_u12_1198','dynclicks_u12_1199','dynclicks_u12_1200','dynclicks_u12_1201','dynclicks_u12_1202','dynclicks_u12_1203','dynclicks_u12_1204'],[4433,4432,1197,1198,1199,1200,1201,1202,1203,1204],"wbnews", 1783453918)</script>
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="foot-t">
+            <div class="link px1400"><span>友情链接</span><i>|</i>
+                <ul>
+                    <li>国内外女子大学
+  <ul>
+    <li><a href="http://www.cwu.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 81103)">中华女子学院</a></li>
+    <li><a href="http://www.sdwu.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 81104)">山东女子学院</a></li>
+    <li><a href="http:www.hnwu.edu.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 81105)">湖南女子学院</a></li>
+    <li><a href="http://www.hnwomen.com.cn" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 81106)">福建华南女子职业学院</a></li>
+    <li><a href="http://www.wellesley.edu" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 81107)">美国韦斯利女子学院</a></li>
+    <li><a href="http://www.ewha.ac.kr/ewha/index.do#menu" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 81108)">韩国梨花女子大学</a></li>
+     </ul>
+
+                    </li>
+                    <li>国外合作高校
+                        <ul>
+   <li><a href="http://www.wellesley.edu" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 75167)">美国韦斯利女子学院</a></li>
+   <li><a href="http://www.salemstate.edu" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 75168)">美国塞勒姆州立大学</a></li>
+   <li><a href="http://www.mq.edu.au" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 75169)">澳大利亚麦考瑞大学</a></li>
+   <li><a href="http://www.meredith.edu" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 75170)">美国梅瑞迪斯学院</a></li>
+   <li><a href="http://www.ncsu.edu" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 75171)">美国北卡罗莱纳州立大学</a></li>
+   <li><a href="http://www.msvu.ca" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 75172)">加拿大圣文森特山大学</a></li>
+   <li><a href="http://www.rennes-sb.com" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 81102)">法国雷恩商学院</a></li>
+ </ul>
+                    </li>
+                     <li>部门站点
+                        <ul>
+   <li><a href="http://rsc.njnu.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 75173)">南师大人力资源处</a></li>
+   <li><a href="http://jwc.njnu.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 75174)">南师大教务处</a></li>
+   <li><a href="http://grad.njnu.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 75175)">南师大研究生院</a></li>
+   <li><a href="http://sk.njnu.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 75176)">南师大人文社会科学研究院</a></li>
+   <li><a href="https://kjc.njnu.edu.cn/index.htm" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1783453918, 75177)">南师大科学技术研究院</a></li>
+ </ul>
+                    </li>
+                    <div style="display:none"> <li>国外女子大学交流
+                        <ul>
+ </ul>
+                    </li></div>
+                    <div class="clear"></div>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="foot-d">
+            <div class="foot-down px1400">
+
+                <script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<table>
+                    <tr>
+                        <td class="child1"><span>随园校区</span><i>|</i></td>
+                        <td class="child2"><img src="images/dz.png" alt="">地址：鼓楼区宁海路122号南京师范大学随园校区金陵女子学院楼（20号楼)</td>
+                        <td class="child3"><img src="images/dh.png" alt="">电话：83598286（院办） 83598777（研究生管理办）</td>
+                        <td class="child4"><img src="images/yb.png" alt="">邮编：210097</td>
+                    </tr>
+                    <tr>
+                        <td class="child1"><span>仙林校区</span><i>|</i></td>
+                        <td class="child2"><img src="images/dz.png" alt="">地址：亚东新城区文苑路1号南京师范大学仙林校区学正楼</td>
+                        <td class="child3"><img src="images/dh.png" alt="">电话：85891037（教务办） 85891817（学工）</td>
+                        <td class="child4"><img src="images/yb.png" alt="">邮编：210046</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bottom-m px1400">
+               <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权所有©南京师范大学金陵女子学院苏公网安备 32011302320321号</p>
+            <ul>        
+            
+                        <li>
+                        <div class="bg">
+                        <img src="images/wx.png"></div>
+                        
+                          
+                        <p><img src="images/wxzdf.png" alt="" onclick="_addDynClicks(&#34;wbimage&#34;, 1783453918, 64368)"></p>
+                    </li>               
+            
+                        <li>
+                        <div class="bg">
+                        
+                        <img src="images/wb.png"></div>
+                          
+                        <p><img src="images/wx.jpg" alt="" onclick="_addDynClicks(&#34;wbimage&#34;, 1783453918, 64367)"></p>
+                    </li>               
+   
+  
+            
+                        <li>
+                        <div class="bg">
+                        
+                        
+                          <img src="images/xx.png"></div>
+                        <p><img src="images/wx.jpg" alt="" onclick="_addDynClicks(&#34;wbimage&#34;, 1783453918, 63944)"></p>
+                    </li>               
+   
+      <div class="clear"></div>
+
+</ul>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+
+    <script src="js/slick.js"></script>  
+    <script src="js/public.js"></script>
+    <script src="js/js1.js"></script>
+<script>
+    $(function() {
+        $('.banner').slick({
+            autoplay: true,
+            dots: true
+        })
+        $('.sect1-l').slick({
+            autoplay: false,
+            dots: true
+        })
+        $('.sect1-r>ul>li').hover(function() {
+            $(this).stop().addClass('on').siblings().stop().removeClass('on');
+        })
+        $('.zs>ul>li').hover(function() {
+            $(this).stop().addClass('on').siblings().stop().removeClass('on');
+        })
+    })
+</script>
+<script>jQuery(".picMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:8,interTime:50,trigger:"click"});</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

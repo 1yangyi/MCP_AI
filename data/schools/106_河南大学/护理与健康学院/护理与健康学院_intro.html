@@ -1,0 +1,571 @@
+<!DOCTYPE html><html class="js cssanimations"><head><meta charset="utf-8">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>学院简介-河南大学护理与健康学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="河南大学护理与健康学院">
+
+
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../skin/css/amazeui.min.css">
+<link rel="stylesheet" href="../skin/css/app.css">
+<link rel="stylesheet" href="../skin/css/index.css">
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="skin/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="../skin/js/jquery.min.js"></script>
+<script src="../skin/js/amazeui.min.js"></script>
+<script src="../skin/js/jquery3.min.js"></script>
+<script src="../skin/js/ToTop.js"></script>
+<link rel="stylesheet" href="../skin/css/index.css">
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e7a475153535742000400014156 -->
+<link rel="stylesheet" type="text/css" href="../z_info.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1011,'/z_info.jsp',-1,1672595101)</script>
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+    以获得更好的体验！</p>
+<![endif]--> 
+<!-- 代码区 -->
+<div class="head">
+  <div class="jz"> 
+  
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="search" class="wow bounceInDown" style="position: absolute; right: 0px; top: 65px; color: #fff;">
+<style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><input type="hidden" name="kwtype" value="0"> <input name="q" placeholder="search" size="12" onfocus="javascript:clearsearch(this);" onblur="javascript:redosearch(this);" autocomplete="off" class="skw"> <input name="submit" type="submit" value="" class="sub"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+         <input type="hidden" name="kwtype" value="0" />
+          <input name="q" placeholder="search" class="skw" size="12" onfocus="javascript:clearsearch(this);" onblur="javascript:redosearch(this);" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"/>
+          <input name="submit" type="submit" class="sub" value="" v-on:click="onSubmit()"/>
+          
+          
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1672595101";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+ </div>
+     <div style="position: absolute; right: 0px; color: #fff; margin-top: 10px;"><sapn><a href="#" style="color: #fff;margin-right: 15px">收藏本站</a></sapn>|<sapn><a href="#" style="color: #fff;margin-left: 15px;">ENGLISH</a></sapn> </div>
+  <a href="../index.htm" class="l p_sj"><img class="pc" src="../skin/img/logo.png" alt=""><img class="m" src="../skin/img/logo_05.png" alt=""></a>
+  </div>
+</div>
+<div class="nav">
+  <div class="jz">
+<ul class="nav_main">
+      <li class="yiji_li"> <a class="wh_wbd" href="../index.htm" target="_self">首页</a> 
+        <ul class="nav_c">
+
+          <li class="erji_li c"> <a href="../index/zxkb.htm" target="_self">资讯快报</a> </li>
+
+          <li class="erji_li c"> <a href="../index/tzgg.htm" target="_self">通知公告</a> </li>
+        </ul>
+      </li>
+      <li class="yiji_li"> <a class="wh_wbd" href="xyjj.htm" target="_self">学院概况</a> 
+        <ul class="nav_c">
+
+          <li class="erji_li c"> <a href="xyjj.htm" target="_self">学院简介</a> </li>
+
+          <li class="erji_li c"> <a href="xrld.htm" target="_self">现任领导</a> </li>
+
+          <li class="erji_li c"> <a href="jgsz.htm" target="_self">机构设置</a> </li>
+
+          <li class="erji_li c"> <a href="yhyx.htm" target="_self">院徽院训</a> </li>
+
+          <li class="erji_li c"> <a href="gzzd.htm" target="_self">规章制度</a> </li>
+        </ul>
+      </li>
+      <li class="yiji_li"> <a class="wh_wbd" href="../szdw/jsdw.htm" target="_self">师资队伍</a> 
+        <ul class="nav_c">
+
+          <li class="erji_li c"> <a href="../szdw/jsdw.htm" target="_self">教师队伍</a> </li>
+
+          <li class="erji_li c"> <a href="../szdw/jxms.htm" target="_self">教学名师</a> </li>
+
+          <li class="erji_li c"> <a href="../szdw/yjsds.htm" target="_self">研究生导师</a> </li>
+
+          <li class="erji_li c"> <a href="../szdw/sdsf.htm" target="_self">师德师风</a> </li>
+        </ul>
+      </li>
+      <li class="yiji_li"> <a class="wh_wbd" href="../rcpy/bksjy.htm" target="_self">人才培养</a> 
+        <ul class="nav_c">
+
+          <li class="erji_li c"> <a href="../rcpy/bksjy.htm" target="_self">本科生教育</a> </li>
+
+          <li class="erji_li c"> <a href="../rcpy/yjsjy.htm" target="_self">研究生教育</a> </li>
+
+          <li class="erji_li c"> <a href="../rcpy/jxjy.htm" target="_self">继续教育</a> </li>
+
+          <li class="erji_li c"> <a href="../rcpy/pyfa.htm" target="_self">培养方案</a> </li>
+        </ul>
+      </li>
+      <li class="yiji_li"> <a class="wh_wbd" href="../kyxk/kypt.htm" target="_self">科研学科</a> 
+        <ul class="nav_c">
+
+          <li class="erji_li c"> <a href="../kyxk/kypt.htm" target="_self">科研平台</a> </li>
+
+          <li class="erji_li c"> <a href="../kyxk/kydt.htm" target="_self">科研动态</a> </li>
+
+          <li class="erji_li c"> <a href="../kyxk/xkjs.htm" target="_self">学科建设</a> </li>
+
+          <li class="erji_li c"> <a href="../kyxk/kycg.htm" target="_self">科研成果</a> </li>
+        </ul>
+      </li>
+      <li class="yiji_li"> <a class="wh_wbd" href="../zsjy/zsxx.htm" target="_self">招生就业</a> 
+        <ul class="nav_c">
+
+          <li class="erji_li c"> <a href="../zsjy/zsxx.htm" target="_self">招生信息</a> </li>
+
+          <li class="erji_li c"> <a href="../zsjy/jyxx.htm" target="_self">就业信息</a> </li>
+        </ul>
+      </li>
+      <li class="yiji_li"> <a class="wh_wbd" href="../gjjl.htm" target="_self">国际交流</a> 
+      </li>
+      <li class="yiji_li"> <a class="wh_wbd" href="../dtgh/ddsh.htm" target="_self">党团工会</a> 
+        <ul class="nav_c">
+
+          <li class="erji_li c"> <a href="../dtgh/ddsh.htm" target="_self">党的生活</a> </li>
+
+          <li class="erji_li c"> <a href="../dtgh/txyd.htm" target="_self">团学园地</a> </li>
+
+          <li class="erji_li c"> <a href="../dtgh/jgzj.htm" target="_self">教工之家</a> </li>
+
+          <li class="erji_li c"> <a href="../dtgh/llzc.htm" target="_self">理论之窗</a> </li>
+
+          <li class="erji_li c"> <a href="https://www.xuexi.cn/" target="_self">学习强国</a> </li>
+        </ul>
+      </li>
+      <li class="yiji_li"> <a class="wh_wbd" href="../xyzj.htm" target="_self">校友之家</a> 
+        <ul class="nav_c">
+
+          <li class="erji_li c"> <a href="../xyzj/xyrw.htm" target="_self">校友人物</a> </li>
+
+          <li class="erji_li c"> <a href="../xyzj/xyhd.htm" target="_self">校友活动</a> </li>
+        </ul>
+      </li>
+  </ul>  
+  </div>  
+</div>
+<nav data-am-widget="menu" class="am-menu  am-menu-dropdown1 am-no-layout" data-am-menu-collapse=""> <a href="javascript: void(0)" class="am-menu-toggle"> <img src="../skin/img/ddh.png" alt="Menu Toggle"> </a>
+  <ul class="am-menu-nav am-avg-sm-1 am-collapse">
+    
+
+    <li class="am-parent"> <a href="../index.htm" class="">首页</a>
+    <ul class="am-menu-sub am-collapse  am-avg-sm-2 ">
+
+        <li class=""> <a href="../index/zxkb.htm">资讯快报</a> </li>
+
+        <li class=""> <a href="../index/tzgg.htm">通知公告</a> </li>
+        
+        
+      </ul>
+ 
+    </li>
+    
+    
+ 
+
+
+    <li class="am-parent"> <a href="xyjj.htm" class="">学院概况</a>
+    <ul class="am-menu-sub am-collapse  am-avg-sm-2 ">
+
+        <li class=""> <a href="xyjj.htm">学院简介</a> </li>
+
+        <li class=""> <a href="xrld.htm">现任领导</a> </li>
+
+        <li class=""> <a href="jgsz.htm">机构设置</a> </li>
+
+        <li class=""> <a href="yhyx.htm">院徽院训</a> </li>
+
+        <li class=""> <a href="gzzd.htm">规章制度</a> </li>
+        
+        
+      </ul>
+ 
+    </li>
+    
+    
+ 
+
+
+    <li class="am-parent"> <a href="../szdw/jsdw.htm" class="">师资队伍</a>
+    <ul class="am-menu-sub am-collapse  am-avg-sm-2 ">
+
+        <li class=""> <a href="../szdw/jsdw.htm">教师队伍</a> </li>
+
+        <li class=""> <a href="../szdw/jxms.htm">教学名师</a> </li>
+
+        <li class=""> <a href="../szdw/yjsds.htm">研究生导师</a> </li>
+
+        <li class=""> <a href="../szdw/sdsf.htm">师德师风</a> </li>
+        
+        
+      </ul>
+ 
+    </li>
+    
+    
+ 
+
+
+    <li class="am-parent"> <a href="../rcpy/bksjy.htm" class="">人才培养</a>
+    <ul class="am-menu-sub am-collapse  am-avg-sm-2 ">
+
+        <li class=""> <a href="../rcpy/bksjy.htm">本科生教育</a> </li>
+
+        <li class=""> <a href="../rcpy/yjsjy.htm">研究生教育</a> </li>
+
+        <li class=""> <a href="../rcpy/jxjy.htm">继续教育</a> </li>
+
+        <li class=""> <a href="../rcpy/pyfa.htm">培养方案</a> </li>
+        
+        
+      </ul>
+ 
+    </li>
+    
+    
+ 
+
+
+    <li class="am-parent"> <a href="../kyxk/kypt.htm" class="">科研学科</a>
+    <ul class="am-menu-sub am-collapse  am-avg-sm-2 ">
+
+        <li class=""> <a href="../kyxk/kypt.htm">科研平台</a> </li>
+
+        <li class=""> <a href="../kyxk/kydt.htm">科研动态</a> </li>
+
+        <li class=""> <a href="../kyxk/xkjs.htm">学科建设</a> </li>
+
+        <li class=""> <a href="../kyxk/kycg.htm">科研成果</a> </li>
+        
+        
+      </ul>
+ 
+    </li>
+    
+    
+ 
+
+
+    <li class="am-parent"> <a href="../zsjy/zsxx.htm" class="">招生就业</a>
+    <ul class="am-menu-sub am-collapse  am-avg-sm-2 ">
+
+        <li class=""> <a href="../zsjy/zsxx.htm">招生信息</a> </li>
+
+        <li class=""> <a href="../zsjy/jyxx.htm">就业信息</a> </li>
+        
+        
+      </ul>
+ 
+    </li>
+    
+    
+ 
+
+
+    <li class="am-parent"> <a href="../gjjl.htm" class="">国际交流</a>
+ 
+    </li>
+    
+    
+ 
+
+
+    <li class="am-parent"> <a href="../dtgh/ddsh.htm" class="">党团工会</a>
+    <ul class="am-menu-sub am-collapse  am-avg-sm-2 ">
+
+        <li class=""> <a href="../dtgh/ddsh.htm">党的生活</a> </li>
+
+        <li class=""> <a href="../dtgh/txyd.htm">团学园地</a> </li>
+
+        <li class=""> <a href="../dtgh/jgzj.htm">教工之家</a> </li>
+
+        <li class=""> <a href="../dtgh/llzc.htm">理论之窗</a> </li>
+
+        <li class=""> <a href="https://www.xuexi.cn/">学习强国</a> </li>
+        
+        
+      </ul>
+ 
+    </li>
+    
+    
+ 
+
+
+    <li class="am-parent"> <a href="../xyzj.htm" class="">校友之家</a>
+    <ul class="am-menu-sub am-collapse  am-avg-sm-2 ">
+
+        <li class=""> <a href="../xyzj/xyrw.htm">校友人物</a> </li>
+
+        <li class=""> <a href="../xyzj/xyhd.htm">校友活动</a> </li>
+        
+        
+      </ul>
+ 
+    </li>
+    
+    
+ 
+
+      </ul>
+    
+  
+</nav>
+<div class="bannern c">
+  
+   
+    <img src="../skin/img/1_10.jpg" alt="">
+ 
+</div>
+<div class="n_cont c">
+ <div class="jz c">
+    <div class="ny_nav" id="my_sticky">
+      <div class="wjssbt c">
+学院概况</div>
+      <div class="wjssbtt c"><img src="../skin/img/20170828093153142.jpg" width="252" height="106" alt=""></div>
+      <ul class="wjsndh c">
+
+       
+        <li class="c"> <a href="xyjj.htm" title="学院简介" target="_self">学院简介<span> &gt; </span> </a> </li>
+       
+      
+
+
+
+       
+        <li class="c"> <a href="xrld.htm" title="现任领导" target="_self">现任领导<span> &gt; </span> </a> </li>
+       
+      
+
+
+
+       
+        <li class="c"> <a href="jgsz.htm" title="机构设置" target="_self">机构设置<span> &gt; </span> </a> </li>
+       
+      
+
+
+
+       
+        <li class="c"> <a href="yhyx.htm" title="院徽院训" target="_self">院徽院训<span> &gt; </span> </a> </li>
+       
+      
+
+
+
+       
+        <li class="c"> <a href="gzzd.htm" title="规章制度" target="_self">规章制度<span> &gt; </span> </a> </li>
+       
+      
+
+</ul>
+    </div>
+    <script>
+            $(window).bind('scroll', function () {
+                var div_h = $('.ny_nav').height(); // div的高度
+                var foot_h = $(".foot").offset().top - $(window).scrollTop(); // foot到顶部的距离
+                var con_h = $('.ny_zqw_chb').offset().top - $(window).scrollTop(); // con到顶部的距离
+                if(con_h <= 0){
+                    $('#my_sticky').addClass('ny_nav_chb');
+                    if(foot_h - div_h <= 0){
+                        $('#my_sticky').css({
+                            'top':'auto',
+                            'bottom':$(window).height() - foot_h
+                        })
+                    }else{
+                        $('#my_sticky').css({
+                            'top':'0',
+                            'bottom':'auto'
+                        })
+                    }
+                }else{
+                    $('#my_sticky').removeClass('ny_nav_chb');
+                }
+            });
+        </script>
+    <div class="ny_zqw ny_zqw_chb">
+      <div class="nw_top"> <span class="top_tzbt l">
+学院简介</span> <span class="top_mbx r">您的位置：<a href="../index.htm"> 首页</a> 
+
+&gt;&gt;
+<a href="xyjj.htm"> 学院概况</a> 
+
+&gt;&gt;
+<a href="xyjj.htm"> 学院简介</a> 
+
+</span> </div>
+      <!--内页正文-->
+      <div class="bjbld">
+
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1672595101,'wbnews','u7')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format501.css"><script>function seeContenta7(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1672595101,1754)</script>
+
+        <div class="xqxq">
+        
+           <div id="vsb_content_501_1754_u71"><div id="vsb_content_501"><p class="vsbcontent_start">护理与健康学院的前身是1929年创办的开封内地会福音医院护士学校，2000年原开封医学高等专科学校与河南大学合并后，学院更名为河南大学护理学院，2016年更名为河南大学护理与健康学院。现为中国高等医学教育学会护理教育分会常务理事单位、教育部高等学校护理学类本科教学指导委员会委员单位，是国家留学基金委公派交换生项目单位。2001年开始招收护理本科生，2006年获批护理学硕士学位授权点，2014年获批护理硕士专业学位授权。2019年12月，护理学获首批国家级一流本科专业建设点。2021年5月，护理学通过教育部专业认证。现有本科生789人，研究生306人。</p>
+<p>学院拥有一支基础理论扎实、专业技术精湛的教师队伍。现有专任教师37人，其中教授、副教授占80%，有博士学位的占56.8%。有中国高等医学教育学会护理教育分会常务理事1人，教育部护理学类专业教学指导委员会委员1人，全国优秀教师1人、中原千人计划-中原领军人1人、美国护理科学院院士1人、河南省教学名师1人、河南省优秀教师2人、河南省教学标兵5人。建有《健康评估》等国家级一流本科课程3门，《外科护理学》《护理综合技能实训》等省级一流本科课程7门，省级课程思政示范课程1门，省级通识教育示范课程1门；省级专业学位研究生精品教学案例3门，省级专业学位研究生校企（产）联合实践课程项目1门；省级继续教育精品在线开放课程1门。获省级高等教育教学成果奖一等奖1项，获第五届河南省本科高校教师课堂教学创新大赛暨第四届全国高校教师教学创新大赛（河南赛区）选拔赛省级决赛新医科组特等奖、全国现场赛新医科副高组三等奖，获第六届全国高校混合式教学设计创新大赛三等奖。建有中西部综合性大学康养护理虚拟教研室、河南省基础与临床护理虚拟仿真实验教学中心，护理学临床实践教研室为省级优秀基层教学组织，护理学理论教学课程组、康养护理学课程组、护理学实验教学中心为省级合格基层教学组织。建有省级大学生校外实践教学基地2个。有13家实习实践教育基地。</p>
+<p>坚持“四个面向”，思国家需，做国家事，扛国家责，积极服务区域卫生健康事业发展，着力培育和打造成人与老年护理学、健康与慢病管理学、交叉护理学、精神心理健康护理学、护理人文社会学等科研团队。建有河南省养老服务职业技能培训基地和河南省阿尔茨海默病护理研究与培训基地。拥有护理学学术学位、护理专业学位、社会医学与卫生事业管理等3个硕士学位授权点。2021年获得河南省博士学位授权点重点立项建设。2023年，智能护理学获批河南省新一轮重点学科。近年来，发表高水平学术论文百余篇，主编、参编护理学类国家规划教材20余部。</p>
+<p>学院重视国际合作与交流，培养涉外型护理人才。传承前瞻开放、国际化的办学理念，学院先后与新加坡、美国、澳大利亚、香港等国家和地区的高校建立了友好合作关系，以战略发展的眼光实现了本土教育与国际教育接轨与融合。</p>
+<p>秉承“慎思、笃行、博学、济世”的院训，坚持以本为本，深化医护协同，立德树人，以教育部高校思想政治工作精品项目“春晖行动”和“守望之家”省级辅导员工作室为载体，强化学生综合素质培养。毕业生岗位胜任力强，人文素养高，第36届南丁格尔奖获得者孔芙蓉女士、宁夏医科大学护理学院执行院长刘民辉就是我院毕业生中的优秀代表。</p>
+<p>面向未来，护理与健康学院将弘扬“自信、拼搏、开放、创新”的新河大精神，精诚团结，踔厉奋发，抢抓“双一流”“双航母”建设机遇，全面开启学院高质量发展新征程，为健康中原、健康中国建设不断作出新贡献。</p>
+<p><br></p>
+<p class="vsbcontent_end">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; （2025年1月更新）</p></div></div>
+        </div>
+       
+
+</div>
+      <!--内页正文--> 
+    </div>
+  </div>
+</div>
+<script language="JavaScript" src="../skin/js/api.js"></script> 
+<!-- 底部 -->
+<div class="foot">
+  <div class="jz">
+     <img src="../skin/img/yao_foot.png" alt="">
+   
+  </div>
+</div>
+<!-- 底部end -->
+<div id="back-to-top" style="display: none;"><a href="#top"></a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

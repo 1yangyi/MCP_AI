@@ -1,0 +1,597 @@
+<!DOCTYPE html><html lang="zh"><head><title>学院简介-人工智能与计算机学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="人工智能与计算机学院,学院简介">
+
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="../ico/jsj.ico">
+    <link rel="stylesheet" href="../css/aos.css">
+    <link rel="stylesheet" href="../css/flexslider.css">
+    <link rel="stylesheet" href="../css/liMarquee.css">
+    <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/owl.carousel.css">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/media-1.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232306975475253535742000400004152 -->
+<link rel="stylesheet" type="text/css" href="../about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1012,'/about.jsp',-1,1783427386)</script>
+</head>
+<body>
+<!-- header -->
+    <div id="header">
+        <div class="header-1">
+            <div class="container">
+                <div class="logo fl">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="新版计算机科学学院"><img src="../images/logo20250716.png"></a></div>
+                <div class="header-1-right fr">
+                    <div class="header-1-dl">
+                        <dl>
+                            <dd style="background-image: url(../images/dd1.png);"><a href="http://www.snuu.edu.cn" target="_blank">学校首页</a></dd>
+                            <dd style="background-image: url(../images/dd2.png);"><a href="../index/ldxx1.htm">领导信箱</a></dd>
+                            <dd style="background-image: url(../images/dd3.png);"><a href="http://ccs.snnu.edu.cn/oldccs/" target="_blank">旧版网站</a></dd>
+                            <dd><a href="#">English</a></dd>
+                        </dl>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="search">
+                        
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu1">
+    <div id="appu1"><div><input type="text" placeholder="请输入搜索关键字" autocomplete="off"> <input name="submit_button" type="image" src="../images/wen1.png" value=" "></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+            <input type="text"  placeholder="请输入搜索关键字" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input name="submit_button" type="image" src="../images/wen1.png" value=" " v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1783427386";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="nav-wp">
+            <div class="container">
+                <div class="nav">
+                    <ul class="list-unstyled">
+	<li><a href="../index.htm">首页</a>
+	</li>
+
+	<li class="active"><a href="xyjj1.htm">学院概况</a>
+				<ul class="list-unstyled">
+					 								<li><a href="xyjj1.htm">学院简介</a></li>
+								<li><a href="lsyg1.htm">历史沿革</a></li>
+								<li><a href="xrld1.htm">现任领导</a></li>
+								<li><a href="jgsz1.htm">机构设置</a></li>
+								<li><a href="xywh.htm">学院文化</a></li>
+				</ul>
+	</li>
+
+	<li><a href="../szdw/jxkyry/js.htm">师资队伍</a>
+				<ul class="list-unstyled">
+					 								<li><a href="../szdw/jxkyry/js.htm">教学科研人员</a></li>
+								<li><a href="../szdw/dzglry/xzglry.htm">党政管理人员</a></li>
+								<li><a href="../szdw/zyjsry/gcsyry.htm">专业技术人员</a></li>
+								<li><a href="../szdw/grtxry1.htm">光荣退休人员</a></li>
+				</ul>
+	</li>
+
+	<li><a href="../rcpy/bkspy1.htm">人才培养</a>
+				<ul class="list-unstyled">
+					 								<li><a href="../rcpy/bkspy1.htm">本科生培养</a></li>
+								<li><a href="../rcpy/yjspy1.htm">研究生培养</a></li>
+				</ul>
+	</li>
+
+	<li><a href="../kxyj/kytd1.htm">科学研究</a>
+				<ul class="list-unstyled">
+					 								<li><a href="../kxyj/kytd1.htm">科研团队</a></li>
+								<li><a href="../kxyj/cdxm1.htm">承担项目</a></li>
+								<li><a href="../kxyj/lwzz1.htm">论文专著</a></li>
+								<li><a href="../kxyj/qtkycg1.htm">其他科研成果</a></li>
+				</ul>
+	</li>
+
+	<li><a href="../xkjs/bshldz1.htm">学科建设</a>
+				<ul class="list-unstyled">
+					 								<li><a href="../xkjs/bshldz1.htm">博士后流动站</a></li>
+								<li><a href="../xkjs/bsxwsqd.htm">博士学位授权点</a></li>
+								<li><a href="../xkjs/ssxwsqd1.htm">硕士学位授权点</a></li>
+				</ul>
+	</li>
+
+	<li><a href="../sysjs/sysgk.htm">实验室建设</a>
+				<ul class="list-unstyled">
+					 								<li><a href="../sysjs/sysgk.htm">实验室概况</a></li>
+								<li><a href="../sysjs/syszd1.htm">实验室制度</a></li>
+								<li><a href="../sysjs/sysaq1.htm">实验室安全</a></li>
+								<li><a href="">实验室预约</a></li>
+				</ul>
+	</li>
+
+	<li><a href="../dqjs/xydw.htm">党群建设</a>
+				<ul class="list-unstyled">
+					 								<li><a href="../dqjs/xydw.htm">学院党委</a></li>
+								<li><a href="../dqjs/zbhd.htm">支部活动</a></li>
+								<li><a href="../dqjs/dwgk.htm">党务公开</a></li>
+								<li><a href="../dqjs/dflz.htm">党风廉政</a></li>
+								<li><a href="../dqjs/xytw.htm">学院团委</a></li>
+								<li><a href="../dqjs/xygh.htm">学院工会</a></li>
+								<li><a href="../dqjs/ghhd.htm">工会活动</a></li>
+								<li><a href="../dqjs/xxyd.htm">学习园地</a></li>
+				</ul>
+	</li>
+
+	<li><a href="../xssq/xsgzgk.htm">学生社区</a>
+				<ul class="list-unstyled">
+					 								<li><a href="../xssq/xsgzgk.htm">学生工作概况</a></li>
+								<li><a href="../xssq/xgdw.htm">学工队伍</a></li>
+								<li><a href="../xssq/xsh.htm">学生会</a></li>
+								<li><a href="../xssq/yjsh.htm">研究生会</a></li>
+								<li><a href="../xssq/xszz.htm">学生组织</a></li>
+								<li><a href="../xssq/xzfc.htm">学子风采</a></li>
+								<li><a href="../xssq/xsjs.htm">学生竞赛</a></li>
+				</ul>
+	</li>
+
+	<li><a href="../szjx/yxjssj.htm">师者匠心</a>
+				<ul class="list-unstyled">
+					 								<li><a href="../szjx/yxjssj.htm">优秀教师事迹</a></li>
+				</ul>
+	</li>
+
+	<li><a href="../zdjs/zhgl.htm">制度建设</a>
+				<ul class="list-unstyled">
+					 								<li><a href="../zdjs/zhgl.htm">综合管理</a></li>
+								<li><a href="../zdjs/rcpy1.htm">人才培养</a></li>
+								<li><a href="../zdjs/kxyj.htm">科学研究</a></li>
+								<li><a href="../zdjs/xsgl1.htm">学生管理</a></li>
+								<li><a href="../zdjs/jygz1.htm">就业工作</a></li>
+								<li><a href="../zdjs/rsxz1.htm">人事行政</a></li>
+				</ul>
+	</li>
+
+</ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- header -->
+<div id="header-2">
+    <div class="logo-2 fl">
+        
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="新版计算机科学学院"><img src="../images/logo2.png"></a>
+    </div>
+    <div class="menu2 fr">
+        <ul class="list-unstyled">
+            <li><a id="sanlan"><img src="../images/sanlan.png" alt=""></a></li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div class="nav-2">
+        
+        <ul class="list-unstyled">
+	<li><a href="../index.htm">首页</a>
+			<span class="jiaspan"></span>
+			<ul class="list-unstyled">
+
+			<li><a href="../index/xshd1.htm">学术活动</a></li>
+			<li><a href="../index/ldxx1.htm">领导信箱</a></li>
+			</ul>
+	</li>
+			
+	<li><a href="xyjj1.htm">学院概况</a>
+			<span class="jiaspan"></span>
+			<ul class="list-unstyled">
+
+			<li><a href="xyjj1.htm">学院简介</a></li>
+			<li><a href="lsyg1.htm">历史沿革</a></li>
+			<li><a href="xrld1.htm">现任领导</a></li>
+			<li><a href="jgsz1.htm">机构设置</a></li>
+			<li><a href="xywh.htm">学院文化</a></li>
+			</ul>
+	</li>
+			
+	<li><a href="../szdw/jxkyry/js.htm">师资队伍</a>
+			<span class="jiaspan"></span>
+			<ul class="list-unstyled">
+
+			<li><a href="../szdw/jxkyry/js.htm">教学科研人员</a></li>
+			<li><a href="../szdw/dzglry/xzglry.htm">党政管理人员</a></li>
+			<li><a href="../szdw/zyjsry/gcsyry.htm">专业技术人员</a></li>
+			<li><a href="../szdw/grtxry1.htm">光荣退休人员</a></li>
+			</ul>
+	</li>
+			
+	<li><a href="../rcpy/bkspy1.htm">人才培养</a>
+			<span class="jiaspan"></span>
+			<ul class="list-unstyled">
+
+			<li><a href="../rcpy/bkspy1.htm">本科生培养</a></li>
+			<li><a href="../rcpy/yjspy1.htm">研究生培养</a></li>
+			</ul>
+	</li>
+			
+	<li><a href="../kxyj/kytd1.htm">科学研究</a>
+			<span class="jiaspan"></span>
+			<ul class="list-unstyled">
+
+			<li><a href="../kxyj/kytd1.htm">科研团队</a></li>
+			<li><a href="../kxyj/cdxm1.htm">承担项目</a></li>
+			<li><a href="../kxyj/lwzz1.htm">论文专著</a></li>
+			<li><a href="../kxyj/qtkycg1.htm">其他科研成果</a></li>
+			</ul>
+	</li>
+			
+	<li><a href="../xkjs/bshldz1.htm">学科建设</a>
+			<span class="jiaspan"></span>
+			<ul class="list-unstyled">
+
+			<li><a href="../xkjs/bshldz1.htm">博士后流动站</a></li>
+			<li><a href="../xkjs/bsxwsqd.htm">博士学位授权点</a></li>
+			<li><a href="../xkjs/ssxwsqd1.htm">硕士学位授权点</a></li>
+			</ul>
+	</li>
+			
+	<li><a href="../sysjs/sysgk.htm">实验室建设</a>
+			<span class="jiaspan"></span>
+			<ul class="list-unstyled">
+
+			<li><a href="../sysjs/sysgk.htm">实验室概况</a></li>
+			<li><a href="../sysjs/syszd1.htm">实验室制度</a></li>
+			<li><a href="../sysjs/sysaq1.htm">实验室安全</a></li>
+			<li><a href="">实验室预约</a></li>
+			</ul>
+	</li>
+			
+	<li><a href="../dqjs/xydw.htm">党群建设</a>
+			<span class="jiaspan"></span>
+			<ul class="list-unstyled">
+
+			<li><a href="../dqjs/xydw.htm">学院党委</a></li>
+			<li><a href="../dqjs/zbhd.htm">支部活动</a></li>
+			<li><a href="../dqjs/dwgk.htm">党务公开</a></li>
+			<li><a href="../dqjs/dflz.htm">党风廉政</a></li>
+			<li><a href="../dqjs/xytw.htm">学院团委</a></li>
+			<li><a href="../dqjs/xygh.htm">学院工会</a></li>
+			<li><a href="../dqjs/ghhd.htm">工会活动</a></li>
+			<li><a href="../dqjs/xxyd.htm">学习园地</a></li>
+			</ul>
+	</li>
+			
+	<li><a href="../xssq/xsgzgk.htm">学生社区</a>
+			<span class="jiaspan"></span>
+			<ul class="list-unstyled">
+
+			<li><a href="../xssq/xsgzgk.htm">学生工作概况</a></li>
+			<li><a href="../xssq/xgdw.htm">学工队伍</a></li>
+			<li><a href="../xssq/xsh.htm">学生会</a></li>
+			<li><a href="../xssq/yjsh.htm">研究生会</a></li>
+			<li><a href="../xssq/xszz.htm">学生组织</a></li>
+			<li><a href="../xssq/xzfc.htm">学子风采</a></li>
+			<li><a href="../xssq/xsjs.htm">学生竞赛</a></li>
+			</ul>
+	</li>
+			
+	<li><a href="../szjx/yxjssj.htm">师者匠心</a>
+			<span class="jiaspan"></span>
+			<ul class="list-unstyled">
+
+			<li><a href="../szjx/yxjssj.htm">优秀教师事迹</a></li>
+			</ul>
+	</li>
+			
+	<li><a href="../zdjs/zhgl.htm">制度建设</a>
+			<span class="jiaspan"></span>
+			<ul class="list-unstyled">
+
+			<li><a href="../zdjs/zhgl.htm">综合管理</a></li>
+			<li><a href="../zdjs/rcpy1.htm">人才培养</a></li>
+			<li><a href="../zdjs/kxyj.htm">科学研究</a></li>
+			<li><a href="../zdjs/xsgl1.htm">学生管理</a></li>
+			<li><a href="../zdjs/jygz1.htm">就业工作</a></li>
+			<li><a href="../zdjs/rsxz1.htm">人事行政</a></li>
+			</ul>
+	</li>
+			
+</ul>
+    </div>
+</div>
+<!-- header -->
+<div class="chenggao"></div>
+<div id="nav-2-heidi"></div>
+<!-- main -->
+    <div id="main">
+            <script language="javascript" src="/system/resource/js/dynclicks.js"></script>    
+     
+             
+                    <div class="banner-2" style="background-image: url(../images/banner-2.jpg);"><img src="../images/banner-2x.jpg" alt=""></div>
+         
+   
+
+
+        <div class="erji">
+            <div class="container">
+                <div class="mianbaoxie">
+    您所在的位置: 
+                        <a href="../index.htm">首页</a>
+                &gt;&gt;
+                <a href="xyjj1.htm">学院概况</a>
+                &gt;&gt;
+                <a href="xyjj1.htm">学院简介</a>
+</div>
+
+                <div class="erji-div">
+                    <div class="menu fl">
+                        <div class="menu-h1">
+                            <div class="menu-h1-con">
+                                <h1>
+学院概况</h1>
+                                <h2>chool profile</h2>
+                                <i>S</i>
+                            </div>
+                        </div>
+                        <div class="menu-dl">
+                            <dl>
+                               
+                                <dd class="cur"><a href="xyjj1.htm" title="学院简介">学院简介</a></dd>
+                              
+                               
+                                <dd><a href="lsyg1.htm" title="历史沿革">历史沿革</a></dd>
+                              
+                               
+                                <dd><a href="xrld1.htm" title="现任领导">现任领导</a></dd>
+                              
+                               
+                                <dd><a href="jgsz1.htm" title="机构设置">机构设置</a></dd>
+                              
+                               
+                                <dd><a href="xywh.htm" title="学院文化">学院文化</a></dd>
+                              
+                            
+</dl>
+
+
+                        </div>
+                        
+
+<div class="menu-pic">
+                         <img src="../images/menu-pic.jpg">
+                        
+</div>
+                    </div>
+                    <div class="erji-content">
+                        <div class="erji-title">
+                            <h1 class="fl">
+学院简介</h1>
+                            <div class="clear"></div>
+                        </div>
+                                                <div class="bantuan-dl">
+                            <dl>
+	
+							
+</dl>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="erji-content-div">
+                            
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1783427386,'wbnews','u13')</script>
+<script>function seeContenta13(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta13('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1783427386,1001)</script>
+<div class="danpian">
+
+                             
+                                <div class="danpian-con">
+                                   <div id="vsb_content_1001_u131"><div id="vsb_content"><p style="background: rgb(251, 252, 252); margin: 0pt; padding: 0pt; text-align: justify; line-height: 22.5pt; text-indent: 21pt; mso-pagination: widow-orphan;"><span style="background: rgb(251, 252, 252); color: black; text-transform: none; letter-spacing: 0.4pt; font-family: 仿宋; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">&nbsp;<span style="background: rgb(251, 252, 252); color: black; text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑,Microsoft YaHei; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">陕西师范大学计算机学科发展历史悠久。早在1959年，学校派1名教师去前苏联学习计算数学、派6名教师前往北京大学计算技术培训班学习；上世纪70年代，学校计算机研究室先后成功仿制了中华-102计算机和DJS-130计算机，在国内产生了一定影响。1985年设立计算机科学与技术本科专业，1988年成立了计算机科学系，2000年成立了计算机科学学院，计算机学科取得了快速发展。2025年7月改建为人工智能与计算机学院</span><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);"><br></span></span></p><p><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);"></span></p><p style="background: rgb(251, 252, 252); margin: 0pt; padding: 0pt; text-align: center; line-height: 22.5pt; text-indent: 0pt; mso-pagination: widow-orphan;"><img width="701" height="224" id="63VORK5C" src="/__local/D/50/96/8F1D653051B836D354BF4BDFE4D_5C54BC6E_57764.png" vwidth=" 567px" vheight=" 202px" vurl="/_vsl/D50968F1D653051B836D354BF4BDFE4D/5C54BC6E/57764" vsbhref="vurl" orisrc="/__local/D/50/96/8F1D653051B836D354BF4BDFE4D_5C54BC6E_57764.png" class="img_vsb_content" style="width: 567px; height: 202px;"></p><p style="background: rgb(251, 252, 252); margin: 0pt; padding: 0pt; text-align: center; line-height: 22.5pt; text-indent: 0pt; mso-pagination: widow-orphan;"><img width="634" height="437" id="695ErkJg" src="/__local/9/AB/85/97EE8ABCE9EFAD5B2C20E851B19_BE9EC987_EE78C.png" vwidth=" 554px" vheight=" 321px" vurl="/_vsl/9AB8597EE8ABCE9EFAD5B2C20E851B19/BE9EC987/EE78C" vsbhref="vurl" orisrc="/__local/9/AB/85/97EE8ABCE9EFAD5B2C20E851B19_BE9EC987_EE78C.png" class="img_vsb_content" style="width: 554px; height: 321px;"></p><p style="background: rgb(251, 252, 252); margin: 0pt; padding: 0pt; line-height: 22.5pt; text-indent: 21pt; mso-pagination: widow-orphan;"><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">学院拥有以知名教授为学术带头人，年龄结构合理</span><img width="280" height="187" src="/__local/6/C4/BE/44FD4DA55301965D84DC3F7C408_8A638ED7_3348E.png" vwidth=" 252px" vheight=" 177px" vurl="/_vsl/6C4BE44FD4DA55301965D84DC3F7C408/8A638ED7/3348E" vsbhref="vurl" orisrc="/__local/6/C4/BE/44FD4DA55301965D84DC3F7C408_8A638ED7_3348E.png" class="img_vsb_content" style="width: 252px; height: 177px; float: right;"><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);"><span style="font-family: 微软雅黑;">的高水平教师队伍。现有教职员工</span>114人，其中教授27人（博士生导师19人）,<span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑,Microsoft YaHei; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">特聘兼职教授3人</span><span style="font-family: 仿宋; font-size: 16px;">，</span>副教授46人，讲师17人，师资博士后3人；其中具有博士学位教师90人，占<span style="font-family: 微软雅黑; font-size: 16px;">教师总数的97%</span>；具有一年以上海外研修经历68人，占教师总数的73%；获得国外大学博士学位教师10人，国务院政府特殊津贴专家1人，教育部新世纪优秀人才支持计划入选者2人，陕西省特聘教授2人，陕西省“三五”人才1人，陕西省青年科技新星3人，陕西高校青年杰出人才支持计划1人，陕西省高校科协青年人才托举计划3人，陕西省优秀博士论文获得者3人。</span></p><p style="background: rgb(251, 252, 252); margin: 0pt; padding: 0pt; line-height: 22.5pt; text-indent: 21pt; mso-pagination: widow-orphan;"><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-family: 微软雅黑,Microsoft YaHei; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">目前学院拥有计算机科学与技术一级学科博士点、博士后科研流动站、陕西省重点学科；拥有计算机科学与技术一级学科硕士点、软件工程一级学科硕士点、电子信息专业学位硕士点和现代教育技术专业学位硕士点。<img width="280" height="159" src="/__local/F/16/76/182D40C0E51F46539AB2E48B616_4C502205_2B9BD.png" vwidth=" 254px" vheight=" 151px" vurl="/_vsl/F1676182D40C0E51F46539AB2E48B616/4C502205/2B9BD" vsbhref="vurl" orisrc="/__local/F/16/76/182D40C0E51F46539AB2E48B616_4C502205_2B9BD.png" class="img_vsb_content" style="width: 254px; height: 151px; float: right;"></span></p><p style="background: rgb(251, 252, 252); margin: 0pt; padding: 0pt; line-height: 22.5pt; text-indent: 21pt; mso-pagination: widow-orphan;"><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-family: 微软雅黑,Microsoft YaHei; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">学院具有本科、硕士、博士和博士后完整的人才培养专业和学科体系，本科专业包括：计算机科学与技术（公费师范生、创新实验班）、软件工程、人工智能。其中计算机科学与技术是国家一流本科专业建设点、陕西省特色专业，并已通过国家师范类专业二级认证；软件工程是国家一流本科专业建设点，计算机软件与理论是陕西省重点学科。<span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-family: 微软雅黑,Microsoft YaHei; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">学院目前在校本科生1060人，国内硕士生371人，国内博士生37人，国外来华留学硕士生1人，国外来华留学博士生9人，在站博士后研究人员8人。<span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);"><img width="283" height="235" id="355ErkJg" src="/__local/C/1E/01/8E0788830A7EF393A365404DE3A_B1200D96_18751.png" vwidth=" 508px" vheight=" 370px" vurl="/_vsl/C1E018E0788830A7EF393A365404DE3A/B1200D96/18751" vsbhref="vurl" orisrc="/__local/C/1E/01/8E0788830A7EF393A365404DE3A_B1200D96_18751.png" class="img_vsb_content" style="width: 508px; height: 370px;"><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);"><br></span></span></span></span></p><p style="text-align: center;"><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);"><br></span></p><p style="text-align: center;">&nbsp;</p><p style="text-align: center;"><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);"><img width="940" height="224" id="45lFTkSu" src="/__local/6/A3/E2/2DA009BDA65512A90264E7C581B_1C3B62DE_3E187.png" vsbhref="vurl" vurl="/_vsl/6A3E22DA009BDA65512A90264E7C581B/1C3B62DE/3E187" vheight=" 276px" vwidth=" 681px" orisrc="/__local/6/A3/E2/2DA009BDA65512A90264E7C581B_1C3B62DE_3E187.png" class="img_vsb_content" style="width: 681px; height: 276px;"></span></p><p><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);"></span></p><p style="background: rgb(251, 252, 252); margin: 11.25pt 0pt 3.75pt; padding: 0pt; line-height: 22.5pt; text-indent: 21pt; mso-pagination: widow-orphan;"><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑,Microsoft YaHei; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0pt; mso-shading: rgb(251, 252, 252); mso-ascii-font-family: &quot;Times New Roman&quot;; mso-hansi-font-family: &quot;Times New Roman&quot;; mso-bidi-font-family: &quot;Times New Roman&quot;; mso-bidi-theme-font: minor-bidi; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">学院下设科研团队、本科课程教学团队和研究生培养团队；有<span style="font-size: 16px; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">陕西省重点科技创新团队(信息技术支撑教学)、</span>民歌智能计算与服务技术文化和旅游部重点实验室、现代教学技术教育部重点实验室、陕西省教学信息技术工程实验室、陕西省实验教学示范中心、麒麟人工智能重点实验室等平台。</span></p><p style="background: rgb(251, 252, 252); margin: 11.25pt 0pt 3.75pt; padding: 0pt; text-align: center; line-height: 22.5pt; text-indent: 0pt; mso-pagination: widow-orphan;"><img width="500" height="357" src="/__local/E/22/D2/10AF1B8411405303A8E97BAF672_03DA3EB6_AEB5B.png" vwidth="500" vheight="357" vurl="/_vsl/E22D210AF1B8411405303A8E97BAF672/03DA3EB6/AEB5B" vsbhref="vurl" orisrc="/__local/E/22/D2/10AF1B8411405303A8E97BAF672_03DA3EB6_AEB5B.png" class="img_vsb_content"><span style="color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt;"> </span></p><p style="background: rgb(251, 252, 252); margin: 0pt; padding: 0pt; text-align: center; line-height: 22.5pt; text-indent: 0pt; mso-pagination: widow-orphan;"><span style="color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt;"><img width="770" height="160" id="65ErkJg" src="/__local/2/76/48/D5A062431D1BEDCC4A85EDFC881_8DA718BD_71B0C.png" vwidth=" 658px" vheight=" 144px" vurl="/_vsl/27648D5A062431D1BEDCC4A85EDFC881/8DA718BD/71B0C" vsbhref="vurl" orisrc="/__local/2/76/48/D5A062431D1BEDCC4A85EDFC881_8DA718BD_71B0C.png" class="img_vsb_content" style="width: 658px; height: 144px;"></span></p><p style="background: rgb(251, 252, 252); margin: 11.25pt 0pt 5px; padding: 0pt; line-height: 22.5pt; text-indent: 21pt; mso-pagination: widow-orphan;"><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑,Microsoft YaHei; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);"><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">近年来，学院获立项国家自然科学基金、国家重点研发计划等</span><span lang="EN-US" style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">100</span><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">多项；承担教育部科学研究重点项目、教育部博士点基金、教育部留学回国人员科研项目、陕西省自然科学基金等</span><span lang="EN-US" style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">100</span><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">多项；主持企业委托项目和教学改革项目</span><span lang="EN-US" style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">80</span><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">多项，近</span><span lang="EN-US" style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">5</span><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">年累计科研经费</span><span lang="EN-US" style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">5000</span><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">多万元。</span></span></p><p style="background: rgb(251, 252, 252); margin: 5px 0pt 3.75pt; padding: 0pt; line-height: 22.5pt; text-indent: 21pt; mso-pagination: widow-orphan;"><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑,Microsoft YaHei; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);"><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">学院教师在《</span><span lang="EN-US" style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">IEEE Trans.</span><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">》《中国科学》《计算机学报》《软件学报》《电子学报》《计算机研究与发展》《自动化学报》等国际国内一流学术期刊上发表论文</span><span lang="EN-US" style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">400</span><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">余篇，获授权国家发明专利</span><span lang="EN-US" style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">150</span><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">余项；登记的软件著作权</span><span lang="EN-US" style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">200</span><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">余项；出版学术专著及教材</span><span lang="EN-US" style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">30</span><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">余部，获教育部科学技术奖、陕西省科学技术奖和陕西高等学校科学技术奖等各类奖项</span><span lang="EN-US" style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">10</span><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">余项。</span></span></p><p style="background: rgb(251, 252, 252); margin: 5px 0pt 3.75pt; padding: 0pt; line-height: 22.5pt; text-indent: 21pt; mso-pagination: widow-orphan;"><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);"></span></p><p style="background: rgb(251, 252, 252); margin: 0pt; padding: 0pt; line-height: 22.5pt; text-indent: 21pt; mso-pagination: widow-orphan;"><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-family: 微软雅黑,Microsoft YaHei; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">学院与美国、澳大利亚、英国、加拿大、日本、德国、中国台湾、中国香港等地的著名大学互派留学生、交换生进行短期访问学<img width="280" height="187" src="/__local/0/51/52/03F9D8C3CF3D263E02DD48D6B78_ADA1415B_3348E.png" vwidth="280" vheight="187" vurl="/_vsl/0515203F9D8C3CF3D263E02DD48D6B78/ADA1415B/3348E" vsbhref="vurl" orisrc="/__local/0/51/52/03F9D8C3CF3D263E02DD48D6B78_ADA1415B_3348E.png" class="img_vsb_content" style="float: right;">习，聘请外籍专家和企业工程师参与讲授本科生课程。在省内外著名</span><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑,Microsoft YaHei; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);"><span lang="EN-US" style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-family: times new roman,serif; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">IT</span><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑,Microsoft YaHei; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);"><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">企业建立实训基地，为本科生提供实训平台。我院学生积极参与各类学科竞赛，成绩突出，在互联网</span><span lang="EN-US" style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">+</span><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">大学生创新创业大赛、</span><span lang="EN-US" style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">ACM</span><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">国际大学生程序设计竞赛、全国大学生电子设计竞赛、全国大学生机器人大赛等活动中多次获奖。</span></span></span></p><p style="background: rgb(251, 252, 252); margin: 0pt; padding: 0pt; line-height: 22.5pt; text-indent: 21pt; mso-pagination: widow-orphan;"><span style="background: rgb(251, 252, 252); color: black; text-transform: none; letter-spacing: 0.4pt; font-family: 仿宋; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);"> </span></p><p style="background: rgb(251, 252, 252); margin: 0pt; padding: 0pt; line-height: 22.5pt; text-indent: 21pt; mso-pagination: widow-orphan;"><span style="background: rgb(251, 252, 252); color: black; text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑,Microsoft YaHei; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);"><span style="background: rgb(251, 252, 252); color: black; text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">院内获得推荐免试攻读研究生数量、通过数学建模等竞赛获奖获得推免指标以及通过考试考取著名高校和研究机构研究生的本科生总量历年保持在</span><span lang="EN-US" style="background: rgb(251, 252, 252); color: black; text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">40%</span><span style="background: rgb(251, 252, 252); color: black; text-transform: none; line-height: 150%; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">左右，部分硕士毕业生获得美国、日本、澳大利亚、英国和中国澳门等大学的全额奖学金继续攻读博士学位。<span style="background: rgb(251, 252, 252); color: black; text-transform: none; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">非师范专业毕业生去向落实率持续保持在</span><span lang="EN-US" style="background: rgb(251, 252, 252); color: black; text-transform: none; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">90%</span><span style="background: rgb(251, 252, 252); color: black; text-transform: none; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">以上，整体就业质量高，多数就业于华为、百度、腾讯、阿里巴巴、字节跳动、小米通讯等高新技术企业和各大银行、通信运营公司等机构；师范类专业毕业生多数就职于重点中学与教育管理部门，就业率</span><span lang="EN-US" style="background: rgb(251, 252, 252); color: black; text-transform: none; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">100%</span><span style="background: rgb(251, 252, 252); color: black; text-transform: none; letter-spacing: 0.4pt; font-size: 16px; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);">。近年来，各用人单位对我院毕业生在道德素养、专业技能、适应能力、发展潜力等方面均给予高度评价。</span></span></span></p><p style="background: rgb(251, 252, 252); margin: 0pt; padding: 0pt; line-height: 22.5pt; text-indent: 21pt; mso-pagination: widow-orphan;"><span style="background: rgb(251, 252, 252); color: black; text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑,Microsoft YaHei; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);"></span></p><p style="text-align: justify; line-height: 1.75em; text-indent: 32px;"><span style="background: rgb(251, 252, 252); color: rgb(0, 0, 0); text-transform: none; letter-spacing: 0.4pt; font-family: 微软雅黑; font-size: 12pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 0.0000pt; mso-shading: rgb(251, 252, 252);"><span style="font-family: 微软雅黑;">古城西安历史文化悠久，自然环境宜人，是治学和生活的理想之地，更是莘莘学子追求理想和实现梦想的驿站。陕西师范大学人工智能与计算机学院热诚欢迎国内外</span>IT学人加盟，携手共创辉煌！（数据更新日期：2025年7月）</span></p><p style="text-align: left;"><span style="background: rgb(255, 255, 255); color: rgb(102, 102, 102); text-transform: none; letter-spacing: 0pt; font-family: 宋体; font-size: 10.5pt; font-style: normal; font-weight: normal; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt; mso-shading: rgb(255, 255, 255);"></span></p></div></div>
+
+                                </div>
+                                
+                            
+</div>
+
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- main -->
+<!-- footer -->
+    <div id="footer">
+        <div class="footer-1">
+            <div class="container">
+                <div class="foo1-1 fl">
+                    <div class="foo-title">
+                        快速导航 
+                    </div>
+                    <div class="foo1-1-dl">
+                        <dl>
+							<dd><a href="xyjj1.htm" title="学院概况">学院概况</a></dd>
+							<dd><a href="../szdw/jxkyry/js.htm" title="师资队伍">师资队伍</a></dd>
+							<dd><a href="../rcpy/bkspy1.htm" title="人才培养">人才培养</a></dd>
+							<dd><a href="../kxyj/kytd1.htm" title="科学研究">科学研究</a></dd>
+							<dd><a href="../xkjs/bshldz1.htm" title="学科建设">学科建设</a></dd>
+							<dd><a href="../sysjs/sysgk.htm" title="实验室建设">实验室建设</a></dd>
+							<dd><a href="../dqjs/xydw.htm" title="党群建设">党群建设</a></dd>
+							<dd><a href="../xssq/xsgzgk.htm" title="学生社区">学生社区</a></dd>
+							<dd><a href="../szjx/yxjssj.htm" title="师者匠心">师者匠心</a></dd>
+							<dd><a href="../zdjs/zhgl.htm" title="制度建设">制度建设</a></dd>
+</dl>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="foo1-2 fl">
+                    <div class="foo-title">
+                        联系方式  
+                    </div>
+                    <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<div class="foo1-2-p">地址：陕西省西安市长安区西长安街620号<br>邮编：710119<br>电话：029-85310161 <br>传真：029-85310661</div>
+                </div>
+                <div class="foo1-3 fr">
+                    <div class="foo-title">微信二维码</div>
+                            
+    
+       
+                   <div class="er">
+						<img src="../images/erweima.png" alt="">
+						关注我们
+					</div>
+  
+
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="footer-2">
+            <div class="container">
+                <div class="fl">陕西师范大学计算机科学学院@版权所有 </div>
+                <div class="fr">技术支持：<a href="http://www.guifeng.net" target="_blank">硅峰网络</a></div>
+            </div>
+        </div>
+    </div>
+<!-- footer -->
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/holder.js"></script>
+<script src="../js/aos.js"></script>
+<script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../js/jquery.liMarquee.js"></script>
+<script src="../js/owl.carousel.js"></script>
+<script src="../js/jquery.mousewheel.min.js"></script>
+<script src="../js/jquery.flexslider.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/lib.js"></script>
+<script>
+    $(function(){
+        //页面插件调用处...
+        
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

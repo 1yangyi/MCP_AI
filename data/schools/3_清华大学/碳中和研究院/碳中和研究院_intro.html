@@ -1,0 +1,724 @@
+<!DOCTYPE html><html class="no-js"><head>
+<style type="text/css" class="AMap.ToolBar">.amap-toolbar{z-index:150}.amap-toolbar{position:absolute;width:52px;overflow:visible}.amap-pancontrol{width:52px;height:52px;background:url(https://webapi.amap.com/theme/v1.3/map_view.png) 0 -140px;position:absolute;_background:url(https://webapi.amap.com/theme/v1.3/map_view.gif)}.amap-pan-left,.amap-pan-top,.amap-pan-right,.amap-pan-bottom{position:absolute;cursor:pointer}.amap-pan-left,.amap-pan-right{width:12px;height:18px;top:17px}.amap-pan-top,.amap-pan-bottom{width:18px;height:12px;left:17px}.amap-pan-left{left:8px}.amap-pan-right{left:32px}.amap-pan-top{top:8px}.amap-pan-bottom{top:31px}.amap-pan-left:hover,.amap-pan-top:hover,.amap-pan-right:hover,.amap-pan-bottom:hover{background:url(https://webapi.amap.com/theme/v1.3/map_view.png);_background:url(https://webapi.amap.com/theme/v1.3/map_view.gif)}.amap-pan-left:hover{background-position:-52px -110px}.amap-pan-top:hover{background-position:-70px -112px}.amap-pan-right:hover{background-position:-61px -110px}.amap-pan-bottom:hover{background-position:-84px -110px}.amap-pan-left-hover{_background:url(https://webapi.amap.com/theme/v1.3/map_view.gif);background-position:-52px -110px}.amap-pan-top-hover{_background:url(https://webapi.amap.com/theme/v1.3/map_view.gif);background-position:-70px -112px}.amap-pan-right-hover{_background:url(https://webapi.amap.com/theme/v1.3/map_view.gif);background-position:-61px -110px}.amap-pan-bottom-hover{_background:url(https://webapi.amap.com/theme/v1.3/map_view.gif);background-position:-84px -110px}.amap-zoomcontrol{width:24px;position:absolute;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none}.amap-zoom-plus,.amap-zoom-minus,.amap-zoom-cursor,.amap-zoom-label-street,.amap-zoom-label-city,.amap-zoom-label-province,.amap-zoom-label-country{background:url(https://webapi.amap.com/theme/v1.3/map_view.png);_background:url(https://webapi.amap.com/theme/v1.3/map_view.gif);cursor:pointer}.amap-zoom-ruler,.amap-zoom-mask{background:url(https://webapi.amap.com/theme/v1.3/toolbar_rbg.png);cursor:pointer}.amap-zoom-ruler{overflow:visible}.amap-zoom-plus,.amap-zoom-minus{width:24px;height:21px}.amap-zoom-plus{background-position:0 -217px}.amap-zoom-plus:hover{background-position:0 -194px}.amap-zoom-minus{background-position:-26px -224px}.amap-zoom-minus:hover{background-position:-26px -195px}.amap-zoom-plus2:hover{background-position:-50px -194px;cursor:default}.amap-zoom-minus2:hover{background-position:-50px -223px;cursor:default}.amap-zoom-ruler{width:12px;height:147px;position:relative;left:6px;background-position:0 0}.amap-zoom-mask,.amap-zoom-cursor,.amap-zoom-labels,.amap-zoom-label-street,.amap-zoom-label-city,.amap-zoom-label-province,.amap-zoom-label-country{position:absolute}.amap-zoom-mask{width:12px;height:106px;background-position:-14px 0}.amap-zoom-cursor{width:24px;height:20px;left:-6px;top:106px;background-position:-127px -164px}.amap-zoom-cursor:hover{background-position:-127px -141px}.amap-zoom-labels{display:none}.amap-zoom-label-street,.amap-zoom-label-city,.amap-zoom-label-province,.amap-zoom-label-country{width:39px;height:31px;left:20px}.amap-zoom-label-street{top:0;background-position:-87px -140px}.amap-zoom-label-city{top:54px;background-position:-87px -171px}.amap-zoom-label-province{top:92px;background-position:-87px -203px}.amap-zoom-label-country{top:129px;background-position:-87px -235px}.amap-locate{position:absolute;width:18px;height:18px;background:url(https://webapi.amap.com/theme/v1.3/map_view.png);_background:url(https://webapi.amap.com/theme/v1.3/map_view.gif);background-position:-130px -185px;cursor:pointer}.amap-geo{width:30px;height:30px;cursor:pointer;bottom:18px;right:7px}.amap-toolbar-geo{position:absolute}.amap-touch-toolbar .amap-zoomcontrol{position:absolute;right:4px;bottom:-80px;z-index:500;width:35px;background-color:white;background-color:rgba(255,255,255,0.9);border-radius:3px;border:1px solid #ccc;box-shadow:1px 1px 10px 0 #ccc}.amap-touch-toolbar .amap-zoomcontrol:after{position:absolute;content:"";height:1px;background:#ddd;top:48px;width:60%;margin:auto;left:0;right:0}.amap-toolbar-geo-secc{background-image:url(https://webapi.amap.com/theme/v1.3/markers/b/loc.png)!important;background-size:22px 22px!important;background-position-x:6px!important}.amap-touch-toolbar .amap-geo{background:#fff url(https://webapi.amap.com/theme/v1.3/markers/b/loc_gray.png) 50% 50% no-repeat;width:35px;height:35px;border:1px solid #ccc;border-radius:3px;right:4px}.amap-touch-toolbar .amap-locate-loading{background-image:url(https://webapi.amap.com/theme/v1.3/loading.gif)}.amap-zoom-touch-plus{margin-bottom:5px}amap-zoom-touch-plus,.amap-zoom-touch-minus{width:100%;height:43px;background-color:white;background-color:rgba(255,255,255,0.5)}.amap-zoom-touch-plus>div,.amap-zoom-touch-minus>div{margin:auto;font-size:26px;line-height:43px;font-family:verdana;text-align:center;color:#666;height:100%;cursor:pointer}.amap-zoom-touch>div{opacity:.2}</style><style type="text/css">.amap-indoor-map .label-canvas{position:absolute;top:0;left:0}.amap-indoor-map .highlight-image-con *{pointer-events:none}.amap-indoormap-floorbar-control{position:absolute;margin:auto 0;bottom:165px;right:12px;width:35px;text-align:center;line-height:1.3em;overflow:hidden;padding:0 2px}.amap-indoormap-floorbar-control .panel-box{background-color:rgba(255,255,255,.9);border-radius:3px;border:1px solid #ccc}.amap-indoormap-floorbar-control .select-dock{position:absolute;top:0;left:0;width:100%;box-sizing:border-box;height:30px;border:solid #4196ff;border-width:0 2px;border-radius:2px;pointer-events:none;background:linear-gradient(to bottom,#f6f8f9 0,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%)}.amap-indoor-map .transition{transition:opacity .2s},.amap-indoormap-floorbar-control .transition{transition:top .2s,margin-top .2s}.amap-indoormap-floorbar-control .select-dock:after,.amap-indoormap-floorbar-control .select-dock:before{content:"";position:absolute;width:0;height:0;left:0;top:10px;border:solid transparent;border-width:4px;border-left-color:#4196ff}.amap-indoormap-floorbar-control .select-dock:after{right:0;left:auto;border-left-color:transparent;border-right-color:#4196ff}.amap-indoormap-floorbar-control.is-mobile{width:37px}.amap-indoormap-floorbar-control.is-mobile .floor-btn{height:35px;line-height:35px}.amap-indoormap-floorbar-control.is-mobile .select-dock{height:35px;top:36px}.amap-indoormap-floorbar-control.is-mobile .select-dock:after,.amap-indoormap-floorbar-control.is-mobile .select-dock:before{top:13px}.amap-indoormap-floorbar-control.is-mobile .floor-list-box{height:105px}.amap-indoormap-floorbar-control .floor-list-item .floor-btn{color:#555;font-family:"Times New Roman",sans-serif,"Microsoft Yahei";font-size:16px}.amap-indoormap-floorbar-control .floor-list-item.selected .floor-btn{color:#000}.amap-indoormap-floorbar-control .floor-btn{height:28px;line-height:28px;overflow:hidden;cursor:pointer;position:relative;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.amap-indoormap-floorbar-control .floor-btn:hover{background-color:rgba(221,221,221,.4)}.amap-indoormap-floorbar-control .floor-minus,.amap-indoormap-floorbar-control .floor-plus{position:relative;text-indent:-1000em}.amap-indoormap-floorbar-control .floor-minus:after,.amap-indoormap-floorbar-control .floor-plus:after{content:"";position:absolute;margin:auto;top:9px;left:0;right:0;width:0;height:0;border:solid transparent;border-width:10px 8px;border-top-color:#777}.amap-indoormap-floorbar-control .floor-minus.disabled,.amap-indoormap-floorbar-control .floor-plus.disabled{opacity:.3}.amap-indoormap-floorbar-control .floor-plus:after{border-bottom-color:#777;border-top-color:transparent;top:-3px}.amap-indoormap-floorbar-control .floor-list-box{max-height:153px;position:relative;overflow-y:hidden}.amap-indoormap-floorbar-control .floor-list{margin:0;padding:0;list-style:none}.amap-indoormap-floorbar-control .floor-list-item{position:relative}.amap-indoormap-floorbar-control .floor-btn.disabled,.amap-indoormap-floorbar-control .floor-btn.disabled *,.amap-indoormap-floorbar-control.with-indrm-loader *{-webkit-pointer-events:none!important;pointer-events:none!important}.amap-indoormap-floorbar-control .with-indrm-loader .floor-nonas{opacity:.5}.amap-indoor-map-moverf-marker{color:#555;background-color:#FFFEEF;border:1px solid #7E7E7E;padding:3px 6px;font-size:12px;white-space:nowrap;display:inline-block;position:absolute;top:1em;left:1.2em}.amap-indoormap-floorbar-control .amap-indrm-loader{-moz-animation:amap-indrm-loader 1250ms infinite linear;-webkit-animation:amap-indrm-loader 1250ms infinite linear;animation:amap-indrm-loader 1250ms infinite linear;border:2px solid #91A3D8;border-right-color:transparent;box-sizing:border-box;display:inline-block;overflow:hidden;text-indent:-9999px;width:13px;height:13px;border-radius:7px;position:absolute;margin:auto;top:0;left:0;right:0;bottom:0}@-moz-keyframes amap-indrm-loader{0%{-moz-transform:rotate(0deg);transform:rotate(0deg)}100%{-moz-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes amap-indrm-loader{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes amap-indrm-loader{0%{-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);-webkit-transform:rotate(360deg);transform:rotate(360deg)}}</style><style type="text/css">.amap-logo{display:block!important;pointer-events:none;}</style><style type="text/css" class="AMap.style">.vml{behavior:url(#default#VML);display:inline-block;position:absolute}.amap-custom{top:0;left:0;position:absolute}.amap-container img{max-width:none!important;max-height:none!important}.amap-container{touch-action:none;position:relative;overflow:hidden;background:#fcf9f2 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0AgMAAAC2uDcZAAAADFBMVEX////////////////1pQ5zAAAABHRSTlMAgP/AWuZC2AAAAVhJREFUeAFiYGAQYGDEQjAB2rcDC4BiGIqiU7abdKlO2QkeIClyPsDHweMKtOPHIJ1Op6/w7Y4fdqfT6VpndzqdrnV2p9PpWmd3Oj3qWndSoKp+2J1Op7vr7E6n07XO7nQ6XevsTqfTtc7udPo4/f787E6n0911dqfT6VpndzqdrnV2p9PpWmd3Ot27Ce8m6HS6u85dR6fTtU7r6HS61mkdnU7XOrvT6XTvJuxOp9PddXan0+laZ3c6na51dDpd67SOTqd7N+HdBJ1Od9e56+h0utZpHZ1O1zq70+l0rbM7nU73bsLudDrdXWd3Ol3rtI5Op2ud1tHpdK3TOjqd7t2EdxN0Ot1dZ3c6na51dqfT6VpndzqdrnV2p9Pp3k3Q6XR3nbuOTqdrndbR6XSt0zo6na51Wken072bsDudTnfX2Z1Op2ud3el0utbZnU7XOq2j0+t0uncTD1gO4zoT5doZAAAAAElFTkSuQmCC);-ms-touch-action:none}.amap-drags,.amap-layers{width:100%;height:100%;position:absolute;overflow:hidden}.amap-layers canvas{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.amap-layer img{pointer-events:none}.amap-e,.amap-maps{width:100%;height:100%}.amap-maps,.amap-e,.amap-layers,.amap-tile,.amap-tile-container{position:absolute;left:0;top:0;overflow:hidden}.amap-context{position:absolute;left:0;top:0}.amap-overlays,.amap-markers,.amap-marker{position:absolute;left:0;top:0}.amap-layers{z-index:0}.amap-overlays{z-index:110;cursor:default}.amap-markers{z-index:120}.amap-controls{z-index:150}.amap-copyright{position:absolute;display:block!important;left:85px;height:16px;bottom:.1px;padding-bottom:3px;font-size:11px;font-family:Arial,sans-serif;z-index:160}.amap-logo{position:absolute;bottom:1.5px;left:4px;z-index:160;height:20px}.amap-logo img{width:73px!important;height:20px!important;border:0;vertical-align:baseline!important}.amap-icon{position:relative;z-index:1}.amap-icon img{position:absolute;z-index:-1}.amap-marker-label{position:absolute;z-index:2;border:1px solid blue;background-color:white;white-space:nowrap;cursor:default;padding:3px;font-size:12px;line-height:14px}.amap-info{position:absolute;left:0;z-index:140;width:320px}.amap-menu{position:absolute;z-index:140;_width:100px}.amap-info-close{position:absolute;right:5px;_right:12px;+right:11px;top:5px;_top:2px;+top:2px;color:#c3c3c3;text-decoration:none;font:bold 16px/14px Tahoma,Verdana,sans-serif;width:14px;height:14px}.amap-info-outer,.amap-menu-outer{box-shadow:0 1px 2px rgba(0,0,0,0.1);background:none repeat scroll 0 0 white;border-radius:2px;padding:1px;text-align:left}.amap-menu-outer:hover{box-shadow:0 1px 2px rgba(0,0,0,0.3)}.amap-info-contentContainer:hover .amap-info-outer{box-shadow:0 1px 2px rgba(0,0,0,0.3)}.amap-info-content{position:relative;background:#fff;padding:10px 18px 10px 10px;line-height:1.4;overflow:auto}.amap-marker-content{position:relative}.amap-info{_width:320px}.amap-menu{_width:100px}.amap-info-sharp-old{overflow:hidden;position:absolute;background-image:url(http://webapi.amap.com/images/arrows.png)}.bottom-center .amap-info-sharp-old{height:12px;margin:0 auto;width:20px;background-position:center 12px;top:100%;margin-top:-9px;left:50%;margin-left:-10px}.bottom-left .amap-info-sharp-old{height:12px;width:13px;background-position:-16px -46px;top:100%;margin-top:-9px}.bottom-right .amap-info-sharp-old{height:12px;width:13px;top:-1px;background-position:-56px -46px;left:100%;margin-left:-13px;top:100%;margin-top:-9px}.middle-left .amap-info-sharp-old{height:20px;width:12px;background-position:left;top:50%;margin-top:-10px;margin-left:-11px}.center .amap-info-sharp-old{display:none}.middle-right .amap-info-sharp-old{height:20px;margin-right:0;width:12px;background-position:right;left:100%;margin-left:-9px;top:50%;margin-top:-10px}.top-center .amap-info-sharp-old{height:12px;margin:0 auto;width:20px;background-position:top;top:0;margin-top:-3px;left:50%;margin-left:-10px}.top-left .amap-info-sharp-old{height:12px;width:13px;background-position:-16px -3px;top:0;margin-top:-3px}.top-right .amap-info-sharp-old{height:12px;width:13px;background-position:-56px -3px;left:100%;margin-left:-13px;top:0;margin-top:-3px}.amap-info-sharp{position:absolute}.bottom-center .amap-info-sharp{bottom:0;left:50%;margin-left:-8px;border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid #fff}.bottom-center .amap-info-sharp:after{position:absolute;content:"";margin-left:-8px;margin-top:-7px;border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid rgba(0,0,0,0.3);filter:blur(2px);z-index:-1}.amap-info-contentContainer:hover.bottom-center .amap-info-sharp:after{border-top:8px solid rgba(0,0,0,0.5)}.bottom-left .amap-info-sharp{border-color:transparent #fff;border-width:0 0 10px 10px;border-style:solid}.bottom-left .amap-info-sharp:after{position:absolute;content:"";margin-left:-10px;border-color:transparent rgba(0,0,0,0.3);border-width:0 0 10px 10px;border-style:solid;filter:blur(1px);z-index:-1}.amap-info-contentContainer:hover.bottom-left .amap-info-sharp:after{border-color:transparent rgba(0,0,0,0.5)}.bottom-left .amap-info-content{border-radius:2px 2px 2px 0}.bottom-right .amap-info-sharp{right:0;border-top:10px solid #fff;border-left:10px solid transparent}.bottom-right .amap-info-sharp:after{position:absolute;margin-top:-9px;margin-left:-10px;content:"";border-top:10px solid rgba(0,0,0,0.3);border-left:10px solid transparent;filter:blur(1px);z-index:-1}.amap-info-contentContainer:hover.bottom-right .amap-info-sharp:after{border-top:10px solid rgba(0,0,0,0.5)}.bottom-right .amap-info-content{border-radius:2px 2px 0 2px}.top-center .amap-info-sharp{top:0;left:50%;margin-left:-8px;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid #fff}.top-center .amap-info-sharp:after{position:absolute;content:"";margin-top:0;margin-left:-8px;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid rgba(0,0,0,0.3);filter:blur(1px);z-index:-1}.top-left .amap-info-sharp{left:0;top:0;border-bottom:10px solid #fff;border-right:10px solid transparent}.top-left .amap-info-sharp:after{position:absolute;content:"";margin-top:0;margin-left:0;border-bottom:10px solid rgba(0,0,0,0.3);border-right:10px solid transparent;filter:blur(1px);z-index:-1}.top-right .amap-info-sharp{right:0;top:0;border-bottom:10px solid #fff;border-left:10px solid transparent}.top-right .amap-info-sharp:after{position:absolute;content:"";margin-top:0;margin-left:-10px;border-bottom:10px solid rgba(0,0,0,0.3);border-left:10px solid transparent;filter:blur(1px);z-index:-1}.middle-right .amap-info-sharp{right:0;top:50%;margin-top:-8px;border-top:8px solid transparent;border-left:8px solid #fff;border-bottom:8px solid transparent}.middle-right .amap-info-sharp:after{position:absolute;content:"";margin-top:-8px;margin-left:-8px;border-top:8px solid transparent;border-left:8px solid rgba(0,0,0,0.3);border-bottom:8px solid transparent;filter:blur(1px);z-index:-1}.amap-info-contentContainer:hover.middle-right .amap-info-sharp:after{border-left:8px solid rgba(0,0,0,0.5)}.middle-left .amap-info-sharp{left:0;top:50%;margin-top:-8px;border-top:8px solid transparent;border-right:8px solid #fff;border-bottom:8px solid transparent}.middle-left .amap-info-sharp:after{position:absolute;content:"";margin-top:-8px;margin-left:0;border-top:8px solid transparent;border-right:8px solid rgba(0,0,0,0.3);border-bottom:8px solid transparent;filter:blur(1px);z-index:-1}.amap-info-contentContainer:hover.middle-left .amap-info-sharp:after{border-right:8px solid rgba(0,0,0,0.5)}.amap-info-contentContainer.top-left,.amap-info-contentContainer.top-center,.amap-info-contentContainer.top-right{padding-top:8px}.amap-info-contentContainer.bottom-left,.amap-info-contentContainer.bottom-center,.amap-info-contentContainer.bottom-right{padding-bottom:8px}.amap-info-contentContainer.middle-right{padding-right:8px}.amap-info-contentContainer.middle-left{padding-left:8px}.amap-menu-outer{margin:0;padding:0;list-style-type:none}ul.amap-menu-outer li{cursor:pointer;height:35px;line-height:35px;word-break:break-all;padding:0 10px;font-size:12px;white-space:nowrap}ul.amap-menu-outer li a{text-decoration:none;font-size:13px;margin:0 5px;color:#000;padding:5px 5px}ul.amap-menu-outer li:hover{background-color:#f3f3ee}.amap-overlay-text-container{display:block;width:auto;word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:#fff;padding:2px 3px;border:1px solid #ccc;border-radius:3px}.amap-overlay-text-container.amap-overlay-text-empty{display:none}.amap-info-content-ie8{border:1px solid #9c9c9c}</style><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="">
+
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+<title>院长寄语-清华大学碳中和研究院</title><meta name="keywords" content="清华大学碳中和研究院">
+
+<!-- Set render engine for 360 browser -->
+<meta name="renderer" content="webkit">
+
+<link rel="shortcut icon" href="#">
+<link rel="stylesheet" href="../css/a_animate.css">
+<link rel="stylesheet" href="../css/a_style.css">
+<script src="../js/a_jquery.js"></script>
+<!--<![endif]-->
+<!-- Compatible files -->
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="../css/a_ie8.css">
+<script src="../js/a_ijr.js"></script>
+<div style=" text-align:center; background:#f00; height:50px;"></div>
+<div style=" padding:100px 0; position:relative">
+<p class="browsehappy" style=" text-align:center; position:relative; z-index:1000; font-size:24px; color:#000000; margin-bottom:15px">您的浏览器版本过低，为了保证更好的使用体验，请升级您的浏览器</p>
+<p class="browsehappy" style=" text-align:center; position:relative; z-index:1000; font-size:18px; color:#9B9B9B">（ IE 浏览器需要 IE9 及 IE9 以上版本 ）</p>
+</div>
+<div style=" text-align:center; background:#f00; height:50px;"></div>
+<style>
+.index_miso{ display:none;}
+</style>
+<![endif]-->
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e78475c5356574200000003435c -->
+<link rel="stylesheet" type="text/css" href="../yzjy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1059,'/yzjy.jsp',-1,1797716044)</script>
+<style type="text/css">.amap-container{cursor:url(https://webapi.amap.com/theme/v1.3/openhand.cur),default;}.amap-drag{cursor:url(https://webapi.amap.com/theme/v1.3/closedhand.cur),default;}</style></head>
+
+<body aos-easing="ease-out-back" aos-duration="600" aos-delay="100">
+<section class="index_miso">
+<!--============================头部 开始=============================-->
+    
+<section class="header_box_wai">
+    <header class="header_box">
+        <div class="w1200 clearfix">
+            <div class="logo fl">
+
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="碳中和研究院"><img src="../images/logo.png" alt=""></a>
+
+                
+            </div>
+            
+            <div class="fr clearfix">
+                <section class="MainMenu fl">
+                    <ul id="links" class="clearfix">
+<li><a href="../index.htm" title="首页"><h3>首页</h3></a></li>
+<li class="on">
+    <a href="yzjy.htm" title="关于我们"><h3>关于我们</h3></a>
+    <ul class="down">
+	<li><a href="yzjy.htm" title="院长寄语">院长寄语</a></li>
+	<li><a href="fzmb.htm" title="发展目标">发展目标</a></li>
+	<li><a href="gztd.htm" title="工作团队">工作团队</a></li>
+	<li><a href="zxzjz.htm" title="咨询专家组">咨询专家组</a></li>
+    </ul>
+</li>
+
+<li>
+    <a href="../bydt1.htm" title="本院动态"><h3>本院动态</h3></a>
+    <ul class="down">
+	<li><a href="../bydt1/yjydt.htm" title="研究院动态">研究院动态</a></li>
+	<li><a href="../bydt1/mtgz.htm" title="媒体关注">媒体关注</a></li>
+    </ul>
+</li>
+
+<li>
+    <a href="../kxyj/yjly.htm" title="科学研究"><h3>科学研究</h3></a>
+    <ul class="down">
+	<li><a href="../kxyj/yjly.htm" title="研究领域">研究领域</a></li>
+	<li><a href="../kxyj/yjzx.htm" title="研究中心">研究中心</a></li>
+	<li><a href="../kxyj/yjcg.htm" title="研究成果">研究成果</a></li>
+	<li><a href="../kxyj/tzhynyzlxm_CNEST_.htm" title="碳中和与能源智联项目（CNEST）">碳中和与能源智联项目（CNEST）</a></li>
+    </ul>
+</li>
+
+<li>
+    <a href="../hzjl/ydhz.htm" title="合作交流"><h3>合作交流</h3></a>
+    <ul class="down">
+	<li><a href="../hzjl/ydhz.htm" title="院地合作">院地合作</a></li>
+	<li><a href="../hzjl/gjhz.htm" title="国际合作">国际合作</a></li>
+    </ul>
+</li>
+
+<li>
+    <a href="../kjcb/tzhjslt.htm" title="科技传播"><h3>科技传播</h3></a>
+    <ul class="down">
+	<li><a href="../kjcb/tzhjslt.htm" title="碳中和技术论坛">碳中和技术论坛</a></li>
+	<li><a href="../kjcb/kjbg.htm" title="科技报告">科技报告</a></li>
+	<li><a href="../kjcb/_tzhkjpl_yw__qk.htm" title="《碳中和科技评论（英文）》期刊">《碳中和科技评论（英文）》期刊</a></li>
+    </ul>
+</li>
+
+<li>
+    <a href="../rcpy.htm" title="人才培养"><h3>人才培养</h3></a>
+    <ul class="down">
+	<li><a href="../rcpy/xsxxwxm.htm" title="学术型学位项目">学术型学位项目</a></li>
+	<li><a href="../rcpy/zyxxwxm.htm" title="专业型学位项目">专业型学位项目</a></li>
+	<li><a href="../rcpy/tzhnltsxm.htm" title="碳中和能力提升项目">碳中和能力提升项目</a></li>
+	<li><a href="../rcpy/qgtzhbsslt.htm" title="全国碳中和博士生论坛">全国碳中和博士生论坛</a></li>
+    </ul>
+</li>
+
+<li>
+    <a href="../ejyjzx_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1139" title="资料下载"><h3>资料下载</h3></a>
+</li>
+
+<li>
+    <a href="../jrwm.htm" title="加入我们"><h3>加入我们</h3></a>
+</li>
+
+<li>
+    <a href="https://www.icon.tsinghua.edu.cn/en" target="_blank" title="English"><h3>English</h3></a>
+</li>
+
+
+
+                    </ul>
+                </section>
+                
+                <div class="search_btn btn fr" name="tss">
+                    <img src="../images/header_ss.png" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+</section>
+
+<div class="search-dialog-box">
+    <div class="search-bg"></div>
+    <div class="bubbles-bg">
+                <div class="bubble bubble1">
+            <div class="circle"></div>
+        </div>
+                <div class="bubble bubble2">
+            <div class="circle"></div>
+        </div>
+                <div class="bubble bubble3">
+            <div class="circle"></div>
+        </div>
+                <div class="bubble bubble4">
+            <div class="circle"></div>
+        </div>
+                <div class="bubble bubble5">
+            <div class="circle"></div>
+        </div>
+                <div class="bubble bubble6">
+            <div class="circle"></div>
+        </div>
+                <div class="bubble bubble7">
+            <div class="circle"></div>
+        </div>
+                <div class="bubble bubble8">
+            <div class="circle"></div>
+        </div>
+                <div class="bubble bubble9">
+            <div class="circle"></div>
+        </div>
+                <div class="bubble bubble10">
+            <div class="circle"></div>
+        </div>
+            </div>
+    <div class="search-dialog">
+        <div class="search-tit">
+            <div class="wrap-inner">
+                <p>搜索</p>
+                <p>您的关键词</p>
+            </div>
+        </div>
+        <div class="search-inner">
+            <div class="wrap-inner">
+                <div class="search f-cb">
+<script type="text/javascript">
+    function _nl_ys_check(){
+        
+        var keyword = document.getElementById('showkeycode1046858').value;
+        if(keyword==null||keyword==""){
+            alert("请输入你要检索的内容！");
+            return false;
+        }
+        if(window.toFF==1)
+        {
+            document.getElementById("lucenenewssearchkey1046858").value = Simplized(keyword );
+        }else
+        {
+            document.getElementById("lucenenewssearchkey1046858").value = keyword;            
+        }
+        var  base64 = new Base64();
+        document.getElementById("lucenenewssearchkey1046858").value = base64.encode(document.getElementById("lucenenewssearchkey1046858").value);
+        new VsbFormFunc().disableAutoEnable(document.getElementById("showkeycode1046858"));
+        return true;
+    } 
+</script>
+<form action="../ssjgy.jsp?wbtreeid=1059" method="post" id="au2a" name="au2a" onsubmit="return _nl_ys_check()" style="display: inline">
+ <input type="hidden" id="lucenenewssearchkey1046858" name="lucenenewssearchkey" value=""><input type="hidden" id="_lucenesearchtype1046858" name="_lucenesearchtype" value="1"><input type="hidden" id="searchScope1046858" name="searchScope" value="0">
+
+
+
+<div class="search-input f-cb clearfix">
+	<input type="text" name="showkeycode" id="showkeycode1046858" placeholder="请输入您想查找的信息！" autocomplete="off">
+	<input type="submit" value="" style="cursor: hand">
+	<a href="javascript:;" class="clear-btn"></a>
+</div>
+</form><script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/formfunc.js"></script>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="javascript:;" class="pub-close">
+        <span class="bg"></span>
+        <i></i>
+    </a>
+</div>
+
+<!--wap header-->
+<section class="m_header_box">
+    <header id="m_header">
+        <div id="logo">
+            <div class="box_table">
+                <div class="box_table_cell">
+    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+
+                    <a href="../index.htm" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1797716044, 65047)" target="_blank"> <img src="../images/logo.png" alt=""></a> 
+
+
+                </div>
+            </div>
+        </div>
+        <div id="nav_btn_box">
+            <div class="box_table">
+                <div class="box_table_cell">
+                    <aside id="nav_btn">
+                        <div class="point" name="1" id="mbtn"> <span class="navbtn"></span> </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </header>
+</section>
+
+<nav id="m_nav">
+    <div class="tc_search">
+<script type="text/javascript">
+    function _nl_ys_check1(){
+        
+        var keyword = document.getElementById('showkeycode1046861').value;
+        if(keyword==null||keyword==""){
+            alert("请输入你要检索的内容！");
+            return false;
+        }
+        if(window.toFF==1)
+        {
+            document.getElementById("lucenenewssearchkey1046861").value = Simplized(keyword );
+        }else
+        {
+            document.getElementById("lucenenewssearchkey1046861").value = keyword;            
+        }
+        var  base64 = new Base64();
+        document.getElementById("lucenenewssearchkey1046861").value = base64.encode(document.getElementById("lucenenewssearchkey1046861").value);
+        new VsbFormFunc().disableAutoEnable(document.getElementById("showkeycode1046861"));
+        return true;
+    } 
+</script>
+<form action="../ssjgy.jsp?wbtreeid=1059" method="post" id="au4a" name="au4a" onsubmit="return _nl_ys_check1()" style="display: inline">
+ <input type="hidden" id="lucenenewssearchkey1046861" name="lucenenewssearchkey" value=""><input type="hidden" id="_lucenesearchtype1046861" name="_lucenesearchtype" value="1"><input type="hidden" id="searchScope1046861" name="searchScope" value="0">
+
+
+<div class="header-search">
+<input type="hidden" name="s" value="so">
+<input type="text" name="showkeycode" id="showkeycode1046861" class="focus_js" placeholder="" autocomplete="off">
+<button type="submit" class="btn_blue fl tc_close" value="" style="cursor: hand"></button>
+</div>
+</form>
+
+
+    </div>
+
+    <ul class="m_nav_list">
+<li class="title">
+    <a class="a" href="../index.htm" title="首页"><h3>首页</h3></a>
+</li>
+<li class="title">
+    <a class="a" href="yzjy.htm" title="关于我们"><h3>关于我们</h3></a>
+    <i></i>
+    <div class="list" style="opacity: 1; visibility: visible;">
+	 <a href="yzjy.htm" title="院长寄语">院长寄语</a>
+	 <a href="fzmb.htm" title="发展目标">发展目标</a>
+	 <a href="gztd.htm" title="工作团队">工作团队</a>
+	 <a href="zxzjz.htm" title="咨询专家组">咨询专家组</a>
+    </div>
+</li>
+<li class="title">
+    <a class="a" href="../bydt1.htm" title="本院动态"><h3>本院动态</h3></a>
+    <i></i>
+    <div class="list" style="opacity: 1; visibility: visible;">
+	 <a href="../bydt1/yjydt.htm" title="研究院动态">研究院动态</a>
+	 <a href="../bydt1/mtgz.htm" title="媒体关注">媒体关注</a>
+    </div>
+</li>
+<li class="title">
+    <a class="a" href="../kxyj/yjly.htm" title="科学研究"><h3>科学研究</h3></a>
+    <i></i>
+    <div class="list" style="opacity: 1; visibility: visible;">
+	 <a href="../kxyj/yjly.htm" title="研究领域">研究领域</a>
+	 <a href="../kxyj/yjzx.htm" title="研究中心">研究中心</a>
+	 <a href="../kxyj/yjcg.htm" title="研究成果">研究成果</a>
+	 <a href="../kxyj/tzhynyzlxm_CNEST_.htm" title="碳中和与能源智联项目（CNEST）">碳中和与能源智联项目（CNEST）</a>
+    </div>
+</li>
+<li class="title">
+    <a class="a" href="../hzjl/ydhz.htm" title="合作交流"><h3>合作交流</h3></a>
+    <i></i>
+    <div class="list" style="opacity: 1; visibility: visible;">
+	 <a href="../hzjl/ydhz.htm" title="院地合作">院地合作</a>
+	 <a href="../hzjl/gjhz.htm" title="国际合作">国际合作</a>
+    </div>
+</li>
+<li class="title">
+    <a class="a" href="../kjcb/tzhjslt.htm" title="科技传播"><h3>科技传播</h3></a>
+    <i></i>
+    <div class="list" style="opacity: 1; visibility: visible;">
+	 <a href="../kjcb/tzhjslt.htm" title="碳中和技术论坛">碳中和技术论坛</a>
+	 <a href="../kjcb/kjbg.htm" title="科技报告">科技报告</a>
+	 <a href="../kjcb/_tzhkjpl_yw__qk.htm" title="《碳中和科技评论（英文）》期刊">《碳中和科技评论（英文）》期刊</a>
+    </div>
+</li>
+<li class="title">
+    <a class="a" href="../rcpy.htm" title="人才培养"><h3>人才培养</h3></a>
+    <i></i>
+    <div class="list" style="opacity: 1; visibility: visible;">
+	 <a href="../rcpy/xsxxwxm.htm" title="学术型学位项目">学术型学位项目</a>
+	 <a href="../rcpy/zyxxwxm.htm" title="专业型学位项目">专业型学位项目</a>
+	 <a href="../rcpy/tzhnltsxm.htm" title="碳中和能力提升项目">碳中和能力提升项目</a>
+	 <a href="../rcpy/qgtzhbsslt.htm" title="全国碳中和博士生论坛">全国碳中和博士生论坛</a>
+    </div>
+</li>
+<li class="title">
+    <a class="a" href="../ejyjzx_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1139" title="资料下载"><h3>资料下载</h3></a>
+</li>
+<li class="title">
+    <a class="a" href="../jrwm.htm" title="加入我们"><h3>加入我们</h3></a>
+</li>
+<li class="title">
+    <a class="a" href="https://www.icon.tsinghua.edu.cn/en" target="_blank" title="English"><h3>English</h3></a>
+</li>
+
+
+    </ul>
+</nav>
+<section class="nav_mask"></section>
+
+<!--============================头部 结束=============================-->
+
+
+<!--============================主体 开始=============================-->
+
+<section class="banner n_banner">
+    <div class="w1200">
+        <div class="img">
+
+<img src="../images/n_banner6.jpg">
+
+        </div>
+        
+        <section class="mianbaoxie">
+<div class="mianbao">
+    <img src="../images/local.png" alt="">
+                <a href="../index.htm">首页</a>
+               <i>-</i>
+                <a href="yzjy.htm">关于我们</a>
+               <i>-</i>
+                <a href="yzjy.htm">院长寄语</a>
+</div>
+
+
+
+
+            <div class="clear"></div>
+        </section>
+    </div>
+</section>
+
+<section id="nav_slide" class="jianbian">
+    <div class="n_title"> 
+        <a id="bnt_back" href="javascript:history.back(-1);">
+            <img src="../images/icon_bnt_back2.png" alt="">
+        </a>
+        <h1 class="margin_auto_1">
+
+
+
+关于我们</h1>
+        <div id="bnt_sub_nav">
+            <img src="../images/bnt_sub_nav2.png" alt="">
+        </div>
+    </div>
+    <div id="sub_nav_content">
+        <ul class="am-list admin-sidebar-list" id="collapase-nav-1">
+
+
+<li class="am-panel  on ">
+<a href="yzjy.htm" title="院长寄语">院长寄语</a>
+</li>
+<li class="am-panel ">
+<a href="fzmb.htm" title="发展目标">发展目标</a>
+</li>
+<li class="am-panel ">
+<a href="gztd.htm" title="工作团队">工作团队</a>
+<i>&gt;</i>
+<ul>
+    <li><a href="gztd/xztd.htm" title="行政团队">行政团队</a></li>
+</ul>
+</li>
+<li class="am-panel ">
+<a href="zxzjz.htm" title="咨询专家组">咨询专家组</a>
+</li>
+
+
+        </ul>
+    </div>
+</section>
+
+<section class="n_container">
+    <div class="w1200">
+        <div class="n_nav_box clearfix">
+            <div class="left fl">
+                
+
+
+
+关于我们
+            </div>
+            
+            <div class="right fl">
+                <ul class="clearfix">
+    
+<li class="on"><a href="yzjy.htm" title="院长寄语">院长寄语</a></li>
+    
+<li><a href="fzmb.htm" title="发展目标">发展目标</a></li>
+    
+<li><a href="gztd.htm" title="工作团队">工作团队</a></li>
+    
+<li><a href="zxzjz.htm" title="咨询专家组">咨询专家组</a></li>
+
+
+                </ul>
+            </div>
+        </div>
+        
+        <section class="n_news_detail">
+            <div class="n_left fl">
+
+
+ <div class="ar_article">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1797716044,'wbnews','u12')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta12(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta12('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1797716044,1044)</script>
+  <div class="yzjy_pic"><img src="/__local/2/D9/D7/B78CE1726906C8E755AF634047F_B074E473_271048.jpg"></div>
+  <div class="yzjy_text">
+    <p></p><div id="vsb_content_2_1044_u121"><div id="vsb_content_2"><p class="vsbcontent_start">全球气候变化是21世纪人类共同面临的重大挑战。2020年9月22日，习近平总书记向世界作出实现“双碳”目标的中国承诺。实现“双碳”目标成为我国重大战略需求，清华大学碳中和研究院正是在这样的背景下，于2021年9月22日成立的。</p>
+<p>清华大学碳中和研究院的优势与特色在于，整合学校在“双碳”相关领域已有的多学科优势和科研基础，推进产学研协同创新，凝聚合力为国家实现“双碳”目标作出贡献。</p>
+<p>研究院成立后，统筹学校相关院系力量，面向“双碳”领域重大科学问题，规划了供能、用能、系统、治理四个研究方向，组建了八个研究中心，积极推动跨学科交叉融合，推进多院系、多学科联合创新，协同进行关键技术攻关。</p>
+<p>在凝聚多学科、多平台优势的同时，研究院在人才培养方面持续发力，积极参与创新领军工程博士研究生培养，推动“碳中和系统科学与技术”交叉学科建设，助力碳中和能力提升项目开展，发起举办全国碳中和博士生论坛，回应“双碳”目标对高水平人才的新要求。</p>
+<p>实现“双碳”目标，还需要政府、科研机构、企业、社会等各方勠力同心、携手共进。研究院将继续推动与地方政府、国内外企业的交流合作，开展学术交流和科技传播活动，全方位促进“双碳”目标的达成。</p>
+<p class="vsbcontent_end">实现碳达峰碳中和是重大挑战，也是前所未有的机遇。清华大学碳中和研究院将始终以服务国家重大战略需求为使命，全力打造服务碳中和主战场的战略科技力量，助力“双碳”目标实现，为推动全球可持续发展、构建人类美好明天作出更大贡献！</p></div></div><img src="../images/mao2.png" style="vertical-align: top; float: right;">
+    <span id="vsb_content_2_1044_u12" name="vsb_content_2_1044_u12"></span><br><br>
+    
+<p></p>
+                    
+                     </div>
+
+
+
+
+
+
+
+                   
+  <div class="clear"></div>
+                    </div>
+
+
+
+            </div>
+            
+            <div class="n_right fr">
+                <h3><img src="../images/n_wenzhang_h3ico.png" alt="">最新推荐</h3>
+
+
+
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script>
+<ul class="list_box18">
+	<li>
+	<a href="../info/1129/2012.htm" target="_blank" title="《中国碳中和与清洁空气协同路径（2025）》报告第二次全体作者会顺利举办">
+		<h6><svg t="1639488355186" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2385" width="16" height="16"><path d="M810.137703 213.860762c-164.388001-164.4187-431.887404-164.4187-596.277452 0-164.417677 164.388001-164.417677 431.889451 0 596.278475 164.390048 164.417677 431.890474 164.417677 596.277452 0C974.557426 645.750213 974.557426 378.248763 810.137703 213.860762zM767.347131 767.345596c-140.797723 140.829446-369.927237 140.797723-510.693238 0-140.828422-140.797723-140.828422-369.895515 0-510.708588 140.767024-140.783397 369.896538-140.813073 510.693238 0C908.14383 397.420405 908.14383 626.578572 767.347131 767.345596z" p-id="2386"></path><path d="M721.450824 521.495258 515.404028 521.495258l0.028653-227.948619c0-15.124466-12.362562-27.458375-27.501354-27.458375s-27.443026 12.33391-27.443026 27.458375l0 235.115855c0 0.835018-1.013073 20.48659 12.094456 34.459836 8.331759 8.809643 20.038382 13.288654 35.148521 13.288654l213.720569 0.031722c15.140839 0 27.472702-12.304234 27.472702-27.474748C748.922503 533.887496 736.620315 521.584286 721.450824 521.495258z" p-id="2387"></path></svg>2025-10-14</h6>
+	    <h5 class="overfloat-dot-2">《中国碳中和与清洁空气协同路径（2025）》报告第二次全体作者会顺利举...</h5>
+	</a>
+    </li>
+	<li>
+	<a href="../info/1070/2011.htm" target="_blank" title="《中国碳中和与清洁空气协同路径（2025）》报告第二次全体作者会顺利举办">
+		<h6><svg t="1639488355186" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2385" width="16" height="16"><path d="M810.137703 213.860762c-164.388001-164.4187-431.887404-164.4187-596.277452 0-164.417677 164.388001-164.417677 431.889451 0 596.278475 164.390048 164.417677 431.890474 164.417677 596.277452 0C974.557426 645.750213 974.557426 378.248763 810.137703 213.860762zM767.347131 767.345596c-140.797723 140.829446-369.927237 140.797723-510.693238 0-140.828422-140.797723-140.828422-369.895515 0-510.708588 140.767024-140.783397 369.896538-140.813073 510.693238 0C908.14383 397.420405 908.14383 626.578572 767.347131 767.345596z" p-id="2386"></path><path d="M721.450824 521.495258 515.404028 521.495258l0.028653-227.948619c0-15.124466-12.362562-27.458375-27.501354-27.458375s-27.443026 12.33391-27.443026 27.458375l0 235.115855c0 0.835018-1.013073 20.48659 12.094456 34.459836 8.331759 8.809643 20.038382 13.288654 35.148521 13.288654l213.720569 0.031722c15.140839 0 27.472702-12.304234 27.472702-27.474748C748.922503 533.887496 736.620315 521.584286 721.450824 521.495258z" p-id="2387"></path></svg>2025-10-14</h6>
+	    <h5 class="overfloat-dot-2">《中国碳中和与清洁空气协同路径（2025）》报告第二次全体作者会顺利举...</h5>
+	</a>
+    </li>
+	<li>
+	<a href="../info/1129/2010.htm" target="_blank" title="清华大学碳中和研究院院长贺克斌出席第17届中美绿色能源论坛并作主旨报告">
+		<h6><svg t="1639488355186" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2385" width="16" height="16"><path d="M810.137703 213.860762c-164.388001-164.4187-431.887404-164.4187-596.277452 0-164.417677 164.388001-164.417677 431.889451 0 596.278475 164.390048 164.417677 431.890474 164.417677 596.277452 0C974.557426 645.750213 974.557426 378.248763 810.137703 213.860762zM767.347131 767.345596c-140.797723 140.829446-369.927237 140.797723-510.693238 0-140.828422-140.797723-140.828422-369.895515 0-510.708588 140.767024-140.783397 369.896538-140.813073 510.693238 0C908.14383 397.420405 908.14383 626.578572 767.347131 767.345596z" p-id="2386"></path><path d="M721.450824 521.495258 515.404028 521.495258l0.028653-227.948619c0-15.124466-12.362562-27.458375-27.501354-27.458375s-27.443026 12.33391-27.443026 27.458375l0 235.115855c0 0.835018-1.013073 20.48659 12.094456 34.459836 8.331759 8.809643 20.038382 13.288654 35.148521 13.288654l213.720569 0.031722c15.140839 0 27.472702-12.304234 27.472702-27.474748C748.922503 533.887496 736.620315 521.584286 721.450824 521.495258z" p-id="2387"></path></svg>2025-10-14</h6>
+	    <h5 class="overfloat-dot-2">清华大学碳中和研究院院长贺克斌出席第17届中美绿色能源论坛并作主旨报告</h5>
+	</a>
+    </li>
+	<li>
+	<a href="../info/1068/2009.htm" target="_blank" title="清华大学碳中和研究院院长贺克斌出席第17届中美绿色能源论坛并作主旨报告">
+		<h6><svg t="1639488355186" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2385" width="16" height="16"><path d="M810.137703 213.860762c-164.388001-164.4187-431.887404-164.4187-596.277452 0-164.417677 164.388001-164.417677 431.889451 0 596.278475 164.390048 164.417677 431.890474 164.417677 596.277452 0C974.557426 645.750213 974.557426 378.248763 810.137703 213.860762zM767.347131 767.345596c-140.797723 140.829446-369.927237 140.797723-510.693238 0-140.828422-140.797723-140.828422-369.895515 0-510.708588 140.767024-140.783397 369.896538-140.813073 510.693238 0C908.14383 397.420405 908.14383 626.578572 767.347131 767.345596z" p-id="2386"></path><path d="M721.450824 521.495258 515.404028 521.495258l0.028653-227.948619c0-15.124466-12.362562-27.458375-27.501354-27.458375s-27.443026 12.33391-27.443026 27.458375l0 235.115855c0 0.835018-1.013073 20.48659 12.094456 34.459836 8.331759 8.809643 20.038382 13.288654 35.148521 13.288654l213.720569 0.031722c15.140839 0 27.472702-12.304234 27.472702-27.474748C748.922503 533.887496 736.620315 521.584286 721.450824 521.495258z" p-id="2387"></path></svg>2025-10-14</h6>
+	    <h5 class="overfloat-dot-2">清华大学碳中和研究院院长贺克斌出席第17届中美绿色能源论坛并作主旨报告</h5>
+	</a>
+    </li>
+	<li>
+	<a href="../info/1129/2008.htm" target="_blank" title="CNEST前沿讲座第8期“The Nature of Chemical Engineering Publishing”成功举办">
+		<h6><svg t="1639488355186" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2385" width="16" height="16"><path d="M810.137703 213.860762c-164.388001-164.4187-431.887404-164.4187-596.277452 0-164.417677 164.388001-164.417677 431.889451 0 596.278475 164.390048 164.417677 431.890474 164.417677 596.277452 0C974.557426 645.750213 974.557426 378.248763 810.137703 213.860762zM767.347131 767.345596c-140.797723 140.829446-369.927237 140.797723-510.693238 0-140.828422-140.797723-140.828422-369.895515 0-510.708588 140.767024-140.783397 369.896538-140.813073 510.693238 0C908.14383 397.420405 908.14383 626.578572 767.347131 767.345596z" p-id="2386"></path><path d="M721.450824 521.495258 515.404028 521.495258l0.028653-227.948619c0-15.124466-12.362562-27.458375-27.501354-27.458375s-27.443026 12.33391-27.443026 27.458375l0 235.115855c0 0.835018-1.013073 20.48659 12.094456 34.459836 8.331759 8.809643 20.038382 13.288654 35.148521 13.288654l213.720569 0.031722c15.140839 0 27.472702-12.304234 27.472702-27.474748C748.922503 533.887496 736.620315 521.584286 721.450824 521.495258z" p-id="2387"></path></svg>2025-10-14</h6>
+	    <h5 class="overfloat-dot-2">CNEST前沿讲座第8期“The Nature of Chemical Engineering Publishing”...</h5>
+	</a>
+    </li>
+	<li>
+	<a href="../info/1068/2007.htm" target="_blank" title="CNEST前沿讲座第8期“The Nature of Chemical Engineering Publishing”成功举办">
+		<h6><svg t="1639488355186" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2385" width="16" height="16"><path d="M810.137703 213.860762c-164.388001-164.4187-431.887404-164.4187-596.277452 0-164.417677 164.388001-164.417677 431.889451 0 596.278475 164.390048 164.417677 431.890474 164.417677 596.277452 0C974.557426 645.750213 974.557426 378.248763 810.137703 213.860762zM767.347131 767.345596c-140.797723 140.829446-369.927237 140.797723-510.693238 0-140.828422-140.797723-140.828422-369.895515 0-510.708588 140.767024-140.783397 369.896538-140.813073 510.693238 0C908.14383 397.420405 908.14383 626.578572 767.347131 767.345596z" p-id="2386"></path><path d="M721.450824 521.495258 515.404028 521.495258l0.028653-227.948619c0-15.124466-12.362562-27.458375-27.501354-27.458375s-27.443026 12.33391-27.443026 27.458375l0 235.115855c0 0.835018-1.013073 20.48659 12.094456 34.459836 8.331759 8.809643 20.038382 13.288654 35.148521 13.288654l213.720569 0.031722c15.140839 0 27.472702-12.304234 27.472702-27.474748C748.922503 533.887496 736.620315 521.584286 721.450824 521.495258z" p-id="2387"></path></svg>2025-10-14</h6>
+	    <h5 class="overfloat-dot-2">CNEST前沿讲座第8期“The Nature of Chemical Engineering Publishing”...</h5>
+	</a>
+    </li>
+	<li>
+	<a href="../info/1129/2006.htm" target="_blank" title="全球碳中和进程论坛暨《2025全球碳中和年度进展报告》发布会在清华大学举行">
+		<h6><svg t="1639488355186" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2385" width="16" height="16"><path d="M810.137703 213.860762c-164.388001-164.4187-431.887404-164.4187-596.277452 0-164.417677 164.388001-164.417677 431.889451 0 596.278475 164.390048 164.417677 431.890474 164.417677 596.277452 0C974.557426 645.750213 974.557426 378.248763 810.137703 213.860762zM767.347131 767.345596c-140.797723 140.829446-369.927237 140.797723-510.693238 0-140.828422-140.797723-140.828422-369.895515 0-510.708588 140.767024-140.783397 369.896538-140.813073 510.693238 0C908.14383 397.420405 908.14383 626.578572 767.347131 767.345596z" p-id="2386"></path><path d="M721.450824 521.495258 515.404028 521.495258l0.028653-227.948619c0-15.124466-12.362562-27.458375-27.501354-27.458375s-27.443026 12.33391-27.443026 27.458375l0 235.115855c0 0.835018-1.013073 20.48659 12.094456 34.459836 8.331759 8.809643 20.038382 13.288654 35.148521 13.288654l213.720569 0.031722c15.140839 0 27.472702-12.304234 27.472702-27.474748C748.922503 533.887496 736.620315 521.584286 721.450824 521.495258z" p-id="2387"></path></svg>2025-10-14</h6>
+	    <h5 class="overfloat-dot-2">全球碳中和进程论坛暨《2025全球碳中和年度进展报告》发布会在清华大学...</h5>
+	</a>
+    </li>
+</ul><script>_showDynClickBatch(['dynclicks_u13_2012','dynclicks_u13_2011','dynclicks_u13_2010','dynclicks_u13_2009','dynclicks_u13_2008','dynclicks_u13_2007','dynclicks_u13_2006'],[2012,2011,2010,2009,2008,2007,2006],"wbnews", 1797716044)</script>
+
+
+            </div>
+        </section>
+    </div>
+</section>
+<script src="../js/jquery.share.min.js"></script>
+<script>
+$('#share-2').share({sites: ['wechat', 'weibo']});
+</script>
+
+<!--============================主体 结束=============================-->
+
+
+<!--============================底部 开始=============================-->
+
+<footer>
+    <div class="w1200">
+        <div class="content clearfix">
+            <div class="box box1">
+
+                
+                <div class="top">
+                    <h3><img src="../images/footer_tit2.png" alt=""></h3>
+                    <script language="javascript" src="/system/resource/js/openlink.js"></script><ul class="list_box10">
+    <li><a href="https://www.tsinghua.edu.cn" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1797716044, 86050)">清华大学主页</a></li>
+    <li><a href="https://www.te.tsinghua.edu.cn" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1797716044, 86039)">清华大学能源与动力工程系</a></li>
+    <li><a href="https://www.eea.tsinghua.edu.cn" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1797716044, 86040)">清华大学电机工程与应用电子技术系</a></li>
+    <li><a href="http://www.arch.tsinghua.edu.cn" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1797716044, 77800)">清华大学建筑学院</a></li>
+    <li><a href="http://www.svm.tsinghua.edu.cn" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1797716044, 77801)">清华大学车辆与运载学院</a></li>
+    <li><a href="https://www.chemeng.tsinghua.edu.cn" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1797716044, 86041)">清华大学化学工程系</a></li>
+    <li><a href="https://www.env.tsinghua.edu.cn/index.htm" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1797716044, 77798)">清华大学环境学院</a></li>
+    <li><a href="http://iccsd.tsinghua.edu.cn" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1797716044, 86051)">清华大学气候变化与可持续发展研究院</a></li>
+    <li><a href="https://www.inet.tsinghua.edu.cn/index.htm" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1797716044, 77799)">清华大学核能与新能源技术研究院</a></li>
+</ul>
+
+                </div>
+            </div>
+            
+            <div class="box box2">
+                <h3><img src="../images/footer_tit3.png" alt=""></h3>
+                
+                <script src="https://cache.amap.com/lbs/static/es5.min.js"></script>
+                <script src="https://webapi.amap.com/maps?v=1.4.15&amp;key=ecb3e94f0bf9961ac7d6c6bc7902d310&amp;plugin=AMap.Scale,AMap.OverView,AMap.ToolBar"></script>
+                <div id="miso_map" class="amap-container" style="position: relative;"><object style="display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; pointer-events: none; z-index: -1;" type="text/html" data="about:blank"></object><div class="amap-maps"><div class="amap-drags"><div class="amap-layers"></div><div class="amap-overlays"><div class="amap-info" style="position: absolute; left: -667px; top: 26px;"><div class="amap-info-shadowContainer" style="position: absolute;"></div><div style="position: absolute; bottom: 0px; left: 0px;"><div class="bottom-center amap-info-contentContainer"></div></div></div></div></div></div><div style="display: none;"></div><div class="amap-controls"><div class="amap-toolbar" style="left: 10px; top: 10px; visibility: visible;"><div class="amap-pancontrol" style="position: relative; display: block;"><div class="amap-pan-left"></div><div class="amap-pan-top"></div><div class="amap-pan-right"></div><div class="amap-pan-bottom"></div></div><div class="amap-locate" style="position: relative; left: 17px; display: block;"></div><div class="amap-zoomcontrol" style="position: relative; left: 14px;"><div class="amap-zoom-plus"></div><div class="amap-zoom-ruler" style="display: block;"><div class="amap-zoom-mask" style="height: 27px;"></div><div class="amap-zoom-cursor" style="top: 27px;"></div><div class="amap-zoom-labels"><div class="amap-zoom-label-street"></div><div class="amap-zoom-label-city"></div><div class="amap-zoom-label-province"></div><div class="amap-zoom-label-country"></div></div></div><div class="amap-zoom-minus"></div></div></div></div><a class="amap-logo"><img src="https://webapi.amap.com/theme/v1.3/logo@1x.png"></a><div class="amap-copyright" style="display: none; visibility: visible;"><!--v1.4.16--> © 2025 AutoNavi <span class="amap-mcode">- GS(2023)4677号</span></div></div>
+                <script type="text/javascript">
+                    //初始化地图对象，加载地图
+                    mapObj = new AMap.Map("miso_map", {zoom: 15, center: [116.326793,40.003017],resizeEnable: true,scrollWheel:false, mapStyle: "amap://styles/normal"});
+                    var lnglats = [
+                        [116.326793,40.003017]
+                    ];
+                
+                    var markerArr = [  
+                
+                      { title: "", title: "清华大学碳中和研究院"},
+                  ];  
+                
+                    var infoWindow = new AMap.InfoWindow({offset: new AMap.Pixel(6, -35)});
+                    for (var i = 0, marker; i < lnglats.length; i++) {
+                        var marker = new AMap.Marker({
+                            position: lnglats[i],
+                            icon:"images/map.png",
+                            map: mapObj
+                        });
+                
+                        
+                        marker.on('click', markerClick);
+                        marker.emit('click', {target: marker});
+                    }
+                    
+                    mapObj.panBy(0, 0);
+                
+                    function markerClick(e) {
+                        infoWindow.setContent(e.target.content);
+                        infoWindow.open(mapObj, e.target.getPosition());
+                
+                    }
+                    /*mapObj.plugin(["AMap.ControlBar"],function(){
+                        var controlBar = new AMap.ControlBar(Options)
+                        map.addControl(controlBar)
+                    });*/
+                    
+                    mapObj.plugin(["AMap.ToolBar"],function(){
+                        //加载工具条
+                        var tool = new AMap.ToolBar();
+                        mapObj.addControl(tool);    
+                    });
+                </script>
+                <style>
+                .amap-info-content{ padding:10px 10px;}
+                .amap-info-content h4{ font-size:14px; color:#333; margin-top:10px; margin-bottom:0;}
+                .amap-info-content p{ font-size:12px; line-height:26px; color:#404040; margin:5px 0;}
+                </style>
+                
+                
+                <div class="bottom">
+
+<ul class="list_box11"> 
+ <li><img title="" alt="" src="/__local/1/0C/C4/237EFDC947FD7071F010609EC86_0D9A00DA_109.png?e=.png" border="0" vspace="0" hspace="0" vsbhref="vurl" vurl="/_vsl/10CC4237EFDC947FD7071F010609EC86/0D9A00DA/109?e=.png" vheight="" vwidth="" orisrc="/__local/1/0C/C4/237EFDC947FD7071F010609EC86_0D9A00DA_109.png?e=.png" class="img_vsb_content"><a href="http://mailto:icon-office@tsinghua.edu.cn" target="_self">icon-office@tsinghua.edu.cn</a></li> 
+ <li style="display:none;"><img title="" alt="" src="/__local/7/62/4F/93838A73FC91E2174BDFF3B8462_9DCA02FD_127.png?e=.png" border="0" vspace="0" hspace="0" vsbhref="vurl" vurl="/_vsl/7624F93838A73FC91E2174BDFF3B8462/9DCA02FD/127?e=.png" vheight="" vwidth="" orisrc="/__local/7/62/4F/93838A73FC91E2174BDFF3B8462_9DCA02FD_127.png?e=.png" class="img_vsb_content"><a>(010)0000000</a></li> 
+ <li><img title="" alt="" src="/__local/2/95/85/77CE0DB663E974C5CCA9B89313E_4040FD51_179.png?e=.png" border="0" vspace="0" hspace="0" vsbhref="vurl" vurl="/_vsl/2958577CE0DB663E974C5CCA9B89313E/4040FD51/179?e=.png" vheight="" vwidth="" orisrc="/__local/2/95/85/77CE0DB663E974C5CCA9B89313E_4040FD51_179.png?e=.png" class="img_vsb_content">北京市海淀区清华科技园科技大厦C座18层</li> 
+</ul>
+                </div>
+            </div>
+            
+            <div class="box box3">
+                <div class="top fr">
+                    <h3><img src="../images/footer_tit4.png" alt=""></h3>
+                        
+<ul class="list_box12 clearfix">
+<li>
+	<h3><img src="../images/wxewm.jpg" alt=""></h3>
+    <h6>官方微信</h6>
+</li>
+</ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="hide" id="gotop">
+    <svg t="1620981491725" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="14041" width="16" height="16"><path d="M825.568 555.328l-287.392-289.28C531.808 259.648 523.488 256.576 515.2 256.64 514.08 256.544 513.12 256 512 256c-4.672 0-9.024 1.088-13.024 2.88-4.032 1.536-7.872 3.872-11.136 7.136l-259.328 258.88c-12.512 12.48-12.544 32.736-0.032 45.248 6.24 6.272 14.432 9.408 22.656 9.408 8.192 0 16.352-3.136 22.624-9.344L480 364.288 480 928c0 17.696 14.336 32 32 32s32-14.304 32-32L544 362.72l236.192 237.728c6.24 6.272 14.496 9.44 22.688 9.44s16.32-3.104 22.56-9.312C838.016 588.128 838.048 567.84 825.568 555.328zM864 192 160 192C142.336 192 128 177.664 128 160s14.336-32 32-32l704 0c17.696 0 32 14.336 32 32S881.696 192 864 192z" p-id="14042"></path></svg>
+</div>
+<script>
+$(window).scroll(function() {
+    if ($(this).scrollTop()>100){
+        $("#gotop").removeClass("hide");
+    }else{
+        $("#gotop").addClass("hide");
+    };
+});
+$('#gotop').click(function () {
+    $('html,body').animate({
+        scrollTop : '0px'
+    }, 800);
+}); 
+</script>
+
+<!--============================底部 结束=============================-->
+
+
+<!--============================动画 开始=============================-->
+
+<script src="../js/a_style.js"></script>
+<script src="../js/a_animate.js"></script>
+<script>
+AOS.init({
+  offset: 100,
+  duration: 600,
+  delay: 100,
+  easing: 'ease-out-back',
+  disable: 'mobile'
+});
+AOS.refresh();
+</script>
+
+<!--============================动画 结束=============================-->
+</section>
+
+
+</body></html>

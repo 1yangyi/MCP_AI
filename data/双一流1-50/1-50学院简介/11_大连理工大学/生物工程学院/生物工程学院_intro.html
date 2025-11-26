@@ -1,0 +1,424 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head>
+
+
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <meta content="IE=EmulateIE8" http-equiv="X-UA-Compatible">
+    <title>院长致辞-大连理工大学生物工程学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="院长致辞">
+<meta name="keywords" content="大连理工大学生物工程学院">
+
+    
+    <meta name="description" content="">
+    <meta name="generator" content="">
+    <meta name="copyright" content="大连理工大学生物工程">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="stylesheet" type="text/css" href="../css/global.css">
+
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307973475c50555742000300034056 -->
+<link rel="stylesheet" type="text/css" href="../tydy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1015,'/tydy.jsp',-1,1637917895)</script>
+</head><body>
+<div class="bg01">
+    <div class="wrapper">
+        <div class="fl"><a href="../index.htm"><img alt="" src="../images/logo.png"></a></div>
+        <div class="index_search fr">
+            <div class="index_date"><a href="../English_New.htm" target="_blank">ENGLISH</a></div>
+            <div class="search">
+                          
+
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script>
+<div id="divu0">
+    <div id="appu0"><div><table border="0" cellspacing="1" cellpadding="0"><tbody><tr><td valign="middle" nowrap="nowrap" height="22"></td><td><input name="INTEXT" class="input"></td> <td align="absmiddle" nowrap="nowrap" height="1"><input type="submit" name="FindButton" value="   " class="btn" style="margin-top: -12px;"></td></tr></tbody></table></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+       <table border="0" cellspacing="1" cellpadding="0">
+      <tbody><tr>
+           <td valign="middle" nowrap="nowrap" height="22">
+                 </td><td>
+            
+ 
+                <input class="input" name="INTEXT" v-model=query.keyWord @keyup.enter="onSubmit" >
+           </td>
+           <td align="absmiddle" nowrap="nowrap" height="1">
+                    <input class="btn" style="margin-top:-12px;" type="submit" name="FindButton" value="   " v-on:click="onSubmit()">
+
+           </td>
+      </tr>
+ </tbody></table>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1637917895";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                <div class="cb"></div>
+            </div>
+        </div>
+        <div class="cb"></div>
+
+
+
+
+
+        <ul id="nav" class="nav clearfix">
+            <li class="nLi on">
+                <h3><a href="../index.htm">学院首页</a></h3>
+            </li>
+            <li class="nLi01">|</li>
+            <li class="nLi">
+                <h3><a href="yzzc.htm">学院概况</a></h3>
+                <ul class="sub">
+                    <li><a href="yzzc.htm">院长致辞</a></li>
+                    <li><a href="xrld.htm">现任领导</a></li>
+                    <li><a href="xkzy.htm">学科专业</a></li>
+                    <li><a href="fzlc.htm">发展历程</a></li>
+                   
+                    
+                </ul>
+            </li>
+            <li class="nLi01">|</li>
+            <li class="nLi">
+                <h3><a href="../jgsz/xzjg.htm">机构设置</a></h3>
+                <ul class="sub" style="width:110px;">
+                    <li><a href="../jgsz/xzjg.htm">行政机构</a></li>
+                    <li><a href="../jgsz/xswyh1.htm">学术委员会</a></li>
+                    <li><a href="../jgsz/xwwyh.htm">学位委员会</a></li>
+                     <li><a href="../jgsz/swgczyjszdwyh.htm">生物工程专业建设指导委员会</a></li>
+                    <li><a href="../jgsz/sdsffwh.htm">师德师风分委会</a></li>
+                    <li><a href="../jgsz/gh.htm">工会</a></li>
+                <li><a href="../jgsz/sysaqglwyh.htm">实验室安全管理委员会</a></li>
+                </ul>
+            </li>
+
+
+
+
+  <li class="nLi01">|</li>
+            <li class="nLi">
+                <h3><a href="../dwgz/dwtz.htm">党委工作</a></h3>
+                <ul class="sub">
+                    <li><a href="../dwgz/dwtz.htm">党务通知</a></li>
+                    <li><a href="../dwgz/dwtz1.htm">党建动态</a></li>
+                    <li><a href="../dwgz/dwtz2.htm">规章制度</a></li>
+                    <li><a href="../dwgz/dwtz3.htm">下载中心</a></li>
+                 
+                </ul>
+            </li>
+
+
+
+            <li class="nLi01">|</li>
+            <li class="nLi">
+                <h3><a href="../szdw/szgk.htm">师资队伍</a></h3>
+                <ul class="sub">
+                    <li><a href="../szdw/szgk.htm">师资概况</a></li>
+                    <li><a href="../szdw/kytd.htm">科研团队</a></li>
+                    <li><a href="../szdw/jsxx.htm">教师信息</a></li>
+                 <li><a href="../szdw/tzgg.htm">通知公告</a></li>
+                </ul>
+            </li>
+            <li class="nLi01">|</li>
+            <li class="nLi">
+                <h3><a href="../bkspy/jxtong_zhi.htm">本科生培养</a></h3>
+                <ul class="sub" style="width:108px;">
+                    <li><a href="../bkspy/jxtong_zhi.htm">教学通知</a></li>
+                    
+                    <li><a href="../bkspy/zyjs1.htm">专业介绍</a></li>
+                    <li><a href="../bkspy/pyfa.htm">培养方案</a></li>
+                       <li><a href="#">实践中心</a></li>
+                          <li><a href="../bkspy/wjxz.htm">文件下载</a></li>
+                 
+                </ul>
+            </li>
+            <li class="nLi01">|</li>
+                  <li class="nLi">
+                <h3><a href="../yjsgz1/yjspy.htm">研究生工作</a></h3>
+              <ul class="sub" style="width:108px;">
+                    <li><a href="../yjsgz1/yjspy.htm">研究生培养</a></li>
+                    <li><a href="../yjsgz1/yjszs.htm">研究生招生</a></li>
+                    <li><a href="../yjsgz1/yjsjy.htm">研究生就业</a></li>
+                    <li><a href="../yjsgz1/yjsgl.htm">研究生管理</a></li>
+                    <li><a href="../yjsgz1/fwznywjxz.htm">服务指南与文件下载</a></li>
+                 <li><a href="../yjsgz1/tzgg.htm">通知公告</a></li>
+                </ul>
+
+
+            </li>
+            <li class="nLi01">|</li>
+            <li class="nLi">
+                <h3><a href="../kxyj/kygk.htm">科学研究</a></h3>
+                <ul class="sub">
+                    <li><a href="../kxyj/kygk.htm">科研概况</a></li>
+                    <li><a href="../szdw/kytd.htm">研究方向</a></li>
+ <li><a href="../kxyj/kypt.htm">科研平台</a></li>
+                    <li><a href="../kxyj/kycg.htm">科研成果</a></li>
+                    <li><a href="../kxyj/kyhz.htm">科研合作</a></li>
+                    <li><a href="../kxyj/cgtj.htm">成果推荐</a></li>
+  <li><a href="../swfxcszx.htm" target="_blank">分析测试中心</a></li> 
+ <li><a href="../kxyj/tzgg.htm">通知公告</a></li>
+                 
+                 
+                </ul>
+            </li>
+            <li class="nLi01">|</li>
+            <li class="nLi">
+                <h3><a href="../gjhz/xshy.htm">国际合作</a></h3>
+                <ul class="sub" style="width:130px;">
+                  
+                    <li><a href="../gjhz/xshy.htm">国际合作概况</a></li>
+                    <li><a href="../gjhz/kyjl.htm">通知公示</a></li>
+                   <li><a href="../gjhz/gjhgzwyh.htm">国际化工作委员会</a></li>
+                </ul>
+            </li>
+            
+            
+                <li class="nLi01">|</li>
+                  <li class="nLi">
+                <h3><a href="../xsgz/tzgg.htm">学生工作</a></h3>
+              <ul class="sub">
+                  
+                    <li><a href="../xsgz/tzgg.htm">通知公告</a></li>
+                    <li><a href="../xsgz/gzzhi_du.htm">规章制度</a></li>
+                    <li><a href="../xsgz/xgfc.htm">学工风采</a></li>
+                     <li><a href="../xsgz/hdyu_gao.htm">活动预告</a></li>
+                      <li><a href="../xsgz/jygong_zuo.htm">就业工作</a></li>
+                        <li><a href="../xsgz/xygong_zuo.htm">校友工作</a></li>
+                              <li><a href="../xsgz/wjxia_zai.htm">文件下载</a></li>
+                </ul>
+            </li>
+            
+
+<li class="nLi01">|</li>
+                  <li class="nLi">
+                <h3><a href="../bszn/bszn.htm">办事指南</a></h3>
+
+            </li>
+
+            
+            <li class="nLi01">|</li>
+            <li class="nLi">
+                <h3><a href="../rczp/rczp.htm">人才招聘</a></h3>
+                <ul class="sub">
+                    <li><a href="../rczp/rczp.htm">人才招聘</a></li>
+                    <li><a href="../rczp/bshzp.htm">博士后招聘</a></li>
+                   
+                   
+                </ul>
+            </li>
+            <li class="nLi01">|</li>
+            <li class="nLi">
+                <h3><a href="../aqzl/gzzd.htm">安全专栏</a></h3>
+                <ul class="sub">
+                    <li><a href="../aqzl/gzzd.htm">规章制度</a></li>
+                    <li><a href="">安全通知</a></li>
+                  
+                </ul>
+            </li>
+        </ul>
+
+
+
+
+    </div>
+</div>
+<div class="bg05">
+    <div class="wrapper bg_fff">
+        <div class="ny_banner">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+    
+</div>
+        <div class="ny_left fl">
+            <div class="t"> 
+学院概况</div>
+            <div class="con">
+           <ul>
+            <li><a href="yzzc.htm" title="院长致辞">院长致辞</a></li>
+        <li><a href="xrld.htm" title="现任领导">现任领导</a></li>
+        <li><a href="xkzy.htm" title="学科专业">学科专业</a></li>
+        <li><a href="fzlc.htm" title="发展历程">发展历程</a></li>
+</ul>
+            </div>
+        </div>
+        <div class="ny_right fr">
+            <div class="t">
+                <div class="border_bottom">
+                    <span class="span">
+院长致辞</span>
+                    <div class="ny_pos fr"><div>
+    当前位置: 
+                        <a href="../index.htm">首页</a>
+                &gt;&gt;
+                学院概况
+                &gt;&gt;
+                <a href="yzzc.htm">院长致辞</a>
+</div></div>
+                </div>
+            </div>
+            <div class="con">
+                <div class="content">
+
+
+
+               
+
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1637917895,'wbnews','u7')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format500.css"><script>function seeContenta7(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1637917895,2012)</script>
+<p>
+  
+    </p><div id="vsb_content_500_2012_u71"><div id="vsb_content_500"><p class="vsbcontent_start"><span style="font-size: 14px;">大连理工大学生物工程学院成立于2019年3月，其前身是成立于2010年的生命科学与技术学院（隶属于化工与环境生命学部）。大连理工大学生物相关学科发展历史悠久，从1985年在化学工程与技术一级学科下设立生物化工方向，到1997年获得生物化工二级学科博士点；从最初的单纯生物发酵与分离工艺的工程化研究发展到与生物学、医学等研究领域的不断交叉与融合；经过30余年的发展历程，已形成从分子水平上基于生物学原理进行创造和设计，并紧密结合工程学的技术手段，大规模生产出人类所需各种产品的基础科学与工程技术融合互生的学科特质。2018年，大连理工大学获得国家首批生物工程一级学科博士点，从此学科发展进入了快车道，2022年，在国家第五次学科评估中，生物工程一级学科位居全国前列，进入一流学科建设方阵。</span></p><p><span style="text-indent: 28px;">生物工程学院共有教职工75人，其中教授23人，副教授29人，助理教授3人，国家杰出青年科学基金获得者2人，中组部科技创新领军人才1人，国家级青年人才项目入选者12人，教育部“新世纪优秀人才”支持计划入选者2人，宝钢教育奖获得者3人，中国科学院“百人计划”入选者2人，辽宁省“兴辽英才”计划科技创新领军人才3人，辽宁省“百千万人才工程”百人层次入选者4人，</span><span style="text-indent: 28px; line-height: 21px;">辽宁省“兴辽英才”计划青年拔尖人才6人。</span>从前沿科学研究到成果转化，形成了特色鲜明的高水平教学科研团队。近 5 年，承担国家重点研发、国家自然科学基金等纵向课题 94 项，产业化项目 10 余项，科研经费总额 1.2 亿元。发表SCI收录论文700余篇，获得授权发明专利200余项，一批高水平的研究成果相继在Nature及Nature 子刊等国际权威期刊发表，获得日内瓦国家发明展览会金奖1项，一批先进技术在企业得到应用，获得省部级科技奖励以上3项。生物工程本科专业位列软科中国大学专业评级A+，<span style="text-indent: 28px; text-wrap: wrap;">生物学与生物化学、植物学与动物学持续进入ESI排名全球前1%</span></p><p><span style="font-size: 14px;">学院具有高水平的教学科研平台，形成了一套完整的本硕博各类高水平人才培养体系。拥有生物工程博士后科研流动站，生物化工国家重点学科，生物工程一级学科博士点，生物化工、化学生物学二级学科博士点。拥有智能生物制造教育部重点实验室、辽宁省分子识别与成像重点实验室、辽宁省蛋白质修饰与疾病发生重点实验室、辽宁省生物实验教学示范中心等一系列省部级平台，有力支撑了学院各项事业的快速发展。</span></p><p><span style="font-size: 14px;">学院目前有各类学生总数500余人，其中博士和硕士研究生约300人。生物工程本科专业为国家级特色专业，国家级一流本科专业，辽宁省首批一流本科示范专业，通过国际工程教育认证。学院拥有先进的本科教育教学体系及实验条件，在国内外创新创业大赛中屡获佳绩。获批辽宁省首批现代产业学院、大连市科普教育基地。创新实践教育成果丰硕，生工学子连续4年蝉联国际顶级科创竞赛—iGEM最高荣誉。2023年，作为国内首个生物工程专业的强基计划正式开始招生。</span></p><p class="vsbcontent_end"><span style="font-size: 14px;">在各级政府、学校以及社会各界朋友的关心和支持下，大连理工大学生物工程学院已成为我国高层次人才培养及高水平科学研究的重要高地。我们热诚期盼海内外优秀人才加盟助力，热烈欢迎来自祖国各地的莘莘学子，也期待与国内外同行专家的真诚合作。</span></p></div></div>
+    <span id="vsb_content_500_2012_u7" name="vsb_content_500_2012_u7"></span><br><br>
+    
+<p></p>
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="cb"></div>
+    </div>
+
+</div>
+<div class="bg04">
+    <div class="footer">
+        <div class="f_one fl">
+            <div class="t">友情链接</div>
+              <script language="javascript" src="/system/resource/js/openlink.js"></script>
+<a href="http://www.dlut.edu.cn" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1637917895, 65137)">大连理工大学</a>
+<a href="http://bim-moe.dlut.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1637917895, 95853)">智能生物制造教育部重点实验室</a>
+
+        </div>
+        <div class="f_two fl">
+            <div class="t">联系我们</div>
+         <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：中国·辽宁省大连市高新园区凌工路2号 &nbsp; &nbsp; 邮编：116024 &nbsp; &nbsp; 电话：0411-84708083<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;版权：大连理工大学生物工程学院</p>
+        </div>
+        <img class="fr" src="../images/index10.png">
+        <div class="cb"></div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jsd.js"></script>
+<script type="text/javascript" src="../js/jquery.SuperSlide.js"></script>
+<script id="jsID" type="text/javascript">
+    jQuery("#nav").slide({
+        type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
+        titCell:".nLi", //鼠标触发对象
+        targetCell:".sub", //titCell里面包含的要显示/消失的对象
+        effect:"slideDown", //targetCell下拉效果
+        delayTime:300 , //效果时间
+        triggerTime:0, //鼠标延迟触发时间（默认150）
+        returnDefault:true //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+    });
+    jQuery(".focusBox").slide({ titCell:".num li", mainCell:".pic",effect:"fold", autoPlay:true,trigger:"click",
+        //下面startFun代码用于控制文字上下切换
+        startFun:function(i){
+            jQuery(".focusBox .txt li").eq(i).animate({"bottom":0}).siblings().animate({"bottom":-36});
+        }
+    });
+</script>
+
+
+
+
+
+</body></html>

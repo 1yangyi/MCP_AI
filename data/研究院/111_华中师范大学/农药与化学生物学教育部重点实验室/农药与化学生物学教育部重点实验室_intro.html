@@ -1,0 +1,347 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>实验室概况-农药与化学生物学教育部重点实验室新</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="实验室概况">
+<meta name="keywords" content="农药与化学生物学教育部重点实验室新">
+
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475c50575742000400034456 -->
+<link rel="stylesheet" type="text/css" href="about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1002,'/about.jsp',-1,1564390261)</script>
+</head>
+<body>
+<!-- header -->
+<div class="header">
+    <div class="top">
+        <div class="w1200">
+            
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" class="logo"><img src="images/logo.png" width="630" height="65" border="0" alt="农药与化学生物学教育部重点实验室" title="农药与化学生物学教育部重点实验室"></a>
+            <div class="right">
+                <a href="mailto:xxxxx@qq.com">网站邮箱</a>
+                
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 34px;}
+    #appu1 .tj{
+        background: url(images/search.png) no-repeat center;
+        height: 34px;}
+</style>
+<div id="divu1">
+    <div id="appu1" class="d_search"><div class="search"><input type="text" placeholder="请输入关键字" autocomplete="off" class="qwss txt"> <input name="submit_button" type="button" value="提交" class="tj btn"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1" class="d_search">
+        <div v-if="!isError" class="search">
+            <input type="text" class="qwss txt" placeholder="请输入关键字" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj btn" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1564390261";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+            </div>
+        </div>
+    </div>
+    <div class="w1200">
+        <div class="menu-btn"><span></span><span></span><span></span></div>
+    </div>
+    <div class="nav-boxs">
+        <div class="w1200">
+            <div class="nav-box">
+                <ul class="nav">
+	<li><a href="index.htm">首页</a></li>
+	<li class="on"><a href="sysgk.htm">实验室概况</a></li>
+	<li><a href="xswyh.htm">学术委员会</a></li>
+	<li><a href="yjdw/gdry1/a2018.htm">研究队伍</a></li>
+	<li><a href="yjcg/fblw/aa2018.htm">研究成果</a></li>
+	<li><a href="rcpy/bkspy.htm">人才培养</a></li>
+	<li><a href="shfw.htm">社会服务</a></li>
+	<li><a href="kfjj/kfkt/a2018.htm">开放基金</a></li>
+	<li><a href="ndbg.htm">年度报告</a></li>
+	<li><a href="yxgl.htm">运行管理</a></li>
+</ul>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var windowWidth = $(window).width();
+        //移动端
+        //点击菜单按钮
+        if(windowWidth < 1024){
+            $(".menu-btn").click(function(){
+                var navStat = $(".nav-box").css('display');
+                if(navStat == 'none'){
+                    $(".nav-box").slideDown();
+                    $(this).addClass('close');
+                    //阻止弹层背景滚动，但会回到页面顶部
+                    $("html,body").css({
+                        height:100+'%',
+                        overflow:'hidden'
+                    })
+                }else{
+                    $(".nav-box").slideUp();
+                    $(this).removeClass('close');
+                    $("html,body").css({
+                        height:'auto',
+                        overflow:'visible'
+                    })
+                }
+            })
+        }
+    </script>
+</div>
+<!-- header end-->
+<!-- inside_content -->
+<div class="inside_content">
+    <div class="w1200 clearfix">
+        <div class="side_nav">
+            <div class="top">
+                <div class="cn">
+实验室概况</div>
+                <div class="en"><span>Laboratory overview</span></div>
+            </div>
+            <ul class="nav_list">
+	<li><a href="sysgk/bsgk.htm" class="on">本室概况</a></li>
+	<li><a href="sysgk/zzjg.htm" class="on">组织机构</a></li>
+</ul>
+        </div>
+        <div class="right_content">
+            <div class="top clearfix">
+                <div class="tit">
+                    <span class="cn">
+实验室概况</span>
+                    <span class="en"><span>Laboratory overview</span></span>
+                </div>
+                <div class="m_tit">
+                    <a href="##" class="on">本室概况</a>
+                    <a href="##" class="">本室概况</a>
+                </div>
+                <ul class="crumbs">
+                    <div>
+    当前位置: 
+                        <a href="index.htm">首页</a>
+                -&gt;
+                <a href="sysgk.htm">实验室概况</a>
+</div>
+                </ul>
+            </div>
+            <div class="about_content">
+                
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1564390261,'wbnews','u9')</script>
+<script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1564390261,1001)</script>
+<div class="h">本室概况</div>
+<div class="txt">
+ <div id="vsb_content_1001_u91"><div id="vsb_content"><div class="txt">
+ 华中师范大学是国内开展新农药创制基础研究与人才培养的重要基地之一。农药与化学生物学教育部重点实验室（华中 师范大学）经教育部批准于2003年正式立项建设，2006年通过验收并正式对外开放，由国家杰出青年基金获得者杨光富教授 担任实验室主任。该实验室建有农药学国家级重点学科和湖北省优势重点学科，拥有化学一级学科和农药学二级学科博士学 位授予权。
+</div>
+<div class="txt">
+ 实验室现有各类固定人员55人，其中研究人员47人，实验技术人员6人，专职管理人员2人。固定研究人员中，共有教授 25人，副教授17人。其中：中国科学院院士（双聘）1人，国务院学科评议组（植物保护）成员1名，国家杰出青年基金获得 者2名，教育部科学技术委员会学部委员1名，教育部（跨）新世纪优秀人才9名。实验室设有四个具有自身特色的研究方向：
+ <ul class=" list-paddingleft-2">
+  <li><p>（1）绿色农药的分子设计与合成；</p></li>
+  <li><p>（2）农药活性杂环的合成方法学；</p></li>
+  <li><p>（3）农药残留分析与环境化学；</p></li>
+  <li><p>（4）农药化学生物学。</p></li>
+ </ul>
+</div>
+<div class="txt">
+ 实验室具有先进的研究条件和研究环境，仪器设备总值6000多万元。先后承担国家“973”计划、国家“863”计划、国 家科技攻关计划、国家科技支撑计划、国家973前期专项以及国家自然科学基金等数十项科研项目的研究工作，年均在研项目 总经费超过4000多万元。近五年累计发表SCI论文800多篇，申请中国发明专利和国际PCT专利百余项，已经获得授权发明专利 78项。
+</div>
+<div class="txt">
+ 华中师范大学农药学科始终坚持“科学研究与人才培养相结合、理论研究与应用研究相结合”的指导思想，在为国家培养 输送一大批高质量农药学研究人才的同时，还先后研制成功了以水胺硫磷、甲基异硫磷、绿酰草膦、苯噻菌酯为代表的十多个 农药新品种，创造数十亿元的直接经济效益和巨大的社会效益，先后获得全国科学大会奖1项、国家科技进步二等奖1项、国家 发明三等奖1项、国家发明四等奖1项、原国家教委科技进步一等奖2项、教育部自然科学一等奖1项、湖北省科技进步一等奖7 项、湖北省技术发明一等奖1项、湖北省自然科学一等奖1项等数十项省部级及以上科技奖励，并被授予“全国农林科技推广先 进集体”、“全国高等学校科研先进集体”、“全国模范职工小家”等荣誉称号。
+</div>
+<ul class="txt list-paddingleft-2">
+ <li><p>实验室组织机构</p></li>
+ <li><p>主 &nbsp;任：杨光富</p></li>
+ <li><p>副主任：刘盛华</p></li>
+</ul>
+<ul class="txt list-paddingleft-2">
+ <li><p>实验室第三届学术委员会</p></li>
+ <li><p>主 &nbsp;任：陈洪渊院士</p></li>
+ <li><p>副主任：钱旭红院士、杨光富教授</p></li>
+ <li><p>委 &nbsp;员：李正名院士、林国强院士、赵玉芬院士、涂永强院士、方维海院士、赵进才院士、王梅祥教授、<br>秦金贵教授、喻子牛教授、席 &nbsp;真教授、宋宝安教授、贺红武教授、刘盛华教授、万 坚教授</p></li>
+</ul></div></div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- inside_content end-->
+<!-- foot -->
+<div class="foot">
+    <div class="w1200">
+        <div class="select">
+            <div class="foot_tit">快捷通道</div>
+            <select onchange="mbar(this)" name="select">
+                <option>课题组</option>
+                <script language="javascript" src="/system/resource/js/openlink.js"></script><option value="http://202.114.34.236/">杨光富课题组</option>
+<option value="http://klpcb.ccnu.edu.cn/ktz/dmwktz/sy.htm">丁明武课题组</option>
+<option value="http://chem-xiao.ccnu.edu.cn/">肖文精课题组</option>
+<option value="http://klpcb.ccnu.edu.cn/ktz/sdqktz/sy.htm">石德清课题组</option>
+<option value="http://klpcb.ccnu.edu.cn/ktz/waxktz/sy.htm">吴安心课题组</option>
+<option value="http://klpcb.ccnu.edu.cn/ktz/ldfktz/sy.htm">李东风课题组</option>
+<option value="http://klpcb.ccnu.edu.cn/ktz/hhwktz/sy.htm">贺红武课题组</option>
+<option value="http://klpcb.ccnu.edu.cn/ktz/lzlktz/sy.htm">刘长林课题组</option>
+<option value="http://klpcb.ccnu.edu.cn/ktz/lshktz/sy.htm">刘盛华课题组</option>
+<option value="http://klpcb.ccnu.edu.cn/ktz/fgqktz/sy.htm">冯国强课题组</option>
+<option value="http://klpcb.ccnu.edu.cn/ktz/zadktz/sy.htm">张爱东课题组</option>
+<option value="http://hyzhongchem.ccnu.edu.cn/">钟鸿英课题组</option>
+<option value="http://klpcb.ccnu.edu.cn/ktz/wjktz/sy.htm">万坚课题组</option>
+<option value="http://klpcb.ccnu.edu.cn/ktz/ddktz/sy.htm">杜丹课题组</option>
+<option value="http://klpcb.ccnu.edu.cn/ktz/zlzktz/sy.htm">张礼知课题组</option>
+<option value="http://klpcb.ccnu.edu.cn/ktz/gjktz/sy.htm">郭军课题组</option>
+<option value="http://lilab.ccnu.edu.cn/">李海兵课题组</option>
+<option value="http://klpcb.ccnu.edu.cn/ktz/zslktz/sy.htm">周少林课题组</option>
+<option value="#">朱成周课题组</option>
+<option value="#">徐浩课题组</option>
+<option value="#">高轲课题组</option>
+
+            </select>
+            <select onchange="mbar(this)" name="select">
+                <option>科研教学平台</option>
+                <option value="#">国家级化学实验教学示范中心</option>
+<option value="#">华中师范大学分析测试中心</option>
+
+            </select>
+            <select onchange="mbar(this)" name="select">
+                <option>下载专区</option>
+                <option value="index/xzzq.htm">下载专区</option>
+
+            </select>
+            <select onchange="mbar(this)" name="select">
+                <option>仪器预约平台</option>
+                <option value="#">化学学院大型仪器共享服务平台</option>
+
+            </select>
+        </div>
+        <script type="text/javascript">
+            function mbar(sobj) {
+            var docurl =sobj.options[sobj.selectedIndex].value;
+            if (docurl != "") {
+               open(docurl,'_blank');
+               sobj.selectedIndex=0;
+               sobj.blur();
+            }
+            }
+         </script>
+        <div class="link">
+            <div class="foot_tit">友情链接</div>
+            <div class="con">
+                <p>
+    <a href="http://www.moe.gov.cn/">·  教育部</a>
+</p>
+<p>
+    <a href="http://www.most.gov.cn/">·  科技部</a>
+</p>
+<p>
+    <a href="http://www.nsfc.gov.cn/">·  国家基金委</a>
+</p>
+<p>
+    <a href="http://www.hbstd.gov.cn/">·  湖北省科技厅</a>
+</p>
+
+            </div>
+        </div>
+        <div class="contact">
+            <div class="foot_tit">联系我们</div>
+            <div class="con clearfix">
+                <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<div class="left"><p class="txt">邮政编码：430079</p><p class="txt">联系电话：027-67867958</p><p class="txt">传真号码：027-67867141</p></div><div class="right"><p class="txt">办公地点：化学学院新楼521</p><p class="txt">联系地址：武汉市珞喻路152号华中师范大学</p></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- foot end-->
+
+
+</body></html>

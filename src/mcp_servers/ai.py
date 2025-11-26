@@ -141,12 +141,12 @@ def extract_entities_with_deepseek(api_key: str, text: str, example: str) -> dic
     else:
         prompt = f"""
         你是一个数据收集助手，协助收集高校所有学院或学术部门信息。
-        现在你需要根据以下页面网页结构化列表，判断哪一个最可能引导至包含所有学院或学术部门信息的页面，并直接返回该按钮的文本和对应URL。
+        现在你需要根据以下页面网页结构化列表或html原码，判断哪一个最可能引导至包含所有学院或学术部门信息的页面，并直接返回该按钮的文本和对应URL。
         链接列表：
         {text}
         请严格按以下格式输出一个最可能的按钮文本，不要任何额外解释：
         按钮文本@URL
-        注意：优先选择类似“院系设置”、“学院一览”、“View Colleges”、“Explore Departments”、“Academic Units”等明确指向学院或学术结构的链接。
+        注意：输出的结果一定要是从上面给定的结构化列表或html原码中抽取的，不要自己生成。优先选择类似“院系设置”、“学院一览”、“View Colleges”、“Explore Departments”、“Academic Units”等明确指向学院或学术结构的链接。
         """
 
     # 初始化客户端（DeepSeek 兼容 OpenAI SDK）
@@ -233,7 +233,7 @@ def extract_schools_with_deepseek(api_key: str, text: str) -> dict:
                 {"role": "system", "content": "你是一个专业的助手，严格按要求输出按钮文本。"},
                 {"role": "user", "content": prompt},
             ],
-            temperature=1.0,
+            temperature=0.1,
         )
 
         # 获取模型返回的内容

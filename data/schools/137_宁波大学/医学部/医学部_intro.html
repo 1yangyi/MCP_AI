@@ -1,0 +1,871 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>学部简介-宁波大学医学部</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学部简介">
+<meta name="keywords" content="宁波大学医学部">
+
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/nry.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+        <link rel="stylesheet" href="../css/mobile/common.css">
+        <link rel="stylesheet" href="../css/mobile/mobile.css">
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307b76465550555742000300024752 -->
+<link rel="stylesheet" type="text/css" href="../single.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1303,'/yxyweb/single.jsp',-1,942993502)</script>
+<link id="layuicss-laydate" rel="stylesheet" href="https://medicine.nbu.edu.cn/yxyweb/layui/css/modules/laydate/default/laydate.css?v=5.0.9" media="all"><link id="layuicss-layer" rel="stylesheet" href="https://medicine.nbu.edu.cn/yxyweb/layui/css/modules/layer/default/layer.css?v=3.1.1" media="all"><link id="layuicss-skincodecss" rel="stylesheet" href="https://medicine.nbu.edu.cn/yxyweb/layui/css/modules/code.css" media="all"></head>
+
+<body>
+<!-- PC头部 -->
+<div class="layui-hide-xs">
+    <div class="yxt-header-pc">
+        <div class="yxt-contain-pc">
+            <div class="yxt-logo-pc">
+<table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a href="https://medicine.nbu.edu.cn/" title="医学部" alt="网站LOGO"><img src="../img/icon-pc/logo.png" border="0" alt="医学部" title="医学部"></a></td></tr></tbody></table></div>
+            <div class="yxt-search-pc">
+                <img src="../img/icon-pc/search.png">
+                <div style="display:inline-block;">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu1" style="display:inline-block;">
+    <div id="appu1" style="display: inline-block;"><div style="display: inline;"><img src="../img/icon-pc/search.png"> <div style="display: inline-block;"><input name="search" autocomplete="off"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1" style="display:inline-block;">
+        <div v-if="!isError"  style="display: inline">
+          
+        <img src="../img/icon-pc/search.png" v-on:click="onSubmit()">
+                <div style="display:inline-block;"> 
+   
+             <input  name="search" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"  >
+            
+           </div>   
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "942993502";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                <a href="https://www.nbu.edu.cn/" target="_self" style="margin-right: 15px;">宁波大学</a>
+                                <a href="#" onclick="alert('主任信箱：liuyu@nbu.edu.cn')" style="margin-right: 15px;">主任信箱</a>
+                <a href="https://medicine.nbu.edu.cn/EN.htm">ENGLISH</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="yxt-nav-pc"><div class="yxt-contain-pc">
+    <ul class="yxt-ul1">
+            <li class="yxt-li1 ">
+            <a class="yxt-a1" href="../xbgk.htm" target="">学部概况</a>
+            <ul class="yxt-ul2">
+                <li class="yxt-li2"><a class="yxt-a2" href="xbjj.htm" target="">学部简介</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="xrld.htm" target="">现任领导</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="lrld.htm" target="">历任领导</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../jgsz.htm" target="">机构设置</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../xywh.htm" target="">学部文化</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="dsj.htm" target="">大事记</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="lxwm.htm" target="">联系我们</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../xxgk.htm" target="">信息公开</a></li>
+            </ul>
+        </li>
+        <li class="yxt-li1 ">
+            <a class="yxt-a1" href="../dqgz.htm" target="">党群工作</a>
+            <ul class="yxt-ul2">
+                <li class="yxt-li2"><a class="yxt-a2" href="../dqgz/jgsz.htm" target="">机构设置</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../dqgz/dwwj_new.htm" target="">党委文件</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../dqgz/llxx.htm" target="">理论学习</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../dqgz/dflz.htm" target="">党风廉政</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../dqgz/ztjy.htm" target="">主题教育</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../dqgz/dyhd.htm" target="">党员活动</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../dqgz/fghgz.htm" target="">分工会工作</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../jgwmg/zzjs.htm" target="">巾帼文明岗</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../dqgz/zdlc.htm" target="">制度流程</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../dqgz/xgxz.htm" target="">相关下载</a></li>
+            </ul>
+        </li>
+        <li class="yxt-li1 ">
+            <a class="yxt-a1" href="../szdw.htm" target="">师资队伍</a>
+            <ul class="yxt-ul2">
+                <li class="yxt-li2"><a class="yxt-a2" href="../szdw/szdwtzgg.htm" target="">通知公告</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../szdw/rczp.htm" target="">人才招聘</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../szdw/jcyx.htm" target="">基础医学</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../szdw/lcyx.htm" target="">临床医学</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../szdw/yfyx.htm" target="">预防医学</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../szdw/yx.htm" target="">药学</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="https://medicine.nbu.edu.cn/yxyweb/yjszdjs/bssds.htm" target="">研究生指导教师</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../szdw/jzsz.htm" target="">兼职师资</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../szdw/zdlc.htm" target="">制度流程</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../szdw/xgxz.htm" target="">相关下载</a></li>
+            </ul>
+        </li>
+        <li class="yxt-li1 ">
+            <a class="yxt-a1" href="../bksjy.htm" target="">本科生教育</a>
+            <ul class="yxt-ul2">
+                <li class="yxt-li2"><a class="yxt-a2" href="../zysz.htm" target="">专业设置</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../bkzs.htm" target="">本科招生</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../bksjy/jwtz.htm" target="">教务通知</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../jwgl.htm" target="">教务管理</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../bksjy/jxyj.htm" target="">教学研究</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../jsfz.htm" target="">教师发展</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../bksjy/zdlc.htm" target="">制度流程</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../bksjy/xgxz.htm" target="">相关下载</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../Int_Student.htm" target="">Int Student</a></li>
+            </ul>
+        </li>
+        <li class="yxt-li1 ">
+            <a class="yxt-a1" href="../yjsjy.htm" target="">研究生教育</a>
+            <ul class="yxt-ul2">
+                <li class="yxt-li2"><a class="yxt-a2" href="../yjszs.htm" target="">研究生招生</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../yjsjy/pygz.htm" target="">培养工作</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../yjsjy/xwgz.htm" target="">学位工作</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../yjsjy/dsgz.htm" target="">导师工作</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../yjsjy/tdxl.htm" target="">同等学力</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../yjsjy/xkjs.htm" target="">学科建设</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../yjsjy/cylc.htm" target="">常用流程</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../yjsjy/gzzd.htm" target="">规章制度</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../yjsjy/xgxz.htm" target="">相关下载</a></li>
+            </ul>
+        </li>
+        <li class="yxt-li1 ">
+            <a class="yxt-a1" href="../kxyj.htm" target="">科学研究</a>
+            <ul class="yxt-ul2">
+                <li class="yxt-li2"><a class="yxt-a2" href="../kxyj/tzgg.htm" target="">通知公告</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../kxyj/kyxm.htm" target="">科研项目</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../kxyj/kycg.htm" target="">科研成果</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../kxyj/kypt.htm" target="">科研平台</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../kxyj/kytd.htm" target="">科研团队</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../kxyj/xsjl.htm" target="">学术交流</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../dffw_link.htm" target="">地方服务</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../kxyj/zdlc.htm" target="">制度流程</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../kxyj/xgxz.htm" target="">相关下载</a></li>
+            </ul>
+        </li>
+        <li class="yxt-li1 sysgz">
+            <a class="yxt-a1" href="../syzx.htm" target="">实验中心</a>
+            <ul class="yxt-ul2">
+                <li class="yxt-li2"><a class="yxt-a2" href="../syzx/tzgg.htm" target="">通知公告</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../syzx/sysaq.htm" target="">实验室安全</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../syzx/yqpt.htm" target="">仪器平台</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../syzx/jszl.htm" target="">技术资料</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../syzx/zdlc_syzx.htm" target="">制度流程</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../syzx/xgxz.htm" target="">相关下载</a></li>
+            </ul>
+        </li>
+        <li class="yxt-li1 ">
+            <a class="yxt-a1" href="../xsgz.htm" target="">学生工作</a>
+            <ul class="yxt-ul2">
+                <li class="yxt-li2"><a class="yxt-a2" href="../xsgz/tzgg.htm" target="">通知公告</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../xsgz/xsdj.htm" target="">学生党建</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../xsgz/jzxj.htm" target="">奖助学金</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../xsgz/cxcy.htm" target="">创新创业</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../xsgz/xshd.htm" target="">学生活动</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../xsgz/jyzd.htm" target="">就业指导</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../xsgz/zdlc_xsgz.htm" target="">制度流程</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../xsgz/is.htm" target="">INTERNATIONAL STUDENTS</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../xsgz/xgxz.htm" target="">相关下载</a></li>
+            </ul>
+        </li>
+        <li class="yxt-li1 ">
+            <a class="yxt-a1" href="../dwjl.htm" target="">对外交流</a>
+            <ul class="yxt-ul2">
+                <li class="yxt-li2"><a class="yxt-a2" href="../dwjl/tzygg.htm" target="">通知与公告</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../dwjl/gjdqjl.htm" target="">国际短期交流</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../dwjl/zwhzbx.htm" target="">中外合作办学</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../dwjl/dffwjl.htm" target="">地方服务交流</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../dwjl/jxjypx.htm" target="">继续教育培训</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../dwjl/zdylc.htm" target="">制度与流程</a></li>
+                <li class="yxt-li2"><a class="yxt-a2" href="../dwjl/xgxz.htm" target="">相关下载</a></li>
+            </ul>
+        </li>
+    </ul>
+</div></div>
+
+<!-- 新闻页banner图 -->
+<div class="yxt-banner-pc">
+    <img src="../images/pic-35.jpg" alt="">
+</div>
+
+<div class="yxt-content-pc">
+    <div class="yxt-contain-pc">
+        <div class="yxt-nav-title-pc">
+学部概况</div>
+        <div class="yxt-nav-box-pc">
+            <div style="height: 3px; background: #f8981e;"></div>
+            <div><ul class="yxt-nav-ul1">
+        <li class="yxt-nav-li1">
+        
+            <a class="yxt-nav-a2" href="xbjj.htm" target="">学部简介</a> 
+    </li> 
+    <li class="yxt-nav-li1">
+        
+            <a class="yxt-nav-a2" href="xrld.htm" target="">现任领导</a> 
+    </li> 
+    <li class="yxt-nav-li1">
+        
+            <a class="yxt-nav-a2" href="lrld.htm" target="">历任领导</a> 
+    </li> 
+    <li class="yxt-nav-li1">
+        
+            <a class="yxt-nav-a2" href="../jgsz.htm" target="">机构设置</a> 
+    </li> 
+    <li class="yxt-nav-li1">
+        
+            <a class="yxt-nav-a2" href="../xywh.htm" target="">学部文化</a> 
+    </li> 
+    <li class="yxt-nav-li1">
+        
+            <a class="yxt-nav-a2" href="dsj.htm" target="">大事记</a> 
+    </li> 
+    <li class="yxt-nav-li1">
+        
+            <a class="yxt-nav-a2" href="lxwm.htm" target="">联系我们</a> 
+    </li> 
+    <li class="yxt-nav-li1">
+        
+            <a class="yxt-nav-a2" href="../xxgk.htm" target="">信息公开</a> 
+    </li> 
+</ul></div>
+        </div>
+        <div class="yxt-list-box-pc">
+            <div class="yxt-list-title-pc"><div class="yxt-list-title">
+学部简介</div>
+                <div style="float: right; font-size: 12px; color: #808080; line-height: 12px; height: 12px; padding-top: 8px;"><img src="/yxyweb/img/icon-pc/location.png" align="" style="width: 12px; margin-right: 10px;">                 
+    <a href="../../index.htm" style="color: #808080;">首页</a> - 
+    <a href="../xbgk.htm" style="color: #808080;">学部概况</a> - 
+    <a href="xbjj.htm" style="color: #808080;">学部简介</a>
+</div></div>
+            <div class="yxt-list-contents">
+
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',942993502,'wbnews','u7')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta7(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',942993502,5263)</script>
+    <div class="list_title">医学部简介</div>
+    <center><div class="list_author">编辑：   发布时间：2025-05-28</div></center>
+    <center><div class="list_content"><div id="vsb_content_4_5263_u71"><div id="vsb_content_4"><p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:38px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-justify:inter-ideograph;line-height:35px"><span style="color: rgb(26, 26, 26); letter-spacing: 0px; font-size: 21px; font-family: 宋体, SimSun;"></span></p><p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:38px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-justify:inter-ideograph;line-height:35px"><span style="color: rgb(26, 26, 26); letter-spacing: 0px; font-size: 18px; font-family: 宋体, SimSun;"></span></p><p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-justify:inter-ideograph;line-height:35px"><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">医学部前身为医学院，创建于</span><span style="font-family:仿宋">1998年，由香港著名医学家、科学家汤于翰博士发起捐资创办，2022年11月提升为医学部。</span></span></p><p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-justify:inter-ideograph;line-height:35px"><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">学部拥有五年制临床医学、预防医学、口腔医学本科专业</span><span style="font-family:仿宋">3个，四年制药学专业1个，本科临床医学专业（英语授课）来华留学生项目1个，临床医学拔尖创新班项目1个；拥有临床医学一级学科学术型博士点1个，博士后科研流动站1个，临床医学、公共卫生与预防医学、基础医学等3个一级学科学术型硕士点，临床医学、公共卫生学、药学</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">、医学技术等</span><span style="font-family:仿宋">4个专业学位硕士点</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">。临床医学、药理学与毒理学、生物学与生物化学进入全球学术机构前</span><span style="font-family:仿宋">1%榜单。</span></span></p><p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-justify:inter-ideograph;line-height:35px"><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">学部现有全日制在校生</span><span style="font-family:仿宋">3313人，其中博士研究生81名、硕士研究生1040</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">人、本科生2192</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">人（含国际学生257</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">人）；另有同等学力申请硕士学位研究生</span><span style="font-family:仿宋">1</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">1</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">32</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">人。学生获得</span><span style="font-family:仿宋">“挑战杯”大学生课外学术科技作品竞赛国家级特等奖、二等奖、三等奖各1项，省级特等奖1项、一等奖</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">5</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">项</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">、</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">二等奖</span><span style="font-family:仿宋">1项、三等奖1项</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">；</span><span style="font-family:仿宋">“挑战杯”大学生创业计划竞赛</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">国家级金奖</span><span style="font-family:仿宋">2项、</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">省级</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">金</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">奖</span><span style="font-family:仿宋">3项、</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">铜</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">奖</span><span style="font-family:仿宋">1项；中国国际大学生创新大赛（原“互联网+”大学生创新创业大赛）总决赛金奖4项</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">，</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">浙江省大学生创新大赛金奖</span><span style="font-family:仿宋">10项（其中国际学生团队2项）、银奖2项、铜奖3项。获评教育部高校思想政治工作质量提升综合改革与精品建设项目1项。近三年，毕业生总就业率保持在97%以上；临床医学本科生考研录取率平均为</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">61.02</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">%，预防医学本科生考研录取率平均为</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">24.78</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">%；临床医学专业本科毕业生在国家执业医师资格考试中，总通过率平均为</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">86.49</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">%</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">；</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">平均高出全国约</span><span style="font-family:仿宋">1</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">5</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">个百分点以上</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">；预防医学专业本科毕业生在国家执业医师资格考试中，总通过率平均为</span><span style="font-family:仿宋">78.95%</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">，</span><span style="font-family:仿宋">2023年预防医学本科毕业生在国家公共卫生执业医师资格考试中总通过率为80.95%，排名全省第一；临床医学专业硕士</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">住院医师规范化培训考试</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">平均总通过率</span><span style="font-family:仿宋">98.</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">7</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">8%。</span></p><p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-justify:inter-ideograph;line-height:35px"><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">学部下设三个学院</span><span style="font-family:仿宋">:基础医学院、公共卫生学院、药学院；两个依托学部的校级研究院：宁波大学新药技术研究院、宁波大学智能医学与生物工程研究院；3个公共服务平台：大仪平台中心、<span style="font-family: 仿宋; font-size: 18.6667px; text-align: justify; text-indent: 37.3333px; text-wrap: wrap;">宁波大学实验动物中心、</span>宁波大学遗体捐献中心；负责管理宁波大学行为神经科学中心、宁波大学糖尿病研究中心、宁波大学生物医学工程研究中心；拥有6家直属附属医院、</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">5</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">家非直属附属医院，</span><span style="font-family:仿宋">1</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">5</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">家教学医院，</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">25</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">家预防医学教学实践基地</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">、</span><span style="font-family:仿宋">19所社区卫生服务实践教学基地、9家药学教学基地和1个省“十三五”省级大学生校外实践教育基地。</span></span></p><p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-justify:inter-ideograph;line-height:35px"><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">学部已获批国家教学团队</span><span style="font-family:仿宋">1支，浙江省教学团队1支，宁波市科技创新团队8支，获国家级课程8门，省级课程</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">25</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">门，获批国家一流专业建设点</span><span style="font-family:仿宋">1个，省一流专业建设点1个，省重点、省优势专业各1个，省实验教学示范中心1个，获批教育部、卫生部卓越医生教育培养计划试点项目；国家级国际合作基地1个，全省重点实验室</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">2</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">个，省部级国际合作基地</span><span style="font-family:仿宋">1个，省市重点学科各2个；主持国家级项目</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">228</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">项（重点</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">7</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">项）和省部级项目</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">432</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">项，累计到款科研经费</span><span style="font-family:仿宋">2.</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">9655</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">亿元；获国家科技进步二等奖</span><span style="font-family:仿宋">1项（参与）及省部级科技奖15项；授权发明专利</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">123</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">项，发表论文</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">2371</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">篇（高水平论文</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">1636</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">篇，高被引论文</span><span style="font-family:仿宋">29篇），出版教材和专著19部、编著6部。</span></span></p><p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-justify:inter-ideograph;line-height:35px"><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">学部拥有一支高水平的师资队伍，其中专任教师109</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">人</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">、</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">全职博士后</span><span style="font-family:仿宋">7人</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">、</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">临床教师</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">3224人</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">。专任教师中正高</span><span style="font-family:仿宋">3</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">5</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">人、副高</span><span style="font-family:仿宋">3</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">7</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">人、中级</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">37</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">人。</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">现有</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">博士生导师</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">68</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">人、硕士生导师</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">624</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">人；拥有</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">中外院士</span><span style="font-family:仿宋">4名，</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">享受国务院政府特殊津贴</span><span style="font-family:仿宋">10人，入选</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">国家级人才</span><span style="font-family:仿宋">5人次、</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">省市各级各类人才工程</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">88</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">人次。</span></p><p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-justify:inter-ideograph;line-height:35px"><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">学部积极走国际化办学道路，开拓留学生项目，开展全英文教学，从</span><span style="font-family:仿宋">2011年开始招收国际学生；2020年</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">起</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">与法国勃艮第</span><span style="font-family:仿宋">-弗朗什孔泰大学</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">、欧洲勃艮第大学、玛丽与路易</span><span style="font-family:仿宋">·巴斯德大学</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">合作举办临床医学双学位联合培养博士研究生项目；同时加强对外交流与合作，已先后与美国南卡医科大学、法国昂热大学医学院、瑞典舍夫德大学、英国伦敦大学、英国曼彻斯特大学、澳大利亚查尔斯特大学、澳大利亚阿德莱德大学等建立了学术交流和师生互派进修等友好合作关系。</span></p><p style="text-align:right;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;line-height:35px"><br></p><p style="text-align: right;"><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">（数据截止日期：</span><span style="font-family:仿宋">202</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">5</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">年</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">10</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">月</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">15</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">日）</span></p><p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:38px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-justify:inter-ideograph;line-height:35px"><span style="color: rgb(26, 26, 26); font-size: 21px; font-family: 宋体, SimSun;"></span><br></p><p style="text-align:left;text-indent:37px;line-height:29px"><span style="font-family: 宋体; color: rgb(26, 26, 26); font-size: 19px;"></span><br></p><p style="text-align:left;text-indent:37px;line-height:29px"><span style="font-family:宋体;color:#1A1A1A"></span><br></p><p style="text-align:left;text-indent:37px;line-height:29px"><span style="font-family:宋体;color:#1A1A1A"></span><br></p><p style="text-align:left;text-indent:37px;line-height:29px"><br></p></div></div></div></center>
+</div>
+        </div>
+    </div>
+</div>
+<div style="clear: both;"></div>
+
+
+    <!-- 快速入口 -->
+    <div class="yxt-shortcut"><div class="yxt-contain-pc">
+            <div class="yxt-shortcut-title"><img src="../img/icon-pc/shortcut.png"></div>
+            <div class="yxt-shortcuts">
+                <div class="shortcut" style="width: 170px;"><a href="http://dygx.nbu.edu.cn/" target="_blank"><img src="../img/icon-pc/S5_icon.svg" class="icon"><img src="../images/S_title_20201207.svg" class="title"></a></div>
+                <div class="shortcut" style="width: 170px;"><a href="https://basicmed.nbu.edu.cn/" target="_blank"><img src="../img/icon-pc/S1_icon.svg" class="icon"><div class="title" style="text-align:center; font-weight:bold; width: 170px;">基础医学院</div></a></div>              
+                <div class="shortcut" style="width: 170px;"><a href="https://sph.nbu.edu.cn/" target="_blank"><img src="../img/icon-pc/S3_icon.svg" class="icon"><div class="title" style="text-align:center; font-weight:bold; width: 170px;">公共卫生学院</div></a></div>
+                
+                <div class="shortcut" style="width: 170px;"><a href="https://lac.nbu.edu.cn/" target="_blank"><img src="../img/icon-pc/S6_icon.svg" class="icon"><img src="../img/icon-pc/S6_title.svg" class="title"></a></div>
+                <div class="shortcut" style="width: 170px;"><a href="http://ytjx.nbu.edu.cn" target="_blank"><img src="../img/icon-pc/S2_icon.svg" class="icon"><div class="title" style="text-align:center; font-weight:bold; width: 170px;">遗体捐献接受站</div></a></div>
+
+                <div class="shortcut" style="width: 170px;"><a href="http://47.100.28.23/CMS"><img src="../img/icon-pc/S4_icon.svg" class="icon"><img src="../img/icon-pc/title_xxmh.svg" class="title"></a></div>
+                
+                <div class="shortcut" style="width: 170px;"><a href="https://medicine.nbu.edu.cn/zyrz.htm"><img src="../img/icon-pc/S8_icon.svg" class="icon"><div class="title" style="text-align:center; font-weight:bold; width: 170px;">临床医学专业认证</div></a></div>
+                <div class="shortcut" style="width: 170px;display: none;"><a href="../dffw_link.htm"><img src="../img/icon-pc/S8_icon.svg" class="icon"><img src="../img/icon-pc/S6_title_n.svg" class="title"></a></div>
+                <div class="shortcut" style="display: none;"><a href="../xxgk.htm"><img src="../img/icon-pc/S4_icon.svg" class="icon"><img src="../img/icon-pc/S4_title.svg" class="title"></a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="yxt-footer">
+        <div class="yxt-contain-pc">
+            <div style="height: 187px; border-bottom: 1px solid #999;">
+                <div class="yxt-footer-left">
+                    <div class="logo"><img src="../img/icon-pc/logo_footer.png" alt=""></div>
+                    <div class="address">地址：中国浙江宁波市江北区风华路818号 邮编：315211 电话：+86-574-87600674</div>
+                </div>
+                <div class="yxt-footer-right" style="padding-top: 35px;">
+                    <div style="width: 150px; float: left;">
+                        <div style="height: 44px; font-size: 14px; color: #4d4d4d;">官方微信</div>
+                        <div style="width: 86px; height: 86px; background: #ccc;">
+                            <img src="../images/code.jpg" alt="">
+                        </div>
+                    </div>
+                    <div style="width: 130px; float: left;">
+                        <div style="height: 44px; font-size: 14px; color: #4d4d4d;">相关链接</div>
+                        <div><script language="javascript" src="/system/resource/js/openlink.js"></script><ul>                            
+<li><a href="http://wjw.ningbo.gov.cn/">宁波市卫生健康委员会</a></li>
+<li><a href="http://www.nbdyyy.com/">宁波大学附属第一医院</a></li>
+<li><a href="http://www.nblhlyy.com/">宁波大学附属李惠利医院</a></li>
+<li><a href="https://www.nbyzyy.com/">宁波大学附属人民医院</a></li>
+</ul></div>
+                    </div>
+                    <div style="width: 142px; float: left; padding-top: 44px;"><ul>                            
+<li><a href="http://recruit.nbu.edu.cn/">宁波大学人才招聘网</a></li>   
+</ul></div>
+                    <div style="width: 146px; float: left; padding-top: 44px;"><ul>                            
+</ul></div>
+                    <div style="width: 117px; float: left; padding-top: 44px;"><ul>                            
+</ul></div>
+                </div>
+            </div>
+            <div class="bottom">
+                版权所有 © 宁波大学医学部 技术支持：宁波甬讯通信息科技有限公司
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script>
+    $(function () {
+        // 导航条控制
+        $('.yxt-nav-pc .yxt-contain-pc .yxt-ul1 .yxt-li1').hover(function () {
+            $(this).find('a.yxt-a1').addClass('yxt-active');
+            $(this).find('.yxt-ul2').show();
+        }, function () {
+            $(this).find('a.yxt-a1').removeClass('yxt-active');
+            $(this).find('.yxt-ul2').hide();
+        });
+
+        $(".hasChilds").click(function() {
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+                $(this).find('img').attr('src', 'images/+.svg');
+            } else {
+                $(this).addClass('active');
+                $(this).find('img').attr('src', 'images/-.svg');
+            }
+
+            $(this).next().animate({
+                height: 'toggle'
+            });
+        });
+
+        $(document).on('click', '.yxt-nav-ul1 a:not(.hasChilds)', function () {
+            $('.yxt-nav-ul1 a:not(.hasChilds)').removeClass('yxt-active');
+            $(this).addClass('yxt-active');
+        })
+    });
+
+</script>
+<!-- mobile开始 -->
+<div class="layui-hide-md">
+<div class="nbdx_mc_head ">
+            <div class="common_width float_after">
+                <div class="nbdx_mc_left float_left layui-col-xs-12">
+<table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a href="http://medicine.nbu.edu.cn/" title="医学部" alt="网站LOGO"><img src="../img/icon-pc/logo.png" border="0" alt="医学部" title="医学部"></a></td></tr></tbody></table></div>
+                <div class="nbdx_mc_right float_right">
+                    <form class="layui-form float_left" action="">
+                        <input type="text" name="search" placeholder="" autocomplete="off" class="layui-input">
+                        <button class="layui-btn" lay-submit="" lay-filter="searchSubmit">
+                            <img src="../images/icon_search.png">
+                        </button>
+                    </form>
+                    <div class="jump_list float_left">
+                        <a class="transition_all" href="#">Ningbo University</a>
+                        <a class="transition_all" href="#">CHINESE</a>
+                    </div>
+                </div>
+                <div class="menu" onclick="showNavMobile()">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>              
+            </div>
+
+        </div>
+        <div class="nbdx_mc_nav transition_all">
+            <div class="common_width float_after">
+                <div class="layui-row float_after">    <div class="layui-col-lg2 nbdx_mc_nav_item" onclick="showNavMobile2(this)">
+            <a href="#" class="nav_item transition_all">学部概况
+            <div class="menu">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>  
+            </a>
+                <div class="nbdx_mc_sec_nav transition_all" style="z-index: 99999;">
+                       <a href="xbjj.htm" class="nbdx_mc_sec_nav_item transition_all">学部简介</a>
+                       <a href="xrld.htm" class="nbdx_mc_sec_nav_item transition_all">现任领导</a>
+                       <a href="lrld.htm" class="nbdx_mc_sec_nav_item transition_all">历任领导</a>
+                       <a href="../jgsz.htm" class="nbdx_mc_sec_nav_item transition_all">机构设置</a>
+                       <a href="../xywh.htm" class="nbdx_mc_sec_nav_item transition_all">学部文化</a>
+                       <a href="dsj.htm" class="nbdx_mc_sec_nav_item transition_all">大事记</a>
+                       <a href="lxwm.htm" class="nbdx_mc_sec_nav_item transition_all">联系我们</a>
+                       <a href="../xxgk.htm" class="nbdx_mc_sec_nav_item transition_all">信息公开</a>
+                </div>
+    </div>
+    <div class="layui-col-lg2 nbdx_mc_nav_item" onclick="showNavMobile2(this)">
+            <a href="#" class="nav_item transition_all">党群工作
+            <div class="menu">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>  
+            </a>
+                <div class="nbdx_mc_sec_nav transition_all" style="z-index: 99999;">
+                       <a href="../dqgz/jgsz.htm" class="nbdx_mc_sec_nav_item transition_all">机构设置</a>
+                       <a href="../dqgz/dwwj_new.htm" class="nbdx_mc_sec_nav_item transition_all">党委文件</a>
+                       <a href="../dqgz/llxx.htm" class="nbdx_mc_sec_nav_item transition_all">理论学习</a>
+                       <a href="../dqgz/dflz.htm" class="nbdx_mc_sec_nav_item transition_all">党风廉政</a>
+                       <a href="../dqgz/ztjy.htm" class="nbdx_mc_sec_nav_item transition_all">主题教育</a>
+                       <a href="../dqgz/dyhd.htm" class="nbdx_mc_sec_nav_item transition_all">党员活动</a>
+                       <a href="../dqgz/fghgz.htm" class="nbdx_mc_sec_nav_item transition_all">分工会工作</a>
+                       <a href="../jgwmg/zzjs.htm" class="nbdx_mc_sec_nav_item transition_all">巾帼文明岗</a>
+                       <a href="../dqgz/zdlc.htm" class="nbdx_mc_sec_nav_item transition_all">制度流程</a>
+                       <a href="../dqgz/xgxz.htm" class="nbdx_mc_sec_nav_item transition_all">相关下载</a>
+                </div>
+    </div>
+    <div class="layui-col-lg2 nbdx_mc_nav_item" onclick="showNavMobile2(this)">
+            <a href="#" class="nav_item transition_all">师资队伍
+            <div class="menu">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>  
+            </a>
+                <div class="nbdx_mc_sec_nav transition_all" style="z-index: 99999;">
+                       <a href="../szdw/szdwtzgg.htm" class="nbdx_mc_sec_nav_item transition_all">通知公告</a>
+                       <a href="../szdw/rczp.htm" class="nbdx_mc_sec_nav_item transition_all">人才招聘</a>
+                       <a href="../szdw/jcyx.htm" class="nbdx_mc_sec_nav_item transition_all">基础医学</a>
+                       <a href="../szdw/lcyx.htm" class="nbdx_mc_sec_nav_item transition_all">临床医学</a>
+                       <a href="../szdw/yfyx.htm" class="nbdx_mc_sec_nav_item transition_all">预防医学</a>
+                       <a href="../szdw/yx.htm" class="nbdx_mc_sec_nav_item transition_all">药学</a>
+                       <a href="https://medicine.nbu.edu.cn/yxyweb/yjszdjs/bssds.htm" class="nbdx_mc_sec_nav_item transition_all">研究生指导教师</a>
+                       <a href="../szdw/jzsz.htm" class="nbdx_mc_sec_nav_item transition_all">兼职师资</a>
+                       <a href="../szdw/zdlc.htm" class="nbdx_mc_sec_nav_item transition_all">制度流程</a>
+                       <a href="../szdw/xgxz.htm" class="nbdx_mc_sec_nav_item transition_all">相关下载</a>
+                </div>
+    </div>
+    <div class="layui-col-lg2 nbdx_mc_nav_item" onclick="showNavMobile2(this)">
+            <a href="#" class="nav_item transition_all">本科生教育
+            <div class="menu">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>  
+            </a>
+                <div class="nbdx_mc_sec_nav transition_all" style="z-index: 99999;">
+                       <a href="../zysz.htm" class="nbdx_mc_sec_nav_item transition_all">专业设置</a>
+                       <a href="../bkzs.htm" class="nbdx_mc_sec_nav_item transition_all">本科招生</a>
+                       <a href="../bksjy/jwtz.htm" class="nbdx_mc_sec_nav_item transition_all">教务通知</a>
+                       <a href="../jwgl.htm" class="nbdx_mc_sec_nav_item transition_all">教务管理</a>
+                       <a href="../bksjy/jxyj.htm" class="nbdx_mc_sec_nav_item transition_all">教学研究</a>
+                       <a href="../jsfz.htm" class="nbdx_mc_sec_nav_item transition_all">教师发展</a>
+                       <a href="../bksjy/zdlc.htm" class="nbdx_mc_sec_nav_item transition_all">制度流程</a>
+                       <a href="../bksjy/xgxz.htm" class="nbdx_mc_sec_nav_item transition_all">相关下载</a>
+                       <a href="../Int_Student.htm" class="nbdx_mc_sec_nav_item transition_all">Int Student</a>
+                </div>
+    </div>
+    <div class="layui-col-lg2 nbdx_mc_nav_item" onclick="showNavMobile2(this)">
+            <a href="#" class="nav_item transition_all">研究生教育
+            <div class="menu">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>  
+            </a>
+                <div class="nbdx_mc_sec_nav transition_all" style="z-index: 99999;">
+                       <a href="../yjszs.htm" class="nbdx_mc_sec_nav_item transition_all">研究生招生</a>
+                       <a href="../yjsjy/pygz.htm" class="nbdx_mc_sec_nav_item transition_all">培养工作</a>
+                       <a href="../yjsjy/xwgz.htm" class="nbdx_mc_sec_nav_item transition_all">学位工作</a>
+                       <a href="../yjsjy/dsgz.htm" class="nbdx_mc_sec_nav_item transition_all">导师工作</a>
+                       <a href="../yjsjy/tdxl.htm" class="nbdx_mc_sec_nav_item transition_all">同等学力</a>
+                       <a href="../yjsjy/xkjs.htm" class="nbdx_mc_sec_nav_item transition_all">学科建设</a>
+                       <a href="../yjsjy/cylc.htm" class="nbdx_mc_sec_nav_item transition_all">常用流程</a>
+                       <a href="../yjsjy/gzzd.htm" class="nbdx_mc_sec_nav_item transition_all">规章制度</a>
+                       <a href="../yjsjy/xgxz.htm" class="nbdx_mc_sec_nav_item transition_all">相关下载</a>
+                </div>
+    </div>
+    <div class="layui-col-lg2 nbdx_mc_nav_item" onclick="showNavMobile2(this)">
+            <a href="#" class="nav_item transition_all">科学研究
+            <div class="menu">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>  
+            </a>
+                <div class="nbdx_mc_sec_nav transition_all" style="z-index: 99999;">
+                       <a href="../kxyj/tzgg.htm" class="nbdx_mc_sec_nav_item transition_all">通知公告</a>
+                       <a href="../kxyj/kyxm.htm" class="nbdx_mc_sec_nav_item transition_all">科研项目</a>
+                       <a href="../kxyj/kycg.htm" class="nbdx_mc_sec_nav_item transition_all">科研成果</a>
+                       <a href="../kxyj/kypt.htm" class="nbdx_mc_sec_nav_item transition_all">科研平台</a>
+                       <a href="../kxyj/kytd.htm" class="nbdx_mc_sec_nav_item transition_all">科研团队</a>
+                       <a href="../kxyj/xsjl.htm" class="nbdx_mc_sec_nav_item transition_all">学术交流</a>
+                       <a href="../dffw_link.htm" class="nbdx_mc_sec_nav_item transition_all">地方服务</a>
+                       <a href="../kxyj/zdlc.htm" class="nbdx_mc_sec_nav_item transition_all">制度流程</a>
+                       <a href="../kxyj/xgxz.htm" class="nbdx_mc_sec_nav_item transition_all">相关下载</a>
+                </div>
+    </div>
+    <div class="layui-col-lg2 nbdx_mc_nav_item" onclick="showNavMobile2(this)">
+            <a href="#" class="nav_item transition_all">实验中心
+            <div class="menu">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>  
+            </a>
+                <div class="nbdx_mc_sec_nav transition_all" style="z-index: 99999;">
+                       <a href="../syzx/tzgg.htm" class="nbdx_mc_sec_nav_item transition_all">通知公告</a>
+                       <a href="../syzx/sysaq.htm" class="nbdx_mc_sec_nav_item transition_all">实验室安全</a>
+                       <a href="../syzx/yqpt.htm" class="nbdx_mc_sec_nav_item transition_all">仪器平台</a>
+                       <a href="../syzx/jszl.htm" class="nbdx_mc_sec_nav_item transition_all">技术资料</a>
+                       <a href="../syzx/zdlc_syzx.htm" class="nbdx_mc_sec_nav_item transition_all">制度流程</a>
+                       <a href="../syzx/xgxz.htm" class="nbdx_mc_sec_nav_item transition_all">相关下载</a>
+                </div>
+    </div>
+    <div class="layui-col-lg2 nbdx_mc_nav_item" onclick="showNavMobile2(this)">
+            <a href="#" class="nav_item transition_all">学生工作
+            <div class="menu">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>  
+            </a>
+                <div class="nbdx_mc_sec_nav transition_all" style="z-index: 99999;">
+                       <a href="../xsgz/tzgg.htm" class="nbdx_mc_sec_nav_item transition_all">通知公告</a>
+                       <a href="../xsgz/xsdj.htm" class="nbdx_mc_sec_nav_item transition_all">学生党建</a>
+                       <a href="../xsgz/jzxj.htm" class="nbdx_mc_sec_nav_item transition_all">奖助学金</a>
+                       <a href="../xsgz/cxcy.htm" class="nbdx_mc_sec_nav_item transition_all">创新创业</a>
+                       <a href="../xsgz/xshd.htm" class="nbdx_mc_sec_nav_item transition_all">学生活动</a>
+                       <a href="../xsgz/jyzd.htm" class="nbdx_mc_sec_nav_item transition_all">就业指导</a>
+                       <a href="../xsgz/zdlc_xsgz.htm" class="nbdx_mc_sec_nav_item transition_all">制度流程</a>
+                       <a href="../xsgz/is.htm" class="nbdx_mc_sec_nav_item transition_all">INTERNATIONAL STUDENTS</a>
+                       <a href="../xsgz/xgxz.htm" class="nbdx_mc_sec_nav_item transition_all">相关下载</a>
+                </div>
+    </div>
+    <div class="layui-col-lg2 nbdx_mc_nav_item" onclick="showNavMobile2(this)">
+            <a href="#" class="nav_item transition_all">对外交流
+            <div class="menu">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>  
+            </a>
+                <div class="nbdx_mc_sec_nav transition_all" style="z-index: 99999;">
+                       <a href="../dwjl/tzygg.htm" class="nbdx_mc_sec_nav_item transition_all">通知与公告</a>
+                       <a href="../dwjl/gjdqjl.htm" class="nbdx_mc_sec_nav_item transition_all">国际短期交流</a>
+                       <a href="../dwjl/zwhzbx.htm" class="nbdx_mc_sec_nav_item transition_all">中外合作办学</a>
+                       <a href="../dwjl/dffwjl.htm" class="nbdx_mc_sec_nav_item transition_all">地方服务交流</a>
+                       <a href="../dwjl/jxjypx.htm" class="nbdx_mc_sec_nav_item transition_all">继续教育培训</a>
+                       <a href="../dwjl/zdylc.htm" class="nbdx_mc_sec_nav_item transition_all">制度与流程</a>
+                       <a href="../dwjl/xgxz.htm" class="nbdx_mc_sec_nav_item transition_all">相关下载</a>
+                </div>
+    </div>
+</div>              
+            </div>
+        </div>
+    
+        <div class="nbdx_mc_sub_head">
+            <div class="name"><span>
+学部概况</span></div>
+            <div class="menu" onclick="showSubNavMobile2()">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+        </div>
+        <div class="nbdx_mc_sub_nav">
+       
+            <a href="xbjj.htm" class="nbdx_mc_sub_item" target="">学部简介</a>               
+
+   
+            <a href="xrld.htm" class="nbdx_mc_sub_item" target="">现任领导</a>               
+
+   
+            <a href="lrld.htm" class="nbdx_mc_sub_item" target="">历任领导</a>               
+
+   
+            <a href="../jgsz.htm" class="nbdx_mc_sub_item" target="">机构设置</a>               
+
+   
+            <a href="../xywh.htm" class="nbdx_mc_sub_item" target="">学部文化</a>               
+
+   
+            <a href="dsj.htm" class="nbdx_mc_sub_item" target="">大事记</a>               
+
+   
+            <a href="lxwm.htm" class="nbdx_mc_sub_item" target="">联系我们</a>               
+
+   
+            <a href="../xxgk.htm" class="nbdx_mc_sub_item" target="">信息公开</a>               
+
+</div>
+        
+    
+        <div class="layui-row m-son-banner layui-hide-md">
+          <img src="../images/pc-banner.jpg" class="img" width="100%">
+        </div>
+
+      <div class="layui-row nbdx_mc_newbox">
+        <div class="layui-col-xs12 layui-col-md9  padding-box pm50 ">
+            <div class="box-hd layui-hide-md nbdx_sub_menu float_after">
+             <span class="layui-col-xs12 layui-breadcrumb float_right" lay-separator="-" style="visibility: visible;"><img src="/yxyweb/img/icon-pc/location.png" class="location_icon" style="margin-top: -10px;">
+    <a href="../../index.htm" style="color: #808080;">首页</a><span lay-separator="">-</span> - 
+    <a href="../xbgk.htm" style="color: #808080;">学部概况</a><span lay-separator="">-</span> - 
+    <a href="xbjj.htm" style="color: #808080;">学部简介</a> - 
+</span>
+             <div class="layui-col-xs12 content-list-title float_left">
+学部简介</div>
+            </div>
+            <div class="nbdx_mc_new_details">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',942993502,'wbnews','u18')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta18(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta18('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+
+<script>_addDynClicks('wbnews',942993502,5263)</script>
+<div class="title_box">
+    <div class="name">医学部简介</div>
+    <div class="desc"><span>编辑：</span><span>发布时间：2025-05-28</span></div>
+</div>
+<div class="desc_box">
+    <div id="vsb_content_4_5263_u181"><div id="vsb_content_4"><p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:38px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-justify:inter-ideograph;line-height:35px"><span style="color: rgb(26, 26, 26); letter-spacing: 0px; font-size: 21px; font-family: 宋体, SimSun;"></span></p><p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:38px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-justify:inter-ideograph;line-height:35px"><span style="color: rgb(26, 26, 26); letter-spacing: 0px; font-size: 18px; font-family: 宋体, SimSun;"></span></p><p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-justify:inter-ideograph;line-height:35px"><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">医学部前身为医学院，创建于</span><span style="font-family:仿宋">1998年，由香港著名医学家、科学家汤于翰博士发起捐资创办，2022年11月提升为医学部。</span></span></p><p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-justify:inter-ideograph;line-height:35px"><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">学部拥有五年制临床医学、预防医学、口腔医学本科专业</span><span style="font-family:仿宋">3个，四年制药学专业1个，本科临床医学专业（英语授课）来华留学生项目1个，临床医学拔尖创新班项目1个；拥有临床医学一级学科学术型博士点1个，博士后科研流动站1个，临床医学、公共卫生与预防医学、基础医学等3个一级学科学术型硕士点，临床医学、公共卫生学、药学</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">、医学技术等</span><span style="font-family:仿宋">4个专业学位硕士点</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">。临床医学、药理学与毒理学、生物学与生物化学进入全球学术机构前</span><span style="font-family:仿宋">1%榜单。</span></span></p><p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-justify:inter-ideograph;line-height:35px"><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">学部现有全日制在校生</span><span style="font-family:仿宋">3313人，其中博士研究生81名、硕士研究生1040</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">人、本科生2192</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">人（含国际学生257</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">人）；另有同等学力申请硕士学位研究生</span><span style="font-family:仿宋">1</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">1</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">32</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">人。学生获得</span><span style="font-family:仿宋">“挑战杯”大学生课外学术科技作品竞赛国家级特等奖、二等奖、三等奖各1项，省级特等奖1项、一等奖</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">5</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">项</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">、</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">二等奖</span><span style="font-family:仿宋">1项、三等奖1项</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">；</span><span style="font-family:仿宋">“挑战杯”大学生创业计划竞赛</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">国家级金奖</span><span style="font-family:仿宋">2项、</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">省级</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">金</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">奖</span><span style="font-family:仿宋">3项、</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">铜</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">奖</span><span style="font-family:仿宋">1项；中国国际大学生创新大赛（原“互联网+”大学生创新创业大赛）总决赛金奖4项</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">，</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">浙江省大学生创新大赛金奖</span><span style="font-family:仿宋">10项（其中国际学生团队2项）、银奖2项、铜奖3项。获评教育部高校思想政治工作质量提升综合改革与精品建设项目1项。近三年，毕业生总就业率保持在97%以上；临床医学本科生考研录取率平均为</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">61.02</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">%，预防医学本科生考研录取率平均为</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">24.78</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">%；临床医学专业本科毕业生在国家执业医师资格考试中，总通过率平均为</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">86.49</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">%</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">；</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">平均高出全国约</span><span style="font-family:仿宋">1</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">5</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">个百分点以上</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">；预防医学专业本科毕业生在国家执业医师资格考试中，总通过率平均为</span><span style="font-family:仿宋">78.95%</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">，</span><span style="font-family:仿宋">2023年预防医学本科毕业生在国家公共卫生执业医师资格考试中总通过率为80.95%，排名全省第一；临床医学专业硕士</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">住院医师规范化培训考试</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">平均总通过率</span><span style="font-family:仿宋">98.</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">7</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">8%。</span></p><p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-justify:inter-ideograph;line-height:35px"><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">学部下设三个学院</span><span style="font-family:仿宋">:基础医学院、公共卫生学院、药学院；两个依托学部的校级研究院：宁波大学新药技术研究院、宁波大学智能医学与生物工程研究院；3个公共服务平台：大仪平台中心、<span style="font-family: 仿宋; font-size: 18.6667px; text-align: justify; text-indent: 37.3333px; text-wrap: wrap;">宁波大学实验动物中心、</span>宁波大学遗体捐献中心；负责管理宁波大学行为神经科学中心、宁波大学糖尿病研究中心、宁波大学生物医学工程研究中心；拥有6家直属附属医院、</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">5</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">家非直属附属医院，</span><span style="font-family:仿宋">1</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">5</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">家教学医院，</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">25</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">家预防医学教学实践基地</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">、</span><span style="font-family:仿宋">19所社区卫生服务实践教学基地、9家药学教学基地和1个省“十三五”省级大学生校外实践教育基地。</span></span></p><p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-justify:inter-ideograph;line-height:35px"><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">学部已获批国家教学团队</span><span style="font-family:仿宋">1支，浙江省教学团队1支，宁波市科技创新团队8支，获国家级课程8门，省级课程</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">25</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">门，获批国家一流专业建设点</span><span style="font-family:仿宋">1个，省一流专业建设点1个，省重点、省优势专业各1个，省实验教学示范中心1个，获批教育部、卫生部卓越医生教育培养计划试点项目；国家级国际合作基地1个，全省重点实验室</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">2</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">个，省部级国际合作基地</span><span style="font-family:仿宋">1个，省市重点学科各2个；主持国家级项目</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">228</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">项（重点</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">7</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">项）和省部级项目</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">432</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">项，累计到款科研经费</span><span style="font-family:仿宋">2.</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">9655</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">亿元；获国家科技进步二等奖</span><span style="font-family:仿宋">1项（参与）及省部级科技奖15项；授权发明专利</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">123</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">项，发表论文</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">2371</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">篇（高水平论文</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">1636</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">篇，高被引论文</span><span style="font-family:仿宋">29篇），出版教材和专著19部、编著6部。</span></span></p><p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-justify:inter-ideograph;line-height:35px"><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">学部拥有一支高水平的师资队伍，其中专任教师109</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">人</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">、</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">全职博士后</span><span style="font-family:仿宋">7人</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">、</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">临床教师</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">3224人</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">。专任教师中正高</span><span style="font-family:仿宋">3</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">5</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">人、副高</span><span style="font-family:仿宋">3</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">7</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">人、中级</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">37</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">人。</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">现有</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">博士生导师</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">68</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">人、硕士生导师</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">624</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">人；拥有</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">中外院士</span><span style="font-family:仿宋">4名，</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">享受国务院政府特殊津贴</span><span style="font-family:仿宋">10人，入选</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">国家级人才</span><span style="font-family:仿宋">5人次、</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">省市各级各类人才工程</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">88</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">人次。</span></p><p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-justify:inter-ideograph;line-height:35px"><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">学部积极走国际化办学道路，开拓留学生项目，开展全英文教学，从</span><span style="font-family:仿宋">2011年开始招收国际学生；2020年</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">起</span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">与法国勃艮第</span><span style="font-family:仿宋">-弗朗什孔泰大学</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">、欧洲勃艮第大学、玛丽与路易</span><span style="font-family:仿宋">·巴斯德大学</span></span><span style="font-family: 仿宋;letter-spacing: 0;font-size: 21px">合作举办临床医学双学位联合培养博士研究生项目；同时加强对外交流与合作，已先后与美国南卡医科大学、法国昂热大学医学院、瑞典舍夫德大学、英国伦敦大学、英国曼彻斯特大学、澳大利亚查尔斯特大学、澳大利亚阿德莱德大学等建立了学术交流和师生互派进修等友好合作关系。</span></p><p style="text-align:right;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:43px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;line-height:35px"><br></p><p style="text-align: right;"><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px"><span style="font-family:仿宋">（数据截止日期：</span><span style="font-family:仿宋">202</span></span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">5</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">年</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">10</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">月</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">15</span><span style="font-family: 仿宋;color: rgb(26, 26, 26);letter-spacing: 0;font-size: 21px">日）</span></p><p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:38px;padding:0 0 0 0 ;text-autospace:ideograph-numeric;text-justify:inter-ideograph;line-height:35px"><span style="color: rgb(26, 26, 26); font-size: 21px; font-family: 宋体, SimSun;"></span><br></p><p style="text-align:left;text-indent:37px;line-height:29px"><span style="font-family: 宋体; color: rgb(26, 26, 26); font-size: 19px;"></span><br></p><p style="text-align:left;text-indent:37px;line-height:29px"><span style="font-family:宋体;color:#1A1A1A"></span><br></p><p style="text-align:left;text-indent:37px;line-height:29px"><span style="font-family:宋体;color:#1A1A1A"></span><br></p><p style="text-align:left;text-indent:37px;line-height:29px"><br></p></div></div>
+</div>
+</div>
+        </div>
+      </div>
+                
+        <div class="common_width nbdx_mc_enter_box">
+            <div class="nbdx_mc_list_head_box float_after">
+                <div class="nbdx_mc_list_head_left float_left">
+                    <div class="name"><span>快速入口</span>&nbsp;&nbsp;SHORTCUT</div>
+                </div>
+                <div class="nbdx_mc_list_head_right float_right">
+                    <a href="#" class="more">MORE<img src="../images/icon_more_arrow.png"></a>
+                </div>
+            </div>
+            <div class="nbdx_mc_enter_list float_after">
+                <a href="http://dygx.nbu.edu.cn/" class="nbdx_mc_enter_item float_left">
+                    <img src="../images/icon_enter_05.png">
+                    <div class="name">大型仪器共享平台</div>
+                </a>
+                <a href="https://basicmed.nbu.edu.cn/" class="nbdx_mc_enter_item float_left">
+                    <img src="../images/icon_enter_01.png">
+                    <div class="name">基础医学院</div>
+                </a>
+                <a href="https://sph.nbu.edu.cn/" class="nbdx_mc_enter_item float_left">
+                    <img src="../images/icon_enter_03.png">
+                    <div class="name">公共卫生学院</div>
+                </a>
+                <a href="https://lac.nbu.edu.cn/" class="nbdx_mc_enter_item float_left">
+                    <img src="../images/icon_enter_06.png">
+                    <div class="name">实验动物中心</div>
+                </a>
+                <a href="http://ytjx.nbu.edu.cn" class="nbdx_mc_enter_item float_left">
+                    <img src="../images/icon_enter_02.png">
+                    <div class="name">遗体捐献接受站</div>
+                </a>                    
+                <a href="http://47.100.28.23/CMS" class="nbdx_mc_enter_item float_left">
+                    <img src="../img/icon-pc/S4_icon.svg">
+                    <div class="name">信息门户系统</div>
+                </a>
+                <a href="https://medicine.nbu.edu.cn/yxyweb/lmy.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1862" class="nbdx_mc_enter_item float_left">
+                    <img src="../images/icon_enter_08.png">
+                    <div class="name">地方服务平台</div>
+                </a>                                             
+            </div>
+        </div>
+        
+
+        <div class="nbdx_mc_link_box back_gray">
+            <div class="title">相关链接</div>
+            <div class="nbdx_mc_link_list float_after"><ul>                            
+<li><a href="http://wjw.ningbo.gov.cn/">宁波市卫生健康委员会</a></li>
+<li><a href="http://www.nbdyyy.com/">宁波大学附属第一医院</a></li>
+<li><a href="http://www.nblhlyy.com/">宁波大学附属李惠利医院</a></li>
+<li><a href="https://www.nbyzyy.com/">宁波大学附属人民医院</a></li>
+</ul></div>
+        </div>
+        
+      <div class="nbdx_mc_footer padding-box">
+        <div class="common_width float_after">
+          <div class="nbdx_mc_footer_top float_after">
+            <div class="layui-col-lg10 layui-col-xs12">
+              <img class="footer_logo" src="../images/footer-logo.png">
+              <div class="con"><span>地址：中国浙江宁波市江北区风华路818号</span><span>邮编：315211</span><span>电话：+86-574-87600674</span></div>
+            </div>
+            <div class="layui-col-lg2 layui-col-xs12 qrcode_fra">
+              <img class="qrcode" src="../images/code.jpg">
+            </div>
+          </div>
+          <div class="nbdx_mc_footer_bottom">版权所有 © 宁波大学医学部<br>技术支持：宁波甬讯通信息科技有限公司</div>
+        </div>
+      </div>
+   </div>
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../layui/layui.all.js"></script>
+    <script src="../js/mobile/toucher.js"></script>
+    <script type="text/javascript">
+        var now_width = $(window).width();
+        layui.use(['form','carousel'], function() {
+            var form = layui.form;
+            var carousel = layui.carousel;
+
+            //监听搜索提交
+            form.on('submit(searchSubmit)', function(data) {
+                console.log(data.field)
+                return false;
+            });
+            
+          //建造实例
+          var ori_width = 1920;
+          var ori_height = 460;
+          
+          var now_height = parseInt(now_width*ori_height/ori_width);
+          var now_height = 460;
+          if(now_width<1200){ 
+              now_height = 183;
+          } 
+          
+        });
+        
+
+        
+        var menu_flag = 0;
+        function showNavMobile(){
+            if(menu_flag == 0){
+                menu_flag = 1
+                $(".nbdx_mc_nav").css("opacity",1).css("visibility","visible");
+            }else{
+                menu_flag = 0
+                $(".nbdx_mc_nav").css("opacity",0).css("visibility","hidden");
+            }
+            
+        }
+        
+       function showNavMobile2(which){
+            $(which).find(".nbdx_mc_sec_nav").removeClass('transition_all')
+            $(which).find(".nbdx_mc_sec_nav .nbdx_mc_sec_nav_item ").removeClass('transition_all')
+            var ishide = $(which).find(".nbdx_mc_sec_nav").css("display");
+            console.log("ishide = "+ishide);
+            if(ishide == 'none'){              
+                $(which).find(".nbdx_mc_sec_nav").css("display","block");
+            }else{                
+                $(which).find(".nbdx_mc_sec_nav").css("display","none");
+            }
+            
+        }
+        
+        $(".nbdx_mc_slide_box .mc_slide_item").click(function(){
+            var index= $(this).data('index');
+            $(".nbdx_mc_slide_box .mc_slide_item").removeClass('on');
+            $(".nbdx_mc_slide_box .mc_slide_item").eq(index).addClass('on');
+            $(".nbdx_mc_slide_show_box .nbdx_mc_slide_show").css("display","none");
+            $(".nbdx_mc_slide_show_box .nbdx_mc_slide_show").eq(index).css("display","block");
+        })
+        
+        var sub_nav_menu_flag = 0;
+        function showSubNavMobile2(){ 
+            console.log("ss")
+            if(sub_nav_menu_flag == 0){
+                $(".nbdx_mc_sub_nav").css("display","block");
+                sub_nav_menu_flag = 1;
+            }else if(sub_nav_menu_flag == 1){
+                $(".nbdx_mc_sub_nav").css("display","none");
+                sub_nav_menu_flag = 0;
+            }
+        }       
+        
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

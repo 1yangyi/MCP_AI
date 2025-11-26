@@ -1,0 +1,491 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+    <title>学院简介-大连理工大学经济管理学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="大连理工大学，经济管理学院">
+
+    
+    <meta name="description" content="">
+    <meta name="generator" content="">
+    <meta name="copyright" content="大连理工大学经济管理学院">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link href="../css/global.css" rel="stylesheet" type="text/css">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307973475c50555742000300034056 -->
+<link rel="stylesheet" type="text/css" href="../tydy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1010,'/tydy.jsp',-1,1699836615)</script>
+</head>
+
+<body>
+    <div class="index_bg01 dis_1200">
+        <div class=" wrapper">
+            <div class="fl"><a href="../index.htm"><img alt="" src="../images/logo.png" style="height: 100px;"></a></div>
+            <div class="welcome fr">
+                <a class="index_icon01" href="http://www.dlut.edu.cn" target="_blank" style="font-size:14px">大连理工大学首页</a><a href="http://sem.dlut.edu.cn/en" style="font-size:14px">English</a>
+
+                <div class="index_search fr">
+                  
+
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu1">
+    <div id="appu1"><div><table border="0" cellspacing="1" cellpadding="0"><tbody><tr><td><input size="12" name="INTEXT" autocomplete="off" class="input"></td> <td align="absmiddle" nowrap="nowrap" height="1"><input type="submit" name="FindButton" value=" " class="btn"></td></tr></tbody></table></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+         <table border="0" cellspacing="1" cellpadding="0">
+  <tbody><tr>
+
+   <td>
+      
+       <input size="12" name="INTEXT"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" class="input">
+   </td>
+   <td align="absmiddle" nowrap="nowrap" height="1">
+                    <input class="btn" type="submit" v-on:click="onSubmit()" name="FindButton" value=" ">
+   </td>
+  </tr>
+ </tbody></table>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1699836615";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                </div>
+            </div>
+            <div class="cb"></div>
+        </div>
+        <div>
+            <div class=" wrapper">
+
+
+ <ul id="nav" class="nav clearfix">
+                    <li class="nLi on" style="width: 77px">
+                        <h3><a href="../index.htm">学院首页</a></h3>
+                    </li>
+                    <li class="nLi" style="width: 77px">
+                        <h3><a href="yzzc.htm">学院概况</a></h3>
+                        <ul class="sub">
+                            <li><a href="yzzc.htm">院长致辞</a></li>
+                            <li><a href="xyjj.htm">学院简介</a></li>
+                            <li><a href="gltd1.htm">管理团队</a></li>
+                               <li><a href="lrld.htm">历任领导</a></li>
+                            <li><a href="xkx.htm">学科系</a></li>
+                            <li><a href="jdpt.htm">基地平台</a></li>
+                            <li><a href="zjwyh.htm">专家委员会</a></li>
+
+
+ <li><a href="dsj.htm">大事记</a></li>
+ <li><a href="lxwm.htm">联系我们</a></li>
+                        </ul>
+                    </li>
+                   
+                    <li class="nLi" style="width: 77px">
+                        <h3><a href="../xysz/gxsz.htm">学院师资</a></h3>
+                        <ul class="sub">
+                          <!--  <li><a href="../xysz/kytd.htm">科研团队</a></li> -->
+                            <li><a href="../xysz/gxsz.htm">各系师资</a></li>
+                            <li><a href="../xysz/js.htm">教授</a></li>
+                            <li><a href="../xysz/fjs.htm">副教授</a></li>
+                            <li><a href="../xysz/zljs_js.htm">助理教授/讲师</a></li>
+                            <li><a href="../xysz/zzkyry.htm">专职科研人员（含博士后）</a></li>
+
+  <li><a href="../xysz/rxjs1.htm">荣休教师</a></li>
+                        </ul>
+                    </li>
+                    <li class="nLi" style="width: 77px">
+                        <h3><a href="../xsky/kytz.htm">学术科研</a></h3>
+                        <ul class="sub">
+                            <li><a href="../xsky/kytz.htm">科研通知</a></li>
+                            <li><a href="../xsky/xkjs.htm">学科介绍</a></li>
+                            <li><a href="../xsky/kyxx.htm">科研信息</a></li>
+                            <li><a href="../xsky/kycg.htm">科研成果</a></li>
+                            <li><a href="../xsky/kyzc.htm">科研政策</a></li>
+                  
+                        </ul>
+                    </li>
+                    <li class="nLi" style="width: 77px">
+                        <h3><a href="../bks.htm">本科生</a></h3>
+                        <ul class="sub">
+                                                    <li><a href="../bks/tzgg/tzgg.htm">通知公告</a></li>
+                            <li><a href="../bks/zsxx/zyjs.htm">招生信息</a></li>
+                            <li><a href="../bks/pytx/pytx.htm">培养体系</a></li>
+                                                        <li><a href="../bks/zysz/zysz.htm">专业师资</a></li>
+                            <li><a href="../bks/xysh/txgongzuo.htm">校园生活</a></li>
+                            <li><a href="../bks/tdjs/tdjs.htm">职业发展</a></li>
+
+                              <li><a href="http://semis.dlut.edu.cn/cmis" target="_blank">师生互选系统</a></li>
+                        </ul>
+                    </li>
+                    <li class="nLi" style="width: 77px">
+                        <h3><a href="../yjs.htm">研究生</a></h3>
+                        <ul class="sub">
+                            <li><a href="../yjs/tzgg/tzgg.htm">通知公告</a></li>
+
+                            <li><a href="../yjs/yjspy/ssyjs.htm">研究生培养</a></li>
+                            <li><a href="../yjs/xysh/xysh.htm">校园生活</a></li>
+                            <li><a href="../yjs/zlxz/zlxz.htm">资料下载</a></li>
+                               <li><a href="http://semis.dlut.edu.cn/tp_appc_gppr" target="_blank">研究生学位论文预审系统</a></li>                   
+                        </ul>
+                    </li>
+                    <li class="nLi">
+                        <h3><a href="http://mba.dlut.edu.cn" target="_blank" style="width:120px">专业学位教育中心</a></h3>
+                        <ul class="sub">
+                            <li><a href="http://mba.dlut.edu.cn" target="_blank">MBA</a></li>
+                            <li><a href="http://emba.dlut.edu.cn" target="_blank">EMBA</a></li>
+                            <li><a href="http://mba.dlut.edu.cn" target="_blank">MEM</a></li>
+                            <li><a href="http://edp.dlut.edu.cn" target="_blank">EDP</a></li>
+                        </ul>
+                    </li>
+                    <li class="nLi" style="width: 77px">
+                        <h3><a href="../gjhz.htm">国际合作</a></h3>
+                        <ul class="sub">
+                            <li><a href="../gjhz/gjjl/gjjlgs.htm">国际交流</a></li>
+                            <li><a href="../gjhz/jszcq/zqcgj_dy90t_.htm">教师走出去</a></li>
+                            <li><a href="https://dutdice.dlut.edu.cn/4jilist2.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1078">教师引进来</a></li>
+                            <li><a href="../gjhz/xszcq/xyxstz.htm">学生走出去</a></li>
+                            <li><a href="https://dutdice.dlut.edu.cn/xsyjl/zqlxlxxm/xmjs.htm">学生引进来</a></li>
+                            <li><a href="../gjhz/gjrz/AACSB.htm">国际认证</a></li>
+                            <li><a href="../gjhz/tzgs/tzgs.htm">通知公示</a></li>
+                          
+                        </ul>
+                    </li>
+                    <li class="nLi" style="width: 77px">
+                        <h3><a href="../xyxy.htm">学院校友</a></h3>
+                        <ul class="sub">
+                            <li><a href="../xyxy/xyzz/xyzz.htm">校友组织</a></li>
+                            <li><a href="http://alumni.dlut.edu.cn/fw1.htm">校友服务</a></li>
+                            <li><a href="../xyxy/xyhd/xyhd.htm">校友活动</a></li>
+                            <li><a href="../xyxy/xyfc/xyfc.htm">校友风采</a></li>
+                            <li><a href="../xyxy/xykw/xykw.htm">校友刊物</a></li>
+                            <li><a href="../xyxy/xyjz/jzxm.htm">校友捐赠</a></li>
+                        </ul>
+                    </li>
+                 <li class="nLi" style="width: 77px">
+                        <h3><a href="../dj.htm">党群工作</a></h3>
+                        <ul class="sub">
+                            <li><a href="../dj/zzjg/xydw.htm">组织机构</a></li>
+                            <li><a href="../dj/xygh/xygh.htm">学院工会</a></li>
+                            <li><a href="../dj/gzzd/gzzd.htm">政策规章</a></li>
+                            <li><a href="../dj/xxyd/xxyd.htm">学习园地</a></li>
+                            <li><a href="../dj/zlxz/zlxz.htm">资料下载</a></li>
+                        </ul>
+                    </li>
+                  
+                  <li class="nLi" style="width: 77px">
+                        <h3><a href="../xyzp/zyjszp.htm">学院招聘</a></h3>
+                        <ul class="sub">
+                            <li><a href="../xyzp/zyjszp.htm">专任教师招聘</a></li>
+
+    <li><a href="../xyzp/bshzp.htm">博士后招聘</a></li>
+                            <li><a href="../xyzp/zyzp.htm">职员招聘</a></li>
+                            <li><a href="../xyzp/zpzc.htm">招聘政策</a></li>
+                        </ul>
+                    </li>
+                    <li class="nLi" style="width: 77px">
+                        <h3><a href="http://www.cmcc-dlut.cn/" target="_blank">案例中心</a></h3>
+                           <ul class="sub">
+    <li><a href="../alzx/zxjj.htm">中心简介</a></li>
+                            <li><a href="../alzx/zzjg2.htm">组织结构</a></li>
+                            <li><a href="http://www.cmcc-dlut.cn/" target="_blank">共享中心</a></li>
+                            <li><a href="http://journal26.magtechjournal.com/glalyjypl/CN/home" target="_blank">学术期刊</a></li>
+                        </ul>
+                    </li>
+                    
+                      <li class="nLi" style="width: 87px">
+                        <h3><a>智慧经管</a></h3>
+                            <ul class="sub">
+                            <li><a href="http://semis.dlut.edu.cn/cmis" target="_blank">本科生师生互选系统</a></li>
+                            <li><a href="http://semis.dlut.edu.cn/tp_appc_gppr" target="_blank">研究生学位论文内审系统</a></li>
+                            <li><a href="http://mbamis.dlut.edu.cn/cmis_mba/" target="_blank">专业学位师生互选系统</a></li>
+                            <li><a href="http://mbamis.dlut.edu.cn/tp_appc_ppr" target="_blank">专业学位论文管理系统</a></li>
+                            <li><a href="../zygx/ptjs.htm" target="_blank">资源共享平台</a></li>
+                            <li><a href="http://semkq.dlut.edu.cn" target="_blank">考勤系统</a></li> 
+                        </ul>
+                    </li>
+                          
+                           <li class="nLi" style="width: 87px">
+                        <h3><a href="https://ip.dlut.edu.cn/" target="_blank">知识产权学院</a></h3>
+                           </li>
+                    
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="fullSlide">
+        <div class="bd">
+           <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+         
+            <ul style="position: relative; width: 1280px; height: 560px;">
+                <li style="background: url(&quot;../images/_DSC7951.png&quot;) center 0px no-repeat; position: absolute; width: 1280px; left: 0px; top: 0px;"></li>
+            </ul>
+        
+
+        </div>
+    </div>
+    <div class="bg03">
+        <div class=" wrapper">
+            <div class="ny_left fl">
+                <div class="t"> <span> 
+学院概况  </span></div>
+                <div class="con">
+                    <ul>
+            <li><a href="yzzc.htm" title="院长致辞">院长致辞</a></li>
+        <li><a href="xyjj.htm" title="学院简介">学院简介</a></li>
+        <li><a href="gltd1.htm" title="管理团队">管理团队</a></li>
+        <li><a href="lrld.htm" title="历任领导">历任领导</a></li>
+        <li><a href="xkx.htm" title="学科系">学科系</a></li>
+        <li><a href="jdpt.htm" title="基地平台">基地平台</a></li>
+        <li><a href="zjwyh.htm" title="专家委员会">专家委员会</a></li>
+        <li><a href="dsj.htm" title="大事记">大事记</a></li>
+        <li><a href="lxwm.htm" title="联系我们">联系我们</a></li>
+</ul>
+
+                </div>
+            </div>
+            <div class="ny_right fr">
+                <div class="ny_pos"><div>
+    当前位置: 
+                        <a href="../index.htm">首页</a>
+                &gt;&gt;
+                学院概况
+                &gt;&gt;
+                <a href="xyjj.htm">学院简介</a>
+</div>
+                </div>
+                <div class="t"> <span class="span">
+学院简介</span>
+
+                </div>
+                 <div class="con">
+                    <div class="content">
+
+
+
+
+
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1699836615,'wbnews','u8')</script>
+<script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1699836615,1092)</script>
+<p>
+
+    </p><div id="vsb_content_1092_u81"><div id="vsb_content"><p style="text-align: justify; line-height: 2em; font-family: calibri, sans-serif; font-size: 16px; white-space: normal;"><span style="color: rgb(0, 112, 192); line-height: 48px; font-family: 微软雅黑, sans-serif; font-size: 32px;">笃行 厚学</span></p><p style="text-align: justify; line-height: 2em; font-family: calibri, sans-serif; font-size: 16px; white-space: normal;"><span style="color: rgb(0, 112, 192); font-family: 微软雅黑, sans-serif;">扎根实践培养卓越管理人才 凝练商学新知 推动社会进步</span></p><p style="text-align: justify; line-height: 24px; font-family: calibri, sans-serif; font-size: 16px; white-space: normal;"><span style="color: rgb(0, 112, 192); font-family: 微软雅黑, sans-serif;"><br></span></p><p style="text-align: justify; line-height: 24px; font-family: calibri, sans-serif; font-size: 16px; white-space: normal;"><span lang="EN-US" style="color: rgb(34, 34, 34); font-family: 微软雅黑, sans-serif;"></span></p><p style="text-align: justify;"><img width="860" height="260" title="" alt="" src="/__local/B/43/23/B1C4219B58F966F147845C81BE3_F90BA564_E0A2.jpg" border="0" vspace="0" hspace="0" vwidth=" 860px" vheight=" 260px" vurl="/_vsl/B4323B1C4219B58F966F147845C81BE3/F90BA564/E0A2" vsbhref="vurl" orisrc="/__local/F/6A/1D/7C088CB7F3E21F6556DF4811DCF_D84AC862_55EB91.jpg" class="img_vsb_content" style="width: 860px; height: 260px;"></p><p style="text-align: justify; line-height: 24px; font-family: calibri, sans-serif; font-size: 16px; white-space: normal;"><span lang="EN-US" style="color: rgb(34, 34, 34); font-family: 微软雅黑, sans-serif;"></span><br></p><p style="text-align: justify; line-height: 2em; text-indent: 2em; font-family: calibri, sans-serif; font-size: 16px; white-space: normal;"><span style="color: rgb(127, 127, 127); font-family: 微软雅黑, sans-serif; font-size: 16px;"></span></p><p style="margin: 5px 0;font-size: 16px;white-space: normal;text-align: justify;text-indent: 32px;line-height: 32px"><span style="font-family: 微软雅黑, sans-serif;color: rgb(127, 127, 127)">大连理工大学经济管理学院起源于<span lang="EN-US">1980</span>年创建的中国工业科技管理大连培训中心（简称大连培训中心）和大连工学院管理工程系；<span lang="EN-US">1984</span>年，与美国纽约州立大学布法罗分校合作，率先在中国引进<span lang="EN-US">MBA</span>学位教育，开创了中国<span lang="EN-US">MBA</span>教育的先河；<span lang="EN-US">1985</span>年，大连理工大学经教育部批准组建管理学院，成为国内最早成立的管理学院之一。发展至今，经济管理学院已经拥有3个学科系，3个国家级工程研究中心（实验室），1个学科创新引智基地，19个省部级工程研究中心（实验室），以及国内最大的管理案例共享平台。</span></p><p style="margin: 5px 0;font-size: 16px;white-space: normal;text-align: justify;text-indent: 32px;line-height: 32px"><span style="font-family: 微软雅黑, sans-serif;color: rgb(127, 127, 127)"><br></span></p><p style="margin: 5px 0;font-size: 16px;white-space: normal;text-align: justify;text-indent: 32px;line-height: 32px"><span style="font-family: 微软雅黑, sans-serif;color: rgb(127, 127, 127)">经济管理学院拥有管理科学与工程、工商管理、应用经济学<span lang="EN-US">3</span>个一级学科，人才培养和科学研究工作形成鲜明特色，教学科研成果稳居全国同类院校前列。学院拥有一支院士领衔，教育部特聘教授、国家级哲学社科领军人才、杰青、优青等名师荟萃的高水平师资队伍。在国内高校率先采用和推广管理案例教学方法，是中国管理案例教学的先锋。在教育部第四轮学科评估中，管理科学与工程、工商管理两个学科同时获得<span lang="EN-US">A-</span>级的评价，是国内拥有两个<span lang="EN-US">A</span>类学科的<span lang="EN-US">6</span>所商学院之一。在<span lang="EN-US">2018</span>年的专业学位评估中，工商管理硕士项目获得<span lang="EN-US">A</span>档评价，位居国内各高校前<span lang="EN-US">7%</span>的梯队。在全国一流本科专业建设<span lang="EN-US">“</span>双万计划<span lang="EN-US">”</span>中，信息管理与信息系统、工商管理、金融学及物流管理专业入选国家级一流本科专业建设点，国际经济与贸易专业、知识产权专业入选辽宁省一流本科教育示范专业。</span></p><p style="margin: 5px 0;font-size: 16px;white-space: normal;text-align: justify;text-indent: 32px;line-height: 32px"><span style="font-family: 微软雅黑, sans-serif;color: rgb(127, 127, 127)"><br></span></p><p style="margin: 5px 0;font-size: 16px;white-space: normal;text-align: justify;text-indent: 32px;line-height: 32px"><span style="font-family: 微软雅黑, sans-serif;color: rgb(127, 127, 127)">经济管理学院努力推进人才培养国际化，是校内留学生最多的单位之一。学院已与美国、加拿大、法国、荷兰、日本、澳大利亚以及港澳台等国家和地区的多所大学建立了学术交流、合作研究与合作办学等广泛的合作关系，是亚太商学院组织（<span lang="EN-US">AAPBS</span>）会员单位。</span></p><p style="margin: 5px 0;font-size: 16px;white-space: normal;text-align: justify;text-indent: 32px;line-height: 32px"><span style="font-family: 微软雅黑, sans-serif;color: rgb(127, 127, 127)"><br></span></p><p style="margin: 5px 0;font-size: 16px;white-space: normal;text-align: justify;text-indent: 32px;line-height: 32px"><span style="font-family: 微软雅黑, sans-serif;color: rgb(127, 127, 127)">经济管理学院一直将国际和国内认证作为事业发展和国际化的重要手段和载体。<span lang="EN-US">2015</span>年<span lang="EN-US">2</span>月，通过国际精英商学院协会（<span lang="EN-US">AACSB</span>）认证，成为东北地区第一家获得国际顶级商学院组织认证的商学院；<span lang="EN-US">2016</span>年<span lang="EN-US">6</span>月，通过中国高质量<span lang="EN-US">MBA</span>教育（<span lang="EN-US">CAMEA</span>）认证；<span lang="EN-US">2018</span>年<span lang="EN-US">3</span>月，通过欧洲质量发展认证体系（<span lang="EN-US">EQUIS</span>）国际认证；<span lang="EN-US">2021</span>年<span lang="EN-US">4</span>月，通过<span lang="EN-US">AMBA</span>认证，学院成为国内第<span lang="EN-US">7</span>所同时通过三大国际商学院认证和中国高质量<span lang="EN-US">MBA</span>教育认证（<span lang="EN-US">CAMEA</span>）的高校，实现国际国内顶级商学院认证大满贯。</span></p><p style="margin: 5px 0;font-size: 16px;white-space: normal;text-align: justify;text-indent: 32px;line-height: 32px"><span style="font-family: 微软雅黑, sans-serif;color: rgb(127, 127, 127)"><br></span></p><p style="margin: 5px 0;font-size: 16px;white-space: normal;text-align: justify;text-indent: 32px;line-height: 32px"><span style="font-family: 微软雅黑, sans-serif;color: rgb(127, 127, 127)">经济管理学院将始终秉承<span lang="EN-US">“</span>笃行厚学<span lang="EN-US">”</span>的理念，以<span lang="EN-US">“</span>扎根实践培养卓越管理人才、凝练商学新知、推动社会进步<span lang="EN-US">”</span>为使命，努力建设成扎根中国的世界一流商学院，并为中国的经济管理教育做出新的、更大的贡献。</span></p><p style="text-align: justify; line-height: 2em; text-indent: 2em; font-family: calibri, sans-serif; font-size: 16px; white-space: normal;"><span style="color: rgb(127, 127, 127); font-family: 微软雅黑, sans-serif; font-size: 16px;"></span><br></p><p style="text-align: justify; font-family: calibri, sans-serif; font-size: 14px; white-space: normal;"><br></p><p><br></p></div></div>
+    <span id="vsb_content_1092_u8" name="vsb_content_1092_u8"></span><br><br>
+    
+<p></p>
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="cb"></div>
+        </div>
+    </div>
+    <div class=" foot_bg01">
+        <div class=" wrapper">
+            <div class=" footer_one fl">
+                <div class="con">
+ 
+
+
+<ul>
+    <li>
+        <h3>
+            <a href="yzzc.htm" target="_blank" style="color:#BFBEBE;">学院概况</a>
+        </h3><a href="yzzc.htm">院长致辞</a> <a href="xyjj.htm">学院简介</a> <a href="gltd1.htm">管理团队</a><a href="lrld.htm">历任领导</a> <a href="xkx.htm">学科系</a> <a href="jdpt.htm">基地平台</a> <a href="zjwyh.htm">专家委员会</a> <a href="dsj.htm">大事记</a> <a href="lxwm.htm">联系我们</a> 
+    </li>
+  
+    <li>
+        <h3>
+             <a href="../xysz/gxsz.htm" target="_blank" style="color:#BFBEBE;">学院师资</a>
+        </h3><a href="../xysz/gxsz.htm">各系师资</a> <a href="../xysz/js.htm">教授</a> <a href="../xysz/fjs.htm">副教授</a> <a href="../xysz/zljs_js.htm">助理教授/讲师</a> <a href="../xysz/zzkyry.htm">专职科研人员（含博士后）</a> <a href="../xysz/rxjs1.htm">荣休教授</a> 
+    </li>
+    <li>
+        <h3>
+            <a href="../xsky/kytz.htm" target="_blank" style="color:#BFBEBE;">学术科研</a>
+        </h3><a href="../xsky/kytz.htm">科研通知</a> <a href="../xsky/xkjs.htm">学科介绍</a> <a href="../xsky/kyxx.htm">科研信息</a> <a href="../xsky/kycg.htm">科研成果</a> <a href="../xsky/kyzc.htm">科研政策</a> 
+    </li>
+    <li>
+        <h3>
+           <a href="../bks.htm" target="_blank" style="color:#BFBEBE;">教学项目</a>
+        </h3><a href="../bks.htm">本科生</a> <a href="../yjs.htm">研究生</a> <a href="http://mba.dlut.edu.cn" target="_blank">MBA</a> <a href="http://mba.dlut.edu.cn" target="_blank">MEM</a> <a href="http://mba.dlut.edu.cn" target="_blank">MF</a> <a href="http://emba.dlut.edu.cn" target="_blank">EMBA</a> <a href="http://edp.dlut.edu.cn" target="_blank">EDP</a> 
+    </li>
+    <li>
+        <h3>
+            <a href="../gjhz/gjjl/gjjlgs.htm" target="_blank" style="color:#BFBEBE;">国际合作</a>
+          </h3>
+          
+              <a href="../gjhz/gjjl/gjjlgs.htm" target="">国际交流</a>
+               <a href="../gjhz/jszcq/zqcgj_dy90t_.htm" target="">教师走出去</a> 
+               <a href="../gjhz/jsyjl/jsyjl.htm" target="">教师引进来</a> 
+               <a href="../gjhz/xszcq/xyxstz.htm" target="">学生走出去</a> 
+               <a href="https://dutdice.dlut.edu.cn/xsyjl/zqlxlxxm/xmjs.htm" target="">学生引进来</a>
+               <a href="../gjhz/gjrz/AACSB.htm" target="">国际认证</a> 
+               <a href="../gjhz/tzgs/tzgs.htm" target="">通知公示</a> 
+
+    </li>
+    <li>
+        <h3>
+            <a href="../xyxy/xyzz/xyzz.htm" target="_blank" style="color:#BFBEBE;">学院校友</a>
+        </h3><a href="../xyxy/xyzz/xyzz.htm">校友组织</a> <a href="http://alumni.dlut.edu.cn/fw1.htm">校友服务</a> <a href="../xyxy/xyhd/xyhd.htm">校友活动</a> <a href="../xyxy/xyfc/xyfc.htm">校友风采</a> <a href="../xyxy/xykw/xykw.htm">校友刊物</a> <a href="../xyxy/xyjz/jzxm.htm">校友捐赠</a> 
+    </li>
+    
+      <li>
+        <h3>
+             <a href="../dj/zzjg/dzb.htm" target="_blank" style="color:#BFBEBE;">党群工作</a>
+        </h3><a href="../dj/zzjg/dzb.htm">组织机构</a> <a href="../dj/xygh/xygh.htm">学院工会</a> <a href="../dj/gzzd/gzzd.htm">政策规章</a> <a href="../dj/xxyd/xxyd.htm">学习园地</a> <a href="../dj/zlxz/zlxz.htm">资料下载</a> 
+    </li>
+    
+    <li>
+        <h3>
+            <a href="../xyzp/zyjszp.htm" target="_blank" style="color:#BFBEBE;">学院招聘</a>
+        </h3><a href="../xyzp/zyjszp.htm">专任教师招聘</a> <a href="../xyzp/bshzp.htm">博士后招聘</a> <a href="../xyzp/zyzp.htm">职员招聘</a> <a href="../xyzp/zpzc.htm">招聘政策</a> 
+    </li>
+   <!--
+    <li>
+        <h3>
+            <a href="/shiyanzhongxin/syzxdy.jsp?urltype=tree.TreeTempUrl&wbtreeid=1084" target="_blank" style="color:#BFBEBE;">实验中心</a>
+        </h3><a href="/shiyanzhongxin/syzxdy.jsp?urltype=tree.TreeTempUrl&wbtreeid=1084">中心简介</a> <a href="/shiyanzhongxin/syzxlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1082">实验教学</a> <a href="/shiyanzhongxin/syzxdy.jsp?urltype=tree.TreeTempUrl&wbtreeid=1083">实验室概况</a> <a href="/shiyanzhongxin/syzxlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1085#">科研与创新</a> <a href="/shiyanzhongxin/syzxlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1086">共享平台</a> <a href="/shiyanzhongxin/syzxlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1087">成果展示</a> <a href="/shiyanzhongxin/syzxlist.jsp?urltype=tree.TreeTempUrl&wbtreeid=1088">下载中心</a> 
+    </li>
+    -->
+    <div class="cb"></div>
+</ul>
+
+
+                </div>
+            </div>
+            <div class=" footer_two fr">
+               <a href="#" class="qrcode"><img alt="" src="../images/weixin.png"><img width="100" height="100" class="img" src="../images/weixinerweima.jpg" style="margin-top: 25px;"></a>
+                <a href="#" class="qrcode"><img alt="" src="../images/weibo.png"><img width="100" height="100" class="img" src="../images/weiboerweima.jpg" style="margin-top: 25px;"></a>
+                <a href="#" class="qrcode"><img alt="" src="../images/tik.png"><img width="100" height="100" class="img" src="../images/douyinerweima.jpg" style="margin-top: 25px;"></a>
+                <a href="#" class="qrcode"><img alt="" src="../images/bili.png"><img width="100" height="100" class="img" src="../images/bilibili.jpg" style="margin-top: 25px;"></a>
+                <br>
+                <img alt="" src="../images/index05.png" style="margin-top: 120px;">
+            </div>
+            <div class="cb"></div>
+        </div>
+        <div class="footer_three">
+            <div class=" wrapper">
+          
+<!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>&nbsp;Copyright@2024大连理工大学经济管理学院 中国辽宁省大连市甘井子区凌工路2号 邮编：116024 电话：0411-84708344</p>
+            </div>
+        </div>
+    </div>
+    
+    
+      <div class="btn btn-icon btn-ftop btn-squared met-scroll-top hide">
+        <img src="../images/gotop.png">
+    </div>
+        <script src="../js/jquery.min.js"></script>
+   
+    <script type="text/javascript" src="../js/jquery.SuperSlide.js"></script>
+    <script type="text/javascript" src="../js/js.js"></script>
+
+
+
+
+
+
+</body></html>

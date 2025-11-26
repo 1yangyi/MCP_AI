@@ -1,0 +1,808 @@
+<!DOCTYPE html><html lang="en" style="font-size: 67px;"><head><title>学院简介-空间科学与技术学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="空间科学与技术学院,学院简介">
+
+
+
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="ie=edge" http-equiv="X-UA-Compatible"><link rel="stylesheet" href="../css/style.css"><script src="../js/jquery.js"></script><script src="../js/superslide.js"></script>
+
+<link rel="stylesheet" href="../css24/style.css">
+<link rel="stylesheet" href="../css24/swiper.min.css">
+
+<script src="../js24/set.js"></script>
+<script src="../js24/swiper.min.js"></script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232306975475350545742000400004256 -->
+<link rel="stylesheet" type="text/css" href="../zwy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1022,'/zwy.jsp',-1,1676986715)</script>
+<style>
+img.par1_bg {
+    display: none;}
+.nry .right .show .show01 p i {
+    padding-right: 0%;}
+</style></head>
+
+
+
+<body class="show">
+<div class="tc2">
+<div class="tc" name="t3">
+<div class="tc-box">
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{/*
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;*/
+        
+        border: none;
+    width: 94%;
+    display: block;
+    height: 60px;
+    text-align: left;
+    color: #434343;
+    font-size: 14px;
+    background: none;
+    line-height: 60px;
+    padding: 0 20px;}
+    #appu0 .tj{/*
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;*/
+        position: absolute;
+    right: 0;
+    top: 50%;
+    padding: 0;
+    z-index: 2;
+    background: url(../images/icon_search.png) center no-repeat;
+    height: 60px;
+    width: 70px;
+    cursor: pointer;
+    border: none;
+    background-size: 20px 20px;
+    margin-top: -30px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><input type="text" placeholder="请输入搜索关键字..." autocomplete="off" class="qwss"> <input name="submit_button" type="button" value="" class="tj"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="请输入搜索关键字..." autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value=""  v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1676986715";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+</div>
+<script src="../js/jquery.js"></script>
+<script src="../js/superslide.js"></script>
+<div class="tc-bg"></div></div></div><!--part1--><img class="par1_bg" alt="" src="../images/part1_bg.png"> 
+
+
+<div class="part1">
+<div class="headT">
+<div class="w178">
+
+<div class="logo fl">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="空间科学与技术学院（2020）"><img alt="" src="../images24/logo.png"></a></div>
+<div class="head_right fr">
+<div class="top_lj">
+<ul class="fr"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>    <li><a href="mailto:sastsj@xidian.edu.cn" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63948)">书记信箱</a></li>
+    <li><a href="mailto:sastyz@xidian.edu.cn" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63949)">院长信箱</a></li>
+    <li><a href="mailto:sast@xidian.edu.cn" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63950)">学院信箱</a></li>
+    <li><a href="http://stumail.xidian.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63951)">学生邮件</a></li>
+    <li><a href="http://webmail.xidian.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63952)">教工邮件</a></li>
+    <li><a href="https://sast.xidian.edu.cn/xygk/jgsz/xybgs.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63953)">联系我们</a></li>
+
+<li class="btn btn01" name="t3" style="margin: 0px"><img alt="" src="../images/search1.png"> </li></ul></div>
+
+<div class="nav_btn fr"><span class="line"></span></div>
+
+<div class="nav_box"> <ul class="sj_nav">
+
+<li><a href="../index.htm">首页</a>
+</li>
+
+
+
+
+
+
+<li><a href="../xygk.htm">学院概况</a>
+<ul class="sub">
+<li><a href="xyjj.htm">学院简介</a> </li>
+<li><a href="xrld.htm">现任领导</a> </li>
+<li><a href="lrld.htm">历任领导</a> </li>
+<li><a href="jgsz.htm">机构设置</a> </li>
+<li><a href="wyh.htm">委员会</a> </li>
+<li><a href="ldzc.htm">领导致辞</a> </li>
+<li><a href="dsj.htm">大事记</a> </li>
+</ul>
+</li>
+
+
+
+
+
+
+<li><a href="../szdw.htm">师资队伍</a>
+<ul class="sub">
+<li><a href="../szdw/rygk.htm">人员概况</a> </li>
+<li><a href="../szdw/ysfc.htm">院士风采</a> </li>
+<li><a href="../szdw/kjyc.htm">空间英才</a> </li>
+<li><a href="../szdw/zmjs.htm">教授</a> </li>
+<li><a href="../szdw/ggjs1/cktxx.htm">骨干教师</a> </li>
+</ul>
+</li>
+
+
+
+
+
+
+<li><a href="../djgz/zzjg.htm">党建工作</a>
+</li>
+
+
+
+
+
+
+<li><a href="../sdsf1.htm">师德师风</a>
+<ul class="sub">
+<li><a href="../sdsf1/llxx.htm">理论学习</a> </li>
+<li><a href="../sdsf1/sddx.htm">师德典型</a> </li>
+<li><a href="../sdsf1/sdgf.htm">师德规范</a> </li>
+<li><a href="../sdsf1/sdjd.htm">师德监督</a> </li>
+<li><a href="../sdsf1/sy.htm">师语</a> </li>
+</ul>
+</li>
+
+
+
+
+
+
+<li><a href="../bkjy.htm">本科教育</a>
+<ul class="sub">
+<li><a href="../bkjy/bkzy.htm">本科专业</a> </li>
+<li><a href="../bkjy/jxcg.htm">教学成果</a> </li>
+<li><a href="../bkjy/jxgg.htm">教学改革</a> </li>
+<li><a href="../bkjy/xsjs.htm">学生竞赛</a> </li>
+<li><a href="https://zsb.xidian.edu.cn/info/1057/2040.htm">招生信息</a> </li>
+<li><a href="https://jwc.xidian.edu.cn/cyxz.htm">资料下载</a> </li>
+</ul>
+</li>
+
+
+
+
+
+
+<li><a href="../yjspy.htm">研究生培养</a>
+<ul class="sub">
+<li><a href="../yjspy/zsjz.htm">招生简章</a> </li>
+<li><a href="../yjspy/pyfa.htm">培养方案</a> </li>
+<li><a href="../yjspy/dsjs.htm">导师介绍</a> </li>
+<li><a href="../yjspy/zlxz.htm">资料下载</a> </li>
+</ul>
+</li>
+
+
+
+
+
+
+<li><a href="../xkky.htm">学科科研</a>
+<ul class="sub">
+<li><a href="../xkky/xkts.htm">学科特色</a> </li>
+<li><a href="../xkky/kygk.htm">科研概况</a> </li>
+<li><a href="../xkky/kytd.htm">科研团队</a> </li>
+<li><a href="../xkky/kycg.htm">科研成果</a> </li>
+<li><a href="../xkky/hzjl.htm">合作交流</a> </li>
+</ul>
+</li>
+
+
+
+
+
+
+<li><a href="../syzx.htm">实验中心</a>
+<ul class="sub">
+<li><a href="../syzx/bkjxzysys.htm">本科教学专业实验室</a> </li>
+<li><a href="../syzx/dxssjjkyxlsys.htm">大学生实践及科研训练实验室</a> </li>
+<li><a href="../syzx/dbcbjtzclsys.htm">电波传播及特种测量实验室</a> </li>
+<li><a href="../syzx/kjwlhjsys.htm">空间物理环境实验室</a> </li>
+</ul>
+</li>
+
+
+
+
+
+
+<li><a href="../xszj.htm">学生之家</a>
+<ul class="sub">
+<li><a href="../xszj/txzz.htm">团学组织</a> </li>
+<li><a href="../xszj/tzgg.htm">通知公告</a> </li>
+<li><a href="../xszj/hddt.htm">活动动态</a> </li>
+<li><a href="../xszj/bszn.htm">办事指南</a> </li>
+<li><a href="../xszj/xsxyfzzx.htm">学生学业发展中心</a> </li>
+</ul>
+</li>
+
+
+
+
+
+
+<li><a href="../rczp.htm">人才招聘</a>
+<ul class="sub">
+<li><a href="../rczp/zpjh.htm">招聘计划</a> </li>
+<li><a href="../rczp/gjrcjh/gjzjxz.htm">国家人才计划</a> </li>
+<li><a href="../rczp/xxrcjh.htm">学校人才计划</a> </li>
+</ul>
+</li>
+
+
+
+
+
+
+<li><a href="../qxsb/qbjj.htm">钱学森班</a>
+<ul class="sub">
+<li><a href="../qxsb/qbjj.htm">钱班简介</a> </li>
+<li><a href="../qxsb/xwdt.htm">新闻动态</a> </li>
+<li><a href="../qxsb/wyqbgcz.htm">我与钱班共成长</a> </li>
+<li><a href="../qxsb/fczs.htm">风采展示</a> </li>
+</ul>
+</li>
+
+
+
+
+
+
+<li><a href="../English/Home.htm">English</a></li>
+
+
+
+
+
+
+</ul></div>
+<div class="clear"></div>
+
+</div>
+
+
+<div class="clear"></div>
+
+<div class="nav_div">    <ul id="nav" class="nav clearfix">
+<li class="nLi">
+<h3><a href="../index.htm">首页</a></h3>
+</li>
+
+
+
+<li class="nLi on">
+<h3><a href="../xygk.htm">学院概况</a></h3>
+<ul class="sub">
+<li><a href="xyjj.htm">学院简介</a> </li>
+<li><a href="xrld.htm">现任领导</a> </li>
+<li><a href="lrld.htm">历任领导</a> </li>
+<li><a href="jgsz.htm">机构设置</a> </li>
+<li><a href="wyh.htm">委员会</a> </li>
+<li><a href="ldzc.htm">领导致辞</a> </li>
+<li><a href="dsj.htm">大事记</a> </li>
+</ul>
+</li>
+
+
+
+<li class="nLi">
+<h3><a href="../szdw.htm">师资队伍</a></h3>
+<ul class="sub">
+<li><a href="../szdw/rygk.htm">人员概况</a> </li>
+<li><a href="../szdw/ysfc.htm">院士风采</a> </li>
+<li><a href="../szdw/kjyc.htm">空间英才</a> </li>
+<li><a href="../szdw/zmjs.htm">教授</a> </li>
+<li><a href="../szdw/ggjs1/cktxx.htm">骨干教师</a> </li>
+</ul>
+</li>
+
+
+
+<li class="nLi">
+<h3><a href="../djgz/zzjg.htm">党建工作</a></h3>
+</li>
+
+
+
+<li class="nLi">
+<h3><a href="../sdsf1.htm">师德师风</a></h3>
+<ul class="sub">
+<li><a href="../sdsf1/llxx.htm">理论学习</a> </li>
+<li><a href="../sdsf1/sddx.htm">师德典型</a> </li>
+<li><a href="../sdsf1/sdgf.htm">师德规范</a> </li>
+<li><a href="../sdsf1/sdjd.htm">师德监督</a> </li>
+<li><a href="../sdsf1/sy.htm">师语</a> </li>
+</ul>
+</li>
+
+
+
+<li class="nLi">
+<h3><a href="../bkjy.htm">本科教育</a></h3>
+<ul class="sub">
+<li><a href="../bkjy/bkzy.htm">本科专业</a> </li>
+<li><a href="../bkjy/jxcg.htm">教学成果</a> </li>
+<li><a href="../bkjy/jxgg.htm">教学改革</a> </li>
+<li><a href="../bkjy/xsjs.htm">学生竞赛</a> </li>
+<li><a href="https://zsb.xidian.edu.cn/info/1057/2040.htm">招生信息</a> </li>
+<li><a href="https://jwc.xidian.edu.cn/cyxz.htm">资料下载</a> </li>
+</ul>
+</li>
+
+
+
+<li class="nLi">
+<h3><a href="../yjspy.htm">研究生培养</a></h3>
+<ul class="sub">
+<li><a href="../yjspy/zsjz.htm">招生简章</a> </li>
+<li><a href="../yjspy/pyfa.htm">培养方案</a> </li>
+<li><a href="../yjspy/dsjs.htm">导师介绍</a> </li>
+<li><a href="../yjspy/zlxz.htm">资料下载</a> </li>
+</ul>
+</li>
+
+
+
+<li class="nLi">
+<h3><a href="../xkky.htm">学科科研</a></h3>
+<ul class="sub">
+<li><a href="../xkky/xkts.htm">学科特色</a> </li>
+<li><a href="../xkky/kygk.htm">科研概况</a> </li>
+<li><a href="../xkky/kytd.htm">科研团队</a> </li>
+<li><a href="../xkky/kycg.htm">科研成果</a> </li>
+<li><a href="../xkky/hzjl.htm">合作交流</a> </li>
+</ul>
+</li>
+
+
+
+<li class="nLi">
+<h3><a href="../syzx.htm">实验中心</a></h3>
+<ul class="sub">
+<li><a href="../syzx/bkjxzysys.htm">本科教学专业实验室</a> </li>
+<li><a href="../syzx/dxssjjkyxlsys.htm">大学生实践及科研训练实验室</a> </li>
+<li><a href="../syzx/dbcbjtzclsys.htm">电波传播及特种测量实验室</a> </li>
+<li><a href="../syzx/kjwlhjsys.htm">空间物理环境实验室</a> </li>
+</ul>
+</li>
+
+
+
+<li class="nLi">
+<h3><a href="../xszj.htm">学生之家</a></h3>
+<ul class="sub">
+<li><a href="../xszj/txzz.htm">团学组织</a> </li>
+<li><a href="../xszj/tzgg.htm">通知公告</a> </li>
+<li><a href="../xszj/hddt.htm">活动动态</a> </li>
+<li><a href="../xszj/bszn.htm">办事指南</a> </li>
+<li><a href="../xszj/xsxyfzzx.htm">学生学业发展中心</a> </li>
+</ul>
+</li>
+
+
+
+<li class="nLi">
+<h3><a href="../rczp.htm">人才招聘</a></h3>
+<ul class="sub">
+<li><a href="../rczp/zpjh.htm">招聘计划</a> </li>
+<li><a href="../rczp/gjrcjh/gjzjxz.htm">国家人才计划</a> </li>
+<li><a href="../rczp/xxrcjh.htm">学校人才计划</a> </li>
+</ul>
+</li>
+
+
+
+<li class="nLi">
+<h3><a href="../qxsb/qbjj.htm">钱学森班</a></h3>
+<ul class="sub">
+<li><a href="../qxsb/qbjj.htm">钱班简介</a> </li>
+<li><a href="../qxsb/xwdt.htm">新闻动态</a> </li>
+<li><a href="../qxsb/wyqbgcz.htm">我与钱班共成长</a> </li>
+<li><a href="../qxsb/fczs.htm">风采展示</a> </li>
+</ul>
+</li>
+
+
+
+<li class="nLi">
+<h3><a href="../English/Home.htm">English</a></h3>
+</li>
+
+
+
+</ul>
+<div class="clear"></div></div>
+
+</div>
+</div>
+
+
+
+<!--erji-part1-end--><!--erji-banner-->
+<div class="ej_banner"><img alt="" src="../images/ej_banner5.png"> </div><!--erji-banner-end--></div>
+<div class="erji_main nry">
+<div class="left">
+<div class="lm">
+学院概况</div>  <ul>
+  
+<li class="on"><a href="xyjj.htm">学院简介</a> 
+</li>
+<div></div>
+  
+<li class=""><a href="xrld.htm">现任领导</a> 
+</li>
+<div></div>
+  
+<li class=""><a href="lrld.htm">历任领导</a> 
+</li>
+<div></div>
+  
+<li class=""><a href="jgsz.htm">机构设置</a> 
+</li>
+<div></div>
+  
+<li class=""><a href="wyh.htm">委员会</a> 
+</li>
+<div></div>
+  
+<li class=""><a href="ldzc.htm">领导致辞</a> 
+</li>
+<div></div>
+  
+<li class=""><a href="dsj.htm">大事记</a> 
+</li>
+<div></div>
+</ul><img alt="" src="../images/ej_l_bo.png"> </div>
+<div class="right">
+<div class="wz">    位置：
+                        <a href="../index.htm">首页</a>
+                 &gt; 
+                <a href="../xygk.htm">学院概况</a>
+                 &gt; 
+                <a href="xyjj.htm">学院简介</a>
+
+</div>
+<div class="show">
+
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1676986715,'wbnews','u8')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1676986715,2273)</script>
+<div class="show01">
+<h5>学 院 简 介</h5>
+<p><i>发布时间：2020-09-22</i></p></div>
+    <div class="show02">
+    <div id="vsb_content_2_2273_u81"><div id="vsb_content_2"><p class="vsbcontent_start">在20世纪50年代我国“两弹一星”研制任务初期，学校第一时间就积极响应国防科委和国防部第五研究院要求，1958年，成立建设了控制工程系。2013年6月11日，习近平总书记指出:“发展航天事业，建设航天强国，是我们不懈追求的航天梦”，向全体航天人发出建设航天强国的动员令。为落实习近平总书记指示，服务航天强国建设，2013年7月14日，西安电子科技大学空间科学与技术学院应运而生,正式成立。学院由中国科学院院士、中国航天科技集团科技委主任包为民担任名誉院长。</p><div><p style="text-align: center;"><img width="500" src="/__local/5/5C/B6/7E73F3D080EB8A0CD56703CCA8A_014C6048_24003.png" vsbhref="vurl" vurl="/_vsl/55CB67E73F3D080EB8A0CD56703CCA8A/014C6048/24003" vheight="" vwidth="500" orisrc="/__local/B/BE/24/85C08AC5F9A894F3A3E66100A5B_F156CB62_3738E.png" class="img_vsb_content"></p><p style="text-align: justify;">学院现有专任教师100余人，其中双聘院士2人，中国空间技术研究院、中国运载技术研究院等航天院所总师、研究员构成的特聘兼职教师15人。学院有国家级人才3人，省部级人才6人，全国模范教师1人，973首席科学家1人、国家重大科技专项首席科学家1人、教育部高等学校教指委委员2人、陕西省青年科技人才6人。博士生导师28人、硕士生导师71人，在校本科生400余人、硕士生300余人、博士生100余人。学院建有国家级一流专业1个，省级一流专业1个，国家级一流课程4门，省级一流课程2门。<br></p></div><div><p>学院以空间科学前沿科学研究和国家重大战略需求为牵引，聚焦空间测控通信、导航制导、空间探测等领域。以学科建设为支撑，以国家航天技术发展急需的创新型人才培养为根本目标，以基础性、创新性与工程结合紧密的一流人才和研究成果服务于国家重大发展需求。成立以来，学院在人才培养、教育教学、科学研究、学科建设、校企联合等方面成绩突出，实现了跨越式发展。</p><p>学院设有测控通信系、导航控制系、智能探测系和空间科学与技术实验中心等3个系及1个实验中心，并设有飞行器测控通信研究所、导航探测与制导研究所、智能控制与图像工程研究所和力学系统与先进控制研究所等4个研究所。在研究生培养中，学院注重校企合作，以培养创新性人才为目标，建有钱学森空间科学人才培养基地（与钱学森空间技术实验室共建）、临近空间飞行器测控及特种测量技术联合研究中心（与空间物理重点实验室共建）、空间测控通信技术联合创新实验室（与北京遥测技术研究所共建）、教育部卫星导航技术研究中心导航新系统分中心、陕西省卫星导航工程技术研究中心。</p></div><div><p class="vsbcontent_img"><img alt="" src="/__local/9/D5/34/AD3C807D0F9C4775FC1922AA916_32BA0D29_63BAC.jpg?e=.jpg" vsbhref="vurl" vurl="/_vsl/9D534AD3C807D0F9C4775FC1922AA916/32BA0D29/63BAC?e=.jpg" vheight="" vwidth=" 700px" orisrc="/__local/9/D5/34/AD3C807D0F9C4775FC1922AA916_32BA0D29_63BAC.jpg" class="img_vsb_content" style="width: 700px;"></p></div><div></div><div><p>学院坚持立德树人，致力探索拔尖创新人才培养，以“钱学森大成智慧教育思想”引领卓越教育，建有全国高校第六个“钱学森空间科学实验班”，也是全国唯一一个电子信息领域的“钱学森”拔尖创新人才实验班，入选全校唯一教育部“三全育人”综合试点院系。建院以来，学院培养了一批坚定投身航天报国的青年人才，三届钱班学生均100%读研深造，获“互联网+”创新创业大赛国家金奖2项，获各类学科竞赛省级以上奖项200余项。3名本科生研制“空间实验一号”皮卫星随“一箭20星”计划发射升空。研究生和本科毕业生一次性就业率保持在98%和95%以上，获得中国航天科技集团等单位高度评价，源源不断的毕业生投身国防军工和航天事业建功立业。</p><p>学院坚持“四个面向”，服务国家重大战略需求，聚焦航天领域世界性难题“通信黑障”开展科学研究，近年来，学院积极参与了载人航天与探月工程、羲和“探日”、临近空间高速飞行器等重大专项的研究工作，获批学校首个民口“973”项目、国家重大仪器项目。</p><p>“十四五”期间，学院面向国家航天事业和空间科学重大战略需求，在“通信黑障”前期基础理论研究和地面模拟装置取得的成果的基础上，进行搭载试飞实验。同时在国家重大研发计划的牵引下，面向航天领域最具颠覆性和变革性的战略发展方向，聚焦“柔性变构跨域智能飞行”领域开展前沿探索研究。同时依托钱学森空间科学实验班，升级人才培养方案，实施“本硕博”贯通式人才培养，发现和培养空间信息拔尖创新人才。</p><p>经过多年的建设，学院在科研平台建设方面卓有成效，“极端环境下装备效能”教育部重点实验室挂牌运行，“空间超限探测”陕西省重点实验室顺利通过建设期验收，3个陕西省“四主体一联合”创新平台和1个西安市科技平台批准成立。学院加强和航天研究所的交流合作，与航天一院10所、12所、五院钱室、504所、九院704所分别建设联合实验室。</p><p>学院不断加强外部交流与合作，重点开展和中国航天科技集团等单位的合作交流，牵头成立了西安电子科技大学航天行业校友会，汇聚了西电78级校友、中国航天科技委主任包为民院士，西电78级校友、“嫦娥五号”总指挥、总设计师杨孟飞院士，西电80级校友、空间站系统总设计师杨宏院士，西电84级校友、中国首次火星探测任务工程总设计师张荣桥院士等航天领军人物，形成了航天总师和校友牵引支持学院发展的良好局面和外部环境。</p><p>学院注重与国内外著名大学及科研机构进行广泛的学术交流与合作，邀请多名院士、国内外专家学者来我院讲学交流，组织国际性学术会议1次、全国性学术会议5次，邀请来校院士60余人次。</p><p>面向未来，学院将继续秉持“夯实理论基础、提升实践能力、科学引领发展、创新探索为先”的办学理念，坚持“胸怀祖国、勇于探索、知行合一、团结协作”的办学文化，传承和发扬航天精神，以建设一流学院为目标，守正创新，团结奋进，攻坚克难，砥砺前行，为建设航天强国贡献“西电力量”。</p></div><div></div><div><p>办公地址：西安电子科技大学南校区G楼2层</p></div><div><p>联系电话/传真：029-81891034</p></div><div><p class="vsbcontent_end">邮箱：sast@xidian.edu.cn</p></div><div></div></div></div>
+    <span id="vsb_content_2_2273_u8" name="vsb_content_2_2273_u8"></span><br><br>
+
+</div>
+
+</div></div>
+<div class="clear"></div></div>
+
+        <!--part6-->
+<div class="part6"><img alt="" src="../images/part6_bg.png"> 
+
+<div class="main w178">
+<div class="qb">
+<div class="left">
+<div class="leftT">
+
+<ul class="le1">
+<p>走进西电</p>    <li><a href="http://zsb.xidian.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63954)">本科生招生</a></li>
+    <li><a href="http://yz.xidian.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63955)">研究生招生</a></li>
+    <li><a href="http://xl.xidian.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63961)">心灵驿站</a></li>
+    <li><a href="http://learning.xidian.edu.cn/portal" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63957)">学习平台</a></li>
+    <li><a href="https://job.xidian.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63962)">就业信息网</a></li>
+    <li><a href="http://720vr.xidian.edu.cn/tour/47b4ce0d2f2e6aa5" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63959)">720度全景VR</a></li>
+    <li><a href="http://720vr.xidian.edu.cn/tour/5da93a0e59cfa3e9" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63960)">海棠宿舍720度VR</a></li>
+    <li><a href="http://xyzh.xidian.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63956)">校友事务与联络发展处</a></li>
+</ul>
+<ul class="le2">
+<p>服务校园</p>
+    <li><a href="http://xyzh.xidian.edu.cn/jjh" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63967)">教育基金</a></li>
+    <li><a href="http://xxc.xidian.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63965)">网络服务</a></li>
+    <li><a href="http://www.xidian.edu.cn/xyfw/bgzn.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63968)">办公指南</a></li>
+    <li><a href="https://vpn.xidian.edu.cn" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63964)">VPN访问</a></li>
+    <li><a href="https://faculty.xidian.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63973)">教师主页</a></li>
+    <li><a href="http://meeting.xidian.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63969)">学术信息网</a></li>
+    <li><a href="https://1234.xidian.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63972)">师生服务热线</a></li>
+    <li><a href="http://onestop.xidian.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63970)">一站式服务大厅</a></li>
+</ul>
+<ul class="le3">
+<p>文化西电</p>
+    <li><a href="http://news.xidian.edu.cn/VIS.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63974)">VI系统</a></li>
+    <li><a href="http://dag.xidian.edu.cn/ybxsddb/sy.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63975)">西电往事</a></li>
+    <li><a href="http://www.xidian.edu.cn/xywh1/jcxd1.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63976)">情深西电</a></li>
+    <li><a href="http://image.xidian.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63979)">影像西电</a></li>
+    <li><a href="http://www.xidian.edu.cn/xywh1.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63980)">校园文化</a></li>
+    <li><a href="https://www.xidian.edu.cn/xdsg.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63981)">西电时光</a></li>
+    <li><a href="http://xyzh.xidian.edu.cn/xyh/xidianPerson/person_index.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63977)">聚焦西电人</a></li>
+    <li><a href="http://paper.xidian.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63978)">西电科大报</a></li>
+</ul>
+<ul class="le4">
+<p>数字校园</p>
+    <li><a href="http://ehall.xidian.edu.cn/new/index.html" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63992)">服务门户</a></li>
+    <li><a href="http://dcdb.xidian.edu.cn" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63996)">督办系统</a></li>
+    <li><a href="http://ids.xidian.edu.cn/authserver/login?service=https%3A%2F%2Foa.xidian.edu.cn%2Fwui%2Fcas-entrance.jsp%3Fpath%3Dhttps%253A%252F%252Foa.xidian.edu.cn%252Fwui%252Findex.html%2523%252Fmain%26ssoType%3DCAS" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63982)">办公系统</a></li>
+    <li><a href="http://202.117.121.190/index.jsp" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63987)">科研系统</a></li>
+    <li><a href="http://ehall.xidian.edu.cn/new/index.html" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63985)">教务系统</a></li>
+    <li><a href="http://ids.xidian.edu.cn/authserver/login?service=http%3A%2F%2Fehall.xidian.edu.cn%2Flogin%3Fservice%3Dhttp%3A%2F%2Fehall.xidian.edu.cn%2Fnew%2Findex.html" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63984)">人事系统</a></li>
+    <li><a href="http://202.117.121.139/tysfrz/caslogin.aspx" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63988)">财务系统</a></li>
+    <li><a href="http://res.xidian.edu.cn/file/xgindex.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63990)">学工系统</a></li>
+    <li><a href="http://zcgl.xidian.edu.cn/sso_assets/caslogin.jsp" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63993)">资产系统</a></li>
+    <li><a href="http://nkxt.xidian.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63995)">合同系统</a></li>
+    <li><a href="http://ehall.xidian.edu.cn/new/index.html" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63999)">研究生系统</a></li>
+    <li><a href="http://xdhpc.xidian.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63994)">高性能计算</a></li>
+    <li><a href="https://oa.xidian.edu.cn/wui/index.html?#/main/cube/tree?id=501&amp;noTitleShow=1&amp;menuIds=-42,-117&amp;_key=lycrzo" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 64002)">规章制度查询</a></li>
+    <li><a href="https://lwrl.xidian.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63997)">论文管理系统</a></li>
+    <li><a href="http://www.xidian.edu.cn/index/jfxt.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 63983)">学费自助缴纳</a></li>
+    <li><a href="https://payment.xidian.edu.cn/NetWorkUI/slogin.html" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1676986715, 64001)">校园缴费平台</a></li>
+</ul>
+<div class="clear"></div></div>
+
+</div>
+
+<div class="right">
+
+    <ul>
+    
+<li onclick="_addDynClicks(&quot;wbimage&quot;, 1676986715, 55557)"><img alt="" src="../ewm/kjy_gzh.png"> 
+<p>学院微信</p></li>
+
+
+<li onclick="_addDynClicks(&quot;wbimage&quot;, 1676986715, 55556)"><img alt="" src="../ewm/xd_wxqyh.png"> 
+<p>学校企业号</p></li>
+
+
+   
+
+<li onclick="_addDynClicks(&quot;wbimage&quot;, 1676986715, 55555)"><img alt="" src="../ewm/xd_gzh.png"> 
+<p>学校官微</p></li>
+
+
+   
+
+</ul>
+
+
+</div>
+</div>
+
+<div class="leftB">
+<div class="footerLogo"><img src="../images24/footerLogo.png"></div>
+
+<div class="footerBy">
+<h5>学院精神</h5>
+<p>【胸怀祖国 &nbsp;&nbsp;勇于探索 &nbsp;&nbsp;知行合一 &nbsp;&nbsp;团结协作】</p>
+</div>
+</div>
+
+
+</div>
+<div class="bottom main" style="display:none;">    <ul>
+       
+                
+
+<li><a href="" onclick="_addDynClicks(&quot;wbimage&quot;, 1676986715, 55549)"><img alt="" src="../images/part6_bt_img1.png"> 
+<p>掌上西电</p></a></li>
+                
+
+<li><a href="" onclick="_addDynClicks(&quot;wbimage&quot;, 1676986715, 55550)"><img alt="" src="../images/part6_bt_img2.png"> 
+<p>招办微博</p></a></li>
+       
+   
+                
+
+<li><a href="" onclick="_addDynClicks(&quot;wbimage&quot;, 1676986715, 55551)"><img alt="" src="../images/part6_bt_img3.png"> 
+<p>校友会微博</p></a></li>
+                
+
+<li><a href="" onclick="_addDynClicks(&quot;wbimage&quot;, 1676986715, 55552)"><img alt="" src="../images/part6_bt_img4.png"> 
+<p>就业办微博</p></a></li>
+       
+   
+                
+
+<li><a href="" onclick="_addDynClicks(&quot;wbimage&quot;, 1676986715, 55553)"><img alt="" src="../images/part6_bt_img5.png"> 
+<p>团委微博</p></a></li>
+                
+
+<li style="margin: 0px"><a href="" onclick="_addDynClicks(&quot;wbimage&quot;, 1676986715, 55554)"><img alt="" src="../images/part6_bt_img6.png"> 
+<p>西电视频</p></a></li>
+       
+
+<div class="clear"></div>
+</ul></div>
+<div class="clear"></div></div><!--part6-end--><!--版权-->
+<div class="banquan"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>学院地址：陕西省西安市西沣路兴隆段266号G楼二层&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电话：029-81891034&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邮编710126<br><a href="https://beian.miit.gov.cn/" target="_blank">陕ICP备05016463号</a>&nbsp;&nbsp;&nbsp;Copyright 2013-2020&nbsp;&nbsp;西安电子科技大学 空间科学与技术学院&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;技术支持：<a href="https://xxzx.xidian.edu.cn/" target="_blank">信息网络技术中心</a> 西安聚力</p></div><!--版权-end-->
+
+
+
+        <!--============================底部 结束=============================-->
+        <!--============================动画 开始=============================-->
+        <script src="../js24/style.js"></script>
+        <!--============================动画 结束=============================-->
+
+<script>
+jQuery("#nav").slide({ type:"menu", titCell:".nLi", targetCell:".sub",effect:"slideDown",delayTime:300,triggerTime:0,returnDefault:true});
+        $(".nav_btn").click(function(){
+      $(this).toggleClass("nav_btn_active");
+      $(".nav_box").slideToggle();
+      $(".nav_box>ul>li").removeClass("on");
+      $(".nav_box>ul>li").find("ul").slideUp();
+    });
+    $(".nav_box>ul>li").click(function(){
+      $(this).toggleClass("on");
+      $(this).find("ul").slideToggle();
+      $(this).siblings("li").find("ul").slideUp();
+      $(this).siblings("li").removeClass("on");
+    });
+    
+  $('.btn[name]').click(function() {
+        var tf_name_id = $(this).attr('name');
+        $('.tc[name=' + tf_name_id + ']').addClass('act');
+    });
+    $('.close').click(function() {
+        $(this).parents('.tc').removeClass('act')
+    });
+    $('.tc-bg').click(function() {
+        $(this).parents('.tc').removeClass('act')
+    });
+      </script>
+<script>
+            $(window).scroll(function() {
+                var winHeight = $(this).scrollTop()
+                if (winHeight > 0) {
+                    $('.headT').addClass('xg');
+                    $('.headT').mouseleave(function(e) {
+                        $('.headT').addClass('xg');
+                    });
+                } else {
+                    $('.headT').removeClass("xg");
+                    $('.headT').mouseleave(function(e) {
+                        $('.headT').removeClass('xg');
+                    });
+                }
+            });
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

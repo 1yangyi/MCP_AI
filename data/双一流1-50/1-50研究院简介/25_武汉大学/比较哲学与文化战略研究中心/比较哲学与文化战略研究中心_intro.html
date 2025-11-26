@@ -1,0 +1,350 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>中心简介-武汉大学比较哲学与文化战略研究中心</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="中心简介">
+<meta name="keywords" content="武汉大学比较哲学与文化战略研究中心，武汉大学 ，比较哲学与文化战略研究中心">
+
+    
+    <meta name="description" content="湖北国家应用数学中心">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <!--轮播图样式以及设置-->
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <!--轮播图样式以及设置结束-->
+    <script src="../js/main.js"></script>
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/moblie.css" rel="stylesheet">
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1003,'/about.jsp',-1,1800539280)</script>
+</head>
+
+<body>
+    <div class="header">
+
+        <div class="container">
+            <div class="header-top">
+                <!-- 网站logo -->
+               
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" class="logo"><img src="../images/logo.png" class="logo-img"></a>
+
+                <button type="button" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="header-right">
+
+                    <div class="top-link"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script></div>
+
+                    <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        background:url(../images/search.png) no-repeat;
+        width:13px;}
+</style>
+<div id="divu2">
+    <div id="appu2"><div><input type="text" placeholder="" autocomplete="off" class="search_kuang"> <input name="submit_button" type="button" value="" class="tj search_submit"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="search_kuang" placeholder="" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj search_submit" name="submit_button" type="button" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1800539280";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+
+                    
+
+                </div>
+            </div>
+
+            <div class="nav">
+                <!--  网站导航开始 -->
+                <ul class="daohang clearfix">    <li>
+        <a href="../index.htm">首页</a>
+     </li>
+    <li>
+        <a href="zxjj.htm">中心概况</a>
+        <ul class="nav_item">
+            <li><a href="zxjj.htm">中心简介</a></li>
+            <li><a href="zzjg.htm">组织机构</a></li>
+            <li><a href="rcpy.htm">人才培养</a></li>
+        </ul>
+     </li>
+    <li>
+        <a href="../xsdw.htm">学术队伍</a>
+     </li>
+    <li>
+        <a href="../zxdt/xshy.htm">中心动态</a>
+        <ul class="nav_item">
+            <li><a href="../zxdt/xwdt.htm">新闻动态</a></li>
+            <li><a href="../zxdt/xshy.htm">学术会议</a></li>
+            <li><a href="../zxdt/gzjb.htm">工作简报</a></li>
+        </ul>
+     </li>
+    <li>
+        <a href="../fzcg/xslw.htm">发展成果</a>
+        <ul class="nav_item">
+            <li><a href="../fzcg/xslw.htm">学术论文</a></li>
+            <li><a href="../fzcg/yjbg.htm">研究报告</a></li>
+            <li><a href="../fzcg/zz.htm">著作</a></li>
+            <li><a href="../fzcg/bjzxybjwhlc.htm">比较哲学与比较文化论丛</a></li>
+        </ul>
+     </li>
+    <li>
+        <a href="../tzgg.htm">通知公告</a>
+     </li>
+</ul>
+                <!--  网站导航结束 -->
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--内容开始-->
+    <div class="content-box">
+        <div class="container">
+            <!-- 当前位置 -->
+            <div class="location">您当前所在位置：
+     <a href="../index.htm">首页</a><span>&gt;<span>
+       
+     <a href="zxjj.htm">中心概况</a><span>&gt;<span>
+       
+             <a href="zxjj.htm">中心简介</a>
+</span></span></span></span></div>
+            <!-- 当前位置结束 -->
+            <div class="box-left">
+                <div class="left-nav">
+                    <h3 class="current">
+中心概况</h3>
+
+                    <ul><li class="active">
+    <a href="zxjj.htm">中心简介</a>
+   
+</li>                   
+<li>
+    <a href="zzjg.htm">组织机构</a>
+   
+</li>                   
+<li>
+    <a href="rcpy.htm">人才培养</a>
+   
+</li>                   
+</ul>
+                </div>
+            </div>
+            
+             <div class="right-box">
+             <div class="column"><h4>
+中心简介</h4></div>
+                <div class="about">
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1800539280,'wbnews','u9')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1800539280,1055)</script>
+<div class="content"><div id="vsb_content_4_1055_u91"><div id="vsb_content_4"><p><img src="/__local/C/71/6E/68B00CB7D73D8D601B09E7AA262_C8E9DE9B_36533.png" width="319" vsbhref="vurl" vurl="/_vsl/C716E68B00CB7D73D8D601B09E7AA262/C8E9DE9B/36533" vheight="" vwidth="319" orisrc="/__local/C/71/6E/68B00CB7D73D8D601B09E7AA262_C8E9DE9B_36533.png" class="img_vsb_content" style="float: right;"></p>
+<h3>“武汉大学比较哲学与文化战略研究中心”</h3>
+<p>（以下简称“中心”）是湖北省重点人文社会科学研究基地</p>
+<p><br></p>
+<p style="text-align: justify;">于2016年10月正式获批，其前身是“武汉大学中西比较哲学研究中心”。2017年5月27日，中心正式挂牌成立。</p>
+<p style="text-align: justify;">鉴于比较哲学与文化研究的性质，中心采取双主任制，中方主任为吴根友教授，外方主任为美国瓦萨学院（Vassar College）万百安(Bryan van Norden)教授。</p>
+<p style="text-align: justify;">本中心拥有定期出版的《比较哲学与比较文化研究论丛》（辑刊），一年两期，目前已经出版了15辑，第16辑正在出版之中。由中心两位主任担任总编的《比较哲学翻译与研究丛书》，第一辑共九本，目前已经出版了三本，其他六本正在出版的过程之中。第二辑正在积极的组稿过程之中。</p>
+<p style="text-align: justify;">自2017年成立以来，本中心每年至少组织两次以比较哲学与文化战略主题相关的中型学术研讨会，在促进学术研讨的过程中，逐渐形成以中心为核心的研究队伍。目前中心拥有骨干成员13人，开放式成员20余人。目前，本中心的所有成员都是兼职研究人员，他们都是本校或外校的正式教员。</p>
+<p><br></p></div></div></div>
+</div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <!--内容结束-->
+
+
+    <!--底部开始-->
+    <div class="footer">
+
+        <div class="container clearfix">
+
+            <div class="footer-top">
+
+                <div class="footer-xinxi">
+ <h3><img src="../images/footer-us.png">联系我们 <span>Contact us</span></h3>
+<p>地址：中国 武汉 珞珈山</p> 
+<p>邮编：430072</p> 
+<p>邮箱：bijiaozhexue@163.com</p></div>
+
+                <div class="footer-link">
+                    <h3><img src="../images/footer-link.png">相关链接 <span>LINK</span></h3>
+                    <ul><li><a href="#" target="_blank">哲学在线 </a></li>
+                        
+<li><a href="#" target="_blank">哲学网络资源库（英文） </a></li>
+                        
+<li><a href="http://cass.cssn.cn/" target="_blank">中国社会科学院 </a></li>
+                        
+<li><a href="http://guoxue.whu.edu.cn/" target="_blank">武汉大学国学院 </a></li>
+                        
+</ul>
+                </div>
+
+                <div class="footer-code">
+                <div class="code-text">
+                                <h3>欢迎关注</h3>
+                                <p>比较哲学和比较文化</p>
+
+                            </div>
+                    <ul>    <li>
+    <img src="../images/code.png">
+</li>               
+</ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="copy">
+            <p><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+</p><p>Copyright 2021 &nbsp;武汉大学比较哲学与文化战略研究中心 &nbsp;All Rights Reserved &nbsp;版权所有</p><p></p>
+            <p class="tonji">浏览统计：访问人数 <span><script language="javascript" src="../_dwr/engine.js"></script><script language="javascript" src="../_dwr/util.js"></script><script language="javascript" src="../_dwr/interface/PageCounterDWR.js"></script><span id="a1027882" name="a1027882">35122</span>   
+
+<script>
+function getvisittimea1027882()
+{       
+    PageCounterDWR.getVisittime('1800539280','1003','TOTAL_COUNTER','0','4',callbackdataa1027882)
+}
+function callbackdataa1027882(data)
+{
+    document.getElementById("a1027882").innerHTML = data; 
+}
+getvisittimea1027882();
+</script></span> 人</p>
+        </div>
+    </div>
+    <!--底部结束-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

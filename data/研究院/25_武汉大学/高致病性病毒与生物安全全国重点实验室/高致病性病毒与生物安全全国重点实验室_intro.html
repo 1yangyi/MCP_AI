@@ -1,0 +1,530 @@
+<!DOCTYPE html><html lang="zh-CN" style="font-size: 80px;"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>实验室简介-武汉大学高致病性病毒与生物安全全国重点实验室</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="实验室简介">
+<meta name="keywords" content="武汉大学高致病性病毒与生物安全全国重点实验室">
+
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/web.css">
+    <link rel="stylesheet" href="../styles/mobile.css">
+    <script src="../scripts/jquery_1.10.2_jquery.min.js"></script>
+    <script src="../scripts/fontSize.js"></script>
+  <!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../single_content.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1128,'/single_content.jsp',-1,1790977359)</script>
+</head>
+  <body style="">
+    <!-- 头部 start -->
+    <div class="header">
+      <div class="lab_logo"><a href="../index.htm"><img src="../images/lab_logo.png" alt=""></a></div>
+      <div class="lab_header_right">
+        <div class="lab_search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><input type="text" placeholder="搜索" autocomplete="off" class="lab-input-text"> <input name="submit_button" type="button" value="" class="lab-input-button"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <input type="text" class="lab-input-text" placeholder="搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="lab-input-button" name="submit_button" type="button" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1790977359";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+        <!-- 电脑端导航 -->
+        <nav class="lab_nav"><ul>
+            <li>
+              <a href="../index.htm">首页</a>
+              
+            </li>  
+            <li>
+              <a href="sysjj.htm">本室概况</a>
+                  <ul class="lab_sunNav">
+                          <li><a href="sysjj.htm">实验室简介</a></li>
+                          <li><a href="zzjg.htm">组织机构</a></li>
+                          <li><a href="xrld.htm">现任领导</a></li>
+                          <li><a href="lrld.htm">历任领导</a></li>
+                          <li><a href="xswyh.htm">学术委员会</a></li>
+                  </ul>
+              
+            </li>  
+            <li>
+              <a href="../kxyj/yjfx.htm">科学研究</a>
+                  <ul class="lab_sunNav">
+                          <li><a href="../kxyj/yjfx.htm">研究方向</a></li>
+                          <li><a href="../kxyj/kyxm.htm">科研项目</a></li>
+                          <li><a href="../kxyj/kycg.htm">科研成果</a></li>
+                  </ul>
+              
+            </li>  
+            <li>
+              <a href="../yjdw/gccrc.htm">研究队伍</a>
+                  <ul class="lab_sunNav">
+                          <li><a href="../yjdw/gccrc.htm">高层次人才</a></li>
+                          <li><a href="../yjdw/gdry.htm">固定人员</a></li>
+                  </ul>
+              
+            </li>  
+            <li>
+              <a href="../kfjl/xshy.htm">开放交流</a>
+                  <ul class="lab_sunNav">
+                          <li><a href="../kfjl/xshy.htm">学术会议</a></li>
+                          <li><a href="../kfjl/kfkt.htm">开放课题</a></li>
+                          <li><a href="../kfjl/gjhz.htm">国际合作</a></li>
+                          <li><a href="../kfjl/fwxz.htm">访问学者</a></li>
+                          <li><a href="../kfjl/xsrz.htm">学术任职</a></li>
+                  </ul>
+              
+            </li>  
+            <li>
+              <a href="../rcpy/jkjxj.htm">人才培养</a>
+                  <ul class="lab_sunNav">
+                          <li><a href="../rcpy/jkjxj.htm">吉凯奖学金</a></li>
+                  </ul>
+              
+            </li>  
+            <li>
+              <a href="../kypt/sypt.htm">科研平台</a>
+                  <ul class="lab_sunNav">
+                          <li><a href="../kypt/sypt.htm">实验平台</a></li>
+                          <li><a href="https://gxpt.whu.edu.cn/genee02/">大型仪器设备</a></li>
+                  </ul>
+              
+            </li>  
+            <li>
+              <a href="../xxgk/gzzd.htm">信息公开</a>
+                  <ul class="lab_sunNav">
+                          <li><a href="../xxgk/gzzd.htm">规章制度</a></li>
+                          <li><a href="../xxgk/ndbg.htm">年度报告</a></li>
+                  </ul>
+              
+            </li>  
+            <li>
+              <a href="../rczp.htm">人才招聘</a>
+              
+            </li>  
+            <li>
+              <a href="../xzzx/bszn.htm">下载中心</a>
+                  <ul class="lab_sunNav">
+                          <li><a href="../xzzx/bszn.htm">办事指南</a></li>
+                          <li><a href="../xzzx/qt.htm">其他</a></li>
+                  </ul>
+              
+            </li>  
+</ul></nav>
+        <!-- 手机端导航 -->
+        <div class="navbar-toggle">
+          <i class="icon-bar icon-bar1"></i>
+          <i class="icon-bar icon-bar2"></i>
+          <i class="icon-bar icon-bar3"></i>
+        </div>
+          <div class="lab-layer-box"><ul class="lab-layer-nav">
+            <li>
+              <a href="../index.htm">首页</a><strong style="display:none;">+</strong>
+            </li>                  
+        <li>
+              <a href="sysjj.htm">本室概况</a><strong>+</strong>
+                  <ul class="lab-layer-suNnav">
+                          <li><a href="sysjj.htm">实验室简介</a></li>
+                          <li><a href="zzjg.htm">组织机构</a></li>
+                          <li><a href="xrld.htm">现任领导</a></li>
+                          <li><a href="lrld.htm">历任领导</a></li>
+                          <li><a href="xswyh.htm">学术委员会</a></li>
+                  </ul>
+            </li>                  
+        <li>
+              <a href="../kxyj/yjfx.htm">科学研究</a><strong>+</strong>
+                  <ul class="lab-layer-suNnav">
+                          <li><a href="../kxyj/yjfx.htm">研究方向</a></li>
+                          <li><a href="../kxyj/kyxm.htm">科研项目</a></li>
+                          <li><a href="../kxyj/kycg.htm">科研成果</a></li>
+                  </ul>
+            </li>                  
+        <li>
+              <a href="../yjdw/gccrc.htm">研究队伍</a><strong>+</strong>
+                  <ul class="lab-layer-suNnav">
+                          <li><a href="../yjdw/gccrc.htm">高层次人才</a></li>
+                          <li><a href="../yjdw/gdry.htm">固定人员</a></li>
+                  </ul>
+            </li>                  
+        <li>
+              <a href="../kfjl/xshy.htm">开放交流</a><strong>+</strong>
+                  <ul class="lab-layer-suNnav">
+                          <li><a href="../kfjl/xshy.htm">学术会议</a></li>
+                          <li><a href="../kfjl/kfkt.htm">开放课题</a></li>
+                          <li><a href="../kfjl/gjhz.htm">国际合作</a></li>
+                          <li><a href="../kfjl/fwxz.htm">访问学者</a></li>
+                          <li><a href="../kfjl/xsrz.htm">学术任职</a></li>
+                  </ul>
+            </li>                  
+        <li>
+              <a href="../rcpy/jkjxj.htm">人才培养</a><strong>+</strong>
+                  <ul class="lab-layer-suNnav">
+                          <li><a href="../rcpy/jkjxj.htm">吉凯奖学金</a></li>
+                  </ul>
+            </li>                  
+        <li>
+              <a href="../kypt/sypt.htm">科研平台</a><strong>+</strong>
+                  <ul class="lab-layer-suNnav">
+                          <li><a href="../kypt/sypt.htm">实验平台</a></li>
+                          <li><a href="https://gxpt.whu.edu.cn/genee02/">大型仪器设备</a></li>
+                  </ul>
+            </li>                  
+        <li>
+              <a href="../xxgk/gzzd.htm">信息公开</a><strong>+</strong>
+                  <ul class="lab-layer-suNnav">
+                          <li><a href="../xxgk/gzzd.htm">规章制度</a></li>
+                          <li><a href="../xxgk/ndbg.htm">年度报告</a></li>
+                  </ul>
+            </li>                  
+        <li>
+              <a href="../rczp.htm">人才招聘</a><strong style="display:none;">+</strong>
+            </li>                  
+        <li>
+              <a href="../xzzx/bszn.htm">下载中心</a><strong>+</strong>
+                  <ul class="lab-layer-suNnav">
+                          <li><a href="../xzzx/bszn.htm">办事指南</a></li>
+                          <li><a href="../xzzx/qt.htm">其他</a></li>
+                  </ul>
+            </li>                  
+</ul>
+            <div class="lab_search mobile">
+
+
+<style>
+    #appu3 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu3 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu3">
+    <div id="appu3"><div><input type="text" placeholder="搜索" autocomplete="off" class="lab-input-text"> <input name="submit_button" type="button" value="" class="lab-input-button"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError">
+            <input type="text" class="lab-input-text" placeholder="搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="lab-input-button" name="submit_button" type="button" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "1790977359";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultmobile/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+          </div>
+      </div>
+    </div>
+    <!-- 头部 end -->
+    <!-- banner图 start -->
+    <div class="lab_banner">
+          <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<img src="../images/banner/img-1.png" alt="">
+
+
+    </div>
+    <!-- banner图 end -->
+    <!-- 内页主体部分 start -->
+    <div class="lab_ny_main">
+      <div class="lab_main_width ny">
+        <div class="lab_ny_left_menu">
+            <div class="bg">
+              <h2>
+本室概况</h2>
+              <ul>    <li class="active"><a href="sysjj.htm">实验室简介</a></li>         
+    <li><a href="zzjg.htm">组织机构</a></li>         
+    <li><a href="xrld.htm">现任领导</a></li>         
+    <li><a href="lrld.htm">历任领导</a></li>         
+    <li><a href="xswyh.htm">学术委员会</a></li>         
+</ul>
+            </div>
+        </div>
+        <div class="lab_ny_cont">
+          <div class="ny_cont-top">
+            <h3>
+实验室简介</h3>
+            <ul>          <a href="../index.htm">首页</a>
+          <span>&gt;</span>
+          <a href="sysjj.htm">本室概况</a>
+          <span>&gt;</span>
+          <a href="sysjj.htm">实验室简介</a>
+</ul>
+          </div>
+          <div class="ny_cont">
+              <div class="single_article">
+                  
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1790977359,'wbnews','u9')</script>
+<script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1790977359,9803)</script>
+<p>
+    </p><div id="vsb_content_9803_u91"><div id="vsb_content"><p style="text-indent: 2em; line-height: 1.75em;">高致病性病毒与生物安全全国重点实验室（以下简称实验室）于2024年12月批准建设，依托中国科学院武汉病毒研究所和武汉大学，基于原“病毒学国家重点实验室”优化调整组建。原“病毒学国家重点实验室”于2004年11月经国家科技部批准立项，2005年3月由国家科技部批准建设。</p><p style="text-indent: 2em; line-height: 1.75em;">实验室主任为蓝柯教授，副主任周溪研究员、殷昊教授、魏进研究员、肖英红研究员、刘芳教授。现任学委会主任饶子和院士，学委会副主任为徐建国院士和舒红兵院士。</p><p style="text-indent: 2em; line-height: 1.75em;">实验室的总体定位为：面向高致病性病毒防控在保障国家生物安全和人民生命健康中的重大需求，依托高等级生物安全团簇平台，阐明高致病性病毒感染致病机制，鉴定关键干预靶点，突破重要病原快速识别和高效防治技术，实现高等级生物安全核心技术自主可控。</p><p style="text-indent: 2em; line-height: 1.75em;">目前实验室聚焦于高致病性病毒感染机制研究、新型免疫及干预策略、生物安全关键技术创新三个研究方向，致力于实现高致病性病毒感染致病机制的原创性理论突破、干预策略和生物安全关键设备等技术创新和储备，有效服务国家生物安全战略，为我国新发突发传染病防控和生物安全提供全方位科技支撑。</p><p style="text-indent: 2em; line-height: 1.75em;">实验室长期重视人才队伍建设，目前共有固定人员112名，其中院士、国家杰青、万人等高水平人才48人，形成“领军人才-青年骨干-后备力量”梯次衔接的科研队伍。</p></div></div>
+<p></p>
+</div>
+              </div>
+        </div>
+      </div>
+    </div>
+    <!-- 内页主体部分 end -->
+    <!-- 底部 start -->
+    <footer>
+      <div class="lab_main_width">
+        <div class="footer_cont">
+          <div class="footer_link">
+            <h4>友情链接</h4>
+            <div class="inside_link"><script language="javascript" src="/system/resource/js/openlink.js"></script><ul>
+                
+<li><a href="https://www.whu.edu.cn/" target="_blank">武汉大学</a></li>
+                
+<li><a href="http://www.whiov.ac.cn/" target="_blank">中国科学院武汉病毒研究所</a></li>
+                
+<li><a href="https://bio.whu.edu.cn/" target="_blank">武汉大学生命科学学院</a></li>
+                
+</ul></div>
+            <div class="outside_link"><ul>
+                
+<li><a href="http://www.moe.gov.cn/" target="_blank">教育部</a></li>
+                
+<li><a href="https://www.most.gov.cn/index.html" target="_blank">科技部</a></li>
+                
+<li><a href="https://www.cas.cn/" target="_blank">中国科学院</a></li>
+                
+<li><a href="https://www.cast.org.cn/" target="_blank">中国科学技术协会</a></li>
+                
+<li><a href="https://www.cncbd.org.cn/" target="_blank">中国生物技术发展中心</a></li>
+                
+<li><a href="https://kjt.hubei.gov.cn/" target="_blank">湖北省科学技术厅</a></li>
+                
+<li><a href="https://wjw.hubei.gov.cn/" target="_blank">湖北省卫生健康委员会</a></li>
+                
+</ul></div>
+          </div>
+          <div class="footer_ewm">    
+
+            <div class="ewm"><img src="../images/lab_ewm.jpg" alt=""></div>
+            <p>扫码关注公众号</p>
+          
+
+</div>
+        </div>
+        <div class="footer_contact">
+          <p>
+</p><p>电话：（8627）-68754592　传真：(8627)-68752592&nbsp; &nbsp; 电子邮件：klv@whu.edu.cn</p><p></p>
+        </div>
+        <div class="footer_copyright">
+<p>版权所有 武汉大学高致病性病毒与生物安全全国重点实验室 Copyright ©2013&nbsp; http://klv.whu.edu.cn/&nbsp; <span style="text-wrap-mode: wrap;">高致病性病毒与生物安全全国重点实验室</span>&nbsp; 湖北 武汉 430072</p></div>
+      </div>
+    </footer>
+    <!-- 底部 start -->
+    <script src="../scripts/web.js"></script>
+  
+
+</body></html>

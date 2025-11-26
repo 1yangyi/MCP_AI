@@ -1,0 +1,399 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no">
+    <title>学院简介-生命科学学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="生命科学学院,学院简介">
+
+    <!-- Bootstrap -->
+      <link rel="shortcut icon" href="../images/favicon.ico">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/slick.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232306975475253535742000400004152 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1003,'/dpzw.jsp',-1,1950332875)</script>
+</head>
+<body>
+    <div class="layer" id="search">
+    <span class="close"><img src="../images/close.png"></span>
+    
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script>
+<div id="divu0">
+    <div id="appu0"><div><div class="search_box"><input autocomplete="off" type="text" placeholder="Search..." class="kw"> <input type="button" placeholder="" value="搜索" class="ok"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+        <div class="search_box">
+           <input autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"  type="text" placeholder="Search..." class="kw">
+          <input type="button" placeholder="" class="ok" value="搜索" v-on:click="onSubmit()">
+      </div>
+        
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1950332875";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+  </div>
+  
+  <div class="header clearfix ">
+        <div class="pull-left logo">
+            
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="生科院新版"><img src="../images/logo.png"></a>
+        </div>
+              <div class="menu-button">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="pull-right">
+            <div class="clearfix">
+                <div class="pull-right header-a">
+                    <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>
+    <a href="../jxcg.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1225" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1950332875, 89307)">本科生教学成果</a>
+    <a href="../info/1091/11684.htm" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1950332875, 89017)">工作监督邮箱</a>
+    <a href="http://www.snnu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1950332875, 89009)">学校主页</a>
+
+                    <a role="button" class="search-a sc"><img src="../images/search.png"></a>
+                </div>
+            </div>
+            
+            <ul class="nav-list clearfix">
+  <li>
+     <a href="../index.htm" title="首页">首页</a><span class="nav-click"><span class="caret"></span></span>
+  </li>
+  <li>
+     <a href="xyjj.htm" title="学院概况">学院概况</a><span class="nav-click"><span class="caret"></span></span>
+          <ul class="nav-down">
+              <li><a href="xyjj.htm" title="学院简介">学院简介</a></li>
+              <li><a href="xrld1.htm" title="现任领导">现任领导</a></li>
+              <li><a href="lrld.htm" title="历任领导">历任领导</a></li>
+              <li><a href="jgsz.htm" title="机构设置">机构设置</a></li>
+              <li><a href="xywh.htm" title="学院文化">学院文化</a></li>
+              <li><a href="xybs.htm" title="学院标识">学院标识</a></li>
+              <li><a href="lsyg.htm" title="历史沿革">历史沿革</a></li>
+              <li><a href="xydsj.htm" title="学院大事记">学院大事记</a></li>
+              <li><a href="lxfs.htm" title="联系方式">联系方式</a></li>
+          </ul>
+  </li>
+  <li>
+     <a href="../szdw/jsdwgk1.htm" title="师资队伍">师资队伍</a><span class="nav-click"><span class="caret"></span></span>
+          <ul class="nav-down">
+              <li><a href="../szdw/jsdwgk1.htm" title="教师队伍概况">教师队伍概况</a></li>
+              <li><a href="../szdw/jxkyry1.htm" title="教学科研人员">教学科研人员</a></li>
+              <li><a href="../szdw/dzglry1.htm" title="党政管理人员">党政管理人员</a></li>
+              <li><a href="../szdw/zyjsry1.htm" title="专业技术人员">专业技术人员</a></li>
+              <li><a href="../szdw/bsh1.htm" title="博士后">博士后</a></li>
+              <li><a href="../szdw/grtxry1.htm" title="光荣退休人员">光荣退休人员</a></li>
+              <li><a href="../szdw/qbfc1.htm" title="前辈风采">前辈风采</a></li>
+              <li><a href="../szdw/skgs1.htm" title="生科故事">生科故事</a></li>
+          </ul>
+  </li>
+  <li>
+     <a href="../rcpy/bkzy.htm" title="人才培养">人才培养</a><span class="nav-click"><span class="caret"></span></span>
+          <ul class="nav-down">
+              <li><a href="../rcpy/bkzy.htm" title="本科专业">本科专业</a></li>
+              <li><a href="../rcpy/bksjxrl.htm" title="本科生教学日历">本科生教学日历</a></li>
+              <li><a href="../rcpy/yjspyfx.htm" title="研究生培养方向">研究生培养方向</a></li>
+              <li><a href="../rcpy/yjszsjz.htm" title="研究生招生简章">研究生招生简章</a></li>
+              <li><a href="../rcpy/jxcg.htm" title="教学成果">教学成果</a></li>
+              <li><a href="../rcpy/yxjxal.htm" title="优秀教学案例">优秀教学案例</a></li>
+          </ul>
+  </li>
+  <li>
+     <a href="../kxyj/kygk.htm" title="科学研究">科学研究</a><span class="nav-click"><span class="caret"></span></span>
+          <ul class="nav-down">
+              <li><a href="../kxyj/kygk.htm" title="科研概况">科研概况</a></li>
+              <li><a href="../kxyj/xshd.htm" title="学术活动">学术活动</a></li>
+              <li><a href="../kxyj/cdxm.htm" title="承担项目">承担项目</a></li>
+              <li><a href="../kxyj/lwzz.htm" title="论文专著">论文专著</a></li>
+              <li><a href="../kxyj/zljxpz.htm" title="专利及新品种">专利及新品种</a></li>
+              <li><a href="../kxyj/kyhj.htm" title="科研获奖">科研获奖</a></li>
+              <li><a href="../kxyj/cgzhtj.htm" title="成果转化推介">成果转化推介</a></li>
+              <li><a href="../kxyj/yqpt.htm" title="仪器平台">仪器平台</a></li>
+              <li><a href="../kxyj/kydt.htm" title="科研动态">科研动态</a></li>
+          </ul>
+  </li>
+  <li>
+     <a href="../xkjs/xkjsgk.htm" title="学科建设">学科建设</a><span class="nav-click"><span class="caret"></span></span>
+          <ul class="nav-down">
+              <li><a href="../xkjs/xkjsgk.htm" title="学科建设概况">学科建设概况</a></li>
+          </ul>
+  </li>
+  <li>
+     <a href="../rczp/zpxx.htm" title="人才招聘">人才招聘</a><span class="nav-click"><span class="caret"></span></span>
+          <ul class="nav-down">
+              <li><a href="../rczp/zpxx.htm" title="招聘信息">招聘信息</a></li>
+          </ul>
+  </li>
+  <li>
+     <a href="../dqjs/ydw.htm" title="党群建设">党群建设</a><span class="nav-click"><span class="caret"></span></span>
+          <ul class="nav-down">
+              <li><a href="../dqjs/ydw.htm" title="院党委">院党委</a></li>
+              <li><a href="../dqjs/ftw.htm" title="分团委">分团委</a></li>
+              <li><a href="../dqjs/ygh.htm" title="院工会">院工会</a></li>
+              <li><a href="../dqjs/ghhd.htm" title="工会活动">工会活动</a></li>
+              <li><a href="../dqjs/dwhd.htm" title="党务活动">党务活动</a></li>
+          </ul>
+  </li>
+  <li>
+     <a href="../xssq/xsgzgk.htm" title="学生社区">学生社区</a><span class="nav-click"><span class="caret"></span></span>
+          <ul class="nav-down">
+              <li><a href="../xssq/xsgzgk.htm" title="学生工作概况">学生工作概况</a></li>
+              <li><a href="../xssq/xgdw.htm" title="学工队伍">学工队伍</a></li>
+              <li><a href="../xssq/bkxsh.htm" title="本科学生会">本科学生会</a></li>
+              <li><a href="../xssq/yjsh.htm" title="研究生会">研究生会</a></li>
+              <li><a href="../xssq/xsst.htm" title="学生社团">学生社团</a></li>
+              <li><a href="../xssq/tzgg.htm" title="通知公告">通知公告</a></li>
+              <li><a href="../xssq/xwdt.htm" title="新闻动态">新闻动态</a></li>
+              <li><a href="../xssq/dzqk.htm" title="电子期刊">电子期刊</a></li>
+          </ul>
+  </li>
+  <li>
+     <a href="../xygz/xyfc.htm" title="校友工作">校友工作</a><span class="nav-click"><span class="caret"></span></span>
+          <ul class="nav-down">
+              <li><a href="../xygz/xyfc.htm" title="校友风采">校友风采</a></li>
+              <li><a href="../xygz/byjz.htm" title="毕业旧照">毕业旧照</a></li>
+              <li><a href="../xygz/xyjz.htm" title="校友捐赠">校友捐赠</a></li>
+              <li><a href="../xygz/jzfs.htm" title="捐赠方式">捐赠方式</a></li>
+          </ul>
+  </li>
+  <li>
+     <a href="../xxgk/cyzlxz.htm" title="信息公开">信息公开</a><span class="nav-click"><span class="caret"></span></span>
+          <ul class="nav-down">
+              <li><a href="../xxgk/cyzlxz.htm" title="常用资料下载">常用资料下载</a></li>
+          </ul>
+  </li>
+
+
+<div class="m-tlink">
+                <a href="../info/1091/6081.htm">书记信箱</a>
+                <a href="../info/1091/6082.htm">院长信箱</a>
+                <a href="http://www.snnu.edu.cn/">学校主页</a>
+                <a href="">ENGLISH</a>
+</div>
+</ul>
+
+
+
+        </div>
+  
+    </div>
+ 
+           
+        
+  <div class="list-banner"><img src="../images/banner.png"></div>
+  <div class="list">
+    <div class="container clearfix">
+        <div class="left-nav pull-left">
+            <h5>
+<b>学院简介</b><i></i></h5>
+            <div class="left-nav-nr"><ul>
+      <li class=" active on"><i></i><a href="xyjj.htm" title="学院简介">学院简介</a>
+
+
+</li>
+    <li><i></i><a href="xrld1.htm" title="现任领导">现任领导</a>
+
+
+</li>
+    <li><i></i><a href="lrld.htm" title="历任领导">历任领导</a>
+
+
+</li>
+    <li><i></i><a href="jgsz.htm" title="机构设置">机构设置</a>
+
+
+</li>
+    <li><i></i><a href="xywh.htm" title="学院文化">学院文化</a>
+
+
+</li>
+    <li><i></i><a href="xybs.htm" title="学院标识">学院标识</a>
+
+
+</li>
+    <li><i></i><a href="lsyg.htm" title="历史沿革">历史沿革</a>
+
+
+</li>
+    <li><i></i><a href="xydsj.htm" title="学院大事记">学院大事记</a>
+
+
+</li>
+    <li><i></i><a href="lxfs.htm" title="联系方式">联系方式</a>
+
+
+</li>
+</ul></div>
+        </div>
+        <div class="list-r pull-right">
+            <div class="position"><p>您当前所在位置：
+                        <a href="../index.htm">首页</a>
+               &gt;
+                <a href="xyjj.htm">学院概况</a>
+               &gt;
+                <a href="xyjj.htm">学院简介</a>
+</p></div>
+            <div class="c-content">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1950332875,'wbnews','u8')</script>
+<script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1950332875,1001)</script>
+<div class="article-p">
+    <div id="vsb_content_1001_u81"><div id="vsb_content"><p class="vsbcontent_start">陕西师范大学是教育部直属的全国重点大学，国家首批“双一流”建设高校，是国家培养高等院校、中等学校师资和教育管理干部以及其他高级专门人才的重要基地，被誉为“教师的摇篮”。</p><p class="vsbcontent_img"><img width="700" height="276" src="/__local/D/BC/89/97ED7621289D2346AEF1EEF52AC_DDA6F494_BD108.png" vwidth="700" vheight="276" vurl="/_vsl/DBC8997ED7621289D2346AEF1EEF52AC/DDA6F494/BD108" vsbhref="vurl" orisrc="/__local/D/BC/89/97ED7621289D2346AEF1EEF52AC_DDA6F494_BD108.png" class="img_vsb_content"></p><p>陕西师范大学生命科学学院的前身是1951年春成立的西北大学师范学院博物专修科；1954年8月，学校更名为西安师范学院，设立生物科；1956年8月，院系调整，西安师范学院生物科调整到陕西师范学院，设立生物系；1960年5月，西安师范学院与陕西师范学院合并成立陕西师范大学，设立新的生物系；1996年12月，陕西师范大学生命科学学院成立。</p><p>多年来，生科人秉承“求真、务实、包容、创新”的精神，为国家培养了近3800余名博士和硕士、8200余名本科生，形成了以全国黄大年式教师团队为代表的优秀教师群体，校友中涌现出了王红艳、段昌群、乔格侠、雷富民等一批科技领域国家级人才，以及杜农学、赵文忠、张永宏、亢永平、王红芳、黎宇等一批基础教育领域国家级荣誉获得者。</p><p class="vsbcontent_img"><img width="300" height="240" src="/__local/0/D1/4A/672E7B0C4B868EFE4390232FAFE_21208E02_46815.png" vwidth="300" vheight="240" vurl="/_vsl/0D14A672E7B0C4B868EFE4390232FAFE/21208E02/46815" vsbhref="vurl" orisrc="/__local/0/D1/4A/672E7B0C4B868EFE4390232FAFE_21208E02_46815.png" class="img_vsb_content"></p><p>在郑哲民教授、王廷正教授等老一辈生科人深厚的学术造诣、严谨的治学态度和不懈的奋斗精神的影响下，学院在人才培养、学科建设、队伍建设、平台建设等方面奠定了坚实的基础、取得了长足的发展。学院是“国家理科（生物学）基础科学研究和人才培养基地”、教育部“国家理科野外实践教育共享平台”首批建设单位、“国家生物学虚拟仿真实验教学中心”、“国家级生物学野外实践教学基地”、“陕西省生物基础实验教学示范中心”等国家级、省部级人才培养平台。目前，学院已形成了本、硕、博完整的人才培养体系，学院下设生物科学、生物技术和生态学三个本科专业，包含生物科学（师范）、生物科学（基地）、生物技术和生态学四个方向，生物科学和生物技术专业入选国家级一流本科专业。</p><p>学院不断推动学科体系的完善与发展。目前，学院拥有生物学和生态学两个博士后科研流动站；拥有生物学和生态学两个一级学科的博士学位授权点；同时，拥有生物学、生态学和中药学三个一级硕士学位授权点。此外，学院还设有课程与教学论（生物）学术学位硕士点，以及学科教学（生物）和生物与医药两个专业学位硕士点。在学科发展上，学院在动物学、植物学、细胞生物学、生物化学与分子生物学、神经生物学和生态学、中药学等七个方向形成了鲜明的特色。动物学被认定为国家重点（培育）学科。</p><p class="vsbcontent_img"><img width="400" height="266" src="/__local/4/96/F4/85C95A6254DFD64C6B0C9674AB1_56D48C2B_68283.png" vwidth="400" vheight="266" vurl="/_vsl/496F485C95A6254DFD64C6B0C9674AB1/56D48C2B/68283" vsbhref="vurl" orisrc="/__local/4/96/F4/85C95A6254DFD64C6B0C9674AB1_56D48C2B_68283.png" class="img_vsb_content"></p><p>学院历来十分重视教学工作。始终坚持“教学为先，科研与教学并重”的办学思路和“启智明德、开拓创新、彰显个性、转型发展”的办学理念，着眼于学生未来发展，着重于夯实基础、完善素质、突出专业，注重学科交叉、渗透和融洽，注重学生综合素质和创新能力的培养，形成了“以学生发展为本，以学生能力培养为核心，全面提升学生综合能力，满足社会多元化需求”的生物学专业人才培养模式和“厚基础、宽口径、重创新、强能力”的专业人才培养理念。目前在校博士、硕士研究生780余人，本科生1420余人。非公费师范本科生每年70%左右推荐免试或考入国家重点大学、科研院所攻读研究生学位，学生一次性就业率连续多年保持在90%以上。</p><p class="vsbcontent_img"><img width="320" height="212" src="/__local/8/0E/58/68EC33FA5340D92E9E0E0AEDEC0_036A62EA_426E1.png" vwidth="320" vheight="212" vurl="/_vsl/80E5868EC33FA5340D92E9E0E0AEDEC0/036A62EA/426E1" vsbhref="vurl" orisrc="/__local/8/0E/58/68EC33FA5340D92E9E0E0AEDEC0_036A62EA_426E1.png" class="img_vsb_content"></p><p>近年来，在学校人事政策的大力支持下，学院吸引和汇聚了一批优秀人才加盟，造就了一支素质优良的师资队伍。<span style="text-wrap: wrap;"></span><span style="text-wrap: wrap;">现有教职工169人，其中专任教师113人，含教授47人，副教授55人，具有高级职务的教师比例占教师总数的90.3%；教师中具有博士学位的113人，占教师总数的100%，具有一年及以上出国出境留学经历者79人，占教师总数的69.9%。现有双聘院士2人，首批全国高校黄大年式教师团队1个，全国优秀教师1人，国家级青年人才计划入选者4人，教育部“优秀青年教师资助计划”入选者1人，教育部“新世纪优秀人才支持计划”1人，宝钢优秀教师奖获得者1人，陕西省高校黄大年式教师团队1个，陕西省师德标兵1人，陕西省“三秦学者”创新团队、科技创新团队2个，陕西省高层次人才计划入选者9人，陕西省杰出青年科学基金资助计划获得者2人，“香江学者”资助计划2人，“澳门青年学者”资助计划1人，其他省部级及以上获奖及荣誉称号获得者20余人；有博士后20人。</span></p><p>经过多年的努力，学院基本建成了良好的科学研究平台和实验条件。现有国家工程实验室1个，教育部重点实验室1个，省级研究中心、引智基地3个，市级重点实验室1个，校级重点实验室4个。拥有动植物博物馆1600平方米，实验动物中心1700平方米；现有仪器设备过万台，总值近2亿元，其中40万元以上设备60台，构成了大型科学仪器共享平台，为科研及人才培养提供了有力支撑。拥有专业设计教学实验室20余个，标本室5个，电子阅览室1个。</p><p class="vsbcontent_img"><img width="552" height="553" src="/__local/0/5A/52/BC446B0E00C8955B0F39C12D451_8D86B7A2_12ABD2.png" vwidth="552" vheight="553" vurl="/_vsl/05A52BC446B0E00C8955B0F39C12D451/8D86B7A2/12ABD2" vsbhref="vurl" orisrc="/__local/0/5A/52/BC446B0E00C8955B0F39C12D451_8D86B7A2_12ABD2.png" class="img_vsb_content"></p><p>优秀的师资队伍和良好的科研平台，也带动了科学研究水平的快速提升。学院近五年来承担科技部重点研发专项、脑科学与类脑研究重大项目课题、国家自然科学基金项目、教育部重点科学研究项目、陕西省重大计划项目、陕西省重点研发项目及省部级科学研究项目180多项，年均总经费达2000万元，年均获得国家自然科学基金15项。在Nature Communications、PNAS、Science Advances、Plant Cell、Cell Death and Differentiation、中国科学、植物学报等顶级刊物和核心期刊发表研究论文，年均发表SCI论文150余篇；近五年获得陕西省科学技术奖一等奖1项、二等奖1项，三等奖1项，陕西高等学校科学技术奖一等奖4项、二等奖7项，三等奖1项，国家授权专利或认定的新品种90余项，出版教材专著等40余部，与企业合作研发或合作的项目80余项，部分项目已经进行产业转化，为企业带来了良好的效益，为学院的科学研究与人才培养提供了重要的技术支持。</p><p class="vsbcontent_img"><img width="334" height="224" src="/__local/3/65/AE/E419E3CAC3E7872B1364080B76D_A34B8543_49411.png" vwidth="334" vheight="224" vurl="/_vsl/365AEE419E3CAC3E7872B1364080B76D/A34B8543/49411" vsbhref="vurl" orisrc="/__local/3/65/AE/E419E3CAC3E7872B1364080B76D_A34B8543_49411.png" class="img_vsb_content"></p><p class="vsbcontent_img"><img width="423" height="121" src="/__local/B/8D/D1/8F863BCC8F8475AFE4DBE5AC07F_8DDD5406_321D8.png" vwidth="423" vheight="121" vurl="/_vsl/B8DD18F863BCC8F8475AFE4DBE5AC07F/8DDD5406/321D8" vsbhref="vurl" orisrc="/__local/B/8D/D1/8F863BCC8F8475AFE4DBE5AC07F_8DDD5406_321D8.png" class="img_vsb_content"></p><p class="vsbcontent_img"><img width="533" height="162" src="/__local/5/D1/DD/EAD4FE4C36154756158D4C75DC5_E0203F42_5484D.png" vwidth="533" vheight="162" vurl="/_vsl/5D1DDEAD4FE4C36154756158D4C75DC5/E0203F42/5484D" vsbhref="vurl" orisrc="/__local/5/D1/DD/EAD4FE4C36154756158D4C75DC5_E0203F42_5484D.png" class="img_vsb_content"></p><p>尊重人才成长规律，培养高素质的合格公民和各行各业高水平专门人才是学院的使命和根本目的，站在新的历史起点，生科人将团结一切可以团结的力量，凝神聚气、协同创新、锐意开拓，为实现这个目的而努力奋斗。</p><p class="vsbcontent_end" style="text-align: right;"><span style="color: rgb(165, 165, 165);"><em>（相关数据截止2025</em><em>年9</em><em>月1</em><em>2</em><em>日）</em></span></p></div></div>
+    <span id="vsb_content_1001_u8" name="vsb_content_1001_u8"></span><br><br>
+    
+</div>
+</div>
+        </div>
+    </div>
+  </div>
+   <div class="footer">
+    <div class="container">
+      <div class="clearfix">
+        
+        <div class="pull-left footer-left footer-center">
+          <div class="footer-tt">校内资源</div>
+          <ul class="footer-ul clearfix">
+                <li><a href="http://kjc.snnu.edu.cn/info/1096/8474.htm" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1950332875, 89004)">JCR期刊分区表</a></li>
+    <li><a href="http://yqyy.snnu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1950332875, 88997)">大型仪器开放管理系统</a></li>
+
+          </ul>
+        </div>
+        
+        <div class="pull-right ewm-box text-center">
+                <img src="../images/ewm.png"><br>学院微信公众号
+
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p><span>陕西师范大学生命科学学院 版权所有</span><span>地址：陕西省西安市长安区西长安街620号</span><span>陕西师范大学生命科学学院</span><span>邮编：710119</span><span>电话：029-85310266</span><span>传真：029-85310623</span> &nbsp;<span><a href="http://sweb.snnu.edu.cn/system/login.jsp" style="color:#fff;">管理</a></span></p>
+      </div>
+    </div>
+  </div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/slick.js"></script>
+<script src="../js/wow.min.js"></script>
+<script type="text/javascript">
+if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+  new WOW().init();
+};
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,1234 @@
+<!DOCTYPE html><html lang="zh"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+     <script src="//static.xtbg.ac.cn/2022/js/jquery_min.js"></script>
+    <link rel="stylesheet" href="//static.xtbg.ac.cn/2022/css/swiper.css">
+    <script src="//static.xtbg.ac.cn/2022/js/vconsole.min.js"></script><style>#__vconsole {
+  color: #000;
+  font-size: 13px;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  /* global */
+  /* compoment */
+}
+#__vconsole .vc-max-height {
+  max-height: 19.23076923em;
+}
+#__vconsole .vc-max-height-line {
+  max-height: 3.38461538em;
+}
+#__vconsole .vc-min-height {
+  min-height: 3.07692308em;
+}
+#__vconsole dd,
+#__vconsole dl,
+#__vconsole pre {
+  margin: 0;
+}
+#__vconsole .vc-switch {
+  display: block;
+  position: fixed;
+  right: 0.76923077em;
+  bottom: 0.76923077em;
+  color: #FFF;
+  background-color: #04BE02;
+  line-height: 1;
+  font-size: 1.07692308em;
+  padding: 0.61538462em 1.23076923em;
+  z-index: 10000;
+  border-radius: 0.30769231em;
+  box-shadow: 0 0 0.61538462em rgba(0, 0, 0, 0.4);
+}
+#__vconsole .vc-mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 10001;
+  transition: background 0.3s;
+  -webkit-tap-highlight-color: transparent;
+  overflow-y: scroll;
+}
+#__vconsole .vc-panel {
+  display: none;
+  position: fixed;
+  min-height: 85%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10002;
+  background-color: #EFEFF4;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translate(0, 100%);
+  transform: translate(0, 100%);
+}
+#__vconsole .vc-tabbar {
+  border-bottom: 1px solid #D9D9D9;
+  overflow-x: auto;
+  height: 3em;
+  width: auto;
+  white-space: nowrap;
+}
+#__vconsole .vc-tabbar .vc-tab {
+  display: inline-block;
+  line-height: 3em;
+  padding: 0 1.15384615em;
+  border-right: 1px solid #D9D9D9;
+  text-decoration: none;
+  color: #000;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+#__vconsole .vc-tabbar .vc-tab:active {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+#__vconsole .vc-tabbar .vc-tab.vc-actived {
+  background-color: #FFF;
+}
+#__vconsole .vc-content {
+  background-color: #FFF;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 3.07692308em;
+  left: 0;
+  right: 0;
+  bottom: 3.07692308em;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: constant(safe-area-inset-bottom);
+  margin-bottom: env(safe-area-inset-bottom);
+}
+#__vconsole .vc-content.vc-has-topbar {
+  top: 5.46153846em;
+}
+#__vconsole .vc-topbar {
+  background-color: #FBF9FE;
+  display: flex;
+  display: -webkit-box;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-box-direction: row;
+  -webkit-flex-wrap: wrap;
+  width: 100%;
+}
+#__vconsole .vc-topbar .vc-toptab {
+  display: none;
+  flex: 1;
+  -webkit-box-flex: 1;
+  line-height: 2.30769231em;
+  padding: 0 1.15384615em;
+  border-bottom: 1px solid #D9D9D9;
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+#__vconsole .vc-topbar .vc-toptab.vc-toggle {
+  display: block;
+}
+#__vconsole .vc-topbar .vc-toptab:active {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+#__vconsole .vc-topbar .vc-toptab.vc-actived {
+  border-bottom: 1px solid #3e82f7;
+}
+#__vconsole .vc-logbox {
+  display: none;
+  position: relative;
+  min-height: 100%;
+}
+#__vconsole .vc-logbox i {
+  font-style: normal;
+}
+#__vconsole .vc-logbox .vc-log {
+  padding-bottom: 3em;
+  -webkit-tap-highlight-color: transparent;
+}
+#__vconsole .vc-logbox .vc-log:empty:before {
+  content: "Empty";
+  color: #999;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 1.15384615em;
+  text-align: center;
+}
+#__vconsole .vc-logbox .vc-item {
+  margin: 0;
+  padding: 0.46153846em 0.61538462em;
+  overflow: hidden;
+  line-height: 1.3;
+  border-bottom: 1px solid #EEE;
+  word-break: break-word;
+}
+#__vconsole .vc-logbox .vc-item-info {
+  color: #6A5ACD;
+}
+#__vconsole .vc-logbox .vc-item-debug {
+  color: #DAA520;
+}
+#__vconsole .vc-logbox .vc-item-warn {
+  color: #FFA500;
+  border-color: #FFB930;
+  background-color: #FFFACD;
+}
+#__vconsole .vc-logbox .vc-item-error {
+  color: #DC143C;
+  border-color: #F4A0AB;
+  background-color: #FFE4E1;
+}
+#__vconsole .vc-logbox .vc-log.vc-log-partly .vc-item {
+  display: none;
+}
+#__vconsole .vc-logbox .vc-log.vc-log-partly-log .vc-item-log,
+#__vconsole .vc-logbox .vc-log.vc-log-partly-info .vc-item-info,
+#__vconsole .vc-logbox .vc-log.vc-log-partly-warn .vc-item-warn,
+#__vconsole .vc-logbox .vc-log.vc-log-partly-error .vc-item-error {
+  display: block;
+}
+#__vconsole .vc-logbox .vc-item .vc-item-content {
+  margin-right: 4.61538462em;
+  display: inline-block;
+}
+#__vconsole .vc-logbox .vc-item .vc-item-repeat {
+  display: inline-block;
+  margin-right: 0.30769231em;
+  padding: 0 6.5px;
+  color: #D7E0EF;
+  background-color: #42597F;
+  border-radius: 8.66666667px;
+}
+#__vconsole .vc-logbox .vc-item.vc-item-error .vc-item-repeat {
+  color: #901818;
+  background-color: #DC2727;
+}
+#__vconsole .vc-logbox .vc-item.vc-item-warn .vc-item-repeat {
+  color: #987D20;
+  background-color: #F4BD02;
+}
+#__vconsole .vc-logbox .vc-item .vc-item-code {
+  display: block;
+  white-space: pre-wrap;
+  overflow: auto;
+  position: relative;
+}
+#__vconsole .vc-logbox .vc-item .vc-item-code.vc-item-code-input,
+#__vconsole .vc-logbox .vc-item .vc-item-code.vc-item-code-output {
+  padding-left: 0.92307692em;
+}
+#__vconsole .vc-logbox .vc-item .vc-item-code.vc-item-code-input:before,
+#__vconsole .vc-logbox .vc-item .vc-item-code.vc-item-code-output:before {
+  content: "›";
+  position: absolute;
+  top: -0.23076923em;
+  left: 0;
+  font-size: 1.23076923em;
+  color: #6A5ACD;
+}
+#__vconsole .vc-logbox .vc-item .vc-item-code.vc-item-code-output:before {
+  content: "‹";
+}
+#__vconsole .vc-logbox .vc-item .vc-fold {
+  display: block;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+#__vconsole .vc-logbox .vc-item .vc-fold .vc-fold-outer {
+  display: block;
+  font-style: italic;
+  padding-left: 0.76923077em;
+  position: relative;
+}
+#__vconsole .vc-logbox .vc-item .vc-fold .vc-fold-outer:active {
+  background-color: #E6E6E6;
+}
+#__vconsole .vc-logbox .vc-item .vc-fold .vc-fold-outer:before {
+  content: "";
+  position: absolute;
+  top: 0.30769231em;
+  left: 0.15384615em;
+  width: 0;
+  height: 0;
+  border: transparent solid 0.30769231em;
+  border-left-color: #000;
+}
+#__vconsole .vc-logbox .vc-item .vc-fold .vc-fold-outer.vc-toggle:before {
+  top: 0.46153846em;
+  left: 0;
+  border-top-color: #000;
+  border-left-color: transparent;
+}
+#__vconsole .vc-logbox .vc-item .vc-fold .vc-fold-inner {
+  display: none;
+  margin-left: 0.76923077em;
+}
+#__vconsole .vc-logbox .vc-item .vc-fold .vc-fold-inner.vc-toggle {
+  display: block;
+}
+#__vconsole .vc-logbox .vc-item .vc-fold .vc-fold-inner .vc-code-key {
+  margin-left: 0.76923077em;
+}
+#__vconsole .vc-logbox .vc-item .vc-fold .vc-fold-outer .vc-code-key {
+  margin-left: 0;
+}
+#__vconsole .vc-logbox .vc-code-key {
+  color: #905;
+}
+#__vconsole .vc-logbox .vc-code-private-key {
+  color: #D391B5;
+}
+#__vconsole .vc-logbox .vc-code-function {
+  color: #905;
+  font-style: italic;
+}
+#__vconsole .vc-logbox .vc-code-number,
+#__vconsole .vc-logbox .vc-code-boolean {
+  color: #0086B3;
+}
+#__vconsole .vc-logbox .vc-code-string {
+  color: #183691;
+}
+#__vconsole .vc-logbox .vc-code-null,
+#__vconsole .vc-logbox .vc-code-undefined {
+  color: #666;
+}
+#__vconsole .vc-logbox .vc-cmd {
+  position: absolute;
+  height: 3.07692308em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 1px solid #D9D9D9;
+  display: block!important;
+}
+#__vconsole .vc-logbox .vc-cmd .vc-cmd-input-wrap {
+  display: block;
+  height: 2.15384615em;
+  margin-right: 3.07692308em;
+  padding: 0.46153846em 0.61538462em;
+}
+#__vconsole .vc-logbox .vc-cmd .vc-cmd-input {
+  width: 100%;
+  border: none;
+  resize: none;
+  outline: none;
+  padding: 0;
+  font-size: 0.92307692em;
+}
+#__vconsole .vc-logbox .vc-cmd .vc-cmd-input::-webkit-input-placeholder {
+  line-height: 2.15384615em;
+}
+#__vconsole .vc-logbox .vc-cmd .vc-cmd-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 3.07692308em;
+  border: none;
+  background-color: #EFEFF4;
+  outline: none;
+  -webkit-touch-callout: none;
+  font-size: 1em;
+}
+#__vconsole .vc-logbox .vc-cmd .vc-cmd-btn:active {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+#__vconsole .vc-logbox .vc-cmd .vc-cmd-prompted {
+  position: fixed;
+  width: 100%;
+  background-color: #FBF9FE;
+  border: 1px solid #D9D9D9;
+  overflow-x: scroll;
+  display: none;
+}
+#__vconsole .vc-logbox .vc-cmd .vc-cmd-prompted li {
+  list-style: none;
+  line-height: 30px;
+  padding: 0 0.46153846em;
+  border-bottom: 1px solid #D9D9D9;
+}
+#__vconsole .vc-logbox .vc-group .vc-group-preview {
+  -webkit-touch-callout: none;
+}
+#__vconsole .vc-logbox .vc-group .vc-group-preview:active {
+  background-color: #E6E6E6;
+}
+#__vconsole .vc-logbox .vc-group .vc-group-detail {
+  display: none;
+  padding: 0 0 0.76923077em 1.53846154em;
+  border-bottom: 1px solid #EEE;
+}
+#__vconsole .vc-logbox .vc-group.vc-actived .vc-group-detail {
+  display: block;
+  background-color: #FBF9FE;
+}
+#__vconsole .vc-logbox .vc-group.vc-actived .vc-table-row {
+  background-color: #FFF;
+}
+#__vconsole .vc-logbox .vc-group.vc-actived .vc-group-preview {
+  background-color: #FBF9FE;
+}
+#__vconsole .vc-logbox .vc-table .vc-table-row {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-box-direction: row;
+  -webkit-flex-wrap: wrap;
+  overflow: hidden;
+  border-bottom: 1px solid #EEE;
+}
+#__vconsole .vc-logbox .vc-table .vc-table-row.vc-left-border {
+  border-left: 1px solid #EEE;
+}
+#__vconsole .vc-logbox .vc-table .vc-table-col {
+  flex: 1;
+  -webkit-box-flex: 1;
+  padding: 0.23076923em 0.30769231em;
+  border-left: 1px solid #EEE;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  /*white-space: nowrap;
+        text-overflow: ellipsis;*/
+  -webkit-overflow-scrolling: touch;
+}
+#__vconsole .vc-logbox .vc-table .vc-table-col:first-child {
+  border: none;
+}
+#__vconsole .vc-logbox .vc-table .vc-small .vc-table-col {
+  padding: 0 0.30769231em;
+  font-size: 0.92307692em;
+}
+#__vconsole .vc-logbox .vc-table .vc-table-col-2 {
+  flex: 2;
+  -webkit-box-flex: 2;
+}
+#__vconsole .vc-logbox .vc-table .vc-table-col-3 {
+  flex: 3;
+  -webkit-box-flex: 3;
+}
+#__vconsole .vc-logbox .vc-table .vc-table-col-4 {
+  flex: 4;
+  -webkit-box-flex: 4;
+}
+#__vconsole .vc-logbox .vc-table .vc-table-col-5 {
+  flex: 5;
+  -webkit-box-flex: 5;
+}
+#__vconsole .vc-logbox .vc-table .vc-table-col-6 {
+  flex: 6;
+  -webkit-box-flex: 6;
+}
+#__vconsole .vc-logbox .vc-table .vc-table-row-error {
+  border-color: #F4A0AB;
+  background-color: #FFE4E1;
+}
+#__vconsole .vc-logbox .vc-table .vc-table-row-error .vc-table-col {
+  color: #DC143C;
+  border-color: #F4A0AB;
+}
+#__vconsole .vc-logbox .vc-table .vc-table-col-title {
+  font-weight: bold;
+}
+#__vconsole .vc-logbox.vc-actived {
+  display: block;
+}
+#__vconsole .vc-toolbar {
+  border-top: 1px solid #D9D9D9;
+  line-height: 3em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  display: -webkit-box;
+  flex-direction: row;
+  -webkit-box-direction: row;
+}
+#__vconsole .vc-toolbar .vc-tool {
+  display: none;
+  text-decoration: none;
+  color: #000;
+  width: 50%;
+  flex: 1;
+  -webkit-box-flex: 1;
+  text-align: center;
+  position: relative;
+  -webkit-touch-callout: none;
+}
+#__vconsole .vc-toolbar .vc-tool.vc-toggle,
+#__vconsole .vc-toolbar .vc-tool.vc-global-tool {
+  display: block;
+}
+#__vconsole .vc-toolbar .vc-tool:active {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+#__vconsole .vc-toolbar .vc-tool:after {
+  content: " ";
+  position: absolute;
+  top: 0.53846154em;
+  bottom: 0.53846154em;
+  right: 0;
+  border-left: 1px solid #D9D9D9;
+}
+#__vconsole .vc-toolbar .vc-tool-last:after {
+  border: none;
+}
+@supports (bottom: constant(safe-area-inset-bottom)) or (bottom: env(safe-area-inset-bottom)) {
+  #__vconsole .vc-toolbar,
+  #__vconsole .vc-switch {
+    bottom: constant(safe-area-inset-bottom);
+    bottom: env(safe-area-inset-bottom);
+  }
+}
+#__vconsole.vc-toggle .vc-switch {
+  display: none;
+}
+#__vconsole.vc-toggle .vc-mask {
+  background: rgba(0, 0, 0, 0.6);
+  display: block;
+}
+#__vconsole.vc-toggle .vc-panel {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+</style><style>/* color */
+.vcelm-node {
+  color: #183691;
+}
+.vcelm-k {
+  color: #0086B3;
+}
+.vcelm-v {
+  color: #905;
+}
+/* layout */
+.vcelm-l {
+  padding-left: 8px;
+  position: relative;
+  word-wrap: break-word;
+  line-height: 1;
+}
+/*.vcelm-l.vcelm-noc {
+  padding-left: 0;
+}*/
+.vcelm-l.vc-toggle > .vcelm-node {
+  display: block;
+}
+.vcelm-l .vcelm-node:active {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.vcelm-l.vcelm-noc .vcelm-node:active {
+  background-color: transparent;
+}
+.vcelm-t {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+/* level */
+.vcelm-l .vcelm-l {
+  display: none;
+}
+.vcelm-l.vc-toggle > .vcelm-l {
+  margin-left: 4px;
+  display: block;
+}
+/* arrow */
+.vcelm-l:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: 3px;
+  width: 0;
+  height: 0;
+  border: transparent solid 3px;
+  border-left-color: #000;
+}
+.vcelm-l.vc-toggle:before {
+  display: block;
+  top: 6px;
+  left: 0;
+  border-top-color: #000;
+  border-left-color: transparent;
+}
+.vcelm-l.vcelm-noc:before {
+  display: none;
+}
+</style>
+    <link rel="stylesheet" href="//static.xtbg.ac.cn/2022/css/animate.min.css">
+    <link rel="stylesheet" href="//static.xtbg.ac.cn/2022/css/style.css">
+    <script src="//static.xtbg.ac.cn/2022/js/Vue.js"></script>
+    <script src="//static.xtbg.ac.cn/2022/js/swiper.js"></script>
+    <meta name="SiteName" content="中国科学院西双版纳热带植物园">
+    <meta name="SiteDomain" content="https://xtbg.ac.cn">
+    <title>中国科学院西双版纳热带植物园</title>
+</head>
+
+<body style="">
+<div class="body_con">
+    <!--HEADER-->
+<!--公共头部-->
+<div class="body_header">
+    <div class="body_header_top">
+        <a href="http://xtbg.cas.cn/2022/wzdt/">网站地图</a>
+        <a href="https://cloud.xtbg.ac.cn">西园云</a>
+        <a href="https://in.xtbg.ac.cn">内网</a>
+        <a href="https://xtbg.cas.cn/2022/library/" target="_blank">图书馆</a>
+        <a href="https://mail.cstnet.cn/" target="_blank">邮箱</a>
+        <a href="https://www.cas.cn" target="_blank">中国科学院</a>
+    </div>
+    <div class="body_header_fg"></div>
+    <div class="body_header_menu">
+        <a href="/" class="body_header_logo">
+            <img src="//static.xtbg.ac.cn/2022/image/logo_1.svg" alt="">
+            <img src="//static.xtbg.ac.cn/2022/image/logo_2.svg" alt="">
+        </a>
+        <div class="body_header_menu_ul">
+            <div class="body_header_menu_li">
+                <a href="https://xtbg.ac.cn/">首页</a>
+            </div>
+
+            <!-- 新闻 -->
+            <div class="body_header_menu_li">
+                <a href="http://xtbg.cas.cn/2022/xinwen/">新闻</a>
+                <div class="body_header_menu_erji">
+                    <div class="body_header_menu_erji_bor">
+                        <div class="menu_erji_left">
+                            
+                                <a href="http://xtbg.cas.cn/2022/xinwen/yw/" target="_blank" title="要闻">要闻</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/xinwen/zhxw/" target="_blank" title="西园动态">西园动态</a>
+                            
+                                <a href="https://xtbg.cas.cn/2022/mtsm/twbd/" target="_blank" title="媒体关注">媒体关注</a>
+                            
+                                <a href="https://xtbg.ac.cn/2022/kxyj01/kydt_1/" target="_blank" title="科研进展">科研进展</a>
+                            
+                                <a href="https://xtbg.cas.cn/2022/wzbc/ylxx_1/" target="_blank" title="园林消息">园林消息</a>
+                            
+                                <a href="https://xtbg.cas.cn/2022/kpjy01/kpbd_1/" target="_blank" title="科普报道">科普报道</a>
+                            
+                                <a href="https://xtbg.ac.cn/2022/ykfw/lyxx/" target="_blank" title="旅游信息">旅游信息</a>
+                            
+                                <a href="https://xtbg.ac.cn/2022/tzgg/zp/" target="_blank" title="通知公告">通知公告</a>
+                            
+                        </div>
+                        <div class="menu_erji_right" style="background: url(//static.xtbg.ac.cn/2022/image/nav2/jgsz.png)no-repeat center top;background-size: cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 新闻 End-->
+
+            <!-- 西园简介 -->
+            <div class="body_header_menu_li">
+                <a href="http://xtbg.cas.cn/2022/xyjj/">西园简介</a>
+                <div class="body_header_menu_erji">
+                    <div class="body_header_menu_erji_bor">
+                        <div class="menu_erji_left">
+                            
+                                <a href="http://xtbg.cas.cn/2022/xyjj/yqjs/" target="_blank" title="园区介绍">园区介绍</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/xyjj/xrld/" target="_blank" title="现任领导">现任领导</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/xyjj/lrld/" target="_blank" title="历任领导">历任领导</a>
+                            
+                                <a href="https://xtbg.cas.cn/2022/djwh/zzjg/" target="_blank" title="党委和纪委">党委和纪委</a>
+                            
+                                <a href="https://xtbg.ac.cn/2022/kxyj01/xswyh/" target="_blank" title="学术委员会">学术委员会</a>
+                            
+                                <a href="https://xtbg.cas.cn/2022/yjsjy/xwxk/202301/t20230106_6596226.html" target="_blank" title="学位委员会">学位委员会</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/xyjj/xyls/" target="_blank" title="西园历史">西园历史</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/xyjj/xxbs/" target="_blank" title="形象标识">形象标识</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/xyjj/szyq/" target="_blank" title="数字园区">数字园区</a>
+                            
+                        </div>
+                        <div class="menu_erji_right" style="background: url(//static.xtbg.ac.cn/2022/image/nav2/yqjj.png)no-repeat center top;background-size: cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 西园简介 End-->
+
+            <!-- 机构设置 -->
+            <div class="body_header_menu_li">
+                <a href="http://xtbg.cas.cn/2022/jgsz/">机构设置</a>
+                <div class="body_header_menu_erji">
+                    <div class="body_header_menu_erji_bor">
+                        <div class="menu_erji_left">
+                            
+                                <a href="http://xtbg.cas.cn/2022/jgsz/kybm/" target="_blank" title="科研部门">科研部门</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/jgsz/glxt/" target="_blank" title="管理系统">管理系统</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/jgsz/ywjg/" target="_blank" title="业务机构">业务机构</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/jgsz/zcxt/" target="_blank" title="支撑系统">支撑系统</a>
+                            
+                        </div>
+                        <div class="menu_erji_right" style="background: url(//static.xtbg.ac.cn/2022/image/nav2/jgsz.png)no-repeat center top;background-size: cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 机构设置End-->
+
+            <!-- 人才队伍 -->
+            <div class="body_header_menu_li">
+                <a href="http://xtbg.cas.cn/2022/rcdw/">人才队伍</a>
+                <div class="body_header_menu_erji">
+                    <div class="body_header_menu_erji_bor">
+                        <div class="menu_erji_left">
+                            
+                                <a href="http://xtbg.cas.cn/2022/rcdw/yjy/" target="_blank" title="研究系列">研究系列</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/rcdw/gcs/" target="_blank" title="工程系列">工程系列</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/rcdw/sys/" target="_blank" title="实验系列">实验系列</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/rcdw/qtrc/" target="_blank" title="其他系列">其他系列</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/rcdw/qch/" target="_blank" title="青促会小组">青促会小组</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/rcdw/bshldz/" target="_blank" title="博士后流动站">博士后流动站</a>
+                            
+                                <a href="https://xtbg.ac.cn/2022/tzgg/zp/" target="_blank" title="人才招聘">人才招聘</a>
+                            
+                        </div>
+                        <div class="menu_erji_right" style="background: url(//static.xtbg.ac.cn/2022/image/nav2/rcdw.png)no-repeat center top;background-size: cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 人才队伍 End-->
+
+            <!-- 研究生教育 -->
+            <div class="body_header_menu_li">
+                <a href="http://xtbg.cas.cn/2022/yjsjy/">研究生教育</a>
+                <div class="body_header_menu_erji">
+                    <div class="body_header_menu_erji_bor">
+                        <div class="menu_erji_left">
+                            
+                                <a href="http://xtbg.cas.cn/2022/yjsjy/xwdt/" target="_blank" title="新闻动态">新闻动态</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/yjsjy/notice/" target="_blank" title="通知公告">通知公告</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/yjsjy/yjszsxx/" target="_blank" title="招生信息">招生信息</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/yjsjy/pygl/" target="_blank" title="培养管理">培养管理</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/yjsjy/xwxk/" target="_blank" title="学位学科">学位学科</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/yjsjy/dsdw/" target="_blank" title="导师队伍">导师队伍</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/yjsjy/xsgz/" target="_blank" title="学生工作">学生工作</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/yjsjy/fwzn80128/" target="_blank" title="服务指南">服务指南</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/yjsjy/contact/" target="_blank" title="联系我们">联系我们</a>
+                            
+                        </div>
+                        <div class="menu_erji_right" style="background: url(//static.xtbg.ac.cn/2022/image/nav2/yjsjy.png)no-repeat center top;background-size: cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 研究生教育 End-->
+
+            <!-- 党建文化 -->
+            <div class="body_header_menu_li">
+                <a href="http://xtbg.cas.cn/2022/djwh/">党建文化</a>
+                <div class="body_header_menu_erji">
+                    <div class="body_header_menu_erji_bor">
+                        <div class="menu_erji_left">
+                            
+                                <a href="http://xtbg.cas.cn/2022/djwh/djdt/" target="_blank" title="党建动态">党建动态</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/djwh/zzjg/" target="_blank" title="组织结构">组织结构</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/djwh/tzqt/" target="_blank" title="群团天地">群团天地</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/djwh/ffcl/" target="_blank" title="廉政建设">廉政建设</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/djwh/dwgk/" target="_blank" title="党务公开">党务公开</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/djwh/oigtz/" target="_blank" title="文化建设">文化建设</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/djwh/whjs/" target="_blank" title="党建专题">党建专题</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/djwh/xxzy/" target="_blank" title="学习资源">学习资源</a>
+                            
+                        </div>
+                        <div class="menu_erji_right" style="background: url(//static.xtbg.ac.cn/2022/image/nav2/djwh.png)no-repeat center top;background-size: cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 党建文化 End-->
+
+            <!-- 信息公开 -->
+            <div class="body_header_menu_li">
+                <a href="http://xtbg.cas.cn/2022/xxgk02/">信息公开</a>
+                <div class="body_header_menu_erji">
+                    <div class="body_header_menu_erji_bor">
+                        <div class="menu_erji_left">
+                            
+                                <a href="http://xtbg.cas.cn/2022/xxgk02/gd/" target="_blank" title="信息公开规定">信息公开规定</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/xxgk02/zn/" target="_blank" title="信息公开指南">信息公开指南</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/xxgk02/ml/" target="_blank" title="信息公开目录">信息公开目录</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/xxgk02/yjs/" target="_blank" title="预（决）算公开">预（决）算公开</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/xxgk02/sqgk/" target="_blank" title="依申请公开">依申请公开</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/xxgk02/xxgkbg/" target="_blank" title="年度报告">年度报告</a>
+                            
+                                <a href="http://xtbg.cas.cn/2022/xxgk02/lxfs/" target="_blank" title="联系方式">联系方式</a>
+                            
+                        </div>
+                        <div class="menu_erji_right" style="background: url(//static.xtbg.ac.cn/2022/image/index_title_bj.png)no-repeat center top;background-size: cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 信息公开 End-->
+
+            <div class="body_header_menu_li">
+                <a href="https://en.xtbg.ac.cn/" class="yuyan">
+                    <span>EN</span>
+                </a>
+                <span>　</span>
+                <a href="/search/" class="yuyan">
+                    <span><img src="//static.xtbg.ac.cn/2022/image/sousuo_i.png" alt=""></span>
+                </a>
+            </div>
+
+        </div>
+        <div class="body_header_menu_model">
+            <a href="javascript:;" class="mobel_top_hamburger" on="false">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </a>
+        </div>
+    </div>
+    <div class="header_model_menu">
+        <a href="https://xtbg.cas.cn">
+            <span>首页</span>
+            <img src="//static.xtbg.ac.cn/2022/image/daohang_jini.png" alt="">
+        </a>
+        <a href="http://xtbg.cas.cn/2022/xinwen/">
+        <span>新闻</span>
+        <img src="//static.xtbg.ac.cn/2022/image/daohang_jini.png" alt="">
+        </a>
+        <a href="http://xtbg.cas.cn/2022/xyjj/">
+        <span>西园简介</span>
+        <img src="//static.xtbg.ac.cn/2022/image/daohang_jini.png" alt="">
+        </a>
+        <a href="http://xtbg.cas.cn/2022/jgsz/">
+        <span>机构设置</span>
+        <img src="//static.xtbg.ac.cn/2022/image/daohang_jini.png" alt="">
+        </a>
+        <a href="http://xtbg.cas.cn/2022/rcdw/">
+        <span>人才队伍</span>
+        <img src="//static.xtbg.ac.cn/2022/image/daohang_jini.png" alt="">
+        </a>
+        <a href="http://xtbg.cas.cn/2022/yjsjy/">
+        <span>研究生教育</span>
+        <img src="//static.xtbg.ac.cn/2022/image/daohang_jini.png" alt="">
+        </a>
+        <a href="http://xtbg.cas.cn/2022/djwh/">
+        <span>党建文化</span>
+        <img src="//static.xtbg.ac.cn/2022/image/daohang_jini.png" alt="">
+        </a>
+        <a href="http://xtbg.cas.cn/2022/xxgk02/">
+        <span>信息公开</span>
+        <img src="//static.xtbg.ac.cn/2022/image/daohang_jini.png" alt="">
+        </a>
+
+        <div class="header_model_menu_li">
+            <a href="http://xtbg.cas.cn/2022/wzdt/">网站地图</a>
+            <a href="https://in.xtbg.ac.cn" target="_blank">内网</a>
+            <a href="https://xtbg.cas.cn/2022/library/" target="_blank">图书馆</a>
+            <a href="https://mail.cstnet.cn" target="_blank">邮箱</a>
+            <a href="https://www.cas.cn" target="_blank">中国科学院</a>
+        </div>
+        <div class="header_model_menu_li" style="justify-content: flex-start">
+            <div class="header_model_menu_li_ywen">
+                EN
+            </div>
+            <a href="https://en.xtbg.ac.cn/">英文版</a>
+            <span>　</span>
+            <div class="header_model_menu_li_ywen">
+                <img src="//static.xtbg.ac.cn/2022/image/sousuo_i.png" alt="">
+            </div>
+            <a href="/search/">搜索</a>
+        </div>
+    </div>
+</div>
+<!--HEADER-END-->
+    <!--BODY-->
+    <!--主要内容-->
+    <div class="nei_div">
+        <!--手机二级导航-->
+        <div class="nei_erji" title_id="1">
+            <a ej_li_id="1" href="../" class="nei_erji_li" on="true">2022网站</a>
+            
+            <a ej_li_id="2" href="./yqjs/" class="nei_erji_li">园区介绍</a>
+            
+            <a ej_li_id="2" href="./xrld/" class="nei_erji_li">现任领导</a>
+            
+            <a ej_li_id="2" href="./lrld/" class="nei_erji_li">历任领导</a>
+            
+            <a ej_li_id="2" href="https://xtbg.cas.cn/2022/djwh/zzjg/" class="nei_erji_li">党委和纪委</a>
+            
+            <a ej_li_id="2" href="https://xtbg.ac.cn/2022/kxyj01/xswyh/" class="nei_erji_li">学术委员会</a>
+            
+            <a ej_li_id="2" href="https://xtbg.cas.cn/2022/yjsjy/xwxk/202301/t20230106_6596226.html" class="nei_erji_li">学位委员会</a>
+            
+            <a ej_li_id="2" href="./xyls/" class="nei_erji_li">西园历史</a>
+            
+            <a ej_li_id="2" href="./xxbs/" class="nei_erji_li">形象标识</a>
+            
+            <a ej_li_id="2" href="./szyq/" class="nei_erji_li">数字园区</a>
+            
+        </div>
+        <!--内页banner图-->
+        <div class="banner_div" style="background: url(./images/P020221031578229669504.jpg)no-repeat center top;background-size: cover"></div>
+        <!--位置-->
+        <div class="body_weizhi wow slideInUp">
+            您当前的位置：<a href="../../" title="首页" class="CurrChnlCls">首页</a>&nbsp;&gt;&nbsp;<a href="./" title="西园简介" class="CurrChnlCls">西园简介</a>
+        </div>
+        <!--园区介绍-->
+        <div class="nei_yqjs">
+            
+            <div class="nei_yqjs_left wow slideInLeft">
+                <div class="nei_yqjs_left_title">
+                    园区介绍
+                </div>
+                <div class="nei_yqjs_left_centent">
+                    <span><br>　　中国科学院西双版纳热带植物园（以下简称“版纳植物园”）是中国科学院直属事业单位，是集科学研究、物种保存与科普教育为一体的综合性研究机构和国内外知名的风景名胜区。版纳植物园秉承“秉恒致知 和实生物”的核心理念，立足中国热带，面向东南亚国家，辐射全球热带区域，开展以森林生态学、资源植物学和保护生物学为主要方向的科学研究、物种保存和科普教育，促进我国生物多样性保护和可持续发展。
+<br>　　版纳植物园由我国著名植物学家蔡希陶先生于1959年领导创建。全园占地面积约1,125公顷，收集活植物13,000多种，建有39个植物专类区，保存有一片面积约250公顷的原始热带雨林，是我国面积最大、收集物种最丰富、专类园区最多的植物园之一，也是世界上户外保存植物种数和向公众展示的植物类群数最多的植物园之一。
+<br>　　版纳植物园现有在册职工769人（岗位聘用309人，项目聘用和一般聘用合同制460人），高级专业技术职称人员164人，研究生指导教师101人。现设有生态学专业一级学科博士、硕士研究生培养点，植物学专业二级学科博士、硕士研究生培养点，并设有生物学专业一级学科博士后流动站。在读研究生516人（含外籍56人），其中博士生142人、硕士生374人。在站博士后共计59人（含外籍22人），特别研究助理16人（含外籍12人）。</span>
+                </div>
+                <a href="https://xtbg.cas.cn/2022/xyjj/yqjs/" class="nei_yqjs_left_gd">
+                    查看详情
+                </a>
+            </div>
+            <div class="nei_yqjs_right wow slideInRight">
+                <img src="./yqjs/202210/W020221102405428244963.png" alt="">
+            </div>
+            
+        </div>
+        <!--现任领导-->
+        <div class="nei_xrld wow slideInUp">
+            <div class="nei_xrld_div">
+                <div class="nei_xrld_top">
+                    <div class="nei_xrld_top_title">
+                        现任领导
+                    </div>
+                </div>
+
+                <div class="nei_xrld_cen">
+                 
+                   <a href="https://xtbg.cas.cn/2022/xyjj/xrld/" class="nei_xrld_cen_li">
+                        <div class="nei_xrld_cen_li_img">
+                            <img src="./xrld/202212/W020221229586878262347.jpg" alt="">
+                        </div>
+                        <div class="nei_xrld_cen_li_div">
+                            <p><span>星耀武</span>  园主任</p>
+                        </div>
+                    </a>
+                 
+                   <a href="https://xtbg.cas.cn/2022/xyjj/xrld/" class="nei_xrld_cen_li">
+                        <div class="nei_xrld_cen_li_img">
+                            <img src="./xrld/202507/W020250708576261147819.jpg" alt="">
+                        </div>
+                        <div class="nei_xrld_cen_li_div">
+                            <p><span>张教林<br></span>  党委书记、副主任</p>
+                        </div>
+                    </a>
+                 
+                   <a href="https://xtbg.cas.cn/2022/xyjj/xrld/" class="nei_xrld_cen_li">
+                        <div class="nei_xrld_cen_li_img">
+                            <img src="./xrld/202210/W020221221341981864355.jpg" alt="">
+                        </div>
+                        <div class="nei_xrld_cen_li_div">
+                            <p><span>权锐昌</span>  副主任</p>
+                        </div>
+                    </a>
+                 
+                   <a href="https://xtbg.cas.cn/2022/xyjj/xrld/" class="nei_xrld_cen_li">
+                        <div class="nei_xrld_cen_li_img">
+                            <img src="./xrld/202210/W020221109472447890942.jpg" alt="">
+                        </div>
+                        <div class="nei_xrld_cen_li_div">
+                            <p><span>黎廷宇</span>  纪委书记</p>
+                        </div>
+                    </a>
+                
+                </div>
+            </div>
+        </div>
+        <!--现任领导-->
+        <div class="nei_lrld">
+            <div class="nei_lrld_title wow slideInUp">
+                <span>历任领导</span>
+                <a href="https://xtbg.cas.cn/2022/xyjj/lrld/">更多+</a>
+            </div>
+            <div class="nei_lrld_ul">
+                 
+                <a href="https://xtbg.cas.cn/2022/xyjj/lrld/" class="nei_lrld_li wow slideInUp">
+                    <div class="nei_lrld_li_img">
+                        <img src="./lrld/202210/W020221022580763287322.jpg" field="_recurl" index="1">
+                    </div>
+                    <div class="nei_lrld_li_cen">
+                        <h1>【蔡希陶】</h1>
+                        <p>任职：第一任园主任</p>
+                        <p>任期：1959-1981年</p>
+                        <p class="nei_lrld_li_cen_p">蔡希陶教授（1911-1981），浙江东阳人，我国著名植物学家。1930年入北平静生生物调查所。1932年入滇考察，采集标本数万号。1938年参与创建中国科学院昆明植物研究所的前身——云南农林植物研究所。1949年后历任昆明工作站主任，昆明植物研究所副所长。1958年带领一批有志青年创建西双版纳热带植物园，兼任园主任。1974年任热带植物所所长至1981年。他一生为祖国的植物学事业，为发展云南的烟草业、橡胶业以及香料、药用植物等经济产业和热带雨林的保护作出了无可估量的贡献。由他领导创建的中国科学院西双版纳热带植物园，已成为我国热带植物学研究的重要基地和科普旅游胜地。中国科学院原院长周光召指出：“蔡希陶同志的科学精神和爱国热情是我国科学界和科学院宝贵的精神财富”。他所开创的事业，有如雨林中的参天大树，根深叶茂，四时常青。 </p>
+                    </div>
+                </a>
+                 
+                <a href="https://xtbg.cas.cn/2022/xyjj/lrld/" class="nei_lrld_li wow slideInUp">
+                    <div class="nei_lrld_li_img">
+                        <img src="./lrld/202210/W020221022579971406780.png" field="_recurl" index="1">
+                    </div>
+                    <div class="nei_lrld_li_cen">
+                        <h1>裴盛基</h1>
+                        <p>任职：第二任园主任</p>
+                        <p>任期：1981-1986年</p>
+                        <p class="nei_lrld_li_cen_p">裴盛基教授，1938年7月15日出生，四川省梓潼县人。1955年7月毕业于四川省成都农业学校，同年9月分配到中国科学院昆明植物研究所，任所办秘书。1961年10月，调该所西双版纳热带植物园，从事植物采集、调查和考察工作，为本园的植物分类学、植物资源学及民族植物学的研究奠定了基础。1978年任助研，1979年任副研，1988年任研究员。在行政管理上，1974年任植物分类研究室主任，1978年任热带植物所副所长，1987年因体制调整，调任中国科学院昆明植物研究所副所长，创建了我国第一个民族植物学研究室，填补了我国民族植物学研究的空白。</p>
+                    </div>
+                </a>
+                 
+                <a href="https://xtbg.cas.cn/2022/xyjj/lrld/" class="nei_lrld_li wow slideInUp">
+                    <div class="nei_lrld_li_img">
+                        <img src="./lrld/202210/W020221103371265138876.png" field="_recurl" index="1">
+                    </div>
+                    <div class="nei_lrld_li_cen">
+                        <h1>许再富</h1>
+                        <p>任职：第三任园主任</p>
+                        <p>任期：1987-2001年</p>
+                        <p class="nei_lrld_li_cen_p">许再富教授，1939年9月15日出生，广东省饶平县人。1959年7月毕业于广东省农业潮安农业学校，同年9月分配到中国科学院昆明植物研究所，从事花卉园艺和园林设计工作。1961年12月调该所西双版纳热带植物园，从事园林设计、植物引种驯化和植物资源的研究工作。1965年函授毕业于云南大学生物系，1985年结业于德国累斯顿技术大学国际研究生班热带森林管理与保护专业（硕士）。1978年晋升为助理研究员，1983年晋升为副研究员，1989年晋升为研究员，1995年任博士生导师。从事热带植物资源开发、利用和保护研究近40年，从20世纪80年代起专攻生物多样性保护及可持续发展研究，是我国最早和较系统从事保护生物学研究的专家之一。</p>
+                    </div>
+                </a>
+                 
+                <a href="https://xtbg.cas.cn/2022/xyjj/lrld/" class="nei_lrld_li wow slideInUp">
+                    <div class="nei_lrld_li_img">
+                        <img src="./lrld/202210/W020221022581119169135.png" field="_recurl" index="1">
+                    </div>
+                    <div class="nei_lrld_li_cen">
+                        <h1>【刘宏茂】</h1>
+                        <p>任职：第四任园主任</p>
+                        <p>任期：2001-2005年</p>
+                        <p class="nei_lrld_li_cen_p">刘宏茂（1961-2006），湖南省洞口县人。1987年9月至1990年2月，在中国科学院昆明植物研究所学习，获理学硕士学位。1996年7月至1997年7月，在澳大利亚西悉尼大学科学技术与农业学院学习。2001年9月至2004年7月，在中科院武汉水生生物所学习，获博士学位。1982年8月至1987年8月，在湖南省洞口县农业科学研究所工作，1983年起任副所长。1990年2月起在西双版纳热带植物园工作，1990年12月任经济植物研究室副主任，助理研究员，1995年3月起任植物园副主任，副研究员。2000年晋升为研究员，2001年6月起任植物园主任。2005年调任昆明分院党组副书记。2006年病逝。</p>
+                    </div>
+                </a>
+                 
+                <a href="https://xtbg.cas.cn/2022/xyjj/lrld/" class="nei_lrld_li wow slideInUp">
+                    <div class="nei_lrld_li_img">
+                        <img src="./lrld/202210/W020221022578308771602.jpg" field="_recurl" index="1">
+                    </div>
+                    <div class="nei_lrld_li_cen">
+                        <h1>陈进</h1>
+                        <p>任职：第五任园主任</p>
+                        <p>任期：2005-2021年</p>
+                        <p class="nei_lrld_li_cen_p">陈进研究员（1965年11月-），江苏省泰县人。1982年9月至1986年7月，在南京农业大学学习，获农学学士学位。1999年2月至2003年9月，在中国科学院昆明植物所学习，获理学博士学位。1997年9月至1998年2月、2002年2月至8月，分别在德国波恩大学植物园、美国迈阿密大学做访问学者。1986年8月起在中国科学院西双版纳热带植物园工作，1995年晋升副研究员，2000年晋升研究员。2005年10月至2021年5月，任园主任。2012年-2021年，任中国植物园联盟（现中国植物园联合保护计划）常务副理事长兼秘书长；2015年-2021年任中国科学院东南亚中心主任。2021年10月至今任版纳植物园环境教育中心首席科学家。</p>
+                    </div>
+                </a>
+                 
+                <a href="https://xtbg.cas.cn/2022/xyjj/lrld/" class="nei_lrld_li wow slideInUp">
+                    <div class="nei_lrld_li_img">
+                        <img src="./lrld/202502/W020250213617927439652.jpg" field="_recurl" index="1">
+                    </div>
+                    <div class="nei_lrld_li_cen">
+                        <h1>杨永平</h1>
+                        <p>任职：第六任园主任</p>
+                        <p>任期：2021-2025年</p>
+                        <p class="nei_lrld_li_cen_p">杨永平研究员，1965年1月30日出生，江西省安远县人。1982年9月至1986年8月，在兰州大学学习，获理学学士学位。1986年9月至1989年7月，在中国科学院昆明植物研究所学习，获理学硕士学位。1989年8月起在中国科学院昆明植物研究所工作，1992年晋升为助理研究员，1997年晋升为副研究员，1999年任计划外事处处长，2002年至2009年任副所长，2006年晋升为研究员。2009年至2012年在中国科学院青藏高原研究所工作，任副所长，2012年至2019年在中国科学院昆明植物研究所工作，任党委书记、副所长。2020年起在中国科学院西双版纳热带植物园工作，任党委书记、副主任，2021年5月起任园主任。</p>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+        <!--西园历史-形象标识-->
+        <div class="nei_xyls_xxbs">
+            <div class="nei_xyls_xxbs_bor">
+                <!--西园历史-->
+                <div class="nei_xyls wow slideInLeft">
+                    <div class="nei_xyls_title">
+                        <span>西园历史</span>
+                        <a href="https://xtbg.cas.cn/2022/xyjj/xyls/">更多+</a>
+                    </div>
+                    <div class="nei_xyls_ul">
+                
+                        <a href="./xyls/202210/t20221013_6524072.html" class="nei_xyls_li">
+                            <p>关于在勐仑建立西双版纳热带植物园的报告</p>
+                            <span>2018-12-23</span>
+                        </a>
+                
+                        <a href="./xyls/202210/t20221013_6524071.html" class="nei_xyls_li">
+                            <p>生命之树常绿</p>
+                            <span>2018-12-23</span>
+                        </a>
+                
+                        <a href="./xyls/202210/t20221013_6524070.html" class="nei_xyls_li">
+                            <p>咏西双版纳植物园</p>
+                            <span>2018-12-23</span>
+                        </a>
+                
+                        <a href="./xyls/202210/t20221013_6524069.html" class="nei_xyls_li">
+                            <p>中国科学院西双版纳热带植物园关于调查勐仑自然保护区范围的报告</p>
+                            <span>2018-12-23</span>
+                        </a>
+                
+                        <a href="./xyls/202210/t20221013_6524068.html" class="nei_xyls_li">
+                            <p>云南省人民委员会同意将西双版纳易武县勐仑区勐仑划为自然保护区的通知</p>
+                            <span>2018-12-23</span>
+                        </a>
+                
+                        <a href="./xyls/202210/t20221013_6524067.html" class="nei_xyls_li">
+                            <p>中国科学院云南分院关于划勐仑自然保护区的报告</p>
+                            <span>2018-12-23</span>
+                        </a>
+                
+                        <a href="./xyls/202210/t20221013_6524066.html" class="nei_xyls_li">
+                            <p>中国科学院西双版纳热带植物园沿革</p>
+                            <span>2015-08-31</span>
+                        </a>
+                
+                    </div>
+                </div>
+                <!--形象标识-->
+                <div class="nei_xxbs wow slideInRight">
+                    <div class="nei_xyls_title">
+                        <span>形象标识</span>
+                    </div>
+                    <div class="nei_xxbs_div">
+                        <div class="nei_xxbs_div_cen">
+                            <div class="nei_xxbs_div_left">
+                                <img src="http://static.xtbg.ac.cn/2022/v9/image/xxbs_img.png" alt="">
+                            </div>
+                            <div class="nei_xxbs_div_right">
+                                中国科学院西双版纳热带植物园标志设计，以“生态学与生物多样性研究基地，热带植物大本营”的形象定位为设计意本营”的形象定位为设计意念，形象贴切的传达了其文化特质，是视觉形象的达了其文化特质，是视觉形象的是视觉形象的达了其文化特质，是视觉形象的
+                            </div>
+                        </div>
+                        <a href="https://xtbg.cas.cn/2022/xyjj/xxbs/" class="nei_xxbs_div_a">
+                            查看详情
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--数字园区-->
+        <div class="nei_szyq wow slideInUp">
+            
+            <a href="https://xtbg.cas.cn/2022/xyjj/szyq/" class="nei_szyq_div">
+                <img src="./szyq/202210/W020221102406176133486.jpg" alt="">
+            </a>
+            
+        </div>
+    </div>
+    <!--BODY-END-->
+
+
+        <!--FOOTER-->
+        <!--尾部-->
+        <div class="body_footer" style="background: url(//static.xtbg.ac.cn/2022/image/buttom_bj.png)no-repeat center top;background-size: cover">
+            <div class="body_footer_bor">
+                <div class="body_footer_left slideInLeft">
+                    <div class="body_footer_left_logo">
+                        <img src="//static.xtbg.ac.cn/2022/image/buttom_logo.png" alt="">
+                        <div class="body_footer_left_yqlj">
+                            <div class="body_footer_left_yqlj_div">
+                                <span>友情链接</span>
+                                <img src="//static.xtbg.ac.cn/2022/image/yqlj_i.png" alt="">
+                                <div class="body_footer_left_yqlj_ol">
+                                    <div class="body_footer_left_yqlj_ol_bor">
+                                         
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="body_footer_left_content">
+                        <div class="body_footer_left_content_li">
+                            <div class="body_footer_left_content_li_p">
+                                <div class="body_footer_left_content_li_img">
+                                    <img src="//static.xtbg.ac.cn/2022/image/buttom_phone_i.png" alt="">
+                                </div>
+                                <span>0691-8715071</span>（电话）
+                            </div>
+                            <div class="body_footer_left_content_li_p">
+                                <span>0691-8715914</span>(旅游咨询)
+                            </div>
+                        </div>
+                        <div class="body_footer_left_content_li">
+                            <div class="body_footer_left_content_li_p">
+                                <div class="body_footer_left_content_li_img">
+                                    <img src="//static.xtbg.ac.cn/2022/image/buttom_map_i.png" alt="">
+                                </div>
+                                中国·云南省勐腊县勐仑镇
+                            </div>
+                        </div>
+                        <div class="body_footer_left_content_li">
+                            <div class="body_footer_left_content_li_p">
+                                <div class="body_footer_left_content_li_img">
+                                    <img src="//static.xtbg.ac.cn/2022/image/buttom_youbian_i.png" alt="">
+                                </div>
+                                <span>666303</span>（邮政编码）
+                            </div>
+                        </div>
+                    </div>
+                    <div class="body_footer_left_banquan">
+                        版权所有 中国科学院西双版纳热带植物园<br>滇ICP备13004273号 滇公网安备53282302000011号
+                        <span id="_ideConac"><a href="http://bszs.conac.cn/sitename?method=show&amp;id=10C59BAF9AD37085E053012819AC906F" target="_blank"><img id="imgConac" vspace="0" hspace="0" border="0" src="//dcs.conac.cn/image/blue.png" data-bd-imgshare-binded="1"></a></span>
+                    </div>
+                </div>
+                <div class="body_footer_right slideInRight">
+                    <div class="body_footer_ewm">
+                        <img src="//static.xtbg.ac.cn/2022/image/ewm/今日头条.png" alt="">
+                        <p>今日头条</p>
+                    </div>
+                    <div class="body_footer_ewm">
+                        <img src="//static.xtbg.ac.cn/2022/image/ewm/微博.png" alt="">
+                        <p>官方微博</p>
+                    </div>
+                    <div class="body_footer_ewm">
+                        <img src="//static.xtbg.ac.cn/2022/image/ewm/微信公众.jpg" alt="">
+                        <p>微信公众号</p>
+                    </div>
+                    <div class="body_footer_ewm">
+                        <img src="//static.xtbg.ac.cn/2022/image/ewm/抖音.jpg" alt="">
+                        <p>官方抖音号</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--FOOTER-END-->
+       
+        <!--PAGE-JS-->
+    <script src="//static.xtbg.ac.cn/2022/js/wow.min.js"></script>
+    <script src="//static.xtbg.ac.cn/2022/js/ik_js.js"></script>
+    <script src="//static.xtbg.ac.cn/2022/js/style.js"></script>
+<!--PAGE-JS-END-->
+    </div>
+
+
+</body></html>

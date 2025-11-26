@@ -1,0 +1,513 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<title>所况介绍-药用植物生理生态研究所</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="所况介绍">
+<meta name="keywords" content="药用植物生理生态研究所">
+
+<link rel="stylesheet" href="css/default.css">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+	<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css">
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307c78475650575742000200014251 -->
+<link rel="stylesheet" type="text/css" href="dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1199,'/dpzw.jsp',-1,1725010033)</script>
+</head>
+<body>
+<!--header-->
+<div class="header cleafix w1000">
+	<!--logo-->
+	<div class="logo fl">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="药用植物生理生态研究所"><img src="images/logo.png" width="420" height="76" border="0" alt="药用植物生理生态研究所" title="药用植物生理生态研究所"></a></div>
+	<!--right-->
+	<div class="hea-r fr">
+		<div class="hea-nav"></div> 
+		<!--搜索框-->
+		<div class="hea-search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu1">
+    <div id="appu1"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="qwss"> <input name="submit_button" type="button" value="提交" class="tj"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1725010033";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+	</div>
+</div>
+<!--nav-->
+<div id="nav">
+  <div class="Toolbar1 w980">
+    <div class="CentreBox">
+      <div class="Menu">
+        <ul class="List1">
+<li class="tshow">
+<a href="index.htm">主页</a></li>
+<li class="Select tshow">
+<a href="skjs1.htm">所况介绍</a></li>
+<li class="tshow">
+<a href="rcdw_.htm">人才队伍 </a></li>
+<li class="tshow">
+<a href="yjfx1.htm">研究方向</a></li>
+<li class="tshow">
+<a href="kycg_.htm">科研成果 </a></li>
+<li class="tshow">
+<a href="tdwh/xshd.htm">团队文化</a></li>
+<li class="tshow">
+<a href="dqyd1.htm">党群园地</a></li>
+<li class="tshow">
+<a href="hzjl1.htm">合作交流</a></li>
+<li class="tshow">
+<a href="shfw1.htm">社会服务</a></li>
+<li class="tshow">
+<a href="zyxz1.htm">资源下载</a></li>
+</ul>
+      </div>
+    </div>
+  </div>
+<div class="Toolbar2">
+    <div class="CentreBox">
+<div class="Menu Hide">
+        <ul>
+          
+        </ul>
+
+      </div>
+<div class="Menu">
+        <ul>
+
+
+<li>
+<a href="skjs1/jbjs.htm">基本介绍</a>
+<span></span>
+</li>
+          
+
+<li>
+<a href="skjs1/glzc1.htm">管理支撑</a>
+<span></span>
+</li>
+          
+
+<li>
+<a href="skjs1/snjg/ynjg.htm">所内机构</a>
+<span></span>
+</li>
+          
+
+<li>
+<a href="skjs1/kypt.htm">科研平台</a>
+</li>
+          
+
+
+          
+        </ul>
+
+      </div>
+<div class="Menu Hide">
+        <ul>
+
+
+<li>
+<a href="rcdw_/js_yjy.htm">教授-研究员</a>
+<span></span>
+</li>
+          
+
+<li>
+<a href="rcdw_/fjs_fyjy.htm">副教授-副研究员</a>
+<span></span>
+</li>
+          
+
+<li>
+<a href="rcdw_/js1.htm">讲师</a>
+<span></span>
+</li>
+          
+
+<li>
+<a href="rcdw_/kyzl.htm">科研助理</a>
+<span></span>
+</li>
+          
+
+<li>
+<a href="rcdw_/bsh.htm">博士后</a>
+<span></span>
+</li>
+          
+
+<li>
+<a href="rcdw_/xzzl.htm">行政助理</a>
+</li>
+          
+
+
+          
+        </ul>
+
+      </div>
+<div class="Menu Hide">
+        <ul>
+
+
+<li>
+<a href="yjfx1/zyzy.htm">中药资源</a>
+<span></span>
+</li>
+          
+
+<li>
+<a href="yjfx1/jyzx.htm">基因组学</a>
+<span></span>
+</li>
+          
+
+<li>
+<a href="yjfx1/zwsl.htm">植物生理</a>
+<span></span>
+</li>
+          
+
+<li>
+<a href="yjfx1/csdx.htm">次生代谢</a>
+</li>
+          
+
+
+          
+        </ul>
+
+      </div>
+<div class="Menu Hide">
+        <ul>
+
+
+<li>
+<a href="kycg_/fbwz.htm">发表文章</a>
+<span></span>
+</li>
+          
+
+<li>
+<a href="kycg_/kyxm.htm">科研项目</a>
+<span></span>
+</li>
+          
+
+<li>
+<a href="kycg_/zlpz.htm">专利品种</a>
+<span></span>
+</li>
+          
+
+<li>
+<a href="kycg_/cgzh.htm">成果转化</a>
+</li>
+          
+
+
+          
+        </ul>
+
+      </div>
+<div class="Menu Hide">
+        <ul>
+
+
+<li>
+<a href="tdwh/xshd.htm">学术活动</a>
+<span></span>
+</li>
+          
+
+<li>
+<a href="tdwh/jxhd.htm">教学活动</a>
+<span></span>
+</li>
+          
+
+<li>
+<a href="tdwh/tjhd.htm">团建活动</a>
+</li>
+          
+
+
+          
+        </ul>
+
+      </div>
+<div class="Menu Hide">
+        <ul>
+
+
+<li>
+<a href="dqyd1/djdt.htm">党建动态</a>
+<span></span>
+</li>
+          
+
+<li>
+<a href="dqyd1/wjxz.htm">文件下载</a>
+</li>
+          
+
+
+          
+        </ul>
+
+      </div>
+<div class="Menu Hide">
+        <ul>
+          
+        </ul>
+
+      </div>
+<div class="Menu Hide">
+        <ul>
+
+
+<li>
+<a href="shfw1/kjfw.htm">科技服务</a>
+<span></span>
+</li>
+          
+
+<li>
+<a href="shfw1/kpjy.htm">科普教育</a>
+</li>
+          
+
+
+          
+        </ul>
+
+      </div>
+<div class="Menu Hide">
+        <ul>
+          
+        </ul>
+
+      </div>
+</div>
+  </div>
+</div>
+    
+
+
+
+
+
+<!--页面主题部分-->
+<div class="mainDiv w1000 cleafix">
+	
+	<div class="situation fl cleafix">
+		<h2><span>
+
+
+
+所况介绍</span><i><img src="images/ico12.png"></i></h2>
+	</div>
+	<div class="current fr cleafix">
+		<h2><i><img src="images/ico13.png"></i><span>
+    当前位置：</span>
+ <a href="index.htm">主页</a>
+                <b style="font-family:微软雅黑; font-size:14px; font-weight: bold;">＞</b>
+
+                <a href="skjs1.htm" class="cur" style="color:#29A7B3">所况介绍</a>
+</h2>
+	</div>
+	<table width="1000" border="0" cellpadding="0" cellspacing="0" style="margin-top:0;display:block;border-spacing:0;">
+	  <tbody><tr>
+	    <td valign="top" style="border: 1px solid #eee;position: relative;width:236px;*width:236px;left:0;">
+	    	<div class="menu_2">
+            	<ul class="menu">
+ <li class="level1"><a href="skjs1/jbjs.htm">基本介绍</a>
+      </li>
+ <li class="level1"><a href="skjs1/glzc1.htm">管理支撑</a>
+      </li>
+ <li class="level1"><a href="skjs1/snjg/ynjg.htm">所内机构</a>
+      </li>
+ <li class="level1"><a href="skjs1/kypt.htm">科研平台</a>
+      </li>
+
+</ul>
+</div>
+
+	    </td>
+	      <td width="31"></td>
+	    <td valign="top" style="position: relative;width: 730px;right:0;">
+	    	<div class="tr-ri">
+	    		
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1725010033,'wbnews','u6')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta6(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta6('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1725010033,1569)</script>
+
+   <h2> 基本介绍</h2>
+    <div id="vsb_content_2_1569_u61"><div id="vsb_content_2"><p class="vsbcontent_start"><strong>缘起</strong>广州中医药大学中药学院“药用植物生理生态研究所”，成立于2019年11月，是一个新生的朝气蓬勃的科研团队。学术带头人为王宏斌教授（国家杰出青年科学基金获得者、万人计划科技创新领军人才），凝聚了一批来自国内外知名科研机构的优秀青年研究人员。</p>
+<p><strong>初心</strong><strong> </strong>团队成员前期在植物与作物方面进行了十余年的研究，建立了完备的植物生理与分子生物学、多组学分析、代谢调控以及遗传资源鉴定与开发等研究方法与技术平台，系列代表作发表于Cell Host Microbe、Nature Chemical Biology、Genome Biology、PNAS、Plant Cell、Molecular Plant等国际知名期刊。为了响应国家对于振兴中医药的号召，我们将聚焦药用植物并结合自身所长，建立药用植物现代化研究范式。</p>
+<p><strong>规划</strong><strong> </strong>我们已经形成“组学解析”、“光合生理”、“代谢与合成生物学”以及“遗传育种”全链条研究体系。首先，通过多组学联合分析，为药用植物的生理以及代谢现象的分子解析提供线索；随后，利用现代植物分子生物学手段，深入解析药用植物的生理与代谢调控的分子机制；进一步，通过合成生物学方法，建立重要的代谢产物的合成调控体系；最终，通过分子育种培育药用植物的新品种。目前，团队研究对象聚焦在大宗、名贵及岭南道地药材，包括金银花、石斛、巴戟天、广藿香等。</p>
+<p class="vsbcontent_end"><strong>愿景</strong><strong> </strong>我们希望通过对药用植物资源的保护利用，以及科学研究上的协同创新，在遵循中医药发展规律的基础上，传承精华，守正创新，助力中医药的现代化、产业化进程。为建设健康中国、实现中华民族伟大复兴的中国梦贡献力量！</p>
+<p style="text-align: center">
+ <img src="/__local/C/4D/C0/9C6C5A82D0D06007CE94CBA43D9_8F901E60_8D0AC.jpg" width="500" vsbhref="vurl" vurl="/_vsl/C4DC09C6C5A82D0D06007CE94CBA43D9/8F901E60/8D0AC" vheight="" vwidth="500" orisrc="/__local/C/4D/C0/9C6C5A82D0D06007CE94CBA43D9_8F901E60_8D0AC.jpg" class="img_vsb_content"></p>
+<p class="vsbcontent_end"><br></p></div></div>
+    <span id="vsb_content_2_1569_u6" name="vsb_content_2_1569_u6"></span>
+
+
+	    	</div>
+	    </td>
+	  </tr>
+	</tbody></table>
+</div>
+
+
+<!--footer-->
+<div class="footerWrap w1000">
+	<div class="foo-info w1000 cleafix">
+	
+	</div>
+	<div class="foo-text w1000"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址: 广州市番禺区广州大学城外环东路232号广州中医药大学药科楼B栋4楼</p><p>邮箱: SIPPE@gzucm.edu.cn&nbsp;&nbsp; &nbsp;&nbsp;联系电话: 020-39358704</p>
+		
+
+   </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

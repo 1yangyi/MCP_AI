@@ -1,0 +1,523 @@
+<!DOCTYPE html><html><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../../font/iconfont.css">
+    <link rel="stylesheet" href="../../css/reset.css?20210513">
+    <link rel="stylesheet" href="../../css/style.css?20210512">
+
+    <script type="text/javascript" src="../../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../js/scripts.js"></script>
+    <script type="text/javascript" src="../../js/iscroll.js"></script>
+    <!-- animate Effect -->
+    <link type="text/css" rel="stylesheet" href="../../js/wow/animate.css">
+    <!--[if lt IE 9]>
+          <script src="../../js/html5shiv.min.js"></script>
+          <script src="../../js/respond.min.js"></script>
+        <![endif]-->
+    <title>学院简介-旅游与服务学院主页</title><meta name="keywords" content="旅游与服务学院主页,学院,简介">
+<meta name="description" content="学院简介">
+
+    <!--移动端上下滑动加载刷新-->
+    <script type="text/javascript">
+
+        var myScroll,
+            pullDownEl, 
+            pullDownOffset,
+            pullUpEl, 
+            pullUpOffset,
+            generatedCount = 0;
+        
+        function pullDownAction () {
+            setTimeout(function () {    // <-- Simulate network congestion, remove setTimeout from production!
+                var el, li, i;
+                el = document.getElementById('thelist');
+        
+                for (i=0; i<5; i++) {
+                    li = document.createElement('li');
+                    li.innerText = '这里是要生成的内容' + (++generatedCount);
+                    el.insertBefore(li, el.childNodes[0]);
+                }
+                document.getElementById("pullUp").style.display="";
+                myScroll.refresh();
+            }, 1000);
+        }
+        
+        function pullUpAction () {
+            setTimeout(function () {
+                var el, li, i;
+                el = document.getElementById('thelist');
+        
+                for (i=0; i<1; i++) {
+                    li = document.createElement('li');
+                    li.innerText = '这里是要生成的内容' + (++generatedCount);
+                    el.appendChild(li, el.childNodes[0]);
+                }
+                myScroll.refresh();
+            }, 1000);
+        }
+        
+        function loaded() {
+            pullDownEl = document.getElementById('pullDown');
+            pullDownOffset = pullDownEl.offsetHeight;
+            pullUpEl = document.getElementById('pullUp');   
+            pullUpOffset = 10;
+            //pullUpOffset = pullUpEl.offsetHeight;
+            myScroll = new iScroll('wrapper', {
+                useTransition: true,
+                topOffset: pullDownOffset,
+                onRefresh: function () {
+                    //that.maxScrollY = that.wrapperH - that.scrollerH + that.minScrollY;
+                    //that.minScrollY = -that.options.topOffset || 0;
+                    //alert(this.wrapperH);
+                    //alert(this.scrollerH);
+                    if (pullDownEl.className.match('loading')) {
+                        pullDownEl.className = '';
+                        pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Pull down to refresh...';}
+                    if (pullUpEl.className.match('loading')) {
+                        pullUpEl.className = '';
+                        pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
+                    }
+                    
+                    document.getElementById("pullUp").style.display="none";
+                    document.getElementById("show").innerHTML="onRefresh: up["+pullUpEl.className+"],down["+pullDownEl.className+"],Y["+this.y+"],maxScrollY["+this.maxScrollY+"],minScrollY["+this.minScrollY+"],scrollerH["+this.scrollerH+"],wrapperH["+this.wrapperH+"]";
+                },
+                onScrollMove: function () {
+                    document.getElementById("show").innerHTML="onScrollMove: up["+pullUpEl.className+"],down["+pullDownEl.className+"],Y["+this.y+"],maxScrollY["+this.maxScrollY+"],minScrollY["+this.minScrollY+"],scrollerH["+this.scrollerH+"],wrapperH["+this.wrapperH+"]";
+                    if (this.y > 0) {
+                        pullDownEl.className = 'flip';
+                        pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Release to refresh...';
+                        this.minScrollY = 0;
+                    }
+                    if (this.y < 0 && pullDownEl.className.match('flip')) {
+                        pullDownEl.className = '';
+                        pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Pull down to refresh...';
+                        this.minScrollY = -pullDownOffset;
+                    }
+                    
+                    if ( this.scrollerH < this.wrapperH && this.y < (this.minScrollY-pullUpOffset) || this.scrollerH > this.wrapperH && this.y < (this.maxScrollY - pullUpOffset) ) {
+                        document.getElementById("pullUp").style.display="";
+                        pullUpEl.className = 'flip';
+                        pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Release to refresh...';
+                    } 
+                     if (this.scrollerH < this.wrapperH && this.y > (this.minScrollY-pullUpOffset) && pullUpEl.className.match('flip') || this.scrollerH > this.wrapperH && this.y > (this.maxScrollY - pullUpOffset) && pullUpEl.className.match('flip')) {
+                        document.getElementById("pullUp").style.display="none";
+                        pullUpEl.className = '';
+                        pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
+                    }
+                },
+                onScrollEnd: function () {
+                    document.getElementById("show").innerHTML="onScrollEnd: up["+pullUpEl.className+"],down["+pullDownEl.className+"],Y["+this.y+"],maxScrollY["+this.maxScrollY+"],minScrollY["+this.minScrollY+"],scrollerH["+this.scrollerH+"],wrapperH["+this.wrapperH+"]";
+                    if (pullDownEl.className.match('flip')) {
+                        pullDownEl.className = 'loading';
+                        pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Loading...';                
+                        pullDownAction();   // Execute custom function (ajax call?)
+                    } 
+                     if (pullUpEl.className.match('flip')) {
+                        pullUpEl.className = 'loading';
+                        pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Loading...';        
+                        pullUpAction(); // Execute custom function (ajax call?)
+                    }
+                }
+            });
+            
+            //setTimeout(function () { document.getElementById('wrapper').style.left = '0'; }, 800);
+        }
+        
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+        
+        document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+    </script>
+    <!--移动端上下滑动加载刷新-->  
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e7846575256574200000004435d -->
+<link rel="stylesheet" type="text/css" href="../../xfnry.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1106,'/xfnry.jsp',1159,1738754965)</script>
+</head>
+
+<body class="bg-f4">
+<div class="header trans header1">
+    <div class="head-logo wow fadeIn" style="visibility: visible; animation-name: fadeIn;"><a href="javascript:"></a></div>
+    <div class="header-first-bar wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+        <ol class="pull-right" style="position: relative;">
+                    <li class="mnu-1"><i class="lkjp lk-shouye top-ico"></i><a href="../../index.htm" class="trans ">首页<span class="trans"></span></a></li>
+        <li class="mnu-1"><i class="lkjp lk-lianxiwomendianhua top-ico"></i><a href="../1117/2771.htm" class="trans ">联系我们<span class="trans"></span></a></li>
+        <li class="mnu-1"><a href="http://oa.tas.nankai.edu.cn/Login/index.html" class="trans " target="_blank">OA系统<span class="trans"></span></a></li>
+        <li class="mnu-1"><a href="https://entas.nankai.edu.cn/" class="trans " target="_blank">EN<span class="trans"></span></a></li>
+
+            <li id="searchAll">
+                    <div id="iocSearch" onclick="searchOpen()" style="width:32px;height:26px;"><span class="search_ico"><i class="lkjp lk-search"></i></span></div>
+                    <div id="searchOpenInput" style="display:none;width:200px;height:26px;">
+                        <script type="text/javascript">
+    function _nl_ys_check(){
+        
+        var keyword = document.getElementById('showkeycode250077').value;
+        if(keyword==null||keyword==""){
+            alert("请输入你要检索的内容！");
+            $(".search_open").focus();
+            return false;
+        }
+        if(window.toFF==1)
+        {
+            document.getElementById("lucenenewssearchkey250077").value = Simplized(keyword );
+        }else
+        {
+            document.getElementById("lucenenewssearchkey250077").value = keyword;            
+        }
+        var  base64 = new Base64();
+        document.getElementById("lucenenewssearchkey250077").value = base64.encode(document.getElementById("lucenenewssearchkey250077").value);
+        new VsbFormFunc().disableAutoEnable(document.getElementById("showkeycode250077"));
+        return true;
+    }
+    function searchClose(){
+        var keyword = document.getElementById('showkeycode250077').value;
+        if(keyword==null||keyword==""){
+            $("#searchOpenInput").css({"display":"none"});
+            $("#iocSearch").css({"display":"block"});
+       }
+  }
+</script>
+<form action="../../ssjgy.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1110" method="post" id="au1a" name="au1a" onsubmit="return _nl_ys_check()">
+ <input type="hidden" id="lucenenewssearchkey250077" name="lucenenewssearchkey" value=""><input type="hidden" id="_lucenesearchtype250077" name="_lucenesearchtype" value="1"><input type="hidden" id="searchScope250077" name="searchScope" value="0">
+ <div style="margin:0px;display:inline;font-family:宋体;font-size:12px;">
+     <input class="search_open" type="text" name="showkeycode" id="showkeycode250077" placeholder="查找关键字" onblur="searchClose()" style="color:#ffffff;">
+     <input id="sraechButton" type="image" src="../../images/srarchGo.png" align="absmiddle" style="cursor: hand;margin-left:-37px;margin-top:-2px;width:22px;height:22px;">
+ </div>
+</form><script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/formfunc.js"></script>
+
+                    </div>
+                </li>
+        </ol>
+    </div>
+    <div class="head-nav wow fadeIn" id="Navigation" style="visibility: visible; animation-name: fadeIn;">
+<ul>
+    <li>
+        <a href="javascript:;" class="trans cur">学院概况<i class="lkjp lk-darrow pull-right pc-hidden"></i><span class="trans"></span></a>
+            <div class="nav-dropdown">
+                <ul class="clearfix">
+                        <li><a href="1159.htm">学院简介</a></li>
+                        <li><a href="../1107/1165.htm">管理团队</a></li>
+                        <li><a href="../../xygk/ghjdh.htm">工会教代会</a></li>
+                        <li><a href="../../xygk/glzd/rsrc.htm">管理制度</a></li>
+                        <li><a href="../../xygk/zyxz.htm">资源下载</a></li>
+                </ul>
+            </div>
+    </li>
+    <li>
+        <a href="javascript:;" class="trans ">师资力量<i class="lkjp lk-darrow pull-right pc-hidden"></i><span class="trans"></span></a>
+            <div class="nav-dropdown">
+                <ul class="clearfix">
+                        <li><a href="../../szll/zzjs.htm">在职教师</a></li>
+                        <li><a href="../../szll/zlyjy.htm">助理研究员</a></li>
+                        <li><a href="../../szll/tpjs.htm">特聘教授</a></li>
+                        <li><a href="../../szll/fwxz.htm">访问学者</a></li>
+                        <li><a href="../../szll/ltxjs.htm">离退休教师</a></li>
+                        <li><a href="../../szll/rczp.htm">人才招聘</a></li>
+                </ul>
+            </div>
+    </li>
+    <li>
+        <a href="javascript:;" class="trans ">党的建设<i class="lkjp lk-darrow pull-right pc-hidden"></i><span class="trans"></span></a>
+            <div class="nav-dropdown">
+                <ul class="clearfix">
+                        <li><a href="../../ddjs/jcdj.htm">基层党建</a></li>
+                        <li><a href="../../ddjs/xxyd.htm">学习园地</a></li>
+                        <li><a href="../../ddjs/fdx.htm">分党校</a></li>
+                </ul>
+            </div>
+    </li>
+    <li>
+        <a href="javascript:;" class="trans ">人才培养<i class="lkjp lk-darrow pull-right pc-hidden"></i><span class="trans"></span></a>
+            <div class="nav-dropdown">
+                <ul class="clearfix">
+                        <li><a href="../../rcpy/bk/zyjs.htm">本科</a></li>
+                        <li><a href="../../rcpy/ss/kxss.htm">硕士</a></li>
+                        <li><a href="../../rcpy/bs/kxbs.htm">博士</a></li>
+                        <li><a href="https://taslab.nankai.edu.cn/">旅游实验教学中心</a></li>
+                </ul>
+            </div>
+    </li>
+    <li>
+        <a href="javascript:;" class="trans ">科学研究<i class="lkjp lk-darrow pull-right pc-hidden"></i><span class="trans"></span></a>
+            <div class="nav-dropdown">
+                <ul class="clearfix">
+                        <li><a href="../../kxyj/kydt.htm">科研动态</a></li>
+                        <li><a href="../../kxyj/xshy.htm">学术会议</a></li>
+                        <li><a href="../../kxyj/kyxx.htm">科研信息</a></li>
+                        <li><a href="../../kxyj/kyjb.htm">科研简报</a></li>
+                        <li><a href="../../kxyj/xkjs.htm">学科建设</a></li>
+                        <li><a href="../../kxyj/qkml.htm">期刊目录</a></li>
+                        <li><a href="../../kxyj/jzyg.htm">讲座预告</a></li>
+                        <li><a href="../../kxyj/sblw.htm">硕博论文</a></li>
+                </ul>
+            </div>
+    </li>
+    <li>
+        <a href="javascript:;" class="trans ">产业合作<i class="lkjp lk-darrow pull-right pc-hidden"></i><span class="trans"></span></a>
+            <div class="nav-dropdown">
+                <ul class="clearfix">
+                        <li><a href="../../cyhz/cyhz.htm">产业合作</a></li>
+                        <li><a href="../../cyhz/gdpx.htm">高端培训</a></li>
+                        <li><a href="../../cyhz/ycjy.htm">远程教育</a></li>
+                </ul>
+            </div>
+    </li>
+    <li>
+        <a href="javascript:;" class="trans ">国际交流<i class="lkjp lk-darrow pull-right pc-hidden"></i><span class="trans"></span></a>
+            <div class="nav-dropdown">
+                <ul class="clearfix">
+                        <li><a href="../../gjjl/xwtz.htm">新闻通知</a></li>
+                        <li><a href="../../gjjl/jlxm.htm">交流项目</a></li>
+                        <li><a href="../../gjjl/wjxz.htm">文件下载</a></li>
+                </ul>
+            </div>
+    </li>
+    <li>
+        <a href="javascript:;" class="trans ">招生信息<i class="lkjp lk-darrow pull-right pc-hidden"></i><span class="trans"></span></a>
+            <div class="nav-dropdown">
+                <ul class="clearfix">
+                        <li><a href="../../zsxx/bk.htm">本科</a></li>
+                        <li><a href="../../zsxx/ss.htm">硕士</a></li>
+                        <li><a href="../../zsxx/bs.htm">博士</a></li>
+                        <li><a href="../../zsxx/lxszs.htm">留学生招生</a></li>
+                </ul>
+            </div>
+    </li>
+    <li>
+        <a href="javascript:;" class="trans ">学生工作<i class="lkjp lk-darrow pull-right pc-hidden"></i><span class="trans"></span></a>
+            <div class="nav-dropdown">
+                <ul class="clearfix">
+                        <li><a href="../../xsgz/xshd.htm">学生活动</a></li>
+                        <li><a href="../../xsgz/xzfc.htm">学子风采</a></li>
+                        <li><a href="../../xsgz/glsw.htm">管理事务</a></li>
+                </ul>
+            </div>
+    </li>
+    <li>
+        <a href="javascript:;" class="trans ">校友工作<i class="lkjp lk-darrow pull-right pc-hidden"></i><span class="trans"></span></a>
+            <div class="nav-dropdown">
+                <ul class="clearfix">
+                        <li><a href="../../xygz/hdxw.htm">活动新闻</a></li>
+                        <li><a href="../../xygz/zjxy/xydt.htm">走进校友</a></li>
+                        <li><a href="../../xygz/xyh.htm">校友会</a></li>
+                        <li><a href="../../xygz/xqzl.htm">校庆专栏</a></li>
+                        <li><a href="../../xygz/xyjz.htm">校友捐赠</a></li>
+                        <li><a href="../../xygz/znjh.htm">值年聚会</a></li>
+                        <li><a href="../../xygz/rxjg.htm">荣休教工</a></li>
+                </ul>
+            </div>
+    </li>
+</ul>
+</div>
+<div class="mb-menu pc-hidden">
+    <i class="lkjp lk-daohang"></i>
+</div>
+</div>
+    <!-- ban start-->
+        <div class="mt-top"></div>
+            <script language="javascript" src="/system/resource/js/dynclicks.js"></script>        <div class="sub-ban  mb-hidden wow fadeIn" id="pcImg" style="visibility: visible; animation-name: fadeIn;"><img src="../../images/pcxxsy.jpg"></div>
+        <div class="sub-ban  pc-hidden wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;"><img src="../../images/mobilexxsy.jpg"></div>
+
+    <!-- ban end-->
+    <div class="container clearfix">
+        <div class="sec-menu-area  sub-white mt24">    <div class="sec-men-in">
+        <h3 style="color:#782674;font-weight:bold;margin-bottom:15px;">学院概况</h3>
+        <div class="sec-mu-col wow fadeInDownBig" style="visibility: visible; animation-name: fadeInDownBig;">
+            <dl class="list_dl">
+                 <dt class="list_dt" id="open">
+                     <span class="_after"></span>
+                         <a href="1159.htm" style="color:#782674;">
+                     <h4 style="color:#782674;">学院简介</h4>
+                     </a>
+                     
+                  </dt>
+                 <dt class="list_dt">
+                     <span class="_after"></span>
+                         <a href="../1107/1165.htm">
+                     <h4>管理团队</h4>
+                     </a>
+                     
+                  </dt>
+                 <dt class="list_dt">
+                     <span class="_after"></span>
+                         <a href="../../xygk/ghjdh.htm">
+                     <h4>工会教代会</h4>
+                     </a>
+                     
+                  </dt>
+                 <dt class="list_dt">
+                     <span class="_after"></span>
+                     <h4>管理制度</h4>
+                     
+                     <i class="list_dt_icon"></i>
+                  </dt>
+                       <dd class="list_dd">
+                          <ul>
+                              <a href="../../xygk/glzd/rsrc.htm" class="s-lk"><li class="list_li"><i class="sp"></i>人事人才</li></a>
+                              <a href="../../xygk/glzd/cgcj.htm" class="s-lk"><li class="list_li"><i class="sp"></i>出国出境</li></a>
+                              <a href="../../xygk/glzd/jfcw.htm" class="s-lk"><li class="list_li"><i class="sp"></i>经费财务</li></a>
+                              <a href="../../xygk/glzd/sbjj.htm" class="s-lk"><li class="list_li"><i class="sp"></i>设备家具</li></a>
+                          </ul>
+                       </dd>
+                 <dt class="list_dt">
+                     <span class="_after"></span>
+                         <a href="../../xygk/zyxz.htm">
+                     <h4>资源下载</h4>
+                     </a>
+                     
+                  </dt>
+         </dl>
+    </div>
+    </div>
+</div>
+
+        <div class="sub-white clearfix mt24 sec-cont-area">
+
+            <!-- 列表  start -->
+            <div class="sec-l-view wow fadeInDownBig" style="visibility: visible; animation-name: fadeInDownBig;">
+                <div class="sec-l-name">
+
+
+
+<h4>学院简介</h4>
+<a href="../../index.htm" class="sec-back">返回首页</a>
+</div>
+                </div>
+                <div class="sec-l-view wow fadeInDownBig" style="visibility: visible; animation-name: fadeInDownBig;">
+                    <div class="sec-list-m">
+                        
+<script language="javascript" src="../../_dwr/interface/NewsvoteDWR.js"></script><script language="javascript" src="../../_dwr/engine.js"></script><script language="javascript" src="/system/resource/js/news/newscontent.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="project-List">
+<hgroup class="news-title">
+    <h2>学院简介</h2>
+</hgroup>
+<article class="news-artilce">
+    <div id="vsb_content"><div class="v_news_content">
+<p style="text-indent:49px;line-height:21px"><span style="font-size: 21px; font-family: 宋体, SimSun;">南开大学是敬爱的周恩来总理的母校，于1919年由爱国教育家严修、张伯苓创办，是国家“211”工程和“985”工程重点建设高校，国家教育部直属重点综合性大学。南开大学秉承“允公允能、日新月异”的校训，弘扬“爱国、敬业、创新、乐群”的光荣传统，培养了以周恩来、陈省身、吴大猷、曹禺等为代表的一大批杰出人才，为民族振兴和国家富强做出了重要的贡献。2017年9月，入选国家42所世界一流大学建设高校，且为36所A类高校之一。</span></p>
+<p style="text-indent:49px;line-height:21px"><span style="font-size: 21px; font-family: 宋体, SimSun;"><span style="font-size: 21px; font-family: 宋体;">南开大学是我国最早开办旅游本科专业的重点高校，是第一批旅游管理科学硕士、专业硕士、旅游管理博士学位授予权单位，全国旅游管理硕士专业学位教育指导委员会秘书处单位，教学科研实力雄厚，社会服务与咨政研究成果丰富，积极引领旅游教育改革创新，培养了大批杰出人才，为我国旅游业发展做出重要贡献。南开大学旅游管理学科支撑的一级学科和旅游管理专业学位双双在学科评估中取得突破性进展。在软科世界一流学科排名中，南开旅游休闲管理学科连续三年实现突破性跃升，2023年列世界第21名、中国境内高校第2名。近年来实现了向国家政府咨政建言、文科国家级重大项目、挑战杯全国特等奖</span>、<span style="font-size: 21px; font-family: 宋体;">第十七届全国大学生创新年会“</span>优秀<span style="font-size: 21px; font-family: 宋体;">学术论文奖”</span>（最高奖，全国共20篇，也是全国唯一一篇管理学科获奖论文）等标志性成果突破。</span></p>
+<p style="text-indent:49px;line-height:21px"><span style="font-family: 宋体, SimSun;"><span style="font-size: 21px; font-family: 宋体;">旅游与服务学院成立于2010年，设有旅游管理、会展经济与管理两个国家级一流本科专业</span><span style="font-family: 宋体, SimSun; letter-spacing: 0px; font-size: 21px;">和文旅融合创新与实践本科微专业，</span><span style="font-size: 21px; font-family: 宋体;">旅游管理和会展管理两个学术硕士学位点，旅游管理专业硕士学位点，以及开展高水平旅游管理创新研究的博士学位点和博士后流动站；建设有旅游目的地管理、大数据与旅游管理工程、旅游协同创新与创新管理、旅游新业态研究、旅游教育创新与知识管理五个学科建设方向，以及“数智赋能文旅创新发展/旅游大数据与决策”方向的“天津市高校哲学社会科学创新团队/南开大学百青团队”、依托中国式现代化乡村工作站的“乡村振兴团队”和依托协同创新中心的“文旅融合团队”，拥有现代旅游业发展省部共建协同创新中心、旅游市场与目的地营销研究中心、休闲农业与乡村旅游研究中心、旅游交叉学科研究中心、文旅乡村振兴研究中心、南开大学数字化教学研发中心、南开大学第一智慧书院、旅游实验教学中心、全域旅游研究所、全国红色旅游创新发展研究基地、中国海洋旅游研究中心、丝路旅游研究中心、全国MTA教育指导委员会秘书处等多个重要研究平台，在乡村振兴与乡村旅游、旅游产业融合与新业态、红色旅游、旅游大数据与新兴科技、旅游共享经济、旅游目的地与消费者行为、旅游企业管理与创新等领域积累了丰富的研究成果。</span></span></p>
+<p style="text-indent:49px;line-height:21px"><span style="font-family: 宋体, SimSun;"><span style="font-family: 宋体, SimSun; letter-spacing: 0px; font-size: 21px;">学院现有在校生575人，其中本科生229人，硕士生227人，博士生89<span style="font-family: 宋体;">人，留学生3</span>0人</span><span style="font-family: 宋体, SimSun; font-size: 21px;"><span style="font-family: 宋体;">。现有专任教师36人，其中教授</span>7<span style="font-family: 宋体;">人，副教授23人，讲师6人</span>，另有博士后团队9人。徐虹教授、姚延波教授、石培华教授、马晓龙教授、李辉教授、陈晔教授、李春晓教授等专家在国内学术界享有很高声誉。李辉教授入选国家级人才计划、天津市131创新型人才培养工程第一层次、<span style="font-family: 宋体;">南开大学英才教授；李辉教授、马晓龙教授、李春晓教授、梁赛副教授、毕建武副教授、张坤副教授入选南开大学“百名青年学科带头人培养计划”；李辉教授团队入选天津市高校哲学社会科学创新团队</span>、南开大学哲学社会科学创新团队、<span style="font-family: 宋体;">南开大学“百青团队”。徐虹教授担任中国旅游协会旅游教育分会副会长，陈晔教授担任MTA教指委秘书长，</span></span><span style="font-family: 宋体, SimSun; letter-spacing: 0px; font-size: 21px;">杨德进副教授担任中国太平洋学会海洋旅游专业委员会秘书长，</span><span style="font-family: 宋体, SimSun; font-size: 21px;">石培华教授入选四川省政府天府学者，马晓龙教授入选文化和旅游部优秀专家。徐虹教授、姚延波教授、黄晶副教授、陈家刚副教授获得南开大学教学名师奖；李春晓教授获天津高校青教赛一等奖（文科组）。</span></span></p>
+<p style="text-indent:49px;line-height:21px"><br></p>
+<p style="text-indent:49px;line-height:21px"><span style="font-family: 宋体, SimSun;"><span style="font-family: calibri; font-size: 21px;">2</span><span style="font-family: 宋体, SimSun; font-size: 21px;">015年7月，由南开大学牵头组建的我国首个旅游协同创新中心正式成立。2019年9月通过教育部认定为省部共建协同创新中心，2020年12月入选中国智库索引（CTTI）来源智库，2021年8月入选文化和旅游部“首批文化和旅游行业智库建设试点单位”名单。</span><span style="font-family: 宋体, SimSun; letter-spacing: 0px; font-size: 21px;">2022-2024连续三年入选<span style="font-family: 宋体;">中国智库索引（CTTI）</span>最佳案例，并获得智库优秀成果特等奖和一等奖。</span><span style="font-size: 21px; font-family: 宋体;">中心按照“2011计划”中提出的“国家急需、世界一流、制度先进、贡献突出”总体要求，紧紧围绕“国民经济战略性支柱产业、人民群众更加满意的现代服务业、世界旅游强国”三大目标，形成了服务国家战略需求的新高地。</span></span></p>
+<p style="text-indent:49px;line-height:21px"><span style="font-family: 宋体, SimSun;"><span style="font-family: 宋体, SimSun; font-size: 21px;">2020年以来，学院合计承担国家级重大、重点、一般和青年项目30余项；完成刊发在旅游国际三大顶刊、管理世界等国内外旅游学科一类高质量学术期刊上的成果近80项，在ATR、TM、JTR等旅游国际三大顶刊的高质量成果产出居世界前20；获批天津市社会科学优秀成果奖</span><span style="font-family: 宋体, SimSun; font-size: 25px;">4</span><span style="font-size: 21px; font-family: 宋体;">项、文化和旅游优秀成果奖及中国旅游研究院优秀博士后成果10余项，学院教师获评IACTS、APTA、CHME、CETA等国际一级学会的会士、杰出青年学者、学术新星、年度科研新星、年度论文等荣誉，并担任IFITT、TTRA-AP等国际组织的理事会委员，以及ATR、TM等旅游顶尖期刊编委。</span></span></p>
+<p style="text-indent:49px;line-height:21px"><span style="font-size: 21px; font-family: 宋体, SimSun;">建院十多年来，南开大学旅游与服务学院和海内外多所知名院校建立了合作关系。学院与中国香港理工大学签订了“2+2”双博士学位联合培养项目，与英国萨里大学签订了“3+1”、“4+1”本硕双学位联合培养项目（国家留学基金委资助）和“2+2”博士项目，与英国格拉斯哥大学签订了“1+1”硕士双学位和“2+2”双博士学位联合培养项目，与澳门大学、复旦大学和中山大学联合成立了中国旅游教育合作联盟。此外，学院与美国南卡罗莱纳大学、美国天普大学、美国犹他大学、美国俄克拉荷马州立大学、美国华盛顿州立大学、美国伊利诺伊大学、西班牙巴列阿里群岛大学等均建立起师资交流、跨国研究的平台，在旅游与服务管理教育研究领域展开合作。学院相继加入联合国世界旅游组织（UNWTO）知识网络、世界旅游联盟（WTA）、亚太旅游协会（PATA）、中国-东盟旅游教育联盟、国际酒店餐饮及教育学术理事会(ICHRIE)、接待管理教育理事会(CHME)、澳大利亚旅游与接待教育理事会(CAUTHE)、全球旅游研究联盟(GReAT),国际旅行和旅游教育者学会（ISTTE）、国际信息技术与旅游业联合会（IFITT）、国际旅游研究协会（TTRA）、中国旅游研究国际联合会（IACTS）等世界知名学术社群和国际性旅游组织。</span></p>
+<p style="text-indent:37px;line-height:21px;background:rgb(255,255,255)"><span style="letter-spacing: 0px; font-size: 21px; font-family: 宋体, SimSun;">在产业合作方面，学院与山西省文化和旅游厅、天津市文化和旅游局、中国旅游集团、国家会展中心、中青旅、天津旅游集团、山东文旅集团、万豪酒店集团、同程旅游、北京大地风景文旅集团、北京北辰会展集团、国家海洋博物馆、上海迪士尼度假区、北京环球影城、腾讯旅游、浪潮集团、等国内外知名单位在人才培养、实践基地、联合研究等方面保持着长期的合作，牵头成立了全国旅游饭店、全国智慧红色旅游和全国数智旅游三个行业产教融合共同体，获得了多个教育部产学合作协同育人项目立项。</span></p>
+<p style="text-indent:49px;line-height:21px"><span style="font-size: 21px; font-family: 宋体, SimSun;">学院始终围绕立德树人根本任务，着力打造“三全育人”大格局，积极培育德智体美劳全面发展的时代新人。强化思想引领，党团班同向发力，举办青春诗会、红色素拓、宣讲比赛等活动，创新开展理想信念教育。深化“师生四同”社会实践，紧密结合学科专业，每年20余支实践队、百余名学生奔赴祖国各地开展实践调研，搭建教学相长的师生共同体平台。拓展育人载体，探索“以赛促学带研”模式，举办京津冀大学生会展创意策划大赛、首届中国大学生旅游管理虚拟仿真大赛等赛事，引导学生积极投身各类比赛，营造浓厚的创新创业氛围。践行“五育并举”，举办和参与“金砖杯”篮球赛、“新生杯”“校长杯”多项赛事，开展“同学同趣”师生趣味运动会，激发学生进取精神；举办“逐梦之旅”美育实践系列活动，以美育人、以美化人、以美培元，在“芭蕾”“合唱”和“诗词”中引导学生领略中外艺术之美；搭建志愿服务平台，打造宿舍文化节与劳动采摘日，让学生在劳动中实现综合素质全面提升。</span></p>
+<p style="text-indent:49px;line-height:21px"><span style="font-family: 宋体, SimSun;"><span style="font-family: 宋体, SimSun; font-size: 21px;"><span style="font-family: 宋体;">近年来，在学院的精心指导和培养下，我院学生先后荣获第十八届“挑战杯”全国大学生课外学术科技作品竞赛主赛道特等奖、第十三届和第十一届全国大学生红色旅游创意策划大赛特等奖、第六届中国国际“互联网+”大学生创新创业大赛“青年红色筑梦之旅”赛道银奖、中国国际大学生创新大赛（2024）</span>全国铜奖、</span><span style="font-family: 宋体, SimSun; letter-spacing: 0px; font-size: 21px;">第五届全国会展策划创意大赛一等奖、</span><span style="font-size: 21px; font-family: 宋体;">第十七届“挑战杯”天津市大学生课外学术科技作品竞赛特等多项获奖，以及天津市优秀学生、南开大学周恩来奖学金、南开十杰、南开大学党员标兵等多项荣誉。</span></span></p>
+<p style="text-indent:37px;line-height:21px;background:rgb(255,255,255)"><span style="font-family: 宋体, SimSun;"><span style="font-family: 宋体, SimSun; font-size: 21px;">（数据截至</span><span style="font-family: calibri; font-size: 21px;">2024</span><span style="font-family: 宋体, SimSun; font-size: 21px;">年1</span><span style="font-family: calibri; font-size: 21px;">2</span><span style="font-family: 宋体, SimSun; font-size: 21px;">月）</span></span></p>
+<p><br></p>
+</div></div>
+</article>
+</div>
+<div class="loading-list">
+<hgroup class="news-title">
+    <h2>学院简介</h2>
+</hgroup>
+<article class="news-artilce">
+    <div id="vsb_content"><div class="v_news_content">
+<p style="text-indent:49px;line-height:21px"><span style="font-size: 21px; font-family: 宋体, SimSun;">南开大学是敬爱的周恩来总理的母校，于1919年由爱国教育家严修、张伯苓创办，是国家“211”工程和“985”工程重点建设高校，国家教育部直属重点综合性大学。南开大学秉承“允公允能、日新月异”的校训，弘扬“爱国、敬业、创新、乐群”的光荣传统，培养了以周恩来、陈省身、吴大猷、曹禺等为代表的一大批杰出人才，为民族振兴和国家富强做出了重要的贡献。2017年9月，入选国家42所世界一流大学建设高校，且为36所A类高校之一。</span></p>
+<p style="text-indent:49px;line-height:21px"><span style="font-size: 21px; font-family: 宋体, SimSun;"><span style="font-size: 21px; font-family: 宋体;">南开大学是我国最早开办旅游本科专业的重点高校，是第一批旅游管理科学硕士、专业硕士、旅游管理博士学位授予权单位，全国旅游管理硕士专业学位教育指导委员会秘书处单位，教学科研实力雄厚，社会服务与咨政研究成果丰富，积极引领旅游教育改革创新，培养了大批杰出人才，为我国旅游业发展做出重要贡献。南开大学旅游管理学科支撑的一级学科和旅游管理专业学位双双在学科评估中取得突破性进展。在软科世界一流学科排名中，南开旅游休闲管理学科连续三年实现突破性跃升，2023年列世界第21名、中国境内高校第2名。近年来实现了向国家政府咨政建言、文科国家级重大项目、挑战杯全国特等奖</span>、<span style="font-size: 21px; font-family: 宋体;">第十七届全国大学生创新年会“</span>优秀<span style="font-size: 21px; font-family: 宋体;">学术论文奖”</span>（最高奖，全国共20篇，也是全国唯一一篇管理学科获奖论文）等标志性成果突破。</span></p>
+<p style="text-indent:49px;line-height:21px"><span style="font-family: 宋体, SimSun;"><span style="font-size: 21px; font-family: 宋体;">旅游与服务学院成立于2010年，设有旅游管理、会展经济与管理两个国家级一流本科专业</span><span style="font-family: 宋体, SimSun; letter-spacing: 0px; font-size: 21px;">和文旅融合创新与实践本科微专业，</span><span style="font-size: 21px; font-family: 宋体;">旅游管理和会展管理两个学术硕士学位点，旅游管理专业硕士学位点，以及开展高水平旅游管理创新研究的博士学位点和博士后流动站；建设有旅游目的地管理、大数据与旅游管理工程、旅游协同创新与创新管理、旅游新业态研究、旅游教育创新与知识管理五个学科建设方向，以及“数智赋能文旅创新发展/旅游大数据与决策”方向的“天津市高校哲学社会科学创新团队/南开大学百青团队”、依托中国式现代化乡村工作站的“乡村振兴团队”和依托协同创新中心的“文旅融合团队”，拥有现代旅游业发展省部共建协同创新中心、旅游市场与目的地营销研究中心、休闲农业与乡村旅游研究中心、旅游交叉学科研究中心、文旅乡村振兴研究中心、南开大学数字化教学研发中心、南开大学第一智慧书院、旅游实验教学中心、全域旅游研究所、全国红色旅游创新发展研究基地、中国海洋旅游研究中心、丝路旅游研究中心、全国MTA教育指导委员会秘书处等多个重要研究平台，在乡村振兴与乡村旅游、旅游产业融合与新业态、红色旅游、旅游大数据与新兴科技、旅游共享经济、旅游目的地与消费者行为、旅游企业管理与创新等领域积累了丰富的研究成果。</span></span></p>
+<p style="text-indent:49px;line-height:21px"><span style="font-family: 宋体, SimSun;"><span style="font-family: 宋体, SimSun; letter-spacing: 0px; font-size: 21px;">学院现有在校生575人，其中本科生229人，硕士生227人，博士生89<span style="font-family: 宋体;">人，留学生3</span>0人</span><span style="font-family: 宋体, SimSun; font-size: 21px;"><span style="font-family: 宋体;">。现有专任教师36人，其中教授</span>7<span style="font-family: 宋体;">人，副教授23人，讲师6人</span>，另有博士后团队9人。徐虹教授、姚延波教授、石培华教授、马晓龙教授、李辉教授、陈晔教授、李春晓教授等专家在国内学术界享有很高声誉。李辉教授入选国家级人才计划、天津市131创新型人才培养工程第一层次、<span style="font-family: 宋体;">南开大学英才教授；李辉教授、马晓龙教授、李春晓教授、梁赛副教授、毕建武副教授、张坤副教授入选南开大学“百名青年学科带头人培养计划”；李辉教授团队入选天津市高校哲学社会科学创新团队</span>、南开大学哲学社会科学创新团队、<span style="font-family: 宋体;">南开大学“百青团队”。徐虹教授担任中国旅游协会旅游教育分会副会长，陈晔教授担任MTA教指委秘书长，</span></span><span style="font-family: 宋体, SimSun; letter-spacing: 0px; font-size: 21px;">杨德进副教授担任中国太平洋学会海洋旅游专业委员会秘书长，</span><span style="font-family: 宋体, SimSun; font-size: 21px;">石培华教授入选四川省政府天府学者，马晓龙教授入选文化和旅游部优秀专家。徐虹教授、姚延波教授、黄晶副教授、陈家刚副教授获得南开大学教学名师奖；李春晓教授获天津高校青教赛一等奖（文科组）。</span></span></p>
+<p style="text-indent:49px;line-height:21px"><br></p>
+<p style="text-indent:49px;line-height:21px"><span style="font-family: 宋体, SimSun;"><span style="font-family: calibri; font-size: 21px;">2</span><span style="font-family: 宋体, SimSun; font-size: 21px;">015年7月，由南开大学牵头组建的我国首个旅游协同创新中心正式成立。2019年9月通过教育部认定为省部共建协同创新中心，2020年12月入选中国智库索引（CTTI）来源智库，2021年8月入选文化和旅游部“首批文化和旅游行业智库建设试点单位”名单。</span><span style="font-family: 宋体, SimSun; letter-spacing: 0px; font-size: 21px;">2022-2024连续三年入选<span style="font-family: 宋体;">中国智库索引（CTTI）</span>最佳案例，并获得智库优秀成果特等奖和一等奖。</span><span style="font-size: 21px; font-family: 宋体;">中心按照“2011计划”中提出的“国家急需、世界一流、制度先进、贡献突出”总体要求，紧紧围绕“国民经济战略性支柱产业、人民群众更加满意的现代服务业、世界旅游强国”三大目标，形成了服务国家战略需求的新高地。</span></span></p>
+<p style="text-indent:49px;line-height:21px"><span style="font-family: 宋体, SimSun;"><span style="font-family: 宋体, SimSun; font-size: 21px;">2020年以来，学院合计承担国家级重大、重点、一般和青年项目30余项；完成刊发在旅游国际三大顶刊、管理世界等国内外旅游学科一类高质量学术期刊上的成果近80项，在ATR、TM、JTR等旅游国际三大顶刊的高质量成果产出居世界前20；获批天津市社会科学优秀成果奖</span><span style="font-family: 宋体, SimSun; font-size: 25px;">4</span><span style="font-size: 21px; font-family: 宋体;">项、文化和旅游优秀成果奖及中国旅游研究院优秀博士后成果10余项，学院教师获评IACTS、APTA、CHME、CETA等国际一级学会的会士、杰出青年学者、学术新星、年度科研新星、年度论文等荣誉，并担任IFITT、TTRA-AP等国际组织的理事会委员，以及ATR、TM等旅游顶尖期刊编委。</span></span></p>
+<p style="text-indent:49px;line-height:21px"><span style="font-size: 21px; font-family: 宋体, SimSun;">建院十多年来，南开大学旅游与服务学院和海内外多所知名院校建立了合作关系。学院与中国香港理工大学签订了“2+2”双博士学位联合培养项目，与英国萨里大学签订了“3+1”、“4+1”本硕双学位联合培养项目（国家留学基金委资助）和“2+2”博士项目，与英国格拉斯哥大学签订了“1+1”硕士双学位和“2+2”双博士学位联合培养项目，与澳门大学、复旦大学和中山大学联合成立了中国旅游教育合作联盟。此外，学院与美国南卡罗莱纳大学、美国天普大学、美国犹他大学、美国俄克拉荷马州立大学、美国华盛顿州立大学、美国伊利诺伊大学、西班牙巴列阿里群岛大学等均建立起师资交流、跨国研究的平台，在旅游与服务管理教育研究领域展开合作。学院相继加入联合国世界旅游组织（UNWTO）知识网络、世界旅游联盟（WTA）、亚太旅游协会（PATA）、中国-东盟旅游教育联盟、国际酒店餐饮及教育学术理事会(ICHRIE)、接待管理教育理事会(CHME)、澳大利亚旅游与接待教育理事会(CAUTHE)、全球旅游研究联盟(GReAT),国际旅行和旅游教育者学会（ISTTE）、国际信息技术与旅游业联合会（IFITT）、国际旅游研究协会（TTRA）、中国旅游研究国际联合会（IACTS）等世界知名学术社群和国际性旅游组织。</span></p>
+<p style="text-indent:37px;line-height:21px;background:rgb(255,255,255)"><span style="letter-spacing: 0px; font-size: 21px; font-family: 宋体, SimSun;">在产业合作方面，学院与山西省文化和旅游厅、天津市文化和旅游局、中国旅游集团、国家会展中心、中青旅、天津旅游集团、山东文旅集团、万豪酒店集团、同程旅游、北京大地风景文旅集团、北京北辰会展集团、国家海洋博物馆、上海迪士尼度假区、北京环球影城、腾讯旅游、浪潮集团、等国内外知名单位在人才培养、实践基地、联合研究等方面保持着长期的合作，牵头成立了全国旅游饭店、全国智慧红色旅游和全国数智旅游三个行业产教融合共同体，获得了多个教育部产学合作协同育人项目立项。</span></p>
+<p style="text-indent:49px;line-height:21px"><span style="font-size: 21px; font-family: 宋体, SimSun;">学院始终围绕立德树人根本任务，着力打造“三全育人”大格局，积极培育德智体美劳全面发展的时代新人。强化思想引领，党团班同向发力，举办青春诗会、红色素拓、宣讲比赛等活动，创新开展理想信念教育。深化“师生四同”社会实践，紧密结合学科专业，每年20余支实践队、百余名学生奔赴祖国各地开展实践调研，搭建教学相长的师生共同体平台。拓展育人载体，探索“以赛促学带研”模式，举办京津冀大学生会展创意策划大赛、首届中国大学生旅游管理虚拟仿真大赛等赛事，引导学生积极投身各类比赛，营造浓厚的创新创业氛围。践行“五育并举”，举办和参与“金砖杯”篮球赛、“新生杯”“校长杯”多项赛事，开展“同学同趣”师生趣味运动会，激发学生进取精神；举办“逐梦之旅”美育实践系列活动，以美育人、以美化人、以美培元，在“芭蕾”“合唱”和“诗词”中引导学生领略中外艺术之美；搭建志愿服务平台，打造宿舍文化节与劳动采摘日，让学生在劳动中实现综合素质全面提升。</span></p>
+<p style="text-indent:49px;line-height:21px"><span style="font-family: 宋体, SimSun;"><span style="font-family: 宋体, SimSun; font-size: 21px;"><span style="font-family: 宋体;">近年来，在学院的精心指导和培养下，我院学生先后荣获第十八届“挑战杯”全国大学生课外学术科技作品竞赛主赛道特等奖、第十三届和第十一届全国大学生红色旅游创意策划大赛特等奖、第六届中国国际“互联网+”大学生创新创业大赛“青年红色筑梦之旅”赛道银奖、中国国际大学生创新大赛（2024）</span>全国铜奖、</span><span style="font-family: 宋体, SimSun; letter-spacing: 0px; font-size: 21px;">第五届全国会展策划创意大赛一等奖、</span><span style="font-size: 21px; font-family: 宋体;">第十七届“挑战杯”天津市大学生课外学术科技作品竞赛特等多项获奖，以及天津市优秀学生、南开大学周恩来奖学金、南开十杰、南开大学党员标兵等多项荣誉。</span></span></p>
+<p style="text-indent:37px;line-height:21px;background:rgb(255,255,255)"><span style="font-family: 宋体, SimSun;"><span style="font-family: 宋体, SimSun; font-size: 21px;">（数据截至</span><span style="font-family: calibri; font-size: 21px;">2024</span><span style="font-family: 宋体, SimSun; font-size: 21px;">年1</span><span style="font-family: calibri; font-size: 21px;">2</span><span style="font-family: 宋体, SimSun; font-size: 21px;">月）</span></span></p>
+<p><br></p>
+</div></div>
+</article>
+</div>
+
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="mt50"></div>
+    <!--footer start-->
+    
+
+
+<div class="footerbg wow fadeIn" style="visibility: hidden; animation-name: none;">
+        <div class="container clearfix">
+            <div class="footer1 pull-left"><img src="../../images/footer-logo.png"></div>
+
+            <div class="footer2 pull-left">
+                <ul class="clearfix">
+                    <li class="ell"><a href="https://www.nankai.edu.cn/" target="_blank"><i></i>南开大学</a></li>
+                    <li class="ell"><a href="https://tourism2011.nankai.edu.cn/" target="_blank"><i></i>现代旅游业发展协同创新中心</a></li>
+                    <li class="ell"><a href="http://www.psc.org.cn/" target="_blank"><i></i>中国太平洋学会海洋旅游专业委员会</a></li>
+                    <li class="ell"><a href="http://www.mta.edu.cn/" target="_blank"><i></i>全国MTA教育指导委员会</a></li>
+                </ul>
+            </div>
+
+            <div class="footer3 pull-left">
+                <ul class="clearfix">
+                    <!--<li><a href="javascript:"><img src="../../images/footer-ico1.png" />
+                            <div class="footer3Code trans">
+                                <img src="../../images/footer-code.jpg" />
+                            </div>
+                        </a></li>-->
+
+                    <li><a href="javascript:"><img src="../../images/footer-ico2.png">
+                            <div class="footer3Code trans">
+                                <img src="../../images/footer-code.jpg">
+                            </div>
+                        </a></li>
+
+                    <li><a href="javascript:"><img src="../../images/footer-ico3.png">
+                            <div class="footer3Code trans">
+                                <img src="../../images/no-completed.png">
+                            </div>
+                        </a></li>
+
+                    <li><a href="javascript:"><img src="../../images/footer-ico4.png">
+                            <div class="footer3Code trans">
+                                <img src="../../images/no-completed.png">
+                            </div>
+                        </a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer4 pull-right">
+                <img src="../../images/footer-code.jpg">
+                <h2>南开大学<br>旅游与服务学院</h2>
+            </div>
+        </div>
+    </div>
+    <div class="copybg wow fadeIn" style="visibility: hidden; animation-name: none;">
+        <div class="container clearfix copy">
+            <ul>
+                <li>地址：天津市津南区同砚路38号 [300071]</li>
+                <li>版权所有 南开大学</li>
+                <li>津教备0061号</li>
+                <li>津ICP备12003308号-1</li>
+                <li>津公网安备12010402000967号</li>
+            </ul>
+        </div>
+    </div>
+    <!--footer end-->
+    <!--animate-->
+    <script type="text/javascript" src="../../js/wow/wow.min.js"></script>
+    <script type="text/javascript">
+        $(".list_dt").on("click",function () {
+            $('.list_dd').stop();
+            $(this).siblings("dt").removeAttr("id");
+            if($(this).attr("id")=="open"){
+                $(this).removeAttr("id").siblings("dd").slideUp();
+            }else{
+                $(this).attr("id","open").next().slideDown().siblings("dd").slideUp();
+            }
+        });
+    </script>   
+
+
+
+</body></html>

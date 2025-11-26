@@ -1,0 +1,730 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML><HEAD><TITLE>南京师范大学环境学院</TITLE><meta name="pageType" content="1">
+<meta name="pageTitle" content="南京师范大学环境学院">
+<META Name="keywords" Content="南京师范大学环境学院" />
+
+
+
+
+
+<META content="text/html; charset=UTF-8" http-equiv="Content-Type"><LINK rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230776447525055574200030003475c -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1408809832)</script>
+</HEAD>
+<BODY>
+
+<div style="z-index:1000; position:relative;">
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>   
+</SCRIPT>
+</div>
+
+
+<DIV class="xg-top fl">
+<DIV class="wid1200">    <a href="index.htm" class="xg-logo"><img src="images/xg-logo20230426.png" /></a>
+
+<DIV class="xg-top-right fr">
+<DIV class="foot-right fr">    <ul>
+
+                <li><img src="mb2/images/ewm.jpg"></li>
+
+
+            </ul></DIV>
+<DIV class="search fr"> 
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu3 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu3 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu3"></div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError">
+        
+        <input  class="search-input" value="请输入搜索内容..." autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"> 
+<input name="search-btn" type="image" class="search-btn" src="images/search-btn.png" v-on:click="onSubmit()"/>
+
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "1408809832";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://223.2.9.5:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></DIV><A class="english fr" href="http://schools.njnu.edu.cn/env/">ENGLISH </A></DIV>
+
+
+
+
+
+
+
+</DIV></DIV>
+<DIV class="menu-nav">
+<DIV id="menu"><ul class="l1-nav"> 
+   <li class="l1-nav">  
+          <a class="l1-nav" href="index.htm" title="首页" style="padding: 0 19px;">首页</a>
+    </li>
+        <li class="l1-nav">  
+          <a class="l1-nav" href="#" title="学院概况" style="padding: 0 19px;">学院概况</a>
+          
+          <ul class="l2-nav">
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="xygk/xyjj.htm" title="学院简介">学院简介</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="xygk/xrld.htm" title="现任领导">现任领导</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="xygk/zzjg1/xyxz.htm" title="组织机构">组织机构</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="xygk/lsyg.htm" title="历史沿革">历史沿革</a></li>
+          
+          
+          </ul>
+          
+        </li> 
+        <li class="l1-nav">  
+          <a class="l1-nav" href="szdw.htm" title="师资队伍" style="padding: 0 19px;">师资队伍</a>
+          
+          <ul class="l2-nav">
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="szdw/rcjh1.htm" title="人才计划">人才计划</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="szdw/js2.htm" title="教授">教授</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="szdw/jzjs1.htm" title="兼职教授">兼职教授</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="szdw/cyjs2.htm" title="产业教授">产业教授</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="szdw/tpyjy1.htm" title="特聘研究员">特聘研究员</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="szdw/fjs2.htm" title="副教授">副教授</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="szdw/js3.htm" title="讲师">讲师</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="szdw/zzbsh.htm" title="在站博士后">在站博士后</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="szdw/syjs2.htm" title="实验教师">实验教师</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="szdw/xzry2.htm" title="行政人员">行政人员</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="szdw/txjs.htm" title="退休教师">退休教师</a></li>
+          
+          
+          </ul>
+          
+        </li> 
+        <li class="l1-nav">  
+          <a class="l1-nav" href="kxyj.htm" title="科学研究" style="padding: 0 19px;">科学研究</a>
+          
+          <ul class="l2-nav">
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="kxyj/yjfx.htm" title="研究方向">研究方向</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="kxyj/kyxm.htm" title="科研项目">科研项目</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="kxyj/kylw.htm" title="科研论文">科研论文</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="kxyj/sqzl.htm" title="授权专利">授权专利</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="kxyj/kyhj.htm" title="科研获奖">科研获奖</a></li>
+          
+          
+          </ul>
+          
+        </li> 
+        <li class="l1-nav">  
+          <a class="l1-nav" href="rcpy/bksjy.htm" title="人才培养" style="padding: 0 19px;">人才培养</a>
+          
+          <ul class="l2-nav">
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="rcpy/bksjy.htm" title="本科生教育">本科生教育</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="rcpy/yjsjy.htm" title="研究生教育">研究生教育</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="rcpy/fxljy.htm" title="非学历教育">非学历教育</a></li>
+          
+          
+          </ul>
+          
+        </li> 
+        <li class="l1-nav">  
+          <a class="l1-nav" href="txgz/txzz.htm" title="团学工作" style="padding: 0 19px;">团学工作</a>
+          
+          <ul class="l2-nav">
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="txgz/txzz.htm" title="团学组织">团学组织</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="txgz/xgjs.htm" title="学工建设">学工建设</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="txgz/kcsj.htm" title="科创实践">科创实践</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="txgz/jycy.htm" title="就业创业">就业创业</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="txgz/xljk.htm" title="心理健康">心理健康</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="txgz/xzfc.htm" title="学子风采">学子风采</a></li>
+          
+          
+          </ul>
+          
+        </li> 
+        <li class="l1-nav">  
+          <a class="l1-nav" href="djsz/zzjg.htm" title="党建思政" style="padding: 0 19px;">党建思政</a>
+          
+          <ul class="l2-nav">
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="djsz/zzjg.htm" title="组织架构">组织架构</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="djsz/zdwj.htm" title="制度文件">制度文件</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="djsz/llxx.htm" title="理论学习">理论学习</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="djsz/djdt.htm" title="党建动态">党建动态</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="djsz/xfyl.htm" title="先锋引领">先锋引领</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="djsz/ghgz.htm" title="工会工作">工会工作</a></li>
+          
+          
+          </ul>
+          
+        </li> 
+        <li class="l1-nav">  
+          <a class="l1-nav" href="rsgz/tzgg.htm" title="人事工作" style="padding: 0 19px;">人事工作</a>
+          
+          <ul class="l2-nav">
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="rsgz/tzgg.htm" title="通知公告">通知公告</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="rsgz/wjzd.htm" title="文件制度">文件制度</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="rsgz/bshldz.htm" title="博士后流动站">博士后流动站</a></li>
+          
+          
+          </ul>
+          
+        </li> 
+        <li class="l1-nav">  
+          <a class="l1-nav" href="aqgz.htm" title="安全工作" style="padding: 0 19px;">安全工作</a>
+          
+          
+          
+        </li> 
+        <li class="l1-nav">  
+          <a class="l1-nav" href="hzjl.htm" title="合作交流" style="padding: 0 19px;">合作交流</a>
+          
+          <ul class="l2-nav">
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="hzjl/yxhz.htm" title="院校合作">院校合作</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="hzjl/yqhz.htm" title="院企合作">院企合作</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="hzjl/gjhz.htm" title="国际合作">国际合作</a></li>
+          
+          
+          </ul>
+          
+        </li> 
+        <li class="l1-nav">  
+          <a class="l1-nav" href="xyzj/xyxx.htm" title="校友之家" style="padding: 0 19px;">校友之家</a>
+          
+          <ul class="l2-nav">
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="xyzj/xyxx.htm" title="校友信息">校友信息</a></li>
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="xyzj/xyfc.htm" title="校友风采">校友风采</a></li>
+          
+          
+          </ul>
+          
+        </li> 
+        <li class="l1-nav">  
+          <a class="l1-nav" href="lxwm.htm" title="联系我们" style="padding: 0 19px;">联系我们</a>
+          
+          <ul class="l2-nav">
+          
+          
+          <li class="l2-nav"><a class="l2-nav" href="lyb.jsp?urltype=tree.TreeTempUrl&wbtreeid=1054" title="留言板">留言板</a></li>
+          
+          
+          </ul>
+          
+        </li> 
+      </ul></DIV></DIV>
+<DIV class="banner fl">
+<DIV class="slideBox slideBox2">
+<DIV class="hd">
+<UL>
+<LI></LI>
+<LI></LI>
+<LI></LI>
+<LI></LI></UL></DIV>
+<DIV class="bd">
+<UL>    
+
+
+                <li>
+                    <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1408809832, 1016494)" class="abanner"><img src="images/qianfenzhierxuekexuanchuantu.png"></a>
+                </li>
+
+
+
+                <li>
+                    <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1408809832, 1010816)" class="abanner"><img src="images/jiaoyujiajingshen.jpg"></a>
+                </li>
+
+
+
+                <li>
+                    <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1408809832, 77678)" class="abanner"><img src="images/xutupian1.jpg"></a>
+                </li>
+
+
+
+                <li>
+                    <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1408809832, 77670)" class="abanner"><img src="images/1.jpg"></a>
+                </li>
+</UL></DIV></DIV></DIV>
+<DIV class="xg-main fl">
+<DIV class="wid1200">
+<DIV class="wid100 fl">
+<DIV class="xg-xwzx fl">
+<DIV class="xg-title fl">
+<H3>新闻中心</H3><A class="xg-more" href="index/xwzx.htm"><IMG src="images/xg-more.jpg"></A></DIV>
+<DIV class="xg-xwzx-con fl">
+
+
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><ul>
+
+
+
+<li><a href="info/1044/8063.htm" target="_blank" title="南师环境欢迎你!">
+                            <div class="xg-xwzx-pic fl">
+                                <img src="/__local/2/15/92/4D429B5CE18EE21D6822DBFE3B5_AF41DFC8_1A021.jpg" width="150" height="90">
+                            </div>
+                            <div class="xg-xwzx-txt fr">
+                                <h3>南师环境欢迎你!</h3>
+                                <i>2024-06-27</i>
+                                <p>  青云出岫，远山如黛，江河安澜，山水锦绣，青程漫漫，我们一路同行，欢迎报考南京…</p>
+                            </div>
+</a></li>
+
+
+
+
+
+
+<li><a href="info/1044/13393.htm" target="_blank" title="校党委书记王成斌率调研组赴苏州工业园区开展“双碳”专题调研">
+                            <div class="xg-xwzx-pic fl">
+                                <img src="/__local/9/20/19/FE03A0C389F9B6DAA00B293C790_91F3F115_7DF59.png" width="150" height="90">
+                            </div>
+                            <div class="xg-xwzx-txt fr">
+                                <h3>校党委书记王成斌率调研组赴苏州工业园区…</h3>
+                                <i>2025-10-22</i>
+                                <p>为深入学习贯彻习近平生态文明思想、贯彻落实“双碳”战略，10月16日上午，南京师范…</p>
+                            </div>
+</a></li>
+
+
+
+
+
+
+<li><a href="info/1044/13363.htm" target="_blank" title="厚植爱国情怀，共建美丽中国丨环境学院2025年秋季学期升旗仪式顺利举行">
+                            <div class="xg-xwzx-pic fl">
+                                <img src="/__local/2/1A/7D/A34A1E627813D368DCD7FD2F732_D2E7458B_35E24.jpg" width="150" height="90">
+                            </div>
+                            <div class="xg-xwzx-txt fr">
+                                <h3>厚植爱国情怀，共建美丽中国丨环境学院20…</h3>
+                                <i>2025-10-22</i>
+                                <p>10月13日清晨，环境学院在世纪广场隆重举行“厚植爱国情怀，共建美丽中国”主题升旗…</p>
+                            </div>
+</a></li>
+
+
+
+
+
+
+<li><a href="info/1044/12693.htm" target="_blank" title="环境学院2025级本研新生欢迎会顺利举行">
+                            <div class="xg-xwzx-pic fl">
+                                <img src="/__local/8/54/83/8328FE4B96D5402661A3A51BDD3_CF5010C3_6135A.png" width="150" height="90">
+                            </div>
+                            <div class="xg-xwzx-txt fr">
+                                <h3>环境学院2025级本研新生欢迎会顺利举行</h3>
+                                <i>2025-09-18</i>
+                                <p>9月12日晚，南京师范大学环境学院2025级本研新生欢迎会于广乐楼顺利召开。学院党委…</p>
+                            </div>
+</a></li>
+
+
+
+</ul><script>_showDynClickBatch(['dynclicks_u6_8063','dynclicks_u6_13393','dynclicks_u6_13363','dynclicks_u6_12693'],[8063,13393,13363,12693],"wbnews", 1408809832)</script>
+</DIV></DIV>
+<DIV class="xg-tzgg fr">
+<DIV class="xg-title fl">
+<H3>科研动态</H3><A class="xg-more" href="index/kydt.htm"><IMG src="images/xg-more.jpg"></A></DIV>
+<DIV class="xg-tzgg-con fl">
+
+
+
+
+
+
+
+<ul>
+
+<li><a href="info/1131/13463.htm" target="_blank" title="【环境论坛第89期】澳大利亚阿德莱德大学王少彬教授来我院学术交流">【环境论坛第89期】澳大利亚阿德莱德大学王少彬教…</a><i>2025-10-31</i></li>
+
+
+<li><a href="info/1131/13453.htm" target="_blank" title="【环境论坛第88期】北京师范大学黄浩勇教授来我院学术交流">【环境论坛第88期】北京师范大学黄浩勇教授来我院…</a><i>2025-10-31</i></li>
+
+
+<li><a href="info/1131/13433.htm" target="_blank" title="斯特拉斯堡大学生态学家Isabelle Combroux教授一行来我院合作交流">斯特拉斯堡大学生态学家Isabelle Combroux教授一…</a><i>2025-10-24</i></li>
+
+
+<li><a href="info/1131/13203.htm" target="_blank" title="我院获批设立“新污染物风险防控”省级重点实验室">我院获批设立“新污染物风险防控”省级重点实验室</a><i>2025-10-15</i></li>
+
+
+<li><a href="info/1131/13193.htm" target="_blank" title="学院何欢教授团队与南京大学谷成教授团队合作发表EST文章">学院何欢教授团队与南京大学谷成教授团队合作发表…</a><i>2025-10-14</i></li>
+
+
+<li><a href="info/1131/13183.htm" target="_blank" title="我院4名学者入选全球前2%顶尖科学家2025榜单">我院4名学者入选全球前2%顶尖科学家2025榜单</a><i>2025-10-14</i></li>
+
+
+<li><a href="info/1131/13133.htm" target="_blank" title="学院污染物环境行为与控制团队张国洋副教授与何欢教授在《Water Research》发表论文">学院污染物环境行为与控制团队张国洋副教授与何欢…</a><i>2025-10-10</i></li>
+
+
+<li><a href="info/1131/13103.htm" target="_blank" title="学院大气污染控制团队张耀宇特聘副研究员在《Nature Communications》发表论文">学院大气污染控制团队张耀宇特聘副研究员在《Natu…</a><i>2025-09-30</i></li>
+
+
+<li><a href="info/1131/12993.htm" target="_blank" title="学院气候适应与环境政策团队谢旻教授在《Environment International》发表论文">学院气候适应与环境政策团队谢旻教授在《Environm…</a><i>2025-09-28</i></li>
+
+
+<li><a href="info/1131/12703.htm" target="_blank" title="【环境论坛第87期】复旦大学张立武教授来我院学术交流">【环境论坛第87期】复旦大学张立武教授来我院学术…</a><i>2025-09-17</i></li>
+
+
+<li><a href="info/1131/12603.htm" target="_blank" title="【环境论坛第86期】Cambond Ltd创始人，英国农业循环经济创新研究中心董事长兼首席科学家赵晓斌博士来我院学术交流">【环境论坛第86期】Cambond Ltd创始人，英国农业…</a><i>2025-09-08</i></li>
+
+
+<li><a href="info/1131/12313.htm" target="_blank" title="【环境论坛第85期】 中国科学院化学研究所许子豪研究员来我院学术交流">【环境论坛第85期】 中国科学院化学研究所许子豪…</a><i>2025-07-24</i></li>
+
+</ul><script>_showDynClickBatch(['dynclicks_u7_13463','dynclicks_u7_13453','dynclicks_u7_13433','dynclicks_u7_13203','dynclicks_u7_13193','dynclicks_u7_13183','dynclicks_u7_13133','dynclicks_u7_13103','dynclicks_u7_12993','dynclicks_u7_12703','dynclicks_u7_12603','dynclicks_u7_12313'],[13463,13453,13433,13203,13193,13183,13133,13103,12993,12703,12603,12313],"wbnews", 1408809832)</script>
+</DIV></DIV></DIV>
+<DIV class="wid100 fl">
+<DIV class="xg-xsjl fl">
+<DIV class="xg-title fl">
+<H3>通知公告</H3><A class="xg-more" href="index/tzgg.htm"><IMG src="images/xg-more.jpg"></A></DIV>
+<DIV class="xg-xsjl-con fl">
+
+
+
+
+
+
+
+<ul>
+
+<li><a href="info/1047/13413.htm" target="_blank" title="中共南京师范大学委员会巡察公告">中共南京师范大学委员会巡察公告</a><i>2025-10-22</i></li>
+
+
+<li><a href="info/1047/13353.htm" target="_blank" title="南京师范大学环境学院同等学力申硕（2025年第二批次）报名通知">南京师范大学环境学院同等学力申硕（2025年第二批…</a><i>2025-10-21</i></li>
+
+
+<li><a href="info/1047/12623.htm" target="_blank" title="环境学院2026年接收推荐免试攻读研究生复试录取办法">环境学院2026年接收推荐免试攻读研究生复试录取办…</a><i>2025-09-09</i></li>
+
+
+<li><a href="info/1047/12483.htm" target="_blank" title="南京师范大学环境学院2026年推免生接收报名的通知">南京师范大学环境学院2026年推免生接收报名的通知</a><i>2025-09-03</i></li>
+
+
+<li><a href="info/1047/12143.htm" target="_blank" title="南京师范大学环境学院2025年优秀本科生学院开放日公告">南京师范大学环境学院2025年优秀本科生学院开放日…</a><i>2025-06-17</i></li>
+
+
+<li><a href="info/1047/11403.htm" target="_blank" title="南京师范大学环境学院同等学力申硕（2025年第一批次）报名通知">南京师范大学环境学院同等学力申硕（2025年第一批…</a><i>2025-04-15</i></li>
+
+</ul><script>_showDynClickBatch(['dynclicks_u8_13413','dynclicks_u8_13353','dynclicks_u8_12623','dynclicks_u8_12483','dynclicks_u8_12143','dynclicks_u8_11403'],[13413,13353,12623,12483,12143,11403],"wbnews", 1408809832)</script>
+</DIV></DIV>
+<DIV class="xg-kyjz fr">
+<DIV class="xg-title fl">
+<H3>人才培养</H3><A class="xg-more" href="rcpy/bksjy.htm"><IMG src="images/xg-more.jpg"></A></DIV>
+<DIV class="xg-kyjz-con fl">
+
+
+
+
+
+
+
+<ul>
+
+<li><a href="info/1028/11943.htm" target="_blank" title="环境学院举办2025春季学期教学沙龙活动">环境学院举办2025春季学期教学沙龙活动</a><i>2025-05-22</i></li>
+
+
+<li><a href="info/1028/11853.htm" target="_blank" title="环境学院开展2025年度新教师名师工作坊活动">环境学院开展2025年度新教师名师工作坊活动</a><i>2025-04-30</i></li>
+
+
+<li><a href="info/1028/9023.htm" target="_blank" title="环境学院开展2024年度新晋研究生导师培训活动">环境学院开展2024年度新晋研究生导师培训活动</a><i>2024-08-26</i></li>
+
+
+<li><a href="info/1028/8723.htm" target="_blank" title="南京师范大学环境学院同等学力申硕（2024年第二批次）报名通知">南京师范大学环境学院同等学力申硕（2024年第二批…</a><i>2024-07-19</i></li>
+
+
+<li><a href="info/1028/5523.htm" target="_blank" title="2023年环境学院本科生专业分流实施细则">2023年环境学院本科生专业分流实施细则</a><i>2023-11-16</i></li>
+
+
+<li><a href="info/1028/5513.htm" target="_blank" title="环境学院推荐2020级优秀本科毕业生免试攻读研究生工作实施细则">环境学院推荐2020级优秀本科毕业生免试攻读研究生…</a><i>2023-11-16</i></li>
+
+</ul><script>_showDynClickBatch(['dynclicks_u9_11943','dynclicks_u9_11853','dynclicks_u9_9023','dynclicks_u9_8723','dynclicks_u9_5523','dynclicks_u9_5513'],[11943,11853,9023,8723,5523,5513],"wbnews", 1408809832)</script>
+</DIV></DIV></DIV>
+<DIV class="clear"></DIV>
+<DIV class="wid1200">
+<DIV class="cylj fl">
+<H3>常用链接</H3>
+<DIV class="cylj-con fl"><script language="javascript" src="/system/resource/js/openlink.js"></script><UL>
+
+
+ <li><a href="http://www.most.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 95255)">科学技术部</a></li>
+
+
+ <li><a href="http://www.moe.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 95256)">教育部</a></li>
+
+
+ <li><a href="http://#" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 95257)">生态环境部</a></li>
+
+
+ <li><a href="http://www.nsfc.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 95258)">国家自然科学基金委员会</a></li>
+
+
+ <li><a href="http://www.ndrc.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 95259)">国家发改委</a></li>
+
+
+ <li><a href="http://kxjst.jiangsu.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 95262)">江苏省科学技术厅</a></li>
+
+
+ <li><a href="http://#" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 95260)">江苏省教育厅</a></li>
+
+
+ <li><a href="http://hbt.jiangsu.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 95261)">江苏省环境保护厅</a></li>
+</UL></DIV></DIV>
+
+<DIV class="cylj fr">
+<H3>校内链接</H3>
+<DIV class="cylj-con fr"><UL>
+
+
+ <li><a href="http://www.njnu.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 40822)">学校主页</a></li>
+
+
+ <li><a href="http://jwc.njnu.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 40824)">教务处</a></li>
+
+
+ <li><a href="http://xgc.njnu.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 40825)">学工处</a></li>
+
+
+ <li><a href="http://rsc.njnu.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 40823)">人力资源处</a></li>
+
+
+ <li><a href="http://grad.njnu.edu.cn" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 40826)">研究生院</a></li>
+
+
+ <li><a href="http://kjc.njnu.edu.cn" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 40859)">科研院</a></li>
+
+
+ <li><a href="http://sun.njnu.edu.cn" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 40860)">阳光网</a></li>
+
+
+ <li><a href="http://lib.njnu.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 40827)">图书馆资源</a></li>
+</UL></DIV></DIV>
+<DIV class="clear"></DIV>
+
+</DIV></DIV>
+<DIV class="clear"></DIV></DIV>
+<DIV class="xg-foot fl"><div style="width:100%; border-bottom:2px solid #2d5e74; height:46px; line-height:46px;">
+<div class="wid1200">
+<div class="dzsys fl"><b>常用链接</b>
+
+
+<a href="http://www.most.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 40828)">科学技术部</a>
+
+
+<a href="http://www.moe.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 40829)">教育部</a>
+
+
+<a href="http://#" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 40830)">生态环境部</a>
+
+
+<a href="http://www.nsfc.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 40861)">国家自然科学基金委员会</a>
+
+
+<a href="http://www.ndrc.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 40862)">国家发改委</a>
+
+
+<a href="http://kxjst.jiangsu.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 40865)">江苏省科学技术厅</a>
+
+
+<a href="http://#" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 40863)">江苏省教育厅</a>
+
+
+<a href="http://hbt.jiangsu.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 40864)">江苏省环境保护厅</a>
+
+
+<a href="http://fzggw.jiangsu.gov.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1408809832, 40866)">江苏省发改委</a>
+</div>
+</div>
+</div><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<div style="width: 100%; float: left; color: #aabfc9; text-align: center; margin-top: 15px"> 
+ <p style="line-height: 24px">南京师范大学环境学院，中国南京市文苑路1号 邮编：210023 School of Environment, Nanjing Normal University, No.1, Wenyuan Road, Nanjing, China, 210023&nbsp;</p> 
+ <p style="line-height: 24px">联系电话：(025)85891455；传真：(025)85891455；Email：envi@njnu.edu.cn</p> 
+</div></DIV>
+<script type="text/javascript" src="js/jquery.min.js"></script><script type="text/javascript" src="js/bdtxk.js"></script><script type="text/javascript" src="js/index.js"></script>
+</BODY></HTML>

@@ -1,0 +1,670 @@
+<!DOCTYPE html><html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>学院简介-生命科学学院</title><meta name="keywords" content="生命科学学院,学院简介">
+
+    <link href="../dfiles/21539/r/cms/front.css" rel="stylesheet" type="text/css">
+    <link href="../dfiles/21539/r/cms/jqueryui/jquery.ui.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="../dfiles/21539/r/cms/www/default/css/index.css">
+    <link rel="stylesheet" type="text/css" href="../dfiles/21539/r/cms/www/default/css/public.css">
+    <link rel="stylesheet" type="text/css" href="../dfiles/21539/r/cms/www/default/css/jquery.bxslider.css">
+    <link rel="stylesheet" type="text/css" href="../dfiles/21539/r/cms/www/default/css/style.css">
+    <script type="text/javascript" src="../dfiles/21539/r/cms/www/default/js/jquery1.11.3.min.js"></script>
+    <script type="text/javascript" src="../dfiles/21539/r/cms/www/default/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../dfiles/21539/r/cms/www/default/js/index.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307978475d51535742000000004252 -->
+<link rel="stylesheet" type="text/css" href="../danpian.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1008,'/danpian.jsp',-1,1246335982)</script>
+</head>
+
+<body>
+    <!--top-->
+
+<!-- <script type="text/javascript">
+    window.onload = function(){
+
+        /*showTime();*/
+
+
+    }
+
+    function showTime(){
+        var myDate = new Date();
+        var year = myDate.getFullYear();
+        var month = myDate.getMonth() + 1;
+        var date = myDate.getDate();
+        var dateArr = ["日","一",'二','三','四','五','六'];
+        var day = myDate.getDay();
+        var hours = myDate.getHours();
+        var minutes = formatTime(myDate.getMinutes());
+        var seconds = formatTime(myDate.getSeconds());
+
+        var systemTime = document.getElementById("time");
+        systemTime.innerHTML = " " + year + "年" + month +"月" + date + "日" + " 星期" + dateArr[day] + " " + hours + ":" + minutes + ":" + seconds;
+        setTimeout("showTime()",500);
+    }
+
+    //格式化时间：分秒。
+    function formatTime (i){
+        if(i < 10){
+            i = "0" + i;
+        }
+        return i;
+    }
+
+</script>
+
+<script>
+    function qkeypress(){
+        var q=$("input[name=q]");
+        if(q.val().trim()!=""){
+            $("input[name=q]").autocomplete("enable");
+        }else{
+            $("input[name=q]").autocomplete("disable");
+        }
+    }
+
+    function selectTheme(){ //选中主题
+        var themeArray = new Array("blue","read");
+        var the = getCookie('theme');
+        var color = '';
+        if(the == null || the == 'blue'){
+            document.cookie="theme="+themeArray[1];
+            color = '';
+        }else{
+            document.cookie="theme="+themeArray[0];
+            color = 'blue/';
+        }
+        dynamicLoadCss('http://112.33.12.100:4028/r/cms/www/default/css/'+color+'home_index.css');
+    }
+
+    function getCookie(name)
+    {
+        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+        if(arr=document.cookie.match(reg))
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+
+    function dynamicLoadCss(url) {
+        var head = document.getElementsByTagName('head')[0];
+        var link = document.createElement('link');
+        link.type='text/css';
+        link.rel = 'stylesheet';
+        link.href = url;
+        head.appendChild(link);
+    }
+
+
+    jQuery(document).ready(function(){
+        var qcloud={};
+        $('[_t_nav]').hover(function(){
+            var _nav = $(this).attr('_t_nav');
+            clearTimeout( qcloud[ _nav + '_timer' ] );
+            qcloud[ _nav + '_timer' ] = setTimeout(function(){
+                $('[_t_nav]').each(function(){
+                    $(this)[ _nav == $(this).attr('_t_nav') ? 'addClass':'removeClass' ]('nav-up-selected');
+                });
+                $('#'+_nav).stop(true,true).slideDown(200);
+            }, 150);
+        },function(){
+            var _nav = $(this).attr('_t_nav');
+            clearTimeout( qcloud[ _nav + '_timer' ] );
+            qcloud[ _nav + '_timer' ] = setTimeout(function(){
+                $('[_t_nav]').removeClass('nav-up-selected');
+                $('#'+_nav).stop(true,true).slideUp(200);
+            }, 150);
+        });
+    });
+
+</script>
+
+
+<script>
+
+    function mouseover(id) {
+
+        var str = id.substring(2,id.length+1);
+
+        var tabid = "#tab"+str;
+        var liid= "#li"+str;
+
+        liactive(liid);
+        $(tabid).parent().children().hide();
+        $(tabid).show();
+    }
+    function liactive(liid){
+
+        var ali=$(liid).parent().children();
+
+        for(var i=0;i<ali.length;i++){
+
+            ali[i].index=i;
+            ali[i].className="";
+
+        }
+
+        $(liid).attr('class','active');
+
+
+
+    }
+</script>
+<script>
+
+    function onclick1(id) {
+
+        var str = id.substring(2,id.length+1);
+
+        var tabid = "#tab"+str;
+        var liid= "#li"+str;
+
+        liactive(liid);
+        $(tabid).parent().children().hide();
+        $(tabid).show();
+    }
+    function liactive(liid){
+
+        var ali=$(liid).parent().children();
+
+        for(var i=0;i<ali.length;i++){
+
+            ali[i].index=i;
+            ali[i].className="";
+
+        }
+
+        $(liid).attr('class','active');
+    }
+</script> -->
+
+
+<div class="top" id="top">
+    <div class="wrap clearfloat">
+        <div class="logo" style="margin-right: 35px;"><a href="../"><img src="../dfiles/21539/r/cms/www/default/images/logo.png"></a></div>
+       <div class="nav">
+            <ul class="clearfloat">
+                
+
+                <li>
+                    <h2><a href="../index.htm" target="_blank">首页</a><span class="navBtn"></span></h2>
+                </li>
+
+                <li class="active">
+                    <h2><a href="xyjj.htm" target="_blank">学院概况</a><span class="navBtn"></span></h2>
+                    <div class="navDown" style="display: none;">
+                        <a href="xyjj.htm" target="_blank">学院简介</a>                        <a href="lsyg.htm" target="_blank">历史沿革</a>                        <a href="xrld.htm" target="_blank">现任领导</a>                        <a href="lrld.htm" target="_blank">历任领导</a>                        <a href="jxdw.htm" target="_blank">教学单位</a>                        <a href="kypt.htm" target="_blank">科研平台</a>                        <a href="gljg.htm" target="_blank">管理机构</a>                        <a href="xs_zm_wyh.htm" target="_blank">学术(专门)委员会</a>
+                       
+
+                    </div>
+                </li>
+
+                <li>
+                    <h2><a href="../szdw/zgj.htm" target="_blank">师资队伍</a><span class="navBtn"></span></h2>
+                    <div class="navDown" style="display: none;">
+                        <a href="../szdw/zgj.htm" target="_blank">正高级</a>                        <a href="../szdw/fgj.htm" target="_blank">副高级</a>                        <a href="../szdw/zj.htm" target="_blank">中级</a>                        <a href="../szdw/jmjhrc.htm" target="_blank">骏马计划人才</a>                        <a href="../szdw/rczp.htm" target="_blank">人才招聘</a>
+                       
+
+                    </div>
+                </li>
+
+                <li>
+                    <h2><a href="../rcpy/bkjy.htm" target="_blank">人才培养</a><span class="navBtn"></span></h2>
+                    <div class="navDown" style="display: none;">
+                        <a href="../rcpy/bkjxpg.htm" target="_blank">本科教学评估</a>                        <a href="../rcpy/bkjy.htm" target="_blank">本科教育</a>                        <a href="../rcpy/yjspy.htm" target="_blank">研究生培养</a>                        <a href="../rcpy/bshldz/ldzjj.htm" target="_blank">博士后流动站</a>
+                       
+
+                    </div>
+                </li>
+
+                <li>
+                    <h2><a href="../kxyj.htm" target="_blank">科学研究</a><span class="navBtn"></span></h2>
+                    <div class="navDown" style="display: none;">
+                        <a href="../kxyj/yjlyjyjfx.htm" target="_blank">研究领域及研究方向</a>                        <a href="../kxyj/gjjkypt.htm" target="_blank">国家级科研平台</a>                        <a href="../kxyj/jybpt.htm" target="_blank">教育部平台</a>                        <a href="../kxyj/zzqjkypt.htm" target="_blank">自治区级科研平台</a>                        <a href="../kxyj/smkxkygxpt.htm" target="_blank">生命科学科研共享平台</a>                        <a href="../kxyj/xhjs.htm" target="_blank">学会建设</a>                        <a href="../kxyj/yjjz.htm" target="_blank">研究进展</a>
+                       
+
+                    </div>
+                </li>
+
+                <li>
+                    <h2><a href="../dtgz/xydw.htm" target="_blank">党团工作</a><span class="navBtn"></span></h2>
+                    <div class="navDown" style="display: none;">
+                        <a href="../dtgz/xydw.htm" target="_blank">学院党委</a>                        <a href="../dtgz/djxxjy.htm" target="_blank">党纪学习教育</a>                        <a href="../dtgz/zbzc.htm" target="_blank">支部组成</a>                        <a href="../dtgz/xytw.htm" target="_blank">学院团委</a>                        <a href="../dtgz/ghwyh.htm" target="_blank">工会委员会</a>                        <a href="../dtgz/txdt.htm" target="_blank">团学动态</a>
+                       
+
+                    </div>
+                </li>
+
+                <li>
+                    <h2><a href="../sdsf.htm" target="_blank">师德师风</a><span class="navBtn"></span></h2>
+                    <div class="navDown" style="display: none;">
+                        <a href="../sdsf/xxdt1.htm" target="_blank">学习动态</a>                        <a href="../sdsf/xxzl.htm" target="_blank">学习资料</a>
+                       
+
+                    </div>
+                </li>
+
+                <li>
+                    <h2><a href="../sysaq/zzjg.htm" target="_blank">实验室安全</a><span class="navBtn"></span></h2>
+                    <div class="navDown" style="display: none;">
+                        <a href="../sysaq/zzjg.htm" target="_blank">组织机构</a>                        <a href="../sysaq/gzzd.htm" target="_blank">规章制度</a>                        <a href="../sysaq/rcgl.htm" target="_blank">日常管理</a>
+                       
+
+                    </div>
+                </li>
+               
+            </ul>
+        </div>
+
+        <!-- <div class="topRight clearfloat">
+            <div class="topLang">
+                <a class="topLangCh" href="javacritp:;">China</a>
+            </div>
+            <div class="topSearch">
+                <span class="topSearchBtn"></span>
+                <div class="topSearchWrap clearfloat">
+                    <form action="/search.jspx" target="_blank" id="searchForm">
+                        <input type="text" name="q" value="" maxlength="50" autocomplete="off" class="searchCon"
+                            style="width:169px;padding-left:20px;" plachholder="请输入检索内容">
+                            <input type="submit" value="" class="searchMenu">
+                    </form>
+
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+    <div class="muen">
+        <span class="muenX"></span>
+        <span class="muenY"></span>
+        <span class="muenZ"></span>
+    </div>
+</div>
+
+
+    <!--top-->
+
+    <!--banner-->
+    <div class="bannerCont bannerContCourse"></div>
+    <!--/banner-->
+
+    <div class="main">
+        <div class="wrap clearfloat">
+            <div class="contLeft" id="contLeft">
+                <div class="contLeftTit">
+                    <span><img src="../dfiles/21539/r/cms/www/default/images/course_ico.jpg"></span>
+                    <h2>
+
+
+
+学院概况</h2>
+                    <h3></h3>
+                </div>
+                <div class="contLeftNav">
+                    <ul>
+
+                        <li class="on">
+                            <h3><a href="xyjj.htm" target="_blank">学院简介</a>
+                               
+                            </h3>
+                        </li>
+
+                        <li>
+                            <h3><a href="lsyg.htm" target="_blank">历史沿革</a>
+                               
+                            </h3>
+                        </li>
+
+                        <li>
+                            <h3><a href="xrld.htm" target="_blank">现任领导</a>
+                               
+                            </h3>
+                        </li>
+
+                        <li>
+                            <h3><a href="lrld.htm" target="_blank">历任领导</a>
+                               
+                            </h3>
+                        </li>
+
+                        <li>
+                            <h3><a href="jxdw.htm" target="_blank">教学单位</a>
+ <span class="contLeftBtn"></span>
+ <span class="contLeftBtn"></span>
+ <span class="contLeftBtn"></span>
+ <span class="contLeftBtn"></span>
+ <span class="contLeftBtn"></span>
+                               
+                            </h3>
+                            <div class="contLeftDown">
+
+                                <a href="jxdw/swhxyslxx.htm" target="_blank">生物化学与生理学系</a>
+
+                                <a href="jxdw/ycfyyxbswxx.htm" target="_blank">遗传发育与细胞生物学系</a>
+
+                                <a href="jxdw/wswxywswgcx.htm" target="_blank">微生物学与微生物工程系</a>
+
+                                <a href="jxdw/swjsyxdnxx.htm" target="_blank">生物技术与现代农学系</a>
+
+                                <a href="jxdw/gjjbksyjxzx.htm" target="_blank">国家级本科实验教学中心</a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <h3><a href="kypt.htm" target="_blank">科研平台</a>
+ <span class="contLeftBtn"></span>
+ <span class="contLeftBtn"></span>
+ <span class="contLeftBtn"></span>
+ <span class="contLeftBtn"></span>
+                               
+                            </h3>
+                            <div class="contLeftDown">
+
+                                <a href="../kxyj/gjjkypt.htm" target="_blank">国家级科研平台</a>
+
+                                <a href="../kxyj/jybpt.htm" target="_blank">教育部平台</a>
+
+                                <a href="../kxyj/zzqjkypt.htm" target="_blank">自治区级科研平台</a>
+
+                                <a href="../kxyj/smkxkygxpt.htm" target="_blank">生命科学科研共享平台</a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <h3><a href="gljg.htm" target="_blank">管理机构</a>
+ <span class="contLeftBtn"></span>
+ <span class="contLeftBtn"></span>
+ <span class="contLeftBtn"></span>
+ <span class="contLeftBtn"></span>
+                               
+                            </h3>
+                            <div class="contLeftDown">
+
+                                <a href="gljg/jwbgs.htm" target="_blank">教务办公室</a>
+
+                                <a href="gljg/xkkybgs.htm" target="_blank">学科科研办公室</a>
+
+                                <a href="gljg/xzbgs.htm" target="_blank">行政办公室</a>
+
+                                <a href="gljg/xsgzbgs.htm" target="_blank">学生工作办公室</a>
+                            </div>
+                        </li>
+
+                        <li>
+                            <h3><a href="xs_zm_wyh.htm" target="_blank">学术(专门)委员会</a>
+ <span class="contLeftBtn"></span>
+ <span class="contLeftBtn"></span>
+ <span class="contLeftBtn"></span>
+                               
+                            </h3>
+                            <div class="contLeftDown">
+
+                                <a href="xs_zm_wyh/jswyh.htm" target="_blank">教授委员会</a>
+
+                                <a href="xs_zm_wyh/jxzdwyh.htm" target="_blank">教学指导委员会</a>
+
+                                <a href="xs_zm_wyh/dxyqsbhkjglwyh.htm" target="_blank">大型仪器设备和空间管理委员会</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="contRight">
+                <div class="contRightH clearfloat">
+                    <h2>
+
+
+
+学院简介</h2>
+                    <p>    您的位置：
+                        <a href="../index.htm">首页</a>
+                &gt;
+                <a href="xyjj.htm">学院概况</a>
+                &gt;
+                <a href="xyjj.htm">学院简介</a>
+</p>
+                </div>
+                <div class="contRightLine"></div>
+                
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1246335982,'wbnews','u6')</script>
+<script>function seeContenta6(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta6('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1246335982,3045)</script>
+<div class="contRightWrap">
+                    <div class="newsDetailH">
+                        <h3>学院简介</h3>
+                    </div>
+                    <div class="aboutBrief clearfloat">
+                        <div id="vsb_content_3045_u61"><div id="vsb_content"><p style="text-align: justify; font-family: &quot;Microsoft YaHei&quot;; font-size: 15px; white-space: normal;"><img width="500" height="327" title="" alt="" src="/__local/C/0D/FF/06B2195F601518C659410925990_D193C8CB_1B2CA.jpg" border="20" vspace="20" hspace="20" vwidth=" 500px" vheight=" 327px" vurl="/_vsl/C0DFF06B2195F601518C659410925990/D193C8CB/1B2CA" vsbhref="vurl" orisrc="/__local/C/0D/FF/06B2195F601518C659410925990_D193C8CB_1B2CA.jpg" class="img_vsb_content" style="width: 500px; height: 327px; float: left;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;"></span></p>
+<p style="text-align: justify; text-indent: 2em; font-family: &quot;Microsoft YaHei&quot;; font-size: 15px; white-space: normal;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;"></span></p>
+<p style="text-align: justify; line-height: 2em; text-indent: 32px;"><span style="color: rgb(0, 0, 0); font-family: 微软雅黑, sans-serif; font-size: 16px;"></span></p>
+<p style="text-align: justify; text-indent: 32px; background: white; line-height: 2em;"><span style="font-family: 微软雅黑, sans-serif; color: black; background: white; font-size: 16px;"></span></p>
+<p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:32px;padding:0 0 0 0 ;text-justify:inter-ideograph;line-height:28px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px"><span style="font-family:微软雅黑">生命科学学院成立于</span>1995年12月，李博院士任首任名誉院长，旭日干院士任首届院长。现有生物化学与生理学系、遗传发育与细胞生物学系、微生物学与生物工程系和生物技术与现代农学系等4个教学单位、1个生命科学国家本科实验教学示范中心和1个生命科学科研公共平台。</span></p>
+<p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:32px;padding:0 0 0 0 ;text-justify:inter-ideograph;line-height:28px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px"><span style="font-family:微软雅黑">生命科学学院前身是建校时的生物学系。</span><span style="font-family:微软雅黑">1957年，著名植物学家、中国科学院学部委员李继侗先生率领一批来自北京大学、复旦大学、南京大学、南开大学等国内知名高校的专家学者创建了生物学系，创建时设动物学和植物学两个专业，办学起点高、基础扎实。六十多年来，学院在建设和发展过程中，砥砺前行、薪火相传，形成鲜明特色的学科优势，成为国家和自治区在本学科领域解决重大科技问题和培养高层次人才的重要基地。2002年，动物学获批国家重点学科；2017年，生物学学科入选国家“双一流”建设学科，2022年继续被列为国家“双一流”建设学科。</span></span></p>
+<p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:28px;padding:0 0 0 0 ;text-justify:inter-ideograph;line-height:28px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px"><span style="font-family:微软雅黑">学院现有教职工</span><span style="font-family:微软雅黑">149人，其中教学科研人员116人，教辅人员24人，管理人员10人。教学科研人员中正高级42人、副高级32人、具有高级职称教师占总数64%；教学科研人员具有博士学位112人，占总数的96.55%</span></span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">。</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px"><span style="font-family:微软雅黑">拥有教育部</span><span style="font-family:微软雅黑">“长江学者奖励计划”特聘教授1人，青年</span></span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">科学</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">基金</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px"><span style="font-family:微软雅黑">项目</span><span style="font-family:微软雅黑">A类</span></span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px"><span style="font-family:微软雅黑">获得者</span><span style="font-family:微软雅黑">1人，国家“万人计划”科技创新领军人才</span></span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">1</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px"><span style="font-family:微软雅黑">人，国家</span><span style="font-family:微软雅黑">“青年千人计划”入选者1人，国家青年拔尖人才项目获得者1人，国家中青年科技创新领军人才1人，国家“新世纪百千万人才工程”人才4人，享受国务院政府特殊津贴专家</span></span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">6</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px"><span style="font-family:微软雅黑">人，国家有突出贡献中青年专家</span><span style="font-family:微软雅黑">4人，有全国高校黄大年式教师团队（家畜现代生物育种团队）1个，1个团队荣获全国杰出专业技术人才先进集体荣誉称号（牛遗传改良与生物育种技术团队）。有“哺乳动物生殖生物学及生物技术”教育部科技创新团队和“转基因高产肉牛新品种培育”科技部创新团队。2023年生命科学学院获“全国五一巾帼标兵岗””自治区工人先锋号“荣誉称号。</span></span></p>
+<p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:32px;padding:0 0 0 0 ;text-justify:inter-ideograph;line-height:28px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">学院现有生物学一级学科博士、硕士学位授权点和博士后科研流动站以及</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">生物与医药专业</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">博士、</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">硕士学位授权点</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">。</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">现有生物科学、生物技术、生物工程、食品科学与工程、食品质量与安全、园艺</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">、</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">生物医学工程</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">等</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">7</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">个本科专业，</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px"><span style="font-family:微软雅黑">其中生物科学为国家级特色专业、生物技术为国家级人才培养模式创新实验区，</span><span style="font-family:微软雅黑">2019年生物科学、生物技术入选首批国家一流本科专业建设点。现有“国家理科生物学基础科学研究与教学人才培养基地”和“国家生命科学与技术人才培养基地”等2个国家人才培养基地，2021年生物科学入选教育部基础学科拔尖学生培养计划2.0基地。</span></span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px"><span style="font-family:微软雅黑">现有国家级一流本科课程</span><span style="font-family:微软雅黑">1门，国家级双语教学示范课程1门。</span></span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px"><span style="font-family:微软雅黑">学生科技创新能力显著提升，近几年在</span><span style="font-family:微软雅黑">“挑战杯”全国大学生课外学术科技作品竞赛、国际“互联网</span></span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">+”大学生创新创业大赛中屡创佳绩，先后获得中国国际“互联网+”大学生创新创业大赛国家级金奖1项、银奖3项、铜奖2项，2021年同时荣获“青年筑梦红色之旅”赛道唯一“乡村振兴奖”</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">、</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px"><span style="font-family:微软雅黑">第八届全国大学生生命科学竞赛</span><span style="font-family:微软雅黑">-国家二等奖。生</span></span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">命科学</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">学院</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">自建立以来，为国家和自治区累计培养了近万名优秀人才，部分成为各行业带头人或骨干，为国家和自治区经济建设和社会发展作出突出贡献。</span></p>
+<p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:32px;padding:0 0 0 0 ;text-justify:inter-ideograph;line-height:28px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px"><span style="font-family:微软雅黑">学院拥有省部共建草原家畜生殖调控与繁育国家重点实验室、牧草与特色作物生物学教育部重点实验室和优良家畜规模化繁育技术教育部工程研究中心，</span><span style="font-family:微软雅黑">6个自治区重点实验室和工程研究中心，以及1个生命科学科研公共平台（包括仪器设备共享平台、二级生物安全实验室、生物种质资源库、动植物标本馆、SPF级实验动物室、植物智能生长温室等）。2021年获批高等学校学科创新引智计划基地（“111”引智基地）。2021年草原家畜种质创新与繁育基地立项建设，占地899亩，通过持续建设力争成为“草原家畜遗传与种质创新国家重大科技基础设施”。</span></span></p>
+<p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:32px;padding:0 0 0 0 ;text-justify:inter-ideograph;line-height:28px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px"><span style="font-family:微软雅黑">学院围绕种业振兴、生物多样性、生物安全等国家重大战略需求，已形成哺乳动物生殖生物学、牧草与特色作物生物学、北方草原带生物多样性和北方草原带人畜共患病原生物学等</span><span style="font-family:微软雅黑">4个研究领域。“十三五”以来，获批国家科技创新重大项目课题、国家重点研发计划项目课题、国家自然科学基金区域创新发展联合基金重点项目等各类科研项目共</span></span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">445</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px"><span style="font-family:微软雅黑">项，立项科研经费</span><span style="font-family:微软雅黑">5.</span></span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">4</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px"><span style="font-family:微软雅黑">亿元。发表高质量论文（中国科学院一区</span><span style="font-family:微软雅黑">/二区）2</span></span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">92</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px"><span style="font-family:微软雅黑">篇，部分论文发表在</span><span style="font-family:微软雅黑">Nature Protocols，Nature Communications，PNAS，GUT，Molecular Plant等高水平期刊；“牛羊良种高效克隆技术”获国家技术发明奖二等奖（合作），“奶牛种公牛培育与性别控制繁育关键技术创新应用”获教育部高等学校科学研究优秀成果奖（科学技术）科技进步二等奖，同时获内蒙古自然科学一等奖2项、二等奖3项，内蒙古科学技术进步一等奖2项、二等奖1项；3项成果通过农业农村部成果鉴定，“蒙油莎2号”新品种通过自治区草品种审定委员审定</span></span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">。</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">2024年作为第二参加单位获国家科技进步二等奖一项。</span></p>
+<p style="text-align:justify;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-indent:32px;padding:0 0 0 0 ;text-justify:inter-ideograph;line-height:28px;background:rgb(255,255,255)"><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">“十四五”期间，学院以习近平新时代中国特色社会主义思想为指导，按照建设中国特色世界一流大学的总体要求，以立德树人为根本，坚持</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">“面向需求、立足前沿、拓展交叉、特色一流”的办学思路，</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px"><span style="font-family:微软雅黑">围绕生物学一流学科重点建设领域，形成</span><span style="font-family:微软雅黑">“搭建大平台、汇聚大团队、产出大成果、培养一流人才”的联动发展格局，显著提升学科整体实力，为建设让党放心、人民满意、特色鲜明的一流大学作出更多更大贡献！</span></span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px">（</span><span style="font-family: 微软雅黑;letter-spacing: 0;font-size: 16px"><span style="font-family:微软雅黑">截止到</span><span style="font-family:微软雅黑">2024年12月）</span></span></p></div></div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+<div class="homeLink" style="background-color: #EEF7F7;">
+  <div class="wrap">
+      <div class="homeTitle">
+          <h2>友情链接</h2>
+          <h3><span><img src="../dfiles/21539/r/cms/www/default/images/title.jpg" style="width: 180px;"></span></h3>
+          <div class="line"></div>
+      </div>
+      <div class="homeLinkWrap">
+      
+                  
+<a href="https://www.imu.edu.cn/" target="_blank" style="margin: 0 3px 10px 3px;">
+          <img src="../images/23/04/13/11rt8xztga/1.jpg" style="height: 50px;width: 100%;background-color: white;  padding: 0px 0px; border:1px solid #eee;">
+          </a><a href="https://www.henu.edu.cn/" target="_blank" style="margin: 0 3px 10px 3px;">
+          <img src="../images/23/04/13/11rt8xztga/2.jpg" style="height: 50px;width: 100%;background-color: white;  padding: 0px 0px; border:1px solid #eee;">
+          </a><a href="http://www.swu.edu.cn/" target="_blank" style="margin: 0 3px 10px 3px;">
+          <img src="../images/23/04/13/11rt8xztga/3.jpg" style="height: 50px;width: 100%;background-color: white;  padding: 0px 0px; border:1px solid #eee;">
+          </a><a href="https://www.sxu.edu.cn/" target="_blank" style="margin: 0 3px 10px 3px;">
+          <img src="../images/23/04/13/11rt8xztga/4.jpg" style="height: 50px;width: 100%;background-color: white;  padding: 0px 0px; border:1px solid #eee;">
+          </a><a href="https://www.nenu.edu.cn" target="_blank" style="margin: 0 3px 10px 3px;">
+          <img src="../images/23/04/13/11rt8xztga/5.jpg" style="height: 50px;width: 100%;background-color: white;  padding: 0px 0px; border:1px solid #eee;">
+          </a><a href="https://www.jlu.edu.cn/" target="_blank" style="margin: 0 3px 10px 3px;">
+          <img src="../images/23/04/13/11rt8xztga/6.jpg" style="height: 50px;width: 100%;background-color: white;  padding: 0px 0px; border:1px solid #eee;">
+          </a><a href="https://www.lzu.edu.cn/" target="_blank" style="margin: 0 3px 10px 3px;">
+          <img src="../images/23/04/13/11rt8xztga/7.jpg" style="height: 50px;width: 100%;background-color: white;  padding: 0px 0px; border:1px solid #eee;">
+          </a><a href="https://www.fudan.edu.cn" target="_blank" style="margin: 0 3px 10px 3px;">
+          <img src="../images/23/04/13/11rt8xztga/8.jpg" style="height: 50px;width: 100%;background-color: white;  padding: 0px 0px; border:1px solid #eee;">
+          </a><a href="https://www.pku.edu.cn/" target="_blank" style="margin: 0 3px 10px 3px;">
+          <img src="../images/23/04/13/11rt8xztga/9.jpg" style="height: 50px;width: 100%;background-color: white;  padding: 0px 0px; border:1px solid #eee;">
+          </a>
+       
+       
+
+      </div>
+
+  </div>
+</div>
+<div id="footer">
+  <div class="wrap clearfloat">
+      <div class="footerLeft">
+    <div class="footerlogo"><img src="../dfiles/21539/r/cms/www/default/images/zs.jpg"></div>
+      </div>
+      <div class="footerRight">
+          <ul class="clearfloat">
+              <li>
+                  <h3><a href="xyjj.htm" target="_blank">学院概况</a></h3>
+
+<p><a href="xyjj.htm" target="_blank">学院简介</a></p>
+
+<p><a href="lsyg.htm" target="_blank">历史沿革</a></p>
+
+<p><a href="xrld.htm" target="_blank">现任领导</a></p>
+
+<p><a href="lrld.htm" target="_blank">历任领导</a></p>
+
+<p><a href="jxdw.htm" target="_blank">教学单位</a></p>
+
+<p><a href="kypt.htm" target="_blank">科研平台</a></p>
+
+<p><a href="gljg.htm" target="_blank">管理机构</a></p>
+
+<p><a href="xs_zm_wyh.htm" target="_blank">学术(专门)委员会</a></p>
+                 
+              </li>
+              <li>
+                  <h3><a href="../szdw/zgj.htm" target="_blank">师资队伍</a></h3>
+
+<p><a href="../szdw/zgj.htm" target="_blank">正高级</a></p>
+
+<p><a href="../szdw/fgj.htm" target="_blank">副高级</a></p>
+
+<p><a href="../szdw/zj.htm" target="_blank">中级</a></p>
+
+<p><a href="../szdw/jmjhrc.htm" target="_blank">骏马计划人才</a></p>
+
+<p><a href="../szdw/rczp.htm" target="_blank">人才招聘</a></p>
+                 
+              </li>
+              <li>
+                  <h3><a href="../rcpy/bkjy.htm" target="_blank">人才培养</a></h3>
+
+<p><a href="../rcpy/bkjxpg.htm" target="_blank">本科教学评估</a></p>
+
+<p><a href="../rcpy/bkjy.htm" target="_blank">本科教育</a></p>
+
+<p><a href="../rcpy/yjspy.htm" target="_blank">研究生培养</a></p>
+
+<p><a href="../rcpy/bshldz/ldzjj.htm" target="_blank">博士后流动站</a></p>
+                 
+              </li>
+              <li>
+                  <h3><a href="../kxyj.htm" target="_blank">科学研究</a></h3>
+
+<p><a href="../kxyj/yjlyjyjfx.htm" target="_blank">研究领域及研究方向</a></p>
+
+<p><a href="../kxyj/gjjkypt.htm" target="_blank">国家级科研平台</a></p>
+
+<p><a href="../kxyj/jybpt.htm" target="_blank">教育部平台</a></p>
+
+<p><a href="../kxyj/zzqjkypt.htm" target="_blank">自治区级科研平台</a></p>
+
+<p><a href="../kxyj/smkxkygxpt.htm" target="_blank">生命科学科研共享平台</a></p>
+
+<p><a href="../kxyj/xhjs.htm" target="_blank">学会建设</a></p>
+
+<p><a href="../kxyj/yjjz.htm" target="_blank">研究进展</a></p>
+                 
+              </li>
+              <li>
+                  <h3><a href="../dtgz/xydw.htm" target="_blank">党团工作</a></h3>
+
+<p><a href="../dtgz/xydw.htm" target="_blank">学院党委</a></p>
+
+<p><a href="../dtgz/djxxjy.htm" target="_blank">党纪学习教育</a></p>
+
+<p><a href="../dtgz/zbzc.htm" target="_blank">支部组成</a></p>
+
+<p><a href="../dtgz/xytw.htm" target="_blank">学院团委</a></p>
+
+<p><a href="../dtgz/ghwyh.htm" target="_blank">工会委员会</a></p>
+
+<p><a href="../dtgz/txdt.htm" target="_blank">团学动态</a></p>
+                 
+              </li>
+              <li>
+                  <h3><a href="../sdsf.htm" target="_blank">师德师风</a></h3>
+
+<p><a href="../sdsf/xxdt1.htm" target="_blank">学习动态</a></p>
+
+<p><a href="../sdsf/xxzl.htm" target="_blank">学习资料</a></p>
+                 
+              </li>
+              <li>
+                  <h3><a href="../sysaq/zzjg.htm" target="_blank">实验室安全</a></h3>
+
+<p><a href="../sysaq/zzjg.htm" target="_blank">组织机构</a></p>
+
+<p><a href="../sysaq/gzzd.htm" target="_blank">规章制度</a></p>
+
+<p><a href="../sysaq/rcgl.htm" target="_blank">日常管理</a></p>
+                 
+              </li>
+          </ul>
+          
+          <div class="footerInfor clearfloat">
+              <div class="footerInforL">
+                  <p>地址： 内蒙古呼和浩特市玉泉区锡林南路49号（010020）</p>
+                  <p>工作时间：周一至周五 8:00-12:00；14:30-17:30</p>
+              </div>
+              <div class="footerInforR">
+                  <p><span>电话（传真）：（0471）4992435</span></p>
+                  <p>邮箱：ndsky123@126.com</p>
+              </div>
+
+          </div>
+      </div>
+  </div>
+</div>
+<div id="bottom">
+  <div class="wrap">
+<p><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+</p><p>内蒙古大学生命科学学院 版权所有<a href="http://bszs.conac.cn/sitename?method=show&amp;id=319B028B5F7A01E5E053012819ACF26B" target="_self"><img src="/__local/2/E4/42/7747499D1D533DD3E8EC1F02FAC_215AB538_F44.png?e=.png" width="25" height="30" border="0" vspace="0" hspace="0" title="" alt="" style="vertical-align: middle"></a><a href="https://beian.miit.gov.cn/publish/query/indexFirst.action" target="_self" style="text-decoration: none; color: #ffffff">蒙ICP16002391号-1 </a>&nbsp;&nbsp;&nbsp;&nbsp;</p><p></p>  </div>
+</div>
+<script type="text/javascript" language="javascript">
+  //加入收藏
+  function AddFavorite(sURL, sTitle) {
+      sURL = encodeURI(sURL);
+      try {
+          window.external.addFavorite(sURL, sTitle);
+      } catch (e) {
+          try {
+              window.sidebar.addPanel(sTitle, sURL, "");
+          } catch (e) {
+              alert("您的浏览器不支持自动加入收藏功能，请使用Ctrl+D进行添加，或手动在浏览器里进行设置！");
+          }
+      }
+  }
+
+  //设为首页
+  function SetHome(url) {
+      if (document.all) {
+          document.body.style.behavior = 'url(#default#homepage)';
+          document.body.setHomePage(url);
+      } else {
+          alert("您的浏览器不支持自动设置页面为首页功能，请您手动在浏览器里设置该页面为首页！");
+      }
+  }
+</script>    <script>
+        $(function () {
+
+            $('.contLeftBtn_133').parents("li").toggleClass("on").siblings("li").removeClass("on");
+            $('.contLeftBtn_133').parents("li").find(".contLeftDown").slideToggle();
+
+        })
+    </script>
+
+
+
+
+
+
+
+
+</body></html>

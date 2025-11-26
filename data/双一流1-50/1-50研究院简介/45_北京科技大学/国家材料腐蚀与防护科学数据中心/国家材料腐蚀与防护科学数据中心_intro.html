@@ -1,0 +1,1461 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=11">
+	<link rel="icon" type="image/png" href="/img/favicon-32.png" sizes="32x32">
+    <title>国家材料腐蚀与防护科学数据中心</title>
+    <link rel="stylesheet" href="/content/site.css">
+    <link rel="stylesheet" href="/content/tab.css">
+    <link rel="stylesheet" href="/fontawesome6/css/all.min.css">
+ <link rel="stylesheet" href="/content/slid.css">
+ <link rel="stylesheet" href="/content/splash.css">
+ <script type="text/javascript" async="" defer="" src="//analytics.escience.org.cn/matomo.js"></script><script src="/jquery/jquery-3.5.1.min.js"></script>
+ <script src="/js/slid.js"></script>
+ <script src="/jquery/jssor.slider.min.js" type="text/javascript"></script>
+<style>
+.sflt{font-size:15pt;color:#fff;
+padding-top:3px;
+cursor:pointer;
+display:inline-block}
+  .style3 .tblock {
+      display: inline-block;
+      width: 420px;
+      padding-top: 6px;
+  }
+
+  .style3 > div {
+      display: inline-block;
+      width: 590px;
+      margin: 3px 0px;
+      font-weight: 500;
+  }
+
+      .style3 > div:nth-child(2n) {
+          margin-left: 10px;
+      }
+
+  .style3 img {
+      width: 150px;
+      height: 96px;
+      margin-right: 10px;
+  }
+
+  .style3 .title-block {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      font-size: 15px;
+      text-align: left;
+  }
+
+  .style3 .desc {
+      display: block;
+      height: 50px;
+      overflow: hidden;
+      margin-top: 5px;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 12px;
+      color: #666;
+  }
+  .hmenu > li {
+      padding: 2px 3px 4px 5px;
+  }
+  .time {
+      margin: 6px 0;
+      font-size: 11px;
+      color: #666;
+      text-align: left;
+  }
+#pref span{display:inline-block;margin:0 3px;}
+
+  .header-bg{
+	  width:1200px;
+	  margin:auto !important;
+  }
+  
+        /* 主容器样式 */
+        #ai-chat-container {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 1000;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        /* 浮动按钮样式 */
+        #ai-chat-button {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        #ai-chat-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 聊天窗口样式 */
+        #ai-chat-window {
+            width: 400px;
+            height: 550px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        #ai-chat-window.active {
+            display: flex;
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* 聊天头部样式 */
+        .chat-header {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        /* 消息区域样式 */
+        .chat-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 嵌入式框架容器 */
+        .iframe-container {
+            flex: 1;
+            border: none;
+            margin: 10px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+</style>
+</head>
+<body>
+<script>
+
+$(function () {
+    $.ajax({
+        url:"/corrosion/index.php/api/news/index",
+        type:"get",
+        data:{
+            filter:{class_id:6},
+            pn:1,
+            ps:8,
+        },
+        dataType:"json",
+        success:function(data){
+          if (data.code == 200) {
+            var new_list = data.data;
+            buildNewsList(new_list);
+          }
+        }
+    });
+
+    function buildNewsList(list){
+        $('.case>.list').empty();
+        $.each(list, function(k,v){
+          $('.case>.list').append($(`<div><a href="javascript:openp('/pages/casesdtl.php?id=` + v.id + `')"><img src="` + v.image + `"></a><div class="tblock"><a href="javascript:openp('/pages/casesdtl.php?id=` + v.id + `')" class="title-block">` + v.title + `</a><span class="desc">` + v.description + `</span><div class="time">` + v.updated_date + `</div></div></div>`))
+        })
+    }
+/*    $.ajax({
+        url:'/corrosion/index.php/api/auth/isLogin',
+        type:'GET',
+        data:{},
+        dataType:'json',
+        success:function(data){
+            if (data.code == 200) {
+                var is_login = data.data.is_login;
+
+                if (is_login) {
+                  $('#login_status').attr('href', 'javascript:void(0);')
+                  $('#login_status').text('退出登录');
+                  $('#login_status').click(function(){
+                    if (confirm('确定要退出登陆吗?')) {
+                      logOut(this);
+                    }
+                  });
+                }
+            }
+        }
+    })
+
+    $.ajax({
+        url:'../corr/application/echart.php',
+        type:'GET',
+        data:{method:'getSearchType'},
+        dataType:'json',
+        success:function(data){
+            if (data.code == 200) {
+                var areas_info = data.data.data;
+                buildSearchCheckBox(areas_info);
+            }
+        }
+    })*/
+
+    slider_init("ads");
+    
+});
+/*function csp(){$(".splash").fadeOut();}
+
+function logOut(that){
+    var $this = $(that);
+    $.ajax({
+        url:'/corrosion/index.php/api/auth/logOut',
+        type:'GET',
+        data:{},
+        dataType:'json',
+        success:function(data){
+            if (data.code == 200) {
+                $this.attr('href', 'corrosion/index.php')
+                $this.text('登录');
+                $this.unbind('click');
+                window.location.reload();
+            }
+        }
+    })
+}
+function buildSearchCheckBox(areas_info){
+    var $content = $(".sdrop").find(".sdrop-content");
+
+    $.each(areas_info, function(i, row){
+        var $input = $("<input type = 'checkBox'/>").attr('id', 'r' + row['area_id']).attr('value', row['area_id']);
+        var $label = $("<label></label>").attr('for', 'r' + row['area_id']).text(row['name']);
+        var $item = $("<div></div>").append($input).append($label);
+        $content.append($item);
+    })
+}
+
+function gto(p, t) {
+    var l = document.location.href;
+    var cp = l.substring(l.lastIndexOf("/") + 1)
+    var ct, e;
+    var h = l.indexOf("=");
+    if (cp == "") { cp = "home"; e = ".php"; }
+    else {
+        cp = l.substring(l.lastIndexOf("/") + 1, l.lastIndexOf("."));
+        if (h > 0) { ct = l.substring(h + 1); e = l.substring(l.lastIndexOf("."), l.indexOf("?")); }
+        else e = l.substring(l.lastIndexOf(".")).replace("#", "");
+    }
+    if (p == cp && t == ct)
+        return;
+    if (p != "home") p = "/pages/" + p;
+    if (p=="/pages/data_gen") document.location.href = p+e+((t)?"?id="+t:"");
+    else document.location.href = p + e + ((t) ? "?p=" + t : "");
+}
+
+function toSearch()
+{
+    var keyWord = $('#headSearch').val();
+    var $content = $(".sdrop").find(".sdrop-content");
+    var type_id = [];
+    $content.find('input').each(function(i, k){
+        if ($(k).is(':checked')) {
+            type_id.push($(k).val());
+        }
+    });
+
+    window.location.href = '/pages/searches.php?keyWord='+keyWord + (type_id.length >= 1 ? '&type=' + type_id.join() : '');
+}*/
+function openp(p, n) {
+    if (n)
+        window.open(p);
+    else
+        location.href = p;
+}
+
+</script>  
+<script type="text/javascript">
+    $(function () {
+        $.ajax({
+            url:'/corrosion/index.php/api/auth/isLogin',
+            type:'GET',
+            data:{},
+            dataType:'json',
+            async:false,
+            success:function(data){
+                if (data.code == 200) {
+                    var is_login = data.data.is_login;
+
+                    if (is_login) {
+                      $('#login_status').attr('href', 'javascript:void(0);')
+                      $('#login_status').text('退出登录');
+                      $('#login_status').click(function(){
+                        if (confirm('确定要退出登陆吗?')) {
+                          logOut(this);
+                        }
+                      });
+                    }else{
+                      $('#feedback').on('click',function(){
+                          alert('请先登录');
+                      });
+                    }
+                }
+            }
+        })
+
+        $.ajax({
+            url:'/corr/application/echart.php',
+            type:'GET',
+            data:{method:'getSearchType'},
+            dataType:'json',
+            success:function(data){
+                if (data.code == 200) {
+                    var areas_info = data.data.data;
+                    buildSearchCheckBox(areas_info);
+                }
+            }
+        })
+    });
+
+    function logOut(that){
+      var $this = $(that);
+      $.ajax({
+          url:'/corrosion/index.php/api/auth/logOut',
+          type:'GET',
+          data:{},
+          dataType:'json',
+          success:function(data){
+              if (data.code == 200) {
+                  $this.attr('href', 'corrosion/index.php')
+                  $this.text('登录');
+                  $this.unbind('click');
+                  window.location.reload();
+              }
+          }
+      })
+  }
+
+    function buildSearchCheckBox(areas_info){
+        var $content = $(".sdrop").find(".sdrop-content");
+
+        $.each(areas_info, function(i, row){
+            var $input = $("<input type = 'checkBox'/>").attr('id', 'r' + row['area_id']).attr('value', row['area_id']);
+            var $label = $(" <label></label>").attr('for', 'r' + row['area_id']).text(row['name']);
+            var $item = $("<div></div>").append($input).append($label);
+            $content.append($item);
+        })
+    }
+
+    function gto(p, t) {
+      var l = document.location.href;
+      var cp = l.substring(l.lastIndexOf("/") + 1)
+      var ct, e;
+      var h = l.indexOf("=");
+      if (cp == "" || l.indexOf("/corrosion/index.php") > -1) { 
+          cp = "home"; 
+          e = ".php"; 
+      }
+      else 
+      {
+          cp = l.substring(l.lastIndexOf("/") + 1, l.lastIndexOf("."));
+          
+          if (h > 0) { 
+              ct = l.substring(h + 1); 
+              e = l.substring(l.lastIndexOf("."), l.indexOf("?")); 
+          }
+          else {
+              e = l.substring(l.lastIndexOf(".")).replace("#", "");
+          }
+      }
+      if (p == cp && t == ct)
+          return;
+      if (p != "home") p = "/pages/" + p;
+      if (p=="/pages/data_gen") document.location.href = p+e+((t)?"?id="+t:"");
+      else document.location.href = p + e + ((t) ? "?p=" + t : "");
+  }
+//原header的gto方法,不适用主页跳转
+    /*function gto(p, t) {
+        var l = document.location.href.replace("http://","");
+        var cp = l.substring(l.indexOf("/") + 1)
+        var ct, e;
+        var h = l.indexOf("=");
+        if (l.indexOf("localhost")==-1) { e = ".php"; }
+        else {
+            cp = l.substring(l.lastIndexOf("/") + 1, l.lastIndexOf("."));
+            if (h > 0) { ct = l.substring(h + 1); e = l.substring(l.lastIndexOf("."), l.indexOf("?")); }
+            else e = l.substring(l.lastIndexOf(".")).split("#")[0];
+        }
+        if (p == cp && t==ct)
+            return;
+        if (p != "index") p = "/pages/" + p; else p = "/index";
+    if (p=="/pages/data_gen") document.location.href = p+e+((t)?"?id="+t:"");
+        else document.location.href = p+e+((t)?"?p="+t:"");
+    }*/
+    function op(p) { location.href = p;}
+    function toSearch()
+    {
+        var keyWord = $('#headSearch').val();
+        var $content = $(".sdrop").find(".sdrop-content");
+        var type_id = [];
+        $content.find('input').each(function(i, k){
+            if ($(k).is(':checked')) {
+                type_id.push($(k).val());
+            }
+        });
+        window.location.href = '/pages/searches.php?keyWord='+keyWord + (type_id.length >= 1 ? '&type=' + type_id.join() : '');
+    }
+</script>
+<style type="text/css">
+  .col_desc>p {
+    font-size: 1px !important;
+  }
+
+</style>
+<div class="header-bg" style="background-image: url('/img/header_back.png');background-repeat:no-repeat;background-size: 100% 100%;margin: 0; z-index: 8;height:128px">      
+<div style="width: 1200px; margin-left: auto; margin-right:auto; color: #00CFFF; font-weight: bold;position:relative">
+<a href="#pop" data-effect="mfp-zoom-out"><img src="/img/logo1.png" style="display:inline-block;height:76px;margin:3px 2px 0px 5px"></a>
+<img id="logo" src="/img/corr1.png" style="display:inline-block;width:65px;height:76px;margin-top:3px">
+ <!-- <div style="position:absolute;left:69px;top:13px;width:486px;color:#f3f0f1;font-size:23pt;font-weight:900"> -->
+ <div style="position:absolute;left:30%;top:13px;width:486px;color:#f3f0f1;font-size:23pt;font-weight:900">
+     <div style="font:微软雅黑;padding:0 0 3px 3px">国家材料腐蚀与防护科学数据中心</div>
+     <div style="font-size:19px;font:Arial Nova;color:#31a353;border-top:solid 2px #94cce3;"><span style="font-size:14px">National </span><span style="color:#fe7108;font-size:15px">Materials Corrosion</span><span style="font-size:14px"> and Protection Scientific </span><span style="color:#fe7108;font-size:15px">Data Center</span></div>
+ </div>
+ <div style="display:inline-block;width:1000px;position:absolute;top:0;right:0">
+     <div style="position:absolute;top:10px;right:10px;color:#f3f0f1;font-size:9pt;font-weight:300;">
+         中文 | <a href="/index_en.php" style="color:#f3f0f1;">Eng</a> <a href="/corrosion/index.php/admin/collection/index" style="color:#f3f0f1;"> 数据审核 </a> <a id="login_status" href="/corrosion/index.php" style="color:#f3f0f1;"> 登录 </a><a id="feedback" href="/corrosion/index.php/user/feedback" style="color:#f3f0f1;"> 反馈 </a>
+     </div>
+     <div style="position:absolute;right:2px;top:26px">
+         <input id="headSearch" class="sinput" type="text" onkeyup="if (event.keyCode === 13) {toSearch()}" placeholder="输入关键词"><a onclick="toSearch()" href="#" style="position:relative;right:12px"><i class="fa fa-search" style="font-size: 12pt;color:#555"></i></a>
+<div class="sdrop">
+  <i class="fa fa-filter dropbtn"></i>
+    <div class="sdrop-content" style="z-index: 100">
+    <div><input type="checkBox" id="r1" value="1"><label for="r1">基础数据</label></div><div><input type="checkBox" id="r2" value="2"><label for="r2">试验数据</label></div><div><input type="checkBox" id="r7" value="7"><label for="r7">服务案例</label></div><div><input type="checkBox" id="r8" value="8"><label for="r8">专题数据</label></div><div><input type="checkBox" id="r9" value="9"><label for="r9">环境数据</label></div><div><input type="checkBox" id="r10" value="10"><label for="r10">腐蚀百科</label></div><div><input type="checkBox" id="r11" value="11"><label for="r11">标准规范</label></div><div><input type="checkBox" id="r13" value="13"><label for="r13">材料数据</label></div><div><input type="checkBox" id="r14" value="14"><label for="r14">统计数据</label></div><div><input type="checkBox" id="r15" value="15"><label for="r15">新闻资讯</label></div></div>
+</div>
+</div>
+<ul class="hmenu" style="position:absolute;top:82px;right:0;">
+   <li><a href="/index.php"><i class="fa fa-home" style="font-size:14pt;"></i></a></li>
+       <li><a onclick="gto('aboutus')">关于我们</a></li>
+   <li>
+       <a onclick="gto('corrosion');" class="drop"><i class="fas fa-database"></i> 数据库</a>
+       <div class="dd_4cols">
+           <!-- Begin 5 columns container -->
+           <div class="col_4 wbd">
+               <h2 class="">基础数据</h2>
+
+               <div class="col_1">
+                   <ul>
+                       <li><a onclick="gto('basic')">基础数据</a></li>
+                   </ul>
+               </div>
+               <div class="col_1">
+                   <ul>
+                       <li><a onclick="gto('knowledge')">腐蚀基础知识</a></li>
+                   </ul>
+               </div>
+               <div class="col_1">
+                   <ul>
+                       <li><a onclick="gto('hightemp')">高温腐蚀数据</a></li>
+                   </ul>
+               </div>
+                               <div class="col_1">
+                   <ul>
+                       <li><a href="/corrosion/index.php/information/list/1">布拜图</a></li>
+                   </ul>
+                </div>
+                               <div class="col_1">
+                   <ul>
+                       <li><a href="/corrosion/index.php/information/list/2">材料</a></li>
+                   </ul>
+                </div>
+                               <div class="col_1">
+                   <ul>
+                       <li><a href="/corrosion/index.php/information/list/3">合金等级</a></li>
+                   </ul>
+                </div>
+                               <div class="col_1">
+                   <ul>
+                       <li><a href="/corrosion/index.php/information/list/9">腐蚀知识库</a></li>
+                   </ul>
+                </div>
+                               <div class="col_1">
+                   <ul>
+                       <li><a href="/corrosion/index.php/information/list/10">标准</a></li>
+                   </ul>
+                </div>
+                               <div class="col_1">
+                   <ul>
+                       <li><a href="/corrosion/index.php/information/list/11">出版物</a></li>
+                   </ul>
+                </div>
+                               <div class="col_1">
+                   <ul>
+                       <li><a href="/corrosion/index.php/information/list/12">分析测试报告</a></li>
+                   </ul>
+                </div>
+                               <div class="col_1">
+                   <ul>
+                       <li><a href="/corrosion/index.php/information/list/14">专利</a></li>
+                   </ul>
+                </div>
+                          </div>
+           <div class="col_2 wbd">
+               <h2>自然环境数据</h2>
+               <div class="col_1">
+                   <ul>
+                       <li><a onclick="gto('environment')">试验站环境数据</a></li>
+                       <li><a onclick="gto('environment',3)">中国气象地图</a></li>
+                   </ul>
+               </div>
+               <div class="col_1">
+                   <ul>
+                       <li><a onclick="gto('environment',1)">中国城市环境数据</a></li>
+                       <li><a onclick="gto('environment',2)">城市空气质量数据</a></li>
+                   </ul>
+               </div>
+           </div>
+           <div class="col_2 wbd">
+               <h2>自然环境腐蚀数据</h2>
+               <div class="col_1">
+                   <ul>
+                       <li><a onclick="gto('corrosion')">试验站腐蚀数据</a></li>
+                       <li><a onclick="gto('corrosion',1)">自然环境腐蚀预测</a></li>
+                   </ul>
+               </div>
+               <div class="col_1">
+                   <ul>
+                       <li><a onclick="gto('corrosion',2)">腐蚀监测数据</a></li>
+                       <li><a onclick="gto('monitor')">实时监测平台</a></li>
+                   </ul>
+               </div>
+           </div>
+           <div class="col_4 wbd">
+               <h2>工业环境腐蚀数据</h2>
+               <div class="col_1">
+                   <ul><li><a onclick="gto('data_gen', 10)">环境数据</a></li></ul>
+               </div>
+               <div class="col_1">
+                   <ul><li><a onclick="gto('data_gen', 12)">材料数据</a></li></ul>
+               </div>
+               <div class="col_1">
+                   <ul><li><a onclick="gto('data_gen', 11)">涂料数据</a></li></ul>
+               </div>
+               <div class="col_1">
+                   <ul><li><a onclick="gto('data_gen',13)">金属涂层数据</a></li></ul>
+               </div>
+           </div>
+           <div class="col_4 wbd">
+               <h2>材料数据</h2>
+               <div class="col_1">
+                   <ul>
+                       <li><a onclick="gto('basic',1)">材料性能</a></li>
+                       <li><a onclick="gto('hightempm')">高温材料</a></li>
+                   </ul>
+               </div>
+               <div class="col_1">
+                   <ul>
+                       <li><a onclick="gto('data_gen', 7)">汽车材料应用</a></li>
+                       <li><a onclick="gto('data_gen', 8)">石化环境材料选材</a></li>
+                   </ul>
+               </div>
+               <div class="col_1">
+                   <ul>
+                       <li><a onclick="gto('data_gen',3)">海洋工程材料</a></li>
+                       <li><a onclick="gto('hightempm',1)">锅炉材料</a></li>
+                   </ul>
+               </div>
+               <div class="col_1">
+                   <ul>
+                       <li><a onclick="gto('data_gen', 5)">有色金属</a></li>
+                       <li><a onclick="gto('data_gen',6)">不锈钢</a></li>
+                   </ul>
+               </div>
+           </div>
+           <div class="col_4 wbd">
+               <h2>专题数据</h2>
+               <div class="col_1">
+                   <ul>
+                       <li><a onclick="gto('specialized', 1)">海工装备及材料</a></li>
+                       <li><a onclick="gto('specialized', 5)">钢筋混凝土</a></li>
+                   </ul>
+               </div>
+               <div class="col_1">
+                   <ul>
+                       <li><a onclick="gto('specialized', 2)">交通运输</a></li>
+                       <li><a onclick="gto('specialized',6)">缓蚀剂</a></li>
+                   </ul>
+               </div>
+               <div class="col_1">
+                   <ul>
+                       <li><a onclick="gto('specialized',3)">石油化工</a></li>
+                       <li><a onclick="gto('specialized', 7)">腐蚀监测</a></li>
+                   </ul>
+               </div>
+               <div class="col_1">
+                   <ul>
+                       <li><a onclick="gto('specialized', 4)">电力及能源</a></li>
+                       <li><a onclick="gto('specialized',8)">环境腐蚀监检测</a></li>
+                   </ul>
+               </div>
+           </div>
+           <div class="col_4 wbd">
+               <h2>其它数据</h2>
+               <div class="col_1">
+                   <ul>
+                       <li><a onclick="gto('labdata')">实验室数据</a></li>
+                   </ul>
+               </div>
+               <!--<div class="col_1">
+              <ul>
+                  <li><a onclick="gto('otherdata',1)">工业腐蚀数据</a></li>
+              </ul>
+          </div>
+          <div class="col_1">
+              <ul>
+                  <li><a onclick="gto('otherdata',2)">随手拍</a></li>
+              </ul>
+          </div>-->
+               <div class="col_1">
+                   <ul>
+                       <li><a onclick="gto('statistics')">统计数据</a></li>
+                   </ul>
+               </div>
+             <div class="col_1">
+                <ul>
+                    <li><a href="/t/materials/">腐蚀调查</a></li>
+                </ul>
+             </div>
+			 <div class="col_1">
+                <ul>
+                    <li><a href="/corrosion/index.php/information/soil_environment_data/1">土壤环境材料</a></li>
+                </ul>
+             </div>
+       </div>
+
+           <!--<div class="col_4 wbd">
+          <h2><a onclick="gto('wiki')">腐蚀百科</a></h2>
+          <p>整合资源来源于社会上所有人士。也可以查找各种与腐蚀相关的问题。如果查找不到答案，你可以在这里提出与腐蚀相关的问题来获得专业人士的回答。欢迎所有专业人士贡献智慧。</p>
+      </div>
+      <div class="col_4 wbd">
+          <h2><a onclick="gto('drom')">无人机</a></h2>
+          <img src="/img/dome.jpg" width="70" height="70" class="img_left imgshadow" alt="" />
+          <p>无人机介绍 无人机介绍 无人机介绍 无人机介绍 无人机介绍 无人机介绍 无人机介绍 无人机介绍 无人机介绍 无人机介绍 无人机介绍 无人机介绍 无人机介绍 无人机介绍.</p>
+      </div>-->
+           <div class="bk_block"></div>
+       </div>
+   </li>
+   <li><a href="#" class="drop"><i class="fa-solid fa-sitemap"></i>分中心</a>
+   <div class="dd_2cols">
+      <div class="col_1 ">
+           <a href="/subdevision/yga.php"><text class="col_desc">粤港澳分中心</text></a>
+       </div>
+	   <div class="col_1">
+           <a href="/subdevision/bj.php"><text class="col_desc">北京分中心</text></a>
+       </div>
+	   <div class="col_1">
+           <a href="http://corrdata.whxxzg.com:8008/" target="_blank"><text class="col_desc">智慧铸管-耐蚀钢铁材料数据中心</text></a>
+       </div>
+	   <div class="col_1">
+           <a href="/fjfd/index.php"><text class="col_desc">海上风电分中心</text></a>
+       </div>
+<!-- 	   <div class="col_1">
+           <a href="/cfd/index.php"><text class="col_desc">曹妃甸分中心</text></a>
+       </div> -->
+	   <div class="col_1">
+           <a href="#"><text class="col_desc">天津分中心</text></a>
+       </div>
+	</div>
+  </li>
+  <li><a href="/corrosion/index.php/devices" class="drop"><i class="fa-solid fa-screwdriver-wrench"></i>行业服务</a>
+  <div class="dd_3cols">
+          <div class="col_3 wbd">
+           <a href="/corrosion/index.php/device/1">大气环境腐蚀性检测与智能管理系统</a>
+           <text class="col_desc"></text>
+       </div>
+           <div class="col_3 wbd">
+           <a href="/corrosion/index.php/device/2">建筑物防水监测预警与智能管理系统（Ecorr Building)</a>
+           <text class="col_desc"></text>
+       </div>
+           <div class="col_3 wbd">
+           <a href="/corrosion/index.php/device/18">电子与通讯装备腐蚀监测预警与智能管理系统（Ecorr CCE）</a>
+           <text class="col_desc"></text>
+       </div>
+           <div class="col_3 wbd">
+           <a href="/corrosion/index.php/device/3">桥梁腐蚀监测预警与智能管理系统（Ecorr Bridge）</a>
+           <text class="col_desc"></text>
+       </div>
+           <div class="col_3 wbd">
+           <a href="/corrosion/index.php/device/5">钢结构塔架腐蚀监测预警与智能管理系统（Ecorr Tower）</a>
+           <text class="col_desc"></text>
+       </div>
+           <div class="col_3 wbd">
+           <a href="/corrosion/index.php/device/6">管道腐蚀监测预警与智能管理系统（Ecorr Pipeline）</a>
+           <text class="col_desc"></text>
+       </div>
+           <div class="col_3 wbd">
+           <a href="/corrosion/index.php/device/7">土壤腐蚀监测预警与智能管理系统（Ecorr Soil）</a>
+           <text class="col_desc"></text>
+       </div>
+           <div class="col_3 wbd">
+           <a href="/corrosion/index.php/device/8">船舶腐蚀监测预警与智能管理系统系统（Ecorr Ship）</a>
+           <text class="col_desc"></text>
+       </div>
+           <div class="col_3 wbd">
+           <a href="/corrosion/index.php/device/9">汽车腐蚀监测预警与智能管理系统（Ecorr Car）</a>
+           <text class="col_desc"></text>
+       </div>
+           <div class="col_3 wbd">
+           <a href="/corrosion/index.php/device/10">室内实验系统（Ecorr Metal Testing）</a>
+           <text class="col_desc"></text>
+       </div>
+           <div class="col_3 wbd">
+           <a href="/corrosion/index.php/device/11">海洋腐蚀监测预警与智能管理系统（Ecorr Ocean</a>
+           <text class="col_desc"></text>
+       </div>
+           <div class="col_3 wbd">
+           <a href="/corrosion/index.php/device/12">铁路腐蚀监测预警与智能管理系统（Ecorr Train）</a>
+           <text class="col_desc"></text>
+       </div>
+           <div class="col_3 wbd">
+           <a href="/corrosion/index.php/device/14">石油腐蚀监测预警与智能管理系统（Ecorr Oil）</a>
+           <text class="col_desc"></text>
+       </div>
+           <div class="col_3 wbd">
+           <a href="/corrosion/index.php/device/15">博物馆腐蚀监测预警与智能管理系统（Ecorr Meseum）</a>
+           <text class="col_desc"></text>
+       </div>
+           <div class="col_3 wbd">
+           <a href="/corrosion/index.php/device/4">耐蚀钢腐蚀大数据高分辨智能化评价系统（Ecorr Steel）</a>
+           <text class="col_desc"></text>
+       </div>
+           <div class="col_3 wbd">
+           <a href="/corrosion/index.php/device/16">电力系统腐蚀监测预警与智能管理系统（Ecorr Power)</a>
+           <text class="col_desc"></text>
+       </div>
+          <!-- <div class="col_3 wbd">
+         <a onclick="op('/pages/device.php?id=2')">Ecorr Concrete</a>
+         <p>xxxxxxx</p>
+     </div>
+     <div class="col_3 wbd">
+         <a onclick="op('/pages/device.php?id=3')">Ecorr Bridge</a>
+         <p>xxxx</p>
+     </div>
+     <div class="col_3 wbd">
+         <a onclick="op('/pages/device.php?id=4)">Ecorr Steel</a>
+         <p>xxxx</p>
+     </div>
+      <div class="col_3 wbd">
+         <a onclick="op('/pages/device.php?id=5')">Ecorr Tower</a>
+         <p>xxxxxxx</p>
+     </div>
+     <div class="col_3 wbd">
+         <a onclick="op('/pages/device.php?id=6')">Ecorr Pipeline</a>
+         <p>xxxx</p>
+     </div>
+     <div class="col_3 wbd">
+         <a onclick="op('/pages/device.php?id=7')">Ecorr Soil</a>
+         <p>xxxx</p>
+     </div>
+     <div class="col_3 wbd">
+         <a onclick="op('/pages/device.php?id=8')">Ecorr Ship</a>
+         <p>xxxxxxx</p>
+     </div>
+     <div class="col_3 wbd">
+         <a onclick="op('/pages/device.php?id=9')">Ecorr Car</a>
+         <p>xxxx</p>
+     </div>
+     <div class="col_3 wbd">
+         <a onclick="op('/pages/device.php?id=10')">Ecorr Metal Testing</a>
+         <p>xxxx</p>
+     </div>
+      <div class="col_3 wbd">
+         <a onclick="op('/pages/device.php?id=11')">Ecorr Ocean</a>
+         <p>xxxxxxx</p>
+     </div>
+     <div class="col_3 wbd">
+         <a onclick="op('/pages/device.php?id=12')">Ecorr Train</a>
+         <p>xxxx</p>
+     </div>
+     <div class="col_3 wbd">
+         <a onclick="op('/pages/device.php?id=13')">Ecorr Storage</a>
+         <p>xxxx</p>
+     </div>
+     <div class="col_3 wbd">
+         <a onclick="op('/pages/device.php?id=14')">Ecorr Meseum</a>
+         <p>xxxx</p>
+     </div> -->
+   </div>
+  </li>
+   <li>
+       <a onclick="gto('cases')"><i class="fas fa-archive"></i> 服务案例</a>
+       <!--<div class="dd_1col align_left"><div class="col_1">
+    <ul>
+      <li><a onclick="gto('cases')">国家腐蚀中心案例</a></li>
+      <li><a onclick="gto('cases_industry')">企业案例</a></li>
+      <li><a onclick="gto('cases_other')">其它案例</a></li>
+    </ul>
+  </div></div>-->
+   </li>
+ <li><a class="drop">标准规范</a>
+<div class="dd_3cols">
+    <div class="col_3 wbd" style="padding-left:8px">
+        <ul>
+            <li><a onclick="gto('stdCenter')">国家腐蚀与保护中心标准</a></li>
+        </ul>
+    </div>
+    <div class="col_2 wbd">
+        <h2>国外标准</h2>
+        <div class="col_1">
+            <ul>
+                <li><a onclick="gto('stdInternational')">国际标准</a></li>
+                <li><a onclick="gto('stdInternational',1)">美国标准</a></li>
+                <li><a onclick="gto('stdInternational',2)">欧洲标准</a></li>
+                <li><a onclick="gto('stdInternational',3)">德国标准</a></li>
+                <li><a onclick="gto('stdInternational',4)">英国标准</a></li>
+            </ul>
+        </div>
+        <div class="col_1">
+            <ul>
+                <li><a onclick="gto('stdInternational',5)">日本标准</a></li>
+                <li><a onclick="gto('stdInternational',6)">韩国标准</a></li>
+                <li><a onclick="gto('stdInternational',7)">澳大利亚标准</a></li>
+                <li><a onclick="gto('stdInternational',8)">其它标准</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col_1 wbd">
+        <h2>国内标准</h2>
+        <div class="col_1">
+            <ul>
+                <li><a onclick="gto('stdNational')">国家标准</a></li>
+                <li><a onclick="gto('stdNational',1)">行业标准</a></li>
+                <li><a onclick="gto('stdNational',2)">地方标准</a></li>
+                <li><a onclick="gto('stdNational',3)">团体标准</a></li>
+                <li><a onclick="gto('stdNational',4)">企业标准</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</li>
+   <li>
+       <a onclick="gto('resources')" class="drop"><i class="fas fa-cubes"></i> 实验资源</a>
+       <div class="dd_1col align_left">
+           <div class="col_1">
+               <ul class="simple">
+                   <li><a onclick="gto('resources')">野外站点</a></li>
+                   <li><a onclick="gto('resources',1)">腐蚀监测</a></li>
+                   <li><a href="/custom/jcfx.html">检测分析</a></li>
+                   <li><a href="/custom/hsfw.html">环试服务</a></li>
+                   <li><a href="/custom/jcfw.html">检测服务</a></li>
+           <li><a href="/app/mobile_app.apk">手机APP</a></li>
+                   <!-- <li><a onclick="gto('resources',2)">无人机</a></li>-->
+               </ul>
+           </div>
+       </div>
+ </li>
+ <li>
+   <a class="drop"><i class="fas fa-broadcast-tower"></i> 信息资源</a>
+   <div class="dd_4cols align_right">
+       <div class="col_2 wbd">
+           <h2>数据动态</h2>
+           <div class="col_1">
+               <ul>
+                   <li><a onclick="gto('news')">数据动态</a></li>
+               </ul>
+           </div>
+           <div class="col_1">
+               <ul>
+                   <li><a href="/dhTJDAOHANG/xinxiziyuan/chengguojianding/">成果鉴定</a></li>
+               </ul>
+           </div>
+       </div>
+       <div class="col_2 wbd">
+           <h2>科普期刊</h2>
+           <div class="col_1">
+               <ul>
+                   <li><a href="/custom/kpqk.html">科普期刊</a></li>
+               </ul>
+           </div>
+           <div class="col_1">
+               <ul>
+                   <li><a onclick="gto('news')">文献资料</a></li>
+               </ul>
+           </div>
+       </div>
+       <div class="col_4 wbd">
+           <h2>新闻资讯</h2>
+           <div class="col_1">
+               <ul>
+                   <li><a href="/s/tj/">要闻推荐</a></li>
+                   <li><a href="/custom/hyjj.html">行业聚焦</a></li>
+               </ul>
+           </div>
+           <div class="col_1">
+               <ul>
+                   <li><a href="/custom/rdzx.html">热点资讯</a></li>
+                   <li><a href="/custom/meetzt.html">会议专题</a></li>
+               </ul>
+           </div>
+           <div class="col_1">
+               <ul>
+                   <li><a href="/dhTJDAOHANG/xinxiziyuan/peixunxinxi/">培训信息</a></li>
+                   <li><a href="/dhTJDAOHANG/xinxiziyuan/zhuanjiaku/">专家介绍</a></li>
+               </ul>
+           </div>
+           <div class="col_1">
+               <ul>
+                   <li><a href="/dhTJDAOHANG/xinxiziyuan/zhaopinxinxi/">招聘信息</a></li>
+                   <li><a href="/dhTJDAOHANG/xinxiziyuan/qita/">其他信息</a></li>
+        </ul>
+           </div>
+
+           <!--<div class="col_1">
+     <ul>
+         <li><a onclick="gto('publication')">文献资料</a></li>
+     </ul>
+ </div>-->
+      </div>
+      <div class="col_2 wbd">
+          <h2>业界视点</h2>
+          <div class="col_1">
+              <ul>
+                  <li><a href="/dhTJDAOHANG/yjsd/gaoduanfangtan/">高端访谈</a></li>
+              </ul>
+          </div>
+          <div class="col_1">
+              <ul>
+                  <li><a href="/dhTJDAOHANG/yjsd/shendujiexi/">深度解析</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="col_2 wbd">
+          <h2>产经专栏</h2>
+          <div class="col_1">
+              <ul>
+                  <li><a href="/dhTJDAOHANG/cjzl/yejiedongtai/">业界动态</a></li>
+              </ul>
+          </div>
+          <div class="col_1">
+              <ul>
+                  <li><a href="/dhTJDAOHANG/cjzl/gongxupingtai/">供需平台</a></li>
+              </ul>
+          </div>
+      </div>
+      <div class="col_4 wbd">
+          <a onclick="gto('talks')">大讲堂</a>
+          <p>腐蚀行业各种专题的讲座视频。可以在这里发现与其相关的很多其它知识，信息，包括基础知识，相关产品和方案以及这些产品和方案的公司</p>
+      </div>
+      <div class="col_4 wbd">
+          <a onclick="gto('experts')">专家库</a>
+          <p>腐蚀界专家集合。可以按姓名，专业领域查找专家和他们的科研业绩，研究方向，所在研究单位的情况，是否招收学生。观看在线讲座...。</p>
+      </div>
+      <div class="col_4 wbd">
+          <a onclick="gto('company')">企业库</a>
+          <p>包括具有腐蚀研究课题组的科研所，大专院校，生产防腐相关产品的公司，企业，以及它们的产品介绍，相关标准，案例，评估，联系方式...。</p>
+      </div>
+         <div class="col_4 wbd">
+             <h2>图片新闻</h2>
+             <div class="col_1">
+                 <ul>
+                     <li><a href="/photo/conference.html">会展图集</a></li>
+                 </ul>
+             </div>
+             <div class="col_1">
+                 <ul>
+                     <li><a href="/photo/news.html">图片新闻</a></li>
+                 </ul>
+             </div>
+             <div class="col_1">
+                 <ul>
+                     <li><a href="/photo/ppt.html">科普PPT</a></li>
+                 </ul>
+             </div>
+         </div>
+     <!--<div class="col_3 wbd">
+     <a onclick="gto('talent')">人才库</a>
+     <p>腐蚀学科的人才，毕业生以及他们的专业领域。任何人都可以注册自己。寻找人才的单位可以从多种角度的搜索这些人才。</p>
+ </div>-->
+          </div>
+</li>
+    <li><a onclick="gto('wiki')"><i class="fas fa-user-graduate"></i>知识库</a>
+    <div class="dd_2cols align_right">
+       <div class="col_2 wbd">
+   
+      <h2>腐蚀百科</h2>
+           <div class="col_1">  <ul>
+              <li><a onclick="gto('wiki')">腐蚀百科</a></li>
+              <li><a href="/t/materials/">耐蚀材料</a></li>
+              <li><a href="/t/co_eva/">腐蚀评价</a></li>
+              <li><a href="/t/field_test/">现场试验</a></li>
+              <li><a href="/t/en_acc/">环境加速</a></li>
+              <li><a href="/t/elect/">电化学</a></li>
+              <li><a href="/t/cathodic/">阴极保护</a></li>
+            </ul></div>
+          <div class="col_1"> <ul>
+           <li><a href="/t/rust/">缓蚀防锈</a></li>
+           <li><a href="/t/coating/">涂料涂装</a></li>
+           <li><a href="/t/coa_eva/">涂层评价</a></li>
+           <li><a href="/t/co_d/">涂层检测</a></li>
+           <li><a href="/t/in_s/">室内模拟</a></li>
+           <li><a href="/t/f_a/">失效分析</a></li>
+      </ul></div>
+        </div>
+      <div class="col_2 wbd"> 
+        <h2>专题专栏</h2>
+           <div class="col_1"><ul>
+              <li><a href="/custom/hyzt.html">行业专题</a></li>            
+           </ul></div>
+           <div class="col_1"><ul>
+               <li><a href="/custom/kpzt.html">科普专题</a></li>
+            </ul>
+      </div>  
+      </div>
+
+       <div class="col_2 wbd">    
+      <h2>科普专栏</h2>
+           <div class="col_1"><ul>
+              <li><a href="/s/dclass/">科普讲堂</a></li>
+              <li><a href="/s/kpzs/">科普活动</a></li>
+         
+           </ul></div>
+           <div class="col_1"><ul>
+              <li><a href="/dhTJDAOHANG/kepuzhuanlan/kepuppt/">科普PPT</a></li>
+              <li><a href="/dhTJDAOHANG/kepuzhuanlan/kepushipin/">科普视频</a></li>
+           </ul></div>            
+      </div>
+     </div>
+   </li>
+    <li>
+        <a href="/dhTJDAOHANG/fhjs/index.html" class="drop"><i class="fas fa-shield-alt"></i>防护技术</a>
+        <div class="dd_1col align_right">
+            <div class="col_1">
+                <ul class="simple">
+                   <li><a href="/dhTJDAOHANG/fhjs/jishuyingyong/index.html">技术应用</a></li>
+                   <li><a href="/dhTJDAOHANG/fhjs/jishuchengguo/index.html">技术成果</a></li>
+                    <!--<li><a onclick="gto('solusion_p')">防腐产品</a></li>
+    <li><a onclick="gto('solusion',1)">防腐方案</a></li>-->
+                     </ul>
+                 </div>
+             </div>
+         </li>
+
+        <!-- <li class="hmenu_right"><a onclick="gto('others')" class="drop">相关资源</a>
+    <div class="dd_3cols align_right">
+        <div class="col_3 wbd">
+            <h2>其它资源</h2>
+            <div class="col_1">
+                <ul class="greybox">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+            </div>
+            <div class="col_1">
+                <ul class="greybox">
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                </ul>
+            </div>
+            <div class="col_1">
+                <ul class="greybox">
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="col_3 wbd">
+            <h2>合作网站</h2>
+            <div>
+                <img src="/img/01.jpg" width="70" height="70" class="imgshadow" alt="" />
+                <a href="#">网站1</a>
+                <p>网站1网站1网站1网站1网站1网站1网站1网站1网站1网站1网站1网站1网站1网站1网站1网站1网站1网站1网站1网站1网站1网站1网站1网站1网站1网站1网站1网站1</p>
+            </div>
+            <div style="clear: both;">
+                <img src="/img/01.jpg" width="70" height="70" class="imgshadow" alt="" />
+                <a href="#">网站2</a>
+                <p>网站2网站2网站2网站2网站2网站2网站2网站2网站2网站2网站2网站2网站2网站2网站2网站2网站2网站2网站2网站2网站2网站2网站2网站2网站2网站2网站2网站2</p>
+            </div>
+        </div>
+    </div>
+            </li>-->
+     </ul>
+
+</div>
+ </div>
+</div>
+
+<div id="mdiv" style="width: 1200px; margin:0 auto;">
+ <div id="mdiv" style="width: 1200px; margin:0 auto;clear:both;">
+ <iframe class="maps" src="data.html" scrolling="no" style="height:454px;border: 0;width:1200px;z-index:1"></iframe>
+ <div id="ads" data-jssor-slider="1" style="width: 1200px; height: 100px; visibility: visible;">
+     <div style="display: block; position: absolute; width: 1200px; height: 100px;"><div style="display: block; position: absolute; width: 1200px; height: 100px; top: 0px; left: 0px;"><div class="slid-container" data-u="slides" style="width: 1200px; height: 100px; margin: 0px; padding: 0px; transform-style: flat; z-index: 0; position: absolute; pointer-events: none; top: 0px; left: 0px;"><div style="width: 1200px; height: 100px; top: 0px; left: 0px; display: block; position: absolute; z-index: 0;"></div></div><div class="slid-container" data-u="slides" style="width: 1200px; height: 100px; margin: 0px; padding: 0px; transform-style: flat; z-index: 0; position: absolute; overflow: hidden; top: 0px; left: 0px;">
+        <div style="border: 1px solid rgb(9, 73, 121); width: 1200px; height: 100px; top: 0px; left: 0px; position: absolute; z-index: 1; overflow: hidden; transform-style: flat;" onclick="openp('/corrosion/index.php/register')">
+            <div data-u="bg" style="width: 1200px; height: 100px; top: 0px; left: 0px; display: block; position: absolute; overflow: hidden; background-color: rgba(0, 0, 0, 0); background-image: none;"></div><img style="width: auto; height: 99px; position: absolute; left: 0px; z-index: 1;" src="/img/join-team.jpg" data-events="auto" data-display="block">
+            <div data-ts="flat" data-p="880" style="left: 0px; top: -30px; width: 1200px; height: 100px; position: absolute; font-weight: 900; z-index: 1; perspective: 880px; transform-style: flat;" data-events="auto" data-display="block">
+                <div data-ts="flat" data-p="880" style="left: 110px; top: 0px; width: 350px; height: 250px; position: absolute; color: rgb(255, 255, 255); z-index: 1; perspective: 880px; transform-style: flat;" data-events="auto" data-display="block">
+                    <div data-to="40% 10%" data-t="14" style="color: rgb(247, 255, 0); left: -800px; top: 40px; width: 680px; position: absolute; font-size: 24px; letter-spacing: 0.1em; transform-origin: 40% 10%; z-index: 1; opacity: 0.5; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 950, 0, 0, 1);" data-events="auto" data-display="block">欢迎注册</div>
+                    <div data-to="50% 50%" data-t="16" style="left: 500px; top: 62px; width: 622px; height: 131px; position: absolute; font-size: 24px; transform-origin: 50% 50%; z-index: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);" data-events="auto" data-display="block">国家材料腐蚀与防护科学数据中心应用理事会</div>
+                </div>
+            </div>
+        </div>
+         <div onclick="openp('/pages/newsdtl.php?id=112')" style="width: 1200px; height: 100px; top: 0px; left: 1200px; position: absolute; z-index: 1; overflow: hidden; transform-style: flat;">
+             <div data-u="bg" style="width: 1200px; height: 100px; top: 0px; left: 0px; display: block; position: absolute; overflow: hidden; background-color: rgba(0, 0, 0, 0); background-image: none;"></div><img src="/img/winter-olympics.png" style="position: absolute; left: 0px; z-index: 1;" data-events="auto" data-display="block">
+             <div data-ts="flat" data-p="880" style="left: 380px; top: -45px; width: 780px; height: 360px; position: absolute; color: rgb(255, 255, 255); z-index: 1; perspective: 880px; transform-style: flat;" data-events="auto" data-display="block">
+                 <div data-to="40% 10%" data-t="14" style="left: 120px; top: 60px; width: 360px; height: 60px; position: absolute; opacity: 0; font-size: 22px; letter-spacing: 2px; transform-origin: 40% 10%; z-index: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); pointer-events: none;" data-events="auto" data-display="block">国家材料腐蚀与防护科学数据中心</div>
+                 <div data-to="50% 50%" data-t="16" style="left: 360px; top: 92px; width: 360px; height: 60px; position: absolute; opacity: 0; font-size: 20px; letter-spacing: 2px; transform-origin: 50% 50%; z-index: 1; transform: matrix3d(5, 0, 0, 0, 0, 5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); pointer-events: none;" data-events="auto" data-display="block">助力北京绿色冬奥</div>
+             </div>
+
+         </div>
+		<div onclick="openp('/corrosion/index.php/recent/award')" style="width: 1200px; height: 100px; top: 0px; left: -1200px; position: absolute; z-index: 1; overflow: hidden; transform-style: flat;">
+            <div data-u="bg" style="width: 1200px; height: 100px; top: 0px; left: 0px; display: block; position: absolute; overflow: hidden; background-color: rgba(0, 0, 0, 0); background-image: none;"></div><img style="width: auto; height: 100px; position: absolute; left: 0px; z-index: 1;" src="/img/banner-award1.jpg" data-events="auto" data-display="block">
+            <div data-ts="flat" data-p="880" style="left: 610px; top: 0px; width: 350px; height: 250px; position: absolute; color: rgb(255, 255, 255); z-index: 1; perspective: 880px; transform-style: flat;" data-events="auto" data-display="block">
+                <div data-to="40% 10%" data-t="14" style="left: 260px; top: 20px; width: 380px; position: absolute; font-size: 22px; line-height: 1.2; letter-spacing: 0.1em; transform-origin: 40% 10%; z-index: 1; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);" data-events="auto" data-display="block">国家材料腐蚀与防护科学数据中心</div>
+                <div data-to="50% 50%" data-t="16" style="left: 200px; top: 48px; width: 392px; height: 131px; position: absolute; opacity: 0; font-size: 20px; transform-origin: 50% 50%; z-index: 1; transform: matrix3d(5, 0, 0, 0, 0, 5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); pointer-events: none;" data-events="auto" data-display="block">优秀论文奖</div>
+            </div>
+        </div>
+        <div onclick="openp('/news/recent/2020work.html')" style="width: 1200px; height: 100px; top: 0px; left: -1200px; position: absolute; z-index: 1; overflow: hidden; transform-style: flat;">
+            <div data-u="bg" style="width: 1200px; height: 100px; top: 0px; left: 0px; display: block; position: absolute; overflow: hidden; background-color: rgba(0, 0, 0, 0); background-image: none;"></div><img style="width: auto; height: 100px; position: absolute; left: 0px; z-index: 1;" src="/img/2020w.jpg" data-events="auto" data-display="block">
+            <div data-ts="flat" data-p="880" style="left: 610px; top: 0px; width: 350px; height: 250px; position: absolute; color: rgb(255, 255, 255); z-index: 1; perspective: 880px; transform-style: flat;" data-events="auto" data-display="block">
+                <div data-to="40% 10%" data-t="14" style="left: 260px; top: 20px; width: 380px; position: absolute; font-size: 22px; line-height: 1.2; letter-spacing: 0.1em; transform-origin: 40% 10%; z-index: 1; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);" data-events="auto" data-display="block">国家材料腐蚀与防护科学数据中心</div>
+                <div data-to="50% 50%" data-t="16" style="left: 200px; top: 48px; width: 392px; height: 131px; position: absolute; opacity: 0; font-size: 20px; transform-origin: 50% 50%; z-index: 1; transform: matrix3d(5, 0, 0, 0, 0, 5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); pointer-events: none;" data-events="auto" data-display="block">2020年度工作会议在北京科技大学召开</div>
+            </div>
+        </div>
+         <div onclick="openp('/news/center_news.php')" style="width: 1200px; height: 100px; top: 0px; left: -1200px; position: absolute; z-index: 1; overflow: hidden; transform-style: flat;">
+             <div data-u="bg" style="width: 1200px; height: 100px; top: 0px; left: 0px; display: block; position: absolute; overflow: hidden; background-color: rgba(0, 0, 0, 0); background-image: none;"></div><img src="/img/center.jpg" style="position: absolute; left: 0px; z-index: 1;" data-events="auto" data-display="block">
+             <div data-ts="flat" data-p="880" style="left: 380px; top: -45px; width: 780px; height: 360px; position: absolute; color: rgb(255, 255, 255); z-index: 1; perspective: 880px; transform-style: flat;" data-events="auto" data-display="block">
+                 <div data-to="40% 10%" data-t="14" style="left: 120px; top: 60px; width: 360px; height: 60px; position: absolute; opacity: 0; font-size: 22px; letter-spacing: 2px; transform-origin: 40% 10%; z-index: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); pointer-events: none;" data-events="auto" data-display="block">国家材料腐蚀与防护科学数据中心</div>
+                 <div data-to="50% 50%" data-t="16" style="left: 360px; top: 92px; width: 360px; height: 60px; position: absolute; opacity: 0; font-size: 20px; letter-spacing: 2px; transform-origin: 50% 50%; z-index: 1; transform: matrix3d(5, 0, 0, 0, 0, 5, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); pointer-events: none;" data-events="auto" data-display="block">成为20个国家科学数据中心之一</div>
+             </div>
+
+         </div>
+     </div></div></div>
+ </div>
+<div class="seperator"></div>
+<div class="case">
+<div class="title">服务案例 <a href="pages/cases.php" style="float:right;display:inline-block;color:#134e87;font-size:11pt;padding-top:5px">更多...</a></div>
+  <div class="style3 list">
+   <div><a href="javascript:openp('/pages/casesdtl.php?id=48')"><img src="/img/7fbe9896a73f44c28743867574a7cdd2.png"></a><div class="tblock"><a href="javascript:openp('/pages/casesdtl.php?id=48')" class="title-block">“载人航天工程”关键材料</a><span class="desc">在陌生生的外太空环境中，航天飞行器所处的服役环境非常复杂，影响飞行器材料服役安全的因素很多，从而在该方面的研究基础十分薄弱。材料的轻度撞击影响设备，装置的功能效果，，导致重大灾难性事故，特别是在空间实验室，载人空间站甚至深空探测器的建设和运行过程中，关键材料的重新构造将导致十分严重的后果，。</span><div class="time">2020-07-06 18:49</div></div></div>
+
+   <div><a href="javascript:openp('/pages/casesdtl.php?id=46')"><img src="/img/c07cbafa2cc10cdf50b916f6fa2b5a7a.png"></a><div class="tblock"><a href="javascript:openp('/pages/casesdtl.php?id=46')" class="title-block">工程装备材料“一带一路”</a><span class="desc">伴随着“一带一路”建设和中国装备“走出去战略”的推进实施，中国工程装备的实现应用势不可挡，这其中，工程装备材料先行是关键，也是必然。“一带一路”建设，是一项宏大系统工程，跨越亚欧非大陆及附近海洋甚至极地，材料及装备加速腐蚀腐蚀失效是根据“一带一路”建设顺利实施的关键技术替代。</span><div class="time">2020-07-06 18:42</div></div></div>
+   <div><a href="javascript:openp('/pages/casesdtl.php?id=45')"><img src="/img/edfa31bf8d51b740d247121ec61e926f.png"></a><div class="tblock"><a href="javascript:openp('/pages/casesdtl.php?id=45')" class="title-block">气象科学数据共享中心平台</a><span class="desc">材料的大气腐蚀是材料与大气环境相作用的失效过程，因此，材料的腐蚀与气象环境因素密切相关。内部幅员辽阔，一年四季各地区气候特征各有不同，气候区可分为：寒温带，中温带，暖温带，亚热带，热带和高原气候带等区域。</span><div class="time">2020-07-06 18:40</div></div></div>
+   <div><a href="javascript:openp('/pages/casesdtl.php?id=36')"><img src="/img/42b90485986cdd125ef69a045b265fe0.png"></a><div class="tblock"><a href="javascript:openp('/pages/casesdtl.php?id=36')" class="title-block">国家科技基础条件平台（2013）案例</a><span class="desc">2013年材料腐蚀平台在上报国家科技基础条件平台中心备案的包括材料大气环境腐蚀数据的应用服务，材料腐蚀数据共享专题服务和高分子等新材料环境物理数据专题服务三个总体方面，利用平台最优势的条件资源和数据资源，通过平台资源整合集成和深度挖掘，2013年重点针对石油工程，电力，通讯，航空航天，汽车产业，海洋工程等几个领域。</span><div class="time">2020-07-06 18:20</div></div></div>
+   <div><a href="javascript:openp('/pages/casesdtl.php?id=35')"><img src="/img/2f88cc949d09bed2edd213f72b0613d6.png"></a><div class="tblock"><a href="javascript:openp('/pages/casesdtl.php?id=35')" class="title-block">国家科技基础条件平台（2012）案例</a><span class="desc">针对2012年材料腐蚀平台上报国家科技基础条件平台中心备案的专题服务方案包括材料大气环境腐蚀数据的应用服务，材料腐蚀数据共享专题服务和高分子等新材料环境颗粒数据专题服务三个方面。针对上述三方面的专题服务总体方向，利用平台最优势的条件资源和数据资源，通过平台资源整合集成和深度挖掘，</span><div class="time">2020-07-06 18:15</div></div></div>
+   <div><a href="javascript:openp('/pages/casesdtl.php?id=49')"><img src="/img/7fbe9896a73f44c28743867574a7cdd2.png"></a><div class="tblock"><a href="javascript:openp('/pages/casesdtl.php?id=49')" class="title-block">“载人航天工程”关键材料123</a><span class="desc">在陌生生的外太空环境中，航天飞行器所处的服役环境非常复杂，影响飞行器材料服役安全的因素很多，从而在该方面的研究基础十分薄弱。材料的轻度撞击影响设备，装置的功能效果，，导致重大灾难性事故，特别是在空间实验室，载人空间站甚至深空探测器的建设和运行过程中，关键材料的重新构造将导致十分严重的后果，</span><div class="time">2020-07-06 18:51</div></div></div>
+   <div><a href="javascript:openp('/pages/casesdtl.php?id=40')"><img src="/img/1a9f2a9cb918486fde8d15ae15e2b3cd.png"></a><div class="tblock"><a href="javascript:openp('/pages/casesdtl.php?id=40')" class="title-block">国家科技基础条件平台（2014）案例</a><span class="desc">材料的大气腐蚀是材料与大气环境相作用的失效过程，因此，材料的腐蚀与气象环境因素密切相关。内部幅员辽阔，一年四季各地区气候特征各有不同，气候区可分为：寒温带，中温带，暖温带，亚热带，热带和高原气候带等区域。</span><div class="time">2020-07-06 18:27</div></div></div>
+   <div><a href="javascript:openp('/pages/casesdtl.php?id=33')"><img src="/img/f75af7ec9e1f937423288a16eb485ca4.jpg"></a><div class="tblock"><a href="javascript:openp(33)" class="title-block">国家科技基础条件平台（2011）案例</a><span class="desc">伴随着经济发展的发展，在大型基础设施，公路，铁路，航空航天，核电等领域都提出了对材料，构件或装备高耐久性和可靠性的要求。针对材料腐蚀数据积累为国家基本建设特别是重大工程建设中合理选材提供科学依据，也为国家有关行业标准，规范提供依据。中国经济建设向着绿色，低碳和可持续发展方向发展产业结构调整的特征。</span><div class="time">2020-07-06 18:14</div></div></div>
+  </div>
+ </div>
+  <div class="seperator"></div>
+ <div class="container">
+  <div class="wrapper">
+   <div class="cctabs">
+     <span class="title">友情链接</span>
+     <input id="four" name="tabs" type="radio">
+     <label for="four" class="right"><i class="fa fa-handshake"></i> 其他相关</label>
+     <input id="three" name="tabs" type="radio">
+     <label for="three" class="right"><i class="fa fa-atom"></i> 科技门户</label>
+     <input id="two" name="tabs" type="radio" value="Two">
+     <label for="two" class="right"><i class="fa fa-hands"></i> 行业协会</label>
+     <input checked="" id="one" name="tabs" type="radio">
+     <label for="one" class="right"><i class="fa fa-address-book"></i> 科技平台</label>
+     <div class="panels">
+       <div class="panel">
+        <ul class="yl-links-ul">
+         <li><a href="http://www.dfgg.cn/" target="_blank">潍坊东方钢管有限公司</a> </li>
+         <li><a href="http://tuliao.qudao.com/" target="_blank">涂料加盟</a> </li>
+         <li><a href="#" target="_blank">山东石创防腐科技有限公司</a> </li>
+         <li><a href="http://www.xincailiao.com/" target="_blank">新材料在线</a> </li>
+         <li><a href="http://www.chinamet.cn" target="_blank">中国钢铁期刊网</a> </li>
+         <li><a href="http://www.gtft.cn" target="_blank">钢铁钒钛</a> </li>
+         <li><a href="http://jme.biam.ac.cn/CN/1001-4381/home.shtml" target="_blank">材料工程</a> </li>
+         <li><a href="http://www.mat-test.com/" target="_blank">材料与测试网</a> </li>
+         <li><a href="http://www.zgwu.cbpt.cnki.net/WKB3/WebPublication/index.aspx?mid=ZGWU" target="_blank">中国钨业</a> </li>
+         <li><a href="http://www.eworldship.com" target="_blank">国际船舶网</a> </li>
+         <li><a href="#" target="_blank">中国化工油气网</a> </li>
+         <li><a href="#" target="_blank">中国海洋工程装备网</a> </li>
+         <li><a href="http://www.chemcp.com" target="_blank">中国化工产品网</a> </li>
+         <li><a href="http://www.csea1991.org" target="_blank">中国表面工程协会</a> </li>
+         <li><a href="http://www.cpcia.org.cn/" target="_blank">国家石油和化工网</a> </li>
+         <li><a href="http://www.cnship.org/" target="_blank">中国船舶网</a> </li>
+        </ul>
+       </div>
+       <div class="panel">
+           <ul class="yl-links-ul">
+               <li><a href="http://www.most.gov.cn/" target="_blank">中华人民共和国科学技术部</a> </li>
+               <li><a href="http://www.ustb.edu.cn/" target="_blank">北京科技大学</a> </li>
+               <li><a href="http://www.moe.gov.cn/" target="_blank">中华人民共和国教育部</a> </li>
+               <li><a href="http://www.nsfc.gov.cn/" target="_blank">国家自然科学基金委员会</a> </li>
+           </ul>
+       </div>
+       <div class="panel">
+           <ul class="yl-links-ul">
+               <li><a href="http://www.cscp.org.cn/" target="_blank">中国腐蚀与防护学会</a> </li>
+               <li><a href="http://www.cstam.org.cn/" target="_blank">中国力学学会</a> </li>
+               <li><a href="http://www.csm.org.cn/" target="_blank">中国金属学会</a> </li>
+               <li><a href="http://www.cmes.org/" target="_blank">中国机械工程学会</a> </li>
+               <li><a href="http://www.csaa.org.cn/" target="_blank">中国航空学会</a> </li>
+               <li><a href="http://www.c-mrs.org.cn/" target="_blank">中国材料研究学会</a> </li>
+           </ul>
+       </div>
+       <div class="panel">
+        <ul class="yl-links-ul">
+
+
+        <li><a href="https://www.nhepsdc.cn" target="_blank">国家高能物理科学数据中心</a> </li>
+        <li><a href="https://bigd.big.ac.cn" target="_blank">国家基因组科学数据中心</a> </li>
+        <li><a href="https://nmdc.cn" target="_blank">国家微生物科学数据中心</a> </li>
+        <li><a href="https://www.nssdc.ac.cn" target="_blank">国家空间科学数据中心</a> </li>
+        <li><a href="https://nadc.china-vo.org" target="_blank">国家天文科学数据中心</a> </li>
+        <li><a href="http://www.chinageoss.cn" target="_blank">国家对地观测科学数据中心</a> </li>
+        <li><a href="https://www.chinare.org.cn" target="_blank">国家极地科学数据中心</a> </li>
+        <li><a href="https://data.tpdc.ac.cn" target="_blank">国家青藏高原科学数据中心</a> </li>
+        <li><a href="http://www.nesdc.org.cn" target="_blank">国家生态科学数据中心</a> </li>
+        <li><a href="http://www.corrdata.org.cn" target="_blank">国家材料腐蚀与防护科学数据中心</a> </li>
+        <li><a href="http://www.ncdc.ac.cn" target="_blank">国家冰川冻土沙漠科学数据中心</a> </li>
+        <li><a href="https://www.nmdc.ac.cn" target="_blank">国家计量科学数据中心</a> </li>
+        <li><a href="http://www.geodata.cn" target="_blank">国家地球系统科学数据中心</a> </li>
+        <li><a href="https://www.ncmi.cn" target="_blank">国家人口健康科学数据中心</a> </li>
+        <li><a href="http://www.nsdata.cn" target="_blank">国家基础学科公共科学数据中心</a> </li>
+        <li><a href="https://www.agridata.cn" target="_blank">国家农业科学数据中心</a> </li>
+        <li><a href="http://www.forestdata.cn" target="_blank">国家林业和草原科学数据中心</a> </li>
+        <li><a href="https://data.cma.cn" target="_blank">国家气象科学数据中心</a> </li>
+        <li><a href="https://data.earthquake.cn" target="_blank">国家地震科学数据中心</a> </li>
+        <li><a href="http://mds.nmdis.org.cn" target="_blank">国家海洋科学数据中心</a> </li>
+
+
+
+         <!-- <li><a href="https://www.escience.org.cn/" target="_blank">中国科技资源共享网</a> </li>
+         <li><a href="http://www.nsii.org.cn/" target="_blank">标本资源共享平台</a> </li>
+         <li><a href="http://zzzy.fishinfo.cn/" target="_blank">水产种质资源平台</a> </li>
+         <li><a href="http://www.nimr.org.cn/" target="_blank">国家微生物资源平台</a> </li>
+         <li><a href="http://www.nfgrp.cn/" target="_blank">国家林木种质资源平台</a> </li>
+         <li><a href="http://www.cgris.net/" target="_blank">国家农作物种质资源平台</a> </li>
+         <li><a href="http://cellresource.cn/" target="_blank">国家实验细胞资源共享平台</a> </li>
+         <li><a href="http://www.ncrm.org.cn/" target="_blank">国家标准物质资源共享平台</a> </li>
+         <li><a href="http://www.cfsdc.org/" target="_blank">林业科学数据平台</a> </li> -->
+         <!-- <li><a href="http://www.agridata.cn/" target="_blank">农业科学数据共享中心</a> </li> -->
+         <!-- <li><a href="http://data.cma.cn/" target="_blank">气象科学数据共享中心</a> </li> -->
+         <!-- <li><a href="http://www.geodata.cn/" target="_blank">地球系统科学数据共享平台</a> </li> -->
+         <!-- <li><a href="http://www.ncmi.cn/" target="_blank">国家人口与健康科学数据共享平台</a> </li> -->
+         <!-- <li><a href="http://www.nstl.gov.cn/" target="_blank">国家科技图书文献中心</a> </li>
+         <li><a href="http://www.cssn.net.cn/" target="_blank">国家标准文献共享服务平台</a> </li>
+         <li><a href="http://www.cdstm.cn/" target="_blank">中国数字科技馆</a> </li>
+         <li><a href="http://bjshrimp.cn/" target="_blank">北京离子探针中心</a> </li>
+         <li><a href="http://www.ceas.org.cn/" target="_blank">中国应急分析测试平台</a> </li>
+         <li><a href="http://nrii.org.cn/" target="_blank">国家大型科学仪器中心</a> </li>
+         <li><a href="http://www.cnern.org/" target="_blank">国家生态系统观测研究网络</a> </li>
+         <li><a href="http://www.nms.org.cn/" target="_blank">国家计量基标准体系资源共享管理平台</a> </li>
+         <li><a href="http://www.cdad-is.org.cn/" target="_blank">家养动物种质资源平台</a> </li> -->
+        </ul>
+       </div>
+     </div>
+   </div>
+  </div>
+ </div>
+
+   </div>
+<link rel="stylesheet" href="/content/popup.css">
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<style>
+ .w-pop {
+     position: relative;
+     margin: 0 auto;
+     color: #333;
+     background: #f3f0f1;
+     width: 680px !important;
+     padding: 6px 12px;
+     border-radius:10px;
+ }
+ .w-pop td{text-align:center}
+ .mfp-zoom-out {
+ }
+  .mfp-zoom-out .mfp-with-anim {
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      transform: scale(1.3);
+  }
+
+  .mfp-zoom-out.mfp-bg {
+      opacity: 0;
+      transition: all 0.3s ease-out;
+  }
+
+  .mfp-zoom-out.mfp-ready .mfp-with-anim {
+      opacity: 1;
+      transform: scale(1);
+  }
+
+  .mfp-zoom-out.mfp-ready.mfp-bg {
+      opacity: 0.8;
+  }
+
+  .mfp-zoom-out.mfp-removing .mfp-with-anim {
+      transform: scale(1.3);
+      opacity: 0;
+  }
+
+  .mfp-zoom-out.mfp-removing.mfp-bg {
+      opacity: 0;
+  }
+#pop td,#pop h2{text-align:center}
+</style>
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.escience.org.cn/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '56']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+  
+</script>
+<!-- End Matomo Code -->
+
+<div class="footer">
+    <div style="width:1200px;margin:0 auto;position:relative">
+        <!-- <div style="position:absolute;width:150px;left:-33px">
+            <ul id="htm-popups">
+                <li><a href="#pop" data-effect="mfp-zoom-out"><img src="/img/logo1.png" /></a></li>
+            </ul>
+        </div> -->
+        <div style="padding-top:22px">
+            <a href="/index.php">网站导航</a>
+            | <a href="/pages/copyright.html">版权声明</a>
+            | <a href="/pages/rules.html">法律法规</a>
+            | <a href="/pages/contact.html">联系我们</a>
+        </div>
+        <div>
+            版权所有：国家材料环境腐蚀平台
+            <span><a href="http://beian.miit.gov.cn/" target="_blank" style="color:blue;">京ICP备13025191号</a></span> 京公网安备11010802026268号
+            <!-- End Piwik Code -->
+        </div>
+    </div>
+</div>
+<div id="pop" class="w-pop mfp-with-anim mfp-hide">
+    <div>
+        <h2>关于国家科技资源服务平台</h2>
+    </div>
+    <div>
+        <div>国家科技基础条件平台中心是科技部直属事业单位，致力于推动科技资源优化配置，实现开放共享，其主要职责是：承担国家科技基础条件平台建设项目的过程管理和基础性工作；承担国家科技基础条件平台建设发展战略、规范标准、管理方式、运行状况和问题的研究，以及国际合作与宣传、培训等工作；承担科技基础条件门户系统的建设与运行管理工作；参与对在建和已建国家科技基础条件平台项目的考核评估和运行监督工作。</div>
+    </div>
+    <div>
+        <h2>国家科技资源服务平台相关网站</h2>
+    </div>
+    <div>
+        <table>
+            <tbody><tr>
+                <td><a href="#"><img style="height:50px" src="/img/corr.png"></a><br>国家材料腐蚀与防护科学数据中心</td>
+                <td><a href="#"><img style="height:50px" src="/img/hep.png"></a><br>国家高能物理科学数据中心</td>
+                <td><a href="#"><img style="height:50px" src="/img/genetic.png"></a><br>国家基因组科学数据中心</td>
+                <td><a href="#"><img style="height:50px" src="/img/microorganism.png"></a><br>国家微生物科学数据中心</td>
+                <td><a href="#"><img style="height:50px" src="/img/space.png"></a><br>国家空间科学数据中心</td>
+            </tr>
+            <tr>
+                <td><a href="#"><img style="height:50px" src="/img/Astronomy.png"></a><br>国家天文科学数据中心</td>
+                <td><a href="#"><img style="height:50px" src="/img/geo.png"></a><br>国家对地观测科学数据中心</td>
+                <td><a href="#"><img style="height:50px" src="/img/poles.png"></a><br>国家极地科学数据中心</td>
+                <td><a href="#"><img style="height:50px" src="/img/highland.png"></a><br>国家青藏高原科学数据中心</td>
+                <td><a href="#"><img style="height:50px" src="/img/ecology.png"></a><br>国家生态科学数据中心</td>
+
+            </tr>
+            <tr>
+                <td><a href="#"><img style="height:50px" src="/img/ice.png"></a><br>国家冰川冻土沙漠科学数据中心</td>
+                <td><a href="#"><img style="height:50px" src="/img/measurement.png"></a><br>国家计量科学数据中心</td>
+                <td><a href="#"><img style="height:50px" src="/img/earth.png"></a><br>国家地球系统科学数据中心</td>
+                <td><a href="#"><img style="height:35px" src="/img/population.png"></a><br>国家人口健康科学数据中心</td>
+                <td><a href="#"><img style="height:50px" src="/img/public.png"></a><br>国家基础学科公共科学数据中心</td>
+            </tr>
+            <tr>
+                <td><a href="#"><img style="height:44px" src="/img/agriculture.png"></a><br>国家农业科学数据中心</td>
+                <td><a href="#"><img style="height:50px" src="/img/forest.png"></a><br>国家林业和草原科学数据中心</td>
+                <td><a href="#"><img style="height:50px" src="/img/meteorological.png"></a><br>国家气象科学数据中心</td>
+                <td><a href="#"><img style="height:40px" src="/img/ocean.png"></a><br>国家地震科学数据中心</td>
+                <td><a href="#"><img style="height:50px" src="/img/earthquake.png"></a><br>国家海洋科学数据中心</td>
+            </tr>
+        </tbody></table>
+    </div>
+</div>
+     <!-- AI聊天组件 -->
+    <div id="ai-chat-container">
+        <div id="ai-chat-button">
+            <i class="fas fa-robot fa-2x"></i>
+        </div>
+        <div id="ai-chat-window">
+            <div class="chat-header">
+                <h3>AI助手</h3>
+                <button class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-messages">
+                <div class="iframe-container">
+                    <iframe id="embedded-frame" src="https://corrllm.82784279.xyz/chat/share?shareId=zD9fp9tmW38xFA1hbQjhYRa4"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatButton = document.getElementById('ai-chat-button');
+            const chatWindow = document.getElementById('ai-chat-window');
+            const closeButton = document.querySelector('.close-btn');
+            const embeddedFrame = document.getElementById('embedded-frame');
+            
+            // 显示/隐藏聊天窗口
+            chatButton.addEventListener('click', function() {
+                chatWindow.classList.toggle('active');
+            });
+            
+            closeButton.addEventListener('click', function() {
+                chatWindow.classList.remove('active');
+            });         
+            
+            // 初始加载默认页面
+            embeddedFrame.src = 'https://corrllm.82784279.xyz/chat/share?shareId=zD9fp9tmW38xFA1hbQjhYRa4';
+        });
+    </script>
+
+</div></body></html>

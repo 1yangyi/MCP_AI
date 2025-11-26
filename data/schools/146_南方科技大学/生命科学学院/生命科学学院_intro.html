@@ -1,0 +1,861 @@
+<!DOCTYPE html><html><head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="browsermode" content="application">
+	<!--苹果Safari、QQ浏览器、UC浏览器：-->
+	<!--删除苹果默认的工具栏和菜单栏 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!--QQ强制全屏-->
+	<meta name="x5-fullscreen" content="true">
+	<!--UC强制全屏-->
+	<meta name="fullscreen" content="yes">
+	<!--uc\QQ浏览器强制竖屏-->
+	<meta name="screen-orientation" content="portrait">
+	<meta name="x5-orientation" content="portrait">
+	<meta charset="utf-8">
+	<title>学院简介 - 南方科技大学生命科学学院</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<link rel="stylesheet" href="/static/site/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/static/site/css/swiper.min.5.2.css">
+	<link rel="stylesheet" href="/static/site/css/animate.min.css">
+	<link rel="stylesheet" href="/static/site/css/lunbo.css">
+	<link rel="stylesheet" href="/static/site/css/common.css">
+	<link rel="stylesheet" href="/static/site/css/style-en.css">
+	<link rel="stylesheet" href="/static/site/css/main.css">
+	<link rel="stylesheet" href="/static/site/css/dang.css">
+	<link rel="stylesheet" href="/static/site/css/other.css">
+		<link rel="stylesheet" href="/static/site/css/style-zh.css">
+		<link rel="stylesheet" href="/static/site/css/newStyle20240507.css">
+
+	<script type="text/javascript" src="/static/site/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/static/site/js/wow.js"></script>
+	<script type="text/javascript" src="/static/site/js/index.js"></script>
+	<script src="/static/site/js/swiper.min.5.2.js"></script>
+	<script>
+		new WOW().init();
+
+		var reqcontroller = 'About';
+		reqcontroller = reqcontroller.toLowerCase();
+		$(function () {
+			var menu_obj = $('.menu ul li');
+			var class_val = 'current-menu-item';
+			if (reqcontroller == 'about' ||  reqcontroller == 'contact' ){
+				//menu_obj.eq(0).addClass(class_val);
+				$('.sel-gywm').addClass(class_val);
+			}else if (reqcontroller == 'news'){
+				//menu_obj.eq(1).addClass(class_val);
+				$('.sel-news').addClass(class_val);
+			}else if (reqcontroller == 'colleges'){
+				//menu_obj.eq(1).addClass(class_val);
+				$('.sel-yuanxi').addClass(class_val);
+			}else if (reqcontroller == 'undergraduate'){
+				//menu_obj.eq(1).addClass(class_val);
+				$('.sel-bkjy').addClass(class_val);
+				$('.sel-xueke').addClass(class_val);
+			}else if (reqcontroller == 'graduate'){
+				//menu_obj.eq(2).addClass(class_val);
+				$('.sel-yjsjy').addClass(class_val);
+				$('.sel-xueke').addClass(class_val);
+			}else if (reqcontroller == 'research'){
+				//menu_obj.eq(3).addClass(class_val);
+				$('.sel-kxyj').addClass(class_val);
+			}else if (reqcontroller == 'faculty'){
+				//menu_obj.eq(4).addClass(class_val);
+				$('.shizi-nav').addClass(class_val);
+			}else if (reqcontroller == 'goglobal'){
+				//menu_obj.eq(5).addClass(class_val);
+				$('.sel-jlhz').addClass(class_val);
+			}else if (reqcontroller == 'party'){
+				//menu_obj.eq(6).addClass(class_val);
+				$('.sel-dqyd').addClass(class_val);
+			}else if (reqcontroller == 'lecture'){
+				//menu_obj.eq(6).addClass(class_val);
+				$('.sel-xsjl').addClass(class_val);
+			}else if (reqcontroller == 'teachers'){
+				//menu_obj.eq(6).addClass(class_val);
+				$('.sel-shizi').addClass(class_val);
+			}else if (reqcontroller == 'xueke'){
+				$('.sel-xueke').addClass(class_val);
+			}
+		})
+	</script>
+	<style type="text/css">
+		.news-details-cus p span{display: inline;}
+
+.t-introl p:nth-child(4) span {     word-break: break-word; transform: translateY(-48%); }
+
+#windows  .tab-cell {    width: 100vw; }
+#windows .btn-close2  { right: 7%;}
+.zp-detail a{display: inline;}
+
+.g1_list ul li  {     margin-bottom: 35px;  }
+
+.teacherlist.ko {   margin-top: 75px; }
+.ko a.btn-libslink { bottom: 95px; }
+
+.gallerylist ul li div {
+    width: 100%;
+    height: 180px;
+    background-position: center top;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 15px;
+    transition: all .5s;
+}
+
+
+.grad-introduce p:before { display: none; }
+
+.grad-desc table td p { text-align: center; }
+
+.lect-new .lect-tittle a, .nav>li h4 a {max-height: 50px; }
+
+
+
+		/*  4-11 */
+		.frend_link ul { list-style: none; width: 100% }
+
+		.frend_link ul li { width: 31%;float: left; margin-bottom: 25px; text-align: center; font-size: 20px; color: #333;   margin-right: 2%; }
+		.frend_link ul li:nth-child(3n) { margin-right: 0;  }
+
+		.frend_link ul li a { display: block; width: 100% ;height: 139px; overflow: hidden; position: relative; z-index: 1; margin-bottom: 8px; border:1px #ccc solid;  }
+		.frend_link ul li a img {max-width: 78%;   max-height: 100%; position: absolute; top: 50%; left:50%; transform: translate(-50%,-50%) scale(1); transition: all .35s ; }
+
+		.frend_link ul li:hover a img {  transform: translate(-50%,-50%) scale(1.1); transition: all .35s ; } 
+
+
+		/*  4-11-end */
+
+
+		
+		
+
+	@media only screen and (max-width: 768px) {
+		
+	   
+		/*  4-11 */
+
+		.frend_link ul li { width: 100%; float: none; margin-right: 0;  }
+
+		/*  4-11-end */
+
+
+	}	
+
+.sztypes-174, .sztypes-175, .sztypes-176 {   display: none !important; }
+
+
+		/* 2023-5-24 */
+		.main { overflow: hidden; }
+		
+		.totoal-ogz {  margin-bottom: 77px;	}
+		.totoal-ogz img { width: 100%; }
+		
+		.ogz_table { margin: 25px 0; width: 100%; overflow: hidden;}
+		.ogz_table table { width: 100%; }
+		.ogz_table table tr td { background-color: #f7f7f7; color: #333; padding: 20px; border-bottom: 2px #fcfcfc solid; border-right: 2px #fcfcfc solid;  }
+		.ogz_table .firstRow td,
+		.ogz_table table tr:nth-child(2) td { background-color: #e7f8f9; color: #18bfc5; font-weight: bold; }
+		.ogz_table p:nth-child(1),
+		.ogz_table p:last-child { background-color: #18bfc5; color: #fff; text-align: center; padding: 25px; }
+		
+		.ogz_table p:nth-child(1) { border-top-left-radius: 45px; border-top-right-radius: 45px; font-size: 22px; }
+		.ogz_table p:last-child { border-bottom-left-radius: 45px; border-bottom-right-radius: 45px; }
+		
+		.ogz_table table  p:nth-child(1),
+		.ogz_table table  p:last-child { background-color: transparent;   color: #333; padding: 0; border-radius: 0; font-size: 100%; }
+		
+		/* 2023-5-24-end */
+
+
+
+
+
+
+/* 2024-4-15 */
+
+/* 鍥剧墖灏哄 */
+.imgsize {
+	display: block;
+	background-color: #eee;
+	position: relative;
+	overflow: hidden;
+	height: 0;
+	width: 100%;
+	transition: all .3s;
+}
+
+.img3_1 { padding-top: 33.3%; }
+
+.img2_1 { padding-top: 50%; }
+
+.img1_1 { padding-top: 100%; }
+
+.img5_4 {  padding-top: 87%;  }
+
+.img4_3 {  padding-top: 67%;  }
+
+.img16_9 {  padding-top: 56.8%;  }
+
+
+.imgsize img {
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) scale(1);
+	transition: all .3s;
+}
+
+.imgsize:hover img {
+	transform: translate(-50%,-50%) scale(1.03);
+	transition: all .3s;
+} 
+
+
+		.color_bai { color: #fff; }
+		.co-title { margin-bottom: 50px; }
+		
+		.box-flex ,
+		.life-group h6 ,
+		.job-item dt, .job-item dd { padding:25px 30px ;  }
+		
+		.life-group h6 ,
+		.job-item dt h6  { font-size: 24px; }
+		
+		.table-tower .tower-head,
+		.table-tower .tower-foot {  font-size: 36px; }
+		
+		.info,
+		.info img { width: 100%;  }
+		
+		
+		ul li,
+		ol li { position: relative; list-style: none; }
+		
+		.li-line-2 ul,
+		.li-line-3 ul,
+		.li-line-4 ul,
+		.Circle-nears ul ,
+		.Culture-path ul { display: flex; flex-flow: row wrap; }
+		
+		
+		.li-line-4 ul li { width: calc((100% - 60px ) / 4); margin-right: 20px; margin-bottom: 20px; }
+		.li-line-3 ul li { width: calc((100% - 40px ) / 3); margin-right: 20px; margin-bottom: 20px; }
+		.li-line-2 ul li { width: calc((100% - 20px) / 2);  margin-bottom: 20px; margin-right: 20px; float: left;  transition: all .3s;	}
+		
+		.li-line-4 ul li:nth-child(4n),
+		.li-line-3 ul li:nth-child(3n),
+		.li-line-2 ul li:nth-child(2n) { margin-right: 0; }
+		
+		.major_list ul li ,
+		.has_underline ul li { 
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-bottom: 1px rgba(0,158,150,.5) solid; 
+			padding-bottom: 20px; 
+			margin-bottom: 20px; 
+			color:  #18bfc5; 
+		}
+		 
+		
+		.life-group,
+		.job-item ,
+		.linear-gradient-bg { 
+			width: 100%; border-radius: 20px; }
+
+
+/* 2024-5-7 */
+.Cultu	</style>
+</head>
+<body>
+
+<div class="sm-nav">
+	<div class="container">
+		<div class="sm-logo"><a href="/?lang=zh-cn"><img src="/uploads/202204/20144203_59696.png"> </a> </div>
+		<div class="dot"> <span></span> <span></span> <span></span> </div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+
+<div class="sm-navlist">
+	<ul class="container">
+		<li><a href="/about.html?lang=zh-cn">关于我们 </a> </li>
+		<li><a href="/colleges.html?lang=zh-cn">院系导航 </a> </li>
+		<li><a href="/teachers.html?lang=zh-cn">师资队伍 </a> </li>
+		<li><a href="/xueke.html?lang=zh-cn">教育教学</a> </li>
+<!--		<li><a href="/undergraduate.html">本科教育</a> </li>-->
+<!--		<li><a href="/graduate.html">研究生教育</a> </li>-->
+		<li><a href="/research.html?lang=zh-cn">科学研究</a> </li>
+		<li><a href="/news.html?lang=zh-cn">新闻动态</a> </li>
+		<li class="shizi-nav"><a href="/faculty/index.html?lang=zh-cn">师资队伍</a> </li>
+		<!--<li><a href="/goglobal.html">交流合作</a> </li>-->
+		<li><a href="/lecture.html?lang=zh-cn">学术交流</a> </li>
+				<li><a href="/party.html?lang=zh-cn">党群园地 </a> </li>
+			</ul>
+
+	<div class="search">
+		<form action="/search/index.html" method="get">
+			<button type="submit" class="btn-search"></button>
+			<input type="text" name="w" class="keywsords" placeholder="请输入关键词...">
+			<button type="button" class="btn-close"><a></a> </button>
+		</form>
+	</div>
+	<!-- 语言切换 -->
+	<div class="lang " id="lan">
+		<a href="https://www.sustech.edu.cn/" target="_blank" class="link">南方科技大学</a>
+		<a href="/index/languages/lang/en.html?lang=zh-cn" class="en">EN </a>
+		<a href="/index/languages/lang/zh.html?lang=zh-cn" class="ch">中 </a>
+	</div>
+
+</div>
+
+<!-- 侧栏 -->
+<div class="navbars">
+
+	<ul>
+		<!-- home -->
+		<li><p><span class="r-home"> 关于我们</span><!--<img src="/static/site/images/r-home.png" />--> </p>
+			<div class="wamps">
+				<ol>
+<!--					<h4 def="关于我们">关于我们</h4>-->
+
+					<a href="/about.html?lang=zh-cn">走进生科院</a>
+					<a href="/about/zzjg.html?lang=zh-cn">组织架构</a>
+					<a href="/about/milestone.html?lang=zh-cn">大事记</a>
+					<!--<a href="/news.html">新闻</a>-->
+					<a href="/news.html?lang=zh-cn">新闻动态</a>
+					<a href="/contact/recru.html?lang=zh-cn">人才招聘</a>
+					<!--<a href="/lecture.html" >学术讲座 </a>-->
+					<!--					<a href="/about/kyzz.html">科研准则  </a>-->
+										<a href="/about/about_gallery.html?lang=zh-cn">视界</a>
+					<a href="/contact.html?lang=zh-cn">联系我们 </a>
+				</ol>
+
+			</div>
+		</li>
+		<!-- 院系 -->
+		<li><p><span class="r-colleges">院系导航</span><!--<img src="/static/site/images/r-teacher.png" />--> </p>
+			<div class="wamps">
+				<ol>
+
+										<a href="/colleges/index/cid/132.html?lang=zh-cn">生物系 </a>
+										<a href="/colleges/index/cid/133.html?lang=zh-cn">基础免疫与微生物学系</a>
+										<a href="/colleges/index/cid/134.html?lang=zh-cn">系统生物学系</a>
+										<a href="/colleges/index/cid/135.html?lang=zh-cn">化学生物学系</a>
+										<a href="/colleges/index/cid/136.html?lang=zh-cn">神经生物学系</a>
+									</ol>
+
+			</div>
+		</li>
+		<!-- Undergraduate -->
+		<li style="display: none"><p><span class="r-pepole">本科教育</span><!--<img src="/static/site/images/r-pepole-hover.png" />--> </p>
+			<div class="wamps">
+				<ol>
+<!--					<h4 def="本科教育">本科教育</h4>-->
+
+					<a href="/undergraduate.html#admiss">本科招生</a>
+					<a href="/undergraduate.html#undergradxl">本科培养</a>
+					<a href="/undergraduate.html#oversea">海外学习</a>
+				</ol>
+
+			</div>
+		</li>
+
+		<!-- Graduate -->
+		<li style="display: none"><p><span class="r-syudent">研究生教育</span><!--<img src="/static/site/images/r-syudent.png" />--> </p>
+			<div class="wamps">
+				<ol>
+<!--					<h4 def="研究生教育">研究生教育</h4>-->
+
+					<a href="/graduate.html#discipline2">学科方向</a>
+					<a href="/graduate.html#degree">联合培养</a>
+					<a href="/graduate.html#career">职业发展</a>
+				</ol>
+
+			</div>
+		</li>
+		<li><p><span class="r-syudent">教育教学</span><!--<img src="/static/site/images/r-syudent.png" />--> </p>
+			<div class="wamps">
+				<ol>
+
+					<a href="/xueke.html?lang=zh-cn">概览</a>
+					<a href="/undergraduate.html?lang=zh-cn">本科生教育</a>
+					<a href="/graduate.html?lang=zh-cn">研究生教育</a>
+				</ol>
+
+			</div>
+		</li>
+
+		<!-- Research -->
+		<li><p><span class="r-research">科学研究</span><!--<img src="/static/site/images/r-research.png" />--> </p>
+			<div class="wamps">
+				<ol>
+<!--					<h4 def="科学研究">科学研究</h4>-->
+
+					<a href="/research.html#overview">概况</a>
+					<a href="/research.html#area">研究方向</a>
+					<a href="/research.html#scientific">科研成果</a>
+					<a href="/research.html#research">科研平台</a>
+				</ol>
+
+			</div>
+		</li>
+
+		<!-- Faculty -->
+		<li class="shizi-nav"><p><span class="r-teacher">师资队伍</span><!--<img src="/static/site/images/r-teacher.png" />--> </p>
+			<div class="wamps">
+				<ol>
+<!--					<h4 def="师资队伍">师资队伍</h4>-->
+
+										<a href="/faculty/index/cid/88.html?lang=zh-cn">全职教师</a>
+										<a href="/faculty/index/cid/87.html?lang=zh-cn">兼职教师</a>
+									</ol>
+
+
+			</div>
+		</li>
+
+		<!-- Go Global -->
+		<li style="display: none;"><p><span class="r-hezuo"><a href="/goglobal.html?lang=zh-cn">交流合作</a></span><!--<img src="/static/site/images/r-hezuo.png" />--> </p>
+			<div class="wamps">
+								<ol>
+<!--					<h4 def="交流合作">交流合作</h4>-->
+
+										<a href="/goglobal/index/cid/92.html?lang=zh-cn">交流动态</a>
+										<a href="/goglobal/index/cid/89.html?lang=zh-cn">校企合作</a>
+									</ol>
+				
+			</div>
+		</li>
+		<li><p><span class="r-hezuo"><a href="/lecture.html?lang=zh-cn">学术交流</a></span> </p>
+
+		</li>
+
+	</ul>
+
+</div>
+
+<header>
+	<div id="header-page-one" class="head"><!-- 不是首页时判断 -->
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="logo" style=""><a href="/?lang=zh-cn"><img src="/uploads/202204/20144203_59696.png"> </a> </div>
+				</div>
+
+				<div class="col-lg-8">
+					<!-- 语言切换 -->
+					<div class="lang">
+						<a href="https://www.sustech.edu.cn/zh/academic-calendar.html" target="_blank">校历</a>
+						<a href="https://65086508.hyshi.cn/login" target="_blank">会议室预约</a>
+						<a href="/contact/recru.html?lang=zh-cn">人才招聘</a>
+						<a href="/contact.html?lang=zh-cn">联系我们</a>
+						<a href="https://www.sustech.edu.cn/" target="_blank" class="link">南方科技大学</a>
+						<a href="/search/index.html?lang=zh-cn" class="btn-for-search "></a>
+						<a href="/index/languages/lang/en.html?lang=zh-cn" class="en">EN </a>
+						<span>&nbsp;|&nbsp;</span>
+						<a href="/index/languages/lang/zh.html?lang=zh-cn" class="ch">中 </a>
+					</div>
+
+					<!-- 菜单栏-menu -->
+					<nav class="menu">
+
+						<ul>
+							<li class="sel-gywm current-menu-item"><p><a href="/about.html?lang=zh-cn">关于我们 </a></p>
+								<ol class="sub-nav">
+									<a href="/about.html?lang=zh-cn">走进生科院</a>
+									<a href="/about/zzjg.html?lang=zh-cn">组织架构</a>
+									<a href="/about/milestone.html?lang=zh-cn">大事记</a>
+									<!--<a href="/news.html">新闻动态</a>-->
+									<a href="/contact/recru.html?lang=zh-cn">人才招聘</a>
+									<!--<a href="/lecture.html" >学术讲座 </a>-->
+																		<!--<a href="/about/kyzz.html">科研准则  </a>-->
+																		<a href="/about/about_gallery.html?lang=zh-cn">视界</a>
+									<a href="/contact.html?lang=zh-cn">联系我们 </a>
+								</ol>
+							</li>
+							<li class="sel-yuanxi"><p><a href="/colleges/index.html?lang=zh-cn">院系导航</a> </p>
+								<ol class="sub-nav">
+																		<a href="/colleges/index/cid/132.html?lang=zh-cn">生物系 </a>
+																		<a href="/colleges/index/cid/133.html?lang=zh-cn">基础免疫与微生物学系</a>
+																		<a href="/colleges/index/cid/134.html?lang=zh-cn">系统生物学系</a>
+																		<a href="/colleges/index/cid/135.html?lang=zh-cn">化学生物学系</a>
+																		<a href="/colleges/index/cid/136.html?lang=zh-cn">神经生物学系</a>
+																	</ol>
+							</li>
+							<li class="sel-shizi"><p><a href="/teachers.html?lang=zh-cn">师资队伍 </a> </p>
+
+							</li>
+							<li class="sel-bkjy" style="display: none"><p><a href="/undergraduate.html?lang=zh-cn">本科教育</a></p>
+								<ol class="sub-nav">
+									<a href="/undergraduate.html#admiss">本科招生</a>
+									<a href="/undergraduate.html#undergradxl">本科培养</a>
+									<a href="/undergraduate.html#oversea">海外学习</a>
+								</ol>
+							</li>
+
+
+							<li class="sel-yjsjy" style="display: none"><p><a href="/graduate.html?lang=zh-cn">研究生教育</a></p>
+								<ol class="sub-nav">
+									<a href="/graduate.html#discipline2">学科方向</a>
+									<a href="/graduate.html#degree">联合培养</a>
+									<a href="/graduate.html#career">职业发展</a>
+								</ol>
+							</li>
+
+							<li class="sel-xueke"><p><a href="/xueke.html?lang=zh-cn">教育教学</a></p>
+								<ol class="sub-nav">
+									<a href="/undergraduate.html?lang=zh-cn">本科生教育</a>
+									<a href="/graduate.html?lang=zh-cn">研究生教育</a>
+								</ol>
+							</li>
+
+
+							<li class="sel-kxyj"><p><a href="/research.html?lang=zh-cn">科学研究</a></p>
+								<ol class="sub-nav">
+									<a href="/research.html#overview">概况</a>
+									<a href="/research.html#area">研究方向</a>
+									<a href="/research.html#scientific">科研成果</a>
+									<a href="/research.html#research">科研平台</a>
+								</ol>
+							</li>
+
+							<li class="sel-news"><p><a href="/news.html?lang=zh-cn">新闻动态</a></p>
+							</li>
+
+
+							<li class="shizi-nav"><p><a href="/faculty/index.html?lang=zh-cn">师资队伍</a> </p>
+								<ol class="sub-nav">
+																		<a href="/faculty/index/cid/88.html?lang=zh-cn">全职教师</a>
+																		<a href="/faculty/index/cid/87.html?lang=zh-cn">兼职教师</a>
+																	</ol>
+							</li>
+
+
+							<li class="sel-jlhz" style="display: none;"><p><a href="/goglobal.html?lang=zh-cn">交流合作</a></p>
+																<ol class="sub-nav" style="display: none;">
+																		<a href="/goglobal/index/cid/92.html?lang=zh-cn">交流动态</a>
+																		<a href="/goglobal/index/cid/89.html?lang=zh-cn">校企合作</a>
+																	</ol>
+															</li>
+
+							<li class="sel-xsjl"><p><a href="/lecture.html?lang=zh-cn">学术交流</a></p>
+							</li>
+
+
+														<li class="sel-dqyd"><p><a href="/party.html?lang=zh-cn">党群园地 </a></p> </li>
+													</ul>
+
+					</nav>
+
+				</div>
+			</div>
+
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</header>
+
+<style type="text/css">
+	.about_desc2_cla img,.txt_black_cla img{
+		display: none;
+	}
+</style>
+<section>
+	<!--inner-ban -->
+	<div class="inner-ban" style="background-image: url(/uploads/202401/11110834_89681.jpg);"></div>
+
+
+	<!--inner-navbar -->
+	<div class="sub-navbar">
+		<div class="container">
+			<ul>
+				<li class="about active"><a href="/about.html?lang=zh-cn">走进生科院</a> </li>
+<li class="zzjgclas"><a href="/about/zzjg.html?lang=zh-cn">组织架构</a> </li>
+<li class="milestone"><a href="/about/milestone.html?lang=zh-cn">大事记</a> </li>
+<li class="about_news" style="display:none;"><a href="/news.html?lang=zh-cn">新闻</a> </li>
+<li class="recru"><a href="/contact/recru.html?lang=zh-cn">人才招聘</a> </li>
+<li class="lecturecla"><a href="/lecture.html?lang=zh-cn">学术讲座 </a> </li>
+<!--<li class="about_kyzz"><a href="/about/kyzz.html">科研准则  </a> </li>-->
+<li class="about_gallery"><a href="/about/about_gallery.html?lang=zh-cn">视界</a> </li>
+<li class="contact"><a href="/contact.html?lang=zh-cn">联系我们 </a> </li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="innerbox ">
+		<div id="innerbox">
+			<img class="about_desc2_imgid" src="/uploads/image/20200531/1590864212107463.jpg">
+		</div>
+
+		<div class="container">
+
+
+			<div class="row">
+				<div class="col-lg-2">
+					<div class="co-title">
+						<h3><!--Why<br /> Biology?-->走进生科院</h3>
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<div class="about-info about_desc2_cla">
+						<p style="text-align: justify; font-family: Calibri; font-size: 14px; white-space: normal; text-indent: 0em;"><span style="font-size: 16px; font-family: arial, helvetica, sans-serif;"></span></p><p style="white-space: normal; text-indent: 2em;">南方科技大学生命科学学院于2020年7月正式成立，首任院长为结构生物学家、神经生物学家张明杰院士。生科院将面向生命科学前沿，面向人类健康重大需求，展开创新研究，围绕拔尖创新生命科学人才培养核心任务，打造生命科学家培养摇篮。生科院以创建具有国际影响力的高水平学院为奋斗目标，以科学研究和创新人才培养为主导，以学科建设为主线，构建高质量教师群体，力争在科研成果、人才培养、队伍建设和科技产业化等方面实现快速发展。</p><p style="white-space: normal;"><br></p><p style="white-space: normal; text-indent: 2em;"><span style="font-family: arial, helvetica, sans-serif;"></span>生科院已建立五个系，包括生物系、基础免疫与微生物学系、系统生物学系、化学生物学系、神经生物学系。我们将以全新的模式发展生命科学学院，在建设传统生物学方向的基础上，引入现代生命科学特点，开展跨学科交叉研究，将传统的生命科学领域揉合到跨学科交叉研究系或中心中，促进新技术开发应用，迎接生命科学定量化、大数据化、多维度、多尺度等特点。充分利用南方科技大学生命科学学院全新建院的契机，深入结合生命科学传统建设和现代发展特点，建设有特色的学科体系，设置具有前瞻性的学科建设方案，既能在短期内得到快速发展、又能保持长远的充足的生命力，快速跻身于国际一流水平生命科学学院的行列。</p><p><img src="/uploads/image/20200531/1590864212107463.jpg" title="1587706915230416.png" alt="1590864212107463.jpg"><br></p>					</div>
+				</div>
+
+				<div class="col-lg-4">
+					<div class="about-info a-marginleft">
+						<p><img class="about_desc2_imgid" src="/uploads/image/20200531/1590864212107463.jpg"> </p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row" style="display: none;">
+				<div class="col-lg-2"></div>
+				<div class="col-lg-6">
+					<div class="a-list">
+						<h4 class="a-title">Undergraduate<br> Major: </h4>
+						<ul>
+							<li class="bg-yellow "><a href="#">Biological Sciences</a> </li>
+							<li><a href="#">Biotechnology</a> </li>
+							<li class="bg-blue "><a href="#">Bioinformatics</a> </li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2">
+					<div class="a-list a-marginleft">
+						<h4 class="a-title">Master &amp; PhD <br> degree program:</h4>
+						<ul>
+							<li><a href="#">Biology</a> </li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2"> </div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-lg-2"></div>
+				<div class="col-lg-6">
+					<div class="a-list">
+						<h4 class="a-title">学士学位点: </h4>
+						<ul>
+							<li class="bg-yellow "><a href="#">生物科学
+<br>生物技术
+<br>生物信息学</a> </li>
+
+						</ul>
+					</div>
+
+					<div class="a-list">
+						<h4 class="a-title">硕士学位点: </h4>
+						<ul>
+							<li><a href="#">生物学</a> </li>
+						</ul>
+					</div>
+
+					<div class="a-list">
+						<h4 class="a-title">博士学位点: </h4>
+						<ul>
+							<li class="bg-blue "><a href="#">生物学</a> </li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="col-lg-2">
+					<div class="a-list a-marginleft">
+						<h4 class="a-title">博士后科研流动站:</h4>
+						<ul>
+							<li><a href="#">生物学</a> </li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2"> </div>
+			</div>
+
+
+
+		</div>
+	</div>
+
+	<div class="innerbox2" style="display: none;">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="about-info dis">
+						<!--<p><img src="images/about-2.png" /> </p>-->
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="about-info2 txt_black_cla">
+						<p><img src="/uploads/image/20200424/1587703145396480.png" title="1587703145396480.png" alt="组1.png"></p><p style="white-space: normal; text-indent: 2em;">70年前，美国的硅谷只是个没有工作机会的，留不下人才的海军工作站，如今成了高科技的麦加；40年前，深圳还是一个渔村，如今跻身于一线国际都市，与河对岸遥遥相望，生机勃勃，气势如虹； 10年前，南方科技大学还只是一纸蓝图，一个设想，一片国家教育改革的试验田。而如今，我们正在天时地利人和的条件下构建一所崭新的学院。</p><p style="white-space: normal; text-indent: 2em;">天时。中国长远的发展目标对加快科技创新提出了迫切的要求，国家号召所有科研工作者加快科技创新，提升原始创新能力，努力实现更多“从0到1”的突破。“双区”国家战略，对未来粤港澳大湾区特别是深圳市的生命科学研究和人才培养发展方向提出了指引和新要求。同时，我们也面临着科学研究变革和日益严峻的全球局势带来的对生命科学领域的新挑战。我们期待抓住机遇，在传统生命科学研究的基础上，开展跨学科交叉研究，设置具有特色和强大生命力的研究体系，实施具有前瞻性的学科建设方案，长久地应对现代生命科学发展的挑战，将是南科大生命科学学院的光荣使命。</p><p style="white-space: normal; text-indent: 2em;">地利。南方科技大学生命科学学院的成立，正是国家十三五建设的总结时期和十四五建设的开始阶段，也是国家科技发展和世界局势变革的关键时期，深圳及粤港澳大湾区的快速发展对生命科学研究提出了重大需求，为南科大生命科学学院的创建提供了最好的机遇。作为重要的人才培养基地，生命科学学院将围绕生命科学领域优秀创新人才培养为核心任务，规划建设一流的科研和教学相结合的本科与研究生教学体系，创建一套追求学术卓越、崇尚创新研究、致力一流教学的学院文化，旨在培养具有独立思考能力的创新型人才，将生命科学学院打造成生命科学研究的高地及下一代生命科学家培养的摇篮。</p><p style="white-space: normal; text-indent: 2em;">人和。深圳是个海纳百川，包容、温情的城市，南方科技大学是个充满活力，蓄势待发的年轻学府。深圳改革开放所取得的惊人成绩举世瞩目，而生命科学院也象磁石一样吸引着有着科技梦想、家国情怀、有水平有担当的海内外优秀学者的目光。我们将用全新的理念建设南科大生命科学学院，诚邀世界各地优秀学者的加入。我们将致力于以卓越的研究和教学提升南科大在国内国际上的学术地位，我们有足够信心和实力见证这所位于南中国海岸的新学院为深圳市、粤港澳大湾区，国家生命健康产业的发展乃至世界生命科学领域做出贡献。</p><p style="white-space: normal; text-align: right;">——张明杰</p>					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="innerbox2" style="background-image: none;">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-12">
+					<div class="about-info2 txt_black_cla">
+						<p><img src="/uploads/image/20200424/1587703145396480.png" title="1587703145396480.png" alt="组1.png"></p><p style="white-space: normal; text-indent: 2em;">70年前，美国的硅谷只是个没有工作机会的，留不下人才的海军工作站，如今成了高科技的麦加；40年前，深圳还是一个渔村，如今跻身于一线国际都市，与河对岸遥遥相望，生机勃勃，气势如虹； 10年前，南方科技大学还只是一纸蓝图，一个设想，一片国家教育改革的试验田。而如今，我们正在天时地利人和的条件下构建一所崭新的学院。</p><p style="white-space: normal; text-indent: 2em;">天时。中国长远的发展目标对加快科技创新提出了迫切的要求，国家号召所有科研工作者加快科技创新，提升原始创新能力，努力实现更多“从0到1”的突破。“双区”国家战略，对未来粤港澳大湾区特别是深圳市的生命科学研究和人才培养发展方向提出了指引和新要求。同时，我们也面临着科学研究变革和日益严峻的全球局势带来的对生命科学领域的新挑战。我们期待抓住机遇，在传统生命科学研究的基础上，开展跨学科交叉研究，设置具有特色和强大生命力的研究体系，实施具有前瞻性的学科建设方案，长久地应对现代生命科学发展的挑战，将是南科大生命科学学院的光荣使命。</p><p style="white-space: normal; text-indent: 2em;">地利。南方科技大学生命科学学院的成立，正是国家十三五建设的总结时期和十四五建设的开始阶段，也是国家科技发展和世界局势变革的关键时期，深圳及粤港澳大湾区的快速发展对生命科学研究提出了重大需求，为南科大生命科学学院的创建提供了最好的机遇。作为重要的人才培养基地，生命科学学院将围绕生命科学领域优秀创新人才培养为核心任务，规划建设一流的科研和教学相结合的本科与研究生教学体系，创建一套追求学术卓越、崇尚创新研究、致力一流教学的学院文化，旨在培养具有独立思考能力的创新型人才，将生命科学学院打造成生命科学研究的高地及下一代生命科学家培养的摇篮。</p><p style="white-space: normal; text-indent: 2em;">人和。深圳是个海纳百川，包容、温情的城市，南方科技大学是个充满活力，蓄势待发的年轻学府。深圳改革开放所取得的惊人成绩举世瞩目，而生命科学院也象磁石一样吸引着有着科技梦想、家国情怀、有水平有担当的海内外优秀学者的目光。我们将用全新的理念建设南科大生命科学学院，诚邀世界各地优秀学者的加入。我们将致力于以卓越的研究和教学提升南科大在国内国际上的学术地位，我们有足够信心和实力见证这所位于南中国海岸的新学院为深圳市、粤港澳大湾区，国家生命健康产业的发展乃至世界生命科学领域做出贡献。</p><p style="white-space: normal; text-align: right;">——张明杰</p>					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="about-info4" style="margin-top: 45px;">
+			<img class="innerbox-img" src="/uploads/image/20200424/1587703145396480.png" width="100%">
+		</div>
+
+	</div>
+
+</section>
+
+
+<script type="text/javascript">
+	$(function () {
+		$('.about').addClass('active');
+
+		//获取内容里的图片路径 单独赋值
+		var about_desc2_cla = $('.about_desc2_cla img').eq(0).attr('src');
+		$('.about_desc2_imgid').attr('src',about_desc2_cla);
+		var txt_black_cla = $('.txt_black_cla img').eq(0).attr('src');
+		//$('.innerbox2').css('background-image','url('+txt_black_cla+')');
+		$('.innerbox-img').attr('src',txt_black_cla);
+	});
+</script>
+
+<footer>
+	<div class="backtop"></div>
+
+	<div class="foot">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="ft-logo">
+						<img src="/uploads/202204/20144055_55719.png">
+					</div>
+
+					<div class="ft-content">
+						<p class="ft-add">深圳市南山区学苑大道1088号南方科技大学生物楼</p>
+						<p class="ft-mail">lifs@sustech.edu.cn</p>
+					</div>
+
+					<div class="ft-share">
+						<a class="wechart"><img src="/static/site/images/icon-wechart.png"></a>
+						<a class="wechart"><img src="/static/site/images/icon-sina.png"></a>
+						<a class="wechart"><img src="/static/site/images/icon-facebook.png"></a>
+						<a class="wechart"><img src="/static/site/images/icon-twitter.png"></a>
+					</div>
+
+				</div>
+
+				<div class="col-lg-6 col-lg-offset-1">
+
+					<div class="col-md-6">
+						<div class="ft-logo">
+							<h2>快速导航</h2>
+						</div>
+
+						<div class="ft-content">
+							<ul>
+								<li><a href="/about.html?lang=zh-cn">关于我们 </a> </li>
+								<li><a href="/colleges.html?lang=zh-cn">院系导航 </a> </li>
+								<li><a href="/teachers.html?lang=zh-cn">师资队伍 </a> </li>
+								<li><a href="/xueke.html?lang=zh-cn">教育教学</a> </li>
+<!--								<li><a href="/undergraduate.html">本科教育</a> </li>-->
+<!--								<li><a href="/graduate.html">研究生教育</a> </li>-->
+								<li><a href="/research.html?lang=zh-cn">科学研究</a> </li>
+								<!--<li class="shizi-nav"><a href="/faculty/index.html">师资队伍</a> </li>-->
+								<!--<li><a href="/goglobal.html">交流合作</a> </li>-->
+								<li><a href="/lecture.html?lang=zh-cn">学术交流</a> </li>
+																<li><a href="/party.html?lang=zh-cn">党群园地 </a> </li>
+															</ul>
+						</div>
+					</div>
+
+
+
+					<div class="col-md-6">
+						<div class="ft-logo">
+							<h2>链接</h2>
+						</div>
+
+						<div class="ft-content ft-content2">
+							<ul>
+																<li><a href="https://www.sustech.edu.cn/" target="_blank">南方科技大学</a> </li>
+																<li><a href="http://ipf.sustech.edu.cn/" target="_blank">南方科技大学-北京大学植物与食品联合研究所</a> </li>
+																<li><a href="http://lsetc.sustech.edu.cn" target="_blank">生命科学实验教学示范中心</a> </li>
+																<li><a href="https://www.720yun.com/vr/b53jOrwfsu7" target="_blank">南方科技大学VR校园植物</a> </li>
+																<li><a href=" https://bio.sustech.edu.cn/xiaoshu/" target="_blank">动物解剖虚拟仿真实验教学</a> </li>
+															</ul>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-md-2">
+
+					<div class="contact">
+						<dl>
+							<dt><img src="/uploads/202102/26130717_80669.jpg"> </dt>
+							<dd>南方科技大学生命科学<br>公众号</dd>
+							<div class="clearfix"></div>
+						</dl>
+
+
+
+						<dl>
+							<dt><img src="/uploads/202003/24183556_56503.png"> </dt>
+							<dd>南科大官方<br>公众号</dd>
+							<div class="clearfix"></div>
+						</dl>
+
+					</div>
+				</div>
+
+
+
+			</div>
+
+			<div class="clearfix"></div>
+
+			<div class="ft-copyright">
+				Copyright © 2016 SUSTech.All rights reserved.         <span><a href="https://www.unisonbrand.com/" target="_blank">Website Design Unisonbrand Support</a></span>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+</footer>
+<script type="text/javascript">
+	$(function () {
+		var langstr = 'zh';
+		var langvar = 'zh-cn';
+		$('a').each(function () {
+			var alink = $(this).attr('href');
+			//console.log(alink);
+			if (alink){
+				if (alink.indexOf("http") < 0 && alink.indexOf("#") < 0){
+					var hrefstr = (alink.indexOf("?") > 0 ? "&lang=" + langvar : "?lang=" + langvar);
+					$(this).attr('href',alink+hrefstr);
+				}
+				// console.log(alink+hrefstr);
+			}
+		})
+	});
+</script>
+
+</body></html>

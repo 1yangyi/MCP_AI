@@ -1,0 +1,866 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=2.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>学院简介-武汉大学信息管理学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+
+
+<meta name="SiteName" content="武汉大学信息管理学院">
+<meta name="SiteDomain" content="sim.whu.edu.cn">
+<meta name="ColumnName" content="学院简介">
+<meta name="ColumnKeywords" content="学院简介">
+
+<link type="text/css" rel="stylesheet" href="../styles/base.css">
+<link type="text/css" rel="stylesheet" href="../styles/main.css">
+<link type="text/css" rel="stylesheet" href="../styles/mobile.css">
+<link type="text/css" rel="stylesheet" href="../styles/swiper.min.css">
+<link type="text/css" rel="stylesheet" href="../styles/animate.min.css">
+<link type="text/css" rel="stylesheet" href="../styles/slick.min.css">
+<link type="text/css" rel="stylesheet" href="../styles/slick-theme.min.css">
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1668,'/about.jsp',-1,1943557701)</script>
+</head>
+
+<body class="bodyList">
+<div class="xgxy-search-warp">
+  <div class="xgxy-header-contain">
+    <div class="xgxy-header-jz">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="xgxy-txt"> <input name="submit_button" type="button" value="提交" class="xgxy-btn"><i class="xgxy-js-close"></i></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <input type="text" class="xgxy-txt" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="xgxy-btn" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/><i class="xgxy-js-close"></i>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1943557701";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+  </div>
+</div>
+<div class="xgxy-header-box">
+  <div class="xgxy-header-contain">
+    <div class="xgxy-contain-padding clearfix">
+      <div class="xgxy-logo"> <a href="../index.htm" class="logo1"><img src="../img/logo-ny.png"></a><a href="../index.htm" class="logo2"><img src="../img/logo-ny-b.png"></a></div>
+      <div class="xgxy-header-right-box clearfix">
+        <div class="xgxy-top-search">
+          <ul class="xgxy-header-right clearfix">
+            <li class="li1"><a href="../English/Home.htm"></a></li>
+            <li class="li2"><a href="javascript:;"></a></li>
+            <li class="li3"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>
+<a href="https://simjwz.whu.edu.cn/" target="_blank">旧版</a>
+
+</li>
+          </ul>
+        </div>
+        <div class="xgxy-nav-box"><ul class="xgxy-nav clearfix">
+          <li class="li1"><a href="../index.htm">首页</a>
+          </li>
+          <li class="li2"><a href="xyjj.htm">学院概况</a>
+            <ul class="xgxy-suNnav">
+              <li><a href="xyjj.htm">学院简介</a></li>              <li><a href="xkbn.htm">学科百年</a></li>              <li><a href="xrld.htm">现任领导</a></li>              <li><a href="lrld.htm">历任领导</a></li>              <li><a href="jgdl.htm">机构导览</a></li>              <li><a href="lxwm.htm">联系我们</a></li>
+            </ul>
+          </li>
+          <li class="li3"><a href="../szdw/zzjs/zmjs/qb.htm">师资队伍</a>
+            <ul class="xgxy-suNnav">
+              <li><a href="../szdw/zzjs/zmjs/qb.htm">专职教师</a></li>              <li><a href="../szdw/rxjs.htm">荣休教师</a></li>              <li><a href="../szdw/bsh.htm">博士后</a></li>
+            </ul>
+          </li>
+          <li class="li4"><a href="../rcpy.htm">人才培养</a>
+            <ul class="xgxy-suNnav">
+              <li><a href="/rcpy.htm#jxgz">教学工作</a></li>              <li><a href="/rcpy.htm#xsgz">学生工作</a></li>              <li><a href="/rcpy.htm#jfjg">教辅机构</a></li>
+            </ul>
+          </li>
+          <li class="li5"><a href="../kxyj/szky.htm">科学研究</a>
+            <ul class="xgxy-suNnav">
+              <li><a href="../kxyj/szky.htm">数字科研</a></li>              <li><a href="../kxyj/kypt.htm">科研平台</a></li>              <li><a href="../kxyj/yjcg.htm">研究成果</a></li>              <li><a href="../kxyj/xsdt.htm">学术动态</a></li>              <li><a href="../kxyj/xsxx.htm">学术信息</a></li>              <li><a href="../kxyj/xsqk.htm">学术期刊</a></li>
+            </ul>
+          </li>
+          <li class="li6"><a href="../gjhz/hzxm.htm">国际合作</a>
+            <ul class="xgxy-suNnav">
+              <li><a href="../gjhz/hzxm.htm">合作项目</a></li>              <li><a href="../gjhz/zxdt.htm">最新动态</a></li>
+            </ul>
+          </li>
+          <li class="li7"><a href="../shfw/zxdt.htm">社会服务</a>
+            <ul class="xgxy-suNnav">
+              <li><a href="../shfw/zxdt.htm">最新动态</a></li>              <li><a href="../shfw/cgzh.htm">成果转化</a></li>              <li><a href="../shfw/gdpxgz1.htm">高端培训工作</a></li>
+            </ul>
+          </li>
+          <li class="li8"><a href="../yyzj/yyml/whtzsq_1920n3y_1953n8y_yyml1.htm">院友之家</a>
+            <ul class="xgxy-suNnav">
+              <li><a href="../yyzj/yyml/whtzsq_1920n3y_1953n8y_yyml1.htm">院友名录</a></li>              <li><a href="../yyzj/yydt.htm">院友动态</a></li>              <li><a href="../yyzj/yyxy.htm">院友心语</a></li>              <li><a href="../yyzj/byhy.htm">毕业合影</a></li>              <li><a href="../yyzj/gdfh.htm">各地分会</a></li>
+            </ul>
+          </li>
+          <li class="li9"><a href="../xxgk/gzzd.htm">信息公开</a>
+            <ul class="xgxy-suNnav">
+              <li><a href="../xxgk/gzzd.htm">规章制度</a></li>              <li><a href="../xxgk/xzzq.htm">下载专区</a></li>              <li><a href="../xxgk/bslc.htm">办事流程</a></li>
+            </ul>
+          </li>
+</ul></div>
+      </div>
+    </div>
+  </div>
+  <div class="xgxy-nav-click"><a href="javascript:;"></a></div>
+</div>
+<div class="navContent">
+  <div class="topStyle clearfix">
+    <div class="xgxy-logo"> <a href="../index.htm"><img src="../img/logo-b1.png"></a></div>
+    <a href="javascript:;" class="xgxy-close"></a> </div>
+  <div class="navContent-box">
+    <div class="clearfix">
+      <div class="xgxy-search-box clearfix">
+
+
+<style>
+    #appu3 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu3 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu3">
+    <div id="appu3"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="xgxy-txt"> <input name="submit_button" type="button" value="提交" class="xgxy-btn"><i class="xgxy-js-close"></i></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError">
+            <input type="text" class="xgxy-txt" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="xgxy-btn" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/><i class="xgxy-js-close"></i>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "1943557701";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+      <div class="linkList"><a href="http://sim100.whu.edu.cn/">建院100周年</a>
+<a href="http://dik.whu.edu.cn/CN/volumn/home.shtml">学术期刊</a>
+<a href="http://simlib.whu.edu.cn/">图书分馆</a>
+<a href="http://simlab.whu.edu.cn/">实验中心</a>
+<a href="http://csir.whu.edu.cn/">信息资源研究中心</a>
+<a href="https://iop.whu.edu.cn" class="last">武汉大学出版研究院</a>
+</div>
+    </div>
+    <dl style="display:none;">
+      <dt><a href="../index.htm">首页</a></dt>
+    </dl>
+<dl>
+      <dt><a href="xyjj.htm">学院概况</a></dt>
+      <dd><a href="xyjj.htm">学院简介</a></dd>
+      <dd><a href="xkbn.htm">学科百年</a></dd>
+      <dd><a href="xrld.htm">现任领导</a></dd>
+      <dd><a href="lrld.htm">历任领导</a></dd>
+      <dd><a href="jgdl.htm">机构导览</a></dd>
+      <dd><a href="lxwm.htm">联系我们</a></dd>
+    </dl>
+<dl>
+      <dt><a href="../szdw/zzjs/zmjs/qb.htm">师资队伍</a></dt>
+      <dd><a href="../szdw/zzjs/zmjs/qb.htm">专职教师</a></dd>
+      <dd><a href="../szdw/rxjs.htm">荣休教师</a></dd>
+      <dd><a href="../szdw/bsh.htm">博士后</a></dd>
+    </dl>
+<dl>
+      <dt><a href="../rcpy.htm">人才培养</a></dt>
+      <dd><a href="/rcpy.htm#jxgz">教学工作</a></dd>
+      <dd><a href="/rcpy.htm#xsgz">学生工作</a></dd>
+      <dd><a href="/rcpy.htm#jfjg">教辅机构</a></dd>
+    </dl>
+<dl>
+      <dt><a href="../kxyj/szky.htm">科学研究</a></dt>
+      <dd><a href="../kxyj/szky.htm">数字科研</a></dd>
+      <dd><a href="../kxyj/kypt.htm">科研平台</a></dd>
+      <dd><a href="../kxyj/yjcg.htm">研究成果</a></dd>
+      <dd><a href="../kxyj/xsdt.htm">学术动态</a></dd>
+      <dd><a href="../kxyj/xsxx.htm">学术信息</a></dd>
+      <dd><a href="../kxyj/xsqk.htm">学术期刊</a></dd>
+    </dl>
+<dl>
+      <dt><a href="../gjhz/hzxm.htm">国际合作</a></dt>
+      <dd><a href="../gjhz/hzxm.htm">合作项目</a></dd>
+      <dd><a href="../gjhz/zxdt.htm">最新动态</a></dd>
+    </dl>
+<dl>
+      <dt><a href="../shfw/zxdt.htm">社会服务</a></dt>
+      <dd><a href="../shfw/zxdt.htm">最新动态</a></dd>
+      <dd><a href="../shfw/cgzh.htm">成果转化</a></dd>
+      <dd><a href="../shfw/gdpxgz1.htm">高端培训工作</a></dd>
+    </dl>
+<dl>
+      <dt><a href="../yyzj/yyml/whtzsq_1920n3y_1953n8y_yyml1.htm">院友之家</a></dt>
+      <dd><a href="../yyzj/yyml/whtzsq_1920n3y_1953n8y_yyml1.htm">院友名录</a></dd>
+      <dd><a href="../yyzj/yydt.htm">院友动态</a></dd>
+      <dd><a href="../yyzj/yyxy.htm">院友心语</a></dd>
+      <dd><a href="../yyzj/byhy.htm">毕业合影</a></dd>
+      <dd><a href="../yyzj/gdfh.htm">各地分会</a></dd>
+    </dl>
+<dl>
+      <dt><a href="../xxgk/gzzd.htm">信息公开</a></dt>
+      <dd><a href="../xxgk/gzzd.htm">规章制度</a></dd>
+      <dd><a href="../xxgk/xzzq.htm">下载专区</a></dd>
+      <dd><a href="../xxgk/bslc.htm">办事流程</a></dd>
+    </dl>
+<div class="home-page"> <a href="https://www.whu.edu.cn/index.htm" target="_blank">武大主页</a> </div>
+
+
+
+  </div>
+</div>
+<button type="button" class="navbar-toggle"> <span class="icon-bar icon-bar1"></span> <span class="icon-bar icon-bar2"></span> <span class="icon-bar icon-bar3"></span> </button>
+<div class="xgxy-ny-banner">
+<div style="background: url(../img/ny-banner.png) no-repeat top center; height:100%;background-size: cover;"></div>
+</div>
+<div class="xgxy-bg-color">
+  <div class="xgxy-bg-img">
+    <div class="xgxy-contain-box">
+      <div class="xgxy-contain-padding">
+        <div class="clearfix">
+          <div class="xgxy-ny-left">
+            <div class="xgxy-ny-nav-box">
+              <div class="xgxy-ny-nav-bg">
+                <h3 class="xgxy-nav-name">
+学院概况</h3>
+                <h4 class="xgxy-nav-en">School Profile</h4>
+              </div>
+              <div class="xgxy-nav-list"><ul>                
+<li class="on"><a href="xyjj.htm">学院简介</a>
+</li>                 
+<li><a href="xkbn.htm">学科百年</a>
+</li>                 
+<li><a href="xrld.htm">现任领导</a>
+</li>                 
+<li><a href="lrld.htm">历任领导</a>
+</li>                 
+<li><a href="jgdl.htm">机构导览</a>
+<ul class="subNav">
+<li><a href="jgdl/jxjg.htm">教学机构</a></li>
+<li><a href="jgdl/xsjg.htm">学术机构</a></li>
+<li><a href="jgdl/xzfg.htm">行政分工</a></li>
+</ul>
+</li>                 
+<li><a href="lxwm.htm">联系我们</a>
+</li>                 
+</ul></div>
+            </div>
+          </div>
+          <div class="xgxy-ny-right">
+            <div class="xgxy-column-box clearfix">
+              <div class="xgxy-place"><div>
+    当前位置: 
+                        <a href="../index.htm">首页</a>
+                &gt;
+                <a href="xyjj.htm">学院概况</a>
+                &gt;
+                <a href="xyjj.htm">学院简介</a>
+</div></div>
+            </div>
+             <h3 class="xgxy-column-h3">
+学院简介</h3>
+            <div class="xgxy-ny-cont">
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1943557701,'wbnews','u12')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format100.css"><script>function seeContenta12(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta12('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1943557701,85182)</script>
+<div id="vsb_content_100_85182_u121"><div id="vsb_content_100"><p class="vsbcontent_img"><img width="100%" src="/__local/4/ED/7B/6B39E30B190CDFC71F1D4A70F8D_B9003EEA_130FEA.png" vsbhref="vurl" vurl="/_vsl/4ED7B6B39E30B190CDFC71F1D4A70F8D/B9003EEA/130FEA" vheight="" vwidth="100%" orisrc="/__local/4/ED/7B/6B39E30B190CDFC71F1D4A70F8D_B9003EEA_130FEA.png" class="img_vsb_content"></p><p style="text-align: justify;"><span style="font-size: 16px;">武汉大学信息管理学院是我国办学历史最悠久、规模最大、学科实力雄厚的信息管理教学与研究机构，前身是创建于1920年的文华大学文华图书科。1924年，文华大学改组为华中大学，文华大学文华图书科改称华中大学文华图书科。1927年，华中大学停办，文华图书科单独继续办学。1929年，文华图书科获准独立建校为私立武昌文华图书馆学专科学校。1951年，学校由私立改为公立，迳名武昌文华图书馆学专科学校。1953年，学校并入武汉大学，成为图书馆学专修科。1956年，图书馆学专修科改制为图书馆学系。1984年，成立图书情报学院。1999年，组建为大众传播与知识信息管理学院。2000年，调整定名为信息管理学院。</span></p><p style="text-align: justify;"><span style="font-size: 16px;">学院现有图书馆学、信息管理与信息系统、档案学、编辑出版学、电子商务、大数据管理与应用等6个本科专业和数字文化试验班（本硕博贯通培养），图书馆学、情报学、档案学、出版发行学、信息资源管理、管理科学与工程、电子商务、保密管理、数据科学等9个学术型学位硕士专业，图书情报、出版、工程、工程管理等4个硕士专业学位类型，图书馆学、情报学、档案学、出版发行学、信息资源管理、管理科学与工程、电子商务、数据科学等8个博士专业，信息资源管理、管理科学与工程等2个一级学科博士学位授权点和博士后科研流动站。信息资源管理（原图书情报与档案管理）一级学科国家重点学科在全国历轮学科评估中排名第一或A+，连续两轮入选世界一流建设学科。图书馆学、信息管理与信息系统、档案学、编辑出版学、电子商务等5个专业获批国家级一流本科专业建设点。</span></p><p style="text-align: justify;"><span style="font-size: 16px;">学院现有专任教师81人（含教授49人、副教授30人），98%以上具有博士学位，97%以上具有海外访学经历。拥有武汉大学人文社科资深教授3人，国务院学位委员会学科评议组召集人1人，教育部社会科学委员会委员1人，国家级教学名师1人，湖北省教学名师1人，享受政府特殊津贴专家5人，国家及省部级高层次人才50余人次；武汉大学珞珈杰出学者2人、珞珈特聘教授12人、珞珈青年学者20人，人文社科杰出青年5人、优秀青年6人；教育部本科专业教学指导委员会委员6人，全国图书情报专业学位研究生教育指导委员会委员2人，全国出版专业学位研究生教育指导委员会委员1人，教育部学风委员会委员1人，全国性学术组织主要负责人3人。2000年以来，40余名海内外知名学者受聘担任学院客座教授或兼职教授。</span></p><p style="text-align: justify;"><span style="font-size: 16px;">学院坚持“五育并举”，积极推进“三全育人”综合改革，致力培养厚基础、宽口径、复合型信息管理高级人才和信息职业领导者。获评全国教育系统“先进集体”、湖北省高校“优秀基层教学组织”“思想政治教育工作先进基层单位”“先进基层党组织”等荣誉，2个教学团队入选国家级和省级教学团队。过去5年，学院获批国家级一流课程4门、省级一流课程2门，出版教材20余部，立项教育部协同育人项目3项、省级教改及虚拟仿真实验项目16项，获首届全国优秀教材二等奖1项，获批国家级新文科研究与改革实践项目1项、大学生创新创业训练项目32项。学生在国际高水平期刊发表论文100余篇，在“挑战杯”“互联网+”“创青春”以及数学建模、大学生英语、电子商务、智慧城市技术与创意设计等全国性赛事中屡获佳绩。现有在读本科生1000余人、研究生900余人，毕业生广受社会和用人单位赞誉。</span></p><p style="text-align: justify;"><span style="font-size: 16px;">学院聚焦信息资源管理基本理论、数据智能与智慧服务、信息传播与数字文化、数据治理与数据安全、数字经济与科技创新等5大主攻方向，借助数智赋能、数字人文、社会计算等引领新文科建设，在学科基本理论、现代目录学、信息检索、知识组织、信息行为、信息计量学、档案与电子文件管理、出版发行、数字出版、电子商务、大数据管理等研究领域具有显著优势和特色。“信息资源管理”创新研究群体获本学科首个国家自科基金创新研究群体项目，“信息资源研究中心”是学科领域全国唯一的教育部人文社科重点研究基地，“文化遗产智能计算实验室”入选教育部首批哲学社会科学实验室，“语义出版与知识服务重点实验室”获评国家新闻出版署重点实验室，领衔建设武汉数据智能研究院、武汉大学大数据研究院、数据智能国际联合培养实验室。过去5年，学院获教育部高校科学研究优秀成果奖8项，湖北省社会科学优秀成果奖8项，获批国家重大、重点项目38项，出版著作80余部，发表高水平论文500余篇，WoS本学科论文数量和被引次数均居国内第一。</span></p><p style="text-align: justify;"><span style="font-size: 16px;">学院是国际信息学院联盟(iSchools)首个发展中国家成员、国际图书馆协会与机构联合会(IFLA)会员单位、美国图书馆协会(ALA)国际成员单位，与联合国教科文组织、国际档案理事会（ICA）、IFLA、ALA等建立了稳定的合作关系，同10余个国家和地区的信息管理教育教学机构保持良好的学术交流，70余人次教师在国际学术刊物或组织任职。过去5年，学院主（承）办JCDL 2020、ASIS&amp;T-AP Conference 2020等6场重要国际学术会议，获批国家自科基金国际（地区）合作项目2项，获iSchools、ICA、Emerald出版集团、美国华人图书馆员协会（CALA）等颁发的奖项16项，与美国威斯康辛大学密尔沃基分校、英国谢菲尔德大学、丹麦皇家图书情报学院、德国洪堡大学柏林图书情报学院和埃尔朗根大学等签署了联合培养或学术交流协议，160余名学生出国（境）交流学习，200余位国际知名学者来院交流讲学。</span></p><p style="text-align: justify;"><span style="font-size: 16px;">“智慧与服务”是学院前身文华图专的校训，也是一直以来学院坚持的优良传统。面向国家战略和重点领域，学院产出了系列具有社会影响力的原创性成果和资政建议，为国家、地方经济和社会发展提供了高效服务和有力支持。过去5年，围绕数字中国、乡村振兴等国家重大战略，学院牵头成立“数字空间与社会治理”智库联盟，建立2家武汉大学乡村振兴服务站，乡村文旅综合服务平台、智慧档案系统等实现成果转化落地。为中央领导和中央国家机关、省委省政府以及联合国教科文组织等提供决策咨询服务，近90项咨政建议被采纳。主持、参与制定本学科相关国际教育教学评估和标准5项、国家标准2项。与华为、百度、阿里、腾讯、泰康人寿、科大讯飞、四维图新等机构开展广泛合作。连续承担国家新闻出版署和国家保密局等单位人才培养工作，为全国20多个省份开展各类培训4万余人次。</span></p><p style="text-align: justify;"><span style="font-size: 16px;">学院信息资源管理实验教学中心是国内本领域唯一的国家级实验教学示范中心，每年承担50余门课程的实验需求，年实验人时数超过10万。建有信息采集与交互、数据智能、虚拟仿真与信息可视化等3个专业实验室，与泰康在线、掌阅科技、世纪高通、高教出版社等多家单位开展合作。学院拥有国内专业藏书最丰富的中外文图书资料室暨实验图书馆，收藏中外文献13万册、中外文工具书8000余册、线装书730函5500册。学院面向国内外公开出版发行《图书情报知识》（国家社科基金资助）、《出版科学》《信息资源管理学报》和<em>Data and Information Management</em>等4种学术期刊。期刊入选国内外重要期刊目录和数据库，包括CSSCI来源期刊、全国中文核心期刊、中国人文社科期刊AMI综合评价（A刊）权威/核心期刊、Scopus、《FMS管理科学高质量期刊推荐列表》等。</span></p><p style="text-align: justify;"><span style="font-size: 16px;">百年风雨沧桑，百年奋发图强。在社会各界和学校的关心支持下，经过百年来数代人的辛勤建设，学院形成了“开拓创造、务实创业、引领创新”的办学传统，为国家经济社会发展和文化传承创新作出了重要贡献。面向未来，学院将坚持以习近平新时代中国特色社会主义思想为指导，全面贯彻党的教育方针，始终牢记为党育人、为国育才初心使命，深化教育改革发展，落实立德树人根本任务，为创建国际一流综合性研究型信息管理学院而不懈奋斗。</span></p><p class="vsbcontent_end" style="text-align: right;"><span style="font-size: 16px;">（数据更新至2022年12月）</span></p></div></div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="xgxy-footer-box">
+  <div class="xgxy-contain-box">
+    <div class="xgxy-contain-padding clearfix">
+      <div class="left">
+        <ul class="list"><li><a href="http://sim100.whu.edu.cn/">建院100周年</a></li>
+          
+<li><a href="http://dik.whu.edu.cn/CN/volumn/home.shtml">学术期刊</a></li>
+          
+<li><a href="http://simlib.whu.edu.cn/">图书分馆</a></li>
+          
+<li><a href="http://simlab.whu.edu.cn/">实验中心</a></li>
+          
+<li><a href="http://csir.whu.edu.cn/">信息资源研究中心</a></li>
+          
+<li><a href="https://iop.whu.edu.cn">武汉大学出版研究院</a></li>
+          
+</ul>
+        <div class="clearfix">
+          <p class="logo"><a href="../index.htm" target=""><img src="../img/footer-logo.png"></a></p>
+          <div class="copyright"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权所有 武汉大学信息管理学院  地址：中国·武汉·珞珈山  邮编：430072  TEL：027-68752135</p>
+            <p>CopyRight © 2016 sim.whu.edu.cn All Rights Reserved</p></div>
+        </div>
+      </div>
+      <div class="right"><p class="img">    
+<img src="../img/wx.jpg">
+
+</p>
+        <p class="txt"><img src="../img/wx-icon.png">欢迎关注官方公众号</p></div>
+    </div>
+  </div>
+</div>
+<div class="xgxy-layer-box">
+  <ul class="xgxy-layer-nav">    <li class="li1"><a href="../index.htm">首页</a><strong>+</strong>
+    </li>
+    <li class="li2"><a href="xyjj.htm">学院概况</a><strong>+</strong>
+      <ul class="xgxy-layer-suNnav">
+        <li><a href="xyjj.htm">学院简介</a>
+ 
+ </li>        <li><a href="xkbn.htm">学科百年</a>
+ 
+ </li>        <li><a href="xrld.htm">现任领导</a>
+ 
+ </li>        <li><a href="lrld.htm">历任领导</a>
+ 
+ </li>        <li><a href="jgdl.htm">机构导览</a>
+ 
+ <ul class="xgxy-layer-suNnav-child">
+ <li><a href="jgdl/jxjg.htm">教学机构</a></li>
+ <li><a href="jgdl/xsjg.htm">学术机构</a></li>
+ <li><a href="jgdl/xzfg.htm">行政分工</a></li>
+ 
+ </ul>
+ </li>        <li><a href="lxwm.htm">联系我们</a>
+ 
+ </li>
+      </ul>
+    </li>
+    <li class="li3"><a href="../szdw/zzjs/zmjs/qb.htm">师资队伍</a><strong>+</strong>
+      <ul class="xgxy-layer-suNnav">
+        <li><a href="../szdw/zzjs/zmjs/qb.htm">专职教师</a>
+ 
+ <ul class="xgxy-layer-suNnav-child">
+ <li><a href="../szdw/zzjs/zmjs/qb.htm">字母检索</a></li>
+ <li><a href="../szdw/zzjs/xbjs/qb1/js.htm">系部检索</a></li>
+ 
+ </ul>
+ </li>        <li><a href="../szdw/rxjs.htm">荣休教师</a>
+ 
+ </li>        <li><a href="../szdw/bsh.htm">博士后</a>
+ 
+ </li>
+      </ul>
+    </li>
+    <li class="li4"><a href="../rcpy.htm">人才培养</a><strong>+</strong>
+      <ul class="xgxy-layer-suNnav">
+        <li><a href="/rcpy.htm#jxgz">教学工作</a>
+ 
+ <ul class="xgxy-layer-suNnav-child">
+ <li><a href="../rcpy/jxgz/bksjx/bkszs.htm">本科生教学</a></li>
+ <li><a href="../rcpy/jxgz/yjsjx/yjszs.htm">研究生教学</a></li>
+ 
+ </ul>
+ </li>        <li><a href="/rcpy.htm#xsgz">学生工作</a>
+ 
+ <ul class="xgxy-layer-suNnav-child">
+ <li><a href="../rcpy/xsgz/yjsgz.htm">研究生工作</a></li>
+ <li><a href="../rcpy/xsgz/bksgz.htm">本科生工作</a></li>
+ 
+ </ul>
+ </li>        <li><a href="/rcpy.htm#jfjg">教辅机构</a>
+ 
+ <ul class="xgxy-layer-suNnav-child">
+ <li><a href="../rcpy/jfjg/tsfg.htm">图书分馆</a></li>
+ <li><a href="../rcpy/jfjg/syzx.htm">实验中心</a></li>
+ 
+ </ul>
+ </li>
+      </ul>
+    </li>
+    <li class="li5"><a href="../kxyj/szky.htm">科学研究</a><strong>+</strong>
+      <ul class="xgxy-layer-suNnav">
+        <li><a href="../kxyj/szky.htm">数字科研</a>
+ 
+ </li>        <li><a href="../kxyj/kypt.htm">科研平台</a>
+ 
+ </li>        <li><a href="../kxyj/yjcg.htm">研究成果</a>
+ 
+ </li>        <li><a href="../kxyj/xsdt.htm">学术动态</a>
+ 
+ </li>        <li><a href="../kxyj/xsxx.htm">学术信息</a>
+ 
+ </li>        <li><a href="../kxyj/xsqk.htm">学术期刊</a>
+ 
+ </li>
+      </ul>
+    </li>
+    <li class="li6"><a href="../gjhz/hzxm.htm">国际合作</a><strong>+</strong>
+      <ul class="xgxy-layer-suNnav">
+        <li><a href="../gjhz/hzxm.htm">合作项目</a>
+ 
+ </li>        <li><a href="../gjhz/zxdt.htm">最新动态</a>
+ 
+ </li>
+      </ul>
+    </li>
+    <li class="li7"><a href="../shfw/zxdt.htm">社会服务</a><strong>+</strong>
+      <ul class="xgxy-layer-suNnav">
+        <li><a href="../shfw/zxdt.htm">最新动态</a>
+ 
+ </li>        <li><a href="../shfw/cgzh.htm">成果转化</a>
+ 
+ </li>        <li><a href="../shfw/gdpxgz1.htm">高端培训工作</a>
+ 
+ <ul class="xgxy-layer-suNnav-child">
+ <li><a href="../shfw/gdpxgz1/ztkc.htm">专题课程</a></li>
+ <li><a href="../shfw/gdpxgz1/pxxw.htm">培训新闻</a></li>
+ <li><a href="../shfw/gdpxgz1/pxtz.htm">培训通知</a></li>
+ 
+ </ul>
+ </li>
+      </ul>
+    </li>
+    <li class="li8"><a href="../yyzj/yyml/whtzsq_1920n3y_1953n8y_yyml1.htm">院友之家</a><strong>+</strong>
+      <ul class="xgxy-layer-suNnav">
+        <li><a href="../yyzj/yyml/whtzsq_1920n3y_1953n8y_yyml1.htm">院友名录</a>
+ 
+ <ul class="xgxy-layer-suNnav-child">
+ <li><a href="../yyzj/yyml/whtzsq_1920n3y_1953n8y_yyml1.htm">文华图专时期（1920年3月-1953年8月）院友名录</a></li>
+ <li><a href="../yyzj/yyml/whdxtsgxzxksq_1953n8y_1956n_yyml.htm">武汉大学图书馆学专修科时期（1953年8月-1956年）院友名录</a></li>
+ <li><a href="../yyzj/yyml/whdxtsgxxsq_1956n_1984n10y_yyml.htm">武汉大学图书馆学系时期（1956年-1984年10月）院友名录</a></li>
+ <li><a href="../yyzj/yyml/whdxtsqbxysq_1984n10y_1999n4y_yyml.htm">武汉大学图书情报学院时期（1984年10月-1999年4月）院友名录</a></li>
+ <li><a href="../yyzj/yyml/dzcbyzsxxglxysq_1999n4y_2000n12y_yyml.htm">大众传播与知识信息管理学院时期（1999年4月-2000年12月）院友名录</a></li>
+ <li><a href="../yyzj/yyml/whdxxxglxysq_2001n1yzj_yyml.htm">武汉大学信息管理学院时期（2001年1月至今）院友名录</a></li>
+ 
+ </ul>
+ </li>        <li><a href="../yyzj/yydt.htm">院友动态</a>
+ 
+ </li>        <li><a href="../yyzj/yyxy.htm">院友心语</a>
+ 
+ </li>        <li><a href="../yyzj/byhy.htm">毕业合影</a>
+ 
+ <ul class="xgxy-layer-suNnav-child">
+ <li><a href="../yyzj/byhy/whtzsq.htm">文华图专时期</a></li>
+ <li><a href="../yyzj/byhy/whdxtsgxzxksq.htm">武汉大学图书馆学专修科时期</a></li>
+ <li><a href="../yyzj/byhy/whdxtsgxxsq.htm">武汉大学图书馆学系时期</a></li>
+ <li><a href="../yyzj/byhy/whdxtsqbxysq.htm">武汉大学图书情报学院时期</a></li>
+ <li><a href="../yyzj/byhy/dzcbyzsxxglxysq.htm">大众传播与知识信息管理学院时期</a></li>
+ <li><a href="../yyzj/byhy/whdxxxglxysq.htm">武汉大学信息管理学院时期</a></li>
+ 
+ </ul>
+ </li>        <li><a href="../yyzj/gdfh.htm">各地分会</a>
+ 
+ </li>
+      </ul>
+    </li>
+    <li class="li9"><a href="../xxgk/gzzd.htm">信息公开</a><strong>+</strong>
+      <ul class="xgxy-layer-suNnav">
+        <li><a href="../xxgk/gzzd.htm">规章制度</a>
+ 
+ </li>        <li><a href="../xxgk/xzzq.htm">下载专区</a>
+ 
+ </li>        <li><a href="../xxgk/bslc.htm">办事流程</a>
+ 
+ </li>
+      </ul>
+    </li>
+</ul>
+  <div class="xgxy-layer-search">
+
+
+<style>
+    #appu17 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu17 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu17">
+    <div id="appu17"><div><input type="text" placeholder="请输入搜索关键字" autocomplete="off" class="xgxy-layer-txt"> <input name="submit_button" type="button" value="提交" class="xgxy-layer-btn"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu17">
+    <div id="appu17">
+        <div v-if="!isError">
+            <input type="text" class="xgxy-layer-txt" placeholder="请输入搜索关键字" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="xgxy-layer-btn" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu17").html($("#htmlu17").text());
+</script>
+<script>
+    var appOwner = "1943557701";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu17",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="../js/swiper.min.js"></script> 
+<script type="text/javascript">
+var mySwiperTzgg = new Swiper('.xgxy-pic-box .swiper-container', {
+      slidesPerView: 4,
+      spaceBetween: 14,
+      speed:600,
+      autoplay: {
+        delay: 4500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.xgxy-pic-box .swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.xgxy-pic-box .swiper-button-next',
+        prevEl: '.xgxy-pic-box .swiper-button-prev',
+      },
+      breakpoints: {
+                        1300: {
+                            slidesPerView: 3,
+                            spaceBetween: 20
+                        },
+
+                        940: {
+                            slidesPerView: 3,
+                            spaceBetween: 20
+                        },
+                       
+                        600: {
+                            slidesPerView: 2,
+                            spaceBetween: 10
+                        },
+                    }
+                })
+</script>
+<script type="text/javascript" src="../js/count.js"></script> 
+<script type="text/javascript">
+    $(function(){
+        var countCXArr = [];
+        var countCX=function (){
+            $('.numCount').each(function(i, dom) {
+                if(countCXArr[i] && countCXArr[i] === true){
+                    return;
+                }
+                var sT;
+                var ncTop;
+                sT = $(window).scrollTop();
+                ncTop = $(dom).offset().top;
+                var id,decimals, startVal, endVal, duration; 
+                if (sT > ncTop-$(window).height() && sT < ncTop) {
+                    $(dom).find('.numCX').each(function(){
+                        id=$(this).attr('id');
+                        decimals = $(this).attr('data-decimals'),
+                        startVal = $(this).attr('data-startVal'),
+                        endVal = $(this).attr('data-endVal'),
+                        duration = $(this).attr('data-speed'); 
+                        new CountUp(id, startVal, endVal, decimals, duration, {
+                            useEasing: true,//效果
+                            separator: ''//数字分隔符
+                        }).start();// target：目标元素id, startVal：你想要开始的值, endVal：你想要到达的值, decimals：小数位数，默认值为0, duration：动画持续时间为秒，默认值为2, options：选项的可选对象
+                        countCXArr[i] = true;
+                    })         
+                }
+            }) 
+        }
+        countCX();  
+        /*$(window).on("scroll",function() {
+            var targetHeight = $(".spa-heightNum-box").offset().top;
+            var scrollTop = $(this).scrollTop();
+            if(scrollTop>targetHeight-400){
+            countCX();  
+            }
+        })*/    
+    });
+</script>
+
+
+</body></html>

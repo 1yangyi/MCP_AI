@@ -1,0 +1,542 @@
+<!DOCTYPE html><html style="font-size: 170.667px;"><head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <title>研究院简介-武汉大学国家文化发展研究院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="研究院简介">
+<meta name="keywords" content="武汉大学国家文化发展研究院,研究院简介">
+
+        <link rel="stylesheet" type="text/css" href="../dfiles/6150/whu_ggw/css/css.css">
+        <link rel="stylesheet" type="text/css" href="../dfiles/6150/whu_ggw/css/nycss.css">
+        <link rel="stylesheet" type="text/css" href="../dfiles/6150/whu_ggw/css/swiper.min.css">
+    <!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1081,'/about.jsp',-1,2033751053)</script>
+<script>
+        document.getElementsByTagName('html')[0].style.fontSize = document.documentElement.clientWidth/7.5 + 'px'
+        window.onresize = function() {
+            document.getElementsByTagName('html')[0].style.fontSize = document.documentElement.clientWidth/7.5 + 'px'
+        }
+    </script></head>
+    
+    <body>
+<div class="content">
+
+
+  <div class="header">
+            <div class="headerCont clearfix">
+                
+<a href="../index.htm" title="武汉大学国家文化发展研究院" class="logo"><img src="../dfiles/6150/whu_ggw/images/logo.png"></a>
+                
+                <span class="menu"></span>
+                
+  <div class="wdtop">
+    <div class="search-btn"><img src="../dfiles/6150/whu_ggw/images/search-btn.png" alt=""></div>
+    <div class="search-dialog-box">
+      <div class="search-bg"></div>
+      <div class="search-dialog">
+        <div class="search-inner">
+          <div class="wrap-inner">
+           
+           
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu1">
+    <div id="appu1"><div><div class="search-input f-cb clearfix"><input type="text" placeholder="请输入想要搜索的内容" autocomplete="off"> <input type="image" src="../dfiles/6150/whu_ggw/images/touming.png"> <a href="javascript:;" class="clear-btn"></a></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+           
+            <div class="search-input f-cb clearfix">
+                 
+                  <input type="text" placeholder="请输入想要搜索的内容" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                  <input type="image" src="../dfiles/6150/whu_ggw/images/touming.png"  v-on:click="onSubmit()">
+                  <a href="javascript:;" class="clear-btn" style=""></a>
+            
+            </div>
+                  
+            
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "2033751053";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+
+
+           
+           
+          </div>
+        </div>
+      </div>
+      <a href="javascript:;" class="pub-close"> <span class="bg"></span> <i></i> </a> </div>
+    <ul class="top-links"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><li class="link1"><a href="http://www.whu.edu.cn" target="_blank">武汉大学</a></li>
+<li class="link2"><a href="https://cas.whu.edu.cn/" target="_blank">信息门户</a></li>
+</ul>
+  </div>
+  
+  
+                
+                <div class="nav"><ul>
+  
+                        
+<li>
+                            <h2><a href="../index.htm">网站首页</a></h2>
+                            
+                            
+                        </li>
+                        
+<li>
+                            <h2><a href="yjyjj.htm">研究院概况</a></h2>
+                            
+             <dl>
+                        
+                        
+                         <dt><a href="yjyjj.htm">研究院简介</a></dt>
+                         
+                        
+                         <dt><a href="zdsj.htm">重大事件</a></dt>
+                         
+                        
+                         <dt><a href="yskyjg.htm">院属科研机构</a></dt>
+                         
+                              
+                              
+                            </dl>
+                            
+                        </li>
+                        
+<li>
+                            <h2><a href="../xwdt.htm">新闻动态</a></h2>
+                            
+             <dl>
+                        
+                        
+                         <dt><a href="../xwdt/yjyxw.htm">研究院新闻</a></dt>
+                         
+                        
+                         <dt><a href="../xwdt/xsdt.htm">学术动态</a></dt>
+                         
+                        
+                         <dt><a href="../xwdt/djyllxx.htm">党建与理论学习</a></dt>
+                         
+                        
+                         <dt><a href="../xwdt/tzgg.htm">通知公告</a></dt>
+                         
+                              
+                              
+                            </dl>
+                            
+                        </li>
+                        
+<li>
+                            <h2><a href="../xstd.htm">学术团队</a></h2>
+                            
+             <dl>
+                        
+                        
+                         <dt><a href="../xstd/zsjmyjs.htm">资深及名誉教授</a></dt>
+                         
+                        
+                         <dt><a href="../xstd/zyyjy.htm">驻院研究员</a></dt>
+                         
+                        
+                         <dt><a href="../xstd/zzjs.htm">专职教师</a></dt>
+                         
+                        
+                         <dt><a href="../xstd/jzyjy.htm">兼职研究员</a></dt>
+                         
+                        
+                         <dt><a href="../xstd/xzjkyms.htm">行政及科研秘书</a></dt>
+                         
+                              
+                              
+                            </dl>
+                            
+                        </li>
+                        
+<li>
+                            <h2><a href="../keyan/lps.htm">学术研究</a></h2>
+                            
+             <dl>
+                        
+                        
+                         <dt><a href="../keyan/lps.htm">蓝皮书</a></dt>
+                         
+                        
+                         <dt><a href="../keyan/_whrslyj_.htm">《文化软实力研究》</a></dt>
+                         
+                        
+                         <dt><a href="../keyan/xmykt.htm">项目与课题</a></dt>
+                         
+                        
+                         <dt><a href="../keyan/xszz.htm">学术专著</a></dt>
+                         
+                        
+                         <dt><a href="../keyan/whdyx_xldy.htm">“文化第一线”系列调研</a></dt>
+                         
+                              
+                              
+                            </dl>
+                            
+                        </li>
+                        
+<li>
+                            <h2><a href="../rcpy.htm">人才培养</a></h2>
+                            
+             <dl>
+                        
+                        
+                         <dt><a href="../rcpy/tzgg.htm">通知公告</a></dt>
+                         
+                        
+                         <dt><a href="../rcpy/xsgz.htm">学生工作</a></dt>
+                         
+                        
+                         <dt><a href="../rcpy/bshjfwxz.htm">博士后及访问学者</a></dt>
+                         
+                              
+                              
+                            </dl>
+                            
+                        </li>
+                        
+<li>
+                            <h2><a href="../lxwm.htm">联系我们</a></h2>
+                            
+                            
+                        </li>
+                        
+</ul></div>
+            </div>
+        </div>
+        
+        
+
+ <div class="topBanner"> 
+  
+  <div class="nyBanner" style="background-image: url(../dfiles/6150/whu_ggw/images/ny-rcpy.png);"></div>
+  
+  </div>
+  
+  <section id="nav_slide">
+  <div class="n_title"> <a id="bnt_back" href="javascript:history.back(-1);"> <img src="../dfiles/6150/whu_ggw/images/icon_bnt_back2.png" alt=""> </a>
+    <h1 class="margin_auto_1">
+研究院概况</h1>
+    <div id="bnt_sub_nav"> <img src="../dfiles/6150/whu_ggw/images/bnt_sub_nav2.png" alt=""> </div>
+  </div>
+  <div id="sub_nav_content">
+    <ul class="am-list admin-sidebar-list" id="collapase-nav-1">
+    
+    <li class="am-panel on"> <a href="yjyjj.htm">研究院简介</a><i>&gt;</i> </li>
+      
+<li class="am-panel "> <a href="zdsj.htm">重大事件</a><i>&gt;</i> </li>
+      
+<li class="am-panel "> <a href="yskyjg.htm">院属科研机构</a><i>&gt;</i> </li>
+      
+
+    
+    </ul>
+    
+  </div>
+</section>
+
+ 
+    
+    
+    
+  <div class="nyWrap">
+  <div class="w1510 clearfix">
+  
+<div class="bread clearfix">
+    <h3 class="fl">
+研究院概况</h3>
+    <div class="path fr">    <a href="../index.htm" class="ani300">网站首页</a><span>-</span>
+    <a href="yjyjj.htm" class="ani300">研究院概况</a><span>-</span>
+    <a href="yjyjj.htm" class="ani300">研究院简介</a><span>-</span>
+</div>
+</div>    <div class="content_left wow fadeInLeft" style="visibility: visible; animation-name: fadeInLeft;">
+  <ul class="leftmenu_jdjj">
+<li class="on"> <a href="yjyjj.htm" class="hfade flex-between"> <span class="name">研究院简介</span> </a> </li>
+    
+
+<li class=""> <a href="zdsj.htm" class="hfade flex-between"> <span class="name">重大事件</span> </a> </li>
+    
+
+<li class=""> <a href="yskyjg.htm" class="hfade flex-between"> <span class="name">院属科研机构</span> </a> </li>
+    
+</ul>
+</div>
+    <div class="nyContent fr">
+      
+      <div class="about clearfix">
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',2033751053,'wbnews','u10')</script>
+<script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',2033751053,1001)</script>
+
+
+    <div id="vsb_content_1001_u101"><div id="vsb_content"><div></div><p style="text-indent: 0em; text-align: center;"><img src="/__local/D/82/FF/2DD9CD117954DAAE9B789A0CD33_2B4FFC54_AB643.jpg" width="800" vsbhref="vurl" vurl="/_vsl/D82FF2DD9CD117954DAAE9B789A0CD33/2B4FFC54/AB643" vheight="" vwidth="800" orisrc="/__local/4/62/AC/16BFB3EA717B4EA6D0D59AD3D9F_E656E3F7_7D624C.jpg" class="img_vsb_content"></p><div><p style="text-indent: 2em;">珞珈山巅，东湖之滨。魁阁峨然，山高水长。</p></div><div><p style="text-indent: 2em;">中国的国家文化研究，始于1930年代的国立武汉大学。抗战军兴，国立武汉大学文科教授张沅长、方重两位先辈，发愿力于“文化抗战”，披历荆路，艰辛开拓，相继在《武汉大学文哲季刊》发表专论，阐释中国文化价值和中国国家形象海外传播问题，此为中国学界的国家文化研究之肇始。</p><p style="text-indent: 2em;">聚是一团火，散作满天星。1949年后，全国高等院校院系调整，武汉大学与国家文化有关的研究分散在各大院系之中，但始终薪火相传。其时，唐长孺先生的古代丝绸之路交通史研究、吴于廑先生的游牧文化与农耕文化比较研究、刘绪贻先生的美国文化史研究、冯天瑜先生的中国文化史研究等，皆自成一家，影响流布于海内外，砥柱中流，筑武大国家文化研究之基。</p><p style="text-indent: 2em;">进入新世纪，国际局势风云变幻，国家经济、社会和文化建设一日千里。国家文化研究的重要性日渐凸显。2009年4月21日，经国家文化部（今文旅部）批准（文科技函[2009]603号），武汉大学与文化部共建“武汉大学国家文化创新研究中心”，是全国高校首家“国家文化创新工程”研究基地，傅才武教授担任中心首任主任。</p><p style="text-indent: 2em;">2011年，文化部、财政部与武汉大学共建“国家文化财政政策研究基地”。2014年，文化部同意在武大设立“国家文化改革发展研究基地”。同年，研究中心相继内设了“文化法制研究中心”和“文化信息中心”，跻身文化研究的“国家队”。2015年，为了贯彻落实国家《关于加强中国特色新型智库建设的意见》，建设文化领域特色新型智库，武汉大学整合三个国家研究基地，设立“武汉大学国家文化发展研究院”，傅才武教授担任创院院长，武汉大学资深教授冯天瑜先生担任首任学术委员会主任，院址设在武汉大学重要历史建筑群“珞珈十八栋”的郭沫若故居（国家重点文物保护单位）。2019年经湖北省科技厅批准成立 “湖北省文化大数据应用工程技术中心”，努力推进文化和科技的融合创新。</p><p style="text-indent: 2em;">2019年建院十周年之际，武汉大学国家文化发展研究院举办“新时代下中国乡村文化振兴国际学术会议”，瑞典皇家人文、艺术与考古学院院士、香港城市大学讲座教授张隆溪先生莅临本次盛会并受聘武汉大学（国家文化发展研究院）荣誉教授。美国丹佛大学教授暨美国美中关系委员会委员赵穗生、荷兰阿姆斯特丹自由大学文化、历史和遗产研究中心主任伯格斯等一批国际知名学者出席此次国际学术会议。美国芝加哥大学特里·克拉克教授、加拿大多伦多大学丹尼尔·西尔副教授等国际同行专程致辞祝贺，武汉大学校长窦贤康院士致辞：“国家文化发展研究院成立十年来，取得了一大批高水平的科研成果，我希望国家文化发展研究院，不忘初心、牢记使命、再接再厉，在科学研究与建言献策方面，作出更大的贡献。” 同年，研究院获批全国唯一的“国家文化和旅游财政政策研究基地”。</p><p style="text-indent: 2em;">目前，研究院已经有了硕士、博士两级研究生招收资格，并与武汉大学新闻传播学院联合培养研究生（数字媒介方向），与武汉大学中国传统文化研究中心联合招收博士后，研究院老师全部承担武汉大学人文社科相关专业本科必修、选修课程，形成了从本科、研究生到博士后的文化产业管理专业课程体系。</p><p style="text-indent: 2em;">研究院十年来组建了一支专兼结合的高水平研究团队。现有专任教师11人（在编），其中教授3人，副教授5人，特聘副研究员1人，讲师2人，并通过签约、特聘等形式聘任15位教授为兼职研究员，研究院教师积极参与学术服务工作，基本上都在国内外重要学术机构或社团担任顾问、委员、理事、正副秘书长、客座教授、兼职研究员或有公信力的学术刊物及出版机构的同行评议人等学术兼职，在研究上形成了稳定的学术方向。当中以冯天瑜教授的文化生成与中外文化交通研究、傅才武教授的中国文化制度研究、陈波教授的场景理论与公共文化空间研究、张薇教授的景观与园林规划研究、彭雷霆副教授的近代中日文化交流与文化供给均等化对策研究、陈庚副教授的戏剧产业及国内文艺院团发展研究、肖波副教授的博物馆与文化遗产研究、蔡武进副教授的文化法制研究、韩晗副教授的中国现代文化产业史与国家文化对外传播研究、钟晟博士的文化旅游规划研究、张凤华博士的文化消费的实证研究与寇垠特聘副研究员的公共文化服务研究等等，在国内外同行间有着的较大的影响力。</p><p style="text-indent: 2em;">研究院不但自主培养了一批立足学科前沿的中青年科研骨干，而且大力引进海内外文化研究领域的知名专家学者，高度重视国际学术交流与合作，与国内外各高校、学术机构联合举办各类学术会议、论坛数十次，并先后与美国芝加哥大学、加拿大维多利亚大学、荷兰阿姆斯特丹自由大学等国际知名高校建立了广泛、深入的合作关系。</p><p style="text-indent: 2em;">研究院以服务国家和社会文化建设需要、推动学科发展为宗旨，在公共文化及文化产业、文化旅游法制与规划、国家文化形象传播等研究领域居于全国前列。研究院从2009年开始建立完善了相对独立的“文化第一线”调查系统和国家文化和旅游政策实验基地观察系统。2016年以来历年均入选南京大学和光明日报社“中国智库索引”来源智库和中国社会科学院“TOP100智库”榜单。研究院先后承担国家社科基金重大项目、国家科技支持计划项目、国家重点研发计划项目与国家部委委托的国家级项目近200项，在《中国软科学》、《中国图书馆学报》等重要期刊发表高水平论文近200余篇，近40篇被《新华文摘》、《人大复印资料》等转载，并出版专著30余部，获国家相关机构采纳的政策建言有160余份，获省部级及以上科研成果奖励10余项。研究院同仁努力践行将论文写在祖国大地上的智库建设之宗旨。</p><p style="text-indent: 2em;">服务于国家和社会文化改革发展需要、推动文化产业学科建设和培育文化产业复合型人才——这是国家文化和旅游部、财政部和武汉大学设立国家文化发展研究院的初衷，也是研究院始终坚持的目标。研究院将以创业精神与创新理念，不断发展自身的同时，在人类命运共同体构建、国家文化形象的学术建构、国家文化和旅游行业改革发展与长江经济带建设等国家战略中主动担当、奋发有为，努力借助于部校共建的优势，立足于武汉大学百年名校积淀、文理工多学科互补等优势特色，继续全力打造跨学科、实体化、高层次的文化创新研究平台，助力于“双一流”大学建设宏伟蓝图，力争将来成为亚洲一流、国际领先、具有中国特色的新时代新型文化智库。</p></div><div><p style="text-indent: 0em; text-align: right;">（更新至2020年6月6日）</p></div></div></div>
+   
+   
+</div>
+    </div>
+  </div>
+</div>
+    
+      
+         
+        <div class="footer">
+            <div class="footerCont">
+                <div class="footerLeft">
+                    <a href="" class="footLogo"><img src="../dfiles/6150/whu_ggw/images/logo.png"></a>                    
+                </div>
+                <div class="frcont">
+                    <h2>联系我们</h2>
+                    <div class="linkBar">
+<p>电话：027-68761537</p>
+<p>地址：湖北省武汉市武昌区八一路299号</p></div>
+                </div>
+                <div class="frLink"><h2>友情链接</h2>
+
+<select name="flink" id="flink" onchange="window.open(this.options[this.selectedIndex].value)">
+
+<option value="https://www.mct.gov.cn/">中华人民共和国文化和旅游部</option>
+<option value="http://www.mof.gov.cn/index.htm">中华人民共和国财政部</option>
+<option value="http://www.ncha.gov.cn/">国家文物局</option>
+<option value="https://publish.cnki.net/whrl">文化软实力研究</option>
+<option value="http://ssroff.whu.edu.cn">武汉大学人文社会科学研究院</option>
+<option value="https://www.hbww.org.cn">湖北省博物馆</option>
+<option value="http://www.cssn.cn">中国社会科学网</option>
+
+</select></div>
+                <div class="scan">
+                   
+                   <div class="scanImg">
+                        <img src="../dfiles/6150/whu_ggw/images/ewm.jpg">
+                    </div>      
+                   
+                   
+                                   
+                </div>
+            </div>
+            <div class="copyRight"><p>
+    <a>Copyright © 2010~2024 武汉大学国家文化发展研究院 All Rights Reserved. &nbsp; 版权所有</a>
+</p></div>
+        </div>
+
+        
+        <div id="screen">
+            
+        </div>
+        
+ <script type="text/javascript" src="../dfiles/6150/whu_ggw/js/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="../dfiles/6150/whu_ggw/js/swiper.min.js"></script>
+    <script>
+        $('.searchCont span').click(function(){
+            $(this).siblings().slideToggle();
+        })
+        $('.nav li').hover(function(){
+            $(this).find('dl').stop().slideDown()
+        },function(){
+            $(this).find('dl').stop().slideUp();
+        })
+        var swiperBanner = new Swiper(".banner .mySwiper", {
+            pagination: {
+              el: ".banner .swiper-pagination",
+              clickable: true,
+              renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+              },
+            },
+            speed:800,
+            loop:true,
+            autoplay:true,
+        });
+        var newsSwiper = new Swiper(".newsSwiper .mySwiper", {
+            pagination: {
+              el: ".newsSwiper .swiper-pagination",
+              clickable: true,
+            },
+            speed:800,
+            loop:true,
+            autoplay:true,
+        });
+        
+        $('.menu').click(function(){
+            if($(this).hasClass('on')){
+                $(this).removeClass('on');
+                $('.nav').animate({left:'-110%'},500);
+                $('#screen').fadeOut();
+            }else{
+                $(this).addClass('on');
+                $('#screen').fadeIn();
+                $('.nav').animate({left:0},500);    
+            }   
+        })
+    </script>
+    
+    
+    
+    <script>
+    var doc = $(document);
+$(window).scroll(function () {
+  if (doc.scrollTop() >= 60) {
+    $(".header").addClass("header2");
+
+  } else {
+    $(".header2").removeClass("header2");
+
+  }
+});
+    </script>
+    
+  
+<script type="text/javascript">
+$(function(){
+    
+      //移动端内页导航
+    $("#bnt_sub_nav").click(function(){
+    $(this).toggleClass("on");
+        $("#sub_nav_content").slideToggle();
+      });
+
+    $("#sub_nav_content dt.title a").attr("href","javascript:void(0)");
+    $("#sub_nav_content dt.title_on").next("dd").show();
+    $("#sub_nav_content dt.title").click(function() {
+        if ($(this).hasClass("title_on")) {
+            $(this).next("dd").slideToggle();
+            $(this).removeClass("title_on");
+        } else {
+            $("#sub_nav_content dd").slideUp();
+            $("#sub_nav_content dt.title").removeClass("title_on").removeClass("on");
+            $(this).toggleClass("title_on");
+            $(this).next("dd").slideDown();
+        }
+    });  
+    $("#sub_nav_content ul li i").click(function(){
+        $(this).next("ul").slideToggle();
+        $(this).parents("#sub_nav_content ul li").siblings().find("ul").slideUp();
+    });
+    
+    if ($(".list_box00").length) {
+        $(".list_box00 li").each(function (i) {
+            $(this).css({ 'transition-delay': i * 200 + 200 + 'ms' });
+        });
+    }
+    
+})
+
+</script></div>
+
+
+<script> 
+
+    var swiper = new Swiper(".aboutScroll .mySwiper", {
+            autoplay:true,
+            loop:true,
+            navigation: {
+              nextEl: ".aboutScroll .swiper-button-next",
+              prevEl: ".aboutScroll .swiper-button-prev",
+            },
+          });
+
+  </script>
+  
+  <script>
+    $('.pub-close').click(function(){
+            $('.search-dialog-box').removeClass('on');
+        })
+        $('.search-btn').click(function(){
+            $('.search-dialog-box').addClass('on');
+        })
+        
+    </script>
+</body></html>

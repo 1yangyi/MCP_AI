@@ -1,0 +1,327 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>学院简介-上海大学医学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="上海大学医学院">
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/index.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307468475d53575742000200034554 -->
+<link rel="stylesheet" type="text/css" href="../jjy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1061,'/jjy.jsp',-1,1556105810)</script>
+</head>
+<body>
+<!--头部-->
+<div class="container" id="header">
+    <a href="#" class="middle"><img src="../img/shLogo.png"></a>
+    <a href="#" class="middle"><img src="../img/yxy.png"></a>
+    <div class="headerList">
+        <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><ul class="middle">
+		<li><a href="#">English</a></li>
+	<li><a href="http://mail.shu.edu.cn/">电子邮件</a></li>
+</ul>
+        <img src="../img/search.png" class="middle seek-kk">
+  
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script>
+<div id="divu1">
+    <div id="appu1"><div class="seek-div" style="border: 1px solid rgb(3, 115, 201); margin: 0px; font-family: 宋体; font-size: 12px;"><button class="seek-btn"></button> <input type="text" border="0" id="" value="" placeholder="请输入您要搜索的内容" autocomplete="off" class="seek-ipt"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError" class="seek-div" style="border:1px solid #0373c9;margin:0px;font-family:宋体;font-size:12px;" class="seek-div">
+            <button class="seek-btn" v-on:click="onSubmit()"></button>
+            <input type="text" type="image" border="0" id="" value="" style="cursor: hand" class="seek-ipt" placeholder="请输入您要搜索的内容" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+           
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1556105810";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://2022openlab.shu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+    </div>
+</div>
+<!--头部结束-->
+<!--导航-->
+<div id="nav" class="container-fulled">
+    <div class="borderLine">
+        <div class="container">
+            <ul class="clearfix nav">
+                    <li class="item"><a href="../index.htm">首页</a>
+                </li>              
+                <li class="item"><a href="xyjj1.htm">学院概况</a>
+                    <ul class="secondNav">
+                        <li><a href="xyjj1.htm">学院简介</a>
+                        </li>
+                        <li><a href="xyld.htm">学院领导</a>
+                        </li>
+                        <li><a href="xyyj.htm">学院愿景</a>
+                        </li>
+                    </ul>
+                </li>              
+                <li class="item"><a href="../szdw/ljrc.htm">师资队伍</a>
+                    <ul class="secondNav">
+                        <li><a href="../szdw/ljrc.htm">领军人才</a>
+                        </li>
+                        <li><a href="../szdw/jsdw.htm">教师队伍</a>
+                        </li>
+                    </ul>
+                </li>              
+                <li class="item"><a href="&lt;span style='color:red;font-size:9pt'&gt;转换链接错误&lt;/span&gt;">科学研究</a>
+                    <ul class="secondNav">
+                        <li><a href="../kxyj/kycg.htm">科研成果</a>
+                        </li>
+                        <li><a href="../kxyj/zcwj.htm">政策文件</a>
+                        </li>
+                    </ul>
+                </li>              
+                <li class="item"><a href="../rcpy/yjszs.htm">人才培养</a>
+                    <ul class="secondNav">
+                        <li><a href="../rcpy/yjszs.htm">研究生招生</a>
+                        </li>
+                        <li><a href="../rcpy/yjspy.htm">研究生培养</a>
+                        </li>
+                        <li><a href="../rcpy/zcwj.htm">政策文件</a>
+                        </li>
+                    </ul>
+                </li>              
+                <li class="item"><a href="../hzjl/gjhz.htm">合作交流</a>
+                    <ul class="secondNav">
+                        <li><a href="../hzjl/gnhz.htm">国内合作</a>
+                        </li>
+                        <li><a href="../hzjl/gjhz.htm">国际合作</a>
+                        </li>
+                        <li><a href="../hzjl/xsjl.htm">学术交流</a>
+                        </li>
+                    </ul>
+                </li>              
+                <li class="item"><a href="../dqgz/dzzt.htm">党群工作</a>
+                    <ul class="secondNav">
+                        <li><a href="../dqgz/dzzt.htm">党政专题</a>
+                        </li>
+                        <li><a href="../dqgz/gh.htm">工会</a>
+                        </li>
+                        <li><a href="../dqgz/qlh1.htm">青联会</a>
+                        </li>
+                    </ul>
+                </li>              
+                <li class="item"><a href="&lt;span style='color:red;font-size:9pt'&gt;转换链接错误&lt;/span&gt;">学生工作</a>
+                    <ul class="secondNav">
+                        <li><a href="../xsgz/xsdj.htm">学生党建</a>
+                        </li>
+                        <li><a href="../xsgz/xstw.htm">学生团委</a>
+                        </li>
+                        <li><a href="../xsgz/xssw.htm">学生事务</a>
+                        </li>
+                    </ul>
+                </li>              
+                <li class="item"><a href="../fsyy/fsyy.htm">附属医院</a>
+                    <ul class="secondNav">
+                        <li><a href="../fsyy/fsyy.htm">附属医院</a>
+                        </li>
+                        <li><a href="../fsyy/jxyy.htm">教学医院</a>
+                        </li>
+                    </ul>
+                </li>              
+                <li class="item"><a href="../rczp/zpxx1.htm">人才招聘</a>
+                    <ul class="secondNav">
+                        <li><a href="../rczp/zpxx1.htm">招聘信息</a>
+                        </li>
+                    </ul>
+                </li>              
+                <li class="item"><a href="../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1343">信息公开</a>
+                    <ul class="secondNav">
+                        <li><a href="../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1343">学院发文</a>
+                        </li>
+                        <li><a href="../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1373">会议纪要</a>
+                        </li>
+                    </ul>
+                </li>              
+</ul>
+        </div>
+    </div>
+</div>
+<!--导航结束-->
+<!--大图-->
+<div class="container-fulled" id="bigImg">
+    <img src="../img/secBigImg.png">
+</div>
+<!--大图结束-->
+<!--平台入口-->
+<div class="container-fulled" id="enter">
+    <div class="enterLeft" style="width: 128px;"></div>
+    <div class="enterBody container">
+        <img src="../img/enter.png" alt="">
+              
+   <a href="#">平台入口</a>
+
+    </div>
+    <div class="enterRight" style="width: 128px;"></div>
+</div>
+<!--平台入口结束-->
+<!--主体-->
+<div class="container clearfix" id="listBody">
+    <div class="leftList">
+        <div class="leftTitle">
+            <span>
+学院概况</span>
+        </div>
+        <ul class="leftUl">
+                <li><a href="xyjj1.htm"><span>1</span>学院简介</a>
+            </li>
+            <li><a href="xyld.htm"><span>2</span>学院领导</a>
+            </li>
+            <li><a href="xyyj.htm"><span>3</span>学院愿景</a>
+            </li>
+</ul>
+    </div>
+    <div class="rightList">
+        
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1556105810,'wbnews','u6')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta6(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta6('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1556105810,1095)</script>
+<p>
+    学院简介<br>
+    </p><div id="vsb_content_4_1095_u61"><div id="vsb_content_4"><p style="text-align: center; line-height: 1.75em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;"><strong><span style="font-size: 21px;">上海大学医学院简介</span></strong></span></p><p style="text-align: justify; line-height: 1.75em;"><span style="color: rgb(31, 73, 125);"></span></p><p style="text-align: justify; text-indent: 43px; background: white; line-height: 1.75em;"><span style="font-size: 21px;font-family: 仿宋_gb2312"></span></p><p style="text-indent: 32px; line-height: 1.75em; text-align: justify;"><span style="line-height: 150%; font-family: 仿宋_gb2312, fangsong_gb2312; font-size: 21px;">发展医学学科是几代上大人共同的梦想。早在“十五”规划期间，钱伟长老校长就提出要通过学科交叉发展医学。2015年，医学学科建设正式写入上海大学地方高水平大学建设方案，成为重点发展的六大学科之一。2019年，时任上海市委书记李强同志来上大调研时指出，上海大学要积极对接生命医药等领域，发挥好理科、工科等学科优势，强化应用研究和基础研究。2020年3月14日，上海大学医学院正式成立。</span></p><p style="text-align: justify; text-indent: 43px; background: white; line-height: 1.75em;"><span style="font-size: 21px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">【办学定位】</span></p><p style="text-align: justify; text-indent: 43px; background: white; line-height: 1.75em;"><span style="font-size: 21px;font-family: 仿宋_gb2312"></span></p><p style="text-indent: 32px; line-height: 1.75em; text-align: justify;"><span style="line-height: 150%; font-family: 仿宋_gb2312, fangsong_gb2312; font-size: 21px;">上海大学医学院依托上海大学学科门类齐全的优势，以“新医科”建设为契机，聚焦国家重大需求和城市重要使命，紧扣健康中国、海洋强国、积极应对人口老龄化，坚持服务国家战略、坚持国际化战略、坚持融合发展战略、坚持特色发展战略，聚焦药学、海洋医学、数字医学、老年健康学、超微创医学五大领域，开展“医理、医工、医文、医X”交叉学科支撑的新医科建设，以培养卓越创新医学人才、服务人民健康为使命，打造特色鲜明的国际化、融合式、创新型医学院为愿景，努力培养博学识、强研究、擅转化的复合型医学精英人才。</span></p><p style="text-align: justify; text-indent: 43px; background: white; line-height: 1.75em;"><span style="font-size: 21px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">【学科建设】</span></p><p style="text-align: justify; text-indent: 43px; background: white; line-height: 1.75em;"><span style="font-family: 仿宋_gb2312, fangsong_gb2312; font-size: 21px;">上海大学医学院拥有智能医学诊疗和新药物与新材料两个交叉学科博士学位授权点、药学一级学科硕士学术学位授权点和硕士专业学位授权点。</span></p><p style="text-align: justify; text-indent: 43px; background: white; line-height: 1.75em;"><span style="font-size: 21px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">【师资队伍】</span></p><p style="text-align: justify; text-indent: 43px; background: white; line-height: 1.75em;"><span style="font-size: 21px;font-family: 仿宋_gb2312"></span></p><p style="text-indent: 32px; line-height: 1.75em; text-align: justify;"><span style="line-height: 150%; font-family: 仿宋_gb2312, fangsong_gb2312; font-size: 21px;">上海大学医学院致力于打造一支国际化高水平师资队伍。目前，学院全职在岗教职员工73人，其中专业技术人员62人，专业技术人员中有一年以上海外留学背景的23人，副高以上专业技术职务35人（其中正高级专业技术职务15人），国家级人才5人，省部级人才12人。</span></p><p style="text-align: justify; text-indent: 43px; background: white; line-height: 1.75em;"><span style="font-size: 21px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">【科学研究】</span></p><p style="text-align: justify; text-indent: 43px; background: white; line-height: 1.75em;"><span style="font-size: 21px;font-family: 仿宋_gb2312"></span></p><p style="text-indent: 32px; line-height: 1.75em; text-align: justify;"><span style="line-height: 150%; font-family: 仿宋_gb2312, fangsong_gb2312; font-size: 21px;">上海大学医学院在医学及前沿交叉领域已形成若干有特色、有影响、有潜力的科研团队及研究方向，涉及人工智能与药物研发、中药及天然药物创新药物研发、多肽药物与材料研发、海洋生物活性分子的发现与研究、干细胞、组织与器官重建、合成生物学、肿瘤精准医学、抗原特异性T细胞免疫、发育与疾病表观遗传调控机制、智能诊疗等多个研究领域。获新药临床批件4项，新药转化签约金额累计2.08亿元。获批国家级项目50项，累计经费4680万元；获批省部级项目19项，累计经费487万元；横向科研合作经费近2400万元。学院教师先后在《SCIENCE》、《NATURE》《CELL》等国际顶尖杂志发表多篇学术论文。获批建设上海市海洋医学工程融合创新中心、上海中药外用制剂创新工程技术研究中心等多个省部级工程技术平台。</span></p><p style="text-align: justify; text-indent: 43px; background: white; line-height: 1.75em;"><span style="font-size: 21px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">【人才培养】</span></p><p style="text-align: justify; text-indent: 43px; background: white; line-height: 1.75em;"><span style="font-size: 21px;font-family: 仿宋_gb2312"></span></p><p style="text-indent: 32px; line-height: 1.75em; text-align: justify;"><span style="line-height: 150%; font-family: 仿宋_gb2312, fangsong_gb2312; font-size: 21px;">上海大学医学院现有专兼职博士生导师53人、硕士生导师284人。目前在校博士生96人，硕士生304人。自2020年至今已累计培养博士、硕士生555人。2023届、2024届毕业生毕业去向落实率分别为100%和98.94%。</span></p><p style="text-align: justify; text-indent: 43px; background: white; line-height: 1.75em;"><span style="font-size: 21px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">【国际合作】</span></p><p style="text-align: justify; text-indent: 43px; background: white; line-height: 1.75em;"><span style="font-size: 21px;font-family: 仿宋_gb2312"></span></p><p style="text-indent: 32px; line-height: 1.75em; text-align: justify;"><span style="line-height: 150%; font-family: 仿宋_gb2312, fangsong_gb2312; font-size: 21px;">上海大学积极探索推动国际化合作办学办医，通过与国内外高水平医学资源的深度对接促进上海大学医学学科发展。目前已与澳大利亚蒙纳士大学签订药学本科专业人才联合培养协议，与日本冈山大学、日本医科大学签署合作备忘录，与东京大学、顺天堂大学达成初步合作意向，围绕人才培养、科学研究、学术交流、医院建设等方面开展国际化合作。 </span></p><p style="text-indent: 32px; line-height: 1.75em; text-align: justify;"><span style="line-height: 150%; font-family: 仿宋_gb2312, fangsong_gb2312; font-size: 21px;">立足上海，放眼未来，上海大学医学院将在习近平新时代中国特色社会主义思想指引下，服务“健康中国”、“健康上海”战略，对接上海亚洲医学中心城市建设需求，助力上海大学早日建成世界一流、特色鲜明的综合性研究大学。</span></p><p style="text-indent: 32px; line-height: 1.75em; text-align: justify;"><span style="line-height: 150%; font-family: 仿宋_gb2312, fangsong_gb2312; font-size: 21px;">（数据截止2025年5月）</span></p><p style="text-align: justify; text-indent: 43px; background: white; line-height: 1.5em;"><span style="font-size:21px;font-family:仿宋_gb2312"></span><br></p><p><br></p><p><br></p></div></div>
+    <span id="vsb_content_4_1095_u6" name="vsb_content_4_1095_u6"></span><br><br>
+    
+<p></p>
+
+
+    </div>
+</div>
+<!--主体结束-->
+<!--足部-->
+<div id="footer" class="container-fulled">
+    <div class="container">
+        <ul class="link clearfix">
+            <li>友情链接</li>
+            <li>
+                <select onchange="window.open(this.options[this.selectedIndex].value)">           
+<option value="https://j.021east.com/p/1699097491042107" selected="selected">中日顶尖专家学者共话医学前沿热点，第二届中日高校医学学术论坛在沪举行</option>
+<option value="http://www.cnmedical-edu.com/">中国医学教育信息网</option>
+<option value="http://www.nmec.org.cn/">国家医学考试网</option>
+</select>
+            </li>
+            <li>
+                <select onchange="window.open(this.options[this.selectedIndex].value)">        
+<option value="http://www.moe.gov.cn/" selected="selected">教育部</option>
+<option value="http://www.nhc.gov.cn/">国家卫生健康委员会</option>
+<option value="https://www.cma.org.cn/">中华医学会</option>
+</select>
+            </li>
+            <li>
+                <select onchange="window.open(this.options[this.selectedIndex].value)">           
+<option value="http://edu.sh.gov.cn/" selected="selected">上海教育</option>
+<option value="http://wsjkw.sh.gov.cn/">上海市卫生健康委员会</option>
+<option value="https://www.shdc.org.cn/">上海申康医院发展中心</option>
+<option value="http://jyt.zj.gov.cn/">浙江省教育厅</option>
+<option value="http://jyt.jiangsu.gov.cn/">江苏省教育厅</option>
+</select>
+            </li>
+            <li>
+                <select onchange="window.open(this.options[this.selectedIndex].value)">           
+<option value="http://shmc.fudan.edu.cn/" selected="selected">复旦大学上海医学院</option>
+<option value="https://www.shsmu.edu.cn/">上海交通大学医学院</option>
+<option value="http://med.tongji.edu.cn/">同济大学医学院</option>
+<option value="http://www.shutcm.edu.cn/">上海中医药大学</option>
+<option value="https://www.sumhs.edu.cn/">上海健康医学院</option>
+</select>
+            </li>
+        </ul>
+    </div>
+    <div class="container copy">
+        <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>
+    &nbsp; &nbsp; &nbsp; 版权所有 ©<a href="http://www.shu.edu.cn/" style="white-space: normal;">&nbsp;上海大学</a>&nbsp;&nbsp;&nbsp;<a href="http://beian.miit.gov.cn/" style="white-space: normal;">沪ICP备09014157&nbsp;</a>&nbsp;&nbsp;<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31009102000049" style="white-space: normal; color: rgb(255, 255, 255);">沪公网安备31009102000049号</a>&nbsp;&nbsp;地址：上海市宝山区上大路99号&nbsp;&nbsp; &nbsp;邮编：200444 &nbsp;&nbsp;<a href="http://www.shu.edu.cn/dhcx.htm" style="white-space: normal;">电话查询&nbsp;</a><br style="white-space: normal;">&nbsp;技术支持：<a href="https://its.shu.edu.cn/" style="white-space: normal;">上海大学信息化工作办公室&nbsp;&nbsp;&nbsp;</a><a href="mailto:info@shu.edu.cn" style="white-space: normal;">联系我们&nbsp;</a>&nbsp;&nbsp;
+</p>
+    </div>
+</div>
+
+
+</body></html>

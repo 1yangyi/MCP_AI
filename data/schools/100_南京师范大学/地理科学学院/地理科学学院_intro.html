@@ -1,0 +1,660 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>南师大地理科学学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="南师大地理科学学院">
+<META Name="keywords" Content="南师大地理科学学院" />
+
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230776447525055574200030003475c -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1512271903)</script>
+</head>
+<body>
+
+
+<div class="top fl">
+    <div class="wid1200">
+        
+<a href="index.htm" class="logo fl"><img src="images/logo.png"></a>
+        <div style="width:86px; height:86px; background:#fff; float:right; margin:8px 36px 0 15px"><img src="images/gzh.jpg" width="86" height="86"></div>
+        <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{}
+    #appu1 .tj{}
+</style>
+<div id="divu1"></div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+            <input type="text" class="qwss search-input" placeholder="请输入关键词…" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj search-btn" name="submit_button" type="image" src="images/img3.png" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1512271903";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://223.2.9.5:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+        
+    </div>
+</div>
+<div class="menu-nav">
+    <div id="menu">    
+      <ul class="l1-nav">
+    <li class="l1-nav">  
+          <a class="l1-nav" href="index.htm">首页</a>
+      </li>
+    <li class="l1-nav">  
+          <a class="l1-nav" href="xygk.htm">学院概况</a>
+              <ul class="l2-nav"> 
+                       <li class="l2-nav"><a class="l2-nav" href="xygk/xyjs.htm">学院介绍</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="xygk/xrld.htm">现任领导</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="xygk/zzjg.htm">组织机构</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="xygk/lshg.htm">历史回顾</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="xygk/xyzs.htm">学院展示</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="xygk/lxwm.htm">联系我们</a></li>
+                </ul>
+      </li>
+    <li class="l1-nav">  
+          <a class="l1-nav" href="szdw1/jslb2.htm">师资队伍</a>
+              <ul class="l2-nav"> 
+                       <li class="l2-nav"><a class="l2-nav" href="szdw1/jslb2.htm">教师列表</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="szdw1/rcjh.htm">人才计划</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="szdw1/rych.htm">荣誉称号</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="szdw1/cxtd.htm">创新团队</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="szdw1/jsfjs.htm">教授副教授</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="szdw1/sssds.htm">硕士生导师</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="szdw1/bssds.htm">博士生导师</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="szdw1/xsxx.htm">学术先贤</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="szdw1/txjs.htm">退休教师</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="szdw1/bshml1.htm">博士后名录</a></li>
+                </ul>
+      </li>
+    <li class="l1-nav">  
+          <a class="l1-nav" href="rcpy.htm">人才培养</a>
+              <ul class="l2-nav"> 
+                       <li class="l2-nav"><a class="l2-nav" href="rcpy/bks.htm">本科生</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="rcpy/yjs.htm">研究生</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="rcpy/jxpt.htm">教学平台</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="rcpy/jxjy.htm">继续教育</a></li>
+                </ul>
+      </li>
+    <li class="l1-nav">  
+          <a class="l1-nav" href="xkky.htm">学科科研</a>
+              <ul class="l2-nav"> 
+                       <li class="l2-nav"><a class="l2-nav" href="xkky/xkgl.htm">学科概览</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="xkky/xkpt.htm">学科平台</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="xkky/kyjg.htm">科研机构</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="xkky/kycg.htm">科研成果</a></li>
+                </ul>
+      </li>
+    <li class="l1-nav">  
+          <a class="l1-nav" href="dwrs.htm">党务人事</a>
+              <ul class="l2-nav"> 
+                       <li class="l2-nav"><a class="l2-nav" href="dwrs/dwgz.htm">党委工作</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="dwrs/rsgz.htm">人事工作</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="dwrs/ghgz.htm">工会工作</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="dwrs/bsh.htm">博士后</a></li>
+                </ul>
+      </li>
+    <li class="l1-nav">  
+          <a class="l1-nav" href="xgw1/xgsy.htm">学生工作</a>
+      </li>
+    <li class="l1-nav">  
+          <a class="l1-nav" href="jwhz.htm">境外合作</a>
+              <ul class="l2-nav"> 
+                       <li class="l2-nav"><a class="l2-nav" href="jwhz/xsjl.htm">学术交流</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="jwhz/hwfx.htm">海外访学</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="jwhz/hzxm.htm">合作项目</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="jwhz/lxs.htm">留学生</a></li>
+                </ul>
+      </li>
+    <li class="l1-nav">  
+          <a class="l1-nav" href="xyjy1/xymd1.htm">校友家园</a>
+              <ul class="l2-nav"> 
+                       <li class="l2-nav"><a class="l2-nav" href="xyjy1/xymd1.htm">校友名单</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="xyjy1/xyfc.htm">校友风采</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="xyjy1/xyhd.htm">校友活动</a></li>
+                       <li class="l2-nav"><a class="l2-nav" href="xyjy1/xyzp.htm">照片集景</a></li>
+                </ul>
+      </li>
+    <li class="l1-nav">  
+          <a class="l1-nav" href="http://schools.njnu.edu.cn/geog/">English</a>
+      </li>
+</ul>    
+    </div> 
+</div>
+<div class="slideBox slideBox4">
+    <div class="hd">
+        <ul class="cleafix"><li></li><li></li><li></li><li></li></ul>
+    </div>
+    <div class="bd">
+            <script language="javascript" src="/system/resource/js/dynclicks.js"></script><ul>
+
+<li><img src="ban3.jpg" /></li>
+<li><img src="ban2.jpg" /></li>
+<li><img src="ban1.jpg" /></li>
+</ul>
+
+
+    </div>
+</div>
+<div class="home-con fl">
+    <div class="wid1200">
+        <div class="xyxw fl">
+            <div class="title1 fl">
+                <h3>学院新闻</h3>
+                <a href="xyxw.htm" class="more" style="float:right;">查看更多</a>
+            </div>
+            <div class="xyxw-con fl">
+                <div class="xyxw-left fl">
+                    <div class="yx-rotaion fl">
+                        <ul class="rotaion_list">
+
+
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script>
+ 
+   <li><a href="info/1056/8848.htm" target="_blank" title="南京师范大学与广东南方数码科技股份有限公司共建iData信创实训室暨软件捐赠和授牌仪式盛大举行"><img src="/__local/6/1E/7E/5C5F90A839919B69106789CDC73_8E902750_47675.jpg" alt="南京师范大学与广东南方数码科技股份有限公司共建iData信创实训室暨软件捐赠和授牌仪式盛大举行" width="455" height="325"></a></li>
+ 
+   <li><a href="info/1056/7128.htm" target="_blank" title="第二届克里福德几何代数与地理信息科学国际会议圆满举办"><img src="/__local/4/53/A3/1C218966B7E3CE158753AE20B72_D404152C_1C5A5E.png" alt="第二届克里福德几何代数与地理信息科学国际会议圆满举办" width="455" height="325"></a></li>
+ 
+   <li><a href="info/1056/7093.htm" target="_blank" title="国家重点研发计划政府间国际科技创新合作项目顺利完成赴日出访任务"><img src="/__local/A/9E/6E/A0F41348DB5FBEA822AF47EDECA_FE2C4130_1ED2C.jpg" alt="国家重点研发计划政府间国际科技创新合作项目顺利完成赴日出访任务" width="455" height="325"></a></li>
+ 
+   <li><a href="info/1056/7066.htm" target="_blank" title="江苏省中学地理信息技术实验学校成立暨中学地理GIS教学研讨会顺利召开"><img src="/__local/0/17/DD/BF971A743B714D611E666CB3F48_F807BA69_1F0199.png" alt="江苏省中学地理信息技术实验学校成立暨中学地理GIS教学研讨会顺利召开" width="455" height="325"></a></li>
+<script>_showDynClickBatch(['dynclicks_u4_8848','dynclicks_u4_7128','dynclicks_u4_7093','dynclicks_u4_7066'],[8848,7128,7093,7066],"wbnews", 1512271903)</script>
+</ul>
+                    </div>
+                   
+                </div>
+                <div class="xyxw-right fr">
+                    <ul>
+
+
+
+
+
+
+
+  
+   
+   <li>
+    <a href="info/1056/18658.htm" target="_blank" title="中国科学技术大学吴卫红教授应邀来我院进行学术讲座交流">
+        <div class="xyxw-date fl"><h3>28</h3><p>2025.10</p></div>
+        <div class="xyxw-txt fl">
+            中国科学技术大学吴卫红教授应邀来我院进行学术讲座交流
+        </div>
+    </a>
+</li>
+  
+   
+   <li class="margin0">
+    <a href="info/1056/18648.htm" target="_blank" title="加拿大阿尔伯塔大学张小川教授应邀来我院进行学术交流">
+        <div class="xyxw-date fl"><h3>27</h3><p>2025.10</p></div>
+        <div class="xyxw-txt fl">
+            加拿大阿尔伯塔大学张小川教授应邀来我院进行学术交流
+        </div>
+    </a>
+</li>
+  
+   
+   <li>
+    <a href="info/1056/18638.htm" target="_blank" title="AI赋能文脉挖掘，南师学子助力城墙申遗 我校学生团队以数智创新推动明城墙文化传播">
+        <div class="xyxw-date fl"><h3>27</h3><p>2025.10</p></div>
+        <div class="xyxw-txt fl">
+            AI赋能文脉挖掘，南师学子助力城墙申遗 我校学生团队以数智创新推动明城...
+        </div>
+    </a>
+</li>
+  
+   
+   <li class="margin0">
+    <a href="info/1056/18618.htm" target="_blank" title="北京师范大学杨宇教授应邀来我院旭旦讲堂开讲">
+        <div class="xyxw-date fl"><h3>25</h3><p>2025.10</p></div>
+        <div class="xyxw-txt fl">
+            北京师范大学杨宇教授应邀来我院旭旦讲堂开讲
+        </div>
+    </a>
+</li>
+  
+   
+   <li>
+    <a href="info/1056/18578.htm" target="_blank" title="美国地球物理联合会（AGU）代表团应邀来我院交流">
+        <div class="xyxw-date fl"><h3>21</h3><p>2025.10</p></div>
+        <div class="xyxw-txt fl">
+            美国地球物理联合会（AGU）代表团应邀来我院交流
+        </div>
+    </a>
+</li>
+  
+   
+   <li class="margin0">
+    <a href="info/1056/18568.htm" target="_blank" title="长三角地区科技考古学科发展暨“GIS+考古”双学位专业研讨会在我院召开">
+        <div class="xyxw-date fl"><h3>20</h3><p>2025.10</p></div>
+        <div class="xyxw-txt fl">
+            长三角地区科技考古学科发展暨“GIS+考古”双学位专业研讨会在我院召开
+        </div>
+    </a>
+</li>
+  
+   
+   <li>
+    <a href="info/1056/18538.htm" target="_blank" title="香港大学黄波教授应邀来我院作学术讲座">
+        <div class="xyxw-date fl"><h3>17</h3><p>2025.10</p></div>
+        <div class="xyxw-txt fl">
+            香港大学黄波教授应邀来我院作学术讲座
+        </div>
+    </a>
+</li>
+  
+   
+   <li class="margin0">
+    <a href="info/1056/18448.htm" target="_blank" title="“地理信息科学+考古学”双学士学位开班仪式隆重举行">
+        <div class="xyxw-date fl"><h3>13</h3><p>2025.10</p></div>
+        <div class="xyxw-txt fl">
+            “地理信息科学+考古学”双学士学位开班仪式隆重举行
+        </div>
+    </a>
+</li>
+<script>_showDynClickBatch(['dynclicks_u5_18658','dynclicks_u5_18648','dynclicks_u5_18638','dynclicks_u5_18618','dynclicks_u5_18578','dynclicks_u5_18568','dynclicks_u5_18538','dynclicks_u5_18448'],[18658,18648,18638,18618,18578,18568,18538,18448],"wbnews", 1512271903)</script>
+</ul>
+                </div>
+            </div>
+        </div>
+        <div class="wid100 fl">
+            <div class="home-left fl">
+                <div class="home-left1 fl">
+                    <div class="home-left-title fl">
+                        <ul>
+                            <li onmouseover="selectSwtich('',this,'bbb',0,'current')" href="javascript:void(0)" class="current"><a href="#">本科生公告</a></li>
+                            <li onmouseover="selectSwtich('',this,'bbb',1,'current')" href="javascript:void(0)"><a href="#">研究生公告</a></li>
+                            <li onmouseover="selectSwtich('',this,'bbb',2,'current')" href="javascript:void(0)"><a href="#">教师公告</a></li>
+                        </ul>
+                    </div>
+                    <div class="home-left-con fl">
+                        <div id="bbb0">
+                            <a href="tzgg/bksgg.htm" class="more1">查看更多</a>
+                            <ul>
+
+
+
+
+
+
+
+   
+   <li><a href="info/1057/16338.htm" target="_blank" title="关于2025年度江苏省土地学会科学技术奖推荐公示">关于2025年度江苏省土地学会科学技术奖推荐公示</a><i>2025-04-29</i></li>
+   
+   <li><a href="info/1057/16138.htm" target="_blank" title="南京师范大学地理科学学院同等学力申硕（2025年第一批次）报名通知">南京师范大学地理科学学院同等学力申硕（2025年第一批次）报...</a><i>2025-04-08</i></li>
+   
+   <li><a href="info/1236/12828.htm" target="_blank" title="地理科学学院举办一流课程建设教学沙龙">地理科学学院举办一流课程建设教学沙龙</a><i>2024-06-04</i></li>
+   
+   <li><a href="info/1236/12818.htm" target="_blank" title="地理科学学院举办新教师名师工作坊活动">地理科学学院举办新教师名师工作坊活动</a><i>2024-06-04</i></li>
+   
+   <li><a href="info/1057/11018.htm" target="_blank" title="第二届（2024年）“行远杯”全国地理实践技能越野赛决赛 暨周恩来纪念馆红图传承活动通知">第二届（2024年）“行远杯”全国地理实践技能越野赛决赛 暨周...</a><i>2024-04-22</i></li>
+   
+   <li><a href="info/1057/10988.htm" target="_blank" title="南京师范大学地理科学学院同等学力申硕（2024年第二批次）报名通知">南京师范大学地理科学学院同等学力申硕（2024年第二批次）报...</a><i>2024-04-17</i></li>
+   
+   <li><a href="info/1236/10698.htm" target="_blank" title="“锦绣江苏‘长三角可持续发展现状与未来’” 国际暑期学校项目">“锦绣江苏‘长三角可持续发展现状与未来’” 国际暑期学校项目</a><i>2024-04-07</i></li>
+   
+   <li><a href="info/1236/10678.htm" target="_blank" title="招生简章 Admission Guide">招生简章 Admission Guide</a><i>2024-04-07</i></li>
+<script>_showDynClickBatch(['dynclicks_u6_16338','dynclicks_u6_16138','dynclicks_u6_12828','dynclicks_u6_12818','dynclicks_u6_11018','dynclicks_u6_10988','dynclicks_u6_10698','dynclicks_u6_10678'],[16338,16138,12828,12818,11018,10988,10698,10678],"wbnews", 1512271903)</script>
+</ul>
+                        </div>
+                        <div id="bbb1" style="display:none;">
+                            <a href="tzgg/yjsgg.htm" class="more1">查看更多</a>
+                            <ul>
+
+
+
+
+
+
+
+   
+   <li><a href="info/1237/18418.htm" target="_blank" title="地理科学学院2026年接收推荐免试研究生名单公示">地理科学学院2026年接收推荐免试研究生名单公示</a><i>2025-10-10</i></li>
+   
+   <li><a href="info/1237/18078.htm" target="_blank" title="【研究生招生】地理科学学院2026年接收推荐免试攻读研究生复试录取办法">【研究生招生】地理科学学院2026年接收推荐免试攻读研究生复...</a><i>2025-09-09</i></li>
+   
+   <li><a href="info/1237/17218.htm" target="_blank" title="南京师范大学地理科学学院 2025年优秀本科生开放日公告">南京师范大学地理科学学院 2025年优秀本科生开放日公告</a><i>2025-06-23</i></li>
+   
+   <li><a href="info/1237/17138.htm" target="_blank" title="关于2026年硕士研究生招生考试初复试科目、参考书目调整的通知">关于2026年硕士研究生招生考试初复试科目、参考书目调整的通...</a><i>2025-06-17</i></li>
+   
+   <li><a href="info/1237/16958.htm" target="_blank" title="“气候系统预测与变化应对”全国重点实验室 2025年博士研究生招考综合成绩公示">“气候系统预测与变化应对”全国重点实验室 2025年博士研究生...</a><i>2025-06-06</i></li>
+   
+   <li><a href="info/1237/16918.htm" target="_blank" title="关于公示“气候系统预测与变化应对”全国重点实验室 2025年博士研究生招生材料初审通过名单的通知">关于公示“气候系统预测与变化应对”全国重点实验室 2025年博...</a><i>2025-06-03</i></li>
+   
+   <li><a href="info/1237/16638.htm" target="_blank" title="2025年“对口支援西部高校计划专项”博士研究生综合成绩公示">2025年“对口支援西部高校计划专项”博士研究生综合成绩公示</a><i>2025-05-20</i></li>
+   
+   <li><a href="info/1057/16338.htm" target="_blank" title="关于2025年度江苏省土地学会科学技术奖推荐公示">关于2025年度江苏省土地学会科学技术奖推荐公示</a><i>2025-04-29</i></li>
+<script>_showDynClickBatch(['dynclicks_u7_18418','dynclicks_u7_18078','dynclicks_u7_17218','dynclicks_u7_17138','dynclicks_u7_16958','dynclicks_u7_16918','dynclicks_u7_16638','dynclicks_u7_16338'],[18418,18078,17218,17138,16958,16918,16638,16338],"wbnews", 1512271903)</script>
+</ul>
+                        </div>
+                        <div id="bbb2" style="display:none;">
+                            <a href="tzgg/jsgg.htm" class="more1">查看更多</a>
+                            <ul>
+
+
+
+
+
+
+
+   
+   <li><a href="info/1057/16338.htm" target="_blank" title="关于2025年度江苏省土地学会科学技术奖推荐公示">关于2025年度江苏省土地学会科学技术奖推荐公示</a><i>2025-04-29</i></li>
+   
+   <li><a href="info/1057/16138.htm" target="_blank" title="南京师范大学地理科学学院同等学力申硕（2025年第一批次）报名通知">南京师范大学地理科学学院同等学力申硕（2025年第一批次）报...</a><i>2025-04-08</i></li>
+   
+   <li><a href="info/1057/11018.htm" target="_blank" title="第二届（2024年）“行远杯”全国地理实践技能越野赛决赛 暨周恩来纪念馆红图传承活动通知">第二届（2024年）“行远杯”全国地理实践技能越野赛决赛 暨周...</a><i>2024-04-22</i></li>
+   
+   <li><a href="info/1057/10988.htm" target="_blank" title="南京师范大学地理科学学院同等学力申硕（2024年第二批次）报名通知">南京师范大学地理科学学院同等学力申硕（2024年第二批次）报...</a><i>2024-04-17</i></li>
+   
+   <li><a href="info/1238/8818.htm" target="_blank" title="2023年协同创新中心成果统计">2023年协同创新中心成果统计</a><i>2023-11-27</i></li>
+   
+   <li><a href="info/1238/8048.htm" target="_blank" title="中国教育学会地理教学专业委员会2023年综合学术年会会议场地调整通知">中国教育学会地理教学专业委员会2023年综合学术年会会议场地...</a><i>2023-10-18</i></li>
+   
+   <li><a href="info/1057/7258.htm" target="_blank" title="关于召开中国教育学会地理教学专业委员会2023年综合学术年会的通知">关于召开中国教育学会地理教学专业委员会2023年综合学术年会...</a><i>2023-09-13</i></li>
+   
+   <li><a href="info/1057/7116.htm" target="_blank" title="南京师范大学地理科学学院同等学力申硕（2023年第一批次）报名通知">南京师范大学地理科学学院同等学力申硕（2023年第一批次）报...</a><i>2023-08-11</i></li>
+<script>_showDynClickBatch(['dynclicks_u8_16338','dynclicks_u8_16138','dynclicks_u8_11018','dynclicks_u8_10988','dynclicks_u8_8818','dynclicks_u8_8048','dynclicks_u8_7258','dynclicks_u8_7116'],[16338,16138,11018,10988,8818,8048,7258,7116],"wbnews", 1512271903)</script>
+</ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="home-left1 fl">
+                    <div class="home-left-title fl">
+                        <ul>
+                            <li onmouseover="selectSwtich('',this,'aaa',0,'current')" href="javascript:void(0)" class="current"><a href="#">学术活动</a></li>
+                            <li onmouseover="selectSwtich('',this,'aaa',1,'current')" href="javascript:void(0)"><a href="#">科研动态</a></li>
+                        </ul>
+                    </div>
+                    <div class="home-left-con fl">
+                        <div id="aaa0">
+                            <a href="xshd.htm" class="more1">查看更多</a>
+                            <ul>
+
+
+
+
+
+
+
+   
+   <li><a href="info/1058/5775.htm" target="_blank" title="南京师范大学信息公开BM审查单">南京师范大学信息公开BM审查单</a><i>2021-11-22</i></li>
+   
+   <li><a href="info/1058/4411.htm" target="_blank" title="学术报告：中国科学院南京地理与湖泊研究所研究员施坤、副研究员李未应邀来我校学术交流">学术报告：中国科学院南京地理与湖泊研究所研究员施坤、副研...</a><i>2020-11-09</i></li>
+   
+   <li><a href="info/1058/2258.htm" target="_blank" title="地科院学子在第一届全国大学生土地利用规划技能大赛中荣获二等奖">地科院学子在第一届全国大学生土地利用规划技能大赛中荣获二等奖</a><i>2018-06-19</i></li>
+   
+   <li><a href="info/1058/2148.htm" target="_blank" title="学术报告：New insights into the biology of aerobic methane-oxidizing bacteria">学术报告：New insights into the biology of aerobic methan...</a><i>2018-05-28</i></li>
+   
+   <li><a href="info/1058/1921.htm" target="_blank" title="​学术报告：黄河上游喇家遗址史前灾难的考古发现与多学科研究">​学术报告：黄河上游喇家遗址史前灾难的考古发现与多学科研究</a><i>2018-03-23</i></li>
+   
+   <li><a href="info/1058/1031.htm" target="_blank" title="​第六届全国大学生GIS应用技能大赛在南京师范大学成功举办">​第六届全国大学生GIS应用技能大赛在南京师范大学成功举办</a><i>2017-12-21</i></li>
+   
+   <li><a href="info/1058/1030.htm" target="_blank" title="​我院成功举办2017年全国高校青年教师GIS教学研修班">​我院成功举办2017年全国高校青年教师GIS教学研修班</a><i>2017-12-10</i></li>
+   
+   <li><a href="info/1058/1029.htm" target="_blank" title="​奥地利萨尔茨堡大学教授来我院交流讲学">​奥地利萨尔茨堡大学教授来我院交流讲学</a><i>2017-08-01</i></li>
+<script>_showDynClickBatch(['dynclicks_u9_5775','dynclicks_u9_4411','dynclicks_u9_2258','dynclicks_u9_2148','dynclicks_u9_1921','dynclicks_u9_1031','dynclicks_u9_1030','dynclicks_u9_1029'],[5775,4411,2258,2148,1921,1031,1030,1029],"wbnews", 1512271903)</script>
+</ul>
+                        </div>
+                        <div id="aaa1" style="display:none;">
+                            <a href="kydt.htm" class="more1">查看更多</a>
+                            <ul>
+
+
+
+
+
+
+
+   
+   <li><a href="info/1059/16888.htm" target="_blank" title="我院蔡祖聪教授团队在Nature Communications发文揭示覆盖可降解膜的土壤碳固存机制和气候反馈效应">我院蔡祖聪教授团队在Nature Communications发文揭示覆盖可降...</a><i>2025-06-02</i></li>
+   
+   <li><a href="info/1059/16608.htm" target="_blank" title="我院胡迪课题组在Nature子刊Humanit. soc. sci. commun.发表论文">我院胡迪课题组在Nature子刊Humanit. soc. sci. commun.发表...</a><i>2025-05-19</i></li>
+   
+   <li><a href="info/1059/16508.htm" target="_blank" title="我院黄新琦教授团队在《Advanced Science》上发表研究成果，取得农田植物-土壤系统中抗生素抗性基因方面的重要进展">我院黄新琦教授团队在《Advanced Science》上发表研究成果，...</a><i>2025-05-13</i></li>
+   
+   <li><a href="info/1059/16028.htm" target="_blank" title="我院陈旻教授课题组最新NCC: 全球屋顶光伏发电可能减缓全球变暖">我院陈旻教授课题组最新NCC: 全球屋顶光伏发电可能减缓全球变...</a><i>2025-03-27</i></li>
+   
+   <li><a href="info/1059/14368.htm" target="_blank" title="我院OpenGMS团队领衔国内外学者在Nature Geoscience上发文提出地球系统科学与AI协同发展方向">我院OpenGMS团队领衔国内外学者在Nature Geoscience上发文提...</a><i>2024-10-12</i></li>
+   
+   <li><a href="info/1059/11338.htm" target="_blank" title="我院邵庆丰教授成果在《Nature Communications》发表">我院邵庆丰教授成果在《Nature Communications》发表</a><i>2024-05-09</i></li>
+   
+   <li><a href="info/1059/9518.htm" target="_blank" title="刘健教授项目组成果在《中国科学: 地球科学》发表">刘健教授项目组成果在《中国科学: 地球科学》发表</a><i>2023-12-07</i></li>
+   
+   <li><a href="info/1059/9528.htm" target="_blank" title="我院程谊教授在Nature Food上再次发表全球氮素研究进展">我院程谊教授在Nature Food上再次发表全球氮素研究进展</a><i>2023-12-07</i></li>
+<script>_showDynClickBatch(['dynclicks_u10_16888','dynclicks_u10_16608','dynclicks_u10_16508','dynclicks_u10_16028','dynclicks_u10_14368','dynclicks_u10_11338','dynclicks_u10_9518','dynclicks_u10_9528'],[16888,16608,16508,16028,14368,11338,9518,9528],"wbnews", 1512271903)</script>
+</ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-right fr">
+                <div class="home-right1 fl">
+                    <h3>    <img src="images/img11.jpg" />
+</h3>
+                    <div class="home-right1-con fl">
+                        <ul>
+    
+    <li><a href="jxzy/ppzy.htm">品牌专业</a></li>
+
+    
+    <li><a href="jxzy/jpkc.htm">精品课程</a></li>
+
+    
+    <li><a href="jxzy/spgkk.htm">视频公开课</a></li>
+
+    
+    <li><a href="jxzy/jxtd.htm">教学团队</a></li>
+
+    
+    <li><a href="jxzy/jcjs.htm">教材建设</a></li>
+
+    
+    <li><a href="jxzy/sysfq1.htm">实验示范区</a></li>
+
+    
+    <li><a href="jxzy/dlknj/a2023.htm">地理看南京</a></li>
+
+    
+    <li><a href="https://geos4s.moodlecloud.com/" style="width:auto;">GeoS4S国际合作课程</a></li>
+</ul>
+                    </div>
+                </div>
+                <div class="home-right1 fl">
+                    <h3>    <img src="images/img12.jpg" />
+</h3>
+                    <div class="home-right1-con fl">
+                        <ul>    <li><a href="xkpt/bkzy.htm" title="本科专业">本科专业</a></li>
+ 
+    <li><a href="xkpt/xwd.htm" title="学位点">学位点</a></li>
+ 
+    <li><a href="xkpt/bshldz.htm" title="博士后流动站">博士后流动站</a></li>
+ 
+    <li><a href="xkpt/zdxk.htm" title="重点学科">重点学科</a></li>
+ 
+    <li><a href="xkpt/sypt.htm" title="实验平台">实验平台</a></li>
+ 
+    <li><a href="xkpt/jxpt.htm" title="教学平台">教学平台</a></li>
+ 
+</ul>
+                    </div>
+                </div>
+                <div class="home-right3 fl">
+                    <ul>    
+<li>
+    <a href="xdjt.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1512271903, 45579)" target="_blank"><img src="images/img13.jpg" /></a>
+    </li>
+<li>
+    <a href="xzzq.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1512271903, 45580)" target="_blank"><img src="images/img14.jpg" /></a>
+    </li>
+<li>
+    <a href="xgw1/xgsy.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1512271903, 45581)" target="_blank"><img src="images/img15.jpg" /></a>
+    </li>
+
+
+
+
+
+
+
+
+
+
+</ul>
+                </div>
+            </div>
+        </div>
+        <div class="link fl">
+            <h3>友情链接</h3>
+            <div class="link-list fl">
+                <ul><script language="javascript" src="/system/resource/js/openlink.js"></script>    <LI><a href="http://www.moe.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1512271903, 53312)">中华人民共和国教育部</a></li>
+    <LI><a href="http://lab-dky.nnu.edu.cn/Userlogin/login.html" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1512271903, 53313)">地理科学国家实验教学示范中心</a></li>
+    <LI><a href="http://nnu.geodata.cn" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1512271903, 53314)">长江三角洲科学数据中心</a></li>
+    <LI><a href="http://www.cas.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1512271903, 53315)">中国科学院</a></li>
+    <LI><a href="http://vgekl.njnu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1512271903, 53316)">虚拟地理环境教育部重点实验室</a></li>
+    <LI><a href="http://js2011gis.njnu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1512271903, 53317)">江苏省地理信息资源开发与利用协同创新中心</a></li>
+    <LI><a href="http://lab-dky.nnu.edu.cn/nsddlhj/login.html" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1512271903, 53318)">地理环境国家级虚拟仿真实验教学中心</a></li>
+    <LI><a href="http://jslybw.jstour.com:8000/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1512271903, 79930)">江苏省文化和旅游标准化</a></li>
+    <LI><a href="http://lab-dky.nnu.edu.cn/gxptwz/login.html" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1512271903, 90378)">地理环境虚拟仿真实验教学共享平台</a></li>
+</ul>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="foot fl"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>南京师范大学地理科学学院，南京市仙林大学城文苑路1号<br />邮编：210023 Tel: 86-25-85891347 &nbsp; Fax: 86-25-85891742<br />Add: School of Geography, NanJing Normal University, &nbsp;No.1,Wenyuan Road，Xianlin University District，Nanjing,China</p></div>
+
+<script type="text/javascript" src="js/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.js"></script>
+<script type="text/javascript" src="js/index1.js"></script>
+ <script type="text/javascript" src="js/jquery.yx_rotaion.js"></script>
+                    <script type="text/javascript">
+                    $(document).ready(function(){
+                        $(".yx-rotaion").yx_rotaion({auto:true});
+                    });
+                    </script>
+
+   <script type="text/javascript">
+$.browser = {};
+(function () {
+    $.browser.msie = false;
+    $.browser.version = 0;
+})();
+    </script>
+</body>
+</html>
+<script type="text/javascript">
+function selectSwtich(parentNodeID,selfObj,showContentPrefix,showContentIndex,showClassName)
+{
+    var tag;
+    if(parentNodeID=="")
+    {
+        tag =selfObj.parentNode.getElementsByTagName("li");
+    }
+    else
+    {
+         tag = document.getElementById(parentNodeID).getElementsByTagName("li");
+    }
+    var taglength = tag.length;
+    for(i=0; i<taglength; i++){
+        tag[i].className = "";
+        if(document.getElementById(showContentPrefix+i) != null && document.getElementById(showContentPrefix+i) != undefined) {
+            document.getElementById(showContentPrefix+i).style.display="none";
+        }
+    }
+    selfObj.className = showClassName;
+    document.getElementById(showContentPrefix+showContentIndex).style.display = "block";
+    
+}
+</script>

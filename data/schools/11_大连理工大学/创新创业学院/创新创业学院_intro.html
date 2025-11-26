@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><title>学院简介-大连理工大学创新创业学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="大连理工大学创新创业学院">
+
+
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="IE=EmulateIE8" http-equiv="X-UA-Compatible">
+
+<meta name="description" content="">
+<meta name="generator" content="">
+<meta name="copyright" content="大连理工大学创新创业学院">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow"><link rel="stylesheet" type="text/css" href="../css/global.css">
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307973475c50555742000300034056 -->
+<link rel="stylesheet" type="text/css" href="../tydy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1023,'/tydy.jsp',-1,1371679421)</script>
+</head>
+<body>
+<div class="bg01">
+<div class="wrapper">
+<div class="fl"><a hidefocus="" href="#" style="hide-focus: true"><img alt="" src="../images/logo.jpg"></a></div>
+<div class="fr index_topr"><span><a hidefocus="" href="http://chuangxin.dlut.edu.cn/" style="hide-focus: true">中文版</a><a hidefocus="" href="../English.htm" target="_blank" style="hide-focus: true">English</a><a hidefocus="" href="http://cxcy.dlut.edu.cn/" target="_blank" style="hide-focus: true">返回旧版</a></span> 
+<div class="index_search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script>
+<div id="divu0">
+    <div id="appu0"><div><table border="0" cellspacing="1" cellpadding="0"><tbody><tr><td><input size="12" name="INTEXT" class="input" style="height: 22px;"></td> <td align="absmiddle" nowrap="nowrap" height="1"><input type="submit" name="FindButton" value=" " class="btn"></td></tr></tbody></table></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <table border="0" cellspacing="1" cellpadding="0">
+      <tbody><tr>
+          <td>
+                
+                
+                <input size="12" name="INTEXT" style="height:22px" v-model=query.keyWord @keyup.enter="onSubmit" class="input">
+           </td>
+           <td align="absmiddle" nowrap="nowrap" height="1">
+                    <input type="submit" name="FindButton"  v-on:click="onSubmit()" class="btn" value=" ">
+
+           </td>
+      </tr>
+ </tbody></table>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1371679421";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+<div class="cb"></div></div></div>
+<div class="cb"></div></div></div>
+<div class="bg02">
+<div class="navBar"><ul class="nav clearfix">
+<li class="m on">
+<h3><a hidefocus="" href="../index.htm" style="hide-focus: true">网站首页</a></h3></li>
+<li class="m">
+<h3><a hidefocus="" href="xyjj.htm" style="hide-focus: true">学院概况</a></h3></li>
+<li class="m">
+<h3><a hidefocus="" href="../cxjy/jygk.htm" style="hide-focus: true">创新教育</a></h3></li>
+<li class="m">
+<h3><a hidefocus="" href="../cyjy/jygk.htm" style="hide-focus: true">创业教育</a></h3></li>
+<li class="m">
+<h3><a hidefocus="" href="../jxcg/gzzd.htm" style="hide-focus: true">教学成果</a></h3></li>
+<li class="m">
+<h3><a hidefocus="" href="../jxzy/jxzy.htm" style="hide-focus: true">教学资源</a></h3></li>
+<li class="m">
+<h3><a hidefocus="" href="../gjjl/gjjl.htm" style="hide-focus: true">国际交流</a></h3></li>
+<li class="m">
+<h3><a hidefocus="" href="../rczp/rczp.htm" style="hide-focus: true">人才招聘</a></h3></li>
+<li class="m">
+<h3><a hidefocus="" href="../zczn/zczn.htm" style="hide-focus: true">政策指南</a></h3></li>
+<li class="m">
+<h3><a hidefocus="" href="../wjxz1.htm" style="hide-focus: true">文件下载</a></h3></li></ul>
+<ul class="subNav">
+<li></li>
+<li style="padding-left: 60px; display: none;">
+<a hidefocus="" href="xyjj.htm" style="hide-focus: true">学院简介</a>
+<a hidefocus="" href="xrld.htm" style="hide-focus: true">现任领导</a>
+<a hidefocus="" href="lsyg.htm" style="hide-focus: true">历史沿革</a>
+<a hidefocus="" href="zzjg.htm" style="hide-focus: true">组织机构</a>
+<a hidefocus="" href="../szdui_wu/azcpl.htm" style="hide-focus: true">教师队伍</a>
+<a hidefocus="" href="lxfs.htm" style="hide-focus: true">联系方式</a>
+
+<a hidefocus="" href="fwzn.htm" style="hide-focus: true">服务指南</a> </li>
+
+
+
+<li style="padding-left: 80px; display: none;">
+<a hidefocus="" href="../cxjy/jygk.htm" style="hide-focus: true">教育概况</a>
+<a hidefocus="" href="../cxjy/kcjc.htm" style="hide-focus: true">课程教材</a>
+<a hidefocus="" href="../cxjy/jxcg.htm" style="hide-focus: true">教学成果</a>
+<a hidefocus="" href="../cxjy/jxzy.htm" style="hide-focus: true">教学资源</a></li>
+
+
+<li style="padding-left: 80px; display: none;">
+<a hidefocus="" href="../cyjy/jygk.htm" style="hide-focus: true">教育概况</a>
+<a hidefocus="" href="../cyjy/kcjc.htm" style="hide-focus: true">课程教材</a>
+<a hidefocus="" href="../cyjy/jxcg.htm" style="hide-focus: true">教学成果</a>
+<a hidefocus="" href="../cyjy/jxzy.htm" style="hide-focus: true">教学资源</a></li>
+
+
+<li style="padding-left: 5px; display: none;">
+<a hidefocus="" href="../jxcg/gzzd.htm" style="hide-focus: true">规章制度</a>
+<a hidefocus="" href="../jxcg/pyjh.htm" style="hide-focus: true">培养计划</a>
+<a hidefocus="" href="../jxcg/jgxm.htm" style="hide-focus: true">教改项目</a>
+<a hidefocus="" href="../jxcg/jsry.htm" style="hide-focus: true">教师荣誉</a>
+<a hidefocus="" href="../jxcg/kjjs.htm" style="hide-focus: true">科技竞赛</a>
+<a hidefocus="" href="../jxcg/dcjh.htm" style="hide-focus: true">大创计划</a>
+<a hidefocus="" href="../jxcg/xslw.htm" style="hide-focus: true">学生论文</a>
+<a hidefocus="" href="../jxcg/xszl.htm" style="hide-focus: true">学生专利</a>
+<a hidefocus="" href="../jxcg/shyx.htm" style="hide-focus: true">社会影响</a></li>
+
+
+<li style="display: none;"></li>
+
+
+<li style="display: none;"></li>
+
+
+<li style="display: none;"></li>
+
+
+<li style="display: none;"></li>
+
+
+<li style="padding-left: 550px; display: none;">
+
+<a hidefocus="" href="../wjxz1/xywj.htm" style="hide-focus: true">学院文件</a>
+<a hidefocus="" href="../wjxz1/cyxz.htm" style="hide-focus: true">常用下载</a>
+<a hidefocus="" href="../wjxz1/jxzy.htm" style="hide-focus: true">教学资源</a>
+<a hidefocus="" href="../wjxz1/qtzy.htm" style="hide-focus: true">其他资源</a></li>
+
+
+</ul></div></div>
+<div class="bg04">
+<div class="wrapper01">
+<div class="ny_banner" style="background: url(../images/ny_banner.jpg) no-repeat">
+
+
+</div>
+
+
+<div class="ny_left fl">
+
+<div class=" menu_title" align="center">
+学院概况</div><br>
+
+<ul>
+            <li style="font-size:11px;"><a href="xyjj.htm" title="学院简介">学院简介</a></li>
+        <li style="font-size:11px;"><a href="xrld.htm" title="现任领导">现任领导</a></li>
+        <li style="font-size:11px;"><a href="lsyg.htm" title="历史沿革">历史沿革</a></li>
+        <li style="font-size:11px;"><a href="zzjg.htm" title="组织结构">组织结构</a></li>
+        <li style="font-size:11px;"><a href="lxfs.htm" title="联系方式">联系方式</a></li>
+        <li style="font-size:11px;"><a href="fwzn.htm" title="服务指南">服务指南</a></li>
+</ul></div>
+<div class="ny_right fr">
+<div class="pos"><div>
+    当前位置: 
+                        <a href="../index.htm">首页</a>
+                &gt;&gt;
+                学院概况
+                &gt;&gt;
+                <a href="xyjj.htm">学院简介</a>
+</div></div>
+<div class="con">
+
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1371679421,'wbnews','u5')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta5(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta5('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1371679421,3825)</script>
+<div style="font-size:14px;">
+
+    <div id="vsb_content_2_3825_u51"><div id="vsb_content_2"><p class="vsbcontent_start">创新创业学院是我校高素质创新创业人才培养基地。学院基于“创意、创新、创业”融合的教育理念，建设四个平台，探索“创意激发、创新创业训练、创新创业实践、创业孵化”全链条创新创业教育新模式。</p><p>“兴趣+”创意激发平台旨在激发学生创新创业兴趣，以工社活动为载体，定期开展创新创业主题沙龙等活动，通过头脑风暴激发学生创新思维碰撞，唤醒学生好奇心，形成全校创新创业良好氛围，促进创新人才成长。</p><p>“课程+”能力训练平台已逐步形成了全面完整的创新创业教育课程体系，其中包括5门面向全体本科生的创新创业通识基础必修课程，30门面向有创新创业兴趣学生的个性化选修课程，100门创新创业实践课程，100门创新创业与专业融合的专业示范课程。</p><p>“项目+”创客教育平台通过建立工作坊，以项目为导向，倡导“做中学、学中思、思中创”，鼓励学生将奇思妙想转化为现实作品。</p><p>“产品+”创业孵化平台以π空间为载体，以产品为导向，建设产品孵化基地，邀请校外导师、企业家提供可行性意见和建议，帮助学生变作品为产品。</p><p>★全国首批创新创业典型经验高校</p><p>★全国首批深化创新创业教育改革示范高校</p><p>★全国首批高校实践育人创新创业基地</p><p>★国家备案众创空间</p><p>★国家级创新创业人才培养模式创新实验区两个</p><p>★全国青年教育基地</p><p>★创新育人模式获得国家级教学成果一等奖三项</p><p>★国家级创新创业类教学团队</p><p>★国家（省）级创新创业资源共享课五门</p><p>★辽宁省大学生创新创业教育基地</p><p>★辽宁省创新项目选育基地</p><p>★辽宁省创新孵化示范基地</p><p>★辽宁省大学生创业园区</p><p>★省级实验教学示范中心</p><p>★省级创新创业教育基地</p><p class="vsbcontent_end">学院学生在各类科技竞赛中也取得优异成绩，每年有300余项学生成果获得国家（国际）级奖励，每年有2000余人获得省级以上奖励。在“互联网+”“挑战杯”、电子设计、智能汽车、数学建模、ACM-ICPC等高水平的竞赛中成绩位居前列。近年来，学生获得专利2000余项，发表论文数百篇，学生创业团队获得多项天使投资，取得了良好的社会效益和经济效益。</p></div></div>
+    <span id="vsb_content_2_3825_u5" name="vsb_content_2_3825_u5"></span><br><br>
+    
+
+</div>
+
+</div></div>
+<div class="cb"></div></div></div>
+<div class="bg01 border_b">
+<div class="wrapper">
+<table class="footer" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td width="34%" align="right"><img alt="" src="../images/s_logo.jpg"></td>
+<td width="66%"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>电话：+86-411-84708599 邮件：kjjs@dlut.edu.cn<br>地址：中国·辽宁省大连市甘井子区凌工路2号 邮编：116024<br>版权所有：大连理工大学创新创业学院</p></td></tr></tbody></table></div></div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jsd.js"></script>
+<script type="text/javascript" src="../js/jquery.SuperSlide.js"></script>
+<script type="text/javascript">
+
+        // 其实这种导航效果相当于Tab切换，用titCell和mainCell 处理
+        jQuery(".navBar").slide({ 
+                titCell:".nav .m", // 鼠标触发对象
+                mainCell:".subNav", // 切换对象包裹层
+                delayTime:0, // 效果时间
+                triggerTime:0, //鼠标延迟触发时间
+                returnDefault:true  //返回默认状态
+            });
+    </script>
+</body></html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>学院简介-历史学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+
+
+<meta name="SiteName" content="历史学院">
+<meta name="SiteDomain" content="history.whu.edu.cn">
+<meta name="ColumnName" content="学院简介">
+<meta name="ColumnKeywords" content="学院简介">
+
+    <link rel="stylesheet" href="../css/common.css">
+    <script src="../js/jquery.min.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../cont_about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1012,'/cont_about.jsp',-1,1601537463)</script>
+</head>
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="menu-btn"><span></span><span></span><span></span></div>
+        <div class="w1200">
+            
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a class="logo wow fadeInLeft" href="../index.htm"><img src="../images/LOGO.png" width="320" height="240" border="0" alt="../images/LOGO.png" title="../images/LOGO.png"></a>
+            
+            
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+
+    #appu1 .qwss{
+        width: 100%;
+    height: 100%;
+    padding: 0 30px 0 15px;
+    background-color: transparent;
+    font-size: 12px;}
+    #appu1 .tj{
+        position: absolute;
+    right: 5px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: url(../images/icon_search.png) center no-repeat;
+    background-size: 60% 60%;}
+</style>
+<div id="divu1">
+    <div id="appu1" class="search-wrap"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="qwss"> <input name="submit_button" type="button" value="" class="tj"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1" class="search-wrap">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1601537463";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>            
+            
+            <div class="title">
+                <img class="wow fadeInUp" src="../images/header_title.png" alt="">
+            </div>
+            <div class="nav-box">
+                <ul class="nav wow fadeInUp">
+        <li class="on"><a href="../index.htm">首页</a></li>
+    
+    
+    <li class="on">
+            <span class="more-btn">+</span>
+        <a href="../xygk.htm">学院概况</a>
+        <ul class="nav-2nd">
+            <li><a href="xyjj.htm">学院简介</a></li>
+            <li><a href="lsyg.htm">历史沿革</a></li>
+            <li><a href="jgsz.htm">机构设置</a></li>
+            <li><a href="xyld.htm">学院领导</a></li>
+        </ul>
+    </li>
+    
+    <li>
+            <span class="more-btn">+</span>
+        <a href="../szdw.htm">师资队伍</a>
+        <ul class="nav-2nd">
+            <li><a href="../szdw/zgjs.htm">在岗教师</a></li>
+            <li><a href="../szdw/rxjs.htm">荣休教师</a></li>
+        </ul>
+    </li>
+    
+    <li>
+            <span class="more-btn">+</span>
+        <a href="../rcpy.htm">人才培养</a>
+        <ul class="nav-2nd">
+            <li><a href="../rcpy/bkspy.htm">本科生培养</a></li>
+            <li><a href="../rcpy/yjspy.htm">研究生培养</a></li>
+            <li><a href="../rcpy/jxyj.htm">教学研究</a></li>
+        </ul>
+    </li>
+    
+    <li>
+            <span class="more-btn">+</span>
+        <a href="../kxyj1/kyxm.htm">科学研究</a>
+        <ul class="nav-2nd">
+            <li><a href="../kxyj1/kyjg.htm">科研机构</a></li>
+            <li><a href="../kxyj1/kyxm.htm">科研项目</a></li>
+            <li><a href="../kxyj1/kycg.htm">科研成果</a></li>
+            <li><a href="../kxyj1/xsjk.htm">学术集刊</a></li>
+            <li><a href="../kxyj1/kyhj.htm">科研获奖</a></li>
+        </ul>
+    </li>
+    
+    <li>
+        <a href="../gjjl.htm">国际交流</a>
+    </li>
+    
+    <li>
+        <a href="../shfw.htm">社会服务</a>
+    </li>
+    
+    <li>
+            <span class="more-btn">+</span>
+        <a href="../dqgz.htm">党群工作</a>
+        <ul class="nav-2nd">
+            <li><a href="../dqgz/djgz.htm">党建工作</a></li>
+            <li><a href="../dqgz/ghgz.htm">工会工作</a></li>
+            <li><a href="../dqgz/gqtgz.htm">共青团工作</a></li>
+            <li><a href="../dqgz/tzgz.htm">统战工作</a></li>
+            <li><a href="../dqgz/ltxgz.htm">离退休工作</a></li>
+        </ul>
+    </li>
+    
+    <li>
+            <span class="more-btn">+</span>
+        <a href="../xsyd.htm">学生园地</a>
+        <ul class="nav-2nd">
+            <li><a href="../xsyd/xssw1.htm">学生事务</a></li>
+            <li><a href="../xsyd/xshd.htm">学生活动</a></li>
+            <li><a href="../xsyd/xsjy.htm">学生就业</a></li>
+            <li><a href="../xsyd/xskw.htm">学生刊物</a></li>
+            <li><a href="../xsyd/tsxm.htm">特色项目</a></li>
+        </ul>
+    </li>
+    
+    <li>
+            <span class="more-btn">+</span>
+        <a href="../xyzj.htm">校友之家</a>
+        <ul class="nav-2nd">
+            <li><a href="../xyzj/xydt.htm">校友动态</a></li>
+            <li><a href="../xyzj/xyml.htm">校友名录</a></li>
+            <li><a href="../xyzj/xyjj.htm">校友基金</a></li>
+        </ul>
+    </li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    <!-- header end -->
+    <script>
+        //导航
+        var windowWidth = $(window).width();  //注：该值为不包含自定义右侧滚动条时的宽度
+        if(windowWidth > 1024){
+            //PC端
+            //二级显示&隐藏
+            $(".nav li").hover(
+                function(){
+                    $(this).children('.nav-2nd').stop(true,true).slideDown('fast');
+            },
+                function(){
+                    $(this).children('.nav-2nd').stop(true,true).slideUp('fast');
+                }
+            )
+        }else{
+            //移动端
+            //二级显示&隐藏
+            $(".nav li").click(function(){
+                var this2nd = $(this).children('.nav-2nd');
+                var this2ndStat = this2nd.css('display');
+                if(this2ndStat == 'none'){
+                    $(this).addClass('on').siblings().removeClass('on').children('.nav-2nd').slideUp();
+                    this2nd.slideDown();
+                }else{
+                    $(this).removeClass('on');
+                    this2nd.slideUp();
+                }
+            })
+        }
+
+        //点击'菜单'按钮，显示移动端导航
+        $(".menu-btn").click(function(){
+            var navStat = $(".nav-box").css('display');
+            if(navStat == 'none'){
+                $(".nav-box").slideDown();
+                $(this).addClass('close');
+            }else{
+                $(".nav-box").slideUp();
+                $(this).removeClass('close');
+            }
+        })
+    </script>
+
+    <!-- 内页 -->
+    <div class="inpage-content w1200 clearfix">
+        <div class="con-l">
+            <div class="nav-vertical-box">
+                <div class="title">
+                    <div class="cn">
+学院概况</div>
+                    <div class="en">/profile</div>
+                </div>
+                <ul class="nav-1st">
+    <li class="on">
+        <a href="xyjj.htm">学院简介</a>
+    </li>
+    <li>
+        <a href="lsyg.htm">历史沿革</a>
+    </li>
+    <li>
+        <a href="jgsz.htm">机构设置</a>
+    </li>
+    <li>
+        <a href="xyld.htm">学院领导</a>
+    </li>
+</ul>
+<script>
+    //菜单栏
+    //1.点击一级标题，展开二级
+    $('.nav-vertical-box .nav-2nd > li > .tit .fold-btn').on('click',function(){
+        var li = $(this).parent().parent();
+        var nav_3rd = li.find('.nav-3rd');
+        var nav_3rd_display = nav_3rd.css('display');
+        if(nav_3rd_display === 'none'){
+            nav_3rd.slideDown(200);
+            li.addClass('open');
+        }else{
+            nav_3rd.slideUp(200);
+            li.removeClass('open');
+        }
+    })
+</script>
+            </div>
+            <div class="fast-news-box">
+                <div class="title">
+                    <div class="cn">学院快讯</div>
+                    <div class="en">/News</div>
+                    <a class="more" href="../index/xykx.htm">更多&gt;&gt;</a>
+                </div>
+                <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><ul class="list">
+    <li>
+        <a href="https://www.ccdi.gov.cn/yaowenn/202510/t20251017_453235_m.html">
+            <div class="num">1.</div>
+            <div class="tit">盘龙城联通江河——访武汉...</div>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.cssn.cn/dfpd/gdjzz/hbjzz/202510/t20251015_5918980.shtml">
+            <div class="num">2.</div>
+            <div class="tit">【中国社会科学网】校企合...</div>
+        </a>
+    </li>
+    <li>
+        <a href="../info/1051/33661.htm">
+            <div class="num">3.</div>
+            <div class="tit">人才培养丨历史学院召开本...</div>
+        </a>
+    </li>
+    <li>
+        <a href="../info/1051/33641.htm">
+            <div class="num">4.</div>
+            <div class="tit">讲座纪要丨西南大学邓云清...</div>
+        </a>
+    </li>
+    <li>
+        <a href="https://app.gmdaily.cn/as/opened/n/9f4a630576bd4f71b30c839782702401">
+            <div class="num">5.</div>
+            <div class="tit">【光明日报】专家工作站走...</div>
+        </a>
+    </li>
+</ul><script>_showDynClickBatch(['dynclicks_u6_33691','dynclicks_u6_33681','dynclicks_u6_33661','dynclicks_u6_33641','dynclicks_u6_33551'],[33691,33681,33661,33641,33551],"wbnews", 1601537463)</script>
+
+            </div>
+        </div>
+        <div class="con-r">
+            <div class="inpage-top-title">
+                <div class="name">
+学院简介</div>
+                <div class="bread">
+<span>当前位置：</span>
+                        <a href="../index.htm">首页</a>
+                &gt;
+                <a href="../xygk.htm">学院概况</a>
+                &gt;
+                <a class="on" href="xyjj.htm">学院简介</a>
+
+            </div>
+            </div>
+            <div class="news-details about-box">
+                    
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1601537463,'wbnews','u9')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1601537463,1001)</script>
+<div class="title">武汉大学历史学院简介</div>
+<div class="content">
+  <p></p><div id="vsb_content_4_1001_u91"><div id="vsb_content_4"><div><p class="vsbcontent_start">武汉大学历史学科创建于1913年，是我国高等院校中较早成立的历史系科之一，有着悠久历史和深厚积淀。著名学者李剑农、谭戒甫、吴其昌、杨人楩、唐长孺、吴于廑、姚薇元、刘绪贻、彭雨新、方壮猷、石泉、王宗华、彭金章等史学名家先后在这里执教，严耕望、高敏、张泽咸、谢桂华、彭泽周（伊原泽周）、张海鹏等知名学者在这里毕业。经过几代学人的不断努力和积极开拓，历史学院形成了严谨的学风和优良的教风，确立了理论探讨与实证研究相统一，断代史与专门史、地区史与国别史相结合，传世文献与出土文献并重等学术特色，在队伍建设、科学研究、人才培养、国际交流、社会服务等方面成绩突出，为中国历史学的发展做出了重要贡献，成为享誉中外的史学重镇。</p><p>武汉大学历史学院的前身是1913年国立武昌高等师范学校设立的历史地理部。1930年国立武汉大学设立史学系。1953年改名历史学系。1998年1月改建为历史文化学院。1999年4月，与中文系、哲学系等共同组建人文科学学院。新武汉大学组建后，学校进行院系调整，保留了人文科学学院。2003年8月，撤销人文科学学院，历史学科单独组建为历史学院。</p><p>1981年，中国古代史和世界史获国家首批博士学位授予权。1986年，历史地理学获博士学位授予权。1997年，历史学获一级学科博士学位授予权，覆盖了史学理论及史学史、考古学及博物馆学、历史地理学、历史文献学、专门史、中国古代史、中国近现代史、世界史等8个二级学科。2003年，增列中国文化史、中国经济史、国际关系与中外关系史、地区国别史等4个二级学科博士学位授权点。1999年2月，国家人事部在武汉大学设立历史学博士后科研流动站。2012年，经重新申报确认分别设立中国史、世界史和考古学三个博士后科研流动站。</p><p>中国古代史于1988年被列为国家重点学科，并于2001年和2007年两度顺利通过教育部评估继续被列为国家重点学科。2007年，世界史被增列为国家重点学科。2008年，历史学一级学科被列为湖北省重点学科，中国古代史、世界史被列为湖北省优势学科。</p><p>历史学院现有全日制在校学生754人，其中博士研究生192人，硕士研究生257人，本科生305人。目前在岗教职工89人，其中专任教师70人，管理人员13人，教辅人员6人。</p><p>作为国家文科基础学科（历史学）人才培养和科学研究基地，学院设有历史学基地班、世界史试验班和考古学三个本科专业。历史学基地班于2007年入选教育部“质量工程”高等学校特色专业建设点。2008年，教育部、财政部批准武汉大学设立“历史学人才培养模式创新实验区”。2009年，《中国古代史》被评为国家级精品课程；2010年，《世界近代史》被评为国家级精品课程；2019年入选教育部“双万计划”一流本科建设点；2020年，《简明世界史（一）》被评为国家级线上线下混合式一流课程、《简明世界史（一）（二）》被评为国家级线上一流课程；2021年，冯天瑜教授、杨华教授等著《中国文化史（彩色增订本）》获首届全国优秀教材二等奖；2022年，《田野考古》被评为省级一流社会实践课程。</p><p>学院拥有国家“211工程”重点建设项目和“985工程”哲学社会科学创新基地。2006年，“211工程”二期建设项目“中国文明进程与世界历史整体发展”顺利通过国家验收。2008年，“新资料整理与中国古代文明进程研究”、“世界历史整体发展中的社会转型与文化变迁研究”两个“211工程”三期建设项目成功立项。2004年11月，历史学、哲学、文学三个一级学科以教育部人文社会科学重点研究基地——中国传统文化研究中心为依托，共同承担了“985工程”哲学社会科学创新基地二期建设项目“中国传统文化现代转型创新基地”的建设任务。2008年，科技考古研究中心成为“985工程”哲学社会科学创新基地拓展项目平台。</p><p>学院师资力量雄厚。专任教师全部拥有博士学位，其中有教授23人，副教授29人，讲师1人，特聘副研究员6人，聘期制讲师2人，博士后9人；博士生导师29人。拥有国家级有突出贡献中青年专家2名，国务院学科评议组成员1名，教育部社会科学委员会委员2名，国家社会科学基金项目学科评审组专家3名，全国博士后管委会专家组成员1名，全国古籍整理出版规划领导小组成员1名，马工程首席专家3人，国家级高层次人才10人。先后有4人入选武汉大学人文社会科学资深教授，2人入选武汉大学人文社科杰出青年学者，6人入选武汉大学人文社科优秀青年学者，2人入选霍英东教育基金项目，5人获宝钢教育基金优秀教师奖。学院大多数教师具有在国外著名大学与科研机构讲学、访问或攻读博士学位的经历。</p><p>学院设有中国三至九世纪研究所、世界史研究所、历史地理研究所、中国经济与社会史研究所、简帛研究中心、科技考古研究中心、民间文献保藏研究中心、15-18世纪世界史研究所、茶文化研究中心、青铜文明研究中心、世界遗产保护研究中心、“一带一路”考古研究中心等研究机构。简帛研究中心、科技考古研究中心分别于2006年、2007年入选湖北省人文社会科学重点研究基地。2020年成立省校共建机构——长江文明考古研究院。2021年简帛研究中心入选第一批古文字工程协同攻关创新平台组成单位。</p><p>2003年独立建院以来，学院教师在海内外重要学术刊物发表论文3000余篇，出版学术著作近500部。承担国家级和省部级等各类科研项目700余项，到账科研经费逾2亿元。其中，承担国家社科基金重大招标项目12项，入选国家哲学社会科学成果文库1项，中央宣传部、教育部马克思主义理论研究和建设工程哲学社会科学重点教材编写项目3项，教育部哲学社会科学重大课题攻关项目5项，国家新闻出版重大科技工程1项，国家社科基金重点项目6项、冷门绝学专项项目3项、后期资助项目15项，点校本“二十四史”修订工程4项，《清史稿》修订工程4项，教育部重点研究基地重大项目15项等。科研成果获得省部级以上奖近百项，其中，教育部高校人文社科研究优秀成果奖34项，中国出版政府奖4项，全国重大考古新发现2项，取得了令人瞩目的成绩。学院还创办《魏晋南北朝隋唐史资料》、《人文论丛》、《简帛》、《简帛》英文刊等学术集刊及“简帛网”、“中国中古史研究网”等学术网站。其中，《魏晋南北朝隋唐史资料》、《人文论丛》、《简帛》入选CSSCI学术集刊刊源。《简帛》英文刊<em>Bamboo and Silk</em>先后被收入ERIH PLUS索引、ESCI索引、Scopus引文数据库。</p><p>学院与国内外著名高校和科研机构建立有广泛的学术联系，近年来举办了多次有重要影响的国际学术研讨会，如“吐鲁番学的回顾与展望学术研讨会（2023）”、“中国世界中世纪史专业委员会2023年学术年会暨吴于廑先生诞辰110周年纪念学术研讨会（2023）”“唐长孺先生诞辰110周年学术座谈会（2021）”“中国法国史研究会2021年年会暨“法国历史上的社会转型与文化变迁”学术研讨会（2021）”“中国考古学理论与方法学术研讨会（2019）”“世界现代史研究中的重大问题与热点问题学术研讨会（2019）”、 “纪念石泉先生百年诞辰学术研讨会（2018）”“区域视野下的近代中外关系 第七届近代中外关系史国际学术研讨会（2018）”、“敦煌吐鲁番文书与中国中古史研究座谈会（2016）”、“中国简帛学国际论坛（2006、2007、2008、2009、2010、2012、2014、2016、2017、2018）”等。</p><p>学院资料室拥有各类中外文藏书15万余册，中外文期刊400余种；其中外文图书2万余册，外文期刊4500余册。建有绘图实验室（计算机房）、考古样品制备实验室、生物考古实验室、考古样品分析检测实验室、比较考古学实验室、显微观察实验室等6个实验室，拥有较具专业特色的各种仪器设备100余台/套。这些藏书和设施为学院的教学科研和人才培养提供了有力的物质保障。</p><p class="vsbcontent_end" style="text-align: right;"><span style="font-size: 14px;">（数据更新：2023年10月）</span></p></div></div></div><p></p>
+  <div class="btns-area">
+      <div class="btn show-more-btn">点击展开<img src="../images/icon_arrowD_red.png"></div>
+  </div>
+</div>
+                                          <script>
+                    //点击展开更多
+                    $(".show-more-btn").on('click',function(){
+                        $(".about-box .content").css({height: 'auto'});
+                        $(".about-box .btns-area").fadeOut();
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+    <!-- 内页 end -->
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="w1200">
+            <div class="links">
+                    <a href="../index.htm" title="首页">首页</a>
+    |
+    <a href="../xygk.htm" title="学院概况">学院概况</a>
+    |
+    <a href="../szdw.htm" title="师资队伍">师资队伍</a>
+    |
+    <a href="../rcpy.htm" title="人才培养">人才培养</a>
+    |
+    <a href="../kxyj1/kyxm.htm" title="科学研究">科学研究</a>
+    |
+    <a href="../gjjl.htm" title="国际交流">国际交流</a>
+    |
+    <a href="../shfw.htm" title="社会服务">社会服务</a>
+    |
+    <a href="../dqgz.htm" title="党群工作">党群工作</a>
+    |
+    <a href="../xsyd.htm" title="学生园地">学生园地</a>
+    |
+    <a href="../xyzj.htm" title="校友之家">校友之家</a>
+    
+
+                
+                <script language="javascript" src="/system/resource/js/openlink.js"></script>    <a href="http://www.history.whu.edu.cn/" target="_blank" class="red">旧版入口</a>
+
+            </div>
+            <div class="info">
+                <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>电话：027-68752695</p><p>传真：027-68754407</p><p>地址：湖北省武汉市武昌区珞珈山街道八一路299号武汉大学振华楼</p><p>武汉大学历史学院 版权所有 &nbsp;All Rights Reserved 2019</p>
+            </div>
+            <div class="ewm-box">
+                <div class="item"><img src="../images/ewm_img1.jpg" alt=""><span>关注我们</span></div>
+                <div class="item"><img src="../images/ewm_img2.jpg" alt=""><span>关注我们</span></div>
+            </div>
+        </div>
+    </div>
+    <!-- footer end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta charset="utf-8">
+<title>学院简介-中央民族大学国际教育学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="中央民族大学国际教育学院,学校概况1">
+
+<link rel="stylesheet" href="../style/public.css">
+<link rel="stylesheet" href="../style/master.css">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e784654525a5742000200024253 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1009,'/dpzw.jsp',-1,1499285259)</script>
+</head>
+<body>
+<!--top-->
+<div class="stick"></div>
+<div class="header cleafix">
+    
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a class="logo" href="../index.htm" onfocus="undefined"><img src="../images/123logo.jpg"></a>
+    
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+   
+</style>
+<div id="divu1" style="width: 275px; height: 35px;    float: right;">
+    <div id="appu1" class="search fr cleafix"><div><span><input type="image" src="../images/search.png" align="absmiddle"></span> <input type="text" placeholder="请输入关键字进行搜索" autocomplete="off" class="searchText"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1"  class="search fr cleafix">
+        <div v-if="!isError">
+        
+       
+ <span><input type="image" src="../images/search.png" align="absmiddle" style="cursor: hand"  v-on:click="onSubmit()"></span>
+<input  type="text" placeholder="请输入关键字进行搜索" class="searchText"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" />
+
+ 
+        
+        
+        
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1499285259";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.119.129.127:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+</div>
+
+<!--nav-->
+<div class="nav">
+<div class="innav">
+
+<ul class="cleafix">
+
+
+            <li class="mainmenu ">
+                <a class="link" href="../index.htm" title="网站首页">网站首页</a>
+            </li>
+           
+           
+           
+          
+          
+           
+
+
+            <li class="mainmenu cur">
+                <a class="link" href="xyjj.htm" title="学院概况">学院概况</a>
+                <div id="nav" style="display: none;">
+
+
+                    <a class="marr" href="xyjj.htm" title="学院简介">学院简介</a>
+                    
+                    
+
+                    <a href="xyld.htm" title="学院领导">学院领导</a>
+                    
+                    
+
+                    <a href="jgsz.htm" title="机构设置">机构设置</a>
+                    
+                    
+
+                    <a href="xkzy.htm" title="学科专业">学科专业</a>
+                    
+                    
+
+                    <a href="xydsj.htm" title="学院大事记">学院大事记</a>
+                    
+                    
+
+                    <a href="lxwm.htm" title="联系我们">联系我们</a>
+                    
+                    
+                </div> 
+            </li>
+           
+           
+           
+          
+          
+           
+
+
+            <li class="mainmenu ">
+                <a class="link" href="../szdw1/zzjs.htm" title="师资队伍">师资队伍</a>
+                <div id="nav" style="display: none;">
+
+
+                    <a href="../szdw1/zzjs.htm" title="专职教师">专职教师</a>
+                    
+                    
+
+                    <a href="../szdw1/wpjs.htm" title="外聘教师">外聘教师</a>
+                    
+                    
+
+                    <a href="../szdw1/xyds.htm" title="行业导师">行业导师</a>
+                    
+                    
+
+                    <a href="../szdw1/xzjs1.htm" title="行政教师">行政教师</a>
+                    
+                    
+
+                    <a href="../szdw1/dsmd.htm" title="导师名单">导师名单</a>
+                    
+                    
+                </div> 
+            </li>
+           
+           
+           
+          
+          
+           
+
+
+            <li class="mainmenu ">
+                <a class="link" href="../xsky1/xshd.htm" title="学术科研">学术科研</a>
+                <div id="nav" style="display: none;">
+
+
+                    <a href="../xsky1/xshd.htm" title="学术活动">学术活动</a>
+                    
+                    
+
+                    <a href="../xsky1/kycg.htm" title="科研成果">科研成果</a>
+                    
+                    
+
+                    <a href="../xsky1/yyjx_rzyxdkfyjzx.htm" title="语言教学、认知与习得开放研究中心">语言教学、认知与习得开放研究中心</a>
+                    
+                    
+
+                    <a href="../xsky1/hygjcbyj_.htm" title="《汉语国际传播研究》">《汉语国际传播研究》</a>
+                    
+                    
+
+                    <a href="../xsky1/gjzwjyalk.htm" title="国际中文教育案例库">国际中文教育案例库</a>
+                    
+                    
+                </div> 
+            </li>
+           
+           
+           
+          
+          
+           
+
+
+            <li class="mainmenu ">
+                <a class="link" href="../dtjs.htm" title="党团建设">党团建设</a>
+            </li>
+           
+           
+           
+          
+          
+           
+
+
+            <li class="mainmenu ">
+                <a class="link" href="../zsjy/zs1.htm" title="招生就业">招生就业</a>
+                <div id="nav" style="display: none;">
+
+
+                    <a href="../zsjy/zs1.htm" title="招生">招生</a>
+                    
+                    
+
+                    <a href="../zsjy/jy.htm" title="就业">就业</a>
+                    
+                    
+                </div> 
+            </li>
+           
+           
+           
+          
+          
+           
+
+
+            <li class="mainmenu ">
+                <a class="link" href="../lxmd2.htm" title="留学民大">留学民大</a>
+            </li>
+           
+           
+           
+          
+          
+           
+
+
+            <li class="mainmenu ">
+                <a class="link" href="../xsfc1/yxxy.htm" title="学生风采">学生风采</a>
+                <div id="nav" style="display: none;">
+
+
+                    <a href="../xsfc1/yxxy.htm" title="优秀校友">优秀校友</a>
+                    
+                    
+
+                    <a href="../xsfc1/wymdgjydgu.htm" title="我与民大国教院的故事">我与民大国教院的故事</a>
+                    
+                    
+                </div> 
+            </li>
+           
+           
+           
+          
+          
+           
+
+
+            <li class="mainmenu ">
+                <a class="link" href="../rczp.htm" title="人才招聘">人才招聘</a>
+            </li>
+           
+           
+           
+          
+          
+           
+
+
+            <li class="mainmenu ">
+                <a class="link" href="../cyxz.htm" title="常用下载">常用下载</a>
+            </li>
+           
+           
+           
+          
+          
+           
+
+
+        </ul>
+
+</div></div>
+
+<!--内页主体部分-->
+<div class="vsb-box">
+    <div class="vsb-container main" containerid="4" columns="4">
+        <div class="vsb-space n_left" columns="1">
+            
+<h2>学院概况</h2>
+            <ul class="n_nav">
+<li>
+<a href="xyjj.htm" class="cur">学院简介</a>
+</li>
+<li>
+<a href="xyld.htm">学院领导</a>
+</li>
+<li>
+<a href="jgsz.htm">机构设置</a>
+</li>
+<li>
+<a href="xkzy.htm">学科专业</a>
+</li>
+<li>
+<a href="xydsj.htm">学院大事记</a>
+</li>
+<li>
+<a href="lxwm.htm">联系我们</a>
+</li>
+</ul>
+
+
+
+
+
+
+        </div>
+        <div class="vsb-space n_right" columns="3">
+            <div class="n_tit cleafix">
+    当前位置：
+               <a href="../index.htm">首页</a>
+               <font>&gt;</font>
+               <a href="xyjj.htm">学院概况</a>
+               <font>&gt;</font>
+               <a href="xyjj.htm">学院简介</a>
+</div>
+
+
+            
+<h1 class="Title cleafix">
+                <span class="tit">学院简介</span>
+            </h1>
+<hr style="margin-bottom:5px;height:1px;background:#ccc;">
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1499285259,'wbnews','u7')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta7(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1499285259,3118)</script>
+<div class="brief">
+<div style="font-weight:bold ;text-align:center;font-size:18px">中央民族大学国际教育学院</div>
+<p></p><div id="vsb_content_2_3118_u71"><div id="vsb_content_2"><p class="vsbcontent_start">中央民族大学国际教育学院成立于2000年，是一个集教学科研和全校国际学生招生、管理、服务于一体的学院。学院是教育部首批“来华留学教育示范基地”、北京市“一带一路”国家人才培养基地、中外语言合作交流中心指定的HSK（汉语水平考试）考点，具有中国政府奖学金、孔子学院奖学金、北京市政府外国留学生奖学金招生资质。学院始终秉持“全球化视野，国际化思维，创新性行动”的理念，将“引进来”和“走出去”并重，以争创一流学科，建设一流专业，培养具有国际视野、中国情怀的国际化人才为培养目标，已成为国内外知名的国际中文教育教学科研单位。</p><p>学院已经形成国内少有的具备中外博士生、硕士生、本科生和语言进修生四个办学层次的完整培养体系。拥有“汉语国际教育”本科专业，“国际中文教育”专业硕士学位点和自主设置的二级学科博士点“国际汉语教学”，面向全球招生。每年长期在学院学习的中外学生逾600人。</p><p>学院现有专职教师27人，其中教授5人、副教授9人，具有博士学位的23人，占专职教师总数的85%；入选“教育部新世纪优秀人才支持计划”1人，学校高层次引进人才1人，中央民族大学知行特聘教授（培育岗位）2人。此外，学院还聘请了外聘教师14人，另有中外著名学者10余人担任学院客座教授。</p><p>学院人才培养模式特色鲜明，汉语国际教育专业本科生采取“知行研+国际化”人才培养模式，2020年获批北京市“一流本科专业”建设点，2022年获批国家级“一流本科专业”建设点。国际中文教育专业硕士实施中外培养模式，面向世界各国培养国际中文师资，在教育部全国学位水平评估中，位居前10%。“国际汉语教学”二级学科博士点下设“汉语国际传播研究”“国际汉语教师、教材、教法研究”和“面向国际汉语教学的汉语研究”三个方向。其中，“汉语国际传播”方向处于国内外研究的前沿水平，推出了一批具有引领性的学术成果。对国际学生，我们坚持以先进的教学理念为指导，通过“分课型授课模式”及“讲练+复练等模式”，大力提升学生的中文能力，为世界各国输送了众多热爱中华文化、对中国怀有深厚感情的优秀人才。</p><p>近五年，学院承担校内外科研项目78项，其中国家社科基金一般项目4项，国家社科基金青年项目1项，教育部、民委等省部级项目2项，教育部语合中心、教育考试院、世界汉语教学学会等委托类项目34项。发表论文182篇，其中SSCI论文20篇，CSSCI论文54篇。共出版专著7部，教材3部。出版15辑专门刊载汉语国际传播理论与实践研究成果的学刊《汉语国际传播研究》，建有国内第一个国际汉语教学数据库。2017年成立了“语言教学、认知与习得开放研究中心”，推出了一批高水平研究成果，对学科建设起到良好的支撑作用。研究中心还举办了一系列有影响力的高端论坛和青年学者论坛。2019年至今，已成功举办了五届“国际中文教育研究方法学术研讨会”“汉语国际教育研究方法青年学者论坛”；并与兄弟单位开展了富有成效的合作与交流活动，在国内外学界的影响力不断扩大。</p><p>学院始终以培养具有中国情怀、国际视野的国际化人才为使命，在培养中外人才方面取得了显著的成果。博士生培养方面，学院出台《“国际汉语教学”专业博士研究生培养质量保障措施》，规范培养流程，突出培养博士生学术研究能力，毕业博士生成为国内外高校汉语二语教学领域的骨干力量。硕士生培养方面，学院采用独创的“1+2+X”培养模式进行培养，积极推动汉教硕士海外实习与就业，培养了众多外向型国际化人才。2020年，研究生项目获国家留学基金委创新型人才国际合作培养项目资助，是全国汉语国际教育硕士获此立项的第一家，也是唯一的汉语国际教育专业获得国家留学基金委资助的国际合作培养项目。本科生培养方面，学院独创“知行研+国际化”培养模式，2020年“汉语国际教育”专业获批北京市级一流本科专业建设点；2022年“汉语国际教育”专业获批国家级一流本科专业建设点。国际学生培养方面，我院结合民大特色，利用我校优势学科和重点学科精心设计项目。我院国际学生培养项目在2018年入选北京市“一带一路”国家人才培养基地项目，在2019年被教育部国际合作与交流司评为优秀项目。</p><p>学院已与美国肯塔基大学、爱尔兰等多所国际知名高校签署协议，联合培养汉语国际教育专业本科生和研究生，并与美中教育访华协会中国游学项目（CET）等美国著名汉语教学项目建立了紧密合作关系，为学院面向美国为主的英语国家的汉语国际教育本科和硕士创造了良好的实习条件。</p><p>中央民族大学国际教育学院已成为国内外著名国际中文教育机构，学院将坚持以习近平新时代中国特色社会主义思想为指导，以铸牢中华民族共同体意识为主线，推进学院高质量发展，持续为祖国、为世界输送国际化的专业优秀人才，打造国际中文教育的新高地！</p><p>国际教育学院办公地点：中央民族大学海淀校区8号学生公寓2层</p><p>联系方式：</p><p>留学生工作办公室（留学生招生）：</p><p>电话：8610-68933263；</p><p>邮箱：chinese@muc.edu.cn（非学历生招生），schlr@muc.edu.cn（学历生招生）</p><p>传真：8610-68933459</p><p>教学科研办公室（中国学生招生）：</p><p>电话：8610-68933351；</p><p>邮箱：ciegrad@muc.edu.cn</p><p class="vsbcontent_end">欢迎来自世界各国的学生到中央民族大学学习！</p></div></div><p></p>
+<span id="vsb_content_2_3118_u7" name="vsb_content_2_3118_u7"></span>
+<br>
+
+</div>
+        </div>
+    </div>
+    <div class="cleafix"></div>
+    
+    
+</div>
+
+
+
+<!--footer-->
+<div class="footer">
+    <div class="footone">
+        <div class="foot cleafix">
+            <script language="javascript" src="/system/resource/js/openlink.js"></script><ul class="ftone_l fl">
+<li><a href="http://ca.muc.edu.cn/zfca/login?service=http%3A%2F%2Fi.muc.edu.cn%2Fportal.do" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1499285259, 41477)">校园信息门户</a>
+
+
+
+ <a href="http://www.muc.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1499285259, 41478)">中央民族大学</a> 
+
+</li></ul>
+            <div class="ftone_r fl">
+                <h2>联系我们</h2>
+                <ul class="ftone_rlist">
+                    
+<ul> 
+ <li class="cleafix"><em class="ico3"></em>学校地址: 中国北京海淀区中关村南大街27号</li> 
+ <li class="cleafix"><em class="ico4"></em>学院办公室：010-68933306</li> 
+ <li class="cleafix"><em class="ico4"></em>国际学生管理办公室：010-68933263</li> 
+</ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<div class="footone_bm">
+<div class="foot"><p>Copyright © 2013-2016 CIE All Rights Reserved</p></div></div>
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery.SuperSlide.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,479 @@
+<!DOCTYPE html><html style="font-size: 80px;"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <meta name="description" content="描述">
+    <title>单位简介-武汉大学前沿交叉学科研究院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="单位简介">
+
+
+<meta name="SiteName" content="武汉大学前沿交叉学科研究院">
+<meta name="SiteDomain" content="aais.whu.edu.cn">
+<meta name="ColumnName" content="单位简介">
+
+    <link href="../js/royalslider/css/royalslider.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
+    <link href="../css/fullpage.min.css" rel="stylesheet">
+    <link href="../css/swiper.min.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/mobile.css" rel="stylesheet">
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../dwgk2.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1471,'/dwgk2.jsp',-1,1983420670)</script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><div class="search1"><input type="text" name="INTEXT" placeholder="请输入检索内容" autocomplete="off" class="search_kuang"> <input type="submit" name="FindButton" value="搜索" class="search_submit"> <a class="close"></a></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <div class="search1">
+                <!-- <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/> -->
+                
+                <input type="text" name="INTEXT" placeholder="请输入检索内容" class="search_kuang" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                <input type="submit" name="FindButton" value="搜索" class="search_submit" v-on:click="onSubmit()"/>
+                <a class="close"></a>
+            </div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1983420670";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+        <div class="header-top">
+            <div class="header-container container clearfix">
+                <!-- 网站logo -->
+                <a href="../index.htm" class="logo"><img src="../images/logo.png" class="logo-img"></a>
+                <button type="button" class="navbar-toggle">
+                    <span class="icon-bar icon-bar1"></span>
+                    <span class="icon-bar icon-bar2"></span>
+                    <span class="icon-bar icon-bar3"></span>
+                </button>
+                <!-- 网站logo -->
+                <!-- 右上角链接 -->
+                <div class="top-link">
+                    <ul><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>    <li><a href="https://aais.whu.edu.cn/teacher/index.htm" target="_blank">教师专题</a></li>                       
+    <li><a href="https://aais.whu.edu.cn/student/index.htm" target="_blank">学生专题</a></li>                       
+    <li><a href="https://aais.whu.edu.cn/djzt/index.htm" target="_blank">党建专题</a></li>                       
+</ul>
+                    <a href="javascript:void(0);" class="a2"><img src="../images/search.png" class="search_anliu"></a>
+                </div>
+                <!-- 右上角链接 -->
+                <!--  网站导航开始 -->
+                <div class="nav">
+                    <ul class="daohang clearfix">                  
+    <li>
+        <div class="nav-box">
+            <a class="dropdown nb-cn" href="../index.htm">首页</a>
+            <a class="dropdown nb-en" href="../index.htm">首页</a>
+       </div>
+    </li>                       
+    <li>
+        <div class="nav-box">
+            <a class="dropdown nb-cn" href="dwjj.htm">单位概况</a>
+            <a class="dropdown nb-en" href="dwjj.htm">单位概况</a>
+       </div>
+           <ul class="nav_item">
+                   <li><a href="dwjj.htm" title="单位简介">单位简介</a></li>
+                   <li><a href="dzjg.htm" title="党政机构">党政机构</a></li>
+                   <li><a href="xsjg1.htm" title="学术机构">学术机构</a></li>
+                   <li><a href="bgs.htm" title="办公室">办公室</a></li>
+                   <li><a href="dsj.htm" title="大事记">大事记</a></li>
+           </ul>
+    </li>                       
+    <li>
+        <div class="nav-box">
+            <a class="dropdown nb-cn" href="../yjjg/gdyjy.htm">研究机构</a>
+            <a class="dropdown nb-en" href="../yjjg/gdyjy.htm">研究机构</a>
+       </div>
+           <ul class="nav_item" style="width: 300%;">
+                   <li><a href="../yjjg/zgctwhyjzx.htm" title="中国传统文化研究中心">中国传统文化研究中心</a></li>
+                   <li><a href="../yjjg/gjwhfzyjy.htm" title="国家文化发展研究院">国家文化发展研究院</a></li>
+                   <li><a href="../yjjg/zlfzzlyjy.htm" title="质量发展战略研究院">质量发展战略研究院</a></li>
+                   <li><a href="../yjjg/twyjs.htm" title="台湾研究所">台湾研究所</a></li>
+                   <li><a href="../yjjg/zgbjyhyyjy.htm" title="中国边界与海洋研究院">中国边界与海洋研究院</a></li>
+                   <li><a href="../yjjg/gjwtyjy.htm" title="国际问题研究院">国际问题研究院</a></li>
+                   <li><a href="../yjjg/dfrjjshfzyjy.htm" title="董辅礽经济社会发展研究院">董辅礽经济社会发展研究院</a></li>
+                   <li><a href="../yjjg/gdyjy.htm" title="高等研究院">高等研究院</a></li>
+                   <li><a href="../yjjg/xxdlxtygjbzyjy.htm" title="新型电力系统与国际标准研究院">新型电力系统与国际标准研究院</a></li>
+                   <li><a href="../yjjg/hbgjyysxzx.htm" title="湖北国家应用数学中心">湖北国家应用数学中心</a></li>
+                   <li><a href="../yjjg/tzhyjy.htm" title="碳中和研究院">碳中和研究院</a></li>
+                   <li><a href="../yjjg/xlxx.htm" title="心理学系">心理学系</a></li>
+                   <li><a href="../yjjg/kcxfzyqqzlyjzx_c_.htm" title="可持续发展与全球治理研究中心（筹）">可持续发展与全球治理研究中心（筹）</a></li>
+           </ul>
+    </li>                       
+    <li>
+        <div class="nav-box">
+            <a class="dropdown nb-cn" href="../szdw/rcdw.htm">师资队伍</a>
+            <a class="dropdown nb-en" href="../szdw/rcdw.htm">师资队伍</a>
+       </div>
+           <ul class="nav_item" style="width: 230%;">
+                   <li><a href="../szdw/rcdw.htm" title="人才队伍">人才队伍</a></li>
+                   <li><a href="../szdw/zrjs1.htm" title="专任教师">专任教师</a></li>
+                   <li><a href="../szdw/jzjs.htm" title="兼职教师">兼职教师</a></li>
+                   <li><a href="../szdw/syry.htm" title="实验人员">实验人员</a></li>
+                   <li><a href="../szdw/bsrg.htm" title="博士后">博士后</a></li>
+                   <li><a href="../szdw/rxjs.htm" title="荣休教师">荣休教师</a></li>
+           </ul>
+    </li>                       
+    <li>
+        <div class="nav-box">
+            <a class="dropdown nb-cn" href="../kxyj/xsjl.htm">科学研究</a>
+            <a class="dropdown nb-en" href="../kxyj/xsjl.htm">科学研究</a>
+       </div>
+           <ul class="nav_item">
+                   <li><a href="../kxyj/xsjl.htm" title="学术交流">学术交流</a></li>
+                   <li><a href="../kxyj/yjjz.htm" title="研究进展">研究进展</a></li>
+                   <li><a href="../kxyj/hzdt.htm" title="合作动态">合作动态</a></li>
+           </ul>
+    </li>                       
+    <li>
+        <div class="nav-box">
+            <a class="dropdown nb-cn" href="../rcpy/yjszs.htm">人才培养</a>
+            <a class="dropdown nb-en" href="../rcpy/yjszs.htm">人才培养</a>
+       </div>
+           <ul class="nav_item">
+                   <li><a href="../rcpy/yjszs.htm" title="研究生招生">研究生招生</a></li>
+                   <li><a href="../rcpy/yjspy.htm" title="研究生培养">研究生培养</a></li>
+                   <li><a href="../rcpy/xwgl.htm" title="学位管理">学位管理</a></li>
+                   <li><a href="../rcpy/xly.htm" title="夏令营">夏令营</a></li>
+           </ul>
+    </li>                       
+    <li>
+        <div class="nav-box">
+            <a class="dropdown nb-cn" href="../xsyd/gztz.htm">学生园地</a>
+            <a class="dropdown nb-en" href="../xsyd/gztz.htm">学生园地</a>
+       </div>
+           <ul class="nav_item">
+                   <li><a href="../xsyd/gztz.htm" title="工作通知">工作通知</a></li>
+                   <li><a href="../xsyd/xwdt.htm" title="新闻动态">新闻动态</a></li>
+                   <li><a href="../xsyd/dtjs.htm" title="党团建设">党团建设</a></li>
+                   <li><a href="../xsyd/jyzd.htm" title="就业指导">就业指导</a></li>
+           </ul>
+    </li>                       
+    <li>
+        <div class="nav-box">
+            <a class="dropdown nb-cn" href="../xxgk/rcyj.htm">信息公开</a>
+            <a class="dropdown nb-en" href="../xxgk/rcyj.htm">信息公开</a>
+       </div>
+           <ul class="nav_item">
+                   <li><a href="../xxgk/rcyj.htm" title="人才引进">人才引进</a></li>
+                   <li><a href="../xxgk/gsgg.htm" title="公示公告">公示公告</a></li>
+                   <li><a href="../xxgk/gzzd.htm" title="规章制度">规章制度</a></li>
+                   <li><a href="../xxgk/xzzx.htm" title="下载中心">下载中心</a></li>
+           </ul>
+    </li>                       
+</ul>
+                </div>
+                <div class="mobile-nav">
+                    <div class="container"><ul class="navs">
+        <li><a href="../index.htm">首页</a></li>
+            <li style="display:none;">
+                <a href="javascript:;">首页</a><strong>+</strong>
+            </li>
+            <li class="select">
+                <a href="javascript:;">单位概况</a><strong>+</strong>
+                    <ul class="sun-nav">
+                            <li><a href="dwjj.htm">单位简介</a></li>
+                            <li><a href="dzjg.htm">党政机构</a></li>
+                            <li><a href="xsjg1.htm">学术机构</a></li>
+                            <li><a href="bgs.htm">办公室</a></li>
+                            <li><a href="dsj.htm">大事记</a></li>
+                    </ul>
+            </li>
+            <li>
+                <a href="javascript:;">研究机构</a><strong>+</strong>
+                    <ul class="sun-nav">
+                            <li><a href="../yjjg/zgctwhyjzx.htm">中国传统文化研究中心</a></li>
+                            <li><a href="../yjjg/gjwhfzyjy.htm">国家文化发展研究院</a></li>
+                            <li><a href="../yjjg/zlfzzlyjy.htm">质量发展战略研究院</a></li>
+                            <li><a href="../yjjg/twyjs.htm">台湾研究所</a></li>
+                            <li><a href="../yjjg/zgbjyhyyjy.htm">中国边界与海洋研究院</a></li>
+                            <li><a href="../yjjg/gjwtyjy.htm">国际问题研究院</a></li>
+                            <li><a href="../yjjg/dfrjjshfzyjy.htm">董辅礽经济社会发展研究院</a></li>
+                            <li><a href="../yjjg/gdyjy.htm">高等研究院</a></li>
+                            <li><a href="../yjjg/xxdlxtygjbzyjy.htm">新型电力系统与国际标准研究院</a></li>
+                            <li><a href="../yjjg/hbgjyysxzx.htm">湖北国家应用数学中心</a></li>
+                            <li><a href="../yjjg/tzhyjy.htm">碳中和研究院</a></li>
+                            <li><a href="../yjjg/xlxx.htm">心理学系</a></li>
+                            <li><a href="../yjjg/kcxfzyqqzlyjzx_c_.htm">可持续发展与全球治理研究中心（筹）</a></li>
+                    </ul>
+            </li>
+            <li>
+                <a href="javascript:;">师资队伍</a><strong>+</strong>
+                    <ul class="sun-nav">
+                            <li><a href="../szdw/rcdw.htm">人才队伍</a></li>
+                            <li><a href="../szdw/zrjs1.htm">专任教师</a></li>
+                            <li><a href="../szdw/jzjs.htm">兼职教师</a></li>
+                            <li><a href="../szdw/syry.htm">实验人员</a></li>
+                            <li><a href="../szdw/bsrg.htm">博士后</a></li>
+                            <li><a href="../szdw/rxjs.htm">荣休教师</a></li>
+                    </ul>
+            </li>
+            <li>
+                <a href="javascript:;">科学研究</a><strong>+</strong>
+                    <ul class="sun-nav">
+                            <li><a href="../kxyj/xsjl.htm">学术交流</a></li>
+                            <li><a href="../kxyj/yjjz.htm">研究进展</a></li>
+                            <li><a href="../kxyj/hzdt.htm">合作动态</a></li>
+                    </ul>
+            </li>
+            <li>
+                <a href="javascript:;">人才培养</a><strong>+</strong>
+                    <ul class="sun-nav">
+                            <li><a href="../rcpy/yjszs.htm">研究生招生</a></li>
+                            <li><a href="../rcpy/yjspy.htm">研究生培养</a></li>
+                            <li><a href="../rcpy/xwgl.htm">学位管理</a></li>
+                            <li><a href="../rcpy/xly.htm">夏令营</a></li>
+                    </ul>
+            </li>
+            <li>
+                <a href="javascript:;">学生园地</a><strong>+</strong>
+                    <ul class="sun-nav">
+                            <li><a href="../xsyd/gztz.htm">工作通知</a></li>
+                            <li><a href="../xsyd/xwdt.htm">新闻动态</a></li>
+                            <li><a href="../xsyd/dtjs.htm">党团建设</a></li>
+                            <li><a href="../xsyd/jyzd.htm">就业指导</a></li>
+                    </ul>
+            </li>
+            <li>
+                <a href="javascript:;">信息公开</a><strong>+</strong>
+                    <ul class="sun-nav">
+                            <li><a href="../xxgk/rcyj.htm">人才引进</a></li>
+                            <li><a href="../xxgk/gsgg.htm">公示公告</a></li>
+                            <li><a href="../xxgk/gzzd.htm">规章制度</a></li>
+                            <li><a href="../xxgk/xzzx.htm">下载中心</a></li>
+                    </ul>
+            </li>
+</ul>
+</div>
+                </div>
+                <!--  网站导航结束 -->
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+            
+<img src="../images/B01.jpg" alt="">
+
+
+    </div>
+    <div class="ny-container qyjcny clearfix">
+        <div class="second-nav">
+            <div class="clo-name">
+单位概况</div>
+            <ul class="clearfix">    <li class="select">
+        <a href="dwjj.htm">单位简介</a>
+    </li>   
+    <li>
+        <a href="dzjg.htm">党政机构</a>
+    </li>   
+    <li>
+        <a href="xsjg1.htm">学术机构</a>
+    </li>   
+    <li>
+        <a href="bgs.htm">办公室</a>
+    </li>   
+    <li>
+        <a href="dsj.htm">大事记</a>
+    </li>   
+</ul>
+        </div>
+        <div class="qyjc">
+            <div class="col-name" id="dwjj" name="dwjj">
+                <span>单位简介</span>
+            </div>
+            <div class="position">        <a href="../index.htm">首页</a> 
+        <span>/</span>
+        <a href="dwjj.htm">单位概况</a> 
+        <span>/</span>
+        <a href="dwjj.htm">单位简介</a> 
+</div>
+            <div class="jianjie clearfix"><div class="jj-cont ">
+                    <div class="jj-cont-img-bg"></div>
+                    <div class="jj-cont-img">
+                        <img src="../images/img-18.jpg" alt="">
+                    </div>
+                </div>
+                <div class="jj-cont-right">
+                    <div class="right-box">
+                        <h2>武汉大学前沿交叉学科研究院</h2>
+                        <p>
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1983420670,'wbnews','u8')</script>
+<script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1983420670,1051)</script>
+</p><p>
+    </p><div id="vsb_content_1051_u81"><div id="vsb_content"><p style="text-align: center"><br></p><p style="text-indent: 2em;">武汉大学前沿交叉学科研究院(Academy of Advanced Interdisciplinary Studies，Wuhan University，简称交叉院AAIS)成立于2023年7月，为武汉大学新体制二级单位，采取实体科研机构方式运行。交叉院在学校党委和行政领导下，开展交叉学科领域人才培养、队伍建设、科学研究、国际交流合作、机制探索等工作，中国科学院院士周翔担任首任院长，余向红任党委书记。<br></p><p style="text-indent: 2em;">交叉院旨在充分发挥武汉大学学科门类齐全、学科基础深厚的优势，构建学科交叉融合发展的新机制，规范和强化跨学科研究平台服务支撑，有组织体系化推进学科交叉融合改革、创新和实践。交叉院党委对武汉大学高等研究院、新型电力系统与国际标准研究院、国际问题研究院、中国边界与海洋研究院、质量发展战略研究院、国家文化发展研究院、中国传统文化中心、台湾研究所、董辅礽经济社会发展研究院、心理学系、湖北国家应用数学中心、碳中和研究院、脑科学研究所（筹）等挂靠机构和内设系（所）履行管理职责。</p><p style="text-indent: 2em;">现共有事业编制教职工211人，其中，教师137人，博士后45人，管理人员24人，教辅人员5人。现有中国科学院院士2名，中国工程院院士1名，武汉大学人文社科资深教授1名，国家级高层次人才4名，国家级青年人才18名。现有全日制研究生909人，其中硕士研究生506人，博士研究生403人。（截至2024年1月）</p><p style="text-indent: 2em;">交叉院将坚持系统思维，按照“问题导向、完善机制、规范管理、文化涵育、协同合作、追求卓越”的方针，不断探索和建立有利于交叉学科发展的制度体系和文化环境，加快形成新的学科增长点和创新极，涵育新兴学科、交叉学科，为高层次复合型人才培养改革探索新路，为建设世界重要人才中心和创新高地、为推进中国式现代化贡献武大智慧和武大力量。</p></div></div>
+<p></p>
+<p></p>
+                    </div>
+                </div></div>
+
+        </div>
+    </div>
+        <div class="section fp-auto-height">
+            <div class="footer">
+                <div class="container">
+                    <div class="foooter-bottom clearfix">
+                        <div class="foooter-logo">
+                            <img src="../images/logo.png" alt="">
+                        </div>
+                        <span></span>
+                        <div class="contact-us clearfix">
+                            <p><img src="../images/dz.png" alt=""> 地址：湖北省武汉市武昌区珞珈山</p>
+                            <p><img src="../images/yx.png" alt=""> 邮箱：aaiswhu@whu.edu.cn</p>
+                            <p><img src="../images/cz.png" alt=""> 电话：027-68788945</p>
+                            <p><img src="../images/yb.png" alt=""> 邮编：430072</p>
+                        </div>
+                        <div class="about-us">
+                            <div class="gzh">
+                                    
+    <img src="../images/share.png" alt="">
+
+
+                                <p>关注微信公众号，了解更多科研资讯</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <!--最底部-->
+    <div class="totop" style="display: none;">
+        <img src="../images/top.png" alt="">
+    </div>
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <script src="../js/fullpage.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/royalslider/js/jquery.royalslider.min.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/mobile.js"></script>
+    <script>
+        $(".dwgk li").click(function(){
+            $(".dwgk li").removeClass('select');
+            $(this).addClass("select");
+        })
+    </script>
+
+
+
+</body></html>

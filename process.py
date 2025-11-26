@@ -7,9 +7,10 @@ from datetime import datetime
 from pathlib import Path
 from src.mcp_servers.ai import extract_entities_with_deepseek,read_json_file,_safe_json_dumps,extract_schools_with_deepseek,decide_click_or_extrect
 # 从配置文件导入服务器URL和目录配置
-from src.config import BROWSER_MCP_URL, HTML_PARSER_URL, OUTPUT_DIR, PROJECT_ROOT
+from src.config import BROWSER_MCP_URL, HTML_PARSER_URL, PROJECT_ROOT,DATA_DIR
 
 # 确保输出目录存在
+OUTPUT_DIR = DATA_DIR / "output_chinese"
 RESULTS_DIR = OUTPUT_DIR
 RESULTS_DIR.mkdir(exist_ok=True, parents=True)
 
@@ -305,74 +306,72 @@ def process_university_website(university_name: str, university_url: str, rank: 
         print(traceback.format_exc())
 
 if __name__ == "__main__":
-    # process_university_website("苏黎世联邦理工大学", "https://ethz.ch/")
-    from get_null import get_null_list
-    null_list = get_null_list()
-    i = 0
-    for item in null_list:
-        if item[0]<495:
-            continue
-        print(f"正在处理第{i+1}/{len(null_list)}个学校: Rank: {item[0]}, School: {item[1]}, Website: {item[2]}")
-        process_university_website(item[1], item[2], item[0])
-        i += 1
-        print(f"第{i}/{len(null_list)}个学校: {item[0]}_{item[1]} 已处理完成")
-
-
-    # def read_school_json(file_path):
-    #     """
-    #     读取指定的school.json文件
-        
-    #     参数:
-    #     file_path (str): JSON文件的完整路径
-        
-    #     返回:
-    #     dict: 解析后的JSON数据，如果出错则返回None
-    #     """
-    #     try:
-    #         # 将路径转换为Path对象
-    #         json_file = Path(file_path)
-            
-    #         # 检查文件是否存在
-    #         if not json_file.exists():
-    #             print(f"错误: 文件 '{file_path}' 不存在")
-    #             return None
-            
-    #         # 检查是否为JSON文件
-    #         if json_file.suffix.lower() != '.json':
-    #             print(f"错误: 文件 '{file_path}' 不是JSON文件")
-    #             return None
-            
-    #         # 读取JSON文件
-    #         with open(json_file, 'r', encoding='utf-8') as file:
-    #             data = json.load(file)
-    #             print(f"成功读取文件: {json_file.name}")
-    #             return data
-                
-    #     except json.JSONDecodeError as e:
-    #         print(f"错误: 文件 '{json_file.name}' 不是有效的JSON格式 - {str(e)}")
-    #         return None
-    #     except Exception as e:
-    #         print(f"读取文件 '{json_file.name}' 时出错: {str(e)}")
-    #         return None
-
-
-    # # 批量处理代码
-    # # 指定文件路径
-    # json_file_path = r"D:\project08\MCP_AI\data\input\top500_school_websites.json"
-    
-    # # 读取JSON文件
-    # school_data = read_school_json(json_file_path)
-    # # 假设 school_data 是一个包含学校信息的列表
-    # for index, item in enumerate(school_data):
-
-    #     if index < 420:
+    # process_university_website("国立欧亚大学 (ENU)", "https://enu.kz/", 321)
+    # from get_null import get_null_list
+    # null_list = get_null_list()
+    # i = 0
+    # for item in null_list:
+    #     if item[0]<495:
     #         continue
-            
-    #     school = item["school"]
-    #     website = item["website"]
-    #     num = item["rank"]
-    #     process_university_website(school, website, num)
+    #     print(f"正在处理第{i+1}/{len(null_list)}个学校: Rank: {item[0]}, School: {item[1]}, Website: {item[2]}")
+    #     process_university_website(item[1], item[2], item[0])
+    #     i += 1
+    #     print(f"第{i}/{len(null_list)}个学校: {item[0]}_{item[1]} 已处理完成")
+
+
+    def read_school_json(file_path):
+        """
+        读取指定的school.json文件
         
-    #     # 可选：打印进度
-    #     print(f"第 {index + 1} 所学校: {school} 已处理完成")
+        参数:
+        file_path (str): JSON文件的完整路径
+        
+        返回:
+        dict: 解析后的JSON数据，如果出错则返回None
+        """
+        try:
+            # 将路径转换为Path对象
+            json_file = Path(file_path)
+            
+            # 检查文件是否存在
+            if not json_file.exists():
+                print(f"错误: 文件 '{file_path}' 不存在")
+                return None
+            
+            # 检查是否为JSON文件
+            if json_file.suffix.lower() != '.json':
+                print(f"错误: 文件 '{file_path}' 不是JSON文件")
+                return None
+            
+            # 读取JSON文件
+            with open(json_file, 'r', encoding='utf-8') as file:
+                data = json.load(file)
+                print(f"成功读取文件: {json_file.name}")
+                return data
+                
+        except json.JSONDecodeError as e:
+            print(f"错误: 文件 '{json_file.name}' 不是有效的JSON格式 - {str(e)}")
+            return None
+        except Exception as e:
+            print(f"读取文件 '{json_file.name}' 时出错: {str(e)}")
+            return None
+
+
+    # 批量处理代码
+    # 指定文件路径
+    json_file_path = r"D:/project08/MCP_AI/data/input/chinese_schools.json"
+    
+    # 读取JSON文件
+    school_data = read_school_json(json_file_path)
+    # 假设 school_data 是一个包含学校信息的列表
+    i = 0
+    for index, item in enumerate(school_data):
+        i += 1
+        school = item["name"]
+        website = item["website"]
+        num = i
+        process_university_website(school, website, num)
+        
+        # 可选：打印进度
+        print(f"第 {index + 1} 所学校: {school} 已处理完成")
 

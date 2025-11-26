@@ -1,0 +1,288 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>学院概况-法学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院概况">
+<meta name="keywords" content="法学院，宁波大学,学院概况">
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307b76465550555742000300024752 -->
+<link rel="stylesheet" type="text/css" href="Nbrief.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1011,'/Nbrief.jsp',-1,1469944109)</script>
+</head>
+<body>
+    <div class="head">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="top-border">
+                    </div>
+                </div>
+            </div>
+            <div class="row top-bg">
+                <div class="col-xs-9 logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="col-xs-3 clearfix">
+                    
+<div class="email1">
+    <a href="mailto:fxy415@nbu.edu.cn" target="_blank">
+        <i class="glyphicon glyphicon-envelope"></i>院长邮箱
+    </a>
+</div>
+<div class="email1">
+    <a href="mailto:">
+        <i class="glyphicon glyphicon-envelope"></i>书记邮箱
+    </a>
+</div>
+                    <div class="search2">
+                        
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu1">
+    <div id="appu1"><div class="form"><input placeholder="请输入搜索关键字"> <button type="submit" class="search-button">信息搜索</button></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError" class="form">
+
+
+<input placeholder="请输入搜索关键字" v-model=query.keyWord @keyup.enter="onSubmit">
+ <button type="submit" class="search-button">信息搜索</button>
+
+
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1469944109";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                      </div>
+                      <div style="text-align: right;color: #fff;display: flex;flex-direction: row;align-items: center;justify-content: flex-end;"><img src="images/language.png" style="width: 15px;margin-right: 11px;"><a href="index.htm" style="color:#fff;padding-right: 2px;">中文</a>/<a href="en/About.htm" style="color:#fff;padding-left: 2px;">En</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav"><div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <ul>
+                        <li><a href="index.htm">首页</a></li>
+            <li><a href="xygk.htm">学院概况</a></li>
+            <li><a href="szdw.htm">师资队伍</a></li>
+            <li><a href="zsxx.htm">招生信息</a></li>
+            <li><a href="Nlist.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1014">教学工作</a></li>
+            <li><a href="xsfz.htm">学生发展</a></li>
+            <li><a href="Nbrief.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1016">科学研究</a></li>
+            <li><a href="gjhz.htm">国际合作</a></li>
+            <li><a href="dqgz.htm">党群工作</a></li>
+            <li><a href="dffw.htm">地方服务</a></li>
+            <li><a href="xyzj.htm">校友之家</a></li>
+            </ul>
+        </div>
+    </div>
+</div></div>
+    <div class="slider">
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><div class="bd">
+    <ul>
+        </ul>
+</div>
+<div class="hd">
+    <ul></ul>
+</div>
+<div class="pnBtn prev"> <span class="blackBg"></span> <a class="arrow" href="javascript:void(0)"></a> </div>
+<div class="pnBtn next"> <span class="blackBg"></span> <a class="arrow" href="javascript:void(0)"></a> </div>
+</div>
+    
+    <div class="container page">
+        <div class="row">
+            <div class="col-xs-3">
+                <div class="page-left">
+                    <h2>
+学院概况</h2>
+                    <ul id="accordion" class="accordion"><li class=""><div class="link "><a href="xygk/xyjj1.htm">学院简介</a></div>
+</li>
+<li class=""><div class="link "><a href="xygk/xyld1.htm">学院领导</a></div>
+</li>
+<li class=""><div class="link "><a href="xygk/zzjg1.htm">组织机构</a></div>
+</li>
+<li class=""><div class="link "><a href="xygk/xyyg1.htm">学院沿革</a></div>
+</li>
+<li class=""><div class="link "><a href="xygk/xywh.htm">学院文化</a></div>
+</li>
+<li class=""><div class="link "><a href="xygk/lxwm1.htm">联系我们</a></div>
+</li>
+</ul>
+                </div>
+            </div>
+            <div class="col-xs-9">
+                <div class="bread-crumb clearfix">
+                    <div class="left pull-left">
+法学院</div>
+                    <div class="right pull-right"><div>
+    当前位置： 
+                        <a href="index.htm">首页</a>
+                &nbsp;-&nbsp;
+                <a href="xygk.htm">学院概况</a>
+</div></div>
+                </div>
+                <div>
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1469944109,'wbnews','u8')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1469944109,1001)</script>
+<h2 style="text-align: center;margin: 30px 0;">宁波大学法学院简介</h2>
+<p>
+    
+    </p><div id="vsb_content_2_1001_u81"><div id="vsb_content_2"><p class="vsbcontent_start" style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><span style="line-height: 24px; font-size: 16px;"><strong>法学是国家特色专业和国家综合改革试点专业</strong></span></p><p style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><span style="line-height: 24px; font-size: 16px;"><strong>法学专业获批国家首批一流专业建设点</strong></span></p><p style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><span style="line-height: 24px; font-size: 16px;"><strong>浙江省唯一的法学一流学科（A类）</strong></span></p><p style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><span style="line-height: 24px; font-size: 16px;"><strong>行政管理专业获批首批浙江省一流本科专业建设点</strong></span></p><p style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><span style="line-height: 24px; font-size: 16px;"><strong>行政管理专业是宁波大学优势特色类专业</strong></span></p><p style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><span style="line-height: 24px; font-size: 16px;"><strong>浙江省高校重点学科公共管理</strong></span></p><p style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><span style="line-height: 24px; font-size: 16px;"><strong>首批高校国家知识产权信息服务中心</strong></span></p><p style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><span style="line-height: 24px; font-size: 16px;"><strong>浙江省高校人文社会科学重点研究基地——法学</strong></span></p><p style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><span style="line-height: 24px; font-size: 16px;"><strong>与中国社科院共建“法治与和谐社会建设研究中心”</strong></span></p><p style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><span style="line-height: 24px; font-size: 16px;"><strong>依托水产学一级学科博士点培养“渔业经济管理”专业博士生</strong></span></p><p style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><span style="line-height: 24px; font-size: 16px;"><strong>与中国社科院法学所联合招生培养博士生</strong></span></p><p style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><span style="line-height: 24px; font-size: 16px;"><strong>宁波市社会科学重点研究基地——市域社会治理现代化研究基地</strong></span></p><p style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><span style="line-height: 24px; font-size: 16px;"><strong>教育部“涉外法治人才协同培养创新基地（培育）”<br></strong></span></p><p style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><span style="line-height: 24px; font-size: 16px;"><strong><br></strong></span></p><p style="margin: 5px 0px; line-height: 1.75em; font-family: 宋体; white-space: normal;">宁波大学法学院，于2000年5月由原法律系合并社会科学系、德育教育中心组建而成。作为其前身的法律系，于1986年在北京大学法律系对口援建下创办，是宁波大学最早设立的八个系之一。</p><p style="margin: 5px 0px; line-height: 1.75em; font-family: 宋体; white-space: normal;">法学院现设2个系（法律系、公共管理系）和2个专业（法学专业、行政管理专业）。2001年获浙江省第一个民商法学硕士学位点，2007年获法律硕士（JM）和公共管理硕士（MPA）2个专业硕士学位点；2010年与中国社科院法学所联合培养博士生；2011年获法学一级学科硕士点；2012年共建渔业经济管理二级博士点。理论法学、宪法与行政法学、民商法学、经济法学、环境与资源保护法学、国际法学、诉讼法学、刑法学等8个二级学科硕士点，设有6个研究所。2018年获公共管理一级学科硕士学位授权点，现设行政管理、土地资源管理和教育管理与政策3个二级学科硕士点，设有公共管理研究所和地方政府治理、城乡治理与社会保障、人事人才理论与政策、土地资源管理、教育管理与政策等五个研究团队。2019年法学专业获首批国家一流本科专业建设试点、行政管理专业获批首批浙江省一流本科专业建设试点，2022年行政管理专业获得国家一流本科专业建设试点。<br></p><p style="margin: 5px 0px; line-height: 1.75em; font-family: 宋体; white-space: normal;"><br></p><p style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><span style="line-height: 27px; font-size: 18px;">●</span><span style="line-height: 24px; font-size: 16px;"><strong>两大专业特色明显，建设成效显著</strong></span></p><p style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><span style="line-height: 24px; font-size: 16px;"><strong>法学专业</strong></span></p><p style="margin: 5px 0px; line-height: 1.75em; font-family: 宋体; white-space: normal;">法学专业先后获国家一流专业、国家综合改革专业、国家特色专业、浙江省“十二五”和“十三五”优势特色专业；2019年入选首批国家一流本科专业建设试点。2020年法学专业排名5星级-，全国第53位，前8.69%；2021年法学专业的邱均平本科专业排行跃升到全国前8.38%。法学专业教学团队是浙江省首届高等学校省级教学团队。法学专业设两大专业模块，即国内法和涉外法模块，结合宁波区位优势和国家“一带一路”倡议人才需求，努力打造商事法律人才和涉外法律人才培养的专业特色。近年来，专业建设成效显著，国际化办学特色凸显，已形成本、硕、博多层次人才培养体系。</p><p style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><strong><span style="line-height: 24px; font-size: 16px;">行政管理专业</span></strong></p><p style="margin: 5px 0px; line-height: 1.75em; font-family: 宋体; white-space: normal;">行政管理专业为浙江省、宁波市重点建设专业；2019年入选首批浙江省一流本科专业建设试点；目前正在积极申报和建设国家一流本科专业。专业和学科排名快速上升，软科排名进入前30%行列。本专业立足于浙江省和宁波市走在全国前列的行政管理实践，形成了特色鲜明的政府治理、土地行政管理、教育行政管理专业模块，与全国一流大学公共管理硕士点学科方向相对接、与国家与地方政府的公务员需求相对接。行政管理专业拥有与中国社科院等其他单位合作共建省级平台3个、拥有“市域社会治理现代化”等市级重点平台3个。本专业师资力量雄厚，拥有学术领军人才1名，<span style="cursor: pointer; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);">国务院政府特殊津贴</span>获得者1名，建国70年纪念章获得者1名，获浙江省151人才工程培养人员及其他省级人才8名。本专业已形成“厚基础、分模块、重创新、强实践”的本科人才培养模式。<br><br></p><p style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><span style="line-height: 24px; font-size: 16px;"><span style="line-height: 30px; text-indent: 40px; font-size: 20px;">●</span><strong>人才结构合理，发展势头强劲</strong></span></p><p style="margin: 5px 0px 25px; line-height: 1.5em; font-family: 宋体; white-space: normal;"><span style="line-height: 21px;"><span style="line-height: 21px; text-indent: 0px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);">学院现有专任教师96人，专任教师中教授24名，副教授30名，具有博士学位教师83人。其中国家级重点人才1人，享受国务院政府特殊津贴1人，获中央国家机关“五一劳动奖章”1人，获全国劳动模范和先进工作者奖章/全国先进工作者1人，省级<span style="color: rgb(51, 51, 51); font-family: 宋体; text-indent: 0px; text-wrap: wrap; background-color: rgb(255, 255, 255);">重点</span>人才2人，浙江省新世纪151人才工程13人、浙江省“十大中青年优秀法学专家”1人，浙江省之江青年社科学者2人，浙江省中青年学科带头人5人。全国模范教师1人，全国优秀教师1人，浙江省杰出教师1人，浙江省优秀教师2人，浙江省教坛新秀1人。</span></span></p><p style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><span style="line-height: 24px; font-size: 16px;"><span style="line-height: 30px; text-indent: 40px; font-size: 20px;">●</span><strong>国际交流与合作不断深化，国际化办学特色凸显</strong></span></p><p style="margin: 5px 0px; line-height: 1.75em; font-family: 宋体; white-space: normal;">积极开阔学生的国际化视野，提高学生的国际交流能力，充分利用国（境）外的优质教育资源，培养学生兼容并包的国际化学术精神，培养具有国际竞争力的创新型人才，学院已与美国威廉玛丽学院（College of William &amp; Mary）、匹兹堡大学（University of Pittsburgh）、佛蒙特法学院（Vermont Law School）、澳大利亚悉尼科技大学（University of Technology Sydney, Australia）、美国西俄勒冈大学（Western Oregon University，U.S.A.）、捷克查理大学（Charles University, Czech Republic），以及香港大学法学院等11所高校签署法学专业校际合作协议。目前，累计有70余名师生前往多所合作大学进行访学或学术交流；现在校留学生33名，涵盖法学（国际法方向）本科生、法学硕士生和渔业经济管理（与商学院合建）博士生三个层次。<br><br></p><p style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><span style="line-height: 24px; font-size: 16px;"><span style="line-height: 30px; text-indent: 40px; font-size: 20px;">●</span><strong>学科平台优势凸显，多学科方向实力雄厚</strong></span></p><p style="margin: 5px 0px; line-height: 1.75em; font-family: 宋体; white-space: normal;">法学学科为浙江省一流学科（A类），2021年在中国软科学排名中法学学科位列全国第50名。公共管理学科是浙江省重点建设学科。</p><p style="margin: 5px 0px; line-height: 1.75em; font-family: 宋体; white-space: normal;">学院拥有浙江省高校人文社会科学重点研究基地；获首批国家知识产权信息服务中心；浙江省高校高水平创新团队；与其它学科共建浙江省新型重点专业智库—东海战略研究院、浙江省新型高校智库——中国非公有制经济人士研究基地；与中国社科院合作共建研究中心— 法治与和谐社会建设研究中心。2018年至今，获批国家社会科学基金项目22项（其中重大项目2 项，重点3 项），国家自然科学基金项目2项，省部级项目43项。民商法、宪法行政法，环境法、国际法、刑法等学科方向初具规模，高水平学术成果不断涌现，如遗传资源知识产权、中国双边投资条约研究等2 项成果入选国家社科成果文库；2018年至今，8项研究成果获省部级科研成果奖（其中浙江省哲学社会科学优秀成果奖一等奖1项，二等奖4项，青年奖1项，全国检察基础理论研究优秀成果奖二等奖1项，商务部商务发展研究成果奖二等奖1项），研究成果转化为国家重大决策咨询、立法、教育部部令、地方重要决策咨询、立法等。<br><br></p><p style="margin: 5px 0px; line-height: 21px; font-family: 宋体; white-space: normal;"><span style="line-height: 30px; text-indent: 40px; font-size: 20px;">●</span><span style="line-height: 24px; font-size: 16px;"><strong>人才培养成效显著，</strong><strong>形成育人特色品牌</strong></span></p><p style="margin: 5px 0px; line-height: 1.75em; font-family: 宋体; white-space: normal;">学生人才培养质量不断提升，近5年，本硕平均就业率在98.1%，其中公 务 员 考试录取率31.6%；国内外研究生录取率占毕业生人数的25%左右；毕业生满意度保持90%以上，用人单位满意度持续提升。近5年，法律职业资格考试一次性通过率约70%；行政管理专业本科生发表SSCI（Q2区）核心期刊论文2篇，在清华大学公共管理案例大赛、浙江省公共管理案例大赛等专业赛事中成绩卓越；学生课外竞赛成绩优异，学生获省属高校唯一法学类挑战杯全国一等奖1项、三等奖1项；浙江省级特等奖2项，一等奖5项；获浙江省A类学科竞赛一等奖19项，二等奖21项等。学院学子在第十九届“理律杯”全国高校模拟法庭竞赛中荣获季军，创造了省内高校参赛以来的最好成绩。近年来，在杰赛普（Jessup）模拟法庭竞赛、国际人道法（IHL）模拟法庭竞赛、国际海洋法模拟法庭竞赛等国际性赛事中屡获佳绩。</p><p style="margin: 5px 0px; line-height: 1.75em; font-family: 宋体; white-space: normal;">以“卓越”计划落实班风学风，以“法律大篷车”省级品牌（央视报道）提升学生社会服务意识，以“东铭法科大学生创新创业驱动中心”培养学生创新创业能力，以三考中心品牌提升三考通过率，以挑战杯品牌和研究生导师工作室教学模式培养硕士生学术能力。</p><p style="margin: 5px 0px; line-height: 1.75em; font-family: 宋体; white-space: normal;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;（更新于2025年8月）</p><p style="margin: 5px 0px; line-height: 1.75em; font-family: 宋体; white-space: normal;"><br></p></div></div>
+    <span id="vsb_content_2_1001_u8" name="vsb_content_2_1001_u8"></span><br><br>
+    
+<p></p>
+</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-1 col-xs-offset-3">    
+<img src="img/ma.jpg" alt="" style="width: 100%;">
+
+</div>
+                <div class="col-xs-6">
+                    <div class="info">
+<p>地址：浙江省宁波市江北区风华路818号&nbsp; 宁波大学</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(function() {
+            var Accordion = function(el, multiple) {
+                this.el = el || {};
+                this.multiple = multiple || false;
+                var links = this.el.find('.link');
+                links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+            }
+            Accordion.prototype.dropdown = function(e) {
+                var $el = e.data.el;
+                    $this = $(this),
+                    $next = $this.next();
+                $next.slideToggle();
+                $this.parent().toggleClass('open');
+                if (!e.data.multiple) {
+                    $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+                };
+            }
+            var accordion = new Accordion($('#accordion'), false);
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

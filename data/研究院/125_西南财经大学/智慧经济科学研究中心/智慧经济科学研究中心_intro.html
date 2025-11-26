@@ -1,0 +1,490 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>About Us-西南财经大学智慧经济科学研究中心</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="About Us">
+<meta name="keywords" content="西南财经大学智慧经济科学研究中心,About Us">
+
+    <link href="../style/public.css" rel="stylesheet">
+    <link href="../style/ny.css" rel="stylesheet">
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307476475c5357574200030003425c -->
+<link rel="stylesheet" type="text/css" href="../en/dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1091,'/en/dpzw.jsp',-1,2110151889)</script>
+</head>
+
+<body>
+    <div class="head pc">
+        <div class="head-top px1400">
+            <div class="">
+                <div class="logo">
+<a href="../index.htm"><img src="../images/logo1ies.png" alt=""></a></div>
+                <div class="b-top-c">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script>
+<div id="divu1">
+    <div id="appu1"><div><div class="ser-box"><input type="text" placeholder="Please enter a keyword" class="ser1"> <input type="image" src="../images/ser.png" alt="" class="ser2"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+          
+            
+             <div class="ser-box">
+                        <input type="text" placeholder="Please enter a keyword" class="ser1"  v-model=query.keyWord @keyup.enter="onSubmit">
+                        <input type="image" src="../images/ser.png" v-on:click="onSubmit()" alt="" class="ser2">
+                    </div>
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "2110151889";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.9.254.151:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="nav"><ul class="px1400 c-nav">
+
+<li>
+                    <a href="Home.htm">Home</a>
+                     
+                </li>
+ 
+
+<li class="active">
+                    <a href="About_Us.htm">About Us</a>
+                     
+                </li>
+ 
+
+<li>
+                    <a href="People.htm">People</a>
+                     
+                </li>
+ 
+
+<li>
+                    <a href="Student_Programs.htm">Student Programs</a>
+                     
+                </li>
+ 
+
+<li>
+                    <a href="Research.htm">Research</a>
+                    <div style="left: -107.156px;">
+                        <ul>
+                    <li><a href="Research/Publications.htm">Publications</a></li>
+                    <li><a href="Research/Seminars.htm">Seminars</a></li>
+                    <li><a href="Research/Conferences.htm">Conferences</a></li>
+                     </ul>
+                    </div>
+                     
+                </li>
+ 
+
+<li>
+                    <a href="News.htm">News</a>
+                     
+                </li>
+ 
+
+<li>
+                    <a href="Joining_Us.htm">Joining Us</a>
+                     
+                </li>
+ 
+<li><a href="/">中文版</a></li>
+ <div class="clear"></div>
+            </ul>
+            <div class="clear"></div></div>
+    </div>
+    <!-- 移动端导航 -->
+    <div class="top">
+        <div class="wap wap-menu">
+            <img src="../en/images/menu.png" class="menu" alt="">
+            <img src="../en/images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+    <div class="wap m-head">
+        <div class="m-logo">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script> 
+        
+              
+                 
+                        <a href="" onclick="_addDynClicks(&quot;wbimage&quot;, 2110151889, 1011059)">
+                         
+                            <img src="../images/25/04/11/1p41ychudb/weixintupian_20250422101016.png">
+                        </a>  
+                   
+       
+</div>
+        <div class="m-nav">
+            <div class="m-tlink"></div>
+            <div class="m-search">
+
+
+
+<div id="divu4">
+    <div id="appu4"><div><input type="text" placeholder="Please enter a keyword"> <input type="image" src="../images/search2.png"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu4">
+    <div id="appu4">
+        <div v-if="!isError">
+    
+             
+ <input type="text" placeholder="Please enter a keyword" v-model=query.keyWord @keyup.enter="onSubmit">
+                <input type="image" src="../images/search2.png" v-on:click="onSubmit()">
+            
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu4").html($("#htmlu4").text());
+</script>
+<script>
+    var appOwner = "2110151889";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu4",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultmobile/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.9.254.151:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+            <ul class="">
+ <li>
+                    <a href="Home.htm">Home</a>
+                </li>
+ 
+
+ <li>
+                    <a href="About_Us.htm">About Us</a>
+                </li>
+ 
+
+ <li>
+                    <a href="People.htm">People</a>
+                </li>
+ 
+
+ <li>
+                    <a href="Student_Programs.htm">Student Programs</a>
+                </li>
+ 
+
+ <li>
+                    <a href="Research.htm">Research</a><span></span>
+                     <ul>
+                    <li><a href="Research/Publications.htm">Publications</a></li>
+                    <li><a href="Research/Seminars.htm">Seminars</a></li>
+                    <li><a href="Research/Conferences.htm">Conferences</a></li>
+                     </ul>
+                </li>
+ 
+
+ <li>
+                    <a href="News.htm">News</a>
+                </li>
+ 
+
+ <li>
+                    <a href="Joining_Us.htm">Joining Us</a>
+                </li>
+ 
+ <div class="clear"></div></ul>
+        </div>
+    </div>
+
+   
+    <div class="nymain">
+        <div class="px1400">
+           
+            <div class="ny-right">
+               
+                <div class="art-main">
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',2110151889,'wbnews','u6')</script>
+<script>function seeContenta6(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta6('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',2110151889,2171)</script>
+<div class="art-tit cont-tit d">
+                        <h3>About Us</h3>
+                    </div>
+                    <div class="art-body d">
+   
+    <div id="vsb_content_2171_u61"><div id="vsb_content"><p style="text-indent: 0em;"><span style="font-size: 18px; font-family: &quot;times new roman&quot;;">Intelligence Economic Science is an emerging interdisciplinary field leveraging research in psychology, neuroscience, and artificial intelligence in advancing economic science in which incentive has a central role. Established during the centennial of Southwestern University of Finance and Economics, the <em>center for Intelligence Economic Science</em> (IES) embraces the vision to bring about a biological science of intelligence and applying it to advance economic science beyond today’s behavioral and cognitive economics. Against the backdrop of the digitalizing global economy, we envisage the IES approach to be broadly applicable to major areas of research in economics, finance, and other business areas along with the social sciences.</span></p><p style="text-indent: 0em;"><span style="font-size: 18px;"><br></span></p><p style="text-indent: 0em;"><span style="font-size: 18px;"><br></span></p><p style="text-indent: 0em;"><br></p></div></div>
+    <span id="vsb_content_2171_u6" name="vsb_content_2171_u6"></span>
+    
+</div>
+</div>
+               
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+
+
+    <div class="footer">
+        <div class="px1400">
+            <div class="foot-c">
+                <div class="foot-l">
+                    <p><span class="c-line"></span> <span>CONTACT US</span></p>
+                    
+
+                    
+                </div>
+                <div class="foot-r">    <ul>
+      <div class="clear"></div>
+                    </ul></div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="copyright"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p><span style="text-wrap-mode: nowrap;">Liulin Campus (Main Campus): 555, Liutai Avenue, Wenjiang District, Chengdu, Sichuan, P. R. China, 611130&nbsp; ies</span><span style="text-wrap-mode: nowrap;">@swufe.edu.cn</span></p><p><br></p></div>
+    </div>
+
+    <script src="../en/js/jquery.js"></script>
+    <script src="../en/js/slick.js"></script>
+    <script src="../en/js/public.js"></script>
+
+
+<style type="text/css">
+#browser-modal{width:100%;height:100%;top:0;left:0;text-align:center;color:#303233;position:fixed;z-index:99999;display: none;}
+#browser-modal .browser-modal-cover{position:fixed;left:0;top:0;height:100%;width:100%;background-color:#111;opacity:.9;z-index:-1;}
+#browser-modal .browser-content{width:700px;margin-top:120px;margin-left:auto;margin-right:auto;padding-bottom:80px;padding-top:30px;background-color:#fff;border-radius:5px;}
+#browser-modal .browser-content .browser-dpc-logo img{height:62px;margin:45px auto 30px;}
+#browser-modal .browser-content .browser-text-title{text-transform:uppercase;font-size:24px;}
+#browser-modal .browser-content .browser-text-desc{margin-top:30px;margin-bottom:40px;font-size:14px;}
+#browser-modal .browser-content .browser-list{width:600px;margin:40px auto;height:130px;}
+#browser-modal .browser-content .browser-item{float:left;width:150px;padding-top:20px;padding-bottom:20px;margin-left:auto;margin-right:auto;}
+#browser-modal .browser-content .browser-item .iconfont{width:100px;height:100px;margin:0 auto;font-size:80px;line-height:80px;margin-bottom:30px;}
+#browser-modal .browser-content .browser-item a{color:#921041;cursor:pointer;display:block;}
+#browser-modal .browser-content .browser-item a img{display:block;margin:0 auto;max-width:100px;width:100px;height:100px;}
+#browser-modal .browser-content .browser-item a h4{text-align:center;margin-top:20px;font-size:18px;font-weight:700;}
+.fixedok .banner {opacity:0;}
+
+#browser-modal .browser-content .browser-item .iconchrome{background:url(../images/bro.png) no-repeat 0 0;}
+#browser-modal .browser-content .browser-item .iconfirefox{background:url(../images/bro.png) no-repeat 0 -100px;}
+#browser-modal .browser-content .browser-item .iconopera{background:url(../images/bro.png) no-repeat 0 -200px;}
+#browser-modal .browser-content .browser-item .iconEdge{background:url(../images/bro.png) no-repeat 0 -300px;}
+
+
+</style>
+<div id="browser-modal">
+    <div class="browser-modal-cover">
+    </div>
+    <div class="browser-content">
+        <div class="browser-text">
+            
+            <h3 class="browser-text-title">请升级浏览器版本</h3>
+            <p class="browser-text-desc">
+        你正在使用旧版本浏览器。请升级浏览器以获得更好的体验。
+            </p>
+        </div>
+        <div class="browser-list">
+            <div class="browser-item">
+                <a href="https://www.google.cn/intl/zh-CN/chrome/" target="_blank">
+                <div class="iconfont iconchrome">
+                </div>
+                <h4>Chrome</h4>
+                </a>
+            </div>
+            <div class="browser-item">
+                <a href="http://www.firefox.com.cn/" target="_blank">
+                <div class="iconfont iconfirefox">
+                </div>
+                <h4>Firefox</h4>
+                </a>
+            </div>
+            <div class="browser-item">
+                <a href="https://www.opera.com/zh-cn" target="_blank">
+                <div class="iconfont iconopera">
+                </div>
+                <h4>Opera</h4>
+                </a>
+            </div>
+            <div class="browser-item">
+                <a href="https://www.microsoft.com/zh-cn/edge" target="_blank">
+                <div class="iconfont iconEdge">
+                </div>
+                <h4>Edge</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE","")) < 11){
+            document.getElementById('browser-modal').style.display='block';
+            console.log("您的浏览器版本过低，请使用IE10以上版本");
+    }
+    </script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

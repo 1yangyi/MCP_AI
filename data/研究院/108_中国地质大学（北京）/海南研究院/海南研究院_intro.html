@@ -1,0 +1,829 @@
+<!DOCTYPE html><html lang="en" style="font-size: 170.667px;"><head>
+<meta charset="utf-8">
+<title>中国地质大学</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Web site created using create-react-app">
+<link rel="stylesheet" href="/hnyjy/css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="/hnyjy/css/hometop.css">
+<script>
+        var deviceWidth = document.documentElement.clientWidth;
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+        window.onresize = function () {
+            var deviceWidth = document.documentElement.clientWidth;
+            document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+        };
+</script>
+<link rel="stylesheet" type="text/css" href="/hnyjy/css/index.css">
+<link rel="stylesheet" type="text/css" href="/hnyjy/css/list.css">
+<link rel="stylesheet" type="text/css" href="/hnyjy/css/detail.css">
+<script>
+        // 判断是pc端 或 移动端
+        function deviceProbing() {
+            var reg = /([a-zA-Z]+)?([a-zA-Z]+.*\;\s([a-zA-Z0-9]+)?)/
+            var newNav = navigator.appVersion.match(reg);
+            if (newNav) {
+                var nav = newNav[0];
+                var navArr = nav.split(/(\s)|((\s\d\.\d)?\;)/);
+                var flag = false;
+                for (var i = 0, len = navArr.length; i < len; i++) {
+                    if (navArr[i] == 'Android' || navArr[i] == 'iPhone' || navArr[i] == 'iPad' || navArr[i] == 'MeeGo' || navArr[i] == 'NokiaN9' || navArr[i] == 'NOKIA') {
+                        flag = true;
+                        break;
+                    } else {
+                        flag = false;
+                    }
+                }
+                return flag;
+            }
+        }
+        var isMobiles = deviceProbing();
+        if (isMobiles) {
+            document.write('<link rel="stylesheet" type="text/css" href="/hnyjy/css/list_mobile.css">');
+            document.write('<link rel="stylesheet" type="text/css" href="/hnyjy/css/detail_mobile.css">');
+        }
+</script>
+<link rel="stylesheet" type="text/css" href="/hnyjy/css/add_page.css">
+<script src="https://cms.cugb.edu.cn/cms/front/stat/dealer?SiteID=247&amp;CatalogInnerCode=003656000001&amp;Type=Article&amp;LeafID=811557&amp;sr=1280x720&amp;cd=24&amp;ce=1&amp;la=zh-CN&amp;cs=UTF-8&amp;vq=2&amp;Title=%E4%B8%AD%E5%9B%BD%E5%9C%B0%E8%B4%A8%E5%A4%A7%E5%AD%A6&amp;URL=https://bm.cugb.edu.cn/hnyjy/xygk/yjyjj/&amp;Host=bm.cugb.edu.cn"></script></head>
+
+<body>
+    <div class="mubansi-body mubansi_box">
+      <!--头部-->
+      
+
+<div class="footer-box">
+	<div class="footer-box-center">
+		<a class="footer-logo" href="https://bm.cugb.edu.cn/hnyjy/"><img src="/hnyjy/images/logo2025s.png" alt=""></a>
+		<!--<a href="${Site.Link}"><img src="${prefix('images/logo2024s.png')}" class='footer-logo' alt='' /></a>-->
+		<!-- pc菜单 -->
+		<div class="footer-tab">
+			<div class="footer-tab-right">
+				<div class="tab-input">
+					<form name="form" action="/hnyjy/search/result.shtml">
+						<input type="hidden" name="SiteID" value="247">
+						<input id="searchInput" placeholder=" 请输入关键字" type="text" name="query" autocomplete="off">
+						<a href="javascript:void(0)" onclick="doSearch()" class="input-search"><img src="/hnyjy/images/search.png" alt=""></a>
+					</form>
+				</div>
+				<!--
+				<div class='tab-box'>
+					<a href="${Site.Link}"><div id="home" class='tab-a'>首页</div></a>
+					<cms:catalog level="Root" count="7">
+						<z:list>
+							<a href="${Catalog.Link}"><div id="${Catalog.InnerCode}" class='tab-a'>${Catalog.Name}</div></a>
+						</z:list>
+					</cms:catalog>
+				</div>
+				-->
+				<ul class="tab-box">
+					<li><a href="https://bm.cugb.edu.cn/hnyjy/"><div id="home" class="tab-a" data-txt="首页">首页</div></a></li>
+					
+						
+							<li>
+                              	<a href="/hnyjy/xygk/yjyjj/"><div id="003656" class="tab-a current" data-txt="研究院概况">研究院概况</div></a>
+								
+									<p class="sub">
+										
+											
+                                              <a href="/hnyjy/xygk/yjyjj/">研究院简介</a>
+                                              <a href="/hnyjy/xygk/lrld/">历任领导</a>
+                                              <a href="/hnyjy/xygk/xrld/">现任领导</a>
+										
+									</p>
+								
+							</li>
+							<li>
+                              	<a href="/hnyjy/jgsz/gljg/"><div id="003657" class="tab-a" data-txt="机构设置">机构设置</div></a>
+								
+									<p class="sub">
+										
+											
+                                              <a href="/hnyjy/jgsz/gljg/">综合办公室</a>
+                                              <a href="/hnyjy/jgsz/jxjg/">研究生管理部</a>
+                                              <a href="/hnyjy/jgsz/syssz/">科研合作部</a>
+                                              <a href="/hnyjy/jgsz/rcfzb/">人才发展部</a>
+                                              <a href="/hnyjy/jgsz/zcycwb/">资产与财务部</a>
+										
+									</p>
+								
+							</li>
+							<li>
+                              	<a href="/hnyjy/szdw/szgk/"><div id="003658" class="tab-a" data-txt="师资队伍">师资队伍</div></a>
+								
+									<p class="sub">
+										
+											
+                                              <a href="/hnyjy/szdw/szgk/">师资概况</a>
+                                              <a href="/hnyjy/szdw/ysgzz/">院士团队创新中心</a>
+                                              <a href="/hnyjy/szdw/zgzcjs/">深海矿产资源开发与智能装备研发中心</a>
+                                              <a href="/hnyjy/szdw/fgzcjs/">海洋油气与天然气水合物勘探开发中心</a>
+                                              <a href="/hnyjy/szdw/zjzcjs/">极地科学技术与极地工程装备研发中心</a>
+                                              <a href="/hnyjy/szdw/hydzdcyhydsjyyzx/">海洋地质调查与海洋大数据应用中心</a>
+                                              <a href="/hnyjy/szdw/hydqwltcjsyzbyfzx/">海洋地球物理探测技术与装备研发中心</a>
+                                              <a href="/hnyjy/szdw/hyyjdfgzczlyjzx/">海洋与极地法规政策战略研究中心</a>
+										
+									</p>
+								
+							</li>
+							<li>
+                              	<a href="/hnyjy/szdw/hydzdcyhydsjyyzx/kypt/jybzdsys1/"><div id="003936" class="tab-a" data-txt="科研平台">科研平台</div></a>
+								
+									<p class="sub">
+										
+											
+                                              <a href="/hnyjy/szdw/hydzdcyhydsjyyzx/kypt/jybzdsys1/">教育部重点实验室1</a>
+                                              <a href="/hnyjy/szdw/hydzdcyhydsjyyzx/kypt/jybzdsys2/">教育部重点实验室2</a>
+                                              <a href="/hnyjy/szdw/hydzdcyhydsjyyzx/kypt/jybzdsys2/jybzdsys3/">教育部重点实验室3</a>
+                                              <a href="/hnyjy/szdw/hydzdcyhydsjyyzx/kypt/jybzdsys2/jybzdsys3/jybzdsys4/">教育部重点实验室4</a>
+                                              <a href="/hnyjy/szdw/hydzdcyhydsjyyzx/kypt/jybzdsys5/">教育部重点实验室5</a>
+										
+									</p>
+								
+							</li>
+							<li>
+                              	<a href="/hnyjy/zmgdt/"><div id="003935" class="tab-a" data-txt="自贸港动态">自贸港动态</div></a>
+								
+							</li>
+							<li>
+                              	<a href="/hnyjy/kxyj/xkjs/"><div id="003659" class="tab-a" data-txt="科学研究">科学研究</div></a>
+								
+									<p class="sub">
+										
+											
+                                              <a href="/hnyjy/kxyj/xkjs/">学科建设</a>
+                                              <a href="/hnyjy/kxyj/xslw/">学术论文</a>
+                                              <a href="/hnyjy/kydt/">科研动态</a>
+                                              <a href="/hnyjy/kxyj/xsjl/">学术交流</a>
+										
+									</p>
+								
+							</li>
+							<li>
+                              	<a href="/hnyjy/rcpy/yjszs/"><div id="003660" class="tab-a" data-txt="人才培养">人才培养</div></a>
+								
+									<p class="sub">
+										
+											
+                                              <a href="/hnyjy/rcpy/yjszs/">研究生招生</a>
+                                              <a href="/hnyjy/rcpy/yjsjy/">研究生教育</a>
+										
+									</p>
+								
+							</li>
+							<li>
+                              	<a href="/hnyjy/dqgz/jzgdzb/"><div id="003661" class="tab-a" data-txt="党群工作">党群工作</div></a>
+								
+									<p class="sub">
+										
+											
+                                              <a href="/hnyjy/dqgz/jzgdzb/">教职工党支部</a>
+                                              <a href="/hnyjy/dqgz/xsdzb/">学生党支部</a>
+                                              <a href="/hnyjy/dqgz/gh/">工会</a>
+                                              <a href="/hnyjy/xsgz/xsgl/">学生管理</a>
+                                              <a href="/hnyjy/xsgz/jlzz/">奖励资助</a>
+                                              <a href="/hnyjy/xsgz/jyzc/">就业政策</a>
+										
+									</p>
+								
+							</li>
+					
+				</ul>
+			</div>
+		</div>
+		<!-- 移动端菜单 -->
+		<!--
+		<div class="on-submit">
+			<form name="form">
+				<input placeholder=' 请输入关键字' type="text" name="element" class="moblsubmit" autocomplete='off' />
+				<a onclick="onSubmit()" class='input-search'>
+					<img src="${prefix('images/tcx.png')}" alt='' />
+				</a>
+			</form>
+		</div>
+		-->
+		
+		<div class="mobil-caidan">
+			<div class="mobil-caidan-title">
+				<img src="/hnyjy/images/wlogo2024.png" alt="" class="logo">
+				<img src="/hnyjy/images/tcx.png" alt="" onclick="shouqi()" class="guanbi">
+			</div>
+			<div class="mobil-cd-box">
+				<div class="m-ul" id="item1">
+					<a href="https://bm.cugb.edu.cn/hnyjy/">
+						<div class="onchild m-center" onclick="ontitle('#item1',false)">
+							首页<span><img src="/hnyjy/images/tcbott.png" alt="" class="jiao"></span>
+						</div>
+					</a>
+				</div>
+				
+					
+						
+							<div class="m-ul" id="item2">
+								<a>
+									<div class="m-center" onclick="ontitle('#item2',true)">
+										研究院概况<span><img src="/hnyjy/images/tcbott.png" alt="" class="jiao"></span>
+									</div>
+								</a>
+								<div class="m-list">
+									
+										
+											<div class="c-li"><a href="/hnyjy/xygk/yjyjj/">研究院简介</a></div>
+											<div class="c-li"><a href="/hnyjy/xygk/lrld/">历任领导</a></div>
+											<div class="c-li"><a href="/hnyjy/xygk/xrld/">现任领导</a></div>
+									
+								</div>
+							</div>
+						
+						
+						
+							<div class="m-ul" id="item3">
+								<a>
+									<div class="m-center" onclick="ontitle('#item3',true)">
+										机构设置<span><img src="/hnyjy/images/tcbott.png" alt="" class="jiao"></span>
+									</div>
+								</a>
+								<div class="m-list">
+									
+										
+											<div class="c-li"><a href="/hnyjy/jgsz/gljg/">综合办公室</a></div>
+											<div class="c-li"><a href="/hnyjy/jgsz/jxjg/">研究生管理部</a></div>
+											<div class="c-li"><a href="/hnyjy/jgsz/syssz/">科研合作部</a></div>
+											<div class="c-li"><a href="/hnyjy/jgsz/rcfzb/">人才发展部</a></div>
+											<div class="c-li"><a href="/hnyjy/jgsz/zcycwb/">资产与财务部</a></div>
+									
+								</div>
+							</div>
+						
+						
+						
+							<div class="m-ul" id="item4">
+								<a>
+									<div class="m-center" onclick="ontitle('#item4',true)">
+										师资队伍<span><img src="/hnyjy/images/tcbott.png" alt="" class="jiao"></span>
+									</div>
+								</a>
+								<div class="m-list">
+									
+										
+											<div class="c-li"><a href="/hnyjy/szdw/szgk/">师资概况</a></div>
+											<div class="c-li"><a href="/hnyjy/szdw/ysgzz/">院士团队创新中心</a></div>
+											<div class="c-li"><a href="/hnyjy/szdw/zgzcjs/">深海矿产资源开发与智能装备研发中心</a></div>
+											<div class="c-li"><a href="/hnyjy/szdw/fgzcjs/">海洋油气与天然气水合物勘探开发中心</a></div>
+											<div class="c-li"><a href="/hnyjy/szdw/zjzcjs/">极地科学技术与极地工程装备研发中心</a></div>
+											<div class="c-li"><a href="/hnyjy/szdw/hydzdcyhydsjyyzx/">海洋地质调查与海洋大数据应用中心</a></div>
+											<div class="c-li"><a href="/hnyjy/szdw/hydqwltcjsyzbyfzx/">海洋地球物理探测技术与装备研发中心</a></div>
+											<div class="c-li"><a href="/hnyjy/szdw/hyyjdfgzczlyjzx/">海洋与极地法规政策战略研究中心</a></div>
+									
+								</div>
+							</div>
+						
+						
+						
+							<div class="m-ul" id="item5">
+								<a>
+									<div class="m-center" onclick="ontitle('#item5',true)">
+										科研平台<span><img src="/hnyjy/images/tcbott.png" alt="" class="jiao"></span>
+									</div>
+								</a>
+								<div class="m-list">
+									
+										
+											<div class="c-li"><a href="/hnyjy/szdw/hydzdcyhydsjyyzx/kypt/jybzdsys1/">教育部重点实验室1</a></div>
+											<div class="c-li"><a href="/hnyjy/szdw/hydzdcyhydsjyyzx/kypt/jybzdsys2/">教育部重点实验室2</a></div>
+											<div class="c-li"><a href="/hnyjy/szdw/hydzdcyhydsjyyzx/kypt/jybzdsys2/jybzdsys3/">教育部重点实验室3</a></div>
+											<div class="c-li"><a href="/hnyjy/szdw/hydzdcyhydsjyyzx/kypt/jybzdsys2/jybzdsys3/jybzdsys4/">教育部重点实验室4</a></div>
+											<div class="c-li"><a href="/hnyjy/szdw/hydzdcyhydsjyyzx/kypt/jybzdsys5/">教育部重点实验室5</a></div>
+									
+								</div>
+							</div>
+						
+						
+						
+						
+							<div class="m-ul" id="item6">
+								<a href="/hnyjy/zmgdt/">
+									<div class="onchild m-center" onclick="ontitle('#item6',false)">
+										自贸港动态<span><img src="/hnyjy/images/tcbott.png" alt="" class="jiao"></span>
+									</div>
+								</a>
+							</div>
+						
+						
+							<div class="m-ul" id="item7">
+								<a>
+									<div class="m-center" onclick="ontitle('#item7',true)">
+										科学研究<span><img src="/hnyjy/images/tcbott.png" alt="" class="jiao"></span>
+									</div>
+								</a>
+								<div class="m-list">
+									
+										
+											<div class="c-li"><a href="/hnyjy/kxyj/xkjs/">学科建设</a></div>
+											<div class="c-li"><a href="/hnyjy/kxyj/xslw/">学术论文</a></div>
+											<div class="c-li"><a href="/hnyjy/kydt/">科研动态</a></div>
+											<div class="c-li"><a href="/hnyjy/kxyj/xsjl/">学术交流</a></div>
+									
+								</div>
+							</div>
+						
+						
+						
+							<div class="m-ul" id="item8">
+								<a>
+									<div class="m-center" onclick="ontitle('#item8',true)">
+										人才培养<span><img src="/hnyjy/images/tcbott.png" alt="" class="jiao"></span>
+									</div>
+								</a>
+								<div class="m-list">
+									
+										
+											<div class="c-li"><a href="/hnyjy/rcpy/yjszs/">研究生招生</a></div>
+											<div class="c-li"><a href="/hnyjy/rcpy/yjsjy/">研究生教育</a></div>
+									
+								</div>
+							</div>
+						
+						
+						
+							<div class="m-ul" id="item9">
+								<a>
+									<div class="m-center" onclick="ontitle('#item9',true)">
+										党群工作<span><img src="/hnyjy/images/tcbott.png" alt="" class="jiao"></span>
+									</div>
+								</a>
+								<div class="m-list">
+									
+										
+											<div class="c-li"><a href="/hnyjy/dqgz/jzgdzb/">教职工党支部</a></div>
+											<div class="c-li"><a href="/hnyjy/dqgz/xsdzb/">学生党支部</a></div>
+											<div class="c-li"><a href="/hnyjy/dqgz/gh/">工会</a></div>
+											<div class="c-li"><a href="/hnyjy/xsgz/xsgl/">学生管理</a></div>
+											<div class="c-li"><a href="/hnyjy/xsgz/jlzz/">奖励资助</a></div>
+											<div class="c-li"><a href="/hnyjy/xsgz/jyzc/">就业政策</a></div>
+									
+								</div>
+							</div>
+						
+						
+				
+			</div>
+		</div>
+		
+		<div class="mobil-cdbox">
+			<!--<img src="${prefix('images/yd-ssuo.png')}" alt='' class='yd-ssuo' onclick="onmobilssuo()" />-->
+			<img src="/hnyjy/images/yd-cdan.png" alt="" class="yd-cdan" onclick="onmobilcaidan()">
+		</div>
+	</div>
+</div>
+
+<script src="/hnyjy/js/jquery-1.11.3.min.js"></script>
+<script>
+	//获取要定位元素距离浏览器顶部的距离
+	var navH = $(".footer-box").offset().top;
+	//滚动条事件
+	$(window).scroll(function(){
+		//获取滚动条的滑动距离
+		var scroH = $(this).scrollTop();
+		//滚动条的滑动距离大于等于定位元素距离浏览器顶部的距离，就固定，反之就不固定
+		if(scroH >navH){
+			$(".footer-box").addClass("fixed");
+		}else if(scroH <= navH){
+			$(".footer-box").removeClass("fixed");
+		}
+	});
+	function doSearch(){
+		$(".mubansi-body .footer-box .footer-tab .tab-input").toggleClass("open");
+		/*
+		if($(".mubansi-body .footer-box .footer-tab .tab-input").hasClass("open")){
+			if(!$("#searchInput").val() || !$("#searchInput").val().trim()){
+				console.log("请输入搜索关键字！")
+				return;
+			}
+			var url="https://bm.cugb.edu.cn/hnyjy/search/result.shtml?SiteID=247&query="+encodeURIComponent($("#searchInput").val());
+			window.open(url);
+		}else{
+			$(".mubansi-body .footer-box .footer-tab .tab-input").addClass("open");
+		}
+		*/
+	}
+	$("#searchInput").keydown(function(event){
+		if(event.keyCode ==13){
+			//doSearch();
+			if(!$("#searchInput").val() || !$("#searchInput").val().trim()){
+				console.log("请输入搜索关键字！")
+				return false;
+			}
+			console.log("enter");
+		}
+	});
+</script>
+
+      
+        <div class="mubansi_main_box">
+            <div class="main_head">
+                
+                  	
+                	<div class="main_head_text">
+                        <label>学院概况</label>
+                        <!--<z:if condition="${Catalog.ChildCount>0}">
+                          <div class="main_head_selct">
+                            <select onchange="window.location=this.value">
+                              <cms:catalog id="${Catalog.id}" level="Child">
+                                  <z:list>
+                                       <option value="${catalog.name}">${catalog.name}</option>
+                                  </z:list>
+                               </cms:catalog>
+                            </select>
+                    	  </div>
+                        </z:if>-->
+                	</div>
+                    
+                
+                <div class="main_head_border">
+                    <a class="main_head_homeicon" href="https://bm.cugb.edu.cn/hnyjy/"><img src="/hnyjy/images/home_icon1.png"></a>
+                    <img class="main_head_righticon" src="/hnyjy/images/right_icon.png">
+                    <label><a>研究院简介</a></label>
+                </div>
+            </div>
+          <!--移动端菜单栏-->
+            <div class="main_nav_mobile">
+                <div class="mnm_box">
+                    
+                        <!--<div class="mnm_sanjinav mobile_child_active"><a href="${Catalog.Link}"><label>${catalog.name}</label></a></div>-->
+                        
+                              
+                                  
+                                       <div class="mnm_sanjinav mobile_child_active">
+                                         <a href="/hnyjy/xygk/yjyjj/"><label>研究院简介</label></a>
+                                       </div>
+                                       <div class="mnm_sanjinav">
+                                         <a href="/hnyjy/xygk/lrld/"><label>历任领导</label></a>
+                                       </div>
+                                       <div class="mnm_sanjinav">
+                                         <a href="/hnyjy/xygk/xrld/"><label>现任领导</label></a>
+                                       </div>
+                               
+                        
+                    
+                </div>
+            </div>
+  			<!--pc端左侧菜单-->
+            <div class="main_list_box" style="min-height: 490px;">
+                <div class="main_nav">
+                    <div class="main_nav_item item_active">
+                       
+                          <!--<div class="main_nav_title">${catalog.name}</div>-->
+                              
+                                  <ul class="main_nav_child" style="display: block;">
+                                    
+                                           
+                                             <li class="main_nav_title"><a href="/hnyjy/xygk/yjyjj/">研究院简介</a></li>
+                                             <li><a href="/hnyjy/xygk/lrld/">历任领导</a></li>
+                                             <li><a href="/hnyjy/xygk/xrld/">现任领导</a></li>
+                                     
+                                  </ul>
+                              
+                       
+                    </div>
+                </div>
+                <div class="main_list">
+                    <div class="main_list_content">
+                        <div class="main_detail_box">
+                            <div class="main_detail_title">研究院简介</div>
+                            <div class="main_detail_subtit">
+                                <label class="main_detail_subname"></label> <span></span>
+                                <label class="main_detail_subtime">2025-04-27</label> <span></span>
+                                <img class="main_detail_subimg" src="/hnyjy/images/eye_icon1.png">
+                                <label>87</label>
+                            </div>
+                            <div class="main_detail_content"><p style="text-indent: 2em; text-align: justify; margin-top: 1em;"><span style="font-family:仿宋_GB2312">中国地质大学(北京)海南研究院(以下简称“海南研究院”)成立于2024年5月15日，是中国地质大学(北京)的二级单位，旨在贯彻落实习近平总书记在庆祝海南建省办经济特区30周年大会的重要讲话精神。研究院依托海南省的区位、资源及政策优势，结合学校在地质学、地质资源与地质工程及海洋科学领域的学科优势，助力国家海洋战略实施和海南自由贸易港建设，同时推动学校“双一流”建设。</span></p><p style="text-indent: 2em; text-align: justify; margin-top: 1em;"><span style="font-family:仿宋_GB2312">海南研究院以推动产学研培一体化建设为核心，依托国家和省部级重点科研平台，如地质过程与矿产资源国家重点实验室、海洋油气勘探国家工程研究中心等，服务国家战略需求，推动国际科研教育合作，致力于打造集科学研究、技术开发和人才培养于一体的高水平科教平台。</span></p><p style="text-indent: 2em; text-align: justify; margin-top: 1em;"><span style="font-family:仿宋_GB2312">海南研究院聚焦深海采矿技术与智能装备、海洋油气勘探与开发、海洋地质调查、海洋大数据与物理海洋等领域，开展高层次人才培养、高水平科学研究和科技成果转化。围绕国家和区域发展的重大需求，组织相关学科力量，系统开展深海采矿技术、海洋油气勘探与开发、海洋综合地质调查和海洋大数据等领域的研究，推动科研成果优先在海南转化应用，为海南自由贸易港“三区一中心”战略定位提供科技支撑。海南研究院以“学校所长，海南所需”为目标，与中国地质调查局、海南地质局、中石油、中石化、中海油等行业龙头企业紧密合作，共同培养高层次、复合型人才，形成产学研深度融合的新模式，积极开展科教融合理念的创新型人才培养工作。自成立以来，累计招收55名研究生，其中博士生数量占比27%。</span></p><p style="text-indent: 2em; text-align: justify; margin-top: 1em;"><span style="font-family:仿宋_GB2312">海南研究院将全力推进科研攻关、建设科研基地、全力打造产学研协同发展的新态势，在琼构建国际领先的海洋科学与技术研究平台，为我国海洋战略实施和区域经济发展做出更大贡献。</span></p><p><br></p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!--底部-->
+     		
+	<div class="yqlj-bott">
+		<div class="yqlj-bott-cen">
+			<a class="logo" href="https://bm.cugb.edu.cn/hnyjy/"><img src="/hnyjy/images/flogo.png"></a>
+				<div class="contact">
+					<div class="code"><img src="/hnyjy/images/code.jpg">研究院官方微信</div>
+					<p><img class="addr" src="/hnyjy/images/f_addr.png">地址：三亚市崖州区崖州湾科技城雅布伦产业园5号楼</p>
+					<p><img class="tel" src="/hnyjy/images/f_tel.png">电话：0898-88273400</p>
+				</div>
+			
+				
+							
+					<dl>
+						<dt><a href="/hnyjy/xygk/yjyjj/">研究院概况</a></dt>
+								
+									
+                                      	
+										<dd><a href="/hnyjy/xygk/yjyjj/">研究院简介</a></dd>
+                                      	
+                                      	
+										<dd><a href="/hnyjy/xygk/lrld/">历任领导</a></dd>
+                                      	
+                                      	
+										<dd><a href="/hnyjy/xygk/xrld/">现任领导</a></dd>
+                                      	
+								
+					</dl>
+							
+							
+					<dl>
+						<dt><a href="/hnyjy/jgsz/gljg/">机构设置</a></dt>
+								
+									
+                                      	
+										<dd><a href="/hnyjy/jgsz/gljg/">综合办公室</a></dd>
+                                      	
+                                      	
+										<dd><a href="/hnyjy/jgsz/jxjg/">研究生管理部</a></dd>
+                                      	
+                                      	
+										<dd><a href="/hnyjy/jgsz/syssz/">科研合作部</a></dd>
+                                      	
+                                      	
+										<dd><a href="/hnyjy/jgsz/rcfzb/">人才发展部</a></dd>
+                                      	
+                                      	
+										<dd><a href="/hnyjy/jgsz/zcycwb/">资产与财务部</a></dd>
+                                      	
+								
+					</dl>
+							
+							
+					<dl>
+						<dt><a href="/hnyjy/szdw/szgk/">师资队伍</a></dt>
+								
+									
+                                      	
+										<dd><a href="/hnyjy/szdw/szgk/">师资概况</a></dd>
+                                      	
+                                      	
+										<dd><a href="/hnyjy/szdw/ysgzz/">院士团队创新中心</a></dd>
+                                      	
+                                      	
+                                      	
+                                      	
+                                      	
+                                      	
+                                      	
+								
+					</dl>
+							
+							
+					<dl>
+						<dt><a href="/hnyjy/szdw/hydzdcyhydsjyyzx/kypt/jybzdsys1/">科研平台</a></dt>
+								
+									
+                                      	
+										<dd><a href="/hnyjy/szdw/hydzdcyhydsjyyzx/kypt/jybzdsys1/">教育部重点实验室1</a></dd>
+                                      	
+                                      	
+										<dd><a href="/hnyjy/szdw/hydzdcyhydsjyyzx/kypt/jybzdsys2/">教育部重点实验室2</a></dd>
+                                      	
+                                      	
+										<dd><a href="/hnyjy/szdw/hydzdcyhydsjyyzx/kypt/jybzdsys2/jybzdsys3/">教育部重点实验室3</a></dd>
+                                      	
+                                      	
+										<dd><a href="/hnyjy/szdw/hydzdcyhydsjyyzx/kypt/jybzdsys2/jybzdsys3/jybzdsys4/">教育部重点实验室4</a></dd>
+                                      	
+                                      	
+										<dd><a href="/hnyjy/szdw/hydzdcyhydsjyyzx/kypt/jybzdsys5/">教育部重点实验室5</a></dd>
+                                      	
+								
+					</dl>
+							
+							
+							
+					<dl>
+						<dt><a href="/hnyjy/kxyj/xkjs/">科学研究</a></dt>
+								
+									
+                                      	
+										<dd><a href="/hnyjy/kxyj/xkjs/">学科建设</a></dd>
+                                      	
+                                      	
+										<dd><a href="/hnyjy/kxyj/xslw/">学术论文</a></dd>
+                                      	
+                                      	
+										<dd><a href="/hnyjy/kydt/">科研动态</a></dd>
+                                      	
+                                      	
+										<dd><a href="/hnyjy/kxyj/xsjl/">学术交流</a></dd>
+                                      	
+								
+					</dl>
+							
+							
+					<dl>
+						<dt><a href="/hnyjy/rcpy/yjszs/">人才培养</a></dt>
+								
+									
+                                      	
+										<dd><a href="/hnyjy/rcpy/yjszs/">研究生招生</a></dd>
+                                      	
+                                      	
+										<dd><a href="/hnyjy/rcpy/yjsjy/">研究生教育</a></dd>
+                                      	
+								
+					</dl>
+							
+			
+			<dl>
+				<dt><a>友情链接</a></dt>
+					
+						
+							<dd><a href="https://www.cugb.edu.cn/" target="_blank">中国地质大学（北京）</a></dd>
+							<dd><a href="https://bm.cugb.edu.cn/pgmm/" target="_blank">教育部重点实验室</a></dd>
+							<dd><a href="https://dost.hainan.gov.cn/" target="_blank">海南省科技厅</a></dd>
+							<dd><a href="http://edu.hainan.gov.cn/" target="_blank">海南省教育厅</a></dd>
+							<dd><a href="https://www.yazhou-bay.com/" target="_blank">三亚崖州科技城</a></dd>
+							<dd><a href="https://cms.cugb.edu.cn/cms/cmslogin.html" target="_blank">管理登录</a></dd>
+					
+					<!--
+					<cms:link code="kslj">
+						<z:list>
+							<dd><a href="${Link.URL}">${Link.Name}</a></dd>
+						</z:list>
+					</cms:link>
+					-->
+			</dl>
+		</div>
+		<div class="copyright">
+			版权所有中国地质大学（北京） 校址：北京市海淀区学院路29号 邮编：100083 文保网安备案：1101080023 技术支持：<a target="_blank">信息网络中心</a>
+		</div>
+	</div>
+	<div class="mo-yqlj-bott">
+		<p>版权所有中国地质大学（北京）</p>
+		<p>校址：北京市海淀区学院路29号 邮编：100083</p>
+		<p>文保网安备案：1101080023 技术支持：信息网络中心</p>
+	</div> 
+    </div>
+    <!-- <div id="mouse" class="mouse"></div> -->
+
+<!-- JQ -->
+<script src="/hnyjy/js/jquery-1.12.4.min.js"></script>
+<!-- 入场动画 -->
+<script src="/hnyjy/js/scrollReveal.js"></script>
+<!-- 轮播图 -->
+<script src="/hnyjy/js/swiper.min.js"></script>
+<script src="/hnyjy/js/paging.js"></script>
+<script>
+    //入场动画
+    $(function () {
+  		// 栏目菜单高亮
+       var currentparentId = "003656";
+        var catalogElement = document.getElementById(currentparentId);
+        if (catalogElement) {
+            catalogElement.className += " current";
+        }
+  
+  
+  
+        // 左侧导航
+        $('.main_nav .item_active').find('ul').slideToggle(1);
+        setTimeout(function () {
+            getHeight();
+        }, 10);
+        $(".main_nav .main_nav_title").click(function () { //一级菜单
+            $(this).parent().addClass('item_active').siblings().removeClass('item_active');
+            $(this).next().slideToggle(200);
+            $(this).parent().siblings().children("ul").slideUp(200);
+            setTimeout(function () {
+                getHeight();
+            }, 200);
+
+        });
+        $('.main_nav .main_nav_child li').click(function () { //二级菜单
+            $(this).parent().parent().siblings().find('.item_child_active').removeClass('item_child_active');
+            $(this).addClass('item_child_active').siblings().removeClass('item_child_active');
+        })
+        function getHeight() {
+            var main_nav_height = $('.mubansi_main_box .main_nav').height();
+            $('.mubansi_main_box .main_list_box').css('min-height', (main_nav_height + 64 > 490 ? (main_nav_height + 64) : 490) + 'px')
+        }
+        // listhover
+        $(".main_list_box .main_list .news-size").hover(function () {
+            $(this).find('.news-two-notes').css('color', '#9f6534')
+            $(this).find('.news-two-title').css({ 'color': '#9f6534', 'text-decoration': 'underline' })
+        }, function () {
+            $(this).find('.news-two-notes').css('color', '#555555')
+            $(this).find('.news-two-title').css({ 'color': '#000000', 'text-decoration': 'none' })
+        })
+        // 分页器
+        $("#mubansi_page").paging({
+            pageNo: 15,
+            totalPage: 19,
+            totalSize: 300,
+            callback: function (num) {
+                // ---
+            }
+        })
+    });
+    if (isMobiles) {
+        // 移动端三级导航
+        $('.mubansi_main_box .main_nav_mobile .mnm_sanjinav').click(function () {
+            $(this).addClass('mobile_child_active').siblings().removeClass('mobile_child_active');
+        })
+        //$('.main_list_content .main_detail_subimg').attr('src', '../../images/eye_icon_mobile.png');
+    }
+    else {
+        window.scrollReveal = new scrollReveal({
+            reset: false,
+            move: '50px'
+        });
+    }
+    //追随鼠标的小点点
+    // var boxDom = document.querySelector(".mouse");
+    // document.onmousemove = function (event) {
+    //   let evt = event || window.event;
+    //   boxDom.style.left = evt.clientX - boxDom.offsetWidth / 2 + "px";
+    //   boxDom.style.top = evt.clientY - boxDom.offsetHeight / 2 + "px";
+    // }
+    //搜索
+    function handlePost() {
+        // console.log('pc搜索', form.element.value);
+    }
+</script>
+<script>
+    //移动端font-size计算
+    var deviceWidth = document.documentElement.clientWidth;
+    document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    window.onresize = function () {
+        var deviceWidth = document.documentElement.clientWidth;
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+    };
+    // 移动端搜索
+    function onmobilssuo() {
+        // console.log('移动端搜索');
+        $(".on-submit").animate({
+            "left": "0",
+            "z-index": "3"
+        }, "slow");
+    }
+    //搜索框失去光标收回搜索框
+    $(".moblsubmit").blur(function () {
+        onSubmit()
+    })
+    // 收回搜索框
+    function onSubmit() {
+        //发出搜索请求后，可选择收回
+        $(".on-submit").css("z-index", "2")
+        $(".on-submit").animate({
+            "left": "6.14rem"
+        }, "slow");
+
+    }
+    // 移动端菜单
+    function onmobilcaidan() {
+        // console.log('展开菜单');
+        $("body").addClass('body-pos');
+        $(".mobil-caidan").animate({
+            "top": "0"
+        }, "slow");
+    }
+    //收起菜单
+    function shouqi() {
+        // console.log('收起菜单');
+        $("body").removeClass('body-pos');
+        $(".mobil-caidan").animate({
+            "top": "-100vh"
+        }, "slow");
+        $(".mubansi-body").css('pointer-events', 'none');
+        setTimeout(function () {
+            $(".mubansi-body").css('pointer-events', 'auto');
+        }, 400);
+    }
+    //点击一级菜单
+    function ontitle(item, state) {
+        if (state) {
+            //有子菜单
+			$(item).toggleClass("onsanjiao");
+			//$(item).children(".m-list").css("display", "table");
+			$(item).children(".m-list").toggle();
+		} else {
+			//没子菜单
+			//$(item).addClass("onHover");
+        }
+    }
+</script>
+
+
+<script src="https://cms.cugb.edu.cn/cms/stat/front/stat.js" type="text/javascript"></script>
+<script>
+if(window._zcms_stat)_zcms_stat("SiteID=247&CatalogInnerCode=003656000001&Type=Article&LeafID=811557&Dest=https://cms.cugb.edu.cn/cms/front/stat/dealer");
+</script>
+
+<!-- App=COMBANC(康邦内容管理系统) 3.2.6,CostTime=6,PublishDate=2025-04-29 10:00:53 -->
+
+<script src="https://cms.cugb.edu.cn/cms/recommend/js/recommendstat.js" type="text/javascript"></script>
+<script>
+if(window._zcms_recommendstat)_zcms_recommendstat("SiteID=247&ContentID=811557&RecommendType=Content&Dest=https://cms.cugb.edu.cn/cms/front/recommends/dealer");
+</script>
+
+</body></html>

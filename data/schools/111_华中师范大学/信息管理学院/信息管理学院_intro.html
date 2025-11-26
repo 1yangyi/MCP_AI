@@ -1,0 +1,485 @@
+<!DOCTYPE html><html xmlns:[default]="" http:="" www.w3.org="" 2000="" svg="http://www.w3.org/2000/svg"><head><title>学院介绍-华中师范大学信息管理学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院介绍">
+<meta name="keywords" content="华中师范大学信息管理学院,学院介绍">
+
+
+
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"><link rel="stylesheet" href="../module/layui/css/layui.css?v2.5.6"><link rel="stylesheet" href="../module/swiper/css/swiper.min.css?v4.5.0"><link rel="stylesheet" href="../module/aos/aos.css"><link rel="stylesheet" href="../css/animate.css"><link rel="stylesheet" href="../css/jzk.css"><link rel="stylesheet" href="../css/style.css"><script src="../module/jq/jquery-2.1.4.min.js"></script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475c50575742000400034456 -->
+<link rel="stylesheet" type="text/css" href="../page.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1003,'/page.jsp',-1,1223788902)</script>
+</head>
+<body aos-easing="ease-in-sine" aos-duration="600" aos-delay="100">
+<div class="top_nav">
+<div class="jzk_box">
+<div class="lang"><a href="http://sim.ccnu.edu.cn/">中文</a> <a href="http://www.ccnu.edu.cn/imd_en/" target="_blank">English</a> </div><a class="weibo" href="https://weibo.com/u/2483866493" target="_blank"><img alt="" src="../images/s1.png"></a> 
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div class="form"><input autocomplete="off"> <button type="submit"><img alt="" src="../images/s.png"></button></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError" class="form">
+         <input autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" >
+<BUTTON type="submit"><IMG alt="" src="../images/s.png" v-on:click="onSubmit()"></BUTTON>
+
+          
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1223788902";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+
+</div></div>
+<div class="head_nav">
+<div class="jzk_box">
+<div class="fl">
+     <a href="../index.htm" title="信息管理学院"><img src="../images/logo.png" alt=""></a>
+</div>
+<div class="jzk_toggle_01">
+<div class="jzk_icon_01"></div></div><ul>
+                    <li><a href="../index.htm" title="首页">首页</a>
+                    </li>
+                     
+                    <li class="hv"><a href="xyjs.htm" title="信管概况">信管概况</a>
+                        <ul>
+                            <li><a href="xyjs.htm" title="学院介绍">学院介绍</a>
+                            </li>
+                            <li><a href="fzlc.htm" title="发展历程">发展历程</a>
+                            </li>
+                            <li><a href="xrld.htm" title="现任领导">现任领导</a>
+                            </li>
+                            <li><a href="sjyzxx.htm" title="书记院长信箱">书记院长信箱</a>
+                            </li>
+                            <li><a href="jgsz.htm" title="机构设置">机构设置</a>
+                            </li>
+                            <li><a href="lrld.htm" title="历任领导">历任领导</a>
+                            </li>
+                        </ul>
+                    </li>
+                     
+                    <li><a href="../xgdt.htm" title="信管动态">信管动态</a>
+                        <ul>
+                            <li><a href="../xgdt/xyyw.htm" title="学院要闻">学院要闻</a>
+                            </li>
+                            <li><a href="../xgdt/tpxw123.htm" title="图片新闻">图片新闻</a>
+                            </li>
+                            <li><a href="../xgdt/tzgg.htm" title="通知公告">通知公告</a>
+                                <ul>
+                                    <li><a href="../xgdt/tzgg/zytz.htm" title="重要通知">重要通知</a></li>
+                                    <li><a href="../xgdt/tzgg/ywgk.htm" title="院务公开">院务公开</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                     
+                    <li><a href="../szdw2/zrjs.htm" title="师资队伍">师资队伍</a>
+                        <ul>
+                            <li><a href="../szdw2/zrjs.htm" title="专任教师">专任教师</a>
+                            </li>
+                            <li><a href="../szdw2/xwds.htm" title="校外导师">校外导师</a>
+                            </li>
+                            <li><a href="../szdw2/xzjf.htm" title="行政教辅">行政教辅</a>
+                            </li>
+                            <li><a href="../szdw2/txzg.htm" title="退休职工">退休职工</a>
+                            </li>
+                        </ul>
+                    </li>
+                     
+                    <li><a href="../rcpy1.htm" title="人才培养">人才培养</a>
+                        <ul>
+                            <li><a href="../rcpy1/bkjx.htm" title="本科教学">本科教学</a>
+                            </li>
+                            <li><a href="../rcpy1/yjsjx123.htm" title="研究生教学">研究生教学</a>
+                                <ul>
+                                    <li><a href="../rcpy1/yjsjx123/yjszs.htm" title="研究生招生">研究生招生</a></li>
+                                    <li><a href="../rcpy1/yjsjx123/yjspy.htm" title="研究生培养">研究生培养</a></li>
+                                    <li><a href="../rcpy1/yjsjx123/yjsxw.htm" title="研究生学位">研究生学位</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../rcpy1/tsqbss_fei_quan_ri_zhi_.htm" title="图书情报硕士（非全日制）">图书情报硕士（非全日制）</a>
+                            </li>
+                            <li><a href="../rcpy1/dekt.htm" title="第二课堂">第二课堂</a>
+                            </li>
+                            <li><a href="../rcpy1/sxsx.htm" title="实习实训">实习实训</a>
+                            </li>
+                            <li><a href="../rcpy1/jyhd.htm" title="教研活动">教研活动</a>
+                            </li>
+                            <li><a href="../rcpy1/syjx.htm" title="实验教学">实验教学</a>
+                            </li>
+                        </ul>
+                    </li>
+                     
+                    <li><a href="../kxyj/kyxm.htm" title="科学研究">科学研究</a>
+                        <ul>
+                            <li><a href="../kxyj/kyxm.htm" title="科研项目">科研项目</a>
+                            </li>
+                            <li><a href="../kxyj/kycg.htm" title="科研成果">科研成果</a>
+                            </li>
+                            <li><a href="../kxyj/xsjz.htm" title="学术讲座">学术讲座</a>
+                            </li>
+                            <li><a href="../kxyj/kyjg.htm" title="科研机构">科研机构</a>
+                            </li>
+                            <li><a href="../kxyj/xsdt.htm" title="学术动态">学术动态</a>
+                            </li>
+                        </ul>
+                    </li>
+                     
+                    <li><a href="../shfw1/hxxm.htm" title="社会服务">社会服务</a>
+                        <ul>
+                            <li><a href="../shfw1/hxxm.htm" title="横向项目">横向项目</a>
+                            </li>
+                        </ul>
+                    </li>
+                     
+                    <li><a href="../dqjs.htm" title="党群建设">党群建设</a>
+                        <ul>
+                            <li><a href="../dqjs/djdt.htm" title="党建动态">党建动态</a>
+                            </li>
+                            <li><a href="../dqjs/ghgz.htm" title="工会工作">工会工作</a>
+                            </li>
+                        </ul>
+                    </li>
+                     
+                    <li><a href="../xsgz.htm" title="学生工作">学生工作</a>
+                        <ul>
+                            <li><a href="../xsgz/xsyd.htm" title="学生园地">学生园地</a>
+                                <ul>
+                                    <li><a href="../xsgz/xsyd/txdt.htm" title="团学动态">团学动态</a></li>
+                                    <li><a href="../xsgz/xsyd/zyfwyshsj.htm" title="志愿服务与社会实践">志愿服务与社会实践</a></li>
+                                    <li><a href="../xsgz/xsyd/cxcy.htm" title="创新创业">创新创业</a></li>
+                                    <li><a href="../xsgz/xsyd/stfc.htm" title="社团风采">社团风采</a></li>
+                                    <li><a href="../xsgz/xsyd/kmszgzs.htm" title="可鸣思政工作室">可鸣思政工作室</a></li>
+                                    <li><a href="../xsgz/xsyd/eqxlgzz.htm" title="e启心理工作站">e启心理工作站</a></li>
+                                    <li><a href="../xsgz/xsyd/extxxfzzx.htm" title="e学堂学习发展中心">e学堂学习发展中心</a></li>
+                                    <li><a href="../xsgz/xsyd/btkx.htm" title="班团快讯">班团快讯</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../xsgz/yjsyd.htm" title="研究生园地">研究生园地</a>
+                                <ul>
+                                    <li><a href="../xsgz/yjsyd/zzjs.htm" title="组织建设">组织建设</a></li>
+                                    <li><a href="../xsgz/yjsyd/xsyzyfz.htm" title="学术与职业发展">学术与职业发展</a></li>
+                                    <li><a href="../xsgz/yjsyd/wyty.htm" title="文艺体育">文艺体育</a></li>
+                                    <li><a href="../xsgz/yjsyd/shqyyzyfw.htm" title="生活权益与志愿服务">生活权益与志愿服务</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../xsgz/xgrd.htm" title="学工热点">学工热点</a>
+                            </li>
+                            <li><a href="../xsgz/gzzd.htm" title="规章制度">规章制度</a>
+                            </li>
+                        </ul>
+                    </li>
+                     
+                    <li><a href="../zsjy1/zsxx.htm" title="招生就业">招生就业</a>
+                        <ul>
+                            <li><a href="../zsjy1/zsxx.htm" title="招生信息">招生信息</a>
+                                <ul>
+                                    <li><a href="../zsjy1/zsxx/bkzy.htm" title="本科专业">本科专业</a></li>
+                                    <li><a href="../zsjy1/zsxx/yjszy.htm" title="研究生专业">研究生专业</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../zsjy1/jyzn.htm" title="就业指南">就业指南</a>
+                                <ul>
+                                    <li><a href="../zsjy1/jyzn/jyzd.htm" title="就业指导">就业指导</a></li>
+                                    <li><a href="../zsjy1/jyzn/jyxx.htm" title="就业信息">就业信息</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                     
+                    <li><a href="../xytd.htm" title="校友天地">校友天地</a>
+                        <ul>
+                            <li><a href="../xytd/xyfc.htm" title="校友风采">校友风采</a>
+                            </li>
+                            <li><a href="../xytd/xyhd.htm" title="校友活动">校友活动</a>
+                            </li>
+                            <li><a href="../xytd/xyzz.htm" title="校友资助">校友资助</a>
+                            </li>
+                            <li><a href="../xytd/xyh1.htm" title="校友会">校友会</a>
+                            </li>
+                        </ul>
+                    </li>
+                     
+                    <li><a href="../xzzq.htm" title="下载专区">下载专区</a>
+                        <ul>
+                            <li><a href="../xzzq/jsxz.htm" title="教师下载">教师下载</a>
+                            </li>
+                            <li><a href="../xzzq/xsxz.htm" title="学生下载">学生下载</a>
+                                <ul>
+                                    <li><a href="../xzzq/xsxz/yjs.htm" title="研究生">研究生</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="../xzzq/kybgrj.htm" title="科研办公软件">科研办公软件</a>
+                            </li>
+                            <li><a href="../xzzq/xnbg.htm" title="校内表格">校内表格</a>
+                            </li>
+                        </ul>
+                    </li>
+                     
+                </ul></div></div>
+ 
+<img src="../images/banner10.png">
+<div class="pape_bg">
+<div class="jzk_box">
+<div class="pape_l">
+<div class="pape_l_t">
+信管概况</div><ul class="pape_l_ul">
+                                         <li><a href="xyjs.htm" title="学院介绍">学院介绍</a>
+                                    </li>
+                                    
+                                    <li><a href="fzlc.htm" title="发展历程">发展历程</a>
+                                    </li>
+                                    
+                                    <li><a href="xrld.htm" title="现任领导">现任领导</a>
+                                    </li>
+                                    
+                                    <li><a href="sjyzxx.htm" title="书记院长信箱">书记院长信箱</a>
+                                    </li>
+                                    
+                                    <li><a href="jgsz.htm" title="机构设置">机构设置</a>
+                                    </li>
+                                    
+                                    <li><a href="lrld.htm" title="历任领导">历任领导</a>
+                                    </li>
+                                    
+                                </ul>
+<ul class="pape_l_ul2">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script> 
+            <li>
+                        <a href="../xyzn/xszd.htm" title="新生指导" onclick="_addDynClicks(&quot;wbimage&quot;, 1223788902, 67045)" target="_blank">
+                            <span><img src="../images/c2h.png"></span><h3>新生指导</h3>
+                        </a>  
+  </li>
+ 
+            <li>
+                        <a href="../xyzn/xgdl.htm" title="信管导览" onclick="_addDynClicks(&quot;wbimage&quot;, 1223788902, 67046)" target="_blank">
+                            <span><img src="../images/c3h.png"></span><h3>信管导览</h3>
+                        </a>  
+  </li>
+ 
+            <li>
+                        <a href="../zsjy1/jyzn/jyxx.htm" title="就业信息" onclick="_addDynClicks(&quot;wbimage&quot;, 1223788902, 67047)" target="_blank">
+                            <span><img src="../images/c4h.png"></span><h3>就业信息</h3>
+                        </a>  
+  </li>
+ 
+            <li>
+                        <a href="../xyzn/jzxj.htm" title="奖助学金" onclick="_addDynClicks(&quot;wbimage&quot;, 1223788902, 67048)" target="_blank">
+                            <span><img src="../images/c5h.png"></span><h3>奖助学金</h3>
+                        </a>  
+  </li>
+ 
+            <li>
+                        <a href="../xzzq/kybgrj.htm" title="科研办公软件" onclick="_addDynClicks(&quot;wbimage&quot;, 1223788902, 67049)" target="_blank">
+                            <span><img src="../images/c6h.png"></span><h3>科研办公软件</h3>
+                        </a>  
+  </li>
+ 
+            <li>
+                        <a href="../xzzq.htm" title="文件下载" onclick="_addDynClicks(&quot;wbimage&quot;, 1223788902, 67044)" target="_blank">
+                            <span><img src="../images/c1h.png"></span><h3>文件下载</h3>
+                        </a>  
+  </li>
+   </ul></div>
+<div class="pape_r">
+<div class="pape_op">
+<h3>
+学院介绍</h3>
+<div class="fr">当前位置： 
+    
+                        <a href="../index.htm">首页</a>
+                》
+                <a href="xyjs.htm">信管概况</a>
+                》
+                <a href="xyjs.htm">学院介绍</a>
+</div></div>
+<div class="about_show">
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1223788902,'wbnews','u9')</script>
+<script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1223788902,1657)</script>
+ <div class="about_show_t">
+                                     <!--   学院介绍-->
+
+                                    </div>                                     <div class="about_show_d">
+                                         <div id="vsb_content_1657_u91"><div id="vsb_content"><p style="line-height: 32px; text-indent: 32px; font-size: 16px;">华中师范大学信息管理学院源于1920年创建的文华大学文华图书科。1983年，学校筹建图书情报学系。1993年，更名为信息管理系。2012年，更名为信息管理学院。</p>
+<p style="line-height: 32px; text-indent: 32px; font-size: 16px;">学院现有信息管理与信息系统、电子商务、信息资源管理、大数据管理与应用4个本科专业。信息资源管理（图书馆学、情报学、档案学、数据科学与数据管理）、管理科学与工程2个学术型学位硕士专业。图书情报、农业工程与信息技术2个专业学位硕士专业。信息资源管理、管理科学与工程2个一级学科博士学位授权点。信息资源管理（原图书情报与档案管理）博士后流动站。教育部第5轮学科评估中，信息资源管理（原图书情报与档案管理）排名B+、管理科学与工程排名C+。电子商务和信息资源管理专业获批国家级一流本科专业建设点。信息管理与信息系统专业获批湖北省一流本科专业建设点。</p>
+<p style="line-height: 32px; text-indent: 32px; font-size: 16px;">学院现有教职工80余人（专任教师69人），其中国务院津贴获得者2人，国务院学科评议组成员1人，国家高层次人才特殊支持计划领军人才1人，教育部新世纪优秀人才1人，全国优秀教师1人，湖北省名师1人，湖北省新世纪高层次人才1人，入选其他省部级青年人才5人，入选桂子学者1人、桂子青年学者8人。教育部本科专业教学指导委员会委员2人。</p>
+<p style="line-height: 32px; text-indent: 32px; font-size: 16px;">学院坚守“立德树人”初心，致力于培养具有管理思维、数据思维、系统思维、技术思维的信息管理专业化高级人才。获评湖北省高校“优秀基层教学组织”、“先进基层党组织”等荣誉。获批湖北省电子商务实验教学示范中心、湖北省电子商务虚拟仿真实验中心。过去5年，学院获批国家级一流课程1门，省级一流课程3门，出版教材30余部，立项教育部协同育人项目7项、省级教学改革项目2项、大学生创新创业训练项目30余项。在“挑战杯”、“互联网+”、“创青春”以及数学建模、大学生英语等权威竞赛中屡获佳绩。现有在读本科生600余人、研究生400余人。</p>
+<p style="line-height: 32px; text-indent: 32px; font-size: 16px;">学院对接国家战略需求，聚焦信息资源管理基本理论、数据治理与智能决策、智慧数据与科技预测、开放科学、政府信息资源管理、数据管理与数据科学、供应链与运营管理等领域开展科学研究。学院现有“湖北省电子商务研究中心”、“数据治理与智能决策研究中心”2个省级人文社科重点研究基地，并建有“智慧数据与科技预测联合实验室”、“湖北省产业安全与贸易救济研究中心”等研究机构。近10年来，学院获教育部高等学校人文社科研究优秀成果奖4项，湖北省社会科学优秀成果奖5项，获批国家社科重大、重点项目7项，获批国家社科、国家自科项目60余项，其他省部级项目100余项，各类横向项目300余项，出版著作40余部，发表高水平论文1000余篇。</p>
+<p style="line-height: 32px; text-indent: 32px; font-size: 16px;">学院结合学生发展需要，打造学生成长发展更优环境。学院是国际信息学院联盟（iSchools）成员，国际图书馆协会与机构联合会（IFLA）会员单位，与美国北德克斯大学、芬兰土尔库大学等高校签署了联合培养协议。依托国家留学基金委国家创新型人才培养项目，积极支持学生参与联合培养。过去5年，20余名博士生参与联合培养，100余名学生出国（境）交流学习。学院实行本科生导师制，突出学生的兴趣培养和能力提升。学院第二课堂体系完备：富有专业特色的“e”、“i”系列活动强化信息管理能力；第三学期开放创新实验提升动手实操能力；“可鸣工作室”、“追光实践队”“健康阳光行动”、“信管杯篮球联赛”已成为较为典型的素质教育品牌。信管之星奖学金、健康阳光行动奖学金、佑禾奖助学金、乐其奖助学金、重大应急补助等资助项目，为学生高质量发展提供坚强有力保障。</p>
+<p style="line-height: 32px; text-indent: 32px; font-size: 16px;">秉持“文化信管、创新信管、笃爱信管”精神，学院坚持五育并举，为国家和社会培养了数以万计的信仰坚定、专业自信、行业信服、值得信赖的“四信”人才，他们之中涌现出一大批典型个人，在学界、业界以及政府机关等发光发热，以实际行动讲述着信管人的生动故事。面向未来，学院将持续坚持以习近平新时代中国特色社会主义思想为指导，贯彻党的教育方针，牢记为党育人、为国育才初心使命，全面深化教育改革，落实立德树人根本任务，在“有特色、高水平”的研究型学院创建中为国家和社会做出更大贡献。</p>
+<p style="line-height: 32px; text-indent: 32px; font-size: 16px;"><strong>单位地址:</strong>湖北省武汉市洪山区雄楚大道382号华中师范大学南湖综合大楼10楼</p>
+<p style="line-height: 32px; text-indent: 32px; font-size: 16px;"><strong>邮政编码:</strong>430079</p>
+<p style="line-height: 32px; text-indent: 32px; font-size: 16px;"><strong>单位网址:</strong>http://sim.ccnu.edu.cn</p>
+<p style="line-height: 32px; text-indent: 32px; font-size: 16px;"><strong>联系电话:</strong>027-67868316、67867645</p>
+<p style="line-height: 32px; text-indent: 32px; font-size: 16px;"><strong>单位微信公众号：</strong></p>
+<p style="line-height: 32px; text-indent: 32px; font-size: 16px;"><img width="280" alt="" src="/virtual_attach_file.vsb?afc=TU8MtRMzU8LmUanjRGsUz62MNlsnRCwsUzUDn7-iLzLPoRL0gihFp2hmCIa0U1yiUSyDMkhfU4VVM4MVM7Uinm78olrkLll8M4V7MN-ZUlVFL8nkM8rfMzVFU4rVoSb/v2veo4OeqIiNgDTJQty0LzGaLYyPMmlsgtA8pUXcc&amp;oid=1223788902&amp;tid=1003&amp;nid=1657&amp;e=.jpg" vwidth="280" vheight="" vurl="/_vsl/B5A64AC1E73E4D5F149EB1E471D6B8AA/3DB7EA51/C5E9" vsbhref="vurl" orisrc="/virtual_attach_file.vsb?afc=TU8MtRMzU8LmUanjRGsUz62MNlsnRCwsUzUDn7-iLzLPoRL0gihFp2hmCIa0U1yiUSyDMkhfU4VVM4MVM7Uinm78olrkLll8M4V7MN-ZUlVFL8nkM8rfMzVFU4rVoSb/v2veo4OeqIiNgDTJQty0LzGaLYyPMmlsgtA8pUXcc&amp;oid=1223788902&amp;tid=1003&amp;nid=1657&amp;e=.jpg" class="img_vsb_content"></p>
+<p style="line-height: 32px; text-indent: 32px; font-size: 16px;">&nbsp;</p>
+<p style="text-align: right; line-height: 32px; text-indent: 32px; font-size: 16px;">更新日期：2024-08-31</p></div></div>
+                                    </div>
+
+
+</div></div></div></div>
+<div class="foot_bg">
+<div class="jzk_box">
+<div class="foot_text">
+<div class="foot_t">学院子站</div><script language="javascript" src="/system/resource/js/openlink.js"></script><ul>
+    <li><a href="http://hbec.ccnu.edu.cn/" target="_blank" title="湖北省电子商务研究中心" onclick="_addDynClicks(&quot;wburl&quot;, 1223788902, 82473)"><h3>湖北省电子商务研究中心</h3></a></li>
+    <li><a href="http://dgid.ccnu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1223788902, 81552)"><h3>数据治理与智能决策研究中心</h3></a></li>
+    <li><a href="http://ec-vlab.ccnu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1223788902, 78977)"><h3>湖北省电子商务实验教学示范中心</h3></a></li>
+    <li><a href="http://clcd.ccnu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1223788902, 78976)"><h3>中国图书馆创新发展研究中心</h3></a></li>
+    <li><a href="http://kmsz-workshop.ccnu.edu.cn/" target="_blank" title="可鸣工作室" onclick="_addDynClicks(&quot;wburl&quot;, 1223788902, 82163)"><h3>可鸣思政工作室</h3></a></li>
+    <li><a href="https://istr.ccnu.edu.cn/" target="_blank" title="湖北省产业安全与贸易救济研究中心" onclick="_addDynClicks(&quot;wburl&quot;, 1223788902, 102905)"><h3>湖北省产业安全与贸易救济研究中心</h3></a></li>
+</ul>                  
+
+</div>
+<div class="foot_text2">
+<div class="foot_t">联系我们</div><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>学院地址:湖北省武汉市洪山区雄楚大道382号华中师范大学南湖综合楼10楼<br>办公室电话: 027-67868316 <br>研究生管理办公室电话: 027-67867641/027- 67867649<br>Copyright©2019-2029 imd.ccnu.edu.cn, All Rights Reserved</p></div>
+<div class="foot_text3"><img alt="" src="../images/c7.png"> </div></div></div>
+<div class="jzk_scroll_top"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" height="24" width="24"><path stroke-linejoin="round" stroke-linecap="round" stroke-width="4" stroke="#fff" d="M13 30L25 18L37 30"></path></svg></div><script src="../module/layui/layui.js?v2.5.6"></script><script src="../module/swiper/js/swiper.min.js?v4.5.0"></script><script src="../module/aos/aos.js"></script><script src="../js/js.js"></script><script>
+            AOS.init({
+                offset: 200,
+                duration: 600,
+                easing: 'ease-in-sine',
+                delay: 100,
+                once: true,
+            });
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

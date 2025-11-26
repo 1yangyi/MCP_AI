@@ -1,0 +1,389 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>研究院介绍-厦门大学人工智能研究院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="研究院介绍">
+
+
+<meta name="keywords" content="厦门大学人工智能研究院,人工智能,厦门大学">
+
+  <meta name="description" content="">
+  
+  <link rel="stylesheet" href="../style/bootstrap.css">
+  <link rel="stylesheet" href="../style/swiper.min.css">
+  <link rel="stylesheet" href="../style/animation.css">
+  <link rel="stylesheet" href="../fonts/iconfont.css">
+  <link rel="stylesheet" href="../style/app.css">
+  <script src="../js/browser.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778465750545742000400024e5c -->
+<link rel="stylesheet" type="text/css" href="../page.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1104,'/page.jsp',-1,1850021924)</script>
+</head>
+
+<body id="app">
+  <!-- 返回顶部按钮 -->
+  <div class="back-top-menu" id="backTopMenu">
+    <span class="iconfont icon-jiantouhong"></span>
+  </div>
+
+  <!-- header -->
+  <header class="web-header active">
+    <div class="container header--top">
+      <div class="top-memu-box d-flex justify-content-between align-items-center">
+        <div class="mobile-nav-open-menu d-block d-lg-none">
+          <span class="iconfont icon-daohang" data-nav-open=""></span>
+        </div>
+
+        <a href="" class="header-logo">
+          <img src="../images/logo.png" alt="" srcset="">
+        </a>
+
+        <div class="d-flex align-items-center">
+            <div class="search-wrapper">
+                <span class="search-open-menu iconfont icon-sousuoxiao d-block d-md-none" data-search-open=""></span>
+                <!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><div id="divu0">
+    <div id="appu0"><div><div data-search="" class="search-input-wrapper"><div class="search-input"><input type="text" placeholder="输入您想搜索的内容" autocomplete="off"> <button><span class="iconfont icon-sousuoxiao"></span></button></div></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+        <div class="search-input-wrapper" data-search>
+        <div class="search-input">
+            <input type="text" placeholder="输入您想搜索的内容" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <button>
+                  <span class="iconfont icon-sousuoxiao" v-on:click="onSubmit()"></span>
+            </button>
+        </div>
+        </div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1850021924";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu0 = document.querySelector("#appu0");
+   if (appElementu0 && appElementu0.__vue__) {
+
+   } else {
+      $("#divu0").html($("#htmlu0").text());
+      var appOwner = "1850021924";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou0 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu0(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu0();
+        }
+      };
+
+      function onSubmitu0(e) {
+        queryInfou0.query.keyWord= $("#appu0  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou0.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header--bottom d-lg-flex justify-content-end" data-nav-wrapper="">
+      <div class="container">
+        <div class="mobile-nav-close shadow-lg d-flex justify-content-between align-items-center d-lg-none">
+          <span class="iconfont icon-shanchu" data-nav-close=""></span>
+        </div>
+        <ul class="nav-one" data-nav="">
+            <li class="nav-one-item" data-nav-lv1=""> <a href="../index.htm" class="nav-one-text" data-nav-lv1-text="">首页</a>
+</li>
+<li class="nav-one-item" data-nav-lv1=""> <a href="../info.htm" class="nav-one-text arrow" data-nav-lv1-text="">研究院概况</a>
+    <span class="nav-two-open nav-open-icon iconfont icon-plus d-block d-lg-none" data-nav-lv2-open=""></span>
+    <ul class="nav-two" data-nav-lv2-wrapper="">
+        <li class="nav-two-item" data-nav-lv2=""> <a href="instruction.htm" class="nav-two-text">研究院介绍</a>
+        </li>
+        <li class="nav-two-item" data-nav-lv2=""> <a href="leaders.htm" class="nav-two-text">研究院领导</a>
+        </li>
+        <li class="nav-two-item" data-nav-lv2=""> <a href="organization.htm" class="nav-two-text">研究院架构</a>
+        </li>
+    </ul>
+</li>
+<li class="nav-one-item" data-nav-lv1=""> <a href="../AInews.htm" class="nav-one-text arrow" data-nav-lv1-text="">AI动态</a>
+    <span class="nav-two-open nav-open-icon iconfont icon-plus d-block d-lg-none" data-nav-lv2-open=""></span>
+    <ul class="nav-two" data-nav-lv2-wrapper="">
+        <li class="nav-two-item" data-nav-lv2=""> <a href="../AInews/other_news.htm" class="nav-two-text">院外资讯</a>
+        </li>
+        <li class="nav-two-item" data-nav-lv2=""> <a href="../AInews/institute_news.htm" class="nav-two-text">院内新闻</a>
+        </li>
+        <li class="nav-two-item" data-nav-lv2=""> <a href="../AInews/announcement.htm" class="nav-two-text">公告通知</a>
+        </li>
+    </ul>
+</li>
+<li class="nav-one-item" data-nav-lv1=""> <a href="../team/PI/PI2023.htm" class="nav-one-text arrow" data-nav-lv1-text="">师资队伍</a>
+    <span class="nav-two-open nav-open-icon iconfont icon-plus d-block d-lg-none" data-nav-lv2-open=""></span>
+    <ul class="nav-two" data-nav-lv2-wrapper="">
+        <li class="nav-two-item" data-nav-lv2=""> <a href="../team/PI/PI2023.htm" class="nav-two-text arrow">PI团队</a>
+            <span class="nav-three-open nav-open-icon iconfont icon-plus d-block d-lg-none" data-nav-lv3-open=""></span>
+            <nav class="nav-three" data-nav-lv3-wrapper="">
+                <a href="../team/PI/PI2023.htm" class="nav-three-text">PI团队（2023年）</a>
+                <a href="../team/PI/PI2024.htm" class="nav-three-text">PI团队（2024年）</a>
+                <a href="../team/PI/PI2025.htm" class="nav-three-text">PI团队（2025年）</a>
+                <a href="../team/PI/PI2026.htm" class="nav-three-text">PI团队（2026年）</a>
+            </nav>
+        </li>
+        <li class="nav-two-item" data-nav-lv2=""> <a href="../team/zrjs.htm" class="nav-two-text">专任教师</a>
+        </li>
+        <li class="nav-two-item" data-nav-lv2=""> <a href="../team/zjry.htm" class="nav-two-text">专技人员</a>
+        </li>
+    </ul>
+</li>
+<li class="nav-one-item" data-nav-lv1=""> <a href="../talent.htm" class="nav-one-text arrow" data-nav-lv1-text="">人才培养</a>
+    <span class="nav-two-open nav-open-icon iconfont icon-plus d-block d-lg-none" data-nav-lv2-open=""></span>
+    <ul class="nav-two" data-nav-lv2-wrapper="">
+        <li class="nav-two-item" data-nav-lv2=""> <a href="../talent/masters.htm" class="nav-two-text">硕士研究生</a>
+        </li>
+        <li class="nav-two-item" data-nav-lv2=""> <a href="../talent/doctors.htm" class="nav-two-text">博士研究生</a>
+        </li>
+    </ul>
+</li>
+<li class="nav-one-item" data-nav-lv1=""> <a href="../recruitment.htm" class="nav-one-text arrow" data-nav-lv1-text="">招生招聘</a>
+    <span class="nav-two-open nav-open-icon iconfont icon-plus d-block d-lg-none" data-nav-lv2-open=""></span>
+    <ul class="nav-two" data-nav-lv2-wrapper="">
+        <li class="nav-two-item" data-nav-lv2=""> <a href="../recruitment/zsxx.htm" class="nav-two-text">招生信息</a>
+        </li>
+        <li class="nav-two-item" data-nav-lv2=""> <a href="../recruitment/zpxx.htm" class="nav-two-text">招聘信息</a>
+        </li>
+    </ul>
+</li>
+<li class="nav-one-item" data-nav-lv1=""> <a href="../achievement.htm" class="nav-one-text arrow" data-nav-lv1-text="">成果展示</a>
+    <span class="nav-two-open nav-open-icon iconfont icon-plus d-block d-lg-none" data-nav-lv2-open=""></span>
+    <ul class="nav-two" data-nav-lv2-wrapper="">
+        <li class="nav-two-item" data-nav-lv2=""> <a href="../achievement/theory.htm" class="nav-two-text">理论与应用</a>
+        </li>
+        <li class="nav-two-item" data-nav-lv2=""> <a href="../achievement/industry.htm" class="nav-two-text">产业与赋能</a>
+        </li>
+    </ul>
+</li>
+
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- banner -->
+  <section class="static-banner"><img src="../images/banner/1.png" class="static-banner__img"></section>
+
+  <!-- 内页 -->
+  <div class="bg-inner-page">
+    <div class="container">
+      <div class="inner-page-wrapper inner-page-wrapper--space">
+        <div class="inner-page-wrapper__left">
+          <!-- 侧边栏 -->
+          <div class="side-bar">
+            <h2 class="side-bar__heading">
+研究院介绍</h2>
+            <ul class="side-bar-nav">    <li class="side-bar-nav__item active"> <a href="instruction.htm" class="side-bar-nav__link side-bar-nav__link--one">研究院介绍</a>
+    </li>
+    <li class="side-bar-nav__item"> <a href="leaders.htm" class="side-bar-nav__link side-bar-nav__link--one">研究院领导</a>
+    </li>
+    <li class="side-bar-nav__item"> <a href="organization.htm" class="side-bar-nav__link side-bar-nav__link--one">研究院架构</a>
+    </li>
+</ul>
+            <img class="side-bar__footer-img" src="../images/nav_bg.png" alt="" srcset="">
+          </div>
+        </div>
+        <div class="inner-page-wrapper__right">
+          <!-- 面包屑 -->
+          <div class="custom-breadcrumb">
+            <h2 class="title">
+研究院介绍</h2>
+            <div class="breadcrumb-navs"><p class="pos">当前位置：</p>
+<nav>
+<a href="../index.htm">首页</a>
+<a href="../info.htm">研究院概况</a>
+<a href="instruction.htm">研究院介绍</a>
+</nav></div>
+          </div>
+
+          <!-- 内容 -->
+          <div class="article-details">
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1850021924,'wbnews','u7')</script>
+<script>function seeContenta7(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1850021924,1043)</script>
+<div id="vsb_content_1043_u71"><div id="vsb_content"><p style="text-indent: 2em; line-height: 3em;"><span style="font-size:21px;font-family:仿宋_gb2312">厦门大学人工智能研究院成立于2020年10月，为厦门大学直属教学科研机构，由中国工程院院士、计算机应用专家陈纯领衔，发挥学科发展和人才培养优势，旨在提升学校人工智能学科质量，加快推进“双一流”建设。</span></p><p style="margin-bottom: 0px; text-align: justify; text-indent: 43px; background: white; line-height: 3em;"><span style="font-size:21px;font-family:仿宋_gb2312">人工智能研究院于<span lang="EN-US">2021</span>年至<span lang="EN-US">2025</span>年已组建<span lang="EN-US">40</span>支高水平<span lang="EN-US">PI</span>团队，包含<span lang="EN-US">227</span>位专任教师。围绕人工智能基础理论、机器学习、人工智能芯片、半导体类脑器件、自然语言处理、认知神经科学、机器感知与机器视觉、模式识别与数据挖掘、人工智能安全、人工智能<span lang="EN-US">+</span>（交叉）等研究方向，招录和教学培养全日制硕博研究生近<span lang="EN-US">400</span>人，后续拟不断发展专任教师和研究生等教学科研队伍，持续强化校企战略合作，转化成果，强化运用。</span></p><p style="margin-bottom: 0px; text-align: justify; text-indent: 43px; background: white; line-height: 3em;"><span style="font-size:21px;font-family:仿宋_gb2312">未来人工智能研究院在政府和学校的重视、支持下，将进一步发挥校内学科优势，依托一流企业，集聚和培养高端人才，研发和运用高水平成果，构建人工智能学术研究基地、学科建设基地、产学研用融合基地，积极融入并服务于厦门的经济社会发展，并辐射周边地区。</span></p><p style="text-indent: 2em;"><br></p></div></div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="web-footer">
+    <div class="footer-partners">
+        <div class="container d-block d-md-flex">
+            <h2 class="footer-partners__title">相关链接:</h2>
+            <div class="footer-partners__links">
+                <script language="javascript" src="/system/resource/js/openlink.js"></script><a href="https://www.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1850021924, 86798)">厦门大学</a>    
+<a href="https://std.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1850021924, 86799)">科技处</a>    
+<a href="https://informatics.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1850021924, 86838)">信息学院</a>    
+<a href="https://xsc.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1850021924, 86800)">学生处</a>    
+<a href="https://zs.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1850021924, 86801)">招生与考试办公室</a>    
+<a href="https://gs.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1850021924, 86802)">研究生院</a>    
+<a href="https://rsc.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1850021924, 86803)">人事处</a>    
+<a href="https://zchqc.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1850021924, 86834)">资产与后勤事务管理处</a>    
+<a href="https://net.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1850021924, 86835)">信息与网络中心</a>    
+<a href="https://metc.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1850021924, 86836)">现代教育技术与实践训练中心</a>    
+<a href="https://lib.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1850021924, 86837)">图书馆</a>    
+<a href="https://yz.chsi.com.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1850021924, 86839)">研招网</a>    
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-main">
+        <div class="container d-block d-lg-flex justify-content-between">
+            <img class="footer-main__logo" src="../images/logo-footer.png" alt="">
+            <p class="footer-main__info">
+                
+</p><p class="footer-main__info">电话：0592-2187820，0592-2188642&nbsp; &nbsp; &nbsp;邮箱：iai@xmu.edu.cn</p>
+            <p></p>
+            <div class="footer-main__qr">
+                <img src="../images/qr_code.png" alt="">
+                <p>微信公众号</p>
+            </div>
+        </div>
+    </div>
+ </footer>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/swiper-bundle.min.js"></script>
+  <script src="../js/wow.js"></script>
+  <script src="../js/jquery.extends.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/theme.js"></script>
+
+
+
+</body></html>

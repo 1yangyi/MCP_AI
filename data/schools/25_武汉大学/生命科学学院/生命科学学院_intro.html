@@ -1,0 +1,505 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=2.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>学院简介-武汉大学生命科学学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+
+
+<meta name="SiteName" content="武汉大学生命科学学院">
+<meta name="SiteDomain" content="bio.whu.edu.cn">
+<meta name="ColumnName" content="学院简介">
+<meta name="ColumnKeywords" content="学院简介">
+
+<link type="text/css" rel="stylesheet" href="../styles/base.css">
+<link type="text/css" rel="stylesheet" href="../styles/main.css">
+<link type="text/css" rel="stylesheet" href="../styles/animate.min.css">
+<link type="text/css" rel="stylesheet" href="../styles/mobile.css">
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1418,'/about.jsp',-1,1845889643)</script>
+</head>
+
+<body class="listPage">
+<div class="smxy-header-box">
+  <div class="smxy-search-box">
+    <div class="smxy-contain-box">
+      <div class="smxy-contain-padding clearfix">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="smxy-txt"> <input name="submit_button" type="button" value="搜索" class="smxy-btn"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <input type="text" class="smxy-txt" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="smxy-btn" name="submit_button" type="button" value="搜索" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1845889643";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+    </div>
+  </div>
+  <div class="smxy-header-contain">
+  <div class="smxy-contain-padding clearfix">
+    <div class="smxy-logo"> <a href="../index.htm" target=""><img src="../images/logo.png" class="logo1"></a><a href="../index.htm" target=""><img src="../images/logo-c.png" class="logo2"></a> </div>
+    <div class="smxy-header-right-box clearfix">
+      <div class="smxy-top-search">
+        <ul class="smxy-header-right clearfix">
+          <li class="yq"><a href="../yq100zn/index.htm" target="_blank"><i class="yq-icon"></i></a></li>
+          <li class="en"><a href="../en.htm" target="_blank"><i class="en-icon"></i>English</a></li>
+          <li class="mail"><a href="mailto:skyys@whu.edu.cn" target="_blank"><i class="mail-icon"></i>书记院长邮箱</a></li>
+          <li class="search-icon"></li>
+          <li class="smxy-nav-icon"></li>
+        </ul>
+      </div>
+      <div class="smxy-nav-box"><ul class="smxy-nav clearfix">
+          <li class="on"><a href="xyjj.htm">学院概况</a>
+          <ul class="smxy-suNnav">
+          <li><a href="xyjj.htm">学院简介</a><i class="nav-icon"></i></li>
+          <li><a href="xrld.htm">现任领导</a><i class="nav-icon"></i></li>
+          <li><a href="zzjg/jgts.htm">组织机构</a><i class="nav-icon"></i></li>
+          <li><a href="lsyg.htm">历史沿革</a><i class="nav-icon"></i></li>
+          </ul>
+          </li>
+          <li class=""><a href="../xkjs/swx.htm">学科建设</a>
+          <ul class="smxy-suNnav">
+          <li><a href="../xkjs/swx.htm">生物学</a><i class="nav-icon"></i></li>
+          <li><a href="../xkjs/stx.htm">生态学</a><i class="nav-icon"></i></li>
+          </ul>
+          </li>
+          <li class=""><a href="../szdw1/lyys.htm">师资队伍</a>
+          <ul class="smxy-suNnav">
+          <li><a href="../szdw1/lyys.htm">两院院士</a><i class="nav-icon"></i></li>
+          <li><a href="../szdw1/jcrc.htm">杰出人才</a><i class="nav-icon"></i></li>
+          <li><a href="../szdw1/zrjs.htm">专任教师</a><i class="nav-icon"></i></li>
+          <li><a href="../szdw1/zyjsry.htm">专业技术人员</a><i class="nav-icon"></i></li>
+          <li><a href="../szdw1/bsh.htm">博士后</a><i class="nav-icon"></i></li>
+          <li><a href="../szdw1/wpjs.htm">外聘教师</a><i class="nav-icon"></i></li>
+          <li><a href="../szdw1/rxjs.htm">荣休教师</a><i class="nav-icon"></i></li>
+          </ul>
+          </li>
+          <li class=""><a href="../bksjy/wzsy.htm" target="_blank">人才培养</a>
+          <ul class="smxy-suNnav">
+          <li><a href="../bksjy/wzsy.htm" target="_blank">本科生教育</a><i class="nav-icon"></i></li>
+          <li><a href="../yjsjy/sy.htm" target="_blank">研究生教育</a><i class="nav-icon"></i></li>
+          </ul>
+          </li>
+          <li class=""><a href="../zsjy/bkszs.htm">招生就业</a>
+          <ul class="smxy-suNnav">
+          <li><a href="../zsjy/bkszs.htm">本科生招生</a><i class="nav-icon"></i></li>
+          <li><a href="../zsjy/yjszs1/xxgk.htm">研究生招生</a><i class="nav-icon"></i></li>
+          <li><a href="../zsjy/jyxx.htm">就业信息</a><i class="nav-icon"></i></li>
+          </ul>
+          </li>
+          <li class=""><a href="../kxyj/yjpt.htm">科学研究</a>
+          <ul class="smxy-suNnav">
+          <li><a href="../kxyj/yjpt.htm">研究平台</a><i class="nav-icon"></i></li>
+          <li><a href="../kxyj/kygsgg.htm">科研公示公告</a><i class="nav-icon"></i></li>
+          <li><a href="../kxyj/kylw1/kylw.htm">科研论文</a><i class="nav-icon"></i></li>
+          </ul>
+          </li>
+          <li class=""><a href="../hzjl/gjjl.htm">合作交流</a>
+          <ul class="smxy-suNnav">
+          <li><a href="../hzjl/gjjl.htm">国际交流</a><i class="nav-icon"></i></li>
+          <li><a href="../hzjl/gnhz.htm">国内合作</a><i class="nav-icon"></i></li>
+          <li><a href="../hzjl/cjgsgg.htm">出境公示公告</a><i class="nav-icon"></i></li>
+          </ul>
+          </li>
+          <li class=""><a target="_blank" href="../PartyWork/sy.htm">党群工作</a>
+          </li>
+          <li class=""><a href="../xyzj/xyxy.htm">校友之家</a>
+          <ul class="smxy-suNnav">
+          <li><a href="../xyzj/xyxy.htm">校友撷英</a><i class="nav-icon"></i></li>
+          <li><a href="../xyzj/xyhd.htm">校友活动</a><i class="nav-icon"></i></li>
+          <li><a href="../xyzj/xyjz.htm">校友捐赠</a><i class="nav-icon"></i></li>
+          </ul>
+          </li>
+          <li class=" last"><a href="../bszn1/lxwm.htm">信息公开</a>
+          <ul class="smxy-suNnav">
+          <li><a href="../bszn1/lxwm.htm">联系我们</a><i class="nav-icon"></i></li>
+          <li><a href="../bszn1/bslc.htm">办事流程</a><i class="nav-icon"></i></li>
+          <li><a href="../bszn1/xzzx.htm">下载中心</a><i class="nav-icon"></i></li>
+          </ul>
+          </li>
+</ul></div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="smxy-ny-banner" style="background: url(../images/b05.jpg) no-repeat top center;"></div>
+<div class="smxy-contain-box">
+  <div class="smxy-contain-padding clearfix">
+    <div class="smxy-ny-left">
+      <div class="smxy-ny-nav-box">
+        <div class="smxy-ny-nav-bg">
+          <h3 class="smxy-nav-name">
+学院概况</h3>
+          <h4 class="smxy-nav-en">ABOUT</h4>
+        </div>
+        <div class="smxy-nav-list"><ul>
+            
+<li class="on"><a href="xyjj.htm">学院简介<i class="nav-right-icon"></i></a>
+</li>
+            
+<li><a href="xrld.htm">现任领导<i class="nav-right-icon"></i></a>
+</li>
+            
+<li><a href="zzjg/jgts.htm">组织机构<i class="nav-right-icon"></i></a>
+<ul class="smxy-subnav-list">
+<li><a href="zzjg/jgts.htm"><i class="yuan"></i>机构图示<i class="smxy-subnav-icon"></i></a></li>
+<li><a href="zzjg/dzjg.htm"><i class="yuan"></i>党政机构<i class="smxy-subnav-icon"></i></a></li>
+<li><a href="zzjg/xsjg.htm"><i class="yuan"></i>学术机构<i class="smxy-subnav-icon"></i></a></li>
+<li><a href="zzjg/xssz.htm"><i class="yuan"></i>系所设置<i class="smxy-subnav-icon"></i></a></li>
+<li><a href="zzjg/kyjg.htm"><i class="yuan"></i>科研机构<i class="smxy-subnav-icon"></i></a></li>
+<li><a href="zzjg/nsbgs.htm"><i class="yuan"></i>内设办公室<i class="smxy-subnav-icon"></i></a></li>
+</ul>
+</li>
+            
+<li><a href="lsyg.htm">历史沿革<i class="nav-right-icon"></i></a>
+</li>
+            
+</ul></div>
+      </div>
+    </div>
+    <div class="smxy-ny-right">
+      <div class="smxy-column-box clearfix">
+        <h3 class="smxy-column-h3">
+学院简介</h3>
+        <div class="smxy-place">
+                        <a href="../index.htm">网站首页</a>
+                -
+                <a href="xyjj.htm">学院概况</a>
+                -
+                <a href="xyjj.htm">学院简介</a>
+</div>
+        <div class="smxy-line"></div>
+      </div>
+      <div class="smxy-gk-box">
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1845889643,'wbnews','u8')</script>
+<script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1845889643,8402)</script>
+<div id="vsb_content_8402_u81"><div id="vsb_content"><p style="text-indent: 2em;">武汉大学生命科学学院历史悠久，可以追溯到1893年武汉大学建校之初设立的培养博物学人才的格致门，1922年成立生物学系，1978年成立病毒学系，1992年生物学系、病毒学系和生物工程研究中心合并成立生命科学学院。经过历代师生员工的努力，特别是一批学术造诣深、治学严谨、国内外知名的高水平生物学家，如张珽、钟心煊、何定杰、汤佩松、孙祥钟、高尚荫、余先觉、吴熙载、杨弘远、田波、朱英国、舒红兵、朱玉贤、宋保亮等在此辛勤耕耘，使学院成为学科专业全，综合实力强，在国内外有重要影响的研究型学院。<br></p><p style="text-indent: 2em;"><br></p><p style="text-indent: 2em;">学院现设七个系（生物化学系、细胞生物学系、遗传学系、微生物学系、植物科学系、病毒学系、生态学系）和两个中心（生物学实验教学中心和仪器设备共享中心），建有高致病性病毒与生物安全全国重点实验室、杂交水稻全国重点实验室、梁子湖湖泊生态系统国家野外科学观测站、中国典型培养物保藏中心、细胞稳态湖北省重点实验室等国家和省部级科研平台,拥有规模较大、特色鲜明的动植物标本馆。</p><p style="text-indent: 2em;"><br></p><p style="text-indent: 2em;">学院现有教职工172人，其中教师118人；包括教授（研究员）87人，副教授（副研究员）27人。有中国科学院院士3名，国家杰出青年科学基金获得者13名，国家各类高层次人才50人次。学院拥有国家创新研究群体3个，教育部创新团队2个，高等学校创新引智基地3个，湖北省创新研究群体7个，全国黄大年式教师团队2个。</p><p style="text-indent: 2em;"><br></p><p style="text-indent: 2em;">学院坚持以“宽口径、厚基础、强实践、促交流”为人才培养特色，建有2个国家级人才培养基地，2020年入选教育部强基计划和基础学科拔尖学生培养计划2.0基地。在校学生1614人，其中本科生641人，研究生973人。学院设有3个本科专业、10个硕士专业、10个博士专业。</p><p style="text-indent: 2em;"><br></p><p style="text-indent: 2em;">学院拥有生物学和生态学两个一级学科博士学位授权点、生物学和生态学两个博士后流动站；生物学是全国首批一级学科国家重点学科，生态学是湖北省一级学科重点学科；学院先后得到国家“211工程”、“985工程”、“双一流”建设项目等支持；在教育部第四轮学科评估中，生物学评估结果为A，排名并列第4，生态学评估结果为B+，排名并列第11；在基本科学指标数据库ESI学科排名中，“生物学与生物化学”、“植物学与动物学”、“环境科学与生态学”、“农学”、“分子生物学与遗传学”、“免疫学”和“微生物学”排名全球前5‰。</p><p style="text-indent: 2em;"><br></p><p style="text-indent: 2em;">学院于1993年获准建立国家理科基础科学研究与教学人才培养基地，2002年获准建立国家生命科学与技术人才培养基地；2005年，武汉大学生物学实验教学中心成为首批国家级实验教学示范中心；2021年，《微生物学》、《现代分子生物学》教材分获首届全国优秀教材一等奖和二等奖；微生物学、动物生物学、分子生物学、生物化学、生命科学导论等5门课程为国家精品课程，分子生物学、细胞生物学课程为国家双语教学示范课程，微生物学、分子生物学、病毒感染与检测虚拟仿真综合实验等3门课程为国家一流本科课程；生物科学专业和生物技术专业为国家一流本科专业；微生物学系列课程教学团队为国家级教学团队，5项成果获得国家教学成果奖。</p><p style="text-indent: 2em;"><br></p><p style="text-indent: 2em;">学院坚持“四个面向”，引导原创性研究，加强学科交叉领域协同发展，瞄准人类健康、农业发展与粮食安全、生态文明建设等领域的重大科学问题，汇聚优质资源，加大科技创新力度，努力实现从0到1的科研突破，在免疫与炎症调节、植物功能基因组与演化、代谢调控与代谢性疾病、水稻抗性与育种、病毒感染与防控、染色质与表观遗传等研究方向初步形成了6个高水平科研团队<span style="text-indent: 2em;">，一系列原创科研成果在生物医药、水稻育种、水生态环境治理等领域成功转化。近十年，学院入账科研经费总额11.6亿元，发表SCI论文1800余篇，其中Nature4篇，Science1篇，Cell4篇；独立获得国家技术发明二等奖2项，国家自然科学二等奖1项，省部级奖项17项；获批国家专利154项，新品种授权24项。</span></p><p style="text-indent: 2em;"><br></p><p style="text-indent: 2em;">学院建有现代化的仪器设备共享中心，拥有一流的仪器设备和研究条件，包括质谱分析仪、透射电子显微镜、扫描电子显微镜、激光共聚焦显微镜、分析及分选型流式细胞仪、激光显微切割仪、膜片钳、微量热分析仪、超速离心机等大型仪器设备，建有二级生物安全实验室（P2实验室）、标准化的实验动物饲养室、植物生长温室，为进行生命科学各领域研究搭建了优良平台。</p><p style="text-indent: 2em;"><br></p><p style="text-indent: 2em;">武汉大学生命科学学院秉承追求卓越的办院宗旨，提供一流的教学服务，开展高水平的学术研究，所培养的毕业生以其素质高、基础厚、创新能力强赢得海内外的广泛赞誉。目前，全院师生正以饱满的热情和不断进取的姿态，不懈努力，开拓奋进，努力建设中国特色世界一流生命科学学科和世界一流生命科学学院，为武汉大学跻身世界一流大学提供更加有力支撑，为实现第二个百年奋斗目标、实现中华民族伟大复兴的中国梦而不懈奋斗！</p></div></div>
+</div>
+    </div>
+  </div>
+</div>
+<div class="smxy-footer-box">
+  <div class="smxy-contain-box">
+    <div class="smxy-contain-padding">
+      <div class="smxy-footer clearfix">
+        <div class="smxy-footer-logo">
+          <p><a href="../index.htm" target=""><img src="../images/footer-logo.png"></a></p>
+        </div>
+        <div class="smxy-dzyx clearfix">
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1845889643,'wbnews','u9')</script>
+<script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+
+<script>_addDynClicks('wbnews',1845889643,8394)</script>
+<div id="vsb_content_8394_u91"><div id="vsb_content"><h3 class="smxy-dzyx-title">电子邮箱</h3><div class="smxy-dzyx-txt"><p class="txt">人才招聘 &nbsp;1304011@whu.edu.cn</p></div></div></div>
+</div>
+        <div class="smxy-lxwm clearfix">
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1845889643,'wbnews','u10')</script>
+<script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+
+<script>_addDynClicks('wbnews',1845889643,8395)</script>
+<div id="vsb_content_8395_u101"><div id="vsb_content"><h3 class="smxy-lxwm-title">联系我们<em class="line"></em></h3><div class="smxy-lxwm-txt"><p class="txt">地址：武汉市武昌珞珈山</p><p class="txt">电话：+86-27-68753780</p></div></div></div>
+</div>
+        <div class="smxy-gzwm clearfix">
+          <h3 class="smxy-gzwm-title">关注我们</h3>
+          <div class="smxy-gzwm-list">    <ul class="clearfix">
+              
+<li>
+                <p><img src="../images/wx1.jpg"></p>
+                <p class="txt txt1">武汉大学生命科学学院官方微信</p>
+              </li>
+              
+<li>
+                <p><img src="../images/wx2.jpg"></p>
+                <p class="txt txt2">生科快讯</p>
+              </li>
+              
+<li>
+                <p><img src="../images/wx3.jpg"></p>
+                <p class="txt txt3">WHU生科院研究生</p>
+              </li>
+              
+</ul></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="smxy-copyright">
+    <div class="smxy-contain-box">
+      <div class="smxy-contain-padding clearfix"> <span class="span-left"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权所有©武汉大学生命科学学院</p></span> <span class="span-right">总浏览数：<span><script language="javascript" src="../_dwr/engine.js"></script><script language="javascript" src="../_dwr/util.js"></script><script language="javascript" src="../_dwr/interface/PageCounterDWR.js"></script><span id="a1053434" name="a1053434">0012097810</span>   
+
+<script>
+function getvisittimea1053434()
+{       
+    PageCounterDWR.getVisittime('1845889643','1418','TOTAL_COUNTER','0','10',callbackdataa1053434)
+}
+function callbackdataa1053434(data)
+{
+    document.getElementById("a1053434").innerHTML = data; 
+}
+getvisittimea1053434();
+</script></span></span> </div>
+    </div>
+  </div>
+</div>
+<div class="smxy-return-top" style="cursor: pointer; display: none; position: fixed; right: 15px; bottom: 60px;">
+  <p><a href="javascript:;"><img src="../images/goToTop.png"></a></p>
+  <p>返回顶端</p>
+</div>
+<div class="smxy-layer-box">
+  <div class="smxy-layer"><i class="smxy-layer-close"></i>
+<ul class="smxy-layer-nav clearfix">
+      <li><a href="javascript:;">学院概况</a><i class="jiahao"></i>
+        <ul class="smxy-suNnav">
+          <li><a href="xyjj.htm">学院简介</a>
+          </li>
+          <li><a href="xrld.htm">现任领导</a>
+          </li>
+          <li><a href="zzjg/jgts.htm">组织机构</a>
+            <ul class="smxy-subnav-list">
+                <li><a href="zzjg/jgts.htm">机构图示</a></li>
+                <li><a href="zzjg/dzjg.htm">党政机构</a></li>
+                <li><a href="zzjg/xsjg.htm">学术机构</a></li>
+                <li><a href="zzjg/xssz.htm">系所设置</a></li>
+                <li><a href="zzjg/kyjg.htm">科研机构</a></li>
+                <li><a href="zzjg/nsbgs.htm">内设办公室</a></li>
+            </ul>
+          </li>
+          <li><a href="lsyg.htm">历史沿革</a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="javascript:;">学科建设</a><i class="jiahao"></i>
+        <ul class="smxy-suNnav">
+          <li><a href="../xkjs/swx.htm">生物学</a>
+          </li>
+          <li><a href="../xkjs/stx.htm">生态学</a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="javascript:;">师资队伍</a><i class="jiahao"></i>
+        <ul class="smxy-suNnav">
+          <li><a href="../szdw1/lyys.htm">两院院士</a>
+          </li>
+          <li><a href="../szdw1/jcrc.htm">杰出人才</a>
+          </li>
+          <li><a href="../szdw1/zrjs.htm">专任教师</a>
+          </li>
+          <li><a href="../szdw1/zyjsry.htm">专业技术人员</a>
+          </li>
+          <li><a href="../szdw1/bsh.htm">博士后</a>
+          </li>
+          <li><a href="../szdw1/wpjs.htm">外聘教师</a>
+          </li>
+          <li><a href="../szdw1/rxjs.htm">荣休教师</a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="javascript:;">人才培养</a><i class="jiahao"></i>
+        <ul class="smxy-suNnav">
+          <li><a href="../bksjy/wzsy.htm" target="_blank">本科生教育</a>
+          </li>
+          <li><a href="../yjsjy/sy.htm" target="_blank">研究生教育</a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="javascript:;">招生就业</a><i class="jiahao"></i>
+        <ul class="smxy-suNnav">
+          <li><a href="../zsjy/bkszs.htm">本科生招生</a>
+          </li>
+          <li><a href="../zsjy/yjszs1/xxgk.htm">研究生招生</a>
+            <ul class="smxy-subnav-list">
+                <li><a href="../zsjy/yjszs1/xxgk.htm">信息公开</a></li>
+                <li><a href="../zsjy/yjszs1/zszy.htm">招生专业</a></li>
+                <li><a href="../zsjy/yjszs1/dsxx.htm">导师信息</a></li>
+            </ul>
+          </li>
+          <li><a href="../zsjy/jyxx.htm">就业信息</a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="javascript:;">科学研究</a><i class="jiahao"></i>
+        <ul class="smxy-suNnav">
+          <li><a href="../kxyj/yjpt.htm">研究平台</a>
+          </li>
+          <li><a href="../kxyj/kygsgg.htm">科研公示公告</a>
+          </li>
+          <li><a href="../kxyj/kylw1/kylw.htm">科研论文</a>
+            <ul class="smxy-subnav-list">
+                <li><a href="../kxyj/kylw1/kylw.htm">科研论文</a></li>
+                <li><a href="../kxyj/kylw1/bpdbxlw/swhxx.htm">百篇代表性论文</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="javascript:;">合作交流</a><i class="jiahao"></i>
+        <ul class="smxy-suNnav">
+          <li><a href="../hzjl/gjjl.htm">国际交流</a>
+          </li>
+          <li><a href="../hzjl/gnhz.htm">国内合作</a>
+          </li>
+          <li><a href="../hzjl/cjgsgg.htm">出境公示公告</a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="../PartyWork/sy.htm" target="_blank">党群工作</a><i class="jiahao"></i>
+      </li>
+      <li><a href="javascript:;">校友之家</a><i class="jiahao"></i>
+        <ul class="smxy-suNnav">
+          <li><a href="../xyzj/xyxy.htm">校友撷英</a>
+          </li>
+          <li><a href="../xyzj/xyhd.htm">校友活动</a>
+          </li>
+          <li><a href="../xyzj/xyjz.htm">校友捐赠</a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="javascript:;">信息公开</a><i class="jiahao"></i>
+        <ul class="smxy-suNnav">
+          <li><a href="../bszn1/lxwm.htm">联系我们</a>
+          </li>
+          <li><a href="../bszn1/bslc.htm">办事流程</a>
+          </li>
+          <li><a href="../bszn1/xzzx.htm">下载中心</a>
+          </li>
+        </ul>
+      </li>
+  </ul></div>
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script> 
+<script type="text/javascript" src="../js/main.js"></script> 
+<script type="text/javascript" src="../js/jquery.toTop.js"></script> 
+<script type="text/javascript">
+$(function() {
+    $(".smxy-return-top").toTop();
+});
+</script>
+
+
+</body></html>

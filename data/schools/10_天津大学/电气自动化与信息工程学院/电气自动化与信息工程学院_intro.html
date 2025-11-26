@@ -1,0 +1,479 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>学院简介-电气自动化与信息工程学院官网</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<META Name="keywords" Content="天津大学自动化，电气自动化，电气自动化与信息工程学院官网" />
+
+<link href="../images/css.css" rel="stylesheet" type="text/css" />
+<link href="../images/bootstrap.css" rel="stylesheet" type="text/css" />
+
+<link href="../images/menu_xiala.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../images/jquery.min.js"></script>
+<script type="text/javascript" src="../images/slide.js"></script>
+<script src="../images/jquery.cycle.all.js"></script>
+
+<script src="../images/jquery.easing.js"></script>
+
+<style type="text/css">
+#apDiv1 {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    z-index: 1;}
+#apDiv2 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 40px;
+    z-index: 2;}
+</style>
+
+
+<link rel="stylesheet" href="../images/slideshows.css" />
+
+<script>
+$(function() {
+    
+
+
+// ---------------------------------------------------
+// Slideshow 1
+
+    $('#slideshow_1').cycle({
+        fx: 'scrollHorz',       
+        easing: 'easeInOutCirc',
+        speed:  700, 
+        timeout: 5000, 
+        pager: '.ss1_wrapper .slideshow_paging', 
+        prev: '.ss1_wrapper .slideshow_prev',
+        next: '.ss1_wrapper .slideshow_next',
+        before: function(currSlideElement, nextSlideElement) {
+            var data = $('.data', $(nextSlideElement)).html();
+            $('.ss1_wrapper .slideshow_box .data').fadeOut(300, function(){
+                $('.ss1_wrapper .slideshow_box .data').remove();
+                $('<div class="data">'+data+'</div>').hide().appendTo('.ss1_wrapper .slideshow_box').fadeIn(600);
+            });
+        }
+    });
+    
+    // not using the 'pause' option. instead make the slideshow pause when the mouse is over the whole wrapper
+    $('.ss1_wrapper').mouseenter(function(){
+        $('#slideshow_1').cycle('pause');
+    }).mouseleave(function(){
+        $('#slideshow_1').cycle('resume');
+    });
+    
+
+
+// ---------------------------------------------------
+// Slideshow 2
+
+    $('#slideshow_2').cycle({
+        fx: 'fade',     
+        speed:  900, 
+        timeout: 5000, 
+        pager: '.ss2_wrapper .slideshow_paging', 
+        prev: '.ss2_wrapper .slideshow_prev',
+        next: '.ss2_wrapper .slideshow_next',
+        before: function(currSlideElement, nextSlideElement) {
+            var data = $('.data', $(nextSlideElement)).html();
+            $('.ss2_wrapper .slideshow_box').stop(true, true).animate({ bottom:'-110px'}, 400, function(){
+                $('.ss2_wrapper .slideshow_box .data').html(data);
+            });
+            $('.ss2_wrapper .slideshow_box').delay(100).animate({ bottom:'0'}, 400);
+        }
+    });
+
+    $('.ss2_wrapper').mouseenter(function(){
+        $('#slideshow_2').cycle('pause');
+        $('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'20px'}, 200);
+        $('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'20px'}, 200);
+    }).mouseleave(function(){
+        $('#slideshow_2').cycle('resume');
+        $('.ss2_wrapper .slideshow_prev').stop(true, true).animate({ left:'-40px'}, 200);
+        $('.ss2_wrapper .slideshow_next').stop(true, true).animate({ right:'-40px'}, 200);
+    });
+    
+
+
+// ---------------------------------------------------
+// Slideshow 3
+
+    $('#slideshow_3').cycle({
+        fx: 'uncover',      
+        speed:  700, 
+        timeout: 5000, 
+        pager: '.ss3_wrapper .slideshow_paging', 
+        pagerAnchorBuilder: pager_create,
+        prev: '.ss3_wrapper .slideshow_prev',
+        next: '.ss3_wrapper .slideshow_next',
+        before: function(currSlideElement, nextSlideElement) {
+            var data = $('.data', $(nextSlideElement)).html();
+            $('.ss3_wrapper .slideshow_box .data').fadeOut(300, function(){
+                $('.ss3_wrapper .slideshow_box .data').remove();
+                $('<div class="data">'+data+'</div>').hide().appendTo('.ss3_wrapper .slideshow_box').fadeIn(600);
+            });
+        }
+    });
+    
+    function pager_create(id, slide) {
+        var thumb = $('.thumb', $(slide)).html();
+        var title = $('h4 a', $(slide)).html();
+        var add_first = (id==0)?' class="first"':'';
+        return '<li><a href="#" title="'+title+'"'+add_first+'>'+thumb+'</a></li>';
+    };
+    
+    // not using the 'pause' option. instead make the slideshow pause when the mouse is over the whole wrapper
+    $('.ss3_wrapper').mouseenter(function(){
+        $('#slideshow_3').cycle('pause');
+    }).mouseleave(function(){
+        $('#slideshow_3').cycle('resume');
+    });
+    
+    
+    
+    
+// ---------------------------------------------------
+    
+    $('a[href="#"]').click(function(event){ 
+        event.preventDefault(); // for this demo disable all links that point to "#"
+    });
+    
+});
+</script>
+
+
+
+<!--幻灯片-->
+<link rel="stylesheet" id="fusion-style-css" href="../images/style.css" type="text/css" media="all" />
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e004657505a5742000400054652 -->
+<link rel="stylesheet" type="text/css" href="../jieshao2.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1003,'/jieshao2.jsp',-1,1659677497)</script>
+</head>
+
+<body>
+
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" background="../images/test_02.jpg">
+  <tr>
+    <td>&nbsp;</td>
+    <td width="1200"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="77%"><img src="../images/test_01.jpg" alt="" /></td>
+        <td width="23%" align="center" valign="bottom" class="yanse1"><a href="../index.htm">中文版</a> | <a href="http://seea.tju.edu.cn/english.htm">ENGLISH</a> | <a href="http://113.44.129.223:8080/" target="_blank">会议室预定</a> | <a href="OnlineSubmission.jsp?urltype=tree.TreeTempUrl&wbtreeid=1154">在线投稿</a></td>
+      </tr>
+    </table></td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" background="../images/bg.png">
+  <tr>
+  <td>&nbsp;</td>
+    <td width="1200">
+    
+    <ul id="nav">
+
+    <li class="mainlevel"><A href="../index.htm">首页</A>
+    </li>
+    <li class="mainlevel"><A id="current" href="../xygk.htm">学院概况</A>
+    <ul id="sub_01">
+        <li><a href="xyjj.htm">学院简介</a></li> 
+        <li><a href="xrld.htm">现任领导</a></li> 
+        <li><a href="lsyg.htm">历史沿革</a></li> 
+        <li><a href="dsj.htm">大事记</a></li> 
+        <li><a href="jgsz.htm">机构设置</a></li> 
+        <li><a href="lxwm.htm">联系我们</a></li> 
+       
+            
+            </ul>
+    </li>
+    <li class="mainlevel"><A href="../xwzx.htm">新闻中心</A>
+    <ul id="sub_01">
+        <li><a href="../xwzx/xyxw.htm">学院新闻</a></li> 
+        <li><a href="../xwzx/tzgg.htm">通知公告</a></li> 
+        <li><a href="../xwzx/jzyhdyg.htm">讲座与活动预告</a></li> 
+        <li><a href="../xwzx/mtbd.htm">媒体报道</a></li> 
+        <li><a href="../xwzx/zxtg.htm">在线投稿</a></li> 
+       
+            
+            </ul>
+    </li>
+    <li class="mainlevel"><A href="../szdw.htm">师资队伍</A>
+    <ul id="sub_01">
+        <li><a href="../szdw/dqgcx.htm">电气工程系</a></li> 
+        <li><a href="../szdw/zdhx.htm">自动化系</a></li> 
+        <li><a href="../szdw/dzxxgcx.htm">电子信息工程系</a></li> 
+        <li><a href="../szdw/txgcx.htm">通信工程系</a></li> 
+        <li><a href="../szdw/xddgdzjszx.htm">现代电工电子技术中心</a></li> 
+        <li><a href="../szdw/dqdzgjjsyjxzx.htm">电气电子国家级实验教学中心</a></li> 
+        <li><a href="../szdw/dqyzdhsyzx.htm">电气与自动化实验中心</a></li> 
+       
+            
+            </ul>
+    </li>
+    <li class="mainlevel"><A href="../bksjy.htm">本科生教育</A>
+    <ul id="sub_01">
+        <li><a href="../bksjy/dqgcjqzdh.htm">电气工程及其自动化</a></li> 
+        <li><a href="../bksjy/zdh.htm">自动化</a></li> 
+        <li><a href="../bksjy/txgc.htm">通信工程</a></li> 
+        <li><a href="../bksjy/dzxxgc.htm">电子信息工程</a></li> 
+        <li><a href="../bksjy/wlwgc.htm">物联网工程</a></li> 
+        <li><a href="../bksjy/zndwxxgc.htm">智能电网信息工程</a></li> 
+        <li><a href="../bksjy/jqrgc.htm">机器人工程</a></li> 
+       
+            
+            </ul>
+    </li>
+    <li class="mainlevel"><A href="../yjsjy.htm">研究生教育</A>
+    <ul id="sub_01">
+        <li><a href="../yjsjy/tzgg.htm">通知公告</a></li> 
+        <li><a href="../yjsjy/xksz.htm">学科设置</a></li> 
+        <li><a href="../yjsjy/zsylq.htm">招生与录取</a></li> 
+        <li><a href="../yjsjy/yjspy.htm">研究生培养</a></li> 
+        <li><a href="../yjsjy/byyxw.htm">毕业与学位</a></li> 
+        <li><a href="../yjsjy/wjxz.htm">文件下载</a></li> 
+        <li><a href="../yjsjy/dspx_xptz.htm">导师培训、选聘通知</a></li> 
+        <li><a href="../yjsjy/lxwm.htm">联系我们</a></li> 
+       
+            
+            </ul>
+    </li>
+    <li class="mainlevel"><A href="../kxyj.htm">科学研究</A>
+    <ul id="sub_01">
+        <li><a href="../kxyj/yjfx.htm">研究方向</a></li> 
+        <li><a href="../kxyj/kypt.htm">科研平台</a></li> 
+        <li><a href="../kxyj/kycg.htm">科研成果</a></li> 
+       
+            
+            </ul>
+    </li>
+    <li class="mainlevel"><A href="../xsgz.htm">学生工作</A>
+    <ul id="sub_01">
+        <li><a href="../xsgz/hdxw.htm">活动新闻</a></li> 
+        <li><a href="../xsgz/xszzjst.htm">学生组织及社团</a></li> 
+        <li><a href="../xsgz/gzlcjbgxz.htm">工作流程及表格下载</a></li> 
+        <li><a href="../xsgz/yxxz.htm">优秀学子</a></li> 
+       
+            
+            </ul>
+    </li>
+    <li class="mainlevel"><A href="../djyd.htm">党建园地</A>
+    <ul id="sub_01">
+        <li><a href="../djyd/djhd.htm">党建活动</a></li> 
+        <li><a href="../djyd/xxyd.htm">学习园地</a></li> 
+       
+            
+            </ul>
+    </li>
+    <li class="mainlevel"><A href="../fxljy.htm">非学历教育</A>
+    <ul id="sub_01">
+        <li><a href="../fxljy/xmbm.htm">项目报名</a></li> 
+        <li><a href="../fxljy/wqxm.htm">往期项目</a></li> 
+        <li><a href="../fxljy/lxwm.htm">联系我们</a></li> 
+       
+            
+            </ul>
+    </li>
+    <li class="mainlevel"><A href="../xyzj.htm">校友之家</A>
+    <ul id="sub_01">
+        <li><a href="../xyzj/xydt.htm">校友动态</a></li> 
+        <li><a href="../xyzj/xyfc.htm">校友风采</a></li> 
+        <li><a href="../xyzj/xyjz.htm">校友捐赠</a></li> 
+        <li><a href="../xyzj/lxwm.htm">联系我们</a></li> 
+       
+            
+            </ul>
+    </li>
+
+    
+    <div class="clear"></div>
+</ul></td>
+  <td>&nbsp;</td>
+
+  </tr>
+</table>
+
+
+
+
+        
+<div id="main_dingwei">
+   <div class="main">
+     <table width="1100" border="0" align="center" cellpadding="0" cellspacing="30" style="background: #ffffff;">
+       <tr>
+         <td><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+           <tr>
+             <td valign="top" class="san_daohang">&nbsp;               </td>
+             <td valign="top" class="san_daohang"><div>
+    当前位置: 
+                        <a href="../index.htm">首页</a>
+                >>
+                <a href="../xygk.htm">学院概况</a>
+                >>
+                <a href="xyjj.htm">学院简介</a>
+</div></td>
+            </tr>
+           <tr>
+             <td valign="top" class="san_left">  
+              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+               <tr>
+                 <td class="san_left_title">学院概况</td>
+               </tr>
+               <tr>
+                 <td class="san_left_list">
+                 
+                 <ul>
+
+ 
+					 <li><a href="xyjj.htm" style="background: #009ff1; color:#fff;">学院简介</a></li>
+					 <li><a href="xrld.htm">现任领导</a></li>
+					 <li><a href="lsyg.htm">历史沿革</a></li>
+					 <li><a href="dsj.htm">大事记</a></li>
+					 <li><a href="jgsz.htm">机构设置</a></li>
+					 <li><a href="lxwm.htm">联系我们</a></li>
+                      
+                 </ul>
+                 
+                 </td>
+               </tr>
+             </table>
+        
+    
+     
+  
+   
+   
+   
+           
+</td>
+             <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+               <tr>
+                 <td height="400" valign="top">
+                   
+                   <div class="text_neirong">
+                    
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1659677497,'wbnews','u3')</script>
+<script>function seeContenta3(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta3('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1659677497,1226)</script>
+<h2>学院简介</h2>
+    
+    <div id="vsb_content_1226_u31"><div id="vsb_content"><p style="text-align: justify;"><img src="/virtual_attach_file.vsb?afc=XUzU/8UNLPU4UbLKRUiUmrkMRN4LlLOYnNCZL8r2MlrRM490gihFp2hmCIa0nSyiL1yDnShRnRW2Ul-YUl7ZUlUPL47PM49bLzLPol-snmVFM4LiL8lZMlVFL47iLmG8gjfJQ4Oeo4x4QIrAgDTJQty0LzGaLYyPLm-DgtA8pUxcc&oid=1659677497&tid=1003&nid=1226&e=.png" width="1200" vsbhref="vurl" vurl="/_vsl/E526ECD2FAB2AA8AD13117891319B7F1/7353E85A/315204" vheight="" vwidth="1200" alt="" orisrc="/virtual_attach_file.vsb?afc=XolV/2nR-4nzCbnKmAVLlC8MmL4olnORL77anlrfMR9PL8l0gihFp2hmCIa0LSybUYhfLSybnN7YM8M2nlMRM7LsMzCZMzVVM4NbU8LbMmWFUzlbUmUYLm6FLz74LmLYgjfJQ4Oeo4x4QIrAgDTJQty0LzGaLYyPLm-DgtA8pUxcc&oid=1659677497&tid=1003&nid=1226&e=.png" class="img_vsb_content"></p><p style="text-align: justify; text-indent: 2em; margin-bottom: 10px;"><span style="letter-spacing: 0px; font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">天津大学电气自动化与信息工程学院的前身可追溯至1933年成立的北洋大学电机系，至今已有九十余年的办学历史，素以<strong>严谨治学、务实求真</strong>而闻名。</span></p><p style="margin: 5px 0px 10px; text-indent: 28px; line-height: 1.75em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px; letter-spacing: 0px;">先后培养出曾任北洋大学、天津大学校务委员会主席的刘锡瑛教授，北京邮电大学校长的叶培大院士，清华大学校长的高景德院士，发电工程与设备专家梁维燕院士，电力系统继电保护专家、俄罗斯工程院院士贺家李教授，数字通信专家李乐民院士，电力系统分析规划与仿真专家余贻鑫院士，国际电气电子工程师学会（IEEE）终身会士何振亚教授，电力系统配电网技术专家王成山院士，电机设计与控制专家夏长亮院士，加拿大工程院院士方黎平教授，国际电机领域知名专家陈之藩教授等一批专家学者，以及以天津市人大常委会原副主任何国模、著名企业家荣智健等为代表的一大批各类杰出人才。</span></p><p style="margin: 5px 0px 10px; text-indent: 28px; line-height: 1.75em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px; letter-spacing: 0px;">通信专家周炯槃院士，我国电力系统学科的开拓者之一徐庆春教授，我国无线电工业的主要奠基人之一、电子与通信专家马师亮教授，自动控制和系统工程领域的奠基人和开拓者之一刘豹教授，电子与工程物理专家陈荫谷教授，我国光纤通讯事业的开拓者之一杨恩泽教授，电视与图像信息技术专家俞斯乐教授，原天津大学校长史绍熙、吴咏诗、李光泉，原天津大学党委书记杨渝钦等一大批知名专家学者先后在此教书育人。</span></p><p style="margin: 5px 0px 10px; text-indent: 28px; line-height: 1.75em;"><strong><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;"><span style="letter-spacing: 0px; font-size: 18px;">学院师资力量雄厚，</span></span></strong><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;"><span style="letter-spacing: 0px; font-size: 18px;">现有教职员工322人，专任教师262人，其中教授94人，副教授120人。教师队伍中拥有<strong>俄罗斯工程院院士1人、中国工程院院士2人，国家级各类人才计划入选者28人</strong>，教育部创新团队1个，科技部重点领域创新团队1人，全国黄大年式教师团队1个，教育部课程思政教学团队1个，天津市教学名师3人。</span><span style="letter-spacing: 0px; font-size: 18px;"></span><span style="letter-spacing: 0px; font-size: 18px;"></span></span></p><p style="margin: 5px 0px 10px; text-indent: 28px; line-height: 1.75em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;"><span style="letter-spacing: 0px; font-size: 18px;">学院设有<strong>电气工程系、自动化系、电子信息工程系、通信工程系、现代电工电子技术中心、电气电子实验教学中心、电气与自动化实验中心</strong>4个系和3个中心，设<strong>电气工程及其自动化、自动化、电子信息工程、物联网工程、通信工程、智能电网信息工程、机器人工程</strong>7个本科专业。每年本科生招生700余人，全日制研究生近500人(硕士研究生400人，博士研究生100人)，在校生4700余人。</span><span style="letter-spacing: 0px; font-size: 18px;"></span><span style="letter-spacing: 0px; font-size: 18px;"></span></span></p><p style="margin: 5px 0px 10px; text-indent: 28px; line-height: 1.75em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;"><span style="letter-spacing: 0px; font-size: 18px;">学院现有<strong>电气工程、控制科学与工程、信息与通信工程</strong>三个一级学科，均具有博士学位授予权，并分别设有博士后流动站，同时设有<strong>低空技术与工程</strong>一级交叉学科博士学位授予点。下设电力系统及其自动化、电机与电器、高电压与绝缘技术、电力电子与电力传动、电工理论与新技术、控制理论与控制工程、检测技术与自动化装置、模式识别与智能系统、信号与信息处理、通信与信息系统等十个二级学科，其中电力系统及其自动化、检测技术与自动化装置、通信与信息系统为国家重点建设学科。</span><span style="letter-spacing: 0px; font-size: 18px;"></span><span style="letter-spacing: 0px; font-size: 18px;"></span></span></p><p style="margin: 5px 0px 10px; text-indent: 28px; line-height: 1.75em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;"><span style="letter-spacing: 0px; font-size: 18px;">学院拥有智能配用电装备与系统全国重点实验室、电气电子国家级实验教学示范中心、电气工程与自动化国家级虚拟仿真实验教学中心、智能电网教育部重点实验室、天津市电力系统仿真控制重点实验室、天津市过程检测与控制重点实验室、天津市智慧能源与信息技术重点实验室、天津市类脑智能技术重点实验室、天津市智能无人集群技术与系统重点实验室、教育部电视与图像信息研究所、综合能源电力系统学科国家重点国际科技合作平台、微网与智能配电系统开发与应用国家地方联合工程研究中心、分布式发电微网及智能电网国际科技合作基地、智能制造示范技术国际联合研究中心（天津市）、能源互联网国际联合研究中心、天津市仿生系统与智能控制国际联合研究中心、天津市过程成像与检测国际联合研究中心、智能多媒体信息系统国际联合研究中心、天津大学电动汽车与能源互联网中英联合研究中心等多个国家和省部级科研基地和教学实验基地，并和国内外知名企业和研究单位共建了多个科研和实训平台。</span><span style="letter-spacing: 0px; font-size: 18px;"></span><span style="letter-spacing: 0px; font-size: 18px;"></span></span></p><p style="margin: 5px 0px 10px; text-indent: 28px; line-height: 1.75em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;"><span style="letter-spacing: 0px; font-size: 18px;">学院科研实力雄厚，已形成多个在国内外具有影响力的特色研究方向，如：电力系统规划、电力系统安全性与运行控制、分布式发电与微网，电力系统保护与控制，新型电机及其控制技术，电器系统优化与节能，高电压与绝缘材料，新型传感器与流动参数检测，自动化装备与过程控制，智能系统检测与控制，智能信息处理与应用，机器人控制技术，新能源动力汽车控制技术，宽带信息处理与传输、智能感知理论与系统、隐蔽通信与信息对抗、高速光纤通信理论与技术、3D立体图像显示技术、音视频信号处理等等。</span><span style="letter-spacing: 0px; font-size: 18px;"></span><span style="letter-spacing: 0px; font-size: 18px;"></span></span></p><p style="margin: 5px 0px 10px; text-indent: 28px; line-height: 1.75em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;"><span style="letter-spacing: 0px; font-size: 18px;">学院始终聚焦国家重大战略需求，瞄准科技发展前沿，以创新引领破解卡点痛点，实现学院科研创新综合实力跃升。新时代以来先后获得<strong>国家科技进步二等奖3项、国家技术发明二等奖3项，省部级奖项70余项。</strong>近五年承接科研项目1900余项，科研经费实到经费11.39亿元，发表高水平论文3976篇，授权发明专利2113项，一大批科研成果获得了广泛的推广应用。</span></span></p><p style="margin: 5px 0px; line-height: 1.75em; text-indent: 0em;"><span style="font-size: 12px;"><br></span></p><p style="margin: 5px 0px; line-height: 1.75em; text-indent: 0em;"><span style="font-size: 12px;">宣传手册（2025年9月）</span></p><p style="text-align: center;"><span style="font-family: 楷体, 楷体_GB2312, SimKai; font-size: 16px; letter-spacing: 0px; text-indent: 0em;"></span></p><p style="text-align: center"><img src="/virtual_attach_file.vsb?afc=XnlL/aMl-ZnN7bMKRf2U8lDUzV7LR7O4UzvYUlL8MRW2LN70gihFp2hmCIa0oSy4n1hkn1y8LNCbUNUsUzrRnzrkMmN8nl-aL7CioRL8n7WFLRvYMm7ZLmMFMmN8MllJqjfjo4OeosMTQI70qIbtpYyPLRG4g47YLmCJqdxnx&oid=1659677497&tid=1003&nid=1226&e=.jpg" width="1200" vsbhref="vurl" vurl="/_vsl/93FBF42F9BD7A5CE5B694EB00F5834DB/07261823/6945E" vheight="" vwidth="1200" alt="" orisrc="/virtual_attach_file.vsb?afc=XLNL/8MRUiMmWRLKNlaoln2LzrVLRCOaL8l8MNCsLzMfUzG0gihFp2hmCIa0M1hkUSyaU1y4Lm6RUz6RL8r2U49ioRG8oR-bolLYMRCZnmAFU8LbUzr7ozfFMzUan7WRgtXaQ4Oeo4x4QIrAgDTJQty0LzGaLYyPLm-DgtA8pUxcc&oid=1659677497&tid=1003&nid=1226&e=.jpg" class="img_vsb_content"></p><p style="text-align: center;"><img src="/virtual_attach_file.vsb?afc=XMmC/snRL8L7L8oKRQ2o7QkMNliU4vOZMNCYLmWRnm67UlL0gihFp2hmCIa0U1ybokhkn1yZLRCPLNQVL8nkLlLZMzNDLz-aLR7sLzCYU8MFMNLZnz-aMzQFL8LPUNUJqjfjo4OeosMTQI70qIbtpYyPLRG4g47YLmCJqdxnx&oid=1659677497&tid=1003&nid=1226&e=.jpg" width="1200" vsbhref="vurl" vurl="/_vsl/B98BF80612FE3DB1C8596120017162CC/6C8E2056/3C1BD" vheight="" vwidth="1200" alt="" orisrc="/virtual_attach_file.vsb?afc=Xo7U/8L77in7rfLKznkMmLsUlMkM8VOfUmliU4G8oRvbUNL0gihFp2hmCIa0LkyiMShknkyYMNlanzQ7UzlPM7VfU4vPU4C4MzA2LRQRM7rFL4T2U4WkLzAFL4W7nzvZgtXaQ4Oeo4x4QIrAgDTJQty0LzGaLYyPLm-DgtA8pUxcc&oid=1659677497&tid=1003&nid=1226&e=.jpg" class="img_vsb_content"><span style="font-family: 楷体, 楷体_GB2312, SimKai; font-size: 16px; letter-spacing: 0px; text-indent: 0em;">&nbsp;</span></p></div></div>
+    <span id="vsb_content_1226_u3" name="vsb_content_1226_u3"></span><br /><br />
+    
+
+
+                     </div>
+                   </td>
+                 </tr>
+               <tr>
+                 <td align="center" valign="top">&nbsp;</td>
+                 </tr>
+             </table></td>
+            </tr>
+         </table></td>
+       </tr>
+     </table>
+   </div>
+   
+   
+   
+
+    
+</div>
+   
+   
+   
+
+   
+   
+   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="footer">
+      <tr>
+        <td>&nbsp;</td>
+        <td width="1200" height="100" align="center" class="foot_style">地址: 天津市南开区卫津路92号 天津大学 电气自动化与信息工程学院           邮编: 300072           电话: (022)27406272           E-mail: auto@tju.edu.cn<br />
+        津ICP备05004358号 津教备0316号 天津大学 电气自动化与信息工程学院 版权所有</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+
+ 
+
+    <div id="hdp"><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><div id="et-slider-wrapper">
+	<div id="et-slides">
+    
+   		<div class="et-slide" style="background-image: url(../virtual_attach_file.vsb?afc=5nzrCfnRGDLzrRMQ77bnmUanmGDn7-q4olQVL8Qfn77bLR90gihFp2hmCIa0M1y8M1h7M1hkLNWkoRC8LmNYL4CPL7liMz-sU8W7L7lPLmAFnRCDol-bMzVFL4WRMRNJqjfjo4OeosMTQI70qIbtpYyxLYyxLYbw62p8c&oid=1659677497&e=.jpg);">
+			<div class="container clearfix">
+				
+				<!-- .description -->
+				<div class="featured-image">
+ 
+ 				</div>
+				<!-- .featured-image --></div>
+			<!-- .container --></div>
+		<div class="et-slide" style="background-image: url(../virtual_attach_file.vsb?afc=5MzNCsL4r2nmlZUQmNYnRvYnz9PMm7qsUmLbnlQ2nzn7L7C0gihFp2hmCIa0LYhVUSyinSyDLzLsL8-iMNl4L7CPUm67MzVkMNWVM8C4LzMFLRCYnmCbnNnFL8l8LzlJqjfjo4OeosMTQI70qIbtpYyxLYyxLYbw62p8c&oid=1659677497&e=.jpg);">
+			<div class="container clearfix">
+				
+				<!-- .description -->
+				<div class="featured-image">
+ 
+ 				</div>
+				<!-- .featured-image --></div>
+			<!-- .container --></div>
+		<div class="et-slide" style="background-image: url(../virtual_attach_file.vsb?afc=5Mz7CaMzTVLNLsoQz6RMllsozW7ozVqfMzlDUmv8nm-ZMmL0gihFp2hmCIa0n1yDLkyPMShRnzlsUzf2MNV7L8M2LlCPnlLZUzvDUm9iU4QFMz62nlnVLmWFMz9bLl-Jqjfjo4OeosMTQI70qIbtpYyxLYyxLYbw62p8c&oid=1659677497&e=.jpg);">
+			<div class="container clearfix">
+				
+				<!-- .description -->
+				<div class="featured-image">
+ 
+ 				</div>
+				<!-- .featured-image --></div>
+			<!-- .container --></div>
+		<div class="et-slide" style="background-image: url(../virtual_attach_file.vsb?afc=5nNVCkozv8L4UbnQRffUl-iLlQ2nNUqPUllZM4CPLRM7M470gihFp2hmCIa0n1h7MkyaMSyZUz7sM8-iUmNPL49aUllZLl-aMmvaU4fRUNnFLml4L7CDnRWFL8lDLRvJqjfjo4OeosMTQI70qIbtpYyxLYyxLYbw62p8c&oid=1659677497&e=.jpg);">
+			<div class="container clearfix">
+				
+				<!-- .description -->
+				<div class="featured-image">
+ 
+ 				</div>
+				<!-- .featured-image --></div>
+			<!-- .container --></div>
+		<!-- .et-slide --></div>
+	<!-- #et-slides --></div>
+
+  <script type="text/javascript" src="images/superfish.js"></script>
+<script type="text/javascript" src="images/jquery.fitvids.js"></script>
+<script type="text/javascript" src="images/custom.js"></script>
+<script type="text/javascript" src="images/modernizr.js"></script><script>_showDynClickBatch(['dynclicks_u5_1666','dynclicks_u5_1665','dynclicks_u5_1664','dynclicks_u5_1663'],[1666,1665,1664,1663],"wbnews", 1659677497)</script>
+</div>
+    
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

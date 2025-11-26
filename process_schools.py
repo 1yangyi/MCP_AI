@@ -10,6 +10,10 @@ from openai import OpenAI
 from urllib.parse import urljoin
 from process_lost import _limit_text_by_tokens
 import glob
+from extract import extract_teacher_button,check_next_page,check_similar_page,decide_if_teacher_list,extract_teachers_with_deepseek
+import concurrent.futures
+import threading
+import logging
 
 # 中间文件目录
 MIDDLE_FILE_DIR = PROJECT_ROOT / "middle_file2"
@@ -18,247 +22,72 @@ MIDDLE_FILE_DIR.mkdir(exist_ok=True)
 DEEPSEEK_API_KEY = "sk-08356d9d33304343a40de1d6d26520f9"
 TOKEN_LIMIT = 120000
 
-def extract_teacher_button(api_key: str, text: str) -> dict:
-    try:
-        client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
-    except Exception as e:
-        return {"status": "error", "message": f"Deepseek API 初始化失败: {str(e)}"}
-    prompt = f"""
-    你是一个数据收集助手，协助收集高校学院的教师信息。
-    现在你需要根据以下页面网页结构化列表，判断哪一个最可能引导至包含教师信息的页面，并直接返回该按钮的文本和对应URL。
-    链接列表：
-    {text}
-    请严格按以下格式输出一个最可能的按钮文本，不要任何额外解释：
-    按钮文本@URL,例如，"师资力量@teachers.htm"
-    注意：优先选择类似“教师队伍”、“师资力量”、“Faculty”、“Professors”、“按字母排序”、“按专业分类”等明确指向教师列表的具体链接。
-    """
-    completion = client.chat.completions.create(
-        model="deepseek-chat",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.0
-    )
-    content = completion.choices[0].message.content
-    parts = content.split('@', 1)
-    return {"status": "success", "button_text": parts[0], "url": parts[1] if len(parts) > 1 else ""}
+browser_lock = threading.Lock()
 
 
-def check_next_page(api_key: str, text: str) -> dict:
-    """检查是否存在下一页按钮及其URL"""
-    client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
-    prompt = f"""
-    你是一个数据分析助手，请从以下网页内容中识别是否存在"下一页"、"next page"、">"等表示翻页的按钮或链接。
-    网页内容如下：
-    {text}
-    如果存在下一页按钮或链接，请提取其URL，并以JSON格式返回：{{"has_next": true, "next_url": "链接URL"}}
-    如果不存在下一页按钮或链接，请返回：{{"has_next": false, "next_url": ""}}
-    如果下一页按钮或链接存在，但URL为空，请返回：{{"has_next": true, "next_url": ""}}
-    注意：仅输出JSON格式结果，不要附加解释。
-    """
-    completion = client.chat.completions.create(
-        model="deepseek-chat",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.1
-    )
-    content = completion.choices[0].message.content
-    # 清理 content
-    content = re.sub(r'^```json\s*|\s*```$', '', content).strip()
-    try:
-        result = json.loads(content)
-        return {"status": "success", "has_next": result.get("has_next", False), "next_url": result.get("next_url", "")}
-    except json.JSONDecodeError:
-        return {"status": "error", "has_next": False, "next_url": ""}
+# 配置 logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(threadName)s - %(levelname)s - %(message)s'
+)
 
+# Ensure logs directory exists
+logs_dir = PROJECT_ROOT / "logs"
+logs_dir.mkdir(exist_ok=True)
 
-def check_similar_page(api_key: str, text: str, button_url: str) -> dict:
-    """检查是否存在与当前页面相似的页面"""
-    client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
-    
-    # 简化提示词，更明确地指出要查找的内容
-    prompt = f"""
-    你是一个数据分析助手，请从以下JSON格式的网页内容中找出与"师资队伍"相关的其他按钮或链接。
-    特别关注这些关键词："杰出人才"、"特聘教师"、"博士后"、"教授"等。
-    
-    当前页面URL为：{button_url}
-    
-    网页内容如下：
-    {text}
-    
-    请提取所有可能包含教师信息的按钮，并以JSON数组格式返回：
-    [
-      {{"name": "按钮名称1", "url": "链接URL1"}},
-      {{"name": "按钮名称2", "url": "链接URL2"}}
-    ]
-    
-    如果没有找到相关按钮，请返回空数组 []
-    """
-    
-    try:
-        completion = client.chat.completions.create(
-            model="deepseek-chat",
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0.5  
-            # do not know why here 0.5 is optimal?
-        )
-        
-        content = completion.choices[0].message.content
-        print(f"API原始返回: {content}")  
-        
-        # 尝试清理内容并解析JSON
-        content = re.sub(r'^```json\s*|\s*```$', '', content).strip()
-        try:
-            result = json.loads(content)
-            return {"status": "success", "has_next": len(result) > 0, "next_urls": result}
-        except json.JSONDecodeError as e:
-            print(f"JSON解析错误: {e}")
-            # 尝试更宽松的解析方式
-            pattern = r'"name"\s*:\s*"([^"]+)"\s*,\s*"url"\s*:\s*"([^"]+)"'
-            matches = re.findall(pattern, content)
-            if matches:
-                result = [{"name": name, "url": url} for name, url in matches]
-                return {"status": "success", "has_next": len(result) > 0, "next_urls": result}
-            return {"status": "error", "has_next": False, "next_urls": [], "raw_content": content}
-    except Exception as e:
-        print(f"API调用错误: {e}")
-        return {"status": "error", "has_next": False, "next_urls": [], "error": str(e)}
+# Add FileHandler for detailed logs
+detailed_handler = logging.FileHandler(logs_dir / "detailed.log")
+detailed_handler.setLevel(logging.INFO)
+detailed_handler.setFormatter(logging.Formatter('%(asctime)s - %(threadName)s - %(levelname)s - %(message)s'))
+logging.getLogger().addHandler(detailed_handler)
 
-
-def decide_if_teacher_list(api_key: str, text: str) -> dict:
-    try:
-        client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
-    except Exception as e:
-        return {"status": "error", "message": f"Deepseek API 初始化失败: {str(e)}"}
-    prompt = f"""
-    你是一个数据收集助手，用于识别网页内容是否包含某学院的全部教师名称及对应信息。
-    请根据以下结构化内容进行判断：
-    {text}
-    若当前列表包含该学院教师的名称和URL，则返回：True
-    若列表中没有教师信息，则返回：False
-    注意：仅输出结果文本（True 或 False），无需任何解释。
-    """
-    completion = client.chat.completions.create(
-        model="deepseek-chat",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.0
-    )
-    content = completion.choices[0].message.content.strip()
-    return {"status": "success", "message": content}
-
-def extract_teachers_with_deepseek(api_key: str, text: str) -> dict:
-    try:
-        client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
-    except Exception as e:
-        return {"status": "error", "message": f"Deepseek API 初始化失败: {str(e)}"}
-    prompt = f"""
-    你是一个数据收集助手，协助收集学院的教师信息。
-    请从以下网页结构化列表中识别出其中所有教师的名称和URL。注意：名称只包含教师的姓名，不能包含任何分类标签（如“院长”、“研究员”、“院士”等）。
-    列表内容如下：
-    {text}
-    请以json格式直接返回该学院所有教师(包括教师、研究员、工程师等，如果是 医学学院则还包括 医生专家等)的信息。
-    注意：仅输出结果的json格式，不要附加解释。每个教师的格式为：{{"name": "", "URL": ""}}。
-    如果未识别出教师信息，则返回空列表。
-    """
-    completion = client.chat.completions.create(
-        model="deepseek-chat",
-        messages=[{"role": "user", "content": prompt}],
-        max_tokens=8000,
-        temperature=0.1
-    )
-    content = completion.choices[0].message.content
-    # 清理 content
-    content = re.sub(r'^```json\s*|\s*```$', '', content).strip()
-    try:
-        teachers = json.loads(content)
-    except json.JSONDecodeError:
-        teachers = []
-    return {"status": "success", "teachers": teachers}
-
-def extract_intro_button(api_key: str, text: str) -> dict:
-    try:
-        client = OpenAI(api_key=api_key, base_url="https://api.deepseek.com")
-    except Exception as e:
-        return {"status": "error", "message": f"Deepseek API 初始化失败: {str(e)}"}
-    prompt = f"""
-    你是一个数据收集助手，协助收集高校学院的简介信息。
-    现在你需要根据以下页面网页结构化列表，判断哪一个最可能引导至包含学院简介的页面，并直接返回该按钮的文本和对应URL。
-    链接列表：
-    {text}
-    请严格按以下格式输出一个最可能的按钮文本，不要任何额外解释：
-    按钮文本@URL,例如，"学院简介@introduction.htm"
-    注意：优先选择类似“学院简介”、“Introduction”、“About Us”、“学院概况”等明确指向学院简介的链接。
-    """
-    completion = client.chat.completions.create(
-        model="deepseek-chat",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.0
-    )
-    content = completion.choices[0].message.content
-    parts = content.split('@', 1)
-    return {"status": "success", "button_text": parts[0], "url": parts[1] if len(parts) > 1 else ""}
-
+# Create separate logger for exceptions
+exceptions_logger = logging.getLogger('exceptions')
+exceptions_logger.setLevel(logging.INFO)
+exceptions_handler = logging.FileHandler(logs_dir / "exceptions.log")
+exceptions_handler.setLevel(logging.INFO)
+exceptions_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+exceptions_logger.addHandler(exceptions_handler)
 
 def process_college_teachers(university_name: str, college_name: str, college_url: str, output_dir: Path):
-    teacher_folder = output_dir / college_name
+    sanitized_name = college_name.replace('/', '_').replace('\\', '_')
+    teacher_folder = output_dir / sanitized_name
     os.makedirs(teacher_folder, exist_ok=True)
     if not college_url.endswith("/"):
         college_url = college_url + "/"
-    print(f"处理学院教师信息: {university_name} {college_name} ({college_url})")
+    logging.info(f"处理学院教师信息: {university_name} {college_name} ({college_url})")
     current_url = college_url.replace("http://", "https://") if college_url.startswith("http://") else college_url
-    # 导航到学院URL
-    print(f"导航到学院URL: {current_url}")
-    navigate_response = requests.post(f"{BROWSER_MCP_URL}/navigate", json={"url": current_url, "wait_time": 2})
-    if navigate_response.status_code != 200:
-        print(f"导航到学院URL失败: {college_url}")
-        return []
+    with browser_lock:
+        # 导航到学院URL
+        logging.info(f"导航到学院URL: {current_url}")
+        navigate_response = requests.post(f"{BROWSER_MCP_URL}/navigate", json={"url": current_url, "wait_time": 2})
+        if navigate_response.status_code != 200:
+            logging.info(f"导航到学院URL失败: {college_url}")
+            return []
 
-    # 获取HTML并解析
-    parse_response = requests.post(f"{HTML_PARSER_URL}/parse", json={"url": college_url, "output_prefix": university_name+'_'+college_name, "output_dir": str(MIDDLE_FILE_DIR)})
-    if parse_response.status_code != 200:
-        print(f"解析学院HTML失败: {college_url}")
+        # 获取HTML并解析
+        parse_response = requests.post(f"{HTML_PARSER_URL}/parse", json={"url": college_url, "output_prefix": university_name+'_'+college_name, "output_dir": str(MIDDLE_FILE_DIR)})
+        if parse_response.status_code != 200:
+            logging.info(f"解析学院HTML失败: {college_url}")
 
     try:
         # 读取解析的JSON
         html_obj = read_json_file(f"{MIDDLE_FILE_DIR}/{university_name}_{college_name}.json")
         html_text = _safe_json_dumps(html_obj)
     except FileNotFoundError:
-        print(f"学院HTML文件不存在: {MIDDLE_FILE_DIR}/{university_name}_{college_name}.json")
-        # 获取当前页面的HTML原码
-        current_page_response = requests.get(f"{BROWSER_MCP_URL}/current_page")
-        if current_page_response.status_code == 200:
-            html_content = current_page_response.json()['html']
-            html_text = html_content  # 使用HTML原码作为html_text
-            print(f"获取HTML成功，HTML长度: {len(html_text)}字符")
-            html_text = _limit_text_by_tokens(html_text, TOKEN_LIMIT)
-            print(f"限制HTML长度为 {TOKEN_LIMIT} 个token，实际长度: {len(html_text)}字符")
-        else:
-            print(f"获取学院页面HTML失败: {college_url}")
-            return []
-
-    # 新增：寻找并保存学院简介
-    print("开始寻找学院简介...")
-    intro_result = extract_intro_button(DEEPSEEK_API_KEY, html_text)
-    if intro_result["status"] == "success" and intro_result["url"]:
-        intro_url = urljoin(current_url, intro_result["url"])
-        if intro_url.startswith('http://'):
-            intro_url = 'https://' + intro_url[7:]
-        print(f"导航到学院简介页面: {intro_url}")
-        navigate_response = requests.post(f"{BROWSER_MCP_URL}/navigate", json={"url": intro_url, "wait_time": 2})
-        if navigate_response.status_code == 200:
+        logging.info(f"学院HTML文件不存在: {MIDDLE_FILE_DIR}/{university_name}_{college_name}.json")
+        with browser_lock:
+            # 获取当前页面的HTML原码
             current_page_response = requests.get(f"{BROWSER_MCP_URL}/current_page")
             if current_page_response.status_code == 200:
                 html_content = current_page_response.json()['html']
-                intro_file = teacher_folder / f"{college_name}_intro.html"
-                with open(intro_file, 'w', encoding='utf-8') as file:
-                    file.write(html_content)
-                print(f"保存学院简介 HTML 到 {intro_file}")
+                html_text = html_content  # 使用HTML原码作为html_text
+                logging.info(f"获取HTML成功，HTML长度: {len(html_text)}字符")
+                html_text = _limit_text_by_tokens(html_text, TOKEN_LIMIT)
+                logging.info(f"限制HTML长度为 {TOKEN_LIMIT} 个token，实际长度: {len(html_text)}字符")
             else:
-                print(f"获取学院简介页面HTML失败: {intro_url}")
-        else:
-            print(f"导航到学院简介页面失败: {intro_url}")
-        # 导航回学院主页面
-        print(f"导航回学院主页面: {current_url}")
-        requests.post(f"{BROWSER_MCP_URL}/navigate", json={"url": current_url, "wait_time": 2})
-    else:
-        print("未找到学院简介按钮")
+                logging.info(f"获取学院页面HTML失败: {college_url}")
+                return []
 
     count = 0
     button_url = ""
@@ -267,57 +96,59 @@ def process_college_teachers(university_name: str, college_name: str, college_ur
         count += 1
         result_link = extract_teacher_button(DEEPSEEK_API_KEY, html_text)
         if result_link["status"] != "success":
-            print(f"未找到教师按钮: {result_link['message']}")
+            logging.info(f"未找到教师按钮: {result_link['message']}")
             continue
         button_text = result_link["button_text"]
         click_url = result_link["url"]
         button_url = click_url
-        print(f"点击按钮文本: {button_text}, URL: {click_url}")
+        logging.info(f"点击按钮文本: {button_text}, URL: {click_url}")
 
-        print(f"当前URL: {current_url}")
-        print(f"点击URL: {click_url}")
+        logging.info(f"当前URL: {current_url}")
+        logging.info(f"点击URL: {click_url}")
         click_url = urljoin(current_url, click_url)
-        print(f"合并后的URL: {click_url}")
-        print('-----------------')
+        logging.info(f"合并后的URL: {click_url}")
+        logging.info('-----------------')
 
         if click_url.startswith('http://'):
             click_url = 'https://' + click_url[7:]
-        # 导航到教师页面
-        print(f"导航到教师页面: {click_url}")
-        requests.post(f"{BROWSER_MCP_URL}/navigate", json={"url": click_url, "wait_time": 3})
-        current_url = click_url  # 更新当前 URL
+        with browser_lock:
+            # 导航到教师页面
+            logging.info(f"导航到教师页面: {click_url}")
+            requests.post(f"{BROWSER_MCP_URL}/navigate", json={"url": click_url, "wait_time": 3})
+            current_url = click_url  # 更新当前 URL
 
-        # 解析新页面HTML
-        print(f"解析教师页面HTML: {click_url}")
-        new_parse_response = requests.post(f"{HTML_PARSER_URL}/parse", json={"url": click_url, "output_prefix": f"{university_name}_{college_name}_teachers", "output_dir": str(MIDDLE_FILE_DIR)})
-        if new_parse_response.status_code != 200:
-            print(f"解析教师页面HTML失败: {click_url}")
-            continue
+            # 解析新页面HTML
+            logging.info(f"解析教师页面HTML: {click_url}")
+            new_parse_response = requests.post(f"{HTML_PARSER_URL}/parse", json={"url": click_url, "output_prefix": f"{university_name}_{college_name}_teachers", "output_dir": str(MIDDLE_FILE_DIR)})
+            if new_parse_response.status_code != 200:
+                logging.info(f"解析教师页面HTML失败: {click_url}")
+                continue
 
         try:
             html_obj = read_json_file(f"{MIDDLE_FILE_DIR}\{university_name}_{college_name}_teachers.json")
             html_text = _safe_json_dumps(html_obj)
         except FileNotFoundError:
-            print(f"教师页面HTML文件不存在: {MIDDLE_FILE_DIR}\{university_name}_{college_name}_teachers.json")
-            # 获取当前页面的HTML原码
-            current_page_response = requests.get(f"{BROWSER_MCP_URL}/current_page")
-            if current_page_response.status_code == 200:
-                html_content = current_page_response.json()['html']
-                html_text = html_content  # 使用HTML原码作为html_text
-                print(f"获取HTML成功，HTML长度: {len(html_text)}字符")
-                html_text = _limit_text_by_tokens(html_text, TOKEN_LIMIT)
-                print(f"限制HTML长度为 {TOKEN_LIMIT} 个token，实际长度: {len(html_text)}字符")
-            else:
-                print(f"获取教师页面HTML失败: {click_url}")
-                return []
+            logging.info(f"教师页面HTML文件不存在: {MIDDLE_FILE_DIR}\{university_name}_{college_name}_teachers.json")
+            with browser_lock:
+                # 获取当前页面的HTML原码
+                current_page_response = requests.get(f"{BROWSER_MCP_URL}/current_page")
+                if current_page_response.status_code == 200:
+                    html_content = current_page_response.json()['html']
+                    html_text = html_content  # 使用HTML原码作为html_text
+                    logging.info(f"获取HTML成功，HTML长度: {len(html_text)}字符")
+                    html_text = _limit_text_by_tokens(html_text, TOKEN_LIMIT)
+                    logging.info(f"限制HTML长度为 {TOKEN_LIMIT} 个token，实际长度: {len(html_text)}字符")
+                else:
+                    logging.info(f"获取教师页面HTML失败: {click_url}")
+                    return []
 
 
         # 检查是否为教师列表
         decide_result = decide_if_teacher_list(DEEPSEEK_API_KEY, html_text)
         is_teacher_list = decide_result["message"]
-        print(f"是否为教师列表: {is_teacher_list}")
+        logging.info(f"是否为教师列表: {is_teacher_list}")
 
-    print("正在提取教师信息...")
+    logging.info("正在提取教师信息...")
     all_teachers = []
     page_count = 1
     extract_result = extract_teachers_with_deepseek(DEEPSEEK_API_KEY, html_text)
@@ -330,7 +161,7 @@ def process_college_teachers(university_name: str, college_name: str, college_ur
         teacher["URL"] = urljoin(current_url, teacher["URL"])
     all_teachers.extend(current_page_teachers)
     # print(f"合并后的教师URL: {current_page_teachers[0]}")
-    print(f"第 {page_count} 页: 提取到 {len(current_page_teachers)} 位教师")
+    logging.info(f"第 {page_count} 页: 提取到 {len(current_page_teachers)} 位教师")
 
 
     # 检查是否有下一页
@@ -338,7 +169,7 @@ def process_college_teachers(university_name: str, college_name: str, college_ur
     while True:
         next_page_result = check_next_page(DEEPSEEK_API_KEY, html_text)
         if not next_page_result["has_next"] or not next_page_result["next_url"]:
-            print("没有更多页面，教师信息提取完成")
+            logging.info("没有更多页面，教师信息提取完成")
             break
         # 获取下一页URL
         next_url = next_page_result["next_url"]
@@ -348,47 +179,49 @@ def process_college_teachers(university_name: str, college_name: str, college_ur
         if next_url.startswith('http://'):
             next_url = 'https://' + next_url[7:]
         if next_url in all_url_list:
-            print(f"发现重复URL: {next_url}，停止翻页")
+            logging.info(f"发现重复URL: {next_url}，停止翻页")
             break
         all_url_list.append(next_url)
         
-        print(f"发现下一页，导航到: {next_url}")
+        logging.info(f"发现下一页，导航到: {next_url}")
         page_count += 1
         
-        # 导航到下一页
-        navigate_response = requests.post(f"{BROWSER_MCP_URL}/navigate", json={"url": next_url, "wait_time": 3})
-        if navigate_response.status_code != 200:
-            print(f"导航到下一页失败: {next_url}")
-            break
-        
-        current_url = next_url  # 更新当前URL
-        
-        # 解析下一页HTML
-        next_page_parse_response = requests.post(
-            f"{HTML_PARSER_URL}/parse", 
-            json={"url": next_url, "output_prefix": f"{university_name}_{college_name}_teachers_page{page_count}", "output_dir": str(MIDDLE_FILE_DIR)}
-        )
-        
-        if next_page_parse_response.status_code != 200:
-            print(f"解析下一页HTML失败: {next_url}")
-            break
+        with browser_lock:
+            # 导航到下一页
+            navigate_response = requests.post(f"{BROWSER_MCP_URL}/navigate", json={"url": next_url, "wait_time": 3})
+            if navigate_response.status_code != 200:
+                logging.info(f"导航到下一页失败: {next_url}")
+                break
             
+            current_url = next_url  # 更新当前URL
+            
+            # 解析下一页HTML
+            next_page_parse_response = requests.post(
+                f"{HTML_PARSER_URL}/parse", 
+                json={"url": next_url, "output_prefix": f"{university_name}_{college_name}_teachers_page{page_count}", "output_dir": str(MIDDLE_FILE_DIR)}
+            )
+            
+            if next_page_parse_response.status_code != 200:
+                logging.info(f"解析下一页HTML失败: {next_url}")
+                break
+                
         try:
             html_obj = read_json_file(f"{MIDDLE_FILE_DIR}/{university_name}_{college_name}_teachers_page{page_count}.json")
             html_text = _safe_json_dumps(html_obj)
         except FileNotFoundError:
-            print(f"下一页HTML文件不存在: {MIDDLE_FILE_DIR}/{university_name}_{college_name}_teachers_page{page_count}.json")
-            # 获取当前页面的HTML原码
-            current_page_response = requests.get(f"{BROWSER_MCP_URL}/current_page")
-            if current_page_response.status_code == 200:
-                html_content = current_page_response.json()['html']
-                html_text = html_content  # 使用HTML原码作为html_text
-                print(f"获取HTML成功，HTML长度: {len(html_text)}字符")
-                html_text = _limit_text_by_tokens(html_text, TOKEN_LIMIT)
-                print(f"限制HTML长度为 {TOKEN_LIMIT} 个token，实际长度: {len(html_text)}字符")
-            else:
-                print(f"获取教师页面HTML失败: {next_url}")
-                return []
+            logging.info(f"下一页HTML文件不存在: {MIDDLE_FILE_DIR}/{university_name}_{college_name}_teachers_page{page_count}.json")
+            with browser_lock:
+                # 获取当前页面的HTML原码
+                current_page_response = requests.get(f"{BROWSER_MCP_URL}/current_page")
+                if current_page_response.status_code == 200:
+                    html_content = current_page_response.json()['html']
+                    html_text = html_content  # 使用HTML原码作为html_text
+                    logging.info(f"获取HTML成功，HTML长度: {len(html_text)}字符")
+                    html_text = _limit_text_by_tokens(html_text, TOKEN_LIMIT)
+                    logging.info(f"限制HTML长度为 {TOKEN_LIMIT} 个token，实际长度: {len(html_text)}字符")
+                else:
+                    logging.info(f"获取教师页面HTML失败: {next_url}")
+                    return []
             
         # 提取下一页的教师信息
         extract_result = extract_teachers_with_deepseek(DEEPSEEK_API_KEY, html_text)
@@ -396,15 +229,15 @@ def process_college_teachers(university_name: str, college_name: str, college_ur
         for teacher in current_page_teachers:
             teacher["URL"] = urljoin(current_url, teacher["URL"])
         all_teachers.extend(current_page_teachers)
-        print(f"第 {page_count} 页: 提取到 {len(current_page_teachers)} 位教师\n")
+        logging.info(f"第 {page_count} 页: 提取到 {len(current_page_teachers)} 位教师\n")
     
-    print(f"总共提取到 {len(all_teachers)} 位教师信息")
+    logging.info(f"总共提取到 {len(all_teachers)} 位教师信息")
 
     # 检查是否有相似页面
-    print("\n开始检查相似页面...")
-    print(f"当前按钮或链接的URL为：{button_url}")
+    logging.info("\n开始检查相似页面...")
+    logging.info(f"当前按钮或链接的URL为：{button_url}")
     similar_page_result = check_similar_page(DEEPSEEK_API_KEY, first_html_text,button_url)
-    print(f"检查相似页面结果: {similar_page_result}")
+    logging.info(f"检查相似页面结果: {similar_page_result}")
     
     # part to modify:
     if similar_page_result.get("status") == "success" and similar_page_result["has_next"]:
@@ -415,47 +248,49 @@ def process_college_teachers(university_name: str, college_name: str, college_ur
 
             # 标准化URL路径
             if not similar_url.startswith("http"):
-                print(f"相似页面URL不是绝对路径: {similar_url}")
-                print(f"原始URL: {first_html_url}")
+                logging.info(f"相似页面URL不是绝对路径: {similar_url}")
+                logging.info(f"原始URL: {first_html_url}")
                 similar_url = urljoin(first_html_url, similar_url)
-                print(f"标准化后的相似页面URL: {similar_url}")
+                logging.info(f"标准化后的相似页面URL: {similar_url}")
             
             if similar_url.startswith('http://'):
                 similar_url = 'https://' + similar_url[7:]
             
-            print(f"原始相似页面URL: {original_url}")
-            print(f"处理后的相似页面URL: {similar_url}")
-            print(f"发现相似页面 '{similar_name}'，导航到: {similar_url}")
-            # 导航到相似页面
-            navigate_response = requests.post(f"{BROWSER_MCP_URL}/navigate", json={"url": similar_url, "wait_time": 3})
-            if navigate_response.status_code != 200:
-                print(f"导航到相似页面失败: {similar_url}")
-                continue
-            # 解析相似页面HTML
-            page_count += 1
-            parse_response = requests.post(
-                f"{HTML_PARSER_URL}/parse", 
-                json={"url": similar_url, "output_prefix": f"{university_name}_{college_name}_similar_teachers_page{page_count}", "output_dir": str(MIDDLE_FILE_DIR)}
-            )
-            if parse_response.status_code != 200:
-                print(f"解析相似页面HTML失败: {similar_url}")
-                continue
+            logging.info(f"原始相似页面URL: {original_url}")
+            logging.info(f"处理后的相似页面URL: {similar_url}")
+            logging.info(f"发现相似页面 '{similar_name}'，导航到: {similar_url}")
+            with browser_lock:
+                # 导航到相似页面
+                navigate_response = requests.post(f"{BROWSER_MCP_URL}/navigate", json={"url": similar_url, "wait_time": 3})
+                if navigate_response.status_code != 200:
+                    logging.info(f"导航到相似页面失败: {similar_url}")
+                    continue
+                # 解析相似页面HTML
+                page_count += 1
+                parse_response = requests.post(
+                    f"{HTML_PARSER_URL}/parse", 
+                    json={"url": similar_url, "output_prefix": f"{university_name}_{college_name}_similar_teachers_page{page_count}", "output_dir": str(MIDDLE_FILE_DIR)}
+                )
+                if parse_response.status_code != 200:
+                    logging.info(f"解析相似页面HTML失败: {similar_url}")
+                    continue
             try:
                 html_obj = read_json_file(f"{MIDDLE_FILE_DIR}/{university_name}_{college_name}_similar_teachers_page{page_count}.json")
                 html_text = _safe_json_dumps(html_obj)
             except FileNotFoundError:
-                print(f"相似页面HTML文件不存在: {MIDDLE_FILE_DIR}/{university_name}_{college_name}_similar_teachers_page{page_count}.json")
-                # 获取当前页面的HTML原码
-                current_page_response = requests.get(f"{BROWSER_MCP_URL}/current_page")
-                if current_page_response.status_code == 200:
-                    html_content = current_page_response.json()['html']
-                    html_text = html_content  # 使用HTML原码作为html_text
-                    print(f"获取HTML成功，HTML长度: {len(html_text)}字符")
-                    html_text = _limit_text_by_tokens(html_text, TOKEN_LIMIT)
-                    print(f"限制HTML长度为 {TOKEN_LIMIT} 个token，实际长度: {len(html_text)}字符")
-                else:
-                    print(f"获取相似页面HTML失败: {similar_url}")
-                    return []
+                logging.info(f"相似页面HTML文件不存在: {MIDDLE_FILE_DIR}/{university_name}_{college_name}_similar_teachers_page{page_count}.json")
+                with browser_lock:
+                    # 获取当前页面的HTML原码
+                    current_page_response = requests.get(f"{BROWSER_MCP_URL}/current_page")
+                    if current_page_response.status_code == 200:
+                        html_content = current_page_response.json()['html']
+                        html_text = html_content  # 使用HTML原码作为html_text
+                        logging.info(f"获取HTML成功，HTML长度: {len(html_text)}字符")
+                        html_text = _limit_text_by_tokens(html_text, TOKEN_LIMIT)
+                        logging.info(f"限制HTML长度为 {TOKEN_LIMIT} 个token，实际长度: {len(html_text)}字符")
+                    else:
+                        logging.info(f"获取相似页面HTML失败: {similar_url}")
+                        return []
             
             # 提取相似页面的教师信息
             extract_result = extract_teachers_with_deepseek(DEEPSEEK_API_KEY, html_text)
@@ -463,7 +298,7 @@ def process_college_teachers(university_name: str, college_name: str, college_ur
             for teacher in similar_teachers:
                 teacher["URL"] = urljoin(similar_url, teacher["URL"])
             all_teachers.extend(similar_teachers)
-            print(f"相似页面 '{similar_name}' (page {page_count}): 提取到 {len(similar_teachers)} 位教师")
+            logging.info(f"相似页面 '{similar_name}' (page {page_count}): 提取到 {len(similar_teachers)} 位教师")
             
             # 对于相似页面，也检查是否有翻页
             while True:
@@ -476,16 +311,16 @@ def process_college_teachers(university_name: str, college_name: str, college_ur
                 if next_url.startswith('http://'):
                     next_url = 'https://' + next_url[7:]
                 if next_url in all_url_list:
-                    print(f"发现重复URL in 相似页面: {next_url}，停止翻页")
+                    logging.info(f"发现重复URL in 相似页面: {next_url}，停止翻页")
                     break
                 all_url_list.append(next_url)
                 
-                print(f"相似页面 '{similar_name}' 发现下一页，导航到: {next_url}")
+                logging.info(f"相似页面 '{similar_name}' 发现下一页，导航到: {next_url}")
                 page_count += 1
                 
                 navigate_response = requests.post(f"{BROWSER_MCP_URL}/navigate", json={"url": next_url, "wait_time": 3})
                 if navigate_response.status_code != 200:
-                    print(f"导航到相似页面下一页失败: {next_url}")
+                    logging.info(f"导航到相似页面下一页失败: {next_url}")
                     break
                 
                 parse_response = requests.post(
@@ -493,24 +328,24 @@ def process_college_teachers(university_name: str, college_name: str, college_ur
                     json={"url": next_url, "output_prefix": f"{university_name}_{college_name}_similar_teachers_page{page_count}", "output_dir": str(MIDDLE_FILE_DIR)}
                 )
                 if parse_response.status_code != 200:
-                    print(f"解析相似页面下一页HTML失败: {next_url}")
+                    logging.info(f"解析相似页面下一页HTML失败: {next_url}")
                     break
                 
                 try:
                     html_obj = read_json_file(f"{MIDDLE_FILE_DIR}/{university_name}_{college_name}_similar_teachers_page{page_count}.json")
                     html_text = _safe_json_dumps(html_obj)
                 except FileNotFoundError:
-                    print(f"相似页面下一页HTML文件不存在: {MIDDLE_FILE_DIR}/{university_name}_{college_name}_similar_teachers_page{page_count}.json")
+                    logging.info(f"相似页面下一页HTML文件不存在: {MIDDLE_FILE_DIR}/{university_name}_{college_name}_similar_teachers_page{page_count}.json")
                     # 获取当前页面的HTML原码
                     current_page_response = requests.get(f"{BROWSER_MCP_URL}/current_page")
                     if current_page_response.status_code == 200:
                         html_content = current_page_response.json()['html']
                         html_text = html_content  # 使用HTML原码作为html_text
-                        print(f"获取HTML成功，HTML长度: {len(html_text)}字符")
+                        logging.info(f"获取HTML成功，HTML长度: {len(html_text)}字符")
                         html_text = _limit_text_by_tokens(html_text, TOKEN_LIMIT)
-                        print(f"限制HTML长度为 {TOKEN_LIMIT} 个token，实际长度: {len(html_text)}字符")
+                        logging.info(f"限制HTML长度为 {TOKEN_LIMIT} 个token，实际长度: {len(html_text)}字符")
                     else:
-                        print(f"获取相似页面HTML失败: {next_url}")
+                        logging.info(f"获取相似页面HTML失败: {next_url}")
                         return []
                     
                 extract_result = extract_teachers_with_deepseek(DEEPSEEK_API_KEY, html_text)
@@ -518,7 +353,7 @@ def process_college_teachers(university_name: str, college_name: str, college_ur
                 for teacher in current_page_teachers:
                     teacher["URL"] = urljoin(next_url, teacher["URL"])
                 all_teachers.extend(current_page_teachers)
-                print(f"相似页面 '{similar_name}' 第 {page_count} 页: 提取到 {len(current_page_teachers)} 位教师")
+                logging.info(f"相似页面 '{similar_name}' 第 {page_count} 页: 提取到 {len(current_page_teachers)} 位教师")
     # all_teachers去重 假设用 'name' 字段作为唯一标识
     # 先strip()姓名字段，再去重
     t = []
@@ -536,42 +371,51 @@ def process_college_teachers(university_name: str, college_name: str, college_ur
             seen.add(identifier)
             unique_teachers.append(teacher)
     all_teachers = unique_teachers
-    print(f"-----------共提取到 {len(all_teachers)} 位教师-----------")
+    logging.info(f"-----------共提取到 {len(all_teachers)} 位教师-----------")
+    
+    # Check if teachers list is empty and log to exceptions
+    if len(all_teachers) == 0:
+        exceptions_logger.info(f"Empty teacher folder: {teacher_folder} for university {university_name} college {college_name} URL {college_url}")
+    
     teacher_folder = output_dir / college_name
     os.makedirs(teacher_folder, exist_ok=True)
 
-    print("\n开始加载教师页面...")
-    for teacher in all_teachers:
-        teacher_name = teacher["name"]
-        teacher_url = teacher["URL"]
-        if not teacher_url or not teacher_name:
-            continue
+    # print("\n开始加载教师页面...")
+    # for teacher in all_teachers:
+    #     teacher_name = teacher["name"]
+    #     teacher_url = teacher["URL"]
+    #     if not teacher_url or not teacher_name:
+    #         continue
 
-        print(f"处理教师: {teacher_name} ({teacher_url})")
-        navigate_response = requests.post(f"{BROWSER_MCP_URL}/navigate", json={"url": teacher_url, "wait_time": 2})
-        if navigate_response.status_code != 200:
-            print(f"导航到教师页面失败: {teacher_url} for {college_name}")
-            continue
+    #     print(f"处理教师: {teacher_name} ({teacher_url})")
+    #     navigate_response = requests.post(f"{BROWSER_MCP_URL}/navigate", json={"url": teacher_url, "wait_time": 2})
+    #     if navigate_response.status_code != 200:
+    #         print(f"导航到教师页面失败: {teacher_url} for {college_name}")
+    #         continue
 
-        current_page_response = requests.get(f"{BROWSER_MCP_URL}/current_page")
-        if current_page_response.status_code != 200:
-            print(f"获取教师页面HTML失败: {teacher_url} in {college_name}")
-            continue
-        print(f"教师页面HTML获取成功: {teacher_url} in {college_name}")
-        current_page_data = current_page_response.json()
-        html_content = current_page_data['html']
+    #     current_page_response = requests.get(f"{BROWSER_MCP_URL}/current_page")
+    #     if current_page_response.status_code != 200:
+    #         print(f"获取教师页面HTML失败: {teacher_url} in {college_name}")
+    #         continue
+    #     print(f"教师页面HTML获取成功: {teacher_url} in {college_name}")
+    #     current_page_data = current_page_response.json()
+    #     html_content = current_page_data['html']
 
-        print(f"创建{teacher_name}老师信息json文件...")
-        teacher_file = teacher_folder / f"{teacher_name}.html"
-        try:
-            with open(teacher_file, 'w', encoding='utf-8') as file:
-                file.write(html_content)
-            print(f"保存教师 {teacher_name} 的HTML到 {teacher_file}...成功")
-        except Exception as e:
-            print(f"保存教师 {teacher_name} 的HTML到 {teacher_file} 失败: {e}")
-            continue
-        print('---------------------------------------------------')
-    return all_teachers
+    #     print(f"创建{teacher_name}老师信息json文件...")
+    #     teacher_file = teacher_folder / f"{teacher_name}.html"
+    #     try:
+    #         with open(teacher_file, 'w', encoding='utf-8') as file:
+    #             file.write(html_content)
+    #         print(f"保存教师 {teacher_name} 的HTML到 {teacher_file}...成功")
+    #     except Exception as e:
+    #         print(f"保存教师 {teacher_name} 的HTML到 {teacher_file} 失败: {e}")
+    #         continue
+    #     print('---------------------------------------------------')
+    teachers_file = teacher_folder / f"{college_name}_teachers.json"
+    with open(teachers_file, 'w', encoding='utf-8') as f:
+        json.dump(all_teachers, f, ensure_ascii=False, indent=4)
+    print(f"已保存 {college_name} 的教师列表到 {teachers_file}")
+    return []
 
 
 if __name__ == "__main__":
@@ -582,12 +426,13 @@ if __name__ == "__main__":
     school_urls = {school['name']: school['website'] for school in schools_data}
 
     input_dir = PROJECT_ROOT / "data" / "output_chinese"
-    output_base = PROJECT_ROOT / "data" / "schools"
+    output_base = PROJECT_ROOT / "data" / "schoolTeachers"
 
     for school in schools_data:
         university_name = school['name']
         school_website = school['website']
-        if university_name != '北京大学':
+        rank = school['rank']
+        if int(rank) <= 123:
             continue
         matching_files = list(input_dir.glob(f"*_{university_name}_schools_result.json"))
         if not matching_files:
@@ -601,21 +446,24 @@ if __name__ == "__main__":
         with open(json_path, 'r', encoding='utf-8') as f:
             colleges = json.load(f)
 
-        output_dir = output_base / university_name
+        output_dir = output_base / f"{rank}_{university_name}"
         os.makedirs(output_dir, exist_ok=True)
 
-        for college in colleges:
-            college_name = college["name"]
-            if college_name != '计算机学院':
-                continue
-            college_url = college["URL"]
-            if not college_url.startswith("http"):
-                college_url = urljoin(school_website, college_url)
-            teachers = process_college_teachers(university_name,college_name, college_url, output_dir)
-            file_path = output_dir / college_name / f"{college_name}.json"
-            try:
-                with open(file_path, 'w', encoding='utf-8') as f:
-                    json.dump(teachers, f, ensure_ascii=False, indent=4)
-                print(f"Saved {college_name} teachers to {file_path}\n")
-            except Exception as e:
-                print(f"Failed to save {college_name} teachers to {file_path}: {e}\n")
+        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+            futures = []
+            for college in colleges:
+                college_name = college["name"]
+                college_url = college["URL"]
+                if college_url is None:
+                    continue
+                if not college_url.startswith("http"):
+                    college_url = urljoin(school_website, college_url)
+                future = executor.submit(process_college_teachers, university_name, college_name, college_url, output_dir)
+                futures.append((college_name, future))
+
+            for college_name, future in futures:
+                try:
+                    future.result()  # 等待任务完成，但不处理返回结果，因为保存已在函数内部完成
+                    print(f"已处理 {college_name}\n")
+                except Exception as e:
+                    print(f"处理 {college_name} 失败: {e}\n")

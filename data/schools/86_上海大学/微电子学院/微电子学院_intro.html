@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>学院简介-上海大学微电子学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="上海大学微电子学院,学院简介">
+
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/index.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307468475d53575742000200034554 -->
+<link rel="stylesheet" type="text/css" href="../jjy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1011,'/jjy.jsp',-1,1880700804)</script>
+</head>
+<body>
+<div id="header-top">
+    <div class="header-search container clearfix">
+        <span class="fl">您好！欢迎访问上海大学微电子学院</span>
+        
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script>
+<div id="divu0">
+    <div id="appu0" class="clearfix fr"><div class="clearfix fr"><input type="text" placeholder="请输入关键字" autocomplete="off" class="write fl"> <input name="submit_button" type="button" value="提交" class="search fr"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0"  class="clearfix fr">
+        <div v-if="!isError"  class="clearfix fr">
+            <input type="text" placeholder="请输入关键字"  class="write fl" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="search fr" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1880700804";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://2022openlab.shu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+    </div>
+</div>
+<div id="header">
+    <div class="header container">
+        <img src="../img/logo.png" class="verticalMid">
+        <div class="nav verticalMid">
+            <ul class="fNav clearfix"> 
+
+                <li><a href="../index.htm">首页</a>
+<ul class="sNav">
+
+                    <li><a href="../index/xwdt.htm">新闻动态</a></li>
+
+                    <li><a href="../index/tzgg.htm">通知公告</a></li>
+
+                    <li><a href="../index/jzxx.htm">讲座信息</a></li>
+
+                    <li><a href="../index/zxdt.htm">资讯动态</a></li>
+                </ul>
+</li>
+
+                <li class="active"><a href="../xygk.htm">学院概况</a>
+<ul class="sNav">
+
+                    <li><a href="xyjj.htm">学院简介</a></li>
+
+                    <li><a href="xyld.htm">学院领导</a></li>
+
+                    <li><a href="zzjg.htm">组织架构</a></li>
+                </ul>
+</li>
+
+                <li><a href="../szgk.htm">师资概况</a>
+<ul class="sNav">
+
+                    <li><a href="../szgk/szdw.htm">师资队伍</a></li>
+                </ul>
+</li>
+
+                <li><a href="../xspy.htm">学生培养</a>
+<ul class="sNav">
+
+                    <li><a href="../xspy/bkspy.htm">本科生培养</a></li>
+
+                    <li><a href="../xspy/yjspy.htm">研究生培养</a></li>
+
+                    <li><a href="../xspy/sxpt.htm">实训平台</a></li>
+                </ul>
+</li>
+
+                <li><a href="../kxyj.htm">科学研究</a>
+</li>
+
+                <li><a href="../hzjl.htm">合作交流</a>
+</li>
+
+                <li><a href="../djsz.htm">党建思政</a>
+<ul class="sNav">
+
+                    <li><a href="../djsz/djhd.htm">党建活动</a></li>
+
+                    <li><a href="../djsz/xshd.htm">学生活动</a></li>
+                </ul>
+</li>
+
+                <li><a href="../xyfc.htm">校友风采</a>
+</li>
+
+                <li><a href="../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1231">制度建设</a>
+</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="body">
+    <div class="erBanner">
+            <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+    </div>
+    <div class="list-page container clearfix">
+        <div class="fl list-left">
+            <div class="list-location">
+                <span>
+学院简介</span>
+            </div>
+            <div class="list-ul">
+                <ul>
+
+                    <li><a href="xyjj.htm">学院简介</a>
+                       
+                    </li>
+
+                    <li><a href="xyld.htm">学院领导</a>
+                       
+                    </li>
+
+                    <li><a href="zzjg.htm">组织架构</a>
+                       
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="fr list-right">
+            <div class="right-title">
+                        
+                <a href="../index.htm">首页</a>
+
+                -
+                <a href="../xygk.htm">学院概况</a>
+
+                -
+                <a href="xyjj.htm">学院简介</a>
+
+            </div>
+            <div class="right-jjy">
+                
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1880700804,'wbnews','u6')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format501.css"><script>function seeContenta6(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta6('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1880700804,1053)</script>
+<p>
+   
+    </p><div id="vsb_content_501_1053_u61"><div id="vsb_content_501"><p class="vsbcontent_img"><img width="500" src="/__local/2/BF/B1/5A22880D3B8D8A065856811FAE6_C14AD3AE_D0E5.jpg" vsbhref="vurl" vurl="/_vsl/2BFB15A22880D3B8D8A065856811FAE6/C14AD3AE/D0E5" vheight="" vwidth="500" orisrc="/__local/2/BF/B1/5A22880D3B8D8A065856811FAE6_C14AD3AE_D0E5.jpg" class="img_vsb_content"></p><p style="text-align: justify;"><span style="font-size: 16px;">上海大学微电子学院于2019年11月成立，与中科院上海分院、嘉定区，和以上海微技术工业研究院、华虹集团、上汽集团、上海微电子装备（集团）等为代表的集成电路及应用关键企业合作共建。</span><span style="font-size: 16px;">学院立足上海集成电路“一体两翼”布局的嘉定翼，致力于通过产教融合、科教融合和学科交叉融合，建成准工业化、国际化的国际一流微电子学院，面向国民经济主战场，培养具有家国情怀、全面发展、卓越创新的集成电路行业紧缺人才，服务国家重大战略需求。</span></p><p style="text-align: justify;"><span style="font-size: 16px;">微电子学院前身是1958年嘉定校区成立的半导体器件与物理专业，历经60年发展，目前已形成本科基础教学和研究生多学科培养特色，以及多学科融合交叉的研究基础。</span><span style="font-size: 16px;">学院以“科技强国、产业强国”为办学宗旨，面向集成电路产业，打造本硕博一体化培养体系，形成本科卓越创新培养、硕士领军工程师培养、博士解决卡脖子难题能力培养的特色，并带动相关学科共同发展。</span></p><p style="text-align: justify;"><span style="font-size: 16px;"></span></p><p style="margin: 8px 0px; text-indent: 35px; line-height: 35px; text-align: justify;"><span style="font-size: 16px;">近三年建设期内学院实现以下重要突破：</span><span style="font-size: 16px;">获批成为上海市高校首个综合预算改革试点的二级学院；</span><span style="font-size: 16px;">上海微电子产业学院入选首批国家级现代产业学院；</span><span style="font-size: 16px;">获批集成电路科学与工程一级学科硕士学位授权点；</span><span style="font-size: 16px;">“科教融合培养产业创新人才”项目入选发改委</span><span style="font-size: 16px;">/</span><span style="font-size: 16px;">科技部《全面创新改革任务揭榜清单》；</span><span style="font-size: 16px;">获批张江国家自主创新示范区专项资金重大项目；获批三个</span><span style="font-size: 16px;">重要科研基地：上海市智能感知芯片技术协同创新中心（市教委），上海市汽车智能网联交互芯片与系统重点实验室（市科委）， 上海市集成电路与新型显示材料工程研究中心（市发改委）；</span><span style="font-size: 16px;">微电子科学与工程专业获批上海市一流本科专业建设，《中国“芯”路》入选上海市一流本科课程。</span></p><p><span style="font-size: 16px;"><strong>培养模式</strong></span></p><p><span style="font-size: 16px;">学院参照国际著名高校与研究院/中心合作办学模式，培养学生具备微电子及其交叉学科的基础知识，拥有全流程芯片设计、制造及测试能力、国际化与团队合作能力、集成电路IP分析保护能力，以及具有清晰的知识产权意识的具备超越摩尔项目管理能力和集成电路创新研发能力，并能应对未来挑战的集成电路领域超越摩尔特色的卓越创新人才。</span></p><p><span style="font-size: 16px;"><strong>-基础学科拔尖人才培养模式</strong></span></p><p style="text-align: justify;"><span style="font-size: 16px;">学院依照现代微电子与集成电路产业的“系统-电路-芯片-器件-物理”架构，设计微电子科学与工程专业的课程体系和培养环节。设置全新的本硕贯通、理工融合的学科基础课，以及由科研团队授课、面向产业前沿的专业选修课，为学生的学习、科研、工作打下坚实的基础。</span></p><p><span style="font-size: 16px;">-</span><span style="font-size: 16px;"><strong>集成电路卓越工程师的</strong></span><span style="font-size: 16px;"><strong>产教融合培养模式</strong></span></p><p><span style="font-size: 16px;"></span></p><p style="margin: 8px 0px; text-indent: 35px; line-height: 35px; text-align: justify;"><span style="font-size: 16px;">学院深度开展产教融合、引产入教，建成以“四个一”实践化培养为特色的课程体系，与<span style="font-size: 16px; text-indent: 32px;">上海微技术工业研究院、</span></span><span style="font-size: 16px;">上海集成电路研发中心、华力微电子、上海微电子装备（集团）、朗力半导体、上汽集团等签署战略合作协议和研究生联合培养协议，深化校企合作实践化培养。在上海市教委、市经信委等部门指导下，开展“上海市集成电路紧缺人才培训项目”并形成品牌，已开设八期培训班，累计培训学员</span><span style="font-size: 16px;">2000</span><span style="font-size: 16px;">余人次。</span></p><p class="vsbcontent_end"><span style="font-size: 16px;">科教融合、产教融合平台：集成电路8英寸超越摩尔研发线，为学生提供国际一流的实践教学平台，并带动课程教学改革，培养企业需求的集成电路领域卓越创新人才。</span></p><p class="vsbcontent_end"><span style="font-size: 16px;">师资队伍：</span><span style="font-size: 16px;">目前已引进专任教师50余名，其中上海市海外高层次引进人才34名，联聘中科院/企业导师110余名，初步建成一支具有创新活力和奋斗精神的国际化师资队伍。</span><span style="font-size: 16px;">核心师资毕业于世界百强高校、科研院所，具有集成电路行业国际领先企业经历。交叉融合课程团队：精品课程授课教师团队由集成电路行业海内外学术精英<span style="font-size: 16px; background-color: yellow;"></span>和行业专家组成。</span><br></p></div></div>
+    <span id="vsb_content_501_1053_u6" name="vsb_content_501_1053_u6"></span><br><br>
+    
+<p></p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div class="container">
+           <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">版权所有 ©</span><a href="http://www.shu.edu.cn/" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal;">&nbsp;上海大学</a><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">&nbsp;&nbsp;&nbsp;</span><a href="http://beian.miit.gov.cn/" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal;">沪ICP备09014157&nbsp;</a><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">&nbsp;&nbsp;</span><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31009102000049" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal;">沪公网安备31009102000049号</a><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">&nbsp;&nbsp;地址：上海市宝山区上大路99号&nbsp; 邮编：200444 &nbsp;&nbsp;</span><a href="http://www.shu.edu.cn/dhcx.htm" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal;">电话查询</a><br style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal; background-color: rgb(27, 70, 123);"><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">技术支持：</span><a href="https://its.shu.edu.cn/" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal;">上海大学信息化工作办公室&nbsp;&nbsp;&nbsp;</a><a href="mailto:info@shu.edu.cn" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal;">联系我们&nbsp;</a><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">&nbsp;&nbsp;</span></p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

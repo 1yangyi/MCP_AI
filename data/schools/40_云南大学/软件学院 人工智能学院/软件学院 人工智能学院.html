@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>学院简介-云南大学软件学院网站</title><META Name="keywords" Content="云南大学软件学院" />
+
+         <link href="../public/css/main.css" rel="stylesheet" type="text/css">
+        <script language="javascript" src="../public/js/jquery.1.11.3.min.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+
+        $(document).ready(function(){
+        if($(".class-col1").height()<500 &&$(".class-col2").height()<500){
+            $(".class-col1").height(500);
+            $(".class-col2").height(500);
+        }else if($(".class-col1").height()>$(".class-col2").height()){
+            $(".class-col2").height($(".class-col1").height());
+        }else{
+            $(".class-col1").height($(".class-col2").height());
+        }
+        
+
+        });
+        
+        //导航栏需要的js
+function dropMenu(obj){
+        $(obj).each(function(){
+        var theSpan = $(this);
+        var theMenu = theSpan.find(".submenu");
+        var tarHeight = theMenu.height();
+        theMenu.css({height:0,opacity:0});
+        theSpan.hover(
+            function(){
+                $(this).addClass("selected");
+                theMenu.stop().show().animate({height:tarHeight,opacity:1},400);
+            },
+            function(){
+                $(this).removeClass("selected");
+                theMenu.stop().animate({height:0,opacity:0},400,function(){
+                    $(this).css({display:"none"});
+                });
+            }
+        );
+        });
+        }
+
+        $(document).ready(function(){
+
+        dropMenu(".drop-menu-effect");
+
+        });
+
+        $(document).ready(function changeli(){
+        var lis = document.getElementById('nav').getElementsByTagName("li");
+        var lilength=0;
+        for(var i = 0; i < lis.length; i++) {   
+        var classes = lis[i].className.split(" ");
+        for(var a = 0; a < classes.length; a++) {
+            if(classes[a] === "drop-menu-effect") {
+                lilength=lilength+1;
+                break;
+                }
+            }    
+        }
+        var spanlength=1200/lilength;
+        spanlength=parseInt(spanlength);
+        var spans=document.getElementById('nav').getElementsByTagName("span");
+        for(var i = 0; i < spans.length; i++) {
+        var classes = spans[i].className.split(" ");
+        for(var a = 0; a < classes.length; a++) {
+            if(classes[a] === "span") {
+                spans[i].style.width = spanlength+"px";
+                break;
+                }
+            }    
+        }
+        var uls = document.getElementById("nav").getElementsByTagName("ul");
+        for(var i = 0; i < uls.length; i++) {
+        var classes = uls[i].className.split(" ");
+        for(var a = 0; a < classes.length; a++) {
+            if(classes[a] === "submenu") {
+                uls[i].style.width = spanlength+"px";
+                break;
+                }
+            }    
+        }
+        document.getElementById("nav_ul").style.width=spanlength*lilength+"px";
+
+        });
+        </script>
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//analytics.ynu.edu.cn/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '2']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+        
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css" />
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230797a465453505742000100054357 -->
+<link rel="stylesheet" type="text/css" href="../zwy2.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1015,'/zwy2.jsp',-1,1418611494)</script>
+</head>
+    <body>
+    <div class="header">
+
+    <div class="header-inner">
+
+        <div class="header-top"><img src="../public/images/icon-home.png" alt=""><a href="../www.sei.ynu.edu.cn">...【欢迎来到软件学院】</a></div>
+
+            <div class="header-banner">
+
+               
+
+           </div>
+
+     
+
+         
+           <div id="nav">
+
+                         <li class="drop-menu-effect">
+
+                                <a href="../index.htm"><span class="span">首   页</span></a>
+
+                                
+
+                            </li>
+
+                            <li class="drop-menu-effect">
+
+                                <a href="../xwgg/xyxw.htm"><span class="span">新闻公告</span></a>
+
+                                <ul class="submenu">
+
+                                    
+
+                                        <li><a href="../xwgg/xyxw.htm">学院新闻</a></li>
+                                        <li><a href="../xwgg/tzgg.htm">通知公告</a></li>
+                                                                        
+
+                                </ul>
+
+                            </li>
+
+
+                           
+                            <li class="drop-menu-effect">
+
+                                <a href="xyjj.htm"><span class="span">学院概况</span></a>
+
+                                <ul class="submenu">
+                                    
+                                        <li><a href="xyjj.htm">学院简介</a></li>
+                                    
+                                        <li><a href="xyld.htm">学院领导</a></li>
+                                    
+                                        <li><a href="jgsz.htm">机构设置</a></li>
+                                                                     
+
+                                </ul>
+
+                            </li>
+                                                                         
+                           
+                           <li class="drop-menu-effect">
+
+                                <a href="../szdw/zzjs.htm"><span class="span">师资队伍</span></a>
+
+                                <ul class="submenu">
+
+                                    
+                                        <li><a href="../szdw/zzjs.htm">在职教师</a></li>
+                                    
+                                  
+                                    
+                                        <li><a href="../szdw/rszp.htm">人事招聘</a></li>
+                                   
+                                    
+                                </ul>
+
+                            </li> 
+                             <li class="drop-menu-effect">
+
+                                <a href="../rcpy/bksjy.htm"><span class="span">人才培养</span></a>
+
+                                <ul class="submenu">
+                                                                          
+                                        <li><a href="../rcpy/bksjy.htm">本科生教育</a></li>
+                                    
+                                        <li><a href="../rcpy/yjsjy.htm">研究生教育</a></li>
+                                    
+                                   <li><a href="../rcpy/jxcgsb.htm">教学成果申报</a></li>
+
+
+                                </ul>
+
+                            </li>
+                            
+
+                             <li class="drop-menu-effect">
+
+                                <a href="../kxyj/kypt.htm"><span class="span">科学研究</span></a>
+
+                                <ul class="submenu">
+
+                                        <li><a href="../kxyj/kypt.htm">科研平台</a></li>
+
+                                 
+                                       
+                                  
+                                </ul>
+
+                            </li>
+                            
+                            <li class="drop-menu-effect">
+                                <a href="../hzjl/jlhd.htm"><span class="span">合作交流</span></a>
+                                <ul class="submenu">
+                                        <li><a href="../hzjl/jlhd.htm">交流活动</a></li>
+                                    
+                                     
+                                                                         
+                                        <li><a href="../hzjl/xshy.htm">学术会议</a></li>
+                                                                          
+                                    
+                                   
+                                </ul>
+
+                            </li>
+              
+                           
+                             <li class="drop-menu-effect">
+
+                                <a href=""><span class="span">党群工作</span></a>
+
+                                <ul class="submenu">
+
+                                  
+                                        <li><a href="../dqgz/gzzd.htm">规章制度</a></li>
+                                        <li><a href="../dqgz/djhd.htm">党建活动</a></li>
+                                        
+                                                                          
+                                </ul>
+
+                            </li>
+                      
+                      <li class="drop-menu-effect">
+
+                                <a href="../xsgz1/xgdt.htm"><span class="span">学术工作</span></a>
+
+                                <ul class="submenu">
+                                    
+                                        <li><a href="../xsgz1/xgdt.htm">学工动态</a></li>
+                                    
+                                        <li><a href="../xsgz1/xgtz.htm">学工通知</a></li>
+                                    
+                                        <li><a href="../xsgz1/jygz.htm">就业工作</a></li>
+                                                                     
+
+                                </ul>
+
+                            </li>
+                            
+                          <li class="drop-menu-effect">
+
+                                <a href="../index.htm"><span class="span">English</span></a>
+
+                                <ul class="submenu">
+
+                                    
+
+                                        <li><a href="../index.htm">English</a></li>
+
+                                    
+
+                                </ul>
+
+                            </li>
+
+                            
+
+                            
+      </div>
+
+   </div>
+
+</div>
+
+
+
+<!------------header end --------------->
+<div class="wrapper">   
+    <div class="sep10"></div>
+    <div class="class-banner"> </div>
+        
+    <div class="sep10"></div>
+    
+    <div class="border1" style="border: none;">
+        <div class="class-col1">
+            <div class="class-nav">
+              
+<table class="winstyle200565" cellspacing="0" cellpadding="0"><tr><td nowrap>当前位置：   
+<a href="../index.htm"><span class="fontstyle200565">学院首页</span></a><span class="splitflagstyle200565">>></span><a href="xyjj.htm"><span class="fontstyle200565">学院概况</span></a><span class="splitflagstyle200565">>></span><a href="xyjj.htm"><span class="fontstyle200565">学院简介</span></a></td></tr></table>
+            </div>
+
+<div style="padding:10px;"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><!---文章标题--->
+<div style="font-family:宋体;font-size:24px; color:#024379; font-weight: bold; text-align: center; padding:10px;">云南大学国家示范性软件学院 人工智能学院概况</div>
+    <!---文章信息--->    <div style="font-family:宋体;font-size: 12px; text-align: center; padding:4px;">时间：2025年06月26日  浏览次数：<span id="dynclicks_u1_2440" name="dynclicks_u1_2440"></span></div>
+    <div style="background-color:#d3d3d3; height:1px;"></div>
+    <!---文章正文--->
+    <div style="font-family:宋体;font-size: 14px; padding:4px; line-height: 30px; text-indent: 2em;">
+     <p style="text-align:center;line-height:150%"><span style="font-size:29px;line-height:150%;font-family:方正小标宋_gbk">云南大学国家示范性软件学院 </span></p>
+<p style="text-align:center;line-height:150%"><span style="font-size:29px;line-height:150%;font-family:方正小标宋_gbk">人工智能学院概况</span></p>
+<p style="text-indent:43px;line-height:150%"><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">云南大学国家示范性软件学院是经中华人民共和国教育部和发展改革委员会批准，于2002年设立的全国首批35所国家示范性软件学院之一。2025年，云南大学重点推进人工智能学科和专业建设，在软件学院加挂人工智能学院牌子，正式成立人工智能学院。学院坚持立德树人根本任务，秉持“育人为本、德育为先、能力为重、应用为要”的人才培养理念，遵循“需求导向、产业面向、交叉融合、科研支撑”的发展思路，深化新工科产教融合教育教学改革，努力培养具有爱国情怀、创新精神、实践能力和奉献意识的新工科人才，持续产出高水平科研成果，服务信息产业和区域经济社会发展，努力建设区域引领、行业示范、产教融合、科教融汇的区域型高水平示范性软件学院和人工智能学院。</span></p>
+<p style="text-align: center"><img src="/__local/1/2C/36/05B16F40FC8CA99682FFFC765BE_C80D373D_7D449C.png" width="600" vsbhref="vurl" vurl="/_vsl/12C3605B16F40FC8CA99682FFFC765BE/C80D373D/7D449C" vheight="" vwidth="600" orisrc="/__local/1/2C/36/05B16F40FC8CA99682FFFC765BE_C80D373D_7D449C.png" class="img_vsb_content"></p>
+<p style="text-indent:43px;line-height:150%"><span style="font-size:21px;line-height:150%;font-family: 方正仿宋_gbk;color:black">学院位于云南大学呈贡校区，拥有近</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">20000</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">平方米独立的教学科研楼宇空间和总值近</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">1</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">亿元的教学科研设备。目前学院有全日制在读学生近</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">2000</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">人，其中，本科生近</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">1400</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">人（数量居全校首位），研究生近</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">600</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">人，国际学生</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">70</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">余人。学院现有教师</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">80</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">余人，其中高级职称</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">35</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">人，博士学位</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">58</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">人，海外留学访学经历</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">21</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">人。拥有省级教学团队</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">1</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">个、省级创新团队</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">1</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">个，博士生导师、硕士生导师</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">49</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">人，省级学术技术带头人及后备人才</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">4</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">名，云南省百名海外高层次人才引进计划</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">2</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">人，云南省教学名师</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">2</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">人，云岭教学名师</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">1</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">人，云南省青年千人计划学者</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">2</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">名。</span></p>
+<p style="text-align:center"><img src="/__local/C/3E/AC/9E741FC601EF4E3790098A37033_C4DE525C_932B5.png" width="600" vsbhref="vurl" vurl="/_vsl/C3EAC9E741FC601EF4E3790098A37033/C4DE525C/932B5" vheight="" vwidth="600" orisrc="/__local/C/3E/AC/9E741FC601EF4E3790098A37033_C4DE525C_932B5.png" class="img_vsb_content" style="text-align: center; text-indent: 2em;"></p>
+<p style="text-indent:43px;line-height:150%"><span style="font-size:21px;line-height:150%;font-family: 方正仿宋_gbk;color:black">人才培养方面，学院目前开设有</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">4</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">个本科专业，其中</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">“</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">软件工程</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">”</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">（国家一流专业）</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">“</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">数字媒体技术</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">”2</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">个国家级和省级卓越工程师培养计划本科专业，合并原国家级特色及卓越工程师培养计划专业</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">“</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">网络工程</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">”</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">与云南省卓越工程师培养计划专业</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">“</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">信息安全</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">”</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">开设</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">“</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">网络空间安全</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">”</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">本科专业（国家一流专业），</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">2021</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">年经教育部批准，在云南省高校率先开设</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">“</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">人工智能</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">”</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">本科专业。学院参建</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">“</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">计算机科学与技术</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">”</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">一级学科博士学位授权，拥有</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">“</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">软件工程</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">”“</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">网络空间安全</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">”“</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">智能科学与技术</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">”3</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">个学术硕士学位授权和</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">“</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">软件工程</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">”“</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">网络信息安全</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">”2</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">个专业硕士学位授权。设有国家软件人才国际培训基地（昆明）、国家</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">Linux</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">技术培训与推广中心、中国信息安全产品测评认证中心云南测评中心、国家软件人才培养改革创新实验区等国家级基地和中心以及云南省软件工程实验教学示范中心、云南大学虚拟仿真实验教学中心。学院较早提出软件工程</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">CDIO</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">工程教育模式，获批教育部人才培养</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">CDIO</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">创新实验区，并建设了一批国家精品课程、国家级精品资源共享课程、国家双语示范课程、教育部</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">-IBM</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">和教育部</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">-Intel</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">精品课程，教育部</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">-IBM</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">专业综合改革项目、教育部</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">-</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">华为新工科建设项目以及云南省精品课程、双语示范课程等，获国家教学成果二等奖</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">1</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">项，国家教学改革质量工程项目</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">6</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">项。</span></p>
+<p style="text-align:center"><img src="/__local/A/0D/88/3F98D7C0FC65998D520AF0B66AC_D5763F0C_11CBD5.png" width="600" height="346" border="0" vspace="0" hspace="0" title="" alt="" vsbhref="vurl" vurl="/_vsl/A0D883F98D7C0FC65998D520AF0B66AC/D5763F0C/11CBD5" vheight=" 346px" vwidth=" 600px" orisrc="/__local/A/0D/88/3F98D7C0FC65998D520AF0B66AC_D5763F0C_11CBD5.png" class="img_vsb_content" style="text-align: center; text-indent: 2em; width: 600px; height: 346px;"></p>
+<p style="text-indent:43px;line-height:150%"><span style="font-size:21px;line-height:150%;font-family: 方正仿宋_gbk;color:black">学院与华为、腾讯、百度、东软、科大讯飞、微软、甲骨文、南天信息等单位，有着长期合作关系，依托教育部产学协同育人项目等，积极推进产教融合、协同创新的新工科专业建设，建立了软件工程领域产教融合协同育人机制。学院设立的</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">“</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">明远众创空间</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">”</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">校内实践基地为培养学生创新、创新实践提供了良好平台。近三年，学生在中国国际大学生创新大赛、</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">“</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">挑战杯</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">”</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">全国大学生课外科技作品竞赛、全国大学生数学建模竞赛、美国大学生数学建模</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">/</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">交叉学科建模竞赛、</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">CCF</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">大学生计算机系统与程序设计竞赛以及各类学科竞赛中获得奖项近</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">300</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">项，其中高级别奖项</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">80</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">余项，居全校前茅。毕业生到一流大学和行业头部企业升学、就业的人数逐年增加，毕业生就业去向落实率居全校前列。</span></p>
+<p style="text-align: center"><img src="/__local/0/13/3D/C382F54AE7F66557BD3E7DB445D_FA6E3785_27B61.jpg" width="600" vsbhref="vurl" vurl="/_vsl/0133DC382F54AE7F66557BD3E7DB445D/FA6E3785/27B61" vheight="" vwidth="600" orisrc="/__local/0/13/3D/C382F54AE7F66557BD3E7DB445D_FA6E3785_27B61.jpg" class="img_vsb_content"></p>
+<p style="text-indent:43px;line-height:150%"><span style="font-size:21px;line-height:150%;font-family: 方正仿宋_gbk;color:black">科学研究和社会服务方面，多年来，学院形成了智慧医养、跨境数据流动安全、计算机视觉、生物医学数据分析、大数据与云计算、智慧安防、跨境电子商务数据挖掘等特色优势学科方向，并不断创造新成绩。经国家相关部委和云南省批准，学院设有</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">“</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">跨境网络空间安全教育部工程研究中心</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">”“</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">云南省软件工程重点实验室</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">”“</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">云南省云计算工程研究中心</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">”“</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">云南省高校数据科学与智能计算重点实验室</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">”“</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">云南省跨境数据治理国际联合实验室</span><span lang="EN-US" style="font-size:21px;line-height:150%;font-family:'times new roman',serif;color:black">”</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black">等省部级科研平台以及院士专家工作站、博士后科研工作站等。</span></p>
+<p style="text-align:center"><img src="/__local/8/4E/A2/8C4D0A9966B3F802263E6BD34D2_43A623BB_162E34.png" width="600" vsbhref="vurl" vurl="/_vsl/84EA28C4D0A9966B3F802263E6BD34D2/43A623BB/162E34" vheight="" vwidth="600" orisrc="/__local/8/4E/A2/8C4D0A9966B3F802263E6BD34D2_43A623BB_162E34.png" class="img_vsb_content" style="text-align: center; text-indent: 2em;"></p>
+<p style="text-indent:43px;line-height:150%"><span style="font-size: 21px; font-family: 方正仿宋_gbk;">近年来，学院立项国家级、省部级及委托项目</span><span lang="EN-US" style="font-size: 21px; font-family: &quot;times new roman&quot;, serif;">130</span><span style="font-size: 21px; font-family: 方正仿宋_gbk;">余项，获准科研经费</span><span lang="EN-US" style="font-size: 21px; font-family: &quot;times new roman&quot;, serif;">7200</span><span style="font-size: 21px; font-family: 方正仿宋_gbk;">余万元。发表学术论文</span><span lang="EN-US" style="font-size: 21px; font-family: &quot;times new roman&quot;, serif;">500</span><span style="font-size: 21px; font-family: 方正仿宋_gbk;">余篇，获国家发明专利</span><span lang="EN-US" style="font-size: 21px; font-family: &quot;times new roman&quot;, serif;">100</span><span style="font-size: 21px; font-family: 方正仿宋_gbk;">余项，出版专著</span><span lang="EN-US" style="font-size: 21px; font-family: &quot;times new roman&quot;, serif;">10</span><span style="font-size: 21px; font-family: 方正仿宋_gbk;">余部，获云南省自然科学奖、第九届侨界贡献奖等</span><span lang="EN-US" style="font-size: 21px; font-family: &quot;times new roman&quot;, serif;">8</span><span style="font-size: 21px; font-family: 方正仿宋_gbk;">项，一些科研成果直接转化应用，服务区域重点产业发展，取得了较好的经济效益和社会效益，同时学院面向社会开放人工智能素养课程以及专业实验室，为服务地方经济发展和文明进步贡献力量。</span><span style="font-size:21px;line-height:150%;font-family:方正仿宋_gbk;color:black"></span></p>
+<p style="text-indent:43px;line-height:150%"><span style="font-size:21px;line-height:150%;font-family: 方正仿宋_gbk;color:black">学院广泛开展国际交流与合作，与欧美、南亚东南亚等区域国家高校和知名机构建立了合作关系，联合开展人才培养、科学研究，在发挥地缘和学科优势，服务面向南亚东南亚辐射中心建设中作出了积极贡献。</span></p>
+<p><br></p>
+     </div>
+<script>_showDynClickBatch(['dynclicks_u1_2440'],[2440],"wbnews", 1418611494)</script>
+</DIV>
+</div>
+        <div class="class-col2">
+        
+        
+        <div class="class-col2">
+            <div class="nav-title">栏目导航</div>
+<ul class="class-list"><ul>
+     <li><a href="xyjj.htm" title="学院简介">&nbsp;&nbsp;学院简介</a></li>
+     <li><a href="xyld.htm" title="学院领导">&nbsp;&nbsp;学院领导</a></li>
+     <li><a href="jgsz.htm" title="机构设置">&nbsp;&nbsp;机构设置</a></li>
+</ul></ul>
+
+<div class="nav-title">栏目推荐</div>
+<ul class="class-list"><ul>
+     <li><a href="../xwgg/xyxw.htm" title="新闻公告">&nbsp;&nbsp;新闻公告</a></li>
+     <li><a href="xyjj.htm" title="学院概况">&nbsp;&nbsp;学院概况</a></li>
+     <li><a href="../szdw/zzjs.htm" title="师资队伍">&nbsp;&nbsp;师资队伍</a></li>
+     <li><a href="../rcpy/bksjy.htm" title="人才培养">&nbsp;&nbsp;人才培养</a></li>
+     <li><a href="../kxyj/kypt.htm" title="科学研究">&nbsp;&nbsp;科学研究</a></li>
+     <li><a href="../zlxz.htm" title="资料下载">&nbsp;&nbsp;资料下载</a></li>
+</ul></ul>
+
+</ul>
+           
+
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="sep10"></div>
+</div>  
+<!--------------footer start------------->
+<div class="footer clear">
+    <div class="footer-inner">
+   云南大学软件学院&人工智能学院 版权所有  <br>
+          地址：昆明市呈贡区大学城东外环南路云南大学呈贡校区软件学院楼  邮编：650504<br>  
+            Copyright@ 2002-2025 School of Software and AI
+
+    </div>
+</div>
+
+    </body>
+    
+</html> 

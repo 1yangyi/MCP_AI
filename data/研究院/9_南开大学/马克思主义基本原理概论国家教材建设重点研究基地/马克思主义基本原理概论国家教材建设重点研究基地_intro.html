@@ -1,0 +1,350 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<title>教材基地介绍</title>
+<meta name="keywords" content="全国思想政治理论课">
+<meta name="description" content="南开大学">
+
+<link type="text/css" href="/_css/_system/system.css" rel="stylesheet">
+<link type="text/css" href="/_upload/site/1/style/6/6.css" rel="stylesheet">
+<link type="text/css" href="/_upload/site/01/11/273/style/268/268.css" rel="stylesheet">
+<link type="text/css" href="/_js/_portletPlugs/sudyNavi/css/sudyNav.css" rel="stylesheet">
+<link type="text/css" href="/_js/_portletPlugs/simpleNews/css/simplenews.css" rel="stylesheet">
+
+<script language="javascript" src="/_js/jquery.min.js" sudy-wp-context="" sudy-wp-siteid="273"></script>
+<script language="javascript" src="/_js/jquery.sudy.wp.visitcount.js"></script>
+<script type="text/javascript" src="/_js/_portletPlugs/sudyNavi/jquery.sudyNav.js"></script>
+<script type="text/javascript" src="/_upload/tpl/02/7e/638/template638/extends/extends.js"></script><link rel="stylesheet" type="text/css" href="/_upload/tpl/02/7e/638/template638/extends/extends.css"><script type="text/javascript" src="/_upload/tpl/02/7e/638/template638/extends/libs/jquery.sudy.js"></script>
+<script type="text/javascript" src="/_upload/tpl/02/7e/638/template638/js/iscroll.js"></script>
+<script type="text/javascript" src="/_upload/tpl/02/7e/638/template638/js/suggest.js"></script>
+<link rel="stylesheet" href="/_upload/tpl/02/7e/638/template638/style.css" type="text/css">
+<link rel="stylesheet" href="/_upload/tpl/02/7e/638/template638/mobile.css" type="text/css">
+<link rel="stylesheet" href="/_upload/tpl/02/7e/638/template638/media.css" type="text/css">
+<link rel="icon" href="/_upload/tpl/02/7e/638/template638/favicon.ico" mce_href="/_upload/tpl/02/7e/638/template638/favicon.ico" type="image/x-icon">
+<script type="text/javascript">
+	 function checkchannel(e, channelid){
+			$(e).parent("li").addClass("cur").siblings().removeClass("cur");
+			$("#cur_channel").val((channelid==0?"":channelid));
+			if(channelid == 8 || channelid == 13){
+				$("#ensearch").addClass("reset_hui").attr("disabled","true");
+			}else{
+				$("#ensearch").removeClass("reset_hui").removeAttr("disabled");
+			}
+ 	}
+    function indexsearch(strchoren){
+		var channel = $("#cur_channel").val();
+		if((strchoren == 2 && (channel != "8" && channel != "13")) || strchoren != 2){
+			$("#strchoren").val(strchoren);
+			var enchannelid = {11:"12", 1:"2", 3:"5", 4:"7", 6:"15", 10:"19"};
+			if (enchannelid[channel]) {
+				$("#strchannel").val(channel+","+enchannelid[channel]);
+			} else {
+				$("#strchannel").val(channel);
+			}
+			$("#indexform").submit();
+    		}
+    	}
+    $(document).ready(function(){
+    	$("#sw").focus(function(){
+	    	if($("#sw").val() == "请输入检索词"){
+	    		$("#sw").val("");
+	    	}
+    	});
+    });
+</script>
+<!--[if lt IE 9]>
+	<script src="/_upload/tpl/02/7e/638/template638/extends/libs/html5.js"></script>
+<![endif]-->
+</head>
+<body class="list">
+<!--Start||headTop-->
+<div class="wrapper headtop" id="headtop">
+	<div class="inner">
+		<div class="mod clearfix">
+			<!--头部信息-->
+			<div class="top-right">
+				<div class="site-lang" frag="窗口05">
+					
+						
+						<ul class="clearfix">
+							
+							<li class="links i1"><a href="#" target="_self">教师登录</a> </li>
+							
+						</ul>
+						
+					
+				</div>				
+			</div>			
+		</div>
+    </div>
+</div>
+<!--End||headTop-->
+<!--Start||head-->
+<div class="wrapper header" id="header">
+	<div class="inner">
+		<div class="mod clearfix">
+			<div class="head-left" frag="面板01">
+				<!--logo开始-->
+				<div class="sitelogo" frag="窗口01" portletmode="simpleSiteAttri">
+					<a href="/main.htm" title="返回全国思想政治理论课马克思主义基本原理概论教材研究基地首页"><img border="0" src="/_upload/site/01/11/273/logo.png"></a> 
+				</div>
+				<!--//logo结束-->
+			</div>
+			<div class="head-right">
+				<form action="http://ss.zhizhen.com/s" id="indexform" target="_blank">	
+			    	<div id="indexchannels" class="s_Txt">
+			       	  <ul class="clearfix">
+			           	<li class="cur"><a href="javascript:;" onclick="checkchannel(this, 0)">全部</a></li>
+			               <li><a href="javascript:;" onclick="checkchannel(this, 11)">图书</a></li>
+			               <li><a href="javascript:;" onclick="checkchannel(this, 1)">期刊</a></li>
+			               <li><a href="javascript:;" onclick="checkchannel(this, 13)">报纸</a></li>
+			               <li><a href="javascript:;" onclick="checkchannel(this, 3)">学位论文</a></li>
+			               <li><a href="javascript:;" onclick="checkchannel(this, 4)">会议论文</a></li>
+			               <li><a href="javascript:;" onclick="checkchannel(this, 6)">标准</a></li>
+			               <li><a href="javascript:;" onclick="checkchannel(this, 10)">专利</a></li>
+			               <li><a href="javascript:;" onclick="checkchannel(this, 8)">音视频</a></li>
+			           </ul>
+			       	</div>
+			       	<div class="ss_input">
+			        	<input type="text" class="txt" id="sw" name="sw" style="font-size:14px; width:480;" value="请输入检索词">
+			      		<input type="button" class="reset" value="中文检索" onclick="indexsearch(1)" style="display:none;" onmouseover="$(this).addClass('reset2')" onmouseout="$(this).removeClass('reset2')">
+			       		<input id="ensearch" type="button" class="reset" value="外文检索" onclick="indexsearch(2)" style="display:none;" onmouseover="$(this).addClass('reset2')" onmouseout="$(this).removeClass('reset2')">
+			        	<input type="button" class="reset" value="" onclick="indexsearch(1)" onmouseover="$(this).addClass('reset2')" onmouseout="$(this).removeClass('reset2')">
+			     	</div>
+				    <input type="text" style="display: none;"> <!-- 阻止enter提交 -->
+				    <input type="hidden" value="" id="strchoren" name="strchoren">
+				    <input type="hidden" value="" id="strchannel" name="strchannel">
+			     </form>
+			</div>
+		</div>
+	</div>
+</div>
+<!--End||head-->
+<!--Start||nav-->
+<div class="wrapper nav wp-navi wp-navi-slide" id="nav">
+	<div class="inner clearfix">
+		<div class="wp-panel">
+			<div class="wp-window" frag="窗口1">
+				
+					<div class="navi-slide-head clearfix">
+						<h3 class="navi-slide-title">导航</h3>
+						<a class="navi-slide-arrow"></a> 
+					</div>
+					
+					<ul class="wp-menu">
+						
+						<li class="menu-item i1"><a class="menu-link" href="http://jcjd.nankai.edu.cn/main.htm" target="_self">首页</a>
+							
+						</li>
+						
+						<li class="menu-item i2"><a class="menu-link" href="/jdgk/list.htm" target="_self">基地概况<em class="menu-switch-arrow"></em></a>
+							
+							
+							<ul class="sub-menu ">
+								
+								<li class="sub-item i2-1"><a class="sub-link" href="/test/list.htm" target="_self">教材基地介绍</a>
+									
+								</li>
+								
+								<li class="sub-item i2-2"><a class="sub-link" href="/jcjdld/list.htm" target="_self">教材基地领导</a>
+									
+								</li>
+								
+								<li class="sub-item i2-3"><a class="sub-link" href="/xswyh/list.htm" target="_self">学术委员会</a>
+									
+								</li>
+								
+								<li class="sub-item i2-4"><a class="sub-link" href="/yjtd/list.htm" target="_self">研究团队</a>
+									
+								</li>
+								
+							</ul>
+							
+						</li>
+						
+						<li class="menu-item i3"><a class="menu-link" href="/cgzs/list.htm" target="_self">成果展示</a>
+							
+						</li>
+						
+						<li class="menu-item i4"><a class="menu-link" href="/szdw/list.htm" target="_self">师资队伍</a>
+							
+						</li>
+						
+						<li class="menu-item i5"><a class="menu-link" href="/zxpj/list.htm" target="_self">咨询评价</a>
+							
+						</li>
+						
+						<li class="menu-item i6"><a class="menu-link" href="/szjd/list.htm" target="_self">数字基地<em class="menu-switch-arrow"></em></a>
+							
+							
+							<ul class="sub-menu ">
+								
+								<li class="sub-item i6-1"><a class="sub-link" href="/zyzx/list.htm" target="_self">资源中心</a>
+									
+								</li>
+								
+								<li class="sub-item i6-2"><a class="sub-link" href="/jczx/list.htm" target="_self">教材中心</a>
+									
+								</li>
+								
+								<li class="sub-item i6-3"><a class="sub-link" href="/xsfw/list.htm" target="_self">学术服务</a>
+									
+								</li>
+								
+								<li class="sub-item i6-4"><a class="sub-link" href="/zxzx/list.htm" target="_self">咨询中心</a>
+									
+								</li>
+								
+								<li class="sub-item i6-5"><a class="sub-link" href="/dsjzx/list.htm" target="_self">大数据中心</a>
+									
+								</li>
+								
+							</ul>
+							
+						</li>
+						
+						<li class="menu-item i7"><a class="menu-link" href="/zywx/list.htm" target="_self">重要文献<em class="menu-switch-arrow"></em></a>
+							
+							
+							<ul class="sub-menu ">
+								
+								<li class="sub-item i7-1"><a class="sub-link" href="http://jcjd.nankai.edu.cn/19401/list.htm" target="_self">马克思主义经典著作选编</a>
+									
+								</li>
+								
+								<li class="sub-item i7-2"><a class="sub-link" href="http://jcjd.nankai.edu.cn/19402/list.htm" target="_self">习近平总书记重要讲话选编</a>
+									
+								</li>
+								
+								<li class="sub-item i7-3"><a class="sub-link" href="http://jcjd.nankai.edu.cn/19403/list.htm" target="_self">“三进”专题</a>
+									
+								</li>
+								
+							</ul>
+							
+						</li>
+						
+						<li class="menu-item i8"><a class="menu-link" href="/lxwm/list.htm" target="_self">联系我们</a>
+							
+						</li>
+						
+					</ul>
+					
+				
+			</div>
+		</div>
+	</div>
+</div>
+<!--End||nav-->
+<!--Start||focus-->
+<div class="wp-wrapper" id="container-1">
+	<div class="wp-inner" frag="面板84">
+		<div class="l-banner" frag="窗口84" portletmode="simpleColumnPicture">
+			<!-- No Data -->
+		</div>
+	</div>
+</div>
+<!--End||focus-->
+<!--Start||content-->
+<div class="wrapper" id="l-container">
+	<div class="inner">
+		<div class="mod clearfix">
+			<div class="col_menu">
+				<div class="col_menu_head">
+					<h3 class="col_name" frag="窗口3" portletmode="simpleColumnAnchor">
+						<span class="col_name_text">
+						<span class="Column_Anchor">基地概况</span>
+						</span>
+					</h3>
+					<a class="column-switch"></a>
+				</div>
+				<div class="col_menu_con" frag="面板4">
+					<div class="col_list" frag="窗口4" portletmode="simpleColumnList">
+						
+							
+							<ul class="wp_listcolumn list-paddingleft-2">
+								
+								<li class="wp_column column-1 selected">     
+										<a title="教材基地介绍" class="col_item_link selected" href="/test/list.htm"><span class="column-name">教材基地介绍</span></a>
+								</li>
+								<li class="wp_column column-2 ">     
+										<a title="教材基地领导" class="col_item_link " href="/jcjdld/list.htm"><span class="column-name">教材基地领导</span></a>
+								</li>
+								<li class="wp_column column-3 ">     
+										<a title="学术委员会" class="col_item_link " href="/xswyh/list.htm"><span class="column-name">学术委员会</span></a>
+								</li>
+								<li class="wp_column column-4 ">     
+										<a title="研究团队" class="col_item_link " href="/yjtd/list.htm"><span class="column-name">研究团队</span></a>
+								</li>
+							</ul>
+										
+						
+					</div>
+				</div>
+			</div>
+			<div class="col_news">
+				<div class="col_news_box">
+					<div class="col_news_head">
+						<ul class="col_metas clearfix" frag="窗口5" portletmode="simpleColumnAttri">
+						   
+							<li class="col_path"><span class="path_name">当前位置：</span><a href="/main.htm" target="_self">首页</a><span class="possplit">&nbsp;&nbsp;</span><a href="/jdgk/list.htm" target="_self">基地概况</a><span class="possplit">&nbsp;&nbsp;</span><a href="/test/list.htm" target="_self">教材基地介绍</a></li>
+							<li class="col_title"><h2>教材基地介绍</h2></li>
+						   
+						</ul>
+					</div>
+					<div class="col_news_con">
+						<div class="col_news_list listcon">
+							<div frag="窗口6" portletmode="simpleList">
+							   
+<div class="wp_single wp_column_article" id="wp_column_article"> 
+     <div class="wp_entry"> 
+         <div class="wp_articlecontent"> 
+             <div id="wp_content_w6_0" class="paging_content" style="display:"> 
+<p style="font-size:14px;text-align:center;line-height:1.75em;"><span style="font-family:黑体, simhei;font-size:18px;line-height:1.75em;">全国高校思想政治理论课马克思主义基本原理概论教材研究基地</span></p><p class="p_text_indent_2" style="font-size:14px;text-align:justify;line-height:1.75em;margin-top:10px;margin-bottom:10px;"><span style="font-family:宋体, simsun;font-size:18px;line-height:1.75em;"></span></p><p class="a p_text_indent_0 p_text_indent_2" style="margin:10px 67px 10px 0cm;font-size:15px;font-family:&quot;arial unicode ms&quot;, sans-serif;border:none;text-align:justify;line-height:2em;"><span style="font-family:宋体;font-size:16px;line-height:2em;">2019</span><span style="font-family:宋体;font-size:16px;line-height:2em;">年</span><span style="font-family:宋体;font-size:16px;line-height:2em;">9</span><span style="font-family:宋体;font-size:16px;line-height:2em;">月，教育部举行“首批国家教材建设重点研究基地工作启动会暨授牌仪式”，南开大学“高校思想政治理论课马克思主义基本原理概论教材研究基地”成为全国首批国家教材建设重点研究基地单位之一。高校思想政治理论课马克思主义基本原理概论国家教材建设重点研究基地以习近平新时代中国特色社会主义思想为指导，依托于南开大学马克思主义学院，</span><span style="font-family:宋体;font-size:16px;line-height:2em;">服务国家教育发展和教材建设重大战略，推动提高《马克思主义基本原理概论》教材建设科学化水平，为教材建设、管理和政策制定提供理论支持智力支撑。</span></p><p class="a p_text_indent_0 p_text_indent_2" style="margin:10px 67px 10px 0cm;font-size:15px;font-family:&quot;arial unicode ms&quot;, sans-serif;border:none;text-align:justify;line-height:2em;"><span style="font-family:宋体;font-size:16px;line-height:2em;">高校思想政治理论课马克思主义基本原理概论国家教材建设重点研究基地自获批以来，已完成组织队伍建设，汇集了一批校内外马克思主义理论领域的高级人才，有效发挥了高端平台的集聚效应。依托于强大的研究团队，高校思想政治理论课马克思主义基本原理概论国家教材建设重点研究基地申报成功2020年度重大科研项目——“马克思主义基本原理教材内容与体系研究”。同时，高校思想政治理论课马克思主义基本原理概论国家教材建设重点研究基地申请创办的配套期刊</span><span style="font-family:sylfaen, serif;font-size:16px;line-height:2em;">——</span><span style="font-family:宋体;font-size:16px;line-height:2em;">《马克思主义理论教学与研究》</span><span style="font-family:宋体;font-size:16px;line-height:2em;">，</span><span style="font-family:宋体;font-size:16px;line-height:2em;">已获国家新闻出版总署批准，基地网站也已完成主体建设正在试运行，将有力推动基地研究成果的交流和推广。南开大学任命南开大学讲席教授逄锦聚为基地学术委员会主任、王新生副校长为基地学术委员会副主任、马克思主义学院院长刘凤义教授为基地主任、马克思主义学院副院长王生升教授为基地副主任。</span></p><p class="a p_text_indent_0 p_text_indent_2" style="margin:10px 67px 10px 0cm;font-size:15px;font-family:&quot;arial unicode ms&quot;, sans-serif;border:none;text-align:justify;line-height:2em;"><span style="font-family:宋体;font-size:16px;line-height:2em;">在未来的建设发展中，高校思想政治理论课马克思主义基本原理概论国家教材建设重点研究基地将立足国家重大需求，汇集优秀专业人才,建立灵活、开放、高效的运行机制，坚持基础理论研究与实践应用研究相结合，定性研究和定量研究相结合，以中国教材建设研究为主，兼顾国际比较研究，以现实问题研究为主，兼顾历史研究与前瞻研究。推动提高《马克思主义基本原理概论》教材建设科学化水平，为解决教材编、审、用、修、培训等环节中的具体问题及教材建设、管理和政策提供理论支持智力支撑，为国家教材建设提供决策咨询服务，发挥筑牢思想防线的重要作用。</span></p><p class="MsoNormal" style="margin:10px 0cm;font-size:medium;font-family:&quot;times new roman&quot;, serif;border:none;text-align:justify;line-height:2em;"><span lang="EN-US" style="font-size:16px;line-height:2em;">&nbsp;</span></p><p class="p_text_indent_2" style="font-size:14px;line-height:1.75em;text-align:justify;margin-top:10px;margin-bottom:10px;"><br></p>
+</div> 
+ 
+         </div> 
+     </div> 
+</div> 
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+<!--End||content-->
+<!--Start||footer-->
+<div class="wrapper footer" id="footer">
+	<div class="inner">
+		<div class="mod clearfix">
+			<div frag="窗口90" portletmode="simpleSiteAttri">
+				<p class="copyright"><span>津教备0061号   津ICP备12003308号-1   津公网安备12010402000967号</span></p>
+				<p class="copyright"><span>新版主页意见征集邮箱：xxb@nankai.edu.cn</span></p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--End||footer-->
+
+<script type="text/javascript" src="/_upload/tpl/02/7e/638/template638/js/comcus.js"></script>
+<script type="text/javascript" src="/_upload/tpl/02/7e/638/template638/js/list.js"></script>
+<script type="text/javascript" src="/_upload/tpl/02/7e/638/template638/js/app.js"></script>
+<script type="text/javascript">
+$(function(){
+	// 初始化SDAPP
+	new SDAPP({
+		"menu":{
+			type:"slide,aside"
+		}
+	});
+});
+</script>
+
+
+ <img src="/_visitcount?siteId=273&amp;type=2&amp;columnId=19320" style="display:none" width="0" height="0"></body></html>

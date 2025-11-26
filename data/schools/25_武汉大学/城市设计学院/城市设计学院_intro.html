@@ -1,0 +1,761 @@
+<!DOCTYPE html><html lang="zh-CN" style="font-size: 80px;"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=2.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>学院简介-武汉大学城市设计学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+
+
+<meta name="SiteName" content="武汉大学城市设计学院">
+<meta name="SiteDomain" content="sud.whu.edu.cn">
+<meta name="ColumnName" content="学院简介">
+
+  <link type="text/css" rel="stylesheet" href="../styles/base.css">
+  <link type="text/css" rel="stylesheet" href="../styles/common.css">
+  <link type="text/css" rel="stylesheet" href="../styles/main.css">
+  <link type="text/css" rel="stylesheet" href="../styles/swiper-bundle.min.css">
+  <link type="text/css" rel="stylesheet" href="../styles/mobile.css">
+  <link type="text/css" rel="stylesheet" href="../styles/mobile-common.css">
+  <script type="text/javascript" src="../js/jquery_1.10.2_jquery.min.js"></script>
+  <script type="text/javascript" src="../js/fontSize.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../about1.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1131,'/about1.jsp',-1,2025181190)</script>
+</head>
+
+<body class="bodyList" style="">
+  <div class="header on">
+        <div class="search">
+            <div class="search1">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><input name="INTEXT" placeholder="请输入检索内容" type="text" autocomplete="off" class="search_kuang"> <input type="submit" name="FindButton" value="搜索" class="search_submit"> <a class="close"></a></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <input name="INTEXT" placeholder="请输入检索内容" class="search_kuang" type="text" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input type="submit" name="FindButton" value="搜索" class="search_submit" v-on:click="onSubmit()">
+            <a class="close"></a>
+            <!--<input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>-->
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "2025181190";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+        </div>
+        <div class="header-top">
+            <div class="header-container container clearfix">
+                <!-- 网站logo -->
+                <div class="header-left">
+                    <div class="logo logo1"><a href="../index.htm"><img src="../images/logo1.png" alt=""></a></div>
+                    <div class="logo logo2"><a href="../index.htm"><img src="../images/logo2.png" alt=""></a></div>
+                </div>
+                <!-- 网站logo -->
+                <div class="header-right">
+                    <!-- 右上角链接 -->
+                    <div class="top-link">
+                        <a href="javascript:void(0);">EN</a>
+                        <a href="javascript:void(0);" class="a2 search_anliu"><img src=""></a>
+                    </div>
+                    <button type="button" class="navbar-toggle">
+                        <span class="icon-bar icon-bar1"></span>
+                        <span class="icon-bar icon-bar2"></span>
+                        <span class="icon-bar icon-bar3"></span>
+                    </button>
+                    <!-- 右上角链接 -->
+                    <!--  网站导航开始 -->
+                    <div class="nav"><ul class="daohang clearfix">
+            <li>
+            <a href="xyjj.htm">学院概况</a>
+                <ul class="down">
+                        <li><a href="xyjj.htm">学院简介</a></li>
+                        <li><a href="xyld.htm">学院领导</a></li>
+                        <li><a href="jgsz/xsjg.htm">机构设置</a></li>
+               </ul>
+        </li>             
+        <li>
+            <a href="../szdw/gjhsbjrc.htm">师资队伍</a>
+                <ul class="down">
+                        <li><a href="../szdw/gjhsbjrc.htm">国家和省部级人才</a></li>
+                        <li><a href="../szdw/jxtd/csghx/js.htm">教学团队</a></li>
+                        <li><a href="../szdw/syzx.htm">实验中心</a></li>
+                        <li><a href="../szdw/jz_kz_js.htm">兼职（客座）教授</a></li>
+                        <li><a href="../szdw/xyds.htm">行业导师</a></li>
+               </ul>
+        </li>             
+        <li>
+            <a href="../rcpy/yjxkjj/bshldz.htm">人才培养</a>
+                <ul class="down">
+                        <li><a href="../rcpy/yjxkjj/bshldz.htm">一级学科简介</a></li>
+                        <li><a href="../rcpy/ylkc.htm">一流课程</a></li>
+                        <li><a href="../rcpy/bkspy.htm">本科生培养</a></li>
+                        <li><a href="../rcpy/yjspy.htm">研究生培养</a></li>
+                        <li><a href="../rcpy/fxljy.htm">非学历教育</a></li>
+               </ul>
+        </li>             
+        <li>
+            <a href="../kxyj/tsyjly.htm">科学研究</a>
+                <ul class="down">
+                        <li><a href="../kxyj/kypt/whdxszcsyjzx.htm">科研平台</a></li>
+                        <li><a href="../kxyj/tsyjly.htm">特色研究领域</a></li>
+                        <li><a href="../kxyj/zdkyxm.htm">重点科研项目</a></li>
+                        <li><a href="../kxyj/kxyjtd.htm">科学研究团队</a></li>
+                        <li><a href="../kxyj/sjsd.htm">设计速递</a></li>
+                        <li><a href="../kxyj/shfw.htm">社会服务</a></li>
+               </ul>
+        </li>             
+        <li>
+            <a href="../hzjl/gnhz.htm">合作交流</a>
+                <ul class="down">
+                        <li><a href="../hzjl/gnhz.htm">国内合作</a></li>
+                        <li><a href="../hzjl/gjjl.htm">国际交流</a></li>
+               </ul>
+        </li>             
+        <li>
+            <a href="../dqjs/djgz.htm">党群建设</a>
+                <ul class="down">
+                        <li><a href="../dqjs/djgz.htm">党建工作</a></li>
+                        <li><a href="../dqjs/ghgz.htm">工会工作</a></li>
+                        <li><a href="../dqjs/gqtgz.htm">共青团工作</a></li>
+                        <li><a href="../dqjs/tzgz.htm">统战工作</a></li>
+                        <li><a href="../dqjs/ltxgz.htm">离退休工作</a></li>
+                        <li><a href="../dqjs/zfjs/bslc.htm">作风建设</a></li>
+               </ul>
+        </li>             
+        <li>
+            <a href="../cpyc.htm">诚聘英才</a>
+        </li>             
+        <li>
+            <a href="../ggfw/gzzd/zyzd.htm">公共服务</a>
+                <ul class="down">
+                        <li><a href="../ggfw/gzzd/zyzd.htm">规章制度</a></li>
+                        <li><a href="../ggfw/sbgx.htm">设备共享</a></li>
+                        <li><a href="https://sbk.whu.edu.cn/Booking_H5/">空间预约</a></li>
+                        <li><a href="../ggfw/xzzx/bksyw.htm">下载中心</a></li>
+               </ul>
+        </li>             
+        <li style="display:none;">
+            <a href="../lmdh/xwdt.htm">栏目导航</a>
+                <ul class="down">
+                        <li><a href="../lmdh/xwdt.htm">新闻动态</a></li>
+                        <li><a href="../lmdh/tzgg/tz.htm">通知公告</a></li>
+               </ul>
+        </li>             
+        <li style="display:none;">
+            <a href="../xxgk/xxcm.htm">信息公开</a>
+                <ul class="down">
+                        <li><a href="../xxgk/xxcm.htm">学校层面</a></li>
+                        <li><a href="../xxgk/xycm.htm">学院层面</a></li>
+                        <li><a href="../xxgk/gzzd.htm">规章制度</a></li>
+               </ul>
+        </li>             
+        <li style="display:none;">
+            <a href="../xyzj/xyhd.htm">校友之家</a>
+                <ul class="down">
+                        <li><a href="../xyzj/xyhd.htm">校友活动</a></li>
+                        <li><a href="../xyzj/xyml.htm">校友名录</a></li>
+               </ul>
+        </li>             
+</ul></div>
+                    <!--  网站导航结束 -->
+                    <div class="mobile_nav"><ul class="daohang clearfix">
+<li><a href="xyjj.htm">学院概况</a>
+<ul class="down">
+<li class="on"><a href="xyjj.htm">学院简介</a>
+</li>
+<li><a href="xyld.htm">学院领导</a>
+</li>
+<li><a href="jgsz/xsjg.htm">机构设置</a>
+<ul class="three-menu">
+<li><a href="jgsz/xsjg.htm">学术机构</a></li>
+<li><a href="jgsz/jxjg.htm">教学机构</a></li>
+<li><a href="jgsz/dzjg.htm">党政机构</a></li>
+</ul>
+</li>
+ </ul>                   
+</li>
+<li><a href="../szdw/gjhsbjrc.htm">师资队伍</a>
+<ul class="down">
+<li><a href="../szdw/gjhsbjrc.htm">国家和省部级人才</a>
+</li>
+<li><a href="../szdw/jxtd/csghx/js.htm">教学团队</a>
+<ul class="three-menu">
+<li><a href="../szdw/jxtd/csghx/js.htm">城市规划系</a></li>
+<li><a href="../szdw/jxtd/jzx/js.htm">建筑系</a></li>
+<li><a href="../szdw/jxtd/sjx/js.htm">设计系</a></li>
+<li><a href="../szdw/jxtd/txyszjsx/js.htm">图学与数字技术系</a></li>
+</ul>
+</li>
+<li><a href="../szdw/syzx.htm">实验中心</a>
+</li>
+<li><a href="../szdw/jz_kz_js.htm">兼职（客座）教授</a>
+</li>
+<li><a href="../szdw/xyds.htm">行业导师</a>
+</li>
+ </ul>                   
+</li>
+<li><a href="../rcpy/yjxkjj/bshldz.htm">人才培养</a>
+<ul class="down">
+<li><a href="../rcpy/yjxkjj/bshldz.htm">一级学科简介</a>
+<ul class="three-menu">
+<li><a href="../rcpy/yjxkjj/bshldz.htm">博士后流动站</a></li>
+<li><a href="../rcpy/yjxkjj/bsxwd.htm">博士学位点</a></li>
+<li><a href="../rcpy/yjxkjj/ssxwd.htm">硕士学位点</a></li>
+<li><a href="../rcpy/yjxkjj/bkzy.htm">本科专业</a></li>
+</ul>
+</li>
+<li><a href="../rcpy/ylkc.htm">一流课程</a>
+</li>
+<li><a href="../rcpy/bkspy.htm">本科生培养</a>
+</li>
+<li><a href="../rcpy/yjspy.htm">研究生培养</a>
+</li>
+<li><a href="../rcpy/fxljy.htm">非学历教育</a>
+</li>
+ </ul>                   
+</li>
+<li><a href="../kxyj/tsyjly.htm">科学研究</a>
+<ul class="down">
+<li><a href="../kxyj/kypt/whdxszcsyjzx.htm">科研平台</a>
+<ul class="three-menu">
+<li><a href="../kxyj/kypt/hbsrjhjgcjszx.htm">湖北省人居环境工程技术中心</a></li>
+<li><a href="../kxyj/kypt/whdxszcsyjzx.htm">武汉大学数字城市研究中心</a></li>
+<li><a href="../kxyj/kypt/whdxysysjsjsysfjxzx.htm">武汉大学艺术与设计省级实验示范教学中心</a></li>
+</ul>
+</li>
+<li><a href="../kxyj/tsyjly.htm">特色研究领域</a>
+</li>
+<li><a href="../kxyj/zdkyxm.htm">重点科研项目</a>
+</li>
+<li><a href="../kxyj/kxyjtd.htm">科学研究团队</a>
+</li>
+<li><a href="../kxyj/sjsd.htm">设计速递</a>
+</li>
+<li><a href="../kxyj/shfw.htm">社会服务</a>
+</li>
+ </ul>                   
+</li>
+<li><a href="../hzjl/gnhz.htm">合作交流</a>
+<ul class="down">
+<li><a href="../hzjl/gnhz.htm">国内合作</a>
+</li>
+<li><a href="../hzjl/gjjl.htm">国际交流</a>
+</li>
+ </ul>                   
+</li>
+<li><a href="../dqjs/djgz.htm">党群建设</a>
+<ul class="down">
+<li><a href="../dqjs/djgz.htm">党建工作</a>
+</li>
+<li><a href="../dqjs/ghgz.htm">工会工作</a>
+</li>
+<li><a href="../dqjs/gqtgz.htm">共青团工作</a>
+</li>
+<li><a href="../dqjs/tzgz.htm">统战工作</a>
+</li>
+<li><a href="../dqjs/ltxgz.htm">离退休工作</a>
+</li>
+<li><a href="../dqjs/zfjs/bslc.htm">作风建设</a>
+<ul class="three-menu">
+<li><a href="../dqjs/zfjs/bslc.htm">办事流程</a></li>
+<li><a href="../dqjs/zfjs/tssl.htm">投诉受理</a></li>
+</ul>
+</li>
+ </ul>                   
+</li>
+<li><a href="../cpyc.htm">诚聘英才</a>
+</li>
+<li><a href="../ggfw/gzzd/zyzd.htm">公共服务</a>
+<ul class="down">
+<li><a href="../ggfw/gzzd/zyzd.htm">规章制度</a>
+<ul class="three-menu">
+<li><a href="../ggfw/gzzd/zyzd.htm">重要制度</a></li>
+<li><a href="../ggfw/gzzd/dwyxzglzd.htm">党务与行政管理制度</a></li>
+<li><a href="../ggfw/gzzd/bksgzzd.htm">本科生工作制度</a></li>
+<li><a href="../ggfw/gzzd/yjsgzzd.htm">研究生工作制度</a></li>
+</ul>
+</li>
+<li><a href="../ggfw/sbgx.htm">设备共享</a>
+</li>
+<li><a href="https://sbk.whu.edu.cn/Booking_H5/">空间预约</a>
+</li>
+<li><a href="../ggfw/xzzx/bksyw.htm">下载中心</a>
+<ul class="three-menu">
+<li><a href="../ggfw/xzzx/bksyw.htm">本科生业务</a></li>
+<li><a href="../ggfw/xzzx/yjsyw.htm">研究生业务</a></li>
+<li><a href="../ggfw/xzzx/gjjl.htm">国际交流</a></li>
+<li><a href="../ggfw/xzzx/kycw.htm">科研财务</a></li>
+</ul>
+</li>
+ </ul>                   
+</li>
+<li><a href="../lmdh/xwdt.htm">栏目导航</a>
+<ul class="down">
+<li><a href="../lmdh/xwdt.htm">新闻动态</a>
+</li>
+<li><a href="../lmdh/tzgg/tz.htm">通知公告</a>
+<ul class="three-menu">
+<li><a href="../lmdh/tzgg/tz.htm">通知</a></li>
+<li><a href="../lmdh/tzgg/jz.htm">讲座</a></li>
+<li><a href="../lmdh/tzgg/gs.htm">公示</a></li>
+<li><a href="../lmdh/tzgg/qt.htm">其它</a></li>
+</ul>
+</li>
+ </ul>                   
+</li>
+<li><a href="../xxgk/xxcm.htm">信息公开</a>
+<ul class="down">
+<li><a href="../xxgk/xxcm.htm">学校层面</a>
+</li>
+<li><a href="../xxgk/xycm.htm">学院层面</a>
+</li>
+<li><a href="../xxgk/gzzd.htm">规章制度</a>
+</li>
+ </ul>                   
+</li>
+<li><a href="../xyzj/xyhd.htm">校友之家</a>
+<ul class="down">
+<li><a href="../xyzj/xyhd.htm">校友活动</a>
+</li>
+<li><a href="../xyzj/xyml.htm">校友名录</a>
+<ul class="three-menu">
+<li><a href="../xyzj/xyml/bks.htm">本科生</a></li>
+<li><a href="../xyzj/xyml/sss.htm">硕士生</a></li>
+<li><a href="../xyzj/xyml/bss.htm">博士生</a></li>
+<li><a href="../xyzj/xyml/qt.htm">其它</a></li>
+</ul>
+</li>
+ </ul>                   
+</li>
+</ul></div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <div class="cs-ny-banner">
+    <img src="../images/b.jpg">
+  </div>
+  <div class="cs-bg-img">
+    <div class="cs-contain-box">
+      <div class="cs-contain-padding">
+        <div class="cs-ny-box">
+          <div class="cs-ny-left">
+            <div class="cs-ny-left-fixed">
+              <h3 class="cs-nav-name">
+学院概况</h3>
+              <div class="cs-nav-list"><ul>
+                  
+<li class="on"><a href="xyjj.htm">学院简介</a>
+</li>
+                  
+<li><a href="xyld.htm">学院领导</a>
+</li>
+                  
+<li><a href="jgsz/xsjg.htm">机构设置</a>
+<ul class="ce-nav-child-list">
+<li><a href="jgsz/xsjg.htm">学术机构</a></li>
+<li><a href="jgsz/jxjg.htm">教学机构</a></li>
+<li><a href="jgsz/dzjg.htm">党政机构</a></li>
+</ul>
+</li>
+                  
+</ul></div>
+            </div>
+          </div>
+          <div class="cs-ny-right">
+            <div class="cs-column-box">
+              <h3 class="cs-column-h3">
+学院简介</h3>
+              <div class="cs-place"><div>
+    <i class="icon"></i>当前位置：
+                        <a href="../index.htm">首页</a>
+               -&gt;
+                <a href="xyjj.htm">学院概况</a>
+               -&gt;
+                <a href="xyjj.htm">学院简介</a>
+</div></div>
+            </div>
+            <div class="cs-about">
+            
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',2025181190,'wbnews','u8')</script>
+<script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',2025181190,47061)</script>
+<div id="vsb_content_47061_u81"><div id="vsb_content"><p style="text-indent: 2em;">城市设计学院是由原武汉大学、原武汉水利电力大学、原武汉测绘科技大学的建筑学、城市规划、艺术设计、图学中心等专业和教学单位于2000年合并而成。2003年，学校将工业设计专业调整到城市设计学院，学院由此形成城乡规划学、建筑学、设计学、工程图学等相辅相成的完整学科体系。</p><p style="text-indent: 2em;">学院依托武汉大学完备的学科配置和深厚的人文底蕴，围绕厚基础、宽口径、高水平、强能力的培养目标，不断深化教育教学改革，人才培养成果丰硕，培育“人文化、数智化、国际化”创新人才。</p><p style="text-indent: 2em;">学院现设有城市规划系、建筑系、设计系、图学与数字技术系、艺术与设计实验中心、图书资料室等6个教学科研机构。现有专任教师113人，其中教授27人、副教授58人、讲师23人、助理研究员1人；近年来，学院积极响应学校“人才强校”战略，从清华大学、北京大学、同济大学、美国马萨诸塞大学、日本东京大学、澳大利亚格里菲斯大学、香港中文大学、天津大学、美国犹他大学、英国伦敦政治经济学院等海内外名校延揽高水平青年人才助力学院学科建设、人才培养和科学研究，其中包括英国社会科学院院士1人、国家社科基金重大项目首席专家2人、国家级人才3人、省级人才3人、武汉大学珞珈青年学者4人。现有在校本科生近700人，研究生300余人，另有相关行业高端培训、研修班、短训班等各类层次的非学历教育。</p></div></div>
+
+            <div>
+<ul class="list1">
+ <li>
+  <div class="item">
+   <p class="num">6</p>
+   <p class="txt">教学科研机构</p>
+  </div></li>
+ <li>
+  <div class="item">
+   <p class="num">113</p>
+   <p class="txt">专任教师</p>
+  </div></li>
+ <li>
+  <div class="item">
+   <p class="num">27</p>
+   <p class="txt">教授</p>
+  </div></li>
+ <li>
+  <div class="item">
+   <p class="num">58</p>
+   <p class="txt">副教授</p>
+  </div></li>
+ <li>
+  <div class="item">
+   <p class="num">23</p>
+   <p class="txt">讲师</p>
+  </div></li>
+ <li>
+  <div class="item">
+   <p class="num">1</p>
+   <p class="txt">助理研究员</p>
+   <div class="item"></div>
+  </div></li>
+</ul></div>
+            <div>
+<ul class="list2">
+ <li>
+  <div class="item">
+   <p class="num">3</p>
+   <p class="txt">国家社科基金<br>重大项目首席专家</p>
+  </div></li>
+ <li>
+  <div class="item">
+   <p class="num">3</p>
+   <p class="txt">国家级人才</p>
+  </div></li>
+ <li>
+  <div class="item">
+   <p class="num">3</p>
+   <p class="txt">省级人才</p>
+  </div></li>
+ <li>
+  <div class="item">
+   <p class="num">4</p>
+   <p class="txt">珞珈青年学者</p>
+  </div></li>
+ <li>
+  <div class="item">
+   <p class="num">600+</p>
+   <p class="txt">在校本科生</p>
+  </div></li>
+ <li>
+  <div class="item">
+   <p class="num">300+</p>
+   <p class="txt">在校研究生</p>
+  </div></li>
+</ul></div>
+            <div>
+<ul class="list3">
+ <li>
+  <div class="item">
+   <div class="num">
+    4
+   </div>
+   <div class="box">
+    <h3>本科专业</h3>
+    <p>城乡规划、建筑学、产品设计、环境设计</p>
+   </div>
+  </div></li>
+ <li>
+  <div class="item">
+   <div class="num">
+    5
+   </div>
+   <div class="box">
+    <h3>特色试验班</h3>
+    <p>城乡规划（本硕试验班）、城乡规划（人工智能试验班）、城乡规划（智慧国土空间规划试验班）、建筑学（人工智能试验班）、建筑学（数智建筑试验班）</p>
+   </div>
+  </div></li>
+ <li>
+  <div class="item">
+   <div class="num">
+    3
+   </div>
+   <div class="box">
+    <h3>学术硕士点</h3>
+    <p>城乡规划学、建筑学、设计学</p>
+   </div>
+  </div></li>
+ <li>
+  <div class="item">
+   <div class="num">
+    2
+   </div>
+   <div class="box">
+    <h3>国家一流本科专业建设点</h3>
+    <p>城乡规划学、建筑学</p>
+   </div>
+  </div></li>
+ <li>
+  <div class="item">
+   <div class="num">
+    2
+   </div>
+   <div class="box">
+    <h3>专业学位硕士点</h3>
+    <p>城乡规划、建筑</p>
+   </div>
+  </div></li>
+ <li>
+  <div class="item">
+   <div class="num">
+    1
+   </div>
+   <div class="box">
+    <h3>省级科研平台</h3>
+    <p>湖北省人居环境工程技术研究中心</p>
+   </div>
+  </div></li>
+ <li>
+  <div class="item">
+   <div class="num">
+    2
+   </div>
+   <div class="box">
+    <h3>一级学科博士点</h3>
+    <p>城乡规划学、建筑学</p>
+   </div>
+  </div></li>
+ <li>
+  <div class="item">
+   <div class="num">
+    1
+   </div>
+   <div class="box">
+    <h3>省级实验教学平台</h3>
+    <p>湖北省艺术与设计实验教学中心</p>
+   </div>
+  </div></li>
+ <li>
+  <div class="item">
+   <p class="dian"><br></p>
+   <p class="dian"><br></p>
+   <p class="dian"><br></p>
+  </div></li>
+</ul></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="../js/swiper-bundle.min.js"></script>
+  <div class="cs-footer-box">
+    <div class="cs-contain-box">
+      <div class="cs-contain-padding">
+        <div class="footer">
+          <div class="logo"><a href="../index.htm" target=""><img src="../images/footer-logo.png" alt=""></a></div>
+          <div class="link">
+            <div class="link-list1"><script language="javascript" src="/system/resource/js/openlink.js"></script><h3>校内职能部门</h3>
+              <ul>
+                
+<li><a href="https://uc.whu.edu.cn/">本科生院</a></li>
+                
+<li><a href="https://gs.whu.edu.cn/">研究生院</a></li>
+                
+<li><a href="https://kfy.whu.edu.cn/">科学技术发展研究院</a></li>
+                
+<li><a href="https://ssroff.whu.edu.cn/">人文社会科学研究院</a></li>
+                
+</ul></div>
+            <div class="link-list2"><h3>相关部委</h3>
+              <ul>
+                
+<li><a href="https://www.cicef.org.cn/">国际基金会</a></li>
+                
+<li><a href="https://www.nsfc.gov.cn/">国家自然科学基金委员会</a></li>
+                
+<li><a href="https://www.mnr.gov.cn/">自然资源部</a></li>
+                
+<li><a href="https://www.mct.gov.cn/">文旅部</a></li>
+                
+</ul></div>
+            <div class="link-list3"><h3>院内接口</h3>
+              <ul>
+                
+<li><a href="http://sud.whu.edu.cn/pmsprj/index.php?g=admin&amp;m=public&amp;a=login">教职工绩效考核系统</a></li>
+                
+<li><a href="http://sud.whu.edu.cn/stupms/index.php?g=admin&amp;m=public&amp;a=login">学生绩效考核系统</a></li>
+                
+</ul></div>
+          </div>
+          <div class="list">
+<ul>
+              <li>
+                <a href="mailto:cssjxy@whu.edu.cn">
+                  <p class="img"><img src="../images/dt01.png" alt=""></p>
+                  <div class="box">
+                    <h3>书记、院长信箱</h3>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="img"><img src="../images/dt02.png" alt=""></p>
+                  <div class="box">
+                    <h3>学院</h3>
+                  </div>
+                  <div class="show"><img src="../images/code01.png"></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="img"><img src="../images/dt02.png" alt=""></p>
+                  <div class="box">
+                    <h3>团委、学生</h3>
+                  </div>
+                  <div class="show"><img src="../images/code02.png"></div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="img"><img src="../images/dt02.png" alt=""></p>
+                  <div class="box">
+                    <h3>研工</h3>
+                  </div>
+                  <div class="show"><img src="../images/code03.png"></div>
+                </a>
+              </li>
+            </ul>
+<script type="text/javascript">
+   $(".cs-footer-box .cs-contain-box .footer .list ul li").hover(function () {
+        $(this).find(".show").show();
+    }, function () {
+        $(this).find(".show").hide();
+    }
+    )
+</script></div>
+        </div>
+      </div>
+    </div>
+    <div class="cs-footer-bottom">
+      <div class="cs-contain-box">
+        <div class="cs-contain-padding"><p>版权所有 © 武汉大学城市设计学院 新版网站试运行中，感谢您的关注！ </p>
+          <p>地址：武汉市武昌区东湖南路8号 邮编：430072 电话：027-68773062</p></div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="../js/main.js"></script>
+  <script type="text/javascript" src="../js/common.js"></script>
+
+
+
+</body></html>

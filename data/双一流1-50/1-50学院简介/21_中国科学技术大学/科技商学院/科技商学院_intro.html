@@ -1,0 +1,630 @@
+<!DOCTYPE html><html lang="en" style="font-size: 66.6667px;"><head>
+	<style type="text/css" id="AMap_Dynamic_style">.amap-custom{top:0;left:0;position:absolute}.amap-container img{max-width:none!important;max-height:none!important}.amap-container{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACC2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOlJlc29sdXRpb25Vbml0PjI8L3RpZmY6UmVzb2x1dGlvblVuaXQ+CiAgICAgICAgIDx0aWZmOkNvbXByZXNzaW9uPjE8L3RpZmY6Q29tcHJlc3Npb24+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgICAgIDx0aWZmOlBob3RvbWV0cmljSW50ZXJwcmV0YXRpb24+MjwvdGlmZjpQaG90b21ldHJpY0ludGVycHJldGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KD0UqkwAAAf1JREFUeAHtmtGpAkEQBE9TMAi/zMb8MzCGU/97Ye8QunDrfQ7qNFUMS8Pbtom/fd8fEx/b/FymdIDL85p/wmmLgEJa5Ad7FTIA0xorpEV+sFchAzCtsUJa5Ad7FTIA0xorpEV+sPcyW1oG33f8WwL3qZ+blebnMs4DXGzqGWFv6hvSYx83KyRi6Q0V0mMfNyskYukNFdJjHzcrJGLpDRXSYx8329QjltrQpp7QH2jWv/5fA5t6EtKc+YY06YfdCglQmiOFNOmH3QoJUJojhTTph90KCVCaI4U06YfdNvUApTiyqSf4NvVEZdGZbwhMvEIUAiMAi+OFKARGABbHC1EIjAAsjk2dJcSmnnzY1BOVRWc+6jDxClEIjAAsjheiEBgBWBwvRCEwArA4/9LUbx+uLxjbM3Fs6omaTT1RWXTmow4TrxCFwAjA4nghCoERgMXxQhQCIwCL8y9NHYb1dBybekJnU09UFp35qMPEK0QhMAKwOF6IQmAEYHG8EIXACMDi2NRZQmzqyYdNPVFZdOajDhOvEIXACMDieCEKgRGAxfFCFAIjAItjU2cJsaknHzb1RGXRmY86TLxCFAIjAIvjhSgERgAWxwtRCIwALI5NnSXEpp582NQTlUVnPuow8QpRCIwALI4XohAYAVgcL0QhMAKwON+m/oRlWjrOG2SeYNIaKe7fAAAAAElFTkSuQmCC);background-color:#f1f1f1;touch-action:none;position:relative;overflow:hidden;-ms-touch-action:none}.amap-drags,.amap-layers{width:100%;height:100%;position:absolute;overflow:hidden;transform:translateZ(0)}.amap-layers canvas{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.amap-layers .amap-layer-tile{transform:translateZ(0)}.amap-layers .amap-layer-tile,.amap-layers .amap-layer-tile img{position:absolute;top:0;left:0;user-select:none;-webkit-user-select:none}.amap-layers .amap-layer-image{position:absolute;top:0;left:0;transform:translateZ(0)}.amap-layers .amap-layer-image img{position:absolute;top:0;left:0}.amap-layer img{pointer-events:none;display:block}.amap-layers .amap-layer-overlay{position:absolute;top:0;left:0;transform:translateZ(0)}.amap-e,.amap-maps{width:100%;height:100%;outline:none}.amap-maps{z-index:0}.amap-e,.amap-layers,.amap-maps,.amap-tile-container{position:absolute;left:0;top:0;overflow:hidden}.amap-context,.amap-marker,.amap-markers,.amap-overlays{position:absolute;left:0;top:0}.amap-layers{z-index:0}.amap-overlays{z-index:110;cursor:default}.amap-markers{z-index:120}.amap-controls{z-index:150}.amap-copyright{display:block!important;left:85px;height:16px;bottom:1.8px;line-height:1.5;padding-bottom:2px;font-size:11px;font-family:Arial,sans-serif}.amap-copyright,.amap-logo{position:absolute;z-index:160;user-select:none;-webkit-user-select:none}.amap-logo{bottom:1.5px;left:4px;height:20px}.amap-logo img{width:73px!important;height:20px!important;border:none;vertical-align:baseline!important;user-select:none;-webkit-user-select:none}.amap-icon{position:relative;z-index:1}.amap-icon img{position:absolute;z-index:-1}.amap-marker-label{position:absolute;z-index:2;border:1px solid #00f;background-color:#fff;white-space:nowrap;cursor:default;padding:3px;font-size:12px;line-height:14px}.amap-info{left:0;width:fit-content;width:-webkit-fit-content;width:-moz-max-content}.amap-info,.amap-menu{position:absolute;z-index:140}.amap-info-close{position:absolute;right:5px;top:5px;color:#c3c3c3;text-decoration:none;font:700 16px/14px Tahoma,Verdana,sans-serif;width:14px;height:14px;cursor:pointer}.amap-info-outer,.amap-menu-outer{box-shadow:0 1px 2px rgba(0,0,0,.1);background:none repeat scroll 0 0 #fff;border-radius:2px;padding:1px;text-align:left}.amap-info-contentContainer:hover .amap-info-outer,.amap-menu-outer:hover{box-shadow:0 1px 2px rgba(0,0,0,.3)}.amap-info-content{position:relative;background:#fff;padding:10px 18px 10px 10px;line-height:1.4;overflow:auto}.amap-marker-content{position:relative}.amap-info-sharp-old{overflow:hidden;position:absolute;background-image:url(https://webapi.amap.com/images/arrows.png)}.bottom-center .amap-info-sharp-old{height:12px;width:20px;background-position:center 12px;top:100%;left:50%;margin:-9px auto 0 -10px}.bottom-left .amap-info-sharp-old{height:12px;width:13px;background-position:-16px -46px;top:100%;margin-top:-9px}.bottom-right .amap-info-sharp-old{height:12px;width:13px;top:-1px;background-position:-56px -46px;left:100%;margin-left:-13px;top:100%;margin-top:-9px}.middle-left .amap-info-sharp-old{height:20px;width:12px;background-position:0;top:50%;margin-top:-10px;margin-left:-11px}.center .amap-info-sharp-old{display:none}.middle-right .amap-info-sharp-old{height:20px;margin-right:0;width:12px;background-position:100%;left:100%;margin-left:-9px;top:50%;margin-top:-10px}.top-center .amap-info-sharp-old{height:12px;width:20px;background-position:top;top:0;left:50%;margin:-3px auto 0 -10px}.top-left .amap-info-sharp-old{height:12px;width:13px;background-position:-16px -3px;top:0;margin-top:-3px}.top-right .amap-info-sharp-old{height:12px;width:13px;background-position:-56px -3px;left:100%;margin-left:-13px;top:0;margin-top:-3px}.amap-info-sharp{position:absolute}.bottom-center .amap-info-sharp{bottom:0;left:50%;border-top:8px solid #fff}.bottom-center .amap-info-sharp,.bottom-center .amap-info-sharp:after{margin-left:-8px;border-left:8px solid transparent;border-right:8px solid transparent}.bottom-center .amap-info-sharp:after{position:absolute;content:"";margin-top:-7px;border-top:8px solid rgba(0,0,0,.3);filter:blur(2px);z-index:-1}.amap-info-contentContainer:hover.bottom-center .amap-info-sharp:after{border-top:8px solid rgba(0,0,0,.5)}.bottom-left .amap-info-sharp{border-color:transparent #fff;border-style:solid;border-width:0 0 10px 10px}.bottom-left .amap-info-sharp:after{position:absolute;content:"";margin-left:-10px;border-color:transparent rgba(0,0,0,.3);border-style:solid;border-width:0 0 10px 10px;filter:blur(1px);z-index:-1}.amap-info-contentContainer:hover.bottom-left .amap-info-sharp:after{border-color:transparent rgba(0,0,0,.5)}.bottom-left .amap-info-content{border-radius:2px 2px 2px 0}.bottom-right .amap-info-sharp{right:0;border-top:10px solid #fff;border-left:10px solid transparent}.bottom-right .amap-info-sharp:after{position:absolute;margin-top:-9px;margin-left:-10px;content:"";border-top:10px solid rgba(0,0,0,.3);border-left:10px solid transparent;filter:blur(1px);z-index:-1}.amap-info-contentContainer:hover.bottom-right .amap-info-sharp:after{border-top:10px solid rgba(0,0,0,.5)}.bottom-right .amap-info-content{border-radius:2px 2px 0 2px}.top-center .amap-info-sharp{top:0;left:50%;border-bottom:8px solid #fff}.top-center .amap-info-sharp,.top-center .amap-info-sharp:after{margin-left:-8px;border-left:8px solid transparent;border-right:8px solid transparent}.top-center .amap-info-sharp:after{position:absolute;content:"";margin-top:0;border-bottom:8px solid rgba(0,0,0,.3);filter:blur(1px);z-index:-1}.top-left .amap-info-sharp{left:0;top:0;border-bottom:10px solid #fff;border-right:10px solid transparent}.top-left .amap-info-sharp:after{position:absolute;content:"";margin-top:0;margin-left:0;border-bottom:10px solid rgba(0,0,0,.3);border-right:10px solid transparent;filter:blur(1px);z-index:-1}.top-right .amap-info-sharp{right:0;top:0;border-bottom:10px solid #fff;border-left:10px solid transparent}.top-right .amap-info-sharp:after{position:absolute;content:"";margin-top:0;margin-left:-10px;border-bottom:10px solid rgba(0,0,0,.3);border-left:10px solid transparent;filter:blur(1px);z-index:-1}.middle-right .amap-info-sharp{right:0;top:50%;border-left:8px solid #fff}.middle-right .amap-info-sharp,.middle-right .amap-info-sharp:after{margin-top:-8px;border-top:8px solid transparent;border-bottom:8px solid transparent}.middle-right .amap-info-sharp:after{position:absolute;content:"";margin-left:-8px;border-left:8px solid rgba(0,0,0,.3);filter:blur(1px);z-index:-1}.amap-info-contentContainer:hover.middle-right .amap-info-sharp:after{border-left:8px solid rgba(0,0,0,.5)}.middle-left .amap-info-sharp{left:0;top:50%;border-right:8px solid #fff}.middle-left .amap-info-sharp,.middle-left .amap-info-sharp:after{margin-top:-8px;border-top:8px solid transparent;border-bottom:8px solid transparent}.middle-left .amap-info-sharp:after{position:absolute;content:"";margin-left:0;border-right:8px solid rgba(0,0,0,.3);filter:blur(1px);z-index:-1}.amap-info-contentContainer:hover.middle-left .amap-info-sharp:after{border-right:8px solid rgba(0,0,0,.5)}.amap-info-contentContainer.top-center,.amap-info-contentContainer.top-left,.amap-info-contentContainer.top-right{padding-top:8px}.amap-info-contentContainer.bottom-center,.amap-info-contentContainer.bottom-left,.amap-info-contentContainer.bottom-right{padding-bottom:8px}.amap-info-contentContainer.middle-right{padding-right:8px}.amap-info-contentContainer.middle-left{padding-left:8px}.amap-menu-outer{margin:0;padding:0;list-style-type:none}ul.amap-menu-outer li{height:35px;line-height:35px;word-break:break-all;padding:0 10px;font-size:12px;white-space:nowrap}ul.amap-menu-outer li a{text-decoration:none;font-size:13px;margin:0 5px;color:#000;padding:5px}ul.amap-menu-outer li:hover{background-color:#f3f3ee}.amap-overlay-text-container{display:block;width:auto;word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:#fff;padding:2px 3px;border:1px solid #ccc;border-radius:3px}.amap-overlay-text-container.amap-overlay-text-empty{display:none}.amap-info-content-ie8{border:1px solid #9c9c9c}.amap-control{position:absolute;-webkit-tap-highlight-color:transparent}.amap-toolbar{background-color:#fff;border-radius:4px;box-shadow:0 0 3px rgba(0,0,0,.5)}.amap-toolbar span{display:block;width:30px;height:30px;line-height:30px;text-align:center;border-radius:0 0 4px 4px;-webkit-user-select:none;-moz-user-select:none;user-select:none;font-size:20px}.amap-toolbar span:first-child{border-bottom:1px solid #eee;border-radius:4px 4px 0 0}.amap-toolbar span:hover{font-weight:bolder;background-color:#f0f0f0}.amap-scalecontrol{pointer-events:none;background-color:hsla(0,0%,100%,.5);border-radius:2px;user-select:none}.amap-scalecontrol .amap-scale-text{font-size:10px;text-align:center;transition:width .3s;user-select:none}.amap-scalecontrol .amap-scale-line{position:relative;height:8px;left:2px;user-select:none}.amap-scalecontrol .amap-scale-edgeleft,.amap-scalecontrol .amap-scale-edgeright,.amap-scalecontrol .amap-scale-middle{position:absolute;background-color:#333;overflow:hidden;box-sizing:content-box!important}.amap-scalecontrol .amap-scale-edgeright{width:1px;height:6px;border:1px solid #fff;transition:left .3s}.amap-scalecontrol .amap-scale-middle{height:2px;left:2px;top:2px;border-top:1px solid #fff;border-bottom:1px solid #fff;transition:width .3s}.amap-scalecontrol .amap-scale-edgeleft{width:1px;height:6px;border:1px solid #fff}.amap-controlbar,.amap-controlbar *{user-select:none}.amap-controlbar .amap-luopan{width:92px;height:92px;background:url(https://webapi.amap.com/theme/v1.3/controlbar/ctb.png) -22px -30px no-repeat;background-size:348px 270px;user-select:none}.amap-luopan .amap-compass{top:46px;left:50%;position:absolute;margin:-24px;width:48px;height:48px;z-index:10;background:url(https://webapi.amap.com/theme/v1.3/controlbar/ctb.png) -231px -26px no-repeat;background-size:348px 270px}.amap-luopan .amap-compass.amap-compass-black{background:url(https://webapi.amap.com/theme/v1.3/controlbar/ctb.png) no-repeat -231px -79px;background-size:348px 270px}.amap-luopan .amap-compass .amap-pointers{position:absolute;width:30px;height:48px;top:0;left:9px;border:none;z-index:2;background:url(https://webapi.amap.com/theme/v1.3/controlbar/ctb.png) -281px -26px no-repeat;background-size:348px 270px}.amap-pitchDown,.amap-pitchUp{width:30px;height:25.5px;position:absolute;top:3.5px;margin-left:-15px;left:50%;z-index:1;background:url(https://webapi.amap.com/theme/v1.3/controlbar/ctb.png) -302.5px -49px no-repeat;background-size:348px 270px}.amap-pitchDown:hover,.amap-pitchUp:hover{background:url(https://webapi.amap.com/theme/v1.3/controlbar/ctb.png) no-repeat -302.5px -23.5px;background-size:348px 270px}.amap-pitchDown{top:66px;transform:rotate(180deg);-ms-transform:rotate(180deg);-webkit-transform:rotate(180deg);-o-transform:rotate(180deg);-moz-transform:rotate(180deg)}.amap-rotateLeft,.amap-rotateRight{width:21px;height:52px;top:19px;position:absolute;z-index:2;background:url(https://webapi.amap.com/theme/v1.3/controlbar/ctb.png) -301.5px -77px no-repeat;background-size:348px 270px}.amap-rotateLeft:hover,.amap-rotateRight:hover{background:url(https://webapi.amap.com/theme/v1.3/controlbar/ctb.png) no-repeat -278.5px -76.5px;background-size:348px 270px}.amap-rotateLeft{left:5px}.amap-rotateRight{right:5px;transform:rotateY(180deg);-ms-transform:rotateY(180deg);-webkit-transform:rotateY(180deg);-o-transform:rotateY(180deg);-moz-transform:rotateY(180deg)}.amap-ctrl-icon-layer{width:30px;height:30px}.amap-ctrl-icon-layer,.amap-ctrl-list-layer{background-color:#fff;border-radius:3px;box-shadow:0 0 4px 1px rgba(0,0,0,.2)}.amap-ctrl-list-layer{position:absolute;top:0;right:0;overflow:hidden;z-index:1}.amap-ctrl-list-layer ul{overflow:hidden;list-style:none;margin:0;padding:5px 8px}.amap-ctrl-list-layer ul li{float:left;width:100%}.amap-ctrl-list-layer ul p{white-space:nowrap;font-size:12px;height:20px;line-height:20px;padding-left:5px;margin:0 10px}.amap-ctrl-list-layer input{float:left;height:20px;width:12px;margin:0 5px}.amap-ctrl-base-layer{border-bottom:1px solid #eee}.amap-ranging-label{_width:10px;font-size:12px;line-height:14px;background:#fff;border:1px solid #ccc;padding:3px 7px 3px 2px;white-space:nowrap}.amap-ranging-label span{height:12px;vertical-align:center;display:inline-block;white-space:nowrap;margin-left:5px}.amap-popup{text-align:center;position:fixed;top:50%;left:50%;margin-left:-165px;margin-top:-170px}.amap-popup-content{vertical-align:middle;line-height:200px;overflow:hidden;background-color:#fff;border:solid;border-width:3px 1px;border-radius:5px;border-color:#ddf;margin:0 auto;text-align:center;height:340px}.amap-labellayers{position:absolute;top:0;left:0;transform-origin:0 0}.amap-indoormap-floorbar-control{position:absolute;width:40px;text-align:center;line-height:1.3em;border-radius:20px;box-shadow:0 0 3px 3px rgba(0,0,0,.1);background-color:#fff;margin-top:-100px}.amap-indoormap-floorbar-control .floor-list-box{max-height:160px;overflow:scroll;-ms-overflow-style:none;overflow:-moz-scrollbars-none;-webkit-user-select:none;-moz-user-select:none}.floor-list-box::-webkit-scrollbar{width:0!important;height:0!important}.amap-indoormap-floorbar-control ul{list-style:none;margin:0;padding:0 4px;width:40px;box-sizing:border-box}.amap-indoormap-floorbar-control ul li{height:32px;width:32px;border-radius:16px}.amap-indoormap-floorbar-control ul li:hover{background-color:#efefef}.amap-indoormap-floorbar-control ul li div{height:32px;text-align:center;line-height:32px;font-size:12px}.amap-indoormap-floorbar-control ul li.selected{color:#fff;background-color:#4196ff}.amap-indoormap-floorbar-control .floor-minus,.amap-indoormap-floorbar-control .floor-plus{height:32px;width:32px;margin:0 auto;border-radius:16px;position:relative}.amap-indoormap-floorbar-control .floor-minus:after,.amap-indoormap-floorbar-control .floor-plus:after{content:"";position:absolute;margin:auto;bottom:4px;left:0;right:0;width:0;height:0;border:7px solid transparent;border-top-color:#777}.amap-indoormap-floorbar-control .floor-plus:after{border-bottom-color:#777;border-top-color:transparent;bottom:11px}.amap-indoormap-floorbar-control .floor-plus:hover:after{border-bottom-color:#222}.amap-indoormap-floorbar-control .floor-minus:hover:after{border-top-color:#222}.amap-indoormap-floorbar-control .floor-plus.disabled:after{border-bottom-color:#ddd}.amap-indoormap-floorbar-control .floor-minus.disabled:after{border-top-color:#ddd}.amap-indoormap-floorbar-control .floor-list-item.selected:after{right:0;left:auto;border-left-color:transparent;border-right-color:#4196ff}.amap-indoormap-floorbar-control .floor-btn.disabled,.amap-indoormap-floorbar-control .floor-btn.disabled *,.amap-indoormap-floorbar-control.with-indrm-loader *{-webkit-pointer-events:none!important;pointer-events:none!important}.amap-indoormap-floorbar-control .with-indrm-loader .floor-nonas{opacity:.5}.amap-logo{display:block!important;pointer-events:none;}</style><meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>学院介绍</title>
+	
+<link type="text/css" href="/_css/_system/system.css" rel="stylesheet">
+<link type="text/css" href="/_upload/site/1/style/1/1.css" rel="stylesheet">
+<link type="text/css" href="/_upload/site/03/24/804/style/1427/1427.css" rel="stylesheet">
+<link type="text/css" href="/_js/_portletPlugs/sudyNavi/css/sudyNav.css" rel="stylesheet">
+<link type="text/css" href="/_js/_portletPlugs/simpleNews/css/simplenews.css" rel="stylesheet">
+
+<script language="javascript" src="/_js/sudy-jquery-autoload.js" jquery-src="/_js/jquery-2.x.min.js" sudy-wp-context="" sudy-wp-siteid="804"></script><script type="text/javascript" src="/_js/jquery-2.x.min.js"></script>
+<script language="javascript" src="/_js/jquery-migrate.min.js"></script>
+<script language="javascript" src="/_js/jquery.sudy.wp.visitcount.js"></script>
+<script type="text/javascript" src="/_js/_portletPlugs/sudyNavi/jquery.sudyNav.js"></script>
+<link rel="stylesheet" href="/_upload/tpl/15/73/5491/template5491/plugins/swiper-8.4.7/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="/_upload/tpl/15/73/5491/template5491/css/comm.css?v=112205">
+	<link rel="stylesheet" href="/_upload/tpl/15/73/5491/template5491/css/nav.css?v=112205">
+	<link rel="icon" type="image/x-icon" href="/_upload/tpl/15/73/5491/template5491/favicon.ico">
+	<script type="text/javascript">
+		document.write('<link rel="stylesheet" href="/_upload/tpl/15/73/5491/template5491/css/index.css?time=' + new Date().getTime() + '">');
+		document.write('<link rel="stylesheet" href="/_upload/tpl/15/73/5491/template5491/css/mobile.css?time=' + new Date().getTime() + '">');
+	</script><link rel="stylesheet" href="/_upload/tpl/15/73/5491/template5491/css/index.css?time=1760687953064"><link rel="stylesheet" href="/_upload/tpl/15/73/5491/template5491/css/mobile.css?time=1760687953064">
+	<script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&amp;key=a3f0c7e30a9acf17d57ddf264b8b4d0b"></script>
+<link rel="stylesheet" href="/_upload/tpl/15/73/5491/template5491/css/main.css?v=112205">
+
+</head>
+<body style="display: block;">
+<div frag="窗口90000" portletmode="simpleColumnAttri" id="page_meta_box">
+	<span class="page_id" data-pid="37256"></span>
+</div>
+	<header>
+		<div class="cont">
+
+			<div class="tl_logo_box" frag="窗口101">
+				<a href="http://fbs.ustc.edu.cn/main.htm" title="中国科学技术大学科技商学院" data-intro="url fixed"><img src="/_upload/article/images/d3/1d/50e109b84190b9569d1a31246005/5c096d05-8abb-4c09-b2ad-00e1a33c02f3.png" alt="中国科学技术大学科技商学院" class="logo"></a>
+			</div>
+			
+			<div class="right">
+						
+				<div class="menu-btn">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			
+				<div class="menu-close">
+					<span></span>
+					<span></span>
+				</div>
+				<ul class="list-unstyled menu" frag="窗口100">
+
+<li data-cid="36995" class="li1">
+	<a href="http://fbs.ustc.edu.cn/main.htm" target="_self" class="t" data-info="tag_not_changed_info" data-intro="url fixed"><span>首页<i></i></span><img src="/_upload/tpl/15/73/5491/template5491/images/arrow.png" class="arrow"></a>
+	<ul class="sub-menu list-unstyled" style="display: none;">
+		<li data-cid="37242" class="li2"><a href="/37242/list.htm" target="_self" data-intro="url fixed">学院动态</a></li>
+		<li data-cid="37014" class="li2"><a href="http://fbs.ustc.edu.cn/bg/list.htm" target="_self" data-intro="url fixed">通知公告</a>
+	<ul class="level-3" style="display: none;">
+		<li data-cid="38757" class="li3"><a href="/bg/list.htm" target="_self" data-intro="url fixed">学术报告</a></li>
+		<li data-cid="38847" class="li3"><a href="/hdygwv25/list.htm" target="_self" data-intro="url fixed">活动预告</a></li>
+		<li data-cid="38758" class="li3"><a href="/38758/list.htm" target="_self" data-intro="url fixed">通知</a></li>
+	</ul></li>
+		<li data-cid="37243" class="li2"><a href="/37243/list.htm" target="_self" data-intro="url fixed">科创生态</a></li>
+		<li data-cid="38790" class="li2"><a href="/38790/list.htm" target="_self" data-intro="url fixed">教授观点</a></li>
+		<li data-cid="39739" class="li2"><a href="/yzyx/list.htm" target="_self" data-intro="url fixed">院长信箱</a></li>
+	</ul>
+</li>
+<li data-cid="37249" class="li1">
+	<a href="http://fbs.ustc.edu.cn/37256/list.htm" target="_self" class="t" data-info="tag_not_changed_info" data-intro="url fixed"><span>学院概况<i></i></span><img src="/_upload/tpl/15/73/5491/template5491/images/arrow.png" class="arrow"></a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37256" class="li2"><a href="/37256/list.htm" target="_self" data-intro="url fixed">学院介绍</a></li>
+		<li data-cid="37258" class="li2"><a href="/37258/list.htm" target="_self" data-intro="url fixed">指导委员会</a></li>
+		<li data-cid="37257" class="li2"><a href="/37257/list.htm" target="_self" data-intro="url fixed">现任领导</a>
+	<ul class="level-3" style="display: none;">
+		<li data-cid="38843" class="li3"><a href="/yz/list.htm" target="_self" data-intro="url fixed">院长</a></li>
+		<li data-cid="38844" class="li3"><a href="/zxyz/list.htm" target="_self" data-intro="url fixed">执行院长</a></li>
+		<li data-cid="38845" class="li3"><a href="/glgzwyh/list.htm" target="_self" data-intro="url fixed">管理工作委员会</a></li>
+	</ul></li>
+		<li data-cid="37260" class="li2"><a href="http://fbs.ustc.edu.cn/38782/list.htm" target="_self" data-intro="url fixed">人才招聘</a>
+	<ul class="level-3" style="display: none;">
+		<li data-cid="38782" class="li3"><a href="/38782/list.htm" target="_self" data-intro="url fixed">师资招聘</a></li>
+		<li data-cid="38783" class="li3"><a href="/38783/list.htm" target="_self" data-intro="url fixed">职员招聘</a></li>
+	</ul></li>
+		<li data-cid="37261" class="li2"><a href="/37261/list.htm" target="_self" data-intro="url fixed">联系我们</a></li>
+	</ul>
+</li>
+<li data-cid="37250" class="li1">
+	<a href="http://fbs.ustc.edu.cn/37262/list.htm" target="_self" class="t" data-info="tag_not_changed_info" data-intro="url fixed"><span>教授研究<i></i></span><img src="/_upload/tpl/15/73/5491/template5491/images/arrow.png" class="arrow"></a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37262" class="li2"><a href="/37262/list.htm" target="_self" data-intro="url fixed">杰出教授</a>
+	<ul class="level-3" style="display: none;">
+		<li data-cid="37308" class="li3"><a href="/szp/list.htm" target="_self" data-intro="url fixed">宋志平</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37309"><a href="/grjj/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37310"><a href="/yjcg/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37311"><a href="/xmxx/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37312"><a href="/sskc/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="37313" class="li3"><a href="/yq/list.htm" target="_self" data-intro="url fixed">叶强</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37314"><a href="/grjj_37314/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37315"><a href="/yjcg_37315/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37316"><a href="/xmxx_37316/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37317"><a href="/sskc_37317/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="37318" class="li3"><a href="/zj/list.htm" target="_self" data-intro="url fixed">张捷</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37319"><a href="/grjj_37319/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37320"><a href="/yjcg_37320/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+	</ul></li>
+		<li data-cid="39250" class="li3"><a href="/jl/list.htm" target="_self" data-intro="url fixed">姜力</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="39251"><a href="/grjj_39251/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+	</ul></li>
+		<li data-cid="39261" class="li3"><a href="/zn/list.htm" target="_self" data-intro="url fixed">朱宁</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="39264"><a href="/grjj_39264/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+	</ul></li>
+		<li data-cid="39262" class="li3"><a href="/zdy/list.htm" target="_self" data-intro="url fixed">詹东远</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="39265"><a href="/zdy_39265/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+	</ul></li>
+		<li data-cid="39263" class="li3"><a href="/mrp/list.htm" target="_self" data-intro="url fixed">穆荣平</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="39266"><a href="/grjj_39266/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+	</ul></li>
+	</ul></li>
+		<li data-cid="37263" class="li2"><a href="/37263/list.htm" target="_self" data-intro="url fixed">青年教师</a>
+	<ul class="level-3" style="display: none;">
+		<li data-cid="37321" class="li3"><a href="/lcx/list.htm" target="_self" data-intro="url fixed">李春晓</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37322"><a href="/grjj_37322/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37323"><a href="/yjcg_37323/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37324"><a href="/xmxx_37324/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37325"><a href="/sskc_37325/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="37326" class="li3"><a href="/dqz/list.htm" target="_self" data-intro="url fixed">杜前舟</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37327"><a href="/grjj_37327/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37328"><a href="/yjcg_37328/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37329"><a href="/xmxx_37329/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37330"><a href="/sskc_37330/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="37331" class="li3"><a href="/wd/list.htm" target="_self" data-intro="url fixed">王澹</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37332"><a href="/grjj_37332/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37333"><a href="/yjcg_37333/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37334"><a href="/xmxx_37334/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37335"><a href="/sskc_37335/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="37336" class="li3"><a href="/cq/list.htm" target="_self" data-intro="url fixed">程琪</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37337"><a href="/grjj_37337/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37338"><a href="/yjcg_37338/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37339"><a href="/xmxx_37339/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37340"><a href="/sskc_37340/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="37341" class="li3"><a href="/hx/list.htm" target="_self" data-intro="url fixed">黄锨</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37342"><a href="/grjj_37342/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37343"><a href="/yjcg_37343/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37344"><a href="/xmxx_37344/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37345"><a href="/sskc_37345/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="37346" class="li3"><a href="/djz/list.htm" target="_self" data-intro="url fixed">杜建忠</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37347"><a href="/grjj_37347/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37348"><a href="/yjcg_37348/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37349"><a href="/xmxx_37349/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37350"><a href="/sskc_37350/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="37351" class="li3"><a href="/lhy/list.htm" target="_self" data-intro="url fixed">林宏远</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37352"><a href="/grjj_37352/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37353"><a href="/yjcg_37353/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37354"><a href="/xmxx_37354/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37355"><a href="/sskc_37355/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="37356" class="li3"><a href="/wh/list.htm" target="_self" data-intro="url fixed">王豪</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37357"><a href="/grjj_37357/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37358"><a href="/yjcg_37358/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37359"><a href="/xmxx_37359/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37360"><a href="/sskc_37360/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="37361" class="li3"><a href="/lt/list.htm" target="_self" data-intro="url fixed">李涛</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37362"><a href="/grjj_37362/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37363"><a href="/yjcg_37363/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37364"><a href="/xmxx_37364/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37365"><a href="/sskc_37365/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="37366" class="li3"><a href="/lx/list.htm" target="_self" data-intro="url fixed">刘行</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37367"><a href="/grjj_37367/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37368"><a href="/yjcg_37368/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37369"><a href="/xmxx_37369/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37370"><a href="/sskc_37370/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="37371" class="li3"><a href="/jhm/list.htm" target="_self" data-intro="url fixed">姜贺敏</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37372"><a href="/grjj_37372/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37373"><a href="/yjcg_37373/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37374"><a href="/xmxx_37374/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37416"><a href="/fwxx/list.htm" target="_self" data-intro="url fixed">服务信息</a></li>
+		<li data-cid="37375"><a href="/sskc_37375/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="37376" class="li3"><a href="/gcy/list.htm" target="_self" data-intro="url fixed">高超越</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37377"><a href="/grjj_37377/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37378"><a href="/yjcg_37378/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37379"><a href="/xmxx_37379/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37380"><a href="/sskc_37380/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="37381" class="li3"><a href="/wzr/list.htm" target="_self" data-intro="url fixed">王泽荣</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37382"><a href="/grjj_37382/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37383"><a href="/yjcg_37383/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37384"><a href="/xmxx_37384/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37385"><a href="/sskc_37385/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="37386" class="li3"><a href="/sh/list.htm" target="_self" data-intro="url fixed">孙浩</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37387"><a href="/grjj_37387/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37388"><a href="/yjcg_37388/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37389"><a href="/xmxx_37389/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37390"><a href="/sskc_37390/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="37391" class="li3"><a href="/lw/list.htm" target="_self" data-intro="url fixed">刘伟</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37392"><a href="/grjj_37392/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37393"><a href="/yjcg_37393/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37394"><a href="/xmxx_37394/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37395"><a href="/sskc_37395/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="37396" class="li3"><a href="/dmt/list.htm" target="_self" data-intro="url fixed">董美彤</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37397"><a href="/grjj_37397/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37398"><a href="/yjcg_37398/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37399"><a href="/xmxx_37399/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37400"><a href="/sskc_37400/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="37401" class="li3"><a href="/lst/list.htm" target="_self" data-intro="url fixed">刘素婷</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37402"><a href="/grjj_37402/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37403"><a href="/yjcg_37403/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37404"><a href="/xmxx_37404/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37405"><a href="/sskc_37405/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="37406" class="li3"><a href="/hx_37406/list.htm" target="_self" data-intro="url fixed">何欣</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37407"><a href="/grjj_37407/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37408"><a href="/yjcg_37408/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37409"><a href="/xmxx_37409/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37410"><a href="/sskc_37410/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="37411" class="li3"><a href="/fsw/list.htm" target="_self" data-intro="url fixed">付思文</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37412"><a href="/grjj_37412/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="37413"><a href="/yjcg_37413/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="37414"><a href="/xmxx_37414/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="37415"><a href="/sskc_37415/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="39832" class="li3"><a href="/hx_39832/list.htm" target="_self" data-intro="url fixed">韩夏</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="39834"><a href="/grjj_39834/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+	</ul></li>
+		<li data-cid="39833" class="li3"><a href="/dy/list.htm" target="_self" data-intro="url fixed">单有</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="39835"><a href="/grjj_39835/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="39836"><a href="/yjcg_39836/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="39837"><a href="/sskc_39837/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="39849" class="li3"><a href="/hty/list.htm" target="_self" data-intro="url fixed">侯天雨</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="39859"><a href="/grjj_39859/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="39860"><a href="/yjcg_39860/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="39861"><a href="/sskc_39861/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="39850" class="li3"><a href="/jx/list.htm" target="_self" data-intro="url fixed">姬翔</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="39862"><a href="/grjj_39862/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="39863"><a href="/yjcg_39863/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="39864"><a href="/sskc_39864/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="39851" class="li3"><a href="/lh/list.htm" target="_self" data-intro="url fixed">李好</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="39865"><a href="/grjj_39865/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="39866"><a href="/yjcg_39866/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="39867"><a href="/sskc_39867/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="39852" class="li3"><a href="/lyl/list.htm" target="_self" data-intro="url fixed">梁一龙</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="39868"><a href="/grjj_39868/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="39869"><a href="/yjcg_39869/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="39870"><a href="/sskc_39870/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="39853" class="li3"><a href="/ll/list.htm" target="_self" data-intro="url fixed">逯兰</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="39871"><a href="/grjj_39871/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="39872"><a href="/yjcg_39872/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="39873"><a href="/sskc_39873/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="39854" class="li3"><a href="/sc/list.htm" target="_self" data-intro="url fixed">孙灿</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="39874"><a href="/grjj_39874/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="39875"><a href="/yjcg_39875/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="39876"><a href="/sskc_39876/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="39855" class="li3"><a href="/spl/list.htm" target="_self" data-intro="url fixed">孙培梁</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="39877"><a href="/grjj_39877/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="39878"><a href="/yjcg_39878/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="39879"><a href="/sskc_39879/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="39856" class="li3"><a href="/tsh/list.htm" target="_self" data-intro="url fixed">谭颂华</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="39880"><a href="/grjj_39880/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="39881"><a href="/yjcg_39881/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="39882"><a href="/sskc_39882/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="39857" class="li3"><a href="/wy/list.htm" target="_self" data-intro="url fixed">王月</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="39883"><a href="/grjj_39883/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="39884"><a href="/yjcg_39884/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="39885"><a href="/sskc_39885/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="39858" class="li3"><a href="/zzl/list.htm" target="_self" data-intro="url fixed">赵朕领</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="39886"><a href="/grjj_39886/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="39887"><a href="/yjcg_39887/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="39888"><a href="/sskc_39888/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="40250" class="li3"><a href="/jl_40250/list.htm" target="_self" data-intro="url fixed">姜力</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="40256"><a href="/grjj_40256/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+	</ul></li>
+		<li data-cid="40251" class="li3"><a href="/lzy/list.htm" target="_self" data-intro="url fixed">刘志迎</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="40257"><a href="/grjj_40257/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+	</ul></li>
+		<li data-cid="40252" class="li3"><a href="/mrp_40252/list.htm" target="_self" data-intro="url fixed">穆荣平</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="40258"><a href="/grjj_40258/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="40260"><a href="/sskc_40260/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+		<li data-cid="40261"><a href="/sskc_40261/list.htm" target="_self" data-intro="url fixed">项目信息</a></li>
+		<li data-cid="40266"><a href="/sskc_40266/list.htm" target="_self" data-intro="url fixed">所授课程</a></li>
+	</ul></li>
+		<li data-cid="40253" class="li3"><a href="/zdy_40253/list.htm" target="_self" data-intro="url fixed">詹东远</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="40262"><a href="/grjj_40262/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+	</ul></li>
+		<li data-cid="40254" class="li3"><a href="/zj_40254/list.htm" target="_self" data-intro="url fixed">张捷</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="40263"><a href="/grjj_40263/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+		<li data-cid="40267"><a href="/yjcg_40267/list.htm" target="_self" data-intro="url fixed">研究成果</a></li>
+	</ul></li>
+		<li data-cid="40255" class="li3"><a href="/zn_40255/list.htm" target="_self" data-intro="url fixed">朱宁</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="40264"><a href="/grjj_40264/list.htm" target="_self" data-intro="url fixed">个人简介</a></li>
+	</ul></li>
+	</ul></li>
+	</ul>
+</li>
+<li data-cid="37251" class="li1">
+	<a href="http://fbs.ustc.edu.cn/37264/list.htm" target="_self" class="t" data-info="tag_not_changed_info" data-intro="url fixed"><span>课程项目<i></i></span><img src="/_upload/tpl/15/73/5491/template5491/images/arrow.png" class="arrow"></a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37264" class="li2"><a href="/37264/list.htm" target="_self" data-intro="url fixed">科创EMBA</a></li>
+		<li data-cid="37265" class="li2"><a href="/37265/list.htm" target="_self" data-intro="url fixed">MBA项目</a></li>
+		<li data-cid="38756" class="li2"><a href="http://fbs.ustc.edu.cn/37266/list.htm" target="_self" data-intro="url fixed">高管教育</a>
+	<ul class="level-3" style="display: none;">
+		<li data-cid="39455" class="li3"><a href="/cxqyjxzxmwIESw/list.htm" target="_self" data-intro="url fixed">DBA直通车—创新企业家学者</a></li>
+		<li data-cid="37266" class="li3"><a href="/37266/list.htm" target="_self" data-intro="url fixed">科创登峰计划</a></li>
+		<li data-cid="37267" class="li3"><a href="/37267/list.htm" target="_self" data-intro="url fixed">科技创新班</a></li>
+		<li data-cid="37268" class="li3"><a href="/37268/list.htm" target="_self" data-intro="url fixed">科技投资人</a></li>
+		<li data-cid="37269" class="li3"><a href="/37269/list.htm" target="_self" data-intro="url fixed">全球未来产业CEO</a></li>
+	</ul></li>
+		<li data-cid="37270" class="li2"><a href="fire_contctEmail" target="_self" data-intro="url fixed">定制项目</a></li>
+	</ul>
+</li>
+<li data-cid="37252" class="li1">
+	<a href="http://fbs.ustc.edu.cn/38767/list.htm" target="_self" class="t" data-info="tag_not_changed_info" data-intro="url fixed"><span>科技创新<i></i></span><img src="/_upload/tpl/15/73/5491/template5491/images/arrow.png" class="arrow"></a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="38764" class="li2"><a href="http://fbs.ustc.edu.cn/38767/list.htm" target="_self" data-intro="url fixed">创新生态</a>
+	<ul class="level-3" style="display: none;">
+		<li data-cid="38767" class="li3"><a href="/38767/list.htm" target="_self" data-intro="url fixed">科创生态坊</a></li>
+		<li data-cid="40493" class="li3"><a href="/hdjbs/list.htm" target="_self" data-intro="url fixed">活动及比赛</a></li>
+	</ul></li>
+		<li data-cid="38765" class="li2"><a href="/38765/list.htm" target="_self" data-intro="url fixed">AI-LINK</a>
+	<ul class="level-3" style="display: none;">
+		<li data-cid="38768" class="li3"><a href="/38768/list.htm" target="_self" data-intro="url fixed">合作企业</a></li>
+		<li data-cid="39712" class="li3"><a href="/39712/list.htm" target="_self" data-intro="url fixed">在研课题</a></li>
+		<li data-cid="39713" class="li3"><a href="http://fbs.ustc.edu.cn/39715/list.htm" target="_self" data-intro="url fixed">需求列表</a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="39715"><a href="/39715/list.htm" target="_self" data-intro="url fixed">新材料</a></li>
+		<li data-cid="39716"><a href="/39716/list.htm" target="_self" data-intro="url fixed">高端装备制造</a></li>
+		<li data-cid="39717"><a href="/39717/list.htm" target="_self" data-intro="url fixed">其他</a></li>
+	</ul></li>
+		<li data-cid="39714" class="li3"><a href="https://fbs.campuswit.com/enroll/fbs/#/questionnaire?table_id=2348" target="_blank" data-intro="url fixed">需求收集</a></li>
+		<li data-cid="39737" class="li3"><a href="/AIAgent/list.htm" target="_self" data-intro="url fixed">应用解决方案</a></li>
+		<li data-cid="39893" class="li3"><a href="https://fbs.campuswit.com/enroll/fbs/#/questionnaire?table_id=2370" target="_blank" data-intro="url fixed">解决方案发布</a></li>
+	</ul></li>
+	</ul>
+</li>
+<li data-cid="37253" class="li1">
+	<a href="http://fbs.ustc.edu.cn/38770/list.htm" target="_self" class="t" data-info="tag_not_changed_info" data-intro="url fixed"><span>对外合作与交流<i></i></span><img src="/_upload/tpl/15/73/5491/template5491/images/arrow.png" class="arrow"></a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="38770" class="li2"><a href="/38770/list.htm" target="_self" data-intro="url fixed">交流动态</a></li>
+	</ul>
+</li>
+<li data-cid="37254" class="li1">
+	<a href="http://fbs.ustc.edu.cn/37271/list.htm" target="_self" class="t" data-info="tag_not_changed_info" data-intro="url fixed"><span>精神学习<i></i></span><img src="/_upload/tpl/15/73/5491/template5491/images/arrow.png" class="arrow"></a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="37271" class="li2"><a href="/37271/list.htm" target="_self" data-intro="url fixed">中央精神</a></li>
+		<li data-cid="37272" class="li2"><a href="/37272/list.htm" target="_self" data-intro="url fixed">基层党建</a></li>
+	</ul>
+</li>
+<li data-cid="37255" class="li1">
+	<a href="http://fbs.ustc.edu.cn/38772/list.htm" target="_self" class="t" data-info="tag_not_changed_info" data-intro="url fixed"><span>校友<i></i></span><img src="/_upload/tpl/15/73/5491/template5491/images/arrow.png" class="arrow"></a>
+	<ul class="sub-menu list-unstyled">
+		<li data-cid="38772" class="li2"><a href="/38772/list.htm" target="_self" data-intro="url fixed">校友活动</a></li>
+		<li data-cid="38775" class="li2"><a href="/38775/list.htm" target="_self" data-intro="url fixed">我要捐赠</a></li>
+	</ul>
+</li>
+				
+<li class="pc-hide links">
+	<div class="t">
+		<a href="https://www.ustc.edu.cn" target="_blank"><span>中国科大<i></i></span></a>
+		<a href="javascript:;"><span>English</span></a>
+	</div>
+</li>
+</ul>
+
+				<ul class="list-unstyled options" frag="窗口102">
+					<li>
+						<a href="https://www.ustc.edu.cn/" title="中国科大" target="_blank" class="t" data-intro="url fixed"><span>中国科大<i></i></span></a>
+					</li>
+					<li>
+						<a href="http://en.ustc.edu.cn/" title="English" target="_blank" class="t" data-intro="url fixed">
+							<span>English<i></i></span>
+							<img src="/_upload/tpl/15/73/5491/template5491/images/arrow.png" class="arrow" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="http://fbs.ustc.edu.cn/yzyx/list.htm" title="院长信箱" target="_blank" class="t" data-intro="url fixed">
+							<span>院长信箱<i></i></span>
+							<img src="/_upload/tpl/15/73/5491/template5491/images/arrow.png" class="arrow" alt="">
+						</a>
+					</li>
+					<li>
+						<div class="t">
+							<img src="/_upload/tpl/15/73/5491/template5491/images/search.png" alt="" class="search">
+						</div>
+						<div class="search-box">					
+<form method="post" action="/_web/_search/api/search/new.rst?locale=zh_CN&amp;request_locale=zh_CN&amp;_p=YXM9ODA0JnQ9NTM3MSZkPTI1ODk2JnA9MSZtPVNOJg__" target="_blank">
+	<div class="search-inner">
+		<input name="keyword" type="text" placeholder="请输入关键词搜索">
+		<button type="submit" class="search-btn">
+			<img src="/_upload/tpl/15/73/5491/template5491/images/search-btn.png">
+		</button>
+		<button type="button" class="close-btn">
+			<img src="/_upload/tpl/15/73/5491/template5491/images/close.png">
+		</button>
+	</div>
+</form>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+
+	<div class="page-banner" frag="窗口1304" portletmode="simpleColumnAttri">
+		<img src="/_upload/tpl/15/73/5491/template5491/images/banner-research.png" data-src="">
+	</div>
+
+
+	<div class="wrap sub-page">
+		<div class="cont">
+			<div class="sub-menu-wrap">
+				<div class="top  font-large" frag="窗口1303" portletmode="simpleColumnAttri">学院概况</div>
+				<ul class="list-unstyled level-1" frag="窗口1302" portletmode="simpleColumnList" data-src="/_upload/tpl/15/73/5491/template5491/images/side-arrow.png">
+				
+					
+					<li class="font-medium">
+						<ul class="list-unstyled level-2">
+							<li class="selected main-color" data-selected="main-color" data-has-sub="has-children">
+								<a href="/37256/list.htm" target="_self" class="inner" data-intro="url fixed">学院介绍</a>
+						 
+								
+							</li>
+						</ul>
+					</li>
+					
+					<li class="font-medium">
+						<ul class="list-unstyled level-2">
+							<li class="" data-selected="main-color" data-has-sub="has-children">
+								<a href="/37258/list.htm" target="_self" class="inner" data-intro="url fixed">指导委员会</a>
+						 
+								
+							</li>
+						</ul>
+					</li>
+					
+					<li class="font-medium">
+						<ul class="list-unstyled level-2">
+							<li class="has-children selected" data-selected="main-color" data-has-sub="has-children">
+								<a href="/37257/list.htm" target="_self" class="inner" data-intro="url fixed">现任领导<img src="/_upload/tpl/15/73/5491/template5491/images/side-arrow.png" class="arrow" style="display: none;"></a>
+						 
+								<ul class="list-unstyled level-3" style="display: none;">
+									<li class=""><a href="/yz/list.htm" target="_self" data-intro="url fixed">院长</a></li>
+									<li class=""><a href="/zxyz/list.htm" target="_self" data-intro="url fixed">执行院长</a></li>
+									<li class=""><a href="/glgzwyh/list.htm" target="_self" data-intro="url fixed">管理工作委员会</a></li>
+								</ul>
+						 
+								
+							</li>
+						</ul>
+					</li>
+					
+					<li class="font-medium">
+						<ul class="list-unstyled level-2">
+							<li class="has-children selected" data-selected="main-color" data-has-sub="has-children">
+								<a href="http://fbs.ustc.edu.cn/38782/list.htm" target="_self" class="inner" data-intro="url fixed">人才招聘<img src="/_upload/tpl/15/73/5491/template5491/images/side-arrow.png" class="arrow" style="display: none;"></a>
+						 
+								<ul class="list-unstyled level-3" style="display: none;">
+									<li class=""><a href="/38782/list.htm" target="_self" data-intro="url fixed">师资招聘</a></li>
+									<li class=""><a href="/38783/list.htm" target="_self" data-intro="url fixed">职员招聘</a></li>
+								</ul>
+						 
+								
+							</li>
+						</ul>
+					</li>
+					
+					<li class="font-medium">
+						<ul class="list-unstyled level-2">
+							<li class="" data-selected="main-color" data-has-sub="has-children">
+								<a href="/37261/list.htm" target="_self" class="inner" data-intro="url fixed">联系我们</a>
+						 
+								
+							</li>
+						</ul>
+					</li>
+					
+				
+				</ul>
+			</div>
+
+			<div class="sub-con">
+
+				<div class="main-color sub-page-title line-height-1" frag="窗口1301" portletmode="simpleColumnAttri">
+					<h3>学院介绍</h3>
+					<div class="breadcrumb"><a href="/main.htm" target="_self" data-intro="url fixed" class="breadcrumb-item">首页</a><a href="http://fbs.ustc.edu.cn/37256/list.htm" target="_self" data-intro="url fixed" class="breadcrumb-item">学院概况</a><a href="/37256/list.htm" target="_self" data-intro="url fixed" class="breadcrumb-item active">学院介绍</a></div>
+				</div>
+
+				<div class="page_bd" frag="窗口1300" portletmode="simpleList">
+				<p>中国科学技术大学科技商学院(Faculty of Business for Science&amp;Technology,
+					USTC)成立于2022年10月26日，是安徽省人民政府和中国科学技术大学共建的中国科大二级学院。</p><p>科技商学院聚力推动解决科研和经济联系不紧密、"两张皮"问题，依托中国科大雄厚的科研实力与办学水平，对标世界一流，充分借鉴国内外知名商学院办学经验，高起点、高标准建设运行。</p><p>学院以"实践性、实战性、实效性"为办学特色，融合中国科大理学、工学、生命科学、管理学等学科优势，引进和培育顶级师资队伍，突破传统的教学组织形态和专业学科局限，设计具有极强实战导向的新型教培模式、跨界融合的新型课程体系，积极探索"懂科技、懂产业、懂资本、懂市场、懂管理"的复合型科技产业组织人才培育路径，聚力建设集教育中心、实训基地和研究基地为一体的科技商学院，构建战略性新兴产业健康快速发展的人才生态，打造科技产业组织学的"科大流派"，赋能科技成果转化和科技产业培育。
+				</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<footer>
+<div class="top">
+	<div class="cont">
+		<div class="footer-inner flex-container justify-between">
+			<!-- 第一列：Logo -->
+			<div class="footer-col logo" frag="窗口108"><img src="/_upload/article/images/66/15/3e3fa4204b379c9e7c8de0574e1a/0aa322cc-c54c-4bf5-b1da-d919cea32283.png" alt="中国科学技术大学科技商学院logo" class="footer-logo">
+			</div>
+
+			<!-- 第二列：联系信息 -->
+			<div class="footer-col contact-info">
+				<ul class="list-unstyled" frag="窗口107">
+					<li>
+						<span class="img"><img src="/_upload/article/images/74/d9/18e88e2b43f985cc669434c7b5f6/498cb3ba-1d1b-4377-ad88-d58079a4412e.png" alt="地址：安徽省合肥市滨湖新区广西路1789号"></span>
+						<span>地址：安徽省合肥市滨湖新区广西路1789号</span>
+					</li>
+					<li>
+						<span class="img"><img src="/_upload/article/images/4f/45/e156f68d4078adf591491fb2cb46/d6b6132a-0bcc-4a47-a9c9-14d443a24024.png" alt="0551-63602462/63602782"></span>
+						<span>电话：</span>
+						<a href="http://tel:0551-63600545" data-intro="url fixed">0551-63602462/63602782</a>
+					</li>
+					<li>
+						<span class="img"><img src="/_upload/article/images/23/5f/d83759bc47d3bc58d444d041fa7d/b0a34433-3589-4d69-8150-a99594069cdb.png" alt="fbs@ustc.edu.cn"></span>
+						<span>邮箱：</span>
+						<a href="mailto:fbs@ustc.edu.cn" data-intro="url fixed">fbs@ustc.edu.cn</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- 第三列：友情链接 -->
+			<div class="footer-col link-container">
+				<div class="t bold">友情链接</div>
+				<ul class="list-unstyled mr-4 flex-container flex-wrap justify-between" frag="窗口104"><li><a href="https://www.ustc.edu.cn/" title="中国科学技术大学" target="_blank" data-intro="url fixed">中国科学技术大学</a></li><li><a href="https://business.ustc.edu.cn/" title="中国科学技术大学管理学院" target="_blank" data-intro="url fixed">中国科学技术大学管理学院</a></li><li><a href="https://aga.ustc.edu.cn/" title="中国科学技术大学校友总会" target="_blank" data-intro="url fixed">中国科学技术大学校友总会</a></li><li><a href="https://iif.ustc.edu.cn/main.htm" title="中国科学技术大学国际金融研究院" target="_blank" data-intro="url fixed">中国科学技术大学国际金融研究院</a></li>
+				</ul>
+			</div>
+
+			<!-- 第四列：二维码 -->
+			<div class="footer-col qrcode-container flex-container align-center justify-between text-center" frag="窗口105">
+				<div class="qrcode-wrap">
+					<img src="/_upload/article/images/3b/79/80374ec04eecaddf7568057695c0/4ebd84f6-ca0f-496a-87bd-3df5825d36a0.png" alt="关注公众号" class="qrcode">
+					<p>关注公众号</p>
+				</div>
+				<div class="qrcode-wrap">
+					<img src="/_upload/article/images/10/1f/d7ca30c5414ba220796d6e8037ca/6dbd21ca-782d-4f8f-9a7d-cbe4a23a8d89.png" alt="关注视频号" class="qrcode">
+					<p>关注视频号</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<div class="Copyright font-small">
+	<div class="cont" frag="窗口106"><p>&nbsp;Copyright <span class="year">2025</span>&nbsp;中国科学技术大学科技商学院 版权所有
+</p></div>
+</div>
+	</footer>
+
+	<script src="/_upload/tpl/15/73/5491/template5491/plugins/swiper-8.4.7/swiper/swiper-bundle.min.js"></script>
+	<script src="/_upload/tpl/15/73/5491/template5491/js/comm.js?v=112205"></script>
+	<script src="/_upload/tpl/15/73/5491/template5491/js/index.js?v=112205"></script>
+	<script src="/_upload/tpl/15/73/5491/template5491/js/main.js?v=112205"></script>
+
+
+ <img src="/_visitcount?siteId=804&amp;type=2&amp;columnId=37256" style="display:none" width="0" height="0"></body></html>

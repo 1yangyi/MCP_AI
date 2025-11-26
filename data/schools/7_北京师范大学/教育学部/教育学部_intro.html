@@ -1,0 +1,688 @@
+<!DOCTYPE html><html class=" js csstransforms"><head>
+    <title>北京师范大学教育学部</title>
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes,text/html; charset=utf-8" name="viewport" http-equiv="Content-Type">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link href="/static/html/css/swiper.css" rel="stylesheet" type="text/css">
+    <link href="/static/html/hred/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/static/html/css/bootstrap.css">
+    <script type="text/javascript" src="/static/html/js/jqueryahcm.js"></script>
+    <script type="text/javascript" src="/static/html/js/slides.min.jquery.js"></script>
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                if ($(document).scrollTop() >= 50) {
+                    $('.m_img').css({'position': 'fixed'});
+                } else if ($(document).scrollTop() <= 50) {
+                    $('.m_img').css({'position': 'absolute'});
+                }
+            });
+        });
+    </script>
+    <script src="/static/html/js/modernizr-custom.js"></script>
+    <script src="/static/html/js/jquery.js"></script>
+    <link href="/static/html/css/mislider.css" rel="stylesheet">
+    <script src="/static/html/js/mislider.js"></script>
+    <script>
+        jQuery(function ($) {
+            var slider = $('.mis-stage').miSlider({
+                //  The height of the stage in px. Options: false or positive integer. false = height is calculated using maximum slide heights. Default: false
+                stageHeight: 380,
+                //  Number of slides visible at one time. Options: false or positive integer. false = Fit as many as possible.  Default: 1
+                slidesOnStage: false,
+                //  The location of the current slide on the stage. Options: 'left', 'right', 'center'. Defualt: 'left'
+                slidePosition: 'center',
+                //  The slide to start on. Options: 'beg', 'mid', 'end' or slide number starting at 1 - '1','2','3', etc. Defualt: 'beg'
+                slideStart: 'mid',
+                //  The relative percentage scaling factor of the current slide - other slides are scaled down. Options: positive number 100 or higher. 100 = No scaling. Defualt: 100
+                slideScaling: 150,
+                //  The vertical offset of the slide center as a percentage of slide height. Options:  positive or negative number. Neg value = up. Pos value = down. 0 = No offset. Default: 0
+                offsetV: -5,
+                //  Center slide contents vertically - Boolean. Default: false
+                centerV: true,
+                //  Opacity of the prev and next button navigation when not transitioning. Options: Number between 0 and 1. 0 (transparent) - 1 (opaque). Default: .5
+                navButtonsOpacity: 1
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="/static/html/css/master.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/static/html/css/animate.css" type="text/css">
+    <link href="/static/html/hred/css/subCon.css" rel="stylesheet" type="text/css">
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                if ($(document).scrollTop() >= 150) {
+                    $('.container_menu').css({'position': 'fixed', 'top': 0});
+                    $('.container_menu_logo02').css({'display': 'none'});
+                    $('.container_menu_font a').css({'margin': '0px 0px', 'padding': '5px 0px'});
+                } else if ($(document).scrollTop() <= 150) {
+                    $('.container_menu').css({'position': 'relative'});
+                    $('.container_menu_logo02').css({'display': 'block'});
+                    $('.container_menu_font a').css({'margin': '5px 0px', 'padding': '10px 0px'});
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="header_bg02">
+</div>
+<div class="header03">
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-13 col-sm-13 col-xs-13">
+            <div class="header_nav">
+                <a href="/html/index.html">
+                    <img src="/static/html/images/logo02.png" class="header_nav_logo03">
+                </a>
+                <div class="top_right02">
+                    <a href="https://www.bnu.edu.cn" target="_blank">学校首页</a> 
+                    <span>|</span>
+                    <a href="http://inei.bnu.edu.cn" target="_blank">国际联盟</a>
+                    <span>|</span>
+                    <a href="https://pdn.bnu.edu.cn/" target="_blank">校长发展网</a>
+                    <span>|</span>
+                    <a href="http://219.224.19.172/fe" target="_blank">协同办公</a>
+                    <span>|</span>
+					<a href="http://ocms.bnu.edu.cn/index.php" target="_blank">在线课程</a>
+                    <!--<span>|</span>
+					<a href="https://eportfolio.bnu.edu.cn/" target="_blank">电子档案袋</a>-->
+                    <span>|</span>
+                    <a href="http://meeting.bnu.edu.cn/" target="_blank">预约系统</a> 
+                    <div class="top_right_font">
+                        <div class="top_right_font_search">
+                            <div class="searchbox">
+                                <form method="post" name="searchform" id="searchform">
+                                    <input type="text" name="searchname" id="searchname" value="" autocomplete="off" placeholder="请输入您要搜索的内容" onkeypress="return search_onkeypress(event)">
+                                    <div class="search"></div>
+                                    <input type="hidden" name="siteid" id="siteid" value="1">
+                                </form>
+                            </div>
+                        </div>
+                        <a href="https://fe-english.bnu.edu.cn/" target="_blank" class="top_right_font_a">English
+                            Version</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/static/skin/js/skin_search.js"></script>
+
+    <script type="text/javascript">
+        $(".include_logo").each(function () {
+            if (!!$(this).attr("file")) {
+                var $includeObj = $(this);
+                $(this).load($(this).attr("file"), function (html) {
+                    $includeObj.after(html).remove();
+                })
+            }
+        });
+    </script>
+</div>
+<div class="header04">
+    <script type="text/javascript" src="/html/1/index/menu.js?v=2020"></script><div class="container">
+<div class="row">
+<div class="col-lg-12 col-sm-12 col-xs-12">
+<div class="header_nav nav">
+<ul>
+<li style="width: 9.09091%;">
+<a class="f_a" href="/pc/cms1info/list/1/2">学部概况</a>
+<div class="s_navbox">
+<div class="s_a">
+<a href="/pc/cms1info/list/1/3">学部简介</a>
+<a href="/pc/cms1info/list/1/4">部长致辞</a>
+<a href="/pc/cms1info/list/1/5">学部领导</a>
+<a href="/pc/cms1info/list/1/6">学科布局</a>
+<a href="/pc/cms1info/list/1/7">组织机构</a>
+<a href="/pc/cms1info/list/1/8">部旗部徽</a>
+<a href="/pc/cms1info/list/1/9">学校校历</a>
+<a href="/pc/cms1info/list/1/190">服务指南</a>
+</div>
+</div>
+</li>
+<li style="width: 9.09091%;">
+<a class="f_a" href="/pc/cms1info/list/1/11">招生信息</a>
+<div class="s_navbox">
+<div class="s_a">
+<a href="/pc/cms1info/list/1/12">本科生招生</a>
+<a href="/pc/cms1info/list/1/13">硕士研究生招生</a>
+<a href="/pc/cms1info/list/1/14">博士研究生招生</a>
+<a href="/pc/cms1info/list/1/15">在职教育硕士招生</a>
+<a href="/pc/cms1info/list/1/16">留学生招生</a>
+</div>
+</div>
+</li>
+<li style="width: 9.09091%;">
+<a class="f_a" href="/pc/cms1info/list/1/17">教育教学</a>
+<div class="s_navbox">
+<div class="s_a">
+<a href="/pc/cms1info/list/1/18">培养动态</a>
+<a href="/pc/cms1info/list/1/19">本科生培养</a>
+<a href="/pc/cms1info/list/1/24">硕士研究生培养</a>
+<a href="/pc/cms1info/list/1/30">博士研究生培养</a>
+<a href="/pc/cms1info/list/1/36">国际研究生培养</a>
+<a href="/pc/cms1info/list/1/43">其他类型培养</a>
+<a href="/pc/cms1info/list/1/49">课程大纲</a>
+</div>
+</div>
+</li>
+<li style="width: 9.09091%;">
+<a class="f_a" href="/pc/cms1info/list/1/50">师资队伍</a>
+<div class="s_navbox">
+<div class="s_a">
+<a href="/pc/cms1info/list/1/51">教学科研系列</a>
+<a href="/pc/cms1info/list/1/52">人才称号</a>
+<a href="/pc/cms1info/list/1/53">工程实验系列</a>
+<a href="/pc/cms1info/list/1/54">编辑系列</a>
+<a href="/pc/cms1info/list/1/55">博士后</a>
+<a href="/pc/cms1info/list/1/56">兼职人员</a>
+</div>
+</div>
+</li>
+<li style="width: 9.09091%;">
+<a class="f_a" href="/pc/cms1info/list/1/57">人才招聘</a>
+<div class="s_navbox">
+<div class="s_a">
+<a href="/pc/cms1info/list/1/58">教师招聘</a>
+<a href="/pc/cms1info/list/1/59">博士后招聘</a>
+<a href="/pc/cms1info/list/1/60">其他招聘</a>
+</div>
+</div>
+</li>
+<li style="width: 9.09091%;">
+<a class="f_a" href="/pc/cms1info/list/1/61">学生园地</a>
+<div class="s_navbox">
+<div class="s_a">
+<a href="/pc/cms1info/list/1/62">通知公告</a>
+<a href="/pc/cms1info/list/1/63">头条关注</a>
+<a href="/pc/cms1info/list/1/81">菁菁学子</a>
+<a href="/pc/cms1info/list/1/80">荣誉殿堂</a>
+<a href="/pc/cms1info/list/1/64">工作团队</a>
+</div>
+</div>
+</li>
+<li style="width: 9.09091%;">
+<a class="f_a" href="/pc/cms1info/list/1/83">科学研究</a>
+<div class="s_navbox">
+<div class="s_a">
+<a href="/pc/cms1info/list/1/84">科研动态</a>
+<a href="/pc/cms1info/list/1/93">学术动态</a>
+<a href="/pc/cms1info/list/1/96">成果集萃</a>
+<a href="/pc/cms1info/list/1/111">项目进展</a>
+<a href="/pc/cms1info/list/1/127">作者学院</a>
+<a href="/pc/cms1info/list/1/128">杂志期刊</a>
+</div>
+</div>
+</li>
+<li style="width: 9.09091%;">
+<a class="f_a" href="/pc/cms1info/list/1/134">国际交流</a>
+<div class="s_navbox">
+<div class="s_a">
+<a href="/pc/cms1info/list/1/135">最新动态</a>
+<a href="/pc/cms1info/list/1/136">因公出境</a>
+<a href="/pc/cms1info/list/1/137">短期专家</a>
+<a href="/pc/cms1info/list/1/138">国际会议</a>
+</div>
+</div>
+</li>
+<li style="width: 9.09091%;">
+<a class="f_a" href="/pc/cms1info/list/1/139">社会服务</a>
+<div class="s_navbox">
+<div class="s_a">
+<a href="/pc/cms1info/list/1/140">动态资讯</a>
+<a href="/pc/cms1info/list/1/141">合作共建</a>
+</div>
+</div>
+</li>
+<li style="width: 9.09091%;">
+<a class="f_a" href="/pc/cms1info/list/1/145">党建工会</a>
+<div class="s_navbox">
+<div class="s_a">
+<a href="/pc/cms1info/list/1/146">通知公告</a>
+<a href="/pc/cms1info/list/1/147">机构人员</a>
+<a href="/pc/cms1info/list/1/148">新闻报道</a>
+<a href="/pc/cms1info/list/1/149">教工之家</a>
+<a href="/pc/cms1info/list/1/150">二级教代会</a>
+<a href="/pc/cms1info/list/1/151">学部通讯</a>
+<a href="/pc/cms1info/list/1/152">支部风采</a>
+<a href="/pc/cms1info/list/1/153">红色源泉</a>
+<a href="/pc/cms1info/list/1/154">精彩图片</a>
+<a href="/pc/cms1info/list/1/155">“两学一做”专栏</a>
+</div>
+</div>
+</li>
+<li style="width: 9.09091%;">
+<a class="f_a" href="/pc/cms1info/list/1/156">校友风采</a>
+<div class="s_navbox">
+<div class="s_a">
+<a href="/pc/cms1info/list/1/157">校友会组织</a>
+<a href="/pc/cms1info/list/1/158">校友动态</a>
+<a href="/pc/cms1info/list/1/159">校友群芳</a>
+<a href="/pc/cms1info/list/1/160">校友名录</a>
+<a href="/pc/cms1info/list/1/161">毕业相册</a>
+<a href="/pc/cms1info/list/1/162">会员信息</a>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!-- 手机端导航--开始 -->
+<div class="m_img">
+    <div class="headrg">
+        <img src="/static/html/images/logo.png" class="headrg_img">
+        <a href="javascript:;" class="a_js"> <img class="m_menuimg" src="/static/html/images/m_menuimg.png"></a>
+    </div>
+</div>
+<div class="m_nav">
+    <div class="closecover a_closed"></div>
+    <div class="closeicon">
+        <a href="javascript:;" class="a_closed"> <img src="/static/html/images/close.png" width="22"></a>
+    </div>
+    <div class="m_navList">
+    <ul>
+                <li>
+                    <div class="m_f_a">
+                        <a href="/pc/cms1info/list/1/2">学部概况</a>
+                        <i></i>
+                    </div>
+                            <div class="m_s_nav">
+                                                <a href="/pc/cms1info/list/1/3">学部简介</a>
+                                                <a href="/pc/cms1info/list/1/4">部长致辞</a>
+                                                <a href="/pc/cms1info/list/1/5">学部领导</a>
+                                                <a href="/pc/cms1info/list/1/6">学科布局</a>
+                                                <a href="/pc/cms1info/list/1/7">组织机构</a>
+                                                <a href="/pc/cms1info/list/1/8">部旗部徽</a>
+                                                <a href="/pc/cms1info/list/1/9">学校校历</a>
+                                                <a href="/pc/cms1info/list/1/190">服务指南</a>
+                            </div>
+                </li>
+                <li>
+                    <div class="m_f_a">
+                        <a href="/pc/cms1info/list/1/11">招生信息</a>
+                        <i></i>
+                    </div>
+                            <div class="m_s_nav">
+                                                <a href="/pc/cms1info/list/1/12">本科生招生</a>
+                                                <a href="/pc/cms1info/list/1/13">硕士研究生招生</a>
+                                                <a href="/pc/cms1info/list/1/14">博士研究生招生</a>
+                                                <a href="/pc/cms1info/list/1/15">在职教育硕士招生</a>
+                                                <a href="/pc/cms1info/list/1/16">留学生招生</a>
+                            </div>
+                </li>
+                <li>
+                    <div class="m_f_a">
+                        <a href="/pc/cms1info/list/1/17">教育教学</a>
+                        <i></i>
+                    </div>
+                            <div class="m_s_nav">
+                                                <a href="/pc/cms1info/list/1/18">培养动态</a>
+                                                <a href="/pc/cms1info/list/1/19">本科生培养</a>
+                                                <a href="/pc/cms1info/list/1/24">硕士研究生培养</a>
+                                                <a href="/pc/cms1info/list/1/30">博士研究生培养</a>
+                                                <a href="/pc/cms1info/list/1/36">国际研究生培养</a>
+                                                <a href="/pc/cms1info/list/1/43">其他类型培养</a>
+                                                <a href="/pc/cms1info/list/1/49">课程大纲</a>
+                            </div>
+                </li>
+                <li>
+                    <div class="m_f_a">
+                        <a href="/pc/cms1info/list/1/50">师资队伍</a>
+                        <i></i>
+                    </div>
+                            <div class="m_s_nav">
+                                                <a href="/pc/cms1info/list/1/51">教学科研系列</a>
+                                                <a href="/pc/cms1info/list/1/52">人才称号</a>
+                                                <a href="/pc/cms1info/list/1/53">工程实验系列</a>
+                                                <a href="/pc/cms1info/list/1/54">编辑系列</a>
+                                                <a href="/pc/cms1info/list/1/55">博士后</a>
+                                                <a href="/pc/cms1info/list/1/56">兼职人员</a>
+                            </div>
+                </li>
+                <li>
+                    <div class="m_f_a">
+                        <a href="/pc/cms1info/list/1/57">人才招聘</a>
+                        <i></i>
+                    </div>
+                            <div class="m_s_nav">
+                                                <a href="/pc/cms1info/list/1/58">教师招聘</a>
+                                                <a href="/pc/cms1info/list/1/59">博士后招聘</a>
+                                                <a href="/pc/cms1info/list/1/60">其他招聘</a>
+                            </div>
+                </li>
+                <li>
+                    <div class="m_f_a">
+                        <a href="/pc/cms1info/list/1/61">学生园地</a>
+                        <i></i>
+                    </div>
+                            <div class="m_s_nav">
+                                                <a href="/pc/cms1info/list/1/62">通知公告</a>
+                                                <a href="/pc/cms1info/list/1/63">头条关注</a>
+                                                <a href="/pc/cms1info/list/1/81">菁菁学子</a>
+                                                <a href="/pc/cms1info/list/1/80">荣誉殿堂</a>
+                                                <a href="/pc/cms1info/list/1/64">工作团队</a>
+                            </div>
+                </li>
+                <li>
+                    <div class="m_f_a">
+                        <a href="/pc/cms1info/list/1/83">科学研究</a>
+                        <i></i>
+                    </div>
+                            <div class="m_s_nav">
+                                                <a href="/pc/cms1info/list/1/84">科研动态</a>
+                                                <a href="/pc/cms1info/list/1/93">学术动态</a>
+                                                <a href="/pc/cms1info/list/1/96">成果集萃</a>
+                                                <a href="/pc/cms1info/list/1/111">项目进展</a>
+                                                <a href="/pc/cms1info/list/1/127">作者学院</a>
+                                                <a href="/pc/cms1info/list/1/128">杂志期刊</a>
+                            </div>
+                </li>
+                <li>
+                    <div class="m_f_a">
+                        <a href="/pc/cms1info/list/1/134">国际交流</a>
+                        <i></i>
+                    </div>
+                            <div class="m_s_nav">
+                                                <a href="/pc/cms1info/list/1/135">最新动态</a>
+                                                <a href="/pc/cms1info/list/1/136">因公出境</a>
+                                                <a href="/pc/cms1info/list/1/137">短期专家</a>
+                                                <a href="/pc/cms1info/list/1/138">国际会议</a>
+                            </div>
+                </li>
+                <li>
+                    <div class="m_f_a">
+                        <a href="/pc/cms1info/list/1/139">社会服务</a>
+                        <i></i>
+                    </div>
+                            <div class="m_s_nav">
+                                                <a href="/pc/cms1info/list/1/140">动态资讯</a>
+                                                <a href="/pc/cms1info/list/1/141">合作共建</a>
+                            </div>
+                </li>
+                <li>
+                    <div class="m_f_a">
+                        <a href="/pc/cms1info/list/1/145">党建工会</a>
+                        <i></i>
+                    </div>
+                            <div class="m_s_nav">
+                                                <a href="/pc/cms1info/list/1/146">通知公告</a>
+                                                <a href="/pc/cms1info/list/1/147">机构人员</a>
+                                                <a href="/pc/cms1info/list/1/148">新闻报道</a>
+                                                <a href="/pc/cms1info/list/1/149">教工之家</a>
+                                                <a href="/pc/cms1info/list/1/150">二级教代会</a>
+                                                <a href="/pc/cms1info/list/1/151">学部通讯</a>
+                                                <a href="/pc/cms1info/list/1/152">支部风采</a>
+                                                <a href="/pc/cms1info/list/1/153">红色源泉</a>
+                                                <a href="/pc/cms1info/list/1/154">精彩图片</a>
+                                                <a href="/pc/cms1info/list/1/155">“两学一做”专栏</a>
+                            </div>
+                </li>
+                <li>
+                    <div class="m_f_a">
+                        <a href="/pc/cms1info/list/1/156">校友风采</a>
+                        <i></i>
+                    </div>
+                            <div class="m_s_nav">
+                                                <a href="/pc/cms1info/list/1/157">校友会组织</a>
+                                                <a href="/pc/cms1info/list/1/158">校友动态</a>
+                                                <a href="/pc/cms1info/list/1/159">校友群芳</a>
+                                                <a href="/pc/cms1info/list/1/160">校友名录</a>
+                                                <a href="/pc/cms1info/list/1/161">毕业相册</a>
+                                                <a href="/pc/cms1info/list/1/162">会员信息</a>
+                            </div>
+                </li>
+    </ul>
+</div>
+    <script type="text/javascript">
+        $(".wx_menu").each(function () {
+            if (!!$(this).attr("file")) {
+                var $includeObj = $(this);
+                $(this).load($(this).attr("file"), function (html) {
+                    $includeObj.after(html).remove();
+                })
+            }
+        });
+    </script>
+</div>
+<!-- 手机端导航--结束 -->
+<script type="text/javascript" src="/static/html/js/jquery.min.js"></script>
+<script type="text/javascript" src="/static/html/js/jquery.SuperSlide.2.1.js"></script>
+<script type="text/javascript" src="/static/html/js/script.js"></script>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2 col-sm-12 col-xs-12">
+            <div class="container_menu">
+                <div class="container_menu_logo02">
+                    <p class="container_menu_logo_p01" id="parent_name">学部概况</p>
+                </div>
+                <div class="container_menu_font" id="c_list_tree"><a href="/pc/cms1info/list/1/3" class="container_menu_font_a">·&nbsp;&nbsp;学部简介</a><a href="/pc/cms1info/list/1/4">·&nbsp;&nbsp;部长致辞</a><a href="/pc/cms1info/list/1/5">·&nbsp;&nbsp;学部领导</a><a href="/pc/cms1info/list/1/6">·&nbsp;&nbsp;学科布局</a><a href="/pc/cms1info/list/1/7">·&nbsp;&nbsp;组织机构</a><a href="/pc/cms1info/list/1/8">·&nbsp;&nbsp;部旗部徽</a><a href="/pc/cms1info/list/1/9">·&nbsp;&nbsp;学校校历</a><a href="/pc/cms1info/list/1/190">·&nbsp;&nbsp;服务指南</a></div>
+            </div>
+        </div>
+        <div class="col-lg-10 col-sm-12 col-xs-12">
+            <div class="container_news_main_box container_news_main_box02">
+                <div class="bread">
+				  <span id="p_list_site">您所在的位置：<a href="/html/index.html">首页</a>»<a href="/pc/cms1info/list/1/2">学部概况</a>»<a href="/pc/cms1info/list/1/3">学部简介</a></span>
+                </div>
+                <div class="news02" style="background: #ffffff; padding: 20px; overflow:hidden;">
+                    <div id="column_info_div"><!--StartFragment--><p style="TEXT-INDENT: 35.45pt; MARGIN-BOTTOM: 8.15pt; mso-para-margin-bottom: .5gd" class="MsoNormal"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 14pt; mso-hansi-font-family: 仿宋"><span style="FONT-SIZE: 12pt">百年峥嵘、风雷激荡，历代名师先贤矢志不渝，使教育事业成为国家独立与自强的基石；世纪之交、继往开来，教育学人更应奋发图强，为实现中华民族的伟大复兴再立千秋功业。秉承这种勇于担当的责任心与使命感，北京师范大学解放思想、创新机制、整合资源、凸显特色，以建设世界一流教育学科为战略目标，将原有教育学科相关单位加以整合，于</span><span style="FONT-SIZE: 12pt">2009</span><span style="FONT-SIZE: 12pt">年组建了教育学部。教育学部的愿景是将北京师范大学教育学科建设成为中国教育创新的重要策源地，高素质教师的培养基地，未来教育家的摇篮，教育决策的思想库，国际教育交流和中国教育文化产业的重要基地。</span><!--?xml:namespace prefix="o"--><!--?xml:namespace--></span></p><p style="TEXT-INDENT: 35.45pt; MARGIN-BOTTOM: 8.15pt; mso-para-margin-bottom: .5gd" class="MsoNormal"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 14pt; mso-hansi-font-family: 仿宋"><span style="FONT-SIZE: 12pt">教育学部承载了北京师范大学教育学科的辉煌成就。全国最早设立教育学硕士、博士学位授权点，最早设立教育学博士后流动站，最早拥有教育学一级学科博士学位授予权，学科综合实力居全国领先水平。一系列具有里程碑意义的创举为教育学部的持续发展奠定了坚实的基础。秉承厚重的光荣历史，学部继承和发扬原有学科优势，着力推进学科整合和创新，现拥有教育学一级学科国家重点学科，</span><span style="FONT-SIZE: 12pt">13</span><span style="FONT-SIZE: 12pt">个博士学位授权点，</span><span style="FONT-SIZE: 12pt">13</span><span style="FONT-SIZE: 12pt">个硕士学位授权点，</span><span style="FONT-SIZE: 12pt">4</span><span style="FONT-SIZE: 12pt">个本科专业，其中特殊教育学、教育技术学为教育部特色专业建设点。</span></span></p><p style="TEXT-INDENT: 35.45pt; MARGIN-BOTTOM: 8.15pt; mso-para-margin-bottom: .5gd" class="MsoNormal"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 14pt; mso-hansi-font-family: 仿宋"><span style="FONT-SIZE: 12pt">教育学部是中国教育科学研究的桥头堡和策源地。学部现设有教育基本理论研究院、国际与比较教育研究院、教育历史与文化研究院、教育技术学院、教育管理学院、课程与教学研究院、教师教育研究所、教育经济研究所、学前教育研究所（系）、特殊教育学院、职业与成人教育研究所、高等教育研究院、教育心理与学校咨询研究所等</span><span style="FONT-SIZE: 12pt">实体性学术机构，承担着学科建设、科学研究、人才培养、社会服务等重要职责。学部拥有《比较教育研究》《教育学报》《教师教育研究》《中国教师》等高水平专业期刊，传播中国教育学术思想、展示最新教育科研成果。</span></span></p><p style="TEXT-INDENT: 35.45pt; MARGIN-BOTTOM: 8.15pt; mso-para-margin-bottom: .5gd" class="MsoNormal"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 14pt; mso-hansi-font-family: 仿宋"><span style="FONT-SIZE: 12pt">教育学部是国家重大教育政策的咨询中心。学部联合国教科文组织国际农村教育研究与培训中心、教育部人文社科基地比较教育研究中心、教育部人文社科基地教师教育研究中心、数字学习与教育公共服务教育部工程研究中心、中国教育政策研究院、国家职业教育研究院、国家手语和盲文研究中心、首都学习型社会研究院、教育信息技术北京市重点实验室、农村教育与农村发展研究院、教育家书院等</span><span style="FONT-SIZE: 12pt">综合交叉平台，以国家重大理论和现实问题为导向，立足学术前沿，紧扣国家需求，服务公众需要，为国家的重大教育决策提供极具价值的“智库”支持。</span></span></p><p style="TEXT-INDENT: 35.45pt; MARGIN-BOTTOM: 8.15pt; mso-para-margin-bottom: .5gd" class="MsoNormal"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 14pt; mso-hansi-font-family: 仿宋"><span style="FONT-SIZE: 12pt">教育学部是培养教育学术人才的顶尖学府。学部师资力量雄厚，现有教学科研人员</span><span style="FONT-SIZE: 12pt">216</span><span style="FONT-SIZE: 12pt">人，其中教授占37%</span><span style="FONT-SIZE: 12pt">，副教授占35%</span><span style="FONT-SIZE: 12pt">，</span><span style="FONT-SIZE: 12pt">91%</span><span style="FONT-SIZE: 12pt">的教学科研人员拥有博士学位。他们之中，既有以中国教育学会荣誉会长、著名教育学家、北京师范大学资深教授顾明远先生，中国教育学会会长钟秉林先生为代表的一批在全国乃至国际教育学术界享有盛誉的教育学家，也有以国家级教学名师奖获得者、长江学者奖励计划入选者张斌贤教授等为代表的一大批构成当代中国教育科研中坚力量的专家学者。学部以“大家、名师”为引领，以“优质课程”为依托，加强对学生学术素养、创新精神和实践能力的全面培养。学部现有全日制学生2317人，其中本科生530人，学术型硕士研究生664人，全日制专业硕士148人，博士研究生304人，各类留学生85人。此外，还有暑期教育硕士566人、伊拉斯谟项目学生20人。<span style="FONT-FAMILY: 宋体; FONT-SIZE: 12pt"><span style="FONT-FAMILY: 宋体; COLOR: black; FONT-SIZE: 12pt; mso-bidi-font-family: 宋体; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA"></span></span></span></span></p><p style="TEXT-INDENT: 35.45pt; MARGIN-BOTTOM: 8.15pt; mso-para-margin-bottom: .5gd" class="MsoNormal"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 14pt; mso-hansi-font-family: 仿宋"><span style="FONT-SIZE: 12pt">教育学部是国际学术交流的高端平台。学部已经与</span><span style="FONT-SIZE: 12pt">30</span><span style="FONT-SIZE: 12pt">多所国际著名大学和机构签订了多边或双边合作协议；作为倡导者之一，与</span><span style="FONT-SIZE: 12pt">9</span><span style="FONT-SIZE: 12pt">所世界著名教育学院组建了世界顶尖教育学院联盟。学部每年召开数次高水平国际学术会议</span><span style="FONT-SIZE: 12pt">,</span><span style="FONT-SIZE: 12pt">年均</span><span style="FONT-SIZE: 12pt">200</span><span style="FONT-SIZE: 12pt">余位国际知名学者前来讲学。学部在校内率先开设国际硕士课程并采用全英文授课方式，为开拓学生视野、培养国际高端人才奠定了坚实基础。</span></span></p><p style="TEXT-INDENT: 35.45pt; MARGIN-BOTTOM: 8.15pt; mso-para-margin-bottom: .5gd" class="MsoNormal"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 14pt; mso-hansi-font-family: 仿宋"><span style="FONT-SIZE: 12pt">教育学部（教育部小学校长培训中心、华北教育管理干部培训中心）是全国校长和教师培训的重要基地。教育学部培训学院、校长培训学院、教育家书院作为全国示范性的校长和教师培训基地、全国中小学校长和教师培训的研究中心以及校长和教师培训的国际交流平台，积极开展教育行政干部、示范性校长、港澳台校长、培训者的培训和骨干教师培训，为我国基础教育的发展做出了卓越贡献，广受教育同行和社会各界的赞誉。</span></span></p><p style="TEXT-INDENT: 35.45pt; MARGIN-BOTTOM: 8.15pt; mso-para-margin-bottom: .5gd" class="MsoNormal"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 14pt; mso-hansi-font-family: 仿宋"><span style="FONT-SIZE: 12pt">站在新的历史时期，北京师范大学教育学部将以更加广阔的视野、更加开放的姿态、更加执着的努力，加快推进世界一流教育学科建设，为实现北京师范大学“综合性、有特色、研究型世界知名高水平大学”的办学目标，为国家教育事业的繁荣发展做出新的更大的贡献！</span></span></p><p style="TEXT-INDENT: 35.45pt; MARGIN-BOTTOM: 8.15pt; mso-para-margin-bottom: .5gd" class="MsoNormal"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 14pt; mso-hansi-font-family: 仿宋"></span></p><p style="TEXT-INDENT: 35.45pt; MARGIN-BOTTOM: 8.15pt; mso-para-margin-bottom: .5gd" class="MsoNormal"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 14pt; mso-hansi-font-family: 仿宋"><span style="FONT-SIZE: 12pt">北京师范大学教育学部</span></span></p><p style="TEXT-INDENT: 35.45pt; MARGIN-BOTTOM: 8.15pt; mso-para-margin-bottom: .5gd" class="MsoNormal"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 14pt; mso-hansi-font-family: 仿宋"><span style="FONT-SIZE: 12pt">地址：北京市海淀区新街口外大街</span><span style="FONT-SIZE: 12pt">19</span><span style="FONT-SIZE: 12pt">号英东教育楼</span></span></p><p style="TEXT-INDENT: 35.45pt; MARGIN-BOTTOM: 8.15pt; mso-para-margin-bottom: .5gd" class="MsoNormal"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 14pt; mso-hansi-font-family: 仿宋"><span style="FONT-SIZE: 12pt">邮编：</span><span style="FONT-SIZE: 12pt">100875</span></span></p><p style="TEXT-INDENT: 35.45pt; MARGIN-BOTTOM: 8.15pt; mso-para-margin-bottom: .5gd" class="MsoNormal"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 14pt; mso-hansi-font-family: 仿宋"><span style="FONT-SIZE: 12pt">电话：</span><span style="FONT-SIZE: 12pt">010-58808855</span></span></p><p style="TEXT-INDENT: 35.45pt; MARGIN-BOTTOM: 8.15pt; mso-para-margin-bottom: .5gd" class="MsoNormal"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 14pt; mso-hansi-font-family: 仿宋"><span style="FONT-SIZE: 12pt">传真：</span><span style="FONT-SIZE: 12pt">010-58804057</span></span></p><p style="TEXT-INDENT: 35.45pt; MARGIN-BOTTOM: 8.15pt; mso-para-margin-bottom: .5gd" class="MsoNormal"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 14pt; mso-hansi-font-family: 仿宋"><span style="FONT-SIZE: 12pt">邮箱：</span><a href="mailto:jiaoyuxuebu@bnu.eud.cn%20"><span style="FONT-SIZE: 12pt">jiaoyuxuebu@bnu.edu.cn </span></a></span></p><p style="TEXT-INDENT: 35.45pt; MARGIN-BOTTOM: 8.15pt; mso-para-margin-bottom: .5gd" class="MsoNormal"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 14pt; mso-hansi-font-family: 仿宋"><span style="FONT-SIZE: 12pt">网址：</span><a href="http://fe.bnu.edu.cn"><span style="FONT-SIZE: 12pt">http://fe.bnu.edu.cn</span></a><span style="FONT-SIZE: 12pt"> </span><span style="mso-spacerun: yes"><span style="FONT-SIZE: 12pt">&nbsp;</span></span></span></p><p style="TEXT-INDENT: 35.45pt" class="MsoNormal"><!--StartFragment--><!--EndFragment--></p><p style="text-indent: 35.45pt; margin-bottom: 8.15pt;" class="MsoNormal"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 14pt; mso-hansi-font-family: 仿宋"></span></p><!--EndFragment--></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/static/html/js/paging.js"></script>
+<div class="footer03">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-sm-12 col-xs-12">
+                <img src="/static/html/images/a28.png" class="footer01_bg02">
+                <div class="footer_left">
+                    <div class="footer_left_box">
+                                <div class="footer_left_div">
+                                    <a href="/pc/cms1info/list/1/2" target="_blank">
+                                        <p class="footer_left_title">
+                                            学部概况
+                                        </p>
+                                    </a>
+                                                        <a href="/pc/cms1info/list/1/3" target="_blank" class="footer_left_a">学部简介</a>
+                                                        <a href="/pc/cms1info/list/1/4" target="_blank" class="footer_left_a">部长致辞</a>
+                                                        <a href="/pc/cms1info/list/1/5" target="_blank" class="footer_left_a">学部领导</a>
+                                                        <a href="/pc/cms1info/list/1/6" target="_blank" class="footer_left_a">学科布局</a>
+                                                        <a href="/pc/cms1info/list/1/7" target="_blank" class="footer_left_a">组织机构</a>
+                                                        <a href="/pc/cms1info/list/1/8" target="_blank" class="footer_left_a">部旗部徽</a>
+                                                        <a href="/pc/cms1info/list/1/9" target="_blank" class="footer_left_a">学校校历</a>
+                                                        <a href="/pc/cms1info/list/1/190" target="_blank" class="footer_left_a">服务指南</a>
+                                                            <a class="footer_left_a"></a>
+                                                            <a class="footer_left_a"></a>
+                                </div>
+                                <div class="footer_left_div">
+                                    <a href="/pc/cms1info/list/1/17" target="_blank">
+                                        <p class="footer_left_title">
+                                            教育教学
+                                        </p>
+                                    </a>
+                                                        <a href="/pc/cms1info/list/1/18" target="_blank" class="footer_left_a">培养动态</a>
+                                                        <a href="/pc/cms1info/list/1/19" target="_blank" class="footer_left_a">本科生培养</a>
+                                                        <a href="/pc/cms1info/list/1/24" target="_blank" class="footer_left_a">硕士研究生培养</a>
+                                                        <a href="/pc/cms1info/list/1/30" target="_blank" class="footer_left_a">博士研究生培养</a>
+                                                        <a href="/pc/cms1info/list/1/36" target="_blank" class="footer_left_a">国际研究生培养</a>
+                                                        <a href="/pc/cms1info/list/1/43" target="_blank" class="footer_left_a">其他类型培养</a>
+                                                        <a href="/pc/cms1info/list/1/49" target="_blank" class="footer_left_a">课程大纲</a>
+                                                            <a class="footer_left_a"></a>
+                                                            <a class="footer_left_a"></a>
+                                                            <a class="footer_left_a"></a>
+                                </div>
+                                <div class="footer_left_div">
+                                    <a href="/pc/cms1info/list/1/50" target="_blank">
+                                        <p class="footer_left_title">
+                                            师资队伍
+                                        </p>
+                                    </a>
+                                                        <a href="/pc/cms1info/list/1/51" target="_blank" class="footer_left_a">教学科研系列</a>
+                                                        <a href="/pc/cms1info/list/1/52" target="_blank" class="footer_left_a">人才称号</a>
+                                                        <a href="/pc/cms1info/list/1/53" target="_blank" class="footer_left_a">工程实验系列</a>
+                                                        <a href="/pc/cms1info/list/1/54" target="_blank" class="footer_left_a">编辑系列</a>
+                                                        <a href="/pc/cms1info/list/1/55" target="_blank" class="footer_left_a">博士后</a>
+                                                        <a href="/pc/cms1info/list/1/56" target="_blank" class="footer_left_a">兼职人员</a>
+                                                            <a class="footer_left_a"></a>
+                                                            <a class="footer_left_a"></a>
+                                                            <a class="footer_left_a"></a>
+                                                            <a class="footer_left_a"></a>
+                                </div>
+                                <div class="footer_left_div">
+                                    <a href="/pc/cms1info/list/1/57" target="_blank">
+                                        <p class="footer_left_title">
+                                            人才招聘
+                                        </p>
+                                    </a>
+                                                        <a href="/pc/cms1info/list/1/58" target="_blank" class="footer_left_a">教师招聘</a>
+                                                        <a href="/pc/cms1info/list/1/59" target="_blank" class="footer_left_a">博士后招聘</a>
+                                                        <a href="/pc/cms1info/list/1/60" target="_blank" class="footer_left_a">其他招聘</a>
+                                                            <a class="footer_left_a"></a>
+                                                            <a class="footer_left_a"></a>
+                                                            <a class="footer_left_a"></a>
+                                                            <a class="footer_left_a"></a>
+                                                            <a class="footer_left_a"></a>
+                                                            <a class="footer_left_a"></a>
+                                                            <a class="footer_left_a"></a>
+                                </div>
+                                <div class="footer_left_div">
+                                    <a href="/pc/cms1info/list/1/61" target="_blank">
+                                        <p class="footer_left_title">
+                                            学生园地
+                                        </p>
+                                    </a>
+                                                        <a href="/pc/cms1info/list/1/62" target="_blank" class="footer_left_a">通知公告</a>
+                                                        <a href="/pc/cms1info/list/1/63" target="_blank" class="footer_left_a">活动快报</a>
+                                                        <a href="/pc/cms1info/list/1/65" target="_blank" class="footer_left_a">党建引领</a>
+                                                        <a href="/pc/cms1info/list/1/66" target="_blank" class="footer_left_a">团学风采</a>
+                                                        <a href="/pc/cms1info/list/1/81" target="_blank" class="footer_left_a">菁菁学子</a>
+                                                        <a href="/pc/cms1info/list/1/73" target="_blank" class="footer_left_a">社会实践</a>
+                                                        <a href="/pc/cms1info/list/1/74" target="_blank" class="footer_left_a">职业发展</a>
+                                                        <a href="/pc/cms1info/list/1/194" target="_blank" class="footer_left_a">创客空间</a>
+                                                        <a href="/pc/cms1info/list/1/82" target="_blank" class="footer_left_a">健康生活</a>
+                                                        <a href="/pc/cms1info/list/1/80" target="_blank" class="footer_left_a">荣誉殿堂</a>
+                                </div>
+                                <div class="footer_left_div">
+                                    <a href="/pc/cms1info/list/1/83" target="_blank">
+                                        <p class="footer_left_title">
+                                            科学研究
+                                        </p>
+                                    </a>
+                                                        <a href="/pc/cms1info/list/1/96" target="_blank" class="footer_left_a">成果集萃</a>
+                                                        <a href="/pc/cms1info/list/1/84" target="_blank" class="footer_left_a">科研动态</a>
+                                                        <a href="/pc/cms1info/list/1/93" target="_blank" class="footer_left_a">学术动态</a>
+                                                        <a href="/pc/cms1info/list/1/111" target="_blank" class="footer_left_a">项目进展</a>
+                                                        <a href="/pc/cms1info/list/1/127" target="_blank" class="footer_left_a">作者学院</a>
+                                                        <a href="/pc/cms1info/list/1/128" target="_blank" class="footer_left_a">杂志期刊</a>
+                                                            <a class="footer_left_a"></a>
+                                                            <a class="footer_left_a"></a>
+                                                            <a class="footer_left_a"></a>
+                                                            <a class="footer_left_a"></a>
+                                </div>
+                                <div class="footer_left_div">
+                                    <a href="" target="_blank">
+                                        <p class="footer_left_title">
+                                            导航链接
+                                        </p>
+                                    </a>
+                                                        <a href="/pc/cms1info/linkurl/49" target="_blank" class="footer_left_a">学术机构</a>
+                                                        <a href="/pc/cms1info/linkurl/50" target="_blank" class="footer_left_a">综合交叉平台</a>
+                                                        <a href="http://inei.bnu.edu.cn" target="_blank" class="footer_left_a">国际教育学院</a>
+                                                        <a href="https://www.bnu.edu.cn/" target="_blank" class="footer_left_a">北京师范大学</a>
+                                                        <a href="http://www.moe.gov.cn" target="_blank" class="footer_left_a">教育部</a>
+                                                            <a class="footer_left_a"></a>
+                                                            <a class="footer_left_a"></a>
+                                                            <a class="footer_left_a"></a>
+                                                            <a class="footer_left_a"></a>
+                                                            <a class="footer_left_a"></a>
+                                </div>
+                    </div>
+                    <div class="footer_left_box02">
+                        <img src="/static/html/images/logo.png" class="footer_logo">
+                        <div class="footer_bottom">
+                            <p class="footer_bottom_p">版权所有：北京师范大学教育学部 电话：010-58808855 传真：010-58804057
+                        Email:jiaoyuxuebu@bnu.edu.cn</p>
+	                    <p class="footer_bottom_p">地址：北京市海淀区新街口外大街19号英东教育楼 邮编：100875 </p>
+	                    <p class="footer_bottom_p">Copyright : 2020 Faculty Of Education,Beijing Normal University. All rights reserved.
+	                    </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_right">
+                    <div class="footer_right_top">
+                        <img src="/static/html/images/a29.png" class="footer_right_top_img">
+                        <p class="footer_right_top_p">学部公众号</p>
+                    </div>
+                    <div class="footer_right_code">
+                        <div class="footer_right_code_div">
+                            <img src="/static/html/images/code01.jpeg">
+                            <p>师大教育学部</p>
+                        </div>
+                        <div class="footer_right_code_div">
+                            <img src="/static/html/images/code06.jpg">
+                            <p>教育学部视频号</p>
+                        </div>
+                        <div class="footer_right_code_div">
+                            <img src="/static/html/images/code05.jpg">
+                            <p>培训学院</p>
+                        </div>
+                        <div class="footer_right_code_div">
+                            <img src="/static/html/images/code02.jpeg">
+                            <p>惠妍国际学院</p>
+                        </div>
+                        <div class="footer_right_code_div">
+                            <img src="/static/html/images/code03.jpeg">
+                            <p>学而微语</p>
+                        </div>
+                        <div class="footer_right_code_div">
+                            <img src="/static/html/images/code04.jpeg">
+                            <p>英东洞</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/static/html/js/wow.min.js"></script>
+<script type="text/javascript" src="/static/skin/js/skin_common.js"></script>
+<script type="text/javascript">
+    //使用jQuery的load方法
+    $(".include").each(function () {
+        if (!!$(this).attr("file")) {
+            var $includeObj = $(this);
+            $(this).load($(this).attr("file"), function (html) {
+                //加载的文件内容写入到当前标签后面并移除当前标签
+                $includeObj.after(html).remove();
+            })
+        }
+    });
+    if (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/8./i) == "8.") {
+        // console.log(1);
+    } else {
+        new WOW().init();
+    }
+    var columnid = '3';
+    $(document).ready(function(){
+        //初始化栏目信息
+        initColumn(columnid);
+        initColumnInfo(columnid);
+    });
+</script>
+
+
+
+</body></html>

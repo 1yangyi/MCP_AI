@@ -1,0 +1,284 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>实验室简介-武汉大学生物医用高分子材料教育部重点实验室</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="实验室简介">
+
+
+<meta name="SiteName" content="武汉大学生物医用高分子材料教育部重点实验室">
+<meta name="SiteDomain" content="bmp.whu.edu.cn">
+<meta name="ColumnName" content="实验室简介">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css">
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1002,'/about.jsp',-1,1575083275)</script>
+</head>
+<body style="">
+    <!-- 头部 -->
+    <div class="top">
+        <div class="container">
+            <!-- logo -->
+            <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="生物医用高分子材料教育部重点实验室"><img src="images/logo.png" width="720" height="74" border="0" alt="生物医用高分子材料教育部重点实验室" title="生物医用高分子材料教育部重点实验室"></a></div>
+            <!-- 搜索框 -->
+           
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu1">
+    <div id="appu1"><div><div class="search_box"><input type="text" placeholder="请输入关键字" class="search"> <input type="image" src="images/search.png" value="" class="btn"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+         <div class="search_box">
+            <input type="text" class="search" placeholder="请输入关键字" v-model=query.keyWord @keyup.enter="onSubmit">
+                    <input type="image" class="btn" src="images/search.png" value="" v-on:click="onSubmit()">
+                    </div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1575083275";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+        </div>
+    </div>
+    <!-- 导航栏 -->
+    <button type="button" class="navbar-toggle">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <div class="nav">
+        <div class="container">
+            
+            <ul class="daohang clearfix">    <li class="first">
+        <a href="index.htm">首页</a>
+    </li>
+    
+            
+
+    <li class="first">
+        <a href="sysjj.htm">实验室简介</a>
+    </li>
+    
+            
+
+    <li class="first">
+        <a href="#">实验室成员</a>
+    </li>
+    
+            
+
+    <li class="first">
+        <a href="kxyj/yjfx.htm">科学研究</a>
+        <ul class="clearfix">
+            <li><a href="kxyj/yjfx.htm">研究方向</a></li>
+            <li><a href="kxyj/yjxm.htm">研究项目</a></li>
+            <li><a href="kxyj/yqsb.htm">仪器设备</a></li>
+        
+        </ul>
+    </li>
+    
+            
+
+    <li class="first">
+        <a href="cgjl/xslw/eight.htm">成果奖励</a>
+        <ul class="clearfix">
+            <li><a href="cgjl/xslw/eight.htm">学术论文</a></li>
+        
+        </ul>
+    </li>
+    
+            
+
+    <li class="first">
+        <a href="gysys/yxygl.htm">关于实验室</a>
+        <ul class="clearfix">
+            <li><a href="gysys/yxygl.htm">运行与管理</a></li>
+            <li><a href="gysys/rcpy.htm">人才培养</a></li>
+            <li><a href="gysys/kfyjl.htm">开放与交流</a></li>
+        
+        </ul>
+    </li>
+    
+            
+
+    <li class="first">
+        <a href="kfjj.htm">开放基金</a>
+    </li>
+    
+            
+
+</ul>
+        </div>
+    </div>
+    <script>
+        jQuery(document).ready(function($) {
+            $(".navbar-toggle").click(function(){
+                $(".nav").show();
+            });    
+        });
+    </script>
+    <!-- 图片 -->
+    <div class="bg-pic">
+        <img src="images/news-pic.jpg" alt="">
+    </div>
+    <!-- 实验室简介 -->
+    <div class="white">
+        <div class="container">
+            <div class="news-wrap">
+                <div class="report clearfix">
+                    <div class="report-left">
+<div class="list_1 active">实验室简介</div></div>
+                    <div class="report-right ">    <a href="index.htm"> <img src="images/home.png" alt="" style="    vertical-align: text-bottom;"> </a>
+    &nbsp;&nbsp;&gt;&nbsp;&nbsp;
+
+            <a href="sysjj.htm" class="report-right-title">实验室简介</a>
+
+
+
+
+
+
+</div>
+                </div>
+                <div class="about"><div class="about-pic">
+                        <img src="images/about-pic.png" alt="">
+                    </div>
+                    <div class="about-detail">
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1575083275,'wbnews','u5')</script>
+<script>function seeContenta5(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta5('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1575083275,1036)</script>
+<p>
+
+    </p><div id="vsb_content_1036_u51"><div id="vsb_content"><p style="text-indent:32px;line-height:120%"><span style="font-size:16px;line-height:120%;font-family: 宋体"></span></p><p style="text-indent:32px;line-height:120%"><span style="font-size: 24px;"><span style="line-height: 120%; font-family: 宋体;">生物医用高分子材料教育部重点实验室前身为生物医用高分子材料教育部开放实验室，自上世纪</span><span lang="EN-US" style="line-height: 120%;">80</span><span style="line-height: 120%; font-family: 宋体;">年代起在卓仁禧院士的领导下开展生物材料的研究，是国内最早开展生物医用高分子研究的基地之一。卓仁禧院士、张俐娜院士为实验室的发展奠定了坚实基础，传承老一代科学家的学术精神，实验室针对国家重大需求，致力于材料的原创性基础研究并积极进行成果转化。目前实验室已成为我国生物医用高分子材料的重要研究基地、高素质人才的培养基地、具有重要国际影响的学术交流科研平台。</span></span></p><p style="text-indent:32px;line-height:120%"><span style="font-size: 16px; line-height: 120%; font-family: 宋体;"><br></span></p><p><br></p></div></div>
+    <span id="vsb_content_1036_u5" name="vsb_content_1036_u5"></span><br><br>
+    
+<p></p>
+</div></div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="bottom">
+        <div class="container">
+            <div class="bottom-wrap"><script language="javascript" src="/system/resource/js/openlink.js"></script><!-- 友情链接 -->
+                <div class="link">
+                    <span>友情链接</span>
+                    
+<a href="https://www.whu.edu.cn/">武汉大学</a>
+                    
+<a href="https://www.tsinghua.edu.cn/publish/thu2018/index.html">清华大学</a>
+                    
+<a href="https://www.pku.edu.cn">北京大学</a>
+                    
+<a href="http://www.chem.whu.edu.cn">武汉大学化学学院</a>
+                    
+<a href="http://www.ciac.jl.cn">长春应化所</a>
+                    
+<a href="http://www.sioc.ac.cn/">上海有机所</a>
+                    
+<a href="http://www.dicp.ac.cn/">大连化物所</a>
+                    
+</div></div>
+            <!-- 版权 -->
+            <div class="copyright"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<div class="copyright">
+    <p>
+        地址：湖北省武汉市武昌区八一路299号邮编：430072　 &nbsp;电话：027-68754509Email：bmp@whu.edu.cn &nbsp; 传真：027-68754509
+    </p>
+</div></div>
+        </div>
+    </div>
+
+
+</body></html>

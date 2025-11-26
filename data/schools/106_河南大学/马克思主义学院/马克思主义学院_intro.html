@@ -1,0 +1,685 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>学院简介-马克思主义学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="马克思主义学院">
+
+    <link href="../css/icon.css" rel="stylesheet" type="text/css">
+    <link href="../css/base.css" rel="stylesheet" type="text/css">
+    <link href="../css/index.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/inner.css" rel="stylesheet" type="text/css">
+
+    <!--[if lt IE 9]>
+        <script src="../js/html5.js" type="text/javascript"></script>
+        <script src="../js/response.min.js"></script>
+    <![endif]-->
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e7a475153535742000400014156 -->
+<link rel="stylesheet" type="text/css" href="../introduce.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1033,'/introduce.jsp',-1,1660400267)</script>
+</head>
+
+<body>
+
+
+    <header class="header">
+        <section>
+            <div class="topLine"></div>
+             <section class="subNav yahei clearfix">
+              
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><section class="mainWrap mainWrap02 noline">
+<ul class="subNavRight" style="padding-right:12px;">
+                        <li id="form_Search_itme">
+<style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><div style="margin-left: 1100px;"><input name="showkeycode" id="showkeycode1065005" size="12" placeholder="搜索" autocomplete="off" class="inp" style="width: 110px;"> <input type="image" src="../images/search_b20221108.png" name="FindButton" align="absmiddle" class="notxt1"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+       <div style="margin-left: 1100px;">
+            <input name="showkeycode" id="showkeycode1065005" size="12" class="inp" placeholder="搜索" style="width:110px;" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+             <input type="image" src="../images/search_b20221108.png" class="notxt1" name="FindButton" align="absmiddle" style="cursor: hand" v-on:click="onSubmit()">
+         </div>
+                                    
+           
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1660400267";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+  </li>
+                    </ul>
+                </section>
+                              <!-- for mobile [begin] -->
+                <section id="mobileNav" class="onlymobileshow clearfix">
+                    <div style="background-color:#fff;clear:both;padding-bottom:7px;line-height:30px;font-size:16px; color:#000;">
+                        <ul>
+                           
+                           
+    <li class="nav_first">
+        <a href="../index.htm">首页</a> 
+    </li>
+    <li class="">
+        <a href="xyjj.htm">学院概况</a> 
+    </li>
+    <li class="">
+        <a href="../szdw/zrjs.htm">师资队伍</a> 
+    </li>
+    <li class="">
+        <a href="../jxgl/bksjxgl.htm">教学管理</a> 
+    </li>
+    <li class="">
+        <a href="../kxyj/kydt.htm">科学研究</a> 
+    </li>
+    <li class="">
+        <a href="../xkjs/sbdjs.htm">学科建设</a> 
+    </li>
+    <li class="">
+        <a href="../dtgz/djdt.htm">党团工作</a> 
+    </li>
+    <li class="">
+        <a href="../zsjy/bkszs.htm">招生就业</a> 
+    </li>
+    <li class="">
+        <a href="../shfw/pxxm.htm">社会服务</a> 
+    </li>
+    <li class="">
+        <a href="../xyzj/xymd.htm">校友之家</a> 
+    </li>
+                           
+                             
+                            
+ 
+ 
+                        </ul>
+                    </div>
+                </section>
+                <!--  for mobile [end] --></section>
+ 
+
+            <section class="topWrap clearfix">
+                <section class="mainWrap">
+                   
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<span class="logo">
+<a href="../index.htm" title="马克思主义学院"><img src="../images/marx-logo.png" width="409" border="0" alt="马克思主义学院" title="马克思主义学院"></a>
+</span>
+                </section>
+               <div class="navtop">
+                <a href="http://mlben.henu.edu.cn">English</a>
+                    <a href="../xwtz/xzzx.htm">下载中心</a>
+                </div>
+                <section class="nav yahei clearfix noMobileShow" style="clear:both;"> 
+                     <ul id="nav">    <li class="  has-sub">
+        <a href="../index.htm">首页</a>
+            <ul class="sub-nav" style="display: none;">
+               </ul>
+    </li>
+    <li class="actives  has-sub">
+        <a href="xyjj.htm">学院概况</a>
+            <ul class="sub-nav" style="display: none;">
+                 <li>
+                    <a href="xyjj.htm">学院简介</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+                 <li>
+                    <a href="xrld.htm">现任领导</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+                 <li>
+                    <a href="jgsz.htm">机构设置</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+                 <li>
+                    <a href="xybz.htm">学院标志</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+                 <li>
+                    <a href="lxfs.htm">联系方式</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+               </ul>
+    </li>
+    <li class="  has-sub">
+        <a href="../szdw/zrjs.htm">师资队伍</a>
+            <ul class="sub-nav" style="display: none;">
+                 <li>
+                    <a href="../szdw/zrjs.htm">专任教师</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+                 <li>
+                    <a href="../szdw/wpzj.htm">外聘专家</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+               </ul>
+    </li>
+    <li class="  has-sub">
+        <a href="../jxgl/bksjxgl.htm">教学管理</a>
+            <ul class="sub-nav" style="display: none;">
+                 <li>
+                    <a href="../jxgl/bksjxgl.htm">本科生教学管理</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+                 <li>
+                    <a href="../jxgl/yjsjxgl.htm">研究生教学管理</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+               </ul>
+    </li>
+    <li class="  has-sub">
+        <a href="../kxyj/kydt.htm">科学研究</a>
+            <ul class="sub-nav" style="display: none;">
+                 <li>
+                    <a href="../kxyj/kydt.htm">科研动态</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+                 <li>
+                    <a href="../kxyj/kycg.htm">科研成果</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+                 <li>
+                    <a href="../kxyj/kypt.htm">科研平台</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+                 <li>
+                    <a href="../kxyj/jxyj.htm">教学研究</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+               </ul>
+    </li>
+    <li class="  has-sub">
+        <a href="../xkjs/sbdjs.htm">学科建设</a>
+            <ul class="sub-nav" style="display: none;">
+                 <li>
+                    <a href="../xkjs/sbdjs.htm">硕博点建设</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+                 <li>
+                    <a href="../xkjs/ystsxk.htm">优势特色学科</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+                 <li>
+                    <a href="../xkjs/bshldz.htm">博士后流动站</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+               </ul>
+    </li>
+    <li class="  has-sub">
+        <a href="../dtgz/djdt.htm">党团工作</a>
+            <ul class="sub-nav" style="display: none;">
+                 <li>
+                    <a href="../dtgz/djdt.htm">党建动态</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+                 <li>
+                    <a href="../dtgz/txgz.htm">团学工作</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+                 <li>
+                    <a href="../dtgz/ghzj.htm">工会之家</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+               </ul>
+    </li>
+    <li class="  has-sub">
+        <a href="../zsjy/bkszs.htm">招生就业</a>
+            <ul class="sub-nav" style="display: none;">
+                 <li>
+                    <a href="../zsjy/bkszs.htm">本科生招生</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+                 <li>
+                    <a href="../zsjy/yjszs.htm">研究生招生</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+                 <li>
+                    <a href="../zsjy/jyzx.htm">就业资讯</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+               </ul>
+    </li>
+    <li class="  has-sub">
+        <a href="../shfw/pxxm.htm">社会服务</a>
+            <ul class="sub-nav" style="display: none;">
+                 <li>
+                    <a href="../shfw/pxxm.htm">培训项目</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+                 <li>
+                    <a href="../shfw/llxj.htm">理论宣讲</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+               </ul>
+    </li>
+    <li class="  has-sub">
+        <a href="../xyzj/xymd.htm">校友之家</a>
+            <ul class="sub-nav" style="display: none;">
+                 <li>
+                    <a href="../xyzj/xymd.htm">校友名单</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+                 <li>
+                    <a href="../xyzj/xyhd.htm">校友活动</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+                 <li>
+                    <a href="../xyzj/xyfc.htm">校友风采</a> 
+                    
+                    
+                    
+                    
+                    
+                    
+                 </li>
+               </ul>
+    </li>
+</ul>
+                </section>
+            </section>
+        </section>
+    </header>
+    <div class="main-body"> 
+        <div class="bouti-tit" style="height: 351.648px;">
+            <div class="bouti-link bouti-link-intro2">
+                <img class="bannerImg" src="../images/aboutbanner.jpg">
+                
+   <div class="boutiCon" style="top: 135.824px;">
+       <h3>学院概况</h3>
+   </div>
+   <div class="boutiConBg" style="top: 135.824px;"></div>
+
+            </div>
+        </div>
+
+        <div class="content"> 
+            <section class="sub-header">
+                <section class="mobSecNav"><img id="subNavlogo" src="../images/mnav2.png" style="padding-bottom:6px;"></section>
+                <section class="mobSecNavMenu">
+                    <ul>     
+    
+        <li class="cur">
+            <a href="xyjj.htm">学院简介</a>
+        </li> 
+         
+      
+    
+        <li class="">
+            <a href="xrld.htm">现任领导</a>
+        </li> 
+         
+      
+    
+        <li class="">
+            <a href="jgsz.htm">机构设置</a>
+        </li> 
+         
+      
+    
+        <li class="">
+            <a href="xybz.htm">学院标志</a>
+        </li> 
+         
+      
+    
+        <li class="">
+            <a href="lxfs.htm">联系方式</a>
+        </li> 
+         
+     </ul>
+                </section>
+                <section class="secNav">
+                    <ul>     
+    
+        <li class="cur">
+            <a href="xyjj.htm">学院简介</a>
+        </li> 
+         
+      
+    
+        <li class="">
+            <a href="xrld.htm">现任领导</a>
+        </li> 
+         
+      
+    
+        <li class="">
+            <a href="jgsz.htm">机构设置</a>
+        </li> 
+         
+      
+    
+        <li class="">
+            <a href="xybz.htm">学院标志</a>
+        </li> 
+         
+      
+    
+        <li class="">
+            <a href="lxfs.htm">联系方式</a>
+        </li> 
+         
+     </ul>
+                </section>
+            </section>      
+            <div class="col_lg_10 top"></div>
+            <div class="col_lg_7">
+
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1660400267,'wbnews','u7')</script>
+<script>function seeContenta7(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1660400267,2928)</script>
+<div class="mainContent">
+   <div class="introTit clearfix">
+                        <div class="introTitImg2"><img src="http://marxism.henu.edu.cn/images/intro.jpg"></div>
+                        <h2>学院简介</h2>
+                    </div>
+      <div class="article">
+    <div id="vsb_content_2928_u71"><div id="vsb_content"><p style="text-indent: 39px; line-height: 150%; text-align: justify;"><span style="font-size: 18px; text-align: justify; line-height: 150%; color: rgb(68, 68, 68);"></span></p><p style="text-indent: 39px; text-align: justify; line-height: 2em;"><span style="color: rgb(68, 68, 68); font-size: 18px; font-family: 宋体;"></span></p><p style="line-height: 2em; text-align: justify; margin-bottom: 5px; margin-top: 5px;"><span style="color: rgb(68, 68, 68); font-size: 18px; font-family: 宋体;">&nbsp; &nbsp;河南大学马克思主义学院历史底蕴深厚。其前身是1950年成立的河南大学政治理论教研室，后历经马列主义教研室、马列主义教研部、马列德育教研部等阶段，2010年正式更名为马克思主义学院。2006年起参与马克思主义基本原理二级学科博士点建设。2013年9月，学校进行马克思主义理论学科调整，马克思主义理论学科由马克思主义学院负责建设。2018年10 月，成为河南省委宣传部与河南大学共建单位。2019年2月，入选河南省首批重点马克思主义学院。2019年11月，学校与焦裕禄干部学院共建焦裕禄精神研究院。2021年，马克思主义理论获批一级学科博士授权点，思想政治教育本科专业获批国家一流本科专业建设点。2023年，获评首批“河南省高校示范性马克思主义学院”，并获批马克思主义理论博士后科研流动站，实现了学院本-硕-博-博士后完整人才培养体系和教育教学体系的新突破。</span></p><p style="line-height: 2em; text-align: justify; margin-bottom: 5px; margin-top: 5px;"><span style="color: rgb(68, 68, 68); font-size: 18px; font-family: 宋体;">&nbsp; &nbsp;学院机构设置完善。设有思想政治教育系、研究生思想政治理论课教研室、马克思主义基本原理教研室、毛泽东思想和中国特色社会主义理论体系概论教研室、习近平新时代中国特色社会主义思想概论教研室、中国近现代史纲要教研室、思想道德与法治教研室、形势与政策教研室等8个基层教学组织。拥有马克思主义研究院、焦裕禄精神研究院、思政课程与课程思政联合研究示范中心、河南省革命文物协同研究基地等研究机</span><span style="color: rgb(68, 68, 68); font-size: 18px; font-family: 宋体;"><span style="border: 0px; padding: 0px; margin: 0px; color: rgb(68, 68, 68); font-family: 宋体; font-size: 18px; text-align: justify; text-indent: 37px; text-wrap: wrap;">构和河南省高校思想政治理论课教师培训基地。</span></span></p><p style="text-indent: 43px; line-height: 2em; text-align: justify; margin-bottom: 5px; margin-top: 5px;"><span style="color: rgb(68, 68, 68); font-size: 18px; font-family: 宋体;"><span style="border: 0px; padding: 0px; margin: 0px; color: rgb(68, 68, 68); font-family: 宋体; font-size: 18px; text-align: justify; text-indent: 37px; text-wrap: wrap;">学院师资力量雄厚。拥有一支学历层次高，职称、年龄结构合理，充满生机和活力的高素质教师队伍。现有教职工100人，专任教师90人。专任教师中，教授、副教授58人，具有博士学位79人。国家“万人计划”哲学社会科学领军人才1人，全国文化名家暨“四个一批”人才1人，省特聘教授1人，河南省中原英才计划（育才项目）1人，河南省教学名师1人，河南省教师教育专家2人，河南省教学标兵11人，全国高校思想政治理论课教师年度影响力提名人物1人，河南省高等学校优秀思想政治理论课教师7人，河南省社会科学年度影响人物1人，河南省“四个一批”（理论）人才3人，河南省“百优”青年社科理论人才1人，河南省青年理论宣讲专家4人。</span></span></p><p style="text-indent: 39px; text-align: justify; line-height: 2em; margin-bottom: 5px; margin-top: 5px;"><span style="color: rgb(68, 68, 68); font-size: 18px; font-family: 宋体;">学科和专业完备。学院有从本科到博士的完整人才培养体系，拥有马克思主义理论一级学科（包括马克思主义基本原理、马克思主义中国化研究、思想政治教育、中国近现代史基本问题研究等4个二</span><span style="color: rgb(68, 68, 68); font-size: 18px; font-family: 宋体;">级学科）博士学位授权点，马克思主义理论一级学科（包括马克思主义基本原理、马克思主义发展史、马克思主义中国化研究、国外马克思主义研究、思想政治教育、中国近现代史基本问题研究、党内法规制度研究、干部教育学等8个二级学科）硕士学位授权点，教育硕士（学科教学·思政）专业学位授权点。其中，马克思主义理论一级学科为河南省重点学科，思想政治教育(含干部教育方向) 本科专业为国家级一流本科专业、河南省特色专业。学院现有博士、硕士研究生260余人，本科生440余人。”改为“学院本硕博在校生770余人。</span><br></p><p style="text-indent: 37px; text-align: justify; line-height: 2em; margin-bottom: 5px; margin-top: 5px;"><span style="color: rgb(68, 68, 68); font-size: 18px; font-family: 宋体;">科学研究成果丰硕。学院教师先后在《中国社会科学》《马克思主义研究》《政治学研究》《哲学研究》《世界宗教研究》等高级别学术期刊上发表论文百余篇。学院先后获批国家和省部级项目百余项，出版学术专著98部，科研成果获省社科优秀成果奖30余项，其它奖项多项。</span></p><p style="text-indent: 37px; text-align: justify; line-height: 2em; margin-bottom: 5px; margin-top: 5px;"><span style="color: rgb(68, 68, 68); font-size: 18px; font-family: 宋体;">人才培养特色鲜明。学院根据“厚基础、宽口径、高素质、强能力”的要求，探索“课程育人+科研育人+实践育人”模式，全力促进学生的全面发展。学院重视学生专业素养提升的同时，注重学生实践技能的培养，拥有当代中国马克思主义研究会、三农发展研究会等学生社团，社团曾荣获全国高校“优秀学生社团”、“全国高校十大明星社团”、“河南百佳大学生社团”、“河南省文明社团”等多项荣誉。学院举办“模拟两会”、“时政论坛”、“习近平新时代中国特色社会主义思想宣讲大赛”、“社会主义核心价值观短剧大赛”、“信仰之旅”等特色活动在校内外影响广泛。</span></p><p style="text-indent: 37px; text-align: justify; line-height: 2em; margin-bottom: 5px; margin-top: 5px;"><span style="color: rgb(68, 68, 68); font-size: 18px; font-family: 宋体;">学院将秉持“明德，新民，止于至善”的校训，承继延续至今的优良办学传统，继往开来，锐意进取，不断开创学院建设新局面。</span></p><p><br></p><p><br></p><p><br></p></div></div>
+    <span id="vsb_content_2928_u7" name="vsb_content_2928_u7"></span><br><br>
+    
+ </div>
+</div></div>
+            <div class="col_lg_3">
+                <div class="rightBg2 rightBg"><img src="../images/abright.jpg"></div>
+            </div> 
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+
+    <div id="gotoTop"><i class="fa fa-angle-up fa-2x"></i></div><footer class="footer"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<section class="fot_bbar"><section class="fot_wap"><section class="fot_left"><div class="logobottom"><img src="../images/marx-logo.png"></div><p>地址：中国·开封·明伦街85号</p><p>邮编：475004</p><p>办公电话：0371-22868398</p><p>本科招生咨询电话：0371-22622806</p><p>版权所有@河南大学马克思主义学院</p></section><section class="fot_cen"><div style="text-align:center"><img src="../images/2weima.png"><br><span style="color:white">关注我们</span></div></section><section class="fot_right"><table class="linktb"><tbody><tr class="firstRow"><td><span class="title">友<br>情<br>链<br>接</span></td><td>　　　</td><td><p><a target="_blank" href="http://www.npopss-cn.gov.cn">国家哲学社会科学规划办公室</a></p><p><a target="_blank" href="http://www.sinoss.net">中国高校人文社科信息网</a></p><p><a target="_blank" href="http://myy.cssn.cn/">马克思主义研究网</a></p><p><a target="_blank" href="http://www.henu.edu.cn">河南大学官网</a></p></td><td><p><a target="_blank" href="http://www.moe.gov.cn/s78/A12/">教育部思政司</a></p><p><a target="_blank" href="http://theory.people.com.cn/GB/179412/index.html">马克思主义学习网</a></p><p><a target="_blank" href="http://www.hnpopss.gov.cn">河南省哲学社会科学规划办公室</a></p><p><a target="_blank" href="http://marxism.henu.edu.cn/yjy/gdlj.htm">更多友情链接</a></p></td></tr></tbody></table><p><br></p></section></section></section><!--<section class="fot_bot_b"><section class="fot_bot"><span class="">院长信箱</span><span class="">联系我们 </span><span class="">管理登录</span><span class="">收藏本站</span></section></section>--></footer>
+   
+       <script src="../js/bdtxkmin.js" type="text/javascript"></script>
+    <script src="../js/comm.js" type="text/javascript"></script>
+    <script src="../js/inner.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      /* var arr1 = [
+            '/images/aboutbanner.jpg',
+            '/images/aboutbanner.jpg', 
+        ];
+        var arr2 = ['/images/intro.jpg',
+        ];
+        var arr3 = ['/images/abright.jpg',
+        ];
+        var iLen1 = arr1.length;
+        var iLen2 = arr2.length;
+        var iLen3 = arr3.length;
+        var iNum = 0;
+        $(function () {
+            iNum1 = Math.floor(Math.random() * iLen1);
+            iNum2 = Math.floor(Math.random() * iLen2);
+            iNum3 = Math.floor(Math.random() * iLen3);
+            $('.bannerImg').attr('src', arr1[iNum1]);
+            $('.introTitImg2 img').attr('src', arr2[iNum2]);
+            $('.rightBg2 img').attr('src', arr3[iNum3]);
+        });
+        */
+    </script> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

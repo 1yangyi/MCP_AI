@@ -1,0 +1,1116 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="author" content="oxxuan,chengxuan">
+<title>法学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="法学院">
+<META Name="keywords" Content="法学院" />
+
+<link rel="stylesheet" href="style/public.css" />
+<link rel="stylesheet" href="style/master.css" />
+
+
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e78475153505742000400014153 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1486028666)</script>
+</head>
+<body>
+<!--top-->
+<div class="stickWrap"></div>
+<div class="headerWrap">
+    
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<div style="margin-top:30px;"></div>
+<a href="index.htm" title="法学院"><img src="images/logofxy.png" width="425" height="77" border="0" alt="法学院" title="法学院"></a>
+    <div class="linSea">
+        <div class="link">
+<script language="javascript">
+function dosuba216476a()
+{
+    try{
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.indexOf("msie 8")>-1)
+        {
+            window.external.AddToFavoritesBar(document.location.href,document.title,"");//IE8
+        }else if(ua.toLowerCase().indexOf("rv:")>-1)
+        {
+            window.external.AddToFavoritesBar(document.location.href,document.title,"");//IE11+
+        }else{
+            if (document.all) 
+            {
+                window.external.addFavorite(document.location.href, document.title);
+            }else if(window.sidebar)
+            {
+                window.sidebar.addPanel( document.title, document.location.href, "");//firefox
+            }
+            else
+            {
+                alert(hotKeysa216476a());
+            }
+        }
+
+    }
+    catch (e){alert("无法自动添加到收藏夹，请使用 Ctrl + d 手动添加");}
+}
+function hotKeysa216476a() 
+{
+    var ua = navigator.userAgent.toLowerCase(); 
+    var str = "";    
+    var isWebkit = (ua.indexOf('webkit') != - 1); 
+    var isMac = (ua.indexOf('mac') != - 1);     
+    if (ua.indexOf('konqueror') != - 1) 
+    {  
+        str = 'CTRL + B'; // Konqueror   
+    } 
+    else if (window.home || isWebkit || isMac) 
+    {        
+        str = (isMac ? 'Command/Cmd' : 'CTRL') + ' + D'; // Netscape, Safari, iCab, IE5/Mac   
+    }
+    return ((str) ? '无法自动添加到收藏夹，请使用' + str + '手动添加' : str);
+}
+function setHomepagea216476a()
+{
+    var url = document.location.href;
+    if (document.all)
+    {
+        document.body.style.behavior='url(#default#homepage)';
+        document.body.setHomePage(url);
+    }
+    else if (window.sidebar)
+    {
+        if(window.netscape)
+        {
+             try{
+                  netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+             }catch (e){
+                   alert("该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true");
+             }
+        }
+    var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components. interfaces.nsIPrefBranch);
+    prefs.setCharPref('browser.startup.homepage',url);
+    }
+    else
+    {
+        alert("浏览器不支持自动设为首页，请手动设置");
+    }
+}
+</script>
+<table>
+    <tr>
+        <td style="font-size: 9pt">
+            <A href="javascript:setHomepagea216476a()" style="TEXT-DECORATION: none;">
+                <span onclick="javascript:setHomepagea216476a()">设为首页</span>
+            </A><font>|</font>
+            <A onclick="javascript:dosuba216476a();" href="#" style="TEXT-DECORATION: none;">
+                <span onclick="javascript:dosuba216476a()">加入收藏</span>
+            </A><font>|</font>
+            <A href="index/lxfs.htm" style="TEXT-DECORATION: none;">
+               联系我们
+            </A>
+
+         </td>
+    </tr>
+</table></div>
+        <div class="search">
+       <!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="searchText" placeholder="请输入关键字进行搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+           <span> <input type="image" src="images/search.png" name="submit_button" v-on:click="onSubmit()"/></span>
+            
+            
+
+
+
+            
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1486028666";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu2 = document.querySelector("#appu2");
+   if (appElementu2 && appElementu2.__vue__) {
+
+   } else {
+      $("#divu2").html($("#htmlu2").text());
+      var appOwner = "1486028666";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou2 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu2(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu2();
+        }
+      };
+
+      function onSubmitu2(e) {
+        queryInfou2.query.keyWord= $("#appu2  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou2.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script>
+        </div>
+    </div>
+</div>
+<!--nav-->
+<div class="navWrap">
+    <div class="innavWrap">
+        <ul class="cleafix">
+<li class="mainMenu">
+<a class="link" href="index.htm">学院概况</a>
+<div id="nav">
+<span>
+<a href="index/xyjj.htm">学院简介</a>
+
+</span>
+
+<span>
+<a href="index/yzjy.htm">院长寄语</a>
+
+</span>
+
+<span>
+<a href="index/xyld.htm">学院领导</a>
+
+</span>
+
+<span>
+<a href="index/lsyg.htm">历史沿革</a>
+
+</span>
+
+<span>
+<a href="index/ry.htm">荣誉</a>
+
+</span>
+
+<span>
+<a href="index/lxfs.htm">联系方式</a>
+
+</span>
+
+</div> 
+</li>
+   
+<li class="mainMenu">
+<a class="link" href="zxzx.htm">资讯中心</a>
+<div id="nav">
+<span>
+<a href="zxzx/xyxw.htm">学院新闻</a>
+
+</span>
+
+<span>
+<a href="zxzx/tzgg.htm">通知公告</a>
+
+</span>
+
+<span>
+<a href="zxzx/xshd.htm">学术活动</a>
+
+</span>
+
+</div> 
+</li>
+   
+<li class="mainMenu">
+<a class="link" href="szll.htm">师资力量</a>
+<div id="nav">
+<span>
+<a href="szll/zzjs.htm">专职教师</a>
+
+</span>
+
+<span>
+<a href="szll/jzjs.htm">兼职教师</a>
+
+</span>
+
+</div> 
+</li>
+   
+<li class="mainMenu">
+<a class="link" href="jxjw.htm">教学教务</a>
+<div id="nav">
+<span>
+<a href="jxjw/bks.htm">本科生</a>
+
+</span>
+
+<span>
+<a href="jxjw/yjs.htm">研究生</a>
+
+</span>
+
+<span>
+<a href="jxjw/bss.htm">博士生</a>
+
+</span>
+
+<span>
+<a href="jxjw/sxw.htm">双学位</a>
+
+</span>
+
+<span>
+<a href="jxjw/lxs.htm">留学生</a>
+
+</span>
+
+<span>
+<a href="jxjw/LLM.htm">LLM</a>
+
+</span>
+
+</div> 
+</li>
+   
+<li class="mainMenu">
+<a class="link" href="kxyj.htm">科学研究</a>
+<div id="nav">
+<span>
+<a href="kxyj/bwfx.htm">北外法学</a>
+
+</span>
+
+<span>
+<a href="kxyj/kycg.htm">科研成果</a>
+
+</span>
+
+<span>
+<a href="kxyj/yjzx.htm">研究中心</a>
+
+<div id="nav1">
+<a href="kxyj/yjzx/zscqyjzx.htm">知识产权研究中心</a>
+<a href="kxyj/yjzx/ymfyjzx.htm">英美法研究中心</a>
+<a href="kxyj/yjzx/gjlzfzyjzx.htm">国际廉政法制研究中心</a>
+<a href="kxyj/yjzx/zwjyfyjzx.htm">中外教育法研究中心</a>
+<a href="kxyj/yjzx/zgqyzcqzlzx.htm">中国企业走出去战略中心</a>
+<a href="kxyj/yjzx/zfflyjzx.htm">中非法律研究中心</a>
+</div>
+</span>
+
+</div> 
+</li>
+   
+<li class="mainMenu">
+<a class="link" href="xysh.htm">校园生活</a>
+<div id="nav">
+<span>
+<a href="xysh/tzz.htm">团总支</a>
+
+</span>
+
+<span>
+<a href="xysh/xsh.htm">学生会</a>
+
+</span>
+
+<span>
+<a href="xysh/yjsh.htm">研究生会</a>
+
+</span>
+
+<span>
+<a href="xysh/lzfls.htm">丽泽法律社</a>
+
+</span>
+
+<span>
+<a href="xysh/zscqfwz.htm">知识产权服务站</a>
+
+</span>
+
+</div> 
+</li>
+   
+<li class="mainMenu">
+<a class="link" href="rczp.htm">人才招聘</a>
+<div id="nav">
+<span>
+<a href="rczp/jxkyg.htm">教学科研岗</a>
+
+</span>
+
+<span>
+<a href="rczp/qzjxg.htm">全职教学岗</a>
+
+</span>
+
+<span>
+<a href="rczp/wjzj_z_dq_.htm">外籍专家（长、短期)</a>
+
+</span>
+
+<span>
+<a href="rczp/xzzy.htm">行政专员</a>
+
+</span>
+
+<span>
+<a href="rczp/Visiting_Scholar.htm">Visiting Scholar</a>
+
+</span>
+
+</div> 
+</li>
+   
+<li class="mainMenu">
+<a class="link" href="xyzy.htm">校友资源</a>
+<div id="nav">
+<span>
+<a href="xyzy/xyml.htm">校友名录</a>
+
+</span>
+
+<span>
+<a href="xyzy/xyhd.htm">校友活动</a>
+
+</span>
+
+</div> 
+</li>
+   
+<li class="mainMenu">
+<a class="link" href="dqgj.htm">党群共建</a>
+<div id="nav">
+<span>
+<a href="dqgj/djgs.htm">党建概述</a>
+
+</span>
+
+<span>
+<a href="dqgj/djdt.htm">党建动态</a>
+
+</span>
+
+<span>
+<a href="dqgj/dyfz.htm">党员发展</a>
+
+</span>
+
+<span>
+<a href="dqgj/ghhd.htm">工会活动</a>
+
+</span>
+
+</div> 
+</li>
+   
+<li class="mainMenu">
+<a class="link" href="xzzq.htm">下载专区</a>
+<div id="nav">
+<span>
+<a href="xzzq/jgzq.htm">教工专区</a>
+
+</span>
+
+<span>
+<a href="xzzq/xszq.htm">学生专区</a>
+
+</span>
+
+</div> 
+</li>
+   
+<li class="mainMenu">
+<a class="link" href="IP_MOOT_COURT.htm">IP MOOT COURT</a>
+<div id="nav">
+<span>
+<a href="IP_MOOT_COURT/Introduction.htm">Introduction</a>
+
+</span>
+
+<span>
+<a href="IP_MOOT_COURT/Previous_Competitions.htm">Previous Competitions</a>
+
+<div id="nav1">
+<a href="IP_MOOT_COURT/Previous_Competitions/2024_IP_MOOT_COURT.htm">2024 IP MOOT COURT</a>
+<a href="IP_MOOT_COURT/Previous_Competitions/a2023_IP_Moot_Court.htm">2023 IP Moot Court</a>
+<a href="IP_MOOT_COURT/Previous_Competitions/2022_IP_MOOT_COURT.htm">2022 IP MOOT COURT</a>
+<a href="IP_MOOT_COURT/Previous_Competitions/2021_IP_MOOT_COURT.htm">2021 IP MOOT COURT</a>
+<a href="IP_MOOT_COURT/Previous_Competitions/2019_IP_MOOT_COURT.htm">2019 IP MOOT COURT</a>
+<a href="IP_MOOT_COURT/Previous_Competitions/2018_IP_MOOT_COURT.htm">2018 IP MOOT COURT</a>
+<a href="IP_MOOT_COURT/Previous_Competitions/PREVIOUS_COMPETITION.htm">PREVIOUS COMPETITION</a>
+</div>
+</span>
+
+<span>
+<a href="IP_MOOT_COURT/IP_MOOT_COURT_2025.htm">2025 IP MOOT COURT</a>
+
+</span>
+
+</div> 
+</li>
+   
+
+</ul>
+
+
+
+    </div>
+</div>
+<!--banner-->
+<div class="vsb-box">
+    <div class="vsb-container a" containerid="1" columns="4">
+        
+    </div>
+    <div class="vsb-container a" containerid="1" columns="4">
+        
+        </div>
+    </div>
+    <div class="vsb-container a" containerid="1" columns="4">
+        <div class="vsb-space ban3" columns="4">
+            <div class="slideBox slideBox3">
+                <div class="bd">
+                        <script language="javascript" src="/system/resource/js/dynclicks.js"></script><div class="slideBox slideBox3">
+				<div class="bd">
+
+<ul>
+            
+              <li>
+							<a href=""><img src="images/18/08/23/1u9iumgbgf/banner33.jpg"></a>
+							<div class="tit"><p>北京外国语大学法学院</p></div>
+						</li>  
+              <li>
+							<a href=""><img src="images/18/08/23/1u9iumgbgf/banner22.jpg"></a>
+							<div class="tit"><p>北京外国语大学法学院</p></div>
+						</li>  
+        
+        
+              <li>
+							<a href=""><img src="images/18/08/23/1u9iumgbgf/bwimg.jpg"></a>
+							<div class="tit"><p>北京外国语大学法学院</p></div>
+						</li>  
+              <li>
+							<a href=""><img src="images/18/08/23/1u9iumgbgf/bw4.png"></a>
+							<div class="tit"><p>北京外国语大学法学院</p></div>
+						</li>  
+        
+</ul>
+</div>
+				<div class="prev-next">
+					<a class="prev" href="javascript:void(0)"></a>
+					<a class="next" href="javascript:void(0)"></a>
+				</div>
+			</div>
+                </div>
+                <div class="prev-next">
+                    <a class="prev" href="javascript:void(0)"></a>
+                    <a class="next" href="javascript:void(0)"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<!--页面主体部分-->
+<!-- main部分-横 -->
+<div class="vsb-box">
+    <!--mainOne-->
+    <div class="vsb-container mainOne cleafix" containerid="2" columns="4">
+        <div class="vsb-space oneLeft" columns="3" style="width:570px;">
+            <div class="insidelOne">
+                <div class="insiTitle cleafix">
+                    <h2>学院新闻</h2>
+                    <a href="zxzx/xyxw.htm" target="">更多</a>
+                </div>
+                <div class="insiBom cleafix">
+                    <div class="insiFocus fl">
+                        
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="hd">
+<ul>
+    <li></li>  
+    <li></li>  
+    <li></li>  
+    <li></li>  
+</ul>
+</div>
+<div class="bd">
+<ul>
+<li>
+<a href="info/1137/4308.htm"><img src="/__local/E/74/D3/05ABEA2D81C5697390BE9DE8607_6CDBFF0F_1A9CF.jpg" style="width:280px; height:213px;" /></a>
+<p>法学院赴观韬律师事务所交流访问</p>
+</li>
+<li>
+<a href="info/1137/4348.htm"><img src="/__local/0/97/50/397040A436597E03DDD0CFA36A4_E747F3FB_403B8.png" style="width:280px; height:213px;" /></a>
+<p>挪威卑尔根大学Bjørnar Borvik 教授到访我院并做讲座</p>
+</li>
+<li>
+<a href="info/1137/4338.htm"><img src="/__local/8/CE/72/E2E3BDB498500FD768581A3868C_7A01E6CC_24F2F.jpg" style="width:280px; height:213px;" /></a>
+<p>法学院法律硕士研究生党支部与北京雍文律师事务所开展红色“1+1”共建活动</p>
+</li>
+<li>
+<a href="info/1137/4298.htm"><img src="/__local/F/6A/09/6C0DF4D6AC82DCEE45CA33766E8_15B4AF48_14A52.png" style="width:280px; height:213px;" /></a>
+<p>我院毕业生获2024-2025年度北京市“高校毕业生基层就业卓越奖”</p>
+</li>
+</ul>
+</div><script>_showDynClickBatch(['dynclicks_u5_4308','dynclicks_u5_4348','dynclicks_u5_4338','dynclicks_u5_4298'],[4308,4348,4338,4298],"wbnews", 1486028666)</script>
+
+
+                    </div>
+                  
+                    
+
+<div class="textList fr">
+<ul>
+
+<li><a href="info/1137/4308.htm"><em>法学院赴观韬律师事务所交流访问</em><span>10-15</span></a></li>
+
+
+<li><a href="info/1137/4348.htm"><em>挪威卑尔根大学Bjørnar Borvik 教授到访...</em><span>10-14</span></a></li>
+
+
+<li><a href="info/1137/4338.htm"><em>法学院法律硕士研究生党支部与北京雍文...</em><span>10-14</span></a></li>
+
+
+<li><a href="info/1137/4298.htm"><em>我院毕业生获2024-2025年度北京市“高校...</em><span>10-13</span></a></li>
+
+
+<li><a href="info/1137/4288.htm"><em>北外法学院赴万慧达知识产权交流访问</em><span>10-11</span></a></li>
+
+
+<li><a href="info/1137/4278.htm"><em>赵刚副校长带队赴法学院走访调研科研工作</em><span>10-11</span></a></li>
+
+
+<li><a href="info/1137/4248.htm"><em>澳门大学法学院院长唐晓晴教授一行到访我院</em><span>10-09</span></a></li>
+
+</ul>
+</div>
+<script>_showDynClickBatch(['dynclicks_u6_4308','dynclicks_u6_4348','dynclicks_u6_4338','dynclicks_u6_4298','dynclicks_u6_4288','dynclicks_u6_4278','dynclicks_u6_4248'],[4308,4348,4338,4298,4288,4278,4248],"wbnews", 1486028666)</script>
+
+
+                </div>
+            </div>
+        </div>
+                              <DIV class="vsb-space oneRight" columns="1">
+
+<div class="insiderOne">
+                <div class="insiTitle cleafix">
+                    <h2>通知公告</h2>
+                    <a href="zxzx/tzgg.htm">更多</a>
+                </div>
+                <div class="textList cleafix">
+<ul>
+   <li><a href="info/1169/4258.htm"><em>关于2026年硕士研究生统一入学考试法学基础、法学...</em><span>10/11</span></a></li>
+   <li><a href="info/1169/4148.htm"><em>北京外国语大学法学院2026年接收推免生考试录取结...</em><span>09/22</span></a></li>
+   <li><a href="info/1169/4048.htm"><em>关于接收2026年优秀应届本科毕业生免试攻读硕士学...</em><span>09/12</span></a></li>
+   <li><a href="info/1169/4038.htm"><em>北京外国语大学法学院关于接收2026年优秀应届本科...</em><span>09/09</span></a></li>
+   <li><a href="info/1169/3788.htm"><em>关于开展法学院2025级新生党组织关系及团组织关系...</em><span>06/10</span></a></li>
+   <li><a href="info/1169/3588.htm"><em>北京外国语大学法学专业课程研修班2025秋季招生简...</em><span>05/15</span></a></li>
+   <li><a href="info/1169/3328.htm"><em>法学院2025年博士生招生考试工作方案</em><span>04/08</span></a></li>
+</ul>
+</div>
+            </div><script>_showDynClickBatch(['dynclicks_u7_4258','dynclicks_u7_4148','dynclicks_u7_4048','dynclicks_u7_4038','dynclicks_u7_3788','dynclicks_u7_3588','dynclicks_u7_3328'],[4258,4148,4048,4038,3788,3588,3328],"wbnews", 1486028666)</script>
+
+ </DIV>
+<DIV class="vsb-space oneRight" columns="1">
+
+<div class="insiderOne">
+                <div class="insiTitle cleafix">
+                    <h2>学术活动</h2>
+                    <a href="zxzx/xshd.htm">更多</a>
+                </div>
+                <div class="textList cleafix">
+<ul>
+   <li><a href="info/1101/2355.htm"><em>讲座预告：最高人民检察院“...</em><span>05/21</span></a></li>
+   <li><a href="info/1101/2307.htm"><em>讲座预告：检察实务专家进校...</em><span>04/02</span></a></li>
+   <li><a href="info/1101/1739.htm"><em>破产法专题讲座“破产担保与...</em><span>10/26</span></a></li>
+   <li><a href="info/1101/1735.htm"><em>讲座预告：破产担保与破产撤销</em><span>10/21</span></a></li>
+   <li><a href="info/1101/1710.htm"><em>中国国际法学会2020年学术年...</em><span>09/17</span></a></li>
+   <li><a href="info/1101/1704.htm"><em>我院刘静老师做客央视财经栏...</em><span>09/09</span></a></li>
+   <li><a href="info/1101/1696.htm"><em>培养具有国际视野的高素质涉...</em><span>08/06</span></a></li>
+</ul>
+</div>
+            </div><script>_showDynClickBatch(['dynclicks_u8_2355','dynclicks_u8_2307','dynclicks_u8_1739','dynclicks_u8_1735','dynclicks_u8_1710','dynclicks_u8_1704','dynclicks_u8_1696'],[2355,2307,1739,1735,1710,1704,1696],"wbnews", 1486028666)</script>
+
+ </DIV></DIV><!--ad_three-->
+<DIV class="vsb-container mainOne" columns="4" containerid="2"></DIV>                  
+    </div>
+    <!--mainTwo-->
+    <div class="vsb-container mainOne cleafix" containerid="2" columns="4">
+        
+        
+    </div>
+    <!--mainThree-->
+    <div class="vsb-container mainOne cleafix" containerid="2" columns="4">
+        
+        
+    </div>
+    <!--ad_one-->
+    <div class="vsb-container mainOne" containerid="2" columns="4">
+        
+    </div>
+</div>
+
+<!-- main部分-竖 -->
+<div class="mainShu">
+    <!--mainFour-->
+    <div class="vsb-box mainsLeft">
+        <!--fourLeft-tp-->
+        <div class="vsb-container" containerid="2" columns="3">
+            
+        </div>
+        <!--fourLeft-ml-->
+        <div class="vsb-container cleafix" containerid="2" columns="3">
+            
+            
+            
+        </div>
+        <!--fourLeft-bm-->
+        <div class="vsb-container cleafix" containerid="2" columns="3">
+            
+            
+        </div>
+    </div>
+    <div class="vsb-box mainsRight">
+        <div class="vsb-container" containerid="2" columns="1">
+            
+            
+            
+        </div>
+    </div>
+    <div class="cleafix"></div>
+</div>
+
+<!-- main部分-横 -->
+<div class="vsb-box">
+    <!--ad_two-->
+    <div class="vsb-container mainOne" containerid="2" columns="4">
+        
+    </div>
+    <!--mainFive-->
+    <div class="vsb-container mainOne cleafix" containerid="2" columns="4">
+        <div class="vsb-space fiveLeft" columns="1">
+         <div class="vsb-space fourr-tp" columns="1">
+                <h2 class="Title3 cleafix">
+                    <span><em>学院</em>师资</span>
+                    <a href="szll/zzjs.htm" class="more" target="">更多</a>
+                </h2>
+                
+
+<ul class="ft-tp-list cleafix">
+   <li>
+						<a href="info/1114/2305.htm">
+							<img src="/__local/F/1A/E5/28F2C6090F989EAADBC59E918F1_9E2E40C7_12592.jpg" style="width:88px; height:112px" />
+							<p>郭向华</p>
+						</a>
+					</li>
+   <li>
+						<a href="info/1114/4358.htm">
+							<img src="/__local/8/9A/5A/CE85A283774BA644751DA89F385_896CD8FC_A2B5A.jpg" style="width:88px; height:112px" />
+							<p>丁相顺</p>
+						</a>
+					</li>
+   <li>
+						<a href="info/1114/1234.htm">
+							<img src="/__local/8/C3/34/2D1B4DC817E65EA208494FCDFD1_3FE7CC7B_1A0D.jpg?e=.jpg" style="width:88px; height:112px" />
+							<p>闫冬</p>
+						</a>
+					</li>
+   <li>
+						<a href="info/1114/1226.htm">
+							<img src="/__local/B/CA/1C/E8EC476EEEDAFBAF4D31A69CB77_25E94CD4_1578D.jpg" style="width:88px; height:112px" />
+							<p>张燕龙</p>
+						</a>
+					</li>
+   <li>
+						<a href="info/1114/2408.htm">
+							<img src="/__local/8/93/4A/A8F6EAA983B2391BF37390E3139_62B9C5C0_3ECA7.jpg" style="width:88px; height:112px" />
+							<p>万方</p>
+						</a>
+					</li>
+   <li>
+						<a href="info/1114/1898.htm">
+							<img src="/__local/D/38/13/DCD96255C3EBC72FA6B7A1C49FB_0A383F6D_1C659.png" style="width:88px; height:112px" />
+							<p>董念清</p>
+						</a>
+					</li>
+</ul><script>_showDynClickBatch(['dynclicks_u9_2305','dynclicks_u9_4358','dynclicks_u9_1234','dynclicks_u9_1226','dynclicks_u9_2408','dynclicks_u9_1898'],[2305,4358,1234,1226,2408,1898],"wbnews", 1486028666)</script>
+
+
+            </div>
+        </div>
+        <div class="vsb-space fiveMiddle" columns="2">
+            <ul class="tab-menu cleafix">
+                <li class="sela selected">校园生活</li>
+                <li class="selb">教学教务</li>
+                <li class="selc">IP MOOT COURT</li>
+            </ul>
+            <div class="tab-box">
+                <div class="box">
+                   <a href="xysh.htm" class="tab-more" target=""><img src="images/ico8.png" /></a>
+                    <div class="box-con">
+                        
+
+<ul class="bcon-tp">
+   <li class="cleafix">
+                                <a href="info/1096/2347.htm" class="img"><img src="/__local/F/D2/F0/F7AA8A938C1DC863BAA21B16338_8F8E5D30_1177B.png" width="120" height="87" /></a>
+                                <div class="wen">
+                                    <a href="info/1096/2347.htm" class="tit">“繁星聚汇”校友沙龙活动第...</a>
+                                    <p>    为加强校友间的联系与交流，分享校友们的职业发展经验，4...[<a href="info/1096/2347.htm" class="detail">详细信息</a>]</p>
+                                </div>
+   <li class="cleafix">
+                                <a href="info/1096/2346.htm" class="img"><img src="/__local/9/97/E9/70A004B29D0941F0162DBCEA242_154291E2_151DD.png" width="120" height="87" /></a>
+                                <div class="wen">
+                                    <a href="info/1096/2346.htm" class="tit">法学院举办新闻写作培训会</a>
+                                    <p>    为加强学生干部队伍建设，提高新闻宣传工作水平，2024年4...[<a href="info/1096/2346.htm" class="detail">详细信息</a>]</p>
+                                </div>
+   <li class="cleafix">
+                                <a href="info/1125/2345.htm" class="img"><img src="/__local/E/B3/9C/2D5A1619E1CBE3546C02EF57D79_EE33A247_AEB0.jpeg" width="120" height="87" /></a>
+                                <div class="wen">
+                                    <a href="info/1125/2345.htm" class="tit">丽泽法律社</a>
+                                    <p>一、社团简介    北京外国语大学丽泽法律社，原名丽泽法律援...[<a href="info/1125/2345.htm" class="detail">详细信息</a>]</p>
+                                </div>
+   <li class="cleafix">
+                                <a href="info/1124/2342.htm" class="img"><img src="/system/resource/images/defaultimg.gif" width="120" height="87" /></a>
+                                <div class="wen">
+                                    <a href="info/1124/2342.htm" class="tit">研究生会</a>
+                                    <p>    ​北京外国语大学法学院研究生会是在学院党总支领导下、...[<a href="info/1124/2342.htm" class="detail">详细信息</a>]</p>
+                                </div>
+                         </li>
+<li><a href="info/1123/2341.htm"><span>2024-04-30</span>学生会</a></li>
+                         </li>
+<li><a href="info/1122/2337.htm"><span>2024-04-30</span>团总支</a></li>
+                         </li>
+<li><a href="info/1122/2104.htm"><span>2022-10-21</span>法学院团总支举办“喜庆二十...</a></li>
+                         </li>
+<li><a href="info/1122/1949.htm"><span>2021-12-10</span>法学院开展2021级本科新生引...</a></li>
+                         </li>
+<li><a href="info/1122/1931.htm"><span>2021-11-26</span>法学院2022届毕业生就业形势...</a></li>
+                         </li>
+<li><a href="info/1122/1930.htm"><span>2021-11-25</span>法学院新生班级喜获2021年北...</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u10_2347','dynclicks_u10_2346','dynclicks_u10_2345','dynclicks_u10_2342','dynclicks_u10_2341','dynclicks_u10_2337','dynclicks_u10_2104','dynclicks_u10_1949','dynclicks_u10_1931','dynclicks_u10_1930'],[2347,2346,2345,2342,2341,2337,2104,1949,1931,1930],"wbnews", 1486028666)</script>
+
+
+                    </div>
+                </div>
+                <div class="box hide">
+                    
+
+
+ <a href="jxjw.htm" class="tab-more" target=""><img src="images/ico8.png" /></a>
+                    <div class="box-con">
+                        
+
+<ul class="bcon-tp">
+   <li class="cleafix">
+                                <a href="info/1108/1249.htm" class="img"><img src="/system/resource/images/defaultimg.gif" width="120" height="87" /></a>
+                                <div class="wen">
+                                    <a href="info/1108/1249.htm" class="tit">留学生</a>
+                                    <p>Application Informationfor Overseas Students[SEMESTER]The...[<a href="info/1108/1249.htm" class="detail">详细信息</a>]</p>
+                                </div>
+   <li class="cleafix">
+                                <a href="info/1107/1248.htm" class="img"><img src="/system/resource/images/defaultimg.gif" width="120" height="87" /></a>
+                                <div class="wen">
+                                    <a href="info/1107/1248.htm" class="tit">双学位</a>
+                                    <p>北京外国语大学法学院“辅修/双学位”项目校内推介通告根据我...[<a href="info/1107/1248.htm" class="detail">详细信息</a>]</p>
+                                </div>
+   <li class="cleafix">
+                                <a href="info/1106/1247.htm" class="img"><img src="/system/resource/images/defaultimg.gif" width="120" height="87" /></a>
+                                <div class="wen">
+                                    <a href="info/1106/1247.htm" class="tit">博士生</a>
+                                    <p>北京外国语大学招收攻读博士学位研究生招生简章一、报考条件...[<a href="info/1106/1247.htm" class="detail">详细信息</a>]</p>
+                                </div>
+   <li class="cleafix">
+                                <a href="info/1105/1246.htm" class="img"><img src="/system/resource/images/defaultimg.gif" width="120" height="87" /></a>
+                                <div class="wen">
+                                    <a href="info/1105/1246.htm" class="tit">研究生</a>
+                                    <p>北京外国语大学招收攻读硕士学位研究生招生简章北京外国语大...[<a href="info/1105/1246.htm" class="detail">详细信息</a>]</p>
+                                </div>
+                         </li>
+<li><a href="info/1104/1245.htm"><span>2018-08-23</span>本科生</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u11_1249','dynclicks_u11_1248','dynclicks_u11_1247','dynclicks_u11_1246','dynclicks_u11_1245'],[1249,1248,1247,1246,1245],"wbnews", 1486028666)</script>
+
+
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+                <div class="box hide">
+                    <a href="IP_MOOT_COURT.htm" class="tab-more" target=""><img src="images/ico8.png" /></a>
+                    <div class="box-con">
+                        
+
+<ul class="bcon-tp">
+   <li class="cleafix">
+                                <a href="info/1128/1791.htm" class="img"><img src="/system/resource/images/defaultimg.gif" width="120" height="87" /></a>
+                                <div class="wen">
+                                    <a href="info/1128/1791.htm" class="tit">Notice: Cancel the 2020 Com...</a>
+                                    <p>​Dear allOwning to current serious situation of coronavi...[<a href="info/1128/1791.htm" class="detail">详细信息</a>]</p>
+                                </div>
+   <li class="cleafix">
+                                <a href="IP_MOOT_COURT/Previous_Competitions/2019_IP_MOOT_COURT.htm" class="img"><img src="/system/resource/images/defaultimg.gif" width="120" height="87" /></a>
+                                <div class="wen">
+                                    <a href="IP_MOOT_COURT/Previous_Competitions/2019_IP_MOOT_COURT.htm" class="tit">2019 IP MOOT COURT</a>
+                                    <p>[<a href="IP_MOOT_COURT/Previous_Competitions/2019_IP_MOOT_COURT.htm" class="detail">详细信息</a>]</p>
+                                </div>
+   <li class="cleafix">
+                                <a href="IP_MOOT_COURT/Previous_Competitions/2018_IP_MOOT_COURT.htm" class="img"><img src="/system/resource/images/defaultimg.gif" width="120" height="87" /></a>
+                                <div class="wen">
+                                    <a href="IP_MOOT_COURT/Previous_Competitions/2018_IP_MOOT_COURT.htm" class="tit">2018 IP MOOT COURT</a>
+                                    <p>[<a href="IP_MOOT_COURT/Previous_Competitions/2018_IP_MOOT_COURT.htm" class="detail">详细信息</a>]</p>
+                                </div>
+   <li class="cleafix">
+                                <a href="IP_MOOT_COURT/Previous_Competitions/PREVIOUS_COMPETITION.htm" class="img"><img src="/system/resource/images/defaultimg.gif" width="120" height="87" /></a>
+                                <div class="wen">
+                                    <a href="IP_MOOT_COURT/Previous_Competitions/PREVIOUS_COMPETITION.htm" class="tit">PREVIOUS COMPETITION</a>
+                                    <p>[<a href="IP_MOOT_COURT/Previous_Competitions/PREVIOUS_COMPETITION.htm" class="detail">详细信息</a>]</p>
+                                </div>
+                         </li>
+<li><a href="info/1126/1258.htm"><span>2018-08-23</span>Introduction</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u12_1791','dynclicks_u12_1579','dynclicks_u12_1580','dynclicks_u12_1581','dynclicks_u12_1258'],[1791,1579,1580,1581,1258],"wbnews", 1486028666)</script>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vsb-space fiveRight" columns="1">
+          <div class="vsb-space flm-ml" columns="1">
+                <h2 class="Title1 cleafix">
+                    <span>党建动态<em>/FOCUS NEWS</em></span>
+                    <a href="dqgj/djdt.htm" class="more" target=""><img src="images/ico3.png" /></a>
+                </h2>
+                
+
+<ul class="flm-ml-list">
+   <li class="cleafix">
+                        <a href="info/1132/4318.htm" class="img"><img src="/__local/8/CE/72/E2E3BDB498500FD768581A3868C_7A01E6CC_24F2F.jpg" style="width:100px; height:72px" /></a>
+                        <div class="wen">
+                            <a href="info/1132/4318.htm" class="tit">法学院法律硕士研...</a>
+                            <p>        2025年10月13日，法学院法律硕士研...[<a href="info/1132/4318.htm" class="detail">详细</a>]</p>
+                        </div>
+                    </li>
+   <li class="cleafix">
+                        <a href="info/1132/4208.htm" class="img"><img src="/__local/4/25/C5/BC4B617C0725898DCFDB433D870_FEA99228_783D.jpg" style="width:100px; height:72px" /></a>
+                        <div class="wen">
+                            <a href="info/1132/4208.htm" class="tit">法学院学生党支部...</a>
+                            <p>        2025年9月28日，法学院学生党支部与...[<a href="info/1132/4208.htm" class="detail">详细</a>]</p>
+                        </div>
+                    </li>
+   <li class="cleafix">
+                        <a href="info/1132/4198.htm" class="img"><img src="/__local/D/02/F2/40C1FEFAAD097F0809B47BBB4E5_7204B558_1F00D.jpg" style="width:100px; height:72px" /></a>
+                        <div class="wen">
+                            <a href="info/1132/4198.htm" class="tit">法学院党总支组织...</a>
+                            <p>        为深入学习贯彻习近平法治思想，全...[<a href="info/1132/4198.htm" class="detail">详细</a>]</p>
+                        </div>
+                    </li>
+   <li class="cleafix">
+                        <a href="info/1132/3948.htm" class="img"><img src="" style="width:100px; height:72px" /></a>
+                        <div class="wen">
+                            <a href="info/1132/3948.htm" class="tit">弘扬教育家精神 加...</a>
+                            <p>为深入学习贯彻习近平总书记关于教育的重要...[<a href="info/1132/3948.htm" class="detail">详细</a>]</p>
+                        </div>
+                    </li>
+   <li class="cleafix">
+                        <a href="info/1132/3908.htm" class="img"><img src="/__local/C/A8/69/9306900BC0D1B23399AC53A4230_4DD35484_19E44.jpg" style="width:100px; height:72px" /></a>
+                        <div class="wen">
+                            <a href="info/1132/3908.htm" class="tit">法学院党总支召开...</a>
+                            <p>        7月2日上午，法学院党总支召开理论...[<a href="info/1132/3908.htm" class="detail">详细</a>]</p>
+                        </div>
+                    </li>
+</ul>
+<script>_showDynClickBatch(['dynclicks_u13_4318','dynclicks_u13_4208','dynclicks_u13_4198','dynclicks_u13_3948','dynclicks_u13_3908'],[4318,4208,4198,3948,3908],"wbnews", 1486028666)</script>
+
+
+            </div>
+        </div>
+    </div>
+    <!--ad_three-->
+    <div class="vsb-container mainOne" containerid="2" columns="4">
+        
+    </div>
+    <!--linkOne-->
+    <div class="vsb-container mainOne" containerid="2" columns="4">
+        
+    </div>
+    <!--linkTwo-->
+    <div class="vsb-container mainOne" containerid="2" columns="4">
+        <div class="vsb-space linkTwo" columns="4">
+            <h2 class="Title1 cleafix">
+                <span class="span">友情链接<em>/LINK</em></span>
+            </h2>
+            <div class="link-list2 cleafix">
+                <script language="javascript" src="/system/resource/js/openlink.js"></script>    <a href="http://www.bfsu.edu.cn/">北京外国语大学</a>
+    <a href="http://www.csc.edu.cn/">国家留学基金会</a>
+    <a href="http://english.mofcom.gov.cn/">商务部英文网</a>
+    <a href="http://sl.bfsu.edu.cn/">CGG</a>
+    <a href="http://#">中国法学创新网</a>
+    <a href="&lt;span style='color:red;font-size:9pt'&gt;转换链接错误&lt;/span&gt;">LLM招生</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--footer-->
+<div class="footerWrap">
+    <!--footOne-->
+    <div class="footOne">
+        <div class="foot cleafix">
+<!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>Copyright @ BFSU. 北京外国语大学版权所有. 地址：北京市海淀区西三环北路2号/19号&nbsp;&nbsp;&nbsp; 邮编：100089&nbsp;&nbsp;Supported by BFSU ITC</p> 
+        </div>
+    </div>
+   </div>
+   
+   <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

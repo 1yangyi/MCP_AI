@@ -1,0 +1,244 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<!--[if IE 7 ]> <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]> <html class="ie8"> <![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chorme=1">
+<title>中心概况-时空数据智能获取技术与应用教育部工程中心</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="中心概况">
+<meta name="keywords" content="时空数据智能获取技术与应用教育部工程中心">
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/mobile.css">
+<!--轮播图样式以及设置-->
+<link href="js/royalslider/css/royalslider.css" rel="stylesheet">
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/royalslider/js/jquery.royalslider.min.js"></script>
+<!--轮播图样式以及设置结束-->
+<script src="js/main.js"></script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css">
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1002,'/about.jsp',-1,1448217335)</script>
+</head>
+
+<body>
+<!--网页头部开始-->
+    <div class="header">
+         <div class="header_top">
+            <div class="container">
+                
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm"><img src="images/logo1.png" class="logo_img1"></a>
+<a href="index.htm"><img src="images/logo2.png" class="logo_img2"></a>
+                <button type="button" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+               </button>
+            </div>
+       </div>
+       
+       <div class="nav">
+        <div class="container"> 
+            <!--  网站导航开始 -->   
+            <ul class="daohang clearfix">
+        <li><a href="index.htm">网站首页</a></li>
+    
+    <li class="active"><a href="zxgk1.htm">中心概况</a></li>
+    
+    <li><a href="yjtd.htm">研究团队</a></li>
+    
+    <li><a href="xwgg.htm">新闻公告</a></li>
+    
+    <li><a href="kydt.htm">科研动态</a></li>
+    
+    <li><a href="xsjl.htm">学术交流</a></li>
+    
+    <li><a href="rcpy.htm">人才培养</a></li>
+</ul>
+            <!--  网站导航结束 -->
+            
+           <!--  搜索开始 --> 
+               <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu2">
+    <div id="appu2"><div class="search1"><input type="text" name="search_kang" placeholder="请输入关键字" id="search_kang" autocomplete="off"> <input type="image" name="search_image" id="search_image" src="images/search.png"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError" class="search1">
+        
+        <input type="text" name="search_kang"  placeholder="请输入关键字" id="search_kang" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                    <input type="image" name="search_image" id="search_image" src="images/search.png"  v-on:click="onSubmit()">
+        
+
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1448217335";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+           <!-- 搜索结束 --> 
+        </div>
+       </div>
+       
+    </div>
+   <!--网页头部开始-->
+   
+    <div class="content clearfix">
+        <div class="write-content">
+            <div class="container">
+                <!--轮播图开始-->
+                     <script language="javascript" src="/system/resource/js/dynclicks.js"></script><div class="sliderContainer fullWidth clearfix">
+    <div id="full-width-slider" class="royalSlider heroSlider rsMinW">
+            <div class="rsContent"> <a href="#" onclick="_addDynClicks(&quot;wbimage&quot;, 1448217335, 37194)"><img class="rsImg" src="images/banner.jpg" alt=""></a></div>
+        <div class="rsContent"> <a href="#" onclick="_addDynClicks(&quot;wbimage&quot;, 1448217335, 37193)"><img class="rsImg" src="images/banner.jpg" alt=""></a></div>
+        <div class="rsContent"> <a href="#" onclick="_addDynClicks(&quot;wbimage&quot;, 1448217335, 37192)"><img class="rsImg" src="images/banner.jpg" alt=""></a></div>
+    </div>
+</div> 
+               <!--轮播图结束--> 
+             </div>
+         </div>
+           
+        <div class="article">
+            <div class="container">
+                <!--当前位置-->
+                 <div class="location">
+您所在的位置：
+            
+        <a href="index.htm">首页</a> &nbsp;&gt;&gt;&nbsp;
+        <a href="zxgk1.htm" class="on">中心概况</a>
+</div>  
+                <!--当前位置结束-->
+        
+                 
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1448217335,'wbnews','u5')</script>
+<script>function seeContenta5(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta5('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1448217335,1167)</script>
+<div class="article_content">
+
+    <h1></h1> <!--引题-->
+    <h2>中心简介</h2> <!--标题-->
+    <h3></h3> <!--副标题-->
+    <h4>作者：&nbsp;&nbsp;文章来源：&nbsp;&nbsp;  点击次数：<script>_showDynClicks("wbnews", 1448217335, 1167)</script><span id="dynclicks_wbnews_1167_919" name="dynclicks_wbnews_1167_919">2303</span>&nbsp;&nbsp;更新时间：2018-07-03 15:36:19</h4>
+    <div class="content">
+      <div id="vsb_content_1167_u51"><div id="vsb_content"><style><!--  /* Font Definitions */  @font-face {font-family:宋体; panose-1:2 1 6 0 3 1 1 1 1 1;} @font-face {font-family:"Cambria Math"; panose-1:2 4 5 3 5 4 6 3 2 4;} @font-face {font-family:Calibri; panose-1:2 15 5 2 2 2 4 3 2 4;} @font-face {font-family:"\@宋体"; panose-1:2 1 6 0 3 1 1 1 1 1;}  /* Style Definitions */  p.MsoNormal, li.MsoNormal, div.MsoNormal {margin:0cm; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:10.5pt; font-family:"Calibri","sans-serif";} p.MsoHeader, li.MsoHeader, div.MsoHeader {mso-style-link:"页眉 Char"; margin:0cm; margin-bottom:.0001pt; text-align:center; vsb_temp-mode:char; border:none; padding:0cm; font-size:9.0pt; font-family:"Calibri","sans-serif";} p.MsoFooter, li.MsoFooter, div.MsoFooter {mso-style-link:"页脚 Char"; margin:0cm; margin-bottom:.0001pt; vsb_temp-mode:char; font-size:9.0pt; font-family:"Calibri","sans-serif";} p {margin-right:0cm; margin-left:0cm; font-size:12.0pt; font-family:"Calibri","sans-serif";} p.MsoAcetate, li.MsoAcetate, div.MsoAcetate {mso-style-link:"批注框文本 Char"; margin:0cm; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:9.0pt; font-family:"Calibri","sans-serif";} span.Char {mso-style-name:"批注框文本 Char"; mso-style-link:批注框文本; font-family:"Calibri","sans-serif";} span.Char0 {mso-style-name:"页眉 Char"; mso-style-link:页眉; font-family:"Calibri","sans-serif";} span.Char1 {mso-style-name:"页脚 Char"; mso-style-link:页脚; font-family:"Calibri","sans-serif";} .MsoChpDefault {font-family:"Calibri","sans-serif";}  /* Page Definitions */  @page WordSection1 {size:595.3pt 841.9pt; margin:72.0pt 90.0pt 72.0pt 90.0pt; vsb_temp:15.6pt;} div.WordSection1 {page:WordSection1;} --></style><div class="WordSection1" style="vsb_temp: 15.6pt;"><p style="text-align: justify; line-height: 35pt; text-indent: 30pt; -ms-text-justify: inter-ideograph;"><span style="font-size: 21px;"><span style="font-family: 宋体;">时空数据智能获取技术与应用教育部工程研究中心（武汉大学）于</span>2009<span style="font-family: 宋体;">年成立，依托测绘遥感信息工程国家重点实验室（武汉大学）。该工程中心充分利用武汉大学测绘、电子、计算机等多学科优势，以国家重大工程需求为目标，以测绘技术集成创新为核心，建成多传感器集成的时空数据快速获取、智能处理与导航位置服务平台，培养一支一流的时空数据获取技术创新开发与系统集成队伍，形成空天地时空数据协同获取、智能处理与智慧应用的能力，推动测绘地理信息科技的进步。</span></span></p><p style="line-height: 35pt; text-indent: 30pt;"><span style="font-size: 21px;"><span style="font-family: 宋体;">工程中心主任由杨必胜教授担任，荣誉主任由深圳大学校长、欧亚科学院院士、何梁何利奖获得者李清泉教授担任。研究方向主要集中在多传感器集成与数据获取、多源信息提取与建模、时空数据挖掘与分析、空间信息智能服务。工程中心目前有固定研究人员</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">20</span><span style="font-family: 宋体;">余人，研究生</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">60</span><span style="font-family: 宋体;">余人，以及</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">1000<span style="color: black;"> m<sup>2</sup></span></span><span style="font-family: 宋体;">的工程技术研发基地。</span></span></p><p style="text-align: justify; line-height: 35pt; text-indent: 30pt; -ms-text-justify: inter-ideograph;"><span style="font-size: 21px;"><span style="font-family: 宋体;">近</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">5</span><span style="font-family: 宋体;">年来，中心承担了国家科技部</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">973</span><span style="font-family: 宋体;">项目课题</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">2</span><span style="font-family: 宋体;">项、</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">863</span><span style="font-family: 宋体;">计划项目</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">1</span><span style="font-family: 宋体;">项、重点研发计划</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">1</span><span style="font-family: 宋体;">项，军民融合重大专项</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">2</span><span style="font-family: 宋体;">项、国家自然基金重点项目</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">2</span><span style="font-family: 宋体;">项、面上项目</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">20</span><span style="font-family: 宋体;">项、青年项目</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">10</span><span style="font-family: 宋体;">项，以及百度、四维、华能澜沧江集团等</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">20</span><span style="font-family: 宋体;">余项应用合作研究项目。发表</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">SCI</span><span style="font-family: 宋体;">论文</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">200</span><span style="font-family: 宋体;">余篇，授权发明专利</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">20</span><span style="font-family: 宋体;">余项，获国家技术发明二等奖</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">1</span><span style="font-family: 宋体;">项，教育部自然科学一等奖</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">1</span><span style="font-family: 宋体;">项，教育部科技进步一等奖</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">2</span><span style="font-family: 宋体;">项，湖北省科技进步一等奖</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">1</span><span style="font-family: 宋体;">项，国家测绘科技进步一等奖</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;,&quot;serif&quot;;">2</span><span style="font-family: 宋体;">项。</span></span></p><p class="MsoNormal" style="text-align: center;"><span style="font-family: 宋体; font-size: 21px;">&nbsp;</span></p></div></div></div>
+    </div>
+</div>
+             </div>
+         </div>
+     </div>
+      
+            
+    <div class="footer">
+       <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权所有：武汉大学 时空数据智能获取技术与应用教育部工程研究中心</p>
+<p>联系地址： 中国·武汉市珞瑜路129号&nbsp;&nbsp;   邮编: 430079 </p>
+    
+    </div>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

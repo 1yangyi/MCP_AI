@@ -1,0 +1,573 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学院简介-建筑与土木工程学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+
+
+<META Name="keywords" Content="建筑与土木工程学院,学院简介" />
+
+    <meta name="description" content="厦门大学建筑与土木工程学院" />
+    
+    <link href="../style/bootstrap.min.css" rel="stylesheet">
+    <link href="../style/all.css" rel="stylesheet">
+    <link href="../style/style.css" rel="stylesheet">
+    <link href="../style/content.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+        <script src="../js/html5shiv.min.js"></script>
+        <script src="../js/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.SuperSlide.js"></script>
+    <script src="../js/responsiveslides.min.js"></script>
+    <script type="text/javascript" src="../js/toTop.js"></script>
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="../js/overflow.js"></script>
+    <script type="text/javascript" src="../js/wySilder.min.js"></script>
+    <script type="text/javascript">
+        var $buoop = {
+            notify: {
+                i: 9,
+                f: -4,
+                o: -4,
+                s: -2,
+                c: -4
+            },
+            unsecure: true,
+            api: 5
+        };
+
+        function $buo_f() {
+            var e = document.createElement("script");
+            e.src = "//browser-update.org/update.min.js";
+            document.body.appendChild(e);
+        };
+        try {
+            document.addEventListener("DOMContentLoaded", $buo_f, false)
+        } catch (e) {
+            window.attachEvent("onload", $buo_f)
+        }
+    </script>
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778465750545742000400024e5c -->
+<link rel="stylesheet" type="text/css" href="../page.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1002,'/page.jsp',-1,1536669093)</script>
+</head>
+
+<body>
+    <header>
+        <div class="header-main">
+            <div class="container">
+                <div class="row">
+                    <div class="xx"> <a href="http://archt.xmu.edu.cn/eng">ENGLISH</a>  <a href="lxfs.htm">联系我们</a>
+                    </div>
+                    <div class="logo">
+                        <img src="../images/logo.jpg" />
+                    </div>
+                    <div class="search">
+<!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script>
+<div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <input type="text"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+           <button v-on:click="onSubmit()">搜索</button> 
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1536669093";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu0 = document.querySelector("#appu0");
+   if (appElementu0 && appElementu0.__vue__) {
+
+   } else {
+      $("#divu0").html($("#htmlu0").text());
+      var appOwner = "1536669093";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou0 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu0(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu0();
+        }
+      };
+
+      function onSubmitu0(e) {
+        queryInfou0.query.keyWord= $("#appu0  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou0.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="wrap">
+        <div class="menu">
+    <div class="container">
+        <div class="row">
+            <div id="cssmenu">
+                <ul>
+                                                <li class="has-sub"><a href="../index.htm">首页</a>
+                            </li>
+                            <li class="has-sub"><a href="xyjj.htm">学院概况</a>
+                                        <ul>
+                                                                <li><a href="xyjj.htm">学院简介</a>
+                                                                </li>
+                                                                <li><a href="yxld.htm">院系领导</a>
+                                                                </li>
+                                                                <li><a href="zzjg.htm">组织机构</a>
+                                                                </li>
+                                                                <li><a href="lxfs.htm">联系方式</a>
+                                                                </li>
+                                        </ul>
+                            </li>
+                            <li class="has-sub"><a href="../xydt.htm">学院动态</a>
+                                        <ul>
+                                                                <li><a href="../xydt/xyxw.htm">学院新闻</a>
+                                                                </li>
+                                                            <li class="has-sub"><a href="../xydt/tzgg.htm">通知公告</a>
+                                                                        <ul>
+                                                                                    <li><a href="../xydt/tzgg/zhsw.htm">综合事务</a>
+                                                                                    </li>
+                                                                                    <li><a href="../xydt/tzgg/pjpy.htm">评奖评优</a>
+                                                                                    </li>
+                                                                                    <li><a href="../xydt/tzgg/rczp.htm">人才招聘</a>
+                                                                                    </li>
+                                                                        </ul>
+                                                            </li>
+                                                                <li><a href="../xydt/gszl.htm">公示专栏</a>
+                                                                </li>
+                                        </ul>
+                            </li>
+                            <li class="has-sub"><a href="../djsz.htm">党建思政</a>
+                                        <ul>
+                                                                <li><a href="../djsz/ygj.htm">主题教育</a>
+                                                                </li>
+                                                                <li><a href="../djsz/xxyd.htm">学习园地</a>
+                                                                </li>
+                                                                <li><a href="../djsz/djdt.htm">党建动态</a>
+                                                                </li>
+                                                                <li><a href="../djsz/ghgz.htm">工会工作</a>
+                                                                </li>
+                                        </ul>
+                            </li>
+                            <li class="has-sub"><a href="../szdw/dwjj.htm">师资队伍</a>
+                                        <ul>
+                                                                <li><a href="../szdw/dwjj.htm">队伍简介</a>
+                                                                </li>
+                                                                <li><a href="../szdw/qysz.htm">全院师资</a>
+                                                                </li>
+                                                                <li><a href="../szdw/jzx.htm">建筑系</a>
+                                                                </li>
+                                                                <li><a href="../szdw/tmgcx.htm">土木工程系</a>
+                                                                </li>
+                                                                <li><a href="../szdw/csghx.htm">城市规划系</a>
+                                                                </li>
+                                                                <li><a href="../szdw/ltxyg.htm">离退休员工</a>
+                                                                </li>
+                                        </ul>
+                            </li>
+                            <li class="has-sub"><a href="../jxky.htm">教学科研</a>
+                                        <ul>
+                                                                <li><a href="../jxky/bkjx.htm">本科教学</a>
+                                                                </li>
+                                                                <li><a href="../jxky/yjsjx.htm">研究生教学</a>
+                                                                </li>
+                                                            <li class="has-sub"><a href="../jxky/xsky.htm">学术科研</a>
+                                                                        <ul>
+                                                                                    <li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1372">科研动态</a>
+                                                                                    </li>
+                                                                                    <li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1382">科研成果</a>
+                                                                                    </li>
+                                                                        </ul>
+                                                            </li>
+                                                                <li><a href="../jxky/yxzls.htm">院系资料室</a>
+                                                                </li>
+                                                                <li><a href="../jxky/jzxx.htm">讲座信息</a>
+                                                                </li>
+                                                                <li><a href="../jxky/qqjzdslt.htm">全球建筑大师论坛</a>
+                                                                </li>
+                                                                <li><a href="../jxky/zpjc.htm">作品集萃</a>
+                                                                </li>
+                                        </ul>
+                            </li>
+                            <li class="has-sub"><a href="../syzx/jxzxgk.htm">实验中心</a>
+                                        <ul>
+                                                                <li><a href="../syzx/sydt.htm">实验动态</a>
+                                                                </li>
+                                                                <li><a href="../syzx/kysys.htm">科研实验室</a>
+                                                                </li>
+                                                                <li><a href="../syzx/jxzxgk.htm">教学中心概况</a>
+                                                                </li>
+                                                            <li class="has-sub"><a href="../syzx/jxsfzx/sqzl.htm">教学示范中心</a>
+                                                                        <ul>
+                                                                                    <li><a href="../syzx/jxsfzx/sqzl.htm">申请资料</a>
+                                                                                    </li>
+                                                                                    <li><a href="../syzx/jxsfzx/zxcy.htm">中心成员</a>
+                                                                                    </li>
+                                                                        </ul>
+                                                            </li>
+                                                            <li class="has-sub"><a href="">教学实验室</a>
+                                                                        <ul>
+                                                                                    <li><a href="../syzx/jxsys/szhsjsys.htm">数字化设计实验室</a>
+                                                                                    </li>
+                                                                                    <li><a href="../syzx/jxsys/dlxxxtyygsys.htm">地理信息系统与遥感实验室</a>
+                                                                                    </li>
+                                                                                    <li><a href="../syzx/jxsys/jzzxsys.htm">建筑造型实验室</a>
+                                                                                    </li>
+                                                                                    <li><a href="../syzx/jxsys/jzwlsys.htm">建筑物理实验室</a>
+                                                                                    </li>
+                                                                                    <li><a href="../syzx/jxsys/jzclygzsys.htm">建筑材料与构造实验室</a>
+                                                                                    </li>
+                                                                                    <li><a href="../syzx/jxsys/cllxsys.htm">材料力学实验室</a>
+                                                                                    </li>
+                                                                                    <li><a href="../syzx/jxsys/jzclsys.htm">建筑材料实验室</a>
+                                                                                    </li>
+                                                                                    <li><a href="../syzx/jxsys/gcclsys.htm">工程测量实验室</a>
+                                                                                    </li>
+                                                                                    <li><a href="../syzx/jxsys/ytgcsys.htm">岩土工程实验室</a>
+                                                                                    </li>
+                                                                                    <li><a href="../syzx/jxsys/jggcsys.htm">结构工程实验室</a>
+                                                                                    </li>
+                                                                                    <li><a href="../syzx/jxsys/ltlxsys.htm">流体力学实验室</a>
+                                                                                    </li>
+                                                                        </ul>
+                                                            </li>
+                                                                <li><a href="../syzx/glgf.htm">管理规范</a>
+                                                                </li>
+                                                                <li><a href="../syzx/aqgl.htm">安全管理</a>
+                                                                </li>
+                                                                <li><a href="../syzx/sysb.htm">实验设备</a>
+                                                                </li>
+                                                                <li><a href="../syzx/sbgl.htm">设备管理</a>
+                                                                </li>
+                                                                <li><a href="../syzx/wjxz.htm">文件下载</a>
+                                                                </li>
+                                                                <li><a href="../syzx/lxfs.htm">联系方式</a>
+                                                                </li>
+                                        </ul>
+                            </li>
+                            <li class="has-sub"><a href="../dwjl.htm">对外交流</a>
+                                        <ul>
+                                                                <li><a href="../dwjl/gzdt.htm">工作动态</a>
+                                                                </li>
+                                                                <li><a href="../dwjl/jlxm.htm">交流项目</a>
+                                                                </li>
+                                                                <li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1402">外事手续</a>
+                                                                </li>
+                                                                <li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1412">相关表单</a>
+                                                                </li>
+                                        </ul>
+                            </li>
+                            <li class="has-sub"><a href="../zs.htm">招生</a>
+                                        <ul>
+                                                                <li><a href="../zs/bkzs.htm">本科招生</a>
+                                                                </li>
+                                                                <li><a href="../zs/sbzs.htm">硕博招生</a>
+                                                                </li>
+                                                                <li><a href="../zs/gjzs.htm">国际招生</a>
+                                                                </li>
+                                        </ul>
+                            </li>
+                            <li class="has-sub"><a href="../rzpg.htm">认证评估</a>
+                                        <ul>
+                                                                <li><a href="../rzpg/jzxzyjypg.htm">建筑学专业教育评估</a>
+                                                                </li>
+                                                                <li><a href="../rzpg/tmgczygcjyrz.htm">土木工程专业工程教育认证</a>
+                                                                </li>
+                                                                <li><a href="../rzpg/cxghzyjypg.htm">城乡规划专业教育评估</a>
+                                                                </li>
+                                                                <li><a href="../rzpg/bysjyrdwfk.htm">毕业生及用人单位反馈</a>
+                                                                </li>
+                                        </ul>
+                            </li>
+                            <li class="has-sub"><a href="../xsgz.htm">学生工作</a>
+                                        <ul>
+                                                            <li class="has-sub"><a href="../xsgz/gqtgz.htm">共青团工作</a>
+                                                                        <ul>
+                                                                                    <li><a href="../xsgz/gqtgz/xw.htm">新闻</a>
+                                                                                    </li>
+                                                                                    <li><a href="../xsgz/gqtgz/tz.htm">通知</a>
+                                                                                    </li>
+                                                                                    <li><a href="../xsgz/gqtgz/xszz.htm">学生组织</a>
+                                                                                    </li>
+                                                                                    <li><a href="../xsgz/gqtgz/st.htm">社团</a>
+                                                                                    </li>
+                                                                        </ul>
+                                                            </li>
+                                                                <li><a href="../xsgz/xshdxw.htm">学生活动新闻</a>
+                                                                </li>
+                                                                <li><a href="../xsgz/jyzpxx.htm">就业招聘信息</a>
+                                                                </li>
+                                                                <li><a href="../xsgz/jzxjtz.htm">奖助学金通知</a>
+                                                                </li>
+                                                                <li><a href="../xsgz/sksj.htm">社科实践</a>
+                                                                </li>
+                                                                <li><a href="../xsgz/xsfc.htm">学生风采</a>
+                                                                </li>
+                                                                <li><a href="../xsgz/xgwj.htm">相关文件</a>
+                                                                </li>
+                                        </ul>
+                            </li>
+                            <li class="has-sub"><a href="../xygz.htm">校友工作</a>
+                                        <ul>
+                                                                <li><a href="../xygz/xyhd.htm">校友活动</a>
+                                                                </li>
+                                                                <li><a href="../xygz/xyzg.htm">校友之光</a>
+                                                                </li>
+                                        </ul>
+                            </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="banner">
+            <img src="../images/banner-in.jpg" />
+        </div>
+        <div class="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="submenu">
+                            <div class="submenu-title">
+                                
+学院简介
+                            </div>
+                            <div class="submenu-con">
+                                <ul>
+            <li><a href="xyjj.htm" title="学院简介" class="cur"> 学院简介</a>
+        </li>
+        <li><a href="yxld.htm" title="院系领导"> 院系领导</a>
+        </li>
+        <li><a href="zzjg.htm" title="组织机构"> 组织机构</a>
+        </li>
+        <li><a href="lxfs.htm" title="联系方式"> 联系方式</a>
+        </li>
+</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-8 col-xs-12">
+                        <div class="content">
+                            <div class="local">
+                                <div class="lj">所在位置：
+                                    
+    当前位置: 
+                        <a href="../index.htm">首页</a>
+                >>
+                <a href="xyjj.htm">学院概况</a>
+                >>
+                <a href="xyjj.htm">学院简介</a>
+
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                        <div class="displayInfo">
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1536669093,'wbnews','u5')</script>
+<script>function seeContenta5(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta5('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1536669093,2460)</script>
+<div id="vsb_content_2460_u51"><div id="vsb_content"><p style="margin-top:5px;margin-right:0;margin-bottom:5px;margin-left: 0;text-indent:32px;line-height:24px"><span style="font-size: 14px">厦门大学建筑与土木工程学院的办学历史可以追溯到<span lang="EN-US">1922</span>年<span lang="EN-US">7</span>月学校增设的工学部，<span lang="EN-US">1923</span>年<span lang="EN-US">4</span>月，工学部改为工科，<span lang="EN-US">1924</span>年<span lang="EN-US">6</span>月，工科归并到理科，下设工程学系，土木工程教授田渊添任物理学系主任兼工程学系主任。<span lang="EN-US">1926</span>年<span lang="EN-US">8</span>月，工程学系独立为工科，下设土木工程系、电气工程系、机械工程系。<span lang="EN-US">1927</span>年<span lang="EN-US">6</span>月，工科停办。<span lang="EN-US">1937</span>年秋，在国家危亡、中华民族全面抗战的艰难岁月里，时任校长萨本栋坚持让学校在战火中发展，考虑到战后国家急需建设人才，毅然决定增设土木工程系，并短期亲自兼任土木工程系主任，为国家和社会培养了一批优秀的土木工程人才。<span lang="EN-US">1953</span>年，由于全国范围院系调整，土木工程系再次停办<span lang="EN-US">,</span></span> <span style="font-size: 14px">相关师生调整到浙江大学、南京工学院（现东南大学）、同济大学、华东水利学院（现河海大学）等兄弟院校。<span lang="EN-US">1987</span>年，在东南大学协助下创办建筑系，<span lang="EN-US">1999</span>年复办土木工程专业，<span lang="EN-US">2004</span>年成立建筑与土木工程学院，<span lang="EN-US">2007</span>年成立城市规划系。</span></p><p style="margin: 5px 0;text-indent: 32px;line-height: 24px"><span style="font-size: 14px">学院现设有建筑系、土木工程系、城市规划系。拥有建筑学、土木工程、城乡规划3个本科专业，设有建筑学（含城市规划）、土木工程<span lang="EN-US">2</span>个一级学科硕士点及建筑学、土木水利（含土木工程和海洋工程2个专业领域）硕士专业学位授权点<span lang="EN-US">,建筑学一级学科博士点，</span>自主设置“建筑工程及防灾减灾”二级学科博士点。</span></p><p style="margin: 0 0 10px;text-indent: 32px;line-height: 24px"><span style="font-size: 14px">建筑学、土木工程专业为国家级一流本科专业建设点，建筑学专业入选教育部第三批“卓越工程师教育培养计划”。城乡规划专业为福建省省级一流本科专业建设点。</span></p><p style="margin: 0 0 10px;text-indent: 32px;line-height: 24px"><span style="font-size: 14px">建筑学、土木工程、城乡规划专业均通过了国家住建部评估委专业教育评估（认证），其中建筑学专业被评为“优秀”。</span></p><p style="margin: 5px 0;text-indent: 32px;line-height: 24px"><span style="font-size: 14px">建筑学、土木工程学科为福建省重点学科，<span style="font-size: 14px">拥有<span style="text-indent: 32px;">福建省滨海土木工程数字仿真重点实验室、</span><span style="text-indent: 32px;">福建省智慧城市感知与计算重点实验室（与信息学院联合申请设立）、</span>闽台非遗文化数字化保护与智能处理文化和旅游部重点实验室（与信息学院联合申请设立）、</span></span><span style="font-size: 14px">智慧低碳建筑技术福建省高校重点实验室、</span><span style="font-size: 14px"><span style="font-size: 14px">厦门市交通基础设施智能管养工程技术研究中心、厦门市建筑遗产保护智能技术集成应用重点实验室等重要科研平台，获批福建省土木工程实验教学示范中心、福建省</span><span lang="EN-US" style="font-size:14px;font-family:'calibri',sans-serif">BIM</span><span style="font-size: 14px">虚拟仿真实验教学中心等省级教学实验中心。</span></span></p><p style="margin: 5px 0;text-indent: 32px;line-height: 24px"><span style="font-size: 14px">学院师资力量雄厚，拥有国家自然科学基金优秀青年基金获得者<span lang="EN-US">1</span>人（王东东），福建省“闽江学者”特聘教授<span lang="EN-US">1</span>人（雷鹰），当代中国百名建筑师<span lang="EN-US">1</span>人（王绍森），中国建筑设计奖•建筑教育奖获得者<span lang="EN-US">1</span>人（王绍森），中国建筑学会青年建筑师奖（青年建筑师最高奖）获得者<span lang="EN-US">1</span>人（王绍森），教育部**优秀人才<span lang="EN-US">3</span>人（雷鹰、王东东、杨明辉），<span style="text-indent: 32px;">福建省教学名师</span><span lang="EN-US" style="text-indent: 32px;">1</span><span style="text-indent: 32px;">人（张建霖），</span>福建省**基金获得者<span lang="EN-US">1</span>人（王东东），福建省高等学校新世纪优秀人才<span lang="EN-US">4</span>人（王东东、胡华、曹春平、古泉）， 福建省工程勘察设计大师2人（王绍森、马武定），福建省高校省级教学团队<span lang="EN-US">1</span>个（张建霖土木工程力学教学团队），</span><span style="font-size: 14px">福建省科技创</span><span style="font-size: 14px">新**人才<span lang="EN-US">2</span>人（雷鹰、王东东），福建省高校青年教学新秀1人（李芝也），</span><span style="font-size: 14px">福建省高层次人才16人，厦门市高层次人才26人</span><span style="font-size: 14px">。福建省研究生导师团队1个（土木工程数值仿真导师团队，负责人：王东东），福建省专业学位研究生导师团队2个（城市与建筑文化遗产数字化保护及应用团队，负责人：王绍森；土木工程基础设施智能建设与管养团队，负责人：古泉） 。中国力学学会全国徐芝纶力学优秀教师3人（王东东、张建国、张灿辉</span><span style="font-size: 14px">）。</span></p><p style="margin: 5px 0;text-indent: 32px;line-height: 24px"><span style="font-size: 14px">学院科研成果丰硕，曾获得国家自然科学二等奖，教育部中国高校科学技术进步一等奖，教育部优秀建筑工程设计二等奖、三等奖，教育部优秀勘察设计建筑设计二等奖、三等奖，教育部优秀结构二等奖，文化和旅游部优秀研究成果一等奖、二等奖，福建省科学技术进步二等奖，厦门市科技进步奖一等奖、三等奖，中华优秀出版物图书奖，中国建筑学会建筑设计奖，中国勘察设计协会“优秀（公共）建筑设计”三等奖，中国测绘地理信息学会测绘科技进步奖一等奖，福建省优秀建筑创作奖一等奖、二等奖、三等奖，福建省级优秀城市规划设计一等奖，广东省城市规划协会优秀城乡规划设计三等奖，湖北省城市规划协会优秀城乡规划设计一等奖、三等奖等国家级、省部级、全国和省级行业协会奖项120多项。</span></p><p style="margin: 5px 0;text-indent: 32px;line-height: 24px"><span style="font-size: 14px">学院现设有建筑物理、数字化设计、地理信息系统与遥感、建筑造型、材料与构造、结构工程、材料力学、建筑材料、岩土工程、工程测量等实验室，配备有专业教室、美术教室、多媒体专用教室、制图教室等教学场所，学院设有专业图书资料室，藏有专业中外文图书资料52224</span>册、中外文期刊126种及相关声像资料等。</p><p style="margin: 5px 0;text-indent: 32px;line-height: 24px"><span style="font-size: 14px">建筑系于<span lang="EN-US">1987</span>年在厦门大学蔡启瑞院士关心倡议下由东南大学建筑系协助创办，东南大学派遣了郭湖生、卢志昌两位教授来系主持工作。<span lang="EN-US">1990</span>年代以来步入快速发展时期。<span lang="EN-US">1999</span>年获“建筑设计及其理论”硕士学位授权点，<span lang="EN-US">2003</span>年通过了“全国高等学校建筑学专业教育评估”，获得“建筑学学士”专业学位授予权。<span lang="EN-US">2005</span>年获得“建筑学”一级学科硕士学位授予权 。<span lang="EN-US">2007</span>年通过了“全国高等学校建筑学专业教育评估”复评，申请并通过了“全国高等学校建筑学硕士学位研究生教育评估，获得了“建筑学硕士”专业学位授予权。<span lang="EN-US"> 2011</span>年和<span lang="EN-US">2015</span>年通过专业教育评估复评，<span lang="EN-US">2019</span>年复评被评为“优秀”。</span></p><p style="margin: 5px 0;text-indent: 32px;line-height: 24px"><span style="font-size: 14px">土木工程系办学历史可以追溯到<span lang="EN-US">1922</span>年<span lang="EN-US">7</span>月学校增设的工学部，<span lang="EN-US">1923</span>年<span lang="EN-US">4</span>月，工学部改为工科，<span lang="EN-US">1924</span>年<span lang="EN-US">6</span>月，工科归并到理科，下设工程学系，土木工程教授田渊添任物理学系主任兼工程学系主任。<span lang="EN-US">1926</span>年<span lang="EN-US">8</span>月，工程学系独立为工科，下设土木工程系、电气工程系、机械工程系。<span lang="EN-US">1927</span>年<span lang="EN-US">6</span>月，工科停办。<span lang="EN-US">1937</span>年秋，在国家危亡、中华民族全面抗战的艰难岁月里，时任校长萨本栋坚持让学校在战火中发展，考虑到战后国家急需建设人才，毅然决定增设土木工程系，并短期亲自兼任土木工程系主任，为国家和社会培养了一批优秀的土木工程人才。如我国著名岩土工程专家、<span lang="EN-US">1943</span>届校友曾国熙教授，随机结构动力学国际著名学者、美国工程院院士、<span lang="EN-US">1946</span>届校友林幼堃先生，中国工程勘察设计大师、<span lang="EN-US">1947</span>届校友吴自迪先生等。<span lang="EN-US">1953</span>年由于全国院校大调整，厦门大学土木工程系内迁到浙江大学、南京工学院（现东南大学）、同济大学、华东水利学院（现河海大学）等兄弟院校。<span lang="EN-US">1999</span>年学校申请并经教育部批准，恢复了该土木工程专业，<span lang="EN-US">2003</span>年获“结构工程”硕士学位授权点，<span lang="EN-US">2004</span>年复办土木工程系，<span lang="EN-US">2005</span>年获得“土木工程”“力学”两个一级学科硕士学位授予权并获得“建筑与土木工程”工程硕士专业学位授权点。<span lang="EN-US"> 2014</span>年申请并通过了住房和城乡建设部高等教育土木工程专业评估，<span lang="EN-US">2018</span>年土木工程专业通过了全国工程教育认证。</span></p><p style="margin: 5px 0;text-indent: 32px;line-height: 24px"><span style="font-size: 14px">城市规划系是从国家海西发展战略的实际需要出发，以坚实的建筑学科为基础，结合厦门大学在海洋、环境、经济、社会、人文等学科优势，由校长聘请国内著名的城乡规划学者马武定教授担任首任系主任，于<span lang="EN-US">2007</span>年正式创办。现设有城乡规划本科专业和城市与区域规划二级学科硕士点。城市规划系成立以来，在教学、科研、实践等方面发展迅速，毕业生的深造或就业情况均较为理想。<span lang="EN-US">2017</span>年通过了住房和城乡建设部高等教育城乡规划专业本科教育评估，2021年通过专业教育评估复评。</span></p><p style="margin: 5px 0;text-indent: 32px;line-height: 24px"><span style="font-size: 14px">学院在人才培养方面形成了以下特色：</span></p><p style="margin: 5px 0;text-indent: 32px;line-height: 24px"><span style="font-size: 14px">（一）坚持以教学为中心，教学、科研与工程实践紧密结合，以科研和工程实践促进教学。承担并完成了多项国家和省部级科研任务以及数十项工程项目的研究和设计工作，并获省部级科研奖或优秀设计奖等。学生在中国国际太阳能十项全能竞赛，<span lang="EN-US">UA</span>概念设计国际比赛，全国大学生结构设计竞赛，全国大学生混凝土材料设计大赛，中国研究生智慧城市技术与创意设计大赛等众多学科竞赛中获得了数百项奖项。</span></p><p style="margin: 5px 0;text-indent: 32px;line-height: 24px"><span style="font-size: 14px">（二）强化提升综合素质教育的理念，不断充实、调整教学计划，并充分利用厦门大学作为综合性大学的多学科优势，以“基础、技术、能力、理论、交叉”五个模块建立学科的培养体系，教学质量稳步提升。</span></p><p style="margin: 5px 0;text-indent: 32px;line-height: 24px"><span style="font-size: 14px">（三）坚持“厚基础、强过程、重能力、多规格”的人才培养模式，培养出一大批富有创造力的应用型人才、专业素质过硬的城市建设和房地产开发与经营的管理人才，以及城乡规划、建筑、土木工程理论的研究型人才，得到了社会和用人单位的普遍好评。</span></p><p style="margin: 5px 0;text-indent: 32px;line-height: 24px"><span style="font-size: 14px">学院在创办专业的同时，参与组建了厦门大学建筑设计研究院（<span lang="EN-US">1998</span>年获甲级资质）、厦门大学城乡规划设计研究院有限公司（2022年获甲级资质），设有厦门大学建筑与规划研究所、厦门大学海峡两岸城市规划研究所、</span><span style="font-size: 14px">厦门大学湾区（大鹏）规划与发展研究中心，</span><span style="font-size: 14px">形成了教学、科研、生产实践相结合的教育机制和具有博士生、硕士生、本科生多层次办学体系。</span></p><p><br></p></div></div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-logo">
+                <img src="../images/logo.png" />
+            </div>
+            
+<div>
+  厦门大学建筑与土木工程学院版权所有 
+</div> 
+<div>
+  Copyright© 2019 by archt.xmu.edu.cn. all rights reserved 
+</div> 
+<div>
+  地址：福建省厦门市思明区大学路182号曾呈奎楼 &nbsp; &nbsp; 邮政编码：361005 
+</div> 
+<div>
+  电话/传真：0592-2188958 &nbsp; &nbsp; &nbsp;邮箱：archt@xmu.edu.cn&nbsp;&nbsp; &nbsp; &nbsp; 
+ <a href="http://121.192.179.34" target="_blank">旧版</a> 
+</div>
+        </div>
+    </div>
+</body>
+
+</html>
+<a href="#0" class="cd-top">Top</a>
+<script type="text/javascript">
+    window.onresize = function() {
+        history.go(0);
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

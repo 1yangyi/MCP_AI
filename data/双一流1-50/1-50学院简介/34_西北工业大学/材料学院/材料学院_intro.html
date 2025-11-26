@@ -1,0 +1,513 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+
+
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no">
+    <title>学院概况-材料学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院概况">
+<meta name="keywords" content="材料学院">
+
+    <!-- Bootstrap -->
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/slick.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232306975475152555742000200014156 -->
+<link rel="stylesheet" type="text/css" href="../page.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1011,'/page.jsp',-1,1874428052)</script>
+</head>
+<body>
+    <div class="modal-box">
+        <div class="modal-back"></div>
+     
+         
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;color:#ffffff;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0" class="search-box-c">
+    <div id="appu0"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="form-control"> <input name="submit_button" type="button" value="检索" class="btn btn-search-c"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <input type="text" class="form-control" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="btn btn-search-c" name="submit_button" type="button" value="检索"  v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1874428052";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://yykfpt.nwpu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+    </div> 
+    <div class="header">
+        <div class="pull-left logo text-center"><a href="">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+
+
+</a><a href="../index.htm" title="材料学院2022"><img src="../images/logo.png"></a></div>
+        <div class="pull-right header-right">
+                          <ul class="nav-list clearfix pull-left">
+                                    <li><a href="../index.htm">首页</a>
+              <span class="nav-click"><span class="caret"></span></span>
+                    <ul class="nav-down">
+                        <li><a href="#">数字学院</a>
+                  
+                        </li>
+                    </ul>
+               
+                    </li>
+                    <li><a href="xygk.htm">学院简介</a>
+              <span class="nav-click"><span class="caret"></span></span>
+                    <ul class="nav-down">
+                        <li><a href="xygk.htm">学院概况</a>
+                  
+                        </li>
+                        <li><a href="xyyg.htm">学院沿革</a>
+                  
+                        </li>
+                        <li><a href="xyld.htm">学院领导</a>
+                  
+                        </li>
+                        <li><a href="lrld.htm">历任领导</a>
+                  
+                        </li>
+                        <li><a href="jgsz/clkxygcx.htm">机构设置</a>
+                  
+                        </li>
+                    </ul>
+               
+                    </li>
+                    <li><a href="../szdw/lyys.htm">师资队伍</a>
+              <span class="nav-click"><span class="caret"></span></span>
+                    <ul class="nav-down">
+                        <li><a href="../szdw/lyys.htm">两院院士</a>
+                  
+                        </li>
+                        <li><a href="../szdw/jcrc.htm">杰出人才</a>
+                  
+                        </li>
+                        <li><a href="../szdw/qnrc.htm">青年人才</a>
+                  
+                        </li>
+                        <li><a href="../szdw/js/clkxygc.htm">教师名录</a>
+                  
+                        </li>
+                        <li><a href="../szdw/jsfc.htm">教师风采</a>
+                  
+                        </li>
+                    </ul>
+               
+                    </li>
+                    <li><a href="../jyjx/bkspy1/zlxz.htm">教育教学</a>
+              <span class="nav-click"><span class="caret"></span></span>
+                    <ul class="nav-down">
+                        <li><a href="../jyjx/bkspy1/zlxz.htm">本科生培养</a>
+                  
+                        </li>
+                        <li><a href="../jyjx/ssspy/zsxx.htm">硕士生培养</a>
+                  
+                        </li>
+                        <li><a href="../jyjx/bsspy/zsxx.htm">博士生培养</a>
+                  
+                        </li>
+                    </ul>
+               
+                    </li>
+                    <li><a href="../kxyj/kypt.htm">科学研究</a>
+              <span class="nav-click"><span class="caret"></span></span>
+                    <ul class="nav-down">
+                        <li><a href="../kxyj/kypt.htm">科研平台</a>
+                  
+                        </li>
+                        <li><a href="../kxyj/kytd.htm">科研团队</a>
+                  
+                        </li>
+                        <li><a href="../kxyj/xscg.htm">学术成果</a>
+                  
+                        </li>
+                        <li><a href="../kxyj/aqybm.htm">安全与保密</a>
+                  
+                        </li>
+                        <li><a href="../kxyj_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1273">资料下载</a>
+                  
+                        </li>
+                    </ul>
+               
+                    </li>
+                    <li><a href="../dqgz/dwgk.htm">党群工作</a>
+              <span class="nav-click"><span class="caret"></span></span>
+                    <ul class="nav-down">
+                        <li><a href="../dqgz/dwgk.htm">党委概况</a>
+                  
+                        </li>
+                        <li><a href="../dqgz/ghjg.htm">工会架构</a>
+                  
+                        </li>
+                        <li><a href="../dqgz/llxx.htm">理论学习</a>
+                  
+                        </li>
+                        <li><a href="../dqgz/zlxz.htm">资料下载</a>
+                  
+                        </li>
+                    </ul>
+               
+                    </li>
+                    <li><a href="../xsgz/xgdw.htm">学生工作</a>
+              <span class="nav-click"><span class="caret"></span></span>
+                    <ul class="nav-down">
+                        <li><a href="../xsgz/xgdw.htm">学工队伍</a>
+                  
+                        </li>
+                        <li><a href="../xsgz/cxcy.htm">创新创业</a>
+                  
+                        </li>
+                        <li><a href="../xsgz/xljk.htm">心理健康</a>
+                  
+                        </li>
+                        <li><a href="../xsgz/qcfc.htm">青春风采</a>
+                  
+                        </li>
+                        <li><a href="https://job.nwpu.edu.cn/home.do">学生就业</a>
+                  
+                        </li>
+                        <li><a href="../xsgz/cyxz.htm">常用下载</a>
+                  
+                        </li>
+                    </ul>
+               
+                    </li>
+                    <li><a href="../gjhz1.htm">国际合作</a>
+              <span class="nav-click"><span class="caret"></span></span>
+                    <ul class="nav-down">
+                        <li><a href="../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1283" target="_blank">合作伙伴</a>
+                  
+                        </li>
+                        <li><a href="../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=2733">合作项目</a>
+                  
+                        </li>
+                        <li><a href="../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=2743">留学机会</a>
+                  
+                        </li>
+                        <li><a href="../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=2753">国际胜任力课程</a>
+                  
+                        </li>
+                        <li><a href="../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1284" target="_blank">资料下载</a>
+                  
+                        </li>
+                    </ul>
+               
+                    </li>
+                    <li><a href="../rczp/zpqs.htm">人才招聘</a>
+              <span class="nav-click"><span class="caret"></span></span>
+                    <ul class="nav-down">
+                        <li><a href="../rczp/zpqs.htm">招聘启事</a>
+                  
+                        </li>
+                        <li><a href="../rczp/zxzp.htm">最新招聘</a>
+                  
+                        </li>
+                        <li><a href="../rczp/xgxz.htm">相关下载</a>
+                  
+                        </li>
+                    </ul>
+               
+                    </li>
+                    <li><a href="../xyzj/xyfc.htm">校友之家</a>
+              <span class="nav-click"><span class="caret"></span></span>
+                    <ul class="nav-down">
+                        <li><a href="../xyzj/xyfh.htm">校友分会</a>
+                  
+                        </li>
+                        <li><a href="../xyzj/xyfc.htm">校友风采</a>
+                  
+                        </li>
+                        <li><a href="../xyzj/xyhd.htm">校友活动</a>
+                  
+                        </li>
+                        <li><a href="../xyzj/xyjz.htm">校友捐赠</a>
+                  
+                        </li>
+                    </ul>
+               
+                    </li>
+                    <li><a href="../ljsy1.htm">流金岁月</a>
+               
+                    </li>
+                </ul>
+
+            <div class="pull-left header-a">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>            
+              
+                        <a class="search-a" role="button" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1874428052, 70074)" target="_blank">
+                            <img src="../images/icon-ss.png" border="0">
+                        </a>  
+               
+
+              
+                        <a href="https://cailiao.nwpu.edu.cn/clxynglish/" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1874428052, 70075)" target="_blank">
+                            <img src="../images/en.png" border="0">
+                        </a>  
+               
+
+
+
+
+</div>
+        </div>
+        <div class="menu-button">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+     <div class="list-banner">
+                         
+                        <img src="../images/361296.png" title="" border="0" width="100%">
+              
+
+    </div>
+    <div class="container clearfix list-content">
+        <div class="pull-left list-left wow animated" style="visibility: visible;">
+            <div class="list-left-top text-center">
+学院简介</div>
+          
+                  <div class="list-left-top list-left-top-phone text-center">
+学院简介<span class="nav-click"><span class="caret"></span></span></div>
+            
+            
+            
+                        <ul class="list-left-nav">
+                                    <li><a class="active" href="xygk.htm">学院概况</a>
+               
+                    </li>
+                    <li><a href="xyyg.htm">学院沿革</a>
+               
+                    </li>
+                    <li><a href="xyld.htm">学院领导</a>
+               
+                    </li>
+                    <li><a href="lrld.htm">历任领导</a>
+               
+                    </li>
+                    <li><a href="jgsz/clkxygcx.htm">机构设置</a>
+           
+                      <ul class="list-left-nav-down">
+                
+                        <li><a href="jgsz/clkxygcx.htm"><font>材料科学与工程系</font></a>
+                  
+                        </li>
+                        <li><a href="jgsz/clcxjkzgcx.htm"><font>材料成型及控制工程系</font></a>
+                  
+                        </li>
+                        <li><a href="jgsz/fhclygcx.htm"><font>复合材料与工程系</font></a>
+                  
+                        </li>
+                        <li><a href="jgsz/clqyjcyjzx_x_.htm"><font>材料前沿交叉研究中心（系）</font></a>
+                  
+                        </li>
+                        <li><a href="jgsz/cljygcgjyjzx.htm"><font>材料基因工程国际研究中心</font></a>
+                  
+                        </li>
+                        <li><a href="jgsz/xbgydxzqkczx.htm"><font>西北工业大学重庆科创中心</font></a>
+                  
+                        </li>
+                        <li><a href="jgsz/qjnyyjy.htm"><font>清洁能源研究院</font></a>
+                  
+                        </li>
+                        <li><a href="jgsz/kjsjyclfxcxzx.htm"><font>科教实践与材料分析创新中心</font></a>
+                  
+                        </li>
+                        <li><a href="jgsz/xybgs.htm"><font>学院办公室</font></a>
+                  
+                        </li>
+                    </ul>
+               
+                    </li>
+                </ul>
+ 
+        </div>
+        <div class="pull-right list-right">
+            <div class="list-right-tt clearfix wow animated" style="visibility: visible;">
+                <div class="pull-left list-right-l">
+学院概况</div>
+                <div class="pull-right nav-b">    当前位置: 
+                        <a href="../index.htm">首页</a>
+               -&gt; 
+                <a href="xygk.htm">学院简介</a>
+               -&gt; 
+                <a href="xygk.htm">学院概况</a>
+
+</div>
+            </div>
+            <div class="article-bottom">
+            
+            
+            
+            
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1874428052,'wbnews','u10')</script>
+<script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1874428052,5136)</script>
+
+
+    <div class="article-txt wow animated" style="visibility: visible;">
+   <p> </p><div id="vsb_content_5136_u101"><div id="vsb_content"><p style="text-align: justify; line-height: 32px; text-indent: 2em;"><span style="font-size:18px;font-family:'微软雅黑',sans-serif">扎根西北，铸大国重器。潜心办学，育华夏栋梁。西北工业大学材料学院源于<span lang="EN-US">1938</span>年<span lang="EN-US">7</span>月成立的国立西北工学院机械工程系与矿冶工程系，<span lang="EN-US">1956</span>年西北工学院设立第四机械系，成为材料学院的主体。历经<span lang="EN-US">80</span>余年的发展，逐步形成独具特色的人才培养体系和协同并进的学科发展格局，领军人才辈出，科研成果丰硕，为推动材料科技进步、服务国家和国防重大战略需求、助力经济社会发展作出了卓越贡献。</span></p><p style="text-align: justify; line-height: 32px; text-indent: 2em;"><strong><span style="font-size:18px;font-family:'微软雅黑',sans-serif">学科特色鲜明，创新活力强劲</span></strong></p><p style="text-align: justify; line-height: 32px; text-indent: 2em;"><span style="font-size:18px;font-family:'微软雅黑',sans-serif">学院拥有材料科学与工程国家一级重点学科和材料学、材料加工工程国家二级重点学科。材料学科在教育部前三轮学科评估中分别位居第<span lang="EN-US">9</span>、第<span lang="EN-US">6</span>和并列第<span lang="EN-US">3</span>，第四轮获评<span lang="EN-US">A</span>类，第五轮学科评估取得重大突破，跻身第一方阵前列；<span lang="EN-US">2017</span>年和<span lang="EN-US">2022</span>年两度进入国家“一流学科”建设行列，<span lang="EN-US">ESI</span>学科排名进入前<span lang="EN-US">0.22</span>‰。学院以服务国家重大战略需求为己任，构建了超高温结构复合材料、高性能金属材料及凝固技术、金属增材制造、精确塑性成形等多个优势学科方向。近年来，</span><span style="font-size:18px;font-family:'微软雅黑',sans-serif">发展了纳米能源材料、先进润滑密封材料、超导材料、材料基因工程、碳中和前沿科学与技术、绿色催化等新兴学科方向，并在江苏太仓成立清洁能源研究院、在重庆两江新区成立轻质高温高强结构材料及构件精确成形技术研究中心，交叉融合、宽强并蓄、多地协同发展的学科布局日益凸显。</span></p><p style="text-align: justify; line-height: 32px; text-indent: 2em;"><strong><span style="font-size:18px;font-family:'微软雅黑',sans-serif">教学成果丰硕，卓越人才辈出</span></strong></p><p style="text-align: justify; line-height: 32px; text-indent: 2em;"><span style="font-size:18px;font-family:'微软雅黑',sans-serif">学院坚持以立德树人为根本任务，以</span><span style="font-size:19px;font-family:'微软雅黑',sans-serif">提升国防科技拔尖人才自主培养质量为己任，</span><span style="font-size:18px;font-family:'微软雅黑',sans-serif">积极探索“总师型”人才培养路径，构建了分层次、有统筹的本研衔接课程体系，实施“寓教于研、寓学于研”的培养模式，切实增强学生的理想信念、科学素养与创新能力。获国家级教学成果一、二等奖各<span lang="EN-US">2</span>项，陕西省教学成果特等奖<span lang="EN-US">3</span>项、一等奖<span lang="EN-US">1</span>项，建成国家一流专业<span lang="EN-US">3</span>个和国家特色专业<span lang="EN-US">2</span>个，国家级和省部级课程<span lang="EN-US">11</span>门次。学院现有本科生、硕士生、博士生<span lang="EN-US">2800</span>余名。办学至今，先后为国防科技事业发展和国民经济建设输送了上万名优秀毕业生，包括<span lang="EN-US">12</span>名两院院士、近百名长江学者和国家杰出青年科学基金获得者，以及我国第一位铸造专业博士、全国十大杰出青年和百余位副总师以上的众多行业领军人才，成为铸就和续写“西工大现象”的中坚力量。</span></p><p style="text-align: justify; line-height: 32px; text-indent: 2em;"><strong><span style="font-size:18px;font-family:'微软雅黑',sans-serif">坚持引育并重，打造人才高地</span></strong></p><p style="text-align: justify; line-height: 32px; text-indent: 2em;"><span style="font-size:18px;font-family:'微软雅黑',sans-serif">学院以构筑材料科技领域的重要人才中心和创新高地为目标，坚持“内培大人才、外引青字号”，通过“育情怀、筑平台、优政策、强配套”，持续改革人才“引育用”机制，不断完善优秀青年人才成长支撑体系。现有教职员工<span lang="EN-US">300</span>余人，教授<span lang="EN-US">128</span>人，副教授<span lang="EN-US">77</span>人。其中，两院院士<span lang="EN-US">7</span>人，国家级领军人才25人，国家级青年人才<span lang="EN-US">41</span>人，高层次人才占比<span lang="EN-US">31%</span>，建成了国家自然科学基金委创新群体<span lang="EN-US">1</span>个、国防科技工业优秀科技创新团队<span lang="EN-US">2</span>个，陕西省科技创新团队十余个，荣获国防创新团队奖<span lang="EN-US">1</span>项、陕西省师德师风先进集体称号，涌现出最美科技工作者、全国创新争先奖、最美劳动者等诸多先进典型，逐步形成了尊师重教、强师铸魂、优师筑梦的浓厚氛围，构建起了一支梯队合理、后劲充足、可持续发展的优秀人才队伍。</span></p><p style="text-align: justify; line-height: 32px; text-indent: 2em;"><strong><span style="font-size:18px;font-family:'微软雅黑',sans-serif">科研实力雄厚，国防贡献突出</span></strong></p><p style="text-align: justify; line-height: 32px; text-indent: 2em;"><span style="font-size:18px;font-family:'微软雅黑',sans-serif">学院立足“四个面向”，坚持“需求导向、问题导向”，在陶瓷基复合材料、<span lang="EN-US">C/C</span>复合材料、高温隐身、高强钛合金、金属<span lang="EN-US">3D</span>打印、反重力铸造、难变形材料锻造和数控弯管等<span lang="EN-US">40</span>余项科研成果在我军现役的<span lang="EN-US">50</span>余个型号百余种关键构件上获得应用，获国家技术发明一、二等奖等国家级科技奖<span lang="EN-US">20</span>余项（其中，“十三五”期间<span lang="EN-US">8</span>项），全国创新争先奖<span lang="EN-US">2</span>项，国防科技创新团队奖<span lang="EN-US">1</span>项。学院拥有凝固技术国家重点实验室、超高温结构复合材料国家级重点实验室等<span lang="EN-US">30</span>余个国家级和省部级平台，“十三五”以来，承担国家自然科学基金<span lang="EN-US">200</span>余项，国家重大专项、国家重点研发计划等其他国家级项目<span lang="EN-US">300</span>余项（含重大项目<span lang="EN-US">10</span>余项），科研经费到款连续<span lang="EN-US">13</span>年过亿，<span lang="EN-US">2018</span>年首次突破<span lang="EN-US">2</span>亿元，<span lang="EN-US">2021</span>年首次突破<span lang="EN-US">3</span>亿元并不断攀升。依托学科优势培育了陕西华秦、西安铂力特、重庆两航、无锡博智、安徽汉正等<span lang="EN-US">15</span>家高新技术企业。其中，铂力特作为中国第一家全产业链<span lang="EN-US">3D</span>打印公司于<span lang="EN-US">2019</span>年首批登陆科创板，华秦科技作为“隐身材料第一股”于<span lang="EN-US">2022</span>年登陆科创板，为学校科技成果转化工作又添硕果。</span></p><p style="text-align: justify; line-height: 32px; text-indent: 2em;"><strong><span style="font-size:18px;font-family:'微软雅黑',sans-serif">立足全球视野，深化全面合作</span></strong></p><p style="text-align: justify; line-height: 32px; text-indent: 2em;"><span style="font-size:18px;font-family:'微软雅黑',sans-serif">学院坚持全球发展、开放包容，统筹做好“引进来”和“走出去”两个大篇章，持续构建高水平对外教育和科技合作格局。积极承担西北工业大学伦敦玛丽女王工程学院人才培养任务，并作为主力学科参与哈萨克斯坦联合办学项目，为落实“一带一路”战略贡献材料智慧。持续完善生本硕博多层次联合培养机制，与英国曼彻斯特大学、法国索邦大学、新加坡国立、巴西国家纳米实验室等<span lang="EN-US">100</span>多所世界知名科研机构建立合作关系。创新国际知名学者引用机制，聘任俄罗斯科学院外籍院士、英国皇家学会院士等<span lang="EN-US">30</span>余位国外知名高校或研究机构专家担任名誉教授或讲座教授，每年邀请近百名外籍专家来校讲学和开展联合研究，派出百余名教师出国访问。“十三五”以来，新增国家创新引智基地<span lang="EN-US">2</span>个、国际科技合作基地<span lang="EN-US">1</span>个、中国政府友谊奖<span lang="EN-US">2</span>人、国际重要学术期刊和机构任职<span lang="EN-US">50</span>余人，省部级国际合作平台<span lang="EN-US">3</span>个，学院在世界材料领域的学科影响力和学术话语权不断提升。</span></p><p style="text-align:justify;text-justify:inter-ideograph;line-height:32px"><br></p><p style="text-align:justify;text-justify:inter-ideograph;line-height:32px"><br></p><p style="text-align:right;line-height:32px"><span style="font-size:18px;font-family:'微软雅黑',sans-serif">（数据截至<span lang="EN-US">2024</span>年<span lang="EN-US">6</span>月）</span></p><p><br></p><p><br></p></div></div>
+    <span id="vsb_content_5136_u10" name="vsb_content_5136_u10"></span><br><br>
+    
+<p></p> </div>
+
+
+            
+   
+          
+            </div>
+        </div>
+    
+    </div>
+    <div class="footer text-center">
+        <div class="container"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p><span>西北工业大学材料学院 版权所有 CopyRight 201907 cailiao.nwpu.edu.cn All Rights Reserved</span> <a href="https://uis.nwpu.edu.cn/cas/login">【网站管理】</a></p></div>
+    </div>
+
+
+
+
+
+
+
+
+<script src="../js/jquery.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/common.js"></script><script src="../js/slick.js"></script><script src="../js/wow.min.js"></script><script>
+if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+  new WOW().init();
+};
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

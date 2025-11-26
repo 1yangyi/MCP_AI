@@ -1,0 +1,425 @@
+<!DOCTYPE html><html><head lang="en">
+    <meta charset="UTF-8">
+    <title>学院概况-阿拉伯学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院概况">
+<meta name="keywords" content="阿拉伯学院,学院概况">
+
+    <link rel="stylesheet" href="style/global.css">
+    <link rel="stylesheet" href="style/list.css">
+    <link rel="stylesheet" type="text/css" href="style/header.css">
+   
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e78475153505742000400014153 -->
+<link rel="stylesheet" type="text/css" href="list.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1046,'/list.jsp',-1,1464039293)</script>
+</head>
+<body>
+<div class="Listbanner-warp">
+    <div class="nva-warp">
+        <div class="nva-1200">
+           <!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><div class="top-search"><input autocomplete="off" class="search_id"> <input type="submit" align="absmiddle" value="" class="searchbnt"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+           
+            
+            <div class="top-search">
+<input class="search_id"   autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+ <input type="submit"  align="absmiddle" style="cursor: hand" class="searchbnt" value="" v-on:click="onSubmit()">
+</div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1464039293";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu0 = document.querySelector("#appu0");
+   if (appElementu0 && appElementu0.__vue__) {
+
+   } else {
+      $("#divu0").html($("#htmlu0").text());
+      var appOwner = "1464039293";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou0 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu0(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu0();
+        }
+      };
+
+      function onSubmitu0(e) {
+        queryInfou0.query.keyWord= $("#appu0  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou0.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script>
+            <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="阿拉伯学院"><img src="images/logoalbxy.png"> </a></div>
+            <div class="clear"></div>
+            <div class="nav">
+               
+<ul>
+
+ <li class="nav-item ">  <a href="index.htm" title="首页">首页</a></li>
+
+ <li class="nav-item cur"><a href="xygk1.htm" title="学院概况">学院概况</a>
+
+                        </li>
+
+
+ <li class="nav-item "><a href="szdw.htm" title="师资队伍">师资队伍</a>
+
+                        </li>
+
+
+ <li class="nav-item "><a href="zsjy1.htm" title="招生就业">招生就业</a>
+
+                        </li>
+
+
+ <li class="nav-item "><a href="xsyd.htm" title="学生园地">学生园地</a>
+
+                        </li>
+
+
+ <li class="nav-item "><a href="jlhz.htm" title="交流合作">交流合作</a>
+
+                        </li>
+
+
+ <li class="nav-item "><a href="xsyj.htm" title="学术研究">学术研究</a>
+
+                        </li>
+
+
+ <li class="nav-item "><a href="CONTACT_US.htm" title="CONTACT US">CONTACT US</a>
+
+                        </li>
+
+
+   </ul>
+                <!--移动的滑动-->
+                <div class="move-bg" style="display: block; left: 155px;"></div>
+                <!--移动的滑动 end-->
+            </div>
+            
+        </div>
+
+    </div>
+</div>
+<div class="pic_box"></div>
+<div class="wrapzs"><!--wrapzs begin-->
+    <div class="wrap-left" id="wrapLeft" style="height: 241px;"><!--wrap-left begin-->
+        <h3>
+学院概况</h3>
+         <ul id="contentLeft">
+          
+        </ul>
+    </div>
+    <!--wrap-left end-->
+    <div class="wrap-right" id="wrapRight"><!--wrap-right begin-->
+        <div class="subnav">
+                        <a href="index.htm">首页</a>
+               &gt;
+                <a href="xygk1.htm">学院概况</a>
+</div>
+     
+
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="wrap_r_list">
+            <ul id="questionList">
+    
+
+        <li>
+            <a href="info/1046/1669.htm" title="学院简介">学院简介</a>
+           </li>
+        <span id="section_u6_0" style="display:none;"><hr style="display:none;"></span>
+
+
+        <li>
+            <a href="info/1046/2207.htm" title="School of Arabic Studies">School of Arabic Studies</a>
+           </li>
+        <span id="section_u6_1" style="display:none;"><hr style="display:none;"></span>
+
+
+        <li>
+            <a href="info/1046/1789.htm" title="北京外国语大学阿拉伯学院地图">北京外国语大学阿拉伯学院地图</a>
+           </li>
+        <span id="section_u6_2" style="display:none;"><hr style="display:none;"></span>
+    </ul>
+</div>
+  <link rel="stylesheet" content-type="text/css" href="/system/resource/css/pagedown/sys.css"><div class="pb_sys_common pb_sys_normal pb_sys_style1" style="margin-top:10px;text-align:center;"><span class="p_pages"><span class="p_first_d p_fun_d">首页</span><span class="p_prev_d p_fun_d">上页</span><span class="p_no_d">1</span><span class="p_next_d p_fun_d">下页</span><span class="p_last_d p_fun_d">尾页</span></span></div><script>_showDynClickBatch(['dynclicks_u6_1669','dynclicks_u6_2207','dynclicks_u6_1789'],[1669,2207,1789],"wbnews", 1464039293)</script>
+
+        <!--page end-->
+    </div>
+    <!--wrap-right end-->
+
+</div>
+<!--wrapzs end-->
+<!---footer--->
+<div class="footer02">
+    <div class="footer_1200">
+        <div class="footabout">
+            <script language="javascript" src="/system/resource/js/openlink.js"></script>    <a href="http://www.moe.gov.cn" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1464039293, 80966)">教育部</a>|
+    <a href="https://www.fmprc.gov.cn" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1464039293, 80967)">外交部</a>|
+    <a href="http://www.bfsu.edu.cn" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1464039293, 43810)">北外主页</a>|
+    <a href="https://arab.bfsu.edu.cn/info/1046/1789.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1464039293, 80968)">北外地图</a>
+
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<p><span style="font-size: 14px; font-family: 微软雅黑; white-space: normal; word-spacing: 0px; text-transform: none; float: none; font-weight: normal; font-style: normal; text-align: center; display: inline !important; letter-spacing: normal; text-indent: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; color: rgb(0, 0, 0);">Copyright @ 2018 BFSU. 北京外国语大学版权所有. 地址：北京市海淀区西三环北路2号/19号&nbsp;&nbsp;&nbsp; 邮编：100089 </span><span style="font-size: 14px; font-family: 微软雅黑; white-space: normal; word-spacing: 0px; text-transform: none; float: none; font-weight: normal; color: rgb(255,255,255); font-style: normal; text-align: center; orphans: 2; widows: 2; display: inline !important; letter-spacing: normal; text-indent: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px"><br></span></p> 
+<p><span style="color: rgb(0, 0, 0); font-size: 14px;">北京外国语大学阿拉伯学院<br>办公电话：88816327<br>办公邮箱：bwayxb@bfsu.edu.cn<br>办公地址：北京外国语大学东院阿语楼</span></p> 
+<p><span style="font-size: 14px; font-family: 微软雅黑; white-space: normal; word-spacing: 0px; text-transform: none; float: none; font-weight: normal; color: rgb(255,255,255); font-style: normal; text-align: center; orphans: 2; widows: 2; display: inline !important; letter-spacing: normal; text-indent: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px"></span><br></p> 
+<p><br></p>        </div>
+    </div>
+</div>
+<!--foonter end--->
+ <script src="javasacript/jquery.min.js" type="text/javascript"></script>
+    <script src="javasacript/jquery.movebg.js" type="text/javascript"></script>
+    <script src="javasacript/mind.js" type="text/javascript"></script>
+            <script type="text/javascript">
+                $(function(){
+                    $(".nav").movebg({
+                        width:155/*滑块的大小*/,
+                        extra:0/*额外反弹的距离*/,
+                        speed:300/*滑块移动的速度*/,
+                        rebound_speed:100/*滑块反弹的速度*/
+                    });
+                })
+            </script>
+<script src="javasacript/move.js"></script>
+<script>
+    window.onload = function () {
+        function $(id) {
+            return document.getElementById(id);
+        }
+
+        var oList = $('questionList');
+if(aList!=null){
+        var aList = oList.getElementsByTagName('li');
+
+        for (var i = 0; i < aList.length; i++) {
+            if (i % 2 == 0) {
+                aList[i].className = 'lightGrey';
+            } else {
+                aList[i].className = 'grey';
+            }
+
+        }}
+
+        var oCon = $('contentLeft');
+        var oWrapleft = $('wrapLeft');
+        var aBtn = oCon.getElementsByTagName('h5');
+        var aDiv = oCon.getElementsByTagName('div');
+        var aLi = null;
+        var arrAli = [];
+        var oRight = $('wrapRight');
+        var oHeight = oRight.offsetHeight;
+        oWrapleft.style.height = oHeight + 'px';
+if(aDiv!=null){
+        for (var i = 0; i < aBtn.length; i++) {
+            aBtn[i].index = i;
+            aBtn[i].onclick = function () {
+                var aLi = aDiv[this.index].getElementsByTagName('a');
+if(aLi!=null){
+                if(aBtn[this.index].className != 'hactive'){
+                    for (var i = 0; i < aDiv.length; i++) {
+                        move(aDiv[i], {height: 0, paddingTop: 0})
+                        aBtn[i].className = '';
+                    }
+                    move(aDiv[this.index], {height: 30 * aLi.length, paddingTop: 10})
+                    aBtn[this.index].className = 'hactive';
+                }else{
+                    move(aDiv[this.index], {height: 0,paddingTop: 0});
+                    aBtn[this.index].className = '';
+                }
+}
+            }
+        }
+        //找元素，方便以后扩展；
+
+        for (var i = 0; i < aDiv.length; i++) {
+            aLi = aDiv[i].getElementsByTagName('a');
+            for (var j = 0; j < aLi.length; j++) {
+                arrAli.push(aLi[j]);
+            }
+        }
+        for (var i = 0; i < arrAli.length; i++) {
+            arrAli[i].onclick = function () {
+                for (var i = 0; i < arrAli.length; i++) {
+                    arrAli[i].className = '';
+                }
+                this.className = "active";
+            }
+        }
+}
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

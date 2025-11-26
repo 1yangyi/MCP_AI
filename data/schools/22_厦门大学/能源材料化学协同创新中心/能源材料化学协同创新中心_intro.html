@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<title>中心概况-能源材料化学协同创新中心</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="中心概况">
+<meta name="keywords" content="能源材料化学协同创新中心,中心概况">
+
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<link rel="stylesheet" type="text/css" media="all" href="../dfiles/21145/style2.css">
+<link rel="shortcut icon" href="../favicon.ico" mce_href="favicon.ico" type="image/x-icon">
+
+<script type="text/javascript" src="../dfiles/21145/js/uery.js"></script>
+<script type="text/javascript" src="../dfiles/21145/css/pie_ie678.js"></script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778465750545742000400024e5c -->
+<link rel="stylesheet" type="text/css" href="../dpnr.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1010,'/dpnr.jsp',-1,1638649373)</script>
+</head>
+ <body> 
+        <div id="main-wrap">
+        
+                        
+<div class="header-wrap">
+                <div class="hehe">
+                  <div id="header">
+               
+          <div class="header-info5"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+教育部“高等学校创新能力提升计划”（2011计划）</div>            
+         <div class="header-info4"><!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><div id="divu1">
+    <div id="appu1"><div><input name="submit_button" type="button" value="" style="float: right; background-image: url(&quot;../dfiles/21145/images/srch_btn.png&quot;); background-repeat: no-repeat; border: none; width: 36px; height: 30px;"> <input type="text" autocomplete="off" style="border: 1px solid rgb(255, 255, 255); font-size: 20px; height: 30px; width: 138px;"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+        <input name="submit_button" type="button" value="" v-on:click="onSubmit()" value=" " style=" float:right; background-image: url(../dfiles/21145/images/srch_btn.png); background-repeat:no-repeat; border:none; width:36px; height:30px">
+
+<input type="text" style=" border: 1px #fff solid;font-size:20px; height:30px; width:138px" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+        
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1638649373";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu1 = document.querySelector("#appu1");
+   if (appElementu1 && appElementu1.__vue__) {
+
+   } else {
+      $("#divu1").html($("#htmlu1").text());
+      var appOwner = "1638649373";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou1 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu1(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu1();
+        }
+      };
+
+      function onSubmitu1(e) {
+        queryInfou1.query.keyWord= $("#appu1  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou1.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script>
+ 
+        
+        
+        
+                                                                               </div>   <div style=" position:absolute; right:5px; line-height:30px; top:40px;">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script><a href="http://2011-ichem.xmu.edu.cn/en/" onclick="_addDynClicks(&quot;wbimage&quot;, 1638649373, 43393)"><img src="../dfiles/21145/ywb.png"></a>
+</div>
+
+     
+           <a href="../index.htm" onclick="_addDynClicks(&quot;wbimage&quot;, 1638649373, 43394)"><img src="../dfiles/21145/images/logo.png" alt="logo" class="logo" style="float:left"></a>  
+    <img class="logo" alt="logo" src="../dfiles/21145/images/t1.png" onclick="_addDynClicks(&quot;wbimage&quot;, 1638649373, 43392)" style="FLOAT: left"> 
+
+                    <div id="nav" class="box"><ul>
+
+<li><a href="../index.htm">首页</a></li>
+
+<li class="active"><a href="zxgk.htm">关于我们</a></li>
+
+<li><a href="../kxyj/yjzz.htm">科学研究</a></li>
+
+<li><a href="../rcdw/kydw.htm">人才队伍</a></li>
+
+<li><a href="../xspy/yjspyfa.htm">学生培养</a></li>
+
+<li><a href="../kycg/cggk.htm">科研成果</a></li>
+
+<li><a href="../xwgg/zxxw.htm">新闻公告</a></li>
+
+<li><a href="../yptd/fwxzsq.htm">应聘通道</a></li>
+
+<li><a href="../lxwm/lxfs.htm">联系我们</a></li>
+
+</ul></div>
+                  </div>
+                </div>
+                  <!-- Navigation -->
+     <!-- /nav -->
+                </div>
+
+
+ 
+
+            <div class="inner-wrap">                
+                <div id="content-wrap">
+        
+                  <!-- Begin Slider -->
+
+              
+                                         
+
+ 
+    
+    
+    <div id="about"> <div style="border:none;margin:5px auto; width:1024px"></div>
+      <div class="about-detail">
+        <div class="lists">
+    <div class="t">
+关于我们</div>
+      <ul class="subn">
+                       <li class="act"> <a href="zxgk.htm">中心概况</a></li>
+   <li> <a href="zzjg.htm">组织机构</a></li>
+   <li> <a href="lsh.htm">理事会</a></li>
+   <li> <a href="gjgwwyh.htm">国际顾问委员会</a></li>
+   <li> <a href="xswyh.htm">学术委员会</a></li>
+   <li> <a href="xtwyh.htm">协同委员会</a></li>
+   <li> <a href="xzzhb.htm">行政综合部</a></li>
+   <li> <a href="zxLOGO.htm">中心LOGO</a></li>
+   <li> <a href="zxdsj.htm">中心大事记</a></li>
+   <li> <a href="gzzd.htm">规章制度</a></li>
+
+                
+               
+      
+      <img src="../dfiles/21145/images/subf.png">
+
+
+          </ul>
+           
+          </div>
+        <div class="lists2" style=" margin-left:10px">
+       
+         <div style="line-height:38px; padding-left:15px; color:#FFF; font-weight:bold;"><span style="float:right; padding-right:20px; font-size:12px; color: #0557CC; font-weight:100">                <a href="../index.htm">首页</a>
+                &gt;
+                <a href="zxgk.htm">关于我们</a>
+                &gt;
+                <a href="zxgk.htm">中心概况</a>
+</span>
+中心概况</div> 
+            <div style="line-height:25px; font-size:13px; padding:20px; color:#333;text-indent:2em;">
+   
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1638649373,'wbnews','u11')</script>
+<script>function seeContenta11(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta11('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+
+<script>_addDynClicks('wbnews',1638649373,1001)</script>
+   <div style="text-align:center;height:40px; font-size:14px; font-weight:bold; color:#009;">中心概况</div>
+                   <div style="line-height:25px;font-size:13px;color:#333;text-indent:2em;">
+      <div id="vsb_content_1001_u111"><div id="vsb_content"><p style="text-align:justify;margin: 10px 0px">“高等学校创新能力提升计划(简称2011计划)”是继“211工程”、“985工程”之后，中国高等教育系统又一项体现国家意志的重大战略举措。厦门大学、复旦大学、中国科学技术大学和中国科学院大连化学物理研究所（以下分别简称厦大、复旦、中科大、大连化物所，或统称“三校一所”）以“2011计划”总体精神为指导，共同建立“能源材料化学协同创新中心”（英文名称：Collaborative Innovation Center of Chemistry for Energy Materials，简称“协同中心”，<em>i</em>ChEM）。这对三校一所以化学学科为中心的相关学科新一轮发展，满足国家急需，冲击世界一流，既是一次难得的历史机遇，也是一个严峻的挑战。</p>
+<p style="text-align:justify;margin: 10px 0px">协同中心由厦大、复旦、中科大和大连化物所组成核心层，中国科学院福建物质结构研究所、清华大学、牛津大学、加州大学伯克利分校等能源材料化学领域杰出人才团队组成外围层。协同中心拥有15个实力雄厚的国家级科研平台。例如，“固体表面物理化学国家重点实验室（厦门大学）”在全国化学化工类国家重点实验室评估中，是“惟一”连续四次（20年）均被评为“优秀”的国家重点实验室。在最近一次（2009年）的国家重点实验室评估中，该实验室与同属协同中心的“催化基础国家重点实验室（大连化物所）”和“分子反应动力学国家重点实验室（大连化物所）”不仅囊括了物理化学所有的优秀实验室，而且占据了化学化工所有学科的六个“优秀”实验室中的三席。这表明协同中心不仅在物理化学而且在整个化学化工领域影响显著。三校一所近年来在<em>Science</em>、<em>Nature</em>及其子刊等顶尖期刊发表的论文数均列全国高校化学学科前茅；中心成员多人次在国际重要刊物如<em>Chem. Soc. Rev</em>.，<em>J. Am. Chem. Soc</em>., <em>Nano Today</em>，<em>Energ. Environ. Sci</em>., <em>J.Mater.Chem</em>.等担任主编、副主编、顾问编委、编委；多人作为主要负责人主办了国际材料化学大会、国际能源大会、国际催化大会、国际电化学会大会等相关领域国际顶级的系列会议；多人次获得国际重要奖项，如国际介观结构协会成就奖、天然气转化杰出成就奖、国际电化学会Jacques Tacussel奖、国际催化奖、国际电化学会Brian Conway奖、英国皇家学会（电化学）法拉第奖章、国际电池材料协会2014 Technology 奖、世界杰出女科学家奖、国际IUPAC化学化工杰出女性奖、中法化学讲座奖、美国化学会的无机杰出青年科学家奖等。中心成员有10人次获得英国皇家化学会Fellow称号。</p>
+<p style="text-align:justify;margin: 10px 0px">协同中心以在能源领域满足国家重大战略需求和在化学基础学科领域冲击世界一流为导向，充分协同三校一所优势资源协同创新体，延揽国内外杰出人才，瞄准碳资源优化利用、化学储能与转化和太阳能转化化学等3个主攻方向中的核心科学与技术难题，以合成制备、理论模拟和仪器方法为基础和支撑，注重交叉前沿研究和前瞻性、非共识性探索和大学科交叉研究，通过构建协同创新的新模式和新机制，以化学为基础，材料为载体，能源为目标，努力将中心建设成为探索高校转变创新发展方式的“特区”。<br></p>
+<p style="text-align:justify;margin: 10px 0px">协同中心将以能源材料表界面化学基础研究为先导，选择美国加州大学伯克利分校（UC Berkeley）和劳伦斯伯克利国家实验室（Lawrence Berkeley National Lab）等为参照系，经过培育、建设和发展三个阶段，将汇聚培养一批具有国际影响力的一流学术领军人才和创新型队伍，取得一批原创性重大科技成果，建成世界一流的能源材料化学科研中心和拔尖创新人才培养的示范基地，打造能源材料化学的国际品牌，为我国能源战略新兴产业的健康快速发展作出引领性和支撑性重大贡献，为高等学校创新能力的提升做出有益的探索。</p></div></div>
+    <span id="vsb_content_1001_u11" name="vsb_content_1001_u11"></span>
+                     
+            </div>
+
+            </div>
+          </div>
+        </div>
+    </div>
+                </div>
+                            
+          </div>
+                
+                                        
+ </div>             
+            
+     <div class="footer-wrap">
+                   
+                    <div class="copy-right">
+        <div class="right-text" style=" margin-left:0px; width:300px;">    <p style="FONT-SIZE: 14px; FONT-WEIGHT: bold">协同单位</p><br>
+
+<p><img src="../dfiles/21145/img/bg3.png" border="0" usemap="#Map" onclick="_addDynClicks(&quot;wbimage&quot;, 1638649373, 56161)"> <map name="Map" id="Map">
+<area href="http://www.dicp.ac.cn" shape="rect" coords="224,4,294,69" target="_blank"><area href="http://www.fudan.edu.cn" shape="rect" coords="75,3,145,68" target="_blank"><area href="http://www.ustc.edu.cn" shape="rect" coords="150,3,220,68" target="_blank">
+    <area href="http://www.xmu.edu.cn" shape="rect" coords="4,3,74,68" target="_blank">
+</map></p>
+</div><div class="right-text" style="width:240px; margin-left:60px;">    <p style="FONT-SIZE: 14px; FONT-WEIGHT: bold">&nbsp;主管部门 </p><br>
+
+<p><a href="http://www.moe.edu.cn/" target="_blank" onclick="_addDynClicks(&quot;wbimage&quot;, 1638649373, 43405)"><img src="../dfiles/21145/img/j.png"></a></p>
+
+<p><a href="http://www.mof.gov.cn" target="_blank" onclick="_addDynClicks(&quot;wbimage&quot;, 1638649373, 56162)"><img src="../dfiles/21145/img/c.png"></a></p>
+
+</div><div class="right-text" style="width:240px; margin-left:70px;">
+<p style="font-size:14px; font-weight:bold;">联系方式</p> 
+<br> 
+<p> 能源材料化学协同创新中心<br> 电话：+86-592-2189881 <br> 邮箱：2011-ichem@xmu.edu.cn <br> 地址：厦门市思明区厦门大学化学化工学院</p></div>
+                    </div>
+                        
+        <div style="text-align:right"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>Copyright&nbsp; ©&nbsp; 能源材料化学协同创新中心 版权所有 2013 All Rights Reserved<br></p>
+<div style="display:none;"><script src="http://s9.cnzz.com/stat.php?id=5719121&amp;web_id=5719121" language="JavaScript"></script> </div></div>     
+        </div>
+       
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,608 @@
+<!DOCTYPE html><html lang="en"><head>
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学院简介-法学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="法学院,学院简介">
+
+    <link href="../style/public.css" rel="stylesheet">
+    <link href="../style/ny.css" rel="stylesheet">
+    <link href="../style/slick.css" rel="stylesheet">
+    <link href="../style/slick-theme.css" rel="stylesheet">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307476475c5357574200030003425c -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1211,'/dpzw.jsp',-1,2114558236)</script>
+</head>
+
+<body>
+    <div class="wave">
+        <div class="layer"></div>
+        <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><input type="text" placeholder="请输入关键字"> <input type="image" src="../images/ser3.png"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+         
+            
+           
+ <input type="text" placeholder="请输入关键字" v-model=query.keyWord @keyup.enter="onSubmit" >
+ <input type="image" src="../images/ser3.png" v-on:click="onSubmit()">
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "2114558236";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.9.254.151:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+    </div>
+    <div class="header">
+        <div class="head">
+            <div class="head-l">
+ 
+<a href="../index.htm"><img src="../images/logo.png" alt=""></a></div>
+            <div class="head-r">
+                <div class="nav">
+                <ul>
+
+<li><a href="../index.htm">首页</a>
+
+        
+                        </li>
+
+
+<li><a href="../xygk.htm">学院概况</a>
+
+<ul>
+<li><a href="xyjj.htm">学院简介</a></li>
+<li><a href="xkjs.htm">学科建设</a></li>
+<li><a href="xzjg.htm">行政机构</a></li>
+<li><a href="lxwm.htm">联系我们</a></li>
+ </ul>
+        
+                        </li>
+
+
+<li><a href="../xwdt.htm">新闻动态</a>
+
+<ul>
+<li><a href="../xwdt/xyxw.htm">学院新闻</a></li>
+<li><a href="../xwdt/zytz.htm">重要通知</a></li>
+<li><a href="../xwdt/gsgg.htm">公示公告</a></li>
+<li><a href="../xwdt/xkdt.htm">学科动态</a></li>
+ </ul>
+        
+                        </li>
+
+
+<li><a href="../dtjs.htm">党团建设</a>
+
+<ul>
+<li><a href="../dtjs/xydw.htm">学院党委</a></li>
+<li><a href="../dtjs/xytw.htm">学院团委</a></li>
+ </ul>
+        
+                        </li>
+
+
+<li><a href="../szll/zzjs.htm">师资力量</a>
+
+<ul>
+<li><a href="../szll/zzjs.htm">专职教师</a></li>
+<li><a href="../szll/jzjs.htm">兼职教师</a></li>
+<li><a href="../szll/xzjf.htm">行政教辅</a></li>
+<li><a href="../szll/yjry.htm">研究人员</a></li>
+ </ul>
+        
+                        </li>
+
+
+<li><a href="../zsxx.htm">招生信息</a>
+
+<ul>
+<li><a href="../zsxx/bkzs.htm">本科招生</a></li>
+<li><a href="../zsxx/sszs.htm">硕士招生</a></li>
+<li><a href="../zsxx/bszs.htm">博士招生</a></li>
+ </ul>
+        
+                        </li>
+
+
+<li><a href="../rcpy.htm">人才培养</a>
+
+<ul>
+<li><a href="../rcpy/jw.htm">教务</a></li>
+<li><a href="../rcpy/xsfz.htm">学生发展</a></li>
+<li><a href="../rcpy/gjjl.htm">国际交流</a></li>
+ </ul>
+        
+                        </li>
+
+
+<div class="clear"></div>
+                    </ul>
+                <div class="ser"><img src="../images/ser.png" alt=""></div>
+                </div>
+                
+
+            </div>
+            <div class="clear"></div>
+        </div>
+
+
+    </div>
+
+
+
+    <div class="banner">
+        <div><a><img src="../images/1/law3.jpg"></a></div>
+
+    </div>
+
+    <!-- 移动端头部 -->
+    <div class="top">
+        <div class="wap wap-menu">
+            <img src="../images/menu.png" class="menu" alt="">
+            <img src="../images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+    <div class="wap m-head">
+        <div class="m-logo">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script> 
+           
+                 
+                        <a href="../index.htm" onclick="_addDynClicks(&quot;wbimage&quot;, 2114558236, 74364)">
+                          
+                            <img src="../images/logo.png">
+                        </a>  
+                    
+     
+</div>
+        <div class="m-nav">
+            <div class="m-search">
+
+
+<style>
+    #appu5 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu5 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu5">
+    <div id="appu5"><div><input type="text" placeholder="请输入内容"> <input type="image" src="../images/search2.png"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu5">
+    <div id="appu5">
+        <div v-if="!isError">
+       
+            
+             <input type="text" placeholder="请输入内容"  v-model=query.keyWord @keyup.enter="onSubmit" >
+ <input type="image" src="../images/search2.png" v-on:click="onSubmit()">
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu5").html($("#htmlu5").text());
+</script>
+<script>
+    var appOwner = "2114558236";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu5",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultmobile/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.9.254.151:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+            <ul class="">
+<li>
+                    <a href="../index.htm">首页</a>
+                     
+                </li>
+ 
+
+<li>
+                    <a href="../xygk.htm">学院概况</a><span></span>
+                    <ul>
+                    <li><a href="xyjj.htm">学院简介</a></li>
+                    <li><a href="xkjs.htm">学科建设</a></li>
+                    <li><a href="xzjg.htm">行政机构</a></li>
+                    <li><a href="lxwm.htm">联系我们</a></li>
+                     </ul>
+                     
+                </li>
+ 
+
+<li>
+                    <a href="../xwdt.htm">新闻动态</a><span></span>
+                    <ul>
+                    <li><a href="../xwdt/xyxw.htm">学院新闻</a></li>
+                    <li><a href="../xwdt/zytz.htm">重要通知</a></li>
+                    <li><a href="../xwdt/gsgg.htm">公示公告</a></li>
+                    <li><a href="../xwdt/xkdt.htm">学科动态</a></li>
+                     </ul>
+                     
+                </li>
+ 
+
+<li>
+                    <a href="../dtjs.htm">党团建设</a><span></span>
+                    <ul>
+                    <li><a href="../dtjs/xydw.htm">学院党委</a></li>
+                    <li><a href="../dtjs/xytw.htm">学院团委</a></li>
+                     </ul>
+                     
+                </li>
+ 
+
+<li>
+                    <a href="../szll/zzjs.htm">师资力量</a><span></span>
+                    <ul>
+                    <li><a href="../szll/zzjs.htm">专职教师</a></li>
+                    <li><a href="../szll/jzjs.htm">兼职教师</a></li>
+                    <li><a href="../szll/xzjf.htm">行政教辅</a></li>
+                    <li><a href="../szll/yjry.htm">研究人员</a></li>
+                     </ul>
+                     
+                </li>
+ 
+
+<li>
+                    <a href="../zsxx.htm">招生信息</a><span></span>
+                    <ul>
+                    <li><a href="../zsxx/bkzs.htm">本科招生</a></li>
+                    <li><a href="../zsxx/sszs.htm">硕士招生</a></li>
+                    <li><a href="../zsxx/bszs.htm">博士招生</a></li>
+                     </ul>
+                     
+                </li>
+ 
+
+<li>
+                    <a href="../rcpy.htm">人才培养</a><span></span>
+                    <ul>
+                    <li><a href="../rcpy/jw.htm">教务</a></li>
+                    <li><a href="../rcpy/xsfz.htm">学生发展</a></li>
+                    <li><a href="../rcpy/gjjl.htm">国际交流</a></li>
+                     </ul>
+                     
+                </li>
+ 
+ <div class="clear"></div></ul>
+        </div>
+    </div>
+    
+
+    <div class="ny-main">
+
+        <div class="ny px1402">
+            <div class="ny-left">
+                <p>
+学院概况</p>
+                <ul>
+<li class="on active"><a href="xyjj.htm">学院简介</a>
+       </li>
+
+ 
+
+<li><a href="xkjs.htm">学科建设</a>
+       </li>
+
+ 
+
+<li><a href="xzjg.htm">行政机构</a>
+       </li>
+
+ 
+
+<li><a href="lxwm.htm">联系我们</a>
+       </li>
+
+ 
+</ul>
+                
+            </div>
+            <div class="ny-right">
+                <div class="ny-title">
+                    <h2>
+学院简介</h2>
+                    <div class="position"><span>当前位置:</span> 
+                        <a href="../index.htm">首页</a>
+                <span>&gt;</span>
+                <a href="../xygk.htm">学院概况</a>
+                <span>&gt;</span>
+                <a href="xyjj.htm">学院简介</a>
+</div>
+                </div>
+                <div class="art-text wow fadeInUp">
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',2114558236,'wbnews','u11')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta11(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta11('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',2114558236,1355)</script>
+<div class="detail-tit wow fadeInUp">
+                        <h4>学院简介</h4>
+ 
+                    </div>
+                    <div class="detail-text">
+   
+    <div id="vsb_content_4_1355_u111"><div id="vsb_content_4"><p class="vsbcontent_start">西南财经大学法学院是学校“211”工程重点建设学院和“双一流”重点培育学科，是国家首批应用型复合型卓越法律人才培养基地、教育部法学专业综合改革试点单位。2010年经国务院学位委员会第二十八次会议审议获批为法学一级学科博士学位授权点，招收法学理论、刑法学、民商法学、诉讼法学、经济法学、金融法学、法律经济学专业博士研究生，自招收博士研究生以来，在教育部博士论文抽检中合格率100%；拥有法学一级学科硕士学位授权点，招收法律经济学、法学理论、宪法学与行政法学、刑法学、民商法学、诉讼法学、经济法学、环境与资源保护法学、国际法学、金融法学、知识产权法11个专业硕士研究生。2023年获批法学博士后科研流动站，至此，学院已成为自本科、硕士、博士到博士后的全覆盖、全流程、全方位法学人才培养的授权单位。</p><p>法学专业为国家级一流本科专业、国家级特色专业，拥有3门国家级一流课程和18门省级一流课程。法学一级学科是省级重点学科，学科整体实力连续多年稳居全国财经院校一流方阵，近两轮学科评估结果均为B类，2023年软科专业排名全国第19位。入选四川省首批“双一流”建设“贡嘎计划”建设学科、四川省首批涉外卓越法律人才教育培养基地。拥有全国首家以信息工程学和统计学进行法治理论与应用研究的四川省高校重点实验室“法治量化与信息工程”，国内唯一的金融法省部级哲学社会科学重点研究基地“中国金融法研究中心”，全国高等学校虚拟仿真教学创新实验室“数字经济法虚拟仿真教学实验室”，省级实验教学示范中心“法学综合实验教学中心”，省级虚拟仿真实验教学中心“法学综合虚拟仿真教学中心”。</p><p>学院师资力量雄厚，现有国家级人才2人，全国五一劳动奖章获得者1人，国务院津贴专家3人，教育部法学类专业教学指导委员1人，教育部新世纪优秀人才计划3人，全国“三八红旗手”2人，四川省十大优秀中青年法学专家4人，四川省学术和技术带头人及后备人选12人，四川省有突出贡献专家6人，四川省“万人计划”人选4人，四川省“教学名师”1人、四川省优秀教师3人。截至2025年10月，学院有专任教师65人，其中教授25人，副教授24人，讲师13人，博士后3人。</p><p>近五年来主持国家社科基金重大项目等省部级以上课题100余项。在《中国社会科学》《中国法学》《法学研究》《管理世界》《Journal of Contemporary China》等中外权威期刊等发文300余篇，主持的教学成果分别于2014年、2018年和2022年连续三届获得国家级教学成果二等奖，在全国法学院中居于领先地位。近年来学院共有50余项科研成果分别获得中宣部“五个一工程”奖、全国青年优秀社科成果奖、教育部社科成果著作奖、司法部法学教材与法学优秀科研成果奖、钱端升法学研究成果奖以及四川省哲学社会科学优秀成果奖等省部级以上奖励。坚持“四个服务”，聚焦聚力法治中国建设与地方法治实践的重大问题，获批全省首批地方立法协作基地，近5年承担委托立法/修法、执法监督/评估等重要专项70余项。通过内参、要报和媒体等积极建言献策百余项，获党和国家领导人及省部级领导批示50余项。</p><p>学院现有学生1500余人，其中，全日制在校本科生700余人，硕士研究生700余人，博士研究生50余人。三十余年来，学院累计培养毕业生近六千人，并为全国党政系统和金融系统完成研究生课程等各类培训千余人。学生就业方向与学院既定的人才培养目标高度契合，学生就业率常年稳定在90%以上，广泛就业于金融机构和全球500强企业（财经领域的就业率在70%以上）以及公检法、律师事务所等法律行业。</p><p>学院将坚定不移地以习近平新时代中国特色社会主义思想为指导，深入贯彻落实习近平法治思想，在中共中央办公厅、国务院办公厅《关于加强新时代法学教育和法学理论研究的意见》的指引下，落实立德树人根本任务，全心全意办好社会主义法学教育，服务国家战略发展需求，紧密围绕高质量发展的中心任务，踔厉奋发、勇毅前行，努力提升学院综合实力和国际影响力，为中国特色社会主义法治事业培养高素质法治人才，为推进全面依法治国贡献西财法学力量。</p><p class="vsbcontent_end">（相关数据更新于2025年10月）</p></div></div>
+    <span id="vsb_content_4_1355_u11" name="vsb_content_4_1355_u11"></span> 
+    
+ </div>
+</div>
+                 
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="footer-box">
+        <div class="foot-c px1403">
+            <div class="foot-l"><script language="javascript" src="/system/resource/js/openlink.js"></script><p>友情链接</p>
+  <ul>
+    <li><a href="https://lawschool.swufe.edu.cn/zgjrfyjzx/wzsy.htm" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 2114558236, 98241)">中国金融法研究中心</a></li>
+    <li><a href="https://lawschool.swufe.edu.cn/fxsys/sy.htm" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 2114558236, 99149)">法学综合实验教学中心</a></li>
+    <li><a href="www.swufe.edu.cn" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 2114558236, 98240)">西南财经大学</a></li>
+    <li><a href="https://jwc.swufe.edu.cn/index.htm" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 2114558236, 99150)">教务处</a></li>
+    <li><a href="https://graduate.swufe.edu.cn/" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 2114558236, 99154)">研究生院</a></li>
+    <li><a href="https://kyc.swufe.edu.cn/" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 2114558236, 99151)">科研处</a></li>
+    <li><a href="https://xgb.swufe.edu.cn/" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 2114558236, 99153)">学生工作部（处）</a></li>
+    <li><a href="https://cwc.swufe.edu.cn/" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 2114558236, 99152)">财务处</a></li>
+<div class="clear"></div>
+                        </ul></div>
+            <div class="foot-r">     
+         
+                
+                <div class="ewm">
+                            <img src="../images/qrcode_for_gh_1990577aaa5c_344.jpg" alt="">
+                        </div>
+                        <span>学院公众号</span>
+                
+                 
+       
+</div>
+            <div class="clear"></div>
+        </div>
+        <div class="foot-b"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>柳林校区
+
+028-87092273 87092467(就业服务)
+
+四川成都温江柳台大道555号
+
+光华校区
+
+028-87353329
+
+四川成都光华村街55号
+
+All rights reserved</p></div>
+    </div>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-migrate.min.js"></script>
+    <script src="../js/slick.js"></script>
+    <script src="../js/public.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

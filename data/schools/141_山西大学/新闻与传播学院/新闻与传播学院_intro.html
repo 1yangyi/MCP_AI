@@ -1,0 +1,189 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"> 
+<title>山西大学新闻学院</title> 
+<link href="../../css/common.css" rel="stylesheet" type="text/css"> 
+<link href="../../css/page.css" rel="stylesheet" type="text/css"> 
+<script src="../../js/jquery-1.7.2.min.js"></script> 
+<script src="../../js/jquery.flexslider-min.js"></script> 
+<script src="../../js/slider.js"></script> 
+<script src="../../js/sjs.js"></script><script src="/js/Custom.plug-in.dsh.js"></script>
+<script src="/js/SelfJs.dsh.js"></script>
+ 
+<script type="text/javascript">
+//设为首页
+function SetHome(obj,url){
+    try{
+        obj.style.behavior='url(#default#homepage)';
+        obj.setHomePage(url);
+    }catch(e){
+        if(window.netscape){
+            try{
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+            }catch(e){
+                alert("抱歉，此操作被浏览器拒绝！\n\n请在浏览器地址栏输入“about:config”并回车然后将[signed.applets.codebase_principal_support]设置为'true'");
+            }
+        }else{
+            alert("抱歉，您所使用的浏览器无法完成此操作。\n\n您需要手动将【"+url+"】设置为首页。");
+        }
+    }
+}
+//收藏本站
+function AddFavorite(title, url) {
+    try {
+        window.external.addFavorite(url, title);
+    }
+    catch (e) {
+        try {
+            window.sidebar.addPanel(title, url, "");
+        }
+        catch (e) {
+            alert("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请使用Ctrl+D进行添加");
+        }
+    }
+}  
+</script> 
+<script src="../../js/jquery.easyaudioeffects.1.0.0.min.js"></script><meta name="author" content=""><meta name="description" content=""><meta name="keywords" content=""><link rel="shortcut icon" href=""><script type="text/javascript" src="/publish/gPublic/all.js"></script></head><body>
+
+<div class="tbg"></div>
+<div class="tnav">
+  <div class="nc"><a href="../../index.htm" target="_blank">山西大学首页</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:void(0);" onclick="SetHome(this,'#');">设为首页</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="javascript:void(0);" onclick="AddFavorite('山西大学新闻学院',location.href)">加入收藏</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="../../index.htm" target="_blank">中文版</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/en/" target="_blank"><span>English</span></a></div>
+</div>
+<div class="top">
+  <div class="ttc"> <a href="../../index.htm" target="_blank" class="logo"></a>
+  <form name="dataForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
+    <div class="search">
+	<input name="indexID" value="208" type="hidden">
+      <input name="query" type="text" class="txt" placeholder="输入您所查找的内容">
+      <input name="" type="submit" class="btn" value=" ">
+    </div>
+	</form>
+  </div>
+</div>
+<div class="menu sx_menu" dsh="menu">
+  <ul class="mn">
+    <li class="first"><a href="../../index.htm">首&nbsp;&nbsp;页</a></li>
+    <li> <a href="../index.htm">学院概况</a> 
+      <!--start-->
+      <ul style="width: 106px;">
+		<li><a href="index.htm">学院简介</a></li>
+		<li><a href="../lsyg/index.htm">历史沿革</a></li>
+		<li><a href="../bxgj/index.htm">部校共建</a></li>
+		<li><a href="../xsjg/index.htm">组织机构</a></li>
+      </ul>
+      <!--end--> 
+    </li>
+    <li> <a href="../../jzyg/index.htm">师资队伍</a> 
+      <!--start-->
+      <ul style="width: 106px;">
+		<li><a href="../../jzyg/tpjs/index.htm">特聘教授</a></li>
+		<li><a href="../../jzyg/zzjs/index.htm">教授</a></li>
+		<li><a href="../../jzyg/jzjs/index.htm">副教授</a></li>
+		<li><a href="../../jzyg/xzgl/index.htm">讲师</a></li>
+		<li><a href="../../jzyg/wpjs/index.htm">外聘教师</a></li>
+		<li><a href="../../jzyg/dzjf/index.htm">党政教辅</a></li>
+      </ul>
+      <!--end--> 
+    </li>
+    <li> <a href="../../rcpy/index.htm">人才培养</a> 
+      <!--start-->
+      <ul style="width: 106px;">
+		<li><a href="../../rcpy/bks/index.htm">本科生</a></li>
+		<li><a href="../../rcpy/yjs/index.htm">研究生</a></li>
+      </ul>
+      <!--end--> 
+    </li>
+    <li> <a href="../../kycg/index.htm">学术科研</a> 
+      <!--start-->
+      <ul style="width: 106px;">
+		<li><a href="../../kycg/xsdt/index.htm">学术动态</a></li>
+		<li><a href="../../kycg/xkjs/index.htm">学科建设</a></li>
+		<li><a href="../../kycg/kycg1/index.htm">科研成果</a></li>
+		<li><a href="../../kycg/kyhj/index.htm">科研获奖</a></li>
+		<li><a href="../../kycg/hzjl/index.htm">合作交流</a></li>
+      </ul>
+      <!--end--> 
+    </li>
+    <li> <a href="../../dtgz/index.htm">党群工作</a> 
+      <!--start-->
+      <ul style="width: 106px;">
+		<li><a href="../../dtgz/djgz/index.htm">党建工作</a></li>
+		<li><a href="../../dtgz/ghgz/index.htm">工会工作</a></li>
+      </ul>
+      <!--end--> 
+    </li>
+    <li> <a href="../../xzzx/index.htm">学生发展</a> 
+      <!--start-->
+      <ul style="width: 106px;">
+		<li><a href="../../xzzx/txgz1/index.htm">团学工作</a></li>
+		<li><a href="../../xzzx/wxsq/index.htm">闻新社区</a></li>
+		<li><a href="../../xzzx/xszp/index.htm">学生作品</a></li>
+      </ul>
+      <!--end--> 
+    </li>
+    <li> <a href="../../zsjy/index.htm">招生就业</a> 
+      <!--start-->
+      <ul style="width: 106px;">
+		<li><a href="../../zsjy/zsxx/index.htm">招生信息</a></li>
+		<li><a href="../../zsjy/jyxx/index.htm">就业信息</a></li>
+      </ul>
+      <!--end--> 
+    </li>
+    <li> <a href="../../xyyd/index.htm">校友园地</a> 
+      <!--start-->
+      <ul style="width: 106px;">
+		<li><a href="../../xyyd/xyfc/index.htm">校友风采</a></li>
+		<li><a href="../../xyyd/jcxy/index.htm">校友讲坛</a></li>
+		<li><a href="../../xyyd/lzp/index.htm">老照片</a></li>
+      </ul>
+      <!--end--> 
+    </li>
+    <li> <a href="../../wjxz/index.htm">文件下载</a> 
+      <!--start-->
+      <ul style="width: 106px;">
+      </ul>
+      <!--end--> 
+    </li>
+  </ul>
+</div>
+<script type="text/javascript">
+  $(function(){
+	 $('#menu a').easyAudioEffects({
+		ogg : "../../audio/pi.ogg",
+		mp3 : "../../audio/pi.mp3",
+		eventType : 'hover'
+	 });
+  });
+</script><div class="pos">当前位置：             <a href="../../index.htm">首页</a>»
+             <a href="../index.htm">学院概况</a>»
+    学院简介
+</div>
+<div class="pg_cnt">
+	<div class="left">
+    	<div class="cat_tit">
+        	学院概况
+            <div class="sarrow"></div>
+        </div>
+        <ul class="cat_con">
+            <a href="index.htm"><li><div>学院简介</div></li></a>
+            <a href="../lsyg/index.htm"><li><div>历史沿革</div></li></a>
+            <a href="../bxgj/index.htm"><li><div>部校共建</div></li></a>
+            <a href="../xsjg/index.htm"><li><div>组织机构</div></li></a>
+        </ul>
+    </div>
+    <div class="right">
+    	<div class="pg_tit">学院简介</div>
+        <div class="pg_con">
+<style type="text/css" id="articleDivCss">.gpCmsArticle00{}.gpCmsArticle00 .gpCmsImg{text-align: center; text-indent: 0 }.gpCmsArticle00 .gpCmsImg img{border-bottom-style: none; border-right-style: none; border-top-style: none; border-left-style: none }.gpCmsArticle00 .gpCmsVideo{text-align: center; text-indent: 0 }.gpCmsArticle00 .gpCmsVideo video{border-bottom-style: none; border-right-style: none; border-top-style: none; border-left-style: none }.gpCmsArticle00 a{color: rgb(30, 80, 162); text-decoration: none }.gpCmsArticle00 a:hover{color: rgb(186, 38, 54) }.gpCmsArticle00 table{border-collapse: collapse; border: 1px solid rgb(204, 204, 204) }.gpCmsArticle00 table th{text-indent: 0px; margin: 0px; font-size: 1px }.gpCmsArticle00 table td{border: 1px solid rgb(204, 204, 204); text-indent: 0px; margin: 0px; font-size: 16px }.gpCmsArticle00 table td img{border-bottom-style: none; border-right-style: none; margin: 5px; border-top-style: none; border-left-style: none }.gpCmsArticle00 .gpCmsCreditLine{font-family: "微软雅黑"; text-align: center; text-indent: 0; margin-top: -5px }.gpCmsArticle00 table td p{text-indent: 0; margin-bottom: 0; text-align: left }.gpCmsArticle00 p{line-height: 180%; text-indent: 2em; font-size: 16px; margin-bottom: 10px; text-align: justify; word-break: break-all; margin-top: 0 }</style><div id="articleDiv" class="gpCmsArticle00"> 
+ <p>山西大学新闻专业始建于1981年，是国内最早设立的新闻人才培养单位之一，广告专业始建于1998年，1999年开始招生。2017年山西大学新闻学院正式成立，新闻学、广告学均入选国家一流本科专业。新闻学院是国家首批卓越新闻人才培养基地，山西省委宣传部与山西大学共建单位，拥有省内唯一的新闻传播学一级学科硕士点和新闻与传播专业硕士点，一直以来，都是山西省新闻传播人才培养的重镇。2022年，在科技史一级学科博士点下设立“科技与社会”博士招生方向。2025年，创办《新媒体传播研究》杂志。</p> 
+ <p>新闻学院拥有专业水平过硬，实践能力突出的师资队伍。在校教职员工40人，其中专职教师32人，三分之二以上拥有博士学位。60%拥有海外学习经历。主持国家社科基金重大项目1项、重点项目1项、一般项目5项目、中华学术外译项目1项目、后期资助项目2项目，教育部人文社会科学研究9项。聘请多名中央和省内主要媒体行业专家担任客座教授，与北京大学新媒体研究院、上海交通大学马克思主义学院建立了长期的合作交流。</p> 
+</div>
+        </div>
+    </div>
+</div>
+
+<div class="fbg"></div>
+<div class="foot"> 山西大学新闻学院    联系电话：0351-7011855    地 址：山西省太原市坞城路92号（邮编 030006） （晋）ICP备05000471号<br>
+  建议浏览使用：1024*768分辨率、16位以上颜色、Mozilla1.7、IE6.0版本浏览器</div>
+<script src="../../js/jquery.easing-1.3.js"></script> 
+<script src="../../js/jquery.iosslider.js"></script> 
+<script type="text/javascript" src="../../js/banner.js"></script><script type="text/javascript" src="../../g_style/g_index.js"></script><script type="text/javascript" src="../../g_style/11069_g_channel_index.js"></script><script src="/cms/web/writeLog.jsp?siteID=208" async="async"></script><style>.selectTdClass{background-color:#edf5fa !important}.gpTable{ border-collapse:collapse;border:1px solid #000 }.gpTable td,.gpTable th{border:1px solid #000;  padding: 2px 3px;}.gpTable caption{border:1px dashed #DDD;border-bottom:0;padding:3px;text-align:center;}.gpTable th{border-top:1px solid #BBB;background-color:#F7F7F7;}.gpTable tr.firstRow th{border-top-width:2px;}.ue-table-interlace-color-single{ background-color: #fcfcfc; } .ue-table-interlace-color-double{ background-color: #f7faff; }td p{margin:0;padding:0;} th p{margin:0;padding:0;}blockquote {padding: 0 0 0 15px;margin: 0 0 18px;border-left: 5px solid #EEE;}</style>
+<div class="toTop" style="width: 50px; height: 50px; display: none; cursor: pointer; z-index: 999999; bottom: 10px; right: 15px; position: absolute;"></div></body></html>

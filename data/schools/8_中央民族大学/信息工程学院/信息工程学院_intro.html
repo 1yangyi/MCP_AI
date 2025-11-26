@@ -1,0 +1,420 @@
+<!DOCTYPE html><html lang="en"><head>
+        <title>学院简介-信息工程学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="信息工程学院,学院简介">
+
+
+
+
+
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../css/common.css">
+        <link rel="stylesheet" type="text/css" href="../css/fenye.css">
+        <link rel="shortcut icon" href="../Public/favicon.ico">
+        <style type="text/css">
+            /*党政领导人名横排显示，去掉竖排显示*/
+            #office-1 ul {
+                width: 800px;}
+
+            #office-1 li {
+                display: inline-block;
+                min-width: 350px;}
+        </style>
+<!--[if lt IE 9]>
+<script type="text/javascript">
+alert("您的浏览器版本太低，请升级浏览器！");
+window.close();
+</script>
+<![endif]-->
+        <script type="text/javascript" src="../js/jquery.js"></script>
+    <!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e784654525a5742000200024253 -->
+<link rel="stylesheet" type="text/css" href="../page.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1012,'/page.jsp',-1,1499287359)</script>
+</head>
+    <body>
+        <header>
+            <div class="header__wrap">
+                <div class="header__logo"></div>
+                <div class="header__search">
+                    <p id="view_count">
+                        <script language="javascript" src="../_dwr/engine.js"></script><script language="javascript" src="../_dwr/util.js"></script><script language="javascript" src="../_dwr/interface/PageCounterDWR.js"></script>访问量:<span id="a2322281" name="a232228">2335752</span>
+<script type="text/javascript">
+				function getvisittimea232228() {
+					PageCounterDWR.getVisittime('1499287359','1012','TOTAL_COUNTER','0','20',callbackdataa232228)
+				}
+
+				function callbackdataa232228(data) {
+					data = ~~data;
+					document.getElementById("a2322281").innerHTML = data;
+				}
+				getvisittimea232228();
+			</script>
+                    </p>
+                    
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu1">
+    <div id="appu1"><div><input placeholder="请输入检索内容！" autocomplete="off" class="content__button"> <input value="" type="submit" class="search__button"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+        
+        <INPUT class="content__button"  placeholder="请输入检索内容！"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"> 
+<INPUT class="search__button" value="" type="submit" v-on:click="onSubmit()"> 
+        
+         
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1499287359";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.119.129.127:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                </div>
+                <div class="header__nav">
+                    <ul>
+			<li class="nav__item drop-nav__item">
+			<a href="../index.htm" title="网站首页" class="header__nav-item ">网站首页</a>
+		</li>
+		<li class="nav__item drop-nav__item">
+			<a href="			xyjj.htm" title="学院概况" class="header__nav-item header__nav-item_status_active" data-active="active">学院概况</a>
+				<div id="subNav2" class="level-2 Layer-2" style="height: 0px; opacity: 0;">
+					<ul>
+							<a href="xyjj.htm" title="学院简介" class="no-drop">学院简介</a>
+							<a href="jgsz.htm" title="机构设置" class="no-drop">机构设置</a>
+							<a href="dw2020.htm" title="党委" class="no-drop">党委</a>
+							<a href="dzld.htm" title="党政领导" class="no-drop">党政领导</a>
+							<a href="jswyh.htm" title="教授委员会" class="no-drop">教授委员会</a>
+							<a href="xkjj.htm" title="学科简介" class="no-drop">学科简介</a>
+					</ul>
+				</div>
+		</li>
+		<li class="nav__item drop-nav__item">
+			<a href="			../szdw/szgk.htm" title="师资队伍" class="header__nav-item ">师资队伍</a>
+				<div id="subNav3" class="level-2 Layer-3" style="height: 0px; opacity: 0;">
+					<ul>
+							<a href="../szdw/szgk.htm" title="师资概况" class="no-drop">师资概况</a>
+							<a href="../szdw/xyjs.htm" title="学院教师" class="no-drop">学院教师</a>
+					</ul>
+				</div>
+		</li>
+		<li class="nav__item drop-nav__item">
+			<a href="			../jyjx/bksjx.htm" title="教育教学" class="header__nav-item ">教育教学</a>
+				<div id="subNav4" class="level-2 Layer-4" style="height: 0px; opacity: 0;">
+					<ul>
+							<a href="../jyjx/bksjx.htm" title="本科生教学" class="no-drop">本科生教学</a>
+							<a href="../jyjx/yjsjx.htm" title="研究生教学" class="no-drop">研究生教学</a>
+							<a href="../jyjx/zyrz.htm" title="专业认证" class="no-drop">专业认证</a>
+					</ul>
+				</div>
+		</li>
+		<li class="nav__item drop-nav__item">
+			<a href="			../dtjs/fdx.htm" title="党团建设" class="header__nav-item ">党团建设</a>
+				<div id="subNav5" class="level-2 Layer-5" style="height: 0px; opacity: 0;">
+					<ul>
+							<a href="../dtjs/fdx.htm" title="分党校" class="no-drop">分党校</a>
+							<a href="../dtjs/gh1.htm" title="工会" class="no-drop">工会</a>
+					</ul>
+				</div>
+		</li>
+		<li class="nav__item drop-nav__item">
+			<a href="			../xsky/kykt.htm" title="学术科研" class="header__nav-item ">学术科研</a>
+				<div id="subNav6" class="level-2 Layer-6" style="height: 0px; opacity: 0;">
+					<ul>
+							<a href="../xsky/kykt.htm" title="科研课题" class="no-drop">科研课题</a>
+							<a href="../xsky/kylw.htm" title="科研论文" class="no-drop">科研论文</a>
+							<a href="../xsky/hjtm.htm" title="获奖题目" class="no-drop">获奖题目</a>
+					</ul>
+				</div>
+		</li>
+		<li class="nav__item drop-nav__item">
+			<a href="			../students/cookbook.htm" title="学生工作" class="header__nav-item ">学生工作</a>
+				<div id="subNav7" class="level-2 Layer-7" style="height: 0px; opacity: 0;">
+					<ul>
+							<a href="../students/cookbook.htm" title="学生手册" class="no-drop">学生手册</a>
+					</ul>
+				</div>
+		</li>
+		<li class="nav__item drop-nav__item" style="width:120px;padding-right:0;">
+			<a href="			../zsjy/yjszs.htm" title="招生就业" class="header__nav-item ">招生就业</a>
+				<div id="subNav8" class="level-2 Layer-8" style="height: 0px; opacity: 0;">
+					<ul>
+							<a href="../zsjy/yjszs.htm" title="研究生招生" class="no-drop">研究生招生</a>
+					</ul>
+				</div>
+		</li>
+	<div class="header__nav-item-tip" style="margin-left: 95px;"></div>
+</ul>
+                </div>
+            </div>
+        </header>
+        <div class="info__img">
+            <img src="../images/teacher__info__img.jpg">
+        </div>
+        <div class="guide">
+            <p>
+	学院概况
+	&gt;
+	学院简介
+</p>
+        </div>
+        <div class="info">
+            <div id="mainMenuBarAnchor"></div>
+            <div class="info__menu">
+                <a href="xyjj.htm" class="info__menu__item-active" title="学院简介">学院简介</a>
+<a href="jgsz.htm" title="机构设置">机构设置</a>
+<a href="dw2020.htm" title="党委">党委</a>
+<a href="dzld.htm" title="党政领导">党政领导</a>
+<a href="jswyh.htm" title="教授委员会">教授委员会</a>
+<a href="xkjj.htm" title="学科简介">学科简介</a>
+
+            </div>
+            <!--放置学院简介的文章-->
+            <div id="faculty__desc" class="info__list">
+                <div class="info__title">
+                    <h4>
+                        
+学院简介
+                    </h4>
+                </div>
+                
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1499287359,'wbnews','u7')</script>
+<script>function seeContenta7(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1499287359,1127)</script>
+<div class="news__content">
+<div id="vsb_content_2_1127_u71"><div id="vsb_content_2"><p class="vsbcontent_start" style="text-align: justify;"><span style="font-size: 16px;">中央民族大学信息工程学院成立于2007年。建院以来，立足国家战略和民族团结进步事业，积极实施工程教育和新工科建设，培养具有家国情怀、民族信息素养的高水平新型工程人才。学院现有本科专业包括：计算机科学与技术、软件工程、数据科学与大数据技术（含第二学位）、电子信息工程、通信工程、人工智能以及民族实验班（计算机科学与技术）。2022年，获批数据科学与大数据技术专业合作办学项目（中央民族大学-澳门城市大学合作本科教育项目）。同时，学院也拥有计算机科学与技术、软件工程2个一级学科硕士点，电子信息（计算机技术、电子与通信领域）、现代教育技术2个专业硕士点。</span></p><p class="vsbcontent_start" style="text-align: justify;"><span style="font-size: 16px;">上述本科专业按照两个大类招生：计算机类（含计算机科学与技术、软件工程、数据科学与大数据技术）；电子信息类（含电子信息工程、通信工程、人工智能）。在本科专业中，2019年计算机科学与技术专业获批国家首批一流本科建设专业，2022年软件工程专业获批国家一流本科建设专业，电子信息工程专业、通信工程专业获批北京市一流建设专业。2022年计算机科学与技术专业通过中国工程教育专业认证协会和教育部高等教育教学评估中心的工程教育专业认证。2021年、2022年数据科学与大数据技术专业软科排名A类。</span></p><p class="vsbcontent_start" style="text-align: justify;"><span style="font-size: 16px;">学院下设计算机科学与技术系、电子信息与通信系、公共计算机教学部（负责全校的公共计算机教学）和实验中心；拥有民族语言智能分析与安全治理教育部重点实验室（筹）、国家语言资源监测与研究中心少数民族语言分中心、“一带一路”民族文化大数据中心、北京市实验教学示范中心---电子工程实验中心。</span></p><p><span style="font-size: 16px;">学院现有教职员工80人，其中教授16人、副教授29人，先后有教师获得“全国优秀教师”、“北京市优秀教师”、“宝钢优秀教师”称号；入选“国家民委领军人物计划”项目、教育部“新世纪优秀人才支持计划”项目、北京市高等学校“青年英才计划”项目、北京市青年拔尖人才项目；“国家民委中青年优秀人才计划”项目；科睿唯安“高被引科学家”。</span></p><p><span style="font-size: 16px;">多年来学院积极投身以科学技术创新赋能民族地区社会文化发展，努力践行社会科学与自然科学交叉融合的学科建设，服务范围拓展到民族语言信息技术处理、网络舆情与安全治理、少数民族古籍文献智能分析、民族事务信息化建设、智能机器人等领域，在人工智能、自然语言处理、网络安全等方面取得了丰硕的科研成果。学院教师先后主持和参与了多项国家“973”基金项目、国家科技支撑计划重大项目、国家“863”基金项目、国家自然科学基金重点项目、国家社会科学基金重大项目、教育部重点项目和国家民委科研项目、北京市教改项目。其中“计算机数据库及文字处理技术在少数民族语言研究中的应用研究”获“国家科技进步三等奖”和“国家民委科学技术进步一等奖”，基于计算机技术的“藏缅语族语言研究”获“国家民委社会科学研究工作成果二等奖”，其他奖励包括：教育部高等学校科学研究优秀成果奖（科学技术进步一等奖）、国防科学技术进步奖一等奖、北京市无党派人士建言献策优秀成果二等奖、全国优秀科普作品、国家民委社会科学研究成果奖、北京市优秀教学成果二等奖；近年来出版数十部学术专著，在国内外重要刊物上发表近千余篇学术论文，获得数十项发明技术专利和软件著作权。</span></p><p><span style="font-size: 16px;">在教学改革方面，获批国家级新工科教育教学改革项目2项，北京市优质课程2门，北京市虚拟仿真实验课程1门，国家规划教材1部，北京市优质教材1部，1部教材入选全国高等院校计算机基础教育研究会优秀教材奖，省部级以上教学改革项目（含教育部协同育人项目）51项，发表教学论文79篇，出版教材近23部。</span></p><p><span style="font-size: 16px;">学院注重培养大学生学科创新实践与应对复杂工程问题的综合解决能力，学生在国家及北京市的各种竞赛中多次获得殊荣。学生团队在中国大学生计算机设计大赛、全国大学生计算机应用能力与信息素养大赛、“互联网+”大学生创新创业大赛、“挑战杯”大学生创业计划竞赛、全国大学生机器人大赛、“西门子杯”中国智能制造挑战赛等竞赛中屡创佳绩。</span></p><p><span style="font-size: 16px;">学院加强国际交流，拓宽合作育人的国际渠道。与加拿大University of New Brunswick和美国University of Wisconsin at Stout实施了2+2的联合培养学生项目，与爱尔兰的University College Dublin实施了3.5+1.5联合培养学生项目，与意大利Universita degli Studi di Cassino e Lazio Meridionale签订了合作开展学术交流和教学研究的双边协议。2023年学院在海南校区与澳门城市大学联合实施“数据科学与大数据技术”专业联合学生培养项目。</span></p></div></div>
+    <span id="vsb_content_2_1127_u7" name="vsb_content_2_1127_u7"></span>
+    
+</div>
+
+            </div>
+<script>
+            $(".info__list").find("link").remove();
+        </script>
+        </div>
+        <footer>
+            <div class="footer__link"><a class="contactus" href="javascript:void(0)">联系我们</a> <a class="organization" href="javascript:void(0)">行政机构</a>
+                <a class="faculty-guide" href="javascript:void(0)">院系入口</a> <a class="schoolwebsite" href="javascript:void(0)">校内网站</a>
+                <a class="friendlink" href="javascript:void(0)">友情链接</a> </div>
+            <div class="footer__copyright">
+                <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>Copyright@2007-2024中央民族大学信息工程学院 All Rights Reserved</p><p>地址：中关村南大街27号 中央民族大学 理工楼 邮编：100081</p>
+            </div>
+            <!--模态框-->
+            <div>
+                <!--联系我们-->
+                <div id="HBox1" style="display: none">
+                    <div id="modal-content" class="content-box">
+                        <h4>联系我们</h4>
+                        <div class="content-table">
+                            <ul>
+                                
+<ul> 
+ <li><a style="width: 50px"> <img src="icons/number.png" height="38" vsbhref="vurl" vurl="icons/number.png" vheight="38" vwidth="" orisrc="icons/number.png" class="img_vsb_content"></a><a style="text-align: center; width: 100px">教学办公室</a><a>010-68932970</a></li> 
+ <li><a style="width: 50px"> <img src="icons/number.png" height="38" vsbhref="vurl" vurl="icons/number.png" vheight="38" vwidth="" orisrc="icons/number.png" class="img_vsb_content"></a><a style="text-align: center; width: 100px">学生工作办公室</a><a>010-68932333</a></li> 
+ <li><a style="width: 50px"> <img src="icons/fax.png" height="38" vsbhref="vurl" vurl="icons/fax.png" vheight="38" vwidth="" orisrc="icons/fax.png" class="img_vsb_content"></a><a style="text-align: center; width: 100px">院系传真</a><a></a></li> 
+ <li><a style="width: 50px"> <img src="icons/mail.png" height="38" vsbhref="vurl" vurl="icons/mail.png" vheight="38" vwidth="" orisrc="icons/mail.png" class="img_vsb_content"></a><a style="text-align: center; width: 100px">院系邮箱</a><a></a></li> 
+ <li><a style="width: 50px"> <img src="icons/location.png" height="38" vsbhref="vurl" vurl="icons/location.png" vheight="38" vwidth="" orisrc="icons/location.png" class="img_vsb_content"></a><a style="text-align: center; width: 100px">学校地址</a><a>北京市海淀区中关村南大街27号</a></li> 
+ <li><a style="width: 50px"> <img src="icons/mailcode.png" height="38" vsbhref="vurl" vurl="icons/mailcode.png" vheight="38" vwidth="" orisrc="icons/mailcode.png" class="img_vsb_content"></a><a style="text-align: center; width: 100px">邮政编码</a><a>100081</a></li> 
+</ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--行政机构-->
+                <div id="HBox2" style="display: none">
+                    <div class="link-box">
+                        <h4>行政机构 </h4>
+                        <div class="link-table">
+                            <ul>
+                                <script language="javascript" src="/system/resource/js/openlink.js"></script>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--院系入口-->
+                <div id="HBox3" style="display: none">
+                    <div class="link-box">
+                        <h4>院系入口</h4>
+                        <div class="link-table">
+                            <ul>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--校内网站-->
+                <div id="HBox4" style="display: none">
+                    <div class="link-box">
+                        <h4>校内网站</h4>
+                        <div class="link-table">
+                            <ul>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--友情链接-->
+                <div id="HBox5" style="display: none">
+                    <div class="link-box">
+                        <h4>友情链接</h4>
+                        <div class="link-table">
+                            <ul>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="../js/common.js"></script>
+        <script type="text/javascript">
+            stickMenu();
+            level1length = $('.photo-level-1 ul li').length - 2;
+            level2length = $('.photo-level-2 ul li').length;
+            //机构列表水平居中
+            $('.photo-level-1').css('width', 100 * level1length + 'px');
+            $('.photo-level-2').css('width', 100 * level2length + 'px');
+            //机构名垂直居中
+            $('.photo-item a').each(function() {
+                var marginTop = (265 - $(this).text().length * 20) / 2;
+                if (marginTop > 0)
+                    $(this).css('margin-top', marginTop + 'px');
+                else
+                    $(this).css('margin-top', '0');
+            });
+         
+        </script>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

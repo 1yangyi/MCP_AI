@@ -1,0 +1,418 @@
+<!DOCTYPE html><html><head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+ 
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="applicable-device" content="pc,mobile">
+<title>
+英文版-北京大学第一医院
+</title>
+<meta name="keywords" content="北京大学第一医院主站,北京大学第一医院,北京第一医院,第一医院,">
+<meta name="description" content="北京大学第一医院(简称“北大医院”)位于北京老皇城内，是距离中南海最近的医院，是一所融医疗、教学、科研、预防为一体的大型综合性三级甲等医院，是中央保健基地医院……">
+ <link href="/Content/Areas/Common/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+ <link href="/Content/Areas/Common/css/common.css" rel="stylesheet" type="text/css">
+ <link href="/Content/Areas/Common/css/animate.css" rel="stylesheet" type="text/css">
+ <style>
+ .nav_con {
+ display: block !important;
+ }
+ </style>
+ 
+ <link href="/Content/Areas/News/css/YWB.css" rel="stylesheet" type="text/css">
+ 
+
+ <script type="text/javascript" async="" defer="" src="https://tongji.54doctor.net/54doctor.js"></script><script src="/Scripts/jquery.min.js" type="text/javascript"></script>
+ <script src="/Content/Areas/Common/scripts/bootstrap.min.js" type="text/javascript"></script>
+
+ 
+ <script src="/Scripts/Common/control.js" type="text/javascript"></script>
+ <!-- IE响应式 -->
+ <!--[if lt IE 9]>
+ <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+ <![endif]-->
+ 
+
+ 
+</head>
+<body>
+ 
+    <img src="/Content/Areas/Common/images/logo/wxShare.jpg" width="0" height="0" style="display: none">
+        <script type="text/javascript">
+            var urlStr = window.location.href;
+            $(document).ready(function () {
+                var ua = window.navigator.userAgent.toLowerCase();
+                if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+                    $.ajax({
+                        url: "/Mobile/Common/WxShare",
+                        type: "POST",
+                        datatype: "JSON",
+                        data: { url: encodeURIComponent(urlStr) },
+                        success: function (data) {
+                            if (data.status == 1) {
+                                $.getScript("https://res.wx.qq.com/open/js/jweixin-1.6.0.js", function () {
+                                    var appId = data.appId;
+                                    var timestamp = data.timestamp;
+                                    var nonceStr = data.noncestr;
+                                    var signature = data.signature;
+                                    var title = '英文版'; // 分享标题
+                                    var desc = '北京大学第一医院(简称“北大医院”)位于北京老皇城内，是距离中南海最近的医院，是一所融医疗、教学、科研、预防为一体的大型综合性三级甲等医院，是中央保健基地医院……'; // 分享描述
+                                    var link = urlStr; // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                                    var imgUrl = 'https://www.pkufh.com/Content/Areas/Common/images/logo/wxShare.jpg'; // 分享图标
+                                    wx.config({
+                                        debug: false,
+                                        appId: appId,
+                                        timestamp: timestamp,
+                                        nonceStr: nonceStr,
+                                        signature: signature,
+                                        jsApiList: [
+                                            'checkJsApi',
+                                            'onMenuShareTimeline',
+                                            'onMenuShareAppMessage',
+                                            'onMenuShareQQ',
+                                            'onMenuShareWeibo',
+                                            'hideMenuItems',
+                                            'showMenuItems',
+                                            'hideAllNonBaseMenuItem',
+                                            'showAllNonBaseMenuItem',
+                                            'translateVoice',
+                                            'startRecord',
+                                            'stopRecord',
+                                            'onRecordEnd',
+                                            'playVoice',
+                                            'pauseVoice',
+                                            'stopVoice',
+                                            'uploadVoice',
+                                            'downloadVoice',
+                                            'chooseImage',
+                                            'previewImage',
+                                            'uploadImage',
+                                            'downloadImage',
+                                            'getNetworkType',
+                                            'openLocation',
+                                            'getLocation',
+                                            'hideOptionMenu',
+                                            'showOptionMenu',
+                                            'closeWindow',
+                                            'scanQRCode',
+                                            'chooseWXPay',
+                                            'openProductSpecificView',
+                                            'addCard',
+                                            'chooseCard',
+                                            'openCard',
+                                            'updateAppMessageShareData',
+                                            'updateTimelineShareData'
+                                        ]
+                                    });
+                                    wx.ready(function () {
+                                        //自定义“分享给朋友”及“分享到QQ”按钮的分享内容
+                                        wx.updateAppMessageShareData({
+                                            title: title, // 分享标题
+                                            desc: desc, // 分享描述
+                                            link: link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                                            imgUrl:imgUrl, // 分享图标
+                                            success: function () {
+                                            // 设置成功
+                                            }
+                                        });
+                                         //自定义“分享到朋友圈”及“分享到QQ空间”按钮的分享内容
+                                        wx.updateTimelineShareData({
+                                            title: title, // 分享标题
+                                            desc: desc, // 分享描述
+                                            link: link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                                            imgUrl:imgUrl, // 分享图标
+                                            success: function () {
+                                            // 设置成功
+                                            }
+                                        });
+                                    });
+                                });
+                            }
+                        },
+                        error: function () {
+                        }
+                    });
+                }
+            });
+
+        </script>
+        <!-- 54Doctor -->
+        <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(["setCookieDomain", "*.pkufh.com"]);
+        _paq.push(["setDomains", ["*.pkufh.com"]]);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function () {
+            var u = "https://tongji.54doctor.net/";
+            _paq.push(['setTrackerUrl', u + '54doctor.php']);
+            _paq.push(['setSiteId', 91]);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + '54doctor.js'; s.parentNode.insertBefore(g, s);
+        })();
+        </script>
+        <noscript><p><img src="https://tongji.54doctor.net/54doctor.php?idsite=91" style="border:0;" alt="" /></p></noscript>
+        <!-- End 54Doctor Code -->
+
+
+
+ <div class="wrap">
+ <!-- 弹窗、飘窗、浮窗等 -->
+  
+
+ <div class=" navbar-default ">
+
+ <div class="header" id="headflag">
+ <div class="header_con">
+ <link href="/Content/Areas/Common/css/header_YWB.css" rel="stylesheet" type="text/css">
+
+
+<!-- 图片懒加载js文件 头部调用 不能删除---wz2016-5-18 -->
+<script src="/Content/Areas/Common/scripts/jquery.lazyload.js" type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8">
+ $(function () {
+ $("img").lazyload({ effect: "fadeIn" });
+ });
+</script>
+<script type="text/javascript">
+ $(function () {
+ $(".arrow").hover(function () {
+ $(this).find(".box").stop().slideDown();
+ }, function () {
+ $(".box").stop().slideUp()
+ })
+ });
+ $(function () {
+ $(".weixin").hover(function () { $(".weixin_img").stop().slideDown(); }, function () { $(".weixin_img").stop().slideUp() });
+ $(".sina").hover(function () { $(".sina_img").stop().slideDown(); }, function () { $(".sina_img").stop().slideUp() });
+ });
+</script>
+<!--头部搜索点击事件-->
+<script type="text/javascript">
+ $(document).ready(function () {
+
+ //选择点击事件
+ $('#searchSexChoose').click(function () {
+ if ($('#searchSexList').is(':visible')) $('#searchSexList').hide();
+ else {
+ cleanAllSearchList();
+ $('#searchSexList').fadeIn(400);
+ return false;
+ }
+ });
+
+ //菜单项hover事件
+ $('.searchDownList li').hover(function () {
+ $(this).css({ 'background-color': '#2076bd' });
+ $(this).css({ 'color': '#fff' });
+ }, function () {
+ $(this).css({ 'color': '#4b4b4b' });
+ $(this).css({ 'background-color': '#fff' });
+ });
+
+ //下拉菜单项点击事件
+ $('.searchDownList li').click(function () {
+ var choosen = $(this).attr("value");
+ var choosem = $(this).html();
+ //将选择的内容插入搜索框中
+ $(this).parent().parent().find('.searchChoose').html(choosem);
+ //将选择的内容插入到隐藏的输入框中
+ $(this).parent().parent().find('input').attr("value", choosen);
+ });
+
+ //全局关闭事件
+ $(document).click(function () {
+ cleanAllSearchList();
+ });
+ });
+
+ //全局关闭
+ function cleanAllSearchList() {
+ $('#searchSexList').hide();
+ }
+</script>
+<!-- 结束 -->
+<!--[if IE 6]>
+<script src="/Content/Areas/Common/scripts/DD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('img,a,input,ul.article_list li,.arrow,div,h2,ul.icon-group li.icon-1 a i,ul.icon-group li.icon-2 a.icon-2-1 i,ul.icon-group li.icon-2 a.icon-2-2 i,ul.icon-group li.icon-4 a.icon-4-1 i,ul.icon-group li.icon-4 a.icon-4-2 i,.picFocus .hd ul li span');
+</script>
+<![endif]-->
+
+<div class="bg_header">
+ <div class="header_top">
+ <div class="header_1200">
+ <div class="headerT_left">WELCOME TO PEKING UNIVERSITY FIRST HOSPITAL</div>
+ <div class="headerT_right">
+ <a href="/">CHINESE</a>
+ <a href="/hospitals/main/boot">GUIDE PAGE</a>
+ <div class="clearit"></div>
+ </div>
+ <div class="clearit"></div>
+ </div>
+ </div>
+ <div class="header_bottom">
+ <a href="/"><img src="/Content/Areas/Hospitals/images/Main/boot/logo.png" alt=""></a></div>
+</div>
+<div class="clearit"></div>
+ 
+ <div class="nav_btn"></div>
+ <div class="clearit"></div>
+ </div>
+ </div>
+
+ 
+
+ 
+ </div>
+ <div class="nav-container"></div>
+
+
+
+ <!--导航结束-->
+ <div class="wrap_main">
+ <!--主体部分-->
+ <div class="">
+     
+ <div class="banner"><img src="/Sites/Uploaded/UserUpLoad/20200819/20200819100015.jpg" alt=""></div>
+ <div class="main">
+ <div class="Min min_1">
+ <div class="min1_left floatL">
+ <div class="bg1">
+ <div class="bg1_item bg1_item_1">
+ <h2>Core Concepts</h2>
+ <div class="div_p">
+ <p class="p_left">History Keynote:</p>
+ <p class="p_right">One Century of Accumulation and Hard Work,
+ <br>Three Decades of Dream Building in the New Era</p>
+ </div>
+ <div class="div_p">
+ <p class="p_left">Motto:</p>
+ <p class="p_right">Inspire Virtue and Revere the Dao</p>
+ </div>
+ <div class="div_p">
+ <p class="p_left">Vision:</p>
+ <p class="p_right">To be the Benchmark for Medical Services</p>
+ </div>
+ <div class="div_p">
+ <p>Humanistic Connotation: Loving Care for Life</p>
+ </div>
+ </div>
+
+ <div class="bg1_item bg1_item_2">
+ <h2>Development Strategy in the New Era</h2>
+ <div class="div_p">
+ <p class="p_left">Mission of the Time:</p>
+ <p class="p_right">To be a national medical base and a world-class academic hospital</p>
+ </div>
+ <div class="div_p">
+ <p class="p_left">Action Plan:</p>
+ <p class="p_right">To Educate people with high moral standards as our duty 
+ <br> To do academic researches for the future
+ </p>
+ </div>
+ <div class="div_p">
+ <p class="p_left">Development Path:</p>
+ <p class="p_right">To focus on academic competence
+ <br> To create a city medical axis
+ </p>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="min1_right floatR">
+ <img src="/Sites/Uploaded/UserUpLoad/20200819/20200819100051.jpg" alt="">
+ </div>
+ </div>
+ <div class="Min min_2 mt60">
+ <h2 class="min2_title">INTRODUCTION</h2>
+ <div class="article_box">
+ <p>Peking University First Hospital (also called “Beida” Hospital) was founded in 1915, which is a large comprehensive tertiary hospital integrating medical services with teaching, research and preventive medicine. It is the Central Government Designated Hospital.</p>
+    <p>Beida Hospital was one of the first-batch clinical medical schools, and was initially the affiliated clinic of Beijing Medical School approved by the Ministry of Education of the Republic of China. In 1946, it became a part of Peking University (also known as Beida) and was renamed as Beida Hospital. Its current name, Peking University First Hospital, was designated after the reunion of Beijing Medical University and Peking University integrated at 2000. In 2008, it was appointed as Central Government Designated Hospital.</p>
+ </div>
+ </div>
+ <div class="Min min_3 mt30">
+ <div class="min3_left floatL">
+ <img src="/Sites/Uploaded/UserUpLoad/20200819/20200819100107.jpg" alt="">
+ </div>
+ <div class="min3_right floatR">
+ <div class="article_box">
+ <p>In the past century, our hospital established the first Pediatrics Teaching and Research Office (1929), the first Urology Department (1946), the major of Nephrology (1950), the first Cardiovascular Ward in general hospital (1950s), and Pediatric Neurology (1961) in China. We are also in the leading position among domestic colleagues on the performance of intravenous anesthesia (1951), surgical treatment of congenital heart diseases (1950s), kidney transplantation (1960), artificial crystal embedding (1983), coronary intervention (1986), thoracoscopic surgery (1992), self-blood callback (1997), mini-incision lung transplantation (2005) and percutaneous ventricular reconstruction (2013), and so on. Therefore, Peking University First Hospital has made outstanding contributions to Chinese medical industry.</p>
+ </div>
+ </div>
+ </div>
+ <div class="Min min_4 mt30">
+ <div class="min4_left floatL">
+ <div class="article_box">
+ <p>Peking University First Hospital has 36 clinical departments, 11 technological departments, 1 research department, 4 research institutes, a total of 59 wards with 1805 opening beds. Averagely 10,000 outpatients are treated in this hospital per day. Over 100,000 patients are admitted, with about 40,000 operations completed per year. The hospital has over 3,600 full time employees, including about 250 with a professional title of professor equivalent, and over 300 with a professional title of associate professor equivalent. Prof. Guo, Yinglu of Urology Department in our hospital was honored as an academician of Chinese Academy of Engineering in 1999, which is a national and independent organization, composed of elected members with the highest honor in the community of engineering and technological sciences of the nation.</p>
+ </div>
+ </div>
+ <div class="min4_right floatR">
+ <img src="/Sites/Uploaded/UserUpLoad/20200819/20200819100120.jpg" alt="">
+ </div>
+ </div>
+ <div class="Min min_2 mt30">
+ <div class="article_box">
+ <p>Our hospital gains a reputation of complete disciplines with high-leveled general diagnosis and treatment. We have a National Clinical Medical Research Center. Totally 19 specialties of our hospital have been admitted in the National Clinical Key Specialty Construction Program (18 key specialties and 1 key specialty lab). The hospital has several peak and plateau disciplines, including 12 National Key Disciplines, National Drug Clinical Trial Institution, National Medical Device Clinical Trial Institution and the first batch of Beijing Research Ward Demonstration Project Unit. As a Class A insurance hospital, we are providing medical security services to 20 million Beijing citizens who are ensured by the basic medical insurance. At the same time, the hospital is responsible for the medical care of 60,000 persons at government expense and the health care for one eighth of the senior government officials. Among all the outpatients of our hospitals, one third of them are patients with stubborn diseases coming from all over the country.</p>
+ </div>
+ </div>
+ <div class="Min min_5 mt30">
+ <div class="min5_left floatL">
+ <img src="/Sites/Uploaded/UserUpLoad/20200819/20200819100131.jpg" alt="">
+ </div>
+ <div class="min5_right floatR">
+ <img src="/Sites/Uploaded/UserUpLoad/20200819/20200819100143.jpg" alt="">
+ </div>
+ </div>
+ <div class="Min min_2 mt30">
+ <div class="article_box">
+ <p>As the oldest affiliated medical hospital of Peking University, over 3, 300 undergraduates and over 3, 800 graduates have received trainings from our hospital since 1977, including 1, 900 with master degree, 1, 800 with doctorate degree and over 115 post-doctoral fellows. At present, the hospital has tremendous teaching responsibilities with an enrollment of more than 300 students from the eight year doctoral programs, 590 students form master programs, and about 400 undergraduates of the nursing school. In addition, our hospital is responsible for the CME of about 20,000 persons annually.</p>
+ <p>Our scientific research has been in the leading position in China for many years. In the past five years, the hospital has been approved for a total of nearly 1,600 national, provincial, municipal, school-level projects and horizontal subjects, as well as clinical trials, with a funding of approximately 1.1 billion yuan. More than 5,300 papers have been published, and nearly 3,000 papers have been included in SCI (Science Citation Index), some of which have been published in international elite journals such as New Engl J Med, Lancet, Blood, Am J Hum Genet, etc. We have honored more than 40 scientific and technological achievement awards from the State, the Ministry of Education, Beijing Municipality, and the Chinese Medical Association, including 19 national and ministerial-level awards. </p>
+ <p>Forging ahead in the New Era, Peking University First Hospital People will carry forward the lofty professional spirit and the great anti-epidemic spirit,and work hard with noble medical ethics, superb medical skills, and rigorous medical standards. With a hundred years of history and fruitful achievements, in front of the mission and responsibility in the New Era, Peking University First Hospital People will continue to inherit the core values of "Inspire Virtue and Revere the Dao", pursue the vision "To be the Benchmark for Medical Services", and carry forward the humanistic connotation of " Loving Care for Life". On the road to realize the great revival of the Chinese dream, we hold the dream of being “a national medical base and a world-class academic hospital”, based on the action plan “Educating people with high moral standards as our duty, Doing academic researches for the future”. We will focus on academic competence and create a city medical axis: with the Central Campus accomplishing national assignment in the central point, Miyun Campus providing medical care in the north end and Daxing Campus developing from an international perspective in the south end. We will stay true to the original aspiration of "a century of accumulation and hard work" and start the new journey of "three decades of dream building in the New Era."</p>
+    </div>
+ </div>
+ <div class="Min min_5 mt30">
+ <div class="min5_left floatL">
+ <img src="/Sites/Uploaded/UserUpLoad/20200819/20200819100155.jpg" alt="">
+ </div>
+ <div class="min5_right floatR">
+ <img src="/Sites/Uploaded/UserUpLoad/20200819/20200819100207.jpg" alt="">
+ </div>
+ </div>
+ </div>
+ 
+ 
+ </div>
+ <div class="clearit"></div>
+
+ <!--主体结束-->
+ <!-- 友情链接 -->
+ 
+ <!--底部开始-->
+ <div class="footer">
+ <link href="/Content/Areas/Common/css/footer_YWB.css" rel="stylesheet" type="text/css">
+
+
+<p><a href="http://www.beian.miit.gov.cn">京ICP备13027525号</a> &nbsp;京卫网审字(2001)27号<span style="width:300px;margin:0 auto; padding:0;">
+ <img src="/Sites/Uploaded/UserUpLoad/20180103/20180103172853.png" style="">京公网安备 11040202430046号
+</span>工信部链接：<a href="https://beian.miit.gov.cn">https://beian.miit.gov.cn</a></p>
+<p>北京大学第一医院 版权所有   地址：北京市西城区西什库大街8号　邮编：100034　联系电话:83572211</p>
+ <p>技术支持：<a href="http://www.54doctor.net/" target="_blank" title="54Doctor" rel="noopener noreferrer"><img src="/Content/Areas/Common/images/logo/54doctor.png"></a></p>
+<p style="display: none;">
+
+<span id="ajax_div__VisitCount_1_0_0_1471">
+本网站已被访问<strong>64473336</strong>次</span> </p> 
+ <p style="display:none;">
+  
+
+<span id="ajax_div__VisitCount_1392_0_0_4641">
+本网站已被访问<strong>36713</strong>次</span>
+ </p>
+
+ 
+ </div>
+ <!--底部结束-->
+ </div>
+ </div>
+
+  </body></html>

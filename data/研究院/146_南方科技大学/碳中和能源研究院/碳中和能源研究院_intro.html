@@ -1,0 +1,823 @@
+<!DOCTYPE html><html><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>研究院概况 - 碳中和能源研究院</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<link rel="stylesheet" href="/static/site/css/animate.min.css">
+	<link rel="stylesheet" href="/static/site/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/static/site/css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="/static/site/css/dragdealer.css">
+	<link rel="stylesheet" href="/static/site/css/com.css">
+	<link rel="stylesheet" href="/static/site/css/base-zj.css">
+	<link rel="stylesheet" href="/static/site/css/index.css">
+	<!-- 不是首页时进行加载 -->
+	<link rel="stylesheet" href="/static/site/css/innerstyle.css">
+		<link rel="stylesheet" href="/static/site/css/screen.css">
+
+	<!-- 不是首页时进行加载 -->
+	
+
+	<script src="/static/site/js/jquery.min.js"></script>
+	<script src="/static/site/js/swiper-bundle.min.js"></script>
+	<script src="/static/site/js/flexble.js"></script><style>html{font-size:66.66666666666667px;}</style>
+
+	<script type="text/javascript">
+		function gxListsHtml(link) {
+			var dataHtml;
+			$.ajax({
+				type:"GET",
+				url:link,
+				dataType:"",
+				async:false,
+				data:{},
+				success:function (data) {
+					dataHtml = data;
+				}, error:function () {}
+			});
+			return dataHtml;
+		}
+
+		$(function () {
+			$(document).on('click','.gxListsHtml .pages a',function () {
+				var thref_ = $(this).attr('href');
+				if (thref_ != undefined){
+					var getPLHtml = gxListsHtml(thref_);
+					$(this).parents('.gxListsHtml').html(getPLHtml);
+				}
+				for(var i = 0 ; i< $(".donghua_list ul li").length ; i++) {
+					$(".donghua_list ul li").eq(i).css({"animation": "bannerInUp .8s ease-in-out "+ Math.floor( i * 10 + 15) / 100  +"s forwards"});
+				}
+				return false;
+			});
+		});
+	</script>
+
+	<script type="text/javascript">
+		getPageVal = 1;
+		$(function () {
+			//$('.load-more a').html("加载更多");
+			if ($('.pages a').length < 1){
+				$('.pages').hide();
+				//$('.load-more').hide();
+			}
+		});
+		function getAhref(){
+			var resahref = '';
+			$('.pages a').each(function(){
+				var ahref = $(this).attr('href');
+				if (ahref != undefined){
+					resahref = ahref;
+					return false;
+				}
+			});
+			return resahref;
+		}
+		function updateQueryStringParameter(queryStrUrl, key, value) {
+			if(!value) {return queryStrUrl;}
+			var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+			var separator = queryStrUrl.indexOf('?') !== -1 ? "&" : "?";
+			if (queryStrUrl.match(re)) {
+				return queryStrUrl.replace(re, '$1' + key + "=" + value + '$2');
+			} else {
+				return queryStrUrl + separator + key + "=" + value;
+			}
+		}
+		function getQueryVariable(variable)
+		{
+			var query = window.location.search.substring(1);
+			var vars = query.split("&");
+			for (var i=0;i<vars.length;i++) {
+				var pair = vars[i].split("=");
+				if(pair[0] == variable){return pair[1];}
+			}
+			return false;
+		}
+		function getPageLists(){
+			var Ahrefstr = getAhref();
+			if (Ahrefstr){
+				getPageVal++;
+				var optsrcval = updateQueryStringParameter(Ahrefstr, 'page', getPageVal);
+				//$('.data-stars').show().css('opacity','0.5').html('Data Loading...');
+				$.ajax({
+					type:"GET",
+					url:optsrcval,
+					data:{},
+				}).done(function (data) {
+					var Htmldata = $.parseHTML(data, document, true);
+					var HtmlObj = $("<code></code>").append($(Htmldata));
+					var HtmlFind = $("#app-lists-data", HtmlObj);
+					var getshowhtml = $.trim(HtmlFind.html());
+					var showreg = new RegExp("<div class=\"clearfix\"></div>","g");//g,表示全部替换。
+					$('#app-lists-data').append(getshowhtml);
+					var isshowh = getshowhtml.replace(showreg,'');
+					$('.data-stars').hide();
+					if (isshowh == ''){
+						//$('.data-stars').show().css('opacity','0.5').html('No more content！');
+						$('.data-more').hide();
+					}
+					for(var i = 0 ; i< $(".donghualist ul li").length ; i++) {
+						$(".donghualist ul li").eq(i).css({"animation": "bannerInUp .5s ease-in-out "+ Math.floor(  15 + 35) / 100  +"s forwards"});
+					}
+				})
+			} else {
+				// $('.data-stars').show().css('opacity','0.5').html('No more content！');
+				$('.data-more').hide();
+			}
+		}
+	</script>
+
+	<style type="text/css">
+		.team-left .desc { display: block; }
+
+.news_filter .searchbox input  {  height: 56px; }
+
+.contact-info dt span {    display: block;    padding-left: 19px; }
+
+.team-desc .desc p {     display: -webkit-box;     -webkit-line-clamp: 7; }
+
+.expect_list ul li:nth-child(1) .desc p { max-width: 55%; }
+
+.expect_list ul li:last-child,
+.tool p  ,
+.mode-build, 
+.float-left ul li:nth-child(1) {    display: none; }
+
+.tool a.icon-serach { margin-right: 0; }
+
+.committee_list ul li .committee-zhiwe p {  text-align: center; }
+
+.content table tr td img {    max-width: 212px !important; }
+
+.content video {   width: 100%;   height: auto; }	</style>
+</head>
+<body style="font-size: 16px;">
+
+<!-- 头部搜索 -->
+<div class="mode-search">
+
+	<div class="close3">
+		<span></span>
+		<span></span>
+	</div>
+
+	<div class="home-search bg_fff">
+		<div class="container">
+			<h1>搜索您想要的内容</h1>
+
+			<div class="search-form">
+				<form action="/search.html">
+					<input type="text" name="ws" placeholder="请输入您想搜索的内容" class="sousuo">
+					<button class="btn-sousuo"></button>
+				</form>
+			</div>
+
+			<div class="s_resurlt">
+				<p>建议搜索</p>
+				<ul>
+					<a href="/search.html?ws=碳中和">碳中和</a><a href="/search.html?ws=清洁能源">清洁能源</a><a href="/search.html?ws=科学研究">科学研究</a>				</ul>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- 头部搜索-end -->
+
+
+
+
+<!-- 汉堡包菜单区 -->
+<div class="menu-panle ">
+	<div class="close3">
+		<span></span>
+		<span></span>
+	</div>
+
+	<div class="left-bg">
+		<img src="/static/site/img/left-bg.png">
+		<div class="black_wamp"></div>
+	</div>
+
+	<div class="container">
+		<div class="logo">
+			<a href="/"><img src="/uploads/202310/资源6[-]09174755_79647_94344072.png"> </a>
+
+		</div>
+
+		<div class="right-content">
+			<div class="dot_menus ">
+				<ul>
+					<li>
+						<p><a href="/"> 首页 </a></p>
+					</li>
+
+					
+					<li class="top-navid-1 active">
+						<p><a href="/about.html?lang=zh-cn" target="">研究院概况</a> <i class="plus"></i> </p>
+												<ol>
+														<a class="alnavcla-6" href="/about.html?lang=zh-cn" target="">研究院概况</a>
+														<a class="alnavcla-7" href="/about/logos.html?lang=zh-cn" target="">研究院标志</a>
+														<a class="alnavcla-8" href="/about/jigou.html?lang=zh-cn" target="">研究院机构</a>
+														<a class="alnavcla-9" href="/about/team.html?lang=zh-cn" target="">人员构成</a>
+														<a class="alnavcla-10" href="/about/committee.html?lang=zh-cn" target="">学术委员会</a>
+													</ol>
+											</li>
+					
+					<li class="top-navid-2">
+						<p><a href="/news/index/cid/8.html?lang=zh-cn" target="">新闻中心</a> <i class="plus"></i> </p>
+												<ol>
+														<a class="alnavcla-11" href="/news/index/cid/8.html?lang=zh-cn" target="">综合新闻</a>
+														<a class="alnavcla-12" href="/notice.html?lang=zh-cn" target="">通知公告</a>
+														<a class="alnavcla-19" href="/news/index/cid/224.html?lang=zh-cn&amp;nvid=19" target="">科研进展</a>
+													</ol>
+											</li>
+					
+					<li class="top-navid-3">
+						<p><a href="/research.html?lang=zh-cn" target="">科学研究</a> <i class="plus"></i> </p>
+												<ol>
+														<a class="alnavcla-13" href="/research.html?lang=zh-cn" target="">研究方向</a>
+														<a class="alnavcla-14" href="/research/project.html?lang=zh-cn" target="">科研项目</a>
+														<a class="alnavcla-15" href="/research/plat.html?lang=zh-cn" target="">科研平台</a>
+														<a class="alnavcla-18" href="/research/paper.html?lang=zh-cn" target="">科研论文</a>
+													</ol>
+											</li>
+					
+					<li class="top-navid-4">
+						<p><a href="/contact/recru.html?lang=zh-cn" target="">人员招聘</a> <i class="plus"></i> </p>
+												<ol>
+														<a class="alnavcla-16" href="/contact/recru.html?lang=zh-cn" target="">招聘信息</a>
+													</ol>
+											</li>
+					
+					<li class="top-navid-5">
+						<p><a href="/contact.html?lang=zh-cn" target="">联系我们</a> <i class="plus"></i> </p>
+												<ol>
+														<a class="alnavcla-17" href="/contact.html?lang=zh-cn" target="">联系信息</a>
+													</ol>
+											</li>
+					
+				</ul>
+
+				<div class="clearfix"></div>
+			</div>
+
+
+			<div class="ft-bottom">
+				<div class="menus-search">
+
+					<div class="lang">
+						<a class="on" href="/index/languages/lang/zh.html"> 中文</a>
+						<a href="/index/languages/lang/en.html"> 英文 </a>
+
+					</div>
+
+					<div class="searchbox">
+						<form action="/search.html">
+							<input type="text" name="ws" placeholder="请输入您想搜索的内容" class="menus-input">
+							<button class="btn_search"></button>
+						</form>
+					</div>
+
+				</div>
+
+				<div class="menus-foot ">
+					<ul>
+						
+						<a href="https://www.sustech.edu.cn/" target="_blank">南方科技大学 </a>
+
+						
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="clearfix"></div>
+</div>
+
+<!-- 汉堡包菜单区-end -->
+
+
+<!-- 头部菜单 -->
+<header>
+	<div class="headtop fixbg zone-1">
+		<div class="container">
+
+
+			<div class="logo ">
+				<a href="/">
+
+					<img src="/uploads/202310/资源5[-]09174744_24810_46034098.png" class="on-color">
+
+					<img src="/uploads/202310/资源6[-]09174755_79647_94344072.png" alt="" class="old">
+				</a>
+			</div>
+
+			<div class="menu">
+				<ul>
+					
+					<li class="top-navid-1 active">
+						<p><a href="/about.html?lang=zh-cn" target="">研究院概况</a> </p>
+					</li>
+					
+					<li class="top-navid-2">
+						<p><a href="/news/index/cid/8.html?lang=zh-cn" target="">新闻中心</a> </p>
+					</li>
+					
+					<li class="top-navid-3">
+						<p><a href="/research.html?lang=zh-cn" target="">科学研究</a> </p>
+					</li>
+					
+					<li class="top-navid-4">
+						<p><a href="/contact/recru.html?lang=zh-cn" target="">人员招聘</a> </p>
+					</li>
+					
+					<li class="top-navid-5">
+						<p><a href="/contact.html?lang=zh-cn" target="">联系我们</a> </p>
+					</li>
+					
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+
+			<div class="tool">
+				<a class="icon-serach" id="sm_serach"></a>
+				<p>
+					<a class="on" href="/index/languages/lang/zh.html">中文</a> / <a href="/index/languages/lang/en.html">英文</a>
+					<!--						<a href="/index/languages/lang/en.html" class="lang_en" >En</a>
+						-->
+				</p>
+				<div class="clearfix"></div>
+			</div>
+
+			
+			<div class="dot">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+
+
+		</div>
+	</div>
+</header>
+<!-- 头部菜单-end -->
+
+
+
+
+<section>
+
+
+	<!-- 内页banner -->
+<div class="innerban" style="background-image: url('/uploads/202305/innerban-about[-]08151410_15189.png');">
+	<div class="container position_rela ">
+		<h1 class="h1">研究院概况</h1>
+
+		<div class="page_loadding theme_blue ">
+			<div class="page_postion icon home">
+				<a href="/" class="anger_next"> 首页 </a>  <a href="/about.html?lang=zh-cn" class="anger_next"> 研究院概况 </a>  <span>研究院概况</span>			</div>
+
+			<div class="sub_nav pc">
+				<ul>
+
+					
+<li class="navcla-6 sub_navon active"> <a href="/about.html?lang=zh-cn">研究院概况</a> </li><!--active-->
+
+
+<li class="navcla-7"> <a href="/about/logos.html?lang=zh-cn">研究院标志</a> </li><!--active-->
+
+
+<li class="navcla-8"> <a href="/about/jigou.html?lang=zh-cn">研究院机构</a> </li><!--active-->
+
+
+<li class="navcla-9"> <a href="/about/team.html?lang=zh-cn">人员构成</a> </li><!--active-->
+
+
+<li class="navcla-10"> <a href="/about/committee.html?lang=zh-cn">学术委员会</a> </li><!--active-->
+
+				</ul>
+
+				<div class="clearfix"></div>
+			</div>
+
+			<div class="clearfix"></div>
+
+		</div>
+
+		<!--<div class="slogan">
+			<h1 class="font-Extralight font-85">
+				<small class="font-Bold font-20"></small>
+							</h1>
+		</div>-->
+
+	</div>
+</div>
+<!-- 内页banner-end -->
+
+
+<!-- 内页二级菜单-移动端 -->
+<div class="sm_subnav phone">
+	<h5>研究院概况<i></i></h5>
+
+	<div class="sub_nav">
+		<ul>
+			
+<li class="navcla-6 sub_navon active"> <a href="/about.html?lang=zh-cn">研究院概况</a> </li><!--active-->
+
+
+<li class="navcla-7"> <a href="/about/logos.html?lang=zh-cn">研究院标志</a> </li><!--active-->
+
+
+<li class="navcla-8"> <a href="/about/jigou.html?lang=zh-cn">研究院机构</a> </li><!--active-->
+
+
+<li class="navcla-9"> <a href="/about/team.html?lang=zh-cn">人员构成</a> </li><!--active-->
+
+
+<li class="navcla-10"> <a href="/about/committee.html?lang=zh-cn">学术委员会</a> </li><!--active-->
+
+		</ul>
+
+		<div class="clearfix"></div>
+	</div>
+</div>
+<!-- 内页二级菜单-移动端-end -->
+
+	<!-- 正文 -->
+	<div class="main " id="about">
+		<div class="container">
+
+			<h3 class="inner-tittle color_blue bannerInUp">研究院概况</h3>
+
+			<div class="about-info space-48 bannerIn">
+				<img src="/uploads/202304/ban[-]25195849_77240.png">
+			</div>
+
+			<div class="row about-info bannerIn">
+				<div class="col-lg-4">
+					<h1 class="tittle_h1 color_blue2 has_shortline">南方科技大学
+<br>碳中和能源研究院						<span class="son-sub">于2022年3月正式获批成立</span>
+					</h1>
+				</div>
+				<div class="col-lg-7 col-lg-offset-1">
+
+					<div class="about-desc">
+						<p>依托南方科技大学，面向国家“双碳”战略，建立国际领先的碳中和技术研发地与碳中和战略高端智库，突破供能端、用能端与固碳端关键技术，提出政策建议，孵化高新企业，打造碳中和技术产业链，以关键技术与战略思想支撑深圳市在“双碳”战略实施中率先作为、先行示范，为“双碳”战略提供深圳方案、南科智慧。</p><p><br></p><p><img src="/uploads/image/20230918/1695008924552884.jpg" title="1695008924552884.jpg" alt="微信图片_20230918102255.jpg"></p><p><br></p>					</div>
+
+
+					<div class="timeline li-circle">
+						<ul>
+							<li>
+								<a>
+									<big class="color_bai font-30 phone">01</big>
+									<p class="sm_icon"><img src="/uploads/202304/icon-1[-]27103251_50117.png"></p>
+									<h6>新能源与碳减排
+<br>技术研究基地</h6>
+								</a>
+							</li>
+
+							<li>
+								<a>
+									<big class="color_bai font-30 phone">02</big>
+									<p class="sm_icon"><img src="/uploads/202305/icon-build[-]24104953_37188_7666196.png"></p>
+									<h6>新能源与碳减排
+<br>产业高地</h6>
+								</a>
+							</li>
+
+							<li>
+								<a>
+									<big class="color_bai font-30 phone">03</big>
+									<p class="sm_icon"><img src="/uploads/202305/icon-global[-]24104953_15286_41564311.png"></p>
+									<h6>碳中和 
+<br>综合高端智库</h6>
+								</a>
+							</li>
+						</ul>
+
+						<div class="clearfix"></div>
+					</div>
+
+
+				</div>
+
+			</div>
+
+
+
+		</div>
+	</div>
+
+	<!-- 正文-end -->
+
+
+	<!-- 大模块 -->
+	<div class="main scrolltool position_rela ">
+
+
+		<div class="container">
+
+			<div class="zj-floatmenu float-left">
+				<ul>
+					<li class="oncall">建设展望</li>
+					<li>建设思路</li>
+					<li>特色</li>
+				</ul>
+			</div>
+
+
+			<div class="clearfix"></div>
+		</div>
+
+		<!-- 建设展望 -->
+		<div class="zj-content demos mode-build theme_blue ">
+
+			<div class="container">
+				<div class="content-right space-48 ">
+					<h1 class="tittle_h3 color_bai">建设展望</h1>
+
+					<div class="about-info color_bai">
+						<p>研究院整合科研力量，形成强大合力，产出标杆性科技成果，
+<br>在碳中和国家大战略中贡献南科力量、展现南科实力！ </p>
+						<br>
+						<p>
+							<img src="/uploads/202304/business_slide_img2[-]25195949_90252.png">
+						</p>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+		<!-- 建设展望-end -->
+
+
+		<!-- 建设思路 -->
+		<div class="zj-content demos mode-structure theme_blue">
+
+			<div class="container">
+				<div class="content-right  space-48 ">
+
+					<h1 class="tittle_h3 color_bai">建设思路</h1>
+
+					<div class="about-info">
+						<img src="/uploads/202311/去中心[-]30111641_12728_60296479.png">
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+		<!-- 建设思路-end -->
+
+
+		<!-- 特色 -->
+		<div class="zj-content demos mode-expect">
+
+			<div class="container">
+				<div class="content-right ">
+
+					<h1 class="tittle_h3">特色</h1>
+
+					<div class="li-line-2 expect_list">
+						<ul>
+							<li style="background-image: url('/uploads/202304/yuan-1[-]25200112_88235.png');">
+								<a>
+									<big class="color_blue font-30">01</big>
+
+									<div class="desc">
+										<h3 class="font-24">学科交叉</h3>
+
+										<p>南方科技大学是深圳在中国高等教育改革发展的时代背景下创建的一所高起点、高定位的公办新型研究型大学。学校以理、工、医为主，兼具商科和特色人文社科，具有学科交叉灵活的天然优势。</p>
+									</div>
+
+								</a>
+							</li>
+
+							<li style="background-image: url('/uploads/202305/yuan-2[-]24104953_70794_65826045.png');">
+								<a>
+									<big class="color_blue font-30">02</big>
+
+									<div class="desc">
+										<h3 class="font-24">国际合作</h3>
+
+										<p>基于合作关系，
+<br>联和大湾区及国际顶尖科研机构，
+<br>组建碳中和能源国际合作中心。</p>
+									</div>
+
+								</a>
+							</li>
+
+							<li style="background-image: url('/uploads/202305/yuan-3[-]24104953_94561_42792671.png');">
+								<a>
+									<big class="color_blue font-30">03</big>
+
+									<div class="desc">
+										<h3 class="font-24">政策支持</h3>
+
+										<p>深圳创新氛围浓厚，经济充满活力，
+<br>肩负率先实现碳中和使命，
+<br>提供稳定政策支持。</p>
+									</div>
+
+								</a>
+							</li>
+
+							<li style="background-image: url('/uploads/202305/yuan-4[-]24104953_64198_40650709.png');">
+								<a>
+									<big class="color_blue font-30">04</big>
+
+									<div class="desc">
+										<h3 class="font-24"></h3>
+										<p></p>
+									</div>
+
+								</a>
+							</li>
+						</ul>
+
+						<div class="clearfix"></div>
+					</div>
+
+
+				</div>
+			</div>
+
+		</div>
+		<!-- 特色-end -->
+
+
+
+	</div>
+	<!-- 大模块-end -->
+
+
+</section>
+
+<!-- 底部 -->
+<footer>
+	<div class="footer ">
+		<div class="container">
+
+			<div class="ft-logo">
+
+				<a href="/">
+					<img src="/uploads/202304/ft-logo[-]27100650_56095.png">
+				</a>
+			</div>
+
+			<div class="ft-content">
+				<div class="ft-menu">
+					<ul>
+						<li>
+							<p><a href="/">首页</a> </p>
+						</li>
+
+												<li><p><a href="/about.html?lang=zh-cn" target="">研究院概况</a></p></li>
+												<li><p><a href="/news/index/cid/8.html?lang=zh-cn" target="">新闻中心</a></p></li>
+												<li><p><a href="/research.html?lang=zh-cn" target="">科学研究</a></p></li>
+												<li><p><a href="/contact/recru.html?lang=zh-cn" target="">人员招聘</a></p></li>
+												<li><p><a href="/contact.html?lang=zh-cn" target="">联系我们</a></p></li>
+						
+
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+
+				<div class="ft-contact">
+					<p>广东省深圳市南山区学苑大道1088号
+南方科技大学工学院北楼414</p>
+					<br>
+					<p>办公电话：0755-88011490</p>
+
+					<p>电子邮箱：xuht@mail.sustech.edu.cn</p>
+
+					<!--<p>chuanz</p>-->
+
+					<p><a href="https://www.unisonbrand.com/" target="_blank" style="display: none;">Design by unison.</a>©版权所有2022南科大碳中和能源研究院    保留所有权利 </p>
+				</div>
+
+
+			</div>
+
+			<div class="ft-outline">
+				<select id="outline">
+					<option value="">外部链接</option>
+										<option value="https://www.sustech.edu.cn/">南方科技大学</option>
+					
+				</select>
+								<!--<li>
+					<p><a href="https://www.sustech.edu.cn/" target="_blank">南方科技大学 </a> </p>
+				</li>-->
+				
+				<div class="ft-contact">
+					<a href="##">隐私政策</a>
+					<a href="##">网站政策</a>
+					<a href="/contact.html?lang=zh-cn">网站地图</a>
+				</div>
+			</div>
+						<!--<a class="icons wechart">
+				<p>
+					<img src="/uploads/202311/微信图片_20231106100122[-]06100856_65603_25242005.jpg" alt="">
+				</p>
+			</a>-->
+			
+			<div class="clearfix"></div>
+
+		</div>
+	</div>
+</footer>
+
+<!-- 底部-end -->
+
+
+<!-- 视频弹窗 -->
+<div id="v-windows"> </div>
+<!-- 视频弹窗-end -->
+<div class="backtop"> <span></span>Top </div>
+
+<script src="/static/site/js/jquery.mousewheel.js"></script>
+<script src="/static/site/js/dragdealer.js"></script>
+<script src="/static/site/js/index.js"></script>
+<script src="/static/site/js/inner.js"></script>
+<script src="/static/site/js/donghua.js"></script>
+
+<script type="text/javascript">
+	var parnidvalss = "";
+	var topparnidvalss = "1";
+	var nvidval = "6";
+	var cidvalss = "";
+	var reqActionStr = "index";
+	$(function () {
+		if ($('.fenye a').length < 1){
+			$('.fenye').hide();
+		}
+		if ($('.pages a').length < 1){
+			$('.data-more').hide();
+		}
+		if (parnidvalss){
+			$('.chnavcla-'+parnidvalss).addClass('active');
+		}
+		if (topparnidvalss){
+			$('.top-navid-'+topparnidvalss).addClass('active');
+		}
+		if (nvidval){
+			$('.navcla-'+nvidval).addClass('sub_navon');
+		}
+		if (cidvalss){
+			linkAppendParam();
+		}
+		if ($('.tixi_meau a').length < 1){
+			$('.tixi_meau').hide();
+		}
+
+		navselOpt('.sub_nav ul li a','active');
+
+		
+		$('#outline').change(function () {
+			var wblink = $(this).val();
+			window.open(wblink);
+		});
+	});
+
+	function navselOpt(obj,cla,parele) {
+		var locah = location.href;
+		var cidlink = cidvalss ? '/'+reqActionStr+'/cid/'+cidvalss : '';
+		var pareleval = parele ? parele : 'li' ;
+		$(obj).each(function(){
+			var sellink = $(this).attr('href');
+			var sellinks = sellink.split('?');
+			var sellinksq = sellink.split('.html');
+			var sellinksq_x = sellinksq[0].split('/');
+
+			if (sellink){
+				if (locah.indexOf(sellinks[0]) !== -1 || locah.indexOf(sellinksq[0]+'.') !== -1 || locah.indexOf(sellinksq[0]+'/index') !== -1 || (cidlink && sellink.indexOf(cidlink) !== -1) || (sellinksq_x.length > 2 && locah.indexOf(sellinksq[0]+'/') !== -1)){
+					$(this).parents(pareleval).addClass(cla);
+				}
+			}
+		});
+	}
+
+	function linkAppendParam() {
+		//var AnvidStr = 'nvid='+nvidval;
+		var AnvidStr = 'cid='+cidvalss;
+		$('.mainbody a').each(function () {
+			var AlinkHref = $(this).attr('href');
+			if (AlinkHref && AlinkHref.indexOf('http') < 0 && AlinkHref.indexOf('#') < 0 && AlinkHref.indexOf('cid=') < 0){
+				var aParam = (AlinkHref.indexOf('?') < 0) ? '?'+AnvidStr : '&'+AnvidStr ;
+				$(this).attr('href',AlinkHref+aParam);
+				// console.log(AlinkHref+aParam);
+			}
+		});
+	}
+</script>
+
+
+</body></html>

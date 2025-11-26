@@ -1,0 +1,385 @@
+<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <link rel="stylesheet" type="text/css" href="../style/init.css">
+      <link rel="stylesheet" type="text/css" href="../style/style.css">
+        <title>学院简介-教师教育学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="教师教育学院,学院简介">
+
+    <!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307b76465550555742000300024752 -->
+<link rel="stylesheet" type="text/css" href="../about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1017,'/about.jsp',-1,1685799759)</script>
+</head>
+    <body>
+    <div class="index-top">
+      <div class="w1100">
+        <a href="#" class="logo">
+          <img src="../images/logo.png">
+        </a>
+        <div class="right">
+          <ul class="links">
+            <li><a href="#">旧版入口</a></li>
+            <li class="split">|</li>
+            <li><a href="#">管理入口</a></li>
+          </ul>
+          <div class="clear"></div>
+          <div class="seach-form">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><form method="post" id="au0a" name="au0a" onsubmit="return _nl_ys_check()" style="display: inline;"><input type="hidden" id="lucenenewssearchkey254019" name="lucenenewssearchkey" value=""> <input type="hidden" id="_lucenesearchtype254019" name="_lucenesearchtype" value="1"> <input type="hidden" id="searchScope254019" name="searchScope" value="0"> <input name="showkeycode" id="showkeycode254019" type="text" placeholder="内容搜索" autocomplete="off"> <input type="image" src="../images/search.png" align="absmiddle"></form></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+<form method="post" id="au0a" name="au0a" onsubmit="return _nl_ys_check()" style="display: inline">
+ <input type="hidden" id="lucenenewssearchkey254019" name="lucenenewssearchkey" value="">
+ <input type="hidden" id="_lucenesearchtype254019" name="_lucenesearchtype" value="1">
+ <input type="hidden" id="searchScope254019" name="searchScope" value="0">
+ 
+  <input name="showkeycode" id="showkeycode254019" type="text" placeholder="内容搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+ <input type="image" src="../images/search.png" align="absmiddle" style="cursor: hand" v-on:click="onSubmit()">
+
+</form>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1685799759";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    
+    <div class="index-navs">
+      <ul class="w1100"><li><a href="../index.jsp">首页</a>
+    <dl>
+            <dd><a href="../index/xyxw.htm">学院新闻</a></dd>
+            <dd><a href="../tzgg1.htm">通知公告</a></dd>
+            <dd><a href="../index/ryck.htm">荣誉窗口</a></dd>
+    </dl>
+</li>
+<li class="on"><a href="../xygk.htm">学院概况</a>
+    <dl>
+            <dd><a href="xyjj.htm">学院简介</a></dd>
+            <dd><a href="xyld.htm">学院领导</a></dd>
+            <dd><a href="zzjg.htm">组织机构</a></dd>
+            <dd><a href="xyyg.htm">学院沿革</a></dd>
+            <dd><a href="xywh.htm">学院文化</a></dd>
+            <dd><a href="lxwm.htm">联系我们</a></dd>
+    </dl>
+</li>
+<li><a href="../dqgz.htm">党群工作</a>
+    <dl>
+            <dd><a href="../dqgz/zzjg.htm">组织机构</a></dd>
+            <dd><a href="../dqgz/dwwj.htm">党委文件</a></dd>
+            <dd><a href="../dqgz/djgz.htm">党建工作</a></dd>
+            <dd><a href="../dqgz/jjjc.htm">纪检监察</a></dd>
+            <dd><a href="../dqgz/qtgz.htm">群团工作</a></dd>
+            <dd><a href="../dqgz/ztjy.htm">主题教育</a></dd>
+    </dl>
+</li>
+<li><a href="../bksjy.htm">本科生教育</a>
+    <dl>
+            <dd><a href="../bksjy/zyjs.htm">专业介绍</a></dd>
+            <dd><a href="../bksjy/pyfa.htm">培养方案</a></dd>
+            <dd><a href="../bksjy/bkszs.htm">本科生招生</a></dd>
+            <dd><a href="../bksjy/jxyj.htm">教学研究</a></dd>
+            <dd><a href="../bksjy/xkjs.htm">学科竞赛</a></dd>
+            <dd><a href="../bksjy/sjjx.htm">实践教学</a></dd>
+            <dd><a href="../bksjy/zyrz.htm">专业认证</a></dd>
+            <dd><a href="../bksjy/cyxz.htm">常用下载</a></dd>
+    </dl>
+</li>
+<li><a href="../yjsjy.htm">研究生教育</a>
+    <dl>
+            <dd><a href="../yjsjy/xwdjs.htm">学位点介绍</a></dd>
+            <dd><a href="https://zhaosheng.eol.cn/11646/tutors/index/collegespecial?college_id=2171&amp;school_id=461">导师信息</a></dd>
+            <dd><a href="../yjsjy/yjszs.htm">研究生招生</a></dd>
+            <dd><a href="../yjsjy/tdxlss.htm">同等学力申硕</a></dd>
+            <dd><a href="../yjsjy/pygz.htm">培养工作</a></dd>
+            <dd><a href="../yjsjy/xwgz.htm">学位工作</a></dd>
+            <dd><a href="../yjsjy/gzzd.htm">规章制度</a></dd>
+            <dd><a href="../yjsjy/cyxz.htm">常用下载</a></dd>
+    </dl>
+</li>
+<li><a href="../xsfz.htm">学生发展</a>
+    <dl>
+            <dd><a href="../xsfz/xgjj.htm">学工简介</a></dd>
+            <dd><a href="../xsfz/gzzd.htm">规章制度</a></dd>
+            <dd><a href="../xsfz/xshd.htm">学生活动</a></dd>
+            <dd><a href="../xsfz/xsdj.htm">学生党建</a></dd>
+            <dd><a href="../xsfz/byjy.htm">毕业就业</a></dd>
+            <dd><a href="../xsfz/cxcy.htm">创新创业</a></dd>
+            <dd><a href="../xsfz/jzxj.htm">奖助学金</a></dd>
+            <dd><a href="../xsfz/xgsj.htm">学工数据</a></dd>
+            <dd><a href="../xsfz/cyxz.htm">常用下载</a></dd>
+    </dl>
+</li>
+<li><a href="../kxyj.htm">科学研究</a>
+    <dl>
+            <dd><a href="../kxyj/xkjj.htm">学科简介</a></dd>
+            <dd><a href="../kxyj/kyjg.htm">科研机构</a></dd>
+            <dd><a href="../kxyj/kyxm.htm">科研项目</a></dd>
+            <dd><a href="../kxyj/kycg.htm">科研成果</a></dd>
+            <dd><a href="../kxyj/hjcg.htm">获奖成果</a></dd>
+            <dd><a href="../kxyj/xshd.htm">学术活动</a></dd>
+            <dd><a href="http://skc.nbu.edu.cn/newsindex.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1106">政策文件</a></dd>
+            <dd><a href="../kxyj/xszy.htm">学术资源</a></dd>
+    </dl>
+</li>
+<li><a href="../szdw.htm">师资队伍</a>
+    <dl>
+            <dd><a href="../szdw/jsfc.htm">教授风采</a></dd>
+            <dd><a href="../szdw/jsml.htm">教师名录</a></dd>
+            <dd><a href="../szdw/xwzj.htm">校外专家</a></dd>
+            <dd><a href="../szdw/rcyj.htm">人才引进</a></dd>
+    </dl>
+</li>
+<li><a href="../dffw.htm">地方服务</a>
+    <dl>
+            <dd><a href="../dffw/fsxxzl.htm">附属学校专栏</a></dd>
+            <dd><a href="../dffw/jxjypx.htm">继续教育培训</a></dd>
+            <dd><a href="../dffw/smgcjs.htm">三名工程建设</a></dd>
+            <dd><a href="../dffw/dffwpt.htm">地方服务平台</a></dd>
+    </dl>
+</li>
+<li><a href="../cysy.htm">春雨书院</a>
+    <dl>
+            <dd><a href="../cysy/sygk.htm">书院概况</a></dd>
+            <dd><a href="../cysy/gzzd.htm">规章制度</a></dd>
+            <dd><a href="../cysy/dsjs.htm">导师介绍</a></dd>
+            <dd><a href="../cysy/xshd.htm">学生活动</a></dd>
+            <dd><a href="http://booking.cysy.nbu.cintsoft.com/#/originLogin">预约系统</a></dd>
+            <dd><a href="../cysy/sydsj.htm">书院大事记</a></dd>
+    </dl>
+</li>
+<li><a href="../xyzj.htm">校友之家</a>
+    <dl>
+            <dd><a href="../xyzj/hdgg.htm">活动公告</a></dd>
+            <dd><a href="../xyzj/xyfc.htm">校友风采</a></dd>
+            <dd><a href="../xyzj/ljbyzp.htm">历届毕业照片</a></dd>
+            <dd><a href="../xyzj/jzzn.htm">捐赠指南</a></dd>
+    </dl>
+</li>
+
+
+</ul>
+      <div class="clear"></div>
+    </div>
+    
+    <div class="index-banner">
+      <img src="../images/banner.jpg">
+    </div>
+    
+    <div class="list-main w1100">
+      <div class="list-content">
+        <div class="lm-nav">
+          <h2> 学院概况
+</h2>
+          <ul>
+         
+<li class="on"><a href="xyjj.htm">学院简介</a></li><a href="xyjj.htm">
+
+
+</a><li><a href="xyjj.htm"></a><a href="xyld.htm">学院领导</a></li><a href="xyld.htm">
+
+
+</a><li><a href="xyld.htm"></a><a href="zzjg.htm">组织机构</a></li><a href="zzjg.htm">
+
+
+</a><li><a href="zzjg.htm"></a><a href="xyyg.htm">学院沿革</a></li><a href="xyyg.htm">
+
+
+</a><li><a href="xyyg.htm"></a><a href="xywh.htm">学院文化</a></li><a href="xywh.htm">
+
+
+</a><li><a href="xywh.htm"></a><a href="lxwm.htm">联系我们</a></li><a href="lxwm.htm">
+
+
+
+          </a></ul><a href="lxwm.htm">
+          
+          
+          
+          
+          <div class="clear"></div>
+        </a></div><a href="lxwm.htm">
+        </a><div class="lm-main"><a href="lxwm.htm">
+              </a><div class="brumks"><a href="lxwm.htm">
+                </a><ul><a href="lxwm.htm">
+                  <li>您当前的位置是：</li>
+                  </a><li><a href="lxwm.htm"></a><a href="../index.jsp">首页</a></li>
+<li class="gt">&gt;</li>
+<li><a href="../xygk.htm">学院概况</a></li>
+<li class="gt">&gt;</li>
+<li><a href="xyjj.htm">学院简介</a></li>
+
+                </ul>
+                <p> 学院简介
+</p>
+              </div>
+          
+            <div class="list">
+          
+
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1685799759,'wbnews','u6')</script>
+<script>function seeContenta6(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta6('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1685799759,9766)</script>
+<p>
+    </p><h1>宁波大学教师教育学院</h1>
+     <div class="content">
+    <div id="vsb_content_9766_u61"><div id="vsb_content"><p style="text-align:center;line-height:35px"><br></p><p style="text-align:justify;text-justify:inter-ideograph;text-indent:37px;line-height:35px"><span style="font-family: 仿宋; font-size: 19px;">宁波大学教师教育学院是致力于教师人才培养和教育科学、心理科学研究的学科性学院，其前身可追溯至</span><span lang="EN-US" style="font-family: 仿宋; font-size: 19px;">1958</span><span style="font-family: 仿宋; font-size: 19px;">年创办的宁波师范学院。</span><span lang="EN-US" style="font-family: 仿宋; font-size: 19px;">2008</span><span style="font-family: 仿宋; font-size: 19px;">年，在原宁波大学教育学院的基础上，成立宁波大学教师教育学院。学院在新时期以“崇德笃行，博学善诲”为院训，以“质量提升，追求卓越，师范特色，协调发展”为办学理念，全面推进教育学科品牌建设和师范专业人才培养。</span><br></p><p style="text-indent:37px;line-height:35px"><span style="font-size:19px;font-family:仿宋">学院现有专任教师<span lang="EN-US">127</span>人，其中具有博士学位<span lang="EN-US">92</span>人，省部级以上人才<span lang="EN-US">20</span>余人，包括国家重大人才工程青年人才、国务院政府特殊津贴专家、教育部高等学校教学指导委员会委员、</span><span style="font-size: 19px; font-family: 仿宋;">浙江省重点人才工程领军和青年人才</span><span style="font-size: 19px; font-family: 仿宋;">、</span><span style="font-size: 19px; font-family: 仿宋;">钱江学者、马工程首席专家、浙江省教学名师</span><span style="font-size: 19px; font-family: 仿宋;">、</span><span style="font-size: 19px; font-family: 仿宋;">浙东学者、之江青年、省<span lang="EN-US">151</span>人才培养对象、省高校中青年学科带头人、省高校优秀教师等。</span></p><p style="text-align:justify;text-justify:inter-ideograph;text-indent:37px;line-height:35px"><span style="font-size:19px;font-family:仿宋">学院下设四系九所。四系分别为<span lang="EN-US">:</span>小学教育系、学前教育系、<span style="font-family: 仿宋; font-size: 19px; text-align: justify; text-indent: 37px;">心理学系</span>和教师教育系。小学教育专业为</span><span style="font-size: 19px;font-family:仿宋">浙江省“十三五”普通高校优势与特色专业，<span lang="EN-US">2019</span>年入选</span><span style="font-size:19px;font-family:仿宋">国家一流本科专业。</span><span style="font-size:19px;font-family:仿宋">学前教育专业为浙江省</span><span style="font-size:19px;font-family:仿宋">一流本科专业，</span><span style="font-size:19px;font-family:仿宋">宁波市高校优势专业，<span style="text-align: justify;text-indent: 37px;font-size: 19px;font-family: 仿宋"><span lang="EN-US">2021</span>年入选</span><span style="text-align: justify;text-indent: 37px;font-size: 19px;font-family: 仿宋">国家一流本科专业</span>。应用心理学专业<span style="text-align: justify; text-indent: 37px; font-size: 19px; font-family: 仿宋;">为浙江省</span><span style="text-align: justify; text-indent: 37px; font-size: 19px; font-family: 仿宋;">一流本科专业，</span>宁波市高校特色专业，<span style="text-align: justify;text-indent: 37px;font-size: 19px;font-family: 仿宋"><span lang="EN-US">2021</span>年入选</span><span style="text-align: justify;text-indent: 37px;font-size: 19px;font-family: 仿宋">国家一流本科专业</span>。在2025年软科中国大学专业排名中，小学教育专业在全国163所专业中位列第7名，进入前4.29%；学前教育专业进步显著，从2024年的第20名跃升至第14名，进入前6.39%；应用心理学专业继续保持稳定发展态势，稳居全国前15%行列，彰显了学院专业建设的稳健提升。九</span><span style="font-size:19px;font-family:仿宋">所分别为<span lang="EN-US">:</span>课程与教学研究所、教育基本理论研究所、高等教育研究所、学前教育研究所、教育领导与管理研究所、<span style="font-family: 仿宋; font-size: 19px; text-align: justify; text-indent: 37px;">教育信息化研究所、</span>心理学研究所、应用心理研究所和心理健康研究所。学院有教育学和心理学两个一级学科硕士点，教育硕士和应用心理两个专业学位硕士点，2024年获批教育专业学位博士点，学院成功构建起学士、硕士、博士三级培养体系。教育学为浙江省“十三五”一流学科，心理学为宁波市重点学科</span><span style="font-size:19px;font-family:仿宋">。</span></p><p style="text-align:justify;text-justify:inter-ideograph;text-indent:37px;line-height:35px"><span style="font-size:19px;font-family:仿宋">学院教学、科研和社会服务取得丰硕成果。</span><span style="font-size: 19px; font-family: 仿宋;"><span lang="EN-US">2014</span>年获国家教学成果一等奖和二等奖各<span lang="EN-US">1</span>项；获第七届、第八届和第九届教育部高等学校科学研究优秀成果奖<span lang="EN-US">9</span>项，其中二等奖<span lang="EN-US">3</span>项，三等奖<span lang="EN-US">6</span>项（含青年奖<span lang="EN-US">1</span>项）；获第五届全国教育科学优秀成果三等奖<span lang="EN-US">1</span>项；获第六届全国教育科学研究优秀成果奖2项，其中一等奖1项</span><span style="font-size: 19px; font-family: 仿宋;">（实现宁波大学该奖项一等奖零的突破）</span><span style="font-family: 仿宋; font-size: 19px;">、二等奖1项；近</span><span lang="EN-US" style="font-family: 仿宋; font-size: 19px;">5</span><span style="font-family: 仿宋; font-size: 19px;">年来获浙江省哲学社会科学优秀成果奖9</span><span style="font-family: 仿宋; font-size: 19px;">项，其中</span><span style="font-family: 仿宋; font-size: 19px;">二等奖</span><span lang="EN-US" style="font-family: 仿宋; font-size: 19px;">6</span><span style="font-family: 仿宋; font-size: 19px;">项，青年成果奖3项。<span style="text-align: justify; text-wrap: wrap; background-color: rgb(255, 255, 255); font-size: 18.6667px; text-indent: 37.3333px; font-family: 仿宋;">2023年度获批教育部哲学社会科学研究重大课题攻关项目立项，实现了我校在该项目零的突破！2024年度获批</span><span style="text-align: justify; text-wrap: wrap; background-color: rgb(255, 255, 255); font-family: 仿宋; font-size: 18.6667px; text-indent: 37.3333px;">国家哲学社会科学成果文库1项。</span></span><span style="font-family: 仿宋; font-size: 19px;"><span style="font-size: 18.6667px; text-indent: 37.3333px; background-color: rgb(255, 255, 255);">学院近五年</span>获批国家级科研项目</span><span lang="EN-US" style="font-family: 仿宋; font-size: 19px;">27</span><span style="font-family: 仿宋; font-size: 19px;">项，省部级科研项目</span><span lang="EN-US" style="font-family: 仿宋; font-size: 19px;">38</span><span style="font-family: 仿宋; font-size: 19px;">项；在</span><span lang="EN-US" style="font-family: 仿宋; font-size: 19px;">SSCI</span><span style="font-family: 仿宋; font-size: 19px;">刊物发表论文</span><span lang="EN-US" style="font-family: 仿宋; font-size: 19px;">100多</span><span style="font-family: 仿宋; font-size: 19px;">篇，在</span><span lang="EN-US" style="font-family: 仿宋; font-size: 19px;">CSSCI</span><span style="font-family: 仿宋; font-size: 19px;">刊物发表论文</span><span lang="EN-US" style="font-family: 仿宋; font-size: 19px;">178</span><span style="font-family: 仿宋; font-size: 19px;">篇</span><span lang="EN-US" style="font-family: 仿宋; font-size: 19px;">,</span><span style="font-family: 仿宋; font-size: 19px;">其中《教育研究》和《心理学报》</span><span lang="EN-US" style="font-family: 仿宋; font-size: 19px;">18</span><span style="font-family: 仿宋; font-size: 19px;">篇</span><span style="font-family: 仿宋; font-size: 19px;">。学院积极参加社会服务，为宁波基础教育发展编制中长期规划，参与宁波学前教育立法调研，较好发挥了智库作用。</span></p><p style="text-align:justify;text-justify:inter-ideograph;text-indent:37px;line-height:35px"><span style="font-size:19px;font-family:仿宋">学院重视本科生和研究生的培养质量，尤其注重学生能力的培养，为学生成长营造良好的环境，学生在国家级和省级学科竞赛中屡获佳绩，就业率和考编率屡创新高。</span></p><p style="text-align:justify;text-justify:inter-ideograph;text-indent:37px;line-height:35px"><span style="font-size:19px;font-family:仿宋">学院将继续凝心聚力锐意进取，回应新时代对教育学科发展和师范人才培养的要求，力争建成有特色、有影响力的国内一流教学科研型学院。（更新至2025年10月）</span></p><p><br></p></div></div>
+    </div>
+    <span id="vsb_content_9766_u6" name="vsb_content_9766_u6"></span><br><br>
+    
+<p></p>
+
+           </div>
+          
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+
+    <div class="index-footer">
+      <p>
+        <span>宁波大学教师教育学院</span>
+        <span>浙江省宁波市风华路616号</span>
+        <span>邮编：315211</span>
+        <span>网页维护：教师教育学院实验中心</span>
+      </p>
+      <p>建议用 1280x1024 分辨率进行浏览 制作及维护：宁波大学 更新日期：2020年10月24日</p>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

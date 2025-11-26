@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>中心介绍-吉林大学东北亚研究中心</title><meta name="keywords" content="吉林大学东北亚研究中心,中心介绍">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/news.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/koala.min.js"></script>
+
+
+
+
+
+
+<script type="text/javascript">
+var Speed_1 = 10; //速度(毫秒)
+var Space_1 = 20; //每次移动(px)
+var PageWidth_1 = 107 * 6; //翻页宽度
+var interval_1 = 5000; //翻页间隔时间
+var fill_1 = 0; //整体移位
+var MoveLock_1 = false;
+var MoveTimeObj_1;
+var MoveWay_1="right";
+var Comp_1 = 0;
+var AutoPlayObj_1=null;
+function GetObj(objName){if(document.getElementById){return eval('document.getElementById("'+objName+'")')}else{return eval('document.all.'+objName)}}
+function AutoPlay_1(){clearInterval(AutoPlayObj_1);AutoPlayObj_1=setInterval('ISL_GoDown_1();ISL_StopDown_1();',interval_1)}
+function ISL_GoUp_1(){if(MoveLock_1)return;clearInterval(AutoPlayObj_1);MoveLock_1=true;MoveWay_1="left";MoveTimeObj_1=setInterval('ISL_ScrUp_1();',Speed_1);}
+function ISL_StopUp_1(){if(MoveWay_1 == "right"){return};clearInterval(MoveTimeObj_1);if((GetObj('ISL_Cont_1').scrollLeft-fill_1)%PageWidth_1!=0){Comp_1=fill_1-(GetObj('ISL_Cont_1').scrollLeft%PageWidth_1);CompScr_1()}else{MoveLock_1=false}
+AutoPlay_1()}
+function ISL_ScrUp_1(){if(GetObj('ISL_Cont_1').scrollLeft<=0){GetObj('ISL_Cont_1').scrollLeft=GetObj('ISL_Cont_1').scrollLeft+GetObj('List1_1').offsetWidth}
+GetObj('ISL_Cont_1').scrollLeft-=Space_1}
+function ISL_GoDown_1(){clearInterval(MoveTimeObj_1);if(MoveLock_1)return;clearInterval(AutoPlayObj_1);MoveLock_1=true;MoveWay_1="right";ISL_ScrDown_1();MoveTimeObj_1=setInterval('ISL_ScrDown_1()',Speed_1)}
+function ISL_StopDown_1(){if(MoveWay_1 == "left"){return};clearInterval(MoveTimeObj_1);if(GetObj('ISL_Cont_1').scrollLeft%PageWidth_1-(fill_1>=0?fill_1:fill_1+1)!=0){Comp_1=PageWidth_1-GetObj('ISL_Cont_1').scrollLeft%PageWidth_1+fill_1;CompScr_1()}else{MoveLock_1=false}
+AutoPlay_1()}
+function ISL_ScrDown_1(){if(GetObj('ISL_Cont_1').scrollLeft>=GetObj('List1_1').scrollWidth){GetObj('ISL_Cont_1').scrollLeft=GetObj('ISL_Cont_1').scrollLeft-GetObj('List1_1').scrollWidth}
+GetObj('ISL_Cont_1').scrollLeft+=Space_1}
+function CompScr_1(){if(Comp_1==0){MoveLock_1=false;return}
+var num,TempSpeed=Speed_1,TempSpace=Space_1;if(Math.abs(Comp_1)<PageWidth_1/2){TempSpace=Math.round(Math.abs(Comp_1/Space_1));if(TempSpace<1){TempSpace=1}}
+if(Comp_1<0){if(Comp_1<-TempSpace){Comp_1+=TempSpace;num=TempSpace}else{num=-Comp_1;Comp_1=0}
+GetObj('ISL_Cont_1').scrollLeft-=num;setTimeout('CompScr_1()',TempSpeed)}else{if(Comp_1>TempSpace){Comp_1-=TempSpace;num=TempSpace}else{num=Comp_1;Comp_1=0}
+GetObj('ISL_Cont_1').scrollLeft+=num;setTimeout('CompScr_1()',TempSpeed)}}
+function picrun_ini(){
+GetObj("List2_1").innerHTML=GetObj("List1_1").innerHTML;
+GetObj('ISL_Cont_1').scrollLeft=fill_1>=0?fill_1:GetObj('List1_1').scrollWidth-Math.abs(fill_1);
+GetObj("ISL_Cont_1").onmouseover=function(){clearInterval(AutoPlayObj_1)}
+GetObj("ISL_Cont_1").onmouseout=function(){AutoPlay_1()}
+AutoPlay_1();
+}
+</script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css">
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:776562626572323076684654525b574200010005445c -->
+<link rel="stylesheet" type="text/css" href="jjy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1011,'/jjy.jsp',-1,1500336632)</script>
+</head>
+
+<body>
+<div class="box">
+
+
+<div class="headtop">
+<div class="con">
+
+<script language="javascript">
+function dosuba214814a()
+{
+    try{
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.indexOf("msie 8")>-1)
+        {
+            window.external.AddToFavoritesBar(document.location.href,document.title,"");//IE8
+        }else if(ua.toLowerCase().indexOf("rv:")>-1)
+        {
+            window.external.AddToFavoritesBar(document.location.href,document.title,"");//IE11+
+        }else{
+            if (document.all) 
+            {
+                window.external.addFavorite(document.location.href, document.title);
+            }else if(window.sidebar)
+            {
+                window.sidebar.addPanel( document.title, document.location.href, "");//firefox
+            }
+            else
+            {
+                alert(hotKeysa214814a());
+            }
+        }
+
+    }
+    catch (e){alert("无法自动添加到收藏夹，请使用 Ctrl + d 手动添加");}
+}
+function hotKeysa214814a() 
+{
+    var ua = navigator.userAgent.toLowerCase(); 
+    var str = "";    
+    var isWebkit = (ua.indexOf('webkit') != - 1); 
+    var isMac = (ua.indexOf('mac') != - 1);     
+    if (ua.indexOf('konqueror') != - 1) 
+    {  
+        str = 'CTRL + B'; // Konqueror   
+    } 
+    else if (window.home || isWebkit || isMac) 
+    {        
+        str = (isMac ? 'Command/Cmd' : 'CTRL') + ' + D'; // Netscape, Safari, iCab, IE5/Mac   
+    }
+    return ((str) ? '无法自动添加到收藏夹，请使用' + str + '手动添加' : str);
+}
+function setHomepagea214814a()
+{
+    var url = document.location.href;
+    if (document.all)
+    {
+        document.body.style.behavior='url(#default#homepage)';
+        document.body.setHomePage(url);
+    }
+    else if (window.sidebar)
+    {
+        if(window.netscape)
+        {
+             try{
+                  netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+             }catch (e){
+                   alert("该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true");
+             }
+        }
+    var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components. interfaces.nsIPrefBranch);
+    prefs.setCharPref('browser.startup.homepage',url);
+    }
+    else
+    {
+        alert("浏览器不支持自动设为首页，请手动设置");
+    }
+}
+</script>
+
+<a href="Home/HOME.htm" style="float:right; color:#fff; margin-left:10px;">English</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="ss">
+
+
+<script type="text/javascript">
+    function _nl_ys_check(){
+        
+        var keyword = document.getElementById('showkeycode214815').value;
+        if(keyword==null||keyword==""){
+            alert("请输入你要检索的内容！");
+            return false;
+        }
+        if(window.toFF==1)
+        {
+            document.getElementById("lucenenewssearchkey214815").value = Simplized(keyword );
+        }else
+        {
+            document.getElementById("lucenenewssearchkey214815").value = keyword;            
+        }
+        var  base64 = new Base64();
+        document.getElementById("lucenenewssearchkey214815").value = base64.encode(document.getElementById("lucenenewssearchkey214815").value);
+        new VsbFormFunc().disableAutoEnable(document.getElementById("showkeycode214815"));
+        return true;
+    } 
+</script>
+<form action="ssjg.jsp?wbtreeid=1011" method="post" id="au1a" name="au1a" onsubmit="return _nl_ys_check()" style="display: inline">
+ <input type="hidden" id="lucenenewssearchkey214815" name="lucenenewssearchkey" value=""><input type="hidden" id="_lucenesearchtype214815" name="_lucenesearchtype" value="1"><input type="hidden" id="searchScope214815" name="searchScope" value="0">
+ 
+<input type="text" class="fl srk" name="showkeycode" id="showkeycode214815">
+<input type="image" src="images/sous_06.png" class="fl" style="height:23px;">
+
+
+</form>
+
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/formfunc.js"></script>
+
+
+
+
+
+</div>
+</div>
+
+</div>
+<div class="head">
+
+<div class="logo">
+
+
+
+<a href="index.htm">
+
+<img src="images/top_03.jpg">
+
+</a>
+
+
+
+
+</div>
+
+
+</div>
+
+<div class="menu-nav">
+<div id="menu">    
+  <ul class="l1-nav">    
+  
+   
+
+    <li class="l1-nav  ">  
+
+      <a class="l1-nav" href="index.htm">网站首页</a>
+
+
+
+    </li>
+
+
+
+
+    <li class="l1-nav  on">  
+
+      <a class="l1-nav" href="zxjs.htm">中心介绍</a>
+
+
+
+    </li>
+
+
+
+
+    <li class="l1-nav  ">  
+
+      <a class="l1-nav" href="xsdw.htm">学术队伍</a>
+
+
+
+    </li>
+
+
+
+
+    <li class="l1-nav  ">  
+
+      <a class="l1-nav" href="xwdt.htm">新闻动态</a>
+
+
+
+    </li>
+
+
+
+
+    <li class="l1-nav  ">  
+
+      <a class="l1-nav" href="xscg.htm">学术成果</a>
+
+
+
+    </li>
+
+
+
+
+    <li class="l1-nav  ">  
+
+      <a class="l1-nav" href="zkjs.htm">智库建设</a>
+
+
+
+    </li>
+
+
+
+
+    <li class="l1-nav  ">  
+
+      <a class="l1-nav" href="zxnk.htm">中心内刊</a>
+
+
+
+    </li>
+
+
+
+
+    <li class="l1-nav  ">  
+
+      <a class="l1-nav" href="lxwm.htm">联系我们</a>
+
+
+
+    </li>
+
+
+
+
+    
+  </ul>    
+</div>  
+</div>
+
+
+<div class="wid100">
+    <div class="list">
+        <div class="list-left fl">
+            <div class="list-left-title fl">
+
+
+
+中心介绍</div>
+            <div class="left-nav fl">
+                <ul>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="list-right fr">
+            <div class="local fl">
+                <h3><img src="images/dqwz.jpg">&nbsp;&nbsp;
+                
+                
+                     <a href="index.htm">网站首页</a>
+            &nbsp;&gt;&nbsp;
+                <a href="zxjs.htm">中心介绍</a>
+
+
+
+                
+                </h3>
+            </div>
+            <div class="jj fl">
+                
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1500336632,'wbnews','u7')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta7(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1500336632,1011)</script>
+
+    <div id="vsb_content_4_1011_u71"><div id="vsb_content_4"><p class="vsbcontent_start">为进一步开展对东北亚地区政治、经济、历史等综合研究，推动东北亚地区合作，促进东北亚地区的和平、发展与繁荣。1999年10月，以东北亚研究院为依托，聘任了校内外从事世界经济、国际政治、东北亚历史等方面的研究人员，成立了吉林大学东北亚研究中心。1999年12月，吉林大学东北亚研究中心经教育部批准，成为首批十五家普通高等学校人文社会科学重点研究基地之一。2003年和2009年，东北亚研究中心顺利通过教育部验收，并于2009年11月被评为优秀重点研究基地。</p>
+<p>经过多年的发展，中心主要围绕东北亚地区重大理论问题和现实问题，充分发挥对东北亚区域经济、政治、历史与社会发展领域多学科综合研究的优势，服务于国家重大战略需求和社会经济发展需求，东北亚研究中心逐步成长为以国际问题研究为主、多学科交叉、在国内外有较大影响力的专职研究机构。</p>
+<p class="vsbcontent_end">中心现有世界经济、区域经济学、人口·资源与环境经济学、人口学、国际政治、世界史等六个硕士和博士学位授权点。中心的主要研究方向包括东北亚区域经济、政治、历史与社会发展等，中心在巩固国别研究优势的同时，注重对东北亚地区基础理论和重大现实问题的综合研究，在东北亚区域经济合作、中日韩FTA、能源安全与合作、区域环境保护、地区安全机制、朝鲜半岛国际关系与朝核问题、图们江地区国际开发、东北老工业基地振兴、日本侵华史研究、中国人口老龄化研究等方面取得一系列重要的研究成果。</p>
+<p class="vsbcontent_img"><img width="500" src="/__local/0/2F/49/91E44FBD036920FC5DA09EB75BA_C6C956DD_24079.jpg" vwidth="500" vheight="" vurl="/_vsl/02F4991E44FBD036920FC5DA09EB75BA/C6C956DD/24079" vsbhref="vurl" orisrc="/__local/0/2F/49/91E44FBD036920FC5DA09EB75BA_C6C956DD_24079.jpg" class="img_vsb_content"></p></div></div>
+    <span id="vsb_content_4_1011_u7" name="vsb_content_4_1011_u7"></span><br><br>
+    
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+
+
+
+<div class="link">
+<div class="con">
+
+<p>友情链接</p> 
+
+<div class="lj">
+
+
+<script language="javascript" src="/system/resource/js/openlink.js"></script><select onchange="_openSelectLink(this, 'value', 'addclicks')">
+
+<option>-----------校内链接-------------</option> 
+
+<option value="https://www.jlu.edu.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1500336632, 62391)">吉林大学</option>
+
+<option value="http://nasa.jlu.edu.cn" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1500336632, 62398)">吉林大学东北亚研究院</option>
+
+<option value="http://59.72.0.2/business/website/mainPageIndex.do" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1500336632, 62392)">吉林大学社会科学处</option>
+
+<option value="http://lib.jlu.edu.cn/portal/index.aspx" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1500336632, 62393)">吉林大学图书馆</option>
+
+<option value="http://rsgl.jlu.edu.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1500336632, 62395)">吉林大学人力资源和社会保障处</option>
+
+<option value="https://hrss.jlu.edu.cn/base/frame/login.jsp?FM_SYS_ID=jldx" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1500336632, 62396)">吉林大学人力资源服务管理平台</option>
+
+<option value="http://bsh.jlu.edu.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1500336632, 62397)">吉林大学博士后流动站</option>
+
+</select>
+
+
+
+
+
+
+
+
+
+<select onchange="_openSelectLink(this, 'value', 'addclicks')">
+<option>-----------校外链接-------------</option> 
+
+
+
+
+<option value="https://cnki.net/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1500336632, 62399)">中国知网</option>   
+
+
+
+
+
+<option value="http://www.imir.tsinghua.edu.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1500336632, 62403)">清华大学国际关系研究院</option>   
+
+
+
+
+
+<option value="http://www.iis.fudan.edu.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1500336632, 62404)">复旦大学国际问题研究院</option>   
+
+
+
+
+
+<option value="http://cssrac.nju.edu.cn/index.html" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1500336632, 62400)">南京大学中国社会科学评价中心</option>   
+
+
+
+
+
+<option value="https://www.sinoss.net/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1500336632, 62401)">中国高校人文社会科学信息网</option>   
+
+
+
+
+
+<option value="http://www.moe.gov.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1500336632, 62402)">中华人民共和国教育部</option>   
+
+
+
+
+
+<option value="http://ijs.cass.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1500336632, 62405)">中国社科院日本研究所</option>   
+
+
+
+
+
+<option value="http://www.jsc.pku.edu.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1500336632, 62406)">北京大学日本研究中心</option>   
+
+
+
+
+
+<option value="http://www.jsc.fudan.edu.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1500336632, 62407)">复旦大学日本研究中心</option>   
+
+
+
+
+
+<option value="http://www.riyan.nankai.edu.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1500336632, 62408)">南开大学日本研究院</option>   
+
+
+
+
+</select>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+<div class="clear"></div>
+<div class="foot">
+<div class="con">
+
+<div class="bq">
+<!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>©2019　吉林大学东北亚研究中心　版权所有</p><p>地址：中国吉林省长春市前进大街2699号吉林大学匡亚明楼</p><p>电话：0431-85166393，传真：0431-85166393　邮箱：<a href="mailto:ylying@jlu.edu.cn" style="color: #fff">ylying@jlu.edu.cn</a></p>
+<div style="text-align:center;">您好！您是第<img src="/system/_component/jsq/counter.jsp?wbtreeid=1011&amp;owner=1500336632&amp;len=8&amp;style=2&amp;basenum=0&amp;countertype=TOTAL_COUNTER" style="margin-bottom:-5px;">位访问本站的人。
+</div>
+</div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</body></html>

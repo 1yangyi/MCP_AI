@@ -1,0 +1,364 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<title>学院简介-中央民族大学预科教育学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="中央民族大学预科教育学院,学院简介">
+
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+<link rel="stylesheet" href="../css/publice.css" type="text/css">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e784654525a5742000200024253 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1057,'/dpzw.jsp',-1,1499284810)</script>
+</head>
+<body>
+<!--top s-->    
+<div class="topWrap clearfix">
+    <div class="topDiv">
+        
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<div class="logo">
+<a href="../index.htm"><img src="../img/logo.png"></a>
+</div>
+        <div class="topR fr">
+            <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><div class="topR_t fr">
+</div>
+
+
+
+            
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2">
+    <div id="appu2"><div><div class="Search"><input type="text" placeholder="请输入关键字搜索" autocomplete="off" class="search_text"> <div class="fdj fr"><input type="submit" value="" class="button pngFix"></div></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+        
+        <div class="Search">
+        <input   type="text" class="search_text" placeholder="请输入关键字搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+        <div class="fdj fr"> <input type="submit" class="button pngFix" value="" style="cursor: hand"  v-on:click="onSubmit()"></div>
+        </div>
+        
+        
+       
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1499284810";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.119.129.127:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+        </div>
+    </div>
+</div>
+<!--nav-->
+<div class="navWrap  clearfix">
+    <div class="nav">
+    <ul>
+            <li>
+            <a class="link" href="../index.htm">主页</a>
+                        
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../xygl.htm">学院概览</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="yzjy.htm">院长寄语</a></dd>
+                    <dd><a href="xyjj.htm">学院简介</a></dd>
+                    <dd><a href="xyld.htm">学院领导</a></dd>
+                    <dd><a href="xzjg.htm">行政机构</a></dd>
+                    <dd><a href="jxjg/ywjys1.htm">教学机构</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../dtxg.htm">党团学工</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../dtxg/dwgz.htm">党务工作</a></dd>
+                    <dd><a href="../dtxg/tzzgz.htm">团总支工作</a></dd>
+                    <dd><a href="../dtxg/ghgz.htm">工会工作</a></dd>
+                    <dd><a href="../dtxg/xsgz.htm">学生工作</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../jxky.htm">教学科研</a>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../xyzc.htm">校友之窗</a>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../cyxz.htm">常用下载</a>
+        </li>
+     
+    </ul>
+</div>
+</div>
+<script type="text/javascript">
+
+    $(".mainmenu dl").hide();
+
+</script>
+    <!--banner-->
+    <div class="banner clearfix">
+    <div class="eachBox">
+        <div class="changeBox_a1" id="change_32">
+                                    <div class="changeDiv" style="display: block;">
+                            <h3></h3>
+                            <img width="1000" height="335" src="../images/banner1.jpg">
+                        </div>
+                        <div class="changeDiv" style="display: none;">
+                            <h3></h3>
+                            <img width="1000" height="335" src="../images/banner2.jpg">
+                        </div>
+
+            <ul class="ul_change_a2">
+                    <li><span class="on"></span></li>
+                    <li><span></span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--main--> 
+<div class="mainWrap clearfix">
+    <div class="main_tit">
+        <div class="main_titT main_titTa">
+            <img src="../img/bri_icon1.png">
+
+<a href="../index.htm">主页</a>&gt;
+<a href="../xygl.htm" class="cur">学院概览</a>
+        </div>
+</div>
+
+    <div class="main_con">
+        <div class="main_conL">
+            <div class="main_conLT">
+                <dl>
+                    
+<dt>学院概览</dt>
+                    <dd><a href="yzjy.htm">院长寄语</a></dd>
+<dd><a href="xyjj.htm" class="cur">学院简介</a></dd>
+<dd><a href="xyld.htm">学院领导</a></dd>
+<dd><a href="xzjg.htm">行政机构</a></dd>
+<dd><a href="jxjg/ywjys1.htm">教学机构</a></dd>
+
+                </dl>
+            </div>
+            
+        </div>
+        
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1499284810,'wbnews','u8')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1499284810,1098)</script>
+<div class="main_conR">
+            <h2>学院简介</h2>
+            <div class="main_conRC">
+		 <div id="vsb_content_4_1098_u81"><div id="vsb_content_4"><p style="text-indent:37px;line-height:35px"><span style="font-size: 18px; font-family: 宋体, SimSun;"><span style="font-size: 18px;">中央民族大学预科教育是中国开办最早的少数民族预科教育之一，创办于</span>1951年，1953年1月正式成立预科部，2008年更名为预科教育学院<span style="font-size: 18px;">，是学校成立最早、培养学生最多、最具民族教育特色的教学单位之一。</span></span></p><p style="text-indent:37px;line-height:35px"><span style="font-size: 18px; font-family: 宋体, SimSun;">高校民族预科教育是我国高等教育的重要组成部分，是党和国家加快少数民族人才培养、促进民族地区发展的特殊举措，对促进民族团结、维护国家统一、实现中华民族伟大复兴的中国梦具有重要意义。</span></p><p style="text-indent:37px;line-height:35px"><span style="font-size: 18px; font-family: 宋体, SimSun;">70<span style="font-size: 18px; font-family: 宋体;">多年来，预科教育学院认真贯彻落实党和国家的教育政策和民族政策，深入学习贯彻落实党的二十大精神，以习近平新时代中国特色社会主义思想为指导，以铸牢中华民族共同体意识为主线，紧紧围绕助力学校“双一流”建设目标，认真贯彻落实《教育部等五部门关于办好新时代高校民族预科教育的意见》（教民</span>2020）4号）精神，牢牢把握为少数民族、“偏远欠发达地区和边境地区”基础教育质量的提升、少数民族地区经济社会发展和国家民族团结进步事业服务的办学宗旨，成为了国内民族预科教育的高地，为国家培养了2万多名各类少数民族人才，其中包括几十位省部级领导干部、鄂伦春族、裕固族、佤族的第一位博士等，为我国少数民族人才的培养、民族地区的社会经济发展和国家民族团结进步事业发展作出了突出的贡献。</span></p><p style="text-indent:37px;line-height:35px"><span style="font-size: 18px; font-family: 宋体, SimSun;"><span style="font-size: 18px; font-family: 宋体;">预科教育学院拥有一支政治站位高、爱岗敬业、师德高尚、潜心治学、真心关爱学生的教师队伍和管理团队。现有教职工</span>17人，其中专任教师11人，行政人员6人<span style="font-size: 18px; font-family: 宋体;">；设语文、数学、英语三个教研室；具有高级职称教师的比例为</span>45%；拥有博士学位5人，在读博士3人<span style="font-size: 18px; font-family: 宋体;">；年招生规模</span>186人，学生合格结业后本科就读的目标校为本校（中央民族大学）。</span></p><p style="text-indent:37px;line-height:35px"><span style="font-size: 18px; font-family: 宋体, SimSun;"><span style="font-size: 18px; font-family: 宋体;">预科教育学院全体师生员工将继续深入学习贯彻习近平新时代中国特色社会主义思想和党的二十大精神，特别是习近平总书记关于加强和改进民族工作的重要思想，以铸牢中华民族共同体意识为主线，推动民族预科教育创新实践和研究，助力学校</span>“双一流”建设，努力培养德智体美劳全面发展的新时代中国特色社会主义事业的建设者和接班人，为实现中华民族伟大复兴的中国梦而砥砺奋进！</span></p><p><br></p></div></div>
+	</div>
+    <span id="vsb_content_4_1098_u8" name="vsb_content_4_1098_u8"></span><br><br>
+    
+        </div>
+
+    </div>
+</div>
+<!--link--> 
+
+<!--foot-->
+<div class="footDiv_three">
+
+<div class="foot_three">
+
+<div class="foot-left" style="width:100%; float:left; text-align:left; margin:20px auto 0; line-height:32px;text-align:center;">
+<!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>中央民族大学预科教育学院 版权所有</p><p>地址：北京市海淀区中关村南大街27号 电话：010-68937504</p>
+<p>
+
+<a href="javascript:void(0);" onclick="_vsb_multiscreen.setDevice('mobile')">手机版</a>
+</p>
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="../js/jquery.soChange.js"></script>
+<script type="text/javascript">
+$(function(){
+    $(".mainmenu dl").hide();
+    $("li.mainmenu").hover(function(){
+        $(this).find("dl").stop(true,true);
+        $(this).find("dl").slideDown();
+    },function(){
+        $(this).find("dl").stop(true,true);
+        $(this).find("dl").slideUp();
+    });
+})
+</script>
+
+
+
+
+<script type="text/javascript">
+$(function () {
+
+//切换对象为其他，这里为包含图片和标题的层
+    $('#change_32 div.changeDiv').soChange({//对象指向层，层内包含图片及标题
+        thumbObj:'#change_32 .ul_change_a2 span',
+        thumbNowClass:'on'//自定义导航对象当前class为on
+    });
+
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

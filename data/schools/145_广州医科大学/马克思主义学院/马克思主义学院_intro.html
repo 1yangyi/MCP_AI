@@ -1,0 +1,373 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<title>学院简介-广州医科大学 马克思主义学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="广州医科大学 马克思主义学院,学院简介">
+
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+<link rel="stylesheet" href="../css/publice.css" type="text/css">
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/dh.js"></script>
+<script type="text/javascript">
+$(function(){
+    $(".mainmenu dl").hide();
+    $("li.mainmenu").hover(function(){
+        $(this).find("dl").stop(true,true);
+        $(this).find("dl").slideDown();
+    },function(){
+        $(this).find("dl").stop(true,true);
+        $(this).find("dl").slideUp();
+    });
+})
+</script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307c78475652505742000300014257 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1151,'/dpzw.jsp',-1,1833486539)</script>
+</head>
+<body>
+<!--top s-->    
+<div class="topWrap clearfix">
+    <div class="topDiv">
+        
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<div class="logo">
+<a href="../index.htm"><img src="../img/logo.png"></a>
+</div>
+        <div class="topR fr">
+     
+            <!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script> 
+<div id="divu1" class="Search">
+    <div id="appu1"><div><input type="text" value="请输入关键字搜索" onfocus="var vpn_return;eval(vpn_rewrite_js((function () { test3() }).toString().slice(14, -2), 2));return vpn_return;" onblur="var vpn_return;eval(vpn_rewrite_js((function () { test4() }).toString().slice(14, -2), 2));return vpn_return;" autocomplete="off" class="search_text"> <div class="fdj fr"><input name="submit_button" type="button" class="button pngFix"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+            <input type="text" value="请输入关键字搜索" class="search_text" onfocus="var vpn_return;eval(vpn_rewrite_js((function () { test3() }).toString().slice(14, -2), 2));return vpn_return;" onblur="var vpn_return;eval(vpn_rewrite_js((function () { test4() }).toString().slice(14, -2), 2));return vpn_return;" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+             <div class="fdj fr"><input class="button pngFix" name="submit_button" type="button"  v-on:click="onSubmit()" style="cursor: hand"/></div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1833486539";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu1 = document.querySelector("#appu1");
+   if (appElementu1 && appElementu1.__vue__) {
+
+   } else {
+      $("#divu1").html($("#htmlu1").text());
+      var appOwner = "1833486539";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou1 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu1(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu1();
+        }
+      };
+
+      function onSubmitu1(e) {
+        queryInfou1.query.keyWord= $("#appu1  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou1.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script>
+        </div>
+    </div>
+</div>
+<!--nav-->
+<div class="navWrap  clearfix">
+    <div class="nav">
+    <ul>
+            <li>
+            <a class="link" href="../index.htm">
+
+首页
+</a>
+                        
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="xyjj.htm">学院概况</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="xyjj.htm" title="学院简介">学院简介</a></dd>
+                    <dd><a href="zzjg1.htm" title="组织机构">组织机构</a></dd>
+                    <dd><a href="ldbz.htm" title="领导班子">领导班子</a></dd>
+                    <dd><a href="../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1158" title="规章制度">规章制度</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../szdw/xjpxsdzgtsshzysxgljys.htm">师资队伍</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../szdw/xjpxsdzgtsshzysxgljys.htm" title="习近平新时代中国特色社会主义思想概论教研室">习近平新时代中国特色社会主义思想概论教研室</a></dd>
+                    <dd><a href="../szdw/rwkxyjs.htm" title="人文科学研究所">人文科学研究所</a></dd>
+                    <dd><a href="../szdw/yxllxjys.htm" title="医学伦理学教研室">医学伦理学教研室</a></dd>
+                    <dd><a href="../szdw/mkszyjbyljys.htm" title="马克思主义基本原理教研室">马克思主义基本原理教研室</a></dd>
+                    <dd><a href="../szdw/mzdsxhzgtsshzylltxgljys.htm" title="毛泽东思想和中国特色社会主义理论体系概论教研室">毛泽东思想和中国特色社会主义理论体系概论教研室</a></dd>
+                    <dd><a href="../szdw/zgjxdsgyjys.htm" title="中国近现代史纲要教研室">中国近现代史纲要教研室</a></dd>
+                    <dd><a href="../szdw/sxddyfzjys.htm" title="思想道德与法治教研室">思想道德与法治教研室</a></dd>
+                    <dd><a href="../szdw/xsyzcjys.htm" title="形势与政策教研室">形势与政策教研室</a></dd>
+                    <dd><a href="../szdw/yjssxzzllkjys.htm" title="研究生思想政治理论课教研室">研究生思想政治理论课教研室</a></dd>
+                    <dd><a href="../szdw/whysjys.htm" title="文化艺术教研室">文化艺术教研室</a></dd>
+                    <dd><a href="../szdw/tpjs.htm" title="特聘教授">特聘教授</a></dd>
+                    <dd><a href="../szdw/bsh.htm" title="博士后">博士后</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../jyjx/kctx.htm">教育教学</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../jyjx/kctx.htm" title="课程体系">课程体系</a></dd>
+                    <dd><a href="../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1167" title="课程建设">课程建设</a></dd>
+                    <dd><a href="../jyjx/kcsz.htm" title="课程思政">课程思政</a></dd>
+                    <dd><a href="../jyjx/jxcg.htm" title="教学成果">教学成果</a></dd>
+                    <dd><a href="../jyjx/jxgg.htm" title="教学改革">教学改革</a></dd>
+                    <dd><a href="../jyjx/shsj.htm" title="社会实践">社会实践</a></dd>
+                    <dd><a href="../jyjx/xxkjj.htm" title="选修课简介">选修课简介</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../xsyj.htm">学术研究</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../xsyj/kycg.htm" title="科研成果">科研成果</a></dd>
+                    <dd><a href="../xsyj/xsjl.htm" title="学术交流">学术交流</a></dd>
+                    <dd><a href="../xsyj/xmsb.htm" title="项目申报">项目申报</a></dd>
+                    <dd><a href="../xsyj/kyjl.htm" title="科研奖励">科研奖励</a></dd>
+                    <dd><a href="../xsyj/jcjx.htm" title="检查结项">检查结项</a></dd>
+                    <dd><a href="../xsyj/ktlx.htm" title="课题立项">课题立项</a></dd>
+                    <dd><a href="../xsyj/xszn.htm" title="学术指南">学术指南</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../xkjs.htm">学科建设</a>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../rczp.htm">人才招聘</a>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../djgh.htm">党建工会</a>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../zlxz.htm">资料下载</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../zlxz/bgxz.htm" title="表格下载">表格下载</a></dd>
+                    <dd><a href="../zlxz/znbmbg.htm" title="职能部门表格">职能部门表格</a></dd>
+                    <dd><a href="../zlxz/wjxz.htm" title="文件下载">文件下载</a></dd>
+                    <dd><a href="../zlxz/bslc.htm" title="办事流程">办事流程</a></dd>
+            </dl>
+        </li>
+     
+    </ul>
+</div>
+</div>
+<script type="text/javascript">
+
+    $(".mainmenu dl").hide();
+
+</script>
+    <!--banner-->
+
+<!--main--> 
+<div class="mainWrap clearfix">
+    <div class="main_tit">
+        <div class="main_titT main_titTa">
+            <img src="../img/bri_icon1.png">
+
+<a href="../index.htm">首页</a> » 
+<a href="xyjj.htm">学院概况</a> » 
+<a href="xyjj.htm" class="cur">学院简介</a>
+        </div>
+</div>
+
+    <div class="main_con">
+        <div class="main_conL">
+<div class="main_conLT">
+<dl>
+<dt>学院概况</dt><dd><a href="xyjj.htm" class="cur" title="学院简介">学院简介</a></dd>
+<dd><a href="zzjg1.htm" title="组织机构">组织机构</a></dd>
+<dd><a href="ldbz.htm" title="领导班子">领导班子</a></dd>
+<dd><a href="../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1158" title="规章制度">规章制度</a></dd>
+</dl></div>
+
+</div>
+        
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1833486539,'wbnews','u6')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta6(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta6('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1833486539,1043)</script>
+<div class="main_conR">
+
+            <div class="main_conRC">
+    <div id="vsb_content_4_1043_u61"><div id="vsb_content_4"><p class="vsbcontent_start" style="text-align: justify;">马克思主义学院前身为1959年成立的马列主义教研室（组）。1990年，马列主义教研室和德育教研室联合组成社会科学部。2005年，社会科学部更名为思想政治理论课教学部，与人文社科学学院（后更名为卫生管理学院）合署办公。2017年正式更名为广州医科大学马克思主义学院。</p><p style="text-align: justify;">马克思主义学院下设9个教研室和3个职能科室、1个实验中心（生命伦理教育馆）。建有全国高等学校医学人文素质教育基地、中国大学生思想道德建设田野研究中心、广东省医学伦理学研究中心、广东省高校“双带头人”教师党支部书记工作室、广东省“全省党建工作样板支部”、广州市医学伦理学重点研究基地、广州市青年马克思主义理论人才培养研究重点基地、广州医科大学人文社会科学研究所等党建、教育和学术平台。</p><p style="text-align: justify;">截至2025年4月，学院有思政课教师45人，其中教授10人、副教授13人、讲师18人，具有博士学位35人、硕士学位9人。教师队伍中拥有广东“特支计划”教学名师、广东省高校教学名师、南粤优秀教师、广东高校共青团思政导师、广州市优秀专家、市优秀哲学社会科学工作者、市高校教学名师、市优秀教师、市“十佳思政课宣讲教师”、市百名优秀思政课教师等一批优秀教师。</p><p style="text-align: justify;">教学和课程建设工作方面，学院共承担必修课程14门，包括根据教育部要求在本科生中开设的“习近平新时代中国特色社会主义思想概论”“思想道德与法治”等思政课，在硕士生和博士生中开设的“新时代中国特色社会主义理论与实践”“中国马克思主义与当代”等思政课，以及“马克思主义中国化进程与青年学生使命担当”“中华医德思想史”等多门相关思政课程和人文素质课程。另有各类选修课近10门。其中，“医学伦理学”为国家级一流本科课程、广东省精品课程、广东省优质资源共享课、广东省课程思政示范课程、校级“AI知识图谱”智慧课程；“医患沟通与调适”和“护理伦理学”为广东省一流本科课程；“医患关系及其伦理难题”为广东省精品视频公开课；“毛泽东思想和中国特色社会主义理论体系概论”为广州市精品课程；另有校级精品资源共享课和示范性思政课程3门。有广东省教学创新团队1个、广州市教育系统学术创新研究团队1个。学院曾获国家级教学成果二等奖1项，省级教学成果6项，和其他级别的教学、科研奖励与荣誉10多项。</p><p style="text-align: justify;">科研和学科建设工作方面，近五年获国家社科基金立项6项，教育部立项10项，省部级立项27项，市厅级及其他级别立项38项。在《新华文摘》《Humanities and Social Sciences Communications》（Nature子刊）《教学与研究》《社会科学战线》等CSSCI、SCI、北大核心刊物发表论文110余篇，多篇论文被《新华文摘》、中国人民大学书报资料中心复印报刊资料转载。主编国家级“十四五”规划教材《护理伦理学》（第三版）、《医学伦理学》等国家级规划教材3部和《人文思政视域中的医学叙事丛书》一套，出版相关著作10余部。获国家民政部2024年民政政策理论研究一等奖、粤桂琼赣滇五省（区）高校思想政治理论课青年教师教学基本功比赛一等奖、广东省大中小学思政课一体化教学展示交流优秀成果二等奖等竞赛展演奖项40项。与卫生管理学院共建人文医学二级学科博士点，公共管理、心理学一级学科硕士点。伦理学为广东省扶持学科、广州市重点学科。学院在2009年获全国“医学人文杯优秀学科建设奖”，2011年获中华医学会医学伦理学分会授予的“医学伦理学和生命伦理学学科建设奖”。学院先后承办了第二届全国生命伦理学学术会议、全国医学伦理学教育教学研讨会、第六届全国医学健康人文学术研讨会等多项全国性学术活动。</p><p style="text-align: justify;">学院工作得到了各级政府和社会的广泛认同，被授予广东省文明单位、广东省巾帼文明岗、广东省高校固本强基先进基层党组织、广州市先进集体、广州市教育工作先进集体、广州市文明单位等市级以上荣誉称号。</p><p><br></p><p style="text-align: right;">(更新时间：2025年4月)</p><p class="vsbcontent_end"><br></p></div></div>
+    <span id="vsb_content_4_1043_u6" name="vsb_content_4_1043_u6"></span><br><br>
+    
+</div>
+ </div>
+    </div>
+</div>
+<!--link--> 
+<!--广告-->
+<!--foot-->
+<div class="footWrap"><div class="footDiv_one">
+        <div class="foot_one">
+            <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权所有：广州医科大学马克思主义学院<br></p>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+$(function () {
+
+//切换对象为其他，这里为包含图片和标题的层
+    $('#change_32 div.changeDiv').soChange({//对象指向层，层内包含图片及标题
+        thumbObj:'#change_32 .ul_change_a2 span',
+        thumbNowClass:'on'//自定义导航对象当前class为on
+    });
+
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>云南生物资源保护与利用国家重点实验室</title>
+    <link rel="stylesheet" href="/cms/css/style.css?v=6">
+    <script src="/manager/js/jquery.min.js"></script>
+    <script src="/manager/js/layui/layui.js"></script>
+    <script src="/cms/js/jquery.SuperSlide.2.1.1.js"></script>
+    
+    <script src="/manager/js/vue.min.js"></script>
+
+</head>
+<body class="allx">
+    <!-- 页头文字 -->
+    <div class="header1">
+        <div class="header2">
+            <div class="header_text">
+                欢迎访问云南生物资源保护与利用国家重点实验室!
+            </div>
+            <div class="header_img">
+                <a href="https://webmail.ynu.edu.cn/coremail/index.jsp"><img class="img" src="/cms/images/icon_top_mail.png"><span>学校邮箱</span></a>
+                <a href="http://www.cub.ynu.edu.cn/oa.ynu.edu.cn"><img src="/cms/images/icon_top_office.png" /><span>网络办公</span></a>
+            </div>
+        </div>
+    </div>
+    <!-- 页头logo -->
+    <div class="logo-wrap">
+        <div class="logo">
+            <img class="logo_img" src="/cms/images/img_logo.png" />
+            <div class="search-box-wrapper">
+                <form>
+                    <input id="keyWord" type="text" value="" placeholder="请输入你想要的内容..." class="search-box-input">
+                    <button class="search-box-button" type="button" onclick="search()">
+                        <img calass="img-search" src="/cms/images/icon_search_wh.png">搜索
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- 页头nav -->
+    <div class="navBar">
+        <ul class="nav clearfix">
+            <li id="m1" class="m on">
+                <h3><a href="/cms">首页</a></h3>
+            </li>
+            <li id="m2" class="m">
+                <h3><a href="/cms/article/detail/19">实验室介绍</a></h3>
+            </li>
+            <li id="m3" class="m">
+                <h3><a href="/cms/article/list/65">新闻动态</a></h3>
+                <ul class="sub">
+                    <li><a href="/cms/article/list/65">焦点新闻</a></li>
+                    <li><a href="/cms/article/list/66">科研动态</a></li>
+                    <li><a href="/cms/article/list/67">综合新闻</a></li>
+                    <li><a href="/cms/article/list/68">通知公告</a></li>
+                </ul>
+            </li>
+            <li id="m5" class="m">
+                <h3><a href="/cms/article/list/69">科学研究</a></h3>
+                <ul class="sub">
+                    <li><a href="/cms/article/list/69">研究方向</a></li>
+                    <li><a href="/cms/article/list/70">研究项目</a></li>
+                    <li><a href="/cms/article/list/71">研究成果</a></li>
+                    <li><a href="/cms/article/list/72">平台建设</a></li>
+                </ul>
+            </li>
+            <li id="m6" class="m">
+                <h3><a href="/cms/article/teamlist/87">研究队伍</a></h3>
+                <ul class="sub">
+                    <li><a href="/cms/article/teamlist/87">院士</a></li>
+                    <li><a href="/cms/article/detail/13">高端人才</a></li>
+                    <li><a href="/cms/article/teamlist/95">学科带头人</a></li>
+                    <li><a href="/cms/article/teamlist/89">博导</a></li>
+                    <li><a href="/cms/article/teamlist/90">硕导</a></li>
+                    <li><a href="/cms/article/teamlist/91">研究骨干</a></li>
+                    <li><a href="/cms/article/list/92">支撑队伍</a></li>
+                    <li><a href="/cms/article/list/93">招聘</a></li>
+                    <li><a href="/cms/article/imagelist/94">教研风采</a></li>
+                </ul>
+            </li>
+            <li id="m7" class="m">
+                <h3><a href="/cms/article/imagelist/73">交流与合作</a></h3>
+                <ul class="sub">
+                    <li><a href="/cms/article/imagelist/73">学术交流</a></li>
+                    <li><a href="/cms/article/imagelist/74">合作推广</a></li>
+                    <li><a href="/cms/article/imagelist/75">学术会议</a></li>
+                </ul>
+            </li>
+            <li id="m8" class="m">
+                <h3><a href="/cms/article/list/76">研究生教育</a></h3>
+                <ul class="sub">
+                    <li><a href="/cms/article/list/76">学科设置</a></li>
+                    <li><a href="/cms/article/list/77">招生</a></li>
+                    <li><a href="/cms/article/list/78">就业</a></li>
+                    <li><a href="/cms/article/list/79">导师介绍</a></li>
+                    <li><a href="/cms/article/studentfield/80">学生园地</a></li>
+                </ul>
+            </li>
+            <li id="m9" class="m">
+                <h3><a href="/cms/article/list/81">党建工作</a></h3>
+                <ul class="sub">
+                    <li><a href="/cms/article/list/81">党建信息</a></li>
+                    <li><a href="/cms/article/list/82">专题活动</a></li>
+                </ul>
+            </li>
+            <li id="m4" class="m">
+                <h3><a href="#">数据库资源</a></h3>
+                <ul class="sub">
+                    <li><a href="https://db.cngb.org/qtp/animals/" target="_blank">动植物多样性资源</a></li>
+                    <li><a href="https://db.cngb.org/qtp/research/" target="_blank">微生物多样性资源</a></li>
+                    <li><a href="https://db.cngb.org/" target="_blank">数据资源</a></li>
+                </ul>
+            </li>
+            <li id="m10" class="m">
+                <h3><a href="/cms/article/detail/249">联系我们</a></h3>
+            </li>
+        </ul>
+    </div>
+    <!--轮播图部分-->
+<div class="scorllx1">
+</div>
+<!--图标小导航-->
+<div class="icon-navigation">
+    <img src="images/icon_location01.png" />
+    <a href="/cms">首页</a>&gt;
+    <span>网站导航</span>&gt;
+    实验室介绍
+</div>
+
+<!--纵向导航-->
+<div class="vertical-navigation clearfix">
+    <!--左边导航-->
+    <div class="vn-left" id="vue">
+        <div class="vn-tit">
+            <h3>
+                实验室介绍
+                <span>About US</span>
+            </h3>
+        </div>
+    </div>
+
+    <!--右边内容-->
+    <div class="vn-right1">
+        <h3>省部共建云南生物资源保护与利用国家重点实验室简介</h3>
+        <span>发布时间：2022-3-22 上午10:35:10 </span>
+        <span>点击次数：8585</span>
+        <div class="line0"></div>
+        <div class="text">
+            <div class="detail-content">
+                <p style="text-align: center;"><strong>省部共建</strong></p><p style="text-align: center;"><strong>云南生物资源保护与利用国家重点实验室</strong></p><p style="text-align: center;"><strong>简介</strong></p><p>生物多样性的研究是人类认识生命、合理利用生物资源和社会可持续发展的重要基础。云南是我国乃至世界上生物多样性最丰富和种质资源最集中的地区之一。为加强云南及西部生物多样性的保护和利用，依托云南大学和云南农业大学现有的2个省部共建国家重点实验室培育基地、3个云南省和教育部共建重点实验室、3个云南省重点实验室的基础上，整合两校相关优势力量，组建了“省部共建云南生物资源保护与利用国家重点实验室”。2015年12月省部共建国家重点实验室通过专家验收并正式运行。云南大学副校长张克勤教授任实验室主任，云南农业大学朱有勇院士任学术委员会主任。</p><p>实验室目前有86人，其中研究人员有77人，形成一支由1个科技部创新团队、1个教育部创新团队和4个省级创新团队组成的以中青年博士为主的研究队伍。研究队伍中，包括中科院院士1名（双聘），中国工程院院士1名，杰青5名，国家百千万人才4名，国家青年拔尖人才计划1名，何梁何利奖获得者2名，国家“973”首席科学家2名，80%以上具有博士学位和高级职称。实验室已拥有科研用房1.2万平方米，建成了特色生物资源库、先导化合物、功能基因组、农业生物多样性、污染生态与生态毒理等基础条件平台，设备总值达8000多万元。</p><p>近5年实验室围绕生物多样性可持续利用研究，获各类科研成果奖26项，其中省部级以上特等和一等奖12项，获国家发明专利授权80项。近5年，实验室围绕云南生物资源保护与利用主持承担了国家“973”项目3项、“973”课题7项、国家科技重大专项2项、杰出青年基金1项、国家基金重大计划3项、国家基金重点1项、NSFC-云南联合重点9项等一批国家重大研究项目，在研项目总合同经费4.63亿元。</p><p>近5年围绕生物多样性发表SCI论文612篇，包括在本领域最具影响的学术刊物Nat Genet、Nat Commun、PNAS、Chem Soc Rev、J Am Chem Soc等影响因子9以上的刊物上发表论文25篇，出版专著10部。</p><p>（一）第一届学术委员会(The First Academic Commitee)</p><p>主任(Director)：</p><p>朱有勇 院士，云南农业大学</p><p>Academician Youyong Zhu, Yunnan Agricultural University</p><p>副主任(Deputy Director)：</p><p>孙汉董 院士，中国科学院昆明植物所</p><p>Academician Handong Sun, Kunming Insitute of Botany, ChineseAcademy of Sciences</p><p>委员（按姓氏笔划）Board Members</p><p>许智宏 院士，北京大学</p><p>Academician Zhihong Xu, PekingUniversity</p><p>张亚平 院士，中国科学院</p><p>Academician Yaping Zhang, ChineseAcademy of Sciences</p><p>邓子新 院士，上海交通大学</p><p>Academician Zixin Deng, ShanghaiJiaoTongUniversity</p><p>洪德元 院士，中国科学院植物所</p><p>Academician Deyuan Hong, Institute of Botany, ChineseAcademy of Sciences</p><p>庄文颖 院士，中国科学院微生物所</p><p>Academician Wenying Zhuang, Institute of Microbiology, ChineseAcademy of Sciences</p><p>桂建芳 院士，中国科学院武汉水生所</p><p>Academician Jianfang Gui, Institute of Hydrobiology, ChineseAcademy of Sciences</p><p>吴孔明 院士，中国农业科学院</p><p>Academician Kongming Wu, ChineseAcademy of Agriculture Sciences</p><p>陈万权 研究员，中国农业科学院</p><p>Professor Wanquan Chen, ChineseAcademy of Agriculture Sciences</p><p>卢宝荣 研究员，复旦大学</p><p>Professor Baorong Lu, FudanUniversity</p><p>张克勤 教授，云南大学，省部共建国家重点实验室</p><p>Professor Keqing Zhang, YunnanUniversity</p><p>李成云 教授，云南农业大学，省部共建国家重点实验室</p><p>Professor Chenyun Li, YunnanAgricultureUniversity</p><p>安志强 教授，美国德克萨斯州立大学</p><p>Professor Ziqiang An,TexasStateUniversity</p><p>黄兴奇 研究员，云南农业科学院</p><p>Professor Xinqi Huang, YunnanAcademy of Agricultural Sciences</p><p>刘杏忠 研究员，中国科学院微生物所</p><p>Professor Xingzhong Liu, Institute of Microbiology, ChineseAcademy of Sciences</p><p>东秀珠 研究员，中国科学院微生物所</p><p>Professor Xiuzhu Dong, Institute of Microbiology, ChineseAcademy of Sciences</p><p>于黎 研究员，云南大学，省部共建国家重点实验室</p><p>Professor Li Yu, YunnanUniversity</p><p>邹成钢 教授，云南大学，省部共建国家重点实验室</p><p>Professor Chenggang Zou, YunnanUniversity</p><p>（二）现任实验室领导(Leaders of the Lab.)</p><p>主任(Director)：</p><p>张克勤 教授</p><p>Prof. Ke-qin Zhang</p><p>副主任(Deputy Directors)：</p><p>李成云 教授</p><p>Professor Chenyun Li, Yunnan Agricultural University</p><p>纪开芳 高级会计师</p><p>Senior AccountantKaifang Ji, Yunnan University</p><p>邹成钢 教授</p><p>Professor Chenggang Zou, YunnanUniversity</p><p>（三）研究方向Research Directions</p><p>实验室主要围绕以下三个大的研究方向开展工作：</p><p>1、特色生物资源的保护与利用</p><p>重点开展以微生物和农作物种质资源为代表的具有重要经济和研究价值的生物资源的收集、保存及评价，完善特色生物种质资源库，开发评价和挖掘新技术。开展农作物高产、优质、抗旱、抗寒、植物营养和水分高效利用，适应性等重要特性的评价、种质资源创新和新型生物制品研究。研究以农田系统为主的作物—生物物种互作机制和效应，为生物资源的高效利用提供理论和材料基础，为提高化学肥料和化学农药的利用效率，降低使用量提供作物种质资源和新技术开发提供基础。发掘有重要经济价值的天然活性产物，揭示其生物合成及调控机制，探讨具有潜在应用价值的天然产物的高效合成方法，研究类天然产物的设计及结构与功能的关系，为资源深度利用、开发环境友好型新农药和肥料，创新药物提供材料和技术支撑。</p><p>2、重要生物类群的系统演化与适应</p><p>以云南及周边地区丰富而特有的脊椎动物、昆虫和微生物类群为研究对象，利用多基因分子标记和基因组水平的谱系分析方法，揭示重要生物类群的起源和演变过程。在了解系统演化历史的基础上，选择其中一些极端和特殊环境下的代表生物，瞄准生物适应中的一些关键环节（如饥饿、缺氧、低温、宿主侵染和防御反应等），采用比较基因组学和蛋白组学等技术，研究生物适应的分子机制，从而探讨生物多样性演变与维持的动因与基本规律。</p><p>3、关键区域的生态功能与生态建设</p><p>以云南重要生态功能区为对象，探索发展高原特色农业的生态优势，发掘优势特色作物，构建特色种植技术，使特色作物资源和特色生态资源能够实现高度契合。以云南的生态敏感区为对象，研究生物群落的结构、生物多样性的维持机制及空间格局，揭示生态系统在维护区域生态健康、流域水环境质量的生态安全屏障功能；阐明不同群落及生态结构对污染和退化环境修复的关键生态过程、农田生态系统中生物多样性维护与经济生产的优化机理；探索利用生物多样性控制病虫害、高效利用水肥资源、防控农田面源污染的综合理论和方法，构建云南农业可持续发展的体系。</p><p>（四）基础条件平台建设Infrastructure Development</p><p>1、中国西南野生种质资源库—微生物库</p><p>2、大型仪器平台</p><p>3、行政办公室</p><p><br/></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script type="text/javascript">
+        jQuery(".nav").slide({
+            type: "menu", //效果类型
+            titCell: ".m", // 鼠标触发对象
+            targetCell: ".sub", // 效果对象，必须被titCell包含
+            delayTime: 300, // 效果时间
+            triggerTime: 0, //鼠标延迟触发时间
+            returnDefault: true //返回默认状态
+        });
+    </script>
+    <div class="footer">
+        <div class="main_footer">
+            <!--右边-->
+            <div class="main_footer_text">
+                <div class="main_footer_text1">
+                    <a>© 2021 ALL RIGHTS RESERVED</a>
+                    <a>云南生物资源保护与利用国家重点实验室</a>
+                </div>
+                <div class="main_footer_text2">
+                    <img src="/cms/images/icon_location.png">
+                    <a>昆明市五华区翠湖北路2号东陆校区 云南大学重点实验室&生物馆西楼</a>
+                </div>
+                <div class="main_footer_text3">
+                    <img src="/cms/images/icon_location.png">
+                    <a>昆明市盘龙区沣源路452号 云南农业大学</a>
+                </div>
+                <div class="main_footer_text4">
+                    <a href="https://www.sykjwh.cn">技术支持：云南尚雅科技文化有限公司</a>
+                    <img src="/cms/images/policeBeian.png">
+                    <a href="#">滇ICP备12004993号-2</a>
+                </div>
+            </div>
+            <!--右边-->
+        </div>
+    </div>
+    <script type="text/javascript">
+        function search() {
+            var keyWord = $("#keyWord").val();
+            window.location.href ='/cms/article/searchlist?keyWord='+ keyWord;
+        }
+    </script>
+    
+    <script type="text/javascript">
+        var vue = new Vue({
+            el: '#vue',
+            data: {
+                channelId: 57,
+                parentChannel:56,
+                channelList: [{"ChannelId":57,"ChanneName":"实验室介绍","Sort":2,"ParentId":56,"Status":0,"ImageUrl":"1","Description":"实验室介绍","Keywords":"About US","ModuleId":1,"CreateDate":"2022-03-18T14:35:03","CreateUserId":0,"Path":"56|57","Depth":2,"IsHasChildren":false,"Remark":null,"MetaTitle":null,"MetaDescription":null,"MetaKeywords":null,"OrgId":null,"AppImgUrl":null,"ChildList":[]},{"ChannelId":58,"ChanneName":"新闻动态","Sort":3,"ParentId":56,"Status":0,"ImageUrl":"1","Description":"新闻动态","Keywords":"News","ModuleId":1,"CreateDate":"2022-03-18T14:35:16","CreateUserId":0,"Path":"56|58","Depth":2,"IsHasChildren":true,"Remark":null,"MetaTitle":null,"MetaDescription":null,"MetaKeywords":null,"OrgId":null,"AppImgUrl":null,"ChildList":[]},{"ChannelId":59,"ChanneName":"科学研究","Sort":4,"ParentId":56,"Status":0,"ImageUrl":"1","Description":"科学研究","Keywords":"Research","ModuleId":1,"CreateDate":"2022-03-18T14:35:28","CreateUserId":0,"Path":"56|59","Depth":2,"IsHasChildren":true,"Remark":null,"MetaTitle":null,"MetaDescription":null,"MetaKeywords":null,"OrgId":null,"AppImgUrl":null,"ChildList":[]},{"ChannelId":60,"ChanneName":"研究队伍","Sort":5,"ParentId":56,"Status":0,"ImageUrl":"1","Description":"研究队伍","Keywords":"Scientists","ModuleId":1,"CreateDate":"2022-03-18T14:35:59","CreateUserId":0,"Path":"56|60","Depth":2,"IsHasChildren":true,"Remark":null,"MetaTitle":null,"MetaDescription":null,"MetaKeywords":null,"OrgId":null,"AppImgUrl":null,"ChildList":[]},{"ChannelId":61,"ChanneName":"交流与合作","Sort":6,"ParentId":56,"Status":0,"ImageUrl":"1","Description":"交流与合作","Keywords":"Cooperation","ModuleId":1,"CreateDate":"2022-03-18T14:36:12","CreateUserId":0,"Path":"56|61","Depth":2,"IsHasChildren":true,"Remark":null,"MetaTitle":null,"MetaDescription":null,"MetaKeywords":null,"OrgId":null,"AppImgUrl":null,"ChildList":[]},{"ChannelId":62,"ChanneName":"研究生教育","Sort":7,"ParentId":56,"Status":0,"ImageUrl":"1","Description":"研究生教育","Keywords":"Education","ModuleId":1,"CreateDate":"2022-03-18T14:36:23","CreateUserId":0,"Path":"56|62","Depth":2,"IsHasChildren":true,"Remark":null,"MetaTitle":null,"MetaDescription":null,"MetaKeywords":null,"OrgId":null,"AppImgUrl":null,"ChildList":[]},{"ChannelId":63,"ChanneName":"党建工作","Sort":8,"ParentId":56,"Status":0,"ImageUrl":"1","Description":"党建工作","Keywords":"Party Building","ModuleId":1,"CreateDate":"2022-03-18T14:36:31","CreateUserId":0,"Path":"56|63","Depth":2,"IsHasChildren":true,"Remark":null,"MetaTitle":null,"MetaDescription":null,"MetaKeywords":null,"OrgId":null,"AppImgUrl":null,"ChildList":[]},{"ChannelId":64,"ChanneName":"联系我们","Sort":9,"ParentId":56,"Status":0,"ImageUrl":"1","Description":"联系我们","Keywords":"Contact","ModuleId":1,"CreateDate":"2022-03-18T14:36:47","CreateUserId":0,"Path":"56|64","Depth":2,"IsHasChildren":false,"Remark":null,"MetaTitle":null,"MetaDescription":null,"MetaKeywords":null,"OrgId":null,"AppImgUrl":null,"ChildList":[]},{"ChannelId":83,"ChanneName":"数据库资源","Sort":10,"ParentId":56,"Status":0,"ImageUrl":"1","Description":"数据库资源","Keywords":"Database","ModuleId":1,"CreateDate":"2022-03-18T15:24:18","CreateUserId":0,"Path":"56|83","Depth":2,"IsHasChildren":true,"Remark":null,"MetaTitle":null,"MetaDescription":null,"MetaKeywords":null,"OrgId":null,"AppImgUrl":null,"ChildList":[]}]
+            },
+            methods: {
+                getClass(channelId) {
+                    if (channelId == this.channelId) {
+                        return "on";
+                    }
+                    else {
+                        return "";
+                    }
+                },
+                tabChange(id) {
+                    switch (id) {
+                        case 87:
+                            window.location.href = "/cms/article/teamlist/" + id;
+                            break;
+                        case 95:
+                            window.location.href = "/cms/article/teamlist/" + id;
+                            break;
+                        case 89:
+                            window.location.href = "/cms/article/teamlist/" + id;
+                            break;
+                        case 90:
+                            window.location.href = "/cms/article/teamlist/" + id;
+                            break;
+                        case 91:
+                            window.location.href = "/cms/article/teamlist/" + id;
+                            break;
+                        case 94:
+                            window.location.href = "/cms/article/imagelist/" + id;
+                            break;
+                        case 80:
+                            window.location.href = "/cms/article/studentfield/" + id;
+                            break;
+                        case 88:
+                            window.location.href = "/cms/article/detail/13";
+                            break;
+                        case 73:
+                            window.location.href = "/cms/article/imagelist/" + id;
+                            break;
+                        case 74:
+                            window.location.href = "/cms/article/imagelist/" + id;
+                            break;
+                        case 75:
+                            window.location.href = "/cms/article/imagelist/" + id;
+                            break;
+                        default:
+                            window.location.href = "/cms/article/list/" + id;
+                            break;
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

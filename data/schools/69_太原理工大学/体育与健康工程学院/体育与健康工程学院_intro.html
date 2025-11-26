@@ -1,0 +1,648 @@
+<!DOCTYPE html><html><head><title>学院简介-太原理工大学体育与健康工程学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="太原理工大学体育与健康工程学院,学院简介">
+
+        <meta charset="utf-8">
+        <meta name="renderer" content="webkit">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="../css/common.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
+        <link href="../css/media.css" rel="stylesheet">
+        <!--[if lte IE 9]>
+        <script src="../js/ie.js"></script>
+        <![endif]-->
+    <!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307b75465752565742000300024150 -->
+<link rel="stylesheet" type="text/css" href="../jjy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1137,'/jjy.jsp',-1,1414495667)</script>
+</head>
+    <body>
+        <script type="text/javascript" src="../js/jq.js"></script>
+        <script type="text/javascript" src="../js/public.js"></script>
+        <div class="header">
+            <div class="header-top">
+                <div class="w90 flex">
+                    <p><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+欢迎访问太原理工大学体育与健康工程学院！</p>
+                    <div class="header-link"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><ul class="flexbox">
+                            
+<li><a href="http://www.tyut.edu.cn" onclick="_addDynClicks(&quot;wburl&quot;, 1414495667, 54244)" target="_blank">学校首页</a></li>
+                            
+<li><a href="http://tyxy.tyut.edu.cn/index.htm" onclick="_addDynClicks(&quot;wburl&quot;, 1414495667, 54245)">学院首页</a></li>
+                            
+<li><a href="http://tyxy.tyut.edu.cn/english/Home.htm" onclick="_addDynClicks(&quot;wburl&quot;, 1414495667, 56989)" target="_blank">ENGLISH</a></li>
+                            
+</ul></div>
+                </div>
+            </div>
+            <div class="hd1">
+                <div class="w90 flex flex-c-center">
+                    <div class="logo">
+<a href="../index.htm" title="体育学院"><img src="../img/logo.png"></a></div>
+                    <div class="header-right flexbox flex-c-center"><div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu3">
+    <div id="appu3"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="searchbox"> <input name="submit_button" type="button" value="" class="searchbutton"> <div class="button"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError">
+            <input type="text" class="searchbox" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="searchbutton" name="submit_button" type="button" value="" v-on:click="onSubmit()"/>
+             <div class="button"></div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "1414495667";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                        <div class="nav-menu selectBut">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div></div>
+                </div>
+            </div>
+            <div class="nav"><ul class="w90 flex">
+
+<li class="on">
+<h3><a href="xyjj.htm">学院概况</a></h3>
+<div class="sub">
+<ul class="sub-h">
+
+<li><a href="xyjj.htm">学院简介</a></li>
+
+<li><a href="zzjg.htm">组织机构</a></li>
+
+<li><a href="xrld.htm">现任领导</a></li>
+
+<li><a href="lrld.htm">历任领导</a></li>
+
+<li><a href="lsyg.htm">历史沿革</a></li>
+
+</ul>
+</div>
+</li>
+
+
+
+
+<li>
+<h3><a href="../xbsz/tyjyx/tyxjj.htm">系部设置</a></h3>
+<div class="sub">
+<ul class="sub-h">
+
+<li><a href="../xbsz/tyjyx/tyxjj.htm">体育教育系</a></li>
+
+<li><a href="../xbsz/ydxlx/ydxlxjj.htm">运动训练系</a></li>
+
+<li><a href="../xbsz/gtjxb/gtbjj.htm">公体教学部</a></li>
+
+</ul>
+</div>
+</li>
+
+
+
+
+<li>
+<h3><a href="../szdw.htm">师资队伍</a></h3>
+<div class="sub">
+<ul class="sub-h">
+
+<li><a href="../szdw/js.htm">教授</a></li>
+
+<li><a href="../szdw/fjs.htm">副教授</a></li>
+
+<li><a href="../szdw/js1.htm">讲师</a></li>
+
+<li><a href="../szdw/zj.htm">助教</a></li>
+
+<li><a href="../szdw/sssds.htm">硕士生导师</a></li>
+
+</ul>
+</div>
+</li>
+
+
+
+
+<li>
+<h3><a href="../dqgz/zzjg.htm">党群工作</a></h3>
+<div class="sub">
+<ul class="sub-h">
+
+<li><a href="../dqgz/zzjg.htm">组织机构</a></li>
+
+<li><a href="../dqgz/gzdt.htm">工作动态</a></li>
+
+<li><a href="../dqgz/zbhd.htm">支部活动</a></li>
+
+<li><a href="../dqgz/ghgz.htm">工会工作</a></li>
+
+</ul>
+</div>
+</li>
+
+
+
+
+<li>
+<h3><a href="../kxyj/xksz.htm">科学研究</a></h3>
+<div class="sub">
+<ul class="sub-h">
+
+<li><a href="../kxyj/xksz.htm">学科设置</a></li>
+
+<li><a href="../kxyj/xkjj.htm">学科简介</a></li>
+
+<li><a href="../kxyj/xscg.htm">学术成果</a></li>
+
+<li><a href="../kxyj/xshd.htm">学术活动</a></li>
+
+</ul>
+</div>
+</li>
+
+
+
+
+<li>
+<h3><a href="../rcpy.htm">人才培养</a></h3>
+<div class="sub">
+<ul class="sub-h">
+
+<li><a href="../rcpy/bksjy.htm">本科生教育</a></li>
+
+<li><a href="../rcpy/yjsjy.htm">研究生教育</a></li>
+
+</ul>
+</div>
+</li>
+
+
+
+
+<li>
+<h3><a href="../xsgz/txgz.htm">学生工作</a></h3>
+<div class="sub">
+<ul class="sub-h">
+
+<li><a href="../xsgz/txgz.htm">团学工作</a></li>
+
+<li><a href="../xsgz/xshgz.htm">学生会工作</a></li>
+
+<li><a href="../xsgz/yggz.htm">研工工作</a></li>
+
+</ul>
+</div>
+</li>
+
+
+
+
+<li>
+<h3><a href="../ydjs.htm">运动竞赛</a></h3></li>
+
+
+
+
+<li>
+<h3><a href="../gjhz.htm">国际合作</a></h3></li>
+
+
+
+
+<li>
+<h3><a href="../xyzj/xyh.htm">校友之家</a></h3>
+<div class="sub">
+<ul class="sub-h">
+
+<li><a href="../xyzj/xyh.htm">校友会</a></li>
+
+<li><a href="../xyzj/xyfc.htm">校友风采</a></li>
+
+<li><a href="../xyzj/xyhd.htm">校友活动</a></li>
+
+</ul>
+</div>
+</li>
+
+
+
+
+<li>
+<h3><a href="../zsjz.htm">招生简章</a></h3></li>
+
+
+
+</ul></div>
+        </div>
+        <div class="list-banner"><img src="../images/banner13.jpg"></div>
+        <div class="navm-box">
+            <div class="link">
+                <ul class="flex-center flex-wrap"><li><a href="https://tyxy.tyut.edu.cn/index.htm" onclick="_addDynClicks(&quot;wburl&quot;, 1414495667, 103004)" target="_blank">中文</a></li>
+                    
+<li><a href="https://tyxy.tyut.edu.cn/english/Home.htm" onclick="_addDynClicks(&quot;wburl&quot;, 1414495667, 103005)" target="_blank">EN</a></li>
+                    
+</ul>
+            </div>
+            <ul class="nav-wrap"><li>
+                    <a href="xyjj.htm">学院概况</a>
+                    <div class="icon-jia"></div>
+                    <dl>
+
+                        <dt><a href="xyjj.htm">学院简介</a></dt>
+
+                        <dt><a href="zzjg.htm">组织机构</a></dt>
+
+                        <dt><a href="xrld.htm">现任领导</a></dt>
+
+                        <dt><a href="lrld.htm">历任领导</a></dt>
+
+                        <dt><a href="lsyg.htm">历史沿革</a></dt>
+                       
+                    </dl>
+                </li>
+<li>
+                    <a href="../xbsz/tyjyx/tyxjj.htm">系部设置</a>
+                    <div class="icon-jia"></div>
+                    <dl>
+
+                        <dt><a href="../xbsz/tyjyx/tyxjj.htm">体育教育系</a></dt>
+
+                        <dt><a href="../xbsz/ydxlx/ydxlxjj.htm">运动训练系</a></dt>
+
+                        <dt><a href="../xbsz/gtjxb/gtbjj.htm">公体教学部</a></dt>
+                       
+                    </dl>
+                </li>
+<li>
+                    <a href="../szdw.htm">师资队伍</a>
+                    <div class="icon-jia"></div>
+                    <dl>
+
+                        <dt><a href="../szdw/js.htm">教授</a></dt>
+
+                        <dt><a href="../szdw/fjs.htm">副教授</a></dt>
+
+                        <dt><a href="../szdw/js1.htm">讲师</a></dt>
+
+                        <dt><a href="../szdw/zj.htm">助教</a></dt>
+
+                        <dt><a href="../szdw/sssds.htm">硕士生导师</a></dt>
+                       
+                    </dl>
+                </li>
+<li>
+                    <a href="../dqgz/zzjg.htm">党群工作</a>
+                    <div class="icon-jia"></div>
+                    <dl>
+
+                        <dt><a href="../dqgz/zzjg.htm">组织机构</a></dt>
+
+                        <dt><a href="../dqgz/gzdt.htm">工作动态</a></dt>
+
+                        <dt><a href="../dqgz/zbhd.htm">支部活动</a></dt>
+
+                        <dt><a href="../dqgz/ghgz.htm">工会工作</a></dt>
+                       
+                    </dl>
+                </li>
+<li>
+                    <a href="../kxyj/xksz.htm">科学研究</a>
+                    <div class="icon-jia"></div>
+                    <dl>
+
+                        <dt><a href="../kxyj/xksz.htm">学科设置</a></dt>
+
+                        <dt><a href="../kxyj/xkjj.htm">学科简介</a></dt>
+
+                        <dt><a href="../kxyj/xscg.htm">学术成果</a></dt>
+
+                        <dt><a href="../kxyj/xshd.htm">学术活动</a></dt>
+                       
+                    </dl>
+                </li>
+<li>
+                    <a href="../rcpy.htm">人才培养</a>
+                    <div class="icon-jia"></div>
+                    <dl>
+
+                        <dt><a href="../rcpy/bksjy.htm">本科生教育</a></dt>
+
+                        <dt><a href="../rcpy/yjsjy.htm">研究生教育</a></dt>
+                       
+                    </dl>
+                </li>
+<li>
+                    <a href="../xsgz/txgz.htm">学生工作</a>
+                    <div class="icon-jia"></div>
+                    <dl>
+
+                        <dt><a href="../xsgz/txgz.htm">团学工作</a></dt>
+
+                        <dt><a href="../xsgz/xshgz.htm">学生会工作</a></dt>
+
+                        <dt><a href="../xsgz/yggz.htm">研工工作</a></dt>
+                       
+                    </dl>
+                </li>
+<li>
+                    <a href="../ydjs.htm">运动竞赛</a>
+                </li>
+<li>
+                    <a href="../gjhz.htm">国际合作</a>
+                </li>
+<li>
+                    <a href="../xyzj/xyh.htm">校友之家</a>
+                    <div class="icon-jia"></div>
+                    <dl>
+
+                        <dt><a href="../xyzj/xyh.htm">校友会</a></dt>
+
+                        <dt><a href="../xyzj/xyfc.htm">校友风采</a></dt>
+
+                        <dt><a href="../xyzj/xyhd.htm">校友活动</a></dt>
+                       
+                    </dl>
+                </li>
+<li>
+                    <a href="../zsjz.htm">招生简章</a>
+                </li>
+</ul>
+            <div class="search_m">
+                
+
+
+<div id="divu8">
+    <div id="appu8"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="searchbox"> <input name="submit_button" type="button" value="" class="searchbutton"> <div class="button"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu8">
+    <div id="appu8">
+        <div v-if="!isError">
+            <input type="text" class="searchbox" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="searchbutton" name="submit_button" type="button" value="" v-on:click="onSubmit()"/>
+             <div class="button"></div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu8").html($("#htmlu8").text());
+</script>
+<script>
+    var appOwner = "1414495667";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu8",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+            </div>
+        </div>
+        <div class="main">
+            <div class="w90 flex flex-wrap">
+                <div class="main-left">
+                    <h3>
+学院概况</h3>
+                    <div class="lm-title flex flex-c-center">
+                        <h2>
+学院简介</h2>
+                        <div class="nav_menu"></div>
+                    </div>
+                    <ul class="nav-list">
+<li class="cur"><a href="xyjj.htm"><span>学院简介</span></a>
+                        </li>
+<li><a href="zzjg.htm"><span>组织机构</span></a>
+                        </li>
+<li><a href="xrld.htm"><span>现任领导</span></a>
+                        </li>
+<li><a href="lrld.htm"><span>历任领导</span></a>
+                        </li>
+<li><a href="lsyg.htm"><span>历史沿革</span></a>
+                        </li>
+</ul>
+                </div>
+                <div class="main-right">
+                    <div class="main-title flex">
+                        <h2>
+学院简介</h2>
+                        <div class="local"><span>
+                        <a href="../index.htm">首页</a>
+               »
+                <a href="xyjj.htm">学院概况</a>
+               »
+                <a href="xyjj.htm">学院简介</a>
+</span></div>
+                    </div>
+                    <div class="content">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1414495667,'wbnews','u14')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta14(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta14('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+
+<script>_addDynClicks('wbnews',1414495667,2842)</script>
+<div class="article" style="padding-top:0.1rem;">
+    <div id="vsb_content_2_2842_u141"><div id="vsb_content_2"><p class="vsbcontent_start">太原理工大学体育与健康工程学院成立于2004年8月。学院下设两个职能部门，即运行保障部和学生工作办公室。设立四个业务部门，即体育教育系、运动训练系、公体教学部、竞赛训练部，主要承担全校体育教育专业、运动训练专业、公共体育课、高水平运动队以及学校群众体育工作的教学、训练、组织与竞赛任务。</p><p>学院目前有教职工92人，其中专职教师及研究人员83人，具有教授职称7人，副教授职称25人，具有博士学位18人，硕士学位53人，现有硕士生导师20人。学院师资队伍雄厚，有享受国务院政府特殊津贴的高级专家，有省级教学名师，还有国际裁判、国际足联裁判技术讲师和亚足联国家级职业教练员、国家级运动健将等专门人才。</p><p>多年来，学院师生发扬“顽强拼搏、奋勇争先、团结合作”的体育精神，在党的建设、教学科研、团学工作、高水平运动队建设等方面取得了显著成绩，为学校和谐快速跨越发展做出突出贡献。学院2名教师荣获“全国优秀教师”，1名教师荣获“省级教学名师”、“山西省先进教育工作者”，多名教师荣获“省三育人标兵”、“省优秀班主任”、“全国优秀教练员”等荣誉称号。学院先后荣获“贯彻《学校体育工作条例》优秀高等学校”、“全国学生体质监测先进集体”、“山西省三育人先进集体”、“山西省高校师德师风建设先进基层单位”等多项荣誉称号。</p><p>近年来，学院在“以人为本、文体为舟、承载德智、全面发展”办学特色引领下，找准定位，科学发展，走出了一条在理工科大学创办一流体育的成功之路。体育教育专业为省级一流专业和国家级一流专业建设点；公共体育教学在历次山西省组织的体育教学工作评比中均取得第一名；在学校本科教学学生评教中，学院教师在学科基础课、专业必修课、专业选修课以及公共选修课教学评价中均名列前茅，得到全校学生的一致好评。获国家级教学成果二等奖1项、山西省教学成果特等奖2项，一等奖2项，二等奖4项；省级精品课程4门。科研工作后来居上，先后承担省部级及以上科研课题100余项，核心期刊发表论文100余篇，山西省科技进步奖二等奖1项；发表CSSCI、SSCI、SCI等国内外高水平学术论文500余篇；出版著作及包括“十一五”、“十二五”规划教材100余部。研究生教育从无到有快速发展，目前学院已具有体育学一级学科和体育专业硕士学位授予权。学生体质监测工作30多年不间断，以此为依据进行的研究工作成果显著。</p><p>学院高水平运动队建设成绩斐然，以校男子篮球队为代表的各团队不畏强手、顽强拼搏，在全国性大赛中摘金夺银，取得骄人战绩。校男子篮球队是全国唯一一支连续十八届进入CUBAL联赛八强的队伍，十八次夺得西北赛区冠军，被誉为“西北王”，2010年、2012年两次夺得全国总冠军，并在2008年、2014年、2016年和2024年四次<span style="text-indent: 32px; text-wrap: wrap;">获得</span>全国亚军。<span style="text-indent: 36px; text-wrap: wrap;">校男子足球队在2006年、2010年、2011年三次夺得全国大学生足球联赛亚军，</span>2017年男子足球队一举夺得CUFL全国总冠军，从而使我校成为了至今为止全国高校唯一一所在男子篮球和男子足球两大集体项目均获得全国总冠军的学校。我校女子篮球队曾荣获第6届CUBA全国亚军，两获西北赛区冠军，女子排球队曾荣获全国大学生运动会季军，武术、游泳、田径等项目运动员均在国际和全国体育竞赛中获得冠军。校男篮、男足、女排、武术队先后荣获 “山西省五四青年奖”、“山西省十佳青年示范群体”、“山西省青年突击队”、“大运会特殊贡献奖”等荣誉称号。我校在2017年中华人民共和国第十三届学生运动会和2021年中华人民共和国第十四届学生运动会上两次荣获学校体育工作的最高荣誉---“校长杯”，是名副其实的中国高校体育劲旅。</p><p>体育与健康工程学院以习近平新时代中国特色社会主义思想为指导，牢牢把握立德树人根本任务，科学谋划、攻坚克难、担当作为、狠抓落实，推动学院科学发展、内涵发展、特色发展、创新发展，高质量发展，不断提升学院建设的科学化、规范化、现代化水平。</p><p style="text-align: right;">（数据更新于2025年10月）</p><div id="phraseJoinewrskdfdswerhnyikyofd" data-v-app=""></div><div id="phraseJoinewrskdfdswerhnyikyofd"></div><div id="phraseJoinewrskdfdswerhnyikyofd"></div><div id="phraseJoinewrskdfdswerhnyikyofd"></div><div id="phraseJoinewrskdfdswerhnyikyofd"></div><div id="phraseJoinewrskdfdswerhnyikyofd"></div></div></div>
+    <span id="vsb_content_2_2842_u14" name="vsb_content_2_2842_u14"></span><br><br>
+    
+</div>
+</div>
+                </div>
+            </div>
+        </div>
+         <div class="footer">
+            <div class="ft1">
+                <div class="w90 flex flex-wrap">
+                    <div class="zhbg">
+                        <h3>智慧办公</h3>
+                        <div class="zhbg-list">
+                            <ul class="flexbox flex-wrap"><li><a href="https://cas.tyut.edu.cn/tpass/login?service=https%3A%2F%2Fone.tyut.edu.cn%2Ftp_up%2F" onclick="_addDynClicks(&quot;wburl&quot;, 1414495667, 102989)" target="_blank">智慧校园</a></li>
+                                
+<li><a href="https://officeoa.tyut.edu.cn/wui/index.html#/?logintype=1&amp;_key=gk0sz6" onclick="_addDynClicks(&quot;wburl&quot;, 1414495667, 102990)" target="_blank">电子公文</a></li>
+                                
+<li><a href="https://mail.tyut.edu.cn/" onclick="_addDynClicks(&quot;wburl&quot;, 1414495667, 102991)" target="_blank">校园邮箱</a></li>
+                                
+<li><a href="https://iadmin.tyut.edu.cn/" onclick="_addDynClicks(&quot;wburl&quot;, 1414495667, 102992)" target="_blank">网络服务</a></li>
+                                
+<li><a href="https://www.tyut.edu.cn/xyxw/dzxl.htm" onclick="_addDynClicks(&quot;wburl&quot;, 1414495667, 102993)" target="_blank">电子校历</a></li>
+                                
+<li><a href="https://www.tyut.edu.cn/bcskb.htm" onclick="_addDynClicks(&quot;wburl&quot;, 1414495667, 102994)" target="_blank">班车信息</a></li>
+                                
+</ul>
+                        </div>
+                    </div>
+                    <div class="ewm">
+                        <h3>关注我们</h3>
+                        <div class="ewm-list">    <ul class="flexbox">
+                                
+<li><img src="../img/ewm1.jpg"><p>学院网址</p></li>
+                                
+<li><img src="../img/ewm2.jpg"><p>微信公众号</p></li>
+                                
+</ul></div>
+                    </div>
+                    <div class="contact">
+                        <h3>联系我们</h3>
+                        <div>
+<p>地址：山西省晋中市大学街209号</p>
+<p>邮编：030600</p>
+<p><span><span>电话：0351-3176727</span></span></p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="w90"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权所有：太原理工大学体育与健康工程学院　<a href="https://beian.miit.gov.cn/" target="_blank">(晋)ICP备05000465号</a>　<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=14010902001610" target="_blank">晋公网安备 14010902001610号</a></p></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../js/nav.js"></script>
+    
+
+</body></html>

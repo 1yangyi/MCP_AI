@@ -1,0 +1,453 @@
+<!DOCTYPE html><html><head><title>学院简介-西安电子科技大学-人工智能学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="西安电子科技大学-人工智能学院,学校概况1">
+
+
+
+
+
+<meta charset="utf-8"><link rel="stylesheet" href="../style/public.css"><link rel="stylesheet" href="../style/master.css"><script type="text/javascript" src="../js/jquery.min.js"></script><script type="text/javascript" src="../js/jquery.SuperSlide.js"></script><script type="text/javascript" src="../js/index.js"></script>
+<style>
+#vsb_content_2 TABLE{width: 100%;}
+</style>
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232306975475350545742000400004256 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1009,'/dpzw.jsp',-1,1416541547)</script>
+</head>
+<body><!--top-->
+<div class="stick"></div>
+<div class="header cleafix">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a class="logo" href="../index.htm" onfocus="undefined"><img src="../images/znlogo.jpg"></a><br>
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu1">
+    <div id="appu1"><div><div class="search fr cleafix"><span><input type="image" src="../images/search.png" align="absmiddle" value=""></span> <input type="text" value="" placeholder="请输入关键字进行搜索" autocomplete="off" class="searchText"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+
+            <div class="search fr cleafix">
+ <span><input type="image" src="../images/search.png" align="absmiddle" style="cursor: hand" value="" v-on:click="onSubmit()"/></span>
+<input type="text" value="" class="searchText" placeholder="请输入关键字进行搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" />
+
+ </div>
+            
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1416541547";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div><!--nav--><div class="nav">
+<div class="innav">
+
+<ul class="cleafix">
+
+            <li class="cur"><a class="link" href="../index.htm" title="首页">首页</a></li>
+
+
+            <li class="mainmenu">
+                <a class="link" href="../xygk.htm" title="学院概况">学院概况</a>
+                <div id="nav" style="display: none;">
+
+
+                    <a class="marr" href="xyjj.htm" title="学院简介">学院简介</a>
+                    
+                    
+
+                    <a href="xy.htm" title="学院领导">学院领导</a>
+                    
+                    
+
+                    <a href="bszn.htm" title="办事指南">办事指南</a>
+                    
+                    
+
+                    <a href="zzjg.htm" title="组织机构">组织机构</a>
+                    
+                    
+
+                    <a href="rcdw.htm" title="人才队伍">人才队伍</a>
+                    
+                    
+
+                    <a href="jcxy.htm" title="杰出校友">杰出校友</a>
+                    
+                    
+                </div> 
+            </li>
+           
+           
+           
+          
+          
+           
+            <li class="mainmenu">
+                <a class="link" href="../kxyj1.htm" title="科学研究">科学研究</a>
+                <div id="nav" style="display: none;">
+
+
+                    <a href="../kxyj1/yjfx.htm" title="研究方向">研究方向</a>
+                    
+                    
+
+                    <a href="../kxyj1/xspt.htm" title="学术平台">学术平台</a>
+                    
+                    
+
+                    <a href="../kxyj1/kycg.htm" title="科研成果">科研成果</a>
+                    
+                    
+                </div> 
+            </li>
+           
+           
+           
+          
+          
+           
+            <li class="mainmenu">
+                <a class="link" href="../bkjx1.htm" title="本科教学">本科教学</a>
+                <div id="nav" style="display: none;">
+
+
+                    <a href="../bkjx1/zyjs.htm" title="专业介绍">专业介绍</a>
+                    
+                    
+
+                    <a href="../bkjx1/jxzy.htm" title="教学资源">教学资源</a>
+                    
+                    
+
+                    <a href="../bkjx1/jxms.htm" title="教学名师">教学名师</a>
+                    
+                    
+
+                    <a href="../bkjx1/xkjs.htm" title="学科竞赛">学科竞赛</a>
+                    
+                    
+                </div> 
+            </li>
+           
+           
+           
+          
+          
+           
+            <li class="mainmenu">
+                <a class="link" href="../yjspy.htm" title="研究生培养">研究生培养</a>
+                <div id="nav" style="display: none;">
+
+
+                    <a href="../yjspy/zsxk.htm" title="招生学科">招生学科</a>
+                    
+                    
+
+                    <a href="../yjspy/dszy1.htm" title="导师主页">导师主页</a>
+                    
+                    
+
+                    <a href="../yjspy/xsjl.htm" title="学术交流">学术交流</a>
+                    
+                    
+
+                    <a href="../yjspy/jycg.htm" title="教育教学成果">教育教学成果</a>
+                    
+                    
+                </div> 
+            </li>
+           
+           
+           
+          
+          
+           
+            <li class="mainmenu">
+                <a class="link" href="../rcpy.htm" title="人才培养">人才培养</a>
+                <div id="nav" style="display: none;">
+
+
+                    <a href="../rcpy/bks.htm" title="本科生">本科生</a>
+                    
+                    
+
+                    <a href="../rcpy/yjs.htm" title="研究生">研究生</a>
+                    
+                    
+
+                    <a href="../rcpy/cxcy.htm" title="创新创业">创新创业</a>
+                    
+                    
+
+                    <a href="../rcpy/gjjl.htm" title="国际交流">国际交流</a>
+                    
+                    
+                </div> 
+            </li>
+           
+           
+           
+          
+          
+           
+            <li class="mainmenu">
+                <a class="link" href="../djgz.htm" title="党建工作">党建工作</a>
+                <div id="nav" style="display: none;">
+
+
+                    <a href="../djgz/zzjg.htm" title="组织架构">组织架构</a>
+                    
+                    
+
+                    <a href="../djgz/djdt.htm" title="党建动态">党建动态</a>
+                    
+                    
+
+                    <a href="../djgz/xxyd.htm" title="学习园地">学习园地</a>
+                    
+                    
+
+                    <a href="../djgz/cyxz.htm" title="常用下载">常用下载</a>
+                    
+                    
+                </div> 
+            </li>
+           
+           
+           
+          
+          
+           
+            <li class="mainmenu">
+                <a class="link" href="../tzgg.htm" title="通知公告">通知公告</a>
+            </li>
+           
+           
+           
+          
+          
+           
+            <li class="mainmenu">
+                <a class="link" href="../jyzp.htm" title="就业招聘">就业招聘</a>
+            </li>
+           
+           
+           
+          
+          
+           
+            <li class="mainmenu">
+                <a class="link" href="../xzzq.htm" title="下载专区">下载专区</a>
+            </li>
+           
+           
+           
+          
+          
+           
+
+ <li class="mainmenu">
+                <a class="link" href="http://ensai.xidian.edu.cn/" title="English">English</a>
+
+            </li>
+
+
+        </ul>
+
+</div></div><!--内页主体部分-->
+<div class="w100" style="text-align: center; height: 245px; overflow: hidden">
+
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<table border="0" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+    <td><img src="../images/banner1.png" border="0"></td>
+        </tr>
+        </tbody></table></div>
+<div class="vsb-box">
+<div class="vsb-container main" containerid="4" columns="4">
+<div class="vsb-space n_left" columns="1"><h2>学院概况</h2><ul class="n_nav">
+               
+ <li><a href="xyjj.htm" class="cur">学院简介</a></li>
+
+               
+ <li><a href="xy.htm">学院领导</a></li>
+
+               
+ <li><a href="bszn.htm">办事指南</a></li>
+
+               
+ <li><a href="zzjg.htm">组织机构</a></li>
+
+               
+ <li><a href="rcdw.htm">人才队伍</a></li>
+
+               
+ <li class="marr"><a href="jcxy.htm">杰出校友</a></li>
+
+</ul></div>
+<div class="vsb-space n_right" columns="3"><div class="n_tit cleafix">
+    当前位置：
+               <a href="../index.htm">首页</a>
+               <font>&gt;</font>
+               <a href="../xygk.htm">学院概况</a>
+               <font>&gt;</font>
+               <a href="xyjj.htm">学院简介</a>
+</div>
+
+
+<h1 class="Title cleafix">
+                <span class="tit">人工智能学院</span>
+                
+            </h1>
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1416541547,'wbnews','u8')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1416541547,1591)</script>
+  <div class="brief" style="min-height: 220px;">
+    <div style="font-weight:bold ;text-align:center;font-size:18px;margin-bottom: 2rem">西安电子科技大学人工智能学院</div>
+  <p style="text-align:left;"></p><div id="vsb_content_2_1591_u81"><div id="vsb_content_2"><p>西安电子科技大学人工智能学院是教育部直属高校中首个致力于人工智能领域人才培养、高端创新成果研发和高层次团队培育的实体性学院。</p><p>学院设有国家级特色专业、全国首批一流专业“智能科学与技术”和全国首批一流专业“人工智能”2个本科专业，2个专业连续3年在“软科中国大学专业排名”中双双获评A+，2024年，智能科学与技术专业排全国第3，人工智能专业排全国第4。学院获全国首批“智能科学与技术”博士学位授权点，在“智能科学与技术”、“计算机科学与技术”、“控制科学与工程”国家“双一流”建设学科群，以及电子信息工程大类招收硕士、博士研究生。学院支撑建设的“计算机科学与技术”学科入选新一轮“双一流”建设名单，在第五轮学科评估中获评“A”，全球ESI排名前万分之一。</p><p>学院师资力量雄厚，现有教学科研人员109人，其中教授35人、副教授29人，研究生导师96人（包含企业导师16人、兼职导师2人）。入选欧洲科学院外籍院士1人，IEEE Fellow 2人，国家级人才14人（领军人才6人、青年人才8人），省部级人才8人。坚守德教双馨，获省级教学名师3人，陕西省高校优秀共产党员1人；入选陕西省第二批高校“双带头人”教师党支部书记工作室、科协劳模创新工作室。</p><p>学院建有智能感知与计算国际联合研究中心、智能信息处理国家“111”计划创新引智基、“信息感知技术”国家2011协同创新中心3个国家级平台；人工智能实验课程教育部虚拟教研室、智能感知与图像理解教育部重点实验室、陕西省类脑智能技术工程研究中心等二十余个省部级教学、科研平台和创新团队；同时，与各大科研院所、知名企业紧密协作，成立了中国电科二十所-西安电子科技大学人工智能联合实验室、西安电子科技大学-商汤智能大健康联合创新实验室等十余个集教育、研究、培训于一体的联合研究中心/创新实验室。</p><p>学院面向国家重大战略和国际前沿发展，产生一系列创新性、不可替代的科研成果，承担了包括国家自然科学基金重点项目、重大项目课题、科技部重点研发项目课题在内的重大科研项目20余项，获国家自然科学奖二等奖2项、省部级科学技术奖一等奖8项等。人才培养方面，始终围绕立德树人根本任务，加强课程与实践体系建设，积极探索课程教学改革与质量保障的创新方法与路径，获批教育部虚拟教研室1项、国家级一流本科课程 1门、陕西省一流本科课程8门、陕西省课程思政示范课程及教学团队4项等，获国家教学成果奖5项、陕西省教学成果奖4项、中国图像图形学学会高等教育教学成果激励计划一等奖1项、中国人工智能学会教学成果激励计划一类成果1项等。</p><p>学院始终强调拓展师生国际视野，鼓励教师和学生出国交流、深造。近五年中，有百余名本科生和研究生出国交流学习，学院90%以上的教师有国外留学或访学经历，出访的学校包括美国麻省理工学院、哥伦比亚大学、美国加州大学洛杉矶分校等。学院与英国诺丁汉大学等开展常规化的交流访问活动，每年寒暑假组织学生赴新加坡南洋理工大学、英国剑桥大学、英国牛津大学等世界著名大学进行短期访学，为教师和学生“走出去”开阔视野、学习先进知识提供了全方位的支持和保障。</p><p>数十年探索耕耘，如今已是硕果累累。人工智能学院培养了大批在电子信息、计算机科学与技术、控制科学与工程、智能科学与技术等不同学科领域中发挥重要作用的人才，2024届毕业生保研率29.68%，深造率51.29%，近五年毕业研究生一次性就业率达98%，本科生一次性就业率达97%。作为走在科技最前沿的智能学子，人工智能相关学科的毕业生始终处于供不应求的状态，深受各大军工科研单位、国有企业、外资/三资企业、知名公司和高校的青睐，就业单位包括：电子信息、航天航空领域各大研究院所、BAT、华为、中兴、字节跳动、京东、思必驰、众多AI创业公司以及谷歌、亚马逊、英特尔、微软等全球知名企业，毕业生就业质量受到科研院所及国际知名企业的高度评价。</p><p class="vsbcontent_img"><br></p><p class="vsbcontent_img"><br></p><p class="vsbcontent_end">（数据更新至2025年5月）</p></div></div><p></p>
+
+    <span id="vsb_content_2_1591_u8" name="vsb_content_2_1591_u8"></span><br><br>
+    
+</div></div></div>
+<div class="cleafix"></div></div><!--footer-->
+<div class="footer" style="text-align: center; padding-bottom: 30px; padding-left: 0px; padding-right: 0px; background: #0f4c94; padding-top: 30px"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>
+    <span style="white-space: normal; word-spacing: 0px; text-transform: none; float: none; color: #ffffff; font: 14px/40px 微软雅黑; display: inline !important; letter-spacing: normal; text-indent: 0px; -webkit-text-stroke-width: 0px">Copyright © 2017 西安电子科技大学-人工智能学院 版权所有 技术支持：西安聚力</span>
+</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,480 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>学院简介-武汉大学公共卫生学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+
+
+<meta name="SiteName" content="武汉大学公共卫生学院">
+<meta name="SiteDomain" content="sph.whu.edu.cn">
+<meta name="ColumnName" content="学院简介">
+
+    
+    <meta name="description" content="武汉大学公共服务学院">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/moblie.css" rel="stylesheet">
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1004,'/about.jsp',-1,1802368574)</script>
+</head>
+
+<body>
+    <div class="header">
+
+        <div class="container clearfix">
+        <button type="button" class="navbar-toggle">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div class="searchbox">
+
+               
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><div class="search"><div class="search-nk"><div class="close"></div> <div class="search-bk"><input type="text" placeholder="全文搜索" autocomplete="off" class="search_kang"> <input type="image" src="../images/search-img.png" name="submit_button" class="search-button"></div></div></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+        <div class="search">
+<div class="search-nk">
+<div class="close"></div>
+<div class="search-bk">
+            <input type="text" class="search_kang" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+           <input type="image"  class="search-button" src="../images/search-img.png" name="submit_button" v-on:click="onSubmit()"/>
+            </div>
+</div>
+</div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1802368574";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                <img src="../images/search-icon-b.png" class="search_anliu search_anliu-b"><img src="../images/search-icon.png" class="search_anliu search_anliu-a">
+                
+            </div>
+
+           
+
+            <div class="top-link">
+                <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><a href="https://cas.whu.edu.cn/authserver/login?service=http%3A%2F%2Fehall.whu.edu.cn%2Flogin%3Fservice%3Dhttp%3A%2F%2Fehall.whu.edu.cn%2Fnew%2Findex.html">信息门户 </a> <span>/</span>
+<a href="https://www.whu.edu.cn/">武大主页 </a> 
+
+            </div>
+
+            <!-- 网站logo -->
+           
+            
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" class="logo">
+                <img src="../images/logo-b.png" class="logo-b-img">
+                <img src="../images/logo.png" class="logo-img">
+            </a>
+          
+
+            <div class="nav">
+                <!--  网站导航开始 -->
+                <ul class="daohang clearfix">
+                    <li>
+    <div class="nav-box">
+        <a class="dropdown nb-cn" href="../index.htm">首页</a>
+        <a class="dropdown nb-en" href="../index.htm">首页</a>
+    </div>
+</li>
+<li>
+    <div class="nav-box">
+        <a class="dropdown nb-cn" href="xyjj.htm">学院概况</a>
+        <a class="dropdown nb-en" href="xyjj.htm">学院概况</a>
+    </div>
+    <ul class="nav_item">
+        <li><a href="xyjj.htm">学院简介</a></li>
+        <li><a href="yzzc.htm">院长致词</a></li>
+        <li><a href="lsyg.htm">历史沿革</a></li>
+        <li><a href="xrld.htm">现任领导</a></li>
+        <li><a href="jgsz.htm">机构设置</a></li>
+        <li><a href="xyfc.htm">校友风采</a></li>
+    </ul>
+</li>
+<li>
+    <div class="nav-box">
+        <a class="dropdown nb-cn" href="../szdw/gccrc.htm">师资队伍</a>
+        <a class="dropdown nb-en" href="../szdw/gccrc.htm">师资队伍</a>
+    </div>
+    <ul class="nav_item">
+        <li><a href="../szdw/gccrc.htm">高层次人才</a></li>
+        <li><a href="../szdw/gxry1.htm">各系人员</a></li>
+    </ul>
+</li>
+<li>
+    <div class="nav-box">
+        <a class="dropdown nb-cn" href="../djgz/gzdt.htm">党建工作</a>
+        <a class="dropdown nb-en" href="../djgz/gzdt.htm">党建工作</a>
+    </div>
+    <ul class="nav_item">
+        <li><a href="../djgz/gzdt.htm">工作动态</a></li>
+        <li><a href="../djgz/xxzl.htm">学习资料</a></li>
+    </ul>
+</li>
+<li>
+    <div class="nav-box">
+        <a class="dropdown nb-cn" href="../rcpy/bksjx.htm">人才培养</a>
+        <a class="dropdown nb-en" href="../rcpy/bksjx.htm">人才培养</a>
+    </div>
+    <ul class="nav_item">
+        <li><a href="../rcpy/bksjx.htm">本科生教学</a></li>
+        <li><a href="../rcpy/yjsjx.htm">研究生教学</a></li>
+        <li><a href="../rcpy/xsgz.htm">学生工作</a></li>
+        <li><a href="../rcpy/glzd.htm">管理制度</a></li>
+    </ul>
+</li>
+<li>
+    <div class="nav-box">
+        <a class="dropdown nb-cn" href="../kxyj/xsdt.htm">科学研究</a>
+        <a class="dropdown nb-en" href="../kxyj/xsdt.htm">科学研究</a>
+    </div>
+    <ul class="nav_item">
+        <li><a href="../kxyj/xsdt.htm">学术动态</a></li>
+        <li><a href="../kxyj/gzzd.htm">规章制度</a></li>
+        <li><a href="../kxyj/yqsb.htm">仪器设备</a></li>
+    </ul>
+</li>
+<li>
+    <div class="nav-box">
+        <a class="dropdown nb-cn" href="../jlhz/gnhz.htm">交流合作</a>
+        <a class="dropdown nb-en" href="../jlhz/gnhz.htm">交流合作</a>
+    </div>
+    <ul class="nav_item">
+        <li><a href="../jlhz/gnhz.htm">国内合作</a></li>
+        <li><a href="../jlhz/gjhz.htm">国际合作</a></li>
+    </ul>
+</li>
+<li>
+    <div class="nav-box">
+        <a class="dropdown nb-cn" href="../kw.htm">刊物</a>
+        <a class="dropdown nb-en" href="../kw.htm">刊物</a>
+    </div>
+</li>
+<li>
+    <div class="nav-box">
+        <a class="dropdown nb-cn" href="../gzzd/djzd.htm">规章制度</a>
+        <a class="dropdown nb-en" href="../gzzd/djzd.htm">规章制度</a>
+    </div>
+    <ul class="nav_item">
+        <li><a href="../gzzd/djzd.htm">党建制度</a></li>
+        <li><a href="../gzzd/xzgl.htm">行政管理</a></li>
+        <li><a href="../gzzd/rsgl.htm">人事管理</a></li>
+        <li><a href="../gzzd/cwgl.htm">财务管理</a></li>
+    </ul>
+</li>
+
+                    
+                     <img src="../images/search-icon-b.png" class="search_anliu search_anliu-b"> 
+            
+            <div class="top-link">
+                <a href="https://cas.whu.edu.cn/authserver/login?service=http%3A%2F%2Fehall.whu.edu.cn%2Flogin%3Fservice%3Dhttp%3A%2F%2Fehall.whu.edu.cn%2Fnew%2Findex.html">信息门户 </a> <span>/</span>
+<a href="https://www.whu.edu.cn/">武大主页 </a> 
+
+            </div>
+                </ul>
+                <!--  网站导航结束 -->
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--内容开始-->
+
+    <!--网站轮播-->
+    <div class="banner">
+           
+<img src="../images/banner-content.jpg" class="banner-content">
+
+
+        <div class="location-box">
+            <div class="container clearfix">
+                <h3 class="current">
+                    
+学院概况
+                </h3>
+                <div class="location">
+                        <a href="../index.htm">首页</a> <span> › </span>
+    <a href="xyjj.htm">学院概况</a> <span> › </span>
+    <a href="xyjj.htm">学院简介</a>           
+
+                </div>
+            </div>
+
+        </div>
+
+        <img src="../images/banner-shadow-bottom.png" class="banner-shadow-bottom">
+        <div class="container clearfix">
+            <div class="nav-center-bj"></div>
+        </div>
+        <img src="../images/banner-yazhe.png" class="banner-yazhe">
+
+
+    </div>
+    <!--网站轮播结束-->
+
+    <div class="article-content ">
+        <div class="container clearfix">
+
+            <div class="nav-center">
+                <ul>
+                    <li class="active"> 
+    <a href="xyjj.htm">学院简介</a> 
+
+</li>
+                    
+<li> 
+    <a href="yzzc.htm">院长致词</a> 
+
+</li>
+                    
+<li> 
+    <a href="lsyg.htm">历史沿革</a> 
+
+</li>
+                    
+<li> 
+    <a href="xrld.htm">现任领导</a> 
+
+</li>
+                    
+<li> 
+    <a href="jgsz.htm">机构设置</a> 
+
+</li>
+                    
+<li> 
+    <a href="xyfc.htm">校友风采</a> 
+
+</li>
+                    
+
+                </ul>
+            </div>
+
+
+            <h3 class="column">
+学院简介</h3>
+
+            <div class="about">
+
+                <div class="about-img">
+                        
+<img src="../images/about.jpg">
+
+
+                    <div class="about-text"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<p>武汉大学公共卫生学院是我国公共卫生与预防医学、全球健康学高级专门人才培养的重要基地之一。学院坚持内涵式发展，着力提升核心竞争力和影响力。</p></div>
+                </div>
+
+                <div class="about-conent">
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1802368574,'wbnews','u12')</script>
+<script>function seeContenta12(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta12('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+
+<script>_addDynClicks('wbnews',1802368574,1001)</script>
+<div id="vsb_content_1001_u121"><div id="vsb_content"><p style="text-indent: 2em;"><span style="font-size: 16px;">武汉大学是教育部直属重点综合性大学，是首批“双一流”建设高校，学科门类齐全，综合性强，医工、医理、医文和医管交叉融合，特色明显。</span></p><p style="text-indent: 2em;"><span style="font-size: 16px;">武汉大学公共卫生学科起源于20世纪50年代，2001年成立独立建制的公卫学院，始终坚持“教育为本、立德树人、服务健康、面向世界”的人才培养理念，初步建成学科门类齐全，学科优势和特色突出的公共卫生与预防医学学科，设有6个系和2个研究中心：流行病与卫生统计学系、劳动卫生与环境卫生学系、营养与食品卫生学系、妇幼卫生学系、毒理学系、社会医学系和全球健康研究中心、人口与健康研究中心。2017年获批一级学科博士点，2021年入选国家级一流本科专业建设点，2012年在全国首设全球健康学本科专业。现任院长为缪小平教授。</span></p><p style="text-indent: 2em;"><span style="font-size: 16px;">学院拥有一支学术精湛、创新能力强、年龄结构合理的高素质师资队伍，包括国家海外引进高层次人才计划入选者1人，国家杰青2人、国家优青4人、中组部青拔3人，中国科协青年托举人才1人，中国科协科技智库青年人才1人，“楚天学子”1人，湖北省公共卫生领军人才2人，湖北省青拔1人，湖北省公共卫生青拔3人，武汉英才4人，武汉大学教学名师1人，珞珈青年学者2。在校生580人，其中本科生263人，全日制硕士生215人、博士生56人，非全日制MPH 46人，留学生9人。<span style="font-size: 16px; text-indent: 28px; text-wrap-mode: wrap;">为加强实践教学，学院在武汉、北京、深圳等国内多地建立了22个实践教学基地，在非洲赞比亚和亚洲尼泊尔建立2个国外教学科研基地。</span></span></p><p style="text-indent: 2em;"><span style="font-size: 16px;">学院始终坚持立德树人根本任务，不断提升教育教学质量。预防医学入选国家级一流本科专业建设点，全球健康学入选教育部试点专业，主编教材6本，《营养学》入选国家级一流课程，已形成以预防医学为主，全球健康学为辅的多专业、多层次高素质公共卫生人才培养体系，培养出的毕业生成为国内外预防医学机构、卫生行政部门、高校院所的领军人才和业务骨干。</span></p><p style="text-indent: 2em;"><span style="font-size: 16px;">学院始终聚焦重大公共卫生问题，为政府决策和制定健康相关标准提供科学证据。搭建了重大传染病病原学识别鉴定及致病机制研究平台，成立了鄂西地区全生命周期健康管理队列和中老年人广场舞队列现场研究基地，组建了包括暴露组学、基因组学和大数据分析等在内的系统流行病学研究平台，并积极推动研究成果转化为相关公共卫生政策、指南和标准，将论文写在祖国大地上。学院建有一流的预防医学公共科研平台，并依托武汉大学病毒学国家重点实验室、生物安全三级实验室和人文社科高端智库等优势资源，面向重大公共卫生需求，在新发传染病流行病学、慢性病分子流行病学、全球疾病负担分析和全球健康治理体系研究等领域取得了令人瞩目的成绩。承担国家重点研发项目课题、基金委重点项目、国家社科重大项目和盖茨基金等项目，每年到账经费超过1500万元。在学科顶尖杂志JAMA、Lancet Glob Health、Lancet Oncol、JAMA Intern Med和Int J Epidemiol等发表学术论文，牵头获省部级成果奖4项。</span></p><p style="text-indent: 2em;"><span style="font-size: 16px;">学院始终围绕国家卫生事业发展，建设高水平智库。全球健康研究中心在中国智库索引中的排名逐年上升，影响力持续增长，主办的杂志Global Health Research and Policy已入选科学引文索引扩展版SCI-E。在抗击新冠肺炎疫情中，彰显公卫使命，服务疫情防控大局，在病例研究、预测模型、科普宣传和建言献策等方面贡献武大智慧，《关于降低武汉市新冠肺炎病死率的建议》获李克强总理肯定性批示。</span></p><p style="text-align: center; text-indent: 0em;"><span style="font-size: 16px;"><strong>院徽创意介绍</strong></span></p><p style="text-align: center; text-indent: 0em;"><img width="230" src="/__local/B/9A/78/72AF3AE4484E83B8A5508B23B4F_A64F3AB1_BD68.png" vsbhref="vurl" vurl="/_vsl/B9A7872AF3AE4484E83B8A5508B23B4F/A64F3AB1/BD68" vheight="" vwidth="230" orisrc="/__local/B/9A/78/72AF3AE4484E83B8A5508B23B4F_A64F3AB1_BD68.png" class="img_vsb_content"><br></p><p style="text-indent: 2em;"><span style="font-size: 16px;">1. 院徽总体图式为圆形。最外围是“武汉大学公共卫生学院”的中文字样和“SCHOOL OF PUBLIC HEALTH WUHAN UNIVERSITY”的英文字样，代表着院徽的主体——武汉大学公共卫生学院。其中“武汉大学“四字采用的是“毛体”，展现出我院对伟人精神的继承与发扬。</span></p><p style="text-indent: 2em;"><span style="font-size: 16px;">2. 院徽最中央是经典的蛇杖元素，象征着医学专业悬壶济世，救死扶伤的责任，同样象征着公共卫生学科追求人类健康的愿景。蛇杖外围是一个“W”形状，既是“武汉”首字母的大写，又是“卫生”首字母的大写，具有一语双关的含义。“W”又特化为一个盾牌的形状，象征着守卫与保护，展现出公共卫生学科预防疾病，促进健康的宗旨。“W”整体又形似一个展开的书本，体现出我院立德树人、以人为本的教学理念，致力于培养公共卫生专业人才。</span></p><p style="text-indent: 2em;"><span style="font-size: 16px;">3. 院徽中心部分的外围，盘绕着橄榄枝元素，象征着和平、和谐、健康与旺盛的生命力，充满着无限的生机。这一元素体现出武汉大学公共卫生学院全体师生牢记维护人类健康的重要使命、凝神聚力、砥砺奋进，为人类的健康事业发展带来无限的生机与希望。</span></p><p style="text-indent: 2em;"><span style="font-size: 16px;">4. 院徽的中心部分整体形似一双托举的手，象征着武汉大学公卫人用双手呵护全人类健康，承担公共卫生事业发展重任，托起公共卫生事业的未来。</span></p><p style="text-indent: 2em;"><span style="font-size: 16px;">5. 院徽的深蓝色， 充满力量与蓬勃的朝气，又不失严肃与庄重。体现出一种科技与未来感。</span></p><p style="text-align: center; text-indent: 0em;"><span style="font-size: 16px;"><strong>院训释义<br></strong></span></p><p style="text-align: center; text-indent: 0em;"><span style="font-size: 16px;"><strong>坚毅公允、诚己卫群</strong></span></p><p style="text-indent: 2em;"><span style="font-size: 16px;">坚毅，指的是坚定而又有毅力。最早出自 宋·叶适《徐德操墓志铭》:"有所执论，发於坚毅，不可悗夺也。"</span></p><p style="text-indent: 2em;"><span style="font-size: 16px;">公允，公，指公平正直。允，信也，指的是公义恰当。</span></p><p style="text-indent: 2em;"><span style="font-size: 16px;">诚己，指的是自己做到真诚，以匡正社会，为众人所取法。<span style="text-indent: 2em; font-size: 16px;">出自《颜氏家训·勉学》: “但知私财不入，公事夙办，便云我能治民；不知诚己刑物，执辔如组，反风灭火，化鸱为凤之术也。”</span></span></p><p style="text-indent: 2em;"><span style="font-size: 16px;">卫群，指践行公共卫生使命，守卫群众健康，为推动全人类卫生事业进步奋斗终身。</span></p><p style="text-indent: 2em;"><span style="font-size: 16px;">“坚毅公允、诚己卫群”的院训意在激发全院师生坚定人生目标，努力奋斗，真诚正义，敢于创新，自强弘毅，积极投身于健康中国的建设中，守护国人安康。</span></p><p><br></p><p><br></p></div></div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--内容结束-->
+
+
+    <!--底部开始-->
+ <div class="footer">
+
+        <div class="container clearfix">
+
+            <div class="footer-top">
+                <!-- 友情链接 -->
+                <div class="footer-link">
+                    <h3>友情链接</h3>
+                    <ul>
+                        <li>
+    <a href="https://www.chinacdc.cn/">中国疾病预防控制中心</a>
+</li>                      
+<li>
+    <a href="http://www.hbcdc.com/">湖北省疾控中心</a>
+</li>                      
+<li>
+    <a href="https://www.whcdc.org/">武汉市疾控中心</a>
+</li>                      
+<li>
+    <a href="http://www.nhc.gov.cn/">中华人民共和国国家卫生健康委员会</a>
+</li>                      
+<li>
+    <a href="https://wjw.hubei.gov.cn/">湖北省卫生健康委员会</a>
+</li>                      
+
+                    </ul>
+                </div>
+                <!-- 底部logo -->
+
+                <div class="footer-logo">
+                          <a href="../index.htm"><img src="../images/bottom-logo.png"></a>
+
+                </div>
+                <!-- 底部二维码 -->
+
+                <div class="footer-code">
+                    <ul>
+                            <li>
+    <div class="code-box">
+        <img src="../images/xcode.jpg">
+    </div>
+    <div class="code-text">
+        <p>扫描二维码</p>
+        <p>关注珞北卫珈</p><p>获取最新学生工作动态</p>
+        
+    </div>
+</li>                      
+<li>
+    <div class="code-box">
+        <img src="../images/xcodex.jpg">
+    </div>
+    <div class="code-text">
+        <p>扫描二维码</p>
+        <p>关注公共卫生学院</p><p>获取最新学院资讯</p>
+        
+    </div>
+</li>                      
+
+                   </ul>
+                </div>
+            </div>
+
+
+            <div class="copy">
+                <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>Copyright 2014-2016 武汉大学公共卫生学院 All Rights Reserved</p><p>地址：湖北省武汉市武昌区东湖路115号 邮编：430071 电话：027-68758591/传真：027-68758648 邮箱：whusph@whu.edu.cn</p>
+            </div>
+        </div>
+    </div>
+
+    <!--底部结束-->
+
+
+
+</body></html>

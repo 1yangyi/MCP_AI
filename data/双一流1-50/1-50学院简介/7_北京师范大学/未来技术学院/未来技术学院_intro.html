@@ -1,0 +1,517 @@
+<!DOCTYPE html><html lang="en" class=" js no-touch cssanimations csstransitions"><head><style class="vjs-styles-defaults"></style>
+    <style type="text/css">.amap-logo{display:block!important;pointer-events:none;}</style><style type="text/css" class="AMap.style">.vml{behavior:url(#default#VML);display:inline-block;position:absolute}.amap-custom{top:0;left:0;position:absolute}.amap-container img{max-width:none!important;max-height:none!important}.amap-container{touch-action:none;position:relative;overflow:hidden;background:#fcf9f2 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0AgMAAAC2uDcZAAAADFBMVEX////////////////1pQ5zAAAABHRSTlMAgP/AWuZC2AAAAVhJREFUeAFiYGAQYGDEQjAB2rcDC4BiGIqiU7abdKlO2QkeIClyPsDHweMKtOPHIJ1Op6/w7Y4fdqfT6VpndzqdrnV2p9PpWmd3Oj3qWndSoKp+2J1Op7vr7E6n07XO7nQ6XevsTqfTtc7udPo4/f787E6n0911dqfT6VpndzqdrnV2p9PpWmd3Ot27Ce8m6HS6u85dR6fTtU7r6HS61mkdnU7XOrvT6XTvJuxOp9PddXan0+laZ3c6na51dDpd67SOTqd7N+HdBJ1Od9e56+h0utZpHZ1O1zq70+l0rbM7nU73bsLudDrdXWd3Ol3rtI5Op2ud1tHpdK3TOjqd7t2EdxN0Ot1dZ3c6na51dqfT6VpndzqdrnV2p9Pp3k3Q6XR3nbuOTqdrndbR6XSt0zo6na51Wken072bsDudTnfX2Z1Op2ud3el0utbZnU7XOq2j0+t0uncTD1gO4zoT5doZAAAAAElFTkSuQmCC);-ms-touch-action:none}.amap-drags,.amap-layers{width:100%;height:100%;position:absolute;overflow:hidden}.amap-layers canvas{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.amap-layer img{pointer-events:none}.amap-e,.amap-maps{width:100%;height:100%}.amap-maps,.amap-e,.amap-layers,.amap-tile,.amap-tile-container{position:absolute;left:0;top:0;overflow:hidden}.amap-context{position:absolute;left:0;top:0}.amap-overlays,.amap-markers,.amap-marker{position:absolute;left:0;top:0}.amap-layers{z-index:0}.amap-overlays{z-index:110;cursor:default}.amap-markers{z-index:120}.amap-controls{z-index:150}.amap-copyright{position:absolute;display:block!important;left:85px;height:16px;bottom:.1px;padding-bottom:3px;font-size:11px;font-family:Arial,sans-serif;z-index:160}.amap-logo{position:absolute;bottom:1.5px;left:4px;z-index:160;height:20px}.amap-logo img{width:73px!important;height:20px!important;border:0;vertical-align:baseline!important}.amap-icon{position:relative;z-index:1}.amap-icon img{position:absolute;z-index:-1}.amap-marker-label{position:absolute;z-index:2;border:1px solid blue;background-color:white;white-space:nowrap;cursor:default;padding:3px;font-size:12px;line-height:14px}.amap-info{position:absolute;left:0;z-index:140;width:320px}.amap-menu{position:absolute;z-index:140;_width:100px}.amap-info-close{position:absolute;right:5px;_right:12px;+right:11px;top:5px;_top:2px;+top:2px;color:#c3c3c3;text-decoration:none;font:bold 16px/14px Tahoma,Verdana,sans-serif;width:14px;height:14px}.amap-info-outer,.amap-menu-outer{box-shadow:0 1px 2px rgba(0,0,0,0.1);background:none repeat scroll 0 0 white;border-radius:2px;padding:1px;text-align:left}.amap-menu-outer:hover{box-shadow:0 1px 2px rgba(0,0,0,0.3)}.amap-info-contentContainer:hover .amap-info-outer{box-shadow:0 1px 2px rgba(0,0,0,0.3)}.amap-info-content{position:relative;background:#fff;padding:10px 18px 10px 10px;line-height:1.4;overflow:auto}.amap-marker-content{position:relative}.amap-info{_width:320px}.amap-menu{_width:100px}.amap-info-sharp-old{overflow:hidden;position:absolute;background-image:url(http://webapi.amap.com/images/arrows.png)}.bottom-center .amap-info-sharp-old{height:12px;margin:0 auto;width:20px;background-position:center 12px;top:100%;margin-top:-9px;left:50%;margin-left:-10px}.bottom-left .amap-info-sharp-old{height:12px;width:13px;background-position:-16px -46px;top:100%;margin-top:-9px}.bottom-right .amap-info-sharp-old{height:12px;width:13px;top:-1px;background-position:-56px -46px;left:100%;margin-left:-13px;top:100%;margin-top:-9px}.middle-left .amap-info-sharp-old{height:20px;width:12px;background-position:left;top:50%;margin-top:-10px;margin-left:-11px}.center .amap-info-sharp-old{display:none}.middle-right .amap-info-sharp-old{height:20px;margin-right:0;width:12px;background-position:right;left:100%;margin-left:-9px;top:50%;margin-top:-10px}.top-center .amap-info-sharp-old{height:12px;margin:0 auto;width:20px;background-position:top;top:0;margin-top:-3px;left:50%;margin-left:-10px}.top-left .amap-info-sharp-old{height:12px;width:13px;background-position:-16px -3px;top:0;margin-top:-3px}.top-right .amap-info-sharp-old{height:12px;width:13px;background-position:-56px -3px;left:100%;margin-left:-13px;top:0;margin-top:-3px}.amap-info-sharp{position:absolute}.bottom-center .amap-info-sharp{bottom:0;left:50%;margin-left:-8px;border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid #fff}.bottom-center .amap-info-sharp:after{position:absolute;content:"";margin-left:-8px;margin-top:-7px;border-left:8px solid transparent;border-right:8px solid transparent;border-top:8px solid rgba(0,0,0,0.3);filter:blur(2px);z-index:-1}.amap-info-contentContainer:hover.bottom-center .amap-info-sharp:after{border-top:8px solid rgba(0,0,0,0.5)}.bottom-left .amap-info-sharp{border-color:transparent #fff;border-width:0 0 10px 10px;border-style:solid}.bottom-left .amap-info-sharp:after{position:absolute;content:"";margin-left:-10px;border-color:transparent rgba(0,0,0,0.3);border-width:0 0 10px 10px;border-style:solid;filter:blur(1px);z-index:-1}.amap-info-contentContainer:hover.bottom-left .amap-info-sharp:after{border-color:transparent rgba(0,0,0,0.5)}.bottom-left .amap-info-content{border-radius:2px 2px 2px 0}.bottom-right .amap-info-sharp{right:0;border-top:10px solid #fff;border-left:10px solid transparent}.bottom-right .amap-info-sharp:after{position:absolute;margin-top:-9px;margin-left:-10px;content:"";border-top:10px solid rgba(0,0,0,0.3);border-left:10px solid transparent;filter:blur(1px);z-index:-1}.amap-info-contentContainer:hover.bottom-right .amap-info-sharp:after{border-top:10px solid rgba(0,0,0,0.5)}.bottom-right .amap-info-content{border-radius:2px 2px 0 2px}.top-center .amap-info-sharp{top:0;left:50%;margin-left:-8px;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid #fff}.top-center .amap-info-sharp:after{position:absolute;content:"";margin-top:0;margin-left:-8px;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:8px solid rgba(0,0,0,0.3);filter:blur(1px);z-index:-1}.top-left .amap-info-sharp{left:0;top:0;border-bottom:10px solid #fff;border-right:10px solid transparent}.top-left .amap-info-sharp:after{position:absolute;content:"";margin-top:0;margin-left:0;border-bottom:10px solid rgba(0,0,0,0.3);border-right:10px solid transparent;filter:blur(1px);z-index:-1}.top-right .amap-info-sharp{right:0;top:0;border-bottom:10px solid #fff;border-left:10px solid transparent}.top-right .amap-info-sharp:after{position:absolute;content:"";margin-top:0;margin-left:-10px;border-bottom:10px solid rgba(0,0,0,0.3);border-left:10px solid transparent;filter:blur(1px);z-index:-1}.middle-right .amap-info-sharp{right:0;top:50%;margin-top:-8px;border-top:8px solid transparent;border-left:8px solid #fff;border-bottom:8px solid transparent}.middle-right .amap-info-sharp:after{position:absolute;content:"";margin-top:-8px;margin-left:-8px;border-top:8px solid transparent;border-left:8px solid rgba(0,0,0,0.3);border-bottom:8px solid transparent;filter:blur(1px);z-index:-1}.amap-info-contentContainer:hover.middle-right .amap-info-sharp:after{border-left:8px solid rgba(0,0,0,0.5)}.middle-left .amap-info-sharp{left:0;top:50%;margin-top:-8px;border-top:8px solid transparent;border-right:8px solid #fff;border-bottom:8px solid transparent}.middle-left .amap-info-sharp:after{position:absolute;content:"";margin-top:-8px;margin-left:0;border-top:8px solid transparent;border-right:8px solid rgba(0,0,0,0.3);border-bottom:8px solid transparent;filter:blur(1px);z-index:-1}.amap-info-contentContainer:hover.middle-left .amap-info-sharp:after{border-right:8px solid rgba(0,0,0,0.5)}.amap-info-contentContainer.top-left,.amap-info-contentContainer.top-center,.amap-info-contentContainer.top-right{padding-top:8px}.amap-info-contentContainer.bottom-left,.amap-info-contentContainer.bottom-center,.amap-info-contentContainer.bottom-right{padding-bottom:8px}.amap-info-contentContainer.middle-right{padding-right:8px}.amap-info-contentContainer.middle-left{padding-left:8px}.amap-menu-outer{margin:0;padding:0;list-style-type:none}ul.amap-menu-outer li{cursor:pointer;height:35px;line-height:35px;word-break:break-all;padding:0 10px;font-size:12px;white-space:nowrap}ul.amap-menu-outer li a{text-decoration:none;font-size:13px;margin:0 5px;color:#000;padding:5px 5px}ul.amap-menu-outer li:hover{background-color:#f3f3ee}.amap-overlay-text-container{display:block;width:auto;word-break:keep-all;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:#fff;padding:2px 3px;border:1px solid #ccc;border-radius:3px}.amap-overlay-text-container.amap-overlay-text-empty{display:none}.amap-info-content-ie8{border:1px solid #9c9c9c}</style><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>北京师范大学未来技术学院</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/poposlides-2.css">
+    <link rel="stylesheet" href="../../css/jquery.bxslider.css">
+    <link rel="stylesheet" href="../../css/banner.css">
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/search-form.css">
+<link rel="stylesheet" href="../../css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/component.css">
+    <link rel="stylesheet" href="../../css/iconfont.css">
+    <link rel="stylesheet" href="../../css/list.css">
+<link rel="stylesheet" href="../../css/xys.css">
+<link rel="stylesheet" href="../../css/xys-list.css">
+<style>.fujian li a{
+    font-family:"宋体";
+}
+
+.cn-en {
+    width: 33px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    color: #fff;
+    float: right;
+    margin-right: 10px;
+    margin-top: 1px;
+    margin-left: 8px;
+    background: #054e9d;
+}
+.cn-en a {
+    text-align: center;
+    display: block;
+    color: #fff!important;
+}
+.navss li {
+    padding: 0 !important;
+}
+</style>
+<style type="text/css">.amap-container{cursor:url(https://webapi.amap.com/theme/v1.3/openhand.cur),default;}.amap-drag{cursor:url(https://webapi.amap.com/theme/v1.3/closedhand.cur),default;}</style></head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="header-topline"></div>
+        <div class="header-content-c">
+            <div class="header-content" style="height:150px;">
+                <div class="hc_img">
+                    <a href="https://www.bnu.edu.cn/" target="_blank">
+                        <img src="../../img/logosd.png" alt="" style="margin-top: 40px; height:65px;">
+                    </a>
+                    <a href="https://tecs.bnu.edu.cn/">
+                        <img src="../../img/logoadd.png" alt="" style="margin-top: 37px; height:71px; margin-right: 5px;">
+                    </a>
+                    <a href="https://tecs.bnu.edu.cn/">
+                        <img src="../../img/logonxg.png" alt="" style="margin-top: 27px;">
+                    </a>
+                    <a href="https://tecs.bnu.edu.cn/">
+                        <img src="../../img/logozo.png" alt="" style="" class="hid">
+                    </a>
+                    <div class="search" style="margin-top:53px;">
+                        <div class="searchs" style="width:165px;">
+                            <form name="dataForm" class="search1" action="/cms/web/search/index.jsp" target="_blank" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';" style="height:100%;">
+                               <input name="siteID" value="3ef9be78a7e7431da066fe055a79f54e" type="hidden">
+                                 <input type="hidden" name="searchScope" value="1">
+                                <input class="notxt" placeholder="输入要搜索的内容" value="" name="query" type="text" id="keywords" onfocus="if(value==defaultValue){value='';}" onblur="if(!value){value='';}" onclick="if(this.value==''){this.value='';this.form.keywords.style.color='#444'}" style="border: none;height: 100%;text-indent: 5px;color: rgb(68, 68, 68);width: 75%;">
+                         
+                                <button class="btns" name="Submit" type="submit" value="搜索" style="width:25%;"><i class="fa fa-search fa-fw"></i></button>
+                            </form>
+                        </div>
+                        <div class="cn-en"><a href="https://tecs.bnu.edu.cn/English/" target="_blank">EN</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-nav">
+            <div class="hnav-c">
+                <div class="nav">
+                    <ul class="navs">
+                        <li>
+                            <a href="../../index.htm">首页</a>
+                        </li>
+                        <li>
+                            <a href="index.htm">关于我们</a>
+                            <ul class="navss" style="width:130%;left:-15%;">
+                                <li><a href="index.htm">学院介绍</a></li>
+                                <li><a href="../yjyjs/index.htm">研究院介绍</a></li>
+                                <li><a href="../lsh/index.htm">研究院理事会</a></li>
+                                <li><a href="../ryyc/index.htm">研究院荣誉院长</a></li>
+                                <li><a href="../xswyh/index.htm">研究院学术委员会</a></li>
+                                <li><a href="../xrld/index.htm">研究院现任领导</a></li>
+                                <li><a href="../zzjg/index.htm">研究院组织机构</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../../xwdt/index.htm">新闻通知</a>
+                            <ul class="navss" style="width:140%;left:-20%;">
+                                <li><a href="../../xwdt/index.htm">新闻动态</a></li>
+                                <li><a href="../../tzgg/index.htm">通知公告</a></li>
+                                <li><a href="../../xsdt/index.htm">学术动态</a></li>
+<li><a href="../../mtbshswljs/index.htm">媒体北师环生-未来技术</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../../szdw/ys/index.htm">师资队伍</a>
+                            <ul class="navss">
+                                <li><a href="../../szdw/ys/index.htm">院士</a></li>
+                                <li><a href="../../szdw/zg/index.htm">正高</a></li>
+                                <li><a href="../../szdw/fg/index.htm">副高</a></li>
+<li><a href="../../szdw/syjs/index.htm">实验技术</a></li>
+                                <li><a href="../../szdw/gljs/index.htm">管理教师</a></li>
+                                <li><a href="../../szdw/bsh/index.htm">博士后</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../../kxyj/hjmysyjzx/index.htm">科学研究</a>
+                            <ul class="navss" style="width:160%;left:-30%;">
+                                <li><a href="../../kxyj/hjmysyjzx/index.htm">郝吉明院士工作站</a></li>
+                                <li><a href="../../kxyj/yzfysyjzx/index.htm">杨志峰院士研究中心</a></li>
+                                <li><a href="../../kxyj/xwrwzlyjzx/index.htm">新污染物治理研究中心</a></li>
+                                <li><a href="../../kxyj/zhlyzx/index.htm">智慧流域研究中心</a></li>
+                                <li><a href="../../kxyj/hjbjmxwyjzx/index.htm">环境表界面行为研究中心</a></li>
+                                <li><a href="../../kxyj/qqbhysxhyjzx/index.htm">全球变化与水循环研究中心</a></li>
+	<li><a href="../../kxyj/hjfxzhkzyjzx/index.htm">环境风险智慧控制研究中心</a></li>
+                                <li><a href="../../kxyj/dxkzhyjzx/index.htm">多学科综合研究中心</a></li>
+                                <li><a href="../../kxyj/yjpt/index.htm">研究平台</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../../rcpy1/xsbs/index.htm">人才培养</a>
+                            <ul class="navss">
+                                <li><a href="../../rcpy1/xsbs/index.htm">学术博士</a></li>
+                                <li><a href="../../rcpy1/gcbs/index.htm">工程博士</a></li>
+                                <li><a href="../../rcpy1/xsss/index.htm">学术硕士</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../../jlhz/qydjt/index.htm">交流合作</a>
+                            <ul class="navss">
+                                <li><a href="../../jlhz/qydjt/index.htm">前沿讲座</a></li>
+                                <li><a href="../../jlhz/jcsl/index.htm">交叉沙龙</a></li>
+                                <li><a href="../../xsdt/index.htm">学术动态</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../../zpxx/sxkxj/index.htm">招聘信息</a>
+                            <ul class="navss">
+                                <li><a href="../../zpxx/sxkxj/index.htm">首席科学家</a></li>
+                                <li><a href="../../zpxx/yjgg/index.htm">研究骨干</a></li>
+                                <li><a href="../../zpxx/bsh/index.htm">博士后</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../../xxfw/bszn/index.htm">信息服务</a>
+                            <ul class="navss">
+                                <li><a href="../../xxfw/bszn/index.htm">办事指南</a></li>
+                                <li><a href="../../xxfw/cyxz/index.htm">常用下载</a></li>
+                                <li><a href="../../xxfw/lxwm/index.htm">联系我们</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <section class="mobile">
+            <div class="mobile-inner-header">
+                <div class="mobile-inner-header-icon mobile-inner-header-icon-out iconfont iconzhankai">
+                    <span></span><span></span><span></span></div>
+            </div>
+            <div class="mobile-inner-nav" style="display: none;">
+                <div class="mobile_search">
+                    <form name="dataForm" class="search" action="/cms/web/search/index.jsp" target="_blank" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
+                        <input name="siteID" value="$curChannel.site.ID" type="hidden">
+                        <input class="notxt1" name="Submit" type="submit" value="">
+                        <input class="notxt" value="search" name="query" type="text" id="keywords" onfocus="if(value==defaultValue){value='';}" onblur="if(!value){value=defaultValue;}" onclick="if(this.value==''){this.value='';this.form.keywords.style.color='#fff'}">
+                    </form>
+                </div>
+                <ul>
+                    <li style="animation-delay: 0s;"><a href="../../index.htm">首页</a></li>
+                    <li style="animation-delay: 0.05s;"><a href="index.htm">关于我们</a><strong>+</strong>
+                        <dl class="mobile_subNav">
+                                <dd><a href="index.htm">学院介绍</a></dd>
+                                <dd><a href="../yjyjs/index.htm">研究院介绍</a></dd>
+                                <dd><a href="../lsh/index.htm">研究院理事会</a></dd>
+                                <dd><a href="../ryyc/index.htm">研究院荣誉院长</a></dd>
+                                <dd><a href="../xswyh/index.htm">研究院学术委员会</a></dd>
+                                <dd><a href="../xrld/index.htm">研究院现任领导</a></dd>
+                                <dd><a href="../zzjg/index.htm">研究院组织机构</a></dd>
+                        </dl>
+                    </li>
+                    <li style="animation-delay: 0.1s;"><a href="../../xwdt/index.htm">新闻通知</a><strong>+</strong>
+                        <dl class="mobile_subNav">
+                            <dd><a href="../../xwdt/index.htm">新闻动态</a></dd>
+                            <dd><a href="../../tzgg/index.htm">通知公告</a></dd>
+                            <dd><a href="../../xsdt/index.htm">学术动态</a></dd>
+<dd><a href="../../mtbshswljs/index.htm">媒体北师环生-未来技术</a></dd>
+                        </dl>
+                    </li>
+                    <li style="animation-delay: 0.15s;"><a href="../../szdw/ys/index.htm">师资队伍</a><strong>+</strong>
+                        <dl class="mobile_subNav">
+                            <dd><a href="../../szdw/ys/index.htm">院士</a></dd>
+                            <dd><a href="../../szdw/zg/index.htm">正高</a></dd>
+                            <dd><a href="../../szdw/fg/index.htm">副高</a></dd>
+<dd><a href="../../szdw/syjs/index.htm">实验技术</a></dd>
+                            <dd><a href="../../szdw/gljs/index.htm">管理教师</a></dd>
+                            <dd><a href="../../szdw/bsh/index.htm">博士后</a></dd>
+                        </dl>
+                    </li>
+                    <li style="animation-delay: 0.2s;"><a href="../../kxyj/hjmysyjzx/index.htm">科学研究</a><strong>+</strong>
+                        <dl class="mobile_subNav">
+                            <dd><a href="../../kxyj/hjmysyjzx/index.htm">郝吉明院士工作站</a></dd>
+                            <dd><a href="../../kxyj/yzfysyjzx/index.htm">杨志峰院士研究中心</a></dd>
+                            <dd><a href="../../kxyj/xwrwzlyjzx/index.htm">新污染物治理研究中心</a></dd>
+                            <dd><a href="../../kxyj/zhlyzx/index.htm">智慧流域研究中心</a></dd>
+                            <dd><a href="../../kxyj/hjbjmxwyjzx/index.htm">环境表界面行为研究中心</a></dd>
+                            <dd><a href="../../kxyj/qqbhysxhyjzx/index.htm">全球变化与水循环研究中心</a></dd>
+<dd><a href="../../kxyj/hjfxzhkzyjzx/index.htm">环境风险智慧控制研究中心</a></dd>
+                            <dd><a href="../../kxyj/dxkzhyjzx/index.htm">多学科综合研究中心</a></dd>
+                            <dd><a href="../../kxyj/yjpt/index.htm">研究平台</a></dd>
+                        </dl>
+                    </li>
+                    <li style="animation-delay: 0.25s;"><a href="../../rcpy1/xsbs/index.htm">人才培养</a><strong>+</strong>
+                        <dl class="mobile_subNav">
+                                <dd><a href="../../rcpy1/xsbs/index.htm">学术博士</a></dd>
+                                <dd><a href="../../rcpy1/gcbs/index.htm">工程博士</a></dd>
+                                <dd><a href="../../rcpy1/xsss/index.htm">学术硕士</a></dd>
+                        </dl>
+                    </li>
+                    <li style="animation-delay: 0.3s;"><a href="../../jlhz/qydjt/index.htm">交流合作</a><strong>+</strong>
+                        <dl class="mobile_subNav">
+                            <dd><a href="../../jlhz/qydjt/index.htm">前沿讲座</a></dd>
+                                <dd><a href="../../jlhz/jcsl/index.htm">交叉沙龙</a></dd>
+                                <dd><a href="../../xsdt/index.htm">学术动态</a></dd>
+                        </dl>
+                    </li>
+                    <li style="animation-delay: 0.35s;"><a href="../../zpxx/sxkxj/index.htm">招聘信息</a><strong>+</strong>
+                        <dl class="mobile_subNav">
+                            <dd><a href="../../zpxx/sxkxj/index.htm">首席科学家</a></dd>
+                            <dd><a href="../../zpxx/yjgg/index.htm">研究骨干</a></dd>
+                            <dd><a href="../../zpxx/bsh/index.htm">博士后</a></dd>
+                        </dl>
+                    </li>
+                    <li style="animation-delay: 0.4s;"><a href="../../xxfw/bszn/index.htm">信息服务</a><strong>+</strong>
+                        <dl class="mobile_subNav">
+                            <dd><a href="../../xxfw/bszn/index.htm">办事指南</a></dd>
+                            <dd><a href="../../xxfw/cyxz/index.htm">常用下载</a></dd>
+                            <dd><a href="../../xxfw/lxwm/index.htm">联系我们</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>    <div>
+    <img src="../../img/5.png" alt="" class="listdt">
+</div>
+    <div class="list-body">
+        <div class="listcon">
+            <div class="listconl">
+                <div class="listconlt">
+                    关于我们
+                </div>
+                <ul class="listconltul">
+                      <li><a href="index.htm" class="xzstyle">学院介绍<img src="../../img/li2.png" alt=""></a></li>
+                      <li><a href="../yjyjs/index.htm">研究院介绍<img src="../../img/li1.png" alt=""></a></li>
+                      <li><a href="../lsh/index.htm">研究院理事会<img src="../../img/li1.png" alt=""></a></li>
+                      <li><a href="../ryyc/index.htm">研究院荣誉院长<img src="../../img/li1.png" alt=""></a></li>
+                      <li><a href="../xswyh/index.htm">研究院学术委员会<img src="../../img/li1.png" alt=""></a></li>
+                      <li><a href="../xrld/index.htm">研究院现任领导<img src="../../img/li1.png" alt=""></a></li>
+                      <li><a href="../zzjg/index.htm">研究院组织机构<img src="../../img/li1.png" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="listconr">
+                <div class="listconrt">
+                    <div class="listconrtd2">学院介绍
+                        <div class="listcsrhls"></div>
+                    </div>
+                    <div class="listconrtd3"><img src="../../img/now.png" alt="">位置:             <a href="../../index.htm">首页</a>»
+             <a href="../index.htm">关于我们</a>»
+    学院介绍
+</div>
+                </div>
+                <div class="listconrc-news">
+                    <div class="listconrc-newszw">
+                        <p style="text-indent:38px"><span style="font-family: 微软雅黑, 'Microsoft YaHei'; font-size: 17px;">为服务教育强国、科技强国、人才强国、美丽中国、健康中国以及粤港澳大湾区高质量绿色发展和广东现代化建设，支撑学校“双一流”建设和“一体两翼”办学格局，落实学校第十四次党代会“布局建设工科学科”“加强交叉学科和新兴学科建设”等精神，深刻把握未来技术的原创性、交叉性、颠覆性发展规律和重要特征，着力培养具有前瞻性、能够引领可持续发展的技术创新领军人才，北京师范大学于2024年10月批准成立未来技术学院。</span></p> 
+<p style="text-indent:37px"><span style="font-family: 微软雅黑, 'Microsoft YaHei'; font-size: 17px;">未来技术学院是学校建制性教学科研机构，直属二级单位，在珠海校区建设和运行。未来技术学院以环境与生态前沿交叉研究院为核心，根据未来发展战略面向全球招聘优秀人才组建。</span></p> 
+<p style="text-indent:37px"><span style="font-family: 微软雅黑, 'Microsoft YaHei'; font-size: 17px;">未来技术学院聚焦支撑人类社会可持续发展的绿色、低碳、健康、智慧技术，通过环境资源、生态生命、物质科学、系统科学、人工智能、工程技术等学科的交叉融合，创新革命性和颠覆性技术，培养交叉工程拔尖创新人才，在学校面向生态文明与绿色发展领域的世界一流学科群建设中发挥重要作用，为粤港澳大湾区和国家的可持续发展事业以及构建清洁美丽世界做出重要贡献。</span></p> 
+<p style="text-indent:37px"><span style="font-family: 微软雅黑, 'Microsoft YaHei'; font-size: 17px;">面向未来，交叉探索，创新绿色发展理论技术。</span></p> 
+<p style="text-indent:37px"><span style="font-family: 微软雅黑, 'Microsoft YaHei'; font-size: 17px;">立足珠海，服务湾区，致力人与自然和谐共生。</span></p> 
+<p style=""><br></p>
+                        <div align="left"><br>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<footer class="main-footer" style="background: url(../../images/background/h.png)center center;">
+        <div class="bottom">
+				<div class="wp_main">
+					<div class="bottom_r">
+						<ul class="bottom_r_ul">
+							<li class="">
+								<div class="li_l">所在地址：</div>
+								<div class="li_r">广东省珠海市香洲区唐家湾金凤路18号北京师范大学珠海校区理工综合体11号楼</div>
+							</li>
+							<li class="">
+								<div class="li_l">邮政编码：</div>
+								<div class="li_r">519087</div>
+							</li>
+							<li class="">
+								<div class="li_l">电子邮箱：</div>
+								<div class="li_r">tecs@bnu.edu.cn</div>
+							</li>
+						</ul>
+						<ul class="bottom_r_ul bottom_r_ul1">
+							<li class="">
+								<div class="li_l">所在地址：</div>
+								<div class="li_r">北京市昌平区沙河满井路北京师范大学昌平校园行政楼5楼</div>
+							</li>
+							<li class="">
+								<div class="li_l">邮政编码：</div>
+								<div class="li_r">102299</div>
+							</li>
+							<li class="">
+								<div class="li_l">电子邮箱：</div>
+								<div class="li_r">tecs@bnu.edu.cn</div>
+							</li>
+						</ul>
+						<div class="bottom_r_ewm">
+							<img src="../../img/gzhyw.png">
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="bottom_b">
+				<div class="wp_main">
+					<p style="height:30px;">版权所有© 北京师范大学未来技术学院</p>
+				</div>
+			</div>
+    </footer>
+    <!--End main-footer-->
+
+
+</div>
+<!--End pagewrapper-->
+
+<!--Search Popup-->
+
+<!--Scroll to top-->
+<script src="../../js/jquery-1.12.4.min.js"></script>
+<script>
+
+    $(function() {
+        $(".more_btn").click(function() {
+            if($(this).hasClass("no")) {
+                $(this).removeClass("no");
+                $(this).next(".thnav").hide();
+            } else {
+                $(this).addClass("no");
+                $(this).next(".thnav").show();
+            }
+        });
+    });
+</script>
+<script src="../../js/jquery.flexslider-min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $(".banner .flexslider").flexslider({
+            animation: 'fade',
+            easing: 'swing',
+            controlNav: false,
+            slideshowSpeed: 5000, //展示时间间隔ms
+            animationSpeed: 500, //滚动时间ms
+            touch: true, //是否支持触屏滑动
+            before: function (slider) { //滑动后是否自动轮播
+                slider.pause();
+                slider.play();
+            }
+        });
+        $('.banner .flexslider .flex-direction-nav a').each(function(e){
+            var $this =$(this);
+            $this.addClass('iconfont');
+            $this.text('');
+            if($this.hasClass('flex-prev')){
+                $(this).addClass('icon-jibenicon_zuo')
+            }else if($this.hasClass('flex-next')){
+                $(this).addClass('icon-jibenicon_you')
+            }
+        });
+
+    });
+
+</script>
+<script src="../../js/swiper-bundle.min.js"></script>
+<script>
+    var galleryThumbs = new Swiper('.thumbs', {
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+        watchOverflow: true,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+            769: {  //当屏幕宽度大于等于320
+                slidesPerView: 4,
+                direction : 'vertical',
+            },
+            0: {  //当屏幕宽度大于等于768
+                slidesPerView: 1,
+                direction : 'horizontal',
+                pagination: {
+                    el: '.thumbs .swiper-pagination',
+                },
+            }
+        }
+    });
+    var galleryTop = new Swiper('.gallery', {
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+        watchOverflow: true,
+        thumbs: {
+            swiper: galleryThumbs
+        },
+        speed:800,
+        autoplay:false,
+        breakpoints: {
+            769: {  //当屏幕宽度大于等于320
+                direction : 'vertical',
+            },
+            0: {  //当屏幕宽度大于等于768
+                direction : 'horizontal',
+            }
+        }
+    });
+    $('.conbox1 .thumbs .item').hover(function(){
+        var index=$(this).index();
+        galleryTop.slideTo(index, 1000, false);
+    })
+    $('h2 span').on('click',function(){
+        if(!$(this).hasClass('active')){
+            $(' h2 span').removeClass('active');
+            $('.conbox').removeClass('active');
+            $(this).addClass('active');
+            var index=$(this).index();
+            $('.conbox').eq(index).addClass('active');
+            $('h2 a').attr('href',$(this).attr('data-url'))
+        }
+    })
+</script>
+<script src="../../js/jquery.goup.js"></script>
+<script src="../../js/index.js"></script>
+<script src="../../js/modernizr.custom.js"></script>
+<script src="../../js/jquery.dlmenu.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        $('#dl-menu').dlmenu();
+
+    });
+
+</script>
+<style>#container-map {
+            height: 380px;
+            width: 100%;
+            margin: 30px 0;
+        }</style>
+<script type="text/javascript">
+    window.init = function(){
+        var map = new AMap.Map('container-map', {
+          zoom: 16,
+      center: [113.537988,22.348489]
+        });
+var infoWindow = new AMap.InfoWindow({offset: new AMap.Pixel(0, -30)});
+        var marker = new AMap.Marker({
+            position: new AMap.LngLat(113.537988,22.348489),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+            title: '北京师范大学珠海校区'
+        });
+        marker.content = '北京师范大学珠海校区';
+        marker.on('click', markerClick);
+        marker.emit('click', {target: marker});
+        // 将创建的点标记添加到已有的地图实例：
+        map.add(marker);
+        function markerClick(e) {
+            infoWindow.setContent(e.target.content);
+            infoWindow.open(map, e.target.getPosition());
+        }
+
+
+    }
+</script>
+<script src="https://webapi.amap.com/maps?v=1.4.15&amp;key=7432b156456c88f45fc761b38e87765f&amp;callback=init"></script>
+
+<script type="text/javascript" src="../../g_style/g_article.js"></script><link rel="stylesheet" href="/publish/gPublic/all.css"><script src="/cms/web/writeLog.jsp?siteID=3ef9be78a7e7431da066fe055a79f54e&amp;channelID=b61e5b4284f544b9afa9439054290826&amp;contentID=83e5c2661bb34a76bc7ddbef521f3830" async="async"></script><style type="text/css">
+    .divPlayerImgResponsive{max-width: 480px;overflow: hidden;position: relative;margin: 15px auto;}
+    .divPlayerResponsive2{text-align:center;max-width: 480px;overflow: hidden;position: relative;margin: 15px auto;}
+    .divPlayerResponsive2 video{width:100%;height: auto;}
+    .article i.iconfont{font-style: normal;}
+</style>
+<script type="text/javascript">
+    //2025-06-11 19:35:47
+    if (typeof jQuery == 'undefined') {
+        var myScript= document.createElement("script");
+        myScript.type = "text/javascript";
+        myScript.src="/publish/gpowersoft/js/jquery-3.5.1.min.js";
+        document.head.appendChild(myScript);
+    }
+</script>
+<script src="/publish/gpowersoft/js/videojs-ie8.min.js"></script>
+<script src="/publish/gpowersoft/js/video.js"></script>
+<script src="/publish/gpowersoft/js/videojs-flash.min.js"></script>
+<script src="/publish/gpowersoft/js/share-video-player.js"></script>
+<link href="/publish/gpowersoft/css/video-js-default.css" rel="stylesheet" type="text/css">
+<meta name="author" content=""><meta name="description" content=""><meta name="keywords" content=""><meta name="author" content=""><meta name="description" content=""><meta name="keywords" content=""><meta name="author" content=""><meta name="description" content=""><meta name="keywords" content=""><meta name="ColumnName" content="学院介绍"><meta name="ColumnDescription" content=""><meta name="ColumnKeywords" content=""><meta name="ColumnType" content="学院介绍"><meta name="author" content="null"><meta name="description" content="null"><meta name="keywords" content="null"><meta name="ArticleTitle" content="学院介绍"><meta name="PubDate" content="2025-04-15 14:47:00"><meta name="ContentSource" content="null"><meta name="Image" content="null"><meta name="Url" content="null"><link rel="shortcut icon" href=""><script type="text/javascript" src="/publish/gPublic/all.js"></script><style>.selectTdClass{background-color:#edf5fa !important}.gpTable{ border-collapse:collapse;border:1px solid #000 }.gpTable td,.gpTable th{border:1px solid #000;  padding: 2px 3px;}.gpTable caption{border:1px dashed #DDD;border-bottom:0;padding:3px;text-align:center;}.gpTable th{border-top:1px solid #BBB;background-color:#F7F7F7;}.gpTable tr.firstRow th{border-top-width:2px;}.ue-table-interlace-color-single{ background-color: #fcfcfc; } .ue-table-interlace-color-double{ background-color: #f7faff; }td p{margin:0;padding:0;} th p{margin:0;padding:0;}blockquote {padding: 0 0 0 15px;margin: 0 0 18px;border-left: 5px solid #EEE;}</style>
+<div style="display: none; position: fixed; width: 41px; height: 41px; background: rgb(28, 67, 132); cursor: pointer; bottom: 160px; right: 100px; border-radius: 25px;" class="goup-container"><div class="goup-arrow" style="width: 0px; height: 0px; margin: 0px auto; padding-top: 13px; border-style: solid; border-width: 0px 10px 10px; border-color: transparent transparent rgb(255, 255, 255);"></div></div><div class="goup-text" style="display: none; position: fixed; width: 80px; height: auto; background: transparent; cursor: pointer; bottom: 150px; right: 80px; border-radius: 25px; text-align: center;"> </div></body></html>

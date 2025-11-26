@@ -1,0 +1,405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>学院简介-机械电子工程学院</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="/DFS//template/1590//templets/style/webstyle.css?v=1" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="/ui/jquery/jquery.js?v=v4.0.3"></script><script type="text/javascript" src="https://jidian.njfu.edu.cn/ui/jquery/jquery.min.js"></script><script type="text/javascript" src="https://jidian.njfu.edu.cn/ui/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="/ui/jquery/jquery.base64.js?v=v4.0.3"></script><script type="text/javascript" src="/ui/boshan/ui.js" data-appurl="/bcms/"></script><script type="text/javascript" src="/bcms//front/ui/jquery/jquery.js"></script><script type="text/javascript" src="https://jidian.njfu.edu.cn/bcms//front/ui/jquery/jquery.min.js"></script><script type="text/javascript" src="https://jidian.njfu.edu.cn/bcms//front/ui/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="/bcms//front/ui/jquery/jquery.base64.js"></script><link type="text/css" rel="stylesheet" href="/ui/page/info.css?v=v4.0.3"><link type="text/css" rel="stylesheet" href="/ui/page/channel.css?v=v4.0.3"><script type="text/javascript" src="/ui/visit/visit.js?s=112&amp;c=5877&amp;v=v4.0.3"></script><script type="text/javascript" src="/ui/jwplayer/jwplayer.js?v=v4.0.3"></script><script type="text/javascript" src="/ui/jwplayer/bs.js?v=v4.0.3"></script><script type="text/javascript" src="/ui/pdf/build/pdf.js?v=v4.0.3"></script><script type="text/javascript" src="/ui/pdf/showpdf.js?v=v4.0.3"></script><script type="text/javascript" src="/ui/layer/layer.js?v=v4.0.3"></script><link rel="stylesheet" href="https://jidian.njfu.edu.cn/ui/layer/skin/layer.css" id="layui_layer_skinlayercss" style=""><script type="text/javascript" src="/ui/layer/bs.js?v=v4.0.3"></script><script type="text/javascript" src="/ui/template/es5-shim.min.js?v=v4.0.3"></script><script type="text/javascript" src="/ui/template/es5-sham.min.js?v=v4.0.3"></script><script type="text/javascript" src="/ui/template/template-web.js?v=v4.0.3"></script><script type="text/javascript" src="/ui/template/template-bs.js?v=v4.0.3"></script>
+<script type="text/javascript" src="/DFS//template/1590//templets/js/jquery.min.js"></script>
+</head>
+<body>
+<table width="1016" height="159" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" id="top">
+  <tbody><tr>
+    <td width="9" rowspan="3"></td>
+    <td width="660" height="120" valign="bottom" background="/DFS//template/1590//images/top_02.jpg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td><span style="font-size:12px; color:#616161; margin-left:5px">
+          <script>   
+  var   CalendarData=new   Array(20);   
+  var   madd=new   Array(12);   
+  var   TheDate=new   Date();   
+  var   tgString="甲乙丙丁戊己庚辛壬癸";   
+  var   dzString="子丑寅卯辰巳午未申酉戌亥";   
+  var   numString="一二三四五六七八九十";   
+  var   monString="正二三四五六七八九十冬腊";   
+  var   weekString="日一二三四五六";   
+  var   sx="鼠牛虎兔龙蛇马羊猴鸡狗猪";   
+  var   cYear;   
+  var   cMonth;   
+  var   cDay;   
+  var   cHour;   
+  var   cDateString;   
+  var   DateString;   
+  var   Browser=navigator.appName;   
+    
+  function   init()   
+  {     
+      CalendarData[0]=0x41A95;   
+      CalendarData[1]=0xD4A;   
+      CalendarData[2]=0xDA5;   
+      CalendarData[3]=0x20B55;   
+      CalendarData[4]=0x56A;   
+      CalendarData[5]=0x7155B;   
+      CalendarData[6]=0x25D;   
+      CalendarData[7]=0x92D;   
+      CalendarData[8]=0x5192B;   
+      CalendarData[9]=0xA95;   
+      CalendarData[10]=0xB4A;   
+      CalendarData[11]=0x416AA;   
+      CalendarData[12]=0xAD5;   
+      CalendarData[13]=0x90AB5;   
+      CalendarData[14]=0x4BA;   
+      CalendarData[15]=0xA5B;   
+      CalendarData[16]=0x60A57;   
+      CalendarData[17]=0x52B;   
+      CalendarData[18]=0xA93;   
+      CalendarData[19]=0x40E95;   
+      madd[0]=0;   
+      madd[1]=31;   
+      madd[2]=59;   
+      madd[3]=90;   
+      madd[4]=120;   
+      madd[5]=151;   
+      madd[6]=181;   
+      madd[7]=212;   
+      madd[8]=243;   
+      madd[9]=273;   
+      madd[10]=304;   
+      madd[11]=334;   
+    }   
+    
+  function   GetBit(m,n)   
+  {     
+        return   (m>>n)&1;   
+  }   
+    
+  function   e2c()   
+  {       
+      var   total,m,n,k;   
+      var   isEnd=false;   
+      var   tmp=TheDate.getYear();   
+      if   (tmp<1900)     tmp+=1900;   
+      total=(tmp-2001)*365   
+          +Math.floor((tmp-2001)/4)   
+          +madd[TheDate.getMonth()]   
+          +TheDate.getDate()   
+          -23;   
+      if   (TheDate.getYear()%4==0&&TheDate.getMonth()>1)   
+          total++;   
+      for(m=0;;m++)   
+      {       
+          k=(CalendarData[m]<0xfff)?11:12;   
+          for(n=k;n>=0;n--)   
+          {   
+              if(total<=29+GetBit(CalendarData[m],n))   
+              {     
+                  isEnd=true;   
+                  break;   
+              }   
+              total=total-29-GetBit(CalendarData[m],n);   
+          }   
+          if(isEnd)break;   
+      }   
+      cYear=2001   +   m;   
+      cMonth=k-n+1;   
+      cDay=total;   
+      if(k==12)   
+      {   
+          if(cMonth==Math.floor(CalendarData[m]/0x10000)+1)   
+              cMonth=1-cMonth;   
+          if(cMonth>Math.floor(CalendarData[m]/0x10000)+1)   
+              cMonth--;   
+      }   
+      cHour=Math.floor((TheDate.getHours()+3)/2);   
+  }   
+    
+  function   GetcDateString()   
+  {   var   tmp="";   
+      tmp+=tgString.charAt((cYear-4)%10);       //年干   
+      tmp+=dzString.charAt((cYear-4)%12);       //年支   
+      tmp+="（";   
+      tmp+=sx.charAt((cYear-4)%12);   
+      tmp+="）年  ";   
+      if(cMonth<1)   
+      {     
+        tmp+="闰";   
+          tmp+=monString.charAt(-cMonth-1);   
+      }   
+      else   
+          tmp+=monString.charAt(cMonth-1);   
+      tmp+="月";   
+      tmp+=(cDay<11)?"初":((cDay<20)?"十":((cDay<30)?"廿":"卅"));   
+      if(cDay%10!=0||cDay==10)   
+          tmp+=numString.charAt((cDay-1)%10);   
+      tmp+="    ";   
+//      if(cHour==13)tmp+="夜";   
+//          tmp+=dzString.charAt((cHour-1)%12);   
+//      tmp+="时";   
+      cDateString=tmp;   
+      return   tmp;   
+  }   
+    
+  function   GetDateString()   
+  {     
+      var   tmp="";   
+      var   t1=TheDate.getYear();   
+      if   (t1<1900)t1+=1900;   
+      tmp+=t1   
+                +"年"   
+                +(TheDate.getMonth()+1)+"月"   
+                +TheDate.getDate()+"日   "   
+//                +TheDate.getHours()+":"   
+//                +((TheDate.getMinutes()<10)?"0":"")   
+//                +TheDate.getMinutes() 
+                +"   星期"+weekString.charAt(TheDate.getDay());     
+      DateString=tmp;   
+      return   tmp;   
+  }   
+    
+  init();   
+  e2c();   
+  GetDateString();   
+  GetcDateString();   
+  document.write(DateString);   
+    </script>2025年10月18日      星期六
+        </span></td>
+      </tr>
+    </tbody></table></td>
+    <td><img src="/DFS//template/1590//images/top_03.jpg" width="338" height="120"></td>
+    <td width="9" rowspan="3"></td>
+  </tr>
+  <tr>
+    <td height="35" colspan="2" bgcolor="#0190dc">
+      <ul id="sddm">
+	    <li><a href="http://jidian.njfu.edu.cn">网站首页</a></li>
+        <li>
+              <a href="/xygk/xyjj/" onmouseover="mopen('m1')" onmouseout="mclosetime()">学院概况</a>
+          <div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                <a href="http://jidian.njfu.edu.cn/xygk/xyjj/index.html">学院简介</a>
+                <a href="http://jidian.njfu.edu.cn/xygk/zzjg/index.html">组织机构</a>
+                <a href="http://jidian.njfu.edu.cn/xygk/xrld/index.html">现任领导</a>
+                <a href="http://jidian.njfu.edu.cn/xygk/lrld/index.html">历任领导</a>
+           </div>
+	     </li>
+
+        <li>
+              <a href="http://jidian.njfu.edu.cn/kxyj/index.html" onmouseover="mopen('m2')" onmouseout="mclosetime()">科学研究</a>
+          <div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                <a href="http://jidian.njfu.edu.cn/kxyj/xsdt/index.html">学术动态</a>
+                <a href="http://jidian.njfu.edu.cn/kxyj/kycg/index.html">科研成果</a>
+                <a href="http://jidian.njfu.edu.cn/kxyj/hjqk/index.html">获奖情况</a>
+                <a href="http://jidian.njfu.edu.cn/kxyj/xsjl/index.html">学术交流</a>
+           </div>
+	     </li>
+
+        <li>
+              <a href="http://jidian.njfu.edu.cn/bkjy/index.html" onmouseover="mopen('m3')" onmouseout="mclosetime()">本科教育</a>
+          <div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                <a href="http://jidian.njfu.edu.cn/bkjy/zyjs/index.html">专业介绍</a>
+                <a href="http://jidian.njfu.edu.cn/bkjy/pyfa/index.html">培养方案</a>
+                <a href="http://jidian.njfu.edu.cn/bkjy/zyrz/index.html">专业认证</a>
+                <a href="http://jidian.njfu.edu.cn/bkjy/jxcg/index.html">教学成果</a>
+                <a href="http://jidian.njfu.edu.cn/bkjy/gjjlxm/index.html">国际交流项目</a>
+                <a href="http://jidian.njfu.edu.cn/bkjy/xkzn/index.html">选课指南</a>
+                <a href="http://jidian.njfu.edu.cn/bkjy/jxdt/index.html">教学动态</a>
+                <a href="http://jidian.njfu.edu.cn/bkjy/glwj/index.html">管理文件</a>
+           </div>
+	     </li>
+
+        <li>
+              <a href="http://jidian.njfu.edu.cn/yjsjy/index.html" onmouseover="mopen('m4')" onmouseout="mclosetime()">研究生教育</a>
+          <div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                <a href="http://jidian.njfu.edu.cn/yjsjy/xksz/index.html">学科设置</a>
+                <a href="http://jidian.njfu.edu.cn/yjsjy/pyfa/index.html">培养方案</a>
+                <a href="http://jidian.njfu.edu.cn/yjsjy/glwj/index.html">管理文件</a>
+           </div>
+	     </li>
+
+        <li>
+              <a href="http://jidian.njfu.edu.cn/szdw/index.html" onmouseover="mopen('m5')" onmouseout="mclosetime()">师资队伍</a>
+          <div id="m5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                <a href="http://jidian.njfu.edu.cn/szdw/js/index.html">教授</a>
+                <a href="http://jidian.njfu.edu.cn/szdw/fjs/index.html">副教授</a>
+                <a href="http://jidian.njfu.edu.cn/szdw/js2617/index.html">讲师</a>
+                <a href="http://jidian.njfu.edu.cn/szdw/syyxl/index.html">实验员系列</a>
+           </div>
+	     </li>
+
+        <li>
+              <a href="http://jidian.njfu.edu.cn/xsgz/index.html" onmouseover="mopen('m6')" onmouseout="mclosetime()">学生工作</a>
+          <div id="m6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                <a href="http://jidian.njfu.edu.cn/xsgz/xgdw/index.html">学工队伍</a>
+                <a href="http://jidian.njfu.edu.cn/xsgz/xsst/index.html">社团简介</a>
+                <a href="http://jidian.njfu.edu.cn/xsgz/xgdt/index.html">学工动态</a>
+           </div>
+	     </li>
+
+        <li>
+              <a href="http://jidian.njfu.edu.cn/zsjy/index.html" onmouseover="mopen('m7')" onmouseout="mclosetime()">招生就业</a>
+          <div id="m7" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                <a href="http://jidian.njfu.edu.cn/zsjy/zyjs/index.html">专业介绍</a>
+                <a href="http://jidian.njfu.edu.cn/zsjy/zcfg/index.html">政策法规</a>
+           </div>
+	     </li>
+
+        <li>
+              <a href="http://jidian.njfu.edu.cn/dqgz/index.html" onmouseover="mopen('m8')" onmouseout="mclosetime()">党群工作</a>
+          <div id="m8" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                <a href="http://jidian.njfu.edu.cn/dqgz/gzdt/index.html">工作动态</a>
+                <a href="http://jidian.njfu.edu.cn/dqgz/zzjs/index.html">组织建设</a>
+                <a href="http://jidian.njfu.edu.cn/dqgz/ghjs/index.html">工会建设</a>
+                <a href="http://jidian.njfu.edu.cn/dqgz/xsdj/index.html">学生党建</a>
+                <a href="http://jidian.njfu.edu.cn/dqgz/lxwm/index.html">联系我们</a>
+           </div>
+	     </li>
+
+        <li>
+              <a href="http://jidian.njfu.edu.cn/xytd/index.html" onmouseover="mopen('m9')" onmouseout="mclosetime()">校友专栏</a>
+          <div id="m9" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+                <a href="http://jidian.njfu.edu.cn/xytd/xyhd/index.html">校友活动</a>
+                <a href="http://jidian.njfu.edu.cn/xytd/byz/index.html">毕业照</a>
+                <a href="http://jidian.njfu.edu.cn/xytd/xyfc/index.html">校友风采</a>
+           </div>
+	     </li>
+
+         <li>
+		 </li>
+         
+         <li>
+		 </li>
+       </ul>
+    <div style="clear:both"></div></td>
+  </tr>
+  <tr>
+    <td height="4" colspan="2"></td>
+  </tr>
+</tbody></table>
+<table width="1016" height="586" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" id="__01">
+  <tbody><tr>
+    <td colspan="5"><img src="/DFS//template/1590//images/list_01.jpg" width="1002" height="5"></td>
+  </tr>
+  <tr>
+    <td width="10" background="/DFS//template/1590//images/list_02.jpg">&nbsp;</td>
+    <td valign="top"><table id="__01" width="228" height="577" border="0" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td><img src="/DFS//template/1590//images/list_left_01.jpg" width="228" height="2"></td>
+      </tr>
+      <tr>
+        <td width="228" height="37" background="/DFS//template/1590//images/list_left_02.jpg"><span style="color:#0190dc; font-size:14px; font-weight:bold; margin-left:10px">学院概况</span></td>
+      </tr>
+      <tr>
+        <td><img src="/DFS//template/1590//images/list_left_03.jpg" width="228" height="4"></td>
+      </tr>
+      <tr>
+        <td height="381" valign="top" background="/DFS//template/1590//images/list_left_04.jpg"><table width="197" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+              <td height="5"></td>
+            </tr>
+            <tr>
+              <td background="/DFS//template/1590//images/left_menu.jpg" height="37"><span style="margin-left:35px"><a href="http://jidian.njfu.edu.cn/xygk/xyjj/index.html">学院简介</a></span></td>
+            </tr>
+            <tr>
+              <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" id="a">
+                </table>
+              </td>
+            </tr>            
+            <tr>
+              <td height="5"></td>
+            </tr>
+            <tr>
+              <td background="/DFS//template/1590//images/left_menu.jpg" height="37"><span style="margin-left:35px"><a href="http://jidian.njfu.edu.cn/xygk/zzjg/index.html">组织机构</a></span></td>
+            </tr>
+            <tr>
+              <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" id="a">
+                </table>
+              </td>
+            </tr>            
+            <tr>
+              <td height="5"></td>
+            </tr>
+            <tr>
+              <td background="/DFS//template/1590//images/left_menu.jpg" height="37"><span style="margin-left:35px"><a href="http://jidian.njfu.edu.cn/xygk/xrld/index.html">现任领导</a></span></td>
+            </tr>
+            <tr>
+              <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" id="a">
+                </table>
+              </td>
+            </tr>            
+            <tr>
+              <td height="5"></td>
+            </tr>
+            <tr>
+              <td background="/DFS//template/1590//images/left_menu.jpg" height="37"><span style="margin-left:35px"><a href="http://jidian.njfu.edu.cn/xygk/lrld/index.html">历任领导</a></span></td>
+            </tr>
+            <tr>
+              <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" id="a">
+                </table>
+              </td>
+            </tr>            
+        </tbody></table></td>
+      </tr>
+      <tr>
+        <td><img src="/DFS//template/1590//images/list_left_05.jpg" width="228" height="151"></td>
+      </tr>
+      <tr>
+        <td><img src="/DFS//template/1590//images/list_left_06.jpg" width="228" height="2"></td>
+      </tr>
+    </tbody></table></td>
+    <td width="9" background="/DFS//template/1590//images/list_04.jpg">&nbsp;</td>
+    <td valign="top"><table id="__01" width="760" height="577" border="0" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td width="764" height="34" background="/DFS//template/1590//images/list_right_01.jpg"><span style="margin-left:45px">您当前所在位置：<a href="http://jidian.njfu.edu.cn">首页</a> &gt;&gt; 学院概况 &gt;&gt; 学院简介</span></td>
+      </tr>
+      <tr>
+        <td height="38" background="/DFS//template/1590//images/list_right_02.jpg"><span style="font-size:14px; font-weight:bold; margin-left:45px">学院简介</span></td>
+      </tr>
+      <tr>
+        <td height="503" valign="top" background="/DFS//template/1590//images/list_right_03.jpg"><table width="710" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+            <td width="710" align="left"><span class="subcontent"><div style="text-align:left;">
+              <style> 
+   #zoom table{border:1px solid #000000} 
+  /* css注释：只对table标签设置黑色色边框样式 */ 
+   #zoom table td{border:1px solid #000000} 
+  /* css注释：只对table标签的td设置黑色色边框样式 */ 
+</style> 
+	&nbsp;
+<div>
+       <span style="font-size:14px;"><div id="zoom"><p style="text-indent: 28px; padding: 0px; line-height: 1.75em;"><span style="font-size: 16px;">机械电子工程学院前身为林业机械系，1958年招收第一届“林业机械”专业本科生，1960年9月正式建系。1994年1月成立机械工程学院，1997年7月更名为机械电子工程学院。</span></p><p style="text-indent: 28px; padding: 0px; line-height: 1.75em;"><span style="font-size: 16px;">学院现有教职工135人，其中教授20人，副教授55人，国务院特殊津贴1人，国家教学名师1人，林业部和江苏省有突出贡献的中青年专家各1人，全国黄大年式教师团队1个；江苏省高校科研创新团队1个，“青蓝工程”优秀教学团队2个，江苏省“333工程”、“六大人才高峰”、“青蓝工程”等培养对象27人。近5年获国家科技进步二等奖、国家教学成果二等奖各1项，教育部科技进步二等奖2项，承担国家重点研发计划、国家自然基金等国家、省部级课题60余项。</span></p><p style="text-indent: 28px; padding: 0px; line-height: 1.75em;"><span style="font-size: 16px;">学院现有机械设计制造及其自动化、机械电子工程、自动化、机器人工程、智能制造工程5个本科专业。其中，机械设计制造及其自动化、机械电子工程、自动化为国家级一流本科专业建设点，均以通过国家工程教育专业认证。机器人工程、智能制造工程为新工科专业，目前在校本科生3000余人，研究生400多人。</span></p><p style="text-indent: 28px; padding: 0px; line-height: 1.75em;"><span style="font-size: 16px;">学院现有“机械工程”一级学科博士点、“机械工程”博士后流动站、“控制科学与工程”一级学科硕士点、“动力工程与工程热物理”一级学科硕士点（化工过程机械方向）<span style="text-indent: 28px;">，</span>另设有机械专业学位硕士点、控制工程专业学位硕士点。其中，“机械工程”学科为“十四五”江苏省A类重点学科，国家林草局重点学科。</span></p><p style="text-indent: 28px; padding: 0px; line-height: 1.75em;"><span style="font-size: 16px;">学院下设林业机械系、机械制造工程系机械电子工程系、机械电子工程系、自动化系、机器人工程系、机械设计基础教研室、工程图学教研室、力学教研室，建有现代林业技术装备国家级虚拟仿真实验教学中心和5个省级工程中心及虚拟仿真共享平台，与20余家企业合作建立了研究生工作站和实践示范基地，建有机械基础、机械工程、自动化与测控技术等3个实验教学中心和1个面向大学生创新的机电创新综合训练中心。教学科研设备先进、设施完善，为学生科研和创新实践提供了有力保障。</span></p><p style="text-indent: 28px; padding: 0px; line-height: 1.75em;"><span style="font-size: 16px;">学院与美国、德国、加拿大、澳大利亚、瑞典、韩国等国外大学和机构建立了长久的合作关系，联合开设的优本生国际交流项目取得了显著成效。并成功举办了中德研讨会、IEEE机器人与人等影响力显著的国际会议，拓宽了学生的国际视野。</span></p><p style="text-indent: 28px; padding: 0px; line-height: 1.75em;"><span style="font-size: 16px;">学院经过60多年的发展，逐步形成以林业机械与装备为特色，智能制造工程为重点的办学优势，并已形成了林业机械与装备工程、现代机械设计及理论、先进制造技术、智能机电装备、控制理论与控制工程、检测技术与自动化装置、模式识别与智能系统等7个特色研究团队，在林业装备、智能检测与控制等方面具有明显优势和较强的竞争力。</span></p><p style="text-indent: 28px; line-height: normal;"><span style=";font-family:宋体;line-height:120%;font-size:14px"></span><br></p><p>&nbsp;<br></p><p>学院地址：南京市龙蟠路159号<br></p><p>邮政编码：210037<br></p><p>联系电话：025-85427741（院办）<br></p><p>E-mail：<a href="http://mailto:jidian@njfu.edu.cn" target="_self">jidian@njfu.edu.cn</a></p><p><br></p><p style="text-align: right;">（2025年7月更新）</p></div></span> 
+  </div>
+</div></span></td>
+          </tr>
+        </tbody></table></td>
+      </tr>
+      <tr>
+        <td><img src="/DFS//template/1590//images/list_right_04.jpg" width="760" height="2"></td>
+      </tr>
+    </tbody></table></td>
+    <td width="9" background="/DFS//template/1590//images/list_06.jpg"></td>
+  </tr>
+  <tr>
+    <td colspan="5"><img src="/DFS//template/1590//images/list_07.jpg" width="1002" height="4"></td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" id="foot">  
+  <tbody><tr>
+    <td height="2" bgcolor="#0f7aca"></td>
+  </tr>
+  <tr>
+    <td height="95" bgcolor="#eeeeee"><table width="1002" border="0" align="center" cellpadding="0" cellspacing="0" id="f">
+      <tbody><tr>
+        <td align="center"><div class="footer">
+          <p>版权所有 © 2009-2018 南京林业大学机械电子工程学院  保留所有权利<br>E-mail:jidian@njfu.edu.cn   联系电话：025-85427741<br>E-mail:jddw@njfu.edu.cn&nbsp;   联系电话：025-85427779<br>
+            （建议采用1024*768及以上分辨率，以达到最佳浏览效果）<br>
+            <a href="http://www.miibeian.gov.cn/" target="_blank">苏ICP备18014352号-1</a> <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32010202010047"><img src="/DFS//template/1590//images/gongan.png" border="0" align="absmiddle"></a><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32010202010047">苏公网安备 32010202010047号</a></p>
+        </div></td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+</tbody></table>
+
+</body></html>

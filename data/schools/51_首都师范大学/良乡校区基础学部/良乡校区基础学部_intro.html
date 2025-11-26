@@ -1,0 +1,479 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>首都师范大学良乡校区基础学部</title>
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/subcon.css">
+<!--[if lt IE 9]>
+<script src="../../js/html5.js"  type="text/javascript"></script>
+<![endif]-->
+<script type="text/javascript">
+window.onload=function(){
+    function getByClass(sClass,parent){
+
+    var aEles = (parent||document).getElementsByTagName('*');
+    var arr = [];
+
+    for(var i=0; i<aEles.length; i++){
+
+      var aClass = aEles[i].className.split(' ');
+
+      for(var j=0; j<aClass.length; j++){
+
+        if( aClass[j] == sClass ){
+
+          arr.push( aEles[i] );
+          break;
+
+        }
+      }
+    }
+    return arr;
+  }
+
+  var arr = getByClass('linkList');
+  var arr2 = getByClass('son_linkList');
+  var that = null;
+  var onoff = true;
+
+  for(var i=0;i<arr.length;i++)
+  {
+    arr[i].index = i;
+    arr[i].onclick = function(ev) {
+      var e = ev || event;
+      e.cancelBubble = true;
+      for(var i=0;i<arr.length;i++)
+      {
+        if(i!=this.index)
+        {
+          arr2[this.index].style.display = 'block';
+          arr2[i].style.display = 'none';
+        }
+      };
+      if(onoff)
+      {
+        arr2[this.index].style.display = 'block';
+        onoff = false;
+      }else
+      {
+        arr2[this.index].style.display = 'none';
+        onoff = true;
+      };
+      that = this.index;
+      document.onclick = function() {
+        arr2[that].style.display = 'none';
+        onoff = true;
+      }
+    }
+  };
+};
+</script>
+<script type="text/javascript" src="../../js/jquery-1.9.0.min.js"></script><script>
+    function checkXnwk(url, xwssyh) {
+    var url1 = window.location + "";
+    url1 = url1.substring(0, url1.lastIndexOf('/')) + "/" + url;
+    if (xwssyh != '' && xwssyh == 'xn') {
+      var flag = checkSession();
+      if (flag == "true") {
+        window.open(url);
+      } else if (flag == "false") {
+        url1 = url1.split("").reverse().join("") ;
+        url1 = encodeURIComponent(url1) ;
+        window.open('/cms/web/checkXnwk.jsp?url=' + url1,'_blank');
+      } else {
+        window.open(url);
+      }
+    } else {
+      window.open(url);
+    }
+  }
+  function checkSession() {
+    var flag = "";
+    jQuery.ajax({
+      type : "POST",
+      url : '/cms/web/getXnwkSession.jsp',
+      async : false,
+      success : function(data) {
+        var newData = data.replace(/(^\s*)|(\s*$)/g, "");
+        flag = newData;
+      }
+    });
+    return flag;
+  }
+</script></head>
+
+
+
+
+<!--header开始-->
+  
+
+
+
+<body><header class="wraq_header">
+    <div class="header  pr">
+      <div class="logo"><a href="../../index.htm"><img src="../../images/logo.png"></a></div>
+      <div class="links">
+        <ul class="links01 f12px">
+          <li><a href="http://www.cnu.edu.cn/">学校主页</a></li>
+          <li><a class="btn_ser">
+            <img src="../../images/little_search_03.png" id="btn_ser">
+            <div class="ser pa" id="ser">
+              <form name="dataForm" class="search" action="/cms/web/search/index.jsp" target="_blank" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
+                <input name="siteID" value="160" type="hidden">
+                <input class="notxt" value="请输入关键字" name="query" type="text" id="keywords" onfocus="if(value==defaultValue){value='';}" onblur="if(!value){value=defaultValue;}" onclick="if(this.value==''){this.value='';this.form.keywords.style.color='#444'}">
+                <input class="notxt1" name="Submit" type="submit" value="">
+              </form>
+            </div>
+          </a></li>
+        </ul>
+      </div>
+
+
+      <!-- 移动端主导航 -->
+      <section class="snav pa">
+       <section id="mbtn" class="mbtn pa"><img src="../../images/sub-mbtn.png"> </section>
+       <div class="navm pa">
+        <ul>
+                            <!--判断是否有子栏目-->
+                              <li class="sub_has current"><a href="javascript:void(0);">学部概况</a>
+           <div class="subNav">
+            <dl>
+                                            <dd>
+                                    <a href="index.htm">学部介绍</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../jgsz/index.htm">机构设置</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../rydw/index.htm">人员队伍</a>
+                                </dd>
+                                           </dl>
+         </div>
+       </li>
+                                  <!--判断是否有子栏目-->
+                              <li class="sub_has current"><a href="javascript:void(0);">学生工作</a>
+           <div class="subNav">
+            <dl>
+                                            <dd>
+                                    <a href="../../xsgz/twgz/index.htm">团委工作</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../xsgz/mygz/index.htm">美育工作</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../xsgz/xyzd/index.htm">学业指导</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../xsgz/gfjy/index.htm">国防教育</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../xsgz/aqjy/index.htm">安全教育</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../xsgz/cxcy/index.htm">创新创业</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../xsgz/xljk/index.htm">心理健康</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../xsgz/zzgl/index.htm">资助管理</a>
+                                </dd>
+                                           </dl>
+         </div>
+       </li>
+                                  <!--判断是否有子栏目-->
+                              <li class="sub_has current"><a href="javascript:void(0);">教学工作</a>
+           <div class="subNav">
+            <dl>
+                                            <dd>
+                                    <a href="../../jxgz/wxtc/index.htm">通识大讲堂</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../jxgz/xzjt/index.htm">学子讲坛</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../jxgz/wddj/index.htm">问道典籍</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../jxgz/xkjs/index.htm">学科竞赛</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../jxgz/jwtz/index.htm">教务通知</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../jxgz/jsjy/index.htm">教室借用</a>
+                                </dd>
+                                           </dl>
+         </div>
+       </li>
+                                  <!--判断是否有子栏目-->
+                              <li class="sub_has current"><a href="javascript:void(0);">党建工作</a>
+           <div class="subNav">
+            <dl>
+                                            <dd>
+                                    <a href="../../djgz/zbsh/index.htm">支部生活</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../djgz/dxpx/index.htm">党校培训</a>
+                                </dd>
+                                           </dl>
+         </div>
+       </li>
+                                  <!--判断是否有子栏目-->
+                              <li class="sub_has current"><a href="javascript:void(0);">信息中心</a>
+           <div class="subNav">
+            <dl>
+                                            <dd>
+                                    <a href="../../xxzx/lxgz/index.htm">良乡工作</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../xxzx/xggz/index.htm">学工工作</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../xxzx/jwmt/index.htm">佳文美图</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../xxzx/xqxx/index.htm">校区信息</a>
+                                </dd>
+                                           </dl>
+         </div>
+       </li>
+                                  <!--判断是否有子栏目-->
+                           <li><a href="../../zcgz/index.htm">政策规章</a></li>
+                                  <!--判断是否有子栏目-->
+                           <li><a href="../../xzzq/index.htm">下载专区</a></li>
+                 </ul>
+ </div>
+</section>
+
+</div>
+</header>
+<div class="nav pa">
+  <ul id="nav">
+    <li><a href="../../index.htm">首页</a></li>
+                         <!--判断是否有子栏目-->
+                        <li>                        <a href="index.htm">学部概况</a>
+                                                <div class="subNav">
+                            <dl>
+                                                                <dd>
+                                    <a href="index.htm">学部介绍</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../jgsz/index.htm">机构设置</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../rydw/index.htm">人员队伍</a>
+                                </dd>
+                                                            </dl>
+                        </div>
+ </li>
+                     <!--判断是否有子栏目-->
+                        <li>                        <a href="../../xsgz/twgz/index.htm">学生工作</a>
+                                                <div class="subNav">
+                            <dl>
+                                                                <dd>
+                                    <a href="../../xsgz/twgz/index.htm">团委工作</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../xsgz/mygz/index.htm">美育工作</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../xsgz/xyzd/index.htm">学业指导</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../xsgz/gfjy/index.htm">国防教育</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../xsgz/aqjy/index.htm">安全教育</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../xsgz/cxcy/index.htm">创新创业</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../xsgz/xljk/index.htm">心理健康</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../xsgz/zzgl/index.htm">资助管理</a>
+                                </dd>
+                                                            </dl>
+                        </div>
+ </li>
+                     <!--判断是否有子栏目-->
+                        <li>                        <a href="../../jxgz/wxtc/index.htm">教学工作</a>
+                                                <div class="subNav">
+                            <dl>
+                                                                <dd>
+                                    <a href="../../jxgz/wxtc/index.htm">通识大讲堂</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../jxgz/xzjt/index.htm">学子讲坛</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../jxgz/wddj/index.htm">问道典籍</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../jxgz/xkjs/index.htm">学科竞赛</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../jxgz/jwtz/index.htm">教务通知</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../jxgz/jsjy/index.htm">教室借用</a>
+                                </dd>
+                                                            </dl>
+                        </div>
+ </li>
+                     <!--判断是否有子栏目-->
+                        <li>                        <a href="../../djgz/zbsh/index.htm">党建工作</a>
+                                                <div class="subNav">
+                            <dl>
+                                                                <dd>
+                                    <a href="../../djgz/zbsh/index.htm">支部生活</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../djgz/dxpx/index.htm">党校培训</a>
+                                </dd>
+                                                            </dl>
+                        </div>
+ </li>
+                     <!--判断是否有子栏目-->
+                        <li>                        <a href="../../xxzx/lxgz/index.htm">信息中心</a>
+                                                <div class="subNav">
+                            <dl>
+                                                                <dd>
+                                    <a href="../../xxzx/lxgz/index.htm">良乡工作</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../xxzx/xggz/index.htm">学工工作</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../xxzx/jwmt/index.htm">佳文美图</a>
+                                </dd>
+                                                                <dd>
+                                    <a href="../../xxzx/xqxx/index.htm">校区信息</a>
+                                </dd>
+                                                            </dl>
+                        </div>
+ </li>
+                     <!--判断是否有子栏目-->
+                    <li><a href="../../zcgz/index.htm">政策规章</a></li>
+                    <!--判断是否有子栏目-->
+                    <li><a href="../../xzzq/index.htm">下载专区</a></li>
+</ul>
+</div><!--header结束 -->
+<!--content开始-->
+  <div class="sub_banner" id="subbanner">
+    
+<img src="../../images/erji_banner.png" alt="" title="">
+  </div>
+  <article class="subPage">
+    <div class="sub_mbtn"></div>
+    
+<aside class="sub_navm">
+    <ul>
+            <li><a href="index.htm">学部介绍</a></li>
+                <li><a href="../jgsz/index.htm">机构设置</a></li>
+                <li><a href="../rydw/index.htm">人员队伍</a></li>
+            </ul>
+</aside>
+<div class="subPage_con">
+    <div class="sbu_leftWrap">
+        <aside class="sub_left">
+            <div class="sub_title">
+                <div class="sub_t01"><h2>学部概况</h2></div>
+            </div>
+            <ul>
+                                    <li><a class="active" href="index.htm">学部介绍</a></li>
+                                        <li><a href="../jgsz/index.htm">机构设置</a></li>
+                                        <li><a href="../rydw/index.htm">人员队伍</a></li>
+                                </ul>
+        </aside>
+
+
+    </div>        <section class="sub_right marginBot">
+            <div class="pageArticle">
+                                               <div class="articleTitle article02">
+                      <h2>学部介绍</h2>
+                      <div class="articleAuthor">
+                        <p>
+                            <span>时间：2018-06-05 09:39:00</span>         <span></span><span></span>
+                        </p>
+                     </div>
+                      <div class="wrapSize">
+                        <div class="size">
+                            <i class="f12px">字体：</i>
+                          <a class="size3 min f12px" href="javascript:;">【小】</a>
+                          <a class="size2 mid f14px" href="javascript:;">【中】</a>
+                          <a class="size1 max f16px" href="javascript:;">【大】</a>
+                          <!--<a class="print"  onclick="doPrint()" href="javascript:;"></a>
+                          <a class="cll"  onclick="()" href="javascript:;"></a>-->
+                        </div>
+                     </div>
+                 </div>
+
+                <div class="article art">
+                     <p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center"><img alt="" src="../../images/content/2019-02/20190225143957208211.png" style="height:546px; width:633px"></p>
+
+<p style="text-align:center"><img alt="" src="../../images/content/2018-06/20180605105724252068.png" style="height:358px; width:640px"></p>
+
+<p style="text-align:center"><img alt="" src="../../images/content/2018-06/20180605104249029425.png" style="height:591px; width:642px"></p>
+
+<p style="text-align:center"><img alt="" src="../../images/content/2018-06/20180605104303406517.png" style="height:429px; width:640px"></p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+                 </div>
+                                <div class="wrapShare floatR">
+                    <div class="share">
+                         <div class="bshare-custom icon-medium"><a title="分享到微信" class="bshare-weixin"></a><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台" class="fenxiang-more"></a></div><script type="text/javascript" charset="utf-8" src="https://static-bshare-cn.v.cnu.edu.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="https://static-bshare-cn.v.cnu.edu.cn/b/bshareC0.js"></script>
+                        </div>
+               </div>
+           </div>
+        </section>
+    </div>
+</article>
+<!--content结束-->
+<!--footer开始-->
+<article class="fooer_wrap">
+  
+ <div class="footer">
+   <div class="footer_left">
+     版权所有：首都师范大学良乡校区基础学部      地址：首都师范大学良乡校区  <br>
+     邮编：102488    邮箱：cnu_jichuxuebu@126.com <br> <a href="https://beian.miit.gov.cn" style="color:#fff">京ICP备05082108号-1 </a>&nbsp;     京公网安备:110402430068号
+   </div>
+   <div class="footer_right">
+     <div class="friendLink_select">
+       <div class="linkList" style="z-index:9999;">------友情链接 ------
+         <div class="son_linkList">
+                    </div>
+       </div>
+     </div>
+   </div>
+ </div></article>
+<!--footer结束-->
+<script type="text/javascript" src="../../js/jquery-1.7.1.min.js"></script>
+<!-- 通用JS -->
+<script type="text/javascript" src="../../js/script.js"></script>
+<script type="text/javascript" src="../../js/jquery.flexslider-min.js"></script>
+<script type="text/javascript">
+Nav('#nav');;//头部导航
+navMin();  //手机端下拉菜单
+Menu('.in_mbtn','.navm');//手机版导航
+Menu('.sub_mbtn','.sub_navm');//手机版导航
+SubImgHeight();
+FontSize2('.size','.art');
+SerMax();  //搜索框弹出效果
+//navMax();  PC端主导航下拉菜单效果
+Nav('#nav');;//导航
+</script>
+<script type="text/javascript" src="../../g_style/g_index.js"></script>
+</body></html>

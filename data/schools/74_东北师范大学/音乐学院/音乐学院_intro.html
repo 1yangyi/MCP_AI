@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>学院简介-东北师范大学音乐与舞蹈学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="东北师范大学音乐与舞蹈学院,学院简介">
+
+<link href="../style/style.css" rel="stylesheet" type="text/css">
+<link href="../css/menu.css" rel="stylesheet" type="text/css">
+    <script src="../js/jquery.min.js" type="text/javascript"></script>
+    <script src="../js/nav.js" type="text/javascript"></script>
+<link href="../css/lrtk.css" rel="stylesheet" type="text/css">
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307668465750545742000400054754 -->
+<link rel="stylesheet" type="text/css" href="../jjy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1003,'/jjy.jsp',-1,1287845304)</script>
+</head>
+
+<body class="bj">
+<div class="jz">
+     <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm"><img src="../images/dbsf.png" width="320" height="79"></a>
+
+</div>
+  <div class="sousuo">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu1">
+    <div id="appu1"><div><input type="text" placeholder="请输入关键字" autocomplete="off" class="srk"> <input type="image" src="../images/i_r2_c7.jpg"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+        
+        <input type="text" class="srk" placeholder="请输入关键字"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"/>
+ <input type="image" src="../images/i_r2_c7.jpg" v-on:click="onSubmit()" >
+        
+         
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1287845304";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+  <div class="toplj"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>
+<a href="../Academy_of_Music.htm">English</a>
+
+ │ 
+
+
+<a href="../index/bgdh.htm">办公电话</a>
+
+ │ 
+
+
+<a href="#">怀念旧版</a>
+
+
+
+</div>
+</div>
+<div class="jz">    <!-- 代码 开始 -->
+  <div class="nav">
+        <div class="navmain">
+             <ul id="nav_all">
+    <li><a href="../xygk.htm">学院概况</a>
+<ul style="display: none">
+ <li style="width:0px"></li>
+<li><a href="xyjj.htm">学院简介 &gt;</a></li> 
+<li><a href="xyld.htm">学院领导 &gt;</a></li> 
+<li><a href="xyjg.htm">学院机构 &gt;</a></li> 
+<li><a href="jytc.htm">建院题词 &gt;</a></li> 
+</ul>
+   </li>
+    <li><a href="../szdw.htm">师资队伍</a>
+<ul style="display: none">
+ <li style="width: 19px"></li>
+<li><a href="../szdw/jcllb.htm">基础理论部 &gt;</a></li> 
+<li><a href="../szdw/ylxx.htm">音乐学系 &gt;</a></li> 
+<li><a href="../szdw/slx.htm">声乐系 &gt;</a></li> 
+<li><a href="../szdw/gqx.htm">钢琴系 &gt;</a></li> 
+<li><a href="../szdw/zqx.htm">作曲系 &gt;</a></li> 
+<li><a href="../szdw/wdx.htm">舞蹈系 &gt;</a></li> 
+<li><a href="../szdw/lxylx.htm">流行音乐系 &gt;</a></li> 
+<li><a href="../szdw/gxx.htm">管弦系 &gt;</a></li> 
+</ul>
+   </li>
+    <li><a href="../bksjy.htm">本科生教育</a>
+<ul style="display: none">
+ <li style="width: 238px"></li>
+<li><a href="../bksjy/jxsj.htm">教学实践 &gt;</a></li> 
+<li><a href="../bksjy/jyxx.htm">教研信息 &gt;</a></li> 
+<li><a href="../bksjy/ywdt.htm">音舞动态 &gt;</a></li> 
+<li><a href="../bksjy/xsxg.htm">学生相关 &gt;</a></li> 
+<li><a href="../bksjy/bgxz.htm">表格下载 &gt;</a></li> 
+<li><a href="../bksjy/tzgg.htm">通知公告 &gt;</a></li> 
+</ul>
+   </li>
+    <li><a href="../yjsjy.htm">研究生教育</a>
+<ul style="display: none">
+ <li style="width: 357px"></li>
+<li><a href="../yjsjy/yjsds.htm">研究生导师 &gt;</a></li> 
+<li><a href="../yjsjy/xkzy.htm">学科专业 &gt;</a></li> 
+<li><a href="../yjsjy/kcjh.htm">课程计划 &gt;</a></li> 
+<li><a href="../yjsjy/gzzd.htm">规章制度 &gt;</a></li> 
+<li><a href="../yjsjy/xzzq.htm">下载专区 &gt;</a></li> 
+<li><a href="../yjsjy/xwdpg.htm">学位点评估 &gt;</a></li> 
+</ul>
+   </li>
+    <li><a href="../kygz.htm">科研工作</a>
+<ul style="display: none">
+ <li style="width: 476px"></li>
+<li><a href="../kygz/kydt.htm">科研动态 &gt;</a></li> 
+<li><a href="../kygz/kycg.htm">科研成果 &gt;</a></li> 
+<li><a href="../kygz/bgxz.htm">表格下载 &gt;</a></li> 
+</ul>
+   </li>
+    <li><a href="../dqgz.htm">党群工作</a>
+<ul style="display: none">
+ <li style="width:200px"></li>
+<li><a href="../dqgz/dqzz.htm">党群组织 &gt;</a></li> 
+<li><a href="../dqgz/djhd.htm">党建活动 &gt;</a></li> 
+<li><a href="../dqgz/djzd/gjzd.htm">党建制度 &gt;</a></li> 
+<li><a href="../dqgz/xxzl.htm">学习资料 &gt;</a></li> 
+</ul>
+   </li>
+    <li><a href="../xsgz.htm">学生工作</a>
+<ul style="display: none">
+ <li style="width: 150px"></li>
+<li><a href="../xsgz/xggk.htm">学工概况 &gt;</a></li> 
+<li><a href="../xsgz/zzjg.htm">组织机构 &gt;</a></li> 
+<li><a href="../xsgz/tzgg.htm">通知公告 &gt;</a></li> 
+<li><a href="../xsgz/xgkx.htm">学工快讯 &gt;</a></li> 
+<li><a href="../xsgz/jyzd1.htm">就业指导 &gt;</a></li> 
+<li><a href="../xsgz/xtzz.htm">学团组织 &gt;</a></li> 
+<li><a href="../xsgz/zdgf.htm">制度规范 &gt;</a></li> 
+<li><a href="../xsgz/xzzq.htm">下载专区 &gt;</a></li> 
+</ul>
+   </li>
+    <li><a href="../xyyd.htm">校友园地</a>
+<ul style="display: none">
+ <li style="width: 450px"></li>
+<li><a href="http://f.sojump.cn/jq/7050411.aspx">校友信息搜集 &gt;</a></li> 
+<li><a href="../xyyd/xyfc.htm">校友风采 &gt;</a></li> 
+<li><a href="../xyyd/xyhd.htm">校友活动 &gt;</a></li> 
+</ul>
+   </li>
+    <li><a href="../xzzq.htm">下载专区</a>
+   </li>
+</ul>
+
+
+
+
+        </div>
+    </div>
+    <!-- 代码 结束 --></div>
+
+<div class="jz" style="margin-top:50px">
+          <div style="float:left; width:158px; border:solid 1px #D2D2D2">
+              <div class="dqyjlm">
+学院概况</div>
+              <div>
+                <ul class="ejdh">
+     <li><a href="xyjj.htm">学院简介</a></li>
+     <li><a href="xyld.htm">学院领导</a></li>
+     <li><a href="xyjg.htm">学院机构</a></li>
+     <li><a href="jytc.htm">建院题词</a></li>
+
+
+                </ul>
+              </div>
+          </div>
+  <div style="float:right; width:980px">
+              <div class="dqwz">所在位置：
+                        <a href="../index.htm">网站首页</a>
+                &gt;
+                <a href="../xygk.htm">学院概况</a>
+                &gt;
+                <a href="xyjj.htm">学院简介</a>
+
+
+
+
+
+</div>
+    <div style="padding-top:10px;min-height:350px;">
+                  
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1287845304,'wbnews','u7')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta7(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1287845304,1001)</script>
+<script>
+$(function(){ 
+
+var width=$(".nrys img").width();
+
+
+if(width>50){
+
+   $(".nrys img").css("display","block");
+}
+else{
+$(".nrys img").css("display","inline");
+
+}
+
+
+
+
+ });
+
+
+
+</script>
+
+<div style="float:left; width:980px">
+    <div style="height:35px; line-height:35px; padding-top:4px; text-align:center"><span style=" padding-right:10px; color:#333; font-weight:bold">学院简介</span></div>
+    <div style="font-size:12px; text-align:center; color:#666">发布日期：2016-08-22        点击量：<script>_showDynClicks("wbnews", 1287845304, 1001)</script><span id="dynclicks_wbnews_1001_102" name="dynclicks_wbnews_1001_102">490147</span>次</div>
+ <div class="nrys" style="min-height:350px;"><div id="vsb_content_2_1001_u71"><div id="vsb_content_2"><p class="vsbcontent_start">音乐与舞蹈学院前身为东北大学鲁迅文艺学院音乐系，创建于1946年，2002年撤系建立音乐学院，2025年更名为音乐与舞蹈学院。</p><p style="text-align: center;"><strong>东北师范大学音乐与舞蹈学院历史沿革</strong></p><p></p><p style="text-align: center"><img src="/__local/3/4A/F7/E065B635FC72C1557D78D03C0AA_4A00C95E_68D4B.jpg" width="472" height="680" vsbhref="vurl" vurl="/_vsl/34AF7E065B635FC72C1557D78D03C0AA/4A00C95E/68D4B" vheight=" 680px" vwidth=" 472px" orisrc="/__local/A/F2/44/793CFE72359934D51126D521AF9_D12E3773_103FE2.jpg" class="img_vsb_content" style="width: 472px; height: 680px; display: block;"></p><p class="vsbcontent_img"></p><p>经过七十余年的发展，学院现已成为具有博士、硕士、本科三个办学层次，有基础理论部、音乐学系、声乐系、钢琴系、作曲系、舞蹈系、流行音乐系、管弦系、学校艺术教育研究中心(教育部委托)、吉林省高校人文社科重点研究基地--学校艺术教育质量监测研究基地、“音舞融合型”卓越基础教育教师培养模式创新实验区、吉林省“重大需求协同创新中心”长白山音乐舞蹈艺术协同创新中心、省级音乐与舞蹈实验教学示范中心、东北少数民族音乐研究中心、教师教育协同创新中心、博士后科研流动站等教学和科研单位的综合性办学实体。</p><p>学院具有一流的办学条件和教学环境，教学楼总建筑面积1.59万平方米。设有1个音乐厅，30余个综合型多功能实践教室，包括室内乐、合唱、民乐、管弦乐排练室、声乐综合实践厅、MIDI 录音教室、流行音乐演绎教室、多声道音乐实验室、双钢琴、现代乐器和电声乐器演奏教室、电脑音乐教室、专业录音棚、多功能录播实验室、电子钢琴教室、微格教室、多媒体教室、舞蹈基本功教室、舞蹈体能训练室等。此外，学院还设有教师及学生琴房200余间，为教学实践活动提供支持。</p><p class="vsbcontent_img"><img width="500" height="244" title="undefined" alt="undefined" src="/__local/C/36/41/F9C365EA4190D08BBB7C52F554B_A573C79A_12218.jpg" border="0" vspace="0" hspace="0" vwidth=" 398px" vheight=" 272px" vurl="/_vsl/C3641F9C365EA4190D08BBB7C52F554B/A573C79A/12218" vsbhref="vurl" orisrc="/__local/1/BE/C2/838C719CCD83862A9AAC079076D_79A51CA9_15E005.jpg" class="img_vsb_content" style="width: 398px; height: 272px; display: block;"></p><p style="text-align: center;"><strong>学院主教学楼</strong></p><p class="vsbcontent_img"><img width="516" height="219" src="/__local/7/80/0D/A540DE7BD3E449B9B558A33AC2E_3412562B_6E9C9.png" vwidth="516" vheight="219" vurl="/_vsl/7800DA540DE7BD3E449B9B558A33AC2E/3412562B/6E9C9" vsbhref="vurl" orisrc="/__local/7/80/0D/A540DE7BD3E449B9B558A33AC2E_3412562B_6E9C9.png" class="img_vsb_content" style="display: block;"></p><p style="text-align: center;"><strong>学院音乐厅</strong></p><p class="vsbcontent_img"><img width="513" height="268" src="/__local/3/21/30/3F88B0E483BDF055FB96019277E_615F800F_86919.png" vwidth="513" vheight="268" vurl="/_vsl/321303F88B0E483BDF055FB96019277E/615F800F/86919" vsbhref="vurl" orisrc="/__local/3/21/30/3F88B0E483BDF055FB96019277E_615F800F_86919.png" class="img_vsb_content" style="display: block;"></p><p style="text-align: center;"><strong>电钢琴教室</strong></p><p class="vsbcontent_img"><img width="514" height="270" src="/__local/4/2D/4B/EE8E4F40E132E68174E629CD243_7CBE8527_87D5B.png" vwidth="514" vheight="270" vurl="/_vsl/42D4BEE8E4F40E132E68174E629CD243/7CBE8527/87D5B" vsbhref="vurl" orisrc="/__local/4/2D/4B/EE8E4F40E132E68174E629CD243_7CBE8527_87D5B.png" class="img_vsb_content" style="display: block;"></p><p style="text-align: center;"><strong>流行音乐演绎教室</strong></p><p class="vsbcontent_img"><img width="498" height="284" src="/__local/1/14/2A/B377D4E890991A41B79643B7F20_910EF50E_8A6F1.png" vwidth="498" vheight="284" vurl="/_vsl/1142AB377D4E890991A41B79643B7F20/910EF50E/8A6F1" vsbhref="vurl" orisrc="/__local/1/14/2A/B377D4E890991A41B79643B7F20_910EF50E_8A6F1.png" class="img_vsb_content" style="display: block;"></p><p style="text-align: center;"><strong>双钢琴教室</strong></p><p>学院拥有一支力量雄厚、水平较高的教学科研队伍。在58名专任教师中，有教授12名，副教授25名，含博士生导师15名。除专任教师外，学院还聘有“东师学者”讲座教授7名，名誉教授、客座教授和兼职教授40余名。</p><p>学院现有音乐、舞蹈两个专业学位博士点，下设音乐教育、舞蹈教育、舞蹈编导、舞蹈表演4个研究方向；有课程与教学论、艺术学2个学术学位硕士点；有教育硕士、音乐、舞蹈3个专业学位硕士点；设有音乐学、舞蹈编导 2个本科专业，另外，学院与美术学院、传媒科学学院共建艺术学博士点。目前，音乐学、舞蹈编导专业均获批国家级一流专业建设点，<span style="text-indent: 28px;">音乐学专业通过教育部师范专业认证三级（最高级），</span>舞蹈编导专业通过教育部师范专业认证(二级)。学院已形成了本硕博一体化的完整人才培养体系。</p><p>近十年，学院教师科研成果显著，先后获国家级项目30项，省级项目60项，在重点刊物发表论文538篇，出版专著62部，创作艺术作品225部，成果获奖95项,《音乐课堂教学课例评析与研究》被评为国家精品在线开放课程、国家一流课程。</p><p>学院先后成功承办了第六届亚冬会开幕式文艺演出，第五届“珠江钢琴”全国高校音乐教育专业大学生基本功比赛，教育部“国培计划”——中小学艺术骨干教师培训项目，国家汉办委托赴美国、葡萄牙、西班牙、韩国孔子学院演出，第29届世界音乐教育大会研究方法分会，第三届东北亚国际钢琴节，“春城乐语 东师心声”系列音乐会，吉林省市民文化节，普通高校舞蹈精品课程教学研讨会、教育部学校体育艺术教育工作专题研讨班（第十六期）、全国首届普通高等学校音乐教育专业教师基本功展示活动、“新时代·新格局·新突破：中俄音乐教师教育的改革与展望”学术研讨会、全国艺术硕士研究生舞蹈领域培养院校作品展演、吉林省普通高等学校音乐教育专业本科生基本功展示活动、第一届中国研究生“文化中国”两创大赛舞蹈赛道全国总决赛，教育部直属师范类高校音乐教育专业建设暨高校美育工作会议等国际、国家、省级活动40余次。学院舞蹈系于2017年、2019年两次受邀赴国家大剧院举办了“从心而来——多题材原创舞蹈作品”专场演出和大型民族舞剧《浮生》的专场演出。</p><p class="vsbcontent_img"><img width="553" height="260" src="/__local/6/2C/DD/83038D2C0A066DE01C950E9F103_BBD1B4A7_8CB9A.png" vwidth="553" vheight="260" vurl="/_vsl/62CDD83038D2C0A066DE01C950E9F103/BBD1B4A7/8CB9A" vsbhref="vurl" orisrc="/__local/6/2C/DD/83038D2C0A066DE01C950E9F103_BBD1B4A7_8CB9A.png" class="img_vsb_content" style="display: block;"></p><p style="text-align: center;"><strong>第六届亚洲冬季运动会开幕式文艺表演</strong></p><p class="vsbcontent_img"><img width="558" height="225" src="/__local/4/69/2C/66985B6EB189F160E514EEEB93D_334F2AF2_7AE29.png" vwidth="558" vheight="225" vurl="/_vsl/4692C66985B6EB189F160E514EEEB93D/334F2AF2/7AE29" vsbhref="vurl" orisrc="/__local/4/69/2C/66985B6EB189F160E514EEEB93D_334F2AF2_7AE29.png" class="img_vsb_content" style="display: block;"></p><p style="text-align: center;"><strong>“春城乐语 东师心声”</strong><strong>系列</strong><strong>音乐会</strong></p><p class="vsbcontent_img"><img width="500" height="204" title="undefined" alt="undefined" src="/__local/0/EF/65/A1EFDD0C8D3A03A4B2EE1AEF779_F766987C_18FD3.jpg" border="0" vspace="0" hspace="0" vwidth="500" vheight="204" vurl="/_vsl/0EF65A1EFDD0C8D3A03A4B2EE1AEF779/F766987C/18FD3" vsbhref="vurl" orisrc="/__local/D/F1/41/806DC906585CA01F5082F2FFB59_14FC366C_A7D3F3.jpg" class="img_vsb_content" style="display: block;"></p><p style="text-align: center;"><strong>音乐与舞蹈学构架下的交叉学科理论研讨会（2017年）</strong></p><p class="vsbcontent_img"><img width="500" height="265" title="undefined" alt="undefined" src="/__local/6/3F/A1/8C5AB45AC6D8E79955CC99D4D30_AD4872E1_19335.jpg" border="0" vspace="0" hspace="0" vwidth="500" vheight="265" vurl="/_vsl/63FA18C5AB45AC6D8E79955CC99D4D30/AD4872E1/19335" vsbhref="vurl" orisrc="/__local/9/6D/4C/3E116043899DCE9FD7217D4218B_99AA2840_169DCF8.jpg" class="img_vsb_content" style="display: block;"></p><p style="text-align: center;"><strong>新年音乐会</strong></p><p class="vsbcontent_img"><img width="204" height="287" src="/__local/7/87/31/E5E78B76A3B435E8660C16E1326_1532ABA1_395CB.png" vwidth="204" vheight="287" vurl="/_vsl/78731E5E78B76A3B435E8660C16E1326/1532ABA1/395CB" vsbhref="vurl" orisrc="/__local/7/87/31/E5E78B76A3B435E8660C16E1326_1532ABA1_395CB.png" class="img_vsb_content" style="display: block;"></p><p style="text-align: center;"><strong>国家艺术基金资助项目《浮生》</strong></p><p class="vsbcontent_img"><img width="517" height="294" src="/__local/6/1A/43/93BC2B4FED75FC0B9BB5A8CCDFA_3A5DA364_94C59.png" vwidth="517" vheight="294" vurl="/_vsl/61A4393BC2B4FED75FC0B9BB5A8CCDFA/3A5DA364/94C59" vsbhref="vurl" orisrc="/__local/6/1A/43/93BC2B4FED75FC0B9BB5A8CCDFA_3A5DA364_94C59.png" class="img_vsb_content" style="display: block;"></p><p style="text-align: center;"><strong>《浮生》剧照</strong></p><p>学院于2017年获得了“国家社会科学基金艺术学重大项目”立项，2020年获批国家社会科学基金"十三五"规划2020年度教育学重大招标课题，2023年获批国家艺术基金艺术人才培养项目，取得了历史性的突破。</p><p>学院根据社会需求调整人才培养目标，大力推进实践教学，注重培养学生的创新精神和实践能力，人才培养质量不断提高。学院师生在历届全国普通高校音乐教育专业本科学生基本功展示、中国音乐金钟奖、中国音乐小金钟、全国 CCTV 舞蹈大赛、全国“桃李杯”舞蹈教育教学成果展示全国舞蹈比赛、中国舞蹈“荷花奖”舞蹈大赛、CCTV 青年歌手电视大赛等国内外大型比赛中，共获国际级奖 8 项、国家级奖 91 项、省部级奖 124 项。</p><p class="vsbcontent_img"><img width="523" height="349" src="/__local/E/B1/CF/73E2FA450E9DCBB191705DD273A_833353BE_B2A57.png" vwidth="523" vheight="349" vurl="/_vsl/EB1CF73E2FA450E9DCBB191705DD273A/833353BE/B2A57" vsbhref="vurl" orisrc="/__local/E/B1/CF/73E2FA450E9DCBB191705DD273A_833353BE_B2A57.png" class="img_vsb_content" style="display: block;"></p><p style="text-align: center;"><strong>《</strong><strong>中国妈妈</strong><strong>》获第七届全国舞蹈比赛表演金奖</strong></p><p class="vsbcontent_img"><img width="500" height="189" title="undefined" alt="undefined" src="/__local/B/79/38/3264763DD31478AC762078D2F0F_66BBA897_1084C.jpg" border="0" vspace="0" hspace="0" vwidth=" 396px" vheight=" 268px" vurl="/_vsl/B79383264763DD31478AC762078D2F0F/66BBA897/1084C" vsbhref="vurl" orisrc="/__local/B/CC/EB/6369CA604F3C9D122FFCA713F42_F9246300_2BE845.jpg" class="img_vsb_content" style="width: 396px; height: 268px; display: block;"></p><p style="text-align: center;"><strong>全国高校音乐学专业学生基本功大赛团体一等奖</strong></p><p class="vsbcontent_img"><img width="423" src="/__local/B/E8/DC/E82030009239BB1BE3DF1D95D09_F26CCF25_6C80.jpg" vwidth="423" vheight="" vurl="/_vsl/BE8DCE82030009239BB1BE3DF1D95D09/F26CCF25/6C80" vsbhref="vurl" orisrc="/__local/B/E8/DC/E82030009239BB1BE3DF1D95D09_F26CCF25_6C80.jpg" class="img_vsb_content" style="display: block;"></p><p class="vsbcontent_img"><img width="500" height="308" src="/__local/9/C5/AD/AC23EF6EA755F92C9A17CBB6AC5_59F0B7F7_5D73.jpg" vwidth=" 572px" vheight=" 320px" vurl="/_vsl/9C5ADAC23EF6EA755F92C9A17CBB6AC5/59F0B7F7/5D73" vsbhref="vurl" orisrc="/__local/9/C5/AD/AC23EF6EA755F92C9A17CBB6AC5_59F0B7F7_5D73.jpg" class="img_vsb_content" style="width: 572px; height: 320px; display: block;"></p><p style="text-align: center"><br></p><p><span class="edui-editor-imagescale-hand0" style="padding: 0px; margin: -4px 0px 0px -4px; font-family: &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, serif; font-size: 0px; color: rgb(51, 51, 51); position: absolute; width: 6px; height: 6px; overflow: hidden; display: block; background-color: rgb(60, 157, 208); cursor: nw-resize; top: 0px; left: 0px; text-indent: 0px;"></span><span class="edui-editor-imagescale-hand1" style="padding: 0px; margin: -4px 0px 0px -4px; font-family: &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, serif; font-size: 0px; color: rgb(51, 51, 51); position: absolute; width: 6px; height: 6px; overflow: hidden; display: block; background-color: rgb(60, 157, 208); cursor: n-resize; top: 0px; left: 75px; text-indent: 0px;"></span><span class="edui-editor-imagescale-hand2" style="padding: 0px; margin: -4px 0px 0px -3px; font-family: &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, serif; font-size: 0px; color: rgb(51, 51, 51); position: absolute; width: 6px; height: 6px; overflow: hidden; display: block; background-color: rgb(60, 157, 208); cursor: ne-resize; top: 0px; left: 150px; text-indent: 0px;"></span><span class="edui-editor-imagescale-hand3" style="padding: 0px; margin: -4px 0px 0px -4px; font-family: &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, serif; font-size: 0px; color: rgb(51, 51, 51); position: absolute; width: 6px; height: 6px; overflow: hidden; display: block; background-color: rgb(60, 157, 208); cursor: w-resize; top: 121.5px; left: 0px; text-indent: 0px;"></span><span class="edui-editor-imagescale-hand4" style="padding: 0px; margin: -4px 0px 0px -3px; font-family: &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, serif; font-size: 0px; color: rgb(51, 51, 51); position: absolute; width: 6px; height: 6px; overflow: hidden; display: block; background-color: rgb(60, 157, 208); cursor: e-resize; top: 121.5px; left: 150px; text-indent: 0px;"></span><span class="edui-editor-imagescale-hand5" style="padding: 0px; margin: -3px 0px 0px -4px; font-family: &quot;Microsoft YaHei&quot;, 微软雅黑, 宋体, serif; font-size: 0px; color: rgb(51, 51, 51); position: absolute; width: 6px; height: 6px; overflow: hidden; display: block; background-color: rgb(60, 157, 208); cursor: sw-resize; top: 243px; left: 0px; text-indent: 0px;"></span></p><p style="text-align: center"><img src="/__local/A/46/60/245E9DF83FDDCA8FA29568877BE_8FC60ECF_7C942.jpg" width="182" height="252" vspace="0" hspace="0" border="0" title="undefined" alt="undefined" vsbhref="vurl" vurl="/_vsl/A4660245E9DF83FDDCA8FA29568877BE/8FC60ECF/7C942" vheight=" 252px" vwidth=" 182px" orisrc="/__local/0/B7/48/52DE46288864658E691A168F316_D88579FF_2B8BE6.jpg" class="img_vsb_content" style="width: 182px; height: 252px; display: block;"></p><p style="text-align: center; font-size: 14px;"><span style="font-size: 14px;"><strong>2024中国音乐小金钟 首届全国青少年合唱展演 最佳展演合唱团</strong></span></p><p>学院自1946年成立，历经几代人的努力，不断地发展壮大。先后有萧军、吕骥、陈汝翼、向隅、翟维、寄明、马可、董清才、王恩显、朱之谦、尚德义、王肯等一大批国内有影响的音乐家在院担任教学或领导工作，为学院建设发展做出了贡献。</p><p class="vsbcontent_img"><img width="500" height="202" src="/__local/8/4A/C8/DB3248A5FEF6C0A38ABEEAD08AF_093F0495_6070.jpg" vwidth=" 709px" vheight=" 267px" vurl="/_vsl/84AC8DB3248A5FEF6C0A38ABEEAD08AF/093F0495/6070" vsbhref="vurl" orisrc="/__local/8/4A/C8/DB3248A5FEF6C0A38ABEEAD08AF_093F0495_6070.jpg" class="img_vsb_content" style="width: 709px; height: 267px; display: block;"> </p><p>70余年来，学院为国家培养了4000多名毕业生，有的成为著名音乐教育家、作曲家，如丁鸣、吕远等；有的成为音乐教育事业的骨干教师和艺术干部；有的被评为全国特级音乐教师。他们遍布全国各地，为我国音乐教育事业作出了巨大贡献。</p><p class="vsbcontent_img"><img width="500" height="281" src="/__local/A/49/79/47F06EB4254A26524F7D4ADE3A7_FBDF801F_4C07.jpg" vwidth=" 549px" vheight="281" vurl="/_vsl/A497947F06EB4254A26524F7D4ADE3A7/FBDF801F/4C07" vsbhref="vurl" orisrc="/__local/A/49/79/47F06EB4254A26524F7D4ADE3A7_FBDF801F_4C07.jpg" class="img_vsb_content" style="width: 549px; display: block;"></p><p class="vsbcontent_end">扎实的专业基础、突出的实践能力和良好的社会声誉使学院毕业生得到了用人单位的充分认可，近年来本科生就业率一直保持在95%以上。</p></div></div></div>
+    <span id="vsb_content_2_1001_u7" name="vsb_content_2_1001_u7"></span>
+    
+
+</div>
+    </div>
+    <div style="clear:both"></div>
+              <div style="clear:both"></div>
+  </div>
+</div>
+<div style="clear:both"></div>
+<div class="jz" style="margin-top:50px"></div>
+<div style="clear:both"></div>
+<div style="width:100%; padding:48px 0 58px 0; height:53px; background-color:#450102">
+      <div class="jz" style="font-size:14px">
+           <span style="float:left">    <img src="../images/dbfs2025.png" width="256" height="53">
+
+</span>
+         <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p><span style="position: relative;text-align: right;line-height: 26px;color: #fff;font-size: 14px;left: 32px;">地址：长春市净月大街2555号 &nbsp;　 &nbsp; 邮编130017 &nbsp; &nbsp; 电子信箱：yywdxy@nenu.edu.cn</span></p><p><span style="position: relative;text-align: right;line-height: 26px;color: #fff;font-size: 14px;left: 32px;">版权所有：东北师范大学音乐与舞蹈学院</span></p>
+      </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

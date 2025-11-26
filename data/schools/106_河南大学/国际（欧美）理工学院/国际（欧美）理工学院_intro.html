@@ -1,0 +1,720 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学院概况-河南大学国际（欧美）理工学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院概况">
+<meta name="keywords" content="河南大学国际（欧美）理工学院">
+
+    <link rel="icon" href="../../2025static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../2025static/css/normalize.css">
+    <link rel="stylesheet" href="../../2025static/css/common.css">
+    <link rel="stylesheet" href="../../2025static/css/about_us.css">
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e7a475153535742000400014156 -->
+<link rel="stylesheet" type="text/css" href="../../2025_about_us.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1701,'/2025_about_us.jsp',-1,1364148776)</script>
+</head>
+<body>
+    <div class="hdRoot">
+        <!-- header start -->
+        <div class="header_fixed wow fadeInDown">
+            <header class="header">
+                <a href="../../" class="index_logo">
+                    <img src="../../2025static/images/pc/index/index_logo.png" alt="">
+                </a>
+                <div class="mo_top_menu">
+                    <a href="#" class="en_website">
+                        <img src="../../2025static/images/pc/index/index_top_tu1.png" alt="">
+                        <p>En</p>
+                    </a>
+                    <div class="mo_nav_icon">
+                        <img id="open_icon" src="../../2025static/images/mo/mo_index_nav.png" alt="">
+                        <img id="close_icon" src="../../2025static/images/mo/mo_index_nav_hover.png" alt="">
+                    </div>
+                </div>
+                <div class="head_r">
+                    <div class="head_t">
+                        <a href="#" class="en_website">
+                            <img src="../../2025static/images/pc/index/index_top_tu1.png" alt="">
+                            <p>En</p>
+                        </a>
+                        <div class="pc_search_wrap">
+                            
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1, #divu1{
+        height: 100%;}
+    /* #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;
+    }
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;
+    } */
+</style>
+<div id="divu1">
+    <div id="appu1"><div class="pc_search_box"><input type="text" placeholder="搜索" autocomplete="off" class="qwss"> <button><img src="../../2025static/images/pc/index/index_top_tu2.png" alt=""></button></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div class="pc_search_box" v-if="!isError">
+            <input type="text" class="qwss" placeholder="搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <button><img src="../../2025static/images/pc/index/index_top_tu2.png" alt="" v-on:click="onSubmit()"></button>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1364148776";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                        </div>
+                    </div>
+                    <!-- nav_pc big_screem start -->
+                    <div class="nav_pc big_screem">
+                        <!-- 一级栏目 -->
+                        <ul class="p_first_nav">    <li class="">
+        <a href="../../index.htm">首页</a>
+    
+    </li>
+    <li class="p_first_li_active">
+        <a href="xygk.htm">学院概况</a>
+    
+        <!-- 二级栏目 -->
+        <ul class="p_second_nav">
+                <li><a href="xygk.htm">学院概况</a></li>
+                <li><a href="../../2025_nav_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1551">办学模式与特色</a></li>
+                <li><a href="../../2025_current_leader.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1561">现任领导</a></li>
+        </ul>
+    </li>
+    <li class="">
+        <a href="../../2025_nav_img_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1601">新闻公告</a>
+    
+        <!-- 二级栏目 -->
+        <ul class="p_second_nav">
+                <li><a href="../../2025_nav_img_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1601">学院新闻</a></li>
+                <li><a href="../../2025_nav_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1611">通知公告</a></li>
+        </ul>
+    </li>
+    <li class="">
+        <a href="../../2025_nav_img_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1641">教学科研</a>
+    
+        <!-- 二级栏目 -->
+        <ul class="p_second_nav">
+                <li><a href="../../2025_nav_img_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1641">教学科研</a></li>
+                <li><a href="../jxky/shiziduiwu/zfjs.htm">师资队伍</a></li>
+        </ul>
+    </li>
+    <li class="">
+        <a href="../../2025_single_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1781">合作交流</a>
+    
+    </li>
+    <li class="">
+        <a href="../../2025_nav_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1911">招生就业</a>
+    
+        <!-- 二级栏目 -->
+        <ul class="p_second_nav">
+                <li><a href="../../2025_nav_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1911">招生信息</a></li>
+                <li><a href="../../2025_nav_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1921">就业信息</a></li>
+        </ul>
+    </li>
+    <li class="">
+        <a href="../../2025_single_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1801">党团建设</a>
+    
+    </li>
+    <li class="">
+        <a href="">校友工作</a>
+    
+        <!-- 二级栏目 -->
+        <ul class="p_second_nav">
+                <li><a href="../../2025_nav_img_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1871">知名校友</a></li>
+        </ul>
+    </li>
+</ul>
+                    </div>
+                    <!-- nav_pc end -->
+                </div>
+            </header>
+
+            <!-- nav_pc medium_screem start -->
+            <div class="nav_pc medium_screem">
+                <!-- 一级栏目 -->
+                <ul class="p_first_nav">    <li class="">
+        <a href="../../index.htm">首页</a>
+    
+    </li>
+    <li class="p_first_li_active">
+        <a href="xygk.htm">学院概况</a>
+    
+        <!-- 二级栏目 -->
+        <ul class="p_second_nav">
+                <li><a href="xygk.htm">学院概况</a></li>
+                <li><a href="../../2025_nav_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1551">办学模式与特色</a></li>
+                <li><a href="../../2025_current_leader.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1561">现任领导</a></li>
+        </ul>
+    </li>
+    <li class="">
+        <a href="../../2025_nav_img_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1601">新闻公告</a>
+    
+        <!-- 二级栏目 -->
+        <ul class="p_second_nav">
+                <li><a href="../../2025_nav_img_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1601">学院新闻</a></li>
+                <li><a href="../../2025_nav_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1611">通知公告</a></li>
+        </ul>
+    </li>
+    <li class="">
+        <a href="../../2025_nav_img_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1641">教学科研</a>
+    
+        <!-- 二级栏目 -->
+        <ul class="p_second_nav">
+                <li><a href="../../2025_nav_img_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1641">教学科研</a></li>
+                <li><a href="../jxky/shiziduiwu/zfjs.htm">师资队伍</a></li>
+        </ul>
+    </li>
+    <li class="">
+        <a href="../../2025_single_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1781">合作交流</a>
+    
+    </li>
+    <li class="">
+        <a href="../../2025_nav_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1911">招生就业</a>
+    
+        <!-- 二级栏目 -->
+        <ul class="p_second_nav">
+                <li><a href="../../2025_nav_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1911">招生信息</a></li>
+                <li><a href="../../2025_nav_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1921">就业信息</a></li>
+        </ul>
+    </li>
+    <li class="">
+        <a href="../../2025_single_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1801">党团建设</a>
+    
+    </li>
+    <li class="">
+        <a href="">校友工作</a>
+    
+        <!-- 二级栏目 -->
+        <ul class="p_second_nav">
+                <li><a href="../../2025_nav_img_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1871">知名校友</a></li>
+        </ul>
+    </li>
+</ul>
+            </div>
+            <!-- nav_pc end -->
+        </div>
+        <!-- header end -->
+
+        <!-- nav_mo start -->
+        <div class="nav_mo" id="nav_mo">
+            <div class="sameWidth">
+                <div class="mo_search_wrap">
+
+
+<style>
+    #appu4, #divu4{
+        width: 100%;}
+    /* #appu4 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;
+    }
+    #appu4 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;
+    } */
+</style>
+<div id="divu4">
+    <div id="appu4"><div class="mo_search_box"><input type="text" placeholder="搜索" autocomplete="off" class="qwss"> <button>搜 索</button></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu4">
+    <div id="appu4">
+        <div class="mo_search_box" v-if="!isError">
+            <input type="text" class="qwss" placeholder="搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <button v-on:click="onSubmit()">搜 索</button>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu4").html($("#htmlu4").text());
+</script>
+<script>
+    var appOwner = "1364148776";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu4",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                <!-- 一级栏目 -->
+                <ul class="m_first_nav">    <li class="">
+        <a href=" ../../index.htm">
+            <p>首页</p>
+            <img src="../../2025static/images/mo/mo_nav01.png" alt="">
+            <img src="../../2025static/images/mo/mo_nav01_hover.png" alt="">
+        </a>
+    </li>
+    <li class="m_first_li_active">
+        <a href="javascript:void(0) ">
+            <p>学院概况</p>
+            <img src="../../2025static/images/mo/mo_nav01.png" alt="">
+            <img src="../../2025static/images/mo/mo_nav01_hover.png" alt="">
+        </a>
+            <!-- 二级栏目 -->
+            <ul class="m_second_nav">
+                    <li><a href="xygk.htm">学院概况</a></li>
+                    <li><a href="../../2025_nav_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1551">办学模式与特色</a></li>
+                    <li><a href="../../2025_current_leader.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1561">现任领导</a></li>
+            </ul>
+    </li>
+    <li class="">
+        <a href="javascript:void(0) ">
+            <p>新闻公告</p>
+            <img src="../../2025static/images/mo/mo_nav01.png" alt="">
+            <img src="../../2025static/images/mo/mo_nav01_hover.png" alt="">
+        </a>
+            <!-- 二级栏目 -->
+            <ul class="m_second_nav">
+                    <li><a href="../../2025_nav_img_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1601">学院新闻</a></li>
+                    <li><a href="../../2025_nav_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1611">通知公告</a></li>
+            </ul>
+    </li>
+    <li class="">
+        <a href="javascript:void(0) ">
+            <p>教学科研</p>
+            <img src="../../2025static/images/mo/mo_nav01.png" alt="">
+            <img src="../../2025static/images/mo/mo_nav01_hover.png" alt="">
+        </a>
+            <!-- 二级栏目 -->
+            <ul class="m_second_nav">
+                    <li><a href="../../2025_nav_img_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1641">教学科研</a></li>
+                    <li><a href="../jxky/shiziduiwu/zfjs.htm">师资队伍</a></li>
+            </ul>
+    </li>
+    <li class="">
+        <a href=" ../../2025_single_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1781">
+            <p>合作交流</p>
+            <img src="../../2025static/images/mo/mo_nav01.png" alt="">
+            <img src="../../2025static/images/mo/mo_nav01_hover.png" alt="">
+        </a>
+    </li>
+    <li class="">
+        <a href="javascript:void(0) ">
+            <p>招生就业</p>
+            <img src="../../2025static/images/mo/mo_nav01.png" alt="">
+            <img src="../../2025static/images/mo/mo_nav01_hover.png" alt="">
+        </a>
+            <!-- 二级栏目 -->
+            <ul class="m_second_nav">
+                    <li><a href="../../2025_nav_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1911">招生信息</a></li>
+                    <li><a href="../../2025_nav_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1921">就业信息</a></li>
+            </ul>
+    </li>
+    <li class="">
+        <a href=" ../../2025_single_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1801">
+            <p>党团建设</p>
+            <img src="../../2025static/images/mo/mo_nav01.png" alt="">
+            <img src="../../2025static/images/mo/mo_nav01_hover.png" alt="">
+        </a>
+    </li>
+    <li class="">
+        <a href="javascript:void(0) ">
+            <p>校友工作</p>
+            <img src="../../2025static/images/mo/mo_nav01.png" alt="">
+            <img src="../../2025static/images/mo/mo_nav01_hover.png" alt="">
+        </a>
+            <!-- 二级栏目 -->
+            <ul class="m_second_nav">
+                    <li><a href="../../2025_nav_img_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1871">知名校友</a></li>
+            </ul>
+    </li>
+</ul>
+            </div>
+        </div>
+        <!-- nav_mo end -->
+
+        <!-- 内页banner start -->
+        <div class="inner_banner">
+            <img src="../../images/neiye_xueyuangaikuang.jpg" width="200" height="40" border="0">
+        </div>
+        <!-- 内页banner end -->
+
+        <!-- 内页正文 start -->
+        <div class="inner_container">
+            <div class="innerWidth innerBox">
+                <!-- 内页左导航 -->
+                <nav class="left_nav">
+                    <!-- 一级栏目名称 -->
+                    <div class="yj_column_name">
+                        <p>
+学院概况</p>
+                        <img src="../../2025static/images/mo/mo_nav02.png" alt="">
+                    </div>
+                    <ul class="nav_first_row">    <li class="first_row_li_default">
+        <!-- 有三级栏目的时候，这个href属性必须写成javascript:void(0)才可实现点击显示/隐藏二级栏目 -->
+        <a href=" xygk.htm">
+            <p>学院概况</p>
+            
+        </a>
+        
+    </li>
+                            
+    <li class="">
+        <!-- 有三级栏目的时候，这个href属性必须写成javascript:void(0)才可实现点击显示/隐藏二级栏目 -->
+        <a href=" ../../2025_nav_words_list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1551">
+            <p>办学模式与特色</p>
+            
+        </a>
+        
+    </li>
+                            
+    <li class="">
+        <!-- 有三级栏目的时候，这个href属性必须写成javascript:void(0)才可实现点击显示/隐藏二级栏目 -->
+        <a href=" ../../2025_current_leader.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1561">
+            <p>现任领导</p>
+            
+        </a>
+        
+    </li>
+                            
+</ul>
+                </nav>
+                <!-- 正文部分 -->
+                <div class="content_box">
+                    <!-- 二级/三级栏目名称（自动获取） -->
+                    <div class="current_cloumn">
+学院概况</div>
+                    <div class="about_us">
+
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1364148776,'wbnews','u10')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format501.css"><script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1364148776,22548)</script>
+<p>
+    </p><div id="vsb_content_501_22548_u101"><div id="vsb_content_501"><p class="vsbcontent_start"><strong>一、学院概况</strong></p><p>河南大学国际（欧美）理工学院是河南省最早的中外合作办学实体学院之一，也是河南省首家境内颁发国外本科学位、实现不出国留学的中外合作办学单位。河南高等教育的对外合作交流始于1912年成立的河南留学欧美预备学校，河南大学的中外合作办学事业始于2002年成立的国际教育中心（学院前身）。随着国际化人才培养模式不断深化，对应河南大学“强理振文 新工新医”办学新主线，2024年，承接原国际商学院的理工科专业，重组形成河南大学国际（欧美）理工学院。</p><p>学院是河南大学推行国际化战略的前沿阵地，承担着学校国际化理工类本科人才培养“孵化器”的重要功能。学院以建设具有中原特色的一流国际理工学院为目标，引进优质国际教育资源，构建国际化人才培养平台，服务国家“双一流”大学建设及区域经济发展需求。学院始终秉承“明德新民 止于至善”的河大校训和“自信、拼搏、开放、创新”的新河大精神，适应全球化、国际化的新形势和新要求，坚持立德树人根本任务和人才培养根本使命，融汇中外名校办学资源，致力于培养具有国际视野和家国情怀的卓越工程技术人才。</p><p>学院主动服务国家和地方经济社会需求，面向AI+产业集成专业和教科研平台资源，深度融合育人体系与数智技术。在课堂教学方面，依托“国际语言教学中心”，加强学生双语优势，提升学生国际化水平和竞争力；在技术应用方面，依托“教育部产学合作协同育人实践基地（遥感大数据与云计算）”，构建覆盖教学、科研、实践“三位一体”的实践平台，衔接教科研深挖学生创新潜力；在工程实践方面，加强校企合作，组建学生实习实训基地，培养学生从校园到用人单位无缝衔接的工作能力。</p><p><strong>二、师生规模</strong></p><p>学院中外合作办学师资队伍强大，现有河南省高校科技创新团队等，中外双方每年投入师资近百名。其中，教授、副教授等高级职称占45%以上；每年有50余名外籍教师来中方任教，约占总师资的50%。外语教学方面，学院设有“国际语言教学中心”，有专门的外籍教师授课，中外教师学时比例约为6:4。专业课教学方面，采用双语教学模式，授课学时比约为7:3。学院现有计算机科学与技术、生物工程、测控与技术仪器等三个理工科专业，在校生1700余人。学院面向全国12个省份招收本科生，累计培养毕业生1.5万名。</p><p><strong>三、培养模式</strong></p><p>学院人才培养的目标任务为培养国际化、复合型的卓越工程技术人才。</p><p>与澳大利亚维多利亚大学合作，学生可选择4年在河南大学学习并完成学业，达到双方学术要求，可同时获得合作大学的学士学位证书、河南大学本科毕业证书和学士学位证书。</p><p>与德国安哈尔特应用技术大学合作，学生在河南大学学习2年，并赴安哈尔特应用技术大学学习2年并完成规定课程后，可获得安哈尔特应用技术大学的学士学位证书，同时颁发河南大学本科毕业证书和学士学位证书。学生也可以选择后2年继续在河南大学学习并完成学业，获得河南大学本科毕业证书和学士学位证书。</p><p>与美国佛罗里达理工大学合作项目学生可以选择在河南大学学习2年之后申请出国留学，在合作大学学习2年并完成规定课程后，获得合作大学的学士学位证书。经河南大学认可后，同时颁发河南大学本科毕业证书和学士学位证书。学生也可以选择后2年继续在河南大学学习并完成学业，获得河南大学本科毕业证书和学士学位证书。</p><p>选择全程在河南大学学习的学生，可直接申请到国外攻读硕士研究生，也可直接考取国内的研究生或直接到外企、事业单位或政府机构等就业。</p><p><strong>四、办学声誉</strong></p><p>学院构建国际化教育生态体系，服务学生多元化发展路径。学院始终坚持国际语言教学与专业教学并重的原则，在传授知识技能的同时更注重学生创新实践能力的培养，得到了学生家长和社会各界的广泛赞誉。</p><p>学院学生每年获批国家级大学生创新创业训练计划项目4-6项，数百余人次荣获“外研社·国才杯”全国英语演讲大赛二等奖、中国日报社“21世纪·可口可乐杯”全国英语演讲比赛全国二等奖、全国大学生英语竞赛特等奖和一等奖等。</p><p>学生有专业与外语双重优势，每年有超过20%的毕业生到澳大利亚、德国、俄罗斯、美国、中国香港等20多个国家和地区攻读硕士学位。其中，以2024届国（境）外读研毕业生为例，77%的学生申请到QS排名在前50以内的国（境）外高校。95%的学生申请到QS排名在前100以内的国（境）外高校。同时，近千名毕业生前往北京大学、复旦大学、武汉大学、中山大学、北京师范大学、华东师范大学、中国矿业大学、西安交通大学、中国科技大学、北京航空航天大学、西安电子科技大学等国内知名院校就读。</p><p class="vsbcontent_end">毕业生就业形势良好。每年有大量毕业生进入外企、行政事业单位以及大型公司就业。办学质量不断提升，社会认可度不断提高。</p></div></div>
+    <span id="vsb_content_501_22548_u10" name="vsb_content_501_22548_u10"></span><br><br>
+    
+<p></p>
+</div>
+                </div>
+            </div>
+        </div>
+        <!-- 内页正文 end -->
+
+        <!-- footer start -->
+        <footer class="footer">
+            <div class="footer_t">
+                <div class="foot_links">
+                    <div class="links_tab">
+                        <img src="../../2025static/images/pc/index/footer_01.png" alt="">
+                        <h3>友情链接</h3>
+                    </div>
+                    <div class="link_wrap">
+                        <div class="tempWrap" style="overflow:hidden; position:relative; width:1040px"><ul class="link_list" style="width: 2496px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: -289px;"><li class="clone" style="float: left; width: 208px;">
+        <a href="" target="_blank">
+            <img src="../../images/guojijiaoliuchu.png" alt="">
+        </a>
+    </li>        <li style="float: left; width: 208px;">
+        <a href="http://www.moe.gov.cn/" target="_blank">
+            <img src="../../images/jiaoyubu.png" alt="">
+        </a>
+    </li>
+                        
+    <li style="float: left; width: 208px;">
+        <a href="https://jyt.henan.gov.cn/" target="_blank">
+            <img src="../../images/jiaoyuting.png" alt="">
+        </a>
+    </li>
+                        
+    <li style="float: left; width: 208px;">
+        <a href="https://www.henu.edu.cn/" target="_blank">
+            <img src="../../images/2323232322.png" alt="">
+        </a>
+    </li>
+                        
+    <li style="float: left; width: 208px;">
+        <a href="https://jwc.henu.edu.cn/" target="_blank">
+            <img src="../../images/jiaowuchu.png" alt="">
+        </a>
+    </li>
+                        
+    <li style="float: left; width: 208px;">
+        <a href="https://stu.henu.edu.cn/" target="_blank">
+            <img src="../../images/xueshengchu.png" alt="">
+        </a>
+    </li>
+                        
+    <li style="float: left; width: 208px;">
+        <a href="" target="_blank">
+            <img src="../../images/guojijiaoliuchu.png" alt="">
+        </a>
+    </li>
+                        
+<li class="clone" style="float: left; width: 208px;">
+        <a href="http://www.moe.gov.cn/" target="_blank">
+            <img src="../../images/jiaoyubu.png" alt="">
+        </a>
+    </li><li class="clone" style="float: left; width: 208px;">
+        <a href="https://jyt.henan.gov.cn/" target="_blank">
+            <img src="../../images/jiaoyuting.png" alt="">
+        </a>
+    </li><li class="clone" style="float: left; width: 208px;">
+        <a href="https://www.henu.edu.cn/" target="_blank">
+            <img src="../../images/2323232322.png" alt="">
+        </a>
+    </li><li class="clone" style="float: left; width: 208px;">
+        <a href="https://jwc.henu.edu.cn/" target="_blank">
+            <img src="../../images/jiaowuchu.png" alt="">
+        </a>
+    </li><li class="clone" style="float: left; width: 208px;">
+        <a href="https://stu.henu.edu.cn/" target="_blank">
+            <img src="../../images/xueshengchu.png" alt="">
+        </a>
+    </li></ul></div>
+                    </div>
+                </div>
+                <div class="foot_r">
+                    <div class="foot_lx">
+                        <div class="lx_tab">
+                            <img src="../../2025static/images/pc/index/footer_02.png" alt="">
+                            <h3>联系我们</h3>
+                        </div>
+                        <div class="lx_list"><div class="lx_item">
+    <img src="../../2025static/images/pc/index/footer_08.png" alt="">
+    <div class="lx_label">地址：</div>
+    <div class="lx_con">
+        <p>河南省郑州市郑东新区明理路北段379号；</p>
+        <p>河南省开封市龙亭区金明大道北端</p>
+    </div>
+</div>
+<div class="lx_item">
+    <img src="../../2025static/images/pc/index/footer_09.png" alt="">
+    <div class="lx_label">联系电话：</div>
+    <div class="lx_con">
+        <p>0371-22828588</p>
+    </div>
+</div>
+<div class="lx_item">
+    <img src="../../2025static/images/pc/index/footer_10.png" alt="">
+    <div class="lx_label">电子邮箱：</div>
+    <div class="lx_con">
+        <p>gjlg@henu.edu.cn</p>
+    </div>
+</div></div>
+                    </div>
+                    <div class="er_code">
+                        <div class="er_l">
+                            <p>扫一扫</p>
+                            <p>微信公众号</p>
+                        </div>
+                        <div class="er_r">
+                            <img src="../../2025static/images/pc/index/footer_11.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_b"><p>河南大学国际（欧美）理工学院 版权所有  </p>
+<p>
+<span>Copyright@2025 All rights reserved.</span>
+    <span>
+        <a href="https://beian.miit.gov.cn/" target="_blank">豫ICP备05002499号-1</a>
+    </span>
+    <span>
+        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41020302000011" target="_blank">豫公网安备 41020302000011号</a>
+    </span>
+    <span>
+        技术支持：<a href="http://www.hnshfhg.cn/" target="_blank">红服惠工</a> 
+    </span>
+</p></div>
+        </footer>
+        <!-- footer end -->
+    
+    
+    </div>
+
+    <script src="../../2025static/js/jquery-1.12.4.min.js"></script>
+    <script src="../../2025static/js/jquery.SuperSlide.2.1.3.js"></script>
+    <script src="../../2025static/js/common.js"></script>
+
+
+</body></html>

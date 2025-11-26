@@ -1,0 +1,467 @@
+<!DOCTYPE html><html lang="zh-cmn-Hans"><head>
+
+
+<title>中心简介-中国行为经济与行为金融研究中心</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="中心简介">
+<meta name="keywords" content="中国行为经济与行为金融研究中心,中心简介">
+
+
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="description" content="">
+<link href="../dfiles/16141/dfiles/3270/skin/pcweb/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../dfiles/16141/dfiles/3270/skin/pcweb/css/reset.css" rel="stylesheet" type="text/css">
+<link href="../dfiles/16141/dfiles/3270/skin/pcweb/css/main.css" rel="stylesheet" type="text/css">
+<!--Announced by Visual SiteBuilder 9-->
+
+
+
+<script type="text/javascript" src="../dfiles/16141/system/resource/js/counter.js"></script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307476475c5357574200030003425c -->
+<link rel="stylesheet" type="text/css" href="../2-zw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1003,'/2-zw.jsp',-1,1984800921)</script>
+</head>
+<body style="">
+<div class="topbar">
+  <div class="top"> 
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="中国行为经济与行为金融研究中心"><img src="../dfiles/16141/images/web_logo.jpg" style=" width: ; padding-bottom: 0px; padding-top: 0px; padding-left: 0px; margin: 0px; padding-right: 0px"></a>
+
+
+
+
+ 
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+    .ss{padding-right:40px;}
+</style>
+<div id="divu1">
+    <div id="appu1"><div><input name="showkeycode" id="showkeycode245724" placeholder="输入关键词" autocomplete="off" class="ss"> <input type="submit" value="" class="sss"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+ 
+            <input class="ss" name="showkeycode" id="showkeycode245724" placeholder="输入关键词" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+    <input class="sss" type="submit" value=""  v-on:click="onSubmit()">
+            
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1984800921";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.9.254.151:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script> <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>
+   <a href="../ENGLISH/Home.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1984800921, 89610)" class="english">English</a>
+
+
+
+ </div>
+</div>
+<!--nar-->
+<!-- 网站导航 -->
+<div class="nav_t"> 
+ <ul class="clearfix" id="nav">
+                             <li><a href="../index.htm">首页</a>
+            </li>
+            <li><a href="zxjj.htm">关于我们</a>
+                <dl class="AWP">
+                    <dt><span class="arrow"></span></dt>
+
+                    <dd><a href="zxjj.htm">中心简介</a></dd>
+                </dl>
+            </li>
+            <li><a href="../xscg1.htm">学术成果</a>
+            </li>
+            <li><a href="../zxry/sztd.htm">中心人员</a>
+                <dl class="AWP">
+                    <dt><span class="arrow"></span></dt>
+
+                    <dd><a href="../zxry/sztd.htm">师资团队</a></dd>
+
+                    <dd><a href="../zxry/jszp1.htm">教师招聘</a></dd>
+                </dl>
+            </li>
+            <li><a href="../zsypy/ssyjs.htm">招生与培养</a>
+                <dl class="AWP">
+                    <dt><span class="arrow"></span></dt>
+
+                    <dd><a href="../zsypy/ssyjs.htm">硕士研究生</a></dd>
+
+                    <dd><a href="../zsypy/bsyjs.htm">博士研究生</a></dd>
+                </dl>
+            </li>
+            <li><a href="../xshd/xsjz.htm">学术活动</a>
+                <dl class="AWP">
+                    <dt><span class="arrow"></span></dt>
+
+                    <dd><a href="../xshd/xsjz.htm">学术讲座</a></dd>
+
+                    <dd><a href="../xshd/xshy.htm">学术会议</a></dd>
+                </dl>
+            </li>
+            <li><a href="../sys/sysjj1.htm">实验室</a>
+                <dl class="AWP">
+                    <dt><span class="arrow"></span></dt>
+
+                    <dd><a href="../sys/sysjj1.htm">实验室简介</a></dd>
+
+                    <dd><a href="../sys/cjsy.htm">参加实验</a></dd>
+                </dl>
+            </li>
+            <li><a href="../xwdt1.htm">新闻动态</a>
+            </li>
+            <li><a href="../djyd1.htm">党建园地</a>
+            </li>
+    </ul> </div>
+  <style>
+
+.ss{position: absolute;
+top: 40px;
+right: 101px;
+padding: 4px;
+border: 1px solid #ccc;
+border-radius: 5px;padding-right: 40px;}
+.sss{position: absolute;
+top: 46px;
+width: 20px;
+right: 112px;
+background: url(../dfiles/16141/dfiles/3270/skin/pcweb/images/sss.jpg) no-repeat;    background-size: contain;
+border: none;}
+*{
+margin:0;
+padding:0;}
+.clear:after {
+clear: both;
+content: ".";
+display: block;
+height: 0;
+visibility: hidden;}
+nav{
+display:inline-block;
+border:1px solid #505255;
+border-bottom: 1px solid #282C2F;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+margin:50px;
+-webkit-box-shadow:1px 1px 3px #292929;
+-moz-box-shadow:1px 1px 3px #292929;}
+li{
+
+
+position: relative;}
+li:hover{}
+li a{}
+li > a{
+position:relative;}
+li.first a{
+-moz-border-radius-topleft: 4px;
+-moz-border-radius-bottomleft: 4px;
+-webkit-border-top-left-radius: 4px;
+-webkit-border-bottom-left-radius: 4px;}
+li.last{
+border-right: 0 none;}
+
+
+dl{
+position:absolute;
+display:block;
+top:40px;
+left: -34px;
+
+width:165px;
+
+background:rgba(0, 0, 0, 0.7);
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+
+-webkit-box-shadow:1px 1px 3px #292929;
+-moz-box-shadow:1px 1px 3px #292929;
+
+z-index:10;}
+li:hover dl{
+top: 56px;
+display: block;
+width: 184px;
+padding: 10px;}
+dl a{
+background:transparent;
+border:0 none;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-transition: background 0.5s ease-out;
+-webkit-transition: background 0.5s ease-out;
+
+z-index:50;}
+dl a:hover{
+
+background: none !important;
+color: #fff !important;
+-moz-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+-webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;}
+dd{
+margin-top:-40px;
+opacity:0;
+
+-webkit-transition-property:all;
+/*-webkit-transition-timing-function: cubic-bezier(5,0,5,0);*/
+-moz-transition-property: all;}
+.AWP{
+display:none;}
+li:hover dd{
+margin-top:0;
+opacity:1;}
+li dd:nth-child(1){
+-webkit-transition-duration: 0.1s;
+-moz-transition-duration: 0.1s;}
+li dd:nth-child(2){
+-webkit-transition-duration: 0.2s;
+-moz-transition-duration: 0.2s;}
+li dd:nth-child(3){
+-webkit-transition-duration: 0.3s;
+-moz-transition-duration: 0.3s;}
+li dd:nth-child(4){
+-webkit-transition-duration: 0.4s;
+-moz-transition-duration: 0.4s;}
+dt{
+display:none;
+margin-top:-25px;
+padding-top:22px;
+height:10px;}
+li:hover dt{
+display:block;}
+.Darrow{
+float:right;
+margin:18px 10px 0 0;
+border-width:5px;
+border-color:#FFF transparent transparent transparent;
+border-style:solid;
+width:0;
+height:0;
+line-height:0;
+overflow:hidden;
+
+cursor:pointer;
+
+text-shadow: 0px -1px 0px #000;
+
+-webkit-box-shadow:0px -1px 0px #000;
+-moz-box-shadow:0px -1px 0px #000;}
+.arrow{
+margin: 0 auto;
+margin-top: -19px;
+display: block;
+width: 8px;
+height: 6px;
+border-width: 6px;
+border-style: solid;
+border-color: rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0.7) rgba(0,0,0,0) ;}
+</style>
+
+  <div class="neiyebanner1">
+    <div class="neiyebanner" style="background: no-repeat center 50%;"></div>
+  </div>
+  <div class="comWidth clearfix" style="margin-top: 30px; margin-bottom: 30px;">
+    <div class="body_left fl">
+      <div class="account-l fl">
+
+  <ul class="accordion" id="accordion">
+          <li>
+            <div class="link"> <a href="zxjj.htm" style="background: rgb(238, 238, 238); color: rgb(56, 118, 170); text-decoration: none;">中心简介</a> </div>
+          </li>
+        </ul>
+      
+      </div>
+    </div>
+    <div class="body_right fl">
+    
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1984800921,'wbnews','u5')</script>
+<script>function seeContenta5(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta5('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1984800921,4301)</script>
+
+   <p>  西南财经大学中国行为经济与行为金融研究中心简介<br></p>
+<p>
+    </p><div id="vsb_content_4301_u51"><div id="vsb_content"><p style="text-align: center; text-indent: 0em;"><span style="font-size: 20px;"><strong><span style="font-family: 宋体, SimSun; line-height: 2; font-size: 21px;">西南财经大学中国行为经济与行为金融研究中心简介</span></strong></span></p><p style="text-indent: 40px; text-align: justify;"><span style="font-family: 宋体, SimSun; font-size: 18px;">中国行为经济与行为金融研究中心的发展大致分为三个阶段。</span></p><p style="text-indent: 40px; text-align: justify;"><span style="font-family: 宋体, SimSun; line-height: 2; font-size: 18px;">第一阶段为启蒙阶段。</span><span style="font-family: 宋体, SimSun; line-height: 2; font-size: 18px;">2009年，为布局实验与行为经济学，西南财经大学成立了“西南财经大学实验经济学实验室”，聘任北京大学国家发展研究院的全职教授唐方方为主任（兼职），经济学院雷震老师任副主任，率先在西南财经大学开设实验经济学等相关课程，组织开展各类实验经济学实验和前沿问题研讨，参与实验和学习实验经济学课程，开始了解实验经济学，一些教师也开始关注实验经济学。</span><span style="font-family: 宋体, SimSun; line-height: 2; font-size: 18px;"></span></p><p style="text-indent: 40px; text-align: justify;"><span style="font-family: 宋体, SimSun; line-height: 2; font-size: 18px;">第二阶段可以称为蓄力阶段。2012年唐方方辞去“西南财经大学实验经济学实验室”主任。2011年-2012年雷震作为副主任受“经济科学协会（ESA）”原主席、世界著名实验经济学家James Cox教授邀请在其主持的佐治亚洲大学“实验经济学中心”工作1年，回国后继续在西南财经大学带领实验经济学发展。实验经济学等相关课程建设以及形式多样的研讨会、学生兴趣小组继续开展。一些世界著名实验经济学家如Gary Charness、Vincent Crawford、杨春雷等学者受邀相继来访，越来越多学生和老师对实验经济学产生了浓厚的兴趣。这个期间，雷震老师以独作或者第一作者在包括《经济研究》、《经济学季刊》等一流经济学期刊发表一系列实验经济学、行为金融学成果，其中一些成果荣获学术奖，如《经济学（季刊）》WERNER JACKSTÄDT“中国经济与商业最佳论文奖”（年度最佳论文奖），该奖在全国实验与行为经济学领域、全国财经类大学都是首次。</span></p><p style="text-indent: 40px; text-align: justify;"><span style="font-family: 宋体, SimSun; line-height: 2; font-size: 18px;"></span></p><table style="margin: auto; border-collapse: collapse; width: 70%;"><tbody><tr class="firstRow"><td style="text-align: center; padding: 10px;"><img src="/__local/2/01/8F/0FC5E96CB333B7E8085D4C3650C_4033528B_844B.jpg" width="190" alt="844B" vsbhref="vurl" vurl="/_vsl/2018F0FC5E96CB333B7E8085D4C3650C/4033528B/844B" vheight=" 220px" vwidth=" 190px" height="220" border="0" vspace="0" hspace="0" title="844B" orisrc="/__local/2/01/8F/0FC5E96CB333B7E8085D4C3650C_4033528B_844B.jpg" class="img_vsb_content" style="display: block; margin: auto; width: 190px; height: 220px;"></td><td style="text-align: center; padding: 10px;"><img src="/__local/A/86/3D/7B23E43AC241650B63AA478D3FA_127ED9CD_BE8B.jpg" width="298" alt="BE8B" vsbhref="vurl" vurl="/_vsl/A863D7B23E43AC241650B63AA478D3FA/127ED9CD/BE8B" vheight=" 220px" vwidth=" 298px" height="220" border="0" vspace="0" hspace="0" title="BE8B" orisrc="/__local/A/86/3D/7B23E43AC241650B63AA478D3FA_127ED9CD_BE8B.jpg" class="img_vsb_content" style="display: block; margin: auto; width: 298px; height: 220px;"></td><td style="text-align: center; padding: 10px;"><img src="/__local/C/E9/9C/4E56276322FE270C9E423F1D95A_54A6B465_EC83.jpg" width="190" alt="EC83" vsbhref="vurl" vurl="/_vsl/CE99C4E56276322FE270C9E423F1D95A/54A6B465/EC83" vheight=" 220px" vwidth=" 190px" height="220" border="0" vspace="0" hspace="0" title="EC83" orisrc="/__local/C/E9/9C/4E56276322FE270C9E423F1D95A_54A6B465_EC83.jpg" class="img_vsb_content" style="display: block; margin: auto; width: 190px; height: 220px;"></td><td style="text-align: center; padding: 10px;"><img src="/__local/A/26/E2/D18C2DCAD278661F3C71D09A193_78984C51_14F86.png" width="155" alt="14F86" vsbhref="vurl" vurl="/_vsl/A26E2D18C2DCAD278661F3C71D09A193/78984C51/14F86" vheight=" 220px" vwidth=" 155px" height="220" border="0" vspace="0" hspace="0" title="14F86" orisrc="/__local/E/A6/E2/BC58FD61C7DB4923E46823990C7_F5AF0619_43125.png" class="img_vsb_content" style="display: block; margin: auto; width: 155px; height: 220px;"></td></tr><tr><td style="text-align: center; padding: 10px;"><span style="font-size: 10px;">著名行为经济与实验经济学家James Cox教授（2011年于美国GSU实验经济学中心）</span></td><td style="text-align: center; padding: 10px;"><span style="font-size: 10px;">著名行为与实验经济学家加州大学Gary Charness教授（2013年于成都）</span></td><td style="text-align: center; padding: 10px;"><span style="font-size: 10px;">著名行为与实验经济学家，英国、欧洲、美国科学院院士，英国牛津大学Vencent Crawford教授（2016年于成都）</span></td><td style="text-align: center; padding: 10px;"><span style="font-size: 10px;">“中国经济和商业研究最佳论文奖”（经济学季刊最佳论文奖）</span></td></tr></tbody></table><p style="text-indent: 40px; text-align: justify;"><span style="font-family: 宋体, SimSun; line-height: 2; font-size: 18px;"></span></p><p><span style="font-family: 宋体, SimSun; line-height: 2; font-size: 18px;">&nbsp; &nbsp;第三阶段为再启航阶段。2018年3月第4次校务会议，学校决定在“西南财经大学实验经济学实验室”基础上升级成立校级“中国行为经济与行为金融研究中心”（以下简称中心），任命雷震教授担任该校级中心主任，中心组织人事关系挂靠经济学院。2018年4月10日举办中心成立揭牌仪式，开启了行为经济学、行为金融学新征程。中心邀请了英国约克大学杨再福教授、英国约克大学鞠源教授、新加坡国立大学教授周恕弘、南京审计大学教授杨春雷等莅临揭牌仪式，并组织国际学术研讨会。</span></p><table style="margin: auto; border-collapse: collapse; width: 70%;"><tbody><tr class="firstRow"><td style="text-align: center; padding: 10px;"><img src="/__local/E/D5/B1/E61250D43241B51CEC25AFF2CC9_228046B7_6521.jpg" width="331" vsbhref="vurl" vurl="/_vsl/ED5B1E61250D43241B51CEC25AFF2CC9/228046B7/6521" vheight=" 220px" vwidth=" 331px" height="220" border="0" vspace="0" hspace="0" title="" alt="" orisrc="/__local/1/62/B1/1CE49950E653AA5B19AC3331DE4_E5711561_85D3.jpg" class="img_vsb_content" style="font-family: 宋体, SimSun; font-size: 18px; white-space: normal; text-align: center; width: 331px; height: 220px;"></td><td style="text-align: center; padding: 10px;"><img src="/__local/2/A5/73/2BC68BE32B25B1FFCDBA39705E4_7443F7D4_951C.jpg" width="294" vsbhref="vurl" vurl="/_vsl/2A5732BC68BE32B25B1FFCDBA39705E4/7443F7D4/951C" vheight=" 220px" vwidth=" 294px" height="220" border="0" vspace="0" hspace="0" title="" alt="" orisrc="/__local/B/32/FD/D0B5A3614E6F615585B6E4CF8C1_4EAFA857_DE13.jpg" class="img_vsb_content" style="font-family: 宋体, SimSun; font-size: 18px; white-space: normal; text-align: center; width: 294px; height: 220px;"></td><td style="text-align: center; padding: 10px;"><img src="/__local/3/34/CF/9D49365AF27964F30AE97CEB11F_2A6A6C28_121A2.jpg" width="293" vsbhref="vurl" vurl="/_vsl/334CF9D49365AF27964F30AE97CEB11F/2A6A6C28/121A2" vheight=" 220px" vwidth=" 293px" height="220" border="0" vspace="0" hspace="0" title="" alt="" orisrc="/__local/1/E3/EE/BC7D7E6699277DC1920EC0B58E0_EA403422_18947.jpg" class="img_vsb_content" style="font-family: 宋体, SimSun; font-size: 18px; white-space: normal; text-align: center; width: 293px; height: 220px;"></td></tr><tr><td style="text-align: center; padding: 10px;"><span style="font-size: 10px;"><span style="text-align: center;">卓志校长为中心揭牌</span></span></td><td style="text-align: center; padding: 10px;"><span style="font-size: 10px;"><span style="text-align: center;">卓志校长为雷震教授颁发主任聘书</span></span></td><td style="text-align: center; padding: 10px;"><span style="font-size: 10px;"><span style="text-align: center;">揭牌仪式</span></span></td></tr></tbody></table><p style="text-indent: 37px; text-align: justify;"><span style="font-family: 宋体, SimSun; line-height: 2; font-size: 18px;">中心在学校领导下实行主任负责制。中心发展始终坚持以马克思主义和社会主义核心价值观为指导，关注我国重大理论和现实问题以及国际学术前沿，培养交叉学科和新兴学科增长点，促进跨学科融合发展，着重产出高水平研究成果和培养高层次财经人才，为学校经济管理等学科提供实验、行为以及心理学、脑科学等研究支撑，最终服务于建设“新财经”和赋能科技自立自强与中国式现代化。</span></p><p style="text-indent: 37px; text-align: justify;"><span style="font-family: 宋体, SimSun; line-height: 2; font-size: 18px;">学校将中心定位学术特区。在学校的坚强领导下，中心初步搭建一个国内领先研究行为经济与行为金融团队，世界计量经济学会士周恕弘教授（在中心全职工作时间2018.7-2024.6）、青年实验经济学家Lawrence Choo（在中心全职工作时间2020.5-2024.10）、Inacio Bo(在中心全职工作时间2021.3-2024.3）、Joshua Lenier(在中心全职工作时间2021.3-2025.3)，一大批国内外一流大学毕业的中国籍青年学者王帝（英国诺丁汉大学）、姚凯（英国诺丁汉大学）、李桦林（英国格拉斯哥大学）、刘金朋（英国格拉斯哥大学）、盛大林（清华大学）、黄大康（法国图卢兹大学）等，还有近期引进曾在美国2所大学担任金融学终身教职的沈建成教授，通过有组织科研，取得一系列一流成果。其中，以西财为第一署名的实验经济学论文A+级成果包括：周恕弘作为第一作者发表的1篇Journal of Political Economy论文（西财首篇经济学Top5期刊）；Lawrence Choo、Inacio Bo、石启超三位分别以第一作者发表的3篇Management Science论文（管理学顶刊）；雷震以第一作者发表的1篇《心理学报》（西财首篇心理学顶刊）等。A级标志性成果包括：European Economic Review（4篇），Journal of Economic Theory（2篇），Theoretical Economics（1篇），Review of Economics and Statistics（2篇）等。立项国家或部级课题包括：国家自然科学重点项目（1项）、国家社会基金项目（1项）、国家自然科学基金青年项目（2项）、教育部人文社科项目（2项）等。培养已毕业和在读博士13人，硕士48人。</span></p><p style="text-indent: 37px; text-align: left;"><span style="font-family: 宋体, SimSun; line-height: 2; font-size: 18px;"></span></p><p style="text-align: center"><img src="/__local/0/11/18/414AA67221AE799782243902981_D5FB2A38_21DA0.jpg" width="500" vsbhref="vurl" vurl="/_vsl/01118414AA67221AE799782243902981/D5FB2A38/21DA0" vheight="" vwidth="500" orisrc="/__local/F/C3/77/98FB07CEA3C39062283EC56C778_825596C9_2D2FE.jpg" class="img_vsb_content"></p><p style="text-align:center;line-height:29px;vertical-align:baseline">2024年3月11日赵建军书记来中心指导和调研</p><p style="line-height: 29px; vertical-align: baseline;"><br></p><table style="margin: auto; border-collapse: collapse; width: 70%;"><tbody><tr class="firstRow"><td style="text-align: center; padding: 10px;"><img src="/__local/C/A4/DD/3BC6A13E426B42AFBB9D2D17011_1F0FC1C7_13ED9.jpg" width="292" vsbhref="vurl" vurl="/_vsl/CA4DD3BC6A13E426B42AFBB9D2D17011/1F0FC1C7/13ED9" vheight=" 220px" vwidth=" 292px" height="220" border="0" vspace="0" hspace="0" title="" alt="" orisrc="/__local/9/92/DB/7EF0A89645AC8B6DD37EC8B44EC_80EC58CF_1A5D8.jpg" class="img_vsb_content" style="white-space: normal; text-align: center; width: 292px; height: 220px;"></td><td style="text-align: center; padding: 10px;"><img src="/__local/2/D3/F3/87E7C9FE385BAD758EE420C2E61_7B6D0CF2_24F73.jpg" width="292" vsbhref="vurl" vurl="/_vsl/2D3F387E7C9FE385BAD758EE420C2E61/7B6D0CF2/24F73" vheight=" 220px" vwidth=" 292px" height="220" border="0" vspace="0" hspace="0" title="" alt="" orisrc="/__local/A/F6/7D/718BE5D806D0F7A21872F4EDD9E_3B773DB3_308D5.jpg" class="img_vsb_content" style="white-space: normal; text-align: center; width: 292px; height: 220px;"></td><td style="text-align: center; padding: 10px;"><img src="/__local/A/D1/9D/A46A188AE3DCA1DD4864AA0C386_AF16E0A2_2AB14.jpg" width="292" vsbhref="vurl" vurl="/_vsl/AD19DA46A188AE3DCA1DD4864AA0C386/AF16E0A2/2AB14" vheight=" 220px" vwidth=" 292px" height="220" border="0" vspace="0" hspace="0" title="" alt="" orisrc="/__local/E/E8/D2/A5858808CF893028954C1C85C39_2C53783E_39F3E.jpg" class="img_vsb_content" style="white-space: normal; text-align: center; width: 292px; height: 220px;"></td></tr><tr><td style="text-align: center; padding: 10px;"><span style="font-size: 10px;"><span style="text-align: center;"><span style="text-align: center;">Lawrence Choo等老师组织心理学实验观摩</span></span></span></td><td style="text-align: center; padding: 10px;"><span style="font-size: 10px;"><span style="text-align: center;"><span style="text-align: center;">2020级迎新活动</span></span></span></td><td style="text-align: center; padding: 10px;"><span style="font-size: 10px;"><span style="text-align: center;"><span style="text-align: center;">2021级迎新活动</span></span></span></td></tr><tr><td style="text-align: center; padding: 10px;"><span style="font-size: 10px;"><span style="text-align: center;"><img src="/__local/8/2A/DB/6A34A8E3B0777A3E97A6E9AC21B_2E1085AC_267BC.jpg" width="292" vsbhref="vurl" vurl="/_vsl/82ADB6A34A8E3B0777A3E97A6E9AC21B/2E1085AC/267BC" vheight=" 220px" vwidth=" 292px" height="220" border="0" vspace="0" hspace="0" title="" alt="" orisrc="/__local/3/80/48/07E3DF80E7D8784F060CF1F431A_CE0F4C97_33C4F.jpg" class="img_vsb_content" style="white-space: normal; text-align: center; width: 292px; height: 220px;"></span></span></td><td style="text-align: center; padding: 10px;"><span style="font-size: 10px;"><span style="text-align: center;"><img src="/__local/2/75/12/00346B3E1EEFD262D5A205C87A4_9D27A1EB_24A06.jpg" width="292" vsbhref="vurl" vurl="/_vsl/2751200346B3E1EEFD262D5A205C87A4/9D27A1EB/24A06" vheight=" 220px" vwidth=" 292px" height="220" border="0" vspace="0" hspace="0" title="" alt="" orisrc="/__local/7/1E/B1/256ED54AFECE6A1133222226617_E4996404_30278.jpg" class="img_vsb_content" style="white-space: normal; text-align: center; width: 292px; height: 220px;"></span></span></td><td style="text-align: center; padding: 10px;"><span style="font-size: 10px;"><span style="text-align: center;"><img src="/__local/2/43/9C/1E43907230ABBB05FC065B0C4F8_9E517702_16587.jpg" width="292" vsbhref="vurl" vurl="/_vsl/2439C1E43907230ABBB05FC065B0C4F8/9E517702/16587" vheight=" 220px" vwidth=" 292px" height="220" border="0" vspace="0" hspace="0" title="" alt="" orisrc="/__local/A/CD/08/EED306200D6CB82C5ADB83CBDED_AC601591_1D914.jpg" class="img_vsb_content" style="white-space: normal; text-align: center; width: 292px; height: 220px;"></span></span></td></tr><tr><td style="text-align: center; padding: 10px;"><span style="font-size: 10px;"><span style="text-align: center;"><span style="text-align: center;">第二届博士研究生研讨会</span></span></span></td><td style="text-align: center; padding: 10px;"><span style="font-size: 10px;"><span style="text-align: center;"><span style="text-align: center;">2021级赵梁佛博士指导师弟师妹们组织脑电实验</span></span></span></td><td style="text-align: center; padding: 10px;"><span style="font-size: 10px;"><span style="text-align: center;"><span style="text-align: center;">行为实验室</span></span></span></td></tr></tbody></table><p style="line-height: 29px; vertical-align: baseline; text-align: center;"><br></p></div></div>
+    <span id="vsb_content_4301_u5" name="vsb_content_4301_u5"></span><br><br>
+    
+<p></p>
+
+
+
+
+      
+    </div>
+  </div>
+  <div class="footer">
+  <div class="comWidth clearfix" style="padding: 20px 0px;">
+    <div class="fl">        
+    
+
+ <a href="../index.htm" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1984800921, 80377)" target="_blank"><img alt="" src="../dfiles/16141/dfiles/3270/skin/pcweb/images/logo.jpg" style="margin-top: 10px;"></a> 
+    
+ </div>
+    <div class="fl"> 
+
+   <ul>
+        <li><a style="color: rgb(221, 221, 221);">校内网站链接</a>
+      
+        </li><li><a href="http://econ.swufe.edu.cn/" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1984800921, 94649)">西南财大经济学院</a> </li>
+      
+        <li><a href="https://jinrong.swufe.edu.cn/" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1984800921, 94650)">西南财经大学金融学院</a> </li>
+      
+        <li><a href="http://icfs.swufe.edu.cn/" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1984800921, 94651)">西南财经大学中国金融研究中心</a> </li>
+      
+        <li><a href="http://www.swufe.edu.cn/" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1984800921, 94652)">西南财经大学</a> </li>
+      </ul> </div>
+    <div class="fl">
+      <p><span style="color: rgb(255, 255, 255); font-family: 宋体, SimSun; font-size: 18px;">Our Address<br>
+        </span></p>
+      <div class="col-md-8 ftr-grid fg2 mid-gd"> <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<div class="ftr-address" style="color:#ffffff;width:450px;line-height:33px">
+    地址：四川成都温江柳台大道555号弘远楼3楼<br>邮编：611130<br>电话：028-87098046<br>邮箱：ccbef@swufe.edu.cn
+</div> </div>
+      <p><br>
+      </p>
+    </div>
+          
+    
+    <div class="fl" style="width: 120px; margin-left: 12px;">
+
+
+<img src="../dfiles/16141/dfiles/3270/uploads/2018/10/221338455605.jpg" max-width="100%"> </div>
+     
+ </div>
+</div>
+  <script src="../dfiles/16141/dfiles/3270/skin/pcweb/js/bdxtk.js"></script>
+  <script src="../dfiles/16141/dfiles/3270/skin/pcweb/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

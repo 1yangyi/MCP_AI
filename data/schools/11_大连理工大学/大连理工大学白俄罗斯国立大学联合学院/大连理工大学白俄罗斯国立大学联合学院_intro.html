@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+    <title>学院简介-大连理工大学白俄罗斯国立大学联合学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="大连理工大学白俄罗斯国立大学联合学院">
+
+    
+    <meta name="description" content="">
+    <meta name="generator" content="">
+    <meta name="copyright" content="大连理工大学白俄罗斯国立大学联合学院">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link href="../css/global.css" rel="stylesheet" type="text/css">
+
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307973475c50555742000300034056 -->
+<link rel="stylesheet" type="text/css" href="../tydy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1015,'/tydy.jsp',-1,1367962541)</script>
+</head><body>
+<div class="bg01">
+    <div class="wrapper">
+        <div class="fl"><a href="../index.htm"><img alt="" src="../images/logo.png"></a></div>
+        <div class="index_search fr">
+            <div class="index_date">
+                <a href="../index.htm">中文版</a>|<a href="../English.htm" target="_blank">English</a>
+            </div>
+   
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu0">
+    <div id="appu0"><div><table border="0" cellspacing="1" cellpadding="0"><tbody><tr><td><input name="INTEXT" class="input"></td> <td align="absmiddle" nowrap="nowrap" height="1"><input type="submit" name="FindButton" value=" " class="btn"></td></tr></tbody></table></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+         
+            
+            <table border="0" cellspacing="1" cellpadding="0">
+  <tbody><tr>
+
+   <td>
+   
+     
+       <input name="INTEXT" class="input" v-model=query.keyWord @keyup.enter="onSubmit">
+   </td>
+   <td align="absmiddle" nowrap="nowrap" height="1">
+                    <input class="btn" type="submit" v-on:click="onSubmit()" name="FindButton" value=" ">
+   </td>
+  </tr>
+ </tbody></table>
+            
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1367962541";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+        </div>
+        <div class="cb"></div>
+    </div>
+    <div class="nav_bg">
+
+
+
+    <ul id="nav" class="nav clearfix">
+            <li class="nLi on">
+                <h3><a href="../index.htm">首页</a></h3>
+            </li>
+            <li class="nLi01">|</li>
+            <li class="nLi">
+                <h3><a href="xyjj.htm">学院概况</a></h3>
+                <ul class="sub" style="width:130px;">
+                    <li><a href="xyjj.htm">学院简介</a></li>
+             
+                    <li><a href="zzji_gou/xyry.htm">组织机构</a></li>
+                    <li><a href="fzlc.htm">发展历程</a></li>
+                    
+                </ul>
+            </li>
+            <li class="nLi01">|</li>
+            <li class="nLi">
+                <h3><a href="#">师资力量</a></h3>
+                <ul class="sub" style="width:130px;">
+                <li><a href="../szli_liang/jxzdypgz.htm">教学指导与评估组</a></li>
+                    <li><a href="../szli_liang/zfsz1.htm">中方师资</a></li>
+                    <li><a href="../szli_liang/wfsz.htm">外方师资</a></li>
+                     <li><a href="../szli_liang/yjsds1.htm">研究生导师</a></li>
+                </ul>
+            </li>
+            
+                        <li class="nLi01">|</li>
+            <li class="nLi">
+                <h3><a href="#">学生培养</a></h3>
+                <ul class="sub" style="width:130px;">
+                    <li><a href="../bkspy/ggtz1.htm">本科生培养</a></li>
+      <li><a href="../yjspy/ggtz1.htm">研究生培养</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+
+
+
+
+            <li class="nLi01">|</li>
+            <li class="nLi">
+                <h3><a href="../gjhe_zuo/xsgjjl.htm">国际合作</a></h3>
+                <ul class="sub" style="width:130px;">
+                    <li><a href="../gjhe_zuo/xsgjjl.htm">学生国际交流</a></li>
+                    <li><a href="../gjhe_zuo/jsgjjl.htm">教师国际交流</a></li>
+                    <li><a href="../gjhe_zuo/hzhb.htm">合作伙伴</a></li>
+                     <li><a href="../gjhe_zuo/bedt.htm">白俄动态</a></li>
+                </ul>
+            </li>
+            <li class="nLi01">|</li>
+            <li class="nLi">
+                <h3><a href="../jxky/kygk.htm">科学研究</a></h3>
+                <ul class="sub" style="width:130px;">
+              
+                    <li><a href="../jxky/kygk.htm">科研概况</a></li>
+                    <li><a href="../jxky/lhshi_yan_shi.htm">联合实验室</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+                 <li class="nLi01">|</li>
+            <li class="nLi">
+                <h3><a href="#">招生就业</a></h3>
+                <ul class="sub" style="width:130px;">
+                    <li><a href="../zsjy/zsjz.htm">本科生招生</a></li>
+                    <li><a href="../yjszsjy/yjszsjy.htm">研究生招生</a></li>
+  <li><a href="../bysfc/bysfc.htm">毕业生风采</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            <li class="nLi01">|</li>
+            <li class="nLi">
+                <h3><a href="../dtjs/gggs.htm">党团建设</a></h3>
+                <ul class="sub" style="width:130px;">
+<li><a href="../dtjs/gggs.htm">公示公告</a></li>
+
+
+
+                    <li><a href="../dtjs/djxw.htm">党建新闻</a></li>
+<li><a href="../dtjs/gzzd.htm">规章制度</a></li>
+                    <li><a href="../dtjs/llxx.htm">理论学习</a></li>
+  <li><a href="../dtjs/zlxz.htm">资料下载</a></li>
+                    
+                </ul>
+            </li>
+            <li class="nLi01">|</li>
+            <li class="nLi">
+                <h3><a href="../zlxz/zlxz.htm">资料下载</a></h3>
+                
+            </li>
+        </ul>
+
+
+
+
+    </div>
+    <div class="wrapper mt17 bg_fff">
+        <div class="ny_banner">
+        <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+     
+              
+             
+                        <img src="../english/ny_banner.png" border="0">
+         
+   
+
+        </div>
+        <div class="ny_left fl">
+            <div class="t"> 
+学院概况  </div>
+            <div class="con">
+            
+
+<ul>
+            <li><a href="xyjj.htm" title="学院简介">学院简介</a></li>
+        <li><a href="fzlc.htm" title="发展历程">发展历程</a></li>
+        <li><a href="zzji_gou/xyry.htm" title="组织机构">组织机构</a></li>
+</ul>
+
+
+            </div>
+            
+            
+        </div>
+        <div class="ny_right fr">
+            <div class="t"> <span class="span">
+学院简介</span>
+                <div class="ny_pos"><div>
+    当前位置: 
+                        <a href="../index.htm">首页</a>
+                &gt;&gt;
+                学院概况
+                &gt;&gt;
+                <a href="xyjj.htm">学院简介</a>
+</div></div>
+            </div>
+            <div class="con">
+                <div class="content">
+
+
+
+            
+
+
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1367962541,'wbnews','u8')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1367962541,1015)</script>
+<p>
+
+    </p><div id="vsb_content_4_1015_u81"><div id="vsb_content_4"><p class="vsbcontent_img"><img src="/__local/1/AC/6E/B1301F4BAEE58C66A2AF7E65066_EF7F4A13_10CE7.jpg" width="725" vsbhref="vurl" vurl="/_vsl/1AC6EB1301F4BAEE58C66A2AF7E65066/EF7F4A13/10CE7" vheight=" 386px" vwidth=" 725px" height="386" border="0" vspace="0" hspace="0" title="" alt="" orisrc="/__local/E/1A/C2/ABD5FD6780152396D7C81CF50FF_929A8B7E_23C9F2D.jpg" class="img_vsb_content" style="width: 725px;height: 386px"></p>
+<p>大连理工大学白俄罗斯国立大学联合学院（以下简称“中白学院”）是大连理工大学配合教育部《推进共建“一带一路”教育行动》、全面优化学科结构、提升国际化水平、构建“双一流”的重大举措，是在中白两国教育部共同批准下在本科层次设立的第一个国际合作办学机构。</p>
+<p>中白学院位于大连理工大学主校区，为大连理工大学内设二级学院，于2017年3月29日获教育部批准正式成立。学院依托大连理工大学和白俄罗斯国立大学，整合中白两国优质教育资源，拥有国际化的教学科研团队，采用国际领先的复合型创新人才培养模式，紧密结合“一带一路”倡议需求，以技术创新、服务产业、服务经济为导向，有针对性培养国家重大战略需求领域的专业人才。</p>
+<p>中白学院将国际先进的教学方式引入国内，学生可同时注册大连理工大学和白俄罗斯国立大学的双重学籍，学生完成四年全部专业学习且成绩合格，可获得大连理工大学毕业证书、学位证书以及白俄罗斯国立大学学士学位证书。中白学院的培养方案和课程体系由双方联合制定，三分之一以上专业核心课程由国外专家讲授，同时聘请大连理工大学教师担任助教。为了保证教学质量，学院在第一年专门设置了高强度的英语语言学习和俄语语言学习，使学生不出国门便能接受国际前沿教育。</p>
+<p class="vsbcontent_end">除了课堂教学之外，中白学院非常重视为学生搭建国际化交流平台。大连理工大学现与遍布30个国家和地区的200多所大学及科研机构建立了长期稳定的合作关系，保证每位学生可获一次全额资助赴白俄罗斯或欧美国家交流学习机会。此外，学生还有机会参与全校的各类长短期国际交流项目，培养国际化视野。</p>
+<p class="vsbcontent_img"><img src="/__local/2/69/9B/3049BA56404CA5943C81D8F4EAD_1BB60B3E_148E7.jpg" width="500" alt="148E7" vsbhref="vurl" vurl="/_vsl/2699B3049BA56404CA5943C81D8F4EAD/1BB60B3E/148E7" vheight="" vwidth="500" orisrc="/__local/8/A6/8B/EF1F4AAA7E040A5772123749990_F9B68826_59ACD4.jpg" class="img_vsb_content"></p>
+<p class="vsbcontent_img"><img src="/__local/2/69/9B/3049BA56404CA5943C81D8F4EAD_1BB60B3E_148E7.jpg" width="1" vsbhref="vurl" vurl="/_vsl/2699B3049BA56404CA5943C81D8F4EAD/1BB60B3E/148E7" vheight=" 1px" vwidth=" 1px" height="1" orisrc="/__local/8/A6/8B/EF1F4AAA7E040A5772123749990_F9B68826_59ACD4.jpg" class="img_vsb_content" style="width: 1px;height: 1px"></p>
+<p class="vsbcontent_img"><img src="/__local/2/69/9B/3049BA56404CA5943C81D8F4EAD_1BB60B3E_148E7.jpg" width="1" alt="148E7" height="1" vsbhref="vurl" vurl="/_vsl/2699B3049BA56404CA5943C81D8F4EAD/1BB60B3E/148E7" vheight=" 1px" vwidth=" 1px" orisrc="/__local/8/A6/8B/EF1F4AAA7E040A5772123749990_F9B68826_59ACD4.jpg" class="img_vsb_content" style="width: 1px;height: 1px"></p></div></div>
+    <span id="vsb_content_4_1015_u8" name="vsb_content_4_1015_u8"></span><br><br>
+    
+<p></p>
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="cb"></div>
+    </div>
+</div>
+<div class="bg02">
+    <div class="footer">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tbody><tr>
+                <td width="30%" align="right"><a href="#"><img alt="" src="../images/s_logo.png"></a></td>
+                <td>
+                    <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权所有：大连理工大学白俄罗斯国立大学联合学院 电话：+86-411-84706615 邮箱：dbji@dlut.edu.cn<br>地址：辽宁省大连市甘井子区凌工路2号 邮编：116024</p>
+                </td>
+            </tr>
+        </tbody></table>
+    </div>
+</div><script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jsd.js"></script>
+<script type="text/javascript" src="../js/jquery.SuperSlide.js"></script>
+        <script id="jsID" type="text/javascript">
+            jQuery("#nav").slide({
+                type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
+                titCell:".nLi", //鼠标触发对象
+                targetCell:".sub", //titCell里面包含的要显示/消失的对象
+                effect:"slideDown", //targetCell下拉效果
+                delayTime:300 , //效果时间
+                triggerTime:0, //鼠标延迟触发时间（默认150）
+                returnDefault:true //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+            });
+        </script>
+<script type="text/javascript" src="../js/jq.orbit.js"></script>
+<script type="text/javascript" src="../js/orbit.js"></script>
+
+
+
+
+
+</body></html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>学院简介-上海大学环境与化学工程学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="上海大学环境与化学工程学院,学院简介">
+
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/index.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307468475d53575742000200034554 -->
+<link rel="stylesheet" type="text/css" href="../jjy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1014,'/jjy.jsp',-1,1880699954)</script>
+</head>
+<body>
+    <div id="header">
+        <div class="header">
+            <div class="container clearfix">
+                <div class="logo fl">
+                    <a href="#"><img src="../img/logo.png"></a>
+                   
+                </div>
+                 
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script>
+<div id="divu0">
+    <div id="appu0"><div class="seek-div" style="margin: 0px; font-family: 宋体; font-size: 12px;"><button name="submit_button" type="button" class="seek-btn"></button> <input type="text" border="0" placeholder="请输入您要搜索的内容" autocomplete="off" class="seek-ipt"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError"  class="seek-div" style="margin:0px;font-family:宋体;font-size:12px;">
+            <button class="seek-btn"  name="submit_button" type="button" v-on:click="onSubmit()"></button>
+            <input  type="text" border="0"  style="cursor: hand" class="seek-ipt" placeholder="请输入您要搜索的内容"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+           
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1880699954";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://2022openlab.shu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+            </div>
+        </div>
+    </div>
+    <div id="nav">
+        <div class="nav">
+            <ul class="fNav clearfix container">
+                
+                <li><a href="../index.htm">首页</a>
+</li>
+
+                <li class="active"><a href="xyjj.htm">学院概况</a>
+<ul class="sNav">
+
+                    <li><a href="xyjj.htm">学院简介</a>
+                    </li>
+
+                    <li><a href="lsyg.htm">历史沿革</a>
+                    </li>
+
+                    <li><a href="smyj.htm">使命愿景</a>
+                    </li>
+
+                    <li><a href="dzld.htm">党政领导</a>
+                    </li>
+
+                    <li><a href="zzjg.htm">组织机构</a>
+                    </li>
+
+                    <li><a href="xsjg.htm">学术机构</a>
+                    </li>
+
+                    <li><a href="xssz.htm">系所设置</a>
+                    </li>
+                    
+                </ul>
+</li>
+
+                <li><a href="../szdw/ysfc.htm">师资队伍</a>
+<ul class="sNav">
+
+                    <li><a href="../szdw/ysfc.htm">院士风采</a>
+                    </li>
+
+                    <li><a href="../szdw/ljrc.htm">领军人才</a>
+                    </li>
+
+                    <li><a href="../szdw/bdml.htm">博导名录</a>
+                    </li>
+
+                    <li><a href="../szdw/zrjs.htm">专任教师</a>
+                    </li>
+
+                    <li><a href="../szdw/jzjs.htm">兼职教师</a>
+                    </li>
+
+                    <li><a href="../szdw/xzgl.htm">行政管理</a>
+                    </li>
+                    
+                </ul>
+</li>
+
+                <li><a href="../rcpy.htm">人才培养</a>
+<ul class="sNav">
+
+                    <li><a href="../rcpy/bkspy.htm">本科生培养</a>
+                    </li>
+
+                    <li><a href="../rcpy/yjspy.htm">研究生培养</a>
+                    </li>
+                    
+                </ul>
+</li>
+
+                <li><a href="../kxyy/kygk.htm">科学研究</a>
+<ul class="sNav">
+
+                    <li><a href="../kxyy/kygk.htm">科研概况</a>
+                    </li>
+
+                    <li><a href="../kxyy/kypt.htm">科研平台</a>
+                    </li>
+
+                    <li><a href="../kxyy/kytd.htm">科研团队</a>
+                    </li>
+
+                    <li><a href="../kxyy/kyhj.htm">科研获奖</a>
+                    </li>
+
+                    <li><a href="../kxyy/kydt1.htm">科研动态</a>
+                    </li>
+
+                    <li><a href="../kxyy/xsbg.htm">学术报告</a>
+                    </li>
+                    
+                </ul>
+</li>
+
+                <li><a href="../rsgz/rczp.htm">人事工作</a>
+<ul class="sNav">
+
+                    <li><a href="../rsgz/rczp.htm">人才招聘</a>
+                    </li>
+
+                    <li><a href="../rsgz/rsxx.htm">人事信息</a>
+                    </li>
+
+                    <li><a href="../rsgz/rszc.htm">人事政策</a>
+                    </li>
+
+                    <li><a href="../rsgz/bshldz.htm">博士后流动站</a>
+                    </li>
+                    
+                </ul>
+</li>
+
+                <li><a href="../gjjl1.htm">国际交流</a>
+<ul class="sNav">
+
+                    <li><a href="../gjjl1/wzxm.htm">外专项目</a>
+                    </li>
+
+                    <li><a href="../gjjl1/hwjy.htm">海外教育</a>
+                    </li>
+
+                    <li><a href="../gjjl1/hzjl.htm">合作交流</a>
+                    </li>
+                    
+                </ul>
+</li>
+
+                <li><a href="../dwgz/whjs1/xywh.htm">党务工作</a>
+<ul class="sNav">
+
+                    <li><a href="../dwgz/dwgk1.htm">党委概况</a>
+                    </li>
+
+                    <li><a href="../dwgz/whjs1/xywh.htm">文化建设</a>
+                    </li>
+
+                    <li><a href="../dwgz/xxyd.htm">学习园地</a>
+                    </li>
+
+                    <li><a href="../dwgz/jssz/jsszdt.htm">教师思政</a>
+                    </li>
+
+                    <li><a href="../dwgz/ghfw/ghwyh.htm">工会妇委</a>
+                    </li>
+
+                    <li><a href="../dwgz/qlfh/qlfhls.htm">青联分会</a>
+                    </li>
+                    
+                </ul>
+</li>
+
+                <li><a href="../xsgz/yrtd.htm">学生工作</a>
+<ul class="sNav">
+
+                    <li><a href="../xsgz/yrtd.htm">育人团队</a>
+                    </li>
+
+                    <li><a href="../xsgz/xstz.htm">学生通知</a>
+                    </li>
+
+                    <li><a href="../xsgz/xsdj.htm">学生党建</a>
+                    </li>
+
+                    <li><a href="../xsgz/xstj.htm">学生团建</a>
+                    </li>
+
+                    <li><a href="../xsgz/xshd.htm">学生活动</a>
+                    </li>
+
+                    <li><a href="../xsgz/jyxx.htm">就业信息</a>
+                    </li>
+                    
+                </ul>
+</li>
+
+                <li><a href="../xyfh/fhzc.htm">校友分会</a>
+<ul class="sNav">
+
+                    <li><a href="../xyfh/fhzc.htm">分会章程</a>
+                    </li>
+
+                    <li><a href="../xyfh/lsmd.htm">理事名单</a>
+                    </li>
+
+                    <li><a href="../xyfh/yxxy.htm">优秀校友</a>
+                    </li>
+
+                    <li><a href="../xyfh/xyhd.htm">校友活动</a>
+                    </li>
+                    
+                </ul>
+</li>
+
+                <li><a href="../xzzq/djgz/jswj.htm">下载专区</a>
+<ul class="sNav">
+
+                    <li><a href="../xzzq/djgz/jswj.htm">党建工作</a>
+                    </li>
+
+                    <li><a href="../xzzq/xzgz/rsgz.htm">行政工作</a>
+                    </li>
+
+                    <li><a href="../xzzq/xwdjsbg.htm">学位点建设报告</a>
+                    </li>
+                    
+                </ul>
+</li>
+
+                <li><a href="">English</a>
+</li>
+            </ul>
+        </div>
+    </div>
+    <div id="listBody" class="clearfix container">
+        <div class="leftList fl">
+            <div class="location">
+                
+学院概况
+            </div>
+            <ul>
+
+                <li><a href="xyjj.htm">学院简介</a></li>
+
+                <li><a href="lsyg.htm">历史沿革</a></li>
+
+                <li><a href="smyj.htm">使命愿景</a></li>
+
+                <li><a href="dzld.htm">党政领导</a></li>
+
+                <li><a href="zzjg.htm">组织机构</a></li>
+
+                <li><a href="xsjg.htm">学术机构</a></li>
+
+                <li><a href="xssz.htm">系所设置</a></li>
+                
+            </ul>
+        </div>
+        <div class="rightPage fr">
+            <div class="titleName">
+学院简介</div>
+            <div class="jjyPage">
+               
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1880699954,'wbnews','u5')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta5(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta5('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1880699954,1001)</script>
+<p>
+   
+    </p><div id="vsb_content_2_1001_u51"><div id="vsb_content_2"><p style="line-height: 2em; text-align: justify;"><span style="color: rgb(0, 0, 0);">上海大学环境与化学工程学院成立于2000年9月，是环境、化工、核技术和材料等多学科交叉的综合性学院。近年来，在国家推进高水平大学和一流学科建设的战略机遇下，学院聚焦“四个面向”，以推进国家“双碳”战略、服务生态文明建设为使命，以解决国家与长三角区域重大环境化工等问题为导向，立足优势特色学科，强化学科交叉融合，攻克关键核心技术。围绕多介质环境复合污染控制、环境健康与纳米生物学、放射性污染物处置与资源化、双碳技术与绿色能源化工等方向开展创新性研究，在特色学科领域取得突破性成果，国内外学术声誉与社会影响力不断提升。</span></p><p style="line-height: 2em; text-align: justify;"><span style="color: rgb(0, 0, 0);">学科门类丰富，专业交叉优势突出。学院由环境科学与工程系、化学工程与工艺系、射线应用研究所、环境污染与健康研究所、纳米化学与生物学研究所、绿色化工与清洁能源研究所、“有机复合污染控制工程”教育部重点实验室、上海多介质环境协同治理工程技术研究中心、上海市氨氢转化示范及应用协同创新中心、上海市无机二维超材料原子调控与应用重点实验室组建而成。设有环境工程（国家级一流专业建设点）和化学工程与工艺（上海市一流专业建设点）2个本科专业，环境科学与工程、化学工程与技术及核科学与技术3个一级学科硕士点，资源与环境、材料与化工2个专业硕士点，环境科学与工程、化学工程与技术2个一级学科博士点，资源与环境、材料与化工2个专业博士点以及环境科学与工程、化学工程与技术2个博士后流动站，形成了系统的本科-硕士-博士-博士后及国内外联合系统人才培养体系。多年来，学院围绕立德树人根本任务，秉承钱伟长先生“拆除四堵墙”人才培养理念，着力培养具有扎实环境或化工专业基础、国际化视野和社会服务意识、原始创新与工程应用能力，勇担生态文明建设及推动绿色发展重任的卓越创新人才。</span></p><p style="line-height: 2em; text-align: justify;"><span style="color: rgb(0, 0, 0);">重视师资队伍建设，梯队结构合理。学院现有教职工178人，其中正高50人、副高88人，45岁以下青年教师占66%。包括中国科学院院士1人、中国工程院院士1人、教育部创新团队1个、上海市创新团队3个，教育部长江学者、国家杰青等国家级与上海市高层次人才30余人。</span></p><p style="line-height: 2em; text-align: justify;"><span style="color: rgb(0, 0, 0);">依托特色学科，科研成果丰硕。依托上海市III类高峰学科支持，学院聚焦国际前沿和国家重大需求，近五年来承担完成了国家科技部、生态环境部、国家自然科学基金、上海市科委、教委等项目近500项，总经费逾5亿元；获得国家标准3项，团体标准10项，行业标准3项；获得国家技术发明一等奖、国家自然科学二等奖、国家光华科技奖、上海市自然科学奖一等奖、上海市科技进步奖一等奖等国家级、省部级奖项30余项；在Science、Nature、Nature Chemistry等期刊上发表SCI收录文章1200余篇，ESI高被引30余篇/年；申请发明专利400余项，授权近180项。2018年起，环境/生态学科持续居ESI全球排名前1%。在2024年泰晤士高等教育排名中，我院环境科学与工程学科入选A-，化学工程与技术学科入选A。</span></p><p style="line-height: 2em; text-align: justify;"><span style="color: rgb(0, 0, 0);">拓宽育人载体，就业前景广阔。学院构建校导师-导学团队-行业导师育人链条，与宝武集团、中石化、上海城投等行业内龙头企事业单位建立多个研究生联合培养和实践基地，形成开环赋能协同育人新生态，培养学生获得第十四届“挑战杯”秦创原中国大学生创业计划竞赛国家级铜奖、第二届中国研究生“双碳”创新与创意大赛一等奖等多个奖项。学生毕业后进入上海城投、上海化工研究院、联合利华、比亚迪国家企事业单位与世界500强等企业。研究生毕业生就业率长期达98%以上。</span></p><p style="line-height: 2em; text-align: justify;"><span style="color: rgb(0, 0, 0);">加大国际合作力度，学术交流广泛。与美国、英国、德国、澳大利亚、新加坡、日本、韩国等多所国外著名高校建立师生交流互访机制，建立上海大学与美国密西西比科技大学、英国拉夫堡大学、澳大利亚昆士兰大学、葡萄牙里斯本大学等多个国际联合培养项目。多次组织召开“一带一路”大气污染与气候变化等前沿国际学术会议。2022年，环境工程专业中葡合作办学项目获得教育部批准。2024年，“多介质环境污染控制和协同降碳创新人才国际合作培养”获批国家留学基金委创新型人才国际合作培养项目。</span></p><p style="line-height: 2em; text-align: justify;"><span style="color: rgb(0, 0, 0);">展望未来，任重而道远。环境与化学工程学院将始终秉承上海大学“自强不息，道济天下”的校训，持续践行“追卓越，创一流”的办学理念，紧抓国家实施生态文明战略的历史机遇，围绕上海大学高水平大学与一流学科建设战略布局，努力为把上海大学环境与化学工程学院建成优势突出、特色鲜明、国际知名的研究型学院而不懈努力!</span></p></div></div>
+    <span id="vsb_content_2_1001_u5" name="vsb_content_2_1001_u5"></span><br><br>
+    
+<p></p>
+
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footer"> 
+            <div class="container clearfix">
+                <div class="fl links">
+                    <p>友情链接</p>
+                    <script language="javascript" src="/system/resource/js/openlink.js"></script><ul class="clearfix">
+
+                        <li><a href="http://www.moe.gov.cn/" target="_blank">中国教育部</a></li>
+
+                        <li><a href="https://www.most.gov.cn/index.html" target="_blank">中国科技部</a></li>
+
+                        <li><a href="https://www.nsfc.gov.cn/" target="_blank">国家自然科学基金委员会</a></li>
+
+                        <li><a href="https://edu.sh.gov.cn/" target="_blank">上海市教育委员会</a></li>
+
+                        <li><a href="https://stcsm.sh.gov.cn/" target="_blank">上海市科学技术委员会</a></li>
+
+                        <li><a href="https://www.shu.edu.cn/" target="_blank">上海大学</a></li>
+
+                        <li><a href="https://lib.shu.edu.cn/" target="_blank">上海大学图书馆</a></li>
+
+                        <li><a href="https://jwb.shu.edu.cn/" target="_blank">上海大学教务部</a></li>
+
+                        <li><a href="https://www.shu.edu.cn/kyglb.htm" target="_blank">上海大学科研管理部</a></li>
+
+                        <li><a href="https://sbc.shu.edu.cn/" target="_blank">上海大学实验室与设备管理处</a></li>
+
+                        <li><a href="http://fzghc.shu.edu.cn/" target="_blank">上海大学发展规划处</a></li>
+
+                        <li><a href="https://mp.weixin.qq.com/s/OrcxOvZCkwbXfhyKnMclng" target="_blank">环化学院招生宣传片</a></li>
+                       
+                    
+                    </ul>
+                </div>
+                <div class="fr ercode clearfix">
+                        <div>
+                        <img src="../images/shanghaidaxuegongzhonghao.jpg" alt="">
+                        <p>上海大学公众号</p>
+                    </div>
+<div>
+                        <img src="../images/shangdahuanhua--.jpg" alt="">
+                        <p>上大环化公众号</p>
+                    </div>
+<div>
+<a href="../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1169" target="_blank">
+                        <img src="../images/neibuwang.jpg" alt="">
+                        <p>内部网</p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="copy">
+            <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">版权所有 ©</span><a href="http://www.shu.edu.cn/" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal;">&nbsp;上海大学</a><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">&nbsp;&nbsp;&nbsp;</span><a href="http://beian.miit.gov.cn/" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal;">沪ICP备09014157&nbsp;</a><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">&nbsp;&nbsp;</span><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31009102000049" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal;">沪公网安备31009102000049号</a><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">&nbsp;&nbsp;地址：上海市宝山区上大路99号&nbsp;&nbsp; &nbsp;邮编：200444 &nbsp;&nbsp;</span><a href="http://www.shu.edu.cn/dhcx.htm" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal;">电话查询</a><br style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal; background-color: rgb(27, 70, 123);"><span style="color: rgb(255, 255, 255); font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center;">&nbsp;技术支持：</span><a href="https://its.shu.edu.cn/" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal;">上海大学信息化工作办公室&nbsp;&nbsp;&nbsp;</a><a href="mailto:info@shu.edu.cn" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; text-decoration-line: none; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal;">联系我们&nbsp;</a></p>
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

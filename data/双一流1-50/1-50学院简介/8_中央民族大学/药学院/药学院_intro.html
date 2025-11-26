@@ -1,0 +1,503 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学院简介-中央民族大学药学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="药学院,学院简介">
+
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/public.css">
+    <link rel="stylesheet" href="../style/ny2.css">
+    <link rel="stylesheet" href="../style/ny_media2.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/public.js"></script>
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e784654525a5742000200024253 -->
+<link rel="stylesheet" type="text/css" href="../jjy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1061,'/jjy.jsp',-1,2110912796)</script>
+</head>
+
+<body>
+
+
+     <div class="head pc head_rgb">
+        <div class="head-top">
+            <div class="w1680">
+                <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="(新)药学院"><img src="../images/logo.png" alt=""></a></div>
+                <div class="nav">
+                    <div class="b-top-c">
+                        <div class="b-top-r">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script>
+ 
+<div id="divu1">
+    <div id="appu1"><div class="search"><input type="text" placeholder="请输入您要搜索的关键字" autocomplete="off" class="text" style="color: rgb(102, 102, 102);"> <input name="submit_button" type="button" value="" class="button"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError" class="search">
+            <input type="text" placeholder="请输入您要搜索的关键字" class="text" style="color: #666;" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="button" name="submit_button" type="button" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "2110912796";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.119.129.127:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <ul class="">  
+    <li>
+         <a href="../index.htm" title="首页">首页</a>
+      </li>
+  
+  <li class="active">
+     <a href="xyjj.htm" title="学院概况">学院概况</a>
+    <div>
+       <ul>
+           <li> <a href="xyjj.htm" title="学院简介">学院简介</a></li>
+           <li> <a href="xrld.htm" title="现任领导">现任领导</a></li>
+           <li> <a href="lrld.htm" title="历任领导">历任领导</a></li>
+           <li> <a href="zzjg.htm" title="组织机构">组织机构</a></li>
+       </ul>
+     </div>
+  </li>
+  
+  
+  <li>
+     <a href="../szdw/mzyyx.htm" title="师资队伍">师资队伍</a>
+    <div>
+       <ul>
+           <li> <a href="../szdw/mzyyx.htm" title="民族医药系">民族医药系</a></li>
+           <li> <a href="../szdw/lczyx1.htm" title="临床中药系">临床中药系</a></li>
+           <li> <a href="../szdw/zyhxx.htm" title="中药化学系">中药化学系</a></li>
+           <li> <a href="../szdw/syglzx.htm" title="实验管理中心">实验管理中心</a></li>
+           <li> <a href="../szdw/xybgs1.htm" title="学院办公室">学院办公室</a></li>
+       </ul>
+     </div>
+  </li>
+  
+  
+  <li>
+     <a href="../rcpy.htm" title="人才培养">人才培养</a>
+  </li>
+  
+  
+  <li>
+     <a href="../kxyj.htm" title="科学研究">科学研究</a>
+  </li>
+  
+  
+  <li>
+     <a href="../dttd/dtgz.htm" title="党团天地">党团天地</a>
+    <div>
+       <ul>
+           <li> <a href="../dttd/dtgz.htm" title="党团工作">党团工作</a></li>
+           <li> <a href="../dttd/txhd.htm" title="团学活动">团学活动</a></li>
+       </ul>
+     </div>
+  </li>
+  
+  
+  <li>
+     <a href="../zdsys/tzgg.htm" title="重点实验室">重点实验室</a>
+    <div>
+       <ul>
+           <li> <a href="../zdsys/tzgg.htm" title="通知公告">通知公告</a></li>
+           <li> <a href="../zdsys/sysgk.htm" title="实验室概况">实验室概况</a></li>
+           <li> <a href="../zdsys/yjdw.htm" title="研究队伍">研究队伍</a></li>
+           <li> <a href="../zdsys/rcpy.htm" title="人才培养">人才培养</a></li>
+           <li> <a href="../zdsys/kxyj1.htm" title="科学研究">科学研究</a></li>
+           <li> <a href="../zdsys/kfjl1.htm" title="开放交流">开放交流</a></li>
+           <li> <a href="../zdsys/kyzy.htm" title="科研资源">科研资源</a></li>
+           <li> <a href="../zdsys/yxgl/ndbg.htm" title="运行管理">运行管理</a></li>
+       </ul>
+     </div>
+  </li>
+  
+</ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 移动端导航 -->
+    <div class="top">
+        <div class="wap wap-menu">
+            <img src="../images/menu.png" class="menu" alt="">
+            <img src="../images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+    <div class="wap m-head">
+       <div class="m-logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="(新)药学院"><img src="../images/logo.png" alt=""></a></div>
+        <div class="m-nav">
+            <div class="m-search">
+
+
+
+   
+<div id="divu4">
+    <div id="appu4"><div><input type="text" placeholder="请输入内容" autocomplete="off"> <input type="image" src="../images/search2.png" name="submit_button" value=""></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu4">
+    <div id="appu4">
+        <div v-if="!isError">
+            <input type="text" placeholder="请输入内容" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input type="image" src="../images/search2.png" name="submit_button" style="cursor: hand" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu4").html($("#htmlu4").text());
+</script>
+<script>
+    var appOwner = "2110912796";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu4",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.119.129.127:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+            <ul class=""> <li><a href="../index.htm" title="首页">首页</a></li>
+    <li>
+       <a href="xyjj.htm" title="学院概况">学院概况</a>
+       <span></span>
+       <ul>
+          <li><a href="xyjj.htm" title="学院简介">学院简介</a></li>
+          <li><a href="xrld.htm" title="现任领导">现任领导</a></li>
+          <li><a href="lrld.htm" title="历任领导">历任领导</a></li>
+          <li><a href="zzjg.htm" title="组织机构">组织机构</a></li>
+      </ul>
+   </li>
+    <li>
+       <a href="../szdw/mzyyx.htm" title="师资队伍">师资队伍</a>
+       <span></span>
+       <ul>
+          <li><a href="../szdw/mzyyx.htm" title="民族医药系">民族医药系</a></li>
+          <li><a href="../szdw/lczyx1.htm" title="临床中药系">临床中药系</a></li>
+          <li><a href="../szdw/zyhxx.htm" title="中药化学系">中药化学系</a></li>
+          <li><a href="../szdw/syglzx.htm" title="实验管理中心">实验管理中心</a></li>
+          <li><a href="../szdw/xybgs1.htm" title="学院办公室">学院办公室</a></li>
+      </ul>
+   </li>
+    <li>
+       <a href="../rcpy.htm" title="人才培养">人才培养</a>
+    </li><li>
+       <a href="../kxyj.htm" title="科学研究">科学研究</a>
+    </li><li>
+       <a href="../dttd/dtgz.htm" title="党团天地">党团天地</a>
+       <span></span>
+       <ul>
+          <li><a href="../dttd/dtgz.htm" title="党团工作">党团工作</a></li>
+          <li><a href="../dttd/txhd.htm" title="团学活动">团学活动</a></li>
+      </ul>
+   </li>
+    <li>
+       <a href="../zdsys/tzgg.htm" title="重点实验室">重点实验室</a>
+       <span></span>
+       <ul>
+          <li><a href="../zdsys/tzgg.htm" title="通知公告">通知公告</a></li>
+          <li><a href="../zdsys/sysgk.htm" title="实验室概况">实验室概况</a></li>
+          <li><a href="../zdsys/yjdw.htm" title="研究队伍">研究队伍</a></li>
+          <li><a href="../zdsys/rcpy.htm" title="人才培养">人才培养</a></li>
+          <li><a href="../zdsys/kxyj1.htm" title="科学研究">科学研究</a></li>
+          <li><a href="../zdsys/kfjl1.htm" title="开放交流">开放交流</a></li>
+          <li><a href="../zdsys/kyzy.htm" title="科研资源">科研资源</a></li>
+          <li><a href="../zdsys/yxgl/ndbg.htm" title="运行管理">运行管理</a></li>
+      </ul>
+   </li>
+</ul>
+        </div>
+    </div>
+
+    <div class="banner"><img src="../images/nyban.jpg"></div>
+
+    <div class="nymain">
+        <div class="w16">
+            <div class="channl-menu leftNav">
+                       <h2>学院概况<span></span></h2> 
+             <ul>
+                 <li class="active  on">
+                        <a href="xyjj.htm">学院简介</a>
+                    </li>
+                 <li>
+                        <a href="xrld.htm">现任领导</a>
+                    </li>
+                 <li>
+                        <a href="lrld.htm">历任领导</a>
+                    </li>
+                 <li>
+                        <a href="zzjg.htm">组织机构</a>
+                    </li>
+             </ul>
+
+            </div>
+            <div class="ny-right">
+                <div class="position d">
+                    <div class="">
+                        <h3>
+学院简介</h3>
+                       <span>当前位置：</span>
+                        <a href="../index.htm">首页</a>
+               <span>/</span>
+                <a href="xyjj.htm">学院概况</a>
+               <span>/</span>
+                <a href="xyjj.htm">学院简介</a>
+
+                    </div>
+                </div>
+                <div class="art-main">
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',2110912796,'wbnews','u10')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',2110912796,4269)</script>
+<div class="art-body d">
+  
+    <div id="vsb_content_2_4269_u101"><div id="vsb_content_2"><p class="vsbcontent_start">中央民族大学药学院前身是2004年成立的中国少数民族传统医学研究中心。2017年9月成立药学院，聚焦“国家所需、学院所能”，发挥多学科交叉融合优势，深化产教研协同创新，不断推进中药学学科内涵式高质量发展，已建成民族医药文化学北京市重点交叉学科、民族医药教育部重点实验室、中国少数民族传统医学教育部创新团队和民族医药研究国家民委创新团队。</p><p>药学院现有教职工32人，其中，正高职称10人、副高职称8人，博士生导师8人，硕士生导师24人。获国务院政府特殊津贴专家2人、新世纪百千万人才工程国家级人选2人、国家“万人计划”科技创新领军人才1人、科技部中青年科技创新领军人才1人、教育部新世纪优秀人才1人、北京市教学名师1人、北京市科技新星计划2人、宝钢优秀教师奖2人、国家民委领军人才支持计划1人、国家民委中青年英才1人、中央民族大学“杰出育人奖”1人，形成了一支结构合理的教师队伍和高层次的学术研究梯队。</p><p>药学院始终把传承创新发展中医药事业作为根本使命和责任担当，坚持服务国家中医药发展战略和民族医药事业，以中药学一级学科学位点建设为核心，形成了民族药学、中药药理学、中药化学、中药分析学、临床中药学等五个研究方向。近五年，承担国家级、省部级等各类科研课题37项，其中主持承担“十三五”“十四五”国家重点研发计划等重点重大项目7项，累计到账经费4294万元；在APSB、EJMC和EJP等期刊发表学术论文257篇，申请专利24项，授权专利10项，专利转化2项，在民族药基础研究领域发挥了引领和示范作用。</p><p class="vsbcontent_end">在未来的发展道路上，药学院将继续秉承初心，砥砺前行，不断加强学科建设，提升科研水平，优化师资队伍，完善人才培养体系，深度融入区域发展与交流合作，增强社会服务新动能，进一步提升学院在中医药产业中的影响力和贡献力。</p></div></div>
+    <span id="vsb_content_2_4269_u10" name="vsb_content_2_4269_u10"></span><br><br>
+    
+</div>
+<script>
+$("div>table,p>table").each(function(){
+    if(!$(this).parent().is("vsbcontent-table-container")){
+        $(this).wrap('<div class="vsbcontent-table-container-outer"><div class="vsbcontent-table-container"></div></div>');
+    }
+});
+</script></div>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+
+     <div class="footer">
+            <div class="w14">
+                <div class="foot-c">
+                    <div class="foot-l"> <dl>
+     <dt><a href="xyjj.htm" title="学院概况">学院概况</a></dt>
+</dl>
+ <dl>
+     <dt><a href="../szdw/mzyyx.htm" title="师资队伍">师资队伍</a></dt>
+</dl>
+ <dl>
+     <dt><a href="../rcpy.htm" title="人才培养">人才培养</a></dt>
+</dl>
+ <dl>
+     <dt><a href="../kxyj.htm" title="科学研究">科学研究</a></dt>
+</dl>
+ <dl>
+     <dt><a href="../dttd/dtgz.htm" title="党团天地">党团天地</a></dt>
+</dl>
+ <dl>
+     <dt><a href="../zdsys/tzgg.htm" title="重点实验室">重点实验室</a></dt>
+</dl>
+</div>
+
+                    <div class="foot-r">
+                      
+                        <div class="links">
+                            <div>
+                                <p>友情链接</p>
+                                <div><script language="javascript" src="/system/resource/js/openlink.js"></script>
+   <a href="https://www.muc.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2110912796, 108098)">学校主页</a>
+</div>
+                            </div>
+                        </div>
+                        <ul class="fmeida">        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bq">
+                <div><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：中国·北京中关村南大街27号，100081&nbsp; 邮箱：mucyaoxueyuan@126.com &nbsp; 电话：010-68939942</p></div>
+            </div>
+
+
+        </div>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

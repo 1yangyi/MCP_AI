@@ -1,0 +1,873 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="/frame/ie-blocker/ie-blocker.css">
+    <script src="/frame/ie-blocker/ie-blocker.zhCN.js"></script>
+    <![endif]-->
+    <script src="/resources/js/jquery-latest.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/resources/js/common.js"></script>
+    <link href="/resources/iconfont/iconfont.css" rel="stylesheet" type="text/css">
+    <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="/resources/js/bootstrap.min.js"></script>
+    <link href="/resources/css/style.css" rel="stylesheet" type="text/css">
+    <link href="/resources/css/main.css" rel="stylesheet" type="text/css">
+	<link href="/resources/css/contentDetail.css" rel="stylesheet" type="text/css">
+    <title>医院简介
+</title>
+</head>
+	<body id="body">
+<header class="header1">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-md-12 col-md-12">
+				<img src="/resources/img/logo.png" style="width: 84%;max-width:768px;margin: 12px auto auto auto;cursor:pointer;float:left" onclick="location.href='/'">
+				<div style="padding-top:35px;text-align:right" id="search_area">
+					<input type="text" placeholder=" 搜索文章" id="searchkey" value="">
+					<a id="search"><i class="iconfont icon-sousuo"></i></a>
+					<!--  
+					<button onclick="location.href='/en'"><b>EN</b></button>
+					-->
+					<div class="header_search_line"></div>
+				</div>
+			
+				<div id="mobile_search_area" style="height: 100%; line-height: 100%; display: none;">
+					<button style="height:30px;margin:14px auto auto auto;padding:0;float:right;" onclick="location.href='/en'"><b>EN</b></button>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+	<script>
+		if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+			$("#search_area").css('display','none'); 
+		}else{
+			$("#mobile_search_area").css('display','none'); 
+		}
+		
+		$('#search').click(function(){
+			searchMsg($("#searchkey").val())
+			
+		})
+			
+     $("#searchkey").keydown(function(e) {  
+           if (e.keyCode == 13) { 
+        	   searchMsg($("#searchkey").val())
+           }  
+      });  
+		
+	</script>
+</header>
+
+	<div id="cssmenu"><div id="menu-button">&nbsp;</div>
+		<ul style="max-width: 1200px;margin: 0 auto;height:100%"><div id="menu-line"></div>
+		   <li><a href="/">首页</a></li>
+					   <li class="has-sub"><span class="submenu-button"></span><a href="#">医院概况</a>
+					      <ul>
+										<li>
+												<a href="introduce?menuCode=hos_description">
+												医院简介
+											</a>
+										</li>
+										<li>
+												<a href="/introduce/hosLeader?menuCode=hos_leader">
+												医院领导
+											</a>
+										</li>
+										<li>
+												<a href="introduce?menuCode=hos_honor">
+												所获荣誉
+											</a>
+										</li>
+					      </ul>
+					   </li>
+					   <li class="has-sub"><span class="submenu-button"></span><a href="#">就诊指南</a>
+					      <ul>
+										<li>
+												<a href="https://hasdyrmyy.cn/hayy_pc/index.html?menuCode=yuyue">
+												预约挂号
+											</a>
+										</li>
+										<li>
+												<a href="introduce?menuCode=hos_work_time">
+												工作时间
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=91">
+												疫情防控
+											</a>
+										</li>
+										<li>
+												<a href="introduce?menuCode=hos_register">
+												挂号方式
+											</a>
+										</li>
+										<li>
+												<a href="introduce?menuCode=hos_visit_process">
+												就诊流程
+											</a>
+										</li>
+										<li>
+												<a href="/introduce/visitSchedule?menuCode=hos_visit">
+												出诊表
+											</a>
+										</li>
+										<li>
+												<a href="introduce?menuCode=hos_plan">
+												平面图
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=75">
+												医保指南
+											</a>
+										</li>
+										<li>
+												<a href="introduce?menuCode=hos_medical_record">
+												病案复印
+											</a>
+										</li>
+					      </ul>
+					   </li>
+					   <li class="has-sub"><span class="submenu-button"></span><a href="#">医疗护理</a>
+					      <ul>
+										<li>
+												<a href="/content?menuId=13">
+												专科建设
+											</a>
+										</li>
+										<li>
+												<a href="/dept?menuCode=dept">
+												科室介绍
+											</a>
+										</li>
+										<li>
+												<a href="/expert?menuCode=expert">
+												专家介绍
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=16">
+												护理园地
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=17">
+												健康科普
+											</a>
+										</li>
+										<li>
+												<a href="/dept/beautyCenter?menuCode=deptMedical">
+												体检中心
+											</a>
+										</li>
+										<li>
+												<a href="/dept/beautyCenter?menuCode=beautyCenter">
+												美容中心
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=20">
+												医患往来
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=89">
+												多学科诊疗
+											</a>
+										</li>
+					      </ul>
+					   </li>
+					   <li class="has-sub"><span class="submenu-button"></span><a href="#">新闻中心</a>
+					      <ul>
+										<li>
+												<a href="/content?menuId=22">
+												医院动态
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=23">
+												医学前沿
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=24">
+												党建信息
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=25">
+												医院文化
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=26">
+												慈善公益
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=27">
+												分院新闻
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=28">
+												院报
+											</a>
+										</li>
+					      </ul>
+					   </li>
+					   <li class="has-sub"><span class="submenu-button"></span><a href="#">教育培训</a>
+					      <ul>
+										<li>
+												<a href="/content?menuId=85">
+												培训教学
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=32">
+												科研工作
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=34">
+												临床试验
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=98">
+												模拟教育
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=96">
+												院校教育
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=95">
+												继续教育
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=94">
+												住培工作
+											</a>
+										</li>
+					      </ul>
+					   </li>
+					   <li class="has-sub"><span class="submenu-button"></span><a href="#">院务公开</a>
+					      <ul>
+										<li>
+												<a href="/content?menuId=36">
+												法规制度
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=37">
+												重要通知
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=38">
+												公开公示
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=39">
+												人才招聘
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=92">
+												财务信息
+											</a>
+										</li>
+					      </ul>
+					   </li>
+					   <li class="has-sub"><span class="submenu-button"></span><a href="#">行风监督</a>
+					      <ul>
+										<li>
+												<a href="/content?menuId=41">
+												行风建设
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=42">
+												廉文鉴读
+											</a>
+										</li>
+					      </ul>
+					   </li>
+					   <li class="has-sub"><span class="submenu-button"></span><a href="#">职工通道</a>
+					      <ul>
+										<li>
+												<a href="http://200.200.200.3/?menuCode=internal_oa">
+												内部OA
+											</a>
+										</li>
+										<li>
+												<a href="http://200.200.200.207:8080/yyky?menuCode=scientific_research_management">
+												科研管理
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=47">
+												内线电话
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=48">
+												标识下载
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=49">
+												图书馆
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=50">
+												文化论坛
+											</a>
+										</li>
+										<li>
+												<a href="http://admin.hasyy.cn?menuCode=admin_manage">
+												主页管理
+											</a>
+										</li>
+										<li>
+												<a href="http://dpt.hasyy.cn?menuCode=dpt_manage">
+												临床科室管理
+											</a>
+										</li>
+										<li>
+												<a href="http://expert.hasyy.cn?menuCode=expert_manage">
+												专家页面管理
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=93">
+												防范电信网络诈骗
+											</a>
+										</li>
+					      </ul>
+					   </li>
+		</ul>
+	</div>
+
+<!--  	<div class="htmleaf-container" >
+		<nav class="animenu">
+			<ul class="animenu__nav" style="width: 1200px;margin: 0 auto;">
+				<li id='wrap'>
+					<a href="/">首页</a>
+					<div class="xiantiao"></div>
+				</li>
+				
+						<li id='wrap'>
+							<a href="#">医院概况+</a>
+							<div class="xiantiao"></div>
+							<ul class="animenu__nav__child">
+										<li>
+												<a href="introduce?menuCode=hos_description">
+												医院简介
+											</a>
+										</li>
+										<li>
+												<a href="/introduce/hosLeader?menuCode=hos_leader">
+												医院领导
+											</a>
+										</li>
+										<li>
+												<a href="introduce?menuCode=hos_honor">
+												所获荣誉
+											</a>
+										</li>
+							</ul>
+						</li>
+						<li id='wrap'>
+							<a href="#">就诊指南+</a>
+							<div class="xiantiao"></div>
+							<ul class="animenu__nav__child">
+										<li>
+												<a href="https://hasdyrmyy.cn/hayy_pc/index.html?menuCode=yuyue">
+												预约挂号
+											</a>
+										</li>
+										<li>
+												<a href="introduce?menuCode=hos_work_time">
+												工作时间
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=91">
+												疫情防控
+											</a>
+										</li>
+										<li>
+												<a href="introduce?menuCode=hos_register">
+												挂号方式
+											</a>
+										</li>
+										<li>
+												<a href="introduce?menuCode=hos_visit_process">
+												就诊流程
+											</a>
+										</li>
+										<li>
+												<a href="/introduce/visitSchedule?menuCode=hos_visit">
+												出诊表
+											</a>
+										</li>
+										<li>
+												<a href="introduce?menuCode=hos_plan">
+												平面图
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=75">
+												医保指南
+											</a>
+										</li>
+										<li>
+												<a href="introduce?menuCode=hos_medical_record">
+												病案复印
+											</a>
+										</li>
+							</ul>
+						</li>
+						<li id='wrap'>
+							<a href="#">医疗护理+</a>
+							<div class="xiantiao"></div>
+							<ul class="animenu__nav__child">
+										<li>
+												<a href="/content?menuId=13">
+												专科建设
+											</a>
+										</li>
+										<li>
+												<a href="/dept?menuCode=dept">
+												科室介绍
+											</a>
+										</li>
+										<li>
+												<a href="/expert?menuCode=expert">
+												专家介绍
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=16">
+												护理园地
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=17">
+												健康科普
+											</a>
+										</li>
+										<li>
+												<a href="/dept/beautyCenter?menuCode=deptMedical">
+												体检中心
+											</a>
+										</li>
+										<li>
+												<a href="/dept/beautyCenter?menuCode=beautyCenter">
+												美容中心
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=20">
+												医患往来
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=89">
+												多学科诊疗
+											</a>
+										</li>
+							</ul>
+						</li>
+						<li id='wrap'>
+							<a href="#">新闻中心+</a>
+							<div class="xiantiao"></div>
+							<ul class="animenu__nav__child">
+										<li>
+												<a href="/content?menuId=22">
+												医院动态
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=23">
+												医学前沿
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=24">
+												党建信息
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=25">
+												医院文化
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=26">
+												慈善公益
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=27">
+												分院新闻
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=28">
+												院报
+											</a>
+										</li>
+							</ul>
+						</li>
+						<li id='wrap'>
+							<a href="#">教育培训+</a>
+							<div class="xiantiao"></div>
+							<ul class="animenu__nav__child">
+										<li>
+												<a href="/content?menuId=85">
+												培训教学
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=32">
+												科研工作
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=34">
+												临床试验
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=98">
+												模拟教育
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=96">
+												院校教育
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=95">
+												继续教育
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=94">
+												住培工作
+											</a>
+										</li>
+							</ul>
+						</li>
+						<li id='wrap'>
+							<a href="#">院务公开+</a>
+							<div class="xiantiao"></div>
+							<ul class="animenu__nav__child">
+										<li>
+												<a href="/content?menuId=36">
+												法规制度
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=37">
+												重要通知
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=38">
+												公开公示
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=39">
+												人才招聘
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=92">
+												财务信息
+											</a>
+										</li>
+							</ul>
+						</li>
+						<li id='wrap'>
+							<a href="#">行风监督+</a>
+							<div class="xiantiao"></div>
+							<ul class="animenu__nav__child">
+										<li>
+												<a href="/content?menuId=41">
+												行风建设
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=42">
+												廉文鉴读
+											</a>
+										</li>
+							</ul>
+						</li>
+						<li id='wrap'>
+							<a href="#">职工通道+</a>
+							<div class="xiantiao"></div>
+							<ul class="animenu__nav__child">
+										<li>
+												<a href="http://200.200.200.3/?menuCode=internal_oa">
+												内部OA
+											</a>
+										</li>
+										<li>
+												<a href="http://200.200.200.207:8080/yyky?menuCode=scientific_research_management">
+												科研管理
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=47">
+												内线电话
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=48">
+												标识下载
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=49">
+												图书馆
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=50">
+												文化论坛
+											</a>
+										</li>
+										<li>
+												<a href="http://admin.hasyy.cn?menuCode=admin_manage">
+												主页管理
+											</a>
+										</li>
+										<li>
+												<a href="http://dpt.hasyy.cn?menuCode=dpt_manage">
+												临床科室管理
+											</a>
+										</li>
+										<li>
+												<a href="http://expert.hasyy.cn?menuCode=expert_manage">
+												专家页面管理
+											</a>
+										</li>
+										<li>
+												<a href="/content?menuId=93">
+												防范电信网络诈骗
+											</a>
+										</li>
+							</ul>
+						</li>
+			</ul>
+		</nav>
+	</div>-->
+	<div class="container">
+		<div class="row" style="overflow:hidden;margin-top:30px">
+			<div class="col-md-12">
+				<div class="depttitle">
+					<div>
+						<div></div>
+						<b>医院简介</b>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" style="margin-bottom:30px">
+			<div class="col-xs-12 col-md-12 kuaijieanniu">
+				<a href="/">首页</a>
+				<a>医院简介</a>
+			</div>
+		</div>
+		<p class="MsoNormal" align="center" style="text-align:center;text-indent:2em;">
+	<strong>向省内一流水平、国内特色鲜明</strong><span></span> 
+</p>
+<p class="MsoNormal" align="center" style="text-align:center;text-indent:2em;">
+	<strong>长三角北部现代化医疗中心的目标奋勇前行</strong><span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:2em;">
+	<br>
+</p>
+<p class="MsoNormal" align="center" style="text-align:center;text-indent:2em;">
+	红色基因 使命担当<span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:2em;">
+	淮安市第一人民医院，又名南京医科大学附属淮安第一医院。前身为新四军的战地医院，据《新四军卫生工作简史》记载，<span>1943</span>年<span>12</span>月，新四军第三师第十旅第一支队卫生队，队长章少卿，是为医院最早记载。<span>1945</span>年抗日战争胜利后，在淮安区湖心寺成立的华中军区第一后方医院，卫生队组建成为有建制的医院。<span>1946</span>年，在宋庆龄女士的关心下，成立苏北国际和平医院。<span>1950</span>年在扬州何园成立苏北军区医院，<span>1951</span>年沿着大运河北上，回到淮安湖心寺，医院后更名江苏省第十康复医院<span>,</span>江苏省干部疗养院。<span>1958</span>年搬迁到现在的地址，淮阴区王家营，医院名称因时而变，先后成为淮阴医学专科学校附属医院，淮阴专区人民医院，淮阴地区人民医院，淮阴市第一人民医院。<span>1996</span>年<span>8</span>月宿迁市从淮阴市析出。<span>2000</span>年医院成为南京医科大学附属淮阴第一医院。<span>2001</span>年淮阴市更名淮安市，医院更名为淮安市第一人民医院。<span>2017</span>年<span>12</span>月<span>27</span>日，南京医科大学苏北临床医学研究院揭牌。建院<span>70</span>多年来，医院现已发展成为全市领先、技术力量雄厚的一所集医、教、研、防为一体的三级甲等综合医院，医疗服务范围辐射淮、连、盐、扬、宿等地区，是长三角北部地区重要的区域医疗中心。<span></span> 
+</p>
+<p class="MsoNormal" align="center" style="text-align:center;text-indent:2em;">
+	人才济济 全国领先<span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:2em;">
+	医院占地面积13.26万平方米，建筑总面积21.88万平方米。核定床位数2320张，开放床位3062张（本部）。拥有达芬奇手术机器人、PET-CT、陀螺刀、磁共振6台、CT9台、西门子飞龙DSA、碎石机等。资产总额37.8亿元。2024年门急诊（不含体检）人次210.65万人次，出院人次15.83万人次，三四级手术占比省目录：84.2%，手术7.64万台次。CMI值全国第63位，四级手术量位列全国三级综合医院第74位。 总院人数：3527人，其中，正高244人，副高407人，中级1067人；博士后18人，博士256人，硕士880人。博士生导师11人（郑东辉、杨晓钟、高勇、孙晓阳、徐克平、于亮、丁涟沭、田兆方、甄林林、王其龙、张红），硕士生导师253人。 拥有国务院特殊津贴７人，江苏省突出贡献专家７人，省“科教兴卫工程”医学重点人才2人，青年人才11人。入选省“333”工程人数 33人，省“双创博士”29人，六大人才高峰16人。省级各专业委员会委员、常委、副主委共326人，市级各专业委员会副主任委员以上113人。郑东辉书记任江苏省肾脏康复学会候任主任委员、江苏省医院协会血液净化中心分会主任委员、江苏省肾病专业质量控制中心副主任，于亮任江苏省医学会血液病分会副主任委员、林宁任江苏省医学会微生物与免疫学分会副主任委员、徐克平任江苏省医学会胸外科分会副主任委员、王书中任江苏省医学会核医学科分会副主任委员、丁涟沭任江苏省医学会医学科学研究分会副主任委员、陆卫平任江苏省医师协会糖尿病专业委员会副主任委员、张双越任江苏省口腔医学会口腔种植专业委员会主任委员、姜玉章是江苏省免疫学会第三届临床免疫检验专业委员会主任委员、潘文友曾任江苏省医学会免疫风湿科分会副主任委员 。<br>
+&nbsp; &nbsp; &nbsp;医院现有一级专科24个、二级专科33个，医技科室10个，护理单元70个。肿瘤学科是江苏省重点学科建设单位。省级临床重点专科24个：分别是血液科、普外科（包括肝胆胰外科、胃肠外科、甲状腺乳腺外科）、肿瘤内科、医学影像科、神经外科、心胸外科、内分泌科、神经内科、消化内科、医学检验科、耳鼻咽喉科、儿科、产科、风湿免疫科、泌尿外科、骨科、眼科、心血管内科、急诊医学科、重症医学科、心脏大血管外科、肾脏内科、妇科、呼吸与危重症医学科。中医科是江苏省示范中医科，医院是全国中医药建设先进单位。南京医科大学重点学科3个：血液科、肿瘤内科、神经外科。江苏省妇幼重点学科：新生儿科、妇科。市级临床重点专科21个，市级中医重点专科2个。 先后有15个学科跻身中国医院科技量值百强榜，分别是肾内科60名，血液科63名，急诊医学科69名,胸外科56名，重症医学科74名,免疫风湿科87名，消化科89名，心内科93名，泌尿外科94名，神经外科99名，烧伤科82名，护理学94名、儿科48名、耳鼻咽喉科90名、普通外科96名。有4个学科荣登5年总榜：胸外科学全省第7名、急诊医学全省第5名、耳鼻咽喉科学全省第6名、血液病学第9名。
+</p>
+<p class="MsoNormal" align="center" style="text-align:center;text-indent:2em;">
+	技术领先 放眼世界<span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:2em;">
+	<br>
+</p>
+<p class="MsoNormal" style="text-indent:28.0000pt;">
+	<span>医院先后成功建有</span><span>9</span><span>个国家级基地、科研平台，如国家级胸痛中心、国家脑防委高级卒中中心、全国微创与内镜培训基地，全国住院医师规范化培训基地等等。江苏省紧急医学救援中心，江苏省血液净化培训基地，产前诊断、生殖医学、孕产妇危重症救治、新生儿危重症救治、创伤、中毒诊断治疗均处于全省领先地位。 建成</span><span>13</span><span>个市级重点实验室，</span><span>30</span><span>个市级质控中心。是全市首家美国心脏协会心血管急救培训中心、全国首批罕见病诊疗协作网络医院。组建名医工作室</span><span>18</span><span>个、科研导师工作室</span><span>2</span><span>个。 建有多个海外培训基地，与瑞典卡罗林斯卡医学院、美国密歇根大学、哈佛大学、约翰霍普金斯大学、加拿大西安大略大学、以及日本、新加坡、意大利、德国、英国等国际一流医学院校交流密切，每年选送</span><span>20</span><span>多名医疗骨干出国境学习交流。《</span><span>Nature</span><span>》医疗机构科技影响力最好排名全国第</span><span>86</span><span>位。连续</span><span>14</span><span>年获得国自然项目立项，总数达</span><span>47</span><span>项。近五年获批江苏省科技厅项目</span><span>10</span><span>项、江苏省卫健委科研项目</span><span>24</span><span>项、国家博士后科研项目</span><span>1</span><span>项、江苏省博士后科研项目</span><span>4</span><span>项；获省</span><span>333</span><span>资助项目</span><span>13</span><span>项；省“六个一”科研资助项目</span><span>11</span><span>项。年均发表国内外高质量论文</span><span>400</span><span>余篇。食管癌治疗全国领先，原副院长陈小飞团队的研究被写入中国食管癌治疗指南，到瑞士世界食管癌大会演讲。王其龙博士的研究成果被国外著名杂志作为封面文章。血液科主任王春玲博士团队参加血液病治疗指南全国巡讲，张红博士内分泌研究在美国论坛发表演讲，徐靖博士睡眠研究在国际学术会议上交流。祁付珍、张喜文博士多次到省内外大型综合医院作手术演示。陶国全博士常规开展国内领先的胃肠外科手术直播。消化内科潘峰博士消化道肿瘤早期治疗及食管狭窄患者胃镜松解让患者得到收益、吴金声博士手术减重让众多胖友重新找回幸福人生、心脏外科徐志伟博士在主动脉夹层救治等领域成就显著……</span> 
+</p>
+<p>
+	<br>
+</p>
+<p class="MsoNormal" style="text-indent:2em;">
+	<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span> 
+</p>
+<p class="MsoNormal" align="center" style="text-align:center;text-indent:2em;">
+	大爱无疆 国际风采<span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:2em;">
+	<br>
+</p>
+<p class="MsoNormal" style="text-indent:28.0000pt;">
+	<span>我们精益求精。我们播撒关爱，多次参与援外医疗服务。孙士道医生援助苏丹，王景红赴毛里塔尼亚做随队医生，卞品高、姚盛来、李业宽、张明珠、林仙芝、陈登巨、张跃、许振平、朱国太、皮文等医生援助坦桑尼亚桑给巴尔。</span><span>2016</span><span>年陈连华等</span><span>10</span><span>名医疗队员援助圭亚那，</span><span>2024</span><span>年</span><span>9</span><span>月</span><span>20</span><span>日呼吸科陈炜博士作为中国第</span><span>34</span><span>期援助桑给巴尔医疗队队长再次奔赴坦桑尼亚，在国际医疗救援上书写大医精诚的绚丽篇章。援疆、援陕、卫生支农全部取得优异成绩。</span> 
+</p>
+<span></span> 
+<p>
+	<br>
+</p>
+<p class="MsoNormal" align="center" style="text-align:center;text-indent:2em;">
+	党建引领 文化建院<span></span> 
+</p>
+<p class="MsoNormal" style="text-indent:2em;">
+	<br>
+</p>
+<p class="MsoNormal" style="text-indent:28.0000pt;">
+	<span>好党风带来好院风。医院创新党支部基础工作质量评价体系，成为行业内典范。院党委延伸便民、惠民服务，开展</span><span>“服务零距离、爱传千万家”活动，让医务人员融入群众中去。全院</span><span>16</span><span>个党总支、</span><span>55</span><span>个党支部积极行动起来，一切以人民为中心，到人民中去、为人民服务。改善服务模式，建立运营管理团队、病区助理团队，精细化管理、人文化服务。完善医保服务中心，一站式提供政策咨询、转诊转院、异地就医等八大功能。创新“杏林春志愿者服务队”，“安安助老驿站”得到患者赞扬。深度融合“互联网</span><span>+</span><span>”理念，医院自助挂号、缴费人次已占门诊总人次</span><span>80%</span><span>以上。把患者安全放在第一位，高度重视医患沟通，率先在省内开展以病人为中心的多学科协同谈话告知模式，设立入院准备中心、按病种的医疗诊治中心。医院连续</span><span>13</span><span>年荣获淮安市公共服务行业政风行风评议先进单位，连续</span><span>6</span><span>年荣获全国改善医疗服务示范医院。全面深化党建与医疗中心工作相融合，近年来，医院先后荣获全国文明单位、全国卫生计生系统先进集体、全国改善医疗服务示范医院、全国青年文明号、全国医院文化建设先进单位、全国医患和谐医院等诸多荣誉。在国家卫健委公立医院建设典型经验推广活动中荣获“公立医院建设成就奖”。</span> 
+</p>
+<p class="MsoNormal" style="text-indent:35.0000pt;">
+	淮安市第一人民医院党委书记、博士生导师郑东辉表示：时代在召唤、人民在期望，在习近平新时代中国特色社会主义思想指引下，在市委市政府坚强领导下，我们将乘势而上，朝着省内技术一流、国内特色鲜明，长三角北部现代化区域医疗中心、全国一流的地市级三级甲等综合医院的目标奋勇前行，奋力谱写新时代淮安卫生事业更加绚丽的新篇章！
+</p>
+<p>
+	<br>
+</p>
+<p style="text-indent:2em;">
+	<br>
+</p>
+	</div>
+	
+<script type="text/javascript" src="/frame/jquery-plugins/qrcode/qrcode.min.js"></script>
+<div class="rightNavigation" style="line-height:25px;font-size:14px">
+	<div class="rightNavigationCel">
+		<div class="codeborder">
+			<div id="wxQrcode" title="https://www.hasyy.cn/introduce?menuCode=hos_description"><canvas width="116" height="116" style="display: none;"></canvas><img src="data:image/png;base64,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" style="display: block;"></div>
+			<div class="codeborderline"></div>
+			<a>分享至微信</a>
+			<div class="codesanjiaoxing"></div>
+		</div>
+		
+		<div class="rightNavigationBtn" id="wxshare">
+			<i class="iconfont icon-weixin"></i>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="rightNavigationCel" style="float:right">
+		<div class="rightNavigationBtn" onclick="shareTo('sina')" style="top:-60px">
+			<i class="iconfont icon-weibo"></i>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="rightNavigationCel">
+		<div class="rightNavigationUp" onclick="goUp()" style="top:-46px">
+		<i class="iconfont icon-xiangshang"></i>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(function(){
+		var qrcode = new QRCode('wxQrcode', {
+			  text: document.location.href,
+			  width: 116,
+			  height: 116,
+			  colorDark : '#000000',
+			  colorLight : '#ffffff',
+			  correctLevel : QRCode.CorrectLevel.H
+		});
+	});
+	function shareTo(stype){
+		if(stype == 'sina'){
+			window.open('http://v.t.sina.com.cn/share/share.php?url='+document.location.href+'&title='+$(document).attr("title"));
+		}
+	}
+	
+	$("#wxshare").mouseover(function(){
+		$(".codeborder").css('visibility','visible')
+	}).mouseout(function(){
+		$(".codeborder").css('visibility','hidden')
+	});
+	
+	if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+		$(".rightNavigation").css('display','none'); 
+	}
+</script><div class="clear"></div>
+<div class="container">
+	<footer>
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-4">
+				<p><b>联系信息：</b></p>
+				<p>门诊服务台：0517-84907287</p>
+				<p>预约挂号电话：84907166（白班）</p>
+				<p>行风投诉电话（工作日）：84907276</p>
+				<p>院长信箱：hayyyzxx@163.com</p>
+			</div>
+			<div class="col-md-4">
+				<p>&nbsp;</p>
+				<p>总值班(周一至周六非8小时工作日之外，周日24小时)：18752318196、84922766</p>
+				<p>院址：江苏省淮安市淮阴区黄河西路1号     邮编：223300</p>
+				<p><a onclick="window.open('https://beian.miit.gov.cn')" style="color:#00c9c9;cursor:pointer;">苏ICP备16004375号-1</a></p>
+				<p>版权所有 Copyright 淮安市第一人民医院</p>
+			</div>
+			<div class="col-md-2 friendshipLink">
+				<p id="footer-mobile" style="display: none;">&nbsp;</p>
+				<p><a><b>友情链接：</b></a></p>
+				<p><a onclick="window.open('http://www.njmu.edu.cn')">南京医科大学</a></p>
+				<p><a onclick="window.open('http://wjw.jiangsu.gov.cn')">江苏省卫健委</a></p>
+				<p><a onclick="window.open('http://wjw.huaian.gov.cn')">淮安市卫健委</a></p>
+				<p><a onclick="window.open('http://ylbzj.huaian.gov.cn')">淮安医保网(药品、诊疗目录查询)</a></p>
+			</div>
+		</div>
+	</footer>
+</div>
+<script>
+if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+
+} else {
+	$("#footer-mobile").css('display','none'); 
+}
+
+
+</script>
+
+	<script type="text/javascript" src="/resources/js/contentDetail.js"></script>
+	<script type="text/javascript" src="/resources/js/globalnavigation.js"></script> 
+	
+	<script src="/resources/js/script.js" type="text/javascript"></script>
+
+	
+
+
+
+
+</body></html>

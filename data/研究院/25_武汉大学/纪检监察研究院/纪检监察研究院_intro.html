@@ -1,0 +1,470 @@
+<!DOCTYPE html><html lang="zh-CN" style="font-size: 80px;"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=2.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>研究院简介-武汉大学纪检监察研究院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="研究院简介">
+<meta name="keywords" content="武汉大学纪检监察研究院,研究院简介">
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link type="text/css" rel="stylesheet" href="styles/base.css">
+  <link type="text/css" rel="stylesheet" href="styles/main.css">
+  <link type="text/css" rel="stylesheet" href="styles/swiper.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/mobile.css">
+  <script type="text/javascript" src="js/jquery_1.10.2_jquery.min.js"></script>
+  <script type="text/javascript" src="js/fontSize.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css">
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1081,'/about.jsp',-1,2119629109)</script>
+</head>
+
+<body class="listPage" style="">
+  <div class="jjjc-header-warp">
+    <div class="jjjc-contain-box">
+      <div class="jjjc-contain-padding">
+        <div class="clearfix">
+          <div class="jjjc-logo"> <a href="index.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1001"><img src="images/logo.png"></a></div>
+          <div class="jjjc-header-right-box">
+            <ul><li><a href="about.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1101">联系我们</a></li>
+<li><a href="#">微信公众号</a>
+<div class="wechat-box">
+    <img src="images/wx.png">
+</div>
+</li></ul>
+            <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;
+    }
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;
+    }
+</style>
+<div id="divu1">
+    <div id="appu1"><div><input type="text" placeholder="搜索" autocomplete="off" class="txt-input"> <input name="submit_button" type="button" value="搜索" class="search-btn"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+            <input type="text" class="txt-input" placeholder="搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="search-btn" name="submit_button" type="button" value="搜索" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "2119629109";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="jjjc-nav-box">
+      <div class="jjjc-contain-box">
+        <div class="jjjc-contain-padding"><ul class="jjjc-nav">
+            <li><a href="index.jsp">首页</a>
+            </li>
+            <li class="on"><a href="about.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1081">研究院概况</a>
+              <ul class="jjjc-suNnav">
+                <li><a href="about.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1081">研究院简介</a></li>
+                <li><a href="ld1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1091">研究院领导</a></li>
+                <li><a href="about.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1101">联系我们</a></li>
+              </ul>
+            </li>
+            <li><a href="sz.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1111">师资队伍</a>
+              <ul class="jjjc-suNnav">
+                <li><a href="sz.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1111">学科导师</a></li>
+                <li><a href="sz.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1121">双聘导师</a></li>
+                <li><a href="ld2.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1131">实务导师</a></li>
+              </ul>
+            </li>
+            <li><a href="list1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1141">人才培养</a>
+              <ul class="jjjc-suNnav">
+                <li><a href="list1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1141">教学培养</a></li>
+                <li><a href="list1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1151">招生工作</a></li>
+                <li><a href="list1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1161">实习实践</a></li>
+              </ul>
+            </li>
+            <li><a href="list2.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1171">学术研究</a>
+              <ul class="jjjc-suNnav">
+                <li><a href="list2.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1171">学术成果</a></li>
+                <li><a href="list2.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1181">学术活动</a></li>
+              </ul>
+            </li>
+            <li><a href="list1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1191">交流培训</a>
+              <ul class="jjjc-suNnav">
+                <li><a href="list1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1191">实务培训</a></li>
+                <li><a href="list1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1201">国内合作</a></li>
+                <li><a href="list1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1211">国际交流</a></li>
+              </ul>
+            </li>
+            <li><a href="list1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1061">学术刊物</a>
+            </li>
+            <li><a href="list1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1071">智能实验室</a>
+            </li>
+</ul></div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="navbar-toggle"> <span class="icon-bar icon-bar1"></span> <span class="icon-bar icon-bar2"></span> <span class="icon-bar icon-bar3"></span> </button>
+
+  <div class="jjjc-ny-banner">
+    <img src="images/ny-banner.png">
+  </div>
+
+  <div class="jjjc-bg-box">
+    <div class="jjjc-contain-box">
+      <div class="jjjc-contain-padding">
+        <div class="jjjc-ny-box">
+          <div class="jjjc-ny-left">
+            <div class="jjjc-ny-left-fixed">
+              <h3 class="jjjc-nav-name">
+研究院概况</h3>
+              <div class="jjjc-nav-list"><ul>
+                  
+<li class="on"><a href="about.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1081">研究院简介</a></li>
+                  
+<li><a href="ld1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1091">研究院领导</a></li>
+                  
+<li><a href="about.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1101">联系我们</a></li>
+                  
+</ul></div>
+            </div>
+          </div>
+          <div class="jjjc-ny-right">
+            <div class="jjjc-column-box">
+              <h3 class="jjjc-column-h3">
+研究院简介</h3>
+              <div class="jjjc-place"><i class="icon"></i>当前位置：
+                        <a href="index.jsp">首页</a>
+                /
+                <a href="about.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1081">研究院概况</a>
+                /
+                <a href="about.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1081">研究院简介</a>
+</div>
+            </div>
+            <div class="jjjc-ny-cont">
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',2119629109,'wbnews','u7')</script>
+<script>function seeContenta7(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',2119629109,1001)</script>
+<div id="vsb_content_1001_u71"><div id="vsb_content"><p style="text-indent: 2em;">武汉大学纪检监察研究院（以下简称“研究院”）成立于2024年12月，作为武汉大学实体性科研机构，挂靠法学院，依托“双一流”和“A+”学科——法学学科运行，与马克思主义理论、中共党史党建学、政治学等学科协同推进纪检监察学科建设。</p><p style="text-indent: 2em;">研究院具有雄厚的成立基础。武汉大学师生围绕新时代纪检监察理论与实践问题发表高质量论文130余篇，出版学术专著、教材、工具书多部，多次荣获教育部、湖北省重要表彰。此外，持续参加纪检监察法规制度建设的论证工作，完成多项重要课题项目，有关职务犯罪调查侦查衔接协调机制、部属高校纪检监察派出派驻体制机制等问题研究报告受到充分肯定。</p><p style="text-indent: 2em;">经向国务院学位委员会办公室备案，研究院先期在法学一级学科下设置监察法学二级学科，设置国家监察基础理论、国家监察法律制度和纪法贯通等研究方向。组建由学科导师、双聘导师和实务导师组成的“三支队伍”，首批遴选产生博士生导师3名、硕士生导师5名；经组织部门批准，聘任3名湖北省纪委监委机关副厅级业务专家为实务导师，开创先河。</p><p style="text-indent: 2em;">作为湖北首个实体化运行的纪检监察研究院，研究院的工作任务是聚焦学术研究、人才培养和资政建言，面向全面从严治党等重大战略需求，开展有组织科研、高标准教学、高质量培训，致力于建成纪检监察实务与学术交流的前沿高地，培养纪检监察专门人才和后备人才的重要阵地，服务纪检监察工作高质量发展的智库基地，争做全国纪检监察学科建设的示范平台。</p><p style="text-indent: 2em;">研究院将做强做优监察法学二级学科，并逐步带动其他二级学科建设，持续产出高质量教学和科研成果，提高人才培养质量，提升社会服务能力，举办反腐败国际学术交流活动，探索廉政风险防控与智能监察研究室建设，为武汉大学纪检监察学科发展奠定坚实基础，为完善党和国家监督体系贡献武大力量。</p><p style="text-indent: 0em; text-align: right;">（截至2025年5月）</p><p style="text-indent: 2em;"><br></p></div></div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="jjjc-footer-box">
+    <div class="jjjc-contain-box">
+      <div class="jjjc-contain-padding">
+        <h3 class="jjjc-title-link">快速通道</h3>
+        <ul class="jjjc-link-list"><script language="javascript" src="/system/resource/js/openlink.js"></script><li><a href="https://www.whu.edu.cn/" target="_blank">武汉大学</a></li>
+          
+<li><a href="https://law.whu.edu.cn/" target="_blank">武汉大学法学院</a></li>
+          
+<li><a href="https://golaw.whu.edu.cn/" target="_blank">武汉大学法学院研究生工作网</a></li>
+          
+<li><a href="https://gs.whu.edu.cn/" target="_blank">武汉大学研究生院</a></li>
+          
+</ul>
+        <ul class="jjjc-link-list"><li><a href="https://www.ccdi.gov.cn/" target="_blank">中央纪委国家监委</a></li>
+          
+<li><a href="https://zgjjjcxh.ccdi.gov.cn/" target="_blank">中国纪检监察协会</a></li>
+          
+<li><a href="https://www.hbjwjc.gov.cn/" target="_blank">湖北省纪委监委</a></li>
+          
+<li><a href="https://jjjc.whu.edu.cn/" target="_blank">武汉大学纪委、监察专员办</a></li>
+          
+</ul>
+        <ul class="jjjc-link-list"><li><a href="http://dis.ruc.edu.cn/" target="_blank">中国人民大学纪检监察学院</a></li>
+          
+<li><a href="https://www.thudis.tsinghua.edu.cn/yh/common/main/index" target="_blank">清华大学纪检监察研究院</a></li>
+          
+<li><a href="https://jjjcxy.cupl.edu.cn/" target="_blank">中国政法大学纪检监察学院</a></li>
+          
+<li><a href="https://jjjc.ecupl.edu.cn/" target="_blank">华东政法大学纪检监察学院</a></li>
+          
+<li><a href="https://als.swupl.edu.cn/index.htm#/" target="_blank">西南政法大学纪检监察学院</a></li>
+          
+</ul>
+        <!-- <div class="jjjc-copyRight">
+          地址：湖北省武汉市武昌区八一路 邮编：430072 电子邮箱：ygb@whu.edu.cn 版权所有：武汉大学复杂生命体代谢与调控全国重点实验室
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="jjjc-layer-box">
+    <ul class="jjjc-layer-nav">      <li><a href="index.jsp">首页</a>
+      </li>
+      <li><a href="about.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1081">研究院概况</a><strong>+</strong>
+        <ul class="jjjc-layer-suNnav">
+          <li><a href="about.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1081">研究院简介</a></li>
+          <li><a href="ld1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1091">研究院领导</a></li>
+          <li><a href="about.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1101">联系我们</a></li>
+        </ul>
+      </li>
+      <li><a href="sz.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1111">师资队伍</a><strong>+</strong>
+        <ul class="jjjc-layer-suNnav">
+          <li><a href="sz.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1111">学科导师</a></li>
+          <li><a href="sz.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1121">双聘导师</a></li>
+          <li><a href="ld2.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1131">实务导师</a></li>
+        </ul>
+      </li>
+      <li><a href="list1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1141">人才培养</a><strong>+</strong>
+        <ul class="jjjc-layer-suNnav">
+          <li><a href="list1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1141">教学培养</a></li>
+          <li><a href="list1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1151">招生工作</a></li>
+          <li><a href="list1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1161">实习实践</a></li>
+        </ul>
+      </li>
+      <li><a href="list2.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1171">学术研究</a><strong>+</strong>
+        <ul class="jjjc-layer-suNnav">
+          <li><a href="list2.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1171">学术成果</a></li>
+          <li><a href="list2.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1181">学术活动</a></li>
+        </ul>
+      </li>
+      <li><a href="list1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1191">交流培训</a><strong>+</strong>
+        <ul class="jjjc-layer-suNnav">
+          <li><a href="list1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1191">实务培训</a></li>
+          <li><a href="list1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1201">国内合作</a></li>
+          <li><a href="list1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1211">国际交流</a></li>
+        </ul>
+      </li>
+      <li><a href="list1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1061">学术刊物</a>
+      </li>
+      <li><a href="list1.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1071">智能实验室</a>
+      </li>
+</ul>
+    <div class="jjjc-layer-search">
+
+
+<style>
+    #appu12 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;
+    }
+    #appu12 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;
+    }
+</style>
+<div id="divu12">
+    <div id="appu12"><div><input type="text" placeholder="搜索" autocomplete="off" class="jjjc-layer-txt"> <input name="submit_button" type="button" value="搜索" class="jjjc-layer-btn"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu12">
+    <div id="appu12">
+        <div v-if="!isError">
+            <input type="text" class="jjjc-layer-txt" placeholder="搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="jjjc-layer-btn" name="submit_button" type="button" value="搜索" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu12").html($("#htmlu12").text());
+</script>
+<script>
+    var appOwner = "2119629109";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu12",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+  </div>
+  <script type="text/javascript" src="js/main.js"></script>
+
+
+
+</body></html>

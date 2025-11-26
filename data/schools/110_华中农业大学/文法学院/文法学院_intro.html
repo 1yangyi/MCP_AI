@@ -1,0 +1,436 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="always" name="referrer">
+<title>学院简介-华中农业大学 文法学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="华中农业大学 文法学院,学院简介">
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/media.css">
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f465553525742000400034351 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1013,'/dpzw.jsp',-1,1652923702)</script>
+</head>
+<body>
+<div class="top">
+    <div class="nav_bg"></div>
+    <div class="nav_icon2">
+        <img src="../img/nav_icon.png" alt="">
+    </div>
+    <div class="bg bg01"><img src="../img/bg_lb.png" alt=""></div>
+    <div class="bg bg02"><img src="../img/bg_wz.png" alt=""></div>
+    <div class="bg bg03"><img src="../img/bg_rb.png" alt=""></div>
+    <div class="areaheart">
+        <div class="logo f_left">
+            
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="文法学院"><img src="../img/logo.png" width="555" height="76" border="0" alt="文法学院" title="文法学院"></a>
+        </div>
+        <div class="logo_rgt search_box f_right">
+            <div class="top_link"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><ul>
+                    
+<li><a href="#" onclick="_addDynClicks(&quot;wburl&quot;, 1652923702, 61706)">· 设为首页</a></li>
+                    
+<li><a href="#" onclick="_addDynClicks(&quot;wburl&quot;, 1652923702, 61707)">· 加入收藏</a></li>
+                    
+</ul></div>
+            <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu2">
+    <div id="appu2"><div><input type="text" placeholder="请输入检索内容..." autocomplete="off" class="ipt_txt"> <input type="submit" class="ipt_sub"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+       
+<input type="text" class="ipt_txt" placeholder="请输入检索内容..." autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+ <input type="submit" class="ipt_sub"  v-on:click="onSubmit()">
+
+        
+        
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1652923702";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+        </div>
+        <div class="cb"></div>
+    </div>
+</div>
+<div class="nav areaheart" id="nav"><ul>
+        <li style="width: 11.1111%;"><a href="../index.htm">首页</a>  
+        </li>
+           
+        <li style="width: 11.1111%;"><a href="xyjj.htm">学院概况</a>  
+            <dl>
+                <dd>
+                    <a href="xyjj.htm">学院简介</a>
+                </dd>
+                <dd>
+                    <a href="xrld.htm">现任领导</a>
+                </dd>
+                <dd>
+                    <a href="jgsz.htm">机构设置</a>
+                </dd>
+                <dd>
+                    <a href="xbjj/shgzx.htm">系部简介</a>
+                </dd>
+                <dd>
+                    <a href="xyzd.htm">学院制度</a>
+                </dd>
+                <dd>
+                    <a href="rczp.htm">人才招聘</a>
+                </dd>
+            </dl>
+        </li>
+           
+        <li style="width: 11.1111%;"><a href="../szdw1.htm">师资队伍</a>  
+            <dl>
+                <dd>
+                    <a href="../szdw1/js1.htm">教授</a>
+                </dd>
+                <dd>
+                    <a href="../szdw1/fjs.htm">副教授</a>
+                </dd>
+                <dd>
+                    <a href="../szdw1/js11.htm">讲师</a>
+                </dd>
+            </dl>
+        </li>
+           
+        <li style="width: 11.1111%;"><a href="../xkjs/bkzy.htm">学科建设</a>  
+            <dl>
+                <dd>
+                    <a href="../xkjs/bkzy.htm">本科专业</a>
+                </dd>
+                <dd>
+                    <a href="../xkjs/ssdjs/xsxssxwd.htm">硕士点介绍</a>
+                </dd>
+            </dl>
+        </li>
+           
+        <li style="width: 11.1111%;"><a href="../kxyj/xsjg.htm">科学研究</a>  
+            <dl>
+                <dd>
+                    <a href="../kxyj/xsjg.htm">学术机构</a>
+                </dd>
+                <dd>
+                    <a href="../kxyj/kycg.htm">科研成果</a>
+                </dd>
+                <dd>
+                    <a href="../kxyj/xshd.htm">学术活动</a>
+                </dd>
+            </dl>
+        </li>
+           
+        <li style="width: 11.1111%;"><a href="../rcpy/bksjy.htm">人才培养</a>  
+            <dl>
+                <dd>
+                    <a href="../rcpy/bksjy.htm">本科生教育</a>
+                </dd>
+                <dd>
+                    <a href="../rcpy/yjsjy.htm">研究生教育</a>
+                </dd>
+                <dd>
+                    <a href="../rcpy/jpkc.htm">精品课程</a>
+                </dd>
+                <dd>
+                    <a href="../rcpy/zsjy/yjszs.htm">招生就业</a>
+                </dd>
+                <dd>
+                    <a href="../rcpy/xsgz/xshd.htm">学生工作</a>
+                </dd>
+                <dd>
+                    <a href="../rcpy/shpg/pjdt.htm">审核评估</a>
+                </dd>
+            </dl>
+        </li>
+           
+        <li style="width: 11.1111%;"><a href="../dqgz/ltxgz.htm">党群工作</a>  
+            <dl>
+                <dd>
+                    <a href="../dqgz/djgz/djgz.htm">党建工作</a>
+                </dd>
+                <dd>
+                    <a href="../dqgz/ghgz1/ghgk.htm">工会工作</a>
+                </dd>
+                <dd>
+                    <a href="../dqgz/ltxgz.htm">离退休工作</a>
+                </dd>
+            </dl>
+        </li>
+           
+        <li style="width: 11.1111%;"><a href="../hzjl/gjjl.htm">合作交流</a>  
+            <dl>
+                <dd>
+                    <a href="../hzjl/gjjl.htm">国际交流</a>
+                </dd>
+                <dd>
+                    <a href="../hzjl/shfw.htm">社会服务</a>
+                </dd>
+            </dl>
+        </li>
+           
+        <li style="width: 11.1111%;"><a href="../xygz/xyfc.htm">校友工作</a>  
+            <dl>
+                <dd>
+                    <a href="../xygz/xyfc.htm">校友风采</a>
+                </dd>
+                <dd>
+                    <a href="../xygz/xwzx.htm">新闻资讯</a>
+                </dd>
+            </dl>
+        </li>
+           
+</ul></div>
+
+<div class="banner_sm">    
+
+    <div class="" style="background: url(../img/banner_sm.png) no-repeat center;"></div>
+
+
+</div>
+
+
+<div class="main">
+    <div class="areaheart" style="position: relative;">
+        <div class="side_nav">
+            <h2>
+学院概况</h2>
+            <ul><li class="on"><a href="xyjj.htm">学院简介</a></li>
+                
+<li><a href="xrld.htm">现任领导</a></li>
+                
+<li><a href="jgsz.htm">机构设置</a></li>
+                
+<li><a href="xbjj/shgzx.htm">系部简介</a></li>
+                
+<li><a href="xyzd.htm">学院制度</a></li>
+                
+<li><a href="rczp.htm">人才招聘</a></li>
+                
+</ul>
+        </div>
+
+        <div class="side_cont">
+            <div class="place">
+                <h2>
+学院简介</h2>
+                <p><span>当前位置：</span>
+                    
+        <a href="../index.htm">首页</a>
+        &gt;
+
+        <a href="xyjj.htm">学院概况</a>
+        &gt;
+
+        <a href="xyjj.htm">学院简介</a>
+</p>
+            </div>
+            <div class="article">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1652923702,'wbnews','u9')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1652923702,7365)</script>
+<style>
+.article_in2 p{
+color: #666;
+    font-size: 16px;
+    line-height: 26px;}
+</style>
+<br>
+
+                <div class="article_in2">
+                    <div id="vsb_content_2_7365_u91"><div id="vsb_content_2"><p class="vsbcontent_start">文法学院的前身是1988年设立的社会科学系。1995年，以社会科学系为基础，合并原农经学院文秘系，组建了文法学院。</p><p>学院现有社会学系、社会工作系、法学系、广告与传播学系、艺术设计系、国学部等6个系（部），有社会学、社会工作、广告学、法学、视觉传达设计、数字媒体艺术等6个本科专业，2个国家一流本科专业建设点（社会学、社会工作），2个省级一流本科专业建设点（法学、广告学），1个省级一级重点学科（社会学）。设有社会学、法学、新闻传播学等3个一级学科硕士点，社会保障1个二级学科硕士点，社会工作硕士、农业硕士（农村发展）、法律硕士、新闻与传播等4个专业学位授权点，农村区域与发展、社会保障2个二级学科博士点，建有农村社会建设与管理研究中心、农村减贫与发展研究中心等7个科研机构，其中农村社会建设与管理研究中心是湖北省普通高等学校人文社会科学重点研究基地。</p><p>学院现有行政管理人员22人、专任教师83名，其中教授11人（博导5人）、副教授（副研究员）44人。有国家级人才2人，中央马克思主义理论研究与建设工程首席专家1人，中央马克思主义理论研究与建设工程主要成员3人，享受国务院政府特殊津贴1人，国家哲学社会科学基金社会学学科终审专家1人，教育部教学指导委员会委员1人，“教育部新世纪优秀人才”支持计划3人，湖北省教学名师1人，湖北省文化系统“五个一批”人才1人、湖北省宣传文化人才培养工程“七个一百”项目2人、湖北省“十佳师德标兵”1人、湖北省“青年英才开发计划”1人、湖北省政府特殊津贴专家1人，湖北省有突出贡献的中青年专家1人，武汉市“十百千人才工程”1人，武汉市黄鹤英才计划2人。</p><p>学院紧密结合国家和社会发展需求，凝练科研方向，逐步形成了以农村社会学、“三农”法制为特色的研究方向。近年来，学院共承担中央马克思主义理论研究和建设工程项目1项、教育部重大攻关项目1项、国家社会科学基金52项（其中重点项目7项），教育部新世纪人才项目3项，其他省部级项目104余项。出版专著49部，主编教材6部（其中马克思主义理论研究和建设工程重点教材1部）。发表CSSCI、SCI、SSCI收录文章411余篇（新华文摘、中国社会科学文摘、人大复印资料等转载或摘录110余篇），1篇研究报告获国家领导人批示，4篇研究报告获省部级领导批示。获得教育部高校人文社科研究优秀成果二等奖1项、三等奖2项、青年成果奖1项，湖北省社科成果一等奖2项、二等奖5项、三等奖4项，省优秀调研成果奖一等奖1项，二等奖1项，三等奖1项，武汉市社科成果一等奖5项。2个科研团队被评为湖北省高校优秀中青年科技创新团队，1个研究基地被评为湖北省人文社科重点研究基地。</p><p>学院将学科建设与社会服务相结合，师生长期扎根农村，专注服务农村发展。《教育部简报》、《农民日报》等专刊报道了社会学团队在社会服务与人才培养方面取得经验与先进事迹；2012年新建黄陂“阳光社会工作服务站”，该站得到了武汉市副市长的批示并先后获批为“教育部大学生创新创业基地”、“湖北省实习实训基地”、“湖北省研究生工作站”；2021年，<span style="text-indent: 28px;">学院实施“十县百村荆楚行”，选派农业硕士师生深入实践基地和固定观测点开展实践活动，相关事迹在央视农业农村频道播出。</span></p><p>学院不断深化教育教学改革，着力提升教学水平及人才培养质量。近年来，学院2个专业入选国家级一流本科专业建设点，2个专业入选省级一流本科专业建设点，1个专业被评为湖北省品牌专业，1个教学团队被评为国家级教学团队；获得省级教学成果一等奖2项，国家级精品课程4门，湖北省精品课程5门，国家视频公开课2门；承担了50余项各级教学改革课题，其中省级教学研究项目12项；学生在核心刊物上公开发表学术论文160余篇，本科生年度就业率一直保持在95%以上。</p><p class="vsbcontent_end" style="text-align: right;">（文中数据统计截止到2025年3月）</p></div></div>
+                </div>
+                <div class="cb"></div>
+</div>
+        </div>
+    </div>
+</div>
+<div class="foot">
+    <div class="areaheart">
+        <div class="foot_lf">
+            <div class="links"><div class="links_btn"></div>
+                <p>——  友情链接  ——</p>
+                <ul>
+                    
+<li><a href="#" target="_blank">中国农村社会学网</a></li>
+<li><a href="http://cpc.people.com.cn/" target="_blank">中国共产党新闻网</a></li>
+<li><a href="#" target="_blank">中国大学视频公开课</a></li>
+<li><a href="http://www.npopss-cn.gov.cn/" target="_blank">全国哲学社会科学规划...</a></li>
+<li><a href="https://www.zuel.edu.cn/" target="_blank">中南财经政法大学</a></li>
+<li><a href="http://www.hzau.edu.cn/" target="_blank">华中农业大学</a></li>
+</ul></div>
+            <div class="copy_right"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>
+    Copyright © 2011-2020 &nbsp;华中农业大学文法学院版权所有
+</p>
+<p>
+    地址：湖北省武汉市洪山区狮子山街一号华中农业大学人文社科楼
+</p>
+<p>
+    邮编：430070
+</p>
+<p>
+邮箱：wfxy@mail.hzau.edu.cn
+</p></div>
+        </div>
+        <div class="foot_mid">    <a href="../index.htm">
+            <img src="../img/logo_btm.png" height="133" width="255" alt="">
+</a>
+</div>
+        <div class="foot_rgt">    <ul>
+                
+<li>
+                    <div class="ewm_box" onclick="_addDynClicks(&quot;wbimage&quot;, 1652923702, 56237)">
+                        <img src="../img/ewm01.png" alt="">
+                    </div>
+                    <p>文法研究生</p>
+                </li>
+                
+<li>
+                    <div class="ewm_box" onclick="_addDynClicks(&quot;wbimage&quot;, 1652923702, 56238)">
+                        <img src="../img/ewm02.png" alt="">
+                    </div>
+                    <p>青春文法</p>
+                </li>
+                
+<li>
+                    <div class="ewm_box" onclick="_addDynClicks(&quot;wbimage&quot;, 1652923702, 56239)">
+                        <img src="../img/ewm03.png" alt="">
+                    </div>
+                    <p>武汉市阳光</p>
+                </li>
+                
+</ul></div>
+        <div class="cb"></div>
+    </div>
+</div>
+
+
+<script src="../js/gxjq.js"></script>
+<script src="../js/jquery-migrate.min.js"></script>
+<script src="../js/js.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

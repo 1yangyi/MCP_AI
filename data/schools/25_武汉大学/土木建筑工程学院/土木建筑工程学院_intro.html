@@ -1,0 +1,704 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios">
+    <title>学院简介-武汉大学土木建筑工程学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+
+
+<meta name="SiteName" content="武汉大学土木建筑工程学院">
+<meta name="SiteDomain" content="civ.whu.edu.cn">
+<meta name="ColumnName" content="学院简介">
+<meta name="ColumnKeywords" content="学院简介">
+
+    <link rel="stylesheet" href="../style/animate.min.css">
+    <link rel="stylesheet" href="../style/slick.css">
+    <link rel="stylesheet" href="../style/slick-theme.css">
+    <link rel="stylesheet" href="../style/public.css">
+    <link rel="stylesheet" href="../style/ny.css">
+
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../jjy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1012,'/jjy.jsp',-1,1780253546)</script>
+</head>
+
+<body>
+    <!-- pc 顶部 导航 -->
+    <div class="head pc">
+        <div class="head-top">
+            <div class="px1400">
+                <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="武汉大学土木建筑工程学院（新）">
+<img src="../images/logo.png" alt="">
+</a></div>
+                <div class="search">
+                    <div class="search-box">
+                        <div>
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+       width: 235px;
+    padding: 0 10px 0 0;
+    line-height: 46px;
+    height: 46px;
+    background: none;
+    color: #b8c8d9;
+    vertical-align: middle;
+    transition: all 0.3s;
+    font-size: 14px;}
+    #appu1 .tj{}
+</style>
+<div id="divu1">
+    <div id="appu1"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="qwss"> <input name="submit_button" type="button" value="提交" class="p-submit"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="p-submit" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1780253546";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="nav">
+<ul class="px1400">
+                <li class="">
+                    <a href="../index.htm" title="首页">首页</a>
+                </li>
+                <li class="active">
+                    <a href="../xygk.htm" title="学院概况">学院概况</a>
+                    <ul>
+ <li><a href="xyjj.htm" title="学院简介">学院简介</a></li>
+ <li><a href="jgsz.htm" title="机构设置">机构设置</a></li>
+ <li><a href="xkzy.htm" title="学科专业">学科专业</a></li>
+ <li><a href="xyld.htm" title="学院领导">学院领导</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="../szdw.htm" title="师资队伍">师资队伍</a>
+                    <ul>
+ <li><a href="../szdw/xzfc.htm" title="学者风采">学者风采</a></li>
+ <li><a href="../szdw/jsdw.htm" title="教师队伍">教师队伍</a></li>
+ <li><a href="../szdw/bshldz.htm" title="博士后流动站">博士后流动站</a></li>
+ <li><a href="../szdw/zpgg.htm" title="招聘公告">招聘公告</a></li>
+ <li><a href="../szdw/bszn.htm" title="办事指南">办事指南</a></li>
+ <li><a href="../szdw/rszd.htm" title="人事制度">人事制度</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="../kxyj1/kydt.htm" title="科学研究">科学研究</a>
+                    <ul>
+ <li><a href="../kxyj1/kydt.htm" title="科研动态">科研动态</a></li>
+ <li><a href="../kxyj1/kycg.htm" title="科研成果">科研成果</a></li>
+ <li><a href="../kxyj1/yjpt.htm" title="研究平台">研究平台</a></li>
+ <li><a href="../kxyj1/xsjl.htm" title="学术交流">学术交流</a></li>
+ <li><a href="../kxyj1/bszn.htm" title="办事指南">办事指南</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="../zsjiuy/zsxx.htm" title="招生就业">招生就业</a>
+                    <ul>
+ <li><a href="../zsjiuy/zsxx.htm" title="招生信息">招生信息</a></li>
+ <li><a href="../zsjiuy/jyxx.htm" title="就业信息">就业信息</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="../rcpy.htm" title="人才培养">人才培养</a>
+                    <ul>
+ <li><a href="../rcpy/bksjy.htm" title="本科生教育">本科生教育</a></li>
+ <li><a href="../rcpy/qrzyjsjy.htm" title="全日制研究生教育">全日制研究生教育</a></li>
+ <li><a href="../rcpy/fqrzyjsjy.htm" title="非全日制研究生教育">非全日制研究生教育</a></li>
+ <li><a href="../rcpy/bszn.htm" title="办事指南">办事指南</a></li>
+ <li><a href="../rcpy/jxjy.htm" title="继续教育">继续教育</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#" title="学生工作">学生工作</a>
+                    <ul>
+ <li><a href="../xsgz1/benkes/xgxw.htm" title="本科生">本科生</a></li>
+ <li><a href="../xsgz1/yjs1/tzgg.htm" title="研究生">研究生</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="../gjjl.htm" title="国际交流">国际交流</a>
+                    <ul>
+ <li><a href="../gjjl/tzgg.htm" title="通知公告">通知公告</a></li>
+ <li><a href="../gjjl/jlhz.htm" title="交流合作">交流合作</a></li>
+ <li><a href="../gjjl/bszn.htm" title="办事指南">办事指南</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="../dqgz.htm" title="党群工作">党群工作</a>
+                    <ul>
+ <li><a href="../dqgz/djgz.htm" title="党建工作">党建工作</a></li>
+ <li><a href="../dqgz/ghjdh.htm" title="工会教代会">工会教代会</a></li>
+ <li><a href="../dqgz/gqt.htm" title="共青团">共青团</a></li>
+ <li><a href="../dqgz/qnjslhh.htm" title="青年教师联合会">青年教师联合会</a></li>
+ <li><a href="../dqgz/ltx.htm" title="离退休">离退休</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="../gxpt.htm" title="共享平台">共享平台</a>
+                    <ul>
+ <li><a href="../gxpt/yqpt.htm" title="仪器平台">仪器平台</a></li>
+ <li><a href="../gxpt/gzzd.htm" title="规章制度">规章制度</a></li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="#" title="信息公开">信息公开</a>
+                    <ul>
+ <li><a href="../xygk.htm" title="学院概况">学院概况</a></li>
+ <li><a href="../szdw.htm" title="师资队伍">师资队伍</a></li>
+ <li><a href="../kxyj.htm" title="科学研究">科学研究</a></li>
+ <li><a href="#" title="招生就业">招生就业</a></li>
+ <li><a href="../rcpy.htm" title="人才培养">人才培养</a></li>
+ <li><a href="../xsgz1/benkes/xgxw.htm" title="学生工作">学生工作</a></li>
+ <li><a href="../gjjl.htm" title="国际交流">国际交流</a></li>
+ <li><a href="../dqgz.htm" title="党群工作">党群工作</a></li>
+ <li><a href="../gxpt.htm" title="共享平台">共享平台</a></li>
+                    </ul>
+                </li>
+                <div class="clear"></div>
+            </ul>
+</div>
+    </div>
+    <!-- 移动端导航 -->
+    <div class="top">
+        <div class="wap wap-menu">
+            <img src="../images/menu.png" class="menu" alt="">
+            <img src="../images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+    <div class="wap m-head">
+        <div class="m-logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="武汉大学土木建筑工程学院（新）">
+<img src="../images/logo.png" alt="">
+</a></div>
+        <div class="m-nav">
+            <div class="m-search">
+
+
+<style>
+    #appu4 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu4 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu4">
+    <div id="appu4"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="qwss"> <input name="submit_button" type="button" value="提交" class="tj"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu4">
+    <div id="appu4">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu4").html($("#htmlu4").text());
+</script>
+<script>
+    var appOwner = "1780253546";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu4",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+            <ul class="">
+                <li>
+                    <a href="../index.htm" title="首页">首页</a>
+
+                </li>
+
+                <li>
+                    <a href="../xygk.htm" title="学院概况">学院概况</a>
+                    <span></span>
+                    <ul>
+<li><a href="xyjj.htm" title="学院简介">学院简介</a></li>
+<li><a href="jgsz.htm" title="机构设置">机构设置</a></li>
+<li><a href="xkzy.htm" title="学科专业">学科专业</a></li>
+<li><a href="xyld.htm" title="学院领导">学院领导</a></li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="../szdw.htm" title="师资队伍">师资队伍</a>
+                    <span></span>
+                    <ul>
+<li><a href="../szdw/xzfc.htm" title="学者风采">学者风采</a></li>
+<li><a href="../szdw/jsdw.htm" title="教师队伍">教师队伍</a></li>
+<li><a href="../szdw/bshldz.htm" title="博士后流动站">博士后流动站</a></li>
+<li><a href="../szdw/zpgg.htm" title="招聘公告">招聘公告</a></li>
+<li><a href="../szdw/bszn.htm" title="办事指南">办事指南</a></li>
+<li><a href="../szdw/rszd.htm" title="人事制度">人事制度</a></li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="../kxyj1/kydt.htm" title="科学研究">科学研究</a>
+                    <span></span>
+                    <ul>
+<li><a href="../kxyj1/kydt.htm" title="科研动态">科研动态</a></li>
+<li><a href="../kxyj1/kycg.htm" title="科研成果">科研成果</a></li>
+<li><a href="../kxyj1/yjpt.htm" title="研究平台">研究平台</a></li>
+<li><a href="../kxyj1/xsjl.htm" title="学术交流">学术交流</a></li>
+<li><a href="../kxyj1/bszn.htm" title="办事指南">办事指南</a></li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="../zsjiuy/zsxx.htm" title="招生就业">招生就业</a>
+                    <span></span>
+                    <ul>
+<li><a href="../zsjiuy/zsxx.htm" title="招生信息">招生信息</a></li>
+<li><a href="../zsjiuy/jyxx.htm" title="就业信息">就业信息</a></li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="../rcpy.htm" title="人才培养">人才培养</a>
+                    <span></span>
+                    <ul>
+<li><a href="../rcpy/bksjy.htm" title="本科生教育">本科生教育</a></li>
+<li><a href="../rcpy/qrzyjsjy.htm" title="全日制研究生教育">全日制研究生教育</a></li>
+<li><a href="../rcpy/fqrzyjsjy.htm" title="非全日制研究生教育">非全日制研究生教育</a></li>
+<li><a href="../rcpy/bszn.htm" title="办事指南">办事指南</a></li>
+<li><a href="../rcpy/jxjy.htm" title="继续教育">继续教育</a></li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="#" title="学生工作">学生工作</a>
+                    <span></span>
+                    <ul>
+<li><a href="../xsgz1/benkes/xgxw.htm" title="本科生">本科生</a></li>
+<li><a href="../xsgz1/yjs1/tzgg.htm" title="研究生">研究生</a></li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="../gjjl.htm" title="国际交流">国际交流</a>
+                    <span></span>
+                    <ul>
+<li><a href="../gjjl/tzgg.htm" title="通知公告">通知公告</a></li>
+<li><a href="../gjjl/jlhz.htm" title="交流合作">交流合作</a></li>
+<li><a href="../gjjl/bszn.htm" title="办事指南">办事指南</a></li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="../dqgz.htm" title="党群工作">党群工作</a>
+                    <span></span>
+                    <ul>
+<li><a href="../dqgz/djgz.htm" title="党建工作">党建工作</a></li>
+<li><a href="../dqgz/ghjdh.htm" title="工会教代会">工会教代会</a></li>
+<li><a href="../dqgz/gqt.htm" title="共青团">共青团</a></li>
+<li><a href="../dqgz/qnjslhh.htm" title="青年教师联合会">青年教师联合会</a></li>
+<li><a href="../dqgz/ltx.htm" title="离退休">离退休</a></li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="../gxpt.htm" title="共享平台">共享平台</a>
+                    <span></span>
+                    <ul>
+<li><a href="../gxpt/yqpt.htm" title="仪器平台">仪器平台</a></li>
+<li><a href="../gxpt/gzzd.htm" title="规章制度">规章制度</a></li>
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="#" title="信息公开">信息公开</a>
+                    <span></span>
+                    <ul>
+<li><a href="../xygk.htm" title="学院概况">学院概况</a></li>
+<li><a href="../szdw.htm" title="师资队伍">师资队伍</a></li>
+<li><a href="../kxyj.htm" title="科学研究">科学研究</a></li>
+<li><a href="#" title="招生就业">招生就业</a></li>
+<li><a href="../rcpy.htm" title="人才培养">人才培养</a></li>
+<li><a href="../xsgz1/benkes/xgxw.htm" title="学生工作">学生工作</a></li>
+<li><a href="../gjjl.htm" title="国际交流">国际交流</a></li>
+<li><a href="../dqgz.htm" title="党群工作">党群工作</a></li>
+<li><a href="../gxpt.htm" title="共享平台">共享平台</a></li>
+                    </ul>
+
+                </li>
+</ul>
+        </div>
+    </div>
+
+
+    <div class="position px1400">
+        <h3>
+学院简介</h3>
+         <img src="../images/position.png" alt=""> 
+                <a href="../index.htm">首页</a>
+                <span>&gt;</span>
+                <a href="../xygk.htm">学院概况</a>
+                <span>&gt;</span>
+                <a href="xyjj.htm">学院简介</a>
+
+    </div>
+
+
+    <div class="nymain px1400">
+    
+        <div class="ny-menu">
+            <p>
+学院概况<span></span></p>
+            <ul><!--二级-->
+<li class="on">
+    <a href="xyjj.htm" title="学院简介">学院简介</a>
+<!--三级-->    
+
+</li>
+<li class="">
+    <a href="jgsz.htm" title="机构设置">机构设置</a>
+<!--三级-->    
+<span></span>
+                    <ul>
+                        <li class="">
+                            <a href="jgsz/xzjg.htm" title="行政机构">行政机构</a>
+<!--四级-->
+ 
+                        </li>
+                        <li class="">
+                            <a href="jgsz/xsjg.htm" title="学术机构">学术机构</a>
+<!--四级-->
+ 
+                        </li>
+                        <li class="">
+                            <a href="jgsz/tmgcx.htm" title="土木工程系（筹）">土木工程系（筹）</a>
+<!--四级-->
+ 
+                        </li>
+                        <li class="">
+                            <a href="jgsz/szgcx.htm" title="市政工程系">市政工程系</a>
+<!--四级-->
+ 
+                        </li>
+                        <li class="">
+                            <a href="jgsz/gclxx.htm" title="工程力学系">工程力学系</a>
+<!--四级-->
+ 
+                        </li>
+                        <li class="">
+                            <a href="jgsz/syzx.htm" title="实验中心">实验中心</a>
+<!--四级-->
+ 
+                        </li>
+                    </ul>
+
+</li>
+<li class="">
+    <a href="xkzy.htm" title="学科专业">学科专业</a>
+<!--三级-->    
+<span></span>
+                    <ul>
+                        <li class="">
+                            <a href="xkzy/xksz.htm" title="学科设置">学科设置</a>
+<!--四级-->
+ 
+                        </li>
+                        <li class="">
+                            <a href="xkzy/zysz.htm" title="专业设置">专业设置</a>
+<!--四级-->
+ 
+                        </li>
+                    </ul>
+
+</li>
+<li class="">
+    <a href="xyld.htm" title="学院领导">学院领导</a>
+<!--三级-->    
+<span></span>
+                    <ul>
+                        <li class="">
+                            <a href="xyld/xrld.htm" title="现任领导">现任领导</a>
+<!--四级-->
+ 
+                        </li>
+                    </ul>
+
+</li>
+</ul>
+        </div>
+        <div class="art-main">
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1780253546,'wbnews','u10')</script>
+<script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1780253546,1036)</script>
+
+    <div class="art-body wow fadeInUpd animated animated" style="visibility: visible;"><div id="vsb_content_1036_u101"><div id="vsb_content"><p style="text-align: justify; text-indent: 2em; line-height: 2em;"><span style="font-size: 16px;">土木建筑工程学院于2000年8月新武汉大学组建后，由原武汉水利电力大学土木与建筑学院、原武汉测绘科技大学城市建设学院的相关学科组建而成。原武汉水利电力大学土木与建筑学院源于1928年国立武汉大学工学院的土木系。1952年，全国高等院校院系调整时，土木系从武汉大学调整到中南土建学院，其中土力学、建筑力学、钢筋混凝土等教研室并入武汉大学水利学院，1954年成建制并入武汉水利学院水利土壤改良系和水利施工系；1984年6月武汉水利电力学院成立建筑工程系；1996年建筑工程系更名为建筑工程学院；1998年土力学、结构力学、材料力学和弹性力学四个教研室调整到建筑工程学院，并更名为土木与建筑学院。原武汉测绘学院1984年成立工业与民用建筑筹建办公室，挂靠工程测量系；1990年成立建筑工程系，与工程测量系合署办公；1992年建筑工程系从工程测量系分离出来，独立建制运行；1993年建筑工程系与城市规划中心(1985年成立)合并，组建城市建设学院。</span></p><p style="text-align: justify; text-indent: 2em; line-height: 2em;"><span style="font-size: 16px;">学院设有土木工程、给排水科学与工程、工程力学、智能建造4个本科专业。土木工程专业获批国家级一流本科专业建设点，是国家第一类特色专业、国家“卓越工程师教育培养计划”和综合改革试点专业，2017年以6年有效期在国内首批通过国际工程教育专业认证，2023年完成复评；给排水科学与工程专业获批国家级一流本科专业建设点，2019年以6年有效期通过国际工程教育专业认证，2025年完成复评；工程力学专业获批国家级一流本科专业建设点；智能建造专业为新工科专业。</span></p><p style="text-align: justify; text-indent: 2em; line-height: 2em;"><span style="font-size: 16px;">学院拥有土木工程、力学2个一级学科，其中，土木工程为国家“双一流”建设学科，拥有土木工程一级学科博士学位授权点和土木水利专业学位工程博士授权点，涵盖岩土工程、结构工程、防灾减灾工程及防护工程、市政工程4个二级学科博士点；力学为湖北省一级学科重点学科，拥有力学一级学科博士学位授权点，涵盖固体力学、工程力学2个二级学科博士点。学院拥有8个二级学科硕士学位授权点和2个专业硕士学位授权点。</span></p><p style="text-align: justify; text-indent: 2em; line-height: 2em;"><span style="font-size: 16px;">学院现有专任教师128人，其中教授50人、特聘研究员2人，副教授53人、特聘副研究员12人，讲师11人。有双聘院士2人，国家级高层次人才7人，国家级青年人才20人，“973计划”项目首席科学家1人，教育部新世纪优秀人才1人，教育部创新团队1个、湖北省自然科学基金创新研究群体2个、国家精品资源共享课程教学团队1个，湖北省精品资源共享课程教学团队2个。</span></p><p style="text-align: justify; text-indent: 2em; line-height: 2em;"><span style="font-size: 16px;">学院实验室总面积超过8000平方米，包括岩土工程试验大厅、土木结构试验大厅、风洞实验室、复杂介质多尺度力学实验中心等，拥有以微纳米力学测试系统为主的国际最先进设备、大型岩体工程物理模拟试验系统、岩体结构物理模型3D打印系统、三轴压缩-直剪复合试验机、分离式霍普金森压杆试验系统（SHPB）、粗粒土大三轴试验机、土动三轴试验机、土真三轴试验机、30000kN结构压剪试验系统、MTS 311.41混凝土构件试验系统、结构试验反力墙、振动台、拟静(动)力实验设备、疲劳试验机等仪器设备、核磁共振波谱仪、隧道超前预报系统、扫描式电子显微镜等。</span></p><p style="text-align: justify; text-indent: 2em; line-height: 2em;"><span style="font-size: 16px;">学院近年来取得了一批教学科研成果。获得国家级教学成果奖二等奖、湖北省优秀教学成果奖特等奖、一等奖，建成国家精品资源共享课程《混凝土结构与砌体结构》，国家级一流本科课程《土力学》、《混凝土结构基本原理》，湖北省精品资源共享课程《混凝土结构与砌体结构》，湖北省精品课程《理论力学》，湖北省一流本科课程《建筑给水排水工程》；“土木工程专业核心课程教学团队”获湖北高校省级教学团队；出版教材80余部；获武汉大学-中铁十一局集团有限公司国家级工程实践教育中心，湖北省人民政府授予的武汉大学-中铁大桥局集团有限公司湖北高校省级示范实习实训基地和武汉大学-中国建筑第三工程局有限公司湖北高校省级实习实训基地；近十年来，作为依托单位承担国家“973”、“863”和基金重点等国家级重大重点项目20项，国家自然科学基金项目200余项；获国家科技进步二等奖3项，省部级特等奖和一等奖25项，省部级以上科技成果奖共43项。</span></p><p style="text-align: justify; text-indent: 2em; line-height: 2em;"><span style="font-size: 16px;">学院创新国际化培养模式，大力推动与世界知名高校的合作交流。先后与美国、英国、法国、澳大利亚、香港和台湾等国家和地区的有关大学和科研机构建立了学术交流与合作关系，每年互派学者专家访问、讲学，开展合作研究。与英国曼彻斯特大学、诺丁汉大学联合培养本科生和研究生，与澳大利亚科廷大学联合培养本科生，与英国邓迪大学联合实施“3+1+1”本硕连读项目和“2+2”联合培养项目，与德国亚琛工业大学联合实施“4+2”联合培养项目，与香港城市大学联合培养博士研究生、与香港理工大学联合开展本硕贯通培养项目。每年支持博士研究生参加高水平国际学术会议并宣读论文。</span></p><p><br></p></div></div></div>
+
+    <span id="vsb_content_1036_u10" name="vsb_content_1036_u10"></span><br><br>
+    
+
+</div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-c px1400">
+            <script language="javascript" src="/system/resource/js/openlink.js"></script><div class="links">
+<ul class="slick-initialized slick-slider"><button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<div aria-live="polite" class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 4674px; transform: translate3d(-1230px, 0px, 0px);" role="listbox"><li class="slick-slide slick-cloned" style="width: 246px;" data-slick-index="-5" aria-hidden="true" tabindex="-1"><a href="http://yjs.whu.edu.cn/ssfw/login.jsp" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1780253546, 74654)" tabindex="-1">武汉大学研究生管理系统</a></li><li class="slick-slide slick-cloned" style="width: 246px;" data-slick-index="-4" aria-hidden="true" tabindex="-1"><a href="http://kjt.hubei.gov.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1780253546, 74655)" tabindex="-1">湖北省科学技术厅</a></li><li class="slick-slide slick-cloned" style="width: 246px;" data-slick-index="-3" aria-hidden="true" tabindex="-1"><a href="http://kfy.whu.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1780253546, 74656)" tabindex="-1">武汉大学科学技术发展研究院</a></li><li class="slick-slide slick-cloned" style="width: 246px;" data-slick-index="-2" aria-hidden="true" tabindex="-1"><a href="http://www.wuj.whu.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1780253546, 74657)" tabindex="-1">武汉大学科技期刊中心</a></li><li class="slick-slide slick-cloned" style="width: 246px;" data-slick-index="-1" aria-hidden="true" tabindex="-1"><a href="http://libguides.lib.whu.edu.cn/civil" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1780253546, 74658)" tabindex="-1">土木建筑工程学科服务平台</a></li><li class="slick-slide slick-current slick-active" style="width: 246px;" data-slick-index="0" aria-hidden="false" tabindex="-1" role="option"><a href="http://202.114.109.88/civoa/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1780253546, 74941)" tabindex="0">学院综合信息管理系统</a></li><li class="slick-slide slick-active" style="width: 246px;" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option"><a href="http://www.whu.edu.cn" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1780253546, 74652)" tabindex="0">武汉大学</a></li><li class="slick-slide slick-active" style="width: 246px;" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option"><a href="http://xsjy.whu.edu.cn/jyxt/jyweb/webIndex.zf" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1780253546, 74653)" tabindex="0">武汉大学就业指导中心</a></li><li class="slick-slide slick-active" style="width: 246px;" data-slick-index="3" aria-hidden="false" tabindex="-1" role="option"><a href="https://jwgl.whu.edu.cn" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1780253546, 74939)" tabindex="0">武汉大学本科教务系统</a></li><li class="slick-slide slick-active" style="width: 246px;" data-slick-index="4" aria-hidden="false" tabindex="-1" role="option"><a href="http://yjs.whu.edu.cn/ssfw/login.jsp" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1780253546, 74654)" tabindex="0">武汉大学研究生管理系统</a></li><li class="slick-slide" style="width: 246px;" data-slick-index="5" aria-hidden="true" tabindex="-1" role="option"><a href="http://kjt.hubei.gov.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1780253546, 74655)" tabindex="-1">湖北省科学技术厅</a></li><li class="slick-slide" style="width: 246px;" data-slick-index="6" aria-hidden="true" tabindex="-1" role="option"><a href="http://kfy.whu.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1780253546, 74656)" tabindex="-1">武汉大学科学技术发展研究院</a></li><li class="slick-slide" style="width: 246px;" data-slick-index="7" aria-hidden="true" tabindex="-1" role="option"><a href="http://www.wuj.whu.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1780253546, 74657)" tabindex="-1">武汉大学科技期刊中心</a></li><li class="slick-slide" style="width: 246px;" data-slick-index="8" aria-hidden="true" tabindex="-1" role="option"><a href="http://libguides.lib.whu.edu.cn/civil" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1780253546, 74658)" tabindex="-1">土木建筑工程学科服务平台</a></li><li class="slick-slide slick-cloned" style="width: 246px;" data-slick-index="9" aria-hidden="true" tabindex="-1"><a href="http://202.114.109.88/civoa/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1780253546, 74941)" tabindex="-1">学院综合信息管理系统</a></li><li class="slick-slide slick-cloned" style="width: 246px;" data-slick-index="10" aria-hidden="true" tabindex="-1"><a href="http://www.whu.edu.cn" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1780253546, 74652)" tabindex="-1">武汉大学</a></li><li class="slick-slide slick-cloned" style="width: 246px;" data-slick-index="11" aria-hidden="true" tabindex="-1"><a href="http://xsjy.whu.edu.cn/jyxt/jyweb/webIndex.zf" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1780253546, 74653)" tabindex="-1">武汉大学就业指导中心</a></li><li class="slick-slide slick-cloned" style="width: 246px;" data-slick-index="12" aria-hidden="true" tabindex="-1"><a href="https://jwgl.whu.edu.cn" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1780253546, 74939)" tabindex="-1">武汉大学本科教务系统</a></li><li class="slick-slide slick-cloned" style="width: 246px;" data-slick-index="13" aria-hidden="true" tabindex="-1"><a href="http://yjs.whu.edu.cn/ssfw/login.jsp" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1780253546, 74654)" tabindex="-1">武汉大学研究生管理系统</a></li></div></div><button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button></ul>
+</div>
+            <div class="foot-m">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="武汉大学土木建筑工程学院（新）">
+<img src="../images/logo.png" alt="">
+</a></div>
+            <div class="foot-r">    <ul>
+                    <li>
+ <img src="../images/f-wechat.png" alt="">
+  
+   
+                        <div><img src="../images/erwem.jpg" alt=""></div>
+                    </li>
+                    <li>
+ 
+  <img src="../images/f-qq.png" alt="">
+   
+                        <div><img src="../images/code-wb.png" alt=""></div>
+                    </li>
+                    <li>
+ 
+  
+   <img src="../images/f-weibo.png" alt="">
+                        <div><img src="../images/code-wb.png" alt=""></div>
+                    </li>
+<div class="clear"></div>
+</ul></div>
+            <div class="clear"></div>
+        </div>
+        <div class="foot-bq"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>武汉大学土木建筑工程学院 版权所有</p>
+            <p>地址：武汉市武昌区东湖南路8号 邮编：430072</p></div>
+    </div>
+        <script src="../js/jquery.js"></script>
+    <script src="../js/slick.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/public.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

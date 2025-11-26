@@ -1,0 +1,748 @@
+<!DOCTYPE html><html class=" js no-touch cssanimations csstransitions"><head>
+        <title>学院简介-未来技术学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="未来技术学院,学院简介">
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="renderer" content="webkit">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <meta name="referrer" content="always">
+        <link rel="stylesheet" href="../css/style.css">
+        <link href="../css/lanrenzhijia.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/media.css">
+        <link rel="stylesheet" href="../css/component.css">
+    <!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475250545742000400004f55 -->
+<link rel="stylesheet" type="text/css" href="../dp.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1003,'/dp.jsp',-1,1779732544)</script>
+</head>
+    <body>
+        <!--头部-->
+        <div class="top toplist">
+            <div class="">
+               <div class="loss">
+                 <div class="center">
+                    <div class="logo">
+                        
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="未来技术学院"><img src="../img/logowljsxy.png" width="283" height="82" border="0" alt="未来技术学院" title="未来技术学院"></a>
+                    </div>
+                    <div class="ss">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu1">
+    <div id="appu1"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="qwss inp"> <input name="submit_button" type="button" class="tj btn"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+            <input type="text" class="qwss inp" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj btn" name="submit_button" type="button"  v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1779732544";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                </div>  </div>
+
+                <!-- 手机导航 -->
+                <div class="demo-2">
+                    <div class="main clearfix" style="width: 100%;">
+                        <div>
+                            <div id="dl-menu" class="dl-menuwrapper">
+                                <button>Open Menu</button>
+                                <ul class="dl-menu">
+                                    
+                          
+                            <li>
+                                <a href="../index.htm" target="_parent">首页</a>
+
+                                <ul class="dl-submenu">
+                                    <li class="dl-back"><a href="#" target="_blank">返回</a></li>
+
+                                    <li><a href="../index/xyxw.htm" target="_parent">学院新闻</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../index/tzgg.htm" target="_parent">通知公告</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../index/wljsqylt.htm" target="_parent">未来技术前沿论坛</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../index/hyqk.htm" target="_parent">会议期刊</a>
+                                    
+                                    </li>
+                                </ul>
+                            </li>                           
+                        
+
+
+                          
+                            <li>
+                                <a href="xyjj.htm" target="_parent">学院概况</a>
+
+                                <ul class="dl-submenu">
+                                    <li class="dl-back"><a href="#" target="_blank">返回</a></li>
+
+                                    <li><a href="xyjj.htm" target="_parent">学院简介</a>
+                                    
+                                    </li>
+
+                                    <li><a href="xyld.htm" target="_parent">学院领导</a>
+                                    
+                                    </li>
+
+                                    <li><a href="zzjg.htm" target="_parent">组织架构</a>
+                                    
+                                    </li>
+
+                                    <li><a href="xybs.htm" target="_parent">学院标识</a>
+                                    
+                                    </li>
+
+                                    <li><a href="yzjy.htm" target="_parent">院长寄语</a>
+                                    
+                                    </li>
+
+                                    <li><a href="lxwm.htm" target="_parent">联系我们</a>
+                                    
+                                    </li>
+                                </ul>
+                            </li>                           
+                        
+
+
+                          
+                            <li>
+                                <a href="../szdw/szgk.htm" target="_parent">师资队伍</a>
+
+                                <ul class="dl-submenu">
+                                    <li class="dl-back"><a href="#" target="_blank">返回</a></li>
+
+                                    <li><a href="../szdw/szgk.htm" target="_parent">师资概况</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../szdw/gwtd.htm" target="_parent">顾问团队</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../szdw/sxkxj.htm" target="_parent">首席科学家</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../szdw/tuandds.htm" target="_parent">团队导师</a>
+                                    
+                                    </li>
+                                </ul>
+                            </li>                           
+                        
+
+
+                          
+                            <li>
+                                <a href="../bkspy/swtz.htm" target="_parent">本科生培养</a>
+
+                                <ul class="dl-submenu">
+                                    <li class="dl-back"><a href="#" target="_blank">返回</a></li>
+
+                                    <li><a href="../bkspy/swtz.htm" target="_parent">事务通知</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../bkspy/zsxx.htm" target="_parent">招生信息</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../bkspy/sjcx.htm" target="_parent">实践创新</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../bkspy/zyjs.htm" target="_parent">专业介绍</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../bkspy/dstd.htm" target="_parent">导师团队</a>
+                                    
+                                    </li>
+                                </ul>
+                            </li>                           
+                        
+
+
+                          
+                            <li>
+                                <a href="../yjspy/swtz.htm" target="_parent">研究生培养</a>
+
+                                <ul class="dl-submenu">
+                                    <li class="dl-back"><a href="#" target="_blank">返回</a></li>
+
+                                    <li><a href="../yjspy/swtz.htm" target="_parent">事务通知</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../yjspy/zsxx.htm" target="_parent">招生信息</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../yjspy/zyjs.htm" target="_parent">专业介绍</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../yjspy/pyfa.htm" target="_parent">培养方案</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../yjspy/dsdw.htm" target="_parent">导师队伍</a>
+                                    
+                                    </li>
+                                </ul>
+                            </li>                           
+                        
+
+
+                          
+                            <li>
+                                <a href="../kxyj/yjfx.htm" target="_parent">科学研究</a>
+
+                                <ul class="dl-submenu">
+                                    <li class="dl-back"><a href="#" target="_blank">返回</a></li>
+
+                                    <li><a href="../kxyj/yjfx.htm" target="_parent">研究方向</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../kxyj/yjtd.htm" target="_parent">研究团队</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../kxyj/yjjz.htm" target="_parent">研究进展</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../kxyj/cxjh.htm" target="_parent">猜想计划</a>
+                                    
+                                    </li>
+                                </ul>
+                            </li>                           
+                        
+
+
+                          
+                            <li>
+                                <a href="../dwjl/xsjl.htm" target="_parent">对外交流</a>
+
+                                <ul class="dl-submenu">
+                                    <li class="dl-back"><a href="#" target="_blank">返回</a></li>
+
+                                    <li><a href="../dwjl/xsjl.htm" target="_parent">学术交流</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../dwjl/cgfx.htm" target="_parent">出国访学</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../dwjl/lhpy.htm" target="_parent">联合培养</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../dwjl/hzyj.htm" target="_parent">合作研究</a>
+                                    
+                                    </li>
+                                </ul>
+                            </li>                           
+                        
+
+
+                          
+                            <li>
+                                <a href="../xsgz/tzgg.htm" target="_parent">学生工作</a>
+
+                                <ul class="dl-submenu">
+                                    <li class="dl-back"><a href="#" target="_blank">返回</a></li>
+
+                                    <li><a href="../xsgz/tzgg.htm" target="_parent">通知公告</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../xsgz/dtjs.htm" target="_parent">党团建设</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../xsgz/xstd.htm" target="_parent">学生天地</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../xsgz/xszz.htm" target="_parent">学生组织</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../xsgz/cxcy.htm" target="_parent">创新创业</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../xsgz/xzfc.htm" target="_parent">学子风采</a>
+                                    
+                                    </li>
+                                </ul>
+                            </li>                           
+                        
+
+
+                          
+                            <li>
+                                <a href="../rgznyjy/xkgk.htm" target="_parent">人工智能研究院</a>
+
+                                <ul class="dl-submenu">
+                                    <li class="dl-back"><a href="#" target="_blank">返回</a></li>
+
+                                    <li><a href="../rgznyjy/xkgk.htm" target="_parent">学科概况</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../rgznyjy/ptjs.htm" target="_parent">平台建设</a>
+                                    
+                                    </li>
+                                </ul>
+                            </li>                           
+                        
+
+
+                          
+                            <li>
+                                <a href="../xzzq.htm" target="_parent">下载专区</a>
+
+                                <ul class="dl-submenu">
+                                    <li class="dl-back"><a href="#" target="_blank">返回</a></li>
+
+                                    <li><a href="../xzzq/bkspy.htm" target="_parent">本科生培养</a>
+                                    
+                                    </li>
+
+                                    <li><a href="../xzzq/yjspy.htm" target="_parent">研究生培养</a>
+                                    
+                                    </li>
+                                </ul>
+                            </li>                           
+                        
+
+
+                                </ul>
+                            </div>
+                            <!-- /dl-menuwrapper -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+                <!--导航-->
+                <div class="nav" id="nav">
+                    <div class="center">
+                        <ul>
+                                                        
+
+                            <li class="">
+                                <a href="../index.htm" title="首页">首页</a>
+
+                            </li>
+                            
+
+                            <li class="">
+                                <a href="xyjj.htm" title="学院概况">学院概况</a>
+                                <dl class="subNav">
+                                    <dd>
+
+                                        <a href="xyjj.htm">学院简介</a>
+
+                                        <a href="xyld.htm">学院领导</a>
+
+                                        <a href="zzjg.htm">组织架构</a>
+
+                                        <a href="xybs.htm">学院标识</a>
+
+                                        <a href="yzjy.htm">院长寄语</a>
+
+                                        <a href="lxwm.htm">联系我们</a>
+                                    </dd>
+                                </dl>
+                            </li>
+                            
+
+                            <li class="">
+                                <a href="../szdw/szgk.htm" title="师资队伍">师资队伍</a>
+                                <dl class="subNav">
+                                    <dd>
+
+                                        <a href="../szdw/szgk.htm">师资概况</a>
+
+                                        <a href="../szdw/gwtd.htm">顾问团队</a>
+
+                                        <a href="../szdw/sxkxj.htm">首席科学家</a>
+
+                                        <a href="../szdw/tuandds.htm">团队导师</a>
+                                    </dd>
+                                </dl>
+                            </li>
+                            
+
+                            <li class="">
+                                <a href="../bkspy/swtz.htm" title="本科生培养">本科生培养</a>
+                                <dl class="subNav">
+                                    <dd>
+
+                                        <a href="../bkspy/swtz.htm">事务通知</a>
+
+                                        <a href="../bkspy/zsxx.htm">招生信息</a>
+
+                                        <a href="../bkspy/sjcx.htm">实践创新</a>
+
+                                        <a href="../bkspy/zyjs.htm">专业介绍</a>
+
+                                        <a href="../bkspy/dstd.htm">导师团队</a>
+                                    </dd>
+                                </dl>
+                            </li>
+                            
+
+                            <li class="">
+                                <a href="../yjspy/swtz.htm" title="研究生培养">研究生培养</a>
+                                <dl class="subNav">
+                                    <dd>
+
+                                        <a href="../yjspy/swtz.htm">事务通知</a>
+
+                                        <a href="../yjspy/zsxx.htm">招生信息</a>
+
+                                        <a href="../yjspy/zyjs.htm">专业介绍</a>
+
+                                        <a href="../yjspy/pyfa.htm">培养方案</a>
+
+                                        <a href="../yjspy/dsdw.htm">导师队伍</a>
+                                    </dd>
+                                </dl>
+                            </li>
+                            
+
+                            <li class="">
+                                <a href="../kxyj/yjfx.htm" title="科学研究">科学研究</a>
+                                <dl class="subNav">
+                                    <dd>
+
+                                        <a href="../kxyj/yjfx.htm">研究方向</a>
+
+                                        <a href="../kxyj/yjtd.htm">研究团队</a>
+
+                                        <a href="../kxyj/yjjz.htm">研究进展</a>
+
+                                        <a href="../kxyj/cxjh.htm">猜想计划</a>
+                                    </dd>
+                                </dl>
+                            </li>
+                            
+
+                            <li class="">
+                                <a href="../dwjl/xsjl.htm" title="对外交流">对外交流</a>
+                                <dl class="subNav">
+                                    <dd>
+
+                                        <a href="../dwjl/xsjl.htm">学术交流</a>
+
+                                        <a href="../dwjl/cgfx.htm">出国访学</a>
+
+                                        <a href="../dwjl/lhpy.htm">联合培养</a>
+
+                                        <a href="../dwjl/hzyj.htm">合作研究</a>
+                                    </dd>
+                                </dl>
+                            </li>
+                            
+
+                            <li class="">
+                                <a href="../xsgz/tzgg.htm" title="学生工作">学生工作</a>
+                                <dl class="subNav">
+                                    <dd>
+
+                                        <a href="../xsgz/tzgg.htm">通知公告</a>
+
+                                        <a href="../xsgz/dtjs.htm">党团建设</a>
+
+                                        <a href="../xsgz/xstd.htm">学生天地</a>
+
+                                        <a href="../xsgz/xszz.htm">学生组织</a>
+
+                                        <a href="../xsgz/cxcy.htm">创新创业</a>
+
+                                        <a href="../xsgz/xzfc.htm">学子风采</a>
+                                    </dd>
+                                </dl>
+                            </li>
+                            
+
+                            <li class="">
+                                <a href="../rgznyjy/xkgk.htm" title="人工智能研究院">人工智能研究院</a>
+                                <dl class="subNav">
+                                    <dd>
+
+                                        <a href="../rgznyjy/xkgk.htm">学科概况</a>
+
+                                        <a href="../rgznyjy/ptjs.htm">平台建设</a>
+                                    </dd>
+                                </dl>
+                            </li>
+                            
+
+                            <li class="">
+                                <a href="../xzzq.htm" title="下载专区">下载专区</a>
+                                <dl class="subNav">
+                                    <dd>
+
+                                        <a href="../xzzq/bkspy.htm">本科生培养</a>
+
+                                        <a href="../xzzq/yjspy.htm">研究生培养</a>
+                                    </dd>
+                                </dl>
+                            </li>
+                            
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 列表页 -->
+        <div class="listcon">
+            <div class="center">
+                <div class="conleft" style="height: 1008px;">
+                    <div class="yj">
+                        
+学院概况
+                    </div>
+                    <ul class="dh">
+                        <li class="active">
+                            <a href="xyjj.htm" title="学院简介">学院简介</a>
+                        </li>
+                        
+<li>
+                            <a href="xyld.htm" title="学院领导">学院领导</a>
+                        </li>
+                        
+<li>
+                            <a href="zzjg.htm" title="组织架构">组织架构</a>
+                        </li>
+                        
+<li>
+                            <a href="xybs.htm" title="学院标识">学院标识</a>
+                        </li>
+                        
+<li>
+                            <a href="yzjy.htm" title="院长寄语">院长寄语</a>
+                        </li>
+                        
+<li>
+                            <a href="lxwm.htm" title="联系我们">联系我们</a>
+                        </li>
+                        
+
+                    </ul>
+                </div>
+                <div class="conright">
+                    <div class="comtop">
+                        <div class="title">
+                            <div class="zm">
+                                S
+                            </div>
+                            <div class="wz">
+                                <div>
+                                    
+学院简介
+                                </div><span>
+                                    <span class="titlestyle1018829">School profile</span></span>
+                            </div>
+                            <div class="hx"><img src="../img/lm-bg.png"></div>
+                        </div>
+
+                        <div class="dq">
+                            当前位置：
+        <a href="../index.htm">首页</a>
+
+        <span class="posSplit">&nbsp;&gt;&nbsp;</span>
+        <a href="xyjj.htm">学院概况</a>
+
+        <span class="posSplit">&nbsp;&gt;&nbsp;</span>
+        <a href="xyjj.htm">学院简介</a>
+
+                        </div>
+                    </div>
+                    <div>
+
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1779732544,'wbnews','u10')</script>
+<script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1779732544,1292)</script>
+<p>
+    </p><div id="vsb_content_1292_u101"><div id="vsb_content"><p style="margin-left: 32px; text-indent: 37px; line-height: 2em;"><span style="font-size: 16px; font-family: &quot;times new roman&quot;;">中国地质大学未来技术学院成立于2021年10月12日。这是学校面向国家高水平人才培养机制变革的需求，通过人工智能、<span style="font-family: &quot;times new roman&quot;; font-size: 16px; text-indent: 37px;">新一代</span>信息技术与地球科学深度融合，探索资源与环境领域多学科交叉创新模式和技术领军人才培养新范式的重大举措。</span></p>
+<p style="margin-left: 32px; text-indent: 37px; line-height: 2em;"><span style="font-size: 16px; font-family: &quot;times new roman&quot;;">学院面向资源能源探测和生态文明建设重大需求，针对资源环境领域“卡脖子”问题，以未来地球探测和生态健康技术发展为重点，推动地球探测和生态健康技术发生颠覆性突破，抢占未来技术制高点。</span></p>
+<p style="margin-left: 32px; text-indent: 37px; line-height: 2em;"><span style="font-size: 16px; font-family: &quot;times new roman&quot;;">学院秉承品德高尚、基础厚实、专业精深、知行合一的育人宗旨。以人工智能、新一代信息技术与地球科学深度融合的前沿技术创新为驱动，培养具有多学科知识背景，掌握先进信息化、智能化技术工具，具备创新创业能力，能够预见和把握资源利用、生态环境及智能制造领域未来技术发展、“敢闯会闯”的复合型高素质人才。</span></p>
+<p style="margin-left: 32px; text-indent: 37px; line-height: 2em;"><span style="font-size: 16px; font-family: &quot;times new roman&quot;;">根据建设方案，学院每年招生本科生60余人、硕士研究生60<span style="font-family: &quot;times new roman&quot;; font-size: 16px; text-indent: 37px;">余</span>人、博士<span style="font-family: &quot;times new roman&quot;; font-size: 16px; text-indent: 37px;">研究生</span>20<span style="font-family: &quot;times new roman&quot;; font-size: 16px; text-indent: 37px;">余</span>人，最终学生总规模将达到600人左右。2021年10月，未来技术学院招收首届本科生60人。2022年，<span style="font-family: &quot;times new roman&quot;; font-size: 16px; text-indent: 37px;">学院招收本科生60人，招收</span>首批多学科硕士研究生55人、博士研究生15人。</span></p>
+<p style="margin-left: 32px; text-indent: 37px; line-height: 2em;"><span style="font-size: 16px; font-family: &quot;times new roman&quot;;">学院以“电子信息类（未来技术学院）”大类招生，培养专业涵盖计算机科学与技术、自动化、机械设计制造及其自动化、地质学、地质工程、资源勘查工程、地球物理学、海洋科学、地理信息科学、环境工程等10个国家级一流本科专业。同时，学院负责管理“人工智能与地球探测”和“地学大数据”2个交叉学科学位点的建设。</span></p>
+<p style="margin-left: 32px; text-indent: 37px; line-height: 2em;"><span style="font-size: 16px; font-family: &quot;times new roman&quot;;">学院汇聚学校最优质的教学资源，组建一流的师资队伍。邀请赵鹏大、殷鸿福、金振民、郝芳、成秋明等院士，以及外国科学院院士担任导师团队顾问。聘任王焰新院士、谢树成院士，以及一批长江学者、国家杰青和知名学者担任首席科学家。汇聚学校地质学、地质资源与地质工程、自动化、计算机等领域的高水平智力资源，组建16支跨学科导师团队，导师总数86人。</span></p>
+<p style="margin-left: 32px; text-indent: 37px; line-height: 2em;"><span style="font-size: 16px; font-family: &quot;times new roman&quot;;">学院形成了一套完整的科教融合、产教融合和国际化的新型育人模式。在组建校内高水平师资团队的同时，聘请国家资源环境行业和国内人工智能、信息技术的行业领军人才，组建产学研导师团队。聘请国际知名教授，组建国外高水平导师队伍，面向本科生、研究生开设国际化特色课程，实现学生国际交流全覆盖。推行“本硕博”贯通培养模式和全面学分制。强调以科学研究为驱动，试行以研代学，设立“探索与猜想计划”，实现科研项目资助学生全覆盖。建设校企协同创新机制，成立产教融合企业联盟，构建产学研用深度融合的实践教学模式。鼓励学生深入企业一线，助推科研成果转化，组织学生科研团队参加“互联网+”“挑战杯”“创青春”等大学生创新创业竞赛。</span></p>
+<p style="margin-left: 32px; text-indent: 37px; line-height: 2em;"><span style="font-size: 16px; font-family: &quot;times new roman&quot;;">在学校的牵引下，浙江中控科技集团、腾讯公司等单位签订了全面建设合作协议，产学融合联合共建未来技术学院。</span></p>
+<p><br></p></div></div>
+    <span id="vsb_content_1292_u10" name="vsb_content_1292_u10"></span><br><br>
+    
+<p></p>
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <!-- bq -->
+        <div class="bq">
+            <div class="center">
+                <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>中国地质大学 未来技术学院 版权所有<br>地址：湖北省武汉市鲁磨路 388号 邮编：430074</p>
+            </div>
+        </div>
+    
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <!-- baner -->
+    <script language="javascript" src="../js/lunbo1.js"></script>
+    <script language="javascript" src="../js/lunbo2.js"></script>
+    <script src="../js/responsiveslides.min.js"></script>
+    <!-- 手机导航 -->
+    <script type="text/javascript" src="../js/modernizr.custom.js"></script>
+    <script src="../js/dlmenu.js"></script>
+    <script>
+        $(function() {
+            $('#dl-menu').dlmenu({
+                animationClasses: { in: 'dl-animate-in-2',
+                    out: 'dl-animate-out-2'
+                }
+            });
+        });
+    </script>
+    <script>
+        $("#slider4").responsiveSlides({
+            auto: true,
+            pager: true,
+            nav: true,
+            speed: 500,
+            namespace: "callbacks",
+            before: function() {
+                $('.events').append("<li>before event fired.</li>");
+            },
+            after: function() {
+                $('.events').append("<li>after event fired.</li>");
+            }
+        });
+    </script>
+<script>
+        function layout(){
+          var h = $(".listcon").height();
+          $(".bg").height( h + 280);
+          if ( !$("conleft").hasClass("set") ){
+              $(".conleft").height( $(".conright").height());
+          }
+          var scrollWidth = document.body.scrollWidth;
+          if ( $(window).width() <1920 ){
+             $(".bg").width( scrollWidth - 90);
+             $(".pageFooter").width( scrollWidth - 90);
+          }
+        }
+        layout();
+        window.onload = function(){
+             layout();
+        }
+    
+    </script>
+
+
+</body></html>

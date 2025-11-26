@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+	<title>学院介绍-东北师范大学体育学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院介绍">
+<meta name="keywords" content="东北师范大学体育学院, 学院介绍">
+
+	<meta charset="UTF-8">
+	
+	<meta name="description" content="东北师范大学体育学院">
+	<link rel="stylesheet" href="../new/css/reset.css" class="skin-color">
+	<link rel="stylesheet" href="../new/css/header.css" class="skin-color">	
+	<link rel="stylesheet" href="../new/css/cont.css" class="skin-color">		
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307668465750545742000400054754 -->
+<link rel="stylesheet" type="text/css" href="../new/jjy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1098,'/new/jjy.jsp',-1,1461878303)</script>
+</head>
+<body>
+<div class="header">
+	<div class="margin-auto">
+		
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a class="logo" href="../index.htm"><img src="../new/img/logo22.png"></a>
+		<div class="sch">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu1">
+    <div id="appu1"><div><div><input type="text" placeholder="请输入关键字" autocomplete="off" class="text"> <input type="button" class="btn"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+        <div>
+                <input type="text" class="text" placeholder="请输入关键字" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                <input type="button" class="btn" v-on:click="onSubmit()">
+            </div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1461878303";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+		<script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><a class="english" href="#">English</a>
+<span>|</span>
+<a class="old" href="#">怀念旧版</a>
+
+	</div>
+</div>
+<ul class="nav"><li>
+     <a href="xyjs.htm" class="current">学院概况</a>
+	<ul class="subnav">
+	   <li><a href="xyjs.htm">学院介绍</a></li>
+	   <li><a href="xyld/xrld.htm">学院领导</a></li>
+	   <li><a href="xyjg/jxkyjg.htm">学院机构</a></li>
+	</ul>
+</li>
+<li>
+     <a href="../sztd/zrjs/js.htm">师资团队</a>
+	<ul class="subnav">
+	   <li><a href="../sztd/zrjs/js.htm">专任教师</a></li>
+	   <li><a href="../sztd/wpjs/bssds.htm">外聘教师</a></li>
+	</ul>
+</li>
+<li>
+     <a href="../jyjx/bksjx.htm">教育教学</a>
+	<ul class="subnav">
+	   <li><a href="../jyjx/bksjx.htm">本科生教学</a></li>
+	   <li><a href="../jyjx/yjsjx.htm">研究生教学</a></li>
+	   <li><a href="../jyjx/jxjy.htm">继续教育</a></li>
+	   <li><a href="../jyjx/jsjx.htm">军事教学</a></li>
+	   <li><a href="../jyjx/ggtyjx.htm">公共体育教学</a></li>
+	</ul>
+</li>
+<li>
+     <a href="../xkjs/zdxk.htm">学科建设</a>
+	<ul class="subnav">
+	   <li><a href="../xkjs/zdxk.htm">重点学科</a></li>
+	   <li><a href="../xkjs/zdyjjd.htm">重点研究基地</a></li>
+	   <li><a href="../xkjs/bshldz.htm">博士后流动站</a></li>
+	   <li><a href="../xkjs/bsd.htm">博士点</a></li>
+	   <li><a href="../xkjs/ssd.htm">硕士点</a></li>
+	   <li><a href="../xkjs/bkzy.htm">本科专业</a></li>
+	</ul>
+</li>
+<li>
+     <a href="../kxyj/kyxm.htm">科学研究</a>
+	<ul class="subnav">
+	   <li><a href="../kxyj/kyxm.htm">科研项目</a></li>
+	   <li><a href="../kxyj/cbzz.htm">出版专著</a></li>
+	   <li><a href="../kxyj/lwcg.htm">论文成果</a></li>
+	   <li><a href="../kxyj/jxkyjl.htm">教学科研奖励</a></li>
+	</ul>
+</li>
+<li>
+     <a href="../dqgz1/dqgz.htm">党群工作</a>
+	<ul class="subnav">
+	   <li><a href="../dqgz1/dqgz.htm">党群工作</a></li>
+	   <li><a href="../dqgz1/sdsf.htm">师德师风</a></li>
+	</ul>
+</li>
+<li>
+     <a href="../xsgz/xytw.htm">学生工作</a>
+	<ul class="subnav">
+	   <li><a href="../xsgz/xytw.htm">学院团委</a></li>
+	   <li><a href="../xsgz/glzd.htm">管理制度</a></li>
+	   <li><a href="../xsgz/xljkjy.htm">心理健康教育</a></li>
+	   <li><a href="../xsgz/zzgz.htm">资助工作</a></li>
+	   <li><a href="http://www.dsjyw.net/">就业信息</a></li>
+	</ul>
+</li>
+<li>
+     <a href="../zszp/zsxx.htm">招生招聘</a>
+	<ul class="subnav">
+	   <li><a href="../zszp/zsxx.htm">招生信息</a></li>
+	   <li><a href="../zszp/zpxx.htm">招聘信息</a></li>
+	</ul>
+</li>
+<li>
+     <a href="../jlhz.htm">交流合作</a>
+</li>
+<li>
+     <a href="../xyyd/zzjg.htm">校友园地</a>
+	<ul class="subnav">
+	   <li><a href="../xyyd/zzjg.htm">组织机构</a></li>
+	   <li><a href="../xyyd/xyhzc.htm">校友会章程</a></li>
+	   <li><a href="../xyyd/xyml.htm">校友名录</a></li>
+	   <li><a href="../xyyd/jzmx.htm">捐赠母校</a></li>
+	   <li><a href="../xyyd/lxwm.htm">联系我们</a></li>
+	</ul>
+</li>
+<li>
+     <a href="../xzzx.htm">下载中心</a>
+</li>
+<li>
+     <a href="../yezq/sswwzq.htm">幼儿足球</a>
+	<ul class="subnav">
+	   <li><a href="../yezq/sswwzq.htm">三岁娃娃足球</a></li>
+	   <li><a href="../yezq/sswwzq1.htm">四岁娃娃足球</a></li>
+	   <li><a href="../yezq/wswwzq.htm">五岁娃娃足球</a></li>
+	</ul>
+</li>
+</ul>
+<div class="banner-sed margin-auto">
+	    <img src="../new/img/b-list.jpg" width="1076" height="244"> 
+
+	<ul class="b-nav">
+		<h1>
+学院概况</h1>
+		    <li>
+	<a href="xyjs.htm" class="special">学院介绍</a>
+    </li>
+    <li>
+	<a href="xyld/xrld.htm">学院领导</a>
+    </li>
+    <li>
+	<a href="xyjg/jxkyjg.htm">学院机构</a>
+    </li>
+
+	</ul>
+	<div class="clearfix"></div>
+</div>
+<!--banner-end-->
+<div class="main">
+	<div class="pos"><h1>
+<a href="../index.htm">首页</a>
+&gt;
+<a href="xyjs.htm">学院概况</a>
+&gt;
+<a href="xyjs.htm">学院介绍</a>
+</h1></div>
+	<div class="content">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1461878303,'wbnews','u8')</script>
+<script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1461878303,4810)</script>
+<p>
+    <span style="font-weight:bold;border-bottom:3px solid #a40000;font-size:16px;margin-bottom:30px;line-height:10px;padding-bottom:3px;">学院简介</span>
+<br>
+<br>    
+<br>
+    </p><div id="vsb_content_4810_u81"><div id="vsb_content"><p><span style="font-size: 18px;">　　东北师范大学体育学院创建于1948年6月，是新中国成立前夕最早建立的专门培养体育师资的体育系科，1994年撤系建院。曾有王迪光、杨钟秀、刘长春、杨瑞雪、程国庆、林笑峰等几十位在全国享有盛名的教授执教，其中杨钟秀、程国庆、林笑峰等教授曾担任国务院学位委员会学科评议组成员。杨瑞雪教授曾担任1-4届全运会团体操总指挥，受到邓小平同志的亲切接见。经过70余年的发展建设，东北师范大学体育学院创造性提出了“身心兼修、魂魄并铸”的教育理念，走出了一条“理想信念坚定、运动技术规范、教学技能扎实、理论基础深厚”的人才培养特色之路，被誉为“人民体育教师的摇篮”。</span></p>
+<p><span style="font-size: 18px;">　　学院师资力量雄厚，在人才培养、科学研究、学科建设等方面名列全国前列，学院现有教授15人，博士生导师16人，副教授36人，省部级专家5人。学院1981年开始招收培养硕士研究生，现拥有体育学一级学科博士点授予权和博士后科研流动站，涵盖体育学一级学科下设全部4个二级学科博士学位授予权，体育教育训练学为学校重点支撑学科。目前学院共获得国家哲学社会科学项目23项，教育部人文社会科学研究项目8项。现有体育教育、运动训练、武术与民族传统体育和冰雪运动四个本科专业。其中冰雪运动专业是2020年获批设置的普通高等学校本科专业。2019年体育教育专业通过教育部全国首家师范类专业国家二级认证。体育教育专业、运动训练专业获批“国家级一流本科专业建设点”。学院现拥有《中国学校体育》杂志社东北分社，国家体育总局体育文化研究基地，冰雪项目跨界跨项选材测试基地，冰雪项目跨界跨项跨季科学化训练基地，冰雪项目跨界跨项国家集训队运动员文化教育基地，冰雪项目运动员、教练员培训实习基地、冬季项目科学化训练基地、国家体育科普基地、冰雪运动吉林省重点实验室、吉林省竞技体育能力提升重点实验室、全国普通高校中华优秀传统文化传承基地、中国武术协会一级会员单位、中国体育非物质文化遗产保护与推广项目单位。学院是体育行业国家职业资格培训基地，设有中国软式棒球垒球培训中心、体育公共外交研究中心、体育教师教育研究中心、青少年体育研究中心、运动流行病学研究中心、体育赛事产业研究中心、运动能力测评与提升研究中心等12个研究中心。</span></p>
+<p><span style="font-size: 18px;">　　学院现有2.5万平方米的大型综合体育馆，2个400米标准田径场，1座200米室内田径馆，22片室外篮球场，10片室外排球场，4片室内网球场和12片室外网球场，2片轮滑场地，3片标准草坪足球场，8个实验室，3个资料室，11个多媒体教室，可以充分满足师生教学和科研的硬件需求。</span></p>
+<p><span style="font-size: 18px;">　　多年来，竞赛训练工作与教学紧密结合，形成以篮球与田径为品牌，冰雪项目和校园足球为特色，兼顾武术、健美操、排球、网球、羽毛球、乒乓球等多个项目综合发展的学校竞技体育发展之路。男子篮球队曾获得4次全国总冠军，并多次代表中国大学生参加国际篮球赛事；冰雪专业先后培养出李坚柔、张虹、周洋等冬奥会冠军，2022年北京冬奥会我院2019级运动训练专业本科生张楚桐获得短道速滑女子3000米接力季军。2019年我院学生在教育部全国高校体育教育专业学生基本功大赛中荣获“一等奖”。2024年我院生学孙龙在第十四届冬季运动会中获得短道速滑500米、1000米、1500米、5000米接力冠军。学院实行“半军事化学生管理和阳光教学联动学生培养模式”,从“规则、规划、规训、规范”四个维度关注学生在校培养，助力学生终身发展，多年来学生就业率一直保持98%以上，居全国前列。</span></p>
+<p><br></p></div></div>
+    <span id="vsb_content_4810_u8" name="vsb_content_4810_u8"></span><br><br>
+    
+<p></p>
+</div>
+</div>
+<!--banner-end-->
+<div class="footer">
+	<div class="margin-auto">
+		<div class="left"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<h1>地址：吉林省长春市人民大街5268号</h1><h1>邮编：130024</h1><h1>电话：0431-85099598</h1><div class="clearfix"></div><p>Copyright?2013 Faculty of Education . &nbsp; &nbsp; All rights reserved.</p></div>
+		<div class="right">    <a href="#"><img src="../images/18/06/05/2wgwdkoelv/precode01.jpg"> </a>
+<a href="#"><img src="../images/18/06/05/2wgwdkoelv/precode.jpg"> </a>
+<a href="http://mark.nenu.edu.cn/info/1012/1155.htm"><img src="../images/18/06/05/2wgwdkoelv/f-logo.png"> </a>
+</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<!--content-->
+<script type="text/javascript" src="../new/js/jquery.js"></script>
+<script src="../new/js/nav.js"></script>
+<script src="../new/js/script.js"></script>
+<script src="../new/js/slide.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

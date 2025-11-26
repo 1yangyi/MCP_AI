@@ -1,0 +1,575 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1440">
+    <link rel="stylesheet" href="/assets/ecust/zh-cn/styles/default.css?v=1590651624">
+    <link rel="stylesheet" href="/assets/ecust/zh-cn/styles/normalize.css">
+    <link rel="stylesheet" href="/assets/ecust/zh-cn/styles/layout.css?v=2021225">
+    <link rel="stylesheet" href="/assets/ecust/zh-cn/styles/grid.css">
+    <link rel="stylesheet" href="/assets/ecust/zh-cn/styles/animate.css">
+    <!-- <link rel="stylesheet" href="/assets/ecust/zh-cn/styles/swiper.css"> -->
+    <style type="text/css">
+        html{
+            width: 100%;
+        }
+        body{
+            margin: 0 auto;
+            width: 100%;
+            max-width:1920px;
+        }
+        table {margin: auto;}
+        table td{
+            padding: 6px 6px;
+        }
+        table th{
+            padding: 6px 6px;
+        }
+        .line-clamp-1{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .line-clamp-2{
+            overflow: hidden;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 2;
+text-overflow: ellipsis;
+        }
+        .line-clamp-3{
+            overflow: hidden;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
+text-overflow: ellipsis;
+        }
+        .main p{
+            margin-bottom: 2px;
+            overflow:hidden !important;
+            
+            font-family:'Microsoft YaHei','微软雅黑',Arial;
+            font-size: 18px;
+            line-height: 2em;
+        }
+        .layout-clear::after {
+            content:"";
+            clear:both;
+            display:block;
+        }
+        .main{
+            content:"";
+            clear:both;
+            display:block;
+            color: #333;
+            text-align: left;
+        }
+        .content-common{
+            background: #fff !important;
+            overflow-wrap: break-word; /* 长单词会在换行点换行 */
+            word-wrap: break-word;/*  兼容旧浏览器 */
+            word-break: normal; /* 使用默认的断行规则 */
+
+        }
+
+        .main *{
+            overflow-wrap: break-word; /* 长单词会在换行点换行 */
+            word-wrap: break-word;/*  兼容旧浏览器 */
+            word-break: normal; /* 使用默认的断行规则 */
+            white-space: normal !important;
+        }
+
+        .content-common *{
+            white-space:normal !important;
+        }
+        .no-wrap{
+
+        }
+        .anchor-wrapper:hover .anchor-text{
+            color: #F34700 !important;
+        }
+        .anchor-text:hover{
+            color: #F34700 !important;
+        }
+        .anchor-text2:hover{
+            text-decoration: underline;
+        }
+        #banner{
+            margin:0 auto;position: relative;height: 400px;background-clip:content-box;
+            background-repeat: no-repeat;background-position: center center;
+        }
+        #banner-container{
+            left:50%;right:50%;margin-left: -272px;top:50%;bottom:50%;margin-top: -91px;;background: rgba(26,14,70,0.6);position:absolute;width: 544px;height: 182px;
+        }
+        #banner .init{
+            position: absolute;left:146px;top:37px;font-size:92px;font-family: 'PingFangHeavy';color:#fff;
+        }
+        #banner .alpha{
+            position: absolute;left: 220px;top: 55px;font-size:20px;font-family: 'PingFangRegular';font-weight: 600;color:#fff;
+        }
+        #banner .line{
+            position: absolute;left:220px;top:83px;height:3px;width: 60px;background: #fff;
+        }
+        #banner .title{
+            position: absolute;left:220px;top:96px;font-size:26px;;color:#fff;font-weight: 600;
+        }
+        #breadcum{
+            height:50px;margin:0 auto;line-height: 50px;color:#666;box-shadow: 1px 1px 1px #979797;
+            background: #fff;
+        }
+        #breadcum-container{
+            width:1200px;margin:0 auto;
+        }
+        #breadcum-container a{
+            color:#F34700 !important;
+        }
+
+        #breadcum .txt{
+            padding-left:7px;font-size:14px;display: table-cell;vertical-align: middle;
+        }
+
+        .triangle2{
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-width: 14px;
+            border-style: solid;
+            top: 32px;
+            left: -28px;
+            border-color: transparent #F3F0FF transparent transparent;
+        }
+        .page-container{
+            height:44px;width: 1200px;margin:30px auto;
+            text-align: center;
+        }
+
+        .page-container>div{
+            margin: 0 auto;
+        }
+
+        .page-container>div span, .page-container>div a{
+            margin-right:20px ;
+            display: inline-block;
+            height: 44px;
+            line-height: 44px;
+            width: 44px;
+            font-size: 20px;
+            font-weight: 400;
+            color: #fff;
+            background: #d3d2d3;
+        }
+
+        .page-container>div .current{
+            background: #ff2900;
+        }
+
+
+        .swiper-container {
+            margin:0 auto;
+            position:relative;
+            overflow:hidden;
+            -webkit-backface-visibility:hidden;
+            -moz-backface-visibility:hidden;
+            -ms-backface-visibility:hidden;
+            -o-backface-visibility:hidden;
+            backface-visibility:hidden;
+            /* Fix of Webkit flickering */
+            z-index:1;
+        }
+        .swiper-wrapper {
+            position:relative;
+            width:100%;
+            -webkit-transition-property:-webkit-transform, left, top;
+            -webkit-transition-duration:0s;
+            -webkit-transform:translate3d(0px,0,0);
+            -webkit-transition-timing-function:ease;
+
+            -moz-transition-property:-moz-transform, left, top;
+            -moz-transition-duration:0s;
+            -moz-transform:translate3d(0px,0,0);
+            -moz-transition-timing-function:ease;
+
+            -o-transition-property:-o-transform, left, top;
+            -o-transition-duration:0s;
+            -o-transform:translate3d(0px,0,0);
+            -o-transition-timing-function:ease;
+            -o-transform:translate(0px,0px);
+
+            -ms-transition-property:-ms-transform, left, top;
+            -ms-transition-duration:0s;
+            -ms-transform:translate3d(0px,0,0);
+            -ms-transition-timing-function:ease;
+
+            transition-property:transform, left, top;
+            transition-duration:0s;
+            transform:translate3d(0px,0,0);
+            transition-timing-function:ease;
+        }
+        .swiper-free-mode > .swiper-wrapper {
+            -webkit-transition-timing-function: ease-out;
+            -moz-transition-timing-function: ease-out;
+            -ms-transition-timing-function: ease-out;
+            -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+            margin: 0 auto;
+        }
+        .swiper-slide {
+            float: left;
+        }
+
+        /* IE10 Windows Phone 8 Fixes */
+        .swiper-wp8-horizontal {
+            -ms-touch-action: pan-y;
+        }
+        .swiper-wp8-vertical {
+            -ms-touch-action: pan-x;
+        }
+
+    </style>
+
+    <meta name="keywords" content="ECUST,华东理工国际卓越工程师学院">
+    <meta name="description" content="华东理工国际卓越工程师学院">
+    <script src="/assets/ecust/zh-cn/js/jquery.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('#search-icon').on('click', function(){
+                $('#search').submit();
+            })
+
+            $('.hoverAnimated').hover(function(){
+                if(!$(this).hasClass('animated'))
+                    $(this).addClass('animated pulse');
+            },function(){
+                $(this).removeClass('animated pulse');
+            })
+
+            $('#menu .has-sub').on('mouseenter',function(){
+                $(this).find('.submenu-list').show();
+
+            }).on('mouseleave',function(){
+                $(this).find('.submenu-list').hide();
+
+            })
+
+            $('.menu-list').on('mouseenter',function(){
+                $(this).addClass('active');
+
+            }).on('mouseleave',function(){
+                $(this).removeClass('active');
+            })
+
+
+
+
+
+            $('#menu .has-sub2').on('mouseenter',function(){
+                $(this).find('.submenu-list2').show();
+                $(this).addClass('active');
+            }).on('mouseleave',function(){
+                $(this).find('.submenu-list2').hide();
+                $(this).removeClass('active');
+            })
+
+            $('#menu .submenu-list2 li').on('mouseenter',function(){
+                $(this).parent().prev().css('border-color','transparent #efefef transparent transparent');
+            }).on('mouseleave',function(){
+                $(this).parent().prev().css('border-color','transparent #fff transparent transparent');
+            })
+
+            $(window).scroll( function() {
+                var top = $(document).scrollTop();
+                if (top > 140) {
+                    $('#menu').css({
+                        position:'fixed',
+                        top:0,
+                        width:'100%',
+                        left:0,
+                        right:0,
+                    })
+                } else {
+                    $('#menu').css({
+                        position:'absolute',
+                        top:'140px'
+                    })
+                }
+            });
+        })
+    </script>
+    <title>ECUST-国际卓越工程师学院</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+<div id="container">
+
+    <div id="header-wrapper">
+        <div id="header-content">
+            <div id="header-content-wrapper" style="">
+                <div id="menu">
+                    <div id="menu-container">
+                        <div id="menu-wrapper">
+                            <a href="https://chimie.ecust.edu.cn">
+                                <div class="menu-list &lt;php&gt;if($menu_active == '1')echo 'fixed-active';&lt;/php&gt;">
+                                    首页
+                                </div>
+                            </a>
+
+                            <div class="menu-list has-sub &lt;php&gt;if($menu_active == '2')echo 'fixed-active';&lt;/php&gt;">
+                                学院概况
+                                <ul class="submenu-list">
+                                    <a href="https://chimie.ecust.edu.cn/index/about.html">
+                                        <li>学院简介</li>
+                                    </a>
+                                    <a href="https://chimie.ecust.edu.cn/index/development.html">
+                                        <li>发展历程</li>
+                                    </a>
+                                    <li class="has-sub2">
+                                        <div>组织架构</div>
+                                        <ul class="submenu-list2">
+                                            <span class="triangle"></span>
+                                            <a href="https://chimie.ecust.edu.cn/index/org.html">
+                                                <li style="padding:0 9px;text-align: center;font-size:14px;">联合管理委员会</li>
+                                            </a>
+                                            <a href="https://chimie.ecust.edu.cn/index/leader.html">
+                                                <li>学院领导</li>
+                                            </a>
+                                            <a href="https://chimie.ecust.edu.cn/index/office.html">
+                                                <li>学院办公室</li>
+                                            </a>
+                                        </ul>
+                                    </li>
+                                    <a href="https://chimie.ecust.edu.cn/index/cop.html">
+                                        <li>合作院校</li>
+                                    </a>
+                                </ul>
+                            </div>
+                            <div class="menu-list has-sub &lt;php&gt;if($menu_active == '3')echo 'fixed-active';&lt;/php&gt;">
+                                人才培养
+                                <ul class="submenu-list">
+                                    <a href="https://chimie.ecust.edu.cn/index/training1.html">
+                                        <li>培养模式</li>
+                                    </a>
+                                    <a href="https://chimie.ecust.edu.cn/index/training2.html">
+                                        <li>培养目标</li>
+                                    </a>
+                                    <li class="has-sub2">
+                                        <div>培养方案</div>
+                                        <ul class="submenu-list2" style="width: 180px;">
+                                            <span class="triangle"></span>
+                                            <a href="https://chimie.ecust.edu.cn/index/training3.html">
+                                                <li>专业设置</li>
+                                            </a>
+                                            <a href="https://chimie.ecust.edu.cn/index/training4.html">
+                                                <li>课程与学分设置</li>
+                                            </a>
+                                        </ul>
+                                    </li>
+                                    <a href="https://chimie.ecust.edu.cn/index/training5.html">
+                                        <li>实习实践</li>
+                                    </a>
+                                </ul>
+                            </div>
+                            <div class="menu-list has-sub &lt;php&gt;if($menu_active == '4')echo 'fixed-active';&lt;/php&gt;">
+                                师资队伍
+                                <ul class="submenu-list">
+                                    <a href="https://chimie.ecust.edu.cn/index/teaching/type/3.html">
+                                        <li>法语教师</li>
+                                    </a>
+                                    <a href="https://chimie.ecust.edu.cn/index/teaching/type/1.html">
+                                        <li>中方师资</li>
+                                    </a>
+                                    <a href="https://chimie.ecust.edu.cn/index/teaching/type/2.html">
+                                        <li>法方师资</li>
+                                    </a>
+
+                                </ul>
+                            </div>
+                            <div class="menu-list has-sub &lt;php&gt;if($menu_active == '5')echo 'fixed-active';&lt;/php&gt;">
+                                教学管理
+                                <ul class="submenu-list">
+                                    <a href="https://chimie.ecust.edu.cn/index/administration1.html">
+                                        <li>教务通知</li>
+                                    </a>
+                                    <a href="https://chimie.ecust.edu.cn/index/administration2.html">
+                                        <li>管理规定</li>
+                                    </a>
+                                    <a href="https://chimie.ecust.edu.cn/index/administration3.html">
+                                        <li>办事指南</li>
+                                    </a>
+                                </ul>
+                            </div>
+                            <div class="menu-list has-sub &lt;php&gt;if($menu_active == '6')echo 'fixed-active';&lt;/php&gt;">
+                                学生工作
+                                <ul class="submenu-list">
+                                    <a href="https://chimie.ecust.edu.cn/index/party1.html">
+                                        <li>学生管理条例</li>
+                                    </a>
+                                    <a href="https://chimie.ecust.edu.cn/index/party2.html">
+                                        <li>团学工作</li>
+                                    </a>
+                                    <a href="https://chimie.ecust.edu.cn/index/party3.html">
+                                        <li>学生风采</li>
+                                    </a>
+                                    <a href="https://chimie.ecust.edu.cn/index/party4.html">
+                                        <li>学生就业</li>
+                                    </a>
+                                </ul>
+                            </div>
+                            <a href="https://chimie.ecust.edu.cn/index/co.html">
+                                <div class="menu-list  &lt;php&gt;if($menu_active == '10')echo 'fixed-active';&lt;/php&gt;">
+                                    企业合作
+                                </div>
+                            </a>
+                            <div class="menu-list has-sub &lt;php&gt;if($menu_active == '7')echo 'fixed-active';&lt;/php&gt;">
+                                中法风采
+                                <ul class="submenu-list">
+                                    <a href="https://chimie.ecust.edu.cn/index/life1.html">
+                                        <li>校园生活</li>
+                                    </a>
+                                    <a href="https://chimie.ecust.edu.cn/index/life2.html">
+                                        <li>奖学励行</li>
+                                    </a>
+                                    <a href="https://chimie.ecust.edu.cn/index/life3.html">
+                                        <li>法式风情</li>
+                                    </a>
+                                </ul>
+                            </div>
+                            <div class="menu-list has-sub &lt;php&gt;if($menu_active == '8')echo 'fixed-active';&lt;/php&gt;">
+                                公共服务
+                                <ul class="submenu-list">
+                                    <a href="https://chimie.ecust.edu.cn/index/service/type/4.html">
+                                        <li>通知公告</li>
+                                    </a>
+
+                                    <a href="https://chimie.ecust.edu.cn/index/service/type/2.html">
+                                        <li style="padding:0 9px;font-size:13px;">校历与上课时间表</li>
+                                    </a>
+                                    <a href="https://chimie.ecust.edu.cn/index/service/type/3.html">
+                                        <li>文件下载</li>
+                                    </a>
+                                </ul>
+                            </div>
+
+                            <div class="menu-list has-sub &lt;php&gt;if($menu_active == '9')echo 'fixed-active';&lt;/php&gt;">
+                                招生信息
+                                <ul class="submenu-list">
+                                    <a href="https://chimie.ecust.edu.cn/index/zsinfo.html">
+                                        <li>招生信息</li>
+                                    </a>
+                                    <a href="https://chimie.ecust.edu.cn/index/zsqa.html">
+                                        <li>招生问答</li>
+                                    </a>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <img id="header-left-img" src="/assets/ecust/zh-cn/imgs/header_left.jpg" height="140">
+                <div id="header-content-wrapper2">
+                    <div id="logo">
+                        <a href="https://chimie.ecust.edu.cn">
+                            <img src="/assets/ecust/zh-cn/imgs/logo.png" width="708" height="75">
+                        </a>
+                    </div>
+                    <div id="search-wrapper">
+                        <form action="https://chimie.ecust.edu.cn/index/search.html" id="search" method="post"><input name="q" type="text"></form>
+                        <div id="search-button">
+                            <img id="search-icon" src="/assets/ecust/zh-cn/imgs/search.png" width="25" height="25">
+                        </div>
+                    </div>
+                    <div id="language">
+                        <div class="fl select"><a style="color:#fff;font-size:16px;" href="https://chimie.ecust.edu.cn/ecustadmin.php">管理员登录</a></div>
+                        <div class="fl select"><a style="color:#fff;font-size:16px;margin-left:20px;" href="https://chimie.ecust.edu.cn/en">EN</a></div>
+                    </div>
+
+                </div>
+                <img id="header-right-img" src="/assets/ecust/zh-cn/imgs/header_right.jpg" height="140">
+            </div>
+        </div>
+    </div>
+<style>
+  .main img{
+    display: inline-block;
+  }
+  .main video{
+    display: inline-block;
+  }
+</style>
+<div id="banner" style="background-image: url('/assets/ecust/zh-cn/imgs/backg1.jpg');">
+  <div id="banner-container" style="display: flex;justify-content: center;align-items: center;text-align: center;">
+    <div style="font-family: 'PingFangRegular',serif;font-weight: 600;color: #fff;font-size: 48px;">学院简介</div>
+  </div>
+  </div>
+  <div id="breadcum">
+    <div id="breadcum-container">
+      <span style="display: table-cell;vertical-align: middle;"><img src="/assets/ecust/zh-cn/imgs/shouye.png" height="18"></span>
+      <span class="txt">&nbsp;您当前的位置：首页 /  学院概况 / <span style="color:#F34700;">学院简介</span></span>
+    </div>
+  </div>
+
+  <!-- main -->
+  <div class="main">
+
+    <div style="padding:64px;background: #fff;width:1200px;margin: 35px auto 35px auto;">
+      <p style="padding: 0px; border: 0px currentColor; border-image: none; text-align: left; line-height: 2em; font-family: 微软雅黑; font-size: 14px; margin-top: 0px; margin-bottom: 0px; white-space: normal; -ms-word-break: break-all; box-sizing: inherit; overflow-wrap: break-word;"><span style="font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 华东理工大学国际卓越工程师学院由华东理工大学与法国化学工程师院校联盟（简称盖∙吕萨克联盟或FGL联盟）及雷恩国立高等化工学校于2019年正式创建。学院引进法国精英工程师教育培养模式，结合中法双方人才培养优质资源，践行卓越工程教育理念，培养具有创新精神和国际视野的高水平工程精英和企业领袖。</span></p><p><br></p><p style="padding: 0px; border: 0px currentColor; border-image: none; text-align: left; line-height: 2em; font-family: 微软雅黑; font-size: 14px; margin-top: 0px; margin-bottom: 0px; white-space: normal; -ms-word-break: break-all; box-sizing: inherit; overflow-wrap: break-word;"><span style="font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 法国精英工程师教育体系在世界上独树一帜，享有盛誉，是法国人引以为豪的精英教育体系组成之一，工程师教育也被誉为法国高等教育“最闪亮的名片”，这一产生于拿破仑时代的精英教育模式经过200多年的积累，已经培养出了法国前总统奥朗德先生、埃菲尔铁塔设计者埃菲尔先生、居里夫人等政界精英以及多名诺贝尔奖获得者；空中客车、赛诺菲、欧莱雅等知名法国企业中，绝大多数的总裁和高级管理人员均毕业于法国工程师学校，其工程师培养质量享誉全球。</span></p><p><br></p><p style="padding: 0px; border: 0px currentColor; border-image: none; text-align: left; line-height: 2em; font-family: 微软雅黑; font-size: 14px; margin-top: 0px; margin-bottom: 0px; white-space: normal; -ms-word-break: break-all; box-sizing: inherit; overflow-wrap: break-word;"><span style="font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FGL联盟由全法20所专长于化学化工领域的顶尖高等工程师院校组成，拥有19个国家级科研实验室，至今已培养五万多名工程师就职于世界各地。华东理工大学与法国FGL联盟已有10余年的联合培养学生的项目合作，2013年该项目获批国家留学基金委优秀本科生项目。迄今为止，150多名华理学生参与了该交流项目,毕业生除了在国内外著名高校继续攻读博士学位以外，大部分已被知名法资、中法合资企业录用。</span></p><p style="padding: 0px; border: 0px currentColor; border-image: none; text-align: left; line-height: 2em; font-family: 微软雅黑; font-size: 14px; margin-top: 0px; margin-bottom: 0px; white-space: normal; -ms-word-break: break-all; box-sizing: inherit; overflow-wrap: break-word;"><br></p><p style="text-align:center"><img src="/uploads/20250910/1fa0303aacc088f9c34525c9df006745.jpg" title="" alt="" width="800" height="" style="width: 800px;"></p><p><br></p><p><br></p>    </div>
+
+  </div><!-- main end-->
+
+<script>
+  
+</script>
+<script type="text/javascript">
+  function Page(){
+
+  }
+</script>
+<div id="footer">
+    <div id="bottom" style="margin-top: 0px;">
+        <div style="background: #0f1a72;height:10px;"></div>
+        <div style="background:url('/assets/ecust/zh-cn/imgs/fg.jpg');height: 240px;background-position: center center;">
+        </div>
+        <div style="height: 182px;background: #222;">
+            <div class="wrapper">
+                <div style="height:20px;line-height: 20px;color:#fff;">
+                    <div style="float:left;font-size: 20px;font-weight: 600;margin-left:64px;margin-right: 33px;">友情链接：</div>
+                    <ul class="layout-clear" style="float:left;height:16px;line-height: 16px;font-size: 16px;display: inline-block;">
+                        <a href="https://www.ecust.edu.cn" class="anchor-text" target="_blank" style="color:#fff;"><li style="padding-top: 2px;float: left;height: 16px;line-height: 16px;margin-right: 40px;">华东理工大学</li></a>
+                        <a href="http://ice.ecust.edu.cn" class="anchor-text" target="_blank" style="color:#fff;"><li style="padding-top: 2px;float: left;height: 16px;line-height: 16px;margin-right: 40px;">国际合作与交流处</li></a>
+                        <a href="https://www.20ecolesdechimie.com" class="anchor-text" target="_blank" style="color:#fff;"><li style="padding-top: 2px;float: left;height: 16px;line-height: 16px;margin-right: 40px;">Fédération Gay Lussac - 20 écoles de chimie</li></a>
+                    </ul>
+
+
+
+                    <ul style="margin-left:auto;margin-right: auto; width: 976px;margin-top:40px;margin-left:0px;height:14px;line-height: 14px;font-size: 14px;display: inline-block;color:#fff;">
+                        <li style="float: left;height: 20px;line-height: 20px;padding:0 40px;border-right: 1px solid #323232;">
+                            <span style="display: table-cell;vertical-align: middle;"><img src="/assets/ecust/zh-cn/imgs/dianhua.png" height="17"></span>
+                            <span style="display: table-cell;vertical-align: middle;">&nbsp;联系电话：021-64252291</span>
+                        </li>
+                        <li style="float: left;height: 20px;line-height: 20px;padding:0 40px;border-right: 1px solid #323232;">
+                            <span style="display: table-cell;vertical-align: middle;"><img src="/assets/ecust/zh-cn/imgs/youxiang.png" height="17"></span>
+                            <span style="display: table-cell;vertical-align: middle;">&nbsp;邮箱：zfxy@mail.ecust.edu.cn</span>
+                        </li>
+                        <li style="float: left;height: 20px;line-height: 20px;padding:0 40px;font-size: 14px;">
+                            <span style="display: table-cell;vertical-align: middle;"><img src="/assets/ecust/zh-cn/imgs/address.png" height="17"></span>
+                            <span style="display: table-cell;vertical-align: middle;">&nbsp;地址：上海市徐汇区梅陇路130号</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="copyright" style="color:#D8D8D8;">
+        ©2019 华东理工大学版权所有
+    </div>
+</div>
+
+
+
+<script>
+    $(document).ready(function() {
+        Page();
+    });
+</script>
+</div></body></html>

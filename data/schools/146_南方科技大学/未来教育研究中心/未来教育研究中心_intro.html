@@ -1,0 +1,845 @@
+<!DOCTYPE html><html lang="en"><head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>中心概况 - 南方科技大学未来教育研究中心</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<link rel="stylesheet" href="/static/site/css/animate.min.css">
+	<link rel="stylesheet" href="/static/site/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/static/site/css/swiper.min.css">
+	<link rel="stylesheet" href="/static/site/css/base.css">
+	<link rel="stylesheet" href="/static/site/css/index.css">
+
+	<link rel="stylesheet" href="/static/site/css/inner_style.css">
+	<link rel="stylesheet" href="/static/site/css/inner.css">
+	<!-- 不是首页时进行加载 -->
+		<link rel="stylesheet" href="/static/site/css/screen.css">
+
+	<script src="/static/site/js/jquery.min.js"></script>
+	<script src="/static/site/js/swiper.min.js"></script>
+	<script src="/static/site/js/flexble.js"></script><style>html{font-size:66.66666666666667px;}</style>
+	<script src="/static/site/js/wow.js"></script>
+
+	<script>
+		new WOW().init();
+	</script>
+
+
+	<script type="text/javascript">
+		function gxListsHtml(link) {
+			var dataHtml;
+			$.ajax({
+				type:"GET",
+				url:link,
+				dataType:"",
+				async:false,
+				data:{},
+				success:function (data) {
+					dataHtml = data;
+				}, error:function () {}
+			});
+			return dataHtml;
+		}
+
+		/*$(function () {
+			$(document).on('click','.gxListsHtml .pages a',function () {
+				var thref_ = $(this).attr('href');
+				if (thref_ != undefined){
+					var getPLHtml = gxListsHtml(thref_);
+					$(this).parents('.gxListsHtml').html(getPLHtml);
+				}
+				for(var i = 0 ; i< $(".donghua_list ul li").length ; i++) {
+					$(".donghua_list ul li").eq(i).css({"animation": "bannerInUp .8s ease-in-out "+ Math.floor( i * 10 + 15) / 100  +"s forwards"});
+				}
+				return false;
+			});
+		});*/
+	</script>
+
+	<script type="text/javascript">
+		getPageVal = 1;
+		$(function () {
+			//$('.load-more a').html("加载更多");
+			// if ($('.pages a').length < 1){
+			// 	$('.pages').hide();
+			// 	//$('.load-more').hide();
+			// }
+		});
+		function getAhref(){
+			var resahref = '';
+			$('.fenye a').each(function(){
+				var ahref = $(this).attr('href');
+				if (ahref != undefined){
+					resahref = ahref;
+					return false;
+				}
+			});
+			return resahref;
+		}
+		function updateQueryStringParameter(queryStrUrl, key, value) {
+			if(!value) {return queryStrUrl;}
+			var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+			var separator = queryStrUrl.indexOf('?') !== -1 ? "&" : "?";
+			if (queryStrUrl.match(re)) {
+				return queryStrUrl.replace(re, '$1' + key + "=" + value + '$2');
+			} else {
+				return queryStrUrl + separator + key + "=" + value;
+			}
+		}
+		function getQueryVariable(variable)
+		{
+			var query = window.location.search.substring(1);
+			var vars = query.split("&");
+			for (var i=0;i<vars.length;i++) {
+				var pair = vars[i].split("=");
+				if(pair[0] == variable){return pair[1];}
+			}
+			return false;
+		}
+		function getPageLists(appld,link){
+			var Ahrefstr = link ? link : getAhref();
+			var applds = appld ? appld : 'app-lists-data';
+
+			if (Ahrefstr){
+				getPageVal++;
+				var optsrcval = updateQueryStringParameter(Ahrefstr, 'page', getPageVal);
+				if (link){
+					optsrcval = Ahrefstr;
+				}
+
+				//$('.data-stars').show().css('opacity','0.5').html('Data Loading...');
+				$.ajax({
+					type:"GET",
+					url:optsrcval,
+					data:{},
+				}).done(function (data) {
+					var Htmldata = $.parseHTML(data, document, true);
+					var HtmlObj = $("<code></code>").append($(Htmldata));
+					var HtmlFind = $("#"+applds, HtmlObj);
+					var getshowhtml = $.trim(HtmlFind.html());
+					var showreg = new RegExp("<div class=\"clearfix\"></div>","g");//g,表示全部替换。
+					//$('#app-lists-data').append(getshowhtml);
+					$('#'+applds).html(getshowhtml);
+					var isshowh = getshowhtml.replace(showreg,'');
+					//$('.data-stars').hide();
+					if (isshowh == ''){
+						//$('.data-more').hide();
+					}
+				})
+			} else {
+				//$('.data-more').hide();
+			}
+		}
+	</script>
+
+
+	<style type="text/css">
+		.t-list-picd {
+  /* height: 200px;*/
+}
+
+.magzine .pics img {  height: 100%;   width: auto; }
+.left_nav::after {     height: 100%;  }
+
+  /*.hz ul li a img {
+    max-width: 83%;
+    max-height: 100%;
+    object-fit: cover;
+    height: auto;
+}*/
+
+.hot ul li .news_desc {   display: none;  }
+
+
+
+.teacher_detail dl dt .t-deil-picd {
+  height: 311px;
+}
+.teacher_list ul li .desc {
+  height: 75px;
+}
+
+/* 11-15 ds */
+.table_scrollble { width: 100%; height: auto; }
+
+.table_scrollble table { width: 100%; }
+
+.table_scrollble table tr td {
+  border: 1px #eee solid;
+  padding: 15px;
+  line-height: 1.35;
+}
+
+.table_scrollble table thead tr td  {
+  background-color: #34b7b1;
+  text-align: center;
+  color: #fff;
+  font-size: .18rem;
+  font-weight: bold;
+}
+
+
+.news_info img {
+    height: auto !important;
+}
+
+a.vlink {
+  display: inline-block;
+  color: #333;
+  text-align: center;
+  border:1px #999 solid;
+  border-radius: 35px;
+  padding: 8px 20px;
+  font-size: 14px;
+  margin: 0 5px;
+  transition: all .35s;
+}
+
+h1.news_bt { text-align: center; }
+.news_tittle  br {    display: none; }
+
+a.vlink:hover {
+  border-color:#34b7b1 ;
+  color:#34b7b1;
+  transition: all .35s;
+}
+
+.table_scrollble table tbody tr:nth-child(2n) td { background-color: #f7f6f6; }
+.table_scrollble table tbody tr td:nth-child(4) { width: 30%; padding: 15px 0; }
+
+.table_scrollble table thead tr td  p { text-align: center; line-height: 1; }
+
+.table_scrollble table tbody tr td:nth-child(1)  p,
+.table_scrollble table tbody tr td:nth-child(3)  p,
+.table_scrollble table tbody tr td:nth-child(4)  p { text-align: center; line-height: 1; }
+
+/* 11-15 */
+
+#window {
+		    width: 100%;
+		    height: 100vh;
+		    background-color: rgba(0,0,0,.85);
+		    position: fixed;
+		    top: 0;
+		    left: 0;
+		    z-index: 1200;
+		    display: none;
+		}
+		
+		#window video {
+		    width: 70%;
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%,-50%);
+		}
+		
+		.close3 {
+			width: 40px;
+		    height: 40px;
+		    background-color: #e2231a;
+		    border-radius: 50%;
+		    position: absolute;
+		    top: 15px;
+		    right: 15px;
+		    z-index: 5;
+		    cursor: pointer;
+		}
+		
+		.close3 span {
+		    width: 23px;
+		    height: 5px;
+		    background-color: #fff;
+		    border-radius: 10px;
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform-origin: center center;
+		    transform: translate(-50%,-50%) rotate(45deg);
+		}
+		
+		.close3 span:last-child {
+		    transform: translate(-50%,-50%) rotate(-45deg);
+		}
+
+dl.visitor_cards dd .kts_yjfxt {min-height: 20px;height: 30px;}
+.view_nums .kts_tittle {font-size: 16px;color: #333;}
+.news_info p {   color: #000; }
+.news_info a {   display: inline; }	</style>
+</head>
+<body style="font-size: 16px;">
+
+
+<div class="header  ">
+		<div class="container">
+
+			<div class="logo">
+				<a href="/">
+					<img src="/uploads/202206/logo[-]22150340_17426_93402759.png" alt="">
+				</a>
+			</div>
+
+			<div class="dot">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+
+			<div class="menu">
+				<ul class="">
+
+										<li class="top-navid-1"><!--active-->
+						<p><a href="/index.html?lang=zh-cn" target="">首页</a></p>
+											</li>
+										<li class="top-navid-2 active"><!--active-->
+						<p><a href="/about.html?lang=zh-cn&amp;nvid=8" target="">中心概况</a></p>
+												<dl class="nav-child-dl">
+														<dd><a class="alnavcla-8" href="/about.html?lang=zh-cn&amp;nvid=8" target="">中心简介</a></dd>
+														<dd><a class="alnavcla-9" href="/about/orgs.html?lang=zh-cn&amp;nvid=9" target="">组织架构</a></dd>
+														<dd><a class="alnavcla-10" href="/faculty.html?lang=zh-cn&amp;nvid=10" target="">人员构成</a></dd>
+														<dd><a class="alnavcla-11" href="/contact.html?lang=zh-cn&amp;nvid=11" target="">联系我们</a></dd>
+													</dl>
+											</li>
+										<li class="top-navid-3"><!--active-->
+						<p><a href="/news/index/cid/8.html?lang=zh-cn&amp;nvid=51" target="">新闻动态</a></p>
+												<dl class="nav-child-dl">
+														<dd><a class="alnavcla-6" href="/notice.html?lang=zh-cn" target="">通知公告</a></dd>
+														<dd><a class="alnavcla-50" href="/news/index/cid/197.html?lang=zh-cn&amp;nvid=50" target="">会议新闻</a></dd>
+														<dd><a class="alnavcla-51" href="/news/index/cid/8.html?lang=zh-cn&amp;nvid=51" target="">综合新闻</a></dd>
+														<dd><a class="alnavcla-63" href="/news/index/cid/249.html?lang=zh-cn&amp;nvid=63" target="">新闻速递</a></dd>
+													</dl>
+											</li>
+										<li class="top-navid-4"><!--active-->
+						<p><a href="/research/lists.html?lang=zh-cn&amp;nvid=13" target="">科学研究</a></p>
+												<dl class="nav-child-dl">
+														<dd><a class="alnavcla-13" href="/research/lists/cid/252.html?lang=zh-cn&amp;nvid=13" target="">研究领域</a></dd>
+														<dd><a class="alnavcla-14" href="/research/rescg.html?lang=zh-cn&amp;nvid=14" target="">科研成果</a></dd>
+														<dd><a class="alnavcla-56" href="/research/zykt.html?lang=zh-cn" target="">在研课题</a></dd>
+														<dd><a class="alnavcla-16" href="/research/lists/cid/253.html?lang=zh-cn&amp;nvid=16" target="">科研队伍</a></dd>
+														<dd><a class="alnavcla-64" href="/research/lists/cid/254.html?lang=zh-cn&amp;nvid=64" target="">学术资源</a></dd>
+													</dl>
+											</li>
+										<li class="top-navid-57"><!--active-->
+						<p><a href="/notice/index/cid/247.html?lang=zh-cn&amp;pnid=57&amp;nvid=58" target="">教育教学</a></p>
+												<dl class="nav-child-dl">
+														<dd><a class="alnavcla-58" href="/notice/index/cid/247.html?lang=zh-cn&amp;pnid=57&amp;nvid=58" target="">课程信息</a></dd>
+													</dl>
+											</li>
+										<li class="top-navid-5"><!--active-->
+						<p><a href="/cooperation/lists.html?lang=zh-cn" target="">合作交流</a></p>
+												<dl class="nav-child-dl">
+														<dd><a class="alnavcla-17" href="/cooperation/lists.html?lang=zh-cn&amp;nvid=17" target="">学术期刊</a></dd>
+														<dd><a class="alnavcla-52" href="/cooperation/meeting.html?lang=zh-cn&amp;nvid=52" target="">学术会议</a></dd>
+														<dd><a class="alnavcla-18" href="/cooperation/downs.html?lang=zh-cn&amp;nvid=18" target="">资源下载</a></dd>
+														<dd><a class="alnavcla-53" href="/cooperation/jigou.html?lang=zh-cn&amp;nvid=53" target="">合作机构</a></dd>
+													</dl>
+											</li>
+										<li class="top-navid-7"><!--active-->
+						<p><a href="/contact/recru.html?lang=zh-cn&amp;nvid=54" target="">人员招聘</a></p>
+												<dl class="nav-child-dl">
+														<dd><a class="alnavcla-54" href="/contact/recru/cid/205.html?lang=zh-cn&amp;nvid=54" target="">课题组招聘</a></dd>
+														<dd><a class="alnavcla-55" href="/contact/recru/cid/206.html?lang=zh-cn&amp;nvid=55" target="">实习生招聘</a></dd>
+													</dl>
+											</li>
+					
+					<li>
+						<p><a href="/search.html"><i class="icons-search"></i> </a> </p>
+					</li>
+
+				</ul>
+
+				<div class="clearfix"></div>
+
+<!--				<div class="boolWrap">-->
+<!--					<form method="get" action="/search.html">-->
+<!--						<input name="ws" type="text">-->
+<!--						<span class="search" onclick="$('#subSearchBtnOpt').click();"></span>-->
+<!--						<input id="subSearchBtnOpt" type="submit" value="搜索" style="display:none;">-->
+<!--					</form>-->
+<!--					<div class="language">-->
+<!--						&lt;!&ndash;-->
+<!--						<a href="/index/languages/lang/en.html" class="lang_en" >En</a>-->
+<!--						&ndash;&gt;-->
+<!--						<a href="/index/languages/lang/zh.html" >中</a>-->
+<!--						<i></i>-->
+<!--					</div>-->
+<!--				</div>-->
+
+			</div>
+		</div>
+	</div>
+
+
+<!-- 移动端导航 -->
+<div class="sm_menu ">
+	<div class="container">
+		<ul class="">
+
+						<li class="wow fadeInRight animated  animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInRight;">
+
+				<p>
+										<a href="/index.html?lang=zh-cn" target="">首页<!--<i class="plus"></i>--></a>
+									</p>
+				<dl>
+									</dl>
+
+			</li>
+						<li class="wow fadeInRight animated  animated" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInRight;">
+
+				<p>
+										<a>中心概况<i class="plus"></i></a>
+									</p>
+				<dl>
+					
+					<dd><a class="alnavcla-8" href="/about.html?lang=zh-cn&amp;nvid=8" target="">中心简介</a></dd>
+
+					
+					<dd><a class="alnavcla-9" href="/about/orgs.html?lang=zh-cn&amp;nvid=9" target="">组织架构</a></dd>
+
+					
+					<dd><a class="alnavcla-10" href="/faculty.html?lang=zh-cn&amp;nvid=10" target="">人员构成</a></dd>
+
+					
+					<dd><a class="alnavcla-11" href="/contact.html?lang=zh-cn&amp;nvid=11" target="">联系我们</a></dd>
+
+									</dl>
+
+			</li>
+						<li class="wow fadeInRight animated  animated" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInRight;">
+
+				<p>
+										<a>新闻动态<i class="plus"></i></a>
+									</p>
+				<dl>
+					
+					<dd><a class="alnavcla-6" href="/notice.html?lang=zh-cn" target="">通知公告</a></dd>
+
+					
+					<dd><a class="alnavcla-50" href="/news/index/cid/197.html?lang=zh-cn&amp;nvid=50" target="">会议新闻</a></dd>
+
+					
+					<dd><a class="alnavcla-51" href="/news/index/cid/8.html?lang=zh-cn&amp;nvid=51" target="">综合新闻</a></dd>
+
+					
+					<dd><a class="alnavcla-63" href="/news/index/cid/249.html?lang=zh-cn&amp;nvid=63" target="">新闻速递</a></dd>
+
+									</dl>
+
+			</li>
+						<li class="wow fadeInRight animated  animated" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInRight;">
+
+				<p>
+										<a>科学研究<i class="plus"></i></a>
+									</p>
+				<dl>
+					
+					<dd><a class="alnavcla-13" href="/research/lists/cid/252.html?lang=zh-cn&amp;nvid=13" target="">研究领域</a></dd>
+
+					
+					<dd><a class="alnavcla-14" href="/research/rescg.html?lang=zh-cn&amp;nvid=14" target="">科研成果</a></dd>
+
+					
+					<dd><a class="alnavcla-56" href="/research/zykt.html?lang=zh-cn" target="">在研课题</a></dd>
+
+					
+					<dd><a class="alnavcla-16" href="/research/lists/cid/253.html?lang=zh-cn&amp;nvid=16" target="">科研队伍</a></dd>
+
+					
+					<dd><a class="alnavcla-64" href="/research/lists/cid/254.html?lang=zh-cn&amp;nvid=64" target="">学术资源</a></dd>
+
+									</dl>
+
+			</li>
+						<li class="wow fadeInRight animated  animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+
+				<p>
+										<a>教育教学<i class="plus"></i></a>
+									</p>
+				<dl>
+					
+					<dd><a class="alnavcla-58" href="/notice/index/cid/247.html?lang=zh-cn&amp;pnid=57&amp;nvid=58" target="">课程信息</a></dd>
+
+									</dl>
+
+			</li>
+						<li class="wow fadeInRight animated  animated" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInRight;">
+
+				<p>
+										<a>合作交流<i class="plus"></i></a>
+									</p>
+				<dl>
+					
+					<dd><a class="alnavcla-17" href="/cooperation/lists.html?lang=zh-cn&amp;nvid=17" target="">学术期刊</a></dd>
+
+					
+					<dd><a class="alnavcla-52" href="/cooperation/meeting.html?lang=zh-cn&amp;nvid=52" target="">学术会议</a></dd>
+
+					
+					<dd><a class="alnavcla-18" href="/cooperation/downs.html?lang=zh-cn&amp;nvid=18" target="">资源下载</a></dd>
+
+					
+					<dd><a class="alnavcla-53" href="/cooperation/jigou.html?lang=zh-cn&amp;nvid=53" target="">合作机构</a></dd>
+
+									</dl>
+
+			</li>
+						<li class="wow fadeInRight animated  animated" data-wow-delay=".8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInRight;">
+
+				<p>
+										<a>人员招聘<i class="plus"></i></a>
+									</p>
+				<dl>
+					
+					<dd><a class="alnavcla-54" href="/contact/recru/cid/205.html?lang=zh-cn&amp;nvid=54" target="">课题组招聘</a></dd>
+
+					
+					<dd><a class="alnavcla-55" href="/contact/recru/cid/206.html?lang=zh-cn&amp;nvid=55" target="">实习生招聘</a></dd>
+
+									</dl>
+
+			</li>
+			
+
+		</ul>
+
+	</div>
+
+	<div class="sm_phone wow fadeInUp animated  animated" data-wow-delay=".7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInUp;">
+		<h6>搜索：</h6>
+		<div class="searchbox ">
+			<form method="get" action="/search.html">
+				<input type="text" name="ws" placeholder="请输入您想搜索的内容" class="menus-input">
+				<button class="btn_search"> </button>
+			</form>
+		</div>
+	</div>
+
+
+</div>
+<!-- 移动端导航-end -->
+
+
+<section>
+
+	<!-- innerbanner -->
+	<div class="innerbanner">
+	<div class="container" style="background-image: url('/uploads/202206/innerban-about[-]23101454_80386_24204967.png');">
+		<div class="wamp">
+			<img src="/static/site/images/wamp.png">
+			<div class="page_load">
+				<p><a href="/">首页</a>  &gt;  <a href="/about.html?lang=zh-cn&amp;nvid=8">中心概况</a> &gt; <span>中心简介</span></p>
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- innerbanner-end -->
+
+	<div class="main">
+
+		<div class="container">
+
+			<div class="left_nav bg_lightgreen">
+	<dl>
+		<dt>
+			<h3 class="sub-tittle">
+				<big class="tittle-en-Bold">About Us</big>
+				<span>中心概况</span>
+			</h3>
+		</dt>
+				<dd class="navcla-8 active"><a href="/about.html?lang=zh-cn&amp;nvid=8" target="">中心简介 <span>/ <sub class="en"> Introduction</sub></span>  </a></dd><!--active-->
+				<dd class="navcla-9"><a href="/about/orgs.html?lang=zh-cn&amp;nvid=9" target="">组织架构 <span>/ <sub class="en"> Organizational Structure</sub></span>  </a></dd><!--active-->
+				<dd class="navcla-10"><a href="/faculty.html?lang=zh-cn&amp;nvid=10" target="">人员构成 <span>/ <sub class="en"> Faculty</sub></span>  </a></dd><!--active-->
+				<dd class="navcla-11"><a href="/contact.html?lang=zh-cn&amp;nvid=11" target="">联系我们 <span>/ <sub class="en"> Contact Us</sub></span>  </a></dd><!--active-->
+		
+	</dl>
+</div>
+
+
+
+			<div class="right_content">
+
+				<h3 class="sub-tittle">
+					<big class="tittle-en-Bold">Introduction</big> 中心简介				</h3>
+
+
+				<div class="about_info">
+					<p>2021年6月，南方科技大学正式成立未来教育研究中心，属于校内研究机构，设在人文社会科学学院。这是学校把握未来教育发展趋势、探索创新人才培养模式、创办世界一流大学的重要举措。在知识经济和数字化转型的大背景下， 未来教育如何适应这一前所未有之大变局。 <br></p><p><br></p><p>未来教育研究中心依托南方科技大学“双一流”理工特色专业，立足深圳基础教育改革先行示范建设，深入探索适应 中国崛起时代要求的未来人才培养模式，构建面向未来的教育理论和实践体系，为南科大附属教育集团优质发展提供 战略研究和学术支撑。</p><p><br></p><p><strong>中心定位</strong></p><p>未来教育研究中心立足深圳未来城市发展和基础教育改革先行先试，依托南方科技大学“双一流”理工特色专业，服务于南科大建成世界一流大学贯通式创新人才培养实践，为南科大教育集团办学实践提供理论和学术支撑。积极投入深圳市和大湾区开展未来教育实践中，研究重心聚焦未来教育理论和实践体系，开展系统性、创新性、开拓性探究工作。中心将发扬南科大“敢闯敢试、求真务实、改革创新、追求卓越”的创校精神，以“创知、创新、创业”为发展理念，深入探索未来教育体系和贯通式创新拔尖人才培养模式，面向基础教育提供针对未来教育的“南科大方案”，着力打造“世界一流、中国特色”的未来教育研究中心。</p><p>&nbsp;</p><p><strong>中心宗旨</strong></p><p>立足深圳和粤港澳大湾区，深入开展面向未来教育体系和贯通式拔尖人才培养的探索和实践，为基础教育办学和未来教育改革创新、先行先试提供学术理论支撑和战略发展咨询。</p><p><br clear="all" style="break-before: page"></p><p><strong>中心发展目标</strong></p><p>中心2025年发展目标是：建设一家面向未来教育发展的智库，打造一个开展未来教育学术研究的综合平台，拓展一块面向未来教育实践的基础教育人才培养基地。</p><p><br></p><p>“十四五”期间，中心将通过实施系列建设项目，打造代表教育发展趋势、适应未来社会需要、探索引领教育思想和理论创新的未来教育体系，建设成全国领先，在未来教育体系（包括未来教育环境、技术、课程、教学、未来教师、未来学生、标准和规范等）研究和实践中成果丰硕、特色鲜明，能够为深圳市和大湾区未来教育发展提供充分的学术支撑，具有权威性和标杆性的学术研究和战略咨询机构。</p><p>&nbsp;</p><p><strong>中心职能</strong></p><p>服务南科大建成世界一流大学贯通式创新人才培养实践；</p><p>为南科大教育集团办学实践提供理论和学术支撑；</p><p>深圳市和大湾区未来教育发展和实践提供战略咨询；</p><p>创建未来教育研究与实践的平台和网络；</p><p>培养适应未来教育发展需要的专业技术和管理人才；</p><p>开展面向未来教育领域的学术研究和实践探索。</p><p><br></p><p><strong>中心发展基础</strong></p><p>南方科技大学建立了从幼儿园到小学、初中、高中再到大学，从基础教育到高等教育的全链条教育体系。南科大附属教育集团的办学规模不断扩大，办学质量不断提升。未来教育研究中心承担着围绕打造具有南科大特色的基础教育体系的重任。在全面整合南科大优势教育资源的基础上，全力加强高等教育与基础教育有效衔接，包括利用南科大优质空间及智力资源，采取教授进校、课程共享等方式，丰富南科大附属学校的校本课程及拓展课程，探索面向未来社会所需高素质人才培养的崭新教育体系。</p><p><br></p><p>在知识经济和教育数字化转型的大背景下，未来教育如何适应这一前所未有之大变局，如何构建立足当前教育系统构建面向未来社会的教育体系，是全球教育都在认真思索并积极探索的重要议题。未来教育研究中心将积极投入和勇于承担这一时代命题和实践重任，在全面打造未来教育“南科大方案”的同时，着力满足深圳和大湾区未来教育发展对数字化教育转型和创新教育实践的需要。</p><p><br></p>				</div>
+
+
+				<div class="concept">
+					<h3 class="sub-tittle">
+						<big class="tittle-en-Bold">Central idea</big> 中心理念					</h3>
+
+
+					<ul>
+												<li>
+							<!--  <a href="" target=""> -->
+							<div class="icon icon_green1" df="/uploads/202206/icon_green1[-]21181924_24787_57081318.png" ho="/uploads/202206/icon_white1[-]21181925_89722_82744035.png"></div>
+							<p>研究当前教育问题<br>切实推动教育革新</p>
+						</li>
+												<li>
+							<!--  <a href="" target=""> -->
+							<div class="icon icon_green2" df="/uploads/202206/icon_green2[-]21181924_18107_10580231.png" ho="/uploads/202206/icon_white2[-]21181925_59048_53117481.png"></div>
+							<p>探索打造未来社会需要的<br>创新人才培养路径和模式</p>
+						</li>
+												<li>
+							<!--  <a href="" target=""> -->
+							<div class="icon icon_green3" df="/uploads/202206/icon_green3[-]21181924_13968_17333096.png" ho="/uploads/202206/icon_white3[-]21181925_73770_7498264.png"></div>
+							<p>办学理论和学术支撑<br>教育战略咨询</p>
+						</li>
+												<li>
+							<!--  <a href="" target=""> -->
+							<div class="icon icon_green4" df="/uploads/202206/icon_green7[-]21181925_80098_79521701.png" ho="/uploads/202206/icon_white7[-]21181925_28561_81135919.png"></div>
+							<p>国际前沿视野</p>
+						</li>
+												<li>
+							<!--  <a href="" target=""> -->
+							<div class="icon icon_green5" df="/uploads/202206/icon_green8[-]21181925_52764_39019770.png" ho="/uploads/202206/icon_white8[-]21181925_62520_89405356.png"></div>
+							<p>未来教育实践体系</p>
+						</li>
+											</ul>
+				</div>
+
+
+
+			</div>
+
+			<div class="clearfix"></div>
+
+		</div>
+
+
+
+	</div>
+</section>
+
+
+<footer>
+	<div class="goTop"> Top </div>
+
+	<div class="foot">
+		<div class="container">
+			<div class="footer_wrap2">
+
+				<div class="ft_logo">
+					<a href="/">
+						<img src="/uploads/202206/ft_logo[-]22150340_80037_16677034.png" alt="">
+					</a>
+				</div>
+
+				<div class="ft_link">
+					<h6>底部友情连接</h6>
+					<ul>
+												<a href="https://www.sustech.edu.cn/" target="_blank">南方科技大学</a>
+												<a href="https://www.hsas.edu.cn/#/" target="_blank">南方科技大学附属中学</a>
+												<a href="" target="_blank">南方科技大学附属小学</a>
+												<a href="http://szeb.sz.gov.cn/" target="_blank">深圳市教育局</a>
+												<a href="http://edu.gd.gov.cn/" target="_blank">广东省教育厅</a>
+												<a href="http://www.moe.gov.cn/" target="_blank">中华人民共和国教育部</a>
+						
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+		<div class="copyright">
+			<div class="container">
+				<p>©2018All Rights Reserved. 粤ICP备14051456号<span>网站浏览量：3425985</span></p>
+				<a href="https://www.unisonbrand.com/" target="_blank" style="display: none;">Design by unison.</a>
+			</div>
+		</div>
+	</div>
+
+<!--	<dl class="ft_lxfs">-->
+<!--		<dt>底部联系方式</dt>-->
+<!--		<dd>-->
+<!--			<h6>底部地址3</h6>-->
+<!--			<p>广东省深圳市南山区学苑大道1088号慧园3栋</p>-->
+<!--		</dd>-->
+
+<!--		<dd>-->
+<!--			<h6>底部电话</h6>-->
+<!--			<p>0755-88010114</p>-->
+<!--		</dd>-->
+
+<!--		<dd>-->
+<!--			<h6>底部邮编</h6>-->
+<!--			<p>518055</p>-->
+<!--		</dd>-->
+
+<!--		&lt;!&ndash;<dd>-->
+<!--			<h6>邮箱</h6>-->
+<!--			<p></p>-->
+<!--		</dd>&ndash;&gt;-->
+
+<!--	</dl>-->
+
+
+		<!--<div class="qrcode">
+		<img src="/uploads/202409/公众号WechatIMG807[-]27153541_13527.jpg" alt="">
+	</div>-->
+		<!--<dd><a href="/index.html?lang=zh-cn" target="">首页</a></dd>-->
+		<!--<dd><a href="/about.html?lang=zh-cn&nvid=8" target="">中心概况</a></dd>-->
+		<!--<dd><a href="/research/lists.html?lang=zh-cn&nvid=13" target="">科学研究</a></dd>-->
+		<!--<dd><a href="/notice/index/cid/247.html?lang=zh-cn&pnid=57&nvid=58" target="">教育教学</a></dd>-->
+		<!--<dd><a href="/cooperation/lists.html?lang=zh-cn" target="">合作交流</a></dd>-->
+	
+</footer>
+
+
+
+<script type="text/javascript">
+	var ishynotice = '';
+	var isagendacat = '';
+	var ishyzhuzhi = '';
+	var ishyzihuiyi = '';
+	var ishyluntan = '';
+	var ishydowns = '';
+	var isabouthyzz = '';
+	var isabouthysz = '';
+
+	$(function () {
+		if (!ishynotice){
+			$('.meet-head-nav li').eq(3).hide();
+		}
+		if (!isagendacat){
+			$('.meet-head-nav li').eq(2).find('dd').eq(0).hide();
+		}
+		if (!ishyzhuzhi){
+			$('.meet-head-nav li').eq(2).find('dd').eq(1).hide();
+		}
+		if (!ishyzihuiyi){
+			$('.meet-head-nav li').eq(2).find('dd').eq(2).hide();
+		}
+		if (!ishyluntan){
+			$('.meet-head-nav li').eq(2).find('dd').eq(3).hide();
+		}
+		if (!ishydowns){
+			$('.meet-head-nav li').eq(2).find('dd').eq(4).hide();
+		}
+
+		if (!isagendacat && !ishyzhuzhi && !ishyzihuiyi && !ishyluntan&& !ishydowns){
+			$('.meet-head-nav li').eq(2).hide();
+		}
+
+		if (!isabouthyzz){
+			$('.meet-head-nav li').eq(1).find('dd').eq(1).hide();
+			$('.about-hyleftnav dd').eq(1).hide();
+		}
+
+		if (!isabouthysz){
+			$('.meet-head-nav li').eq(1).find('dd').eq(2).hide();
+			$('.about-hyleftnav dd').eq(2).hide();
+		}
+
+		$('.huiyi_nav_left dd').each(function () {
+			var tisvalss = $(this).attr('tis');
+			if (tisvalss == '议程概览'){
+				if (!isagendacat){
+					$(this).hide();
+				}
+			}
+			if (tisvalss == '主会议'){
+				if (!ishyzhuzhi){
+					$(this).hide();
+				}
+			}
+			if (tisvalss == '子会议'){
+				if (!ishyzihuiyi){
+					$(this).hide();
+				}
+			}
+			if (tisvalss == '分论坛'){
+				if (!ishyluntan){
+					$(this).hide();
+				}
+			}
+			if (tisvalss == '会议论文下载'){
+				if (!ishydowns){
+					$(this).hide();
+				}
+			}
+		});
+	});
+</script>
+
+<script src="/static/site/js/index.js"></script>
+<script src="/static/site/js/dom.js"></script>
+
+
+<script type="text/javascript">
+	var parnidvalss = "";
+	var topparnidvalss = "2";
+	var nvidval = "8";
+	var cidvalss = "";
+	var reqActionStr = "index";
+	$(function () {
+		if ($('.fenye a').length < 1){
+			$('.fenye').hide();
+		}
+		if (parnidvalss){
+			$('.chnavcla-'+parnidvalss).addClass('active');
+		}
+		if (topparnidvalss){
+			$('.top-navid-'+topparnidvalss).addClass('active');
+		}
+		if (nvidval){
+			$('.navcla-'+nvidval).addClass('active');
+		}
+		if (cidvalss){
+			//linkAppendParam();
+		}
+		if ($('.tixi_meau a').length < 1){
+			$('.tixi_meau').hide();
+		}
+
+		/*$('.top-navid-19 dl').remove();
+		$('.nav-child-dl').each(function () {
+			var navchdlhtml = $.trim($(this).html());
+			if (navchdlhtml == ''){
+				$(this).remove();
+			}
+		});*/
+
+		navselOpt('.sub_menu ul li a','sub_navon');
+
+	});
+
+	function navselOpt(obj,cla,parele) {
+		var locah = location.href;
+		var cidlink = cidvalss ? '/'+reqActionStr+'/cid/'+cidvalss : '';
+		var pareleval = parele ? parele : 'li' ;
+		$(obj).each(function(){
+			var sellink = $(this).attr('href');
+			var sellinks = sellink.split('?');
+			var sellinksq = sellink.split('.html');
+			var sellinksq_x = sellinksq[0].split('/');
+
+			if (sellink){
+				if (locah.indexOf(sellinks[0]) !== -1 || locah.indexOf(sellinksq[0]+'.') !== -1 || locah.indexOf(sellinksq[0]+'/index') !== -1 || (cidlink && sellink.indexOf(cidlink) !== -1) || (sellinksq_x.length > 2 && locah.indexOf(sellinksq[0]+'/') !== -1)){
+					$(this).parents(pareleval).addClass(cla);
+				}
+			}
+		});
+	}
+
+	function linkAppendParam() {
+		//var AnvidStr = 'nvid='+nvidval;
+		var AnvidStr = 'cid='+cidvalss;
+		$('.main a').each(function () {
+			var AlinkHref = $(this).attr('href');
+			if (AlinkHref && AlinkHref.indexOf('http') < 0 && AlinkHref.indexOf('#') < 0 && AlinkHref.indexOf('cid=') < 0){
+				var aParam = (AlinkHref.indexOf('?') < 0) ? '?'+AnvidStr : '&'+AnvidStr ;
+				$(this).attr('href',AlinkHref+aParam);
+				// console.log(AlinkHref+aParam);
+			}
+		});
+	}
+</script>
+
+</body></html>

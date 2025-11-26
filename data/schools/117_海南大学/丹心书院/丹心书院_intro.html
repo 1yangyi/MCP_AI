@@ -1,0 +1,437 @@
+<!DOCTYPE html><html><head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="email=no">
+    <meta name="wap-font-scale" content="no">
+    <meta name="viewport" content="user-scalable=no, width=device-width">
+    <meta content="telephone=no" name="format-detection">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>书院简介-海南大学丹心书院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="书院简介">
+<meta name="keywords" content="海南大学丹心书院,书院简介">
+
+    <meta name="description" content="海南大学丹心书院 | Hainan University">
+    
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307c784750505b5742000300004354 -->
+<link rel="stylesheet" type="text/css" href="../dy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1022,'/dy.jsp',-1,1855260240)</script>
+</head><body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+
+
+<div id="headersearch111" style="display:none;">
+<div class="header-search">
+<div class="ss_close">×</div>
+
+<div class="search-style">
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="sb-search-input" style="width: 82%;"> <button name="submit_button" type="submit" class="sb-search-submit"><i class="ax-iconfont ax-icon-search"></i></button></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+    <input type="text" style="width: 82%;" class="sb-search-input" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <button class="sb-search-submit" name="submit_button" type="submit"  v-on:click="onSubmit()"/><i class="ax-iconfont ax-icon-search"></i></button>
+
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1855260240";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+</div>
+    </div></div>
+
+    <link href="../home2022/axui/css/ax.css?2023" rel="stylesheet" type="text/css">
+    <link href="../home2022/axui/axfont/ax-iconfont.css" rel="stylesheet" type="text/css">
+    <link href="../home2022/css/z202210.css?202311" rel="stylesheet" media="screen" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../home2022/iconfont/iconfont.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    
+    <script language="javascript" type="text/javascript" src="../home2022/js/jquery-min.js"></script>
+    <script language="javascript" type="text/javascript" src="../home2022/js/jquery.SuperSlide.2.1.3.js"></script>
+    
+     <script>
+$(function(){
+
+$("#ss_btn").click(function(){
+
+$("#headersearch111").fadeIn();
+
+})
+$(".ss_close").click(function(){
+
+$("#headersearch111").fadeOut();
+
+})
+
+})
+
+
+
+</script> 
+    
+     
+    
+    
+    <link href="../home2022/css/nav.css?202220" rel="stylesheet" media="screen" type="text/css">
+    <link rel="stylesheet" href="../home2022/swiper545/css/swiper.min.css">
+    <link rel="stylesheet" href="../home2022/css/swiper.min-my.css?202220444">
+    <script src="../home2022/swiper545/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="../home2022/aos/dist/aos.css">
+    <script src="../home2022/aos/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    
+   
+
+
+<header class="aui-header-nav moveDown aos-init aos-animate" data-aos="fade-down" style="transition:ease .4s .1s;">
+    <div class="wrapper">
+        <nav id="navigation">
+        <ol class="head-tips aos-init aos-animate" data-aos="fade-left" style="transition:ease .4s .2s;">
+<img src="../home2022/imgs/logoz.png"></ol>
+        <ul id="nav" class="nav clearfix">
+                <p class="nLi on" id="fixed-logo"></p>
+                <article class="aui-logo">
+
+                    <span id="logo1"><a href="../index.htm" target="_self"><img src="../home2022/imgs/logo2024.png"></a></span>
+                    <span id="logo2"><a href="../index.htm" target="_self"><img src="../home2022/imgs/logo2024.png"></a></span>
+                </article>
+        <li class="nLi">  
+
+        <h3><a href="../index.htm" title="首页">首页</a></h3>
+
+        </li>
+        <li class="nLi">  
+
+        <h3><a href="../syzl.htm" title="书院总览">书院总览</a></h3>
+
+        <ul class="sub">
+           <a href="yzjy.htm">院长寄语</a>
+           <a href="syjj.htm">书院简介</a>
+           <a href="zzjg.htm">组织架构</a>
+           <a href="whgy.htm">文化光影</a>
+        </ul>
+        </li>
+        <li class="nLi">  
+
+        <h3><a href="../xwdt2/fmxw.htm" title="新闻动态">新闻动态</a></h3>
+
+        <ul class="sub">
+           <a href="../xwdt2/fmxw.htm">封面新闻</a>
+           <a href="../xwdt2/tzgg.htm">通知公告</a>
+           <a href="../xwdt2/hdyg.htm">活动预告</a>
+           <a href="../xwdt2/mtsy.htm">媒体视野</a>
+        </ul>
+        </li>
+        <li class="nLi">  
+
+        <h3><a href="../dxxd1/djjx.htm" title="丹心向党">丹心向党</a></h3>
+
+        <ul class="sub">
+           <a href="../dxxd1/djjx.htm">党建简讯</a>
+           <a href="../dxxd1/agjy.htm">爱国教育</a>
+        </ul>
+        </li>
+        <li class="nLi">  
+
+        <h3><a href="../py/rcgl.htm" title="培养教育">培养教育</a></h3>
+
+        <ul class="sub">
+           <a href="../py/xysx.htm">学业升学</a>
+           <a href="../py/jyzd.htm">就业指导</a>
+           <a href="../py/zbrw.htm">征兵入伍</a>
+           <a href="../py/xljk.htm">心理健康</a>
+           <a href="../py/rcgl.htm">日常管理</a>
+        </ul>
+        </li>
+        <li class="nLi">  
+
+        <h3><a href="../xsfz2/xszz.htm" title="学生发展">学生发展</a></h3>
+
+        <ul class="sub">
+           <a href="../xsfz2/xszz.htm">活动风采</a>
+           <a href="../xsfz2/sqfc.htm">社区风采</a>
+           <a href="../xsfz2/sjfw.htm">实践服务</a>
+        </ul>
+        </li>
+        <li class="nLi">  
+
+        <h3><a href="../wdds2/xyds.htm" title="我的导师">我的导师</a></h3>
+
+        <ul class="sub">
+           <a href="../wdds2/fdy.htm">辅导员</a>
+           <a href="../wdds2/xyds.htm">学业导师</a>
+           <a href="../wdds2/pbds.htm">朋辈导师</a>
+        </ul>
+        </li>
+     <li class="nLi"><span class="header-so"><a href="javascript:void(0)" axdialog="" data-content="#headersearch" data-width="650px" data-padding="0" data-footershow="false"><i id="ss_btn" class="ax-iconfont ax-icon-search"></i></a></span></li>  
+
+
+        </ul>
+        </nav>
+        <script id="jsID" type="text/javascript">
+        jQuery("#nav").slide({ type:"menu", titCell:".nLi",targetCell:".sub",delayTime:300,triggerTime:0,returnDefault:true,effect:"slideDown",});
+        </script> 
+    </div>
+</header>
+<script type="text/javascript">
+    jQuery(".aui-banner-main").slide({
+        mainCell: ".bd ul",
+        effect: "left",
+        autoPlay: true,
+        trigger: "click",
+        delayTime: 700
+    });
+    $(window).on('scroll', function() {
+        if ($(document).scrollTop() > 10) {
+            $('.aui-header-nav').addClass('solid').removeClass('moveDown');
+            $('.aui-header-top').addClass('moveUp');
+        } else {
+            $('.aui-header-nav').removeClass('solid').addClass('moveDown');
+            $('.aui-header-top').removeClass('moveUp');
+        }
+    });
+</script>
+
+
+    
+
+
+
+<div class="lmdaohang" style="background:url(../home2022/imgc/n1.jpg) no-repeat center bottom"></div>
+
+
+
+<div class="wk1">
+<div class="w3">
+    
+    <dl class="cleft">
+        
+        <div>
+            <div class="news-list-vertical nei_tu">
+                
+<span>
+                <em><b>书院总览</b></em>
+                </span>
+            </div>
+<div class="m_new3">
+<ul>
+    <li><a href="yzjy.htm" title="院长寄语">院长寄语</a></li>
+    <li class="on"><a href="syjj.htm" title="书院简介">书院简介</a></li>
+    <li><a href="zzjg.htm" title="组织架构">组织架构</a></li>
+    <li><a href="whgy.htm" title="文化光影">文化光影</a></li>
+</ul>
+</div>  
+<div class="left-dbbj"></div>
+        </div>
+    </dl>
+    <dl class="cright">
+        <div class="fdiv muc">
+            
+<ul><span>书院简介</span></ul>
+
+            <div class="current-w">
+<span>
+    当前位置: 
+                        <a href="../index.htm">首页</a>
+                &gt;&gt;
+                <a href="../syzl.htm">书院总览</a>
+                &gt;&gt;
+                <a href="syjj.htm">书院简介</a>
+</span>    
+</div>
+
+        </div>  
+
+        <div class="kanz">
+            
+            
+            
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1855260240,'wbnews','u10')</script>
+<script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1855260240,1186)</script>
+    <div class="lnmu">
+    <ul>海南大学丹心书院简介</ul>
+    </div>
+<div class="InfoContent neirong">
+    <div id="vsb_content_1186_u101"><div id="vsb_content"><p style="list-style: none; margin: 0px auto; padding: 0px; border: 0px currentColor; border-image: none; text-align: justify; color: rgb(0, 0, 0); text-transform: none; line-height: 37px; text-indent: 43px; letter-spacing: normal; font-family: &quot;Microsoft YaHei&quot;, simsun, &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; flex-shrink: 0; background-color: rgb(255, 255, 255); -webkit-tap-highlight-color: transparent; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><br></p><p style="text-align:justify;font-size: medium;white-space: normal;text-indent: 43px;line-height: 37px"><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">丹心书院成立于</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">2022年3月，坐落</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">于</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">美丽的</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">海南大学儋州校区</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">，由海南大学校长、中国科学院院士骆清铭兼任院长，</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">涵盖儋州校区</span><span style="font-family:仿宋_GB2312">4栋、12栋、16栋、A7、A8、A9、A10、A11、A12共9栋学生宿舍楼，</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">现有专职教职工</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">11人、</span></span><span style="font-size: 21px;"><span style="font-family: 仿宋_GB2312;">学生</span><span style="font-family: 仿宋_GB2312;">2</span><span style="font-family:仿宋_gb2312">500</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">人。</span></span></p><p style="text-align:justify;font-size: medium;white-space: normal;text-indent: 43px;line-height: 37px"><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">丹心</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">书院</span><span style="font-family:仿宋_GB2312">“丹心”二字</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">，</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">取自何康老校长的题词</span><span style="font-family:仿宋_GB2312">“丹心耀南疆”，意喻赤诚之心</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">，</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">象征了艰苦卓绝的校史、热作人的奋斗史和对学子传承海大精神、建功自贸港的要求。</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">丹心书院弘扬的</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">丹心耀南疆精神</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">，</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">是无私奉献、报效祖国的爱党爱国精神，是艰苦奋斗、自强不息的民族精神，是团结协作、同心同德的人民精神</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">，</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">是勇于创新</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">、</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">追求卓越的科学精神</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">，</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">是</span><span style="font-family:仿宋_GB2312">“海大精神”的根源！</span></span></p><p style="text-align:justify;font-size: medium;white-space: normal;text-indent: 43px;line-height: 37px"><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">丹心书院是学校实施书院制改革的先锋，以立德树人为根本任务，大力弘扬丹心耀南疆精神，注重通识教育、文理融合、学科交叉，促进学生全面而有个性的发展，培养堪当民族复兴重任和建功自贸港的时代新人。每一位书院学子都有双重身份，既是丹心书院的学生，也是专业所在学院的学生；第一课堂的专业学习与学术发展主要由学院负责，第一课堂之外的教育管理主要由书院负责。</span></span></p><p style="text-align:justify;font-size: medium;white-space: normal;text-indent: 43px;line-height: 37px"><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312"><br></span></span></p><p style="text-align: right; font-size: medium; white-space: normal; text-indent: 128px; line-height: 37px;"><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">（以上数据统计截止至</span></span><span style="font-size: 21px;"><span style="font-family: 仿宋_GB2312;">202</span><span style="font-family:仿宋_gb2312">5</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">年4</span><span style="font-family:仿宋_GB2312">月</span></span><span style="font-family: 仿宋_gb2312;font-size: 21px"><span style="font-family:仿宋_GB2312">）</span></span></p><p style="text-align: justify; line-height: 37px; text-indent: 43px; -ms-text-autospace: ideograph-numeric; -ms-text-justify: inter-ideograph;"><span style="font-family: 宋体,SimSun;"><span style="font-family: 宋体; font-size: 21px;"></span></span><br></p><p style="list-style: none; margin: 0px auto; padding: 0px; border: 0px currentColor; border-image: none; text-align: justify; color: rgb(0, 0, 0); text-transform: none; line-height: 37px; text-indent: 43px; letter-spacing: normal; font-family: &quot;Microsoft YaHei&quot;, simsun, &quot;Helvetica Neue&quot;, Arial, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; flex-shrink: 0; background-color: rgb(255, 255, 255); -webkit-tap-highlight-color: transparent; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;"><span style="margin: 0px; padding: 0px; line-height: 2 !important; font-family: 宋体; font-size: 16px !important; vertical-align: top; display: inline !important; flex-shrink: 0; -webkit-tap-highlight-color: transparent;"></span></p><p>&nbsp;</p></div></div>
+    <span id="vsb_content_1186_u10" name="vsb_content_1186_u10"></span><br><br>
+    
+</div>
+
+         
+            
+        
+        </div>
+    </dl>
+</div>  
+</div>
+
+
+
+
+
+
+
+
+
+
+    <div class="footx">
+    <div class="w1">
+        <dl class="ft1">
+
+        <dt><img src="../home2022/imgs/logo2024.png"></dt>
+        <dd>
+            <li>版权所有 © 海南大学丹心书院 </li>
+            <li>美工支持/中旗网络</li>
+        </dd>
+        </dl>
+        <dl class="ft2">
+
+            <li><img src="../home2022/imgs/0001.png"><i>电话：0898-23837738</i></li>
+            <li><img src="../home2022/imgs/0002.png"><i>邮箱：dxsy@hainanu.edu.cn</i></li>
+            <li><img src="../home2022/imgs/0003.png"><i>地址：中国海南省儋州市宝岛新村</i></li>
+        </dl>
+        <dl class="ft3">
+<script language="javascript" src="/system/resource/js/openlink.js"></script>            <div class="ft3mu">友情链接</div>
+            <div class="institution-list2">
+            <ul>
+               <li><a href="https://www.hainanu.edu.cn/" target="_blank" title="">海南大学官网</a></li>
+               <li><a href="https://dz.hainanu.edu.cn/" target="_blank" title="">儋州校区管理委员会</a></li>
+               <li><a href="https://staf.hainanu.edu.cn/index.htm" target="_blank" title="">热带农林学院</a></li>
+               <li><a href="https://student.hainanu.edu.cn" target="_blank" title="">海南大学学生工作部</a></li>
+            </ul>
+            </div>
+        </dl>
+    
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+</body></html>

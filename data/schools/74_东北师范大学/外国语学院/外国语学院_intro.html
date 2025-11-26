@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="dfiles/9866/waiyu/cms/ht/style/header.css" rel="stylesheet" type="text/css">
+<link href="dfiles/9866/waiyu/cms/ht/style/list.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="dfiles/9866/waiyu/cms/ht/js/jquery-bd1.min.js"></script>
+<script type="text/javascript" src="dfiles/9866/waiyu/cms/ht/js/nav2.js"></script>
+<title>学院概况-外语学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院概况">
+<meta name="keywords" content="外语学院,学院概况">
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307668465750545742000400054754 -->
+<link rel="stylesheet" type="text/css" href="list.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1002,'/list.jsp',-1,1496403175)</script>
+</head>
+<body>
+<div id="bj">
+<div class="top-site-con">
+<h1>
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="外国语学院"><img src="images/logo_03.png" width="320" height="240" border="0" alt="外国语学院" title="外国语学院"></a></h1>
+</div>
+<div style="    margin-top: -85px;float: right;width: 280px;">
+               <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><ul style="list-style:none">
+<li style="font-size:15px;float:left;"><a href="index.htm" style="color:#fff;">ENGLISH &nbsp;|</a></li>
+
+
+<li style="font-size: 15px;color:#fff;float:left;margin-left: 10px;"><a href="http://www.nenu.edu.cn/" style="color:#fff;">学校主页</a></li>
+</ul>
+    </div>
+    
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2">
+    <div id="appu2"><div><input width="200px" autocomplete="off" style="margin-top: -57px; float: right; margin-right: 152px; height: 25px;"> <input type="image" src="images/search_botton.jpg" width="31px" align="absmiddle" style="float: right; margin-top: -57px; margin-right: 119px;"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+        <input  width="200px" style="margin-top: -57px;float: right; margin-right: 152px;height: 25px;" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+ <input type="image" src="images/search_botton.jpg" width="31px" align="absmiddle" style="cursor: hand;float: right;margin-top: -57px; margin-right: 119px;" v-on:click="onSubmit()">
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1496403175";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+</div>
+<div id="nav">
+<div class="navword" onclick="goto('index.htm')">首页</div> 
+
+<div class="navword" onclick="goto('xygk.htm')">学院概况</div> 
+
+<div class="navword" onclick="goto('szdw1/azc.htm')">师资队伍</div> 
+
+<div class="navword" onclick="goto('rcpy1/yjsjy.htm')">人才培养</div> 
+
+<div class="navword" onclick="goto('#')">科学研究</div> 
+
+<div class="navword" onclick="goto('http://wy.nenu.edu.cn/wysy/')">实验教学</div> 
+
+<div class="navword" onclick="goto('djgz.htm')">党建工作</div> 
+
+<div class="navword" onclick="goto('jlhz.htm')">交流合作</div> 
+
+<div class="navword" onclick="goto('xzjf1.htm')">行政教辅</div> 
+
+<div class="navword" onclick="goto('xsgz.htm')">学生工作</div> 
+
+
+
+
+
+
+</div>
+
+<div id="mid" style="height: 700px;">
+
+
+
+
+
+
+<div id="left"><div id="tl">
+快速连接
+</div>
+<div class="tl" onclick="goto('xygk/xyjj.htm')">● 学院简介</div>
+
+<div class="tl" onclick="goto('xygk/xyld.htm')">● 学院领导</div>
+
+<div class="tl" onclick="goto('xygk/jgsz.htm')">● 机构设置</div>
+
+<div class="tl" onclick="goto('xygk/lsyg.htm')">● 历史沿革</div>
+
+</div>
+<div id="right">
+<div>         
+                <a href="index.htm" style="color:#000000;">首页</a>
+
+                 &gt; 
+                <a href="xygk.htm" style="color:#000000;">学院概况</a>
+
+</div>
+
+
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div id="dd">
+    <div class="li">
+<div class="w4"> 文章标题 </div>
+<div class="d1">  浏览量</div>
+<div class="d2"> 发布日期 </div>
+<div style="clear: both;"></div>
+
+</div>
+
+
+    
+<div class="li2"><div class="w2"><a href="info/1004/7656.htm" target="_blank">·&nbsp;历史沿革</a></div><div class="d1" style="width: 80px;"><span id="dynclicks_u6_7656" name="dynclicks_u6_7656">1185</span></div><div class="d2" style="width: 120px;">2025-05-20</div></div>
+<div style="clear: both;"></div>
+
+<div class="li2"><div class="w2"><a href="info/1006/7646.htm" target="_blank">·&nbsp;学院简介</a></div><div class="d1" style="width: 80px;"><span id="dynclicks_u6_7646" name="dynclicks_u6_7646">3936</span></div><div class="d2" style="width: 120px;">2025-05-20</div></div>
+<div style="clear: both;"></div>
+
+<div class="li2"><div class="w2"><a href="info/1003/3394.htm" target="_blank">·&nbsp;机构设置</a></div><div class="d1" style="width: 80px;"><span id="dynclicks_u6_3394" name="dynclicks_u6_3394">42283</span></div><div class="d2" style="width: 120px;">2025-09-03</div></div>
+<div style="clear: both;"></div>
+
+<div class="li2"><div class="w2"><a href="info/1005/2138.htm" target="_blank">·&nbsp;学院领导</a></div><div class="d1" style="width: 80px;"><span id="dynclicks_u6_2138" name="dynclicks_u6_2138">53394</span></div><div class="d2" style="width: 120px;">2025-04-30</div></div>
+<div style="clear: both;"></div>
+<br>    <link rel="stylesheet" content-type="text/css" href="/system/resource/css/pagedown/sys.css"><div class="pb_sys_common pb_sys_normal pb_sys_style1" style="margin-top:10px;text-align:center;"><span class="p_pages"><span class="p_first_d p_fun_d">首页</span><span class="p_prev_d p_fun_d">上页</span><span class="p_no_d">1</span><span class="p_next_d p_fun_d">下页</span><span class="p_last_d p_fun_d">尾页</span></span></div>
+</div><script>_showDynClickBatch(['dynclicks_u6_7656','dynclicks_u6_7646','dynclicks_u6_3394','dynclicks_u6_2138'],[7656,7646,3394,2138],"wbnews", 1496403175)</script>
+
+
+
+</div>
+</div>
+
+
+
+<div class="footer">
+    <div class="footer-main cf">
+        <div class="footer-logo">
+            <img src="images/foot_logo.png" alt="">
+        </div>
+        <div class="addr" style="color:#fff">
+                            <div class="addr1">
+                                <p>
+                                    <b>
+                                        本部校区
+                                    </b>
+                                </p>
+                                <p>
+                                    <span>吉林省长春市南关区人民大街5268号（130024）</span>
+                                </p>
+                            </div>
+                            <div class="addr3">
+                                <p>
+                                    <b>
+                                        净月校区
+                                    </b>
+                                </p>
+                                <p>
+                                    <span>吉林省长春市净月经济开发区净月大街2555号 （130117）</span>
+                                </p>
+                            </div>
+
+        </div>
+            <div class="addr1">
+        
+      
+       <div style="    width: 90px;    float: left;    margin-left: 78px; line-height: 26px; margin-top: 14px;">
+
+     <a href="index.htm" style="color:#fff;font-size:14px">首页</a><br>
+ 
+     <a href="xygk.htm" style="color:#fff;font-size:14px">学院概况</a><br>
+ 
+     <a href="djgz.htm" style="color:#fff;font-size:14px">党建工作</a><br>
+ 
+     <a href="szdw1/azc.htm" style="color:#fff;font-size:14px">师资队伍</a><br>
+ 
+     <a href="rcpy1/yjsjy.htm" style="color:#fff;font-size:14px">人才培养</a><br>
+ 
+ </div>
+<div style="width: 90px;float: left;line-height: 26px;  margin-top: 14px;margin-left: 28px;">
+
+    <a href="#" style="color:#fff;font-size:14px">科学研究</a><br>
+ 
+    <a href="syjx.htm" style="color:#fff;font-size:14px">实验教学</a><br>
+ 
+    <a href="xsdt.htm" style="color:#fff;font-size:14px">学术工作</a><br>
+ 
+    <a href="index.htm" style="color:#fff;font-size:14px">English</a><br>
+ 
+    <a href="index.htm" style="color:#fff;font-size:14px">联系我们</a><br>
+ 
+</div>
+         
+</div>
+
+               
+        <script type="text/javascript" charset="utf-8"></script>
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

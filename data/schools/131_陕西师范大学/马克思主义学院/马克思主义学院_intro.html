@@ -1,0 +1,626 @@
+<!DOCTYPE html><html lang="zh"><head><title>学院简介-马克思主义学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="马克思主义学院,学院简介">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../css/flexslider.css">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/media-1.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/jquery.flexslider-min.js"></script>
+    <script src="../js/jquery.kxbdSuperMarquee.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/lib.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232306975475253535742000400004152 -->
+<link rel="stylesheet" type="text/css" href="../about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1016,'/about.jsp',-1,1487900666)</script>
+</head>
+<body>
+<!-- header -->
+    <div id="header">
+        <div class="header-1">
+            <div class="container">
+                <div class="logo fl">
+                    
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="马克思主义学院"><img src="../images/logo.png" alt=""></a>
+
+                </div>
+                <div class="header-right fr">
+                    <div class="header-right-top">
+                        <a href="http://www.snnu.edu.cn" target="_blabk">学校主页</a>  |  <a href="#">English</a>
+                         <span>
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu1">
+    <div id="appu1"><div><input type="text" placeholder="请输入关键字" autocomplete="off" class="form-control input-sm"> <input name="submit_button" type="image" src="../images/wen.png" value=""></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+            <input type="text" type="text" class="form-control input-sm" placeholder="请输入关键字" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input name="submit_button" type="image" src="../images/wen.png" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1487900666";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></span>
+                    </div>
+                    <div class="header-right-img">
+                        <img src="../images/header-1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-wp">
+            <div class="container">
+                <div class="nav">
+                <ul class="list-unstyled">
+
+						<li><a href="../index.htm">网站首页</a>
+
+							<div class="xiala-a">
+								<a href="../index/jtbk.htm">集体备课</a>
+								<a href="../index/szkjxzs.htm">思政课教学展示</a>
+							</div>
+						</li>
+						
+
+						<li class="active"><a href="xyjj.htm">学院概况</a>
+
+							<div class="xiala-a">
+								<a href="xyjj.htm">学院简介</a>
+								<a href="dzld.htm">党政领导</a>
+								<a href="zzjg.htm">组织机构</a>
+							</div>
+						</li>
+						
+
+						<li><a href="../szdw/zzjs.htm">师资队伍</a>
+
+							<div class="xiala-a">
+								<a href="../szdw/zzjs.htm">在职教师</a>
+								<a href="../szdw/dsdw.htm">导师队伍</a>
+								<a href="../szdw/bsh.htm">博士后</a>
+							</div>
+						</li>
+						
+
+						<li><a href="../rcpy/bksjy.htm">人才培养</a>
+
+							<div class="xiala-a">
+								<a href="../rcpy/bksjy.htm">本科生教育</a>
+								<a href="../rcpy/yjsjy.htm">研究生教育</a>
+								<a href="../rcpy/jxcg.htm">教学成果</a>
+							</div>
+						</li>
+						
+
+						<li><a href="../xsyj/kydt.htm">学术研究</a>
+
+							<div class="xiala-a">
+								<a href="../xsyj/kydt.htm">科研动态</a>
+								<a href="../xsyj/kyxm.htm">科研项目</a>
+								<a href="../xsyj/kyhj.htm">科研获奖</a>
+								<a href="../xsyj/lwzz.htm">论文著作</a>
+							</div>
+						</li>
+						
+
+						<li><a href="../dqgz/djgz.htm">党群工作</a>
+
+							<div class="xiala-a">
+								<a href="../dqgz/djgz.htm">党建工作</a>
+								<a href="../dqgz/ghgz.htm">工会工作</a>
+								<a href="../dqgz/xygz.htm">校友工作</a>
+								<a href="../dqgz/xxyd.htm">学习园地</a>
+							</div>
+						</li>
+						
+
+						<li><a href="../xstd/twjj.htm">学生天地</a>
+
+							<div class="xiala-a">
+								<a href="../xstd/twjj.htm">团委简介</a>
+								<a href="../xstd/txzz.htm">团学组织</a>
+								<a href="../xstd/gzzd.htm">规章制度</a>
+								<a href="../xstd/xshd.htm">学生活动</a>
+								<a href="../xstd/xjt.htm">宣讲团</a>
+								<a href="../xstd/bjfc.htm">班级风采</a>
+								<a href="../xstd/xskw.htm">学生刊物</a>
+							</div>
+						</li>
+						
+
+						<li><a href="../zsxx/bks.htm">招生信息</a>
+
+							<div class="xiala-a">
+								<a href="../zsxx/bks.htm">本科生</a>
+								<a href="../zsxx/sss.htm">硕士生</a>
+								<a href="../zsxx/bss.htm">博士生</a>
+								<a href="../zsxx/lxs.htm">留学生</a>
+							</div>
+						</li>
+						
+
+						<li><a href="../xkjs/xkgk.htm">学科建设</a>
+
+							<div class="xiala-a">
+								<a href="../xkjs/xkgk.htm">学科概况</a>
+								<a href="../xkjs/jdpt.htm">基地平台</a>
+								<a href="../xkjs/xstd.htm">学术团队</a>
+							</div>
+						</li>
+						
+
+						<li><a href="../xzzx/xzzx.htm">下载中心</a>
+
+							<div class="xiala-a">
+								<a href="../xzzx/xzzx.htm">下载中心</a>
+							</div>
+						</li>
+						
+</ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- header -->
+<div id="header-fine">
+        <div class="container">
+            <div class="header-fine-div">
+                <div class="logo-fine fl">
+                    
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="马克思主义学院"><img src="../images/logo.png" alt=""></a>
+
+                </div>
+                <div class="nav-fine">
+                    <ul class="list-unstyled">
+
+						<li><a href="../index.htm">网站首页</a>
+
+							<div class="xiala-a">
+								<a href="../index/jtbk.htm">集体备课</a>
+								<a href="../index/szkjxzs.htm">思政课教学展示</a>
+							</div>
+						</li>
+						
+
+						<li class="active"><a href="xyjj.htm">学院概况</a>
+
+							<div class="xiala-a">
+								<a href="xyjj.htm">学院简介</a>
+								<a href="dzld.htm">党政领导</a>
+								<a href="zzjg.htm">组织机构</a>
+							</div>
+						</li>
+						
+
+						<li><a href="../szdw/zzjs.htm">师资队伍</a>
+
+							<div class="xiala-a">
+								<a href="../szdw/zzjs.htm">在职教师</a>
+								<a href="../szdw/dsdw.htm">导师队伍</a>
+								<a href="../szdw/bsh.htm">博士后</a>
+							</div>
+						</li>
+						
+
+						<li><a href="../rcpy/bksjy.htm">人才培养</a>
+
+							<div class="xiala-a">
+								<a href="../rcpy/bksjy.htm">本科生教育</a>
+								<a href="../rcpy/yjsjy.htm">研究生教育</a>
+								<a href="../rcpy/jxcg.htm">教学成果</a>
+							</div>
+						</li>
+						
+
+						<li><a href="../xsyj/kydt.htm">学术研究</a>
+
+							<div class="xiala-a">
+								<a href="../xsyj/kydt.htm">科研动态</a>
+								<a href="../xsyj/kyxm.htm">科研项目</a>
+								<a href="../xsyj/kyhj.htm">科研获奖</a>
+								<a href="../xsyj/lwzz.htm">论文著作</a>
+							</div>
+						</li>
+						
+
+						<li><a href="../dqgz/djgz.htm">党群工作</a>
+
+							<div class="xiala-a">
+								<a href="../dqgz/djgz.htm">党建工作</a>
+								<a href="../dqgz/ghgz.htm">工会工作</a>
+								<a href="../dqgz/xygz.htm">校友工作</a>
+								<a href="../dqgz/xxyd.htm">学习园地</a>
+							</div>
+						</li>
+						
+
+						<li><a href="../xstd/twjj.htm">学生天地</a>
+
+							<div class="xiala-a">
+								<a href="../xstd/twjj.htm">团委简介</a>
+								<a href="../xstd/txzz.htm">团学组织</a>
+								<a href="../xstd/gzzd.htm">规章制度</a>
+								<a href="../xstd/xshd.htm">学生活动</a>
+								<a href="../xstd/xjt.htm">宣讲团</a>
+								<a href="../xstd/bjfc.htm">班级风采</a>
+								<a href="../xstd/xskw.htm">学生刊物</a>
+							</div>
+						</li>
+						
+
+						<li><a href="../zsxx/bks.htm">招生信息</a>
+
+							<div class="xiala-a">
+								<a href="../zsxx/bks.htm">本科生</a>
+								<a href="../zsxx/sss.htm">硕士生</a>
+								<a href="../zsxx/bss.htm">博士生</a>
+								<a href="../zsxx/lxs.htm">留学生</a>
+							</div>
+						</li>
+						
+
+						<li><a href="../xkjs/xkgk.htm">学科建设</a>
+
+							<div class="xiala-a">
+								<a href="../xkjs/xkgk.htm">学科概况</a>
+								<a href="../xkjs/jdpt.htm">基地平台</a>
+								<a href="../xkjs/xstd.htm">学术团队</a>
+							</div>
+						</li>
+						
+
+						<li><a href="../xzzx/xzzx.htm">下载中心</a>
+
+							<div class="xiala-a">
+								<a href="../xzzx/xzzx.htm">下载中心</a>
+							</div>
+						</li>
+						
+</ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+<!-- header-2 -->   
+        <div id="header-2">
+            <div class="logo-2 fl">
+                
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="马克思主义学院"><img src="../images/logo2.png" alt=""></a>
+
+            </div>
+            <div class="menu2 fr">
+                <ul class="list-unstyled">
+                    <li><a id="sanlan"><img src="../images/sanlan.png" alt=""></a></li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+            <div class="clear"></div>
+            <div class="nav-2">
+                <ul class="list-unstyled">
+					<li><a href="../index.htm">网站首页</a>
+						<span class="jiaspan"></span>
+						<div class="nav-xia-a">
+							<a href="../index/jtbk.htm">集体备课</a>	
+							<a href="../index/szkjxzs.htm">思政课教学展示</a>	
+						</div>
+	</li>
+					<li><a href="xyjj.htm">学院概况</a>
+						<span class="jiaspan"></span>
+						<div class="nav-xia-a">
+							<a href="xyjj.htm">学院简介</a>	
+							<a href="dzld.htm">党政领导</a>	
+							<a href="zzjg.htm">组织机构</a>	
+						</div>
+	</li>
+					<li><a href="../szdw/zzjs.htm">师资队伍</a>
+						<span class="jiaspan"></span>
+						<div class="nav-xia-a">
+							<a href="../szdw/zzjs.htm">在职教师</a>	
+							<a href="../szdw/dsdw.htm">导师队伍</a>	
+							<a href="../szdw/bsh.htm">博士后</a>	
+						</div>
+	</li>
+					<li><a href="../rcpy/bksjy.htm">人才培养</a>
+						<span class="jiaspan"></span>
+						<div class="nav-xia-a">
+							<a href="../rcpy/bksjy.htm">本科生教育</a>	
+							<a href="../rcpy/yjsjy.htm">研究生教育</a>	
+							<a href="../rcpy/jxcg.htm">教学成果</a>	
+						</div>
+	</li>
+					<li><a href="../xsyj/kydt.htm">学术研究</a>
+						<span class="jiaspan"></span>
+						<div class="nav-xia-a">
+							<a href="../xsyj/kydt.htm">科研动态</a>	
+							<a href="../xsyj/kyxm.htm">科研项目</a>	
+							<a href="../xsyj/kyhj.htm">科研获奖</a>	
+							<a href="../xsyj/lwzz.htm">论文著作</a>	
+						</div>
+	</li>
+					<li><a href="../dqgz/djgz.htm">党群工作</a>
+						<span class="jiaspan"></span>
+						<div class="nav-xia-a">
+							<a href="../dqgz/djgz.htm">党建工作</a>	
+							<a href="../dqgz/ghgz.htm">工会工作</a>	
+							<a href="../dqgz/xygz.htm">校友工作</a>	
+							<a href="../dqgz/xxyd.htm">学习园地</a>	
+						</div>
+	</li>
+					<li><a href="../xstd/twjj.htm">学生天地</a>
+						<span class="jiaspan"></span>
+						<div class="nav-xia-a">
+							<a href="../xstd/twjj.htm">团委简介</a>	
+							<a href="../xstd/txzz.htm">团学组织</a>	
+							<a href="../xstd/gzzd.htm">规章制度</a>	
+							<a href="../xstd/xshd.htm">学生活动</a>	
+							<a href="../xstd/xjt.htm">宣讲团</a>	
+							<a href="../xstd/bjfc.htm">班级风采</a>	
+							<a href="../xstd/xskw.htm">学生刊物</a>	
+						</div>
+	</li>
+					<li><a href="../zsxx/bks.htm">招生信息</a>
+						<span class="jiaspan"></span>
+						<div class="nav-xia-a">
+							<a href="../zsxx/bks.htm">本科生</a>	
+							<a href="../zsxx/sss.htm">硕士生</a>	
+							<a href="../zsxx/bss.htm">博士生</a>	
+							<a href="../zsxx/lxs.htm">留学生</a>	
+						</div>
+	</li>
+					<li><a href="../xkjs/xkgk.htm">学科建设</a>
+						<span class="jiaspan"></span>
+						<div class="nav-xia-a">
+							<a href="../xkjs/xkgk.htm">学科概况</a>	
+							<a href="../xkjs/jdpt.htm">基地平台</a>	
+							<a href="../xkjs/xstd.htm">学术团队</a>	
+						</div>
+	</li>
+					<li><a href="../xzzx/xzzx.htm">下载中心</a>
+						<span class="jiaspan"></span>
+						<div class="nav-xia-a">
+							<a href="../xzzx/xzzx.htm">下载中心</a>	
+						</div>
+	</li>
+</ul>
+            </div>
+        </div>
+<!-- header --> 
+<div class="chenggao"></div>
+<div id="nav-2-heidi"></div>
+
+
+<!-- main -->
+    <div id="main">
+        <div class="banner-2-wp">
+                <script language="javascript" src="/system/resource/js/dynclicks.js"></script>    
+
+                
+                    <div class="banner-2" style="background-image: url(../images/banner-2.jpg);">
+                <img src="../images/banner-2x.jpg" alt="">              
+            </div>
+                
+        
+
+            <div class=" banner-2-title">
+                <div class="container">
+                    <h1>
+学院概况</h1>
+                </div>
+            </div>
+        </div>
+        <div class="erji">
+            <div class="container">
+                <div class="menu fl">
+                    <ul class="list-unstyled">
+						<li class="active"><a href="xyjj.htm" title="学院简介">学院简介</a></li>
+
+						<li><a href="dzld.htm" title="党政领导">党政领导</a></li>
+
+						<li><a href="zzjg.htm" title="组织机构">组织机构</a></li>
+
+</ul>
+                </div>
+                <div class="erji-content">
+                    <div class="erji-title">
+                    <div class="mianbaoxie fr"> 
+                        <a href="../index.htm">网站首页</a>
+                &gt;&gt;
+                <a href="xyjj.htm">学院概况</a>
+                &gt;&gt;
+                <a href="xyjj.htm">学院简介</a>
+</div>
+
+
+
+                        <div class="clear"></div>
+                    </div>
+                    <div class="san-a">
+		<div class="clear"></div>
+</div>
+                    <div class="erji-content-div">
+                        
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1487900666,'wbnews','u12')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta12(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta12('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1487900666,1005)</script>
+
+<div class="danpian">
+								<div class="danpian-h1">学院简介</div>
+								
+			                       <div class="danpian-con">
+			 <div id="vsb_content_4_1005_u121"><div id="vsb_content_4"><p class="vsbcontent_start">陕西师范大学马克思主义学院是陕西师范大学独立设置的二级教学科研机构，主要承担全校思想政治理论课教学、马克思主义理论专业人才培养和马克思主义理论学科建设任务。学院2006年获批全国首批马克思主义理论一级博士学科授权点；2009年获批建设马克思主义理论博士后科研流动站；2017年获批建立陕西省首批重点中国特色社会主义理论体系研究中心；2018年入选陕西省首批重点马克思主义学院；2019年获全国教育系统先进集体、全国党建工作标杆院系；2021年获陕西省先进基层党组织，2024年入选全国重点马克思主义学院。</p>
+<p>陕西师范大学马克思主义学院拥有一支教风优良、研究能力突出、具有高度社会责任感和铸魂育人使命感的马克思主义理论教育教学和科学研究队伍。目前，学院有专任教师近80人，兼任教师20余人（含兼职教授、兼课辅导员）。其中,专任教师中教授19人，副教授27人，具有博士学位的教师65人。学院现有享受国务院政府特殊津贴专家5人，国家级人才称号获得者多人，教育部教学指导委员会专家4人，“马工程”教材编写首席专家1人、专家3人，教育部“新世纪优秀人才支持计划”入选者2人，教育部“全国高校优秀中青年思政课教师择优资助计划”入选者6人，教育部“<span style="text-indent: 37.33px; font-size: 18.66px;">思想政治教育中青年杰出人才支持计划</span>”入选者（含培育）2人，宝钢优秀教师奖获得者2人，全国百篇优秀博士学位论文奖获得者1人，陕西省“四个一批”“六个一批”理论人才入选者3人，陕西省哲学社会科学和文化艺术领域领军人才1人，陕西高校人文社会科学英才资助计划入选者1人，全国高校思想政治理论课教学展示一等奖2人、二等奖6人，全国高校思政课教师年度影响力人物1人、提名人物1人，全国高校思政课教学能手1人，全国高校思政课教学骨干1人，全国高校青教赛三等奖获得者1人，省级教学名师3人，陕西高校思政课教学标兵11人、教学能手6人、教学骨干1人，陕西高校课堂教学创新大赛二等奖2人、三等奖1人，陕西高校思政课优秀教师1人，全国高校辅导员年度人物入围奖1人，陕西省高等教育师德标兵1人，陕西省五四青年奖章获得者1人。</p>
+<p>陕西师范大学马克思主义学院具有完整的马克思主义理论人才培养体系。学院设有思想政治教育、马克思主义理论等本科专业，目前在院本科生共计700余人。思想政治教育专业是陕西师范大学具有传统优势的本科专业，2002年获陕西省人民政府“名牌专业”称号，2007年起承担国家公费师范生培养任务，2009年获批国家级特色专业，2017年入选陕西省“一流专业”，2018年通过教育部师范类专业二级认证，2019年入选首批国家级一流本科专业建设点，2022年起承担“优师计划”师范生培养任务。学院招收马克思主义理论各专业博士研究生、硕士研究生以及学科教学（思政）专业硕士研究生，建有全国专业学位研究生联合培养示范基地，并于2020年起面向“一带一路”沿线国家招收“中国发展与国家治理”项目留学生。在博士培养层次，学院还承担了少数民族高层次骨干人才、对口支援、“1023计划”、高校思政工作骨干、高校思政课教师、总体国家安全观高层次人才培养等各类专项计划。目前，学院在院研究生400余人，研究生人才培养体现了“厚基础、重能力”的培养特色，曾连续多年荣获陕西省马克思主义理论学科优秀博士论文。多年来，学院为国家输送了大量人才，培养了大批扎根学校思想政治理论课教学一线的优秀教师。</p>
+<p>陕西师范大学马克思主义学院学科体系健全，学科平台齐备，目前建有10余个国家级、省部级等各级各类教学和研究基地，承担全国高校思政课“手拉手”集体备课中心、全国高校思政课名师工作室、教育部大中小学思政课一体化共同体、国家社科基金重大项目、教育部重大课题攻关项目等建设和研究任务。近年来，学院科研、教学成果产出稳定，学科特色持续彰显，学科影响力和社会服务能力不断提升。</p>
+<p class="vsbcontent_end" style="text-align: right;">（数据截至2023年2月）</p></div></div>
+
+			                        </div> 
+			                        
+</div>
+
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+<!-- main -->
+<!-- footer -->
+    <div id="footer">
+        <div class="footer-1">
+            <div class="container">
+                <div class="logo-foo fl">
+                    <img src="../images/logo2.png" alt="">
+                </div>
+                <div class="foo-a fl">
+                    <dl>
+                        <dd><a href="../gzzd/gjzc.htm">规章制度</a></dd>
+                        <dd><a href="../zszp/zszp.htm">招生招聘</a></dd>
+                        <dd><a href="https://mail.snnu.edu.cn/" target="_blank">学校邮箱</a></dd>
+                        <dd><a href="../xzzx/xzzx.htm">下载专区</a></dd>
+                    </dl>
+                    <div class="clear"></div>
+                </div>
+                <div class="er fr">
+                    <div class="erer fl">
+                        <img src="../images/er.jpg" alt="">
+                        学院新浪微博
+                    </div>
+                    <div class="erer fr">
+                        <img src="../images/er2.jpg" alt="">
+                        学院微信平台
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="footer-2">
+            <div class="container">
+                 Copyright ?2011-2018 陕西师范大学马克思主义学院 版权所有&nbsp;&nbsp;&nbsp;&nbsp;
+                    地址：陕西师范大学长安校区文澜楼C段四层 &nbsp;&nbsp;&nbsp;
+                    邮编：710119<br>
+                    电话：+86-(0)29-81530722&nbsp;&nbsp;&nbsp;
+                    邮箱：mkszyxy@snnu.edu.cn&nbsp;&nbsp;&nbsp;
+                    技术支持：硅峰网络
+            </div>
+        </div>
+    </div>
+<!-- footer -->
+
+<script>
+    $(function(){
+        //页面插件调用处...W
+        
+    })
+</script>
+
+</body></html>

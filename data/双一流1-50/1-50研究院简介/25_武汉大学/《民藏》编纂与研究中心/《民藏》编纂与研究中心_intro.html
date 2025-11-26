@@ -1,0 +1,552 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+    <title>学院概况-国学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院概况">
+
+
+<meta name="SiteName" content="国学院">
+<meta name="SiteDomain" content="guoxue.whu.edu.cn">
+<meta name="ColumnName" content="学院概况">
+
+    <link href="dfiles/14521/public/css/common.css" rel="stylesheet" type="text/css">
+    <link href="dfiles/14521/public/css/index.css" rel="stylesheet" type="text/css">
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css">
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="xyggnav.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1037,'/xyggnav.jsp',-1,1464248954)</script>
+<script src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=489207"></script></head>
+
+<body>
+    <script type="text/javascript" src="dfiles/14521/public/js/jquery.js"></script>
+    <div class="top_big">
+        <div class="right_logo">
+            <img src="dfiles/14521/public/images/gxweb_06.jpg">
+        </div>
+        <a href="" class="logo"></a>
+    </div>
+    <div class="clear"></div>
+    <div class="daohang_big">
+        <div class="soso_big">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        font-size: 12px;
+    outline: none;
+    width: 100px;
+    height: 18px;
+    line-height: 18px;
+    text-align: left;
+    background: #FFFFFF;
+    border: none;
+    float: left;}
+    #appu0 .tj{
+       width: 60px;
+    height: 18px;
+    background: #838383;
+    text-align: center;
+    color: #FFFFFF;
+    float: left;
+    border: none;
+    font-size: 12px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="qwss"> <input name="submit_button" type="button" value="提交" class="tj"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1464248954";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+        </div>
+       <div>  <ul class="daohang" style="height: 30px;">
+              <li val="1016">
+            <a href="index.htm">首页</a>
+        </li>
+        <li val="1030">
+            <a href="xy_zxgg.htm">学院、中心公告</a>
+        </li>
+        <li class="bigmenu" val="1031">
+            <a href="xyxw.htm">学院新闻</a>
+            <div class="xiala submenu1031" style="display:none;position: absolute;">
+                <ul>
+                    <li><a href="xyxw/ynxw.htm">院内新闻</a></li>
+                    <li><a href="xyxw/mtbg.htm">媒体报告</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="bigmenu" val="1037">
+            <a href="xygk.htm">学院概况</a>
+            <div class="xiala submenu1037" style="display:none;position: absolute;">
+                <ul>
+                    <li><a href="xygk/lsyg.htm">历史沿革</a></li>
+                    <li><a href="xygk/xrld.htm">现任领导</a></li>
+                    <li><a href="xygk/ljxx.htm">珞珈先贤</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="bigmenu" val="1027">
+            <a href="szdw.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1027">师资队伍</a>
+            <div class="xiala submenu1027" style="display:none;position: absolute;">
+                <ul>
+                    <li><a href="szdw/bxsz.htm">本校师资</a></li>
+                    <li><a href="kzjs.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1029">客座教授</a></li>
+                </ul>
+            </div>
+        </li>
+        <li val="1032">
+            <a href="rcpy.htm">人才培养</a>
+        </li>
+        <li class="bigmenu" val="1022">
+            <a href="xsyj.htm">学术研究</a>
+            <div class="xiala submenu1022" style="display:none;position: absolute;">
+                <ul>
+                    <li><a href="xsyj/zxlw.htm">在线论文</a></li>
+                    <li><a href="xsyj/xzzz.htm">学志杂志</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="bigmenu" val="1033">
+            <a href="xstd.htm">学生天地</a>
+            <div class="xiala submenu1033" style="display:none;position: absolute;">
+                <ul>
+                    <li><a href="xstd/hbgxdjt.htm">湖北国学大讲堂</a></li>
+                    <li><a href="test.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1044">国学社员</a></li>
+                    <li><a href="xstd/gxs.htm">.国学社</a></li>
+                    <li><a href="xstd/sxs.htm">.禅学社</a></li>
+                    <li><a href="xstd/gxyx.htm">国学游学</a></li>
+                </ul>
+            </div>
+        </li>
+        <li val="1034">
+            <a href="gxpx.htm">国学培训</a>
+        </li>
+  </ul>
+</div>
+    </div>
+
+    <div class="zhengwen_big">
+
+        <div class="left_news">
+            <div class="liebiao">
+                <div class="biaoti_zw">院内新闻</div>
+                <div class="clear"></div>
+                <div>
+                    <table width="100%" cellspacing="3" cellpadding="0">
+  
+<tbody><tr><td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont193478">·</span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1035/185511.htm" class="c193478" title="贵州日报当代融媒体集团、贵州孔学堂发展基金会、孔学堂书局一行来我中心调研座谈" target="_blank">
+        贵州日报当代融媒体…
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle193478" width="1%" nowrap="">2025/09/29</td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont193478">·</span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1035/185421.htm" class="c193478" title="《阳明学研究》第七辑隆重出版" target="_blank">
+        《阳明学研究》第七…
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle193478" width="1%" nowrap="">2025/06/17</td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont193478">·</span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1035/185371.htm" class="c193478" title="黄泰岩走访调研《民藏》编纂与研究中心" target="_blank">
+        黄泰岩走访调研《民…
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle193478" width="1%" nowrap="">2025/06/09</td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont193478">·</span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1035/185281.htm" class="c193478" title="孙劲松教授应邀赴法参加文化交流活动" target="_blank">
+        孙劲松教授应邀赴法…
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle193478" width="1%" nowrap="">2024/11/15</td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont193478">·</span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1035/185261.htm" class="c193478" title="欧阳祯人教授在《哲学研究》发表《乐是心之本体：阳明心学的美学向度》" target="_blank">
+        欧阳祯人教授在《哲…
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle193478" width="1%" nowrap="">2024/11/02</td></tr>
+</tbody></table>
+                </div>
+            </div>
+
+            <div class="liebiao mt">
+                <div class="biaoti_zw">学院公告</div>
+                <div class="clear"></div>
+                <div>
+                    <table width="100%" cellspacing="3" cellpadding="0">
+  
+<tbody><tr><td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont193477">·</span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1030/185501.htm" class="c193477" title="第二届传统民学青年学者工作坊 邀请函" target="_blank">
+        第二届传统民学青年…
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle193477" width="1%" nowrap="">2025/09/25</td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont193477">·</span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1030/185491.htm" class="c193477" title="2025年度项目作者培训会 会议通知" target="_blank">
+        2025年度项目作者培…
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle193477" width="1%" nowrap="">2025/09/25</td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont193477">·</span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1030/185481.htm" class="c193477" title="2025年《民本文献集成（初编）》青年项目 立项公告" target="_blank">
+        2025年《民本文献集…
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle193477" width="1%" nowrap="">2025/08/25</td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont193477">·</span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1030/185471.htm" class="c193477" title="2025年《民本文献集成（初编）》年度项目 立项公告" target="_blank">
+        2025年《民本文献集…
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle193477" width="1%" nowrap="">2025/08/10</td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont193477">·</span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="info/1030/185341.htm" class="c193477" title="《民藏》编纂工程课题立项公告（2024年度增补项目）" target="_blank">
+        《民藏》编纂工程课…
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle193477" width="1%" nowrap="">2025/03/10</td></tr>
+</tbody></table>
+                </div>
+            </div>
+
+            <div class="liebiao mt">
+                <div class="biaoti_zw">媒体报道</div>
+                <div class="clear"></div>
+                <div>
+                    <table width="100%" cellspacing="3" cellpadding="0">
+  
+<tbody><tr><td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont193479">·</span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="https://share.eyesnews.cn/news/news-news_detail-news_id-11515117011339.html" class="c193479" title="第二届阳明心学论坛｜武汉大学国学院原院长、国际中国哲学会原会长郭齐勇：心学的返本与开新" target="_blank">
+        第二届阳明心学论坛…
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle193479" width="1%" nowrap="">2025/07/27</td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont193479">·</span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="https://mp.weixin.qq.com/s/NY9QaC-zlooJftnARdw7xw" class="c193479" title="《中国哲学通史》入选2025年中国自主知识体系成果发布会——胡治洪教授代表撰写团队现场致辞" target="_blank">
+        《中国哲学通史》入…
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle193479" width="1%" nowrap="">2025/06/16</td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont193479">·</span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="https://epaper.gmw.cn/zhdsb/html/2025-04/02/nw.D110000zhdsb_20250402_5-02.htm" class="c193479" title="《湖北国学大师评传丛书》在武汉首发" target="_blank">
+        《湖北国学大师评传…
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle193479" width="1%" nowrap="">2025/04/09</td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont193479">·</span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="https://www.cbbr.com.cn/contents/533/98062.html" class="c193479" title="《湖北国学大师评传丛书》新书发布会在武汉圆满成功" target="_blank">
+        《湖北国学大师评传…
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle193479" width="1%" nowrap="">2025/03/11</td></tr>  
+<tr><td align="center" valign="middle" width="10" nowrap=""><span class="leaderfont193479">·</span></td>
+<td valign="middle" align="left">
+    
+    
+        <a href="https://mp.weixin.qq.com/s/RvISGg9SBlqCvJWzIEPUTQ" class="c193479" title="谢远笋 | 郭齐勇与现代新儒学研究" target="_blank">
+        谢远笋 | 郭齐勇与…
+        </a>
+        
+        
+        
+            </td>
+        
+        <td valign="middle" align="right" class="timestyle193479" width="1%" nowrap="">2025/02/28</td></tr>
+</tbody></table>
+                </div>
+            </div>
+        </div>
+
+        <div class="right_news">
+            <div class="weizhi weizhi_1">您的位置：
+                <a href="">首页</a> &gt; 学院概况</div>
+            <div class="nav">
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1464248954,'wbnews','u5')</script>
+<script>function seeContenta5(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta5('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1464248954,19275)</script>
+<div style="text-align: left;text-indent: 20px;"><div id="vsb_content_19275_u51"><div id="vsb_content"><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; line-height: 24px; text-indent: 24px; color: rgb(52, 52, 52); font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体, 黑体; font-size: 12px; white-space: normal;">武汉大学国学院以悉心培养国学的读书种子为唯一宗旨或目标。院训取自《论语·述而》篇，为“志于道，据于德，依于仁，游于艺。”</p>
+<p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; line-height: 24px; text-indent: 24px; color: rgb(52, 52, 52); font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体, 黑体; font-size: 12px; white-space: normal;">武大国学院是目前中国大陆仅有的“国学”本科、硕士、博士完整培养体系的教学研究单位。</p>
+<p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; line-height: 24px; text-indent: 24px; color: rgb(52, 52, 52); font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体, 黑体; font-size: 12px; white-space: normal;"><strong style="margin: 0px; padding: 0px;">【国学本科人才培养】</strong></p>
+<p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; line-height: 24px; text-indent: 24px; color: rgb(52, 52, 52); font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体, 黑体; font-size: 12px; white-space: normal;">国学本科试验班已连续11年招生，该班旨在培养一批对我国传统经学、史学、子学、文学、小学的基本知识、基础典籍和治学门径有深刻理解，能熟练阅读中国古典文献，至少掌握两门外文，且熟悉当今世界人文学科走向的复合型人才。2010年12月，“国学”专业作为全校唯一的人文学术实验班纳入武汉大学“基础学科拔尖学生培养实验计划”，成立“弘毅学堂”国学班。该班秉承“根基经典，回归传统，面向现代”之教育理念，标举“知识与价值并重”的传统，奉行学术精英教育。国学试验班50%以上的毕业生可被推免攻读硕士学位或硕博连读。</p>
+<p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; line-height: 24px; text-indent: 24px; color: rgb(52, 52, 52); font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体, 黑体; font-size: 12px; white-space: normal;">武大国学试验班探索一种新的人文学人才的培养道路，在教学模式上参酌中国古代书院和牛津、剑桥等国际名校导师指导阅读及讨论的方法；在教材选用上力求直接采用原典原著；在考核方法上采用闭卷与课程论文写作相结合的形式；在师资的聘用方法上尽量采用灵活的方式，邀请校内外、国内外名家授课或做专题讲座。</p>
+<p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; line-height: 24px; text-indent: 24px; color: rgb(52, 52, 52); font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体, 黑体; font-size: 12px; white-space: normal;">国学本科试验班的专业主干课程有：国学通论、国学研究方法论、古典目录学、四书研读、诗经（附楚辞）研读、周易研读、礼记研读、史记研读、老庄研读、荀子研读、文选研读、文心雕龙研读、说文解字注导读、广雅疏证导读、史学和社会理论、文字学、音韵学、训诂学、古代文体和辞章、古代经学和经典注释学、中国古代小学源流、清代考据学研究、海外中国学研究、基督教思想史、印度佛教与早期经典、中国哲学史、西方哲学史、逻辑学导论，还有英语、日语、书法等课程。</p>
+<p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; line-height: 24px; text-indent: 24px; color: rgb(52, 52, 52); font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体, 黑体; font-size: 12px; white-space: normal;"><strong style="margin: 0px; padding: 0px;">【硕博士人才培养】</strong></p>
+<p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; line-height: 24px; text-indent: 24px; color: rgb(52, 52, 52); font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体, 黑体; font-size: 12px; white-space: normal;">国学本科试验班的创办是我国大学培养国学人才的有益尝试，也是培养跨学科人才的有力举措。但是，由于国学学科的特性，学生的学习和研究也有其特定的系统性和连续性，不可能在本科期间一蹴而就。为了进一步推动国学研究和教学，同时为有志于国学研究的学子提供继续深造的专业平台，武汉大学于2007年底自行增列了国学专业的硕士点与博士点，于2008年上报国务院学位委员会备案，2009年正式招生。目前，武汉大学国学硕士、博士点下设有：1、经学研究方向；2、子学研究方向；3、史部典籍研究方向；4、集部研究方向；5、佛教与道教研究方向。武汉大学国学硕士、博士点得特色主要表现在两个方面：</p>
+<p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; line-height: 24px; text-indent: 24px; color: rgb(52, 52, 52); font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体, 黑体; font-size: 12px; white-space: normal;">第一，多学科交叉。在设置研究方向和配备师资上努力打破原有的文、史、哲学科划分的限制，根据国学学科自身的特点，初步确定了五个研究方向，横跨文学、历史学、哲学、宗教学、艺术学武大学科，实现了诸学科的真正的交叉融合。在师资方面，该校组织有实力的专家担任国学点硕、博士生导师，并拟进一步聘请海内外知名专家加盟该博士点，联合指导。对硕、博士生也拟采取适当“走出去”的方式，加强校际、国际学生交流。</p>
+<p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; line-height: 24px; text-indent: 24px; color: rgb(52, 52, 52); font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体, 黑体; font-size: 12px; white-space: normal;">第二，强调原著经典的创造诠释。原著经典是我们研究国学的生命力和创造力的根源，国学硕、博士点拟在突出小学训练和古文献训练的基础上，加强外语、中外学术之方法学训练与国学典籍的创造性诠释，重视海外中国学成果的研讨，重视启发学生的问题意识，训练学生创造性诠释与研讨的能力。</p>
+<p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; line-height: 24px; text-indent: 24px; color: rgb(52, 52, 52); font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体, 黑体; font-size: 12px; white-space: normal;"><strong style="margin: 0px; padding: 0px;">【校内外结合的师资队伍】</strong></p>
+<p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; line-height: 24px; text-indent: 24px; color: rgb(52, 52, 52); font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体, 黑体; font-size: 12px; white-space: normal;">武大国学院集中了包括唐明邦、郭齐勇、陈伟、徐少华、徐水生、吴根友、王兆鹏、陈文新、程水金、杨逢彬、杨华、于亭、何德章、谢贵安、丁四新、俞汝捷、景海峰教授在内的近30位学者，承担本科生课程，并分别在经学、子学、史学典籍、集部、佛教与道教五个研究方向担任博士生和硕士生导师。</p>
+<p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; line-height: 24px; text-indent: 24px; color: rgb(52, 52, 52); font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体, 黑体; font-size: 12px; white-space: normal;">国学专业设置以来，我们还先后聘请南京大学周勋初、复旦大学章培恒、台湾学者黄俊杰、龚鹏程、林庆彰、蒋秋华、李明辉、唐翼明、林安梧，美国哈弗大学杜维明、夏威夷大学安乐哲（Roger T.Ames）、成中英、德国特里尔大学卜松山（Karl-Heinz Pohl）、德国波恩大学顾斌（Wolfgang Kubin）、美国芝加哥大学夏含夷（Edward L.Shaughnessy）、日本东北大学中嶋隆藏、挪威奥斯陆大学何莫邪（Chritoph Harbsmeier）教授等海内外专家为国学专业的本科生、研究生上课或演讲。</p>
+<p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; line-height: 24px; text-indent: 24px; color: rgb(52, 52, 52); font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体, 黑体; font-size: 12px; white-space: normal;"><strong style="margin: 0px; padding: 0px;">【成绩与展望】</strong></p>
+<p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; line-height: 24px; text-indent: 24px; color: rgb(52, 52, 52); font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体, 黑体; font-size: 12px; white-space: normal;">武汉大学国学班的创建于实践的经验不仅在武汉大学得到推广，并且在全国范围内产生了较大的反响。2006年，教育部本科评鉴专家组对武汉大学进行评估考察后指出：“武大国学试验班在国内是首创。”武大国学院教学研究项目“武汉大学国学班的创建与实践”获2009年度湖北省政府颁发的优秀教学成果一等奖、教育部颁发的国家级优秀教学成果二等奖。中国人民大学国学院、复旦大学国学班等国学教育机构在创办过程中也都参考了武汉大学国学试验班的本科人才培养模式及其课程设置方案。</p>
+<p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; line-height: 24px; text-indent: 24px; color: rgb(52, 52, 52); font-family: Arial, Helvetica, sans-serif, 微软雅黑, 宋体, 黑体; font-size: 12px; white-space: normal;">近年来，中国大陆有十余所高校成立了国学研究院或者国学院，挂靠哲学等一级学科办起了国学本科、硕士、博士专业，对中国传统的经史子集以及学术思想进行综合研究。目前，武汉大学国学院以及中国大陆国学学科发展面临的最大的问题就是学科体制问题。“国学”或者“经学”还没有作为一个正式学科被纳入《学位授予和人才培养学科目录》。中国大陆的《学位授予和人才培养学科目录》由国务院学位办发布，全国及省市级重点学科、各级重点研究基地、硕士博士学位授予权、全国和地方各类纵向基金的评审以及政府各级学术奖的设立等等，都以《学科目录》作为基本的分类标准。如果一个学科不能进入《学科目录》，就很难获平等发展的机会，这是国学学科发展所碰到的瓶颈。目前，国内各高校同仁正在努力争取、积极呼吁，期望在今后数年能将“国学”或“经学”纳入《学位授予和人才培养学科目录》，实现国学学科在体制内的良性发展。</p>
+<p><br></p></div></div></div>
+</div>
+            <div class="clear"></div>
+
+            <div class="fengxiang">
+                <div class="bdsharebuttonbox">
+                    <a href="#" class="bds_more" data-cmd="more"></a>
+                    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+                    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                </div>
+                <script>
+                    window._bd_share_config = {
+                        "common": {
+                            "bdSnsKey": {},
+                            "bdText": "",
+                            "bdMini": "2",
+                            "bdPic": "",
+                            "bdStyle": "0",
+                            "bdSize": "16"
+                        },
+                        "share": {}
+                    };
+                    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src =
+                        'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() /
+                            36e5)];
+                </script>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    
+    <div class="clear"></div>
+
+    <div class="clear"></div>
+    <div class="bottom">
+        <div class="youqing">
+                友情链接
+                <script language="javascript" src="/system/resource/js/openlink.js"></script><select class="l" onchange="if(value!='')window.open(value);" style="width:160px;height:24px;border:1px solid #a7a7a;">           
+<option value="">====友情链接====</option>
+<option value="http://www.whu.edu.cn/">武汉大学</option>
+                    
+<option value="http://philosophy.whu.edu.cn/">武汉大学哲学学院</option>
+                    
+<option value="http://jas.hkbu.edu.hk/">香港浸會大學饒宗頤國學院</option>
+                    
+<option value="http://www.ica.org.cn/">国际儒学网</option>
+                    
+<option value="http://guoxue.ruc.edu.cn/">人民大学国学院</option>
+                    
+<option value="http://guoxue.ifeng.com/">凤凰国学-凤凰网</option>
+                    
+</select>
+        </div>
+        <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>Copyright©2014 武汉大学国学院版权所有 All Rights Reserved. &nbsp;&nbsp;&nbsp;&nbsp;地址：中国·武汉·珞珈山&nbsp;&nbsp;&nbsp;&nbsp; 邮编：430072</p>
+    </div>
+    <script>
+        $(function () {
+            $(".bigmenu").hover(function () {
+                $(".submenu" + $(this).attr("val")).show();
+            }, function () {
+                $(".submenu" + $(this).attr("val")).hide();
+
+            });
+
+            $(".daohang li").hover(function () {
+                //$(".daohang li").removeClass("choose");
+                $(this).addClass("choose");
+            }, function () {
+                $(this).removeClass("choose");
+            });
+        });
+    </script>
+
+
+
+
+</body></html>

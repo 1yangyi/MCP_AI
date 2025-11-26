@@ -1,0 +1,387 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>学院简介-武汉大学哲学学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+
+
+<meta name="SiteName" content="武汉大学哲学学院">
+<meta name="SiteDomain" content="philosophy.whu.edu.cn">
+<meta name="ColumnName" content="学院简介">
+<meta name="ColumnKeywords" content="学院简介">
+
+
+<meta name="description" content="武汉大学哲学学院">
+
+<script src="../skin/js/jquery.min.js"></script>
+<link href="../skin/css/bootstrap.min.css" rel="stylesheet">
+<link href="../skin/css/main.css" rel="stylesheet">
+<link href="../skin/css/moblie.css" rel="stylesheet">
+<script src="../skin/js/main.js"></script>
+<script type="text/javascript" src="../skin/js/myjs.js"></script></head><body><div id="code"></div><div id="code_img"></div><a id="gotop" href="javascript:void(0)" style="display: none;"></a>
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../show_about_v2.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1015,'/show_about_v2.jsp',-1,1301861223)</script>
+
+
+
+<div class="header"> 
+  <div class="logo">
+    <div class="container"> <a href="../index.htm"> <img class="logo_img" src="../skin/images/logo.png"> </a> <span class="english"><a href="http://philo.whu.edu.cn">English Version</a></span>
+      <button type="button" class="navbar-toggle"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <div class="absolute search-box">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{}
+    #appu0 .tj{}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><div class="fr search-form hidden"><div class="fl search-input"><input type="text" placeholder="全文搜索" autocomplete="off" class="qwss" style="width: 200px; border: 0px; outline: none; background-color: rgb(216, 215, 215); height: 36px;"></div> <input name="submit_button" type="image" src="../skin/images/findbtn.jpg" value="提交" class="tj" style="width: 36px; height: 36px; outline: none;"></div> <button type="submit" class="absolute btn-search searchbtn"><input type="image" src="../skin/images/findbtn.jpg" align="absmiddle" style="width: 36px; height: 36px; outline: none;"></button> <img src="../skin/images/logo_wz.png" class="select_img" style="cursor: pointer;"></div></div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+        <div class="fr search-form hidden">
+  <div class="fl search-input">
+            <input type="text" class="qwss" placeholder="全文搜索"  class="search-title" style="width:200px;border:0;outline:none;background-color: #d8d7d7; height:36px;" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"> </div>
+            <input class="tj" name="submit_button" type="image" src='../skin/images/findbtn.jpg' value="提交"  style="cursor: hand;width:36px;height:36px;outline:none;" v-on:click="onSubmit()"/></div>
+            <button class="absolute btn-search searchbtn" type="submit">
+<input type="image" src='../skin/images/findbtn.jpg' align="absmiddle" style="cursor: hand;width:36px;height:36px;outline:none;">
+</button>
+<img src='../skin/images/logo_wz.png' class="select_img" style="cursor:pointer">
+            </div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1301861223";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+    </div>
+  </div>
+</div>
+<div class="nav">
+  <ul class="container clearfix">
+    <li> <a href="../index.htm">首页</a> </li>
+    <li class="activer"><a class="dropdown" href="xyjj.htm"> 学院概况 </a>
+        <ul class="nav_item">
+            <li><a href="xyjj.htm"> 学院简介 </a></li> 
+            <li><a href="lsyg.htm"> 历史沿革 </a></li> 
+            <li><a href="jgsz1/xsjg.htm"> 机构设置 </a></li> 
+            <li><a href="lrld.htm"> 历任领导 </a></li> 
+            <li><a href="xrld.htm"> 现任领导 </a></li> 
+            <li><a href="dwwy.htm"> 党委委员 </a></li> 
+            <li><a href="lsmj.htm"> 历史名家 </a></li> 
+            <li><a href="xyzc.htm"> 校友之窗 </a></li> 
+        </ul>
+    </li>
+    <li class=""><a class="dropdown" href="../szdw1.htm"> 师资队伍 </a>
+        <ul class="nav_item" style="width:180px;">
+            <li><a href="../szdw1/mkszyzxjys.htm"> 马克思主义哲学教研室 </a></li> 
+            <li><a href="../szdw1/zgzx_gx_jys.htm"> 中国哲学(国学)教研室 </a></li> 
+            <li><a href="../szdw1/wgzxjys.htm"> 外国哲学教研室 </a></li> 
+            <li><a href="../szdw1/mxjys.htm"> 美学教研室 </a></li> 
+            <li><a href="../szdw1/zjxjys.htm"> 宗教学教研室 </a></li> 
+            <li><a href="../szdw1/ljxjys.htm"> 逻辑学教研室 </a></li> 
+            <li><a href="../szdw1/llxyzzzxjys.htm"> 伦理学与政治哲学教研室 </a></li> 
+            <li><a href="../szdw1/kxjszxjys.htm"> 科学技术哲学教研室 </a></li> 
+            <li><a href="../szdw1/wjjs.htm"> 外籍教师 </a></li> 
+            <li><a href="../szdw1/bsh.htm"> 博士后 </a></li> 
+            <li><a href="../szdw1/spjs.htm"> 双聘教师 </a></li> 
+            <li><a href="../szdw1/jzjs.htm"> 兼职教授 </a></li> 
+            <li><a href="../szdw1/rxjs.htm"> 荣休教师 </a></li> 
+            <li><a href="../szdw1/yydhn.htm"> 永远的怀念 </a></li> 
+        </ul>
+    </li>
+    <li class=""><a class="dropdown" href="../rcpy.htm"> 人才培养 </a>
+        <ul class="nav_item">
+            <li><a href="../rcpy/bksjy1.htm"> 本科生教育 </a></li> 
+            <li><a href="../rcpy/yjsjy1.htm"> 研究生教育 </a></li> 
+            <li><a href="../rcpy/bsh.htm"> 博士后 </a></li> 
+        </ul>
+    </li>
+    <li class=""><a class="dropdown" href="../xsyj.htm"> 学术研究 </a>
+        <ul class="nav_item">
+            <li><a href="../xsyj/xsxx.htm"> 学术信息 </a></li> 
+            <li><a href="../xsyj/xsbd.htm"> 学术报道 </a></li> 
+            <li><a href="../xsyj/xscg.htm"> 学术成果 </a></li> 
+            <li><a href="../xsyj/zxlw.htm"> 在线论文 </a></li> 
+            <li><a href="../xsyj/xsqk.htm"> 学术期刊 </a></li> 
+        </ul>
+    </li>
+    <li class=""><a class="dropdown" href="../gjjl.htm"> 国际交流 </a>
+        <ul class="nav_item">
+            <li><a href="../gjjl/jlhz.htm"> 交流合作 </a></li> 
+            <li><a href="../gjjl/hwxx.htm"> 海外学习 </a></li> 
+            <li><a href="../gjjl/cgcj.htm"> 出国出境 </a></li> 
+            <li><a href="../gjjl/wgzj.htm"> 外国专家 </a></li> 
+        </ul>
+    </li>
+    <li class=""><a class="dropdown" href="../dqgz.htm"> 党群工作 </a>
+        <ul class="nav_item">
+            <li><a href="../dqgz/djgz.htm"> 党建工作 </a></li> 
+            <li><a href="../dqgz/ltxgz.htm"> 离退休工作 </a></li> 
+            <li><a href="../dqgz/ghgz.htm"> 工会工作 </a></li> 
+            <li><a href="../dqgz/twgz.htm"> 团委工作 </a></li> 
+            <li><a href="../dqgz/ztwz.htm"> 专题网站 </a></li> 
+        </ul>
+    </li>
+    <li class=""><a class="dropdown" href="../xsgz1/yjsgz.htm"> 学生工作 </a>
+        <ul class="nav_item">
+            <li><a href="http://philxz.whu.edu.cn/"> 本科生工作 </a></li> 
+            <li><a href="../xsgz1/yjsgz.htm"> 研究生工作 </a></li> 
+        </ul>
+    </li>
+    <li class=""><a class="dropdown" href="../info/1097/3164.htm"> 图书分馆 </a>
+        <ul class="nav_item">
+            <li><a href="../tsfg/fgjj.htm"> 分馆简介 </a></li> 
+            <li><a href="../tsfg/xxfw.htm"> 信息服务 </a></li> 
+            <li><a href="../tsfg/dzfw.htm"> 读者服务 </a></li> 
+        </ul>
+    </li>
+    <li class=""><a class="dropdown" href="../gzzd.htm"> 规章制度 </a>
+        <ul class="nav_item">
+            <li><a href="../gzzd/dzgl.htm"> 党政管理 </a></li> 
+            <li><a href="../gzzd/xspy.htm"> 学生培养 </a></li> 
+            <li><a href="../gzzd/kygz.htm"> 科研工作 </a></li> 
+            <li><a href="../gzzd/cwda.htm"> 财务档案 </a></li> 
+            <li><a href="../gzzd/qt.htm"> 其他 </a></li> 
+        </ul>
+    </li>
+    <li class=""><a class="dropdown" href="../xxgk.htm"> 信息公开 </a>
+        <ul class="nav_item">
+            <li><a href="../xxgk/zsgz.htm"> 招生工作 </a></li> 
+            <li><a href="../xxgk/jypy.htm"> 教育培养 </a></li> 
+            <li><a href="../xxgk/xssw.htm"> 学生事务 </a></li> 
+            <li><a href="../dqgz.htm"> 党务公开 </a></li> 
+            <li><a href="../xxgk/cwzc.htm"> 财务资产 </a></li> 
+            <li><a href="../gzzd.htm"> 规章制度 </a></li> 
+            <li><a href="../xxgk/tzgggs.htm"> 通知公告公示 </a></li> 
+        </ul>
+    </li>
+    <li class=""><a class="dropdown" href="../zfjs.htm"> 作风建设 </a>
+        <ul class="nav_item">
+            <li><a href="../zfjs/zcwj.htm"> 政策文件 </a></li> 
+            <li><a href="../zfjs/gzxz.htm"> 工作小组 </a></li> 
+            <li><a href="../zfjs/bslc.htm"> 办事流程 </a></li> 
+            <li><a href="../zfjs/fwgw.htm"> 服务岗位 </a></li> 
+            <li><a href="../zfjs/tsfs.htm"> 投诉方式 </a></li> 
+        </ul>
+    </li>
+    <li class=""><a class="dropdown" href="../xzzx1.htm"> 下载中心 </a>
+        <ul class="nav_item">
+            <li><a href="../xzzx1/jxl.htm"> 教学类 </a></li> 
+            <li><a href="../xzzx1/kyl.htm"> 科研类 </a></li> 
+            <li><a href="../xzzx1/wsl.htm"> 外事类 </a></li> 
+            <li><a href="../xzzx1/rsrcl.htm"> 人事人才类 </a></li> 
+            <li><a href="../xzzx1/qtl.htm"> 其它类 </a></li> 
+        </ul>
+    </li>
+    <li class="" style="display:none;"><a class="dropdown" href="../yjszsfs.htm"> 研究生招生复试 </a>
+        <ul class="nav_item">
+            <li><a href="../yjszsfs/ss.htm"> 硕士 </a></li> 
+            <li><a href="../yjszsfs/bs.htm"> 博士 </a></li> 
+        </ul>
+    </li>
+    <li class=""><a class="dropdown" href="../dsztsy/index.htm"> 党史专题 </a>
+        <ul class="nav_item">
+            <li><a href="../dsztsy/index.htm"> 首页 </a></li> 
+            <li><a href="../dsztsy/xwzx.htm"> 新闻资讯 </a></li> 
+            <li><a href="../dsztsy/xxzl.htm"> 学习资料 </a></li> 
+            <li><a href="../dsztsy/tzgg.htm"> 通知公告 </a></li> 
+            <li><a href="../dsztsy/tpxinwen.htm"> 图片新闻 </a></li> 
+        </ul>
+    </li>
+  </ul>
+</div>
+<div class="article clearfix">
+  <div class="container">
+    <div class="location">    <b>
+        您所在的位置：
+    </b>
+        <a href="../index.htm">
+        首页
+    </a>
+    &nbsp;&gt;&nbsp;
+    <a href="xyjj.htm">
+        学院概况
+    </a>
+    &nbsp;&gt;&nbsp;
+    <a href="xyjj.htm">
+        学院简介
+    </a>
+</div>
+    <div class="list_left">
+      <h3>
+学院概况</h3>
+      <ul>
+<li class="selecd"><a href="xyjj.htm"> 学院简介 </a></li>
+<li class=""><a href="lsyg.htm"> 历史沿革 </a></li>
+<li class=""><a href="jgsz1/xsjg.htm"> 机构设置 </a></li>
+            <li class="list_subMenu ">
+                    •&nbsp;<a href="../show_about_v2.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1057">
+                        党政机构
+                    </a>            
+            </li>
+            <li class="list_subMenu ">
+                    •&nbsp;<a href="jgsz1/kyjg.htm">
+                        科研机构
+                    </a>            
+            </li>
+            <li class="list_subMenu ">
+                    •&nbsp;<a href="jgsz1/wyh_xz_.htm">
+                        委员会(小组)
+                    </a>            
+            </li>
+            <li class="list_subMenu ">
+                    •&nbsp;<a href="jgsz1/xsjg.htm">
+                        系所机构
+                    </a>            
+            </li>
+<li class=""><a href="lrld.htm"> 历任领导 </a></li>
+<li class=""><a href="xrld.htm"> 现任领导 </a></li>
+<li class=""><a href="dwwy.htm"> 党委委员 </a></li>
+<li class=""><a href="lsmj.htm"> 历史名家 </a></li>
+<li class=""><a href="xyzc.htm"> 校友之窗 </a></li>
+            <li class="list_subMenu ">
+                    •&nbsp;<a href="xyzc/xyyd.htm">
+                        校友园地
+                    </a>            
+            </li>
+            <li class="list_subMenu ">
+                    •&nbsp;<a href="xyzc/xyfc.htm">
+                        校友风采
+                    </a>            
+            </li>
+            <li class="list_subMenu ">
+                    •&nbsp;<a href="xyzc/xyl.htm">
+                        校友录
+                    </a>            
+            </li>
+                    <li class="list_subMenu ">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<a href="xyzc/xyl/bks.htm">
+                                本科生
+                            </a>            
+                    </li>                   
+                    <li class="list_subMenu ">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<a href="xyzc/xyl/ssyjs.htm">
+                                硕士研究生
+                            </a>            
+                    </li>                   
+                    <li class="list_subMenu ">
+                            &nbsp;&nbsp;&nbsp;&nbsp;<a href="xyzc/xyl/bsyjs.htm">
+                                博士研究生
+                            </a>            
+                    </li>                   
+                
+
+      </ul>
+    </div>
+    <div class="article_right">
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1301861223,'wbnews','u5')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta5(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta5('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1301861223,5367)</script>
+<div style="margin:30px;min-height:600px;line-height:2;font-size:14px;">
+<p style="margin-bottom:0;text-indent:28px;line-height:27px;background:white;">
+    <span style="font-size: 14px;">
+	</span></p><div id="vsb_content_4_5367_u51"><div id="vsb_content_4"><p class="vsbcontent_start"><span style="font-size: 16px;">武汉大学哲学学院是国内最有影响的哲学院系之一，综合实力和整体水平在全国各类评估中名列前茅,也是国际知名大学哲学院系。哲学学科在2025年度国际QS排名中，位列全球第23位、亚洲第1位。<span style="font-size: 16px;">在第五轮学科评估中评为A类学科。20世纪初期，众多著名哲学家，如熊十力、方东美、洪谦、朱光潜等人在这里任教。中国共产党创始人之一李达先生，曾任恢复重建的哲学系系主任，并为20世纪后叶哲学学科的发展奠定了新的基础。</span></span></p><p><span style="font-size: 16px;">学科优势突出。学院共有哲学1个一级学科，是一级学科博士学位授权单位，9个二级学科，其中哲学二级学科8个，国学1个，包括：马克思主义哲学、中国哲学、外国哲学、美学、宗教学、逻辑学、伦理学、科学技术哲学、国学。马克思主义哲学和中国哲学为国家重点二级学科，哲学一级学科为湖北省重点学科，设有哲学博士后科研流动站。拥有9个硕士点，9个博士点。学院设哲学系、宗教学系，下设8个教研室，武汉大学国学院、武汉大学《民藏》编纂与研究中心挂靠哲学学院。学院设有3个省级科研基地，13个校级研究平台，拥有教育部重点研究基地中国传统文化研究中心（与文学院、历史学院共建）。</span></p><p><span style="font-size: 16px;">师资力量雄厚。学院现有专任教师71人，其中教授32人、副教授33人、讲师6人。人文社会科学资深教授1人，国家级教学名师2人，教育部长江学者特聘教授3人，青年长江学者2人，国家“万人计划”哲学社会科学领军人才2人、青年拔尖人才1人，中宣部文化名家暨“四个一批”人才2人，教育部高校优秀青年教师和新世纪优秀人才11人，湖北省“青年拔尖”人才项目1人，湖北省楚天系列3人，“武汉英才”计划3人，武汉大学珞珈杰出学者4人，武汉大学珞珈学者特聘教授12人，武汉大学人文社会科学优秀青年学者2人，武汉大学珞珈青年学者13人，有8名教师获评享受国务院政府特殊津贴专家。共引进外籍教师19人，在站博士后15人。</span></p><p><span style="font-size: 16px;">学术成果显著。2012-2023年，学院教师在核心期刊发表论文1300余篇，出版论（译）著500余部。获得省部级科研成果奖励61项，其中教育部人文社科优秀成果一等奖2项、二等奖8项、三等奖10项，普及奖2项。获国家哲学社会科学成果文库3项，国家社科基金重大项目5项，教育部重大攻关项目4项。主办国内外学术会议150余次。</span></p><p><span style="font-size: 16px;">教学水平一流。知名教授、博士生导师站在教学第一线授课。采取原典教学、双语教学、名师授课、国外专家授课、国内外专家讲座等丰富多样的教学模式和教学方法。有5位国家马克思主义理论研究和建设工程重点教材建设首席专家，1个国家级教学团队。有5门国家级精品课程，3门教育部精品视频公开课，5门国家精品资源共享课，2门国家级慕课平台课程，3门国家级一流本科课程，14门全英文课程和4门双语课程。2019年，哲学专业被教育部认定为首批国家级一流本科专业建设点；2020年，哲学专业入选教育部首批基础学科拔尖学生培养计划2.0基地、首批基础学科招生改革试点专业（简称“强基计划”）；2022年，宗教学专业入选省级一流本科专业建设点。</span></p><p><span style="font-size: 16px;">学院国际交流与合作日益频繁。已经与美、日、澳等国的高校签订培养协议，每年选送一批本科生到世界名校交流。学院积极推进师资队伍国际化，鼓励教师在国际学界发表论著，不断加强国际合作与交流项目的拓展，大力支持本院学生海外研修和留学，努力吸引海外优质留学生生源。2013年以来新进教师中80%具有国外名校学习经历，现有5名外籍教师和5名外籍博士后。每年举办国际学术会议和讲座60余场，选送一批教师出国（境）研修或参加学术活动。目前，国际化程度居于国内高校哲学院系前列。</span></p><p><span style="font-size: 16px;">学生活动丰富多彩。引导学生开展科学研究、创新创业实践，打造了关注我们的精神家园、经典教读、本科生辩论赛等文化活动品牌，培养了学生的创造、创新、创业能力，本科生党支部入选第四批“全国党建工作样板支部”。</span></p><p><span style="font-size: 16px;">学院人才培养成就卓著。创建百年来，学院为祖国培养了各类优秀人才，他们在党、政、军、学、商、文各界做出了杰出的贡献。近年来，近一半本科毕业生通过推荐免试或参加全国统考考取硕士研究生。15%以上的学生到国外、境外继续学习深造，多名学生被国际名校直接录取为博士生。学生就业领域广阔，大多分布在党政机关、高等院校、科研机构、新闻出版单位、大中型公司企业等，口碑良好。</span></p><p class="vsbcontent_end" style="text-align: right;"><span style="font-size: 16px;">（数据更新：2025年7月）</span></p></div></div>
+    
+<p></p>
+</div>
+</div>
+  </div>
+</div>
+<div class="footer">
+  <div class="container clearfix">版权所有©2018&nbsp;武汉大学哲学学院&nbsp;&nbsp;&nbsp;&nbsp;地址：中国&nbsp;武汉&nbsp;珞珈山&nbsp;&nbsp;&nbsp;&nbsp;邮编：430072&nbsp;&nbsp;&nbsp;&nbsp;邮箱：phil@whu.edu.cn&nbsp;&nbsp;&nbsp;&nbsp;电话：68752861&nbsp;&nbsp;&nbsp;</div>
+</div>
+
+
+</body></html>

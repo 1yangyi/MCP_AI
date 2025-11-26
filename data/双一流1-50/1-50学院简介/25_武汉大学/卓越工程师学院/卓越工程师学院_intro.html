@@ -1,0 +1,516 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<title>学院简介-武汉大学卓越工程师学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+
+
+<meta name="SiteName" content="武汉大学卓越工程师学院">
+<meta name="SiteDomain" content="cee.whu.edu.cn">
+<meta name="ColumnName" content="学院简介">
+<meta name="ColumnKeywords" content="学院简介">
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="">
+
+<link rel="stylesheet" href="../dfiles/27359/whu_zygcs/css/style.css">
+<link rel="stylesheet" href="../dfiles/27359/whu_zygcs/css/nycss.css" type="text/css">
+<link rel="stylesheet" href="../dfiles/27359/whu_zygcs/css/swiper.css">
+<link rel="stylesheet" href="../dfiles/27359/whu_zygcs/css/animate.min.css">
+<link rel="stylesheet" href="../dfiles/27359/whu_zygcs/css/aos.css">
+<script src="../dfiles/27359/whu_zygcs/js/jquery.min.js"></script>
+<script src="../dfiles/27359/whu_zygcs/js/ofi.min.js"></script>
+<script src="../dfiles/27359/whu_zygcs/js/picturefill.min.js"></script>
+<script src="../dfiles/27359/whu_zygcs/js/libsy.js"></script>
+<script src="../dfiles/27359/whu_zygcs/js/swiper.minindex.js"></script>
+<script src="../dfiles/27359/whu_zygcs/js/swiper.animate.min.js"></script>
+<script src="../dfiles/27359/whu_zygcs/js/aos.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1091,'/about.jsp',-1,2098416091)</script>
+</head>
+
+<body style="background:url(../dfiles/27359/whu_zygcs/images/content-bg.png) no-repeat center bottom;">
+  <div class="header"> <span class="menuBtn"><b></b><b></b><b></b></span>
+  
+     <div class="logo lg1">   
+    <a href="../index.htm" title="武汉大学卓越工程师学院"><img src="../dfiles/27359/whu_zygcs/images/logo-b.svg" alt=""></a>
+    </div>
+  <div class="logo lg2">
+  <a href="../index.htm"> <img src="../dfiles/27359/whu_zygcs/images/logo-h.svg"> <img src="../dfiles/27359/whu_zygcs/images/h-logo8.png" alt=""> </a>
+  </div> 
+    
+    
+    <div class="header-soBtn">
+    
+  
+     
+     
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu1">
+    <div id="appu1"><div class="so-cont"><input type="text" placeholder="请输入关键司..." autocomplete="off" class="inp"> <input name="submit_button" type="button" value="" class="submit"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError" class="so-cont">               
+ 
+    
+            <input type="text" class="inp" placeholder="请输入关键司..." autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="submit" name="submit_button" type="button" value="" v-on:click="onSubmit()"/>
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "2098416091";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+     
+     
+    </div>
+    <div class="header-r">
+      <div class="scroll">
+        <div class="header-set"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><div class="item"><a href="https://www.whu.edu.cn/" target="_blank" title="武大主页" class="btns">武大主页</a></div>
+        
+<div class="item"><a href="https://zhlj.whu.edu.cn/pc/index" target="_blank" title="智慧珞珈" class="btns">智慧珞珈</a></div>
+        
+</div>
+        
+       <ul class="nav">
+
+
+ 
+        <li> <a href="../index.htm" title="首页" class="v1">首页<i></i></a>
+         
+          
+        </li>       
+
+
+ 
+        <li> <a href="xyjj.htm" title="学院概况" class="v1">学院概况<i></i></a>
+         
+          <div class="sub">
+            <div class="sub-in">
+            
+             <a href="xyjj.htm" title="学院简介"><span>学院简介</span></a>
+             <a href="xrld.htm" title="现任领导"><span>现任领导</span></a>
+             <a href="zzjg.htm" title="组织机构"><span>组织机构</span></a>
+              
+            </div>
+          </div>
+          
+        </li>       
+
+
+ 
+        <li> <a href="../2_list_teacher.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1621" title="师资队伍" class="v1">师资队伍<i></i></a>
+         
+          <div class="sub">
+            <div class="sub-in">
+            
+             <a href="../2_list_teacher.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1621" title="校内导师"><span>校内导师</span></a>
+             <a href="../team/qyds.htm" title="企业导师"><span>企业导师</span></a>
+              
+            </div>
+          </div>
+          
+        </li>       
+
+
+ 
+        <li> <a href="../talent/zyxwlb.htm" title="人才培养" class="v1">人才培养<i></i></a>
+         
+          <div class="sub">
+            <div class="sub-in">
+            
+             <a href="../talent/zyxwlb.htm" title="专业学位类别"><span>专业学位类别</span></a>
+             <a href="../talent/zsxx.htm" title="招生信息"><span>招生信息</span></a>
+             <a href="../talent/pyfa.htm" title="培养方案"><span>培养方案</span></a>
+             <a href="../talent/kcjs.htm" title="课程建设"><span>课程建设</span></a>
+             <a href="../talent/xwgz.htm" title="学位工作"><span>学位工作</span></a>
+             <a href="../talent/gjjl.htm" title="国际交流"><span>国际交流</span></a>
+             <a href="../talent/xmzpy.htm" title="项目制培养"><span>项目制培养</span></a>
+              
+            </div>
+          </div>
+          
+        </li>       
+
+
+ 
+        <li> <a href="../chanjiao/lsh.htm" title="产教融合" class="v1">产教融合<i></i></a>
+         
+          <div class="sub">
+            <div class="sub-in">
+            
+             <a href="../chanjiao/lsh.htm" title="理事会"><span>理事会</span></a>
+             <a href="../chanjiao/hzqy.htm" title="合作企业"><span>合作企业</span></a>
+             <a href="../chanjiao/gcsjszx.htm" title="工程师技术中心"><span>工程师技术中心</span></a>
+              
+            </div>
+          </div>
+          
+        </li>       
+
+
+ 
+        <li> <a href="../xsgz.htm" title="学生工作" class="v1">学生工作<i></i></a>
+         
+          <div class="sub">
+            <div class="sub-in">
+            
+             <a href="../xsgz/xgdt.htm" title="学工动态"><span>学工动态</span></a>
+             <a href="../xsgz/jyxx.htm" title="就业信息"><span>就业信息</span></a>
+              
+            </div>
+          </div>
+          
+        </li>       
+
+
+ 
+        <li> <a href="../dqgz.htm" title="党群工作" class="v1">党群工作<i></i></a>
+         
+          <div class="sub">
+            <div class="sub-in">
+            
+             <a href="../dqgz/llxx.htm" title="理论学习"><span>理论学习</span></a>
+             <a href="../dqgz/zfjs.htm" title="作风建设"><span>作风建设</span></a>
+             <a href="../dqgz/qtgz.htm" title="群团工作"><span>群团工作</span></a>
+              
+            </div>
+          </div>
+          
+        </li>       
+
+
+ 
+        <li> <a href="../xxgk.htm" title="信息公开" class="v1">信息公开<i></i></a>
+         
+          <div class="sub">
+            <div class="sub-in">
+            
+             <a href="../xxgk/gsgg.htm" title="公示公告"><span>公示公告</span></a>
+             <a href="../xxgk/gzzd.htm" title="规章制度"><span>规章制度</span></a>
+             <a href="../xxgk/bszn.htm" title="办事指南"><span>办事指南</span></a>
+             <a href="../xxgk/zlxz.htm" title="资料下载"><span>资料下载</span></a>
+              
+            </div>
+          </div>
+          
+        </li>       
+
+</ul>
+       
+      </div>
+    </div>
+  </div>
+<div class="so-pop">
+  <div class="pop-bg"></div>
+  <div class="pop-close"></div>
+  <div class="search-box">
+
+    
+  </div>
+</div> 
+
+ <div class="nyBanner" style="background-image: url(../dfiles/27359/whu_zygcs/images/ny-banner.png);"></div>
+
+
+
+  <section id="nav_slide">
+  <div class="n_title"> <a id="bnt_back" href="javascript:history.back(-1);"> <img src="../dfiles/27359/whu_zygcs/images/icon_bnt_back2.png" alt=""> </a>
+    <h1 class="margin_auto_1">
+学院概况</h1>
+    <div id="bnt_sub_nav"> <img src="../dfiles/27359/whu_zygcs/images/bnt_sub_nav2.png" alt=""> </div>
+  </div>
+  <div id="sub_nav_content">
+   
+    <ul class="am-list admin-sidebar-list" id="collapase-nav-1">
+    <li class="am-panel on"> <a href="xyjj.htm">学院简介</a><i>&gt;</i> </li>
+        
+    <li class="am-panel "> <a href="xrld.htm">现任领导</a><i>&gt;</i> </li>
+        
+    <li class="am-panel "> <a href="zzjg.htm">组织机构</a><i>&gt;</i> </li>
+        
+</ul>
+   
+  </div>
+</section>
+  <div class="nyWrap">
+  <div class="dwpre w1400 clearfix">
+    
+<div class="left_nav fl">
+  <div class="titleny">
+    <h3>
+学院概况</h3>
+    <h4>ABOUT US</h4>
+  </div>
+  
+    <ul class="clearfix">
+  <li class="nLi on"><a href="xyjj.htm" class="block fz16 on"><span>学院简介</span></a></li>
+    
+<li class="nLi "><a href="xrld.htm" class="block fz16 "><span>现任领导</span></a></li>
+    
+<li class="nLi "><a href="zzjg.htm" class="block fz16 "><span>组织机构</span></a></li>
+    
+ </ul>
+  
+</div>
+
+
+
+
+<script>
+     $(function () {
+                        var idx = $('.left_nav .nLi.on').find('.navSub').stop().slideDown(300);
+                    
+                        $('.left_nav .nLi h3').click(function () {
+                            var _this = $(this);
+                            if ($(_this).parents('.nLi').hasClass('on')) {
+                                $(_this).parents('.nLi').removeClass('on').find('.navSub').stop().slideUp(300);
+                                 $(_this).parents('.nLi').siblings('.nLi').removeClass('on');
+                            } else {
+                                $(_this).parents('.nLi').addClass('on').find('.navSub').stop().slideDown(300);
+                                $(_this).parents('.nLi').siblings('.nLi').removeClass('on');
+                                $(_this).parents('.nLi').siblings('.nLi').find('.navSub').stop().slideUp(300);
+                            }
+                        })
+                    })
+</script> 
+    <div class="nyContent fr">
+      
+<div class="bread clearfix">
+    <h3 class="fl">
+学院简介</h3>
+    <div class="path fr"><i></i>
+    <a href="../index.htm" class="ani300">首页</a><span>-</span>
+    <a href="xyjj.htm" class="ani300">学院概况</a><span>-</span>
+    <a href="xyjj.htm" class="ani300">学院简介</a><span>-</span>
+</div>
+</div>      <div class="about clearfix">
+
+
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',2098416091,'wbnews','u12')</script>
+<script>function seeContenta12(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta12('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',2098416091,1001)</script>
+
+    <div id="vsb_content_1001_u121"><div id="vsb_content"><p style="text-indent: 2em; padding-bottom:16px;"><span style="font-family: 仿宋_gb2312, fangsong_gb2312; font-size: 20px;">武汉大学卓越工程师学院为学校新体制二级单位，学院在学校党委和行政领导下，以培养工程类专业学位硕博士研究生为主，开展相关工作。学院设综合办公室（理事会秘书处）、项目合作办公室、学生工作办公室等内设机构。学院具体职责包括：</span></p><p style="text-indent: 2em; padding-bottom:16px;"><span style="text-indent: 2em; font-family: 仿宋_gb2312, fangsong_gb2312; font-size: 20px;">1、研究制定卓越工程师学院发展规划，建设校企理事会管理、企业项目牵引、产教深度融合运行机制，制定完善相关政策制度。</span></p><p style="text-indent: 2em; padding-bottom:16px;"><span style="text-indent: 2em; font-family: 仿宋_gb2312, fangsong_gb2312; font-size: 20px;">2、负责实施工程硕博士培养模式改革。落实卓越工程师学院研究生思政教育及日常教育教学管理、校企双导师队伍建设等工作，建立健全招生、培养、学位授予与质量保障等全过程教育管理服务体系。</span></p><p style="text-indent: 2em; padding-bottom:16px;"><span style="font-family: 仿宋_gb2312, fangsong_gb2312; font-size: 20px;">3、推进校企联合培养工作。推进校企共同实施订单式、项目制人才培养，开展校企共建的产教融合特色项目建设；常态化、制度化、规模化组织产教对接活动，协同建设类企业级别的仿真环境及工程技术实践平台；协调校企共同落实联合培养教学、科研、生活所需的空间设施等配套条件。</span></p><p style="text-indent: 2em; padding-bottom:16px;"><span style="font-family: 仿宋_gb2312, fangsong_gb2312; font-size: 20px;">4、开展工程教育交流合作。联合国内外相关高校、企业和机构，建立国内外工程前沿科技交流机制，定期组织夏令营、论坛等活动，邀请工程科技领军人才和企业一流工程师开展教学指导，促进交流合作。</span></p><script src="../sf-webproxy/resource/web_proxy.js?v=1.4.3.605"></script><script src="../sf-webproxy/resource/web_proxy.js?v=1.4.3.605"></script><script src="../sf-webproxy/resource/web_proxy.js?v=1.4.3.605"></script></div></div>
+   
+
+
+ <div class="aboutScroll">
+          <div class="swiper mySwiper swiper-container-initialized swiper-container-horizontal">
+          
+             <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1714px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate" title="武汉大学卓越工程师学院" data-swiper-slide-index="5" style="width: 857px;">
+              <div class="pic"><em class="tran500" style="background-image: url(../images/25/02/26/1aqaoca2yk/about0.jpg)"></em></div>
+              <h5 class="TXTovehid"><span>武汉大学卓越工程师学院</span></h5>
+            </div>
+
+
+
+ <div class="swiper-slide swiper-slide-prev" title="武汉大学卓越工程师学院" data-swiper-slide-index="0" style="width: 857px;">
+              <div class="pic"><em class="tran500" style="background-image: url(../images/25/02/26/1aqaoca2yk/about5.jpg)"></em></div>
+              <h5 class="TXTovehid"><span>武汉大学卓越工程师学院</span></h5>
+            </div>      
+ <div class="swiper-slide swiper-slide-active" title="武汉大学卓越工程师学院" data-swiper-slide-index="1" style="width: 857px;">
+              <div class="pic"><em class="tran500" style="background-image: url(../images/25/02/26/1aqaoca2yk/about4.jpg)"></em></div>
+              <h5 class="TXTovehid"><span>武汉大学卓越工程师学院</span></h5>
+            </div>      
+
+            
+
+
+ <div class="swiper-slide swiper-slide-next" title="武汉大学卓越工程师学院" data-swiper-slide-index="2" style="width: 857px;">
+              <div class="pic"><em class="tran500" style="background-image: url(../images/25/02/26/1aqaoca2yk/about3.jpg)"></em></div>
+              <h5 class="TXTovehid"><span>武汉大学卓越工程师学院</span></h5>
+            </div>      
+ <div class="swiper-slide" title="武汉大学卓越工程师学院" data-swiper-slide-index="3" style="width: 857px;">
+              <div class="pic"><em class="tran500" style="background-image: url(../images/25/02/26/1aqaoca2yk/about2.jpg)"></em></div>
+              <h5 class="TXTovehid"><span>武汉大学卓越工程师学院</span></h5>
+            </div>      
+
+            
+
+
+ <div class="swiper-slide" title="武汉大学卓越工程师学院" data-swiper-slide-index="4" style="width: 857px;">
+              <div class="pic"><em class="tran500" style="background-image: url(../images/25/02/26/1aqaoca2yk/about1.jpg)"></em></div>
+              <h5 class="TXTovehid"><span>武汉大学卓越工程师学院</span></h5>
+            </div>      
+ <div class="swiper-slide" title="武汉大学卓越工程师学院" data-swiper-slide-index="5" style="width: 857px;">
+              <div class="pic"><em class="tran500" style="background-image: url(../images/25/02/26/1aqaoca2yk/about0.jpg)"></em></div>
+              <h5 class="TXTovehid"><span>武汉大学卓越工程师学院</span></h5>
+            </div>      
+
+            
+
+<div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" title="武汉大学卓越工程师学院" data-swiper-slide-index="0" style="width: 857px;">
+              <div class="pic"><em class="tran500" style="background-image: url(../images/25/02/26/1aqaoca2yk/about5.jpg)"></em></div>
+              <h5 class="TXTovehid"><span>武汉大学卓越工程师学院</span></h5>
+            </div></div> 
+         
+          <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
+          <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        </div>
+
+</div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer">
+
+      <div class="wp clearfix">
+                <div class="footLogo"><a href=""><img src="../dfiles/27359/whu_zygcs/images/logo-b.svg"></a></div>
+                <div class="banQuan fr">
+                   <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p><span> 电话：027-68763997</span><span>邮箱：cee@whu.edu.cn</span><span>传真：027-68765908</span><br>版权所有 © 武汉大学卓越工程师学院<span>地址：中国武汉珞珈山</span><span>邮编：430072</span></p>
+                  
+                </div>
+    </div> 
+
+</footer>
+
+
+
+
+
+
+
+<script> 
+    var swiper = new Swiper(".aboutScroll .mySwiper", {
+            autoplay:true,
+            loop:true,
+            navigation: {
+              nextEl: ".aboutScroll .swiper-button-next",
+              prevEl: ".aboutScroll .swiper-button-prev",
+            },
+          });
+
+</script>
+
+<script type="text/javascript">
+$(function(){
+    $("#bnt_sub_nav").click(function(){
+    $(this).toggleClass("on");
+        $("#sub_nav_content").slideToggle();
+      });
+
+    $("#sub_nav_content dt.title a").attr("href","javascript:void(0)");
+    $("#sub_nav_content dt.title_on").next("dd").show();
+    $("#sub_nav_content dt.title").click(function() {
+        if ($(this).hasClass("title_on")) {
+            $(this).next("dd").slideToggle();
+            $(this).removeClass("title_on");
+        } else {
+            $("#sub_nav_content dd").slideUp();
+            $("#sub_nav_content dt.title").removeClass("title_on").removeClass("on");
+            $(this).toggleClass("title_on");
+            $(this).next("dd").slideDown();
+        }
+    });  
+    $("#sub_nav_content ul li i").click(function(){
+        $(this).next("ul").slideToggle();
+        $(this).parents("#sub_nav_content ul li").siblings().find("ul").slideUp();
+    });
+    
+    if ($(".list_box00").length) {
+        $(".list_box00 li").each(function (i) {
+            $(this).css({ 'transition-delay': i * 200 + 200 + 'ms' });
+        });
+    }
+    
+})
+
+</script>
+</body></html>

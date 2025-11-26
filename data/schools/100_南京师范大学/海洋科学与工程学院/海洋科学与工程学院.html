@@ -1,0 +1,794 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南京师范大学海洋科学与工程学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="南京师范大学海洋科学与工程学院">
+<META Name="keywords" Content="南京师范大学海洋科学与工程学院" />
+
+    <link rel="stylesheet" href="style/slick.css">
+    <link rel="stylesheet" href="style/slick-theme.css">
+    <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/swiper.css">
+    <link rel="stylesheet" href="style/animate.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/wow.min.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230776447525055574200030003475c -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1943005723)</script>
+</head>
+
+<body>
+    <div class="wave">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script>
+<div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+          <div class="layer"></div>
+        <div class="search"><input type="text" placeholder="请输入关键字" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+        <input type="image" src="images/search.png" v-on:click="onSubmit()"/></div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1943005723";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://223.2.9.5:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+    <div class="main-top">
+        <div class="header">
+            <div class="head px1400">
+                <div class="head-l">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="海洋科学与工程学院"><img src="images/logo.png" alt=""></a></div>
+                <div class="head-r"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><div class="lt-r">
+<a href="http://schools.njnu.edu.cn/marine/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 90342)">English</a><span>|</span>
+<a href="http://1www.njnu.edu.cn" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 90341)">学校主页</a><span>|</span>
+<a href="javascript:;" class="sousuo"><img src="images/search.png" alt="">搜索</a>
+</div></div>
+                <div class="clear"></div>
+
+            </div>
+        </div>
+        <div id="nav"><div class="nav px1400">
+<ul>
+<li><a href="index.htm" title="首页">首页</a></li>
+<li><a href="xygk1/xyjj.htm" title="学院概况">学院概况</a>
+<ul>
+<li><a href="xygk1/xyjj.htm" title="学院简介">学院简介</a></li>
+<li><a href="xygk1/xrld.htm" title="现任领导">现任领导</a></li>
+<li><a href="xygk1/wyh.htm" title="委员会">委员会</a></li>
+<li><a href="xygk1/dw.htm" title="党委">党委</a></li>
+<li><a href="xygk1/xktd.htm" title="学科团队">学科团队</a></li>
+<li><a href="xygk1/jyjg.htm" title="教研机构">教研机构</a></li>
+<li><a href="xygk1/xzjg.htm" title="行政机构">行政机构</a></li>
+<li><a href="xygk1/dqzz.htm" title="党群组织">党群组织</a></li>
+</ul>
+</li>
+<li><a href="szdw/szgk.htm" title="师资队伍">师资队伍</a>
+<ul>
+<li><a href="szdw/szgk.htm" title="师资概况">师资概况</a></li>
+<li><a href="szdw/rcjh.htm" title="人才计划">人才计划</a></li>
+<li><a href="szdw/jsmd.htm" title="教师名单">教师名单</a></li>
+<li><a href="szdw/kzjs.htm" title="客座教授">客座教授</a></li>
+<li><a href="szdw/rtjs.htm" title="荣退教师">荣退教师</a></li>
+</ul>
+</li>
+<li><a href="kxyj.htm" title="科学研究">科学研究</a>
+<ul>
+<li><a href="kxyj/kytz.htm" title="科研通知">科研通知</a></li>
+<li><a href="kxyj/kygk.htm" title="科研概况">科研概况</a></li>
+<li><a href="kxyj/kypt.htm" title="科研平台">科研平台</a></li>
+<li><a href="kxyj/xkjs.htm" title="学科介绍">学科介绍</a></li>
+</ul>
+</li>
+<li><a href="bkspy.htm" title="本科生培养">本科生培养</a>
+<ul>
+<li><a href="bkspy/jxtz.htm" title="教学通知">教学通知</a></li>
+<li><a href="bkspy/zysz.htm" title="专业设置">专业设置</a></li>
+<li><a href="bkspy/kcjs.htm" title="课程建设">课程建设</a></li>
+<li><a href="bkspy/jwwd.htm" title="教务文档">教务文档</a></li>
+</ul>
+</li>
+<li><a href="yjspy.htm" title="研究生培养">研究生培养</a>
+<ul>
+<li><a href="yjspy/tzgg.htm" title="通知公告">通知公告</a></li>
+<li><a href="yjspy/dsdw.htm" title="导师队伍">导师队伍</a></li>
+<li><a href="yjspy/zsgz.htm" title="招生工作">招生工作</a></li>
+<li><a href="yjspy/pygz.htm" title="培养工作">培养工作</a></li>
+<li><a href="yjspy/xwgz.htm" title="学位工作">学位工作</a></li>
+<li><a href="yjspy/wdxz.htm" title="文档下载">文档下载</a></li>
+</ul>
+</li>
+<li><a href="dwrs/llxx.htm" title="党建人事">党建人事</a>
+<ul>
+<li><a href="dwrs/llxx.htm" title="理论学习">理论学习</a></li>
+<li><a href="dwrs/dwgz.htm" title="党委工作">党委工作</a></li>
+<li><a href="dwrs/rsgz.htm" title="人事工作">人事工作</a></li>
+<li><a href="dwrs/txgz.htm" title="退休工作">退休工作</a></li>
+<li><a href="dwrs/xxzl.htm" title="学习资料">学习资料</a></li>
+</ul>
+</li>
+<li><a href="xsgz.htm" title="学生工作">学生工作</a>
+<ul>
+<li><a href="xsgz/tzgg.htm" title="通知公告">通知公告</a></li>
+<li><a href="xsgz/xsdj.htm" title="学生党建">学生党建</a></li>
+<li><a href="xsgz/xzfc.htm" title="学子风采">学子风采</a></li>
+<li><a href="xsgz/jczd.htm" title="奖惩助贷">奖惩助贷</a></li>
+<li><a href="xsgz/zsjy.htm" title="招生就业">招生就业</a></li>
+<li><a href="xsgz/xljk.htm" title="心理健康">心理健康</a></li>
+<li><a href="xsgz/shsj.htm" title="社会实践">社会实践</a></li>
+<li><a href="xsgz/gzzd.htm" title="规章制度">规章制度</a></li>
+</ul>
+</li>
+<li><a href="xygh/tzgg.htm" title="学院工会">学院工会</a>
+<ul>
+<li><a href="xygh/tzgg.htm" title="通知公告">通知公告</a></li>
+<li><a href="xygh/ghdt.htm" title="工会动态">工会动态</a></li>
+</ul>
+</li>
+<li><a href="xyzj/byhy.htm" title="校友之家">校友之家</a>
+<ul>
+<li><a href="xyzj/byhy.htm" title="毕业合影">毕业合影</a></li>
+<li><a href="xyzj/xyfc.htm" title="校友风采">校友风采</a></li>
+<li><a href="xyzj/xyml.htm" title="校友名录">校友名录</a></li>
+</ul>
+</li>
+<div class="clear"></div>
+</ul>
+</div></div>
+    </div>
+
+    <div class="banner">    
+<div><a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1943005723, 1010863)" target="_blank"><img src="images/weixintupian_20241118195858.jpg" alt=""></a></div>
+<div><a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1943005723, 1008755)" target="_blank"><img src="images/18/06/haiyangzhishijingsai.jpg" alt=""></a></div>
+<div><a href="" title="江苏自然资源智库南京师范大学研究基地揭牌" onclick="_addDynClicks(&#34;wbimage&#34;, 1943005723, 76010)" target="_blank"><img src="images/banner.jpg" alt=""></a></div>
+<div><a href="" title="江苏自然资源智库南京师范大学研究基地揭牌" onclick="_addDynClicks(&#34;wbimage&#34;, 1943005723, 76009)" target="_blank"><img src="images/banner.jpg" alt=""></a></div>
+</div>
+    <!-- 移动端头部 -->
+    <div class="top">
+        <div class="wap wap-menu">
+            <img src="images/menu.png" class="menu" alt="">
+            <img src="images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+    <div class="wap m-head">
+        <div class="m-logo">
+          
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="海洋科学与工程学院"><img src="images/logo.png" alt=""></a>
+        </div>
+        <div class="m-nav">
+            <div class="m-tlink">
+<a href="http://schools.njnu.edu.cn/marine/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 90342)">English</a>
+<a href="http://1www.njnu.edu.cn" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 90341)">学校主页</a>
+</div>
+<ul class="">
+<li class="active"><a href="index.htm" title="首页">首页</a></li>
+<li><a href="xygk1/xyjj.htm" title="学院概况">学院概况</a><span></span>
+<ul>
+<li><a href="xygk1/xyjj.htm" title="学院简介">学院简介</a></li>
+<li><a href="xygk1/xrld.htm" title="现任领导">现任领导</a></li>
+<li><a href="xygk1/wyh.htm" title="委员会">委员会</a></li>
+<li><a href="xygk1/dw.htm" title="党委">党委</a></li>
+<li><a href="xygk1/xktd.htm" title="学科团队">学科团队</a></li>
+<li><a href="xygk1/jyjg.htm" title="教研机构">教研机构</a></li>
+<li><a href="xygk1/xzjg.htm" title="行政机构">行政机构</a></li>
+<li><a href="xygk1/dqzz.htm" title="党群组织">党群组织</a></li>
+</ul>
+</li>
+<li><a href="szdw/szgk.htm" title="师资队伍">师资队伍</a><span></span>
+<ul>
+<li><a href="szdw/szgk.htm" title="师资概况">师资概况</a></li>
+<li><a href="szdw/rcjh.htm" title="人才计划">人才计划</a></li>
+<li><a href="szdw/jsmd.htm" title="教师名单">教师名单</a></li>
+<li><a href="szdw/kzjs.htm" title="客座教授">客座教授</a></li>
+<li><a href="szdw/rtjs.htm" title="荣退教师">荣退教师</a></li>
+</ul>
+</li>
+<li><a href="kxyj.htm" title="科学研究">科学研究</a><span></span>
+<ul>
+<li><a href="kxyj/kytz.htm" title="科研通知">科研通知</a></li>
+<li><a href="kxyj/kygk.htm" title="科研概况">科研概况</a></li>
+<li><a href="kxyj/kypt.htm" title="科研平台">科研平台</a></li>
+<li><a href="kxyj/xkjs.htm" title="学科介绍">学科介绍</a></li>
+</ul>
+</li>
+<li><a href="bkspy.htm" title="本科生培养">本科生培养</a><span></span>
+<ul>
+<li><a href="bkspy/jxtz.htm" title="教学通知">教学通知</a></li>
+<li><a href="bkspy/zysz.htm" title="专业设置">专业设置</a></li>
+<li><a href="bkspy/kcjs.htm" title="课程建设">课程建设</a></li>
+<li><a href="bkspy/jwwd.htm" title="教务文档">教务文档</a></li>
+</ul>
+</li>
+<li><a href="yjspy.htm" title="研究生培养">研究生培养</a><span></span>
+<ul>
+<li><a href="yjspy/tzgg.htm" title="通知公告">通知公告</a></li>
+<li><a href="yjspy/dsdw.htm" title="导师队伍">导师队伍</a></li>
+<li><a href="yjspy/zsgz.htm" title="招生工作">招生工作</a></li>
+<li><a href="yjspy/pygz.htm" title="培养工作">培养工作</a></li>
+<li><a href="yjspy/xwgz.htm" title="学位工作">学位工作</a></li>
+<li><a href="yjspy/wdxz.htm" title="文档下载">文档下载</a></li>
+</ul>
+</li>
+<li><a href="dwrs/llxx.htm" title="党建人事">党建人事</a><span></span>
+<ul>
+<li><a href="dwrs/llxx.htm" title="理论学习">理论学习</a></li>
+<li><a href="dwrs/dwgz.htm" title="党委工作">党委工作</a></li>
+<li><a href="dwrs/rsgz.htm" title="人事工作">人事工作</a></li>
+<li><a href="dwrs/txgz.htm" title="退休工作">退休工作</a></li>
+<li><a href="dwrs/xxzl.htm" title="学习资料">学习资料</a></li>
+</ul>
+</li>
+<li><a href="xsgz.htm" title="学生工作">学生工作</a><span></span>
+<ul>
+<li><a href="xsgz/tzgg.htm" title="通知公告">通知公告</a></li>
+<li><a href="xsgz/xsdj.htm" title="学生党建">学生党建</a></li>
+<li><a href="xsgz/xzfc.htm" title="学子风采">学子风采</a></li>
+<li><a href="xsgz/jczd.htm" title="奖惩助贷">奖惩助贷</a></li>
+<li><a href="xsgz/zsjy.htm" title="招生就业">招生就业</a></li>
+<li><a href="xsgz/xljk.htm" title="心理健康">心理健康</a></li>
+<li><a href="xsgz/shsj.htm" title="社会实践">社会实践</a></li>
+<li><a href="xsgz/gzzd.htm" title="规章制度">规章制度</a></li>
+</ul>
+</li>
+<li><a href="xygh/tzgg.htm" title="学院工会">学院工会</a><span></span>
+<ul>
+<li><a href="xygh/tzgg.htm" title="通知公告">通知公告</a></li>
+<li><a href="xygh/ghdt.htm" title="工会动态">工会动态</a></li>
+</ul>
+</li>
+<li><a href="xyzj/byhy.htm" title="校友之家">校友之家</a><span></span>
+<ul>
+<li><a href="xyzj/byhy.htm" title="毕业合影">毕业合影</a></li>
+<li><a href="xyzj/xyfc.htm" title="校友风采">校友风采</a></li>
+<li><a href="xyzj/xyml.htm" title="校友名录">校友名录</a></li>
+</ul>
+</li>
+ <div class="clear"></div>
+            </ul></div>
+    </div>
+    <div class="section1">
+        <div class="sect1 px1400">
+            <div class="sect1-l wow fadeInLeft">
+
+
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="title">
+                    <h2><span>News information</span>
+                        <p>新闻动态</p>
+                    </h2>
+                    <a href="index/xwdt.htm">MORE </a>
+                    <div class="clear"></div>
+                </div>
+                <div class="news">
+                    <div class="news-r">
+                        <div class="swiper-container slideA">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide no-swi">
+                                   <a href="info/1050/11413.htm" title="中共南京师范大学委员会巡察公告"><img src="/__local/F/D3/CE/1A1B632AAB5D42E7E840658C61C_3C6A90F7_B6527.jpg" />
+                                        <p>中共南京师范大学委员会巡察公告</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide no-swi">
+                                   <a href="info/1050/11393.htm" title="南京农业大学李向飞教授为“渔菁英”参赛队员做专题培训"><img src="/__local/4/A2/E2/4C05F18384125DB47282495687D_4B996FA7_1F423.jpeg" />
+                                        <p>南京农业大学李向飞教授为“渔菁英”参赛队员做专题培训</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide no-swi">
+                                   <a href="info/1050/11123.htm" title="海洋学院教师在第三届江苏省高校海洋类专业青年教师讲课竞赛中取得佳绩"><img src="/__local/7/AA/23/3FD9B64C61AD7579C2D188B9CC3_7C1F11D7_38B46.jpeg" />
+                                        <p>海洋学院教师在第三届江苏省高校海洋类专业青年教师讲课竞赛中取得佳绩</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide no-swi">
+                                   <a href="info/1050/11113.htm" title="海洋学院召开“十五五”计划暨学科建设研讨会"><img src="/__local/9/70/B7/3539784C0F607E40AFB02F44C43_2301D048_21BBF.jpeg" />
+                                        <p>海洋学院召开“十五五”计划暨学科建设研讨会</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="news-l">
+                        <ul>
+                            
+<li class="on">
+                                <a href="info/1050/11413.htm" title="中共南京师范大学委员会巡察公告">
+                                    <div class="date">2025-10-22</div>
+                                    <p>中共南京师范大学委员会巡察公告</p>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/1050/11393.htm" title="南京农业大学李向飞教授为“渔菁英”参赛队员做专题培训">
+                                    <div class="date">2025-10-21</div>
+                                    <p>南京农业大学李向飞教授为“渔菁英”参赛队员做专题培训</p>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/1050/11123.htm" title="海洋学院教师在第三届江苏省高校海洋类专业青年教师讲课竞赛中取得佳绩">
+                                    <div class="date">2025-09-02</div>
+                                    <p>海洋学院教师在第三届江苏省高校海洋类专业青年教师讲课竞赛中取得佳绩</p>
+                                </a>
+                            </li>
+                            
+<li>
+                                <a href="info/1050/11113.htm" title="海洋学院召开“十五五”计划暨学科建设研讨会">
+                                    <div class="date">2025-08-06</div>
+                                    <p>海洋学院召开“十五五”计划暨学科建设研讨会</p>
+                                </a>
+                            </li>
+                            
+</ul>
+                    </div>
+
+                    <div class="clear"></div>
+                </div><script>_showDynClickBatch(['dynclicks_u8_11413','dynclicks_u8_11393','dynclicks_u8_11123','dynclicks_u8_11113'],[11413,11393,11123,11113],"wbnews", 1943005723)</script>
+</div>
+            <div class="sect1-r wow fadeInRight">
+
+
+
+
+
+
+
+<div class="title">
+<h2><span>NOTICES</span>
+<p>通知公告</p>
+</h2>
+<a href="index/tzgg.htm">MORE </a>
+<div class="clear"></div>
+</div>
+<ul>
+<li>
+<a href="info/1049/11363.htm" title="海洋学院2025年硕士研究生导师招生资格公示">
+<div class="date">
+<p>16</p><span>2025/10</span></div>
+<div class="text">
+<p>海洋学院2025年硕士研究生导师招生资格公示</p>
+</div>
+</a>
+</li>
+<li>
+<a href="info/1049/11323.htm" title="海洋科学与工程学院2026年接收推荐免试研究生名单公示">
+<div class="date">
+<p>10</p><span>2025/10</span></div>
+<div class="text">
+<p>海洋科学与工程学院2026年接收推荐免试研究生名单公示</p>
+</div>
+</a>
+</li>
+<li>
+<a href="info/1049/11233.htm" title="海洋科学与工程学院2026年接收推荐免试攻读研究生复试录取办法" style="font-weight:bold;">
+<div class="date">
+<p>09</p><span>2025/09</span></div>
+<div class="text">
+<p>海洋科学与工程学院2026年接收推荐免试攻读研究生复试录取办法</p>
+</div>
+</a>
+</li>
+<li>
+<a href="info/1049/11043.htm" title="海洋学院2025-2026学年秋季学期拟选用教材公示">
+<div class="date">
+<p>04</p><span>2025/07</span></div>
+<div class="text">
+<p>海洋学院2025-2026学年秋季学期拟选用教材公示</p>
+</div>
+</a>
+</li>
+<li>
+<a href="info/1049/10983.htm" title="南京师范大学海洋科学与工程学院本科生暑期开放日">
+<div class="date">
+<p>18</p><span>2025/06</span></div>
+<div class="text">
+<p>南京师范大学海洋科学与工程学院本科生暑期开放日</p>
+</div>
+</a>
+</li>
+</ul><script>_showDynClickBatch(['dynclicks_u9_11363','dynclicks_u9_11323','dynclicks_u9_11233','dynclicks_u9_11043','dynclicks_u9_10983'],[11363,11323,11233,11043,10983],"wbnews", 1943005723)</script>
+</div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="section2">
+        <div class="sect2 px1400">
+            <div class="sect2-l wow fadeInUp">
+                <ul>
+                    <li>
+
+
+
+
+
+
+
+<div class="title wow fadeInUp">
+<h2><span>Scientific advances</span>
+<p>科研进展</p>
+</h2>
+<a href="index/kyjz.htm">MORE </a>
+<div class="clear"></div>
+</div>
+<div class="s2">
+<a href="info/1091/11403.htm" title="实验室徐敏教授团队在环境管理领域取得重要进展：从生态实体到海岸带整体的生态风险演变与驱动机制研究">
+<div class="pic"><img src="/__local/4/DB/D5/5A372BF8640460A114010ED6966_CC228D79_F4EB.png" /></div>
+<div class="text">
+<div class="date">
+<p>22</p><span>2025/10</span>
+</div>
+<h2>实验室徐敏教授团队在环境管理领域取得重要进展：从生态实体到海岸带整体的生态风险演变与驱动机制研究</h2>
+<p>南京师范大学海洋科学与工程学院、江苏省海-陆环境演变与生态建设高校重点实验室徐敏教授团队在环境管理领域国际权威期刊《Environmental Impact Assessment Review》（中国科学院1区Top，IF=11.2）发表重要研究成果“From ecological entities to the entire coastal zone: An improved ecological risk assessment methodology in Jiangsu, China”，提出了适用于海岸带的生态风险评价思路，建立了从生态实体到海岸带整体的生态风险评价方法。...</p>
+</div>
+</a>
+</div><script>_showDynClickBatch(['dynclicks_u10_11403'],[11403],"wbnews", 1943005723)</script>
+</li>
+                    <li>
+
+
+
+
+
+
+
+<div class="title">
+                            <h2><span>Academic Exchange</span>
+                                <p>学术交流</p>
+                            </h2>
+                            <a href="index/xsjl.htm">MORE </a>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="s2">
+                             <a href="info/1092/11423.htm" title="深蓝讲坛(2025年第7期) |华东师范大学贾建军研究员应邀为海洋学院师生作“海岸建筑退缩线划定”专题学术报告">
+                                <div class="pic"><img src="/__local/5/6B/99/D87EAF7C8E340B023D51874FDF0_745396E5_16577.jpeg" /></div>
+                                <div class="text">
+                                    <div class="date">
+                                        <p>24</p><span>2025/10</span>
+                                    </div>
+                                    <h2>深蓝讲坛(2025年第7期) |华东师范大学贾建军研究员应邀为海洋学院师生作“海岸建筑退缩线划定”专题学术报告</h2>
+                                    <p>随着全球气候变化和海平面上升，我们的海岸线正面临着前所未有的挑战。如何在开发利用和生态保护之间找到平衡点？如何为我们的近海城市和家园划定一条“安全线”？为进一步拓展我院师生在海岸带资源管理与海洋空间规划领域的研究视野，促进学术交流与合作，南京师范大学海洋科学与工程学院、江苏省海-陆环境演变与生态建设高校重点实验室特邀华东师范大学河口海岸全国重点实验室贾建军研究员，于2025年10月20日（星期一）15:00~17:00在学思楼225室，...</p>
+                                </div>
+                            </a>
+                        
+                    
+
+</div><script>_showDynClickBatch(['dynclicks_u11_11423'],[11423],"wbnews", 1943005723)</script>
+</li>
+                    <div class="clear"></div>
+                </ul>
+
+            </div>
+
+            <div class="sect2-r  wow fadeInUp">
+                <div class="title">
+                    <h2><span>Three all-round education</span>
+                        <p>三全育人</p>
+                    </h2>
+                    <a href="index/sqyr.htm">MORE+</a>
+                    <div class="clear"></div>
+                </div>
+                <ul>
+
+
+
+
+
+
+
+<li>
+                        <a href="info/1089/10463.htm" title="学科交融 科创未来|海洋学院举办研究生“学科交叉青年思享汇”学术沙龙">
+                            <div class="pic"><img src="/__local/7/24/E9/E5262E6B5AEFB88E3931E9B3CC5_0114E8B6_1C77C.jpg" /></div>
+                            <div class="text">
+                                <p>03-21 | 学科交融 科创未来|海洋学院举办研究生“学科交叉青年思享汇”学术沙龙</p>
+                            </div>
+                        </a>
+                    </li>
+                    
+<li>
+                        <a href="info/1089/10213.htm" title="一站式学生社区|海洋学院开展“赓续雷锋精神 闪耀青春光芒”学雷锋志愿服务活动">
+                            <div class="pic"><img src="/__local/F/C6/0B/8E6C9477E3DCAC36EF6A2E13152_428F75E7_176DE.jpg" /></div>
+                            <div class="text">
+                                <p>03-10 | 一站式学生社区|海洋学院开展“赓续雷锋精神 闪耀青春光芒”学雷锋志愿服务活动</p>
+                            </div>
+                        </a>
+                    </li>
+                    
+<li>
+                        <a href="info/1089/9723.htm" title="校第十九届优秀学子宣讲团海洋学院专场宣讲会顺利举行">
+                            <div class="pic"><img src="/__local/6/09/E7/BFB36E3C9C0C3D0F238DCA5FD98_11A7D91C_189EE.jpg" /></div>
+                            <div class="text">
+                                <p>11-25 | 校第十九届优秀学子宣讲团海洋学院专场宣讲会顺利举行</p>
+                            </div>
+                        </a>
+                    </li>
+                    
+<li>
+                        <a href="info/1089/9383.htm" title="青春献基层，实践长才干｜海洋学院举行2024年大学生暑期社会实践分享会">
+                            <div class="pic"><img src="/__local/F/CC/5E/34137F99862294817DB4376A033_0ED1FCC5_93E6.jpg" /></div>
+                            <div class="text">
+                                <p>10-14 | 青春献基层，实践长才干｜海洋学院举行2024年大学生暑期社会实践分享会</p>
+                            </div>
+                        </a>
+                    </li>
+                    
+<div class="clear"></div><script>_showDynClickBatch(['dynclicks_u12_10463','dynclicks_u12_10213','dynclicks_u12_9723','dynclicks_u12_9383'],[10463,10213,9723,9383],"wbnews", 1943005723)</script>
+</ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="section3">
+
+
+
+
+
+
+
+<div class="sect3 px1400">
+            <div class="title wow fadeInUp">
+                <h2><span>Blue Ocean Scholar</span>
+                    <p>蓝海学人</p>
+                </h2>
+                <a href="index/lhxr.htm">MORE </a>
+                <div class="clear"></div>
+            </div>
+            <div class="s3 wow fadeInUp">
+                <ul>
+                    
+<li>
+                        <a href="info/1090/10073.htm" title="李玉凤">
+                            <div class="pic"><img src="/__local/A/67/4B/1E916B5E4F7DBA9722860202D1E_3C599E37_1F15D.jpg" /></div>
+                            <p>李玉凤</p>
+                        </a>
+                    </li>
+                    
+<li>
+                        <a href="info/1090/10083.htm" title="杨阳">
+                            <div class="pic"><img src="/__local/E/40/83/A983EF8306CF85121AD21430271_7CB6867C_48195.jpg" /></div>
+                            <p>杨阳</p>
+                        </a>
+                    </li>
+                    
+<li>
+                        <a href="info/1090/4081.htm" title="孟庆国">
+                            <div class="pic"><img src="/__local/F/7C/CB/7E2424BC7B5E6B078902D978377_6C3688E4_2A6D3.png" /></div>
+                            <p>孟庆国</p>
+                        </a>
+                    </li>
+                    
+<li>
+                        <a href="info/1090/10063.htm" title="范育新">
+                            <div class="pic"><img src="/__local/0/21/AF/C5FF34DA6C71FB53024CAD0CA77_C123296C_8FA5.jpg" /></div>
+                            <p>范育新</p>
+                        </a>
+                    </li>
+                    
+<li>
+                        <a href="info/1090/4080.htm" title="尹绍武（二级教授）">
+                            <div class="pic"><img src="/__local/B/C9/DD/98FD8A0E3604E1D07B60E38497D_95F1499C_80C78.jpg" /></div>
+                            <p>尹绍武（二级教授）</p>
+                        </a>
+                    </li>
+                    
+<li>
+                        <a href="info/1090/4082.htm" title="连  宾">
+                            <div class="pic"><img src="/__local/6/AF/F8/1F0E7852351CAFE4D9AC9C0CC2E_C6BD6BF9_333CE.jpg" /></div>
+                            <p>连  宾</p>
+                        </a>
+                    </li>
+                    
+<li>
+                        <a href="info/1090/10123.htm" title="沈永明">
+                            <div class="pic"><img src="/__local/C/C1/18/8F045C449E495A46337D06313FB_B53C0F59_44F7.jpg" /></div>
+                            <p>沈永明</p>
+                        </a>
+                    </li>
+                    
+<li>
+                        <a href="info/1090/10113.htm" title="舒强">
+                            <div class="pic"><img src="/__local/4/F1/D4/C2175A0A652DA8EBB0139D54248_8D0245E8_16CC.jpg" /></div>
+                            <p>舒强</p>
+                        </a>
+                    </li>
+                    
+<li>
+                        <a href="info/1090/10103.htm" title="张东">
+                            <div class="pic"><img src="/__local/A/F9/D3/9AE743E09AC32D956B185FD2A80_F53F7D1A_473E.jpg" /></div>
+                            <p>张东</p>
+                        </a>
+                    </li>
+                    
+<li>
+                        <a href="info/1090/10093.htm" title="陈晔">
+                            <div class="pic"><img src="/__local/1/D6/E9/4E88FDFA93D6F5CC1FB705D7BDD_E5D7B118_1093B.jpg" /></div>
+                            <p>陈晔</p>
+                        </a>
+                    </li>
+                    
+</ul>
+                <div class="s3-logo"><span><img src="images/s3-logo.png" alt=""></span></div>
+            </div>
+        </div><script>_showDynClickBatch(['dynclicks_u13_10073','dynclicks_u13_10083','dynclicks_u13_4081','dynclicks_u13_10063','dynclicks_u13_4080','dynclicks_u13_4082','dynclicks_u13_10123','dynclicks_u13_10113','dynclicks_u13_10103','dynclicks_u13_10093'],[10073,10083,4081,10063,4080,4082,10123,10113,10103,10093],"wbnews", 1943005723)</script>
+</div>
+    <div class="footer">
+        <div class="foot px1400">
+            <div class="foot-l">
+                <h2>友情链接</h2>
+                <ul>
+                    <li><p>校内链接<span></span></p>
+                        <ul>                     
+<li><a href="https://kjc.njnu.edu.cn/" target="_blank" title="科学技术研究院" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 98406)">科学技术研究院</a></li>             
+<li><a href="https://cwc.njnu.edu.cn/" target="_blank" title="财务处" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 98407)">财务处</a></li>             
+<li><a href="https://jwc.njnu.edu.cn/" target="_blank" title="教务处" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 98408)">教务处</a></li>             
+<li><a href="https://grad.njnu.edu.cn/" target="_blank" title="研究生院" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 98409)">研究生院</a></li>             
+</ul></li>
+                    <li><p>校外链接<span></span></p>
+                        <ul>
+                            
+<li><a href="http://www.moe.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 90357)">中华人民共和国教育部</a></li>
+                            
+<li><a href="http://www.most.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 90356)">中华人民共和国科学技术部</a></li>
+                            
+<li><a href="http://www.nsfc.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 90355)">国家自然科学基金委员会</a></li>
+                            
+<li><a href="http://www.mnr.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 90359)">中华人民共和国自然资源部</a></li>
+                            
+<li><a href="http://www.mee.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 90360)">中华人民共和国生态环境部</a></li>
+                            
+<li><a href="http://www.moa.gov.cn/govpublic/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 90358)">中华人民共和国农业农村部</a></li>
+                            
+<li><a href="http://fzggw.jiangsu.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 90362)">江苏省发展和改革委员会</a></li>
+                            
+<li><a href="http://jyt.jiangsu.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 90364)">江苏省教育厅</a></li>
+                            
+<li><a href="http://kxjst.jiangsu.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 90363)">江苏省科技厅</a></li>
+                            
+<li><a href="http://zrzy.jiangsu.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 90365)">江苏省自然资源厅</a></li>
+                            
+<li><a href="http://hbt.jiangsu.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 90366)">江苏省生态环境厅</a></li>
+                            
+<li><a href="http://nw.jiangsu.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 90361)">江苏省农业农村厅</a></li>
+                            
+<li><a href="http://www.cso.org.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 90352)">中国海洋学会</a></li>
+                            
+<li><a href="http://www.caoe.org.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 90353)">中国海洋工程咨询协会</a></li>
+                            
+<li><a href="https://csfish.kejie.org.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1943005723, 90354)">中国水产学会</a></li>
+                            
+</ul></li>
+                </ul>
+            </div>
+
+            <div class="foot-r">    
+
+                <div class="ewm"><img src="images/ewm.jpg" alt=""><span>扫一扫<br>关注我们</span></div>
+            
+
+</div>
+            <div class="clear"></div>
+            <div class="foot-m"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>
+    © 2023 南京师范大学海洋科学与工程学院 <a href="https://beian.miit.gov.cn/" style="color: rgba(255, 255, 255, .6);">苏ICP备05007121号-4</a>
+</p>
+<p>
+    地址：南京市仙林大学城学林路2号 邮编：210023 邮箱：sun@njnu.edu.cn
+</p></div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,461 @@
+<!DOCTYPE html><html lang="zh"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <title>哲学系简介-厦门大学哲学系</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="哲学系简介">
+
+
+<meta name="keywords" content="厦门大学哲学系,哲学系简介">
+
+  <meta name="description" content="厦门大学哲学系">
+  
+  <!-- <link rel="stylesheet" href="./style/bootstrap.css" /> -->
+  <link rel="stylesheet" href="../style/swiper.min.css">
+  <link rel="stylesheet" href="../style/animation.css">
+  <link rel="stylesheet" href="../fonts/iconfont.css">
+  <link rel="stylesheet" href="../style/app.css">
+  <script src="../js/brower.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778465750545742000400024e5c -->
+<link rel="stylesheet" type="text/css" href="../page.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1088,'/page.jsp',-1,1900432788)</script>
+</head>
+
+<body id="app">
+
+  <!-- 返回顶部按钮 -->
+  <div class="back-top-menu" id="backTopMenu">
+    <span class="iconfont icon-jiantouhong"></span>
+  </div>
+
+  <!-- header -->
+  <header class="header">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__top-container">
+          <span data-nav-open="" class="header__nav-open iconfont icon-daohang only-mobile"></span>
+          <a href="../" class="header__logo">
+            <img src="../images/logo.png" alt="">
+          </a>
+          <img class="header__top-bg" src="../images/image3.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="header__bottom" data-nav-wrapper="">
+      <div class="container">
+        <div class="header__search"><!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><div id="divu0">
+    <div id="appu0"><div class="search-input"><input type="text" placeholder="全文搜索" autocomplete="off" class="search-input__input"> <a href="" class="search-input__button"></a></div></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+            <div class="search-input">
+                <input type="text" class="search-input__input" placeholder="全文搜索" autocomplete="off" v-model=query.keyWord @keyup.enter="onSubmit">
+                <a href="" class="search-input__button" v-on:click="onSubmit()"></a>
+            </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1900432788";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu0 = document.querySelector("#appu0");
+   if (appElementu0 && appElementu0.__vue__) {
+
+   } else {
+      $("#divu0").html($("#htmlu0").text());
+      var appOwner = "1900432788";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou0 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu0(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu0();
+        }
+      };
+
+      function onSubmitu0(e) {
+        queryInfou0.query.keyWord= $("#appu0  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou0.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script></div>
+        <div class="header__nav">
+          <span class="header__nav-close iconfont icon-shanchu" data-nav-close="">&nbsp;</span>
+          <div class="web-nav" data-nav-content=""><ul class="web-nav__1-list" data-nav="">
+  <li class="web-nav__1-item" data-nav-lv1=""> <a href="../index.htm" class="web-nav__1-link" data-nav-lv1-text="">首页</a>
+  </li>
+  <li class="web-nav__1-item" data-nav-lv1=""> <a href="zxxjj.htm" class="web-nav__1-link active" data-nav-lv1-text="">本系概况</a>
+    <ul class="web-nav__2-list" data-nav-lv2-wrapper="">
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="zxxjj.htm" class="web-nav__2-link">哲学系简介</a>
+      </li>
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="dzld.htm" class="web-nav__2-link">党政领导</a>
+      </li>
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="wyh.htm" class="web-nav__2-link">委员会</a>
+      </li>
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="bgstw.htm" class="web-nav__2-link">办公室团委</a>
+      </li>
+    </ul>
+  </li>
+  <li class="web-nav__1-item" data-nav-lv1=""> <a href="../szdw.htm" class="web-nav__1-link" data-nav-lv1-text="">师资队伍</a>
+    <ul class="web-nav__2-list" data-nav-lv2-wrapper="">
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../szdw/zzjs.htm" class="web-nav__2-link web-nav__2-link--arrow">在职教师</a>
+        <nav class="web-nav__3-list" data-nav-lv3-wrapper="">
+          <a href="../szdw/zzjs/mkszyzx.htm" class="web-nav__3-link">马克思主义哲学</a>
+          <a href="../szdw/zzjs/zgzx.htm" class="web-nav__3-link">中国哲学</a>
+          <a href="../szdw/zzjs/wgzx.htm" class="web-nav__3-link">外国哲学</a>
+          <a href="../szdw/zzjs/ljx.htm" class="web-nav__3-link">逻辑学</a>
+          <a href="../szdw/zzjs/llx.htm" class="web-nav__3-link">伦理学</a>
+          <a href="../szdw/zzjs/kjzx.htm" class="web-nav__3-link">科技哲学</a>
+        </nav>
+      </li>
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../szdw/bsh.htm" class="web-nav__2-link">博士后</a>
+      </li>
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../szdw/rxjs.htm" class="web-nav__2-link">荣休教师</a>
+      </li>
+    </ul>
+  </li>
+  <li class="web-nav__1-item" data-nav-lv1=""> <a href="../xsyj.htm" class="web-nav__1-link" data-nav-lv1-text="">学术研究</a>
+    <ul class="web-nav__2-list" data-nav-lv2-wrapper="">
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../xsyj/yjpt.htm" class="web-nav__2-link">研究平台</a>
+      </li>
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../xsyj/xsjl.htm" class="web-nav__2-link">学术交流</a>
+      </li>
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../xsyj/kydt.htm" class="web-nav__2-link">科研动态</a>
+      </li>
+    </ul>
+  </li>
+  <li class="web-nav__1-item" data-nav-lv1=""> <a href="../rcpy.htm" class="web-nav__1-link" data-nav-lv1-text="">人才培养</a>
+    <ul class="web-nav__2-list" data-nav-lv2-wrapper="">
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../rcpy/bks.htm" class="web-nav__2-link web-nav__2-link--arrow">本科生</a>
+        <nav class="web-nav__3-list" data-nav-lv3-wrapper="">
+          <a href="../rcpy/bks/bkpy.htm" class="web-nav__3-link">本科培养</a>
+          <a href="../rcpy/bks/wjgd.htm" class="web-nav__3-link">文件规定</a>
+        </nav>
+      </li>
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../rcpy/yjs.htm" class="web-nav__2-link web-nav__2-link--arrow">研究生</a>
+        <nav class="web-nav__3-list" data-nav-lv3-wrapper="">
+          <a href="../rcpy/yjs/yjspy.htm" class="web-nav__3-link">研究生培养</a>
+          <a href="../rcpy/yjs/lwdb.htm" class="web-nav__3-link">论文答辩</a>
+          <a href="../rcpy/yjs/wjgd.htm" class="web-nav__3-link">文件规定</a>
+        </nav>
+      </li>
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../rcpy/qjjh.htm" class="web-nav__2-link">强基计划</a>
+      </li>
+    </ul>
+  </li>
+  <li class="web-nav__1-item" data-nav-lv1=""> <a href="../djsz.htm" class="web-nav__1-link" data-nav-lv1-text="">党建思政</a>
+    <ul class="web-nav__2-list" data-nav-lv2-wrapper="">
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../djsz/gzdt.htm" class="web-nav__2-link">工作动态</a>
+      </li>
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../djsz/llyd.htm" class="web-nav__2-link">理论园地</a>
+      </li>
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../djsz/dzdg.htm" class="web-nav__2-link">党章党规</a>
+      </li>
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../djsz/zbjs.htm" class="web-nav__2-link">支部建设</a>
+      </li>
+    </ul>
+  </li>
+  <li class="web-nav__1-item" data-nav-lv1=""> <a href="../zsjy.htm" class="web-nav__1-link" data-nav-lv1-text="">招生就业</a>
+    <ul class="web-nav__2-list" data-nav-lv2-wrapper="">
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../zsjy/zsdt.htm" class="web-nav__2-link">招生动态</a>
+      </li>
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../zsjy/jyxx.htm" class="web-nav__2-link">就业信息</a>
+      </li>
+    </ul>
+  </li>
+  <li class="web-nav__1-item" data-nav-lv1=""> <a href="../rczp.htm" class="web-nav__1-link" data-nav-lv1-text="">人才招聘</a>
+  </li>
+  <li class="web-nav__1-item" data-nav-lv1=""> <a href="../xstd.htm" class="web-nav__1-link" data-nav-lv1-text="">学生天地</a>
+    <ul class="web-nav__2-list" data-nav-lv2-wrapper="">
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../xstd/xsjg.htm" class="web-nav__2-link">学生机构</a>
+      </li>
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../xstd/txhd.htm" class="web-nav__2-link">团学活动</a>
+      </li>
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../xstd/xssw.htm" class="web-nav__2-link">学生事务</a>
+      </li>
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../xstd/xsfc.htm" class="web-nav__2-link">学生风采</a>
+      </li>
+    </ul>
+  </li>
+  <li class="web-nav__1-item" data-nav-lv1=""> <a href="../xyfc.htm" class="web-nav__1-link" data-nav-lv1-text="">系友风采</a>
+    <ul class="web-nav__2-list" data-nav-lv2-wrapper="">
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../xyfc/xydt.htm" class="web-nav__2-link">系友动态</a>
+      </li>
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../xyfc/nqjy.htm" class="web-nav__2-link">南强记忆</a>
+      </li>
+      <li class="web-nav__2-item" data-nav-lv2=""> <a href="../xyfc/xyjz.htm" class="web-nav__2-link">系友捐赠</a>
+      </li>
+    </ul>
+  </li>
+  <li class="web-nav__1-item" data-nav-lv1=""> <a href="../shfw.htm" class="web-nav__1-link" data-nav-lv1-text="">社会服务</a>
+  </li>
+</ul></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- banner -->
+  <div class="static-banner">
+    <img src="../images/xiqingbainian.png">
+  </div>
+
+
+  <!-- 内页 -->
+  <main class="inner-page">
+    <div class="container">
+      <div class="inner-page__wrapper">
+        <div class="inner-page__left">
+          <!-- 侧边栏 -->
+          <div class="side-bar">
+            <h2 class="side-bar__heading">
+本系概况</h2>
+            <div class="side-nav"><ul class="side-nav__1-list">
+      <li class="side-nav__1-item active">
+      <a href="zxxjj.htm" class="side-nav__1-link">哲学系简介</a>
+    </li>
+    <li class="side-nav__1-item">
+      <a href="dzld.htm" class="side-nav__1-link">党政领导</a>
+    </li>
+    <li class="side-nav__1-item">
+      <a href="wyh.htm" class="side-nav__1-link">委员会</a>
+    </li>
+    <li class="side-nav__1-item">
+      <a href="bgstw.htm" class="side-nav__1-link">办公室团委</a>
+    </li>
+</ul></div>
+            <img class="side-bar__footer-img" src="../images/side-nav-img.png" alt="">
+          </div>
+        </div>
+
+
+        <div class="inner-page__medium">
+
+          <div class="inner-page__medium--top">
+            <!-- 面包屑 -->
+            <div class="custom-breadcrumb">
+              <h2 class="title">
+哲学系简介</h2>
+              <div class="breadcrumb-navs">
+                <p class="pos">当前位置：</p>
+                <nav>    <a href="../index.htm">首页</a>
+    <a href="zxxjj.htm">本系概况</a>
+    <a href="zxxjj.htm">哲学系简介</a>
+</nav>
+              </div>
+            </div>
+          </div>
+
+          <div class="inner-page__medium--bottom">
+            <!-- 内容 -->
+            <div class="article-details">
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1900432788,'wbnews','u7')</script>
+<script>function seeContenta7(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1900432788,2381)</script>
+<h2 class="article-details__heading">厦门大学哲学系简介</h2>
+<div class="article-details__content">
+  <p>
+        </p><div id="vsb_content_2381_u71"><div id="vsb_content"><p style="text-align:center;line-height:150%"><strong><span style="line-height: 150%; font-size: 21px; font-family: simfang, 仿宋;">（一）</span></strong></p><p style="text-indent: 0px; line-height: 150%;"><span style="text-indent: 32px; font-size: 21px; font-family: simfang, 仿宋;"><strong>&nbsp; &nbsp;&nbsp;</strong>厦门大学哲学系创办于1922年，初建时隶属于文学部。1923年4月，厦门大学改“学部”为“科”后，哲学系隶属于文科。哲学系首任系主任是孙贵定（1896—1949）教授。孙贵定教授是民国第一批公费留英学生，曾于1913年至1922年在英国爱丁堡大学学习，期间不仅精通了英语，还对法语、德语、拉丁语、西班牙语等语言颇有造诣，并先后获得了心理学学士学位、文学硕士学位、教育专科哲学博士学位，主要从事教育学、外国文学研究。他于1923年回国后受聘为厦门大学文科教育系主任、教育学兼社会心理学教授，兼任哲学系主任。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;1929年秋季，陈定谟（1889-1961）教授接任哲学系主任。陈定谟教授在美国芝加哥大学先后获得哲学学士学位和社会学硕士学位，1925年加盟厦门大学之前，曾经在北京大学、复旦大学、南开大学和西北大学任教授。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;1930年，学校又改“科”为“学院”，哲学系被归入文学院。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;厦大哲学系创建后，孙贵定、艾锷风（Gustav Ecke，又名艾克，著名德国汉学家）、朱谦之、缪篆、戴密微（Paul DeMiéville，著名法国汉学家）、陈定谟、张颐、邓以蛰等知名学者先后来系任教，林玉霖（系林语堂二哥）也曾担任哲学系副教授。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;哲学系创建之初就十分重视教学体系的建设，每年认真制定《哲学系学程纲要》和《教学纲要》，不断充实和完善课程设置，并予以必要的调整、改革，使之系统化；对学生的学时与学分安排也做了详细的规定，课程设置逐年充实和完善。每届学生除国文、外文等公共必修课外，一般须修习20多门专业课。例如1933-1934年，必修课有哲学概论、西洋伦理学、唯识哲学、形上学、知识论、方法论、德国哲学、宗教哲学、美术、中国伦理学、中国哲学、诸子哲学、西洋哲学史、印度哲学等。选修课有普通心理学、社会心理学、社会哲学、政治哲学、希腊哲学、英国哲学、道家哲学、比较宗教论、佛典选读、佛家哲学、历史哲学、文化哲学、尼采哲学、社会学原理等。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;哲学系鼓励学生在认真修完本系和学校规定的课程之外，利用课余时间积极参加学校“文哲学会”及其他社团活动。“文哲学会”是学校五个团体组织之一，经常组织学术活动，邀请本校教授和校外专家学者作学术讲演。例如在1932年底，“文哲学会”就曾邀请南普陀寺太雪法师作了八次“法相唯识学”演讲。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;哲学系于1923年首次招收学生，至1933年共招收七届（其间有四年停招）学生，共计13人。著名的佛学研究者林藜光，为厦门大学哲学系1928年毕业生，一生以复兴佛学为己任，精通英、法、德、日诸国文字，对梵文、巴利文、藏文均有相当的造诣。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;1934年6月，遵照当时的教育部令，哲学系被停办。</span></p><p style="text-align:center;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;"><strong><span style="font-family: simfang, 仿宋; font-size: 21px; line-height: 150%;">（二）</span></strong></span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;厦门大学哲学系于1959年复办。1960年，哲学系复办之初，朱天顺被任命为哲学系主任，邹永贤担任党总支书记(与马列室合成一总支)。当时哲学系的筹建工作主要是由马列主义教研室兼管的。同时，系里还选派了一些教师到中国人民大学和北京大学的哲学系研究生班进修深造。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;1960年夏季，哲学系首次招收50名调干生。新中国成立后复办的哲学系，在教学目的和教学内容上较之前有了根本性改变，着重培养马克思主义哲学方向的专门人才，因此辩证唯物主义、历史唯物主义就成为主干课程。50名首批入学的学生，在第一学年里，即接受了系统深入的辩证唯物主义和历史唯物主义教育，为以后继续深造打下了坚实的基础。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;哲学系复办之后仍然坚持把教学工作放在首位，努力建立健全教学体系。当时的哲学系十分重视学生的马克思主义哲学基础理论教育，着重加强马克思主义哲学原理、原著等专业必修课程的教学。除此之外还开设出系列选修课程，如形式逻辑、自然辩证法、马克思主义哲学发展史、宗教学、中国哲学、社会管理科学等。在提高教学质量，完善课程体系的同时，哲学系也加快科学研究工作的推进，提出以教学带科研，以科研促教学的发展方针，把科研和教学紧密结合起来，使二者相得益彰。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;但是此次复办持续时间很短。1961年夏，根据中央的“调整”方针，学校再次撤销了哲学系，学生中有近十人转入政治经济学系继续学习，其余回原单位工作，教师并入马列主义教研室哲学教研组。</span></p><p style="text-align:center;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;"><strong><span style="font-family: simfang, 仿宋; font-size: 21px; line-height: 150%;">（三）</span></strong></span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;1974年10月，厦门大学在马列主义教研室哲学教研组的基础上成立了哲学系筹备小组，筹备恢复哲学系办学事宜，罗芬任筹备小组组长。彼时，哲学系的人员编制与机构设置还没有从马列主义教研室独立出来。为了锻炼教师队伍，积累办学经验，1975年底至1976年底，哲学系先后与福建省三明地区总工会、同安县总工会和三明地区共青团举办理论骨干哲学短训班，培训学员240多人，主要讲授辩证唯物主义和历史唯物主义。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;经认真筹划，厦大哲学系终于在1976年底正式复办，当时共有教职工22人，其中教师19人。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;哲学系在复办之初，设立了马克思主义哲学原理原著、西方哲学史、中国哲学史和自然辩证法四个教研室及系资料室。1977年初增设逻辑学教研室，次年又增设辩证法教研室，该教研室下设马克思主义辩证法史、欧洲辩证法思想史、中国辩证法思想史和辩证法逻辑四个研究组及编译组。编译组不定期编译刊印内部刊物《辩证法研究》，以与国内其他学术单位交流。1977年，学校正式任命哲学系领导，罗芬任系党总支书记，邹永贤任系主任。后来，罗芬调到校部任职，由洪桂芳接任总支书记。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;1984年底，学校成立政法学院，哲学系随之并入其中。邹永贤调任政法学院院长，赵民接任系主任，王善钧任总支书记。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;接着，哲学系扩建了教研室，从马克思主义哲学原理原著教研室中分出马克思主义哲学史、毛泽东哲学思想、伦理学—美学、社会学等教研室，并增设毛泽东哲学思想研究室。同年，哲学系增设科学社会主义专业，原马列室共运史教研室教师转入哲学系，并成立科学社会主义教研室。第二年，该教研室扩展为科学社会主义原理原著、共运史和社会主义思想史、政治学等三个教研室。1986年4月，科学社会主义专业改为政治学专业，脱离哲学系成立政治学系。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;1990年，赵民调任政法学院副院长，哲学系副主任商英伟主持哲学系工作。两年后，哲学系组建新的领导班子，张善城任系主任，潘世墨任党总支书记。1996年1月，潘世墨升任校长助理，白锡能任哲学系党总支书记。同年12月，厦门大学自然辩证法研究室并入哲学系(厦门大学自然辩证法研究室正式成立于1978年，周济任主任，1979年开始招收自然辩证法专业硕士研究生，该专业于1981年获得硕士学位授予权)。1998年，徐梦秋任哲学系主任。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;1999年9月，学校成立人文学院，哲学系脱离政法学院，被并入人文学院，白锡能任人文学院党总支书记，徐梦秋任人文学院副院长兼哲学系主任。2000年3月，社会工作专业脱离哲学系，另成立社会学系。2004年4月，徐梦秋不再兼任哲学系主任，由詹石窗接任。2005年5月，厦门大学马列部部分教师并入哲学系，哲学系师资队伍进一步壮大。自此，哲学系开始承担全校公共课“马克思主义哲学原理”和“自然辩证法”的教学工作。同年，哲学系对教研室设置做了调整，最终确立了马克思主义哲学、中国哲学、外国哲学、科技哲学、逻辑学、伦理学、宗教学等7个教研室。2008年2月，詹石窗调任人文学院副院长。同年6月，刘泽亮接任哲学系主任。中国哲学教研室与宗教学教研室合并，组建成新的中国哲学教研室。2011年春，刘泽亮任人文学院副院长，曹志平接任哲学系主任。同年8月，哲学系部分师资调至学校新成立的马克思主义学院。2018年8月，哲学系领导班子调整，曹剑波接任哲学系主任。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;2022年11月14日，学校决定正式将哲学系调整为厦门大学直属系，并任命杨松为哲学系党委书记，聘任朱菁为哲学系主任。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;哲学系自1976年正式复办当年即开始招生。除了招收哲学专业本科生之外，1987年哲学系还组织一批师资，在哲学专业内增设社会工作与管理专门化方向，并于1988年开始招收本科生，直到社会学系成立后招生终止。2007-2009年间，哲学系曾在哲学专业内增设国学专门化方向，共招收了三届本科生。此外，哲学系还于1977年起陆续招收了政治理论班、党政干部基础理论专业、社会保险与管理专业等各类学员数百名。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;在2013年以前，哲学系独立招收本科生。2013年起，厦门大学全面推行本科生的大类招生和大类培养制度。新生入学后前两年在人文科学试验班接受人文学科的大类培养，修读中文系、历史系、哲学系、人类学系开设的多门大类平台课程。当时哲学系为这批本科生开设的课程有哲学导论、马克思主义基本原理、伦理学原理、普通逻辑学等。第三年，部分人文科学实验班的本科生分流到哲学系，系统接受哲学专业教育。从2016年开始，人文学科本科生大类培养的时间从两年缩短至一年，哲学系为本科生提供了哲学导论（上）和哲学导论（下）这两门课程，采用“大班授课、小班讨论”的教学模式，取得了良好的效果。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;哲学系在1976年正式复办后延续了重视本科教学工作的传统，并进一步努力提高教师的教学能力和学术水平，建立健全课程体系。哲学系认真制定教学计划和教学大纲，不断充实、深化和完善课程设置，并予以必要的调整、改革，使之更为系统化，以更好地适应社会和时代的需求。同时还注重教材建设，先后编撰出一批具有较高水平的教材，如：《马克思主义辩证法史》，曾被国家教委列为“高等学校文科教材”；《伦理学基础》也为国内许多高校采用；还有《形式逻辑简明读本》《马克思主义哲学概论》《中国哲学史》等等，都产生了一定的影响。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;在本科专业教育方面，哲学系开设出门类较为齐全的系列必修课程，如马克思主义哲学原理、马克思主义哲学史、马克思主义原著选读、中国哲学史、西方哲学史、形式逻辑、伦理学、宗教学、美学概论、科学技术哲学等。这些必修课自第二次复办以来持续开课，一直保留至今。此外还曾在不同的时期开设了一批独具特色的选修课，如马克思主义辩证法史、唯物史观专题、毛泽东哲学思想发展史、西方马克思主义原著选读、马克思主义经济学说、西方辩证法史、中西哲学比较研究、宋明理学、中国哲学史方法论、科学学原理、知识论、社会科学哲学、自然科学发展概论等等。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;总的来说，重视专业基础训练，注重阅读理解、思维分析、论文写作、沟通表达、跨界学习、理论联系实际等基本能力的培养，探索精细化、个性化的人才培养模式，充分落实本科生导师制，切实加强班级制建设，是厦大哲学系通过对40多年来的教学经验的总结而形成的特色。哲学专业2020年入选国家首批“强基计划”，2021年获批福建省一流本科专业，并于2022年获批国家一流本科专业。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;在研究生和博士后招收方面，哲学系也走在了全国前列。哲学系1981年即开始招收硕士研究生，招生专业为马克思主义哲学和逻辑学，指导教师分别为邹永贤副教授和赵民副教授。1984年第一批硕士研究生毕业（马克思主义哲学专业由中山大学授予学位，逻辑学专业由武汉大学授予学位）。1985年，马克思主义哲学、外国哲学、逻辑学和科学社会主义四个专业获得硕士学位授予权。1993年中国哲学获得硕士学位授予权。2000年哲学系科技哲学专业获批博士学位授予权，并于2002年招收了首届博士研究生。2003年，中国哲学和外国哲学专业获得博士学位授予权。2006年，哲学系获批哲学一级学科博士学位授予权，自此哲学系的博士点、硕士点涵盖了哲学一级学科之下的所有8个二级学科。2007年，哲学系获批哲学博士后流动站。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;哲学系十分重视国内外学术交流和学术团体活动。从1979年以来，先后组织、主办（或参与主办）百余次全国性学术活动和多次国际性学术活动，如1979年中国马克思主义哲学史学会的成立大会、1980年中国逻辑学会辩证逻辑专业委员会成立大会、1981年全国首次列宁《哲学笔记》讲习班、1987年国际朱子学学术会议、1989年现代认识论研讨会、1993年全国首届科技哲学史研讨会、2000年第四次全国科学逻辑讨论会、2003年西方知识论学术研讨会、2014年中国知识论学会成立大会等。</span></p><p style="text-indent:32px;line-height:150%"><span style="font-size: 21px; font-family: simfang, 仿宋;">&nbsp;多年来，哲学系高度重视科研平台的建设，成立了一批特色鲜明、成果突出的科研机构。1986年初哲学系成立哲学研究所，下设辩证法、毛泽东思想、科学学与科学管理、闽学四个研究室，有六个专职编制，其余由系教师兼任，在管理体制方面是系所合一。1998年12月，哲学系成立厦门大学宗教学研究所，詹石窗教授任所长。2003年5月，哲学系成立厦门大学道学与传统文化研究中心，詹石窗教授任中心主任。同年7月，成立厦门大学佛学研究中心，刘泽亮教授任中心主任。2010年4月，成立于2006年的学术机构“厦门大学哲学与当代社会研究中心”通过福建省的验收，成为首批福建省高校人文社科研究基地。2011年6月，哲学系联合信息科学与技术学院成立厦门大学知识论与认知科学研究中心，陈嘉明教授任中心主任。2020年，哲学系获批福建省社会科学研究基地“马克思主义的规范与认知理论研究中心”，徐梦秋教授任首席专家，曹剑波教授任中心主任。2022年，哲学系成立厦门大学规范理论研究中心，徐梦秋教授任中心主任。目前，哲学系共建设有2个省级科研基地，4个校级研究中心和多个院（系）级研究中心，并且是福建省哲学学会的会长单位。</span></p><p style="text-align: start; text-indent: 32px; line-height: 150%;"><span style="text-align: right; font-size: 21px; font-family: simfang, 仿宋;">&nbsp;自1976年复办以来，厦门大学哲学系教师团队积极进取，学术成果斐然，各二级学科都形成若干独具特色的研究方向，有些已经达到了国内领先水平。截至目前，共出版各类学术著作或教材300余部，主持国家社科基金重大项目4项，教育部哲学社会科学研究重大攻关项目1项，国家社会科学基金重点项目7项、一般或青年项目54项，国家自然科学基金项目2项，教育部人文社会科学基金项目32项，省级课题近百项。取得的成果获国家社会科学基金优秀成果奖一等奖、三等奖各1项，中国图书奖荣誉奖、全国图书金钥匙奖各1项，教育部人文社会科学优秀成果奖二等奖2项、三等奖7项，福建省社会科学优秀成果一等奖16项、二等奖28项、三等奖45项。</span><span style="text-align: right;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p><p style="text-align: right; text-indent: 32px; line-height: 150%;"><span style="text-align: right; font-size: 21px; font-family: simfang, 仿宋;">（更新时间：2023年12月）</span></p></div></div>
+  <p></p>
+
+</div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="container">
+        <div class="part">
+          <div class="footer__logo">
+            <img src="../images/logo.png" alt="">
+          </div>
+        </div>
+
+        <div class="part">
+<p class="footer__info">地址：福建省厦门市思明区思明南路422号</p>
+<p class="footer__info">系办电话：0592-2186530（非招生电话）</p>
+<p class="footer__info">系办邮箱：philoffice@xmu.edu.cn</p></div>
+
+        <div class="part">
+          <ul class="footer__selector">
+            <li class="item">
+              <div class="custom-selector">
+                <div class="custom-selector__input">
+                  <p class="custom-selector__placeholder">校内链接</p>
+                </div>
+                <nav class="custom-selector__options" style="display: none;"><script language="javascript" src="/system/resource/js/openlink.js"></script><a href="http://xphi.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1900432788, 88823)">实验哲学</a>      
+<a href="https://norm.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1900432788, 88824)">厦门大学规范理论研究中心</a>      
+</nav>
+              </div>
+            </li>
+            <li class="item">
+              <div class="custom-selector">
+                <div class="custom-selector__input">
+                  <p class="custom-selector__placeholder">校外链接</p>
+                </div>
+                <nav class="custom-selector__options" style="display: none;"><a href="http://www.phil.pku.edu.cn/" target="_blank" title="【北京大学】" onclick="_addDynClicks(&quot;wburl&quot;, 1900432788, 88813)">北京大学</a>      
+<a href="http://philo.ruc.edu.cn/dept/" target="_blank" title="【人民大学】" onclick="_addDynClicks(&quot;wburl&quot;, 1900432788, 88814)">人民大学</a>      
+<a href="http://philosophy.fudan.edu.cn/" target="_blank" title="【复旦大学】" onclick="_addDynClicks(&quot;wburl&quot;, 1900432788, 88815)">复旦大学</a>      
+<a href="http://philo.nju.edu.cn/" target="_blank" title="【南京大学】" onclick="_addDynClicks(&quot;wburl&quot;, 1900432788, 88816)">南京大学</a>      
+<a href="http://philosophy.whu.edu.cn/" target="_blank" title="【武汉大学】" onclick="_addDynClicks(&quot;wburl&quot;, 1900432788, 88817)">武汉大学</a>      
+<a href="http://philosophy.sysu.edu.cn/" target="_blank" title="【中山大学】" onclick="_addDynClicks(&quot;wburl&quot;, 1900432788, 88818)">中山大学</a>      
+<a href="http://homepage.ntu.edu.tw/~philo/" target="_blank" title="【台湾大学】" onclick="_addDynClicks(&quot;wburl&quot;, 1900432788, 88819)">台湾大学</a>      
+<a href="http://phil.arts.cuhk.edu.hk/" target="_blank" title="【香港中文大学】" onclick="_addDynClicks(&quot;wburl&quot;, 1900432788, 88820)">香港中文大学</a>      
+<a href="http://www.csstoday.net/" target="_blank" title="【中国社会科学报在线】" onclick="_addDynClicks(&quot;wburl&quot;, 1900432788, 88821)">中国社会科学报在线</a>      
+</nav>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="part">
+          <div class="footer__qr">
+            <img src="../images/qr-code.png" alt="">
+            <p class="text">微信公众号</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      <p>
+</p><p>厦门大学哲学系版权所有 Copyright © 2023 . All Rights Reserved</p><p></p>
+    </div>
+  </footer>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/swiper-bundle.min.js"></script>
+  <script src="../js/wow.js"></script>
+  <script src="../js/jquery.extends.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/theme.js"></script>
+
+
+
+</body></html>

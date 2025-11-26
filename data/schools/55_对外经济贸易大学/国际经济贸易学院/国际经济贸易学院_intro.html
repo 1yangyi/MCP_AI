@@ -1,0 +1,621 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>对外经济贸易大学·国际经济贸易学院</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<link href="css/css.css" rel="stylesheet" type="text/css">
+<script src="newsenglish/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<style type="text/css">
+<!--
+table{table-layout: fixed;}
+.lianjie_MORE{line-height: 13px;}
+.STYLE2 {font-size: 15px}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+
+
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+
+function onsearch() {
+    var key = $("#textfield").val();
+    if (key.length > 0) {
+        location = "search/search.aspx?key=" + escape(key);
+    } else {
+    alert("请输入搜索关键字。");return;
+    }
+}
+</script>
+
+<!--浮动广告JS-->
+<script type="text/javascript">
+    function addEvent(obj, evtType, func, cap) {
+        cap = cap || false;
+        if (obj.addEventListener) {
+            obj.addEventListener(evtType, func, cap);
+            return true;
+        } else if (obj.attachEvent) {
+            if (cap) {
+                obj.setCapture();
+                return true;
+            } else {
+                return obj.attachEvent("on" + evtType, func);
+            }
+        } else {
+            return false;
+        }
+    }
+    function getPageScroll() {
+        var xScroll, yScroll;
+        if (self.pageXOffset) {
+            xScroll = self.pageXOffset;
+        } else if (document.documentElement && document.documentElement.scrollLeft) {
+            xScroll = document.documentElement.scrollLeft;
+        } else if (document.body) {
+            xScroll = document.body.scrollLeft;
+        }
+        if (self.pageYOffset) {
+            yScroll = self.pageYOffset;
+        } else if (document.documentElement && document.documentElement.scrollTop) {
+            yScroll = document.documentElement.scrollTop;
+        } else if (document.body) {
+            yScroll = document.body.scrollTop;
+        }
+        arrayPageScroll = new Array(xScroll, yScroll);
+        return arrayPageScroll;
+    }
+    function GetPageSize() {
+        var xScroll, yScroll;
+        if (window.innerHeight && window.scrollMaxY) {
+            xScroll = document.body.scrollWidth;
+            yScroll = window.innerHeight + window.scrollMaxY;
+        } else if (document.body.scrollHeight > document.body.offsetHeight) {
+            xScroll = document.body.scrollWidth;
+            yScroll = document.body.scrollHeight;
+        } else {
+            xScroll = document.body.offsetWidth;
+            yScroll = document.body.offsetHeight;
+        }
+
+        var windowWidth, windowHeight;
+        if (self.innerHeight) {
+            windowWidth = self.innerWidth;
+            windowHeight = self.innerHeight;
+        } else if (document.documentElement && document.documentElement.clientHeight) {
+            windowWidth = document.documentElement.clientWidth;
+            windowHeight = document.documentElement.clientHeight;
+        } else if (document.body) {
+            windowWidth = document.body.clientWidth;
+            windowHeight = document.body.clientHeight;
+        }
+
+        if (yScroll < windowHeight) {
+            pageHeight = windowHeight;
+        } else {
+            pageHeight = yScroll;
+        }
+        if (xScroll < windowWidth) {
+            pageWidth = windowWidth;
+        } else {
+            pageWidth = xScroll;
+        }
+        arrayPageSize = new Array(pageWidth, pageHeight, windowWidth, windowHeight)
+        return arrayPageSize;
+    }
+
+    var AdMoveConfig = new Object();
+    AdMoveConfig.IsInitialized = false;
+    AdMoveConfig.ScrollX = 0;
+    AdMoveConfig.ScrollY = 0;
+    AdMoveConfig.MoveWidth = 0;
+    AdMoveConfig.MoveHeight = 0;
+    AdMoveConfig.Resize = function() {
+        var winsize = GetPageSize();
+        AdMoveConfig.MoveWidth = winsize[2];
+        AdMoveConfig.MoveHeight = winsize[3];
+        AdMoveConfig.Scroll();
+    }
+    AdMoveConfig.Scroll = function() {
+        var winscroll = getPageScroll();
+        AdMoveConfig.ScrollX = winscroll[0];
+        AdMoveConfig.ScrollY = winscroll[1];
+    }
+    addEvent(window, "resize", AdMoveConfig.Resize);
+    addEvent(window, "scroll", AdMoveConfig.Scroll);
+    function AdMove(id) {
+        if (!AdMoveConfig.IsInitialized) {
+            AdMoveConfig.Resize();
+            AdMoveConfig.IsInitialized = true;
+        }
+        var obj = document.getElementById(id);
+        obj.style.position = "absolute";
+        var W = AdMoveConfig.MoveWidth - obj.offsetWidth;
+        var H = AdMoveConfig.MoveHeight - obj.offsetHeight;
+        var x = W * Math.random(), y = H * Math.random();
+        var rad = (Math.random() + 1) * Math.PI / 6;
+        var kx = Math.sin(rad), ky = Math.cos(rad);
+        var dirx = (Math.random() < 0.5 ? 1 : -1), diry = (Math.random() < 0.5 ? 1 : -1);
+        var step = 1;
+        var interval;
+        this.SetLocation = function(vx, vy) { x = vx; y = vy; }
+        this.SetDirection = function(vx, vy) { dirx = vx; diry = vy; }
+        obj.CustomMethod = function() {
+            obj.style.left = (x + AdMoveConfig.ScrollX) + "px";
+            obj.style.top = (y + AdMoveConfig.ScrollY) + "px";
+            rad = (Math.random() + 1) * Math.PI / 6;
+            W = AdMoveConfig.MoveWidth - obj.offsetWidth;
+            H = AdMoveConfig.MoveHeight - obj.offsetHeight;
+            x = x + step * kx * dirx;
+            if (x < 0) { dirx = 1; x = 0; kx = Math.sin(rad); ky = Math.cos(rad); }
+            if (x > W) { dirx = -1; x = W; kx = Math.sin(rad); ky = Math.cos(rad); }
+            y = y + step * ky * diry;
+            if (y < 0) { diry = 1; y = 0; kx = Math.sin(rad); ky = Math.cos(rad); }
+            if (y > H) { diry = -1; y = H; kx = Math.sin(rad); ky = Math.cos(rad); }
+        }
+        this.Run = function() {
+            var delay = 10;
+            interval = setInterval(obj.CustomMethod, delay);
+            obj.onmouseover = function() { clearInterval(interval); }
+            obj.onmouseout = function() { interval = setInterval(obj.CustomMethod, delay); }
+        }
+    }
+
+    function MM_openBrWindow(theURL, winName, features) { //v2.0
+        window.open(theURL, winName, features);
+    }
+
+</script>
+
+<!--Powered by ChinaHCM(www.chinahcm.com). &copy 2002,ChinaHCM Co.,Ltd! -->
+</head>
+<body bgcolor="#FFFFFF">
+<table width="940" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
+  <tbody><tr>
+    <td><iframe id="top" name="top" src="UNIFORM/top.htm" width="100%" height="113" style="MARGIN: 0px" scrolling="no" frameborder="0"></iframe></td>
+  </tr>
+</tbody></table>
+<table width="756" height="4" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td></td>
+  </tr>
+</tbody></table>
+<table border="0" align="center" cellpadding="0" cellspacing="0" width="940">
+  <tbody><tr>
+    <td bgcolor="#FFFFFF"><iframe id="banner" name="banner" src="newbanner/banner.aspx?iBannerID=1" width="702" height="335" style="MARGIN: 0px" scrolling="no" frameborder="0"></iframe></td>
+    <td width="238">
+    <div class="ztc_cnt">
+    	<div class="ztc_title"><img src="images/ztc_img.jpg" class="ztc_img"></div>
+        <div class="ztc_nr">
+        	<div class="ztcnr_cnt">
+            	<div class="ztcnr_link">
+                    <img class="ztc_ico" src="images/ztc_ico.jpg" width="11" height="11" alt="">
+                    <a href="http://site.uibe.edu.cn/xsyd/index.htm" target="blank">本科生培养</a>
+                </div>
+          </div>
+        	<div class="ztcnr_cnt">
+            	  <div class="ztcnr_link">
+                    <img class="ztc_ico" src="images/ztc_ico.jpg" width="11" height="11" alt="">
+                    <a href="#">研究生培养</a>
+               	</div>
+                <p><a href="http://site.uibe.edu.cn/xsyd/index.htm" target="_blank">科学学位</a></p>
+                <p><a href="http://site.uibe.edu.cn/xsyd/index.htm" target="_blank">专业学位</a></p>
+                <!--<p class="gmdk"><a href="download/gmdk2012.pdf" target="_blank">国贸单考</a></p>-->
+          </div>
+        	<div class="ztcnr_cnt">
+            	<div class="ztcnr_link">
+                    <img class="ztc_ico" src="images/ztc_ico.jpg" width="11" height="11" alt="">
+                    <a href="#">留学生培养</a>
+				      </div>
+                <p><a href="http://site.uibe.edu.cn/site/" target="_blank">中文培养</a></p>
+                <p><a href="http://site.uibe.edu.cn/site/" target="_blank">英文培养</a></p>
+          </div>
+        	<div class="ztcnr_cnt">
+            	<div class="ztcnr_link">
+                    <img class="ztc_ico" src="images/ztc_ico.jpg" width="11" height="11" alt="">
+                    <!--<a href="http://www.uibe-edp.org/" target="blank">EDP培训</a>-->
+            	    <!--<a href="http://www.ezedu.org/" target="_blank">海外项目</a>-->
+                    <a href="http://site.uibe.edu.cn/site_zzyjsw/default.html" target="_blank">在职研修</a>
+                    <!--class="hwxm"-->
+                </div>
+            </div>
+            <div class="ztcnr_cnt">
+                <div class="ztcnr_link">
+                    <img class="ztc_ico" src="images/ztc_ico.jpg" width="11" height="11" alt="">
+                    <a href="#">经贸E论文</a>
+                </div>
+                <p><a href="http://202.204.175.180:9827/student" target="_blank">学生入口</a></p>
+                <p><a href="http://202.204.175.180:9827/teacher" target="_blank">导师入口</a></p>
+            </div>
+        	<!--<div class="ztcnr_cnt bdbn">
+            	<div class="ztcnr_link">
+                    <img class="ztc_ico" src="images/ztc_ico.jpg" width="11" height="11" alt="" />
+                    <a href="download/jrgdrcpy2017.pdf" target="_blank">注册财务策划师（RFP方向）</a>
+                </div>
+            </div>
+            -->
+        </div>
+    
+    </div>
+    </td>
+  </tr>
+</tbody></table>
+<table width="756" height="4" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td></td>
+  </tr>
+</tbody></table>
+<table width="940" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
+  <tbody><tr>
+    <td width="249" valign="top"><table height="160" border="0" cellpadding="0" cellspacing="0" class="bk_2">
+      <tbody><tr>
+        <td bgcolor="#FFFFFF"><table width="249" height="160" border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+            <td height="20" valign="bottom" class="biaoti05"><table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tbody><tr>
+                <td width="18" align="right"><img src="photo/dian_1.gif" width="12" height="9"></td>
+                <td valign="bottom"><span class="new_top">学 术 论 坛</span></td>
+                <td width="55" align="center" valign="middle"><table width="51" height="13" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr>
+                    <td width="51" height="13" align="center" background="photo/more_1.gif"><a href="aspxNews/ListNewsXscg.aspx?TypeID=6" class="lianjie_MORE">MORE</a></td>
+                  </tr>
+                </tbody></table></td>
+              </tr>
+            </tbody></table></td>
+          </tr>
+          <tr>
+            <td height="5" bgcolor="#EFEFEF"></td>
+          </tr>
+          <tr>
+            <td height="116"><iframe id="shequ" name="shequ" src="aspxNews/ListNewsTop.aspx?TypeID=6&amp;Top=11" width="100%" height="223" style="MARGIN: 0px" scrolling="no" frameborder="0"></iframe></td>
+          </tr>
+          <tr></tr>
+        </tbody></table></td>
+      </tr>
+    </tbody></table>
+      <table width="100%" height="6" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td></td>
+        </tr>
+
+      </tbody></table>
+      <table height="120" border="0" cellpadding="0" cellspacing="0" class="bk_2">
+        <tbody><tr>
+          <td bgcolor="#FFFFFF"><table width="249" height="118" border="0" cellpadding="0" cellspacing="0">
+              <tbody><tr>
+                <td height="20" valign="bottom" class="biaoti05"><table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                      <td width="18" align="right"><img src="photo/dian_1.gif" width="12" height="9"></td>
+                      <td valign="bottom"><span class="new_top">学 者 与 观 点</span></td>
+                      <td width="55" align="center" valign="middle"><table width="51" height="13" border="0" cellpadding="0" cellspacing="0">
+                          <tbody><tr>
+                            <td width="51" height="13" align="center" background="photo/more_1.gif"><a href="aspxNews/ListNewsXscg.aspx?TypeID=54" class="lianjie_MORE">MORE</a></td>
+                          </tr>
+                      </tbody></table></td>
+                    </tr>
+                </tbody></table></td>
+              </tr>
+              <tr>
+                <td height="5" bgcolor="#EFEFEF"></td>
+              </tr>
+              <tr>
+                <td height="93"><iframe id="shequ" name="shequ" src="aspxNews/ListNewsTop.aspx?TypeID=54&amp;Top=8" width="100%" height="188" style="MARGIN: 0px" scrolling="no" frameborder="0"></iframe></td>
+              </tr>
+          </tbody></table></td>
+        </tr>
+      </tbody></table>
+      <table width="100%" height="6" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td></td>
+        </tr>
+      </tbody></table>
+	  <table height="120" border="0" cellpadding="0" cellspacing="0" class="bk_2" width="100%">
+      	<tbody><tr>
+        	<td>
+            	<img class="ewm" src="images/ewm.png" alt="">
+            </td>
+        </tr>
+      </tbody></table>
+      <table width="100%" height="6" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td></td>
+        </tr>
+      </tbody></table>
+      <table width="249" height="30" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td><label for="textfield"></label>
+            <input name="textfield" type="text" id="textfield" size="20"></td>
+          <td width="55" align="center" valign="middle"><table width="51" height="13" border="0" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+              <td width="51" height="13" align="center" background="photo/more_1.gif"><a href="javascript:onsearch();" class="lianjie_MORE">search</a></td>
+            </tr>
+          </tbody></table></td>
+        </tr>
+      </tbody></table></td>
+    <td width="461" valign="top"><table width="442" height="146" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td height="20" valign="bottom" class="biaoti03"><table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+              <td width="18" align="right"><img src="photo/dian_2.gif" width="12" height="9"></td>
+              <td class="biaoti03">公 告 专 栏</td>
+              <td width="55" align="center" valign="middle"><table width="49" height="15" border="0" cellpadding="0" cellspacing="0">
+                  <tbody><tr>
+                    <td width="49" height="15" align="center" background="photo/more_1.gif" class="more"><a href="aspxNews/ListNews.aspx?TypeID=3" class="lianjie_MORE">MORE</a></td>
+                  </tr>
+              </tbody></table></td>
+            </tr>
+        </tbody></table></td>
+      </tr>
+      <tr>
+        <td height="6" bgcolor="#E0E0E0"></td>
+      </tr>
+      <tr>
+        <td height="182" align="center" bgcolor="#FFFFFF"><iframe id="new" name="new" src="aspxNews/ListNewsTop1.aspx?TypeID=3&amp;Top=9" width="100%" height="200" style="MARGIN: 0px" scrolling="no" frameborder="0"></iframe></td>
+      </tr>
+      <tr>
+        <td height="1" bgcolor="#b6b6b6"></td>
+      </tr>
+    </tbody></table>
+      <table width="100%" height="5" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td></td>
+        </tr>
+      </tbody></table>
+      <table width="442" height="146" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td height="20" valign="bottom" class="biaoti03"><table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tbody><tr>
+                <td width="18" align="right"><img src="photo/dian_2.gif" width="12" height="9"></td>
+                <td class="biaoti03">学 院 新 闻</td>
+                <td width="55" align="center" valign="middle"><table width="49" height="15" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                      <td width="49" height="15" align="center" background="photo/more_1.gif" class="more"><a href="aspxNews/ListNews.aspx?TypeID=1" class="lianjie_MORE">MORE</a></td>
+                    </tr>
+                </tbody></table></td>
+              </tr>
+          </tbody></table></td>
+        </tr>
+        <tr>
+          <td height="6" bgcolor="#E0E0E0"></td>
+        </tr>
+        <tr>
+          <td align="center" bgcolor="#FFFFFF"><iframe id="new_1" name="new_1" src="aspxNews/ListNewsTop1.aspx?TypeID=1&amp;Top=12" width="100%" height="266" style="MARGIN: 0px" scrolling="no" frameborder="0"></iframe></td>
+        </tr>
+        <tr>
+          <td height="1" bgcolor="#b6b6b6"></td>
+        </tr>
+      </tbody></table>
+      <table width="100%" height="5" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td></td>
+        </tr>
+      </tbody></table>
+
+      <table width="442" height="120" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td height="20" valign="bottom" class="biaoti03"><table width="97%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tbody><tr>
+                <td width="18" align="right"><img src="photo/dian_2.gif" width="12" height="9"></td>
+                <td class="biaoti03">学 术 成 果</td>
+                <td width="55" align="center" valign="middle"><table width="49" height="15" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                      <td width="49" height="15" align="center" background="photo/more_1.gif" class="more"><a href="aspxNews/ListNewsXscg.aspx?TypeID=30" class="lianjie_MORE">MORE</a></td>
+                    </tr>
+                   
+                </tbody></table></td>
+              </tr>
+          </tbody></table></td>
+        </tr>
+       
+        <tr>
+          <td height="5" bgcolor="#E0E0E0"></td>
+        </tr>
+        <tr>
+          <td align="center" bgcolor="#FFFFFF"><iframe id="cg" name="cg" src="aspxNews/ListNewsTop1.aspx?TypeID=30&amp;Top=100" width="100%" height="200" style="MARGIN: 0px" scrolling="no" frameborder="0"></iframe></td>
+        </tr>
+        <tr>
+          <td height="1" bgcolor="#b6b6b6"></td>
+        </tr>
+      </tbody></table></td>
+    <td width="229" valign="top">
+      <table width="229" border="0" cellpadding="0" cellspacing="0" class="bk_2">
+        <tbody><tr>
+          <td align="center" valign="middle" bgcolor="#FFFFFF"><a href="djgz/index.html" target="_blank"><img src="images/djgz_img.jpg" width="227" height="57" border="0"></a></td>
+        </tr>
+      </tbody></table>
+      <table width="100%" height="4" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td></td>
+        </tr>
+      </tbody></table>
+      <table width="229" border="0" cellpadding="0" cellspacing="0" class="bk_2">
+        <tbody><tr>
+          <td align="center" valign="middle" bgcolor="#FFFFFF"><a href="http://site.uibe.edu.cn/aspxNews/ViewNews.aspx?NewsID=14197" target="_blank"><img src="images/szzp.jpg" width="227" height="57" border="0"></a></td>
+        </tr>
+      </tbody></table>
+      <table width="100%" height="4" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td></td>
+        </tr>
+      </tbody></table>
+      <table width="229" height="75" border="0" cellpadding="0" cellspacing="0" class="bk_2">
+        <tbody><tr>
+          <td height="19" align="center" valign="bottom" class="biaoti05">
+            <div class="iszdw_tit">师资队伍</div>
+            <div class="iszdw_nr iszdw_bg">
+              <a href="actionszdw/Index.aspx?id=2" class="lianjie_news"><span class="tuchu">·</span>国际贸易学系</a>
+              <a href="actionszdw/Index.aspx?id=3" class="lianjie_news"><span class="tuchu">·</span>金融学系</a>
+              <a href="actionszdw/Index.aspx?id=5" class="lianjie_news"><span class="tuchu">·</span>国际运输与物流学系</a>
+              <a href="actionszdw/Index.aspx?id=7" class="lianjie_news"><span class="tuchu">·</span>国际商务与合作学系</a>
+              <a href="actionszdw/Index.aspx?id=9" class="lianjie_news"><span class="tuchu">·</span>财政税务学系</a>
+              <a href="actionszdw/Index.aspx?id=22" class="lianjie_news"><span class="tuchu">·</span>能源与低碳经济学系</a>
+              <a href="actionszdw/Index.aspx?id=40" class="lianjie_news"><span class="tuchu">·</span>电子商务学系</a>
+            </div>
+
+          </td>
+        </tr>
+      </tbody></table>
+      <table width="100%" height="4" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td></td>
+        </tr>
+      </tbody></table>
+      <table width="229" height="75" border="0" cellpadding="0" cellspacing="0" class="bk_2">
+        <tbody><tr>
+          <td height="19" align="center" valign="bottom" class="biaoti05">
+            <div class="iszdw_tit">学生导师</div>
+            <div class="iszdw_nr iszdw_bg">
+              <a href="actionszdw/Index.aspx?id=23" class="lianjie_news"><span class="tuchu">·</span>专硕导师</a>
+              <a href="actionszdw/Index.aspx?id=27" class="lianjie_news"><span class="tuchu">·</span>学硕导师</a>
+              <a href="actionszdw/Index.aspx?id=38" class="lianjie_news"><span class="tuchu">·</span>博士导师</a>
+            </div>
+
+          </td>
+        </tr>
+      </tbody></table>
+      <table width="100%" height="4" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td></td>
+        </tr>
+      </tbody></table>
+      <table width="100%" height="4" border="0" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+          <td></td>
+        </tr>
+      </tbody></table>
+      <table height="143" border="0" cellpadding="0" cellspacing="0" class="bk_2">
+        <tbody><tr>
+          <td bgcolor="#FFFFFF">
+            <table width="227" height="143" border="0" cellpadding="0" cellspacing="0">
+              <tbody><tr>
+                <td align="center" valign="bottom" class="biaoti05"><div class="iszdw_tit" style="position: relative">研究中心/实验室<a href="/jgsz/yjzx.htm" class="lianjie_news" style="position: absolute;line-height: inherit;right: 0.5em;">更多</a></div></td>
+              </tr>
+              <tr>
+                <td height="122">
+                  <div class="iszdw_nr">
+                    <a class="lianjie_news" href="CRCFDI_index.html" target="_blank"><span class="tuchu">·</span>外国直接投资研究中心</a>
+                    <a class="lianjie_news"><span class="tuchu">·</span>大田物流研究中心</a>
+                    <a class="lianjie_news"><span class="tuchu">·</span>租赁研究中心</a>
+                    <a class="lianjie_news"><span class="tuchu">·</span>国际商务研究中心</a>
+                    <a class="lianjie_news"><span class="tuchu">·</span>供应链研究中心</a>
+                    <a class="lianjie_news"><span class="tuchu">·</span>行业税收政策与管理研究中心</a>
+                    <a class="lianjie_news" href="http://www.luxurychina.org/" target="_blank"><span class="tuchu">·</span>中国奢侈品研究中心</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody></table>
+          </td>
+        </tr>
+      </tbody></table>
+    </td>
+      </tr>
+    </tbody></table>
+  
+
+<table width="756" height="6" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td></td>
+  </tr>
+</tbody></table>
+<table width="940" border="0" align="center" cellpadding="0" cellspacing="0" class="bk_3" id="Table_01">
+  <tbody><tr>
+    <td height="22" style="padding-left:50px;"><img src="photo/dian_1.gif" width="12" height="9">秘书处单位：　<a href="" target="_blank" class="lianjie_down">全国高校国际贸易学科协作组常设秘书处</a>　|　<a href="" target="_blank" class="lianjie_down">国际经济和金融学会中国(IEFS中国)</a>　|　<a href="" target="_blank" class="lianjie_down">国际商务专业教学指导委员会秘书处</a></td>
+  </tr>
+  <tr>
+    <td height="22" style="padding-left:50px;"><img src="photo/dian_1.gif" width="12" height="9">友情链接：　<a href="http://www.uibe.edu.cn/" target="_blank" class="lianjie_down">学校主页</a>　|　<a href="http://www.edu.cn/HomePage/jiao_yu_zi_yuan/list_cernet.php?listid=1121" target="_blank" class="lianjie_down">国外大学目录</a>　|　<a href="http://www.edu.cn/" target="_blank" class="lianjie_down">中国教育和科研计算网</a>　|　<a href="http://www.moe.gov.cn" target="_blank" class="lianjie_down">中华人民共和国教育部</a>　|　<a href="http://www.mofcom.gov.cn/" target="_blank" class="lianjie_down">中华人民共和国商务部</a></td>
+  </tr>
+</tbody></table>
+<table width="756" height="6" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td></td>
+  </tr>
+</tbody></table>
+<table width="756" height="2" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td></td>
+  </tr>
+</tbody></table>
+<table width="940" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
+  <tbody><tr>
+    <td><iframe id="dizhi" name="dizhi" src="UNIFORM/dizhi.htm" width="100%" height="87" style="MARGIN: 0px" scrolling="no" frameborder="0"></iframe></td>
+  </tr>
+</tbody></table>
+
+ <!--浮动广告开始-->
+<!--<DIV id=ad1 style="Z-INDEX: 999">-->
+<!--漂浮开始-->
+<!--<iframe width="175" height="85" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="floatimg/index.htm"></iframe>-->
+<!--漂浮结束-->
+<!--</DIV>-->
+ <!--浮动广告结束-->  
+<!--Powered by ChinaHCM(www.chinahcm.com). ? 2002,ChinaHCM Co.,Ltd! -->
+<script type="text/javascript">
+        //var ad1=new AdMove("ad1");
+        //ad1.Run();
+	//多组漂浮
+	//var ad1=new AdMove("ad2");
+        //ad2.Run();
+
+</script>
+  <script>
+    document.getElementById('cg').addEventListener('load', () => {
+      let scrollHeight = document.getElementById('cg').contentDocument.body.scrollHeight
+
+      let tbody = document.getElementById('cg').contentDocument.querySelector('table tbody')
+      let tr = tbody.querySelectorAll('tr')
+      tr.forEach(row => {
+        tbody.appendChild(row.cloneNode(true))
+      })
+
+      let h = 0
+
+      function scrollFrame() {
+        return rAF(() => {
+          h++
+          if (h >= scrollHeight) {
+            h = 0
+          }
+          document.getElementById('cg').contentWindow.scrollTo({ top: h, behavior: 'smooth'})
+        }, 10)
+      }
+
+      let cancel = scrollFrame()
+
+      document.getElementById('cg').addEventListener('mouseenter', () => {
+        cancel()
+      })
+
+      document.getElementById('cg').addEventListener('mouseleave', () => {
+        cancel = scrollFrame()
+      })
+
+      function rAF(callback, fps = 24) {
+        let last = Date.now()
+        let delta = last
+        const interval = 1000 / fps
+        let cancel = false
+        function draw() {
+          if (cancel) return
+          requestAnimationFrame(draw)
+          let now = Date.now()
+          delta = now - last
+          if (delta > interval) {
+            last = now - (delta % interval)
+            callback()
+          }
+        }
+        draw()
+
+        return function cancelRAF() {
+          cancel = true
+        }
+      }
+
+    })
+  </script>
+
+</body></html>

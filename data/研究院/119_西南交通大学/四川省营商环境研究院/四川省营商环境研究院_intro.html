@@ -1,0 +1,426 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<title>研究院概况-西南交通大学四川省营商环境研究院 Sichuan Institute of Doing Business</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="研究院概况">
+<meta name="keywords" content="西南交通大学,四川省营商环境研究院 Sichuan Institute of Doing Business,研究院概况">
+
+
+<link rel="stylesheet" href="dfiles/16558/css/style.css" type="text/css">
+<link rel="stylesheet" href="dfiles/16558/css/publice.css" type="text/css">
+
+<!--Announced by Visual SiteBuilder 9-->
+<!-- CustomerNO:7765626265723230777847565253544203070000 -->
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307476475d51535742000300034452 -->
+<link rel="stylesheet" type="text/css" href="cdnry.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1151,'/cdnry.jsp',-1,1878060340)</script>
+</head>
+<body>
+<!--top s-->    
+<div class="topWrap clearfix">
+    <div class="topDiv">
+        
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<div class="logo">
+<a href="cdnry.jsp">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+</a><a href="index.htm" title="四川省营商环境研究院"><img src="images/logo.png" width="550" height="60" border="0" alt="四川省营商环境研究院" title="四川省营商环境研究院"></a>
+</div>
+        <div class="topR fr">
+            <script language="javascript" src="dfiles/16558/system/resource/js/dynclicks.js"></script><script language="javascript" src="dfiles/16558/system/resource/js/openlink.js"></script><div class="topR_t fr">
+     <a href="yjygk/jj.htm" onclick="_addDynClicks(&quot;wburl&quot;, 1451319075, 36190)" target="">研究院概况</a>
+     |
+     <a href="lxwm.htm" onclick="_addDynClicks(&quot;wburl&quot;, 1451319075, 36191)" target="">联系我们</a>
+     
+</div>
+
+<div><!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><style>
+    #appu1 .qwss{}
+    #appu1 .tj{}
+</style>
+<div id="divu1">
+    <div id="appu1"><div class="Search"><input type="text" placeholder="" autocomplete="off" class="qwss search_text"> <div class="fdj fr"><input name="submit_button" type="button" value="" class="tj button pngFix"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError" class="Search">
+            <input type="text" class="qwss search_text" placeholder="" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <div class="fdj fr">
+                <input class="tj button pngFix" name="submit_button" type="button" value="" v-on:click="onSubmit()"/>
+            </div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1878060340";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu1 = document.querySelector("#appu1");
+   if (appElementu1 && appElementu1.__vue__) {
+
+   } else {
+      $("#divu1").html($("#htmlu1").text());
+      var appOwner = "1878060340";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou1 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu1(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu1();
+        }
+      };
+
+      function onSubmitu1(e) {
+        queryInfou1.query.keyWord= $("#appu1  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou1.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script></div>
+
+
+</div><script language="javascript" src="dfiles/16558/system/resource/js/base64.js"></script><script language="javascript" src="dfiles/16558/system/resource/js/formfunc.js"></script>
+
+        </div>
+    </div>
+
+<!--nav-->
+<div class="navWrap  clearfix">
+    <div class="nav">    <ul>
+        <li class="mainmenu">
+            <a class="link" href="index.htm">首页</a>                       
+        </li>
+    </ul>
+    <ul>
+        <li class="mainmenu">
+            <a class="link" href="yjygk.htm">研究院概况</a>                       
+            <dl style="display: none;">
+                <dd><a href="yjygk/jj.htm">简介</a></dd>
+                <dd><a href="yjygk/yjtd.htm">研究团队</a></dd>
+            </dl>
+        </li>
+    </ul>
+    <ul>
+        <li class="mainmenu">
+            <a class="link" href="tzxw.htm">通知新闻</a>                       
+            <dl style="display: none;">
+                <dd><a href="tzxw/tzgg.htm">通知公告</a></dd>
+                <dd><a href="tzxw/xwdt.htm">新闻动态</a></dd>
+            </dl>
+        </li>
+    </ul>
+    <ul>
+        <li class="mainmenu">
+            <a class="link" href="xsjl.htm">学术交流</a>                       
+        </li>
+    </ul>
+    <ul>
+        <li class="mainmenu">
+            <a class="link" href="zchj.htm">政策汇集</a>                       
+        </li>
+    </ul>
+    <ul>
+        <li class="mainmenu">
+            <a class="link" href="dxal.htm">典型案例</a>                       
+        </li>
+    </ul>
+    <ul>
+        <li class="mainmenu">
+            <a class="link" href="scsjczxwyh/zzgc.htm">四川省决策咨询委员会</a>                       
+            <dl style="display: none;">
+                <dd><a href="scsjczxwyh/zzgc.htm">组织构成</a></dd>
+                <dd><a href="scsjczxwyh/wygd.htm">委员观点</a></dd>
+                <dd><a href="scsjczxwyh/hdly.htm">活动掠影</a></dd>
+            </dl>
+        </li>
+    </ul>
+    <ul>
+        <li class="mainmenu">
+            <a class="link" href="lxwm.htm">联系我们</a>                       
+        </li>
+    </ul>
+    <ul>
+    </ul>
+    <ul>
+    </ul>
+</div>
+</div>
+<script type="text/javascript">
+
+    $(".mainmenu dl").hide();
+
+</script>
+<div>
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script>    <div class="banner_three">
+            <div class="eachBox">
+                <div class="changeBox_a1" id="change_32">
+                                            <div class="changeDiv" style="display: block;"><h3><a href="#" target="_blank"></a></h3> <a target="_blank" href="#" title=""><img width="1000" height="335" src="/__local/5/B2/31/3CDD4A5467B9B5CD7A3C0DFCA42_1C284D25_5B69C.jpg"></a></div>
+                        <div class="changeDiv" style="display: none;"><h3><a href="#" target="_blank"></a></h3> <a target="_blank" href="#" title=""><img width="1000" height="335" src="/__local/2/91/B3/81E85C15C3B351EB8E9F09E13A8_0ECC7880_34312.jpeg"></a></div>
+                        <div class="changeDiv" style="display: none;"><h3><a href="#" target="_blank"></a></h3> <a target="_blank" href="#" title=""><img width="1000" height="335" src="/__local/E/14/FF/4FAB7E62517A7362FC829A43FF0_1890BE1D_EE2D.jpg"></a></div>
+                        <div class="changeDiv" style="display: none;"><h3><a href="#" target="_blank"></a></h3> <a target="_blank" href="#" title=""><img width="1000" height="335" src="/__local/2/91/B3/81E85C15C3B351EB8E9F09E13A8_0ECC7880_34312.jpeg"></a></div>
+                    <ul class="ul_change_a2">
+                        <li><span class="on"></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+<script>_showDynClickBatch(['dynclicks_u3_2468','dynclicks_u3_2428','dynclicks_u3_2358','dynclicks_u3_2378'],[2468,2428,2358,2378],"wbnews", 1878060340)</script>
+</div>
+
+<!--main--> 
+<div class="mainWrap clearfix">
+    <div class="main_tit">
+        <div class="main_titT main_titTa"><img src="dfiles/16558/img/bri_icon1.png">
+
+        <a href="index.htm"> 首页</a>&gt;
+        <a href="yjygk.htm"> 研究院概况</a>&gt;
+</div>
+</div>
+
+    <div class="main_con">
+        <div class="main_conL"><div class="main_conLT">
+<dl><div class="main_con">
+    <div class="main_conL">
+<div class="main_conLT">
+<dl>
+    <dd><a href="yjygk/jj.htm">简介</a></dd>
+    <dd><a href="yjygk/yjtd.htm">研究团队</a></dd>
+</dl></div>
+</div></div></dl></div>
+<div class="informBox informBoxb informBoxb1">
+
+
+    <div class="zp_pic">
+
+                </div>
+</div></div>  
+
+
+<script language="javascript" src="dfiles/16558/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1451319075,'wbnews','u10')</script>
+<script>function seeContenta10(contentid,size,displayid){   document.getElementById(contentid).innerHTML = '['; for(var i=0;i<=size;i++){       var allcontentid = contentid+(i+1);     if(allcontentid==displayid){            document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";         document.getElementById(displayid).style.display = 'block';     }else{          document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";         document.getElementById(allcontentid).style.display = 'none';       }   }   document.getElementById(contentid).innerHTML += ']';}</script>
+<script>_addDynClicks('wbnews',1451319075,1044)</script>
+<div class="main_conR"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<p style="text-indent:43px;line-height:150%"><span style="font-size:16px;line-height:150%">西南交通大学营商环境研究团队一直关注世界银行的营商环境评价，</span><span style="font-size:16px;line-height:150%;font-family:仿宋_GB2312">2019</span><span style="font-size:16px;line-height:150%">年开始参与四川省发展和改革委员会组织的全省营商环境评价相关工作。</span><span style="font-size:16px;line-height:150%;font-family:仿宋_GB2312">2021</span><span style="font-size:16px;line-height:150%">年</span><span style="font-size:16px;line-height:150%;font-family:仿宋_GB2312">6</span><span style="font-size:16px;line-height:150%">月，学校与四川省发展和改革委员会共建成立了“四川省营商环境研究院”，研究院是国内最早专注研究营商环境的智库机构之一，围绕营商环境评价、优化提升开展了很多卓有成效的探索，积累了丰富的经验。</span></p> 
+<p style="text-indent:43px;line-height:150%"><span style="font-size:16px;line-height:150%">研究院针对全国尤其是四川省优化营商环境进行了实践探索，开展了深入理论研究、案例调查和对策探讨，为推进我国营商环境高质量优化提供有价值的理论指导和决策参考，以实现</span><span style="font-size:16px;line-height:150%">“</span><span style="font-size:16px;line-height:150%">立足四川，面向全国、服务地方、共谋发展</span><span style="font-size:16px;line-height:150%">”</span><span style="font-size:16px;line-height:150%">为目标，汇聚各方资源，完善政府体制机制、规范市场经济活动，打响四川营商环境品牌。</span></p> 
+<p style="text-indent:43px;line-height:150%"><span style="font-size:16px;line-height:150%">主要围绕以下方面开展相关工作：</span></p> 
+<p style="text-indent:43px;line-height:150%"><strong><span style="font-size:16px;line-height:150%">第一，研究工作。</span></strong><span style="font-size: 16px;line-height:150%">整合四川乃至全国相关领域专家共同开展跨学科的相关研究，研究内容包括但不限于以下内容：互联网</span><span style="font-size:16px;line-height:150%;font-family:仿宋_GB2312">+</span><span style="font-size:16px;line-height:150%">政务服务、营商环境无感化检测、四川省营商环境指标体系及评价机制、互联网</span><span style="font-size:16px;line-height:150%;font-family:仿宋_GB2312">+</span><span style="font-size:16px;line-height:150%">监管、数字化政府、城市大脑等方面。</span></p> 
+<p style="text-indent:48px;line-height:150%"><strong><span style="font-size:16px;line-height:150%">第二，学术交流。</span></strong><span style="font-size:16px;line-height:150%">举办四川省营商环境评价、全国数字化营商环境论坛等学术交流活动，定期发布四川省营商环境排行榜、全国数字化营商环境排行榜等，搭建学术交流桥梁、致力于向国内外展示四川省营商环境改革成就的重要窗口，宣传四川省营商环境优化建设的成果，推广全省优化营商环境优秀经验，树立四川省在全国营商竞赛中的改革品牌，提升市场和社会对四川营商环境的认知度与认同度。</span></p> 
+<p style="text-indent:43px;line-height:150%"><strong><span style="font-size:16px;line-height:150%">第三，人才培训。</span></strong><span style="font-size: 16px;line-height:150%">在四川省发展和改革委员指导下，结合四川省乃至全国营商环境优化提升的需要，依托西南交通大学人才优势，面向省直部门、市州、区县的营商环境人才开展培训工作。</span></p> 
+<p><br></p></div>
+    </div>
+</div>
+<!--link--> 
+<div class="vsb-container container clearfix" columns="6" containerid="2">
+<div class="vsb-space content contentf" columns="6">    <div class="link_tit">
+            <h3>友情链接<i>/LINK</i></h3>
+</div>
+<div class="link_two">           
+<ul>
+<li>
+<a href="https://www.swjtu.edu.cn" target="_blank" onclick="_addDynClicks(&quot;wbimage&quot;, 1878060340, 65447)"><img src="images/swjtu.jpg"></a>
+</li>
+<li>
+<a href="http://fgw.sc.gov.cn/" target="_blank" onclick="_addDynClicks(&quot;wbimage&quot;, 1878060340, 65448)"><img src="images/fgw.jpg"></a>
+</li>
+<li>
+<a href="https://www.scu.edu.cn/" target="_blank" onclick="_addDynClicks(&quot;wbimage&quot;, 1878060340, 65449)"><img src="images/scu.jpg"></a>
+</li>
+<li>
+<a href="https://www.uestc.edu.cn/" target="_blank" onclick="_addDynClicks(&quot;wbimage&quot;, 1878060340, 65450)"><img src="images/uestc.jpg"></a>
+</li>
+<li>
+<a href="https://www.swufe.edu.cn/" target="_blank" onclick="_addDynClicks(&quot;wbimage&quot;, 1878060340, 65451)"><img src="images/swufe.jpg"></a>
+</li>
+<li>
+<a href="https://www.idataway.com/" target="_blank" onclick="_addDynClicks(&quot;wbimage&quot;, 1878060340, 65452)"><img src="images/idataway.jpg"></a>
+</li>
+<li>
+<a href="http://www.yd-tec.com/" target="_blank" onclick="_addDynClicks(&quot;wbimage&quot;, 1878060340, 65453)"><img src="images/yd.jpg"></a>
+</li>
+<li>
+<a href="https://home.kpmg/cn/zh/home.html" target="_blank" onclick="_addDynClicks(&quot;wbimage&quot;, 1878060340, 65454)"><img src="images/kpmg.jpg"></a>
+</li>
+<li>
+<a href="http://www.cdwisdom.3see.com/member/company.php?show=1" target="_blank" onclick="_addDynClicks(&quot;wbimage&quot;, 1878060340, 65455)"><img src="images/dz.jpg"></a>
+</li>
+<li>
+<a href="http://sc.china.com.cn/" target="_blank" onclick="_addDynClicks(&quot;wbimage&quot;, 1878060340, 65440)"><img src="images/sc.jpg"></a>
+</li>
+</ul>
+</div>
+</div></div><!--广告-->
+<!--foot-->
+<div class="footWrap"><div class="footDiv_one">
+        <div class="foot_one">
+            <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+</p><p>&nbsp;Copyright© 2022 All Rights Reserved. 四川省营商环境研究院&nbsp;<span style="font-family: 等线; font-size: 16px;">Sichuan Institute of Doing Business</span></p><p></p>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="dfiles/16558/js/jquery.js"></script>
+<script type="text/javascript" src="dfiles/16558/js/dh.js"></script>
+<script type="text/javascript">
+$(function(){
+    $(".mainmenu dl").hide();
+    $("li.mainmenu").hover(function(){
+        $(this).find("dl").stop(true,true);
+        $(this).find("dl").slideDown();
+    },function(){
+        $(this).find("dl").stop(true,true);
+        $(this).find("dl").slideUp();
+    });
+})
+</script>
+<script type="text/javascript">
+$(function () {
+
+//切换对象为其他，这里为包含图片和标题的层
+    $('#change_32 div.changeDiv').soChange({//对象指向层，层内包含图片及标题
+        thumbObj:'#change_32 .ul_change_a2 span',
+        thumbNowClass:'on'//自定义导航对象当前class为on
+    });
+
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

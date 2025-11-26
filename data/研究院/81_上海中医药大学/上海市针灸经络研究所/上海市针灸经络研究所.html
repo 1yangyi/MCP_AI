@@ -1,0 +1,389 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页_上海市针灸经络研究所</title>
+<meta name="keywords" content="" />
+<meta name="description" content=""  />
+<meta name="robots" content="index,follow" />
+<meta name="copyright" content="Copyright©shacumox.com" />
+<meta name="author" content="上海千策网络科技有限公司-定制化高端网站建设-https://www.qceer.com" />
+<!-- 开发者：LUBIN-->
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta name="revisit-after" content="3 days" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<meta name="google-site-verification" content="" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<script src="/js/all.js"></script>
+<!--[if IE]>
+    <script src="https://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+<![endif]-->
+<script src="/js/jquery-1.8.3.min.js"></script>
+<!-- 横线滚动图片 -->
+<script src="/js/scroll.js"></script>
+<!-- 横线滚动图片 end -->
+</head>
+<body>
+<!--头部 start-->
+<section>
+  <div class="row">
+    <div class="header"><img src="/images/header_banner998x168.jpg" alt=""></div>
+    <div class="header_menu">
+      <ul>
+        <li class="active"><a href="/">返回首页</a></li>
+        <li ><a href="/about.html">研究所概况</a></li>
+        <li ><a href="/set.html">研究室设置</a></li>
+        <li ><a href="/scientific.html">科研教学</a></li>
+        <li ><a href="/subject.html">学科建设</a></li>
+        <li ><a href="/department.html">针灸门诊</a></li>
+		<li ><a href="/train.html">党建工作</a></li>
+        <li ><a href="http://www.acumoxj.com" target="_blank">学术期刊</a></li>
+      </ul>
+    </div>
+    <div class="header_search">
+      <div class="header_search_left">
+        <form action="/search.html">
+        <ul>
+          <li>站内搜索：</li>
+          <li>
+            <input type="text" name="wd" placeholder="在此输入您要找的内容" class="input">
+          </li>
+          <li class="label_box">
+            <p>
+              <label>
+                <input type="radio" name="type" value="1" id="RadioGroup1_0" checked="checked">
+                标题</label>
+              <label>
+                <input type="radio" name="type" value="2" id="RadioGroup1_1">
+                内容</label>
+            </p>
+          </li>
+          <li>
+            <input type="submit" class="search_bt">
+          </li>
+        </ul>
+        </form>
+      </div>
+      <div class="header_search_right"> 
+        <script language="javascript">
+	var week,today,week_i;
+	week = new Array(7);
+	week[1] = "星期一";
+	week[2] = "星期二";
+	week[3] = "星期三";
+	week[4] = "星期四";
+	week[5] = "星期五";
+	week[6] = "星期六";
+	week[0] = "星期日";
+	today = new Date();
+	week_i = today.getDay();
+	var year = today.getFullYear();
+	var month = today.getMonth()+1;
+	var date = today.getDate();
+	document.write(""+year+"年"+month+"月"+date+"日 "+week[week_i]+"");
+</script> 
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="row">
+    <div class="home_news">
+      <div class="home_news_banner">
+		  <script type="text/javascript">
+    window.onload= function() {
+        var box  = document.getElementById("all");  //   获得大盒子
+        var ul = box.children[0].children[0];  // 获取ul
+        var ulLis = ul.children;  //  ul 里面的所有  li
+        // 复习：  cloneNode()     克隆节点       追加a.appendChild(b)  把b 放到a 的最后面
+        //1.  ulLis[0].cloneNode(true)  克隆  节点
+        ul.appendChild(ulLis[0].cloneNode(true));   // ul 是 a   ulLis[0].cloneNode(true) 是b
+
+        //2. 插入 ol 里面的li
+        var ol = box.children[1];  // 获得ol
+        // 因为 我们要创建很多个 ol 里面的li 所以需要用到for 循环哦
+        for(var i=0;i<ulLis.length-1;i++) {   // ul 里面的li  长度 要减去 1  因为我们克隆一个
+            // 创建节点 li
+            var li = document.createElement("li");
+            li.innerHTML = i + 1;   //  存在加1 的关系
+            // a.appendChild(b);
+            ol.appendChild(li);
+        }
+        var olLis = ol.children;  // 找到 ol 里面的li
+        olLis[0].className = 'current';
+        // 3. 动画部分  遍历小li ol
+        for(var i=0;i<olLis.length;i++) {
+            olLis[i].index = i;  // 赋予索引号
+            olLis[i].onmouseover = function() {
+                // 清除所有人
+                for(var j=0;j<olLis.length;j++) {
+                    olLis[j].className = "";
+                }
+                this.className = 'current';
+                animate(ul,-this.index*ulLis[0].offsetWidth);
+                key = square = this.index; // 鼠标经过 key square 要等于 当前的索引号
+            }
+        }
+       // 4. 定时器部分  难点
+        var timer = null;  // 定时器
+        var key = 0; // 用来控制图片的播放的
+        var square = 0;  // 用来控制小方块的
+        timer = setInterval(autoplay,3000);   // 每隔3s 调用一次 autoplay
+        function autoplay() {
+            key++;   // key == 1  先 ++
+            console.log(key); //  不能超过5
+            if(key > ulLis.length - 1)
+            {
+               // alert('停下');
+                ul.style.left = 0;
+                key = 1;  // 因为第6张就是第一张，我们已经播放完毕了， 下一次播放第2张
+                // 第2张的索引号是1
+            }
+            animate(ul,-key*ulLis[0].offsetWidth);
+            // 小方块的做法
+            square++;  // 小方块自加1
+            square = square>olLis.length-1 ? 0 : square;
+            /// 清除所有人
+            for(var i=0;i<olLis.length;i++) {
+                olLis[i].className = "";
+            }
+            olLis[square].className = "current";   // 留下当前自己的
+
+        }
+
+
+        // 鼠标经过和停止定时器
+        box.onmouseover = function() {
+            clearInterval(timer);
+        }
+
+        box.onmouseout = function() {
+            timer = setInterval(autoplay,3000);  // 一定这么开
+        }
+
+
+
+        //  基本封装
+        function animate(obj,target) {
+            clearInterval(obj.timer);  // 要开启定时器，先清除以前定时器
+            // 有2个参数 第一个 对象谁做动画  第二 距离 到哪里
+            // 如果 offsetLeft 大于了  target 目标位置就应该反方向
+            var speed = obj.offsetLeft < target ? 15 : -15;
+            obj.timer = setInterval(function() {
+                var result = target - obj.offsetLeft;  //  他们的值 等于 0 说明完全相等
+                // 动画的原理
+                obj.style.left = obj.offsetLeft + speed  + "px";
+                if(Math.abs(result) <= 15) {
+                    obj.style.left = target + "px";   //抖动问题
+                    clearInterval(obj.timer);
+                }
+            },10);
+        }
+
+    }
+</script>
+		<div class="all" id="all" >
+	<div class="screen">
+        <ul>
+                          <li><img src="/uploads/20210604/eb19d79f59df397ed8db6a63daaf23ac.jpg" width="250" height="250" /></li>
+                            <li><img src="/uploads/20210604/628d017b9dce2eb1de17da1447f22845.jpg" width="250" height="250" /></li>
+                    </ul>
+    </div>
+    <ol>
+    </ol>
+</div>
+
+		</div>
+      <div class="home_news_left">
+        <h3><span class="title_left">动态要闻</span>
+          <span class="news_more"><a href="/news.html">更多新闻 》</a></span></h3>
+        <ul>
+                      <li>
+              <a href="/detail/133.html">· 针研所、岳阳医院吴焕淦岐黄学者团队研究成果入选“2022年度中医药十大学术进展”</a>
+            </li>
+                      <li>
+              <a href="/detail/132.html">· 首届长三角针灸创新发展青年学术论坛和博士生论坛暨2023年上海市针灸学会学术年会在上海市召开</a>
+            </li>
+                      <li>
+              <a href="/detail/131.html">· 【两会声音】全国人大代表吴焕淦两会热情履职，贡献中医智慧</a>
+            </li>
+                      <li>
+              <a href="/detail/130.html">· 我所两本期刊入选CSCD、中国科技核心期刊和T2期刊</a>
+            </li>
+                      <li>
+              <a href="/detail/43.html">· 世界针联第八届针灸学术大会召开</a>
+            </li>
+                      <li>
+              <a href="/detail/106.html">· 《上海针灸杂志》荣获华东地区优秀期刊称号</a>
+            </li>
+                      <li>
+              <a href="/detail/109.html">· 针灸发展须发挥综合优势（王国强）</a>
+            </li>
+                  </ul>
+      </div>
+      <div class="home_news_right">
+        <h3><span>通知公告</span><span class="news_more"><a href="/department/8.html">更多公告 》</a></span></h3>
+        <ul>
+                    <li>
+            <a href="/detail/137.html">· 上海市针灸经络研究所关于冒用我所名称推销医疗产品的严正声明</a>
+          </li>
+                    <li>
+            <a href="/detail/136.html">· 上海市针灸经络研究所关于2024年度逾期尚未支付中小企业款项的说明</a>
+          </li>
+                    <li>
+            <a href="/detail/134.html">· 上海市针灸经络研究所植入式多通道电生理记录仪微型放大器单一来源公示</a>
+          </li>
+                    <li>
+            <a href="/detail/129.html">· 2024年清明节门诊安排</a>
+          </li>
+                    <li>
+            <a href="/detail/124.html">· 2023年针研所节假日安排通知</a>
+          </li>
+                    <li>
+            <a href="/detail/123.html">· 上海市针灸经络研究所手持数码裂隙灯单一来源公示</a>
+          </li>
+                    <li>
+            <a href="/detail/122.html">· 2022年针研所节假日安排通知</a>
+          </li>
+                  </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="row">
+    <div class="gd_img">
+      <div class="gd_white">
+        <div class="container">
+          <div class="scroll">
+            <ul>
+                              <li><img src="./images/01.jpg" alt=""></li>
+                <li><img src="./images/02.jpg" alt=""></li>
+                <li><img src="./images/03.jpg" alt=""></li>
+                <li><img src="./images/04.jpg" alt=""></li>
+                <li><img src="./images/05.jpg" alt=""></li>
+                <li><img src="./images/06.jpg" alt=""></li>
+                <li><img src="./images/07.jpg" alt=""></li>
+                <li><img src="./images/03.jpg" alt=""></li>
+                          </ul>
+          </div>
+        </div>
+        <script type="text/javascript">
+		$(function () {
+			$('.scroll').scroll({
+				speed: 80, //数值越大，速度越快
+				direction: 'horizantal'
+			});
+		});
+	</script>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="row">
+    <div class="left_mail">
+     <!-- <h2>邮箱登录</h2>
+      <div class="mail_input">
+        <ul>
+          <li>
+            <input type="text" name="" placeholder="邮箱账号/用户名" class="input">
+          </li>
+          <li>
+            <input type="text" name="" placeholder="账户密码" class="input">
+          </li>
+          <li><span>
+            <input type="submit" value="登录" title="登录" class="bot_tj">
+            </span><span>
+            <input type="reset" value="重置" title="重置" class="bot_tj">
+            </span></li>
+        </ul>
+      </div>-->
+      <h3>〓 友情链接</h3>
+      <div class="links_box">
+        <ul>
+                      <li><a href="http://www.satcm.gov.cn/" target="_blank">国家中医药管理局</a></li>
+                      <li><a href="http://www.nsfc.gov.cn/" target="_blank">国家自然科学基金委员会</a></li>
+                      <li><a href="http://www.nhc.gov.cn/" target="_blank">中华人民共和国国家卫生健康委员会</a></li>
+                      <li><a href="https://wsjkw.sh.gov.cn/" target="_blank">上海卫生健康委员会</a></li>
+                      <li><a href="http://stcsm.sh.gov.cn/" target="_blank">上海市科学技术委员会</a></li>
+                      <li><a href="https://www.shyueyanghospital.com/" target="_blank">上海岳阳中西医结合医院</a></li>
+                      <li><a href="https://www.shutcm.edu.cn/" target="_blank">上海中医药大学</a></li>
+                      <li><a href="http://www.caam.cn/" target="_blank">中国针灸协会</a></li>
+                      <li><a href="http://www.wfas.org.cn/" target="_blank">世界针灸协会联合会</a></li>
+                      <li><a href="http://www.caam.cn/article/488" target="_blank">上海市针灸协会网</a></li>
+                      <li><a href="https://www.cacms.ac.cn/" target="_blank">中国中医科学院</a></li>
+                  </ul>
+      </div>
+    </div>
+    <div class="right_menu">
+      <div class="box">
+        <h3><span class="right_menu_title">〓 973项目专栏</span><span class="news_more"><a href="/special.html" target="_blank">更多 》</a></span></h3>
+        <div class="box_left_img"><img src="/images/a.jpg" alt=""></div>
+        <ul class="box_right_menu">
+                    <li>
+            <a href="/detail/105.html">· 973计划“基于临床的灸法作用机理研究”项目2015年度总结会在沪隆重举行</a>
+          </li>
+                    <li>
+            <a href="/detail/104.html">· 关于组织编报2015年度国家科技计划及专项项目（课题）财务决算报告的通知</a>
+          </li>
+                    <li>
+            <a href="/detail/103.html">· 国家重点基础研究发展计划（973计划）“基于临床的灸法作用机理研究”项目中期总结会会议通知</a>
+          </li>
+                    <li>
+            <a href="/detail/102.html">· 关于国家重点基础研究发展计划（973计划）以及重大科学研究计划2015年立项项目中期财务检查的通知</a>
+          </li>
+                    <li>
+            <a href="/detail/45.html">· 灸法临床操作规范与注意事项</a>
+          </li>
+                  </ul>
+      </div>
+      <div class="box">
+        <h3><span class="right_menu_title">〓 学术期刊</span></h3>
+        <div class="xsqk_box"><a href="http://www.acumoxj.com" target="_blank"><img src="/images/book1.jpg" alt="">
+          <p>上海针灸杂志</p>
+          </a></div>
+        <div class="xsqk_box"><a href="http://www.acumoxj.com" target="_blank"><img src="/images/book2.jpg" alt="">
+          <p>针灸推拿医学</p>
+          </a></div>
+      </div>
+      <div class="box">
+        <h3><span class="right_menu_title">〓 科研教学&学科建设</span>
+          <span class="news_more"><a href="/scientific.html">更多 》</a></span></h3>
+        <div class="box_left_img"><img src="/images/c.jpg" alt=""></div>
+        <ul class="box_right_menu">
+                      <li><a href="/scientific/3.html">· 项目申报</a></li>
+                      <li><a href="/scientific/4.html">· 教育培训</a></li>
+                      <li><a href="/scientific/5.html">· 临床与实验研究</a></li>
+                      <li><a href="/subject/6.html">· 上海市重点学科</a></li>
+                      <li><a href="/subject/7.html">· 国家重点（培育）学科</a></li>
+                  </ul>
+      </div>
+      <div class="box">
+        <h3><span class="right_menu_title">〓 针灸门诊</span>
+          <span class="news_more"><a href="/department.html">更多 》</a></span></h3>
+        <div class="box_left_img"><img src="/images/d.jpg" alt=""></div>
+        <ul class="box_right_menu">
+                      <li><a href="/department/8.html">· 公告栏</a></li>
+                      <li><a href="/department/9.html">· 就医指南</a></li>
+                      <li><a href="/department/10.html">· 党员助您了解针灸</a></li>
+                  </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="footer">
+    <div class="row">
+      <div class="footer_copyright">
+        <p>CopyRight @ 2009-2021上海市针灸经络研究所</p>
+        <p>上海市徐汇区宛平南路650号 邮编：200030 电话：021-64383453</p>
+        <p><a href="https://beian.miit.gov.cn" target="_blank">沪ICP备09077916号</a></p>
+        <p><img src="/images/batb.png" alt=""><a href="http://www.beian.gov.cn/portal/registerSystemInfo" target="_blank">沪公网安备 31010402000779号</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

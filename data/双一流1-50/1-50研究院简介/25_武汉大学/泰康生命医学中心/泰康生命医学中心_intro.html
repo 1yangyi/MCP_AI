@@ -1,0 +1,472 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>中心简介-武汉大学泰康生命医学中心</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="中心简介">
+<meta name="keywords" content="武汉大学泰康生命医学中心">
+
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    
+    <meta name="description" content="武汉大学泰康生命医学中心">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <script src="../js/main.js"></script>
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/moblie.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../about1.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1055,'/about1.jsp',-1,1876074409)</script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="search">
+            <div class="search1" style="-webkit-box-shadow: 0 0px 0px rgb(0 0 0);">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        width: 72.3%;
+        position: relative;
+        left: 3px;}
+    #appu0 .tj{}
+</style>
+<div id="divu0" style="-webkit-box-shadow: 0 0px 0px rgb(0 0 0);">
+    <div id="appu0"><div><input type="text" placeholder="请输入检索内容" autocomplete="off" class="search_kuang qwss"> <input name="submit_button" type="button" value="搜索" class="tj search_submit"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <input type="text" placeholder="请输入检索内容" class="search_kuang qwss" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj search_submit" name="submit_button" type="button" value="搜索" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1876074409";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+        </div>
+        <div class="header-top">
+            <div class="header-container clearfix">
+
+               
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" class="logo"><img src="../images/logo.png"></a>
+                <button type="button" class="navbar-toggle">
+                    <span class="icon-bar icon-bar1"></span>
+                    <span class="icon-bar icon-bar2"></span>
+                    <span class="icon-bar icon-bar3"></span>
+                </button>
+
+                <div class="nav">
+
+                    <!--  网站导航开始 -->
+                    <ul class="daohang clearfix">    <li style="display:none;">
+        <a class="dropdown" href="../index.htm">首页</a>
+    </li>
+    <li class="active">
+        <a class="dropdown" href="overview.htm">中心概况</a>
+            <ul class="nav_item animate__animated">
+                <li><a href="overview.htm">中心简介</a></li>     
+                <li><a href="committee.htm">科学咨询委员会</a></li>     
+                <li><a href="zxglwyh.htm">中心管理委员会</a></li>     
+                <li><a href="leader.htm">现任领导</a></li>     
+                <li><a href="staff.htm">行政支撑团队</a></li>     
+                <li><a href="dsj.htm">大事记</a></li>     
+            </ul>
+    </li>
+    <li>
+        <a class="dropdown" href="../kydw/lyys.htm">科研队伍</a>
+            <ul class="nav_item animate__animated">
+                <li><a href="../kydw/lyys.htm">两院院士</a></li>     
+                <li><a href="../kydw/jcrc.htm">杰出人才</a></li>     
+                <li><a href="../kydw/PIdw/qb.htm">PI队伍</a></li>     
+                <li><a href="../kydw/zyjsry.htm">专业技术人员</a></li>     
+            </ul>
+    </li>
+    <li>
+        <a class="dropdown" href="../research/research_direction.htm">科学研究</a>
+            <ul class="nav_item animate__animated">
+                <li><a href="../research/research_direction.htm">研究方向</a></li>     
+                <li><a href="../research/kydt.htm">科研动态</a></li>     
+                <li><a href="../research/publication.htm">论文列表</a></li>     
+            </ul>
+    </li>
+    <li>
+        <a class="dropdown" href="../keyanpingta.htm">科研平台</a>
+    </li>
+    <li>
+        <a class="dropdown" href="../communication/forum.htm">合作交流</a>
+            <ul class="nav_item animate__animated">
+                <li><a href="../communication/forum.htm">生命医学前沿论坛</a></li>     
+                <li><a href="../communication/xshy.htm">学术会议</a></li>     
+            </ul>
+    </li>
+    <li>
+        <a class="dropdown" href="../gxpt/yqzx.htm">共享平台</a>
+            <ul class="nav_item animate__animated">
+                <li><a href="../gxpt/yqzx.htm">仪器中心</a></li>     
+                <li><a href="../gxpt/dwzx.htm">动物中心</a></li>     
+                <li><a href="../gxpt/hys.htm">会议室</a></li>     
+            </ul>
+    </li>
+    <li>
+        <a class="dropdown" href="../recruitment.htm">人才招聘</a>
+    </li>
+    <li>
+        <a class="dropdown" href="../service/procedure.htm">服务指南</a>
+            <ul class="nav_item animate__animated">
+                <li><a href="../service/procedure.htm">办事流程</a></li>     
+                <li><a href="../service/xzzq.htm">下载专区</a></li>     
+            </ul>
+    </li>
+    <li style="display:none;">
+        <a class="dropdown" href="../SEMINARS.htm">学术动态</a>
+    </li>
+    <li style="display:none;">
+        <a class="dropdown" href="../NEWS_EVENTS.htm">中心动态</a>
+    </li>
+</ul>
+                    <!--  网站导航结束 -->
+                </div>
+
+                <div class="nav-mobile"><ul>
+<li><a href="../index.htm">首页</a>
+</li>
+<li><a href="overview.htm">中心概况</a>
+<ul class="nav-sub-mobile">
+<li><a href="overview.htm">中心简介</a></li>
+<li><a href="committee.htm">科学咨询委员会</a></li>
+<li><a href="zxglwyh.htm">中心管理委员会</a></li>
+<li><a href="leader.htm">现任领导</a></li>
+<li><a href="staff.htm">行政支撑团队</a></li>
+<li><a href="dsj.htm">大事记</a></li>
+</ul>
+</li>
+<li><a href="../kydw/lyys.htm">科研队伍</a>
+<ul class="nav-sub-mobile">
+<li><a href="../kydw/lyys.htm">两院院士</a></li>
+<li><a href="../kydw/jcrc.htm">杰出人才</a></li>
+<li><a href="../kydw/PIdw/qb.htm">PI队伍</a></li>
+<li><a href="../kydw/zyjsry.htm">专业技术人员</a></li>
+</ul>
+</li>
+<li><a href="../research/research_direction.htm">科学研究</a>
+<ul class="nav-sub-mobile">
+<li><a href="../research/research_direction.htm">研究方向</a></li>
+<li><a href="../research/kydt.htm">科研动态</a></li>
+<li><a href="../research/publication.htm">论文列表</a></li>
+</ul>
+</li>
+<li><a href="../keyanpingta.htm">科研平台</a>
+</li>
+<li><a href="../communication/forum.htm">合作交流</a>
+<ul class="nav-sub-mobile">
+<li><a href="../communication/forum.htm">生命医学前沿论坛</a></li>
+<li><a href="../communication/xshy.htm">学术会议</a></li>
+</ul>
+</li>
+<li><a href="../gxpt/yqzx.htm">共享平台</a>
+<ul class="nav-sub-mobile">
+<li><a href="../gxpt/yqzx.htm">仪器中心</a></li>
+<li><a href="../gxpt/dwzx.htm">动物中心</a></li>
+<li><a href="../gxpt/hys.htm">会议室</a></li>
+</ul>
+</li>
+<li><a href="../recruitment.htm">人才招聘</a>
+</li>
+<li><a href="../service/procedure.htm">服务指南</a>
+<ul class="nav-sub-mobile">
+<li><a href="../service/procedure.htm">办事流程</a></li>
+<li><a href="../service/xzzq.htm">下载专区</a></li>
+</ul>
+</li>
+<li><a href="../SEMINARS.htm">学术动态</a>
+</li>
+<li><a href="../NEWS_EVENTS.htm">中心动态</a>
+</li>
+</ul>
+</div>
+
+                <img src="../images/search-icon.png" class="search_anliu">
+
+                <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>
+<a href="https://tkclms.whu.edu.cn/en/index.htm" class="change">En</a>
+
+
+               
+
+            </div>
+        </div>
+    </div>
+
+    <!--网站轮播-->
+
+    <div class="banner"><div style="background:url(../images/4.jpg) no-repeat center center;height:100%;background-size: cover;"></div>
+<div class="zzc" style="background:url(../images/zz.png) no-repeat;background-size: cover;"></div>
+</div>
+
+
+    <!--网站轮播结束-->
+
+    <!--内容开始-->
+
+
+    <div class="contentbox">
+        <div class="container">
+
+            <div class="left-box col-md-3 col-sm-3 col-xs-12 ">
+                <h3 class="current">
+中心概况</h3>
+
+                <div class="left-nav">
+                    <ul><li class="active">
+    <a href="overview.htm">中心简介</a>
+</li>
+
+                        
+<li>
+    <a href="committee.htm">科学咨询委员会</a>
+</li>
+
+                        
+<li>
+    <a href="zxglwyh.htm">中心管理委员会</a>
+</li>
+
+                        
+<li>
+    <a href="leader.htm">现任领导</a>
+</li>
+
+                        
+<li>
+    <a href="staff.htm">行政支撑团队</a>
+</li>
+
+                        
+<li>
+    <a href="dsj.htm">大事记</a>
+</li>
+
+                        
+</ul>
+                </div>
+
+            </div>
+
+            <div class="right-box col-md-9 col-sm-9 col-xs-12">
+                <div class="right-current">
+                    <div class="location">当前所在位置：
+    <a href="../index.htm"> 首页</a><span>&gt;</span>
+    <a href="overview.htm"> 中心概况</a><span>&gt;</span>
+            <a href="overview.htm">中心简介</a>
+</div>
+
+                    <h3 class="columntitle"><span>
+中心简介</span></h3>
+                </div>
+
+
+
+
+                <div class="jianjie">
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1876074409,'wbnews','u10')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1876074409,1003)</script>
+<div id="vsb_content_2_1003_u101"><div id="vsb_content_2"><p style="text-indent: 2em; line-height: 3em;"><span style="font-size: 20px; color: rgb(0, 0, 0); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">为更好地服务国家创新驱动发展战略和健康中国战略，泰康保险集团于2021年向武汉大学捐赠10亿元人民币，以支持武汉大学医学与生命科学发展。在此基础上，2021年12月31日成立武汉大学泰康生命医学中心（以下简称中心）。</span></p><p style="text-indent: 0em; line-height: 3em;"><span style="font-size: 20px; color: rgb(0, 0, 0); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;"><br></span></p><p style="text-indent: 2em; line-height: 3em;"><span style="font-size: 20px; color: rgb(0, 0, 0); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">中心为武汉大学校内独立运行的实体科研机构，由中国科学院院士、著名代谢生物学家宋保亮教授出任中心主任、首席科学家。中心主要任务是以卓越的生命医学研究带动拔尖创新人才培养，建设国际一流的科学研究与人才培养高地。中心采用国际先进的管理和运行机制，设立科学咨询委员会，采用现代科技PI制度（首席学术带头人+团队），组建高水平科研团队。中心建设有一流的公共科研平台和大型共享设备，聚焦健康与疾病相关的重大科学问题开展前沿探索，为重大疾病的治疗提供源头创新，持续提升我国医学与生命科学领域的创新能力。</span></p><p style="text-indent:32px;line-height:30px"><br></p><p style="text-indent:32px;line-height:30px"><br></p><p style="line-height: 2em; text-indent: 2em;"><span style="font-size: 20px; font-family: &quot;times new roman&quot;; color: rgb(0, 0, 0);">To better serve the national innovation-driven development strategy and the Healthy China strategy, Taikang Insurance Group donated 1 billion RMB to Wuhan University in 2021 to support the development in medical and life sciences at Wuhan University. Starting from this initiative, on December 31, 2021, the Taikang Center for Life and Medical Sciences (hereinafter referred to as “Taikang Center") was established.</span></p><p style="line-height: 2em; text-indent: 2em;"><span style="font-size: 20px; font-family: &quot;times new roman&quot;; color: rgb(0, 0, 0);"><br></span></p><p style="line-height: 2em; text-indent: 2em;"><span style="font-size: 20px; font-family: &quot;times new roman&quot;; color: rgb(0, 0, 0);">Taikang Center is an independently operated research institution in Wuhan University. It is led by Professor Song Bao-Liang, a renowned metabolic biologist and academician of the Chinese Academy of Sciences, who serves as the Director and Chief Scientist of Taikang Center. The primary mission of Taikang Center is to drive the cultivation of top innovative talents through outstanding research in life and medical sciences, aiming to build an world-class highland for scientific research and talent cultivation. Taikang Center adopts internationally advanced management and operation mechanisms, establishes a scientific advisory committee, and employs a modern scientific Principal Investigator (PI) system (a Chief Academic Leader + a team) to assemble high-level research groups. Taikang Center has established a full set of core facilities with advanced large equipment. It focuses on cutting-edge exploration of significantly scientific questions related to health and diseases, provides pioneering innovations for the treatment of major diseases, and continuously contributes to improve China's innovation capabilities in the fields of medical and life sciences.</span></p><p><br></p></div></div>
+</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--内容结束-->
+
+    
+     <!--底部开始-->
+
+    <div class="footer">
+        <div class="container clearfix">
+
+            <a href="" class="bottom-logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+</a><a href="../index.htm" class="bottom-logo"><img src="../images/bottom-logo.png"></a>
+            <div class="footer-right">
+
+               <select onchange="_openSelectLink(this, 'value', 'addclicks')">
+    <option>相关部门</option>
+   <option value="http://www.moe.gov.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 71426)">中华人民共和国教育部</option>   
+   <option value="https://www.most.gov.cn/index.html" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 71427)">中华人民共和国科学技术部</option>   
+   <option value="https://www.nsfc.gov.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 71428)">国家自然科学基金委员会</option>   
+   <option value="http://kjt.hubei.gov.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 71429)">湖北省科学技术厅</option>   
+</select><select onchange="_openSelectLink(this, 'value', 'addclicks')">
+   <option>兄弟院校</option>                 
+<option value="https://www.bjmu.edu.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 71422)">北京大学医学部</option>    
+                    
+<option value="http://www.bio.pku.edu.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 71423)">北京大学生命科学学院</option>    
+                    
+<option value="https://www.med.tsinghua.edu.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 71424)">清华大学医学院</option>    
+                    
+<option value="https://life.tsinghua.edu.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 71425)">清华大学生命科学学院</option>    
+                    
+<option value="http://www.cmm.zju.edu.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 76233)">浙江大学医学院</option>    
+                    
+<option value="http://www.cls.zju.edu.cn/clscn/main.htm" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 76234)">浙江大学生命科学学院</option>    
+                    
+<option value="https://med.nju.edu.cn/main.htm" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 76235)">南京大学医学院</option>    
+                    
+<option value="https://life.nju.edu.cn/main.htm" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 76236)">南京大学生命科学学院</option>    
+                    
+<option value="https://basicmed.fudan.edu.cn/main.htm" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 76237)">复旦大学基础医学院</option>    
+                    
+<option value="https://life.fudan.edu.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 76238)">复旦大学生命科学学院</option>    
+                    
+<option value="http://www.tjmu.edu.cn/index.htm" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 76240)">华中科技大学同济医学院</option>    
+                    
+<option value="http://life.hust.edu.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 76239)">华中科技大学生命科学与技术学院</option>    
+                    
+<option value="https://biomed.ustc.edu.cn/main.htm" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 76277)">中国科学技术大学生命科学与医学部</option>    
+                    
+<option value="https://life.sjtu.edu.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 76279)">上海交通大学生命科学技术学院</option>    
+                    
+<option value="https://www.shsmu.edu.cn/index.htm" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 76280)">上海交通大学医学院</option>    
+                    
+</select><select onchange="_openSelectLink(this, 'value', 'addclicks')">
+  <option>合作机构</option>                  
+</select><select onchange="_openSelectLink(this, 'value', 'addclicks')">
+<option>友情链接</option>
+
+    <option value="http://wsm70.whu.edu.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 71416)">医学部机关</option>              
+
+    <option value="https://wbm.whu.edu.cn/index.htm" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 76232)">武汉大学泰康医学院（基础医学院）</option>              
+
+    <option value="http://www.rmhospital.com/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 71417)">武汉大学人民医院</option>              
+
+    <option value="https://www.znhospital.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 71418)">武汉大学中南医院</option>              
+
+    <option value="https://www.whuss.com/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 71419)">武汉大学口腔医院</option>              
+
+    <option value="http://facility.whu.edu.cn/index.htm" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 71420)">武汉大学科研公共服务条件平台</option>              
+
+    <option value="http://kfy.whu.edu.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1876074409, 76320)">武汉大学科学技术发展研究院</option>              
+</select>
+
+                <div class="footer-adress"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：湖北武汉武昌区东湖路115号&nbsp; &nbsp; 邮编：430071</p><p>邮箱：office.tkms@whu.edu.cn</p><p class="footer-copyright">版权所有©武汉大学泰康生命医学中心</p></div>
+    </div>
+  </div>
+</div>
+    <!--底部结束-->
+<div class="return-top" style="cursor: pointer; display: none; position: fixed; right: 15px; bottom: 30px;"></div>
+<script type="text/javascript" src="../js/jquery.toTop.js"></script> 
+<script type="text/javascript">
+$(function() {
+    $(".return-top").toTop();
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

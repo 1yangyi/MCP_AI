@@ -1,0 +1,542 @@
+<!DOCTYPE html><html lang="ZH-CN"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>学部简介-陕西师范大学教育学部(田家炳教育书院)</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学部简介">
+<meta name="keywords" content="陕西师范大学教育学部(田家炳教育书院),学院简介">
+
+<meta name="description" content="陕西师范大学教育学部·田家炳教育书院">
+
+<meta name="author" content="陕西新势力网络科技有限公司_16年网站建设制作经验_029-88455393">
+<link href="../static/css/bootstrap.min.css" rel="stylesheet">
+<link href="../static/css/main.css" rel="stylesheet">
+<link href="../static/css/responsive.css" rel="stylesheet">
+<link href="../static/css/css2.css" rel="stylesheet">
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232306975475253535742000400004152 -->
+<link rel="stylesheet" type="text/css" href="../about_us.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1029,'/about_us.jsp',-1,1501668256)</script>
+</head>
+<body>
+<div class="page-wrapper">
+    <header class="main-header">
+        <div class="header-upper">
+            <div class="outer-container">
+                <div class="inner-container clearfix">
+<div class="news3content" style="float: right; color: #fff; font-size: 14px;padding-top: 10px;">
+<ul>
+<li style="display:inline-block;">
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<p><a href="English.htm" target="_self" textvalue="English" _href="/system/go.jsp?treeid=1351&amp;apptype=treetemp&amp;urltype=tree.TreeTempUrl">English</a>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="http://www.snnu.edu.cn/" _href="http://www.snnu.edu.cn/">学校首页</a></p>
+</li>
+<li style="display:inline-block;">
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu1">
+    <div id="appu1"><div><div style="padding-left: 15px; margin: 0px; display: inline; font-size: 15px;"><input placeholder="Search..." autocomplete="off" style="border-radius: 30px; width: 125px; height: 22px; padding-left: 15px; font-size: 12px;"> <button type="submit" id="searchsubmit" align="absmiddle" class="search_icon" style="color: rgb(255, 255, 255); outline: none; background: rgba(255, 255, 255, 0); border: 0px;"><i class="fa fa-search" style="font-size: 15px; font-weight: 550; padding-left: 12px;"></i></button></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+        
+        <div style="padding-left:15px;margin:0px;display:inline;font-size:15px;">
+<input  style="border-radius:30px;width:125px;height:22px;padding-left:15px;font-size:12px;" placeholder="Search..." autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+<button type="submit" class="search_icon" id="searchsubmit" align="absmiddle" style="color:#fff;outline:none;background:rgba(255,255,255,0);border:0;" v-on:click="onSubmit()">
+<i class="fa fa-search" style="font-size:15px; font-weight:550;padding-left: 12px;"></i>
+</button>
+ </div>
+        
+          
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1501668256";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+</li>
+<!--<i class="fa fa-search" style="padding-left: 20px;"></i>-->
+</ul>
+</div>
+                    <div class="pull-left logo-box">
+                        <div class="logo"><a href="http://edu.snnu.edu.cn"><img src="../static/picture/logo.png"></a></div>
+                    </div>
+                    
+                    <div class="nav-outer pull-left clearfix">
+                        <div class="mobile-nav-toggler"><span class="icon ti-menu"></span></div>
+                        <nav class="main-menu navbar-expand-md">
+<div class="navbar-collapse show collapse clearfix" id="navbarSupportedContent">
+<ul class="navigation clearfix">
+<li class="current"><a href="../index.htm">首页</a></li>
+<li class="dropdown"><a id="current" href="About_us.htm">学部概况</a>
+<ul>
+  <li><a href="About_us.htm">学部简介</a></li>
+  <li><a href="leaders.htm">现任领导</a></li>
+  <li><a href="lrld/lrsj.htm">历任领导</a></li>
+  <li><a href="zzjg.htm">组织架构</a></li>
+  <li><a href="zywyh.htm">专业委员会</a></li>
+  <li><a href="dzgljg.htm">党政管理机构</a></li>
+  <li><a href="Rules_regulations.htm">规章制度</a></li>
+  <li><a href="school_logo.htm">部徽部训</a></li>
+  <li><a href="Contact_Us.htm">联系方式</a></li>
+</ul>
+<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+<li class="dropdown"><a href="&lt;span style='color:red;font-size:9pt'&gt;转换链接错误&lt;/span&gt;">师资队伍</a>
+<ul>
+  <li><a href="../szdw/zgj.htm">正高级</a></li>
+  <li><a href="../szdw/fgj.htm">副高级</a></li>
+  <li><a href="../szdw/zj.htm">中级</a></li>
+  <li><a href="../szdw/qzbshyjry.htm">全职博士后研究人员</a></li>
+  <li><a href="../szdw/txjzg.htm">退休教职工</a></li>
+</ul>
+<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+<li class="dropdown"><a href="../xkjs/xkpt1.htm">学科建设</a>
+<ul>
+  <li><a href="../xkjs/xkpt1.htm">学科平台</a></li>
+  <li><a href="../xkjs/xwsqd1.htm">学位授权点</a></li>
+  <li><a href="../xkjs/bshldz1.htm">博士后流动站</a></li>
+  <li><a href="../xkjs/rczp1.htm">人才招聘</a></li>
+</ul>
+<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+<li class="dropdown"><a href="../rcpy/rcpygk.htm">人才培养</a>
+<ul>
+  <li><a href="../rcpy/rcpygk.htm">人才培养概况</a></li>
+  <li><a href="../rcpy/bksjy.htm">本科生教育</a></li>
+  <li><a href="../rcpy/yjsjy.htm">研究生教育</a></li>
+  <li><a href="../rcpy/ylkc.htm">一流课程</a></li>
+  <li><a href="../rcpy/jxcg.htm">教学成果</a></li>
+  <li><a href="../rcpy/bgjyj.htm">宝钢教育奖</a></li>
+</ul>
+<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+<li class="dropdown"><a href="../kxyj/xsdt1.htm">科学研究</a>
+<ul>
+  <li><a href="../kxyj/xsdt1.htm">学术动态</a></li>
+  <li><a href="../kxyj/cgzs1.htm">成果展示</a></li>
+</ul>
+<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+<li class="dropdown"><a href="../gjjl/hyjz1.htm">国际交流</a>
+<ul>
+  <li><a href="../gjjl/hyjz1.htm">会议讲座</a></li>
+  <li><a href="../gjjl/ssjl1.htm">师生交流</a></li>
+  <li><a href="../gjjl/hzxm1.htm">合作项目</a></li>
+  <li><a href="../gjjl/lxspy1.htm">留学生培养</a></li>
+</ul>
+<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+<li class="dropdown"><a href="../dqgz/dwjj1.htm">党群工作</a>
+<ul>
+  <li><a href="../dqgz/dwjj1.htm">党委简介</a></li>
+  <li><a href="../dqgz/zzjg1.htm">组织机构</a></li>
+  <li><a href="../dqgz/djgz1.htm">党建工作</a></li>
+  <li><a href="../dqgz/ghtd1.htm">工会天地</a></li>
+</ul>
+<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+<li class="dropdown"><a href="../xsgz/xbtw.htm">学生工作</a>
+<ul>
+  <li><a href="../xsgz/xbtw.htm">学部团委</a></li>
+  <li><a href="../xsgz/xstd.htm">学生天地</a></li>
+  <li><a href="../xsgz/jyxx1.htm">就业信息</a></li>
+  <li><a href="../xsgz/xsst1.htm">学生社团</a></li>
+  <li><a href="../xsgz/xskw1.htm">学生刊物</a></li>
+</ul>
+<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+<li class="dropdown"><a href="../xygz/zzjg1.htm">校友工作</a>
+<ul>
+  <li><a href="../xygz/zzjg1.htm">组织结构</a></li>
+  <li><a href="../xygz/gzzd1.htm">工作制度</a></li>
+  <li><a href="../xygz/xyml1.htm">校友名录</a></li>
+  <li><a href="../xygz/xydt1.htm">校友动态</a></li>
+  <li><a href="../xygz/xyfc1.htm">校友风采</a></li>
+</ul>
+<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+</ul>
+</div>
+</nav>
+                    </div>
+                    
+                    <div class="outer-box clearfix">
+                        <div class="mobile-nav-toggler"><span class="icon icon-menu"></span></div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <div class="menu-backdrop"></div>
+            <div class="close-btn"><span class="icon lnr lnr-cross"></span></div>
+            
+            <nav class="menu-box mCustomScrollbar _mCS_1 mCS_no_scrollbar"><div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" style="max-height: 720px;" tabindex="0"><div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+                <div class="nav-logo"><a href=""><img src="../static/picture/logo-2.png" class="mCS_img_loaded"></a></div>
+                <div class="menu-outer">
+<div class="navbar-collapse show collapse clearfix" id="navbarSupportedContent">
+<ul class="navigation clearfix">
+<li class="current"><a href="../index.htm">首页</a></li>
+<li class="dropdown"><a id="current" href="About_us.htm">学部概况</a>
+<ul>
+  <li><a href="About_us.htm">学部简介</a></li>
+  <li><a href="leaders.htm">现任领导</a></li>
+  <li><a href="lrld/lrsj.htm">历任领导</a></li>
+  <li><a href="zzjg.htm">组织架构</a></li>
+  <li><a href="zywyh.htm">专业委员会</a></li>
+  <li><a href="dzgljg.htm">党政管理机构</a></li>
+  <li><a href="Rules_regulations.htm">规章制度</a></li>
+  <li><a href="school_logo.htm">部徽部训</a></li>
+  <li><a href="Contact_Us.htm">联系方式</a></li>
+</ul>
+<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+<li class="dropdown"><a href="&lt;span style='color:red;font-size:9pt'&gt;转换链接错误&lt;/span&gt;">师资队伍</a>
+<ul>
+  <li><a href="../szdw/zgj.htm">正高级</a></li>
+  <li><a href="../szdw/fgj.htm">副高级</a></li>
+  <li><a href="../szdw/zj.htm">中级</a></li>
+  <li><a href="../szdw/qzbshyjry.htm">全职博士后研究人员</a></li>
+  <li><a href="../szdw/txjzg.htm">退休教职工</a></li>
+</ul>
+<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+<li class="dropdown"><a href="../xkjs/xkpt1.htm">学科建设</a>
+<ul>
+  <li><a href="../xkjs/xkpt1.htm">学科平台</a></li>
+  <li><a href="../xkjs/xwsqd1.htm">学位授权点</a></li>
+  <li><a href="../xkjs/bshldz1.htm">博士后流动站</a></li>
+  <li><a href="../xkjs/rczp1.htm">人才招聘</a></li>
+</ul>
+<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+<li class="dropdown"><a href="../rcpy/rcpygk.htm">人才培养</a>
+<ul>
+  <li><a href="../rcpy/rcpygk.htm">人才培养概况</a></li>
+  <li><a href="../rcpy/bksjy.htm">本科生教育</a></li>
+  <li><a href="../rcpy/yjsjy.htm">研究生教育</a></li>
+  <li><a href="../rcpy/ylkc.htm">一流课程</a></li>
+  <li><a href="../rcpy/jxcg.htm">教学成果</a></li>
+  <li><a href="../rcpy/bgjyj.htm">宝钢教育奖</a></li>
+</ul>
+<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+<li class="dropdown"><a href="../kxyj/xsdt1.htm">科学研究</a>
+<ul>
+  <li><a href="../kxyj/xsdt1.htm">学术动态</a></li>
+  <li><a href="../kxyj/cgzs1.htm">成果展示</a></li>
+</ul>
+<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+<li class="dropdown"><a href="../gjjl/hyjz1.htm">国际交流</a>
+<ul>
+  <li><a href="../gjjl/hyjz1.htm">会议讲座</a></li>
+  <li><a href="../gjjl/ssjl1.htm">师生交流</a></li>
+  <li><a href="../gjjl/hzxm1.htm">合作项目</a></li>
+  <li><a href="../gjjl/lxspy1.htm">留学生培养</a></li>
+</ul>
+<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+<li class="dropdown"><a href="../dqgz/dwjj1.htm">党群工作</a>
+<ul>
+  <li><a href="../dqgz/dwjj1.htm">党委简介</a></li>
+  <li><a href="../dqgz/zzjg1.htm">组织机构</a></li>
+  <li><a href="../dqgz/djgz1.htm">党建工作</a></li>
+  <li><a href="../dqgz/ghtd1.htm">工会天地</a></li>
+</ul>
+<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+<li class="dropdown"><a href="../xsgz/xbtw.htm">学生工作</a>
+<ul>
+  <li><a href="../xsgz/xbtw.htm">学部团委</a></li>
+  <li><a href="../xsgz/xstd.htm">学生天地</a></li>
+  <li><a href="../xsgz/jyxx1.htm">就业信息</a></li>
+  <li><a href="../xsgz/xsst1.htm">学生社团</a></li>
+  <li><a href="../xsgz/xskw1.htm">学生刊物</a></li>
+</ul>
+<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+<li class="dropdown"><a href="../xygz/zzjg1.htm">校友工作</a>
+<ul>
+  <li><a href="../xygz/zzjg1.htm">组织结构</a></li>
+  <li><a href="../xygz/gzzd1.htm">工作制度</a></li>
+  <li><a href="../xygz/xyml1.htm">校友名录</a></li>
+  <li><a href="../xygz/xydt1.htm">校友动态</a></li>
+  <li><a href="../xygz/xyfc1.htm">校友风采</a></li>
+</ul>
+<div class="dropdown-btn"><span class="fa fa-angle-down"></span></div></li>
+</ul>
+</div>
+</div>
+            </div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; height: 0px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div><div class="mCSB_draggerRail"></div></div></div></div></div></nav>
+        </div>
+    </header>
+
+    <!-- 内页banner-开始 -->
+    <section class="page-title-two-section" style="background-image: url(../images/main-slider/ny-banner1.jpg)">
+        <div class="auto-container">
+            <ul class="page-breadcrumb1">
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </section>
+    <!-- 内页banner-结束 -->
+    
+    <!--正文-开始 -->
+    <div class="sidebar-page-container" style="background: #F1F7FD;">
+        <div class="auto-container">
+            <div class="row clearfix">
+         
+                <!-- 左侧-开始 -->
+                <div class="content-side col-lg-12 col-md-12 col-sm-12">
+                    <div class="row clearfix">
+                        
+                        <div class="news-block col-lg-12 col-md-12 col-sm-12">
+                            <div class="inner-box">
+                                <div class="image">
+                                    <a href="#"><img src="../static/picture/news-1.jpg" alt=""></a>
+                                </div>
+                                <div class="lower-content1">
+<h3>
+<span style="font-size:20px; font-weight:600;">学部简介</span></h3>
+                                    <div class="post-info">
+                                    <span>
+<div>
+    <i class="fas fa-home" style="padding-right:8px; font-size:14px;color:#999;"></i>
+                        <a href="../index.htm"><span class="news2content">首页</span></a>
+                <span style="font-family:'宋体';font-size:15px;color:#999;"> &gt; </span>
+                <a href="About_us.htm"><span class="news2content">学部概况</span></a>
+                <span style="font-family:'宋体';font-size:15px;color:#999;"> &gt; </span>
+                <a href="About_us.htm"><span class="news2content">学部简介</span></a>
+</div>
+                                    </span>
+                                    </div>
+                                    <div style="border-bottom:2px #22738e solid; padding-top:15px;"></div>
+                                    <p>
+
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1501668256,'wbnews','u5')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta5(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta5('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+
+<script>_addDynClicks('wbnews',1501668256,9361)</script>
+<!--startprint-->
+</p><div class="news1content">
+<div id="vsb_content_4_9361_u51"><div id="vsb_content_4"><p class="vsbcontent_start">陕西师范大学教育学部（田家炳教育书院）肇始于1945年的国立西北大学文学院教育学系。历经西安师范学院教育行政系，陕西师范大学教育系、教育科学学院、教育学院等发展阶段，2021年2月由教育学院、教育实验经济研究所、高等教育研究与评估中心合并组建为教育学部，是学校成立的第一个集教学与科研于一体的学部，也是学校重点建设的研究型学部。</p><p>学部历经近80年的发展，在马师儒、郝耀东、刘泽如、朱勃、吴元训、张安民等几代学人筚路蓝缕、薪火相传的奋斗中，构建了本科、硕士、博士一体化的人才培养体系。现有全日制学生1821人，其中本科生690人，硕士研究生566人，博士研究生529人，来华留学生36人。在人才培养、科学研究、社会服务、国际交流与文化传承创新中取得卓越成就，为国家培养了众多优秀教师、教育管理干部和教育科学研究专门人才，为弘扬和传承“西部红烛 两代师表”精神作出了重要贡献。</p><p>学部现有专任教师100人，其中，教授41人、具有博士学位者94人、具有海外学习经历者51人。教师中有“马工程”首席专家，国家级领军人才，国家级教学名师，全国文化名家暨“四个一批”人才，“新世纪百千万人才工程”国家级人选，特聘教授，国家级青年人才，教育部“新世纪优秀人才支持计划”入选者，全国优秀教师，国务院特殊津贴获得者，宝钢优秀教师奖获得者以及其他省部级人才等29人次。郝文武、傅钢善、栗洪武、陈晓端、司晓宏、陈鹏、李森等教授在中国教育学会、中国高等教育学会、中国地方教育史研究会、教育部高等学校教学指导委员会、教育部基础教育教学指导专业委员会等担任重要学术职务。</p><p>学部学科专业建设成绩显著，拥有教育学一级学科硕士学位授权点、一级学科博士学位授权点、教育博士专业学位授予权，建有教育学博士后科研流动站。有4个本科专业，其中教育学、学前教育、教育技术学3个专业是国家级一流本科专业建设点，特殊教育是省级一流本科专业建设点；学前教育专业是教育部“卓越教师培养计划改革项目”的承担者。获批国家级一流本科课程7门、国家级精品资源共享课5门、国家精品在线开放课程1门、陕西省一流本科课程6门、陕西省特色线上课程1门、陕西省“课程思政示范课程”7门；荣获国家级教学成果奖5项，省级教学成果奖20项；获批国家级虚拟仿真实验教学项目2项，教育部首批新文科项目1项；首届国家教材建设奖二等奖1项；国家级规划教材5部。</p><p>学部现有教育部、外国专家局“西部贫困地区农村人力资本培育智库建设”学科创新引智基地、教育部陕西师范大学基础教育课程研究中心、教育部教育立法研究基地、西北基础教育与教师教育研究中心等十余个省部级研究平台。学部以国家、区域教育与社会发展重大需求为导向，积极推进有组织科研，整合学术资源，强化大教育学科思维，开展团队攻关研究，促进学科交叉融合，形成了基于教育公平的西部农村教育发展研究、促进学生思维发展的课程与教学研究、陕甘宁边区教育史与革命老区教育研究、立足于职业心理健康的教师专业发展研究、特殊儿童发展与教育干预研究、教育治理与政策供给研究、数字技术与教育深度融合研究等七个优势研究领域或学科方向。</p><p>学部重视国际交流与合作，坚持“引进来”和“走出去”的双轨发展路线，通过承办和参加国际会议、合作研究、交换学生、联合培养以及招收留学生等多种方式，先后与美国斯坦福大学、匹兹堡大学、堪萨斯大学，英国爱丁堡大学，新西兰惠灵顿维多利亚大学等国外高校建立了稳定的合作关系，促进了教育学学科的国际化进程，扩大了教育学科的国际影响力。</p><p>新时代，教育学部将以“打造西部教育研究高地，跻身国际一流教育学科行列，培养高层次教育人才，服务国家与区域教育发展”为目标，以一流学科建设为龙头，立足西部，面向全国，放眼全球，不断增强对西部教育的辐射力和影响力，力争成为我国西部教育研究的重镇、卓越教师培养的摇篮。</p><p class="vsbcontent_end">(以上数据截至2025年9月)</p></div></div>
+</div>
+<!--endprint-->
+<div style="border-bottom:1px #ccc solid; padding-top:15px;"></div>
+<div align="right" style="padding-top:15px;"><a href="javascript:doPrint()" target="_self"><span style="color:#000;font-size:15px;">/ 打印 /</span></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:self.close()"><span style="color:#000;font-size:15px;">/ 关闭 /</span></a></div>
+<script language="javascript">
+function doPrint() {   
+    bdhtml=window.document.body.innerHTML;   
+    sprnstr="<!--startprint-->";   
+    eprnstr="<!--endprint-->";   
+    prnhtml=bdhtml.substr(bdhtml.indexOf(sprnstr)+17);   
+    prnhtml=prnhtml.substring(0,prnhtml.indexOf(eprnstr));   
+    window.document.body.innerHTML=prnhtml;  
+    window.print();   
+}
+</script><p></p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+ </div>
+        </div>
+    </div>
+    <!-- 正文-结束 -->
+            
+            <!-- 版权-开始 -->
+    <footer class="main-footer" style="background-image: url(../static/image/foot-bj.jpg);">
+        <div class="container">
+            <div class="widgets-section">
+                <div class="row">
+
+                    <div class="col-lg-5">
+                        <div class="footer-column">
+                            <div class="footer-widget contact-widget">
+                                <h3>陕西师范大学教育学部(田家炳教育书院)</h3>
+                                <p style="border-bottom: 2px #fff solid;width: 120px;color: #fff;margin: -20px 0px 0px 0px;"></p>
+                                <ul style="padding-top: 20px;">
+                                    <li><i class="fas fa-map-marker-alt" style="padding-right: 15px; font-size: 18px;"></i>中国·西安长安南路199号陕西师范大学田家炳教育书院</li>
+                                    <li><i class="fas fa-envelope-open" style="padding-right: 15px;"></i>jyxb@snnu.edu.cn</li>
+                                    <li><i class="fas fa-phone-alt" style="padding-right: 15px;"></i>+86-29-85308047</li>
+                                    <li><i class="fas fa-fax" style="padding-right: 15px;"></i>+86-29-85308767</li>
+                                    <li style="padding-top: 15px;"><img src="../static/image/2wm.jpg">&nbsp;&nbsp;&nbsp;&nbsp;<img src="../static/image/2wm.jpg"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="footer-column">
+                            <div class="footer-widget link-widget">
+                                <h3>校内链接</h3>
+                                <p style="border-bottom: 2px #fff solid;width: 40px;color: #fff;margin: -20px 0px 0px 0px;"></p>
+<script language="javascript" src="/system/resource/js/openlink.js"></script><ul style="padding-top: 20px;">
+    <li><a href="http://jsfz.snnu.edu.cn/" title="">教师发展学院</a></li>
+    <li><a href="http://www.xsc.snnu.edu.cn/" title="">党委学生工作部（武装部、学生处）</a></li>
+    <li><a href="http://ygb.snnu.edu.cn/" title="">研究生院（党委研究生工作部）</a></li>
+    <li><a href="http://jwc.snnu.edu.cn/" title="">教务处</a></li>
+    <li><a href="http://rsc.snnu.edu.cn/" title="">人力资源部</a></li>
+    <li><a href="http://skc.snnu.edu.cn/" title="">社会科学处</a></li>
+    <li><a href="http://cwc.snnu.edu.cn/" title="">计划财务处</a></li>
+    <li><a href="http://rcc.snnu.edu.cn" title="">人才工作处</a></li>
+    <li><a href="http://ipo.snnu.edu.cn/" title="">国际交流与合作处（港澳台办公室、“一带一路”办公室）</a></li>
+    <li><a href="http://xkfgc.snnu.edu.cn/" title="">学科建设与发展规划处（“双一流”建设办公室）</a></li>
+    <li><a href="http://job.snnu.edu.cn/" title="">学生就业指导服务中心</a></li>
+    <li><a href="http://dlca.snnu.edu.cn/" title="">实验室建设与管理处</a></li>
+    <li><a href="http://hqjt.snnu.edu.cn/" title="">后勤服务集团</a></li>
+</ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="footer-column">
+                            <div class="footer-widget link-widget">
+                                <h3>院部链接</h3>
+                                <p style="border-bottom: 2px #fff solid;width: 40px;color: #fff;margin: -20px 0px 0px 0px;"></p>
+<ul style="padding-top: 20px;">
+    <li><a href="https://fe.bnu.edu.cn" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1501668256, 88822)">北京师范大学教育学部</a></li>
+    <li><a href="http://www.ed.ecnu.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1501668256, 1008)">华东师范大学教育学部</a></li>
+    <li><a href="http://edu.nenu.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1501668256, 1005)">东北师范大学教育学部</a></li>
+    <li><a href="http://jky.njnu.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1501668256, 1010)">南京师范大学教育科学学院田家炳书院</a></li>
+    <li><a href="http://cte.scnu.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1501668256, 44841)">华南师范大学教师教育学部</a></li>
+    <li><a href="http://jyxb.swu.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1501668256, 88823)">西南大学教育学部</a></li>
+    <li><a href="https://jyxb.ynnu.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1501668256, 88824)">云南师范大学教育学部</a></li>
+    <li><a href="https://jyxb.tjnu.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1501668256, 88825)">天津师范大学教育学部</a></li>
+    <li><a href="https://jykx.henu.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1501668256, 88826)">河南大学教育学部</a></li>
+    <li><a href="http://jyxb.gxnu.edu.cn" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1501668256, 88827)">广西师范大学教育学部(田家炳教育书院)</a></li>
+</ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="row clearfix">
+                    <div class="copy-column col-lg-6">
+                        <div class="copyright">Copyright © <script>document.write(new Date().getFullYear());</script>2025.陕西师范大学教育学部(田家炳教育书院) All rights reserved.</div>
+                    </div>
+                    
+<div class="language-column col-lg-6">
+<ul>
+<li style="text-align: right;color:#fff;">Design &amp; Support 技术支持：<a href="http://www.xinpop.cn" target="_blank" title="16年网站建设制作经验">新势力网络</a></li>
+</ul>
+</div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+    <!-- 版权-结束 -->
+</div>
+<div class="scroll-to-top scroll-to-target" data-target="html">
+<span class="fa fa-arrow-circle-up"></span></div>
+<script src="../static/js/jquery.js"></script>
+<script src="../static/js/jquery.migrate.min.js"></script>
+<script src="../static/js/popper.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../static/js/jquery.fancybox.js"></script>
+<script src="../static/js/appear.js"></script>
+<script src="../static/js/owl.js"></script>
+<script src="../static/js/wow.js"></script>
+<script src="../static/js/mixitup.js"></script>
+<script src="../static/js/parallax.min.js"></script>
+<script src="../static/js/tilt.jquery.min.js"></script>
+<script src="../static/js/jquery.paroller.min.js"></script>
+<script src="../static/js/jquery-ui.js"></script>
+<script src="../static/js/script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

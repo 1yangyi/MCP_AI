@@ -1,0 +1,396 @@
+<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="renderer" content="webkit">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <meta name="referrer" content="always">
+        <title>学院简介-首页 | 艺术与传媒学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="首页 | 艺术与传媒学院">
+
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="../css/bootsnav.css">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css"> 
+    
+    <script type="text/javascript" src="../js/bctxk.js"></script>
+    <script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/bootsnav.js"></script>    
+      
+        
+        
+        
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+      <script src="../js/respond.min.js"></script> 
+    <![endif]-->
+        
+    <!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475250545742000400004f55 -->
+<link rel="stylesheet" type="text/css" href="../list_danye.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1056,'/list_danye.jsp',-1,1407220831)</script>
+</head>
+    <body><div class="wrapper">
+    
+        <div class="search-bar">
+        <div class="close">
+            <span>X</span>
+        </div>
+        <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="qwss"> <input name="submit_button" type="button" value="提交" class="tj"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1407220831";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+    
+    </div>
+    
+    
+        <div class="header">
+            <div class="head">
+                <div class="col-xs-12 col-md-3 col-lg-3 logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="116-艺术与传媒学院"><img src="../images/ddyslogo.png" class="img-responsive"></a></div>
+                <div class="col-xs-12 col-md-9 col-lg-9 logor"><div class="col-xs-12 col-md-11 dh">
+                         <nav class="navbar navbar-default navbar-brand-top bootsnav on no-full">
+                                
+                                    <!-- Start Header Navigation -->
+                                    <div class="navbar-header"><button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> </div>
+                                    <!-- End Header Navigation -->
+  <!-- Collect the nav links, forms, and other content for toggling -->
+     <div id="navbar-menu" class="collapse navbar-collapse">
+       <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">                                
+<li>
+    <a href="../index.htm" class="dropdown-toggle" data-toggle="dropdown">学院首页</a>
+      <ul class="dropdown-menu animated">
+          <li><a href="../index/xyxw.htm">学院新闻</a></li>
+          <li><a href="../index/xshd.htm">学术活动</a></li>
+          <li><a href="../index/xxgg.htm">信息公告</a></li>
+          <li><a href="../index/cxcy.htm">创新创业</a></li>
+          <li><a href="../index/xszpz.htm">学生作品展</a></li>
+      </ul>
+     </li>
+                     
+                                            
+<li class="dropdown">
+    <a href="xyjj.htm" class="dropdown-toggle" data-toggle="dropdown">学院概况</a>
+      <ul class="dropdown-menu animated">
+          <li><a href="xyjj.htm">学院简介</a></li>
+          <li><a href="xyld.htm">学院领导</a></li>
+          <li><a href="xyjg/xzfwdw.htm">学院机构</a></li>
+      </ul>
+     </li>
+                     
+                                            
+<li class="dropdown">
+    <a href="../szdw/js.htm" class="dropdown-toggle" data-toggle="dropdown">师资队伍</a>
+      <ul class="dropdown-menu animated">
+          <li><a href="../szdw/js.htm">教授</a></li>
+          <li><a href="../szdw/fjs.htm">副教授</a></li>
+          <li><a href="../szdw/js_zj.htm">讲师，助教</a></li>
+      </ul>
+     </li>
+                     
+                                            
+<li class="dropdown">
+    <a href="../kxyj/xsdtai.htm" class="dropdown-toggle" data-toggle="dropdown">科学研究</a>
+      <ul class="dropdown-menu animated">
+          <li><a href="../kxyj/xsdtai.htm">学术动态</a></li>
+          <li><a href="../kxyj/kycg.htm">科研成果</a></li>
+          <li><a href="../kxyj/yjzx.htm">研究中心</a></li>
+      </ul>
+     </li>
+                     
+                                            
+<li class="dropdown">
+    <a href="../bks/zsgl.htm" class="dropdown-toggle" data-toggle="dropdown">本科生</a>
+      <ul class="dropdown-menu animated">
+          <li><a href="../bks/zsgl.htm">招生管理</a></li>
+          <li><a href="../bks/jxgl.htm">教学管理</a></li>
+          <li><a href="../bks/hzjl.htm">合作交流</a></li>
+      </ul>
+     </li>
+                     
+                                            
+<li class="dropdown">
+    <a href="../yjs/zsgl.htm" class="dropdown-toggle" data-toggle="dropdown">研究生</a>
+      <ul class="dropdown-menu animated">
+          <li><a href="../yjs/zsgl.htm">招生管理</a></li>
+          <li><a href="../yjs/pygl.htm">培养管理</a></li>
+          <li><a href="../yjs/xsyj.htm">学术研究</a></li>
+      </ul>
+     </li>
+                     
+                                            
+<li class="dropdown">
+    <a href="../xsgz/xssw.htm" class="dropdown-toggle" data-toggle="dropdown">学生工作</a>
+      <ul class="dropdown-menu animated">
+          <li><a href="../xsgz/xsdjgz.htm">学生党建工作</a></li>
+          <li><a href="../xsgz/txgz.htm">团学工作</a></li>
+      </ul>
+     </li>
+                     
+                                            
+<li class="dropdown">
+    <a href="../syjx/sjjd.htm" class="dropdown-toggle" data-toggle="dropdown">实验教学</a>
+      <ul class="dropdown-menu animated">
+          <li><a href="../syjx/sjjd.htm">实践基地</a></li>
+          <li><a href="../syjx/yqsb.htm">仪器设备</a></li>
+          <li><a href="../syjx/msg.htm">美术馆</a></li>
+          <li><a href="../syjx/ylt.htm">音乐厅</a></li>
+      </ul>
+     </li>
+                     
+                                            
+<li class="dropdown">
+    <a href="../dzgz/szwj.htm" class="dropdown-toggle" data-toggle="dropdown">党政工作</a>
+      <ul class="dropdown-menu animated">
+          <li><a href="../dzgz/szwj.htm">时政文件</a></li>
+          <li><a href="../dzgz/xygz.htm">学院规章</a></li>
+          <li><a href="../dzgz/djgz.htm">党建工作</a></li>
+          <li><a href="../dzgz/ghgz.htm">工会工作</a></li>
+      </ul>
+     </li>
+                     
+                                            
+<li class="dropdown">
+    <a href="../gjjl/wshd.htm" class="dropdown-toggle" data-toggle="dropdown">国际交流</a>
+      <ul class="dropdown-menu animated">
+          <li><a href="../gjjl/wshd.htm">外事活动</a></li>
+          <li><a href="../gjjl/lxxm.htm">留学项目</a></li>
+      </ul>
+     </li>
+                     
+                                            
+<li class="dropdown">
+    <a href="../zyxz/jszq.htm" class="dropdown-toggle" data-toggle="dropdown">资源下载</a>
+      <ul class="dropdown-menu animated">
+          <li><a href="../zyxz/jszq.htm">教师专区</a></li>
+          <li><a href="../zyxz/xszq.htm">学生专区</a></li>
+          <li><a href="../zyxz/ggxzq.htm">公共下载区</a></li>
+      </ul>
+     </li>
+                     
+                                            
+<li class="dropdown">
+    <a href="../zxns/rczp.htm" class="dropdown-toggle" data-toggle="dropdown">招贤纳士</a>
+      <ul class="dropdown-menu animated">
+          <li><a href="../zxns/rczp.htm">人才招聘</a></li>
+      </ul>
+     </li>
+                     
+                                            
+<li class="dropdown">
+    <a href="https://ensac.cug.edu.cn/" class="dropdown-toggle" data-toggle="dropdown">English</a>
+     </li>
+                     
+                                            
+</ul>
+                                    </div>
+                                    </nav></div>
+
+                                   
+                     <div class="hidden-xs col-md-1 search">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<a href="../search.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1047"><img src="../images/search.png"></a>
+
+</div>
+                </div>
+            
+
+            
+            </div>
+            
+        </div>
+        <div class="clearfix"></div>
+        <div class="bg_img">
+            <div class="lm_bg"><img class="lm_img img-responsive" src="../images/lm_01.png"><h5 class="hidden-xs">
+学院简介</h5></div>
+            
+        </div>
+        <div class="clearfix"></div>
+        <div class="bg_mian">
+            <div class="container">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1407220831,'wbnews','u6')</script>
+<script>function seeContenta6(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta6('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1407220831,4213)</script>
+<div class="bt_title">
+  <h5>艺术与传媒学院简介</h5>
+  <em></em>
+</div>
+    <div class="content">
+    <div id="vsb_content_4213_u61"><div id="vsb_content"><style>@font-face{ font-family:"Times New Roman";} @font-face{ font-family:"宋体";} @font-face{ font-family:"Wingdings";} @font-face{ font-family:"Calibri";} p.MsoNormal{ mso-style-name:正文; mso-style-parent:""; margin:0pt; margin-bottom:.0001pt; mso-pagination:none; text-align:justify; text-justify:inter-ideograph; font-family:Calibri; mso-fareast-font-family:宋体; mso-bidi-font-family:'Times New Roman'; font-size:10.5000pt; mso-font-kerning:1.0000pt;} span.10{ font-family:'Times New Roman';} span.15{ font-family:'Times New Roman'; mso-ansi-font-weight:bold;} span.msoIns{ mso-style-type:export-only; mso-style-name:""; text-decoration:underline; text-underline:single; color:blue;} span.msoDel{ mso-style-type:export-only; mso-style-name:""; text-decoration:line-through; color:red;} table.MsoNormalTable{ mso-style-name:普通表格; mso-style-parent:""; mso-style-noshow:yes; mso-tstyle-rowband-size:0; mso-tstyle-colband-size:0; mso-padding-alt:0.0000pt 5.4000pt 0.0000pt 5.4000pt; mso-para-margin:0pt; mso-para-margin-bottom:.0001pt; mso-pagination:widow-orphan; font-family:'Times New Roman'; font-size:10.0000pt; mso-ansi-language:#0400; mso-fareast-language:#0400; mso-bidi-language:#0400;} @page{mso-page-border-surround-header:no; mso-page-border-surround-footer:no;}@page Section0{ margin-top:72.0000pt; margin-bottom:72.0000pt; margin-left:90.0000pt; margin-right:90.0000pt; size:595.3000pt 841.9000pt; vsb_temp:15.6000pt; mso-header-margin:42.5500pt; mso-footer-margin:49.6000pt;} div.Section0{page:Section0;}</style><div class="Section0" style="vsb_temp: 15.6000pt;"><p class="MsoNormal" style="line-height: 150%; text-indent: 24pt; mso-char-indent-count: 2.0000;"><span style="line-height: 150%; font-family: 宋体; font-size: 12pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 宋体;">艺术与传媒学院成立于</span><span style="font-family: 宋体;">2006年5月。现任</span></span><span style="font-family: 宋体; font-size: 16px;">院党委书记冷再心同志，</span><span style="text-indent: 24pt; font-family: 宋体; font-size: 12pt;">院长何清俊教授。</span></p><p class="MsoNormal" style="line-height: 150%; text-indent: 24pt; mso-char-indent-count: 2.0000;"><span style="line-height: 150%; font-family: 宋体; font-size: 12pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 宋体;">目前</span></span><span style="line-height: 150%; font-family: 宋体; font-size: 12pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 宋体;">，</span></span><span style="line-height: 150%; font-family: 宋体; font-size: 12pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 宋体;">学院共有</span></span><span style="line-height: 150%; font-family: 宋体; font-size: 12pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 宋体;">教职工</span><span style="font-family: 宋体;">81人，其中专任教师66人，教授6人，副教授35人，“地大学者”学科骨干人才2人。</span></span><span style="line-height: 150%; font-family: 宋体; font-size: 12pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 宋体;">学院现设</span></span><span style="line-height: 150%; font-family: 宋体; font-size: 12pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 宋体;">有环境设计系、视觉与媒体设计系、新闻传播系、音乐系4个系；有</span></span><span style="font-family: 宋体; font-size: 16px;">广播电视学、</span><span style="font-family: 宋体; font-size: 16px;">音乐学、</span><span style="line-height: 150%; text-indent: 24pt; font-family: 宋体; font-size: 12pt;">环境设计、视觉传达设计、数字媒体艺术五个本科专业，</span><span style="line-height: 150%; text-indent: 24pt; font-family: 宋体; font-size: 12pt;">其中广播电视学<span style="font-size: 16px; text-align: justify; text-indent: 32px; text-wrap: wrap;">2021年</span>获批国家级一流本科专业建设点；</span><span style="line-height: 150%; text-indent: 24pt; font-family: 宋体; font-size: 12pt;">有新闻传播学、设计学2个一级学科硕士点，环境规划与设计二级博士点与硕士点，以及艺术硕士（MFA）专业学</span><span style="line-height: 150%; text-indent: 24pt; font-family: 宋体; font-size: 12pt;">位授予点</span><span style="line-height: 150%; text-indent: 24pt; font-family: 宋体; font-size: 12pt;">，</span><span style="line-height: 150%; text-indent: 24pt; font-family: 宋体; font-size: 12pt;">是湖北省重点学科-设计学负责建设单位。目前共有在校生1399人，其中本科生992人、研究生407人。</span></p><p class="MsoNormal" style="line-height: 150%; text-indent: 24pt; mso-char-indent-count: 2.0000;"><span style="line-height: 150%; font-family: 宋体; font-size: 12pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 宋体;"><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">学院</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">以</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">实验教学</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">场地</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">、室内展演场馆、写生采风基地</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">、联合实习</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">基地</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">等为载体，有力</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">支撑人才培养</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">工作</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">。目前</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">，学院拥</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">有总价值达</span><span style="font-family: 宋体;">1200多万的实验教学设备</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">和</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">能容纳</span><span style="font-family: 宋体;">6</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">0</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">0人的专业音乐厅</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">，</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">在黄山、婺源、庐山、秭归</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">、</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">巴东、恩施和太行山等多地设有</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">写生采风</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">和</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">实习基地</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">，</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">与中央电视台、</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">中国矿业报社、</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">湖北日报传媒集团、湖北</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">省广播</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">电视</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">总</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">台等单位</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">共同开展学生实习实践活动</span></span><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;">。</span></span></span></span></p><p class="MsoNormal" style="line-height: 150%; text-indent: 24pt; mso-char-indent-count: 2.0000;"><span style="line-height: 150%; font-family: 宋体; font-size: 12pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 宋体;"><span style="font-family: 宋体; font-size: 16px;"><span style="font-family: 宋体;"><span style="line-height: 150%; font-family: 宋体; font-size: 12pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 宋体;">学院是教育部</span><span style="font-family: 宋体;">"基于自然景观资源的环境艺术设计"国家级人才培养模式创新实验区</span></span><span style="line-height: 150%; font-family: 宋体; font-size: 12pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 宋体;">，</span></span><span style="line-height: 150%; font-family: 宋体; font-size: 12pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 宋体;">湖北省高校艺术创作研究中心、湖北科技传播学会、学校自然历史文化研究和传播中心和数字艺术实验教学中心的建设单位。在湖北省及全国具有一定的学术影响力。</span></span></span></span></span></span></p><p class="MsoNormal" style="line-height: 150%; text-indent: 24pt; mso-char-indent-count: 2.0000;"><span style="line-height: 150%; font-family: 宋体; font-size: 12pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 宋体;">学院积极推进国际交流与合作，与美国阿尔弗莱德大学、布莱恩特大学、西班牙巴塞罗那建筑学院、意大利罗马美术学院、韩国建国大学等保持密切关系，积极开展师生访学、项目合作、艺术交流、文化推广等活动。多次应邀赴欧美、东南亚等国家或地区演出交流，在国际上具有一定的影响力。</span></span></p><p class="MsoNormal" style="line-height: 150%; text-indent: 24pt; mso-char-indent-count: 2.0000;"><span style="line-height: 150%; font-family: 宋体; font-size: 12pt; mso-spacerun: &quot;yes&quot;; mso-font-kerning: 1.0000pt;"><span style="font-family: 宋体;">学生就业良好，多名优秀毕业生就业于新华社、人民日报、中央电视台、南方报业等主流媒体，英国阿特金斯设计集团等知名设计机构，百度、腾讯、阿里巴巴、新浪、网易等知名互联网企业，及一些文艺团体、各类学校、影视公司和国家机关企事业单位等。</span></span></p></div></div></div>
+    <span id="vsb_content_4213_u6" name="vsb_content_4213_u6"></span><br><br>
+    
+</div>
+<div class="sxt">
+                    <ul>
+                     <li><a href="#"><span class="glyphicon glyphicon-arrow-left"></span></a></li>
+                     <li class="back"><a title="返回" href="javascript:history.go(-1)">返回</a></li>
+                     <li><a href="#"> <span class="glyphicon glyphicon-arrow-right"></span></a></li>
+                    </ul>
+                </div></div>
+            
+        </div>
+        <div class="clearfix"></div>
+        <div class="footer">
+            <div class="container foot">
+                <div class="col-xs-12 col-sm-6 col-md-6 copy"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权所有 © 2006-2022&nbsp; 中国地质大学（武汉）艺术与传媒学院</p><p>Designed by XR STUDIO</p></div>
+                <div class="col-xs-12 col-sm-6 col-md-6 link">
+                    <div class="col-xs-4 link_select"><script language="javascript" src="/system/resource/js/openlink.js"></script><select onchange="_openSelectLink(this, 'value', 'addclicks')">
+    <option>友情链接</option>
+    <option value="http://www.moe.gov.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1407220831, 86496)">教育部</option>
+    <option value="http://jyt.hubei.gov.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1407220831, 86495)">湖北省教育厅</option>
+    <option value="https://www.most.gov.cn/tztg/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1407220831, 86460)">科技部</option>
+    <option value="https://kjt.hubei.gov.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1407220831, 86491)">省科技厅</option>
+    <option value="https://www.nsfc.gov.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1407220831, 86489)">国家自然科学基金</option>
+    <option value="http://www.cssn.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1407220831, 86478)">中国社会科学网</option>
+    <option value="https://www.cnaf.cn/index.html" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1407220831, 86470)">国家艺术基金</option>
+    <option value="https://www.cug.edu.cn/" title="" addclicks="_addDynClicks(&quot;wburl&quot;, 1407220831, 86462)">学校首页</option>
+</select></div>
+                    <div class="col-xs-8 foot_r">    <ul>
+                            
+<li><a href="#" target="_blank" onclick="_addDynClicks(&quot;wbimage&quot;, 1407220831, 47155);#"><img src="../images/weib.png"><p>官方微博</p></a>
+<div class="weix" style="display:none"><img src="../images/weib.png"></div>
+</li>
+
+<li><a href="#" target="_blank" onclick="_addDynClicks(&quot;wbimage&quot;, 1407220831, 47156);#"><img src="../images/weix.png"><p>官方微信</p></a>
+<div class="weix" style="display:none"><img src="../images/weix.png"></div>
+</li>
+
+</ul></div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        
+        <script src="../js/SuperSlide.js"></script>
+        <script src="../js/index.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    
+
+</div></body></html>

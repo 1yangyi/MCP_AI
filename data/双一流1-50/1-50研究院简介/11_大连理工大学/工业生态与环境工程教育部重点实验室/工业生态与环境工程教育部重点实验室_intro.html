@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><title>实验室概况-欢迎访问工业生态与环境工程教育部重点实验室！</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="实验室概况">
+<meta name="keywords" content="请填入网站关键字">
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="css/style.css" rel="stylesheet" type="text/css"><link href="css/index_banner.css" rel="stylesheet" type="text/css"><script src="js/jquery.min.js" type="text/javascript"></script><script src="js/index_banner.js" type="text/javascript"></script><link href="css/slideshow.css" rel="stylesheet"><script src="js/slideshow.js" type="text/javascript"></script><script type="text/javascript" src="js/zk.js"></script><script>  
+  setInterval("document.getElementById('linkweb').innerHTML='现在时间：' + new Date  ().toLocaleString()+' 星期'+'日一二三四五六'.charAt(new Date().getDay  ());",1000);  
+</script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307973475d52575742000500004f52 -->
+<link rel="stylesheet" type="text/css" href="about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(9990,'/about.jsp',-1,1180642989)</script>
+</head>
+<body><!--container-->
+<div class="container">
+<div class="main"><!--top-->
+<div class="top">
+<div class="logo">
+<table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><img src="images/logo.png" border="0" alt="工业生态与环境工程重点实验室" title="工业生态与环境工程重点实验室"></td></tr></tbody></table></div><!--天气-->
+<div class="tianqi">
+<div id="linkweb" style="display: inline">现在时间：2025/10/22 23:16:01 星期三</div>
+<iframe name="weather_inc" width="330" height="35" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+</div></div>
+<div class="clearfloat"> <ul class="nav">
+   <li> <a href="index.htm" title="首页">首页</a></li>
+  
+   <li> <a href="sysgk.htm" title="实验室概况">实验室概况</a></li>
+  
+   <li> <a href="yjdw.htm" title="研究队伍">研究队伍</a></li>
+  
+   <li> <a href="rcpy.htm" title="人才培养">人才培养</a></li>
+  
+   <li> <a href="kxyj.htm" title="科学研究">科学研究</a></li>
+  
+   <li> <a href="kfjl.htm" title="开放交流">开放交流</a></li>
+  
+   <li> <a href="yxgl.htm" title="运行管理">运行管理</a></li>
+  
+   <li> <a href="zygx.htm" title="资源共享">资源共享</a></li>
+  
+   <li> <a href="xwtz.htm" title="新闻通知">新闻通知</a></li>
+  
+</ul></div><!--top_end--><!--nav-->
+
+<div class="clearfloat"></div><!--nav_end--><!--banner-->
+<div class="index_banner">
+<style type="text/css">
+ul,li{
+    padding:0;
+    margin:0;
+    list-style:none;}
+#flashBoxu_u2_{
+    width:930px;
+    height:240px;
+    border:0px solid #EEE;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;}
+#flashBoxu_u2_ img{
+    /*初始不要显示*/
+    display:none;
+    /*用边框来实现空位，因为margin和paading有时会引起些麻烦*/
+    border:0px solid #FFF;}
+#flashBoxu_u2_ ul{
+    display:none;
+    position:absolute;
+    right:7px;
+    bottom:3px;
+    font:9px tahoma;}
+#flashBoxu_u2_ ul li{
+    display:none;
+    float:left;
+    width:12px;
+    height:12px;
+    line-height:12px;
+    margin-right:3px;
+    border:0px solid #999;
+    background:#F0F0F0;
+    text-align:center;
+    cursor:pointer;}
+#flashBoxu_u2_ ul li.hover{
+    border-color:red;
+    background:#FFE1E1;
+    color:red;}
+</style>
+<script type="text/javascript">
+function flashBoxCtrl(o){
+    this.obj=document.getElementById(o);
+    //这个私有方法虽然写了，但暂时没用到
+    function addListener(ele,eventName,functionBody){
+        if (ele.attachEvent){
+            ele.attachEvent("on"+eventName, functionBody);
+        }else if (ele.addEventListener){
+            ele.addEventListener("on"+eventName,functionBody, false);
+        }else{
+            return false;
+        }
+    }
+    //初始化
+    this.init=function(){
+        var objImg=this.obj.getElementsByTagName("img");
+        var tagLength=objImg.length;
+        if (tagLength>0){
+            var oUl=document.createElement("ul");
+            oUl.setAttribute("id",o+"numTag");
+            for (var i=0;i<tagLength;i++){
+                var oLi=oUl.appendChild(document.createElement("li"));
+                if (i==0){
+                    oLi.setAttribute("class","hover"); //初始化时把第一个设置为高亮
+                    oLi.setAttribute("className","hover");
+                }
+                //设置标签的数字
+                oLi.appendChild(document.createTextNode((i+1)));
+            }
+            this.obj.appendChild(oUl);
+            objImg[0].style.display="block";
+            //设置标签事件
+            var oTag=this.obj.getElementsByTagName("li");
+            for (var i=0;i<oTag.length;i++){
+                var flag = 0;
+                var temp = 0;
+                var timeout=null;
+                var step = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    this.className="hover";
+                    flag = flag>=oTag.length-1?0:flag+1;
+                    objImg[flag].style.display="block";
+                    oTag[flag].className = "hover";
+                    timeout = setTimeout(step,8000);
+                };
+                oTag[i].onmouseover=function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                        temp = j;
+                    }
+                    this.className="hover";
+                    objImg[this.innerHTML-1].style.display="block";
+                    temp = this.innerHTML-1;
+                    flag = i;
+                    clearInterval(timeout);
+                }
+                oTag[i].onmouseout = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    flag = temp;
+                    objImg[temp].style.display="block";
+                    oTag[temp].className = "hover";
+                    timeout = setTimeout(step,8000);
+                }
+                if(i==0)
+                {
+                    timeout = setTimeout(step,8000);
+                }
+            }
+        }
+    };
+    //自动滚动的方法还没写
+    this.imgRoll=function(){};
+    //生成对象时自动加载init()方法以初始化对象
+    this.init();
+}
+</script>
+<table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td><div id="flashBoxu_u2_"><img src="pic03.jpg" border="0" width="930" height="240" style="display: block;"><img src="pic2.jpg" border="0" width="930" height="240"><ul id="flashBoxu_u2_numTag"><li class="hover" classname="hover">1</li><li>2</li></ul></div></td></tr></tbody></table><script language="JavaScript">new flashBoxCtrl("flashBoxu_u2_");</script>
+</div>
+<div class="clearfloat"></div><!--banner_end--><!--about_main-->
+<div class="about_main">
+<div class="about_manileft">
+<div class="left_title"><span class="windowstyle72870">
+实验室概况</span></div><script type="text/javascript">$(document).ready(function (){$(".menu ul li").menu();}); </script>
+<div class="menu">
+<ul> <div class="menu">
+                             <ul class="">
+                                                             <li><a href="sysgk/sysjj.htm">实验室简介<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                                      
+                                </li>  
+                                <li><a href="sysgk/yjfx.htm">研究方向<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                                    <ul style="display: block;">
+                                        <li><a href="sysgk/yjfx/gywrkzjsyll.htm">工业污染控制技术与理论<!--[if gte IE 7]><!--></a><!--<![endif]--> </li>
+                                    </ul>
+                                    <ul style="display: block;">
+                                        <li><a href="sysgk/yjfx/gyfw_eczyly.htm">工业废物‒二次资源利用<!--[if gte IE 7]><!--></a><!--<![endif]--> </li>
+                                    </ul>
+                                    <ul style="display: block;">
+                                        <li><a href="sysgk/yjfx/gystxtylystgyygh1.htm">工业生态系统原理与生态工业园规划<!--[if gte IE 7]><!--></a><!--<![endif]--> </li>
+                                    </ul>
+                                </li>  
+                                <li><a href="sysgk/nsjg.htm">内设机构<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                                      
+                                </li>  
+                                <li><a href="sysgk/xswyh.htm">学术委员会<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                                    <ul style="display: block;">
+                                        <li><a href="sysgk/xswyh/xswyhcy.htm">学术委员会成员<!--[if gte IE 7]><!--></a><!--<![endif]--> </li>
+                                    </ul>
+                                </li>  
+                                <li><a href="sysgk/sysfzr.htm">实验室负责人<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                                    <ul style="display: block;">
+                                        <li><a href="sysgk/sysfzr/xrfzr.htm">现任负责人<!--[if gte IE 7]><!--></a><!--<![endif]--> </li>
+                                    </ul>
+                                    <ul style="display: block;">
+                                        <li><a href="sysgk/sysfzr/lrfzr.htm">历任负责人<!--[if gte IE 7]><!--></a><!--<![endif]--> </li>
+                                    </ul>
+                                </li>  
+                                <li><a href="sysgk/lxxx.htm">联系信息<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                                    <ul style="display: block;">
+                                        <li><a href="sysgk/lxxx/syszzms.htm">实验室专职秘书<!--[if gte IE 7]><!--></a><!--<![endif]--> </li>
+                                    </ul>
+                                </li>  
+                             </ul>        
+                        </div></ul></div></div><!--右面-->
+<div class="about_mainright">
+<div class="about_mainright_title">  
+<table class="winstyle72868" cellspacing="0" cellpadding="0"><tbody><tr><td nowrap="">当前位置：   
+<a href="index.htm"><span class="fontstyle72868">首页</span></a><span class="splitflagstyle72868">&gt;&gt;</span><a href="sysgk.htm"><span class="fontstyle72868">实验室概况</span></a></td></tr></tbody></table></div>
+<div class="about_txt" style="text-indent:0px">
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script>
+function seeContenta6(contentid,size,displayid)
+{
+	document.getElementById(contentid).innerHTML = "[";
+	for(var i=0;i<=size;i++)
+	{
+		var allcontentid = contentid+(i+1);
+		if(allcontentid==displayid)
+		{
+			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"' "+' class="wb_content" '+" >"+(i+1)+"</span> ";
+			document.getElementById(displayid).style.display = 'block';
+		}else
+		{
+			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta6('"+contentid+"','"+size+"','"+allcontentid+"') "+' class="wb_content" '+" >"+(i+1)+"</span> ";
+			document.getElementById(allcontentid).style.display = "none";
+		}
+	}
+
+	document.getElementById(contentid).innerHTML += "]";
+}
+</script>
+<table class="wb_window" width="100%">
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+		<script>
+		_addDynClicks('wbnews',1180642989,85929)
+		</script>
+
+		<tbody><tr><td align="center"><span class="timestyle72874">
+	</span><span class="authorstyle72874"></span></td></tr>
+<tr><td class="contentstyle72874"><div id="vsb_content_85929_u61"><div id="vsb_content"><div class="v_news_content"><p style="text-align: center"><strong><span style="line-height: 200%; font-size: 20px">实验室概况</span></strong></p> 
+<p style="text-align: justify; line-height: 200%; text-indent: 32px; layout-grid-mode: char"><span style="font-size: 16px; text-indent: 28px;">工业生态与环境工程教育部重点实验室于</span><span style="font-size: 16px; text-indent: 28px;">2005</span><span style="font-size: 16px; text-indent: 28px;">年</span><span times="" new="" roman";"="" style="font-size: 16px; text-indent: 28px; font-family: ">12</span><span style="font-size: 16px; text-indent: 28px;">月由教育部批准立项，</span><span times="" new="" roman";"="" style="font-size: 16px; text-indent: 28px; font-family: ">2008</span><span style="font-size: 16px; text-indent: 28px;">年</span><span times="" new="" roman";"="" style="font-size: 16px; text-indent: 28px; font-family: ">1</span><span style="font-size: 16px; text-indent: 28px;">月通过教育部验收。实验室占地约</span><span times="" new="" roman";"="" style="font-size: 16px; text-indent: 28px; font-family: ">15000 m</span><sup style="text-indent: 28px;"><span style="vertical-align: super;">2</span></sup><span style="font-size: 16px; text-indent: 28px;">, </span><span style="font-size: 16px; text-indent: 28px;">由</span><span times="" new="" roman";"="" style="font-size: 16px; text-indent: 28px; font-family: ">7</span><span style="font-size: 16px; text-indent: 28px;">个研究所（组）和“环境分析与测试中心”、“工业污染防治模拟实验室”、“环境模拟</span><span times="" new="" roman";"="" style="font-size: 16px; text-indent: 28px; font-family: ">/</span><span style="font-size: 16px; text-indent: 28px;">生态仿真实验室”三个公共教学科研平台组成。实验室以解决东北老工业基地典型行业（如石油开采、化工、冶金和机械加工等）的环境问题为特色，以研究开发有针对性的创新性成果、技术与培养相关高层次人才为目标，为东北老工业基地及我国其他走新型工业化道路的工业园区的环境保护与污染治理提供理论、技术和人才支持。实验室科研条件先进，单价</span><span times="" new="" roman";"="" style="font-size: 16px; text-indent: 28px; font-family: ">5</span><span style="font-size: 16px; text-indent: 28px;">万元以上的仪器设备近</span><span times="" new="" roman";"="" style="font-size: 16px; text-indent: 28px; font-family: ">240</span><span style="font-size: 16px; text-indent: 28px;">台，仪器设备总价达</span><span times="" new="" roman";"="" style="font-size: 16px; text-indent: 28px; font-family: ">7980</span><span style="font-size: 16px; text-indent: 28px;">余万元。</span><br></p> 
+<p style="line-height: 2em;"><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 16px; font-family: 宋体;">实验室现有教职工</span>64<span style="font-size: 16px; font-family: 宋体;">人，其中：教师</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">55</span><span style="font-size: 16px; font-family: 宋体;">人（含教授</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">19</span><span style="font-size: 16px; font-family: 宋体;">人、副教授</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">28</span><span style="font-size: 16px; font-family: 宋体;">人、讲师</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">8</span><span style="font-size: 16px; font-family: 宋体;">人），实验技术系列教师</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">9</span><span style="font-size: 16px; font-family: 宋体;">人（含高工</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">2</span><span style="font-size: 16px; font-family: 宋体;">人、工程师</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">7</span><span style="font-size: 16px; font-family: 宋体;">人），包括国务院学科评议组成员</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">1</span><span style="font-size: 16px; font-family: 宋体;">名、</span><span style="font-size: 16px; font-family: 宋体;">教育部跨世纪优秀人才</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">2</span><span style="font-size: 16px; font-family: 宋体;">名、教育部新世纪优秀人才</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">6</span><span style="font-size: 16px; font-family: 宋体;">名、高等学校青年教师教学科研奖励基金获得者</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">1</span><span style="font-size: 16px; font-family: 宋体;">名、辽宁省</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">1</span><span style="font-size: 16px; font-family: 宋体;">名、辽宁省十大科技英才</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">1</span><span style="font-size: 16px; font-family: 宋体;">名、辽宁省青年科技奖获得者</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">2</span><span style="font-size: 16px; font-family: 宋体;">名、</span><span style="font-size: 16px; font-family: 宋体;">大连市青年科技之星</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">1</span><span style="font-size: 16px; font-family: 宋体;">名。同时，学院还聘请了</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">11</span><span style="font-size: 16px; font-family: 宋体;">名国内外知名专家学者任兼职教授。有</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">5</span><span style="font-size: 16px; font-family: 宋体;">人获得注册环保工程师资格，</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">3</span><span style="font-size: 16px; font-family: 宋体;">人获得环境影响评价工程师资格。教学科研人员中，具有博士学位人员占</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">89%</span><span style="font-size: 16px; font-family: 宋体;">，</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">45</span><span style="font-size: 16px; font-family: 宋体;">岁以下中青年教师占</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">73%</span><span style="font-size: 16px; font-family: 宋体;">，基本形成了知识结构、年龄梯度合理的人才格局。</span></span></p> 
+<p style="line-height: 2em;"><span style="font-size: 16px;">&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 16px; font-family: 宋体;">实验室依托</span>“环境工程”国家重点学科、“环境科学与工程“辽宁省一级重点学科和一级学科博士点，在（<span times="" new="" roman";"="" style="font-size: 16px; font-family: ">1</span><span style="font-size: 16px; font-family: 宋体;">）工业污染控制工程理论；（</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">2</span><span style="font-size: 16px; font-family: 宋体;">）工业生态设计与规划原理；（</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">3</span><span style="font-size: 16px; font-family: 宋体;">）健康风险防范原理和技术三个研究方向开展高水平的基础和应用研究并形成了自己的研究特色。近</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">5</span><span style="font-size: 16px; font-family: 宋体;">年，共完成和承担国家水专项课题、</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">973</span><span style="font-size: 16px; font-family: 宋体;">课题、</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">863</span><span style="font-size: 16px; font-family: 宋体;">项目</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">/</span><span style="font-size: 16px; font-family: 宋体;">课题、国家自然科学基金重点、面上等国家级科研项目近百项，发表</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">SCI</span><span style="font-size: 16px; font-family: 宋体;">论文近</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">840</span><span style="font-size: 16px; font-family: 宋体;">余篇，获授权发明专利</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">110</span><span style="font-size: 16px; font-family: 宋体;">余件，含国际发明专利</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">3</span><span style="font-size: 16px; font-family: 宋体;">件，其中</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">10</span><span style="font-size: 16px; font-family: 宋体;">余项专利技术已成功实现工程化应用。获国家自然科学二等奖</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">2</span><span style="font-size: 16px; font-family: 宋体;">项（其中一项为第二完成单位），国际技术发明奖</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">1</span><span style="font-size: 16px; font-family: 宋体;">项（第二完成单位），省部级奖励</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">7</span><span style="font-size: 16px; font-family: 宋体;">项（其中一等奖</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">2</span><span style="font-size: 16px; font-family: 宋体;">项）</span></span></p> 
+<p style="text-indent: 28px; line-height: 2em;"><span style="font-size: 16px;"><span style="font-size: 16px; font-family: 宋体;">近五年，已累计培养博士、硕士</span>500<span style="font-size: 16px; font-family: 宋体;">余名，目前在读研究生近</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">460</span><span style="font-size: 16px; font-family: 宋体;">名，在站博士后</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">19</span><span style="font-size: 16px; font-family: 宋体;">名。培养的学生中，有</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">4</span><span style="font-size: 16px; font-family: 宋体;">人获全国优秀博士论文提名奖、</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">8</span><span style="font-size: 16px; font-family: 宋体;">人获辽宁省优秀博士论文奖、</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">7</span><span style="font-size: 16px; font-family: 宋体;">人获辽宁省优秀硕士论文奖、</span><span times="" new="" roman";"="" style="font-size: 16px; font-family: ">18</span><span style="font-size: 16px; font-family: 宋体;">名本科生获大连理工大学优秀本科论文，多人获得国外著名奖学金（如德国洪堡基金）资助，毕业生过硬的科研素质、良好的学习能力和朴实的为人态度受到全国各个用人单位的好评。</span></span></p> 
+<p style="text-align: justify; line-height: 200%; text-indent: 32px; layout-grid-mode: char"><span style="line-height: 200%; font-size: 16px"><br></span><br></p> 
+<p style="text-align: justify"><br></p></div></div></div></td></tr>
+<tr><td class="wb_content" align="left" id="vsb_content_85929_u6" name="vsb_content_85929_u6"></td></tr>
+
+</tbody></table>
+<table cellspacing="" cellpadding="" border="0">
+<tbody><tr><td align="center"></td></tr>
+</tbody></table></div></div></div><!--about_main_end-->
+<div class="copyright"><p><span style="color: rgb(255, 255, 255);">地址：大连市高新区凌工路2号 工业生态与环境工程教育部重点实验室<br>邮编：116024，电话：0411-84707965； 传真：0411-84707965</span><span style="color: rgb(255, 255, 255);"><br></span><br></p></div></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

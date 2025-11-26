@@ -1,0 +1,704 @@
+
+<!DOCTYPE html>
+<html><head><title>化学与材料科学学院-南京师范大学</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="化学与材料科学学院-南京师范大学">
+<META Name="keywords" Content="化学与材料科学学院-南京师范大学" />
+
+
+
+
+
+<meta charset="utf-8"><link rel="stylesheet" type="text/css" href="css/style.css"><link rel="stylesheet" type="text/css" href="css/publice.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230776447525055574200030003475c -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1033,'/index.jsp',-1,1422520567)</script>
+</head>
+<body><!--top s-->
+<div class="topWrap clearfix">
+<div class="topDiv">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<div class="logo">
+<a href="index.htm"><img src="images/logo.png"></a>
+</div>
+<div class="topR fr"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><div class="topR_t fr">
+     <a href="index.htm" onclick="_addDynClicks(&#34;wburl&#34;, 1422520567, 39234)">中文</a>
+     |
+     <a href="http://schools.njnu.edu.cn/chem/" onclick="_addDynClicks(&#34;wburl&#34;, 1422520567, 39235)">English</a>
+     |
+     <a href="list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1168" onclick="_addDynClicks(&#34;wburl&#34;, 1422520567, 68520)">教工之家</a>
+     
+</div>
+<div style="clear: both"></div>
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+        
+        <div class="Search">
+
+ <input  type="text" value=""  class="search_text" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"/>
+                <div class="fdj fr"> <input type="submit" class="button pngFix"value=""style="cursor: hand" v-on:click="onSubmit()"></div>
+
+</div>
+        
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1422520567";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://223.2.9.5:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div></div></div><!--nav--><div class="navWrap  clearfix">
+    <div class="nav">
+    <ul>
+			<li>
+			<a class="link" href="xygk/xyjs.htm">学院概况</a>
+						
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="szdw/gjj_sbjrc.htm">师资队伍</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl>
+					<dd><a href="szdw/gjj_sbjrc.htm">国家级、省部级人才</a></dd>
+					<dd><a href="szdw/jszcjs.htm">教授职称教师</a></dd>
+					<dd><a href="szdw/zrjsdw.htm">专任教师队伍</a></dd>
+					<dd><a href="szdw/syjsry.htm">实验技术人员</a></dd>
+					<dd><a href="szdw/bshry.htm">博士后人员</a></dd>
+					<dd><a href="szdw/grtxry.htm">退休人员</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="kxyj/kyjg.htm">科学研究</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl>
+					<dd><a href="kxyj/kyjg.htm">科研机构</a></dd>
+					<dd><a href="kxyj/kytz.htm">科研通知</a></dd>
+					<dd><a href="kxyj/kycg.htm">科研成果</a></dd>
+					<dd><a href="kxyj/xsjl.htm">学术交流</a></dd>
+					<dd><a href="kxyj/shfw.htm">社会服务</a></dd>
+					<dd><a href="kxyj/xkjs.htm">学科介绍</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="bkspy.htm">本科生培养</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl>
+					<dd><a href="bkspy/bkjxtz.htm">本科教学通知</a></dd>
+					<dd><a href="bkspy/bkzysz.htm">本科专业设置</a></dd>
+					<dd><a href="list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1110">课程建设</a></dd>
+					<dd><a href="bkspy/jwwd.htm">教务文档</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="yjspy.htm">研究生培养</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl>
+					<dd><a href="yjspy/tzgg.htm">通知公告</a></dd>
+					<dd><a href="yjspy/zsgz.htm">招生工作</a></dd>
+					<dd><a href="yjspy/pygz.htm">培养工作</a></dd>
+					<dd><a href="yjspy/xwgz.htm">学位工作</a></dd>
+					<dd><a href="yjspy/wdxz.htm">文档下载</a></dd>
+					<dd><a href="yjspy/tdxl.htm">同等学力</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="djrs/dw1.htm">党建工作</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl>
+					<dd><a href="djrs/dw1.htm">党委</a></dd>
+					<dd><a href="djrs/zzllxx.htm">政治理论学习</a></dd>
+					<dd><a href="djrs/dwgz.htm">党员活动</a></dd>
+					<dd><a href="djrs/ghgz.htm">工会工作</a></dd>
+					<dd><a href="djrs/ggwgz.htm">关工委工作</a></dd>
+					<dd><a href="djrs/txgz.htm">退休工作</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="xsgz1.htm">学生工作</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl>
+					<dd><a href="xsgz1/tzgg.htm">通知公告</a></dd>
+					<dd><a href="xsgz1/gzzd.htm">规章制度</a></dd>
+					<dd><a href="xsgz1/xsdj.htm">学生党建</a></dd>
+					<dd><a href="xsgz1/xzfc.htm">学子风采</a></dd>
+					<dd><a href="xsgz1/jczd.htm">奖惩助贷</a></dd>
+					<dd><a href="xsgz1/zsjy.htm">招生就业</a></dd>
+					<dd><a href="xsgz1/xljk.htm">心理健康</a></dd>
+					<dd><a href="xsgz1/shsj.htm">社会实践</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="xyzj/xyfc.htm">校友之家</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl>
+					<dd><a href="xyzj/xyfc.htm">校友风采</a></dd>
+					<dd><a href="xyzj/xyhj.htm">校友欢聚</a></dd>
+					<dd><a href="xyzj/xyml.htm">校友名录</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="shfw/xqhz.htm">社会服务</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl>
+					<dd><a href="shfw/xqhz.htm">校企合作</a></dd>
+					<dd><a href="shfw/jspx.htm">教师培训</a></dd>
+					<dd><a href="shfw/xsyx.htm">学生研学</a></dd>
+			</dl>
+		</li>
+     
+    </ul>
+</div>
+</div>
+<script type="text/javascript">
+
+	$(".mainmenu dl").hide();
+
+</script><!--banner-->
+<div class="vsb-box">
+<div class="vsb-container a" containerid="1" columns="6">
+<div class="vsb-space bannerWrap clearfix" columns="6">    <div class="banner clearfix">
+            <div class="eachBox">
+                <div class="changeBox_a1" id="change_32">
+		   			<div class="changeDiv">
+                        <h3><a href="" target="_blank"></a></h3>
+                        <a target="_blank" href="" title=""><img width="1000" height="335" src="images/banner2.jpg" /></a>
+                    </div>
+			<div class="changeDiv">
+                        <h3><a href="" target="_blank"></a></h3>
+                        <a target="_blank" href="" title=""><img width="1000" height="335" src="images/banner21.jpg" /></a>
+                    </div>
+                    
+               
+                    <ul class="ul_change_a2">
+                        <li><span></span></li>
+                        <li><span></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div></div></div><!--main-->
+<div class="vsb-container a" containerid="1" columns="6"><!--banner2--></div>
+<div class="vsb-container a" containerid="1" columns="6"><!--banner3--></div></div>
+<div></div><!--container-->
+<div class="vsb-box">
+<div class="vsb-container container clearfix" containerid="2" columns="6">
+<div class="informBoxb" style="width: auto">
+<div class="xsdt" style="overflow: hidden; width: 312px; float: left; margin-right: 20px">
+<div class="vsb-space new_inforBoxa1 fl" columns="4">
+
+
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="dynamic dynamicf">
+<h2>学术交流</h2><span><a href="kxyj/xsjl.htm"><img src="temp/more.png"></a></span></div>
+                <div class="newBox newBoxe">
+            
+                    <div class="new_list new_listd">
+
+                        <ul class="dynamic_list dynamic_listh">
+
+       <li><a href="info/1207/14230.htm"><span>09/04</span><em>【懋仪讲堂】世界厕所组织Heinz-Peter MANG教授来我院交流</em></a></li>                 
+
+
+       <li><a href="info/1207/14150.htm"><span>09/04</span><em>【懋仪讲堂】德国可再生能源协会Elisabeth M.Huba主席来我院交流</em></a></li>                 
+
+
+       <li><a href="info/1207/14160.htm"><span>09/02</span><em>【懋仪讲堂】南京大学朱从青教授学术交流</em></a></li>                 
+
+
+       <li><a href="info/1207/14190.htm"><span>09/01</span><em>【懋仪讲堂】中国科学院理化所闻利平教授：仿生通道构建与能源高效转换</em></a></li>                 
+
+
+       <li><a href="info/1207/14220.htm"><span>08/06</span><em>【懋仪讲堂】南京大学谢劲教授学术交流</em></a></li>                 
+
+
+       <li><a href="info/1207/14210.htm"><span>08/06</span><em>【懋仪讲堂】巴基斯坦科学院Irshad Hussain教授：纳米功能材料的精准合成与应用</em></a></li>                 
+
+
+       <li><a href="info/1207/13900.htm"><span>07/15</span><em>【懋仪讲堂】二氧化钌基析氧材料的设计与预测</em></a></li>                 
+
+
+       <li><a href="info/1207/13880.htm"><span>07/15</span><em>【懋仪讲堂】北科大施春红：园林废弃物资源化利用——城市有机覆盖物应用概况</em></a></li>                 
+
+                             
+                         </ul>
+                    </div>
+                </div>  
+      
+
+
+<script>_showDynClickBatch(['dynclicks_u5_14230','dynclicks_u5_14150','dynclicks_u5_14160','dynclicks_u5_14190','dynclicks_u5_14220','dynclicks_u5_14210','dynclicks_u5_13900','dynclicks_u5_13880'],[14230,14150,14160,14190,14220,14210,13900,13880],"wbnews", 1422520567)</script>
+</div></div>
+<div class="xsdt" style="overflow: hidden; width: 312px; float: left">
+<div class="vsb-space new_inforBoxa1 fl" columns="4">
+
+
+
+
+
+
+
+
+<div class="dynamic dynamicf">
+<h2>科研成果</h2><span><a href="kxyj/kycg.htm"><img src="temp/more.png"></a></span></div>
+                <div class="newBox newBoxe">
+            
+                    <div class="new_list new_listd">
+
+                        <ul class="dynamic_list dynamic_listh">
+
+       <li><a href="info/1083/11410.htm"><span>10/08</span><em>我院韩维教授课题组在国际顶尖学术期刊Science上发表研究论文</em></a></li>                 
+
+
+       <li><a href="info/1083/14440.htm"><span>09/11</span><em>我院杨华军教授课题组在《Advanced Materials》发表重要研究成果</em></a></li>                 
+
+
+       <li><a href="info/1083/13840.htm"><span>07/05</span><em>我院杨华军教授课题组在《JACS Au》发表重要研究成果</em></a></li>                 
+
+
+       <li><a href="info/1083/13680.htm"><span>06/24</span><em>我院古志远教授课题组在《J. Am. Chem. Soc.》发表重要研究成果</em></a></li>                 
+
+
+       <li><a href="info/1083/13670.htm"><span>06/24</span><em>我院付更涛、王彧教授合作在《Advanced Materials》发表重要研究成果</em></a></li>                 
+
+
+       <li><a href="info/1083/13690.htm"><span>06/18</span><em>我院陈旭东教授课题组在《PNAS》上发表重要研究成果</em></a></li>                 
+
+
+       <li><a href="info/1083/13490.htm"><span>06/18</span><em>我院古志远教授课题组在纳米孔传感分析领域取得重要研究进展</em></a></li>                 
+
+
+       <li><a href="info/1083/13280.htm"><span>05/30</span><em>我院韩维教授课题组在《Nature Communications》发表研究论文</em></a></li>                 
+
+                             
+                         </ul>
+                    </div>
+                </div>  
+      
+
+
+<script>_showDynClickBatch(['dynclicks_u6_11410','dynclicks_u6_14440','dynclicks_u6_13840','dynclicks_u6_13680','dynclicks_u6_13670','dynclicks_u6_13690','dynclicks_u6_13490','dynclicks_u6_13280'],[11410,14440,13840,13680,13670,13690,13490,13280],"wbnews", 1422520567)</script>
+
+
+</div></div>
+<div class="vsb-space informBoxb2 fr" columns="2">
+<div id="tab">
+<ul class="tab_menu clearfix">
+<li class="selected">本科生培养</li>
+<li>研究生培养</li></ul>
+<div class="tab_box">
+
+
+
+
+
+
+
+<div>
+                             <ul>
+<li><a href="info/1108/14730.htm">化科院2025年秋季学期一流本科教育建设文…</a></li>
+<li><a href="info/1108/13460.htm">化学与材料科学学院2025年春季一流本科教…</a></li>
+<li><a href="info/1108/12970.htm">2025年春季学期化学工程与技术教学团队听…</a></li>
+<li><a href="info/1107/12930.htm">2025年春季学期生命分析化学教学团队听课…</a></li>
+<li><a href="info/1108/12910.htm">第十四届师范生教学基本功大赛院级选拔赛…</a></li>
+<li><a href="info/1108/12880.htm">化学与材料科学学院举办2025年新教师名师…</a></li>
+<li><a href="info/1107/12490.htm">化科院2025年春季学期一流本科教育建设文…</a></li>
+                                 
+                             </ul>
+                        </div><script>_showDynClickBatch(['dynclicks_u7_14730','dynclicks_u7_13460','dynclicks_u7_12970','dynclicks_u7_12930','dynclicks_u7_12910','dynclicks_u7_12880','dynclicks_u7_12490'],[14730,13460,12970,12930,12910,12880,12490],"wbnews", 1422520567)</script>
+
+
+
+
+
+
+
+
+<div class="hide1">
+                             <ul>
+<li><a href="info/1100/13440.htm">化科院关于2026年硕士研究生招生考试复试…</a></li>
+<li><a href="info/1100/13450.htm">化科院关于2026年硕士研究生招生考试初试…</a></li>
+<li><a href="info/1100/6761.htm">南京师范大学化学与材料科学学院硕士复试…</a></li>
+<li><a href="info/1100/14480.htm">化学与材料科学学院2026年接收推荐免试研…</a></li>
+<li><a href="info/1122/14240.htm">2025年9月化科院博士学位论文答辩公告</a></li>
+<li><a href="info/1100/14140.htm">化学与材料科学学院2026年接收推荐免试攻…</a></li>
+<li><a href="info/1122/14120.htm">2025年9月化科院博士学位论文答辩公告-无…</a></li>
+                                 
+                             </ul>
+                        </div><script>_showDynClickBatch(['dynclicks_u8_13440','dynclicks_u8_13450','dynclicks_u8_6761','dynclicks_u8_14480','dynclicks_u8_14240','dynclicks_u8_14140','dynclicks_u8_14120'],[13440,13450,6761,14480,14240,14140,14120],"wbnews", 1422520567)</script>
+</div></div></div></div></div>
+<div class="vsb-container container clearfix" containerid="2" columns="6"><!--新闻信息-->
+<div class="vsb-space new_inforBox new_inforBox2 fl" columns="4">
+<div class="dynamic">
+<h2>学院新闻</h2><span><a href="xyxw.htm"><img src="temp/more.png"></a></span> </div>
+<div class="newBox"><!--新闻信息-->
+<div class="new_pic new_pic1"><LINK href="/system/resource/style/component/news/list/imagechangenews.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="/system/resource/js/news/imagechangenews.js"></script>
+<script language="JavaScript"> 
+var u_u1_icn = new ImageChangeNews("u_u1_", 310, 178, 4, 2.0, false, false, false, true);
+//初始化图片, 并启动定时
+function u_u1_init_img()
+{
+        u_u1_icn.addimg("/__local/B/E1/00/A1298E6BB6991843E6946062EC0_051C4FF5_853ED.jpg", "info/1065/14740.htm", "", "");
+        u_u1_icn.addimg("/__local/A/95/14/1CBC3D8EFF765957C2445F88CE4_17D3430C_3F23E.jpg", "info/1065/14400.htm", "", "");
+        u_u1_icn.addimg("/__local/3/97/B5/1DE095944110C94A25C472C050A_C2890F21_58D60.png", "info/1065/14100.htm", "", "");
+        u_u1_icn.addimg("/__local/C/5B/C6/61F2925D3113B1A2AA1FE50F63F_1CFBEE85_C789.png", "info/1065/14080.htm", "", "");
+        u_u1_icn.addimg("/__local/6/85/BA/7D1DE852B9A35F139A034A41211_634AB47F_10EEC3.png", "info/1065/14070.htm", "", "");
+     
+    u_u1_icn.changeimg(0);
+}
+</script>
+<table cellspacing="0" cellpadding="0" border="0" style="padding:0px margin:0px; border:0px">
+    <tr>
+        <td>
+            <div style="OVERFLOW: hidden;height:178px;width:310px">
+                <div id="u_u1_div" align="center" style="padding:0px;margin:0px;border:0px solid black;background-color:#000000;FILTER: progid:DXImageTransform.Microsoft.RevealTrans (duration=2.0,transition=23);height:178px;width:310px">
+                    <div id="u_u1_imgdiv" style="padding:0px;border:0px;">
+                        <a id="u_u1_url" target="_blank"><img id="u_u1_pic" border="0" width="310" height="178" src="/system/resource/images/space.gif"></a>
+                    </div>
+                 </div>
+                 <div style="filter:alpha(style=1,opacity=10,finishOpacity=80);width:310px;height:19px;text-align:right;top:-19px;position:relative;padding:0px;margin:0px;border:0px;">
+                            <a href="javascript:u_u1_icn.changeimg(0)" ; id="u_u1_selectNode0" class="imagechangenews_pnode" target="_self">1</a>
+                            <a href="javascript:u_u1_icn.changeimg(1)" ; id="u_u1_selectNode1" class="imagechangenews_pnode" target="_self">2</a>
+                            <a href="javascript:u_u1_icn.changeimg(2)" ; id="u_u1_selectNode2" class="imagechangenews_pnode" target="_self">3</a>
+                            <a href="javascript:u_u1_icn.changeimg(3)" ; id="u_u1_selectNode3" class="imagechangenews_pnode" target="_self">4</a>
+                            <a href="javascript:u_u1_icn.changeimg(4)" ; id="u_u1_selectNode4" class="imagechangenews_pnode" target="_self">5</a>
+                </div>
+             </div>
+        </td>
+   </tr>
+   
+       <tr style="display: none">
+           <td height="25">
+               <!--是否显示标题-->
+               <div align="center" style="overflow:hidden;text-overflow:ellipsis;height:25px;width:310px;">
+                   <a target="_blank" class="titlestyle1114" id="u_u1_newstitle"></a>
+               </div>
+            </td>
+       </tr>
+
+   
+
+</table>
+    
+<SCRIPT language="JavaScript">
+u_u1_init_img();
+</SCRIPT><script>_showDynClickBatch(['dynclicks_u9_14740','dynclicks_u9_14400','dynclicks_u9_14100','dynclicks_u9_14080','dynclicks_u9_14070'],[14740,14400,14100,14080,14070],"wbnews", 1422520567)</script>
+</div>
+<div class="new_list new_list3">
+
+
+
+
+
+
+
+<ul class="dynamic_list fr">
+
+<LI><A href="info/1065/14740.htm"><SPAN>[10-31]</SPAN><em>我院学子在第十九届“挑战杯”揭榜挂帅专项</em></A></LI>
+
+<LI><A href="info/1065/14680.htm"><SPAN>[10-22]</SPAN><em>2025年化学数字化实验教学应用案例交流与培</em></A></LI>
+
+<LI><A href="info/1065/14500.htm"><SPAN>[10-11]</SPAN><em>银龄育青，赋能化院新发展——南师大化科院</em></A></LI>
+
+<LI><A href="info/1065/14460.htm"><SPAN>[09-26]</SPAN><em>党建引领聚合力，交叉融合促创新 ———我</em></A></LI>
+
+<LI><A href="info/1065/14430.htm"><SPAN>[09-23]</SPAN><em>我院多位学者入选2025年度全球前2%顶尖科学</em></A></LI>
+
+<LI><A href="info/1065/14400.htm"><SPAN>[09-19]</SPAN><em>南京师范大学化学与材料科学学院2025级新生</em></A></LI>
+
+</UL><script>_showDynClickBatch(['dynclicks_u10_14740','dynclicks_u10_14680','dynclicks_u10_14500','dynclicks_u10_14460','dynclicks_u10_14430','dynclicks_u10_14400'],[14740,14680,14500,14460,14430,14400],"wbnews", 1422520567)</script>
+</div></div></div><!--通知公告-->
+<div class="vsb-space informBox informBox4 fl" columns="2">
+
+
+
+
+
+
+
+<div class="dynamic cleafix">
+<h2>学院公告</h2><span><a href="index/xygg.htm"><img src="temp/more.png"></a></span></div>
+<div class="infor_list">
+				<ul class="dynamic_list dynamic_list1">
+
+<li> <a href="info/1126/14000.htm">博士后出站答辩</a></li>
+<li> <a href="info/1126/13930.htm">博士后终期考核成果公示</a></li>
+<li> <a href="info/1126/13390.htm">关于开展 “四风” 问题意见征集的通知</a></li>
+<li> <a href="info/1126/13370.htm">公示</a></li>
+<li> <a href="info/1126/12870.htm">公示</a></li>
+<li> <a href="info/1126/12860.htm">公示</a></li>
+			</ul>
+	</div>
+
+
+
+
+
+<script>_showDynClickBatch(['dynclicks_u11_14000','dynclicks_u11_13930','dynclicks_u11_13390','dynclicks_u11_13370','dynclicks_u11_12870','dynclicks_u11_12860'],[14000,13930,13390,13370,12870,12860],"wbnews", 1422520567)</script>
+</div></div>
+<div class="vsb-container container clearfix" containerid="2" columns="6"><!--校园生活--><!--学术动态--></div>
+<div class="vsb-container container clearfix" containerid="2" columns="6"><!--师资队伍--><!--通知公告--></div>
+<div class="vsb-container container clearfix" containerid="2" columns="6"><!--焦点要闻--><!--学术动态--><!--广告-->
+<div class="vsb-container container clearfix" containerid="2" columns="6">
+<div class="vsb-space content contentf" columns="6">
+<div class="linkDiv_two">
+<div class="link_tit">
+<h3>友情链接<i>/LINK</i></h3></div>
+<div class="link_two">        
+        
+
+<ul><li>
+                        <a href="http://biomat.njnu.edu.cn/index.html" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1422520567, 39435)" target="_blank">
+                            <img src="images/17/12/30/1lg4462lpj/gdzx.png" border="0" width="200" height="150">
+                        </a>  
+  </li>
+
+
+
+
+
+
+
+                
+                    
+                
+
+<li>
+                        <a href="http://wjhxjxtd.njnu.edu.cn" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1422520567, 39437)" target="_blank">
+                            <img src="images/nanshid6ab69f6-c50e-4eed-ba2f-8e0513abbae5.png" border="0" width="200" height="150">
+                        </a>  
+  </li>
+
+
+
+
+
+
+                
+                    
+                
+        
+</div></div></div></div>
+<div class="vsb-container container clearfix" containerid="2" columns="6">
+<div class="vsb-space linkDiv_three" columns="6">
+<div class="link_tit link_tita">
+<h3>友情链接</h3></div>
+<div class="linkDiv">
+<div class="choice"><dl class="select">
+                    <dt>------科研工作链接-------</dt>
+                    <dd>
+                        <ul>
+<li><a href="http://kjc.njnu.edu.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1422520567, 39084)">----学校科技处-----</a></li>
+<li><a href="http://www.nsfc.gov.cn/nsfc2009/index.htm" onclick="_addDynClicks(&#34;wburl&#34;, 1422520567, 39085)">----国家基金委-----</a></li>
+<li><a href="http://hky.njnu.edu.cn/manage/adredirect.aspx?id=57&amp;url=http://202.119.175.199/" onclick="_addDynClicks(&#34;wburl&#34;, 1422520567, 39086)">----江苏高校科技网-----</a></li>
+<li><a href="http://www.jstd.gov.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1422520567, 39087)">----江苏省科技厅-----</a></li>
+<li><a href="http://hky.njnu.edu.cn/manage/adredirect.aspx?id=59&amp;url=http://202.119.108.47:8080/slhzyg/" onclick="_addDynClicks(&#34;wburl&#34;, 1422520567, 39088)">----学校数理化图书馆-----</a></li>
+                            
+                        </ul>
+                    </dd>
+                </dl><dl class="select">
+                    <dt>------教学工作链接-------</dt>
+                    <dd>
+                        <ul>
+<li><a href="http://hky.njnu.edu.cn/manage/adredirect.aspx?id=53&amp;url=http://202.119.109.12:8000/" onclick="_addDynClicks(&#34;wburl&#34;, 1422520567, 39089)">----学校教材网-----</a></li>
+<li><a href="http://hky.njnu.edu.cn/manage/adredirect.aspx?id=54&amp;url=http://e.njnu.edu.cn" onclick="_addDynClicks(&#34;wburl&#34;, 1422520567, 39090)">----本科生教务系统-----</a></li>
+<li><a href="http://www.jingpinke.com/" onclick="_addDynClicks(&#34;wburl&#34;, 1422520567, 39091)">----国家精品课程资源网-----</a></li>
+<li><a href="http://www.cctr.net.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1422520567, 39092)">----中国高等学校教学资源网-----</a></li>
+                            
+                        </ul>
+                    </dd>
+                </dl><dl class="select">
+                    <dt>------党建工作链接-------</dt>
+                    <dd>
+                        <ul>
+                            
+                        </ul>
+                    </dd>
+                </dl><dl class="select" style="float: right;margin-right: 0px">
+                    <dt>---------校内链接---------</dt>
+                    <dd>
+                        <ul>
+                            
+                        </ul>
+                    </dd>
+                </dl></div></div></div></div></div><!--foot-->
+<div class="footWrap" style="z-index: 1 !important"><div class="footDiv_one">
+        <div class="foot_one">
+            <p><p>Copyright © 2009-20010 南京师范大学 化学与材料科学学院. All rights reserved.</p><a><img src="img/foot_icon.png"></a></p>
+        </div>
+    </div>
+<div class="foot_three">
+<div class="foot-right" style="width: 110px; float: right; margin-top: 10px"></div></div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script><script type="text/javascript" src="js/jquery.js"></script><script type="text/javascript" src="js/superslide.js"></script><script type="text/javascript" src="js/jquery.soChange.js"></script><script type="text/javascript" src="js/index.js"></script><script type="text/javascript">
+    $(function(){
+        $(".mainmenu dl").hide();
+        $("li.mainmenu").hover(function(){
+            $(this).find("dl").stop(true,true);
+            $(this).find("dl").slideDown();
+        },function(){
+            $(this).find("dl").stop(true,true);
+            $(this).find("dl").slideUp();
+        });
+    })
+</script>
+<script type="text/javascript">
+$(function(){
+    $(".select").each(function(){
+        var s=$(this);
+        var z=parseInt(s.css("z-index"));
+        var dt=$(this).children("dt");
+        var dd=$(this).children("dd");
+        var _show=function(){dd.slideDown(200);dt.addClass("cur");s.css("z-index",z+1);};   //展开效果
+        var _hide=function(){dd.slideUp(200);dt.removeClass("cur");s.css("z-index",z);};    //关闭效果
+        dt.click(function(){dd.is(":hidden")?_show():_hide();});
+        dd.find("a").click(function(){dt.html($(this).html());_hide();});     //选择效果（如需要传值，可自定义参数，在此处返回对应的“value”值 ）
+        $("body").click(function(i){ !$(i.target).parents(".select").first().is(s) ? _hide():"";});
+    })
+});
+</script><script type="text/javascript">
+$(function () {
+//切换对象为其他，这里为包含图片和标题的层
+    $('#change_32 div.changeDiv').soChange({//对象指向层，层内包含图片及标题
+        thumbObj:'#change_32 .ul_change_a2 span',
+        thumbNowClass:'on'//自定义导航对象当前class为on
+    });
+});
+</script><script type="text/javascript">
+function setContentTab(name, curr, n) {
+    for (i = 1; i <= n; i++) {
+        var menu = document.getElementById(name + i);
+        var cont = document.getElementById("con_" + name + "_" + i);
+    if(menu != null)
+    {
+        menu.className = i == curr ? "up" : "";
+    }
+        if (i == curr) {
+      if(cont != null)
+        {
+            cont.style.display = "block";
+        }
+        } else {
+        if(cont != null)
+    {
+            cont.style.display = "none";
+    }
+        }
+    }
+}
+</script><script type="text/javascript">
+$(".pic ul li").hover(function(){
+    $(this).stop(true).animate({width:"824px"},500).siblings().stop(true).animate({width:"50px"},500);
+});
+</script></div></div>
+
+</body></html>

@@ -1,0 +1,524 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>学院简介-天津大学新媒体与传播学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<META Name="keywords" Content="天津大学新媒体与传播学院,天津大学,新媒体与传播学院,新媒体,传播,学院简介" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" href="../encss/base.css" type="text/css">
+<link rel="stylesheet" href="../encss/css.css?v=6" type="text/css">
+<link rel="stylesheet" href="../encss/swiper.min.css" type="text/css">
+<link rel="stylesheet" href="../encss/visuallightbox.css" type="text/css">
+
+
+<script src="../enjs/jquery.js" type="text/javascript"></script>
+<script src="../enjs/head.js" type="text/javascript"></script>
+<script src="../enjs/ggvSlide.js" type="text/javascript"></script>
+<script src="../enjs/swiper.min3.js" type="text/javascript"></script>
+<script src="../enjs/jquery.sidr.min.js" type="text/javascript"></script>
+<script src="../enjs/index.js" type="text/javascript"></script>
+
+<script>
+    $(function(){
+      $(".subNav").click(function(){
+        $(this).toggleClass("currentDd").siblings(".subNav").removeClass("currentDd");
+        $(this).next(".navContent").slideToggle(300).siblings(".navContent").slideUp(500);
+});
+    
+    });
+
+  
+
+$(function(){
+            
+$('#left-menu').sidr({
+name: 'sidr-left',
+side: 'right'
+});
+    
+var navDown = false,
+        items_s = $(".search"),
+        search = $(".psearch");
+    search.click(function () {
+        if (!navDown) {
+            items_s.slideDown(300);
+            navDown = true;
+
+
+        } else {
+            items_s.slideUp(300);
+            navDown = false; 
+        }
+    });
+  });
+</script>
+ 
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e004657505a5742000400054652 -->
+<link rel="stylesheet" type="text/css" href="../cn_dan.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1185,'/cn_dan.jsp',-1,1534809574)</script>
+</head>
+
+<body class="sub cn">
+
+    <div class="container">
+    <div class="g-head">
+  <div class="wal ianimation"><a href="http://www.tju.edu.cn" class="logo"></a><a href="/" class="logo2"></a></div>
+    <div class="search_lan ianimation">
+     <div class="itop_link"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><a href="../szdw/career.htm">诚聘英才</a>
+</div>
+      <div class="search"><!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+          
+             <form  >
+
+         
+          <div class="input">
+            <input type="text"  placeholder="Search..." autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+          </div>
+          <div class="p-ico btn">
+              <input type="submit" value="" v-on:click="onSubmit()">
+          </div>
+        </form>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1534809574";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu2 = document.querySelector("#appu2");
+   if (appElementu2 && appElementu2.__vue__) {
+
+   } else {
+      $("#divu2").html($("#htmlu2").text());
+      var appOwner = "1534809574";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou2 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu2(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu2();
+        }
+      };
+
+      function onSubmitu2(e) {
+        queryInfou2.query.keyWord= $("#appu2  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou2.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script></div>
+    <div class="language"><a class="name" href="/en/Home.htm" target="_blank" title=""><em>EN</em></a></div>
+        </div>
+    <div class="btn-list nav_menu3 ianimation"><ul class="iflex nav_ul">
+          
+<li class="nav_d "><a href="../index.htm">首页</a>
+</li>
+        
+<li class="nav_d active"><a href="../xygk.htm">学院概况</a>
+   <ul class="nav_d_d">
+   <li><a href="xyjj.htm">学院简介</a></li>
+   <li><a href="xrld.htm">现任领导</a></li>
+   <li><a href="lxwm.htm">联系我们</a></li>
+</ul>
+</li>
+        
+<li class="nav_d "><a href="../djgz.htm">党建工作</a>
+   <ul class="nav_d_d">
+   <li><a href="../djgz/gzdt.htm">工作动态</a></li>
+   <li><a href="../djgz/llxx.htm">理论学习</a></li>
+</ul>
+</li>
+        
+<li class="nav_d "><a href="../szdw.htm">师资队伍</a>
+   <ul class="nav_d_d">
+   <li><a href="../szdw/xwcb.htm">新闻传播</a></li>
+   <li><a href="../szdw/dzxx_xmtfx.htm">电子信息（新媒体方向）</a></li>
+   <li><a href="../szdw/xzjf.htm">行政教辅</a></li>
+   <li><a href="../szdw/career.htm">诚聘英才</a></li>
+</ul>
+</li>
+        
+<li class="nav_d "><a href="../rcpy.htm">人才培养</a>
+   <ul class="nav_d_d">
+   <li><a href="../rcpy/bks_wzy.htm">本科生/微专业</a></li>
+   <li><a href="../rcpy/yjs.htm">研究生</a></li>
+   <li><a href="../rcpy/sjcgzs.htm">实践成果展示</a></li>
+   <li><a href="../rcpy/fxljy.htm">非学历教育</a></li>
+</ul>
+</li>
+        
+<li class="nav_d "><a href="../kxyj.htm">科学研究</a>
+   <ul class="nav_d_d">
+   <li><a href="../kxyj/xscg.htm">学术成果</a></li>
+   <li><a href="../kxyj/xshd.htm">学术活动</a></li>
+</ul>
+</li>
+        
+<li class="nav_d "><a href="../gjjl.htm">国际交流</a>
+</li>
+        
+        
+        
+</ul>
+</div>
+    <a href="javascript:;" class="psearch"></a>
+    <a href="javascript:;" class="navA"></a>
+    
+  </div>
+
+<div class="g-nav2">
+  <div class="scroll">    <ul>   
+
+      <li>
+            <h2><a href="../index.htm" title="首页">首页</a></h2>
+      </li>
+
+
+      <li>
+            <h2><a href="../xygk.htm" title="学院概况">学院概况</a></h2>
+        <div class="list">
+          <h3><a href="xyjj.htm" title="学院简介">学院简介</a></h3>
+          <h3><a href="xrld.htm" title="现任领导">现任领导</a></h3>
+          <h3><a href="lxwm.htm" title="联系我们">联系我们</a></h3>
+        </div>
+      </li>
+
+
+      <li>
+            <h2><a href="../djgz.htm" title="党建工作">党建工作</a></h2>
+        <div class="list">
+          <h3><a href="../djgz/gzdt.htm" title="工作动态">工作动态</a></h3>
+          <h3><a href="../djgz/llxx.htm" title="理论学习">理论学习</a></h3>
+        </div>
+      </li>
+
+
+      <li>
+            <h2><a href="../szdw.htm" title="师资队伍">师资队伍</a></h2>
+        <div class="list">
+          <h3><a href="../szdw/xwcb.htm" title="新闻传播">新闻传播</a></h3>
+          <h3><a href="../szdw/dzxx_xmtfx.htm" title="电子信息（新媒体方向）">电子信息（新媒体方向）</a></h3>
+          <h3><a href="../szdw/xzjf.htm" title="行政教辅">行政教辅</a></h3>
+          <h3><a href="../szdw/career.htm" title="诚聘英才">诚聘英才</a></h3>
+        </div>
+      </li>
+
+
+      <li>
+            <h2><a href="../rcpy.htm" title="人才培养">人才培养</a></h2>
+        <div class="list">
+          <h3><a href="../rcpy/bks_wzy.htm" title="本科生/微专业">本科生/微专业</a></h3>
+          <h3><a href="../rcpy/yjs.htm" title="研究生">研究生</a></h3>
+          <h3><a href="../rcpy/sjcgzs.htm" title="实践成果展示">实践成果展示</a></h3>
+          <h3><a href="../rcpy/fxljy.htm" title="非学历教育">非学历教育</a></h3>
+        </div>
+      </li>
+
+
+      <li>
+            <h2><a href="../kxyj.htm" title="科学研究">科学研究</a></h2>
+        <div class="list">
+          <h3><a href="../kxyj/xscg.htm" title="学术成果">学术成果</a></h3>
+          <h3><a href="../kxyj/xshd.htm" title="学术活动">学术活动</a></h3>
+        </div>
+      </li>
+
+
+      <li>
+            <h2><a href="../gjjl.htm" title="国际交流">国际交流</a></h2>
+      </li>
+
+
+     <li class="phone_lan">
+            <h2><a href="/en/Home.htm" title="English">English</a></h2></li>
+</ul>
+</div>
+</div>
+<div class="nybanner">
+
+
+
+    <img src="../enimg/ny-pro-pic.jpg" alt="">   
+    <div class="typename_one"><h2>学院概况</h2></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div class="submain">
+    <div class="wrapper2">
+    <div class="list-r">
+      <div class="mbx"><div class="mbx-z">
+                <a href="../index.htm">首页</a>
+                <a href="../xygk.htm">学院概况</a>
+                <a href="xyjj.htm">学院简介</a>
+</div></div>
+<div class="list-r-right">
+
+        <div class="typename">
+学院简介</div>
+<div class="fck fck_zj">
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1534809574,'wbnews','u9')</script>
+<script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1534809574,2588)</script>
+    <div id="vsb_content_2588_u91"><div id="vsb_content"><p>　　面对新媒体领域面临的重大需求与时代机遇，学校于2017年底启动新媒体研究院建设，并于2019年正式成立新媒体学院。学院紧密围绕国家重大战略需求和国际学术前沿，以文工交叉、产教融合、开放办学为鲜明特色，重点打造<strong>数字新闻学、网络国际传播、智能传播与算法治理</strong>三个核心方向。天津大学新媒体与传播学院是全国唯一一个既培养新闻传播研究生又培养电子信息硕博研究生的新闻传播学院，学院现有教职工30人，其中专任教师21人、实验技术工程人员2人。在学科构成上，新闻传播教师约70% ，计算机领域教师约 30%。</p><p>　　在人才培养方面，坚持立德树人根本任务，培养善用传播规律与数据算法的新媒体传播人才、熟悉传播规律与需求的信息科技人才、懂得数据与算法治理的管理人才。获批教<strong>育部哲学社会科学原创性教材项目</strong>1项。现有在校生139人，已毕业的三届研究生去往地方政府、国有企业、互联网企业等工作。</p><p>　　在科学研究方面，近5年共获批省部级及以上项目48项，其中国家级项目16项，包括<strong>国社科重大项目</strong>1项。累计发表高水平学术论文100余篇，出版教材专著10余部。</p><p>　　在服务国家重大战略需求方面，加强习近平新时代中国特色社会主义思想与国际传播的研究，与国家外文局当代中国与世界研究院共同主办学术研讨会，举办习近平总书记著作多语种版本展(全国唯一展出合作出版版本)，共32个语种、155个品种在天津大学展出。开展相关研究服务中宣部国际传播工作；服务天津市委宣传部网络传播、各区级融媒体中心量化评价等。</p></div></div>
+</div>
+        </div>
+        
+    </div>
+    <div class="list-l">
+        <div class="list-left">    
+
+<div class="subNav currentDd"><a href="xyjj.htm">学院简介</a></div>
+
+<div class="subNav "><a href="xrld.htm">现任领导</a></div>
+
+<div class="subNav "><a href="lxwm.htm">联系我们</a></div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+            <div class="part01-l left-news">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script>              <script>
+               $(function(){
+ $(".p1-img img").each(function(){
+             var onepic = $(this).attr("src");
+            console.log(onepic);
+            if(onepic == null || onepic == ""){
+            $(this).attr("src","../enimg/nopic2.jpg");
+        }
+        
+        });
+    });
+  
+
+
+              </script>
+                <div class="news-l-title"><a href="../news/xyxw.htm"><h2>学院新闻</h2></a></div>
+            <ul>
+                <li><a href="../info/1121/2296.htm"><div class="p1-img"><span>2024-12-27</span><img src="../virtual_attach_file.vsb?afc=5LmQCVM4VVnRr2UQmVfLmG4nNVkLR6qfM4UiUlMRMNMko7l0gihFp2hmCIa0oSybUShfnSyiMzviLR9boRrknR-4MRUsMNrkoz-PL7Q2M4fFo7VknN-aMRrFoRGDoRlJqjfjo4OeosMJpIL0qIbtpYyxLYyxLYbw62p8c&oid=1534809574&e=.jpg" alt=""></div><div class="p1-z"><h2><p>“数字新闻学与中国自主知识体系构建”学术论坛成功召开</p></h2></div></a></li>
+                </ul>
+        
+
+<script>_showDynClickBatch(['dynclicks_u11_2296'],[2296],"wbnews", 1534809574)</script>
+</div>
+    </div>  
+    
+        </div>
+</div>
+<div class="blank"></div>
+<div class="f-link">
+    <div class="wrapper2">
+        <div class="f-link-z">  <script>
+  $(function(){
+if ($('.cn').size() > 0) {
+        $(".clinks").html($(".clinks").html().replace(/Common links/g, "常用校内外链接"));
+     
+}
+})
+
+  </script>
+
+<h2 class="clinks">Common links</h2>
+<a href="https://e.tju.edu.cn/">天津大学办公网</a>
+            
+<a href="http://www.nopss.gov.cn/">全国哲学社会科学工作办公室</a>
+            
+<a href="https://www.nsfc.gov.cn/">国家自然科学基金委员会</a>
+            
+<a href="http://www.tjskw.org.cn/">天津市社会科学界联合会</a>
+            
+</div>
+        <div class="f-qr">    
+
+            <div class="qr-img">
+            <img src="../snmc-200-200.jpg" alt="">
+            </div>
+            <p>微信公众号</p>
+        
+
+</div>
+    </div>      
+</div>
+<footer>
+    <div class="wrapper2 flogo-t">
+        <div class="flogo"><a href="http://www.tju.edu.cn"><img src="../enimg/enlogo-01.png" alt=""></a><a href="/"><img src="../enimg/enlogo-02.png" alt=""></a></div>
+        <div class="faddress"><p>地址：天津市南开区卫津路92号</p>
+        <p>邮编：300072      电话：+86-22-27405272</p>
+        <p>Email: newmedia@tju.edu.cn</p></div>
+        <div class="fbutton">
+
+
+
+
+
+
+</div>
+    </div>  
+    <div class="fcopyright"><div class="wrapper2">CopyRight &copy; 天津大学新媒体与传播学院版权所有</div></div>
+</footer>   
+        
+        
+        
+    </div>
+
+</body>
+</html>

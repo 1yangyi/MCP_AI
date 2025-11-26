@@ -1,0 +1,536 @@
+
+<!DOCTYPE html><HTML><HEAD><TITLE>北京外国语大学专用英语学院</TITLE><meta name="pageType" content="1">
+<meta name="pageTitle" content="北京外国语大学专用英语学院">
+<META Name="keywords" Content="北京外国语大学专用英语学院" />
+
+
+
+
+
+<META name="author" content="oxxuan,chengxuan">
+<META charset="utf-8">
+<META name="author" content="oxxuan,chengxuan">
+
+
+<LINK rel="stylesheet" type="text/css" href="css/style.css">
+<LINK rel="stylesheet" type="text/css" href="css/publice.css">
+
+
+
+
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e78475153505742000400014153 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1033,'/index.jsp',-1,1634189082)</script>
+</HEAD>
+<BODY><!--top s-->
+<DIV class="topWrap clearfix">
+<DIV class="topDiv">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<div class="logo">
+<a href="index.htm"><img src="images/logo3.png" height="65px"></a>
+</div>
+<DIV class="topR fr">
+<TABLE cellspacing="0" cellpadding="0" width="100%" align="right" border="0">
+<TBODY>
+<TR>
+<TD align="right">&nbsp;<script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><div class="topR_t fr">
+     <a href="https://sespen.bfsu.edu.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1634189082, 56095)">中文</a>
+     |
+     <a href="https://sespen.bfsu.edu.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1634189082, 56096)">English</a>
+     
+</div>
+
+
+</TD></TR>
+<TR>
+<TD valign="top" align="right">&nbsp;<!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+        <div class="Search">
+            <input type="text" class="search_text" placeholder="请输入关键字搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <div class="fdj fr"> <input class="button pngFix" name="submit_button" type="button" value="" v-on:click="onSubmit()"/></div>
+        </div></div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1634189082";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu2 = document.querySelector("#appu2");
+   if (appElementu2 && appElementu2.__vue__) {
+
+   } else {
+      $("#divu2").html($("#htmlu2").text());
+      var appOwner = "1634189082";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou2 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu2(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu2();
+        }
+      };
+
+      function onSubmitu2(e) {
+        queryInfou2.query.keyWord= $("#appu2  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou2.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script></TD></TR></TBODY></TABLE></DIV></DIV></DIV><!--nav--><div class="navWrap  clearfix">
+    <div class="nav">
+    <ul>
+			<li>
+			<a class="link" href="index.htm">首页</a>
+						
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="#">学院概括</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl>
+					<dd><a href="xygk/xyjj.htm">学院简介</a></dd>
+					<dd><a href="xygk/xyld.htm">学院领导</a></dd>
+					<dd><a href="xygk/szdw.htm">师资队伍</a></dd>
+					<dd><a href="xygk/xsxx.htm">学术信息</a></dd>
+					<dd><a href="xygk/ghhd.htm">工会活动</a></dd>
+					<dd><a href="xygk/lxwm.htm">联系我们</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="#">双带头人工作室</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl>
+					<dd><a href="sdtrgzs/zcwj.htm">政策文件</a></dd>
+					<dd><a href="sdtrgzs/gzdt.htm">工作动态</a></dd>
+					<dd><a href="sdtrgzs/sfdx.htm">示范典型</a></dd>
+					<dd><a href="sdtrgzs/zygw.htm">箴言感悟</a></dd>
+					<dd><a href="sdtrgzs/xxgg.htm">信息公告</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="#">英语教学</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl>
+					<dd><a href="yyjx/kcsz.htm">课程设置</a></dd>
+					<dd><a href="yyjx/dxyyjx.htm">大学英语教学</a></dd>
+					<dd><a href="yyjx/sxwyyjx.htm">双学位英语教学</a></dd>
+					<dd><a href="yyjx/yjsyyjx.htm">研究生英语教学</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="#">教务管理</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl>
+					<dd><a href="#">选课说明</a></dd>
+					<dd><a href="#">跳级与免修</a></dd>
+					<dd><a href="jwgl/kqgd.htm">考期规定</a></dd>
+					<dd><a href="jwgl/ksgd.htm">考试规定</a></dd>
+					<dd><a href="jwgl/jxrl.htm">教学日历</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="dwjl.htm">对外交流</a>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="#">研究生</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl>
+					<dd><a href="yjs/MTIbyxm.htm">MTI笔译项目</a></dd>
+					<dd><a href="yjs/ewsyb.htm">二外实验班</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="http://new.espchina.com.cn/">中国ESP研究</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl>
+					<dd><a href="ESPzywyh/zgESPyjzz.htm">中国ESP研究杂志</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="xzzq.htm">下载专区</a>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="#">ENGLISH</a>
+		</li>
+     
+    </ul>
+</div>
+</div>
+<script type="text/javascript">
+
+	$(".mainmenu dl").hide();
+
+</script><!--banner-->
+<DIV class="vsb-box">
+<DIV class="vsb-container a" containerid="1" columns="6"><!--banner3-->
+<DIV class="vsb-space banner_three" columns="6">        <!--banner1-->
+<div class="slideBox slideBox1">
+        
+            <div class="bd">
+                <ul>
+                             <li style="width: 100%;height: 417px"><a href="" target="_blank"><img src="images/LIU_937-7.jpg" /></a></li>
+
+           
+                     <li style="width: 100%;height: 417px"><a href="" target="_blank"><img src="images/banner2.jpg" /></a></li>
+
+           
+                     <li style="width: 100%;height: 417px"><a href="" target="_blank"><img src="images/0918.JPG" /></a></li>
+
+           
+                </ul>
+            </div>
+            <a class="prev" href="javascript:void(0)"></a>
+                <a class="next" href="javascript:void(0)"></a>
+
+
+        </div>
+</DIV></DIV></DIV>
+<DIV></DIV><!--container-->
+<DIV class="vsb-box">
+<DIV class="vsb-container container clearfix" containerid="2" columns="6"><!--通知公告--><!--通知公告-->
+<DIV class="vsb-space informBox informBoxb fl" columns="1">
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script>                <div class="dynamic dynamicb dynamice"><h2>通知公告</h2><span><a href="index/tzgg.htm"><img src="img/w_more.png"></a></span></div>
+                <div class="infor_list infor_lista">
+                    <ul class="dynamic_list dynamic_listb dynamic_liste fr">
+<li><a href="info/1106/5765.htm"><span>09/12</span><em>2026年北京外国语大学专用英语学院推免...</em></a></li>
+<li><a href="info/1106/5755.htm"><span>09/08</span><em>北京外国语大学专用英语学院关于接收202...</em></a></li>
+<li><a href="info/1106/5675.htm"><span>04/08</span><em>北京外国语大学专用英语学院2025年硕士...</em></a></li>
+<li><a href="info/1106/5655.htm"><span>03/24</span><em>专用英语学院2025年硕士研究生复试录取...</em></a></li>
+<li><a href="info/1106/5645.htm"><span>03/21</span><em>北京外国语大学专用英语学院2025年硕士...</em></a></li>
+<li><a href="info/1106/5405.htm"><span>09/19</span><em>2025年北京外国语大学专用英语学院推免...</em></a></li>
+<li><a href="info/1106/5394.htm"><span>09/16</span><em>北京外国语大学专用英语学院关于接收202...</em></a></li>
+<li><a href="info/1106/5375.htm"><span>03/25</span><em>北京外国语大学专用英语学院2024年硕士...</em></a></li>
+
+                     </ul>
+                 </div>
+<script>_showDynClickBatch(['dynclicks_u5_5765','dynclicks_u5_5755','dynclicks_u5_5675','dynclicks_u5_5655','dynclicks_u5_5645','dynclicks_u5_5405','dynclicks_u5_5394','dynclicks_u5_5375'],[5765,5755,5675,5655,5645,5405,5394,5375],"wbnews", 1634189082)</script>
+
+</DIV>
+<DIV class="vsb-space informBox informBoxd informBoxc1 fl" columns="2">
+
+                <div class="dynamic dynamicb dynamice"><h2>工作动态</h2><span><a href="sdtrgzs/gzdt.htm"><img src="img/w_more.png"></a></span></div>
+                <div class="infor_list infor_lista">
+                    <ul class="dynamic_list dynamic_listb dynamic_liste fr">
+<li><a href="info/1144/5495.htm"><span>11/08</span><em>专用英语学院理论学习中心组集体学习习...</em></a></li>
+<li><a href="info/1144/5505.htm"><span>11/01</span><em>专用英语学院召开2024年秋季学期党员大...</em></a></li>
+<li><a href="info/1144/5515.htm"><span>10/11</span><em>传承中轴文脉 共筑文化自信 —— 专用英...</em></a></li>
+<li><a href="info/1144/5525.htm"><span>10/19</span><em>专用英语学院教师党支部举办 “亚运之后...</em></a></li>
+<li><a href="info/1144/5535.htm"><span>10/10</span><em>专用英语学院教师党支部举办 “深学细悟...</em></a></li>
+<li><a href="info/1144/5306.htm"><span>02/24</span><em>专用英语学院党总支召开新学期党员大会</em></a></li>
+<li><a href="info/1144/5278.htm"><span>10/07</span><em>“喜迎二十大，激扬爱国情”——专用英...</em></a></li>
+<li><a href="info/1144/5281.htm"><span>09/19</span><em>专用英语学院党总支召开全体党员大会</em></a></li>
+
+                     </ul>
+                 </div>
+<script>_showDynClickBatch(['dynclicks_u6_5495','dynclicks_u6_5505','dynclicks_u6_5515','dynclicks_u6_5525','dynclicks_u6_5535','dynclicks_u6_5306','dynclicks_u6_5278','dynclicks_u6_5281'],[5495,5505,5515,5525,5535,5306,5278,5281],"wbnews", 1634189082)</script>
+
+</DIV>
+<DIV class="vsb-space informBox informBoxd informBoxc1 fl" columns="2">
+
+                <div class="dynamic dynamicb dynamice"><h2>学术信息</h2><span><a href="xygk/xsxx.htm"><img src="img/w_more.png"></a></span></div>
+                <div class="infor_list infor_lista">
+                    <ul class="dynamic_list dynamic_listb dynamic_liste fr">
+<li><a href="info/1140/5173.htm"><span>12/22</span><em>北外专英讲堂第二讲：“生态给养”理论...</em></a></li>
+<li><a href="info/1140/5136.htm"><span>11/04</span><em>北外专英讲堂第一讲：外语院类院校公共...</em></a></li>
+<li><a href="info/1140/5137.htm"><span>10/27</span><em>携手“一路同行”，推进一流课程建设</em></a></li>
+<li><a href="info/1140/5138.htm"><span>06/30</span><em>专用英语学院召开期末教学研讨会</em></a></li>
+<li><a href="info/1140/5139.htm"><span>04/26</span><em>专用英语学院举办教师发展系列讲座之九</em></a></li>
+<li><a href="info/1140/5140.htm"><span>04/18</span><em>专用英语学院举办教师发展系列活动之八</em></a></li>
+<li><a href="info/1140/5141.htm"><span>04/09</span><em>专用英语学院举办教师发展系列活动之七</em></a></li>
+<li><a href="info/1140/5142.htm"><span>04/03</span><em>专用英语学院开展教师发展系列活动</em></a></li>
+
+                     </ul>
+                 </div>
+<script>_showDynClickBatch(['dynclicks_u7_5173','dynclicks_u7_5136','dynclicks_u7_5137','dynclicks_u7_5138','dynclicks_u7_5139','dynclicks_u7_5140','dynclicks_u7_5141','dynclicks_u7_5142'],[5173,5136,5137,5138,5139,5140,5141,5142],"wbnews", 1634189082)</script>
+
+</DIV></DIV>
+<DIV class="vsb-container container clearfix" containerid="2" columns="6"><!--学者社区--><!--新闻信息6-->
+<DIV class="vsb-space informBox informBoxb informBoxb2 fl" columns="2" style="margin-top: 21px">
+
+                <div class="dynamic dynamicb dynamice"><h2>新闻资讯</h2><span><a href="index/xwzx1.htm"><img src="img/w_more.png"></a></span></div>
+                <div class="infor_list infor_lista">
+                    <ul class="dynamic_list dynamic_listb dynamic_liste fr">
+<li><a href="info/1105/5685.htm"><span>05/14</span><em>北外专英大讲堂举办语言政策研究前沿讲座</em></a></li>
+<li><a href="info/1105/5695.htm"><span>04/24</span><em>专用英语学院教师党支部赴颐和园开展主...</em></a></li>
+<li><a href="info/1105/5705.htm"><span>04/23</span><em>“强国行”专项行动之人工智能教育应用...</em></a></li>
+<li><a href="info/1105/5735.htm"><span>04/02</span><em>专用英语学院举办 “AI工具在学术论文中...</em></a></li>
+<li><a href="info/1105/5745.htm"><span>03/27</span><em>专用英语学院教师党支部主题党日活动:在...</em></a></li>
+<li><a href="info/1105/5545.htm"><span>01/20</span><em>专用英语学院召开人才培养方案修订会</em></a></li>
+<li><a href="info/1105/5615.htm"><span>01/14</span><em>专用英语学院召开处级以上党员领导干部...</em></a></li>
+<li><a href="info/1105/5605.htm"><span>01/14</span><em>专用英语学院召开2024年秋季学期期末全...</em></a></li>
+
+                     </ul>
+                 </div>
+<script>_showDynClickBatch(['dynclicks_u8_5685','dynclicks_u8_5695','dynclicks_u8_5705','dynclicks_u8_5735','dynclicks_u8_5745','dynclicks_u8_5545','dynclicks_u8_5615','dynclicks_u8_5605'],[5685,5695,5705,5735,5745,5545,5615,5605],"wbnews", 1634189082)</script>
+
+</DIV>
+<DIV class="vsb-space new_inforBox new_inforBox1 new_inforBoxb fl" columns="4">
+<DIV class="dynamic dynamicd">
+<H2>工会活动</H2><SPAN><A href="xygk/ghhd.htm" target=""><IMG src="temp/more.png" oldsrc="temp/more.png"></A></SPAN></DIV>
+<DIV class="newBox">
+<DIV class="new_pic new_pica new_pica3">
+
+<div id="slideBox" class="slideBox slideBox6 slideBoxa">
+<div class="hd">						
+                                <ul>
+                                                              <li></li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                                
+                                </ul>
+                            </div>
+                            <div class="bd">
+                                <ul>
+                                    
+<li><a title="我院工会喜获学校工会工作“先进单位”和“先进个人”光荣称号" href="info/1141/4730.htm" target="_self"><img src="/__local/B/87/94/12961861892EDC771A6AB0B684C_20A1E135_1799C.jpg?e=.jpg"><p>我院工会喜获学校工会工作“先进单…</p></a></li>
+                                    
+<li><a title="我院师生积极参加学校第十四届“外研社杯”运动会" href="info/1141/4731.htm" target="_self"><img src="/__local/C/BA/24/4A91D432AA654E09DA35E476CB1_3881169E_3CEC.jpg?e=.jpg"><p>我院师生积极参加学校第十四届“外…</p></a></li>
+                                    
+<li><a title="专用英语学院工会成功组织秋游活动" href="info/1141/4732.htm" target="_self"><img src="/__local/B/A2/6E/0CBE9DF9D34F5F9274332CB2690_53E37CE4_5A5A.jpg?e=.jpg"><p>专用英语学院工会成功组织秋游活动</p></a></li>
+                                    
+<li><a title="我院师生积极参加学校春季运动会" href="info/1141/4733.htm" target="_self"><img src="/__local/D/E4/CF/0E51BE46AA04DF0576672DE86FD_7409BD57_623B.jpg?e=.jpg"><p>我院师生积极参加学校春季运动会</p></a></li>
+                                    
+</ul>
+                            </div>
+</div>
+                
+
+
+<script>_showDynClickBatch(['dynclicks_u9_4730','dynclicks_u9_4731','dynclicks_u9_4732','dynclicks_u9_4733'],[4730,4731,4732,4733],"wbnews", 1634189082)</script>
+
+</DIV>
+<DIV class="new_list new_lista new_lista2">
+
+<ul class="dynamic_list dynamic_lista fr">
+                             
+<li><a href="info/1141/4729.htm"><span>11/05</span><em>专用英语学院工会成功组织秋游活动</em></a></li>
+                             
+<li><a href="info/1141/4964.htm"><span>10/20</span><em>联系我们</em></a></li>
+                             
+<li><a href="info/1141/4730.htm"><span>09/27</span><em>我院工会喜获学校工会工作“先进单位”…</em></a></li>
+                             
+<li><a href="info/1141/4731.htm"><span>10/21</span><em>我院师生积极参加学校第十四届“外研社…</em></a></li>
+                             
+<li><a href="info/1141/4732.htm"><span>04/20</span><em>专用英语学院工会成功组织秋游活动</em></a></li>
+                             
+<li><a href="info/1141/4733.htm"><span>01/11</span><em>我院师生积极参加学校春季运动会</em></a></li>
+                             
+</ul>
+
+
+<script>_showDynClickBatch(['dynclicks_u10_4729','dynclicks_u10_4964','dynclicks_u10_4730','dynclicks_u10_4731','dynclicks_u10_4732','dynclicks_u10_4733'],[4729,4964,4730,4731,4732,4733],"wbnews", 1634189082)</script>
+
+</DIV></DIV></DIV></DIV>
+<DIV class="vsb-container container clearfix" containerid="2" columns="6">
+<DIV class="vsb-space content contentf" columns="6"><div class="link_one clearfix">
+            <dl>
+                <dt>快速导航</dt>
+<dd>
+    </dd>         
+            </dl>
+        </div>
+
+
+<div class="link_one link_onea">
+           <dl class="clearfix">
+                <dt>友情链接</dt>
+<dd>
+   </dd>
+            </dl>
+        </div>
+
+</DIV></DIV></DIV><!--foot-->
+<DIV class="footWrap"><div class="footDiv_one">
+		<div class="foot_one">
+			<p><p>Copyright @ BFSU. 北京外国语大学版权所有. 地址：北京市海淀区西三环北路2号/19号&nbsp;&nbsp;&nbsp; 邮编：100089&nbsp;&nbsp;Supported by BFSU ITC</p><img src="img/foot_icon.png"></p>
+		</div>
+	</div></DIV>
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/superslide.js"></script>
+<script type="text/javascript" src="js/jquery.Change.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".mainmenu dl").hide();
+        $("li.mainmenu").hover(function(){
+            $(this).find("dl").stop(true,true);
+            $(this).find("dl").slideDown();
+        },function(){
+            $(this).find("dl").stop(true,true);
+            $(this).find("dl").slideUp();
+        });
+    })
+</script>
+
+
+<script type="text/javascript">
+    $(function(){
+        $(".select").each(function(){
+            var s=$(this);
+            var z=parseInt(s.css("z-index"));
+            var dt=$(this).children("dt");
+            var dd=$(this).children("dd");
+            var _show=function(){dd.slideDown(200);dt.addClass("cur");s.css("z-index",z+1);};   //展开效果
+            var _hide=function(){dd.slideUp(200);dt.removeClass("cur");s.css("z-index",z);};    //关闭效果
+            dt.click(function(){dd.is(":hidden")?_show():_hide();});
+            dd.find("a").click(function(){dt.html($(this).html());_hide();});     //选择效果（如需要传值，可自定义参数，在此处返回对应的“value”值 ）
+            $("body").click(function(i){ !$(i.target).parents(".select").first().is(s) ? _hide():"";});
+        })
+    });
+</script><script type="text/javascript">
+    $(function () {
+    //切换对象为其他，这里为包含图片和标题的层
+        $('#change_32 div.changeDiv').soChange({//对象指向层，层内包含图片及标题
+            thumbObj:'#change_32 .ul_change_a2 span',
+            thumbNowClass:'on'//自定义导航对象当前class为on
+        });
+    });
+</script><script type="text/javascript">
+    $(".pic ul li").hover(function(){
+        $(this).stop(true).animate({width:"824px"},500).siblings().stop(true).animate({width:"50px"},500);
+    });
+</script>
+
+</BODY></HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

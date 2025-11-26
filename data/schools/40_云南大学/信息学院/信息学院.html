@@ -1,0 +1,1026 @@
+
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>云南大学信息学院</title>
+  <!-- 引入 Bootstrap CSS -->
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 图标库 -->
+  <link rel="stylesheet" href="/static/css/fontawesome/all.min.css">
+  <!-- 引入自定义样式文件 -->
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/frontend-image-styles.css">
+  <link rel="stylesheet" href="/static/css/image-quality.css">
+  <link rel="stylesheet" href="/static/css/swiper-bundle.min.css">
+  
+  <link rel="stylesheet" href="/static/css/secure-pdf-viewer.css">
+  <style>
+    :root {
+      --primary-red: #8B0000; /* 深红色 */
+      --light-red: #f9dada; /* 辅助浅红 */
+      --dark-red: #660000; /* 深色强调红 */
+    }
+    body {
+      background-color: var(--bs-body-bg);
+      color: var(--bs-body-color);
+    }
+    
+    /* 开发人员彩蛋样式 */
+    .developer-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+      animation: fadeIn 0.3s ease-in-out;
+    }
+    
+    .developer-modal-content {
+      background-color: #fff;
+      margin: 5% auto;
+      padding: 30px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 600px;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      animation: slideIn 0.3s ease-out;
+    }
+    
+    .developer-modal-header {
+      text-align: center;
+      margin-bottom: 25px;
+      border-bottom: 3px solid var(--primary-red);
+      padding-bottom: 15px;
+    }
+    
+    .developer-modal-title {
+      color: var(--primary-red);
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .developer-list {
+      margin: 20px 0;
+    }
+    
+    .developer-item {
+      display: flex;
+      align-items: center;
+      padding: 12px 15px;
+      margin: 10px 0;
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      border-radius: 10px;
+      border-left: 4px solid var(--primary-red);
+      transition: all 0.3s ease;
+    }
+    
+    .developer-item:hover {
+      transform: translateX(5px);
+      box-shadow: 0 5px 15px rgba(139, 0, 0, 0.2);
+    }
+    
+    .developer-role {
+      font-weight: bold;
+      color: var(--primary-red);
+      margin-right: 15px;
+      min-width: 80px;
+    }
+    
+    .developer-name {
+      color: #333;
+      font-size: 1.1rem;
+    }
+    
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #999;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    
+    .close-btn:hover {
+      color: var(--primary-red);
+    }
+    
+    .easter-egg-footer {
+      text-align: center;
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid #ddd;
+      color: #666;
+      font-style: italic;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes slideIn {
+      from { 
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+      }
+      to { 
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+    
+    /* LOGO点击动画效果 */
+    .logo-shake {
+      animation: shake 0.5s ease-in-out;
+    }
+    
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px) rotate(-1deg); }
+      75% { transform: translateX(5px) rotate(1deg); }
+    }
+  </style>
+  
+<style>
+  /* 页边栏样式 */
+  .sidebar {
+    border-left: 1px solid var(--border-color);
+    padding-left: 20px;
+    height: 100%;
+  }
+  
+  .sidebar h5 {
+    color: var(--primary-red);
+    border-bottom: 2px solid var(--primary-red);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+  }
+  
+  /* 面包屑导航样式 */
+  .breadcrumb-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .breadcrumb-nav li {
+    margin-bottom: 8px;
+  }
+  
+  .breadcrumb-nav a {
+    text-decoration: none;
+    color: var(--text-light);
+    display: block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+  
+  .breadcrumb-nav a:hover {
+    background-color: var(--bg-light);
+    color: var(--primary-red);
+  }
+  
+  .sidebar ul,
+  .sidebar ul ul,
+  .sidebar ul ul ul,
+  .sidebar ul ul ul ul,
+  .sidebar li {
+    list-style: none !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  .breadcrumb-nav {
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .breadcrumb-nav > li {
+    padding-left: 0.5em;
+  }
+
+  .breadcrumb-nav > li > ul {
+    padding-left: 1.5em;
+  }
+
+  .breadcrumb-nav > li > ul > li > ul {
+    padding-left: 1.5em;
+  }
+
+
+
+  /* 高亮不改变缩进 */
+  .breadcrumb-nav .current {
+    background-color: var(--primary-red);
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 2px 8px;
+    display: inline-block;
+  }
+  
+  /* 侧边栏折叠按钮样式 */
+  .sidebar-toggle-btn {
+    background: none;
+    border: none;
+    color: var(--primary-red);
+    font-size: 12px;
+    cursor: pointer;
+    padding: 2px 4px;
+    margin-right: 6px;
+    transition: transform 0.2s ease;
+    display: inline-block;
+    vertical-align: middle;
+    transform: rotate(0deg);
+  }
+  
+  .sidebar-toggle-btn:hover {
+    color: #d32f2f;
+  }
+  
+  .sidebar-toggle-btn.expanded {
+    transform: rotate(90deg);
+  }
+  
+  /* 一级和二级目录标题样式 */
+  .sidebar-level1-title,
+  .sidebar-level2-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  
+  .sidebar-level2 {
+    padding-left: 1.2em;
+    margin-top: 6px;
+  }
+  
+  .sidebar-level2-item {
+    margin-bottom: 4px;
+  }
+  
+  /* 目录标题样式 */
+  .directory-title {
+    font-weight: bold;
+    color: var(--primary-red);
+    display: block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: var(--bg-light);
+    margin-bottom: 5px;
+  }
+  
+  .sub-directory-title {
+    font-weight: bold;
+    color: var(--text-light);
+    display: block;
+    padding: 6px 12px;
+    margin-bottom: 3px;
+  }
+  
+  .placeholder {
+    color: var(--text-light);
+    display: block;
+    padding: 6px 12px;
+    font-style: italic;
+  }
+  
+  /* 子目录样式 */
+  .sub-directories {
+    list-style: none;
+    padding-left: 15px;
+    margin: 5px 0;
+  }
+  
+  .sub-sub-directories {
+    list-style: none;
+    padding-left: 15px;
+    margin: 3px 0;
+  }
+  
+  .sub-directories li,
+  .sub-sub-directories li {
+    margin-bottom: 3px;
+  }
+  
+  .sub-directories a,
+  .sub-sub-directories a {
+    padding: 4px 8px;
+    font-size: 0.9em;
+  }
+  
+  .sub-directories .current,
+  .sub-sub-directories .current {
+    background-color: var(--primary-red);
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .sidebar {
+      margin-top: 20px;
+      border-left: none;
+      border-top: 1px solid var(--border-color);
+    }
+  }
+
+.sidebar ul ul > li {
+  white-space: nowrap;
+}
+
+.sidebar ul ul > li > a,
+.sidebar ul ul > li > span.current {
+  display: inline;
+  vertical-align: middle;
+}
+
+/* 相关新闻列表样式 */
+.related-news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.related-news-list li {
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.related-news-list li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.related-news-link {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  display: block;
+  margin-bottom: 4px;
+  transition: color 0.3s;
+}
+
+.related-news-link:hover {
+  color: var(--primary-red);
+  text-decoration: none;
+}
+
+.related-news-date {
+  color: var(--text-light);
+  font-size: 0.8rem;
+}
+
+/* 当前新闻样式 */
+.current-news {
+  background-color: var(--primary-red);
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
+.current-news-title {
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.current-news .related-news-date {
+  color: rgba(255, 255, 255, 0.8);
+}
+</style>
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <!-- 统一的头部区域：包含header和导航栏 -->
+  <div class="unified-header">
+    <!-- 顶部区域：学院名称、Logo和搜索框 -->
+    <div class="top-header">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-md-8 col-lg-7">
+            <div class="d-flex align-items-center justify-content-center py-2">
+              <img src="/static/headLSize_770x120_4k.png" alt="云南大学信息学院" class="header-logo" id="logo-easter-egg" style="cursor: pointer;">
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-5">
+            <div class="search-container">
+              <!-- 桌面端完整搜索框 -->
+              <form class="search-form desktop-search" action="/search/" method="get">
+                <div class="input-group">
+                  <input type="search" name="q" class="form-control search-input" placeholder="搜索内容..." aria-label="Search">
+                  <button class="btn btn-search" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </form>
+              
+              <!-- 移动端折叠搜索框 -->
+              <div class="mobile-search-container">
+                <button class="mobile-search-toggle" type="button" aria-label="搜索">
+                  <i class="fas fa-search"></i>
+                </button>
+                <form class="search-form mobile-search" action="/search/" method="get" style="display: none;">
+                  <div class="input-group">
+                    <input type="search" name="q" class="form-control search-input" placeholder="搜索内容..." aria-label="Search">
+                    <button class="btn btn-search" type="submit">
+                      <i class="fas fa-search"></i>
+                    </button>
+                    <button class="btn btn-close-search" type="button" aria-label="关闭搜索">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="main-navbar navbar navbar-expand-xl">
+    <div class="container-fluid">
+      <!-- 汉堡菜单按钮（移动端显示） -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!-- 导航菜单内容 -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto">
+          
+            <li class="nav-item ">
+              
+                <a class="nav-link" href="/">首页</a>
+              
+            </li>
+          
+            <li class="nav-item dropdown">
+              
+                <a class="nav-link dropdown-toggle " href="/directory/2/"
+                   id="nav2" role="button" aria-expanded="false">
+                  学院简介
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="nav2">
+                  
+                    <li><a class="dropdown-item active" href="/directory/3/">学院概况</a></li>
+                  
+                    <li><a class="dropdown-item " href="/news-list/5/">历史沿革</a></li>
+                  
+                    <li><a class="dropdown-item " href="/directory/20/">现任领导</a></li>
+                  
+                    <li><a class="dropdown-item " href="/directory/21/">委员会</a></li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="nav-item dropdown">
+              
+                <a class="nav-link dropdown-toggle " href="/directory/4/"
+                   id="nav4" role="button" aria-expanded="false">
+                  机构设置
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="nav4">
+                  
+                    <li><a class="dropdown-item " href="/directory/24/">通信工程系</a></li>
+                  
+                    <li><a class="dropdown-item " href="/directory/26/">信息与电子工程系</a></li>
+                  
+                    <li><a class="dropdown-item " href="/directory/5/">计算机科学与工程系</a></li>
+                  
+                    <li><a class="dropdown-item " href="/directory/27/">智能科学与技术系</a></li>
+                  
+                    <li><a class="dropdown-item " href="/directory/73/">物联网工程系</a></li>
+                  
+                    <li><a class="dropdown-item " href="/directory/29/">实验中心</a></li>
+                  
+                    <li><a class="dropdown-item " href="/directory/28/">公共计算机教学部</a></li>
+                  
+                    <li><a class="dropdown-item " href="/directory/39/">云南省电子计算中心</a></li>
+                  
+                    <li><a class="dropdown-item " href="/directory/31/">服务部门</a></li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="nav-item dropdown">
+              
+                <a class="nav-link dropdown-toggle " href="/directory/13/"
+                   id="nav13" role="button" aria-expanded="false">
+                  师资队伍
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="nav13">
+                  
+                    <li><a class="dropdown-item " href="/directory/34/">教职工</a></li>
+                  
+                    <li><a class="dropdown-item " href="/directory/78/">退休教师</a></li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="nav-item dropdown">
+              
+                <a class="nav-link dropdown-toggle " href="/directory/11/"
+                   id="nav11" role="button" aria-expanded="false">
+                  党群工作
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="nav11">
+                  
+                    <li><a class="dropdown-item " href="/news-list/4/">党建工作</a></li>
+                  
+                    <li><a class="dropdown-item " href="/news-list/9/">学生工作</a></li>
+                  
+                    <li><a class="dropdown-item " href="/directory/43/">工会工作</a></li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="nav-item dropdown">
+              
+                <a class="nav-link dropdown-toggle " href="/directory/16/"
+                   id="nav16" role="button" aria-expanded="false">
+                  人才培养
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="nav16">
+                  
+                    <li><a class="dropdown-item " href="/directory/46/">本科生培养</a></li>
+                  
+                    <li><a class="dropdown-item " href="/directory/45/">硕士生培养</a></li>
+                  
+                    <li><a class="dropdown-item " href="/directory/44/">博士生培养</a></li>
+                  
+                    <li><a class="dropdown-item " href="/directory/47/">博士后培养</a></li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="nav-item dropdown">
+              
+                <a class="nav-link dropdown-toggle " href="/directory/6/"
+                   id="nav6" role="button" aria-expanded="false">
+                  科学研究
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="nav6">
+                  
+                    <li><a class="dropdown-item " href="/news-list/10/">科研动态</a></li>
+                  
+                    <li><a class="dropdown-item " href="/directory/48/">科研平台</a></li>
+                  
+                    <li><a class="dropdown-item " href="/directory/7/">科研方向</a></li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="nav-item dropdown">
+              
+                <a class="nav-link dropdown-toggle " href="/directory/9/"
+                   id="nav9" role="button" aria-expanded="false">
+                  教务教学
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="nav9">
+                  
+                    <li><a class="dropdown-item " href="/news-list/11/">教务动态</a></li>
+                  
+                    <li><a class="dropdown-item " href="/news-list/1/">本科生</a></li>
+                  
+                    <li><a class="dropdown-item " href="/news-list/12/">研究生</a></li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="nav-item dropdown">
+              
+                <a class="nav-link dropdown-toggle " href="/directory/74/"
+                   id="nav74" role="button" aria-expanded="false">
+                  学科竞赛
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="nav74">
+                  
+                    <li><a class="dropdown-item " href="/directory/75/">竞赛概况</a></li>
+                  
+                    <li><a class="dropdown-item " href="/directory/76/">竞赛通知</a></li>
+                  
+                    <li><a class="dropdown-item " href="/directory/77/">竞赛动态</a></li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="nav-item dropdown">
+              
+                <a class="nav-link dropdown-toggle " href="/directory/17/"
+                   id="nav17" role="button" aria-expanded="false">
+                  招生招聘
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="nav17">
+                  
+                    <li><a class="dropdown-item " href="/news-list/7/">招生信息</a></li>
+                  
+                    <li><a class="dropdown-item " href="/news-list/8/">招聘信息</a></li>
+                  
+                </ul>
+              
+            </li>
+          
+            <li class="nav-item dropdown">
+              
+                <a class="nav-link dropdown-toggle " href="/directory/18/"
+                   id="nav18" role="button" aria-expanded="false">
+                  院友工作
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="nav18">
+                  
+                    <li><a class="dropdown-item " href="/directory/59/">发展基金</a></li>
+                  
+                    <li><a class="dropdown-item " href="/directory/58/">校友会信息学院分会</a></li>
+                  
+                </ul>
+              
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </div>
+
+  <!-- 主体内容：继承模板后填充 -->
+  <main class="flex-grow-1">
+    
+<div class="page-content">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- 主要内容区域 -->
+      <div class="col-lg-9">
+        
+<div class="content-container">
+  <h1>
+    
+      学院概况
+    
+  </h1>
+  <hr>
+  <div class="content-body">
+    
+      <p style="margin-left:0px;text-align:justify;">云南大学信息学院是在整合原有的计算机科学系、信息与电子科学系和云南大学计算中心的基础上于1998年4月组建成立，2015年12月云南省电子计算中心并入，2025年9月成立云南大学低空技术研究院。学院成为云南大学规模最大的工科学院，现有全日制本科生近1400名，研究生1000余名，留学生13名。现有教职工135人，其中，教授26人、副高（含高级工程师、高级实验师、副研究员）52人，具有博士学位的教师80余人，博士生导师30人；入选中国科协“青年人才托举工程”1人，爱思唯尔中国高被引学者1人；各级各类人才近50人，其中云南省“兴滇英才支持计划”各类人才30余人（其中“云岭学者”专项3人、“产业创新人才”专项3人、“教学名师”专项2人），云南省中青年学术和技术带头人及后备人才15人，云南省有突出贡献优秀专业技术人才2人、享受国务院政府特殊津贴1人。</p><p style="margin-left:0px;text-align:justify;">学院坚持理工结合，优化专业结构，打造品牌专业，设有计算机科学与技术（国家级特色专业、国家级一流本科专业）、通信工程（国家级一流本科专业）、电子信息工程（国家级一流本科专业）、物联网工程（国家级一流本科专业）、智能科学与技术（省级一流本科专业）五个本科专业，低空通信技术微专业；拥有计算机科学与技术（ESI前1%学科、第四轮和第五轮学科评估结果B-、省级一流学科）、信息与通信工程两个一级学科博士学位授权点和国家级博士后科研流动站，以及低空技术与工程二级学科博士学位授权点，计算机科学与技术、信息与通信工程、生物医学工程、控制科学与工程四个一级学科学术型硕士学位授权点，还拥有电子信息专业型硕士学位授权点。拥有电子信息技术国家级实验教学示范中心、云南省智能系统与计算重点实验室、云南省云无线接入与异构网络工程实验室、云南大学空间大数据挖掘与决策支持省创新团队等10余个学科专业平台。</p><p style="margin-left:0px;text-align:justify;">多年来形成了大数据与知识工程、多媒体信息处理与视觉计算、分布式计算与云计算、模式识别与智能信息处理、生物医学工程与高原病诊断、无线接入网络阐述与器件、边疆无线电频谱检测等特色优势学科方向。近五年主持、完成国家级/省部级及企业委托项目200余项，科研规模达到8000余万元。其中，国家自然科学基金60余项，经费2000余万元；省部级项目30余项，横向开发项目120余项，经费3200余万元；获教育部自然科学奖、吴文俊人工智能奖、云南省自然科学奖、云南省青年科技奖、中国自动化学会自然科学奖10余项，发表学术论文600余篇，获国家发明专利100余项，出版专著30余部。成果得到了广泛应用，取得了较好的经济效益和社会效益，为服务云南地方经济发展和高水平人才培养做出了重要的贡献。</p><p style="margin-left:0px;text-align:justify;">与华为、腾讯、百度、中兴、西门子、云南天文台、云南移动等单位，建立了多个联合实验室及校内外实习基地。依托教育部新工科研究与实践项目、教育部产学协同育人项目等课题，积极推进新工科专业建设和升级改造，建立了信息技术领域卓越人才培养体系和产教融合协同育人机制，出版教材20余部，建成国家级、省级精品课程和一流课程10余门。本科和研究生生源质量和就业率名列前茅，参加“互联网+”、挑战杯和数学建模等竞赛，获CSP西南赛区冠军、各类奖项70余项。</p><p style="margin-left:0px;text-align:justify;">拥有云南大学电子信息技术实验教学中心(以下简称“实验中心”)，是云南大学较早建设的实验室，其前身分别是始建于1953年的无线电专业实验室和始建于1971年的计算机实验室。1990年实验室被国家教委评为全国实验室“先进集体”，1996、1997年有4个实验室通过省教育厅第一批和第二批“双基”实验室评估，获得了“云南省合格实验室”称号。2004年，“云南大学电子信息技术实验教学中心”成立。2007年，评为云南省实验教学示范中心，2015年在实验中心的基础上，经云南省教育厅批准成立了“电子信息技术虚拟仿真实验教学中心”。2015年“电子信息技术实验教学中心”被评为国家级实验教学示范中心。</p>
+       
+  </div>
+</div>
+
+
+
+
+
+      </div>
+      
+      <!-- 页边栏 -->
+      <div class="col-lg-3">
+        <div class="sidebar">
+          
+            <h5>学院简介</h5>
+            <ul class="breadcrumb-nav">
+              
+                <li class="sidebar-level1">
+                  <div class="sidebar-level1-title">
+                    
+                    
+                    
+                      <span class="current">学院概况</span>
+                    
+                  </div>
+                  
+                </li>
+              
+                <li class="sidebar-level1">
+                  <div class="sidebar-level1-title">
+                    
+                    
+                    
+                      
+                        <a href="/news-list/5/">历史沿革</a>
+                      
+                    
+                  </div>
+                  
+                </li>
+              
+                <li class="sidebar-level1">
+                  <div class="sidebar-level1-title">
+                    
+                    
+                    
+                      
+                        <a href="/directory/20/">现任领导</a>
+                      
+                    
+                  </div>
+                  
+                </li>
+              
+                <li class="sidebar-level1">
+                  <div class="sidebar-level1-title">
+                    
+                    
+                      <button class="sidebar-toggle-btn" aria-label="展开/折叠" data-toggle-target="sidebar-sub-21">▶</button>
+                    
+                    
+                      
+                        <a href="/directory/21/">委员会</a>
+                      
+                    
+                  </div>
+                  
+                    <ul id="sidebar-sub-21" class="sidebar-level2" style="display: none;">
+                      
+                        <li class="sidebar-level2-item">
+                          <div class="sidebar-level2-title">
+                            
+                            
+                              
+                                <a href="/directory/22/">中共云南大学信息学院委员会</a>
+                              
+                            
+                          </div>
+                          
+                        </li>
+                      
+                        <li class="sidebar-level2-item">
+                          <div class="sidebar-level2-title">
+                            
+                            
+                              
+                                <a href="/directory/72/">学术委员会</a>
+                              
+                            
+                          </div>
+                          
+                        </li>
+                      
+                        <li class="sidebar-level2-item">
+                          <div class="sidebar-level2-title">
+                            
+                            
+                              
+                                <a href="/directory/23/">学位评定分委员会</a>
+                              
+                            
+                          </div>
+                          
+                        </li>
+                      
+                    </ul>
+                  
+                </li>
+              
+            </ul>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 侧边栏折叠/展开功能 -->
+<script>
+(function() {
+  function initSidebar() {
+    const buttons = document.querySelectorAll('.sidebar-toggle-btn');
+    
+    buttons.forEach(function(btn) {
+      // 移除可能的事件监听器
+      btn.onclick = null;
+      
+      // 延迟绑定，确保在其他脚本之后执行
+      setTimeout(function() {
+        btn.onclick = function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          const targetId = btn.getAttribute('data-toggle-target');
+          const target = document.getElementById(targetId);
+          
+          if (target) {
+            const isHidden = target.style.display === 'none' || window.getComputedStyle(target).display === 'none';
+            
+            if (isHidden) {
+              target.style.display = 'block';
+              target.style.visibility = 'visible';
+              btn.classList.add('expanded');
+            } else {
+              target.style.display = 'none';
+              btn.classList.remove('expanded');
+            }
+          } else {
+            // 仅切换按钮状态（用于二级目录有三级目录但不渲染三级目录的情况）
+            btn.classList.toggle('expanded');
+          }
+        };
+      }, 100);
+    });
+    
+    // 自动展开当前目录所在的层级
+    const current = document.querySelector('.sidebar .current');
+    if (current) {
+      const level2 = current.closest('.sidebar-level2');
+      if (level2) {
+        level2.style.display = 'block';
+        const toggleBtn = document.querySelector('[data-toggle-target="' + level2.id + '"]');
+        if (toggleBtn) {
+          toggleBtn.classList.add('expanded');
+        }
+      }
+    }
+  }
+  
+  // 初始化
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSidebar);
+  } else {
+    initSidebar();
+  }
+})();
+</script>
+
+
+  </main>
+
+  <!-- 页面Footer（非首页显示） -->
+  
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- 左侧：图片 -->
+        <div class="col-md-3 col-12 text-center mb-3 mb-md-0">
+          <img src="/static/headSSize_450x45_1.4k.png" alt="云南大学信息学院" style="max-width: 100%; height: auto; max-height: 45px;">
+        </div>
+        
+        <!-- 中间：联系信息和版权 -->
+        <div class="col-md-6 col-12 text-center mb-3 mb-md-0">
+          <!-- 联系我们链接 -->
+          
+          <div class="mb-3">
+            <a href="/page/16/" class="contact-button" style="color: #fff; font-weight: 500; text-decoration: underline; display: inline-flex; align-items: center; justify-content: center;">
+              <i class="fas fa-envelope" style="margin-right: 0.4em;"></i>联系我们
+            </a>
+          </div>
+          
+          
+          <!-- 地址 -->
+          <div class="mb-2" style="font-size: 0.9rem;">
+            <p style="margin-bottom: 0.5rem;">地址：云南省昆明市呈贡区大学城东外环南路云南大学呈贡校区信息学院 650500</p>
+          </div>
+          
+          <!-- 版权所有 -->
+          <div style="font-size: 0.85rem; opacity: 0.9;">
+            © 2025 云南大学信息学院
+          </div>
+        </div>
+        
+        <!-- 右侧：二维码 -->
+        <div class="col-md-3 col-12 text-center">
+          <div class="qr-section">
+            <div class="qr-code" style="background: #fff; border-radius: 8px; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: none; padding: 0; margin: 0 auto;">
+              <img src="/media/qr_code/qrcode.jpg" alt="扫码关注" class="qr-img" style="width: 100%; height: 100%; border-radius: 8px; background: transparent; box-shadow: none; padding: 0;">
+            </div>
+            <div class="qr-label" style="margin-top: 4px; margin-bottom: 0; font-size: 0.95rem; font-weight: 500; color: #fff; white-space: nowrap; text-align: center;">关注我们</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+  <!-- 开发人员彩蛋模态框 -->
+  <div id="developer-modal" class="developer-modal">
+    <div class="developer-modal-content">
+      <span class="close-btn" id="close-developer-modal">&times;</span>
+      <div class="developer-modal-header">
+        <h2 class="developer-modal-title">
+          <i class="fas fa-code"></i>
+          开发团队
+        </h2>
+      </div>
+      <div class="developer-list">
+        <div class="developer-item">
+          <span class="developer-role">🎯 项目经理</span>
+          <span class="developer-name">云大信息学院开发团队</span>
+        </div>
+        <div class="developer-item">
+          <span class="developer-role">💻 前端工程师</span>
+          <span class="developer-name">Django Template Expert</span>
+        </div>
+        <div class="developer-item">
+          <span class="developer-role">⚙️ 后端工程师</span>
+          <span class="developer-name">Python Django Master</span>
+        </div>
+        <div class="developer-item">
+          <span class="developer-role">🎨 UI/UX设计师</span>
+          <span class="developer-name">Bootstrap Wizard</span>
+        </div>
+        <div class="developer-item">
+          <span class="developer-role">🔧 系统管理员</span>
+          <span class="developer-name">DevOps Specialist</span>
+        </div>
+        <div class="developer-item">
+          <span class="developer-role">🧪 测试工程师</span>
+          <span class="developer-name">Quality Assurance Team</span>
+        </div>
+      </div>
+      <div class="easter-egg-footer">
+        🎉 恭喜你发现了这个隐藏彩蛋！<br>
+        💡 小贴士：试试按键盘上的 ↑↑↓↓←→←→，还有惊喜哦~
+      </div>
+    </div>
+  </div>
+
+  <!-- 引入 Bootstrap JavaScript -->
+  <script src="/static/js/bootstrap.bundle.min.js"></script>
+  <!-- 引入固定导航栏脚本 -->
+  <script src="/static/js/sticky-navbar.js"></script>
+  <!-- 引入鼠标悬停下拉菜单脚本 -->
+  <script src="/static/js/hover-dropdown.js"></script>
+  <script src="/static/js/swiper-bundle.min.js"></script>
+  <script src="/static/js/directory-admin.js"></script>
+  <!-- 引入PDF响应式脚本 -->
+  
+  <!-- 引入LOGO彩蛋脚本 -->
+  <script src="/static/js/logo-easter-egg.js"></script>
+  
+  <!-- 移动端搜索框切换脚本 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileSearchToggle = document.querySelector('.mobile-search-toggle');
+      const mobileSearchForm = document.querySelector('.mobile-search');
+      const closeSearchBtn = document.querySelector('.btn-close-search');
+      
+      if (mobileSearchToggle && mobileSearchForm) {
+        // 点击搜索图标展开搜索框
+        mobileSearchToggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          mobileSearchForm.style.display = 'block';
+          const searchInput = mobileSearchForm.querySelector('.search-input');
+          if (searchInput) {
+            searchInput.focus();
+          }
+        });
+        
+        // 点击关闭按钮收起搜索框
+        if (closeSearchBtn) {
+          closeSearchBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            mobileSearchForm.style.display = 'none';
+          });
+        }
+        
+        // 点击页面其他地方收起搜索框
+        document.addEventListener('click', function(e) {
+          const mobileSearchContainer = document.querySelector('.mobile-search-container');
+          if (mobileSearchContainer && !mobileSearchContainer.contains(e.target)) {
+            mobileSearchForm.style.display = 'none';
+          }
+        });
+        
+        // ESC键收起搜索框
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && mobileSearchForm.style.display === 'block') {
+            mobileSearchForm.style.display = 'none';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

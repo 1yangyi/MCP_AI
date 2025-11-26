@@ -1,0 +1,967 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>学院简介-厦门大学国际中文教育学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<META Name="keywords" Content="厦门大学国际中文教育学院,学院简介" />
+
+    <link rel="stylesheet" href="../style/public.css">
+    <link rel="stylesheet" href="../style/ny.css">
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778465750545742000400024e5c -->
+<link rel="stylesheet" type="text/css" href="../jjy.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1003,'/jjy.jsp',-1,1933934427)</script>
+</head>
+
+<body>
+        <!-- 头部 -->
+    <div class="head pc">
+        <div class="h-top">
+            <div class="px1400">
+                <div class="logo">
+<a href="../index.htm">
+                        <img src="../images/logo.png" alt="">
+                    </a></div>
+                <div class="h-right">
+                   <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>
+<a href="https://oec.xmu.edu.cn/en/" class="en" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1933934427, 87418)">English</a>
+
+
+                    <div class="ser"><!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+        
+        <input type="text" placeholder="请输入关键词搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+       <a href="" class="ser-img" v-on:click="onSubmit()"></a>
+        
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1933934427";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu2 = document.querySelector("#appu2");
+   if (appElementu2 && appElementu2.__vue__) {
+
+   } else {
+      $("#divu2").html($("#htmlu2").text());
+      var appOwner = "1933934427";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou2 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu2(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu2();
+        }
+      };
+
+      function onSubmitu2(e) {
+        queryInfou2.query.keyWord= $("#appu2  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou2.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="nav-box">
+            <div class="px1600">
+                <div class="nav"><ul>
+<li>
+                            <a href="../index.htm">首页</a>
+                        </li>
+<li class="active">
+                            <a href="xyjj.htm">学院概况</a>
+                            <div>
+                                <ul>
+                                    <li><a href="xyjj.htm">学院简介</a></li>
+                                    <li><a href="xyld.htm">学院领导</a></li>
+                                    <li><a href="jgsz.htm">机构设置</a></li>
+                                    <li><a href="lxfs.htm">联系方式</a></li>
+                                    <li><a href="sddt.htm">厦大地图</a></li>
+                                </ul>
+                            </div>
+                        </li>
+<li>
+                            <a href="../szdw/szjj.htm">师资队伍</a>
+                            <div>
+                                <ul>
+                                    <li><a href="../szdw/szjj.htm">师资简介</a></li>
+                                    <li><a href="../szdw/szdw/js.htm">师资队伍</a></li>
+                                </ul>
+                            </div>
+                        </li>
+<li>
+                            <a href="../lhlx/tzgg.htm">来华留学</a>
+                            <div>
+                                <ul>
+                                    <li><a href="../lhlx/tzgg.htm">通知公告</a></li>
+                                    <li><a href="https://mcc.xmu.edu.cn/register_step0.aspx">在线报名</a></li>
+                                    <li><a href="../lhlx/zsxm.htm">招生项目</a></li>
+                                    <li><a href="../lhlx/sfbz.htm">收费标准</a></li>
+                                    <li><a href="../lhlx/zsxx.htm">住宿信息</a></li>
+                                    <li><a href="../lhlx/sqbz.htm">申请步骤</a></li>
+                                    <li><a href="../lhlx/sqclxz.htm">申请材料下载</a></li>
+                                    <li><a href="../lhlx/lxfs.htm">联系方式</a></li>
+                                </ul>
+                            </div>
+                        </li>
+<li>
+                            <a href="https://oecc.xmu.edu.cn/oversea-auth/auth.action">远程教育</a>
+                            <div>
+                                <ul>
+                                    <li><a href="../ycjy/zsjz.htm">招生简章</a></li>
+                                    <li><a href="https://oecc.xmu.edu.cn/oversea-auth/auth.action">在线报名</a></li>
+                                    <li><a href="https://oecc.xmu.edu.cn/oversea-auth/auth.action">学习中心</a></li>
+                                </ul>
+                            </div>
+                        </li>
+<li>
+                            <a href="../lkzs/lkbjj.htm">联考招生</a>
+                            <div>
+                                <ul>
+                                    <li><a href="../lkzs/lkbjj.htm">联考班简介</a></li>
+                                    <li><a href="../lkzs/lkzx.htm">联考资讯</a></li>
+                                    <li><a href="../lkzs/lxysh.htm">校园生活</a></li>
+                                    <li><a href="https://mcc.xmu.edu.cn/register_step0.aspx">在线报名</a></li>
+                                </ul>
+                            </div>
+                        </li>
+<li>
+                            <a href="../jxky/bkspy/tzgg.htm">教学科研</a>
+                            <div>
+                                <ul>
+                                    <li><a href="../jxky/bkspy/tzgg.htm">本科生培养</a></li>
+                                    <li><a href="../jxky/yjspy/pyfa.htm">研究生培养</a></li>
+                                    <li><a href="../jxky/xsyd.htm">学生园地</a></li>
+                                    <li><a href="https://oec.xmu.edu.cn/english/">前沿资讯</a></li>
+                                </ul>
+                            </div>
+                        </li>
+<li>
+                            <a href="../xsgz/xsfc.htm">学生工作</a>
+                            <div>
+                                <ul>
+                                    <li><a href="../xsgz/xsfc.htm">学生风采</a></li>
+                                </ul>
+                            </div>
+                        </li>
+<li>
+                            <a href="../yhzx/zxjj.htm">语合中心</a>
+                            <div>
+                                <ul>
+                                    <li><a href="../yhzx/zxjj.htm">中心简介</a></li>
+                                    <li><a href="../yhzx/kzxy_yywhzx1/kzxy.htm">孔子学院 /语言文化中心</a></li>
+                                    <li><a href="../yhzx/pxxm.htm">培训项目</a></li>
+                                    <li><a href="../yhzx/zwjsxm2.htm">中文教师项目</a></li>
+                                    <li><a href="../yhzx/zyzxm1.htm">志愿者项目</a></li>
+                                    <li><a href="../yhzx/jxjxm.htm">奖学金项目</a></li>
+                                    <li><a href="https://clec.xmu.edu.cn/">信息平台</a></li>
+                                </ul>
+                            </div>
+                        </li>
+<li>
+                            <a href="../dqgz/gzdt.htm">党建思政</a>
+                            <div>
+                                <ul>
+                                    <li><a href="../dqgz/gzdt.htm">工作动态</a></li>
+                                    <li><a href="../dqgz/zbfc.htm">支部风采</a></li>
+                                    <li><a href="../dqgz/ghfwh.htm">工会妇委会</a></li>
+                                </ul>
+                            </div>
+                        </li>
+<li>
+                            <a href="../xzzx/cywjxz.htm">下载中心</a>
+                            <div>
+                                <ul>
+                                    <li><a href="../xzzx/cywjxz.htm">常用文件下载</a></li>
+                                    <li><a href="../xzzx/bkjxzq.htm">本科教学专区</a></li>
+                                    <li><a href="../xzzx/yjjxzq.htm">研究教学专区</a></li>
+                                </ul>
+                            </div>
+                        </li>
+<li>
+                            <a href="<span style='color:red;font-size:9pt'>转换链接错误</span>">校友园地</a>
+                            <div>
+                                <ul>
+                                    <li><a href="../xyyd/xyfc.htm">校友风采</a></li>
+                                    <li><a href="../xyyd/byhy.htm">毕业合影</a></li>
+                                    <li><a href="../xyyd/xyjz.htm">校友捐赠</a></li>
+                                    <li><a href="../xyyd/xyfw.htm">校友服务</a></li>
+                                    <li><a href="../xyyd/jzjs.htm">捐赠计算</a></li>
+                                </ul>
+                            </div>
+                        </li>
+<li>
+                            <a href="https://mcc.xmu.edu.cn/">Login</a>
+                        </li>
+ <div class="clear"></div>
+                    </ul></div>
+            </div>
+        </div>
+    </div>
+    <!-- banner -->
+    <div class="banner"></div>
+
+    <!-- 移动端导航 -->
+    <div class="m-index">
+        <div class="top">
+            <div class="wap wap-menu">
+                <img src="../images/menu.png" class="menu" alt="">
+                <img src="../images/close.png" class="close-menu" alt="">
+            </div>
+        </div>
+        <div class="wap m-head">
+            <div class="m-logo">    
+    
+<a href="../index.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1933934427, 76200)"><img src="../images/logo.png" alt=""></a>
+
+</div>
+            <div class="m-nav">
+                <div class="m-search"><!-- 3.1.3版本 -->
+
+
+
+<style>
+    #appu6 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu6 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu6"></div>
+<script type="text/html" id="htmlu6">
+    <div id="appu6">
+        <div v-if="!isError">
+        
+        <input type="text" placeholder="请输入内容" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                    <input type="image" src="../images/m-search.png" v-on:click="onSubmit()">
+        
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu6").html($("#htmlu6").text());
+</script>
+<script>
+    var appOwner = "1933934427";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu6",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultmobile/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu6 = document.querySelector("#appu6");
+   if (appElementu6 && appElementu6.__vue__) {
+
+   } else {
+      $("#divu6").html($("#htmlu6").text());
+      var appOwner = "1933934427";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou6 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu6(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu6();
+        }
+      };
+
+      function onSubmitu6(e) {
+        queryInfou6.query.keyWord= $("#appu6  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultmobile/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou6.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script></div>
+                <ul class=""><li>
+                        <a href="../index.htm">首页</a>
+                    </li>
+<li class="active">
+                        <a href="xyjj.htm">学院概况</a>
+                        <span></span>
+                        <ul>
+
+                            <li><a href="xyjj.htm">学院简介</a></li>
+                      
+
+                            <li><a href="xyld.htm">学院领导</a></li>
+                      
+
+                            <li><a href="jgsz.htm">机构设置</a></li>
+                      
+
+                            <li><a href="lxfs.htm">联系方式</a></li>
+                      
+
+                            <li><a href="sddt.htm">厦大地图</a></li>
+                      
+                            
+                        </ul>
+                    </li>
+<li>
+                        <a href="../szdw/szjj.htm">师资队伍</a>
+                        <span></span>
+                        <ul>
+
+                            <li><a href="../szdw/szjj.htm">师资简介</a></li>
+                      
+
+                            <li><a href="../szdw/szdw/js.htm">师资队伍</a></li>
+                      
+                            
+                        </ul>
+                    </li>
+<li>
+                        <a href="../lhlx/tzgg.htm">来华留学</a>
+                        <span></span>
+                        <ul>
+
+                            <li><a href="../lhlx/tzgg.htm">通知公告</a></li>
+                      
+
+                            <li><a href="https://mcc.xmu.edu.cn/register_step0.aspx">在线报名</a></li>
+                      
+
+                            <li><a href="../lhlx/zsxm.htm">招生项目</a></li>
+                      
+
+                            <li><a href="../lhlx/sfbz.htm">收费标准</a></li>
+                      
+
+                            <li><a href="../lhlx/zsxx.htm">住宿信息</a></li>
+                      
+
+                            <li><a href="../lhlx/sqbz.htm">申请步骤</a></li>
+                      
+
+                            <li><a href="../lhlx/sqclxz.htm">申请材料下载</a></li>
+                      
+
+                            <li><a href="../lhlx/lxfs.htm">联系方式</a></li>
+                      
+                            
+                        </ul>
+                    </li>
+<li>
+                        <a href="https://oecc.xmu.edu.cn/oversea-auth/auth.action">远程教育</a>
+                        <span></span>
+                        <ul>
+
+                            <li><a href="../ycjy/zsjz.htm">招生简章</a></li>
+                      
+
+                            <li><a href="https://oecc.xmu.edu.cn/oversea-auth/auth.action">在线报名</a></li>
+                      
+
+                            <li><a href="https://oecc.xmu.edu.cn/oversea-auth/auth.action">学习中心</a></li>
+                      
+                            
+                        </ul>
+                    </li>
+<li>
+                        <a href="../lkzs/lkbjj.htm">联考招生</a>
+                        <span></span>
+                        <ul>
+
+                            <li><a href="../lkzs/lkbjj.htm">联考班简介</a></li>
+                      
+
+                            <li><a href="../lkzs/lkzx.htm">联考资讯</a></li>
+                      
+
+                            <li><a href="../lkzs/lxysh.htm">校园生活</a></li>
+                      
+
+                            <li><a href="https://mcc.xmu.edu.cn/register_step0.aspx">在线报名</a></li>
+                      
+                            
+                        </ul>
+                    </li>
+<li>
+                        <a href="../jxky/bkspy/tzgg.htm">教学科研</a>
+                        <span></span>
+                        <ul>
+
+                            <li><a href="../jxky/bkspy/tzgg.htm">本科生培养</a></li>
+                      
+
+                            <li><a href="../jxky/yjspy/pyfa.htm">研究生培养</a></li>
+                      
+
+                            <li><a href="../jxky/xsyd.htm">学生园地</a></li>
+                      
+
+                            <li><a href="https://oec.xmu.edu.cn/english/">前沿资讯</a></li>
+                      
+                            
+                        </ul>
+                    </li>
+<li>
+                        <a href="../xsgz/xsfc.htm">学生工作</a>
+                        <span></span>
+                        <ul>
+
+                            <li><a href="../xsgz/xsfc.htm">学生风采</a></li>
+                      
+                            
+                        </ul>
+                    </li>
+<li>
+                        <a href="../yhzx/zxjj.htm">语合中心</a>
+                        <span></span>
+                        <ul>
+
+                            <li><a href="../yhzx/zxjj.htm">中心简介</a></li>
+                      
+
+                            <li><a href="../yhzx/kzxy_yywhzx1/kzxy.htm">孔子学院 /语言文化中心</a></li>
+                      
+
+                            <li><a href="../yhzx/pxxm.htm">培训项目</a></li>
+                      
+
+                            <li><a href="../yhzx/zwjsxm2.htm">中文教师项目</a></li>
+                      
+
+                            <li><a href="../yhzx/zyzxm1.htm">志愿者项目</a></li>
+                      
+
+                            <li><a href="../yhzx/jxjxm.htm">奖学金项目</a></li>
+                      
+
+                            <li><a href="https://clec.xmu.edu.cn/">信息平台</a></li>
+                      
+                            
+                        </ul>
+                    </li>
+<li>
+                        <a href="../dqgz/gzdt.htm">党建思政</a>
+                        <span></span>
+                        <ul>
+
+                            <li><a href="../dqgz/gzdt.htm">工作动态</a></li>
+                      
+
+                            <li><a href="../dqgz/zbfc.htm">支部风采</a></li>
+                      
+
+                            <li><a href="../dqgz/ghfwh.htm">工会妇委会</a></li>
+                      
+                            
+                        </ul>
+                    </li>
+<li>
+                        <a href="../xzzx/cywjxz.htm">下载中心</a>
+                        <span></span>
+                        <ul>
+
+                            <li><a href="../xzzx/cywjxz.htm">常用文件下载</a></li>
+                      
+
+                            <li><a href="../xzzx/bkjxzq.htm">本科教学专区</a></li>
+                      
+
+                            <li><a href="../xzzx/yjjxzq.htm">研究教学专区</a></li>
+                      
+                            
+                        </ul>
+                    </li>
+<li>
+                        <a href="<span style='color:red;font-size:9pt'>转换链接错误</span>">校友园地</a>
+                        <span></span>
+                        <ul>
+
+                            <li><a href="../xyyd/xyfc.htm">校友风采</a></li>
+                      
+
+                            <li><a href="../xyyd/byhy.htm">毕业合影</a></li>
+                      
+
+                            <li><a href="../xyyd/xyjz.htm">校友捐赠</a></li>
+                      
+
+                            <li><a href="../xyyd/xyfw.htm">校友服务</a></li>
+                      
+
+                            <li><a href="../xyyd/jzjs.htm">捐赠计算</a></li>
+                      
+                            
+                        </ul>
+                    </li>
+<li>
+                        <a href="https://mcc.xmu.edu.cn/">Login</a>
+                    </li>
+
+
+
+
+
+
+
+<li><a href="https://oec.xmu.edu.cn/en/">English</a></li></ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="nymain">
+        <div class="px1400">
+            <div class="channl-menu leftNav">
+                <h2>
+<b>学院概况</b><span></span></h2>
+                <ul>  <li class="active  on">
+                        <a href="xyjj.htm">学院简介</a>
+                    </li>
+  <li>
+                        <a href="xyld.htm">学院领导</a>
+                    </li>
+  <li>
+                        <a href="jgsz.htm">机构设置</a>
+                    </li>
+  <li>
+                        <a href="lxfs.htm">联系方式</a>
+                    </li>
+  <li>
+                        <a href="sddt.htm">厦大地图</a>
+                    </li>
+</ul>
+            </div>
+            <div class="ny-right">
+                <div class="position d">
+                    <div class="">
+                        <h3>
+学院简介</h3>
+                       <span>当前位置：</span>
+                        <a href="../index.htm">首页</a>
+              <span>-></span>
+                <a href="xyjj.htm">学院概况</a>
+              <span>-></span>
+                <a href="xyjj.htm">学院简介</a>
+
+                    </div>
+                </div>
+                <div class="art-main">
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1933934427,'wbnews','u12')</script>
+<script>function seeContenta12(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta12('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1933934427,1001)</script>
+<div class="art-tit cont-tit d">
+                        <h3>学院简介</h3></div>
+                         <div class="art-body d">
+    <div id="vsb_content_1001_u121"><div id="vsb_content"><p>厦门大学国际中文教育学院/海外教育学院创建于1956年，历经华侨函授部、海外函授部、海外函授学院、海外教育学院、海外教育学院与国际学院合署等不同时期。2020年10月，为积极把握国际中文教育的新机遇，海外教育学院与汉语国际推广南方基地/孔子学院办公室合并，学院更名为国际中文教育学院/海外教育学院。</p><p><br></p><p>经过近70年的发展，学院已经形成了汉语国际教育与文化传播并重、学历教育与非学历教育兼备、面授教学与远程教育并举、理论研究与应用开发并行的特色，同时承担我校14所孔子学院和1个中国语言文化研究中心的管理与发展工作。学院现设有华文系、中外语言交流合作中心、汉语国际推广南方基地、台港澳学生先修部等机构，是汉语水平考试、国际中文教师证书考试考点。</p><p><br></p><p>学院有一支学科结构完备、专业素质过硬的教师队伍。现有专任教师66人，其中副教授以上24人，教师均有在国外留学进修或从事汉语教学、师资培训工作的经历。通过高质量、高水平的师资培养，学院全方位推进学科发展、教学科研和社会服务。</p><p><br></p><p>学院立足于建设高水平人才培养体系，包括语言学及应用语言学学术型硕士、国际中文教育专业硕士、汉语言留学生本科，培养具有高水平人文素养、跨文化交际能力、语言运用能力、全球视野和传播能力的国际化复合型中外高层次人才。同时，还开展面向海外的远程非脱产教育、港澳台侨联考班、来华留学的长短期进修、孔子学院各类师资（中外方院长、汉语教师、志愿者）培训以及各种来华团组等不同的教学类型。以专业系统的课程、融通海内外的实践体系和丰富的文化体验活动，提升学生参与国际交往、传播中国文化的专业能力。近70年来，已为100多个国家和地区培养了约6.5万名专门人才，共建孔子学院海外注册学员逾35万。</p><p><br></p><p>学院与国外共建孔子学院紧密配合，基于海外教育的实际需求，融合国际中文教育先进理念和实践经验，深入挖掘海外教育的应用性与国别教育的差异性，持续开展科研工作，取得了显著的科研成果。近十年来，共承担国家社科、教育部社科等各级各类科研课题77项，正式出版专著、教材等30余部，在国内外学术刊物发表高水平论文600余篇，涵盖文化传播学、教育学、语言学等多个研究领域，体现了鲜明的国别研究特色。学院积极搭建学科交流平台，主办的《海外华文教育》学术期刊杂志已创刊20余年，在国内外业界具有较大的影响力。</p><p><br></p><p><br></p><p>学院下设厦门大学中外语言交流合作中心，致力于推进以孔子学院为载体的国际中文教育，服务五大洲14所孔子学院和1个中国语言文化研究中心的管理与发展，与国内外兄弟院校开展中外语言交流合作，建设中外语言交流合作示范基地，共同搭建学习语言、交流文化、推动校际间全方位合作的平台。</p><p><br></p><p>国际中文教育学院/海外教育学院努力把学院建设成为理念先进、特色鲜明、示范引领的知名高水平国际中文教育机构，加强教育对外开放，助推中文和中华文化走向世界，让世界了解中国，为促进文明交流互鉴和中外人文交流贡献积极力量。</p><p><br></p><p style="text-align: center;"><strong>Profile of Xiamen University Chinese International Education College / Overseas Education College</strong></p><p><br></p><p>Founded in 1956, the Chinese International Education College (Overseas Education College) at Xiamen Universityhas a rich history marked by several transformations. It initially started as the Overseas Correspondence Department, evolving into the Overseas Correspondence College and eventually becoming the Overseas Education College. For a time, the college also operated under a shared administration with the International College.In October 2020, to capitalize on emerging opportunities in international Chinese language education, the Overseas Education College merged with the Southern Base of Confucius InstituteHeadquarters (Office ofConfucius Institute Affairs). This merger resulted in the institution being dually named the Chinese International Education College.</p><p><br></p><p>With nearly seven decades of growth, the College has cultivated a distinctive profile that effectively balances international Chinese language education with cultural dissemination. It offers a range of both degree and non-degree programs, utilizing a combination of in-person and remote teaching methods, while pursuing parallel tracks of theoretical research and practical application. In addition to its educational initiatives, the College is tasked with managing and developing Xiamen University’s 14 Confucius Institutes and overseeing a Chinese Language and Culture Research Center. It currently comprises several key components, including the Department of Chinese Language, the Center for Language Education and Cooperation, the Southern Base of Confucius InstituteHeadquarters, and the Department of Advanced Studies for Students from Taiwan, Hong Kong, and Macao.Additionally, the College operates an examination center for the HSK (Chinese Proficiency Test) and the CTCSOL (Certificate for Teachers of Chinese to Speakers of Other Language).</p><p><br></p><p>The College boasts a well-rounded and highly professional team of educators. Among the 66 full-time faculty members, 24 hold the rank of associate professor or higher. Each educator has experience studying abroad, teaching Chinese as a foreign language, or participating in teacher training. Through rigorous faculty development, the College is dedicated to advancing academic disciplines, enhancing teaching and research, and extending its services to the community.</p><p><br></p><p>Additionally, the College is committed to creating a top-tier talent cultivation system. This includes offering academic master’s degree programs in Linguistics and Applied Linguistics, professional master’s degree programs in International Chinese Language Education, and bachelor’s degree programs in Chinese Language tailored for international students. The goal is to develop adaptable, internationally-minded professionals with a strong foundation in the humanities, exceptional cross-cultural communication skills, linguistic proficiency, and a global perspective.Furthermore, the College broadens its impact through remote education for overseas learners, specialized classes for students from Hong Kong, Macao, Taiwan, and overseas Chinese communities, as well as short-term and long-term study programs for international students in China. It also provides training for faculty at Confucius Institutes, including both Chinese and foreign directors, Chinese language instructors, and volunteers, along with various group study tours to China.With a comprehensive curriculum, a practical system that integrates domestic and international experiences, and a rich array of cultural engagement activities, students are well-prepared to participate in international exchanges and promote Chinese culture. Over the past seven decades, the College has graduated approximately 65,000 students from more than 100 countries and regions, and hasserved over 350,000 registered learners in jointly established Confucius Institutes worldwide.</p><p><br></p><p>The College maintains close collaboration with Confucius Institutes worldwide, aligning its efforts with the practical demands of international education. By integrating innovative concepts and hands-on experience in teaching Chinese as a foreign language, the College explores the applicability and unique nuances of education across different countries. This approach has fostered a robust research agenda, leading to significant scholarly achievements. Over the past decade, the College has successfully undertaken 77 research projects supported by the National Social Science Fund of China and the Ministry of Education. It has published over 30 academic monographs and textbooks, as well as more than 600 high-quality papers in academic journals both domestically and internationally. These publications cover a wide range of fields, including cultural studies, pedagogy, and linguistics, reflecting a strong emphasis on nation-specific research. Additionally, the College actively promotes academic exchange through various platforms. Its flagship journal, Overseas Chinese Education, has been published for over two decades and holds considerable influence in the academic community.</p><p><br></p><p>To support international Chinese language education and the development of Confucius Institutes, the College has established the Xiamen University Center for Language Education and Cooperation. This center is dedicated to advancing Chinese language education on a global scale through the Confucius Institutes, overseeing the management and development of 14 Confucius Institutes and aChinese Language and Culture Research Center across five continents. The center actively engages in collaborative language exchange and cooperation with partner institutions both within China and abroad, with the goal of establishing a model for Chinese-foreign language exchange and cooperation. It aims to build a comprehensive platform for language learning, cultural exchange, and multifaceted inter-institutional collaboration.</p><p><br></p><p>The College aspires to be a leading institution in international Chinese language education, characterized by innovative ideas, distinctive attributes, and exemplary leadership. Its mission is to expand educational outreach, promote the global dissemination of Chinese language and culture, and cultivate a deeper understanding of China worldwide. In doing so, the College aims to facilitate the exchange and mutual learning of civilizations and enhance cultural interactions between China and the global community.</p></div></div>
+    <span id="vsb_content_1001_u12" name="vsb_content_1001_u12"></span>
+    
+</div>
+</div>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+     <!-- 底部 -->
+    <div class="foot">
+        <div class="foot-r">
+            <b><img src="../images/link.png" alt="">友情链接</b>
+            <ul>
+
+<li>
+                    <a href="https://www.xmu.edu.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1933934427, 87419)">厦门大学</a>
+                </li>
+
+
+<li>
+                    <a href="https://news.xmu.edu.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1933934427, 87427)">厦门大学新闻网</a>
+                </li>
+
+
+<li>
+                    <a href="https://library.xmu.edu.cn/#&amp;panel1-1" onclick="_addDynClicks(&#34;wburl&#34;, 1933934427, 87423)">厦门大学图书馆</a>
+                </li>
+
+
+<li>
+                    <a href="https://i.xmu.edu.cn/EIP/nonlogin/homePage.htm" onclick="_addDynClicks(&#34;wburl&#34;, 1933934427, 87420)">厦门大学信息门户</a>
+                </li>
+
+
+<li>
+                    <a href="https://gs.xmu.edu.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1933934427, 87424)">厦门大学研究生院</a>
+                </li>
+
+
+<li>
+                    <a href="http://www.chinese.cn/page/#/pcpage/mainpage" onclick="_addDynClicks(&#34;wburl&#34;, 1933934427, 87429)">中外语言交流合作中心</a>
+                </li>
+
+
+<li>
+                    <a href="https://ice.xmu.edu.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1933934427, 87421)">厦门大学国际合作与交流处</a>
+                </li>
+
+
+<li>
+                    <a href="https://jwc.xmu.edu.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1933934427, 87426)">厦门大学教务处</a>
+                </li>
+
+
+<li>
+                    <a href="https://www.cief.org.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1933934427, 87428)">中国国际中文教育基金会</a>
+                </li>
+
+
+<li>
+                    <a href="https://admissions.xmu.edu.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1933934427, 87422)">厦门大学招生网</a>
+                </li>
+
+
+<li>
+                    <a href="https://alumni.xmu.edu.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1933934427, 87425)">厦门大学校友总会</a>
+                </li>
+
+
+<li>
+                    <a href="http://www.shihan.org.cn/" onclick="_addDynClicks(&#34;wburl&#34;, 1933934427, 87430)">世界汉语教学学会</a>
+                </li>
+
+<div class="clear"></div>
+</ul>
+        </div>
+        <div class="foot-l">
+           <div><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>中国福建省厦门市翔安区新店镇翔安南路厦门大学翔安校区坤銮楼(主楼群二号楼) 厦门大学海外教育学院 361102</p><p>电子邮件:oec@xmu.edu.cn(招生) gjzwjy@xmu.edu.cn(办公室) 网站:http://oec.xmu.edu.cn/</p><p>电话: +86 (0)592 2186211 传真: +86 (0)592 2093346</p></div>
+            <div class="code">    
+    
+<a class="wx" href="javascript:;" onclick="_addDynClicks(&#34;wbimage&#34;, 1933934427, 75928)">
+                    <div class="icon"></div>
+                    <img src="../images/ewm.jpg" alt="">
+                </a>
+
+</div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/slick.js"></script>
+    <script src="../js/public.js"></script>
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,596 @@
+<!DOCTYPE html><html class=" js no-touch cssanimations csstransitions"><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="renderer" content="webkit">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <meta name="referrer" content="always">
+        <title>实验室简介-非线性分析及其应用教育部重点实验室（华中师范大学）</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="实验室简介">
+<meta name="keywords" content="非线性分析及其应用教育部重点实验室（华中师范大学）,实验室概况">
+
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/component.css">
+        
+    <!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475c50575742000400034456 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1002,'/dpzw.jsp',-1,1981911233)</script>
+</head>
+
+     <body>
+        <!-- header -->
+        <div class="header">
+            <div class="headern">
+                <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="非线性分析及其应用教育部重点实验室"><img src="../img/logo.png"></a></div>
+                <span class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu1">
+    <div id="appu1"><div><input id="search-txt" type="search" placeholder="请输入检索关键字..." autocomplete="off"> <input id="search-bt" type="submit"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+        <input id="search-txt" type="search" placeholder="请输入检索关键字..." autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"/>
+                                    <input id="search-bt" type="submit" v-on:click="onSubmit()"/>
+                                    
+          
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1981911233";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+</span>
+                                  
+                                  
+                                  <div class="demo-2">
+            
+                    <div id="dl-menu" class="dl-menuwrapper"><button>Open Menu</button>
+  <ul class="dl-menu">                      
+
+ <li>
+                                <a href="../index.htm">首页</a>
+                                <ul class="dl-submenu">
+
+                                    <li class="dl-back">
+                                        <a href="#" target="_blank">返回</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="../index/tzgg.htm">通知公告</a>
+                                    </li>
+                                    <li>
+                                        <a href="../index/xwdt.htm">新闻动态</a>
+                                    </li>
+                                    <li>
+                                        <a href="../index/yjjz.htm">研究进展</a>
+                                    </li>
+                                    <li>
+                                        <a href="../index/xshy.htm">学术会议</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+ <li>
+                                <a href="sysjj.htm">实验室概况</a>
+                                <ul class="dl-submenu">
+
+                                    <li class="dl-back">
+                                        <a href="#" target="_blank">返回</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="sysjj.htm">实验室简介</a>
+                                    </li>
+                                    <li>
+                                        <a href="sysgldw.htm">实验室管理队伍</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+ <li>
+                                <a href="../xswyh.htm">学术委员会</a>
+                            </li>
+
+ <li>
+                                <a href="../yjtd.htm">研究团队</a>
+                            </li>
+
+ <li>
+                                <a href="../yjcg1/yjcgjj.htm">研究成果</a>
+                                <ul class="dl-submenu">
+
+                                    <li class="dl-back">
+                                        <a href="#" target="_blank">返回</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="../yjcg1/yjcgjj.htm">研究成果简介</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+ <li>
+                                <a href="../rcpy1/ztmb.htm">人才培养</a>
+                                <ul class="dl-submenu">
+
+                                    <li class="dl-back">
+                                        <a href="#" target="_blank">返回</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="../rcpy1/ztmb.htm">总体目标</a>
+                                    </li>
+                                    <li>
+                                        <a href="../rcpy1/bkspy.htm">本科生培养</a>
+                                    </li>
+                                    <li>
+                                        <a href="../rcpy1/yjspy.htm">研究生培养</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+ <li>
+                                <a href="../xsjl.htm">学术交流</a>
+                            </li>
+
+ <li>
+                                <a href="../kfkt.htm">开放课题</a>
+                            </li>
+
+ <li>
+                                <a href="../yxjz1/sthyxgl.htm">运行机制</a>
+                                <ul class="dl-submenu">
+
+                                    <li class="dl-back">
+                                        <a href="#" target="_blank">返回</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="../yxjz1/sthyxgl.htm">实体化运行管理</a>
+                                    </li>
+                                    <li>
+                                        <a href="../yxjz1/ryprjld.htm">人员聘任及流动</a>
+                                    </li>
+                                    <li>
+                                        <a href="../yxjz1/yqsbglysy.htm">仪器设备管理与使用</a>
+                                    </li>
+                                    <li>
+                                        <a href="../yxjz1/kfhzjz.htm">开放合作机制</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+ <li>
+                                <a href="../lxwm.htm">联系我们</a>
+                            </li>
+                        </ul>
+</div>
+                </div>
+            </div>
+        </div>
+        <!-- header -->
+        
+        <!-- nav -->
+        <div class="nav">
+
+            <ul class="flex hd-nav">
+                           
+
+                <li class="on">
+                    <a href="../index.htm" title="首页">首页</a>
+                </li>
+
+             
+            
+        
+
+               
+
+                <li>
+                    <a href="sysjj.htm" title="实验室概况">实验室概况</a>
+                    <div class="subnav">
+
+                        <a href="sysjj.htm" title="实验室简介">实验室简介</a>
+
+                        <a href="sysgldw.htm" title="实验室管理队伍">实验室管理队伍</a>
+                    </div>
+                </li>
+
+             
+            
+        
+
+               
+
+                <li>
+                    <a href="../xswyh.htm" title="学术委员会">学术委员会</a>
+                </li>
+
+             
+            
+        
+
+               
+
+                <li>
+                    <a href="../yjtd.htm" title="研究团队">研究团队</a>
+                </li>
+
+             
+            
+        
+
+               
+
+                <li>
+                    <a href="../yjcg1/yjcgjj.htm" title="研究成果">研究成果</a>
+                    <div class="subnav">
+
+                        <a href="../yjcg1/yjcgjj.htm" title="研究成果简介">研究成果简介</a>
+                    </div>
+                </li>
+
+             
+            
+        
+
+               
+
+                <li>
+                    <a href="../rcpy1/ztmb.htm" title="人才培养">人才培养</a>
+                    <div class="subnav">
+
+                        <a href="../rcpy1/ztmb.htm" title="总体目标">总体目标</a>
+
+                        <a href="../rcpy1/bkspy.htm" title="本科生培养">本科生培养</a>
+
+                        <a href="../rcpy1/yjspy.htm" title="研究生培养">研究生培养</a>
+                    </div>
+                </li>
+
+             
+            
+        
+
+               
+
+                <li>
+                    <a href="../xsjl.htm" title="学术交流">学术交流</a>
+                </li>
+
+             
+            
+        
+
+               
+
+                <li>
+                    <a href="../kfkt.htm" title="开放课题">开放课题</a>
+                </li>
+
+             
+            
+        
+
+               
+
+                <li>
+                    <a href="../yxjz1/sthyxgl.htm" title="运行机制">运行机制</a>
+                    <div class="subnav">
+
+                        <a href="../yxjz1/sthyxgl.htm" title="实体化运行管理">实体化运行管理</a>
+
+                        <a href="../yxjz1/ryprjld.htm" title="人员聘任及流动">人员聘任及流动</a>
+
+                        <a href="../yxjz1/yqsbglysy.htm" title="仪器设备管理与使用">仪器设备管理与使用</a>
+
+                        <a href="../yxjz1/kfhzjz.htm" title="开放合作机制">开放合作机制</a>
+                    </div>
+                </li>
+
+             
+            
+        
+
+               
+
+                <li>
+                    <a href="../lxwm.htm" title="联系我们">联系我们</a>
+                </li>
+
+             
+            
+        
+
+</ul></div>
+        <!-- nav end -->
+        
+        
+        
+        <!-- main -->
+        <div class="main-zy">
+            
+        <div class="nymain">
+                <div class="channl-menu leftNav">
+                    <h2>
+实验室简介</h2>
+                    <ul><li class="active on">
+                            <a href="sysjj.htm" title="实验室简介" target="_blank">实验室简介</a>
+                            
+                        </li>
+                        
+<li class="active on">
+                            <a href="sysgldw.htm" title="实验室管理队伍" target="_blank">实验室管理队伍</a>
+                            
+                        </li>
+                        
+</ul>
+                </div>
+                <div class="ny-right">
+                    <div class="position">
+                        <div class="">
+                            <h3>
+实验室简介</h3>
+                                           <span>当前位置：</span>
+                 <a href="../index.htm">首页</a>
+             <span>-</span>
+                <a href="sysjj.htm">实验室概况</a>
+             <span>-</span>
+                <a href="sysjj.htm">实验室简介</a>
+
+                        </div>
+                    </div>
+                    <div class="art-main">
+                        <div class="art-body">
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1981911233,'wbnews','u8')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css?v=C480050A38454007B26CA9E10BF01A27"><script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1981911233,1002)</script>
+
+    
+    <div id="vsb_content_2_1002_u81"><div id="vsb_content_2"><p class="vsbcontent_start">非线性分析及其应用教育部重点实验室立足于华中师范大学数学及统计学等学科,是在数学物理湖北省重点实验室的基础上逐步建设与发展起来的。实验室于2023年3月经教育部正式批准立项建设,于2023年6月21日顺利通过教育部重点实验室建设计划论证专家组论证。</p>
+<p>实验室现有固定研究人员50余人,其中国家级人才10余人、省部级人才20余人,具体包括：国家百千万人才工程入选者1人、教育部长江讲座教授1人、国家杰青获得者4人、国家级青年人才入选者6人、教育部新世纪人才计划入选者5人、湖北省“百人计划”入选者5人、湖北省“楚天学者”特聘教授2人等。2023年6月，实验室成立了以辛周平教授为首任主任的实验室学术委员会，彭双阶教授担任实验室主任。另外，实验室现有常务副主任1人，副主任2人，办公室秘书2人。</p>
+<p class="vsbcontent_end">根据新时代国家对科技发展的新要求，结合教育部重点实验室发展的总体定位，实验室将立足中部地区，聚焦非线性偏微分方程及其应用、动力系统与分形分析、代数表示与编码、生物医学与数据科学等四个主要研究方向，面向世界科技前沿、面向国民经济主战场，积极开展创新性特色研究。实验室将积极建设科技水平高、创新能力强、年龄结构合理、团队优势互补的国际化科技队伍，协调攻克若干关键问题，形成独特的研究特色，取得标志性重大成果，建成国际上有重要影响力的非线性分析科研与人才培养基地、高水平的学术交流基地。另外，实验室将积极承担国家公费师范生和优师计划培养任务，引领全国数学类师范生培养，培养一批从事中小学数学教育的优秀基层教师，为振兴乡村教育做出华中师大数学人的贡献。</p></div></div>
+    <span id="vsb_content_2_1002_u8" name="vsb_content_2_1002_u8"></span><br><br>
+    
+
+</div>
+
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+            
+            
+        </div>
+        <!-- main end -->
+        
+        
+         <!-- foot -->
+        <div class="foot">
+            <div class="footx">
+                <div class="footxl"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<h2>联系地址：</h2><p>地址: &nbsp;湖北省武汉市洪山区珞喻路152号</p><p>邮编：430079</p><p>版权所有：Copyright © 2005-2020 华中师范大学 鄂ICP备05003325号-9</p></div>
+                <div class="footxr">    
+<img src="../img/ewmt.png">
+
+</div>
+            </div>
+        </div>
+        <!-- foot end -->
+        
+        
+        
+        <script type="text/javascript" src="../js/jquery.js"></script>
+ <script type="text/javascript" src="../js/modernizr.custom.js"></script>
+ <script src="../js/dlmenu.js"></script>
+<script type="text/javascript" src="../js/lib5.js"></script>
+<script src="../js/jquery.SuperSlide.js"></script>
+
+<script type="text/javascript" src="../js/public.js"></script>
+ <script src="../js/jquery.mousewheel.js"></script>
+
+        <script>
+            $(function() {
+                $('#dl-menu').dlmenu({
+                    animationClasses: { in: 'dl-animate-in-2',
+                        out: 'dl-animate-out-2'
+                    }
+                });
+            });
+        </script>
+ <script>        
+  var mySwiper1 = new Swiper('.slide-banner', {
+    speed: 1000,
+        loop: true,
+        spaceBetween: 0,
+        autoplay: {
+            delay: 3000,
+            stopOnLastSlide: false,
+            disableOnInteraction: false
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        }
+});
+var a = new Swiper(".slide-news", {
+        speed: 1000,
+        loop: true,
+        spaceBetween: 0,
+        autoplay: {
+            delay: 4000,
+            stopOnLastSlide: false,
+            disableOnInteraction: false
+        },
+        pagination: {
+            el: ".slide-news .swiper-pagination",
+            clickable: true
+        }
+        /* on: {
+            slideChangeTransitionStart: function() {
+                $(".homeb .aright ul li").eq(this.realIndex).addClass("on").siblings().removeClass("on")
+            }
+        } */
+    });
+  </script>
+  
+  
+   <script>
+    $.fn.size=function(){
+    return $(this).length;
+
+}
+            var num = 0
+            $(".con2").eq(0).show();
+            $(".btn2 span").mousemove(function() {
+                num = $(".btn2 span").index(this);
+                $(".btn2 span").eq(num).addClass('borderbottom1').siblings().removeClass("borderbottom1");
+                $(".con2").hide();
+                $(".con2").eq(num).show();
+            })
+        </script>
+        <script id="jsID" type="text/javascript">
+        
+          var ary = location.href.split("&");
+        jQuery(".txtMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",interTime:50,trigger:"click"});
+        </script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

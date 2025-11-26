@@ -1,0 +1,316 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>基本信息-计算科学湖北省重点实验室</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="基本信息">
+<meta name="keywords" content="计算科学湖北省重点实验室">
+
+    
+    <meta name="description" content="湖北国家应用数学中心">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <!--轮播图样式以及设置-->
+    <script src="../js/jquery-1.9.1.min.js"></script>
+    <!--轮播图样式以及设置结束-->
+    <script src="../js/main.js"></script>
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/moblie.css" rel="stylesheet">
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1186,'/about.jsp',-1,1909532262)</script>
+</head>
+
+<body>
+    <div class="header">
+
+        <div class="container">
+            <div class="header-top">
+                <!-- 网站logo -->
+               
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" class="logo"><img src="../images/logo.png" class="logo-img"></a>
+
+                <button type="button" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="header-right">
+
+                    <div class="top-link"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script></div>
+
+                    <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu2 .qwss{}
+    #appu2 .tj{
+        background:url(../images/search.png) no-repeat;
+        width: 13px;}
+</style>
+<div id="divu2">
+    <div id="appu2"><div><input type="text" placeholder="" autocomplete="off" class="qwss search_kuang"> <input name="submit_button" type="button" value="" class="tj search_submit"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="qwss search_kuang" placeholder="" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj search_submit" name="submit_button" type="button" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1909532262";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+
+                    
+
+                </div>
+            </div>
+
+            <div class="nav">
+                <!--  网站导航开始 -->
+                <ul class="daohang clearfix">    <li>
+        <a href="../index.htm">首页</a>
+     </li>
+    <li>
+        <a href="jbxx.htm">实验室简介</a>
+        <ul class="nav_item">
+            <li><a href="jbxx.htm">基本信息</a></li>
+            <li><a href="gltd.htm">管理团队</a></li>
+            <li><a href="yjnr1.htm">研究内容</a></li>
+            <li><a href="lxwm.htm">联系我们</a></li>
+        </ul>
+     </li>
+    <li>
+        <a href="../yjtd/tdgk.htm">研究团队</a>
+        <ul class="nav_item">
+            <li><a href="../yjtd/tdgk.htm">团队概况</a></li>
+            <li><a href="../yjtd/yjdw.htm">研究队伍</a></li>
+        </ul>
+     </li>
+    <li>
+        <a href="../kxyj/yjfx1.htm">科学研究</a>
+        <ul class="nav_item">
+            <li><a href="../kxyj/yjfx1.htm">研究方向</a></li>
+            <li><a href="../kxyj/kyxm.htm">科研项目</a></li>
+            <li><a href="../kxyj/yjcg.htm">研究成果</a></li>
+        </ul>
+     </li>
+    <li>
+        <a href="../zxdt/xwdt.htm">中心动态</a>
+        <ul class="nav_item">
+            <li><a href="../zxdt/xwdt.htm">新闻动态</a></li>
+            <li><a href="../zxdt/xshy.htm">学术会议</a></li>
+            <li><a href="../zxdt/kcyx.htm">课程研修</a></li>
+            <li><a href="../zxdt/zhbg.htm">综合报告</a></li>
+        </ul>
+     </li>
+    <li>
+        <a href="../hzjl.htm">合作交流</a>
+     </li>
+</ul>
+                <!--  网站导航结束 -->
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--内容开始-->
+    <div class="content-box">
+        <div class="container">
+            <!-- 当前位置 -->
+            <div class="location">您当前所在位置：
+     <a href="../index.htm">首页</a><span>&gt;<span>
+       
+     <a href="jbxx.htm">实验室简介</a><span>&gt;<span>
+       
+             <a href="jbxx.htm">基本信息</a>
+</span></span></span></span></div>
+            <!-- 当前位置结束 -->
+            <div class="box-left">
+                <div class="left-nav">
+                    <h3 class="current">
+实验室简介</h3>
+
+                    <ul><li class="active">
+    <a href="jbxx.htm">基本信息</a>
+</li>                   
+<li>
+    <a href="gltd.htm">管理团队</a>
+</li>                   
+<li>
+    <a href="yjnr1.htm">研究内容</a>
+</li>                   
+<li>
+    <a href="lxwm.htm">联系我们</a>
+</li>                   
+</ul>
+                </div>
+            </div>
+            
+             <div class="right-box">
+                <div class="about">
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1909532262,'wbnews','u8')</script>
+<script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1909532262,1024)</script>
+<div id="vsb_content_1024_u81"><div id="vsb_content"><p style="font-size: 18px; font-weight: bold; text-align: center; line-height: 2em;"><span style="font-size: 21px;">实验室基本信息</span></p><p><br></p><table align="center" width="100%" style="border-collapse: collapse;"><tbody><tr class="firstRow"><td align="center" style="border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px; padding: 5px 10px;"><span style="font-size: 21px;">实验室名称</span></td><td align="center" style="border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px; padding: 5px 10px;"><span style="font-size: 21px;"> &nbsp; &nbsp;计算科学湖北省重点实验室</span></td></tr><tr><td align="center" style="border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px; padding: 5px 10px;"><span style="font-size: 21px;">学科分类</span></td><td align="center" style="border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px; padding: 5px 10px;"><span style="font-size: 21px;"> &nbsp; &nbsp;数学</span></td></tr><tr><td align="center" style="border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px; padding: 5px 10px;"><span style="font-size: 21px;">承担建设单位</span></td><td align="center" style="border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px; padding: 5px 10px;"><span style="font-size: 21px;"> &nbsp; &nbsp;武汉大学</span></td></tr><tr><td align="center" style="border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px; padding: 5px 10px;"><span style="font-size: 21px;">建设地点</span></td><td align="center" style="border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px; padding: 5px 10px;"><span style="font-size: 21px;"> &nbsp; &nbsp;武汉大学数学与统计学院</span></td></tr><tr><td align="center" style="border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px; padding: 5px 10px;"><span style="font-size: 21px;">实验室主任</span></td><td align="center" style="border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px; padding: 5px 10px;"><span style="font-size: 21px;">&nbsp; &nbsp; 杨志坚</span></td></tr><tr><td align="center" style="border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px; padding: 5px 10px;"><span style="font-size: 21px;">实验室副主任</span></td><td align="center" style="border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px; padding: 5px 10px;"><span style="font-size: 21px;">&nbsp; &nbsp; 何德彪</span></td></tr><tr><td align="center" style="border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px; padding: 5px 10px;"><span style="font-size: 21px;">实验室<span style="font-size: 21px; text-align: -webkit-center; text-wrap-mode: wrap;">副</span>主任</span></td><td align="center" style="border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px; padding: 5px 10px;"><span style="font-size: 21px;">&nbsp; &nbsp; 吕锡亮</span></td></tr><tr><td align="center" style="border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px; padding: 5px 10px;"><span style="font-size: 21px;">主管部门</span></td><td align="center" style="border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px; padding: 5px 10px;"><span style="font-size: 21px;"> &nbsp; &nbsp;湖北省科技厅</span></td></tr></tbody></table><p><br style="white-space: normal;"></p><p><br></p></div></div>
+</div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <!--内容结束-->
+
+
+    <!--底部开始-->
+<div class="footer">
+
+        <div class="container clearfix">
+
+            <div class="footer-top">
+
+                <div class="footer-xinxi">
+ <h3><img src="../images/footer-icon.png">联系我们 <span>Contact us</span><img src="../images/footer-icon.png"></h3>
+<p style="text-align: left;">电 话： 027-68752456</p> 
+<p style="text-align: left;">传 真： 027-68752256</p> 
+<p style="text-align: left;">Email： zjyang.math@whu.edu.cn</p> 
+<p style="text-align: left;">地 址： 武汉大学数学与统计学院</p> 
+<p style="text-align: left;">邮 编： 430072</p> 
+<p><br style="text-align: left;"></p></div>
+
+                <div class="footer-link">
+                    <h3><img src="../images/footer-icon.png">相关链接 <span>LINK</span><img src="../images/footer-icon.png"></h3>
+                    <ul><li><a href="https://maths.whu.edu.cn/" target="_blank">武汉大学数学与统计学院 </a></li>
+                        
+<li><a href="http://hbncam.whu.edu.cn/" target="_blank">湖北国家应用数学中心 </a></li>
+                        
+<li><a href="http://tmcc.whu.edu.cn/" target="_blank">国家天元数学中部中心 </a></li>
+                        
+<li><a href="http://hbsiam.whu.edu.cn/" target="_blank">湖北省暨武汉工业与应用数学学会 </a></li>
+                        
+</ul>
+                </div>
+
+                <div class="footer-code">
+                    <ul>    <li>
+    <img src="../images/code.png">
+</li>               
+</ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="copy">
+            <p><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+</p><p>Copyright@武汉大学计算数学湖北重点实验室 All Rights Reserved 版权所有</p><p></p>
+            <p class="tonji">浏览统计：访问人数 <span><script language="javascript" src="../_dwr/engine.js"></script><script language="javascript" src="../_dwr/util.js"></script><script language="javascript" src="../_dwr/interface/PageCounterDWR.js"></script><span id="a1062931" name="a1062931">14768</span>   
+
+<script>
+function getvisittimea1062931()
+{       
+    PageCounterDWR.getVisittime('1909532262','1186','TOTAL_COUNTER','0','4',callbackdataa1062931)
+}
+function callbackdataa1062931(data)
+{
+    document.getElementById("a1062931").innerHTML = data; 
+}
+getvisittimea1062931();
+</script></span> 人</p>
+        </div>
+    </div>
+    <!--底部结束-->
+
+
+
+
+</body></html>

@@ -1,0 +1,486 @@
+<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <!-- 为移动设备添加 viewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>研究院简介-武汉大学长江文明考古研究院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="研究院简介">
+<meta name="keywords" content="武汉大学长江文明考古研究院">
+
+        <link rel="stylesheet" href="../css/swiper.min.css">
+        <link rel="stylesheet" href="../css/jquery.mmenu.all.css">
+        <link rel="stylesheet" href="../css/common.css">
+        <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+        <script type="text/javascript" src="../js/jquery.js"></script>
+        <script type="text/javascript" src="../js/swiper.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.mmenu.min.all.js"></script>
+        <script type="text/javascript" src="../js/common.js"></script>
+    <!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../list_about_noimg.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1003,'/list_about_noimg.jsp',-1,1750674888)</script>
+<link rel="stylesheet" href="https://cj.whu.edu.cn/layer/theme/default/layer.css?v=*.*.*" id="layuicss-layer"></head>
+    <body>
+        <div id="page">
+            <div class="header">
+                <div class="w1280">
+                        <div class="headerT clearfix">
+                        
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a class="logo fl" href="../index.htm">
+<img src="../images/logo.png"></a>
+                        
+                        
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu1" class="fr searchBox clearfix">
+    <div id="appu1"><div><input type="text" placeholder="" autocomplete="off" class="text fl"> <input name="submit_button" type="button" value="搜索" class="submit fr" style="background: no-repeat; line-height: 37px;"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+            <input type="text" class="text fl" placeholder="" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" >
+            <input class="submit fr" name="submit_button" type="button" value="搜索" v-on:click="onSubmit()" style="background: no-repeat;
+    line-height: 37px;"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1750674888";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                            <a class="menu-btn fr" href="#menu"><span></span><span></span><span></span></a>
+                            <!-- <div class="searchIcon fr"></div> -->
+                        </div>
+                        
+                        <div class="nav-box">
+                            <ul class="nav-1st">
+<li>
+    <a href="../index.htm">首页</a>
+</li>
+<li class="on">
+    <a href="../yjygk.htm">研究院概况</a>
+    <ul class="nav-2nd">
+        <li><a href="yjyjj.htm">研究院简介</a></li>
+        <li><a href="jgsz.htm">机构设置</a></li>
+        <li><a href="xrld.htm">现任领导</a></li>
+    </ul>
+</li>
+<li>
+    <a href="../kgxgtt.htm">考古学共同体</a>
+    <ul class="nav-2nd">
+        <li><a href="../kgxgtt/gttdt.htm">共同体动态</a></li>
+        <li><a href="../kgxgtt/gttlsh.htm">共同体理事会</a></li>
+        <li><a href="../kgxgtt/gttdw.htm">共同体单位</a></li>
+    </ul>
+</li>
+<li>
+    <a href="../szdw.htm">师资队伍</a>
+    <ul class="nav-2nd">
+        <li><a href="../szdw/js.htm">教授</a></li>
+        <li><a href="../szdw/fjs.htm">副教授</a></li>
+        <li><a href="../szdw/js1.htm">讲师</a></li>
+        <li><a href="../szdw/xwzj.htm">校外专家</a></li>
+    </ul>
+</li>
+<li>
+    <a href="../kxyj.htm">科学研究</a>
+    <ul class="nav-2nd">
+        <li><a href="../kxyj/kgfx.htm">考古发现</a></li>
+        <li><a href="../kxyj/kycg.htm">科研成果</a></li>
+        <li><a href="../kxyj/kyxm.htm">科研项目</a></li>
+    </ul>
+</li>
+<li>
+    <a href="../shfw.htm">社会服务</a>
+    <ul class="nav-2nd">
+        <li><a href="../shfw/zypt.htm">资源平台</a></li>
+        <li><a href="../shfw/kyfw.htm">科研服务</a></li>
+        <li><a href="../shfw/shpx.htm">社会培训</a></li>
+    </ul>
+</li>
+<li>
+    <a href="../rcpy.htm">人才培养</a>
+    <ul class="nav-2nd">
+        <li><a href="../rcpy/xscg.htm">学生成果</a></li>
+        <li><a href="../rcpy/xshd.htm">学生活动</a></li>
+    </ul>
+</li>
+<li>
+    <a href="../xwgg.htm">新闻公告</a>
+    <ul class="nav-2nd">
+        <li><a href="../xwgg/xwdt.htm">新闻动态</a></li>
+        <li><a href="../xwgg/tzgg.htm">通知公告</a></li>
+    </ul>
+</li>
+<li>
+    <a href="../xzzq.htm">下载专区</a>
+</li>
+<li>
+    <a href="../xsjl.htm">学术交流</a>
+</li>
+</ul>
+                        </div>
+                        
+                    </div>
+            </div>
+            
+            <!--手机端-->
+            <nav id="menu" style="display: none;">
+                    <ul>
+    <li>
+        <a href="../index.htm">首页</a>
+    </li>
+    <li>
+        <a href="../yjygk.htm">研究院概况</a>
+        <ul>
+		<li><a href="yjyjj.htm">研究院简介</a></li>
+		<li><a href="jgsz.htm">机构设置</a></li>
+		<li><a href="xrld.htm">现任领导</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="../kgxgtt.htm">考古学共同体</a>
+        <ul>
+		<li><a href="../kgxgtt/gttdt.htm">共同体动态</a></li>
+		<li><a href="../kgxgtt/gttlsh.htm">共同体理事会</a></li>
+		<li><a href="../kgxgtt/gttdw.htm">共同体单位</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="../szdw.htm">师资队伍</a>
+        <ul>
+		<li><a href="../szdw/js.htm">教授</a></li>
+		<li><a href="../szdw/fjs.htm">副教授</a></li>
+		<li><a href="../szdw/js1.htm">讲师</a></li>
+		<li><a href="../szdw/xwzj.htm">校外专家</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="../kxyj.htm">科学研究</a>
+        <ul>
+		<li><a href="../kxyj/kgfx.htm">考古发现</a></li>
+		<li><a href="../kxyj/kycg.htm">科研成果</a></li>
+		<li><a href="../kxyj/kyxm.htm">科研项目</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="../shfw.htm">社会服务</a>
+        <ul>
+		<li><a href="../shfw/zypt.htm">资源平台</a></li>
+		<li><a href="../shfw/kyfw.htm">科研服务</a></li>
+		<li><a href="../shfw/shpx.htm">社会培训</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="../rcpy.htm">人才培养</a>
+        <ul>
+		<li><a href="../rcpy/xscg.htm">学生成果</a></li>
+		<li><a href="../rcpy/xshd.htm">学生活动</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="../xwgg.htm">新闻公告</a>
+        <ul>
+		<li><a href="../xwgg/xwdt.htm">新闻动态</a></li>
+		<li><a href="../xwgg/tzgg.htm">通知公告</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="../xzzq.htm">下载专区</a>
+    </li>
+    <li>
+        <a href="../xsjl.htm">学术交流</a>
+    </li>
+</ul>
+            </nav>
+            
+            <script src="../layer/layer.js"></script>
+            <!--二维码&搜索弹窗-->
+            <div class="searchTan">
+                <form>
+                    <input class="text-input" type="text" name="" value="" placeholder="搜索关键词...">
+                    <input class="sub-btn" type="submit" name="" value="">
+                </form>
+            </div>
+            <script>
+                //弹出层-搜索
+                $(".searchIcon").on('click', function() {
+                    layer.open({
+                        shadeClose: true,
+                        type: 1,
+                        title: false,
+                        area: ['86%', "120px"],
+                        content: $(".searchTan"),
+                        skin: 'custom-skin',
+                    })
+                })
+                //PC导航
+                    $(".header .nav-1st > li").hover(
+                        function(){
+                            if($(this).children('.nav-2nd').children('li').length != 0){
+                                $(this).children('.nav-2nd').stop().slideDown(300);
+                            }
+                    },
+                        function(){
+                            $(this).children('.nav-2nd').stop().slideUp(300);
+                        }
+                    )
+            </script>
+            <div class="contentBox">
+                <div class="w1280 clearfix">
+                    <div class="menu fl">
+                        <h3 class="SimSun">
+研究院概况</h3>
+                        <ul>
+<li>
+    <a class="SimSun tran300 on" href="yjyjj.htm">研究院简介<i></i></a>
+</li>
+<li>
+    <a class="SimSun tran300" href="javascript:;">机构设置<i></i></a>
+    <div class="menu2th">
+        <a class="tran300 " href="jgsz/yxswyh.htm">院学术委员会</a>
+        <a class="tran300 " href="jgsz/kjkgyjzx.htm">科技考古研究中心</a>
+        <a class="tran300 " href="jgsz/jbyjzx.htm">简帛研究中心</a>
+        <a class="tran300 " href="jgsz/lsdlyjs.htm">历史地理研究所</a>
+        <a class="tran300 " href="jgsz/qtwmyjzx1.htm">青铜文明研究中心</a>
+        <a class="tran300 " href="jgsz/ydylkgyjzx1.htm">一带一路考古研究中心</a>
+        <a class="tran300 " href="jgsz/cwhyjzx.htm">茶文化研究中心</a>
+        <a class="tran300 " href="jgsz/whycyszhbhyjzx.htm">文化遗产与数字化保护研究中心</a>
+    </div>
+</li>
+<li>
+    <a class="SimSun tran300 " href="xrld.htm">现任领导<i></i></a>
+</li>
+</ul>
+                    </div>
+                    <script>
+                        $('.menu li>a').click(function(){
+                            $(this).parent('li').find('.menu2th').slideToggle('300')
+                        })
+                        $('.menu li .menu2th a').each(function(){
+                            if($(this).hasClass("act")){
+                                $(this).parent('.menu2th').slideDown('300')
+                                $(this).parents('li').find('a').addClass('on')
+                            }
+                        })
+                    </script>
+                    <div class="content fr">
+                        <div class="clibBox clearfix">
+                            <span class="tit fl">
+研究院简介</span>
+                            <div class="clib fr"><img src="../images/svg/home.svg">当前位置:
+                                
+                        <a href="../index.htm">首页</a>
+                &gt;
+                <a href="../yjygk.htm">研究院概况</a>
+                &gt;
+                <a href="yjyjj.htm">研究院简介</a>
+
+                            </div>
+                        </div>
+                        <div class="aboutBox aboutimgBox">
+                            <div class="word">
+                                
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1750674888,'wbnews','u8')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format100.css"><script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1750674888,1002)</script>
+    <div id="vsb_content_100_1002_u81"><div id="vsb_content_100"><p class="vsbcontent_img"><img src="/__local/7/64/D0/C69EA586A741C080B1BE8EC7DC9_C840FB7B_10E04.jpg" vsbhref="vurl" vurl="/_vsl/764D0C69EA586A741C080B1BE8EC7DC9/C840FB7B/10E04" vheight="" vwidth="" orisrc="/__local/7/64/D0/C69EA586A741C080B1BE8EC7DC9_C840FB7B_10E04.jpg" class="img_vsb_content"></p><p style="line-height: 150%; text-indent: 36px; -ms-layout-grid-mode: char; -ms-text-autospace: ideograph-numeric;"><span style="line-height: 150%; font-family: 宋体, SimSun; font-size: 20px;">武汉大学长江文明考古研究院成立于2020年12月29日，是全面贯彻落实习近平总书记关于考古学讲话精神的具体行动，是在国家“十四五”规划和2035远景目标指导下的探索实践，也是响应新时代全面推进“新文科”建设、实现高等教育内涵式发展的主动作为。</span></p><p style="line-height: 150%; text-indent: 36px; -ms-layout-grid-mode: char; -ms-text-autospace: ideograph-numeric;"><span style="line-height: 150%; font-family: 宋体, SimSun; font-size: 20px;">研究院由武汉大学与湖北省文化和旅游厅共建，在双方组成的理事会指导下具体开展建设工作。樊锦诗任名誉院长、陈伟任学术委员会主任，刘礼堂任院长，余西云任常务副院长。研究院重点打造“四个一流”：打造一流的考古文博人才培养体系、建设一流的考古文博学科群落、推进一流的考古文博科学研究、实现一流的考古文化遗产展示与利用。</span></p><p style="line-height: 150%; text-indent: 36px; -ms-layout-grid-mode: char; -ms-text-autospace: ideograph-numeric;"><span style="line-height: 150%; font-family: 宋体, SimSun; font-size: 20px;">研究院设立七个研究中心（所），包括：武汉大学科技考古研究中心（主任张建民，副主任，常务副主任余西云，副主任潘春旭、李涛）、武汉大学简帛研究中心（主任陈伟，副主任李天虹）、武汉大学历史地理研究所（所长郑威）、武汉大学青铜文明研究中心（主任张昌平）、武汉大学“一带一路”考古研究中心（主任李英华）、武汉大学茶文化研究中心（主任刘礼堂，副主任宋时磊）、武汉大学文化遗产与数字化保护研究中心（主任王晓光，副主任王炎松、黄先锋、宋海超、徐雷）。</span></p><p style="margin: 5px 0px; line-height: 150%; text-indent: 36px; -ms-layout-grid-mode: char; -ms-text-autospace: ideograph-numeric;"><span style="line-height: 150%; font-family: 宋体, SimSun; font-size: 20px;">长江文明考古研究院的学科依托是武汉大学考古学科。该学科成立于1976年，是中国较早成立的考古学科之一，是湖北省乃至中南地区唯一的考古学科，经过四十多年的发展，已形成了较完整的学科体系、较高水平的人才队伍和若干优势特色研究领域，具有一流的学术水准和广泛的国际影响力。</span></p><p class="vsbcontent_end"><span style="font-family: 楷体,楷体_GB2312, SimKai; font-size: 18px;"><br></span></p></div></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="w1280 clearfix">
+                    <div class="fl left">
+                        <img src="../images/footLog.png">
+                        <div class="box clearfix">
+                            <dl>
+    <dd><a href="../index.htm">首页</a></dd>
+
+
+    <dd><a href="../yjygk.htm">研究院概况</a></dd>
+
+
+    <dd><a href="../kgxgtt.htm">考古学共同体</a></dd>
+</dl>
+<dl>
+    <dd><a href="../szdw.htm">师资队伍</a></dd>
+
+
+    <dd><a href="../kxyj.htm">科学研究</a></dd>
+
+
+    <dd><a href="../shfw.htm">社会服务</a></dd>
+</dl>
+<dl>
+    <dd><a href="../rcpy.htm">人才培养</a></dd>
+
+
+    <dd><a href="../xwgg.htm">新闻公告</a></dd>
+
+
+    <dd><a href="../xzzq.htm">下载专区</a></dd>
+</dl>
+<dl>
+    <dd><a href="../xsjl.htm">学术交流</a></dd>
+
+
+                        </dl></div>
+                    </div>
+                    <div class="fl center">
+                        <p>电话：027-68752695</p>
+                        <p>传真：027-68754407</p>
+                        <p>地址：湖北省武汉市武昌区珞珈山街道八一路299号武汉大学振华楼</p>
+                    </div>
+                    <div class="fr right">
+                        <div class="ma">
+                            <img src="../images/ma1.jpg">
+                            <p>关注“武汉大学”</p>
+                        </div>
+                        <div class="ma">
+                            <img src="../images/ma2.jpg">
+                            <p>关注“珞珈史学”</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footBtm">
+                <div class="w1280">
+                    <p>版权所有 © 2021 武汉大学长江文明考古研究院</p>
+                </div>
+            </div>
+            
+        </div>
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

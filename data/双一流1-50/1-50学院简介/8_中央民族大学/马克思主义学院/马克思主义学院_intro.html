@@ -1,0 +1,692 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学院简介-中央民族大学马克思主义学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="中央民族大学马克思主义学院,学院简介">
+
+    <link rel="stylesheet" href="../style/slick.css">
+    <link rel="stylesheet" href="../style/public.css">
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/ny.css">
+
+
+  <!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e784654525a5742000200024253 -->
+<link rel="stylesheet" type="text/css" href="../jjy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1171,'/jjy.jsp',-1,2077420629)</script>
+</head>
+
+  <body>
+     <!-- 头部 -->
+    <div class="head pc">
+      <div class="head_box">
+        <div class="head_line"></div>
+        <div class="tops">
+          <div class="center">
+            <div class="logo fl">
+<a href="../index.htm">
+                <img src="../images/logo.png" alt="">
+              </a></div>
+            <div class="search fr">
+              <div><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>   <a href="https://www.muc.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2077420629, 103435)"><span>中央民族大学</span></a>
+    
+</div>
+              <div>
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2">
+    <div id="appu2"><div><input type="text" placeholder="请输入关键词..." autocomplete="off"> <a><img src="../images/search.png" alt=""></a></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+
+            
+            <input type="text" placeholder="请输入关键词..."  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"/>
+              <a>
+                <img src="../images/search.png" alt=""  v-on:click="onSubmit()"/>
+              </a>
+            
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "2077420629";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.119.129.127:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="nav">
+          <div class="center"><ul class="first">
+
+ <li class="first_nav">
+                <a href="../index.htm"> 首页</a>
+              </li>
+              
+
+ <li class="first_nav">
+                <a href="xyjj.htm"> 学院概况</a>
+                <ul class="second">
+
+                  <li>
+                    <a href="xyjj.htm">学院简介</a>
+                  </li>
+
+
+                  <li>
+                    <a href="ldtd.htm">领导团队</a>
+                  </li>
+
+
+                  <li>
+                    <a href="xssz.htm">系所设置</a>
+                  </li>
+
+
+                  <li>
+                    <a href="xsfwyh.htm">学术分委员会</a>
+                  </li>
+
+
+                  <li>
+                    <a href="xwfwyh.htm">学位分委员会</a>
+                  </li>
+
+
+                  <li>
+                    <a href="jxfwyh.htm">教学分委员会</a>
+                  </li>
+
+
+                  <li>
+                    <a href="xzry.htm">行政人员</a>
+                  </li>
+
+                </ul>
+              </li>
+              
+
+ <li class="first_nav">
+                <a href="../szdw1/mkszyjbylx.htm"> 师资队伍</a>
+                <ul class="second">
+
+                  <li>
+                    <a href="../szdw1/mkszyjbylx.htm">马克思主义基本原理系</a>
+                  </li>
+
+
+                  <li>
+                    <a href="../szdw1/mkszyzghx.htm">马克思主义中国化系</a>
+                  </li>
+
+
+                  <li>
+                    <a href="../szdw1/sxzzjyx.htm">思想政治教育系</a>
+                  </li>
+
+
+                  <li>
+                    <a href="../szdw1/zgjxdsx.htm">中国近现代史系</a>
+                  </li>
+
+                </ul>
+              </li>
+              
+
+ <li class="first_nav">
+                <a href="../dqgz.htm"> 党群工作</a>
+              </li>
+              
+
+ <li class="first_nav">
+                <a href="../rcpy.htm"> 人才培养</a>
+                <ul class="second">
+
+                  <li>
+                    <a href="../rcpy/sspy.htm">硕士培养</a>
+                  </li>
+
+
+                  <li>
+                    <a href="../rcpy/bspy.htm">博士培养</a>
+                  </li>
+
+                </ul>
+              </li>
+              
+
+ <li class="first_nav">
+                <a href="../zdpt.htm"> 重大平台</a>
+                <ul class="second" style="min-width: 400%; left: -150%;">
+
+                  <li>
+                    <a href="../zdpt/xjpwhsxyjzxzymzdxxtyjjd.htm">习近平文化思想研究中心中央民族大学协同研究基地</a>
+                  </li>
+
+
+                  <li>
+                    <a href="../zdpt/bjsxjpxsdzgtsshzysxyjzxzymzdxyjjd.htm">北京市习近平新时代中国特色社会主义思想研究中心中央民族大学研究基地</a>
+                  </li>
+
+
+                  <li>
+                    <a href="../zdpt/zgmzzcyjhmsc.htm">中国民族政策研究会秘书处</a>
+                  </li>
+
+                </ul>
+              </li>
+              
+
+ <li class="first_nav">
+                <a href="../xsyj.htm"> 学术研究</a>
+              </li>
+              
+
+ <li class="first_nav">
+                <a href="../jxdt.htm"> 教学动态</a>
+              </li>
+              
+
+ <li class="first_nav">
+                <a href="../zszp/zs.htm"> 招生招聘</a>
+                <ul class="second">
+
+                  <li>
+                    <a href="../zszp/zs.htm">招生</a>
+                  </li>
+
+
+                  <li>
+                    <a href="../zszp/zp.htm">招聘</a>
+                  </li>
+
+                </ul>
+              </li>
+              
+
+ <li class="first_nav">
+                <a href="../hzjl.htm"> 合作交流</a>
+              </li>
+              
+</ul></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 移动端导航 -->
+    <div class="top wap">
+      <div class="wap wap-menu">
+        <img src="../images/menu.png" class="menu" alt="">
+        <img src="../images/close.png" class="close-menu" alt="">
+      </div>
+    </div>
+    <div class="wap m-head">
+      <div class="m-logo">    
+    
+<a href="../index.htm" onclick="_addDynClicks(&quot;wbimage&quot;, 2077420629, 74280)"><img src="../images/logo.png" alt=""></a>
+
+
+</div>
+      <div class="m-nav">
+       
+        <div class="m-search">
+
+
+<style>
+    #appu5 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu5 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu5">
+    <div id="appu5"><div><input type="text" placeholder="请输入关键词..." autocomplete="off"> <input type="image" src="../images/search.png"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu5">
+    <div id="appu5">
+        <div v-if="!isError">
+         
+            
+            <input type="text" placeholder="请输入关键词..." autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" />
+          <input type="image" src="../images/search.png" v-on:click="onSubmit()" />
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu5").html($("#htmlu5").text());
+</script>
+<script>
+    var appOwner = "2077420629";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu5",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultmobile/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.119.129.127:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+        <ul class="">
+  <li>
+            <a href="../index.htm">首页</a>
+          </li>
+
+  <li>
+            <a href="xyjj.htm">学院概况</a>
+            <span></span>
+            <ul>
+
+              <li><a href="xyjj.htm">学院简介</a></li>
+ 
+
+              <li><a href="ldtd.htm">领导团队</a></li>
+ 
+
+              <li><a href="xssz.htm">系所设置</a></li>
+ 
+
+              <li><a href="xsfwyh.htm">学术分委员会</a></li>
+ 
+
+              <li><a href="xwfwyh.htm">学位分委员会</a></li>
+ 
+
+              <li><a href="jxfwyh.htm">教学分委员会</a></li>
+ 
+
+              <li><a href="xzry.htm">行政人员</a></li>
+ 
+            </ul>
+          </li>
+
+  <li>
+            <a href="../szdw1/mkszyjbylx.htm">师资队伍</a>
+            <span></span>
+            <ul>
+
+              <li><a href="../szdw1/mkszyjbylx.htm">马克思主义基本原理系</a></li>
+ 
+
+              <li><a href="../szdw1/mkszyzghx.htm">马克思主义中国化系</a></li>
+ 
+
+              <li><a href="../szdw1/sxzzjyx.htm">思想政治教育系</a></li>
+ 
+
+              <li><a href="../szdw1/zgjxdsx.htm">中国近现代史系</a></li>
+ 
+            </ul>
+          </li>
+
+  <li>
+            <a href="../dqgz.htm">党群工作</a>
+          </li>
+
+  <li>
+            <a href="../rcpy.htm">人才培养</a>
+            <span></span>
+            <ul>
+
+              <li><a href="../rcpy/sspy.htm">硕士培养</a></li>
+ 
+
+              <li><a href="../rcpy/bspy.htm">博士培养</a></li>
+ 
+            </ul>
+          </li>
+
+  <li>
+            <a href="../zdpt.htm">重大平台</a>
+            <span></span>
+            <ul>
+
+              <li><a href="../zdpt/xjpwhsxyjzxzymzdxxtyjjd.htm">习近平文化思想研究中心中央民族大学协同研究基地</a></li>
+ 
+
+              <li><a href="../zdpt/bjsxjpxsdzgtsshzysxyjzxzymzdxyjjd.htm">北京市习近平新时代中国特色社会主义思想研究中心中央民族大学研究基地</a></li>
+ 
+
+              <li><a href="../zdpt/zgmzzcyjhmsc.htm">中国民族政策研究会秘书处</a></li>
+ 
+            </ul>
+          </li>
+
+  <li>
+            <a href="../xsyj.htm">学术研究</a>
+          </li>
+
+  <li>
+            <a href="../jxdt.htm">教学动态</a>
+          </li>
+
+  <li>
+            <a href="../zszp/zs.htm">招生招聘</a>
+            <span></span>
+            <ul>
+
+              <li><a href="../zszp/zs.htm">招生</a></li>
+ 
+
+              <li><a href="../zszp/zp.htm">招聘</a></li>
+ 
+            </ul>
+          </li>
+
+  <li>
+            <a href="../hzjl.htm">合作交流</a>
+          </li>
+</ul>
+      </div>
+    </div>
+
+
+    <!-- 轮播图 -->
+    <div class="banner">
+       <div><img src="../images/20241206102536.png"></div>
+    </div>
+
+    <!-- 内容 -->
+    <div class="nymain">
+      <div class="center">
+        <div class="channl-menu leftNav">
+            <h2>
+学院概况</h2>
+          <ul> <li class="active on">
+              <a href="xyjj.htm">学院简介</a>
+            </li>
+ <li>
+              <a href="ldtd.htm">领导团队</a>
+            </li>
+ <li>
+              <a href="xssz.htm">系所设置</a>
+            </li>
+ <li>
+              <a href="xsfwyh.htm">学术分委员会</a>
+            </li>
+ <li>
+              <a href="xwfwyh.htm">学位分委员会</a>
+            </li>
+ <li>
+              <a href="jxfwyh.htm">教学分委员会</a>
+            </li>
+ <li>
+              <a href="xzry.htm">行政人员</a>
+            </li>
+</ul>
+        </div>
+        <div class="ny-right">
+          <div class="position">
+            <div class="">
+                        <a href="../index.htm">首页</a>
+                <span>&gt;</span>
+                <a href="xyjj.htm">学院概况</a>
+                <span>&gt;</span>
+                <a href="xyjj.htm">学院简介</a>
+</div>
+          </div>
+          <div class="art-main">
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',2077420629,'wbnews','u11')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta11(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta11('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',2077420629,1992)</script>
+<div class="art-tit cont-tit">
+              <h3>学院简介</h3>
+            </div>
+            <div class="art-body">
+    <div id="vsb_content_4_1992_u111"><div id="vsb_content_4"><p class="vsbcontent_start">中央民族大学马克思主义学院是北京市重点建设马克思主义学院、全国民族院校中最早设立的马克思主义学院。学院始终坚持政治立院，经不懈耕耘，已发展成为马克思主义理论科学研究、学科建设和人才培养的重要基地，成为依托思想政治理论课秉持“两个结合”、传承红色基因、进行爱国主义和民族团结教育的重要阵地。</p><p>学院以“知止揆一，至诚无息”为院训，以扎实推进马克思主义基本原理与中华优秀传统文化相结合为己任。</p><p><strong>历史沿革——</strong></p><p>源于延安：延安民族学院时期开设政治课，教授马克思主义理论和党的基本知识。</p><p>最早建系：1952年建立政治系，是中央民族学院最早的两个系科之一，专门进行马克思主义理论学科建设和教育。</p><p>新世纪建院：2004年成立马克思主义学院。</p><p><strong>教研平台——</strong></p><p>学院现有“四系两所”，分别是马克思主义基本原理系、马克思主义中国化系、思想政治教育系、中国近现代史系、政治学研究所和中共党史党建研究所。</p><p>1个国家级研究基地秘书处：习近平文化思想研究中心中央民族大学协同研究基地秘书处；</p><p>1个国家级学会秘书处：中国民族政策研究会秘书处；</p><p>1个省部级研究基地秘书处：北京市习近平新时代中国特色社会主义思想研究中心中央民族大学研究基地秘书处；</p><p>1个北京市“思想引领工程”：马克思主义经典读书会（高端讲坛）；</p><p>1个北京高校中国特色社会主义理论研究协同创新中心：马克思主义与民族团结教育协同创新中心；</p><p>1个北京高校宣传文化创新工作室（培育）：习近平文化思想研究与传播创新工作室；</p><p>1个院级常设学术平台：中央民大马院学术工作坊。</p><p><strong>学科建设——</strong></p><p>学院拥有马克思主义理论一级学科博士学位授权点和硕士学位授权点。2019年，马克思主义理论一级学科被评为国家民委重点学科。2013年学院牵头成立了全国民族（地区）院校马克思主义学院院长联席会并成为会长单位，每年定期举办全国民族（地区）院校马克思主义理论学科高层论坛和研究生论坛。学院在中华民族共同体学学科构建等中央民族大学学科优化调整中作出重要贡献。</p><p><strong>基层党建——</strong></p><p>中央民族大学马克思主义学院教工第一党支部于2018年入选教育部首批“全国党建样板支部培育创建单位”，2023年荣获“中央民族大学先进基层党组织”荣誉称号，2024年入选“全国高校‘双带头人’教师党支部书记‘强国行’专项行动团队”。</p><p><strong>理论宣传——</strong></p><p>习近平文化思想研究中心中央民族大学协同研究基地是中宣部在全国范围内首批确定的7家协同研究基地之一，致力于做好习近平文化思想的“中华民族篇”。北京市习近平新时代中国特色社会主义思想研究中心中央民族大学研究基地在“三报一刊”已发表数百篇理论文章，连年获评优秀基地。马克思主义经典读书会（高端讲坛）至今已举办近百期，在全国产生了良好反响，被纳入北京市“思想引领工程”资助计划，多家国家级媒体予以报道。学院在全国各地特别是边疆民族地区建立了10余个社会实践研修基地。毕业生就业率连年达100%，主要从事马克思主义理论教育教学、理论宣传、党政管理等工作。</p><p><strong>师资队伍</strong><strong>——</strong></p><p class="vsbcontent_end">马克思主义学院现有在岗专职教职员工53人（专职教师48人），其中高级职称27人，博士生导师9人，硕士生导师27人。学院有国务院政府特殊津贴专家1人，全国优秀教师1人，全国思想政治理论课影响力人物1人，北京市“四个一批”人才2人，北京市教学名师2人，北京高校思想政治理论课特级教授2人、特级教师3人，国家民委中青年英才1人，国家民委优秀中青年专家2人，国家民委青年教学标兵1人。</p></div></div>
+    <span id="vsb_content_4_1992_u11" name="vsb_content_4_1992_u11"></span>
+    
+</div>
+</div>
+        </div>
+
+        <div class="clear"></div>
+      </div>
+    </div>
+
+    <!-- 尾部 -->
+    <div class="foot ss">
+      <div class="center">
+                 
+
+<a href="../index.htm" class="fl" onclick="_addDynClicks(&quot;wbimage&quot;, 2077420629, 74294)">
+          <img src="../images/logo.png" alt="">
+        </a>
+
+
+
+      
+<ul class="fl">
+ <li>地址：北京市丰台区魏各庄路27号（丰台校区）；北京市海淀区中关村南大街27号（海淀校区）</li>
+ <li>邮编：100074；100081</li>
+ <li>邮箱：muc_mayuan@163.com</li>
+</ul>
+        <div class="fr">    
+
+          <img src="../images/wxewm.jpg" alt="">
+          <p>学院官微</p>
+        
+
+</div>
+        <div class="clear"></div>
+      </div>
+    </div>
+     <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p class="foot1">版权所有：中央民族大学马克思主义学院&nbsp;</p>
+      <script src="../js/jquery.js"></script>
+    <script src="../js/slick.js"></script>
+    <script src="../js/public.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

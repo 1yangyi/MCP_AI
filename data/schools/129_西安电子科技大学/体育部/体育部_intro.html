@@ -1,0 +1,352 @@
+<!DOCTYPE html><html lang="en"><head><title>部门简介-西安电子科技大学体育部</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="部门简介">
+<meta name="keywords" content="西安电子科技大学体育部">
+
+
+
+
+
+<meta charset="UTF-8">
+<meta name="description" content=""><link rel="stylesheet" href="../css/reset.css"><link rel="stylesheet" href="../css/style.css"><script type="text/javascript" src="../js/bdtxk.js"></script><script type="text/javascript" src="../js/slide.js"></script><script type="text/javascript" src="../js/index.js"></script>
+
+<style>
+#vsb_content_2 P{font-size:16px !important;text-align: justify;}
+</style>
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232306975475350545742000400004256 -->
+<link rel="stylesheet" type="text/css" href="../zwy_content.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1088,'/zwy_content.jsp',-1,1641759486)</script>
+</head>
+<body>
+<div id="header" class="w100">
+<div class="container">
+<div class="header_top">
+<div class="logo fl">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+
+
+<a href="../index.htm" title="体育部2020"><img alt="" src="../images/logo.png"> </a></div>
+<div class="hd_r_top fr">
+<div class="search fr">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu1">
+    <div id="appu1"><div style="padding: 3px; margin: 0px; display: inline; font-family: 宋体; font-size: 12px;"><input autocomplete="off" value="请输入关键字！" class="txt"> <input type="image" src="../images/search_icon.png" align="absmiddle" class="btn"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError" style="padding:3px;margin:0px;display:inline;font-family:宋体;font-size:12px;">
+
+    <input autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" class="txt" value="请输入关键字！">
+    <input type="image" src="../images/search_icon.png" align="absmiddle" v-on:click="onSubmit()" class="btn">
+ </div>
+        
+        
+        
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1641759486";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+<div class="hd_r_link fr"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><a href="https://www.xidian.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1641759486, 61540)">学校主页</a> 
+<a href="http://tyben.xidian.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1641759486, 62678)">English</a> 
+</div></div></div><!-- nav start -->
+<div id="nav">
+<div class="nav_menu"><ul class="nav_list">
+<li><a href="../index.htm" title="首页">首页</a> 
+</li>
+<li><a href="bmjj.htm" title="部门概况">部门概况</a> 
+<dl class="menu">
+<dd><a href="bmjj.htm" title="部门简介">部门简介</a> </dd>
+<dd><a href="lsyg.htm" title="历史沿革">历史沿革</a> </dd>
+<dd><a href="xrld.htm" title="现任领导">现任领导</a> </dd>
+<dd><a href="jgsz.htm" title="机构设置">机构设置</a> </dd>
+<dd><a href="wyh.htm" title="委员会">委员会</a> </dd>
+<dd><a href="xcsp.htm" title="宣传视频">宣传视频</a> </dd>
+</dl>
+</li>
+<li><a href="../szdw.htm" title="师资队伍">师资队伍</a> 
+<dl class="menu">
+<dd><a href="../szdw/js.htm" title="教授">教授</a> </dd>
+<dd><a href="../szdw/fjs.htm" title="副教授">副教授</a> </dd>
+<dd><a href="../szdw/js1.htm" title="讲师">讲师</a> </dd>
+<dd><a href="../szdw/zj.htm" title="助教">助教</a> </dd>
+<dd><a href="../szdw/zzgtjs.htm" title="专职公体教师">专职公体教师</a> </dd>
+</dl>
+</li>
+<li><a href="../djgz.htm" title="党建工作">党建工作</a> 
+<dl class="menu">
+<dd><a href="../djgz/zzjg.htm" title="组织机构">组织机构</a> </dd>
+<dd><a href="../djgz/gzdt.htm" title="工作动态">工作动态</a> </dd>
+<dd><a href="../djgz/ztxx.htm" title="专题学习">专题学习</a> </dd>
+<dd><a href="../djgz/ghgz.htm" title="工会工作">工会工作</a> </dd>
+</dl>
+</li>
+<li><a href="../tyjlb.htm" title="体育俱乐部">体育俱乐部</a> 
+<dl class="menu">
+<dd><a href="../tyjlb/jlbjx.htm" title="俱乐部教学">俱乐部教学</a> </dd>
+<dd><a href="../tyjlb/yjsjx.htm" title="研究生教学">研究生教学</a> </dd>
+<dd><a href="../tyjlb/wskc.htm" title="网上课程">网上课程</a> </dd>
+<dd><a href="http://jpkc.xidian.edu.cn/dxty/" title="精品课程">精品课程</a> </dd>
+</dl>
+</li>
+<li><a href="../zspy.htm" title="招生培养">招生培养</a> 
+<dl class="menu">
+<dd><a href="../zspy/sszs.htm" title="硕士招生">硕士招生</a> </dd>
+<dd><a href="../zspy/sspy1.htm" title="硕士培养">硕士培养</a> </dd>
+<dd><a href="../zspy/yddzsh.htm" title="运动队招生">运动队招生</a> </dd>
+</dl>
+</li>
+<li><a href="../tyky.htm" title="体育科研">体育科研</a> 
+<dl class="menu">
+<dd><a href="../tyky/ktlx.htm" title="课题立项">课题立项</a> </dd>
+<dd><a href="../tyky/xscg.htm" title="学术成果">学术成果</a> </dd>
+<dd><a href="../tyky/kyhj.htm" title="科研获奖">科研获奖</a> </dd>
+</dl>
+</li>
+<li><a href="../ydjs.htm" title="运动竞赛">运动竞赛</a> 
+<dl class="menu">
+<dd><a href="../ydjs/gspydd.htm" title="高水平运动队">高水平运动队</a> </dd>
+<dd><a href="../ydjs/ptsydd.htm" title="普通生运动队">普通生运动队</a> </dd>
+<dd><a href="../ydjs/xnjs.htm" title="校内竞赛">校内竞赛</a> </dd>
+<dd><a href="../ydjs/syxw.htm" title="首页新闻">首页新闻</a> </dd>
+</dl>
+</li>
+<li><a href="../rydt.htm" title="荣誉殿堂">荣誉殿堂</a> 
+<dl class="menu">
+<dd><a href="../rydt/xdqgry.htm" title="西电全国荣誉">西电全国荣誉</a> </dd>
+<dd><a href="../rydt/xdsnry.htm" title="西电省内荣誉">西电省内荣誉</a> </dd>
+<dd><a href="../rydt/xdxnry.htm" title="西电校内荣誉">西电校内荣誉</a> </dd>
+</dl>
+</li>
+<li><a href="../gzzd.htm" title="规章制度">规章制度</a> 
+</li>
+<li><a href="../rczp.htm" title="人才招聘">人才招聘</a> 
+</li>
+<li><a href="#" title="下载专区">下载专区</a> 
+<dl class="menu">
+<dd><a href="../xzzq1/xzzq.htm" title="下载专区">下载专区</a> </dd>
+<dd><a href="../xzzq1/jxkyyb.htm" title="教学科研用表">教学科研用表</a> </dd>
+<dd><a href="../xzzq1/rsfwxx.htm" title="人事服务信息">人事服务信息</a> </dd>
+<dd><a href="../xzzq1/wskc.htm" title="网上课程">网上课程</a> </dd>
+</dl>
+</li>
+<li><a href="../cggl.htm" title="场馆管理">场馆管理</a> 
+<dl class="menu">
+<dd><a href="../cggl/cgjs.htm" title="场馆介绍">场馆介绍</a> </dd>
+<dd><a href="../cggl/glgd.htm" title="管理规定">管理规定</a> </dd>
+<dd><a href="../cggl/cgsq.htm" title="场馆申请">场馆申请</a> </dd>
+</dl>
+</li>
+</ul></div></div><!-- end nav --></div></div><!-- end header --><!-- ej_banner start -->
+<div id="ej_banner" class="w100">
+<div class="ej_banner_con">    <img alt="" src="../images/ej_banner.jpg"> </div>
+<div class="ej_banner_bd">
+<div class="lmmc"><!-- header start -->
+部门简介</div></div></div><!-- end ej_banner --><!-- main start -->
+<div id="main" class="w100">
+<div class="container">
+<div class="main_con clearfix">
+<div class="main_con_l fl">
+<div class="sidebar"><ul>
+<li class="active"><a href="bmjj.htm" title="部门简介">部门简介</a></li>
+
+<li><a href="lsyg.htm" title="历史沿革">历史沿革</a></li>
+
+<li><a href="xrld.htm" title="现任领导">现任领导</a></li>
+
+<li><a href="jgsz.htm" title="机构设置">机构设置</a></li>
+
+<li><a href="wyh.htm" title="委员会">委员会</a></li>
+
+<li><a href="xcsp.htm" title="宣传视频">宣传视频</a></li>
+
+</ul>
+</div></div>
+<div class="main_con_r fr">
+<div class="main_hd">
+<div class="dqwz"><div>
+    位置: 
+                        <a href="../index.htm">首页</a>
+                &gt;
+                <a href="bmjj.htm">部门概况</a>
+                &gt;
+                <a href="bmjj.htm">部门简介</a>
+</div>
+
+</div><span class="line"></span></div>
+<!-- header start -->
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1641759486,'wbnews','u8')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1641759486,1903)</script>
+<div class="nr" style="min-height: 600px;">
+	<div class="main_bd">
+	         <div class="con_title"><h2 class="title">部门简介</h2></div>
+
+   <div class="content"> <div id="vsb_content_2_1903_u81"><div id="vsb_content_2"><div>
+ <p class="vsbcontent_start">西安电子科技大学体育部主要负责公共体育教学、体育专业人才培养、体育学科建设、群体活动、体育竞赛、大学生体质测试、运动场馆管理等工作。2017获批体育学一级学科硕士学位授予权，2021年获批大数据特色运动训练本科专业。2018年获批陕西省学校体育信息化研究基地、终南山武术研究中心、青少年体育素养研究中心等科研机构。2019年西电高水平啦啦操队被国家体育总局和全国啦啦操委员会确定为国家啦啦操集训队。</p>
+ <p><a></a>体育部现有教职员工73人，其中专任教师59人，管理人员7人,场地工勤7人。有教授5人，副教授35人，讲师20人。教师中具有博士学位8人，博士后流动站出站2人，博士生导师1人，硕士生导师10人。有西安电子科技大学教学名师2人，国际级裁判2人，国家级裁判9人，有中共党员48人，民主党派3人。</p>
+ <p><a></a>近年来，《大学体育》获批省级资源共享课程；首次获得陕西省虚拟仿真教学实验项目和省级优秀教材奖。获国家社科基金、教育部社科基金、国家体育总局重点项目、陕西省社科基金、陕西省自然科学基金等科研资助50余项。累计发表论文300余篇，其中核心期刊论文70多篇；参加国际学术会议论文9篇；实用新型专利10余项；编写出版教材与专著14部。</p>
+ <p><a></a>西电体育教学认真贯彻落实习近平总书记关于体育强国建设的重要指示和全国教育大会精神，深入落实《关于全面加强和改进新时代学校体育工作的意见》部署要求，坚持立德树人根本任务，<a></a>牢固树立健康第一的体育教育理念，学校出台《西安电子科技大学落实＜关于全面加强和改进新时代学校体育工作的意见＞体育教育改革实施方案》，凝聚体育育人共识，将教学、训练和竞赛融为一体，通过体育俱乐部组织形式将课内课外合二为一，构建具有学校特色的体育教育体系，提升学生体质健康水平。俱乐部打破专业、班级、学院的限制，让学生自主选择运动项目、上课时间、授课教师、运动技能级别，全员参加体育俱乐部，提供学生自身喜爱且对体质健康促进明显的21个体育俱乐部供选择。形成“四自主”选课和“一生一课表”俱乐部教学特色，促使学生熟练掌握运动技能、强化体能，全面提升全体大学生的体质健康水平，实现新时代学校体育工作的新目标。自2020级本科生开始，体育必修课扩展至四年，每学期0.5学分，以有力措施保障体育课开齐开足。</p>
+ <p><a></a>西电体育竞赛现以游泳和健美操2支高水平运动队为引领，同时依托各个体育俱乐部，成立多支普通大学生体育代表队并坚持全年训练，在全国和省级各类比赛中屡获佳绩。2022年新增运动训练本科专业篮球、网球、技巧代表队。西电体育注重激发大学生对体育竞赛的主动参与意识，培养学生们的群体凝聚力和团队协作精神，重点打造以校运会、校园迷你马拉松、“西军电杯”、大学生体质测试运动会等各类体育竞赛为主要载体的体育文化节，并贯穿全年，努力实现全体大学生参赛的目标。</p>
+ <p><a></a>在学校推进教育信息化的进程中，西电体育充分利用电子信息类高校的特色与优势，依托该校陕西省学校体育信息化研究基地，着力打造“人工智能+体育”标杆大学。通过建设智能化运动场馆，采用人脸验证和教师人工干预等多种方式，确保学生每周至少锻炼4次（含俱乐部授课1次），实现学生日常运动参与的精准化监督、管理和考核，引导学生养成良好锻炼习惯和健康生活方式。</p>
+ <p><a></a>西电体育工作积极推进国际化进程。西电高水平啦啦操队代表中国出访澳大利亚，摘得啦啦操全明星赛大学组花球舞蹈项目桂冠。同时，多次邀请英国、美国、比利时等国的学者赴西电进行学术交流。校游泳队和5名体育教师先后赴英美进行访学、裁判以及体育竞赛等学习交流，多名教师赴海外参加国际体育学术会议并作主题报告。</p>
+ <p><a></a>随着远望谷体育馆的落成以及学校对室外运动场地的大面积维修改造，西电体育场馆设施迈入了国内高校一流行列。截止目前，西电运动场地总面积18.5万平方米。其中体育馆建筑面积2.3万平方米，2021年秋承办了全国十四运会和残特奥会羽毛球赛事。全日制在校生生均面积5.65平方米。</p>
+ <p><a></a>在中国特色社会主义进入了新时代和学校建设双一流大学的征程中，体育部将坚持教学、科研、竞赛、服务“四位一体”的部门业务格局，以立德树人为根本任务，着眼学生终身体育发展，以改革创新为动力，以学科建设为抓手，以提高教学质量为核心，以运动竞赛为亮点，深化内涵建设，推动学校体育工作全面可持续发展，为创建国内一流的大学体育而努力奋斗！</p>
+ <p><a><br></a></p>
+ <p style="text-align: right;">2024年2月</p>
+</div></div></div>
+    <span id="vsb_content_2_1903_u8" name="vsb_content_2_1903_u8"></span><br><br>
+    
+</div></div></div>
+
+</div></div></div></div><!-- end main --><!-- footer start -->
+<div id="footer" class="w100">
+<div class="container">
+<div class="foot_con clearfix">
+<div class="foot_top">
+<div class="address fl">
+<p>北校区地址:西安市太白南路2号 邮编：710071</p> 
+<p>南校区地址:西安市西沣路兴隆段266号 邮编：710126</p> 
+<p>电话：（029）81891207 办公邮箱：tiyubu1294@126.com</p> 
+<p>意见投诉信箱：tyb@xidian.edu.cn</p> 
+<p>师德师风监督电话：（029）81891207</p></div>
+<div class="ft_ewm fr">    
+
+<img alt="" src="../images/erweima.jpg"> 
+<p class="title">官方微信</p>
+</div></div>
+<div class="copyright"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>Copyright&nbsp;© 2007-2021 西安电子科技大学体育部 版权所有 技术支持： <a href="https://xxzx.xidian.edu.cn/" style="text-decoration: none; color: white">信息网络技术中心 </a>&nbsp;&nbsp;西安聚力</p></div></div></div></div><!-- end footer --><!-- back start -->
+<div id="back"></div><!-- end back -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

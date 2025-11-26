@@ -1,0 +1,708 @@
+<!DOCTYPE html><html><head><title>学院简介-英语学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="英语学院,学院简介">
+
+
+
+
+
+<meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../css/style.css"><link rel="stylesheet" type="text/css" href="../css/publice.css">
+
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e78475153505742000400014153 -->
+<link rel="stylesheet" type="text/css" href="../list.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1043,'/list.jsp',-1,1466381589)</script>
+</head>
+<body><!--top s-->
+<div class="topWrap clearfix">
+<div class="topDiv">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<div class="logo">
+<a href="../index.htm"><img src="../images/logozw.png" height="65px"></a>
+</div>
+<div class="topR fr">
+  <table width="100%" border="0" align="right" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+      <td align="right">&nbsp;<script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><div class="topR_t fr">
+     <a href="https://seis.bfsu.edu.cn/" onclick="_addDynClicks(&quot;wburl&quot;, 1466381589, 50212)">中文</a>
+     |
+     <a href="https://seisen.bfsu.edu.cn/" onclick="_addDynClicks(&quot;wburl&quot;, 1466381589, 50213)">English</a>
+     
+</div>
+
+
+</td>
+    </tr>
+    <tr>
+      <td align="right" valign="top">&nbsp;<!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2">
+    <div id="appu2"><div><div class="Search"><input type="text" value="search" autocomplete="off" class="search_text"> <div class="fdj fr"><input type="submit" value="" class="button pngFix"></div></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+          
+            
+            <div class="Search">
+
+ <input  type="text" value="search"  class="search_text"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"/>
+                <div class="fdj fr"> <input type="submit" class="button pngFix"value=""style="cursor: hand" value="提交" v-on:click="onSubmit()"></div>
+
+</div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1466381589";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu2 = document.querySelector("#appu2");
+   if (appElementu2 && appElementu2.__vue__) {
+
+   } else {
+      $("#divu2").html($("#htmlu2").text());
+      var appOwner = "1466381589";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou2 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu2(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu2();
+        }
+      };
+
+      function onSubmitu2(e) {
+        queryInfou2.query.keyWord= $("#appu2  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou2.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script></td>
+    </tr>
+  </tbody></table>
+</div></div></div><!--nav--><div class="navWrap  clearfix">
+    <div class="nav">
+    <ul>
+            <li>
+            <a class="link" href="../index.htm">首页</a>
+                        
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../xyjs.htm">学院介绍</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="xyjj.htm">学院简介</a></dd>
+                    <dd><a href="xyld.htm">学院领导</a></dd>
+                    <dd><a href="lxwm.htm">联系我们</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../szdw.htm">师资队伍</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../szdw/qysz.htm">全院师资</a></dd>
+                    <dd><a href="../szdw/yywxfxsz.htm">英语文学方向师资</a></dd>
+                    <dd><a href="../szdw/yyyyxfxsz.htm">英语语言学方向师资</a></dd>
+                    <dd><a href="../szdw/yygjyjfxsz.htm">英语国家研究方向师资</a></dd>
+                    <dd><a href="../szdw/fyyjfxsz.htm">翻译研究方向师资</a></dd>
+                    <dd><a href="../szdw/ftyyzfxsz.htm">非通用语种方向师资</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../yjzx.htm">研究中心</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../yjzx/ymwxyjzx.htm">英语文学研究中心</a></dd>
+                    <dd><a href="../yjzx/yyxyjzx.htm">语言学研究中心</a></dd>
+                    <dd><a href="../yjzx/fyyjzx.htm">翻译研究中心</a></dd>
+                    <dd><a href="../yjzx/MTIfysszx.htm">MTI翻译硕士中心</a></dd>
+                    <dd><a href="../yjzx/mgyjzx.htm">美国研究中心</a></dd>
+                    <dd><a href="../yjzx/jndyjzx.htm">加拿大研究中心</a></dd>
+                    <dd><a href="../yjzx/ygyjzx.htm">英国研究中心</a></dd>
+                    <dd><a href="../yjzx/aelyjzx.htm">爱尔兰研究中心</a></dd>
+                    <dd><a href="../yjzx/adlyyjzx.htm">澳大利亚研究中心</a></dd>
+                    <dd><a href="../yjzx/hymgwxyjzx.htm">华裔美国文学研究中心</a></dd>
+                    <dd><a href="../yjzx/kwhyjzx.htm">跨文化研究中心</a></dd>
+                    <dd><a href="../yjzx/etyyyjzx.htm">儿童语言研究中心</a></dd>
+                    <dd><a href="../yjzx/shfyxyjzx.htm">社会翻译学研究中心</a></dd>
+                    <dd><a href="http://www.bfsutextbook.cn/">中国外语教材研究中心</a></dd>
+                    <dd><a href="../yjzx/fysyjxsfzx.htm">翻译实验教学示范中心</a></dd>
+                    <dd><a href="../yjzx/ntpyyyhwhzx.htm">南太平洋语言和文化中心</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../zysz.htm">专业设置</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../zysz/bkzy.htm">本科专业</a></dd>
+                    <dd><a href="../zysz/sszy.htm">硕士专业</a></dd>
+                    <dd><a href="../zysz/bszy.htm">博士专业</a></dd>
+                    <dd><a href="../zysz/tdxlkcyx.htm">博士后专业</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../zsxx.htm">招生信息</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../zsxx/zsml.htm">本科招生</a></dd>
+                    <dd><a href="../zsxx/zsjz.htm">硕士招生</a></dd>
+                    <dd><a href="../zsxx/gfwxgzh.htm">博士招生</a></dd>
+                    <dd><a href="../zsxx/fwxz.htm">访问学者</a></dd>
+                    <dd><a href="../zsxx/tdxlkcyx.htm">同等学力课程研修</a></dd>
+                    <dd><a href="../zsxx/zxks.htm">自学考试</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../dwjl.htm">对外交流</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../dwjl/bkslx.htm">本科生留学</a></dd>
+                    <dd><a href="../dwjl/yjslx.htm">研究生留学</a></dd>
+                    <dd><a href="../dwjl/lxxz.htm">留学细则</a></dd>
+                    <dd><a href="../dwjl/lxgy.htm">留学感言</a></dd>
+                    <dd><a href="../dwjl/jldt.htm">交流动态</a></dd>
+                    <dd><a href="../dwjl/gjxs.htm">国际学生</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../xzzl.htm">学子专栏</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../xzzl/xzfc.htm">学子风采</a></dd>
+                    <dd><a href="../xzzl/xzxg1.htm">学子星光</a></dd>
+                    <dd><a href="../xzzl/xzst.htm">学子社团</a></dd>
+                    <dd><a href="../xzzl/xzkw.htm">学子刊物</a></dd>
+                    <dd><a href="../xzzl/zyhd.htm">志愿活动</a></dd>
+                    <dd><a href="../xzzl/jxjsz.htm">奖学金设置</a></dd>
+                    <dd><a href="../xzzl/byjjy.htm">毕业及就业</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../xyzl.htm">校友专栏</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../xyzl/xyml.htm">校友名录</a></dd>
+                    <dd><a href="../xyzl/xydb.htm">校友代表</a></dd>
+                    <dd><a href="../xyzl/xyfc.htm">校友风采</a></dd>
+                    <dd><a href="../xyzl/xyhd.htm">校友活动</a></dd>
+                    <dd><a href="../xyzl/xyjz.htm">校友捐赠</a></dd>
+                    <dd><a href="../xyzl/yysy.htm">英院岁月</a></dd>
+                    <dd><a href="../xyzl/xyxh.htm">校友协会</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu" style="width: 220px;">
+            <a class="link" href="https://yuke.bfsu.edu.cn/">出国留学（北外预科）</a>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="https://seisen.bfsu.edu.cn/">English</a>
+        </li>
+     
+    </ul>
+</div>
+</div>
+<script type="text/javascript">
+
+    $(".mainmenu dl").hide();
+
+</script><!--banner-->
+
+
+<div class="vsb-box">
+    <div columns="6" containerid="1" class="vsb-container a">
+        <!--banner3-->
+        
+    <div class="vsb-space banner_three" columns="6">
+                    <!--banner1-->
+<div class="slideBox slideBox1">
+        
+            <div class="bd">
+                <ul>
+                             <li style="margin: 0px auto; width: 1200px; height: 350px; display: none;"><a href="" target="_blank"><img src="../images/20240416BuldingFront.png"></a></li>
+
+           
+                     <li style="margin: 0px auto; width: 1200px; height: 350px;"><a href="" target="_blank"><img src="../images/stone.jpg"></a></li>
+
+           
+                     <li style="margin: 0px auto; width: 1200px; height: 350px; display: none;"><a href="" target="_blank"><img src="../images/20240401Banner02.jpg"></a></li>
+
+           
+                     <li style="margin: 0px auto; width: 1200px; height: 350px; display: none;"><a href="" target="_blank"><img src="../images/20240330Banner01.jpg"></a></li>
+
+           
+                     <li style="margin: 0px auto; width: 1200px; height: 350px; display: none;"><a href="" target="_blank"><img src="../images/20240330Banner033.jpg"></a></li>
+
+           
+                     <li style="margin: 0px auto; width: 1200px; height: 350px; display: none;"><a href="" target="_blank"><img src="../images/18/06/25/1vg4j1gor8/banner008.jpg"></a></li>
+
+           
+                     <li style="margin: 0px auto; width: 1200px; height: 350px; display: none;"><a href="" target="_blank"><img src="../images/18/06/25/1vg4j1gor8/banner007.jpg"></a></li>
+
+           
+                </ul>
+            </div>
+            <a class="prev" href="javascript:void(0)"></a>
+                <a class="next" href="javascript:void(0)"></a>
+
+
+        </div>
+
+     </div>
+</div>
+</div>
+
+
+
+
+<!--main-->
+<div class="mainWrap clearfix"><div class="main_tit">
+        <div class="main_titT main_titTa">
+            <img src="../img/bri_icon1.png">
+
+<a href="../index.htm">首页</a>&gt;
+<a href="../xyjs.htm" class="cur">学院介绍</a>
+        </div>
+</div>
+
+<div class="main_con">
+<div class="main_conL">
+<div class="main_conLT">
+<dl>
+<dt>学院介绍</dt><dd><a href="xyjj.htm" class="cur">学院简介</a></dd>
+<dd><a href="xyld.htm">学院领导</a></dd>
+<dd><a href="lxwm.htm">联系我们</a></dd>
+</dl></div>
+<div class="informBox informBoxb informBoxb1"><!-- 3.1.3版本 -->
+
+
+
+<style>
+    #appu8 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu8 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu8">
+    <div id="appu8"><div><div class="dynamic dynamicc dynamiccc"><h2>站内搜索</h2></div> <input id="test1" type="text" placeholder="请输入关键字进行搜索" autocomplete="off" class="search_text"> <input type="button" value="搜索" class="h_button"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu8">
+    <div id="appu8">
+        <div v-if="!isError">
+          
+            
+            <div class="dynamic dynamicc dynamiccc"><h2>站内搜索</h2></div>
+                <input id="test1" type="text" placeholder="请输入关键字进行搜索" class="search_text" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"/>
+                <input type="button" value="搜索" class="h_button"  v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu8").html($("#htmlu8").text());
+</script>
+<script>
+    var appOwner = "1466381589";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu8",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu8 = document.querySelector("#appu8");
+   if (appElementu8 && appElementu8.__vue__) {
+
+   } else {
+      $("#divu8").html($("#htmlu8").text());
+      var appOwner = "1466381589";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou8 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu8(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu8();
+        }
+      };
+
+      function onSubmitu8(e) {
+        queryInfou8.query.keyWord= $("#appu8  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou8.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script>    <div class="zp_pic">
+                    <a href="../index/jqcg.htm"><img src="../images/18/08/22/1quhzlt620/jqcg.png"></a>
+
+                    <a href="../index/dtgh.htm"><img src="../images/18/08/22/1quhzlt620/dtgh.png"></a>
+
+
+                </div></div></div>
+
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="main_conR main_conRa">
+            <div class="main_conRCb">
+                <ul>
+<li><a href="../info/1043/1305.htm"><span></span><em>学院概况</em></a></li>
+<li><a href="../info/1043/1306.htm"><span></span><em>大事记</em></a></li>
+<li><a href="../info/1043/1307.htm"><span></span><em>院训宗旨</em></a></li>
+                    
+              </ul>
+            </div>
+           <link rel="stylesheet" content-type="text/css" href="/system/resource/css/pagedown/sys.css"><div class="pb_sys_common pb_sys_normal pb_sys_style1" style="margin-top:10px;margin-bottom:10px;text-align:center;"><span class="p_pages"><span class="p_first_d p_fun_d">首页</span><span class="p_prev_d p_fun_d">上页</span><span class="p_no_d">1</span><span class="p_next_d p_fun_d">下页</span><span class="p_last_d p_fun_d">尾页</span></span></div>
+        
+        </div><script>_showDynClickBatch(['dynclicks_u10_1305','dynclicks_u10_1306','dynclicks_u10_1307'],[1305,1306,1307],"wbnews", 1466381589)</script>
+</div></div><br><!--link--><div class="linkDiv_two"><div class="link_one clearfix">
+            <dl>
+                <dt>快速导航</dt>
+<dd>
+
+<a href="https://seis.bfsu.edu.cn/info/1155/5042.htm" onclick="_addDynClicks(&quot;wburl&quot;, 1466381589, 44699)">《翻译界》</a>
+
+
+
+<a href="https://seis.bfsu.edu.cn/info/1155/5044.htm" onclick="_addDynClicks(&quot;wburl&quot;, 1466381589, 44697)">《英语文学研究》</a>
+
+
+
+<a href="https://seis.bfsu.edu.cn/info/1155/5041.htm" onclick="_addDynClicks(&quot;wburl&quot;, 1466381589, 44698)">《澳大利亚研究》</a>
+
+
+
+<a href="https://seis.bfsu.edu.cn/info/1155/5043.htm" onclick="_addDynClicks(&quot;wburl&quot;, 1466381589, 44696)">《跨文化研究论丛》</a>
+
+
+<a href="https://seis.bfsu.edu.cn/info/1155/8871.htm" class="cur" onclick="_addDynClicks(&quot;wburl&quot;, 1466381589, 104748)">《翻译与社会》</a>
+
+
+    </dd>         
+            </dl>
+        </div>
+
+
+</div><!--foot--><div class="footWrap"><div class="footDiv_one">
+		<div class="foot_one">
+			<p></p><p>Copyright @ BFSU. 北京外国语大学版权所有. 地址：北京市海淀区西三环北路2号/19号&nbsp;&nbsp;&nbsp; 邮编：100089&nbsp;&nbsp;Supported by BFSU ITC</p><img src="../img/foot_icon.png"><p></p>
+		</div>
+	</div>
+
+</div>
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+
+<script type="text/javascript" src="../js/jquery.Change.js"></script>
+<script type="text/javascript">
+$(function(){
+    $(".mainmenu dl").hide();
+    $("li.mainmenu").hover(function(){
+        $(this).find("dl").stop(true,true);
+        $(this).find("dl").slideDown();
+    },function(){
+        $(this).find("dl").stop(true,true);
+        $(this).find("dl").slideUp();
+    });
+})
+</script>
+<script type="text/javascript">
+$(function () {
+
+//切换对象为其他，这里为包含图片和标题的层
+    $('#change_32 div.changeDiv').soChange({//对象指向层，层内包含图片及标题
+        thumbObj:'#change_32 .ul_change_a2 span',
+        thumbNowClass:'on'//自定义导航对象当前class为on
+    });
+
+});
+</script>
+
+
+<script type="text/javascript" src="../js/jquery.Change.js"></script>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jsd.js"></script>
+<script type="text/javascript" src="../js/superslide.js"></script>
+<script type="text/javascript" src="../js/jquery.Change.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

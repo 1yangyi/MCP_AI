@@ -1,0 +1,1669 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站首页-化学与化工学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="网站首页">
+<meta name="keywords" content="化学与化工学院">
+
+    <link rel="stylesheet" href="../css/slick-theme.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/index.css">
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232306975475152555742000200014156 -->
+<link rel="stylesheet" type="text/css" href="../sy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1302,'/sy.jsp',-1,1860487147)</script>
+</head>
+<body>
+<div class="wave">
+    <div class="layer"></div>
+    <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu0">
+    <div id="appu0"><div><input type="text" placeholder="请输入关键字" autocomplete="off"> <input type="image" src="../images/ss.png"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <input type="text" placeholder="请输入关键字" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input type="image" src="../images/ss.png" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1860487147";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://yykfpt.nwpu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+</div>
+
+
+<div class="top_box">
+<div class="header">
+    <div class="head px1400">
+        <div class="head-l">
+<a href="wzsy.htm" title="化学化工学院2022"><img src="../images/20/logohg.png"></a></div>
+        <div class="head-r">
+            <div class="link-top">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>       
+              
+                        <a href="https://www.nwpu.edu.cn/" title="学校主页" onclick="_addDynClicks(&quot;wbimage&quot;, 1860487147, 69806)" target="_blank">
+                            <img src="../images/zy.png" border="0">学校主页
+                        </a>  
+               
+              
+                        <a href="https://oa.nwpu.edu.cn" title="办公网" onclick="_addDynClicks(&quot;wbimage&quot;, 1860487147, 69807)" target="_blank">
+                            <img src="../images/oa.png" border="0">办公网
+                        </a>  
+               
+              
+                        <a href="http://enhuaxue.nwpu.edu.cn/" title="English" onclick="_addDynClicks(&quot;wbimage&quot;, 1860487147, 69808)" target="_blank">
+                            <img src="../images/en.png" border="0">English
+                        </a>  
+               
+       
+ <i>|</i>
+                <span><img src="../images/ss.png" alt="" class="sousuo"></span></div>
+
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<div id="nav">                                                           
+    <div class="nav px1400"><ul>
+<li>
+                  <a href="wzsy.htm" title="网站首页">网站首页</a>  
+                </li>              
+<li>
+                  <a href="xyjs1/xyjj.htm" title="学院介绍">学院介绍</a>  
+                    <ul>
+
+                       <li> <a href="xyjs1/xyjj.htm" title="学院简介">学院简介</a> </li>
+
+                       <li> <a href="xyjs1/xrld.htm" title="现任领导">现任领导</a> </li>
+
+                       <li> <a href="xyjs1/jcsj.htm" title="基础数据">基础数据</a> </li>
+
+                       <li> <a href="xyjs1/VISxt.htm" title="VIS系统">VIS系统</a> </li>
+
+                       <li> <a href="xyjs1/lsyg.htm" title="历史沿革">历史沿革</a> </li>
+
+                       <li> <a href="xyjs1/jgsz/gx_zx_.htm" title="机构设置">机构设置</a> </li>
+
+                       <li> <a href="xyjs1/lxwm.htm" title="联系我们">联系我们</a> </li>
+                    </ul>
+                </li>              
+<li>
+                  <a href="szdw1/gccrc.htm" title="师资队伍">师资队伍</a>  
+                    <ul>
+
+                       <li> <a href="szdw1/gccrc.htm" title="高层次人才">高层次人才</a> </li>
+
+                       <li> <a href="szdw1/jsml2/hxx.htm" title="教师名录">教师名录</a> </li>
+                    </ul>
+                </li>              
+<li>
+                  <a href="jyjx/bksjx2/zysz.htm" title="教育教学">教育教学</a>  
+                    <ul>
+
+                       <li> <a href="jyjx/bksjx2.htm" title="本科生教学">本科生教学</a> </li>
+
+                       <li> <a href="jyjx/yjsjx.htm" title="研究生教学">研究生教学</a> </li>
+
+                       <li> <a href="jyjx/cxcy.htm" title="创新创业">创新创业</a> </li>
+                    </ul>
+                </li>              
+<li>
+                  <a href="rczp/rczp.htm" title="人才招聘">人才招聘</a>  
+                </li>              
+<li>
+                  <a href="kxyj1/kygk.htm" title="科学研究">科学研究</a>  
+                    <ul>
+
+                       <li> <a href="kxyj1/kygk.htm" title="科研概况">科研概况</a> </li>
+
+                       <li> <a href="kxyj1/yjfx.htm" title="研究方向">研究方向</a> </li>
+
+                       <li> <a href="kxyj1/kjpt.htm" title="科技平台">科技平台</a> </li>
+
+                       <li> <a href="kxyj1/kydt.htm" title="科研动态">科研动态</a> </li>
+
+                       <li> <a href="kxyj1/sysaqzx.htm" title="实验室安全资讯">实验室安全资讯</a> </li>
+
+                       <li> <a href="kxyj1/aqzdgd.htm" title="安全制度规定">安全制度规定</a> </li>
+
+                       <li> <a href="kxyj1/aqpxzs.htm" title="安全培训知识">安全培训知识</a> </li>
+                    </ul>
+                </li>              
+<li>
+                  <a href="dqgz1/zzjs.htm" title="党群工作">党群工作</a>  
+                    <ul>
+
+                       <li> <a href="dqgz1/zzjs.htm" title="组织建设">组织建设</a> </li>
+
+                       <li> <a href="dqgz1/djdt.htm" title="党建动态">党建动态</a> </li>
+
+                       <li> <a href="dqgz1/xyjj.htm" title="习语金句">习语金句</a> </li>
+
+                       <li> <a href="dqgz1/xxyd.htm" title="学习园地">学习园地</a> </li>
+
+                       <li> <a href="dqgz1/ghsc.htm" title="工会视窗">工会视窗</a> </li>
+
+                       <li> <a href="dqgz1/esdjsxx.htm" title="二十大精神学习">二十大精神学习</a> </li>
+                    </ul>
+                </li>              
+<li>
+                  <a href="xs/tz.htm" title="学生工作">学生工作</a>  
+                    <ul>
+
+                       <li> <a href="xs/tz.htm" title="通知公告">通知公告</a> </li>
+
+                       <li> <a href="xs/xw.htm" title="新闻动态">新闻动态</a> </li>
+
+                       <li> <a href="xs/zlxz.htm" title="资料下载">资料下载</a> </li>
+                    </ul>
+                </li>              
+<li>
+                  <a href="zsjy/bkszs.htm" title="招生就业">招生就业</a>  
+                    <ul>
+
+                       <li> <a href="zsjy/bkszs.htm" title="本科生招生">本科生招生</a> </li>
+
+                       <li> <a href="zsjy/yjszs.htm" title="研究生招生">研究生招生</a> </li>
+
+                       <li> <a href="zsjy/jyxx.htm" title="就业信息">就业信息</a> </li>
+                    </ul>
+                </li>              
+<li>
+                  <a href="xyzj1/jcxy.htm" title="校友之家">校友之家</a>  
+                    <ul>
+
+                       <li> <a href="xyzj1/jcxy.htm" title="杰出校友">杰出校友</a> </li>
+
+                       <li> <a href="xyzj1/xydt.htm" title="校友动态">校友动态</a> </li>
+
+                       <li> <a href="xyzj1/lxwm.htm" title="联系我们">联系我们</a> </li>
+                    </ul>
+                </li>              
+<li>
+                  <a href="https://chemtest.nwpu.edu.cn/" title="共享平台">共享平台</a>  
+                    <ul>
+
+                       <li> <a href="https://chemtest.nwpu.edu.cn/" title="共享平台">共享平台</a> </li>
+                    </ul>
+                </li>              
+<li>
+                  <a href="ywgk.htm" title="院务公开">院务公开</a>  
+                </li>              
+<li>
+                  <a href="cyxz1/jxzl.htm" title="常用下载">常用下载</a>  
+                    <ul>
+
+                       <li> <a href="cyxz1/gzlc.htm" title="工作流程">工作流程</a> </li>
+
+                       <li> <a href="cyxz1/jxzl.htm" title="教学资料">教学资料</a> </li>
+
+                       <li> <a href="cyxz1/xsgz.htm" title="学生工作">学生工作</a> </li>
+
+                       <li> <a href="cyxz1/kyzl.htm" title="科研资料">科研资料</a> </li>
+
+                       <li> <a href="cyxz1/qtzl.htm" title="其他资料">其他资料</a> </li>
+                    </ul>
+                </li>              
+<div class="clear"></div>
+        </ul></div>
+</div>
+</div>
+
+
+
+
+<!-- 移动端头部 -->
+<div class="m-top ">
+    <div class="wap wap-menu "><img src="../images/menu.png " class="menu " alt=" ">
+        <img src="../images/close.png " class="close-menu " alt=" "></div>
+</div>
+<div class="wap m-head ">
+    <div class="m-logo ">
+       
+<a href="wzsy.htm" title="化学化工学院2022"><img src="../images/20/logohg.png"></a>
+    </div>
+    <div class="m-nav ">
+        <div class="m-tlink ">           
+              
+                        <a href="https://www.nwpu.edu.cn/" title="学校主页" onclick="_addDynClicks(&quot;wbimage&quot;, 1860487147, 69806)" target="_blank">
+                            <img src="../images/zy.png" border="0">学校主页
+                        </a>  
+               
+              
+                        <a href="https://oa.nwpu.edu.cn" title="办公网" onclick="_addDynClicks(&quot;wbimage&quot;, 1860487147, 69807)" target="_blank">
+                            <img src="../images/oa.png" border="0">办公网
+                        </a>  
+               
+              
+                        <a href="http://enhuaxue.nwpu.edu.cn/" title="English" onclick="_addDynClicks(&quot;wbimage&quot;, 1860487147, 69808)" target="_blank">
+                            <img src="../images/en.png" border="0">English
+                        </a>  
+               
+       
+</div>
+        
+        <ul class=" "><li>
+                  <a href="wzsy.htm" title="网站首页">网站首页</a>  
+                </li>              
+<li>
+                  <a href="xyjs1/xyjj.htm" title="学院介绍">学院介绍</a>  
+                    <span></span><ul>
+
+                       <li> <a href="xyjs1/xyjj.htm" title="学院简介">学院简介</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="xyjs1/xrld.htm" title="现任领导">现任领导</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="xyjs1/jcsj.htm" title="基础数据">基础数据</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="xyjs1/VISxt.htm" title="VIS系统">VIS系统</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="xyjs1/lsyg.htm" title="历史沿革">历史沿革</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="xyjs1/jgsz/gx_zx_.htm" title="机构设置">机构设置</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="xyjs1/lxwm.htm" title="联系我们">联系我们</a> 
+                       
+                   
+                   
+                       </li>
+                    </ul>
+                </li>              
+<li>
+                  <a href="szdw1/gccrc.htm" title="师资队伍">师资队伍</a>  
+                    <span></span><ul>
+
+                       <li> <a href="szdw1/gccrc.htm" title="高层次人才">高层次人才</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="szdw1/jsml2/hxx.htm" title="教师名录">教师名录</a> 
+                       
+                   
+                   
+                       </li>
+                    </ul>
+                </li>              
+<li>
+                  <a href="jyjx/bksjx2/zysz.htm" title="教育教学">教育教学</a>  
+                    <span></span><ul>
+
+                       <li> <a href="jyjx/bksjx2.htm" title="本科生教学">本科生教学</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="jyjx/yjsjx.htm" title="研究生教学">研究生教学</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="jyjx/cxcy.htm" title="创新创业">创新创业</a> 
+                       
+                   
+                   
+                       </li>
+                    </ul>
+                </li>              
+<li>
+                  <a href="rczp/rczp.htm" title="人才招聘">人才招聘</a>  
+                </li>              
+<li>
+                  <a href="kxyj1/kygk.htm" title="科学研究">科学研究</a>  
+                    <span></span><ul>
+
+                       <li> <a href="kxyj1/kygk.htm" title="科研概况">科研概况</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="kxyj1/yjfx.htm" title="研究方向">研究方向</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="kxyj1/kjpt.htm" title="科技平台">科技平台</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="kxyj1/kydt.htm" title="科研动态">科研动态</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="kxyj1/sysaqzx.htm" title="实验室安全资讯">实验室安全资讯</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="kxyj1/aqzdgd.htm" title="安全制度规定">安全制度规定</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="kxyj1/aqpxzs.htm" title="安全培训知识">安全培训知识</a> 
+                       
+                   
+                   
+                       </li>
+                    </ul>
+                </li>              
+<li>
+                  <a href="dqgz1/zzjs.htm" title="党群工作">党群工作</a>  
+                    <span></span><ul>
+
+                       <li> <a href="dqgz1/zzjs.htm" title="组织建设">组织建设</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="dqgz1/djdt.htm" title="党建动态">党建动态</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="dqgz1/xyjj.htm" title="习语金句">习语金句</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="dqgz1/xxyd.htm" title="学习园地">学习园地</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="dqgz1/ghsc.htm" title="工会视窗">工会视窗</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="dqgz1/esdjsxx.htm" title="二十大精神学习">二十大精神学习</a> 
+                       
+                   
+                   
+                       </li>
+                    </ul>
+                </li>              
+<li>
+                  <a href="xs/tz.htm" title="学生工作">学生工作</a>  
+                    <span></span><ul>
+
+                       <li> <a href="xs/tz.htm" title="通知公告">通知公告</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="xs/xw.htm" title="新闻动态">新闻动态</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="xs/zlxz.htm" title="资料下载">资料下载</a> 
+                       
+                   
+                   
+                       </li>
+                    </ul>
+                </li>              
+<li>
+                  <a href="zsjy/bkszs.htm" title="招生就业">招生就业</a>  
+                    <span></span><ul>
+
+                       <li> <a href="zsjy/bkszs.htm" title="本科生招生">本科生招生</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="zsjy/yjszs.htm" title="研究生招生">研究生招生</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="zsjy/jyxx.htm" title="就业信息">就业信息</a> 
+                       
+                   
+                   
+                       </li>
+                    </ul>
+                </li>              
+<li>
+                  <a href="xyzj1/jcxy.htm" title="校友之家">校友之家</a>  
+                    <span></span><ul>
+
+                       <li> <a href="xyzj1/jcxy.htm" title="杰出校友">杰出校友</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="xyzj1/xydt.htm" title="校友动态">校友动态</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="xyzj1/lxwm.htm" title="联系我们">联系我们</a> 
+                       
+                   
+                   
+                       </li>
+                    </ul>
+                </li>              
+<li>
+                  <a href="https://chemtest.nwpu.edu.cn/" title="共享平台">共享平台</a>  
+                    <span></span><ul>
+
+                       <li> <a href="https://chemtest.nwpu.edu.cn/" title="共享平台">共享平台</a> 
+                       
+                   
+                   
+                       </li>
+                    </ul>
+                </li>              
+<li>
+                  <a href="ywgk.htm" title="院务公开">院务公开</a>  
+                </li>              
+<li>
+                  <a href="cyxz1/jxzl.htm" title="常用下载">常用下载</a>  
+                    <span></span><ul>
+
+                       <li> <a href="cyxz1/gzlc.htm" title="工作流程">工作流程</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="cyxz1/jxzl.htm" title="教学资料">教学资料</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="cyxz1/xsgz.htm" title="学生工作">学生工作</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="cyxz1/kyzl.htm" title="科研资料">科研资料</a> 
+                       
+                   
+                   
+                       </li>
+
+                       <li> <a href="cyxz1/qtzl.htm" title="其他资料">其他资料</a> 
+                       
+                   
+                   
+                       </li>
+                    </ul>
+                </li>              
+<div class="clear"></div>
+</ul>
+    </div>
+</div>
+
+<div class="banner slick-initialized slick-slider slick-dotted" role="toolbar"><button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button>           
+               <div aria-live="polite" class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 9100px; transform: translate3d(-2600px, 0px, 0px);" role="listbox"><div class="slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" style="width: 1300px;" tabindex="-1">
+                        <a tabindex="-1"> <img src="../css/keyan.jpg" border="0"></a> 
+               </div><div class="slick-slide" data-slick-index="0" aria-hidden="true" style="width: 1300px;" tabindex="-1" role="option" aria-describedby="slick-slide00">
+                        <a tabindex="-1"> <img src="../images/20/fanfaxisi80zhounian.jpg" border="0"></a> 
+               </div><div class="slick-slide slick-current slick-active" data-slick-index="1" aria-hidden="false" style="width: 1300px;" tabindex="-1" role="option" aria-describedby="slick-slide01">
+                        <a tabindex="0"> <img src="../css/shiwenda.png" border="0"></a> 
+               </div><div class="slick-slide" data-slick-index="2" aria-hidden="true" style="width: 1300px;" tabindex="-1" role="option" aria-describedby="slick-slide02">
+                        <a tabindex="-1"> <img src="../css/fengmian.jpg" border="0"></a> 
+               </div><div class="slick-slide" data-slick-index="3" aria-hidden="true" style="width: 1300px;" tabindex="-1" role="option" aria-describedby="slick-slide03">
+                        <a tabindex="-1"> <img src="../css/xueshengkou.png" border="0"></a> 
+               </div><div class="slick-slide" data-slick-index="4" aria-hidden="true" style="width: 1300px;" tabindex="-1" role="option" aria-describedby="slick-slide04">
+                        <a tabindex="-1"> <img src="../css/keyan.jpg" border="0"></a> 
+               </div><div class="slick-slide slick-cloned" data-slick-index="5" id="" aria-hidden="true" style="width: 1300px;" tabindex="-1">
+                        <a tabindex="-1"> <img src="../images/20/fanfaxisi80zhounian.jpg" border="0"></a> 
+               </div></div></div>
+       
+       
+               
+       
+       
+               
+       
+       
+               
+       
+       
+               
+       
+<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button><ul class="slick-dots" style="" role="tablist"><li class="" aria-hidden="true" role="presentation" aria-selected="true" aria-controls="navigation00" id="slick-slide00"><button type="button" data-role="none" role="button" tabindex="0">1</button></li><li aria-hidden="false" role="presentation" aria-selected="false" aria-controls="navigation01" id="slick-slide01" class="slick-active"><button type="button" data-role="none" role="button" tabindex="0">2</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation02" id="slick-slide02"><button type="button" data-role="none" role="button" tabindex="0">3</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation03" id="slick-slide03"><button type="button" data-role="none" role="button" tabindex="0">4</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation04" id="slick-slide04"><button type="button" data-role="none" role="button" tabindex="0">5</button></li></ul></div>
+
+<div id="main">
+    <div class="main ">
+        <div class="section0 ">
+            <div class="px1400">
+                
+            
+            <div class="notice">
+                <div class="list"><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="title">
+                    <h2><span>通知公告</span><i>Notice</i></h2>
+                    <div class="more"><a href="wzsy/tzgg.htm">查看更多 &gt;</a></div>
+                </div>
+                <ul>
+
+                    
+
+<li><a href="../info/1108/17812.htm" title="回收制备型高效液相色谱项目竞选结果公告">
+
+ <div class="txt">
+                                <div class="date">
+                                    <span class="rq">
+                                        28
+                                    </span>
+                                    <span class="nyf">
+                                        2025.09
+                                    </span>
+                                </div>
+                                <p class="tit">回收制备型高效液相色谱项目竞选结果公告</p>
+                            </div>
+                        
+                    </a></li>
+                    
+                    
+                    
+
+
+                    
+
+<li><a href="../info/1108/17802.htm" title="对溴丁基苯乙烯项目竞选结果公告">
+
+ <div class="txt">
+                                <div class="date">
+                                    <span class="rq">
+                                        28
+                                    </span>
+                                    <span class="nyf">
+                                        2025.09
+                                    </span>
+                                </div>
+                                <p class="tit">对溴丁基苯乙烯项目竞选结果公告</p>
+                            </div>
+                        
+                    </a></li>
+                    
+                    
+                    
+
+
+                    
+
+<li><a href="../info/1108/17782.htm" title="树脂材料项目竞选结果公告">
+
+ <div class="txt">
+                                <div class="date">
+                                    <span class="rq">
+                                        28
+                                    </span>
+                                    <span class="nyf">
+                                        2025.09
+                                    </span>
+                                </div>
+                                <p class="tit">树脂材料项目竞选结果公告</p>
+                            </div>
+                        
+                    </a></li>
+                    
+                    
+                    
+
+
+                    
+
+<li><a href="../info/1108/17672.htm" title="热重分析仪项目竞选结果公告">
+
+ <div class="txt">
+                                <div class="date">
+                                    <span class="rq">
+                                        19
+                                    </span>
+                                    <span class="nyf">
+                                        2025.09
+                                    </span>
+                                </div>
+                                <p class="tit">热重分析仪项目竞选结果公告</p>
+                            </div>
+                        
+                    </a></li>
+                    
+                    
+                    
+
+</ul><script>_showDynClickBatch(['dynclicks_u9_17812','dynclicks_u9_17802','dynclicks_u9_17782','dynclicks_u9_17672'],[17812,17802,17782,17672],"wbnews", 1860487147)</script>
+</div>
+                 
+                
+            </div>
+          
+            <div class="zxdt"><div class="title">
+                    <h2><span>最新动态</span><i>News</i></h2>
+                    <div class="more"><a href="wzsy/zxdt.htm">查看更多 &gt;</a></div>
+                </div>
+                
+                <div class="slider-news slick-initialized slick-slider"><button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button>
+<div aria-live="polite" class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 3416px; transform: translate3d(-854px, 0px, 0px); transition: transform 500ms;" role="listbox"><div class="box slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" style="width: 427px;" tabindex="-1">
+                        <div class="pic1">
+                            <a href="../info/1107/17752.htm" title="化学与化工学院工会举办“月圆人团圆，健步迎国庆”健步走活动​" tabindex="-1"><img src="/__local/F/7E/D2/C23CFFCDA6FD64FD8DAF74CB3CC_06FAB5A8_6159A.png" alt=""></a>
+                        </div>
+                        <div class="txt">
+                            <a href="../info/1107/17752.htm" title="化学与化工学院工会举办“月圆人团圆，健步迎国庆”健步走活动​" class="tit" tabindex="-1">化学与化工学院工会举办“月圆人团圆，健步迎国庆”健步走活动​</a>
+                        </div>
+                    </div><div class="box slick-slide" data-slick-index="0" aria-hidden="true" style="width: 427px;" tabindex="-1" role="option">
+                        <div class="pic1">
+                            <a href="../info/1107/17862.htm" title="化育未来 赋能双碳｜化学与化工学院学生赴中节能（西安）环保能源有限公司开展“绿动循环”主题研学" tabindex="0"><img src="/__local/1/7C/C0/E2D826443F39881183A8C099C42_1ECBB050_84AC2.png" alt=""></a>
+                        </div>
+                        <div class="txt">
+                            <a href="../info/1107/17862.htm" title="化育未来 赋能双碳｜化学与化工学院学生赴中节能（西安）环保能源有限公司开展“绿动循环”主题研学" class="tit" tabindex="0">化育未来 赋能双碳｜化学与化工学院学生赴中节能（西安）环保能源有限公司开展“绿动循环”主题研学</a>
+                        </div>
+                    </div><div class="box slick-slide slick-current slick-active" data-slick-index="1" aria-hidden="false" style="width: 427px;" tabindex="-1" role="option">
+                        <div class="pic1">
+                            <a href="../info/1107/17852.htm" title="化学与化工学院举行2025年新认定研究生导师岗前谈话座谈会" tabindex="-1"><img src="/__local/A/3C/CE/A19F425B56DDE7437AD357F34E4_004F8138_6FA73.png" alt=""></a>
+                        </div>
+                        <div class="txt">
+                            <a href="../info/1107/17852.htm" title="化学与化工学院举行2025年新认定研究生导师岗前谈话座谈会" class="tit" tabindex="-1">化学与化工学院举行2025年新认定研究生导师岗前谈话座谈会</a>
+                        </div>
+                    </div><div class="box slick-slide" data-slick-index="2" aria-hidden="true" style="width: 427px;" tabindex="-1" role="option">
+                        <div class="pic1">
+                            <a href="../info/1107/17832.htm" title="化学与化工学院党委开展“厚植家国情怀，砥砺强国之志”主题党日系列活动" tabindex="-1"><img src="/__local/6/35/63/B547017457D6818A7CD11FABCE2_4057DD2D_777A5.png" alt=""></a>
+                        </div>
+                        <div class="txt">
+                            <a href="../info/1107/17832.htm" title="化学与化工学院党委开展“厚植家国情怀，砥砺强国之志”主题党日系列活动" class="tit" tabindex="-1">化学与化工学院党委开展“厚植家国情怀，砥砺强国之志”主题党日系列活动</a>
+                        </div>
+                    </div><div class="box slick-slide" data-slick-index="3" aria-hidden="true" style="width: 427px;" tabindex="-1" role="option">
+                        <div class="pic1">
+                            <a href="../info/1107/17822.htm" title="中国科学院上海有机化学研究所黎占亭研究员做客我校翱翔灵犀学术殿堂暨“化”语高端讲堂" tabindex="-1"><img src="/__local/3/6D/B1/A639E340EB4B428FB7C8CD1A547_1945A4E8_113BCE.png" alt=""></a>
+                        </div>
+                        <div class="txt">
+                            <a href="../info/1107/17822.htm" title="中国科学院上海有机化学研究所黎占亭研究员做客我校翱翔灵犀学术殿堂暨“化”语高端讲堂" class="tit" tabindex="-1">中国科学院上海有机化学研究所黎占亭研究员做客我校翱翔灵犀学术殿堂暨“化”语高端讲堂</a>
+                        </div>
+                    </div><div class="box slick-slide" data-slick-index="4" aria-hidden="true" style="width: 427px;" tabindex="-1" role="option">
+                        <div class="pic1">
+                            <a href="../info/1107/17772.htm" title="化学与化工学院召开深入贯彻中央八项规定精神学习教育总结会暨党支部书记例会" tabindex="-1"><img src="/__local/1/A4/FF/2987AC9C49E256E94414B1AFE3B_683897DA_15EB77.png" alt=""></a>
+                        </div>
+                        <div class="txt">
+                            <a href="../info/1107/17772.htm" title="化学与化工学院召开深入贯彻中央八项规定精神学习教育总结会暨党支部书记例会" class="tit" tabindex="-1">化学与化工学院召开深入贯彻中央八项规定精神学习教育总结会暨党支部书记例会</a>
+                        </div>
+                    </div><div class="box slick-slide" data-slick-index="5" aria-hidden="true" style="width: 427px;" tabindex="-1" role="option">
+                        <div class="pic1">
+                            <a href="../info/1107/17752.htm" title="化学与化工学院工会举办“月圆人团圆，健步迎国庆”健步走活动​" tabindex="-1"><img src="/__local/F/7E/D2/C23CFFCDA6FD64FD8DAF74CB3CC_06FAB5A8_6159A.png" alt=""></a>
+                        </div>
+                        <div class="txt">
+                            <a href="../info/1107/17752.htm" title="化学与化工学院工会举办“月圆人团圆，健步迎国庆”健步走活动​" class="tit" tabindex="-1">化学与化工学院工会举办“月圆人团圆，健步迎国庆”健步走活动​</a>
+                        </div>
+                    </div><div class="box slick-slide slick-cloned" data-slick-index="6" id="" aria-hidden="true" style="width: 427px;" tabindex="-1">
+                        <div class="pic1">
+                            <a href="../info/1107/17862.htm" title="化育未来 赋能双碳｜化学与化工学院学生赴中节能（西安）环保能源有限公司开展“绿动循环”主题研学" tabindex="-1"><img src="/__local/1/7C/C0/E2D826443F39881183A8C099C42_1ECBB050_84AC2.png" alt=""></a>
+                        </div>
+                        <div class="txt">
+                            <a href="../info/1107/17862.htm" title="化育未来 赋能双碳｜化学与化工学院学生赴中节能（西安）环保能源有限公司开展“绿动循环”主题研学" class="tit" tabindex="-1">化育未来 赋能双碳｜化学与化工学院学生赴中节能（西安）环保能源有限公司开展“绿动循环”主题研学</a>
+                        </div>
+                    </div></div></div>
+                    
+                    
+                    
+                    
+
+
+                    
+                    
+                    
+
+
+                    
+                    
+                    
+                    
+
+
+                    
+                    
+                    
+
+
+                    
+                    
+                    
+                    
+
+
+                    
+                    
+                    
+
+
+                    
+                    
+                    
+                    
+
+
+                    
+                    
+                    
+
+
+                    
+                    
+                    
+                    
+
+
+                    
+                    
+                    
+
+
+                    
+                    
+                    
+                    
+
+
+                    
+                    
+                    
+
+ <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button></div>
+                
+                <div class="right_news">
+                    
+                        <ul>
+                        
+                        <li><a href="../info/1107/17862.htm" title="化育未来 赋能双碳｜化学与化工学院学生赴中节能（西安）环保能源有限公司开展“绿动循环”主题研学">化育未来 赋能双碳｜化学与化工学院学生赴中节能（西安）环保能源有限公司开展“绿动循环”主题研学</a><span>[10-17]</span></li>
+                    
+                        
+                        <li><a href="../info/1107/17852.htm" title="化学与化工学院举行2025年新认定研究生导师岗前谈话座谈会">化学与化工学院举行2025年新认定研究生导师岗前谈话座谈会</a><span>[10-17]</span></li>
+                    
+                        
+                        <li><a href="../info/1107/17832.htm" title="化学与化工学院党委开展“厚植家国情怀，砥砺强国之志”主题党日系列活动">化学与化工学院党委开展“厚植家国情怀，砥砺强国之志”主题党日系列活动</a><span>[09-30]</span></li>
+                    
+                        
+                        <li><a href="../info/1107/17822.htm" title="中国科学院上海有机化学研究所黎占亭研究员做客我校翱翔灵犀学术殿堂暨“化”语高端讲堂">中国科学院上海有机化学研究所黎占亭研究员做客我校翱翔灵犀学术殿堂暨“化”语高端讲堂</a><span>[09-29]</span></li>
+                    
+                        
+                        <li><a href="../info/1107/17772.htm" title="化学与化工学院召开深入贯彻中央八项规定精神学习教育总结会暨党支部书记例会">化学与化工学院召开深入贯彻中央八项规定精神学习教育总结会暨党支部书记例会</a><span>[09-27]</span></li>
+                    
+                        
+                        <li><a href="../info/1107/17752.htm" title="化学与化工学院工会举办“月圆人团圆，健步迎国庆”健步走活动​">化学与化工学院工会举办“月圆人团圆，健步迎国庆”健步走活动​</a><span>[09-27]</span></li>
+                    
+                        
+                         </ul>
+                    
+                </div>
+                        
+<script>_showDynClickBatch(['dynclicks_u10_17862','dynclicks_u10_17852','dynclicks_u10_17832','dynclicks_u10_17822','dynclicks_u10_17772','dynclicks_u10_17752'],[17862,17852,17832,17822,17772,17752],"wbnews", 1860487147)</script>
+</div>
+            </div>
+        
+        </div>
+            
+        <div class="section3 ">
+            <div class="px1400">
+                
+            
+            <div class="xsdt" style="display:none"><div class="list">
+                    <div class="title">
+                    <h2><span>科研动态</span><i>Academic Trend</i></h2>
+                    <div class="more"><a href="kxyj1/kydt.htm">查看更多 &gt;</a></div>
+                </div>
+                <ul>
+<li>
+                        
+                        <img src="/__local/3/6D/B1/A639E340EB4B428FB7C8CD1A547_1945A4E8_113BCE.png">
+                        <a href="../info/1088/17842.htm" title="中国科学院上海有机化学研究所黎占亭研究员做客我校翱翔灵犀学术殿堂暨“化”语高端讲堂">
+                            <div class="txt">
+                                <div class="date">
+                                    2025-09-29
+                                </div>
+                                <p class="tit">中国科学院上海有机化学研究所黎占亭研究员做客我校翱翔灵犀学术...</p>
+                            </div>
+                        </a>
+                    </li>
+
+<li>
+                        
+                        <img src="/__local/8/AB/F4/E6028A2620B3BDD40CAF4E1AA46_A07D7DA7_32731.png">
+                        <a href="../info/1088/17622.htm" title="《Angew. Chem. Int. Ed.》期刊发表张秋禹教授、郭威副教授关于共价-非共价界面作用协同增强储能的研究成果">
+                            <div class="txt">
+                                <div class="date">
+                                    2025-09-10
+                                </div>
+                                <p class="tit">《Angew. Chem. Int. Ed.》期刊发表张秋禹教授、郭威副教授关于共...</p>
+                            </div>
+                        </a>
+                    </li>
+
+</ul>
+                </div>   <script>_showDynClickBatch(['dynclicks_u11_17842','dynclicks_u11_17622'],[17842,17622],"wbnews", 1860487147)</script>
+
+            
+            </div>
+            <div class="xs" style="float:left;"><div class="list"><div class="title">
+                    <h2><span>科研动态</span><i>Academic Trend</i></h2>
+                    <div class="more"><a href="kxyj1/kydt.htm">查看更多 &gt;</a></div>
+                </div>
+                <div class="slider-xs slick-initialized slick-slider"><button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button>
+
+<div aria-live="polite" class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 4600px; transform: translate3d(-1150px, 0px, 0px); transition: transform 500ms;" role="listbox"><div class="box slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" style="width: 575px;" tabindex="-1">
+                        <div class="pic">
+                            <a href="../info/1088/17272.htm" title="《Nature Communications》发表我院瞿永泉教授、张赛教授受阻路易斯酸碱对研究新进展" tabindex="-1"><img src="/__local/D/45/0E/92E04D7D16B93CA31847FBACE68_79728797_CCC3.png"></a>
+                        </div>
+                        <div class="txt">
+                            <div class="date">
+                                    2025-08-15
+                                </div>
+                            <a href="../info/1088/17272.htm" title="《Nature Communications》发表我院瞿永泉教授、张赛教授受阻路易斯酸碱对研究新进展" class="tit" tabindex="-1">《Nature Communications》发表我院瞿永泉教授、张...</a>
+                            <p class="zy">近日，化学与化工学院瞿永泉教授、张赛教授联合江南大学刘冰副教授团队在原位重构金属-受阻路易斯酸碱对双位点催化方面取得重...</p>
+                        </div>
+                       
+                    </div><div class="box slick-slide" data-slick-index="0" aria-hidden="true" style="width: 575px;" tabindex="-1" role="option">
+                        <div class="pic">
+                            <a href="../info/1088/17842.htm" title="中国科学院上海有机化学研究所黎占亭研究员做客我校翱翔灵犀学术殿堂暨“化”语高端讲堂" tabindex="0"><img src="/__local/3/6D/B1/A639E340EB4B428FB7C8CD1A547_1945A4E8_113BCE.png"></a>
+                        </div>
+                        <div class="txt">
+                            <div class="date">
+                                    2025-09-29
+                                </div>
+                            <a href="../info/1088/17842.htm" title="中国科学院上海有机化学研究所黎占亭研究员做客我校翱翔灵犀学术殿堂暨“化”语高端讲堂" class="tit" tabindex="0">中国科学院上海有机化学研究所黎占亭研究员做客我...</a>
+                            <p class="zy">9月28日上午，应化学与化工学院副院长田威教授邀请，中国科学院上海有机化学研究所黎占亭研究员做客我校翱翔灵犀学术殿堂，为...</p>
+                        </div>
+                       
+                    </div><div class="box slick-slide slick-current slick-active" data-slick-index="1" aria-hidden="false" style="width: 575px;" tabindex="-1" role="option">
+                        <div class="pic">
+                            <a href="../info/1088/17622.htm" title="《Angew. Chem. Int. Ed.》期刊发表张秋禹教授、郭威副教授关于共价-非共价界面作用协同增强储能的研究成果" tabindex="-1"><img src="/__local/8/AB/F4/E6028A2620B3BDD40CAF4E1AA46_A07D7DA7_32731.png"></a>
+                        </div>
+                        <div class="txt">
+                            <div class="date">
+                                    2025-09-10
+                                </div>
+                            <a href="../info/1088/17622.htm" title="《Angew. Chem. Int. Ed.》期刊发表张秋禹教授、郭威副教授关于共价-非共价界面作用协同增强储能的研究成果" class="tit" tabindex="-1">《Angew. Chem. Int. Ed.》期刊发表张秋禹教授、郭...</a>
+                            <p class="zy">近日，学院张秋禹教授、郭威副教授团队在《Angew. Chem. Int. Ed.》期刊在线发表题为《Engineering Covalent and Noncovalent...</p>
+                        </div>
+                       
+                    </div><div class="box slick-slide" data-slick-index="2" aria-hidden="true" style="width: 575px;" tabindex="-1" role="option">
+                        <div class="pic">
+                            <a href="../info/1088/17602.htm" title="《Advanced Functional Materials》期刊发表张秋禹教授团队新型含炭黑胆甾型液晶弹性体实现多级信息加密与多模式驱动的研究成果" tabindex="-1"><img src="/__local/B/0B/41/54B83E4322804780445490550CF_79650DE1_2AAD4.png"></a>
+                        </div>
+                        <div class="txt">
+                            <div class="date">
+                                    2025-09-10
+                                </div>
+                            <a href="../info/1088/17602.htm" title="《Advanced Functional Materials》期刊发表张秋禹教授团队新型含炭黑胆甾型液晶弹性体实现多级信息加密与多模式驱动的研究成果" class="tit" tabindex="-1">《Advanced Functional Materials》期刊发表张秋禹...</a>
+                            <p class="zy">近日，学院张秋禹教授团队在《Advanced Functional Materials》期刊在线发表题为《Carbon Black-Containing Cholesteric Liqu...</p>
+                        </div>
+                       
+                    </div><div class="box slick-slide" data-slick-index="3" aria-hidden="true" style="width: 575px;" tabindex="-1" role="option">
+                        <div class="pic">
+                            <a href="../info/1088/17422.htm" title="《Adv. Funct. Mater.》发表顾军渭教授团队关于低反射电磁屏蔽气凝胶的研究成果" tabindex="-1"><img src="/__local/7/FE/DB/EC99FE2E034468198A3080DD72F_7862556B_1079C.png"></a>
+                        </div>
+                        <div class="txt">
+                            <div class="date">
+                                    2025-08-30
+                                </div>
+                            <a href="../info/1088/17422.htm" title="《Adv. Funct. Mater.》发表顾军渭教授团队关于低反射电磁屏蔽气凝胶的研究成果" class="tit" tabindex="-1">《Adv. Funct. Mater.》发表顾军渭教授团队关于低...</a>
+                            <p class="zy">近日，学院顾军渭教授团队在Advanced Functional Materials期刊在线发表题为《Multifunctional Flexible WPU Composite Aerog...</p>
+                        </div>
+                       
+                    </div><div class="box slick-slide" data-slick-index="4" aria-hidden="true" style="width: 575px;" tabindex="-1" role="option">
+                        <div class="pic">
+                            <a href="../info/1088/17262.htm" title="《Adv. Mater.》发表我院黄英教授、宗蒙副研究员超宽频吸波材料新进展" tabindex="-1"><img src="/__local/8/A5/30/C2C1106D4C55DD5CF84259C2ABA_BBD1FEBC_18736.png"></a>
+                        </div>
+                        <div class="txt">
+                            <div class="date">
+                                    2025-08-18
+                                </div>
+                            <a href="../info/1088/17262.htm" title="《Adv. Mater.》发表我院黄英教授、宗蒙副研究员超宽频吸波材料新进展" class="tit" tabindex="-1">《Adv. Mater.》发表我院黄英教授、宗蒙副研究员超...</a>
+                            <p class="zy">近日，化学与化工学院黄英教授和宗蒙副研究员在柔性超宽频吸波材料方面取得新进展，提出了一种通过液-液相分离策略制备柔性且...</p>
+                        </div>
+                       
+                    </div><div class="box slick-slide" data-slick-index="5" aria-hidden="true" style="width: 575px;" tabindex="-1" role="option">
+                        <div class="pic">
+                            <a href="../info/1088/17272.htm" title="《Nature Communications》发表我院瞿永泉教授、张赛教授受阻路易斯酸碱对研究新进展" tabindex="-1"><img src="/__local/D/45/0E/92E04D7D16B93CA31847FBACE68_79728797_CCC3.png"></a>
+                        </div>
+                        <div class="txt">
+                            <div class="date">
+                                    2025-08-15
+                                </div>
+                            <a href="../info/1088/17272.htm" title="《Nature Communications》发表我院瞿永泉教授、张赛教授受阻路易斯酸碱对研究新进展" class="tit" tabindex="-1">《Nature Communications》发表我院瞿永泉教授、张...</a>
+                            <p class="zy">近日，化学与化工学院瞿永泉教授、张赛教授联合江南大学刘冰副教授团队在原位重构金属-受阻路易斯酸碱对双位点催化方面取得重...</p>
+                        </div>
+                       
+                    </div><div class="box slick-slide slick-cloned" data-slick-index="6" id="" aria-hidden="true" style="width: 575px;" tabindex="-1">
+                        <div class="pic">
+                            <a href="../info/1088/17842.htm" title="中国科学院上海有机化学研究所黎占亭研究员做客我校翱翔灵犀学术殿堂暨“化”语高端讲堂" tabindex="-1"><img src="/__local/3/6D/B1/A639E340EB4B428FB7C8CD1A547_1945A4E8_113BCE.png"></a>
+                        </div>
+                        <div class="txt">
+                            <div class="date">
+                                    2025-09-29
+                                </div>
+                            <a href="../info/1088/17842.htm" title="中国科学院上海有机化学研究所黎占亭研究员做客我校翱翔灵犀学术殿堂暨“化”语高端讲堂" class="tit" tabindex="-1">中国科学院上海有机化学研究所黎占亭研究员做客我...</a>
+                            <p class="zy">9月28日上午，应化学与化工学院副院长田威教授邀请，中国科学院上海有机化学研究所黎占亭研究员做客我校翱翔灵犀学术殿堂，为...</p>
+                        </div>
+                       
+                    </div></div></div>
+                    
+                    
+                    
+
+
+
+                    
+                    
+                    
+
+
+
+                    
+                    
+                    
+
+
+
+                    
+                    
+                    
+
+
+
+                    
+                    
+                    
+
+
+
+                    
+                    
+                    
+
+<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button></div><script>_showDynClickBatch(['dynclicks_u12_17842','dynclicks_u12_17622','dynclicks_u12_17602','dynclicks_u12_17422','dynclicks_u12_17262','dynclicks_u12_17272'],[17842,17622,17602,17422,17262,17272],"wbnews", 1860487147)</script>
+</div></div>
+           <div class="xs">
+                <div class="list"><div class="title">
+                    <h2><span>学生风采</span><i>Student</i></h2>
+                    <div class="more"><a href="xs/xw.htm">查看更多 &gt;</a></div>
+                </div>
+                <div class="slider-xs slick-initialized slick-slider"><button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button>
+
+<div aria-live="polite" class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 4600px; transform: translate3d(-1150px, 0px, 0px); transition: transform 500ms;" role="listbox"><div class="box slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" style="width: 575px;" tabindex="-1">
+                        <div class="pic">
+                            <a href="../info/1164/16452.htm" title="学生工作丨化学与化工学院举办“研途逐梦”保研考研经验分享会" tabindex="-1"><img src="/__local/D/60/0F/3ECAC5185E868E4065CE70BBA30_2D03570A_5D312.png"></a>
+                        </div>
+                        <div class="txt">
+                            <div class="date">
+                                    2025-06-04
+                                </div>
+                            <a href="../info/1164/16452.htm" title="学生工作丨化学与化工学院举办“研途逐梦”保研考研经验分享会" class="tit" tabindex="-1">学生工作丨化学与化工学院举办“研途逐梦”保研考...</a>
+                            <p class="zy">为助力本科生科学规划升学深造路径，化学与化工学院于5月23日在理学院报告厅举办保研及考研经验交流分享会。由分子科学与工程...</p>
+                        </div>
+                       
+                    </div><div class="box slick-slide" data-slick-index="0" aria-hidden="true" style="width: 575px;" tabindex="-1" role="option">
+                        <div class="pic">
+                            <a href="../info/1164/17492.htm" title="我院组织师生集中收听收看纪念中国人民抗日战争暨世界反法西斯战争胜利80周年大会实况" tabindex="0"><img src="/__local/A/61/AA/8EB22F140A39B6D1FFE39632409_BBB02FCA_59482.png"></a>
+                        </div>
+                        <div class="txt">
+                            <div class="date">
+                                    2025-09-04
+                                </div>
+                            <a href="../info/1164/17492.htm" title="我院组织师生集中收听收看纪念中国人民抗日战争暨世界反法西斯战争胜利80周年大会实况" class="tit" tabindex="0">我院组织师生集中收听收看纪念中国人民抗日战争暨...</a>
+                            <p class="zy">为深切缅怀革命先烈，弘扬伟大抗战精神，激发广大师生的爱国热情和民族使命感，2025年9月3日上午，我院组织师生集中收听收看...</p>
+                        </div>
+                       
+                    </div><div class="box slick-slide slick-current slick-active" data-slick-index="1" aria-hidden="false" style="width: 575px;" tabindex="-1" role="option">
+                        <div class="pic">
+                            <a href="../info/1164/17462.htm" title="“一站式”学生社区 | 物化两院联合举办“笔走山河红韵，心系强国征程”主题活动" tabindex="-1"><img src="/__local/7/8E/FD/421EB0992E31E2DC6AAFFDF600B_9E6BC7E0_8D8D2.png"></a>
+                        </div>
+                        <div class="txt">
+                            <div class="date">
+                                    2025-09-04
+                                </div>
+                            <a href="../info/1164/17462.htm" title="“一站式”学生社区 | 物化两院联合举办“笔走山河红韵，心系强国征程”主题活动" class="tit" tabindex="-1">“一站式”学生社区 | 物化两院联合举办“笔走山河...</a>
+                            <p class="zy">为纪念中国人民抗日战争暨世界反法西斯战争胜利80周年，共同铭记历史、缅怀先烈、珍爱和平、开创未来。9月3日，物理科学与技...</p>
+                        </div>
+                       
+                    </div><div class="box slick-slide" data-slick-index="2" aria-hidden="true" style="width: 575px;" tabindex="-1" role="option">
+                        <div class="pic">
+                            <a href="../info/1164/17502.htm" title="家校携手 共育英才｜化学与化工学院举办2025级本科新生家长见面会" tabindex="-1"><img src="/__local/A/E4/A3/C74FFBC755690F60E44D8014F74_074A37A9_174AF2.png"></a>
+                        </div>
+                        <div class="txt">
+                            <div class="date">
+                                    2025-08-27
+                                </div>
+                            <a href="../info/1164/17502.htm" title="家校携手 共育英才｜化学与化工学院举办2025级本科新生家长见面会" class="tit" tabindex="-1">家校携手 共育英才｜化学与化工学院举办2025级本科...</a>
+                            <p class="zy">8月23日下午，化学与化工学院在长安校区教学西楼A座103举行2025级本科新生家长见面会。院长顾军渭、党委书记傅茂森、副院长陈...</p>
+                        </div>
+                       
+                    </div><div class="box slick-slide" data-slick-index="3" aria-hidden="true" style="width: 575px;" tabindex="-1" role="option">
+                        <div class="pic">
+                            <a href="../info/1164/17512.htm" title="学生工作｜化学与化工学院领导走访宿舍看望2025级本科新生" tabindex="-1"><img src="/__local/9/5D/41/4592D882080E4720AA2B23818F7_C9037AFE_796F5.png"></a>
+                        </div>
+                        <div class="txt">
+                            <div class="date">
+                                    2025-08-27
+                                </div>
+                            <a href="../info/1164/17512.htm" title="学生工作｜化学与化工学院领导走访宿舍看望2025级本科新生" class="tit" tabindex="-1">学生工作｜化学与化工学院领导走访宿舍看望2025级...</a>
+                            <p class="zy">8月23日下午，化学与化工学院院长顾军渭、党委书记傅茂森带队，副院长陈凯杰、党委副书记姚东东、院长助理、新生辅导员、班主...</p>
+                        </div>
+                       
+                    </div><div class="box slick-slide" data-slick-index="4" aria-hidden="true" style="width: 575px;" tabindex="-1" role="option">
+                        <div class="pic">
+                            <a href="../info/1164/17522.htm" title="红色基因 蓝色情怀｜化学与化工学院师生党员赴鄠邑区开展“乡村振兴”主题实践" tabindex="-1"><img src="/__local/D/AD/5A/153335BD54D7B01BD4A170D92C6_A577FA22_7C552.png"></a>
+                        </div>
+                        <div class="txt">
+                            <div class="date">
+                                    2025-08-22
+                                </div>
+                            <a href="../info/1164/17522.htm" title="红色基因 蓝色情怀｜化学与化工学院师生党员赴鄠邑区开展“乡村振兴”主题实践" class="tit" tabindex="-1">红色基因 蓝色情怀｜化学与化工学院师生党员赴鄠邑...</a>
+                            <p class="zy">习近平总书记在党的二十大报告中强调：“加快建设农业强国，扎实推动乡村产业、人才、文化、生态、组织振兴。”在国家全面推...</p>
+                        </div>
+                       
+                    </div><div class="box slick-slide" data-slick-index="5" aria-hidden="true" style="width: 575px;" tabindex="-1" role="option">
+                        <div class="pic">
+                            <a href="../info/1164/16452.htm" title="学生工作丨化学与化工学院举办“研途逐梦”保研考研经验分享会" tabindex="-1"><img src="/__local/D/60/0F/3ECAC5185E868E4065CE70BBA30_2D03570A_5D312.png"></a>
+                        </div>
+                        <div class="txt">
+                            <div class="date">
+                                    2025-06-04
+                                </div>
+                            <a href="../info/1164/16452.htm" title="学生工作丨化学与化工学院举办“研途逐梦”保研考研经验分享会" class="tit" tabindex="-1">学生工作丨化学与化工学院举办“研途逐梦”保研考...</a>
+                            <p class="zy">为助力本科生科学规划升学深造路径，化学与化工学院于5月23日在理学院报告厅举办保研及考研经验交流分享会。由分子科学与工程...</p>
+                        </div>
+                       
+                    </div><div class="box slick-slide slick-cloned" data-slick-index="6" id="" aria-hidden="true" style="width: 575px;" tabindex="-1">
+                        <div class="pic">
+                            <a href="../info/1164/17492.htm" title="我院组织师生集中收听收看纪念中国人民抗日战争暨世界反法西斯战争胜利80周年大会实况" tabindex="-1"><img src="/__local/A/61/AA/8EB22F140A39B6D1FFE39632409_BBB02FCA_59482.png"></a>
+                        </div>
+                        <div class="txt">
+                            <div class="date">
+                                    2025-09-04
+                                </div>
+                            <a href="../info/1164/17492.htm" title="我院组织师生集中收听收看纪念中国人民抗日战争暨世界反法西斯战争胜利80周年大会实况" class="tit" tabindex="-1">我院组织师生集中收听收看纪念中国人民抗日战争暨...</a>
+                            <p class="zy">为深切缅怀革命先烈，弘扬伟大抗战精神，激发广大师生的爱国热情和民族使命感，2025年9月3日上午，我院组织师生集中收听收看...</p>
+                        </div>
+                       
+                    </div></div></div>
+                    
+                    
+                    
+
+
+
+                    
+                    
+                    
+
+
+
+                    
+                    
+                    
+
+
+
+                    
+                    
+                    
+
+
+
+                    
+                    
+                    
+
+
+
+                    
+                    
+                    
+
+<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button></div><script>_showDynClickBatch(['dynclicks_u13_17492','dynclicks_u13_17462','dynclicks_u13_17502','dynclicks_u13_17512','dynclicks_u13_17522','dynclicks_u13_16452'],[17492,17462,17502,17512,17522,16452],"wbnews", 1860487147)</script>
+</div>
+                </div>
+            </div></div>
+     <div class="section1 px1400" style="display:none;"><div class="title">
+                <h2><span>科研动态</span><i>Academic Trend</i></h2>
+                <div class="more"><a href="kxyj1/kydt.htm">查看更多 &gt;</a></div>
+            </div>
+            <div class="news">
+                <ul class="slick-initialized slick-slider"><button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button>
+<div aria-live="polite" class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 0px; transform: translate3d(0px, 0px, 0px);" role="listbox"><li class="slick-slide slick-cloned" data-slick-index="-3" id="" aria-hidden="true" style="width: 0px;" tabindex="-1">
+                        <a href="../info/1088/17422.htm" title="《Adv. Funct. Mater.》发表顾军渭教授团队关于低反射电磁屏蔽气凝胶的研究成果" tabindex="-1">
+                            <div class="pic"><img src="/__local/7/FE/DB/EC99FE2E034468198A3080DD72F_7862556B_1079C.png" alt=""></div>
+                            <div class="text">
+                                <h2>《Adv. Funct. Mater.》发表顾军渭教授...</h2>
+                                <p>近日，学院顾军渭教授团队在Advanced Functional Materials期刊在线发表题为《Multifunctional Flexible...</p>
+                            </div>
+                        </a>
+                    </li><li class="slick-slide slick-cloned" data-slick-index="-2" id="" aria-hidden="true" style="width: 0px;" tabindex="-1">
+                        <a href="../info/1088/17262.htm" title="《Adv. Mater.》发表我院黄英教授、宗蒙副研究员超宽频吸波材料新进展" tabindex="-1">
+                            <div class="pic"><img src="/__local/8/A5/30/C2C1106D4C55DD5CF84259C2ABA_BBD1FEBC_18736.png" alt=""></div>
+                            <div class="text">
+                                <h2>《Adv. Mater.》发表我院黄英教授、宗蒙...</h2>
+                                <p>近日，化学与化工学院黄英教授和宗蒙副研究员在柔性超宽频吸波材料方面取得新进展，提出了一种通过液-液...</p>
+                            </div>
+                        </a>
+                    </li><li class="slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" style="width: 0px;" tabindex="-1">
+                        <a href="../info/1088/17272.htm" title="《Nature Communications》发表我院瞿永泉教授、张赛教授受阻路易斯酸碱对研究新进展" tabindex="-1">
+                            <div class="pic"><img src="/__local/D/45/0E/92E04D7D16B93CA31847FBACE68_79728797_CCC3.png" alt=""></div>
+                            <div class="text">
+                                <h2>《Nature Communications》发表我院瞿永...</h2>
+                                <p>近日，化学与化工学院瞿永泉教授、张赛教授联合江南大学刘冰副教授团队在原位重构金属-受阻路易斯酸碱对...</p>
+                            </div>
+                        </a>
+                    </li><li class="slick-slide" data-slick-index="0" aria-hidden="true" style="width: 0px;" tabindex="-1" role="option">
+                        <a href="../info/1088/17842.htm" title="中国科学院上海有机化学研究所黎占亭研究员做客我校翱翔灵犀学术殿堂暨“化”语高端讲堂" tabindex="-1">
+                            <div class="pic"><img src="/__local/3/6D/B1/A639E340EB4B428FB7C8CD1A547_1945A4E8_113BCE.png" alt=""></div>
+                            <div class="text">
+                                <h2>中国科学院上海有机化学研究所黎占亭研...</h2>
+                                <p>9月28日上午，应化学与化工学院副院长田威教授邀请，中国科学院上海有机化学研究所黎占亭研究员做客我校...</p>
+                            </div>
+                        </a>
+                    </li><li class="slick-slide slick-current slick-active" data-slick-index="1" aria-hidden="false" style="width: 0px;" tabindex="-1" role="option">
+                        <a href="../info/1088/17622.htm" title="《Angew. Chem. Int. Ed.》期刊发表张秋禹教授、郭威副教授关于共价-非共价界面作用协同增强储能的研究成果" tabindex="0">
+                            <div class="pic"><img src="/__local/8/AB/F4/E6028A2620B3BDD40CAF4E1AA46_A07D7DA7_32731.png" alt=""></div>
+                            <div class="text">
+                                <h2>《Angew. Chem. Int. Ed.》期刊发表张秋...</h2>
+                                <p>近日，学院张秋禹教授、郭威副教授团队在《Angew. Chem. Int. Ed.》期刊在线发表题为《Engineering Cova...</p>
+                            </div>
+                        </a>
+                    </li><li class="slick-slide slick-active" data-slick-index="2" aria-hidden="false" style="width: 0px;" tabindex="-1" role="option">
+                        <a href="../info/1088/17602.htm" title="《Advanced Functional Materials》期刊发表张秋禹教授团队新型含炭黑胆甾型液晶弹性体实现多级信息加密与多模式驱动的研究成果" tabindex="0">
+                            <div class="pic"><img src="/__local/B/0B/41/54B83E4322804780445490550CF_79650DE1_2AAD4.png" alt=""></div>
+                            <div class="text">
+                                <h2>《Advanced Functional Materials》期刊...</h2>
+                                <p>近日，学院张秋禹教授团队在《Advanced Functional Materials》期刊在线发表题为《Carbon Black-Contain...</p>
+                            </div>
+                        </a>
+                    </li><li class="slick-slide slick-active" data-slick-index="3" aria-hidden="false" style="width: 0px;" tabindex="-1" role="option">
+                        <a href="../info/1088/17422.htm" title="《Adv. Funct. Mater.》发表顾军渭教授团队关于低反射电磁屏蔽气凝胶的研究成果" tabindex="0">
+                            <div class="pic"><img src="/__local/7/FE/DB/EC99FE2E034468198A3080DD72F_7862556B_1079C.png" alt=""></div>
+                            <div class="text">
+                                <h2>《Adv. Funct. Mater.》发表顾军渭教授...</h2>
+                                <p>近日，学院顾军渭教授团队在Advanced Functional Materials期刊在线发表题为《Multifunctional Flexible...</p>
+                            </div>
+                        </a>
+                    </li><li class="slick-slide" data-slick-index="4" aria-hidden="true" style="width: 0px;" tabindex="-1" role="option">
+                        <a href="../info/1088/17262.htm" title="《Adv. Mater.》发表我院黄英教授、宗蒙副研究员超宽频吸波材料新进展" tabindex="-1">
+                            <div class="pic"><img src="/__local/8/A5/30/C2C1106D4C55DD5CF84259C2ABA_BBD1FEBC_18736.png" alt=""></div>
+                            <div class="text">
+                                <h2>《Adv. Mater.》发表我院黄英教授、宗蒙...</h2>
+                                <p>近日，化学与化工学院黄英教授和宗蒙副研究员在柔性超宽频吸波材料方面取得新进展，提出了一种通过液-液...</p>
+                            </div>
+                        </a>
+                    </li><li class="slick-slide" data-slick-index="5" aria-hidden="true" style="width: 0px;" tabindex="-1" role="option">
+                        <a href="../info/1088/17272.htm" title="《Nature Communications》发表我院瞿永泉教授、张赛教授受阻路易斯酸碱对研究新进展" tabindex="-1">
+                            <div class="pic"><img src="/__local/D/45/0E/92E04D7D16B93CA31847FBACE68_79728797_CCC3.png" alt=""></div>
+                            <div class="text">
+                                <h2>《Nature Communications》发表我院瞿永...</h2>
+                                <p>近日，化学与化工学院瞿永泉教授、张赛教授联合江南大学刘冰副教授团队在原位重构金属-受阻路易斯酸碱对...</p>
+                            </div>
+                        </a>
+                    </li><li class="slick-slide slick-cloned" data-slick-index="6" id="" aria-hidden="true" style="width: 0px;" tabindex="-1">
+                        <a href="../info/1088/17842.htm" title="中国科学院上海有机化学研究所黎占亭研究员做客我校翱翔灵犀学术殿堂暨“化”语高端讲堂" tabindex="-1">
+                            <div class="pic"><img src="/__local/3/6D/B1/A639E340EB4B428FB7C8CD1A547_1945A4E8_113BCE.png" alt=""></div>
+                            <div class="text">
+                                <h2>中国科学院上海有机化学研究所黎占亭研...</h2>
+                                <p>9月28日上午，应化学与化工学院副院长田威教授邀请，中国科学院上海有机化学研究所黎占亭研究员做客我校...</p>
+                            </div>
+                        </a>
+                    </li><li class="slick-slide slick-cloned" data-slick-index="7" id="" aria-hidden="true" style="width: 0px;" tabindex="-1">
+                        <a href="../info/1088/17622.htm" title="《Angew. Chem. Int. Ed.》期刊发表张秋禹教授、郭威副教授关于共价-非共价界面作用协同增强储能的研究成果" tabindex="-1">
+                            <div class="pic"><img src="/__local/8/AB/F4/E6028A2620B3BDD40CAF4E1AA46_A07D7DA7_32731.png" alt=""></div>
+                            <div class="text">
+                                <h2>《Angew. Chem. Int. Ed.》期刊发表张秋...</h2>
+                                <p>近日，学院张秋禹教授、郭威副教授团队在《Angew. Chem. Int. Ed.》期刊在线发表题为《Engineering Cova...</p>
+                            </div>
+                        </a>
+                    </li><li class="slick-slide slick-cloned" data-slick-index="8" id="" aria-hidden="true" style="width: 0px;" tabindex="-1">
+                        <a href="../info/1088/17602.htm" title="《Advanced Functional Materials》期刊发表张秋禹教授团队新型含炭黑胆甾型液晶弹性体实现多级信息加密与多模式驱动的研究成果" tabindex="-1">
+                            <div class="pic"><img src="/__local/B/0B/41/54B83E4322804780445490550CF_79650DE1_2AAD4.png" alt=""></div>
+                            <div class="text">
+                                <h2>《Advanced Functional Materials》期刊...</h2>
+                                <p>近日，学院张秋禹教授团队在《Advanced Functional Materials》期刊在线发表题为《Carbon Black-Contain...</p>
+                            </div>
+                        </a>
+                    </li></div></div>
+                    
+                    
+
+                    
+                    
+
+
+                    
+                    
+
+                    
+                    
+
+
+                    
+                    
+
+                    
+                    
+
+
+                    
+                    
+
+                    
+                    
+
+
+                    
+                    
+
+                    
+                    
+
+
+                    
+                    
+
+                    
+                    
+
+ <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button></ul>
+            </div><script>_showDynClickBatch(['dynclicks_u14_17842','dynclicks_u14_17622','dynclicks_u14_17602','dynclicks_u14_17422','dynclicks_u14_17262','dynclicks_u14_17272'],[17842,17622,17602,17422,17262,17272],"wbnews", 1860487147)</script>
+</div>
+        
+        <div class="section2 px1400">
+            
+            <!--
+                <div class="ztzl">
+                <ul>
+                    <li>
+                        <a href=""><img src="images/zt1.jpg"/></a>
+                    </li>
+                   <li>
+                        <a href=""><img src="images/zt2.jpg"/></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/zt3.jpg"/></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/zt4.jpg"/></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/zt5.jpg"/></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/zt6.jpg"/></a>
+                    </li>
+                </ul>
+            </div>
+            -->
+            
+            
+                  <div class="ztzl1">  
+       
+               
+                       <div class="one">
+                    <ul>  <li> <a href="https://z.nwpu.edu.cn/dsxxjy/sy.htm" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1860487147, 69809)" target="_blank">
+                           
+                            <img src="../images/dsxxjy.png">
+                        </a></li>   
+              
+               
+                        <li> <a href="ywgk.htm" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1860487147, 69811)" target="_blank">
+                           
+                            <img src="../images/20/sgxd1.png">
+                        </a></li>   
+              
+       
+
+       
+               
+                        <li> <a href="jyjx/bksjx2/qjjh.htm" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1860487147, 69810)" target="_blank">
+                           
+                            <img src="../images/qjjh.png">
+                        </a></li>   
+              
+               
+                        <li> <a href="http://www.aqsc.cn/" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1860487147, 69812)" target="_blank">
+                           
+                            <img src="../images/20/aqsc.jpg">
+                        </a></li>  </ul>
+                </div>
+                <div class="two">
+                    <ul> 
+              
+       
+
+       
+               
+                        <li> <a href="https://www.icourse163.org/" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1860487147, 69813)" target="_blank">
+                           
+                            <img src="../images/20/mooc.png">
+                        </a></li>   
+              
+               
+                        <li> <a href="https://www.ndrc.gov.cn/fggz/hjyzy/tdftzh/" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1860487147, 76281)" target="_blank">
+                           
+                            <img src="../images/sctd.png">
+                        </a></li>   
+              
+       
+
+       
+               
+                        <li> <a href="dqgz1/esdjsxx.htm" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 1860487147, 69814)" target="_blank">
+                           
+                            <img src="../images/ztesd.jpg">
+                        </a></li>   </ul>
+                </div>
+              
+       
+</div>
+            
+        </div>
+    
+    </div>
+</div>
+<div class="link">
+
+<div class="px1400 ">  
+        
+        <div class="yqlj">友情链接： </div>
+        
+        <script language="javascript" src="/system/resource/js/openlink.js"></script><ul class="links slick-initialized slick-slider"><button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button>              
+    <div aria-live="polite" class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 3760px; transform: translate3d(-1410px, 0px, 0px); transition: transform 500ms;" role="listbox"><li class="slick-slide slick-cloned" data-slick-index="-5" id="" aria-hidden="true" style="width: 230px;" tabindex="-1"><a href="http://www.moe.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860487147, 82737)" tabindex="-1">国家教育部</a></li><li class="slick-slide slick-cloned" data-slick-index="-4" id="" aria-hidden="true" style="width: 230px;" tabindex="-1"><a href="https://www.most.gov.cn/index.html" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860487147, 82738)" tabindex="-1">国家科技部</a></li><li class="slick-slide slick-cloned" data-slick-index="-3" id="" aria-hidden="true" style="width: 230px;" tabindex="-1"><a href="https://www.nsfc.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860487147, 82739)" tabindex="-1">国家自然科学基金委</a></li><li class="slick-slide slick-cloned" data-slick-index="-2" id="" aria-hidden="true" style="width: 230px;" tabindex="-1"><a href="https://www.chemsoc.org.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860487147, 82740)" tabindex="-1">中国化学会</a></li><li class="slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" style="width: 230px;" tabindex="-1"><a href="https://xyh.nwpu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860487147, 82741)" tabindex="-1">学校校友会</a></li><li class="slick-slide" data-slick-index="0" aria-hidden="true" style="width: 230px;" tabindex="-1" role="option"><a href="https://www.nwpu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860487147, 82736)" tabindex="0">西北工业大学</a></li><li class="slick-slide slick-current slick-active" data-slick-index="1" aria-hidden="false" style="width: 230px;" tabindex="-1" role="option"><a href="http://www.moe.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860487147, 82737)" tabindex="0">国家教育部</a></li><li class="slick-slide slick-active" data-slick-index="2" aria-hidden="false" style="width: 230px;" tabindex="-1" role="option"><a href="https://www.most.gov.cn/index.html" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860487147, 82738)" tabindex="0">国家科技部</a></li><li class="slick-slide slick-active" data-slick-index="3" aria-hidden="false" style="width: 230px;" tabindex="-1" role="option"><a href="https://www.nsfc.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860487147, 82739)" tabindex="0">国家自然科学基金委</a></li><li class="slick-slide slick-active" data-slick-index="4" aria-hidden="false" style="width: 230px;" tabindex="-1" role="option"><a href="https://www.chemsoc.org.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860487147, 82740)" tabindex="0">中国化学会</a></li><li class="slick-slide slick-active" data-slick-index="5" aria-hidden="false" style="width: 230px;" tabindex="-1" role="option"><a href="https://xyh.nwpu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860487147, 82741)" tabindex="-1">学校校友会</a></li><li class="slick-slide slick-cloned" data-slick-index="6" id="" aria-hidden="true" style="width: 230px;" tabindex="-1"><a href="https://www.nwpu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860487147, 82736)" tabindex="-1">西北工业大学</a></li><li class="slick-slide slick-cloned" data-slick-index="7" id="" aria-hidden="true" style="width: 230px;" tabindex="-1"><a href="http://www.moe.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860487147, 82737)" tabindex="-1">国家教育部</a></li><li class="slick-slide slick-cloned" data-slick-index="8" id="" aria-hidden="true" style="width: 230px;" tabindex="-1"><a href="https://www.most.gov.cn/index.html" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860487147, 82738)" tabindex="-1">国家科技部</a></li><li class="slick-slide slick-cloned" data-slick-index="9" id="" aria-hidden="true" style="width: 230px;" tabindex="-1"><a href="https://www.nsfc.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860487147, 82739)" tabindex="-1">国家自然科学基金委</a></li><li class="slick-slide slick-cloned" data-slick-index="10" id="" aria-hidden="true" style="width: 230px;" tabindex="-1"><a href="https://www.chemsoc.org.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860487147, 82740)" tabindex="-1">中国化学会</a></li></div></div>
+    
+    
+    
+    
+    
+<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button></ul>
+        
+ </div>
+</div>
+        
+<div class="footer ">
+    <div class="foot px1400">
+       <div class="ft-l"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<ul> 
+ <li class="dt"><a>地址：陕西省西安市长安区东祥路西北工业大学长安校区</a></li> 
+ <li class="dh"><a>联系方式：029-88431664</a></li> 
+ <li class="yx"><a>邮箱：hxyhg@nwpu.edu.cn</a></li> 
+ <li class="cz"><a>传真：029-88431664</a></li> 
+</ul></div>
+       <div class="ft-r">    <ul>
+       
+              <li>
+                        <a href="https://uis.nwpu.edu.cn/cas/login" title="翱翔门户" onclick="_addDynClicks(&quot;wbimage&quot;, 1860487147, 69764)" target="_blank">
+                            <img src="../images/mh.png" border="0"><p>翱翔门户</p>
+                        </a>  
+               </li>
+              <li>
+                        <a href="https://hxpgl.nwpu.edu.cn/nwpu/public/z/Index/admin.html" title="化学品综合管理平台" onclick="_addDynClicks(&quot;wbimage&quot;, 1860487147, 74811)" target="_blank">
+                            <img src="../images/huax.png" border="0"><p>化学品综合</p><p style="    padding: 0;    line-height: 14px;">管理平台</p>
+                        </a>  
+               </li>
+              <li>
+                        <a href="https://chemtest.nwpu.edu.cn/" title="共享平台预约" onclick="_addDynClicks(&quot;wbimage&quot;, 1860487147, 69767)" target="_blank">
+                            <img src="../images/yy.png" border="0"><p>共享平台预约</p>
+                        </a>  
+               </li>
+              <li>
+                        <a href="xyjs1/lxwm.htm" title="联系我们" onclick="_addDynClicks(&quot;wbimage&quot;, 1860487147, 69765)" target="_blank">
+                            <img src="../images/lxwm.png" border="0"><p>联系我们</p>
+                        </a>  
+               </li>
+              <li>
+                        <a href="cyxz1/jxzl.htm" title="资料下载" onclick="_addDynClicks(&quot;wbimage&quot;, 1860487147, 69766)" target="_blank">
+                            <img src="../images/zlxz.png" border="0"><p>资料下载</p>
+                        </a>  
+               </li>
+       
+    </ul></div>
+    </div>
+     <div class="ft-down">
+<p>西北工业大学化学与化工学院 版权所有</p></div>
+</div>
+
+
+
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery-migrate.min.js"></script>
+<script src="../js/slick.js"></script>
+<script src="../js/public.js"></script>
+     <script>
+        $(function() {
+            $('.banner').slick({
+                autoplay: true,
+                dots: true,
+                arrows: true,
+            })
+            
+            $('.zxdt .slider-news').slick({
+                dots: false, //显示指示点
+                infinite: true, //开启循环播放
+                arrows: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                speed: 500, //滑动速度300毫秒，单位毫秒
+                slidesToShow: 1, //幻灯片每屏显示1个
+                slidesToScroll: 1, //幻灯片每次滑动1个
+            });
+            
+            $('.news>ul').slick({
+                autoplay: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                responsive: [{
+                        breakpoint: 769,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    }, {
+                        breakpoint: 415,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+
+
+                ]
+
+
+            })
+            $('.notice>ul').slick({
+                autoplay: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                responsive: [{
+                        breakpoint: 769,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    }, {
+                        breakpoint: 415,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+
+
+                ]
+
+            })
+             $('.slider-xs').slick({
+                dots: false, //显示指示点
+                infinite: true, //开启循环播放
+                arrows: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                speed: 500, //滑动速度300毫秒，单位毫秒
+                slidesToShow: 1, //幻灯片每屏显示1个
+                slidesToScroll: 1, //幻灯片每次滑动1个
+            });
+            
+            
+            
+            //2022-09-01 start
+             $('.links').slick({
+                dots: false, //显示指示点
+                infinite: true, //开启循环播放
+                arrows: true,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                speed: 500, //滑动速度300毫秒，单位毫秒
+                slidesToShow: 5, //幻灯片每屏显示1个
+                slidesToScroll: 1, //幻灯片每次滑动1个
+                responsive: [{
+                        breakpoint: 900,
+                        settings: {
+                            slidesToShow:2,
+                            slidesToScroll: 1
+                        }
+                    }, {
+                        breakpoint: 450,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+
+
+                ]
+            });
+            
+            //2022-09-01 end
+        })
+    </script>
+
+</body></html>

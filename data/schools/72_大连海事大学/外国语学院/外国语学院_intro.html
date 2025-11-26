@@ -1,0 +1,327 @@
+<!DOCTYPE html><html lang="zh-CN"><head><title>学院简介-大连海事大学外国语学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+
+
+<meta name="SiteName" content="大连海事大学外国语学院">
+<meta name="SiteDomain" content="sfl.dlmu.edu.cn">
+<meta name="ColumnName" content="学院简介">
+<meta name="ColumnKeywords" content="学院简介">
+
+
+
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="ie=edge" http-equiv="X-UA-Compatible"><!-- Bootstrap --><link rel="stylesheet" href="../css/bootstrap.css"><link rel="stylesheet" href="../css/slick.css"><link rel="stylesheet" href="../css/animate.min.css"><link rel="stylesheet" href="../css/style.css">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307973465450535742000200024f50 -->
+<link rel="stylesheet" type="text/css" href="../dpzw_1.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1012,'/dpzw_1.jsp',-1,1685872202)</script>
+</head>
+<body>
+<div id="header" class="header wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+<div class="container clearfix">
+<div class="pull-left logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm"><img src="../images/logo20250416.png"></a></div>
+<div class="pull-right">
+<div class="header-a"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>    <a href="http://www.dlmu.edu.cn/" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1685872202, 66668)">学校主页</a>
+    <a href="../yzxx.htm" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1685872202, 66669)">院长信箱</a>
+    <a href="../xzzx.htm" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1685872202, 66670)">下载中心</a>
+</div>
+<div class="search-box">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2">
+    <div id="appu2"><div><input type="text" autocomplete="off" placeholder="请输入关键字" class="form-control"> <input type="submit" name="submit_button" align="absmiddle" value="" class="btn btn-search"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+          
+            <input type="text"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" class="form-control" placeholder="请输入关键字" >
+<input type="submit" class="btn btn-search"  name="submit_button"  v-on:click="onSubmit()" align="absmiddle" style="cursor: hand" value="">
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1685872202";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://zq-open.dlmu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div></div></div>
+<div class="nav-box wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+<div class="container"><ul class="nav-list clearfix text-center">
+	<li>
+		<a href="../index.htm">首页</a><span class="nav-click"><span class="caret"></span></span>
+	</li>
+	<li class="on">
+		<a href="xyjj.htm">学院概况</a><span class="nav-click"><span class="caret"></span></span>
+		<ul class="nav-down">
+			<li><a href="xyjj.htm">学院简介</a></li>
+			<li><a href="xrld.htm">现任领导</a></li>
+			<li><a href="jgsz1.htm">机构设置</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="../szdw/szgk.htm">师资队伍</a><span class="nav-click"><span class="caret"></span></span>
+		<ul class="nav-down">
+			<li><a href="../szdw/szgk.htm">师资概况</a></li>
+			<li><a href="../szdw/jsml1.htm">教师名录</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="../bksjy.htm">本科生教育</a><span class="nav-click"><span class="caret"></span></span>
+		<ul class="nav-down">
+			<li><a href="../bksjy/zyjs.htm">专业介绍</a></li>
+			<li><a href="../bksjy/pyjh.htm">培养计划</a></li>
+			<li><a href="../bksjy/cxcy.htm">创新创业</a></li>
+			<li><a href="../bksjy/sjjx.htm">实践教学</a></li>
+			<li><a href="../bksjy/jxcg.htm">教学成果</a></li>
+			<li><a href="../bksjy/sxsjjd.htm">实习实践基地</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="../yjspy.htm">研究生培养</a><span class="nav-click"><span class="caret"></span></span>
+		<ul class="nav-down">
+			<li><a href="../yjspy/xkjs.htm">学科介绍</a></li>
+			<li><a href="../yjspy/pyfa.htm">培养方案</a></li>
+			<li><a href="../yjspy/dsfc.htm">导师风采</a></li>
+			<li><a href="http://grs.dlmu.edu.cn/?action-category-catid-46" target="_blank">招生信息</a></li>
+			<li><a href="../yjspy/jxcg.htm">教学成果</a></li>
+			<li><a href="../yjspy/sxsjjd.htm">实习实践基地</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="../xsyj.htm">学术研究</a><span class="nav-click"><span class="caret"></span></span>
+		<ul class="nav-down">
+			<li><a href="../xsyj/qnjskytd.htm">青年教师科研团队</a></li>
+			<li><a href="../xsyj/xsdt.htm">学术动态</a></li>
+			<li><a href="../xsyj/kycg.htm">科研成果</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="../hzyjl.htm">合作与交流</a><span class="nav-click"><span class="caret"></span></span>
+		<ul class="nav-down">
+			<li><a href="../hzyjl/gjhz.htm">国际合作</a></li>
+			<li><a href="../hzyjl/yjjl.htm">院际交流</a></li>
+			<li><a href="../hzyjl/xqhz.htm">校企合作</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="../dwgz1/djgz.htm">党务工作</a><span class="nav-click"><span class="caret"></span></span>
+		<ul class="nav-down">
+			<li><a href="../dwgz1/djgz.htm">党建工作</a></li>
+			<li><a href="../dwgz1/ghgz.htm">工会工作</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="../xsgz/xshd.htm">学生工作</a><span class="nav-click"><span class="caret"></span></span>
+		<ul class="nav-down">
+			<li><a href="../xsgz/xshd.htm">学生活动</a></li>
+			<li><a href="../xsgz/xzfc.htm">学子风采</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="../jypx/pxxm.htm">教育培训</a><span class="nav-click"><span class="caret"></span></span>
+		<ul class="nav-down">
+			<li><a href="../jypx/pxxm.htm">培训项目</a></li>
+			<li><a href="../jypx/lxfs.htm">联系方式</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="../gzzd.htm">规章制度</a><span class="nav-click"><span class="caret"></span></span>
+	</li>
+	<li>
+		<a href="http://rcb.dlmu.edu.cn/index.htm">招聘信息</a><span class="nav-click"><span class="caret"></span></span>
+	</li>
+</ul></div>
+<div class="menu-button">
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div></div></div></div>
+<div class="slick banner-slick ">
+<div><img src="../images/nyban.jpg"></div></div><!-- jianjie -->
+<div class="container clearfix">
+<div class="pull-left left-width">
+<div class="left-width-tt text-center">
+学院概况</div><ul class="left-nav-list text-center">
+    <li class="active"><a href="xyjj.htm">学院简介</a></li>
+    <li><a href="xrld.htm">现任领导</a></li>
+    <li><a href="jgsz1.htm">机构设置</a></li>
+</ul></div>
+<div class="pull-right right-width">
+<div class="nav-b"><div>
+    当前位置: 
+                        <a href="../index.htm">首页</a>
+                &gt;&gt;
+                <a href="xyjj.htm">学院概况</a>
+                &gt;&gt;
+                <a href="xyjj.htm">学院简介</a>
+</div></div>
+<div class="article-p about-p wow animated fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1685872202,'wbnews','u8')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1685872202,1301)</script>
+    <div id="vsb_content_2_1301_u81"><div id="vsb_content_2"><p class="vsbcontent_start">外国语学院的前身是大连海运学院科技外语部。1997年成立外语系，2005年更名外国语学院。</p><p>学院下设英语系、日语系、海上专业大学英语教学部、陆上专业大学英语教学部、研究生公共外语教学部、西语教学部、外教教学部和语言教学中心等教学机构。设有全球化与外语教学研究中心、英语语言文学研究中心、日语教学研究所等研究机构。</p><p>学院现有英语、日语两个本科专业。<span style="text-indent: 28px;">1998年开始招收英语专业本科生，2005年开始招收日语专业本科生。</span>英语专业在2012年辽宁省本科专业综合评价中位列全省第三名，2015年获批辽宁省优势特色专业，2019年获批国家首批一流本科专业建设点。日语专业在2013年辽宁省本科专业综合评价中位列全省第五名，2019年获批辽宁省普通高等学校一流本科教育示范专业。依托外国语学院多年的办学经验，先进的教学条件和优良的师资队伍，英语和日语专业目前已发展成为特色鲜明的本科专业。<span style="text-indent: 28px;">学院现在校本科生约500人，研究生约200人。</span></p><p>1985年获批“外国语言学及应用语言学”硕士学位授权点，2005年获批“英语语言文学”硕士学位授权点。<span style="text-indent: 28px;">2018年增列为外国语言文学一级学科硕士学位授权点。</span></p><p>2008年“外国语言学及应用语言学”硕士点成为辽宁省重点学科，是国内最早开展语料库语言学和计量语言学研究的为数不多的机构之一。外国语言学及应用语言学硕士点包括海事英语、语料库语言学与语言处理、英语语言学理论与教学、商务英语4个研究方向。英语语言文学硕士点包括翻译学、英美文学2个研究方向。俄语语言文学硕士点包括语言学、俄罗斯文学、翻译学和区域国别研究4个研究方向。日语语言文学硕士点包括语言学、日本文学、翻译学3个研究方向。</p><p>2011年获批翻译硕士专业学位授权点，现有英语笔译、英语口译、日语笔译和日语口译四个硕士点。英语笔译和口译硕士点包括海事翻译、机助翻译和商务翻译3个研究方向，日语笔译和口译硕士点包括科技翻译、商务翻译和文学翻译3个研究方向。</p><p>学院师资力量雄厚，现有专任教师118人，教授19人（其中三级教授3人，另有两名教授分别当选为教育部英语专业教学指导委员会英语教学指导委员会和航海技术类教学指导委员会委员），副教授35人。具有博士学位的49人。每年聘请外籍教师20余人，此外，还聘请冯志伟、戴炜栋、王克非、汪洪章、刘海涛、陈国华、朱永生等国内知名专家学者为我校讲座、客座教授，定期来校授课、讲学。</p><p style="text-align: justify;">学院配备了先进的语言教学设备，拥有19个多媒体教室、14个数字化语音室、2个同传实验室、2个计算机辅助翻译实验室、1个图书资料室，1个音像资料编辑室。学院拥有丰富的专业图书、期刊杂志等教学资源。学院设有辽宁省教育科学规划首批重点研究基地“辽宁省大学英语教学研究基地”、海事特色外语人才创新培育与研究基地，<span style="text-align: justify; text-indent: 28px; text-wrap-mode: wrap;">与全国科技名词委共建</span>“涉海术语研究基地”、校内跨学科研究机构“大连海事大学中华优秀海洋文化外译研究中心”等科研平台， 获批辽宁省首批虚拟教研室建设点等教研机构，建有“辽宁省大学生实践教育基地”、辽宁省研究生联合培养示范基地、“辽宁省普通高等学校本科实验教学示范中心”等育人平台。</p><p style="text-align: justify;">近年来,学院秉持“教学与科研”同向发展的理念，扎实推进科研工作，强化服务意识，提升科研管理效能，积极营造学术氛围，在论文发表、专著出版、课题立项、学术交流等方面都有收效。发表SSCI和A&amp;HCI检索论文32篇、CSSCI检索论文70余篇；主持国家社科基金项目9项，教育部哲学社会科学重大攻关项目2项，教育部首批新文科研究与改革专项1项，教育部哲学社会科学研究项目6项，辽宁省社科基金项目36项、其中重点项目7项、全国科技名词委项目3项，其他省部级项目40余项；获辽宁省哲学社会科学奖二等奖2项、三等奖4项；出版专著（含译著）30余部。先后聘请语言学、文学、翻译等领域知名学者200余人来校讲学。</p><p style="margin-top:5px;margin-right:0;margin-bottom:5px;margin-left: 0;text-indent:32px;line-height:21px"><span style="font-size:14px;color:black"><span style="text-indent: 28px;"></span></span><br></p><p class="vsbcontent_end" style="text-align: center;">（以上统计数据截止时间为2024年11月）</p><p style="text-align: center"><img src="/virtual_attach_file.vsb?afc=oozvuiL7nkLzNbMUzCsL4NDM4V7LN-n8nmA2Lz62LR98oll0gihFp2hmCIa0USyDLkh7nSyiozlsMlL4MmvYnlVRUmG4n7Mfn7CDLllDozVFMmCbozARnRfFMNW2Ul-Jqjfjo4Oeos6b_dTZgDTJQty0LzGPL1yxLSbw62S8c" width="500" vsbhref="vurl" vurl="/_vsl/A60DE59575C3672EACB03DCADF61E691/66998CD0/6BFAB" vheight="" vwidth="500" orisrc="/virtual_attach_file.vsb?afc=OUmQx2nmW7MRVfMJ87DMz9snmnRMlL0sLRLYMzGsUmLDnNl0gihFp2hmCIa0oSybLkh7LkhVMzGZUz-aMllZLzGYnRC8U4WRL87Yn7LDnmrFLmffnmGinmMFnRU4Ul78gtXaQ4Oeo4xs_5Ab_khXptQ0g47aLz-0gz7Jqdanx" class="img_vsb_content"></p><p class="vsbcontent_img"><br></p></div></div>
+    <span id="vsb_content_2_1301_u8" name="vsb_content_2_1301_u8"></span><br><br>
+    
+</div></div></div><!-- foot -->
+<div class="footer wow animated fadeInUp text-center" style="visibility: hidden; animation-name: none;">
+<div class="container"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p class="text-left fl bq">大连海事大学外国语学院 © Copyright 2020 All rights reserved</p>
+<a class="fl top" href="#header">返回顶部</a> 
+<p class="text-right fr">辽ICP备11006854号-3</p></div></div><script src="../js/jquery.min.js"></script><script src="../js/slick.js"></script><script src="../js/wow.min.js"></script><script type="text/javascript">
+    $(".menu-button").click(function () {
+        $(".nav-down").slideUp("slow");
+        $(".nav-click").removeClass("active");
+        $(this).toggleClass("cross");
+        if ($(".nav-list").is(":hidden")) {
+            $(".nav-list").slideDown("slow");
+        } else {
+            $(".nav-list").slideUp("slow");
+        }
+    });
+    $(".nav-click").click(function () {
+        if ($(this).parents("li").find(".nav-down").is(":hidden")) {
+            $(".nav-click").removeClass("active");
+            $(this).addClass("active");
+            $(".nav-down").slideUp("slow");
+            $(this).parents("li").find(".nav-down").slideDown("slow");
+        } else {
+            $(this).parents("li").find(".nav-down").slideUp("slow");
+            $(this).removeClass("active");
+        }
+    });
+    if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+        new WOW().init();
+    };
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

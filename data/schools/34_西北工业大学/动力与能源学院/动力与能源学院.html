@@ -1,0 +1,930 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios">
+    <title>学院简介-动力与能源学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<META Name="keywords" Content="动力与能源学院,学院简介" />
+
+    <link rel="stylesheet" href="../style/public.css">
+    <link rel="stylesheet" href="../style/ny.css">
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-migrate.min.js"></script>
+    <script src="../js/public.js"></script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css" />
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232306975475152555742000200014156 -->
+<link rel="stylesheet" type="text/css" href="../index_article.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1002,'/index_article.jsp',-1,1769638200)</script>
+</head>
+
+<body>
+<!--pc端头部-->
+<div class="top pc">
+    <div class="header px1320">
+        <div class="logo">
+            
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+
+<a href="../index.htm"><img src="../images/dlyny.png" alt=""></a>
+        </div>
+        <div class="link-box">
+            <div class="h-link"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><div class="h-link">
+
+       <a href="http://www.nwpu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1769638200, 75009)">西北工业大学主页</a>
+
+       <a href="http://endongneng.nwpu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1769638200, 75010)">ENGLISH</a>
+</div></div>
+            <div class="search">
+              
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+ </style>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+
+ <img src="../images/search.png" alt="">
+                <div class="search-box">
+                    <div>
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="image" src="../images/search2.png" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+        </div>
+                </div>
+
+</script>
+
+
+                      
+                      
+                      
+                                      
+
+
+
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1769638200";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://yykfpt.nwpu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>             </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="nav-box">
+        <div class="px1320">
+
+
+            <div class="home">
+                <a href="../index.htm">
+                    <img src="../images/home.png" alt="">
+                    网站首页
+                </a></div>
+  <ul class="lv1">              
+              
+
+                <li><a href="xyjj.htm">学院概况</a>
+                <ul>
+
+                
+                        <li><a href="xyjj.htm">学院简介</a></li>
+                        
+                    
+
+                
+                        <li><a href="lsyg.htm">历史沿革</a></li>
+                        
+                    
+
+                
+                        <li><a href="xrld.htm">现任领导</a></li>
+                        
+                    
+
+                
+                        <li><a href="xzjg/zhbgs.htm">行政机构</a></li>
+                        
+                    
+                    </ul>
+                    
+                </li>
+               
+                
+
+              
+
+                <li><a href="../szdw/jcrc.htm">师资队伍</a>
+                <ul>
+
+                
+                        <li><a href="../szdw/jcrc.htm">杰出人才</a></li>
+                        
+                    
+
+                
+                        <li><a href="../szdw/jsml/qtjszmd.htm">教师名录</a></li>
+                        
+                    
+
+                
+                        <li><a href="../szdw/bsh.htm">博士后</a></li>
+                        
+                    
+
+                
+                        <li><a href="../szdw/xswyh.htm">学术委员会</a></li>
+                        
+                    
+                    </ul>
+                    
+                </li>
+               
+                
+
+              
+
+                <li><a href="../yjspy/tzgg.htm">研究生培养</a>
+                <ul>
+
+                
+                        <li><a href="../yjspy/tzgg.htm">通知公告</a></li>
+                        
+                    
+
+                
+                        <li><a href="../yjspy/zsgz.htm">招生工作</a></li>
+                        
+                    
+
+                
+                        <li><a href="../yjspy/pygz.htm">培养工作</a></li>
+                        
+                    
+
+                
+                        <li><a href="../yjspy/xjgl.htm">学籍管理</a></li>
+                        
+                    
+
+                
+                        <li><a href="../yjspy/xwgz.htm">学位工作</a></li>
+                        
+                    
+                    </ul>
+                    
+                </li>
+               
+                
+
+              
+
+                <li><a href="../bksjx/tzgg.htm">本科生教学</a>
+                <ul>
+
+                
+                        <li><a href="../bksjx/tzgg.htm">通知公告</a></li>
+                        
+                    
+
+                
+                        <li><a href="../bksjx/zyjs.htm">专业介绍</a></li>
+                        
+                    
+
+                
+                        <li><a href="../bksjx/pyfa.htm">培养方案</a></li>
+                        
+                    
+
+                
+                        <li><a href="../bksjx/jxgl.htm">教学管理</a></li>
+                        
+                    
+
+                
+                        <li><a href="../bksjx/jxcg.htm">教学成果</a></li>
+                        
+                    
+
+                
+                        <li><a href="../bksjx/sjjx.htm">实践教学</a></li>
+                        
+                    
+
+                
+                        <li><a href="../bksjx/xzzq.htm">下载专区</a></li>
+                        
+                    
+                    </ul>
+                    
+                </li>
+               
+                
+
+              
+
+                <li><a href="../xsgz/xgdt.htm">学生工作</a>
+                <ul>
+
+                
+                        <li><a href="../xsgz/xgdt.htm">学工动态</a></li>
+                        
+                    
+
+                
+                        <li><a href="../xsgz/tzgg.htm">通知公告</a></li>
+                        
+                    
+                    </ul>
+                    
+                </li>
+               
+                
+
+              
+
+                <li><a href="../kxyj/ysfx.htm">科学研究</a>
+                <ul>
+
+                
+                        <li><a href="../kxyj/ysfx.htm">优势方向</a></li>
+                        
+                    
+
+                
+                        <li><a href="../kxyj/kysys/sysgk.htm">科研实验室</a></li>
+                        
+                    
+
+                
+                        <li><a href="../kxyj/xgxz/ky.htm">相关下载</a></li>
+                        
+                    
+                    </ul>
+                    
+                </li>
+               
+                
+
+              
+
+                <li><a href="../gjhz/tzgg1.htm">国际合作</a>
+                <ul>
+
+                
+                        <li><a href="../gjhz/tzgg1.htm">通知公告</a></li>
+                        
+                    
+
+                
+                        <li><a href="../gjhz/ewbhz/lyb.htm">俄乌白合作</a></li>
+                        
+                    
+
+                
+                        <li><a href="../gjhz/ghjd/fxqfzldykzxkcxyzjd.htm">国合基地</a></li>
+                        
+                    
+
+                
+                        <li><a href="../gjhz/sqkt.htm">暑期课堂</a></li>
+                        
+                    
+
+                
+                        <li><a href="../gjhz/lhlx.htm">来华留学</a></li>
+                        
+                    
+
+                
+                        <li><a href="../gjhz/jlfc.htm">交流风采</a></li>
+                        
+                    
+
+                
+                        <li><a href="https://guoji.nwpu.edu.cn/">西工大国际合作处</a></li>
+                        
+                    
+                    </ul>
+                    
+                </li>
+               
+                
+
+              
+
+                <li><a href="../djyd/dwgk.htm">党建园地</a>
+                <ul>
+
+                
+                        <li><a href="../djyd/dwgk.htm">党委概况</a></li>
+                        
+                    
+
+                
+                        <li><a href="../djyd/llxx.htm">理论学习</a></li>
+                        
+                    
+
+                
+                        <li><a href="../djyd/djdt.htm">党建动态</a></li>
+                        
+                    
+
+                
+                        <li><a href="../djyd/djfw.htm">党建服务</a></li>
+                        
+                    
+                    </ul>
+                    
+                </li>
+               
+                
+
+              
+
+                <li><a href="../xyzs/xyhd.htm">校友之声</a>
+                <ul>
+
+                
+                        <li><a href="../xyzs/xyhd.htm">校友活动</a></li>
+                        
+                    
+
+                
+                        <li><a href="../xyzs/xyfw.htm">校友服务</a></li>
+                        
+                    
+                    </ul>
+                    
+                </li>
+               
+                
+
+              
+
+                <li><a href="../rcyy/gzzd.htm">人才引育</a>
+                <ul>
+
+                
+                        <li><a href="../rcyy/gzzd.htm">规章制度</a></li>
+                        
+                    
+
+                
+                        <li><a href="../rcyy/dqxh.htm">冬青学会</a></li>
+                        
+                    
+
+                
+                        <li><a href="../rcyy/hdfc/a2023.htm">活动风采</a></li>
+                        
+                    
+                    </ul>
+                    
+                </li>
+               
+                
+
+              
+</ul>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+<!--wap端导航-->
+<div class="m-top wap">
+    <div class="logo">
+        
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+
+<a href="../index.htm"><img src="../images/dlyny.png" alt=""></a>
+    </div>
+    <div class="menuBtn">
+
+    </div>
+    <div class="m-nav">
+        <div class="m-search">
+            <div class="input-box">
+               
+
+
+<style>
+
+</style>
+<div id="divu5"></div>
+<script type="text/html" id="htmlu5">
+    <div id="appu5">
+        <div v-if="!isError">
+            <input type="text" class="qwss" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="image"  src="../images/search.png" align="absmiddle" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+
+
+
+
+
+
+
+<script>
+    $("#divu5").html($("#htmlu5").text());
+</script>
+<script>
+    var appOwner = "1769638200";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu5",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultmobile/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://yykfpt.nwpu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+            </div>
+            <div class="m-link">
+                <a href="http://www.nwpu.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1769638200, 75009)" class="c1028229">西北工业大学主页</a>
+    
+<a href="http://endongneng.nwpu.edu.cn/" target="_blank" onclick="_addDynClicks(&#34;wburl&#34;, 1769638200, 75010)" class="c1028229">ENGLISH</a>
+    
+
+            </div>
+        </div>
+        <ul>
+            
+<li><a href="../index.htm">首页</a>
+                <ul>
+                <li><a href="../index/djsz.htm">党建思政</a></li>
+                <li><a href="../index/rcyy.htm">人才引育</a></li>
+                <li><a href="../index/yjspy.htm">研究生培养</a></li>
+                <li><a href="../index/bksjx.htm">本科生教学</a></li>
+                <li><a href="../index/xsgz.htm">学生工作</a></li>
+                <li><a href="../index/gjhz.htm">国际合作</a></li>
+                    
+                   
+                </ul>
+                <span></span>
+            </li>
+   
+
+<li><a href="xyjj.htm">学院概况</a>
+                <ul>
+                <li><a href="xyjj.htm">学院简介</a></li>
+                <li><a href="lsyg.htm">历史沿革</a></li>
+                <li><a href="xrld.htm">现任领导</a></li>
+                <li><a href="xzjg/zhbgs.htm">行政机构</a></li>
+                    
+                   
+                </ul>
+                <span></span>
+            </li>
+   
+
+<li><a href="../szdw/jcrc.htm">师资队伍</a>
+                <ul>
+                <li><a href="../szdw/jcrc.htm">杰出人才</a></li>
+                <li><a href="../szdw/jsml/qtjszmd.htm">教师名录</a></li>
+                <li><a href="../szdw/bsh.htm">博士后</a></li>
+                <li><a href="../szdw/xswyh.htm">学术委员会</a></li>
+                    
+                   
+                </ul>
+                <span></span>
+            </li>
+   
+
+<li><a href="../yjspy/tzgg.htm">研究生培养</a>
+                <ul>
+                <li><a href="../yjspy/tzgg.htm">通知公告</a></li>
+                <li><a href="../yjspy/zsgz.htm">招生工作</a></li>
+                <li><a href="../yjspy/pygz.htm">培养工作</a></li>
+                <li><a href="../yjspy/xjgl.htm">学籍管理</a></li>
+                <li><a href="../yjspy/xwgz.htm">学位工作</a></li>
+                    
+                   
+                </ul>
+                <span></span>
+            </li>
+   
+
+<li><a href="../bksjx/tzgg.htm">本科生教学</a>
+                <ul>
+                <li><a href="../bksjx/tzgg.htm">通知公告</a></li>
+                <li><a href="../bksjx/zyjs.htm">专业介绍</a></li>
+                <li><a href="../bksjx/pyfa.htm">培养方案</a></li>
+                <li><a href="../bksjx/jxgl.htm">教学管理</a></li>
+                <li><a href="../bksjx/jxcg.htm">教学成果</a></li>
+                <li><a href="../bksjx/sjjx.htm">实践教学</a></li>
+                <li><a href="../bksjx/xzzq.htm">下载专区</a></li>
+                    
+                   
+                </ul>
+                <span></span>
+            </li>
+   
+
+<li><a href="../xsgz/xgdt.htm">学生工作</a>
+                <ul>
+                <li><a href="../xsgz/xgdt.htm">学工动态</a></li>
+                <li><a href="../xsgz/tzgg.htm">通知公告</a></li>
+                    
+                   
+                </ul>
+                <span></span>
+            </li>
+   
+
+<li><a href="../kxyj/ysfx.htm">科学研究</a>
+                <ul>
+                <li><a href="../kxyj/ysfx.htm">优势方向</a></li>
+                <li><a href="../kxyj/kysys/sysgk.htm">科研实验室</a></li>
+                <li><a href="../kxyj/xgxz/ky.htm">相关下载</a></li>
+                    
+                   
+                </ul>
+                <span></span>
+            </li>
+   
+
+<li><a href="../gjhz/tzgg1.htm">国际合作</a>
+                <ul>
+                <li><a href="../gjhz/tzgg1.htm">通知公告</a></li>
+                <li><a href="../gjhz/ewbhz/lyb.htm">俄乌白合作</a></li>
+                <li><a href="../gjhz/ghjd/fxqfzldykzxkcxyzjd.htm">国合基地</a></li>
+                <li><a href="../gjhz/sqkt.htm">暑期课堂</a></li>
+                <li><a href="../gjhz/lhlx.htm">来华留学</a></li>
+                <li><a href="../gjhz/jlfc.htm">交流风采</a></li>
+                <li><a href="https://guoji.nwpu.edu.cn/">西工大国际合作处</a></li>
+                    
+                   
+                </ul>
+                <span></span>
+            </li>
+   
+
+<li><a href="../djyd/dwgk.htm">党建园地</a>
+                <ul>
+                <li><a href="../djyd/dwgk.htm">党委概况</a></li>
+                <li><a href="../djyd/llxx.htm">理论学习</a></li>
+                <li><a href="../djyd/djdt.htm">党建动态</a></li>
+                <li><a href="../djyd/djfw.htm">党建服务</a></li>
+                    
+                   
+                </ul>
+                <span></span>
+            </li>
+   
+
+<li><a href="../xyzs/xyhd.htm">校友之声</a>
+                <ul>
+                <li><a href="../xyzs/xyhd.htm">校友活动</a></li>
+                <li><a href="../xyzs/xyfw.htm">校友服务</a></li>
+                    
+                   
+                </ul>
+                <span></span>
+            </li>
+   
+
+<li><a href="../rcyy/gzzd.htm">人才引育</a>
+                <ul>
+                <li><a href="../rcyy/gzzd.htm">规章制度</a></li>
+                <li><a href="../rcyy/dqxh.htm">冬青学会</a></li>
+                <li><a href="../rcyy/hdfc/a2023.htm">活动风采</a></li>
+                    
+                   
+                </ul>
+                <span></span>
+            </li>
+   
+
+        </ul>
+        
+    </div>
+</div>
+
+
+<div class="banner">
+        
+<img src="../images/banner2.jpg" alt="">
+
+
+</div>
+
+
+
+
+    <div class="nymain px1320">
+        <div class="position wow fadeInUp"><img src="../images/position.png" alt=""><span>当前位置：</span>
+
+                <a href="../index.htm">首页</a>
+            
+
+
+                <span>></span>
+                <a href="xyjj.htm">学院概况</a>
+            
+
+
+                <span>></span>
+                <a href="xyjj.htm">学院简介</a>
+            
+
+
+</div>
+       
+        <div class="channl-menu leftNav">
+            
+            <div class="ny_left_top">
+学院概况</div>
+            
+            <ul>
+                
+                <li class="active on">
+                   
+                    <a href="xyjj.htm">学院简介</a><span></span>
+                    
+                </li>
+                
+                
+                
+
+                
+                <li>
+                   
+                    <a href="lsyg.htm">历史沿革</a><span></span>
+                    
+                </li>
+                
+                
+                
+
+                
+                <li>
+                   
+                    <a href="xrld.htm">现任领导</a><span></span>
+                    
+                </li>
+                
+                
+                
+
+                
+                <li>
+                   <i class="on"></i>
+                    <a href="xzjg/zhbgs.htm">行政机构</a><span></span>
+                    <ul>
+                    <li><a href="xzjg/zhbgs.htm">综合办公室</a></li>
+                    
+                    <li><a href="xzjg/kyybmbgs.htm">科研与保密办公室</a></li>
+                    
+                    <li><a href="xzjg/gjhyrcyjbgs.htm">国际化与人才引进办公室</a></li>
+                    
+                    <li><a href="xzjg/jxgzbgs.htm">教学工作办公室</a></li>
+                    
+                    <li><a href="xzjg/xsgzbgs.htm">学生工作办公室</a></li>
+                    
+                    </ul>   
+                    
+                    
+                </li>
+                
+                
+                
+</ul>
+        </div>
+
+        <div class="ny-right">
+            <h3>
+学院简介</h3>
+            <div class="art-main">
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1769638200,'wbnews','u13')</script>
+<link rel="stylesheet" Content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta13(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta13('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1769638200,2838)</script>
+
+    
+    <div id="vsb_content_4_2838_u131"><div id="vsb_content_4"><p style="background: rgb(255, 255, 255); margin: 0px 0px 10px; text-align: justify; line-height: 33px; text-indent: 37px; -ms-text-justify: inter-ideograph;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 宋体; font-size: 19px; font-style: normal;"><span style="font-family: 宋体;">西北工业大学动力与能源学院是从事航空发动机与新型能源领域的高水平科学研究和高层次人才培养的</span>“三航”特色学院，至今已有80余年的发展历史。</span></p><p style="background: rgb(255, 255, 255); margin: 0px 0px 10px; text-align: justify; line-height: 33px; text-indent: 37px; -ms-text-justify: inter-ideograph;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-size: 19px; font-style: normal; font-family: 宋体;">学院现有教职工149人，其中：教授44，副教授69。博士生导师76人。国家教学名师1人，国家级人才工程入选者14人，国家级专家6人，省部级人才工程入选者28人次。</span></p><p style="background: rgb(255, 255, 255); margin: 0px 0px 10px; text-align: center; line-height: 180%; text-indent: 28px;"><img width="553" height="251" id="65AUUUUA" src="/__local/B/B0/2F/29307A3669B6ADD6941A5F3353C_9C627DC9_14895.png" vsbhref="vurl" vurl="/_vsl/BB02F29307A3669B6ADD6941A5F3353C/9C627DC9/14895" vheight="251" vwidth="553" orisrc="/__local/B/B0/2F/29307A3669B6ADD6941A5F3353C_9C627DC9_14895.png" class="img_vsb_content"> </p><p style="background: rgb(255, 255, 255); margin: 0px 0px 10px; text-align: justify; line-height: 33px; text-indent: 37px; -ms-text-justify: inter-ideograph;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-style: normal; font-size: 18px; font-family: 宋体, SimSun;">学院有“航空宇航科学与技术”（A+学科）和“动力工程及工程热物理”（工信部重点学科）两个一级学科，包括“航空宇航推进理论与工程”和“工程热物理”、“热能工程”、“流体机械</span><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-style: normal; font-family: 宋体, SimSun; font-size: 18px;">及工程”、“动力机械及工程”、“风能和太阳能系统及工程”6个二级学科；有2个博士后流动站；“飞行器动力工程”和“能源与动力工程”2个本科专业。</span></p><p style="background: rgb(255, 255, 255); margin: 0px 0px 10px; text-align: justify; line-height: 33px; text-indent: 37px; -ms-text-justify: inter-ideograph;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-style: normal; font-family: 宋体, SimSun; font-size: 18px;"></span></p><p><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-style: normal; font-size: 18px; font-family: 宋体, SimSun;"></span></p><p><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-style: normal; font-family: 宋体, SimSun; font-size: 18px;">学院教学资源丰富，飞行器动力工程专业和能源与动力工程专业分别获批国家级一流本科专业建设点及陕西省名牌专业。建有国家级一流本科课程：“燃烧学”（线上线下混合式一流课程）和“航空发动机燃烧学”（线上一流课程）；国家级精品资源共享课程：“航空发动机燃烧学”；陕西省精品资源共享课程：“航空发动机燃烧学”和“气体动力学基础”；陕西省一流本科课程：“航空发动机故障诊断”、“航空发动机结构分析”、“叶轮机械原理”及“流体力学基础”；校级一流本科课程：“工程热力学”、“航空发动机结构动力学”及“传热学”；国家级虚拟仿真实验教学项目：“跨音速压气机失速/喘振虚拟实验”；陕西省虚拟仿真实验教学项目：“燃烧室点熄火与火焰稳定实验”、“拉伐尔喷管压力测量及纹影观测实验”。“气体动力学基础系列课程研究型教学创新团队”为工信部研究型教学创新团队；“航空动力实验教学示范中心”为工信部、陕西省实验教学示范中心；“航空动力系统虚拟仿真实验教学中心”为陕西省虚拟仿真教学实验中心。</span></p><p style="background: rgb(255, 255, 255); margin: 0px 0px 10px; text-align: justify; line-height: 33px; text-indent: 37px; -ms-text-justify: inter-ideograph;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-style: normal; font-family: 宋体, SimSun; font-size: 18px;">学院现有在校学生1977名（其中，本科生927名，硕士生677名，博士生373名）。曾培养了我国第一位航空发动机专业博士。到目前为止，已为国家培养了380余名博士生，3400余名硕士生等高素质创新型人才。其中一些佼佼者已成长为各级党政领导，著名大学、科研院所、企事业单位及部队的知名专家和技术骨干。在创新创业方面，“十三五”以来，学院学生获国际大学生数学建模等国际级学科竞赛奖励80余项，获得“挑战杯”全国大学生课外学术科技作品竞赛特等奖、全国大学生节能减排社会实践与科技竞赛一等奖、全国海洋航行器设计与制作大赛一等奖等国家级创新创业和学科竞赛奖励190余项。</span></p><p><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-style: normal; font-family: 宋体, SimSun; font-size: 18px;"></span></p><p style="text-indent:43px;text-autospace:ideograph-numeric;line-height:37px"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-style: normal; font-family: 宋体, SimSun; font-size: 18px;">学院面向国家重大战略需求，聚焦内涵式发展，推动高质量提升。学院拥有“轻型涡轮动力”全国重点实验室（西工大分部），“航空发动机总体与控制数智技术”工业和信息化部重点实验室，“航空发动机内流动力学”和“航空动力系统热科学”陕西省重点实验室，“航空航天发动机振动”陕西省工程中心和“空天动力工业软件”陕西省“四主体一联合”校企联合研究中心等。另有“国家重点项目振动控制支撑团队”、“新概念喷气推进技术”国防科工委创新团队等省部级或行业创新团队6个。近年来，学院承担了千万级国家重大科研项目28项，科研经费稳步增长，人均科研经费多年位居全校前列。近年来，获国家技术发明奖二等奖2项，国防科技进步一等奖1项、二等奖4项，国防技术发明二、三等奖3项，陕西省自然科学二等奖2项，陕西省科技进步一等奖1项、二等奖2项，中国航空学会技术发明一等奖1项，1人获探月工程嫦娥五号任务先进个人，1人获得中国人工智能学会吴文俊人工智能科学技术科技进步奖，1人获得中国青年科技奖特别奖。</span></p><p style="text-align: justify;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-style: normal; font-family: 宋体, SimSun; font-size: 18px;">学院拥有“风力发电技术国家科技部引才引智示范基地”、“飞行器综合体效能分析国际科技合作基地”、“飞行器复杂流动与控制学科国家创新引智基地”、“陕西省创新能力支撑计划先进航空发动机气动与热结构技术创新引智基地”等国家级与省部级国际合作基地。</span></p><p style="text-align: justify;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-style: normal; font-family: 宋体, SimSun; font-size: 18px;">与德国柏林工业大学、俄罗斯喀山国立技术大学、俄罗斯萨马拉国家研究性大学、英国剑桥大学、荷兰代尔夫特理工大学等世界30余所大学以及英国罗•罗公司、俄罗斯航空发动机中央研究院等世界著名航空发动机研制单位建立了紧密的科研合作关系。联合成立了“中德旋转机械与风能装置测控研究所”、“中俄先进航空发动机热结构国际联合实验室”、“中英传热与空气动力学实验室”、“中俄联合适航性研究中心”和“中德风电技术研究中心”等研究机构，每年双方互派留学生和访问学者，进行人才培养和学术交流。与学院长期合作的外方教授有2人获得“国家友谊奖”，中德旋转机械与风能装置测控研究所是国家外专局和陕西省引进国外智力示范单位。获批国家级111引智基地、陕西省一带一路联合实验室和陕西省先进航空发动机气动与热结构技术创新引智基地。</span></p><p style="text-align: justify;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-style: normal; font-family: 宋体, SimSun; font-size: 18px;">学院成立俄乌交流中心，学校与喀山国立技术大学联合成立了俄语中心、航空发动机热结构国际联合实验室。获批千万级国家留学基金委国际合作培养项目，为人才联合培养和学术交流提供了重要的保障。</span></p><p style="background: rgb(255, 255, 255); margin: 0px 0px 10px; text-align: justify; line-height: 33px; text-indent: 37px; -ms-text-justify: inter-ideograph;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-style: normal; font-family: 宋体, SimSun; font-size: 18px;">学院将秉承“公诚勇毅”校训，发扬“三实一新”校风，以“培养家国情怀强烈、专业基础扎实、综合素质突出、创新思维活跃、善于沟通协同、有国际视野和全球胜任力的领</span><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-style: normal; font-family: 宋体, SimSun; font-size: 18px;">军人才”为目标，不断续写新时代“西工大现象”新篇章！</span></p><p style="background: rgb(255, 255, 255); margin: 0px 0px 10px; text-align: justify; line-height: 33px; text-indent: 37px; -ms-text-justify: inter-ideograph;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-style: normal; font-family: 宋体, SimSun; font-size: 18px;"></span><br></p><p style="background: rgb(255, 255, 255); margin: 0px 0px 10px; text-align: right; line-height: 33px; text-indent: 37px;"><span style="background: rgb(255, 255, 255); color: rgb(0, 0, 0); letter-spacing: 0px; font-family: 宋体; font-size: 19px; font-style: normal;">（数据截止2025年09月25日）</span></p><p><br></p></div></div>
+    <span id="vsb_content_4_2838_u13" name="vsb_content_4_2838_u13"></span>
+    
+
+</div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="footer">
+        <div class="px1320">
+            <div class="ft-l">
+                <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p class="bq">版权所有 @ 西北工业大学 动力与能源学院</p><p class="dh">电话：029-88431112&nbsp; &nbsp; &nbsp;</p><p class="dz">地址：西安市长安区东祥路1号 &nbsp; &nbsp; 邮编：710129</p>
+            </div>
+            <div class="ft-c">
+                <ul>
+                        
+                    
+                    <li><a href="https://uis.nwpu.edu.cn/cas/login?service=https%3A%2F%2Fecampus.nwpu.edu.cn%2Fc%2Fportal%2Flogin" onclick="_addDynClicks(&#34;wbimage&#34;, 1769638200, 63288)">
+                        <div><img src="../images/icon-6.png" alt="">
+                        </div>
+                        <p>翱翔门户</p>
+                    </a></li>
+
+                    
+                    <li><a href="https://uis.nwpu.edu.cn/cas/login?service=http%3A%2F%2Foa.nwpu.edu.cn%2Flogin%2FLogin.jsp%3Bjsessionid%3DabcRa_2f1obJahjTGcEVx%3" onclick="_addDynClicks(&#34;wbimage&#34;, 1769638200, 63289)">
+                        <div><img src="../images/icon-7.png" alt="">
+                        </div>
+                        <p>翱翔办公</p>
+                    </a></li>
+
+                    
+                    <li><a href="https://xygg.nwpu.edu.cn/info/1003/22073.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1769638200, 63291)">
+                        <div><img src="../images/icon-8.png" alt="">
+                        </div>
+                        <p>校车校历</p>
+                    </a></li>
+
+                    
+                    <li><a href="../zhxin_xi/xzzq.htm" onclick="_addDynClicks(&#34;wbimage&#34;, 1769638200, 63306)">
+                        <div><img src="../images/icon-9.png" alt="">
+                        </div>
+                        <p>下载专区</p>
+                    </a></li>
+
+                    
+                    <li><a href="http://hyssqglxt.nwpu.edu.cn/cdsq7/" onclick="_addDynClicks(&#34;wbimage&#34;, 1769638200, 63606)">
+                        <div><img src="../images/main3-2-4.png" alt="">
+                        </div>
+                        <p>会议室预约</p>
+                    </a></li>
+
+                </ul>
+            </div>
+            <div class="ft-r">
+                <p>社交媒体</p>
+                    
+<img src="../images/qr.jpg" alt="">
+
+
+                <span>微信公众号</span>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</body>
+
+
+</html>

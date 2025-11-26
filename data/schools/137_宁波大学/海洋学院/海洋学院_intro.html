@@ -1,0 +1,506 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width">
+<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+<title>学院简介-宁波大学海洋学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="宁波大学海洋学院">
+
+<link rel="stylesheet" type="text/css" href="../site2023/static/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../site2023/static/css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="../site2023/static/css/base.css">
+<link rel="stylesheet" type="text/css" href="../site2023/static/css/style.css">
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307b76465550555742000300024752 -->
+<link rel="stylesheet" type="text/css" href="../site2023/page1.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1452,'/site2023/page1.jsp',-1,1309592351)</script>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col logo">
+                <a href=""><img src="../site2023/static/images/logo.svg" alt="宁波大学海洋学院"></a>
+            </div>
+
+            <div class="col-md-6 col right-container flex">
+                 <div class="search pc-show">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script>
+<div id="divu0">
+    <div id="appu0"><div><input type="text" placeholder="搜索" name="INTEXT" autocomplete="off"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+           
+            
+                 <input type="text" placeholder="搜索" name="INTEXT" autocomplete="off"   v-model=query.keyWord @keyup.enter="onSubmit">
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1309592351";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                <div class="links">
+                    <div class="menu"><a href="javascript:;"></a></div>
+                    <a href="javascript:;" class=" searchico mobile-show"></a>
+                     <a href="../English.htm" class="">ENGLISH</a>
+                    <a href="https://www.nbu.edu.cn/" class=" pc-show">宁大主页</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="search-page bluebg mobile-show">
+     <div class="search">
+
+
+<div id="divu1">
+    <div id="appu1"><div><input type="text" placeholder="搜索" autocomplete="off"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+        
+           <input type="text"    placeholder="搜索"  autocomplete="off"  v-model=query.keyWord @keyup.enter="onSubmit">
+           
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1309592351";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+</div>
+
+<div class="nav-container">
+  <nav class="container">
+    <ul class="row flex">
+
+      <li><a href="http://haiyang.nbu.edu.cn/">首页</a></li>
+      <li class="withdrop"><i></i> <a href="javascript:;">学院概况</a>
+        <dl>
+          <dd><a href="/xygk/xyjj.htm">学院简介</a></dd>
+          <dd><a href="/xygk/xyld.htm">学院领导</a></dd>
+          <dd><a href="/xygk/jgsz.htm">机构设置</a></dd>
+          <dd><a href="/xygk/fzlc.htm">发展历程</a></dd>
+          <dd><a href="/xygk/lxfs.htm">联系我们</a></dd>
+          <dd><a href="/xygk/xywh.htm">学院文化</a></dd>
+        </dl>
+      </li>
+      <li class="withdrop"><i></i> <a href="javascript:;">师资队伍</a>
+        <dl>
+          <dd><a href="/szdw/szgk.htm">师资概况</a></dd>
+          <dd><a href="/szdw/qzjs.htm">全职教师</a></dd>
+          <dd><a href="/szdw/ggrc.htm">骨干人才</a></dd>
+        </dl>
+      </li>
+      <li class="withdrop"><i></i> <a href="javascript:;">科学研究</a>
+        <dl class="withlong">
+        <dd><a href="/kxyj/xkykypt1.htm">学科与科研平台</a></dd>
+          <dd><a href="/kxyj/kyxm.htm">科研项目</a></dd>
+          <dd><a href="/kxyj/kycg.htm">科研成果</a></dd>
+          <dd><a href="https://ehall.nbu.edu.cn/ywtb-portal/official/index.html?browser=no#/custom/zywj">规章制度</a></dd>
+        </dl>
+      </li>
+      <li class="withdrop"><i></i> <a href="javascript:;">本科教育</a>
+        <dl>
+          <dd><a href="/bkjy/zsxx.htm">招生信息</a></dd>
+          <dd><a href="/bkjy/zyjs.htm">专业介绍</a></dd>
+          <dd><a href="/bkjy/pyfa.htm">培养方案</a></dd>
+          <dd><a href="/bkjy/jxdg.htm">教学大纲</a></dd>
+          <dd><a href="/bkjy/gsgg.htm">公示公告</a></dd>
+          <dd><a href="/bkjy/jsfz.htm">教师发展</a></dd>
+          <dd><a href="/bkjy/gzzd.htm">规章制度</a></dd>
+          <dd><a href="/bkjy/jsxz.htm">教师下载</a></dd>
+          <dd><a href="/bkjy/xsxz.htm">学生下载</a></dd>
+        </dl>
+      </li>
+
+      <li class="withdrop"><i></i> <a href="javascript:;">研究生培养</a>
+        <dl>
+          <dd><a href="/yjspy/zsgz.htm">招生工作</a></dd>
+          <dd><a href="/yjspy/pygz.htm">培养工作</a></dd>
+          <dd><a href="https://tutors.eol.cn/web/index/indexblists?service_id=36&amp;type=1&amp;act=de&amp;depart_id=268&amp;rel=3">导师信息</a></dd>
+          <dd><a href="/yjspy/bygz.htm">毕业工作</a></dd>
+          <dd><a href="/yjspy/dsxp.htm">导师选聘</a></dd>
+          <dd><a href="/yjspy/gsgg.htm">公示公告</a></dd>
+        </dl>
+      </li>
+
+      <li class="withdrop"><i></i> <a href="http://sea.nbu.edu.cn/">学生工作</a>
+
+      </li>
+      <li class="withdrop"><i></i> <a href="javascript:;">党群工作</a>
+        <dl>
+          <dd><a href="/dqgz/zzjg.htm">组织机构</a></dd>
+          <dd><a href="/dqgz/dwwj.htm">党委文件</a></dd>
+          <dd><a href="/dqgz/djdt.htm">党建动态</a></dd>
+          <dd><a href="/dqgz/dflz.htm">党风廉政</a></dd>
+          <dd><a href="/dqgz/ghdt.htm">工会动态</a></dd>
+          <dd><a href="/dqgz/ggw.htm">关工委</a></dd>
+        </dl>
+      </li>
+
+      <li class="withdrop"><i></i> <a href="javascript:;">地方服务</a>
+        <dl class="withlong">
+          <dd><a href="/dffw1/kjtpyfw.htm">科技特派员服务</a></dd>
+          <dd><a href="/dffw1/js_bsjqy.htm">教授、博士进企业</a></dd>
+          <dd><a href="/dffw1/jxjyypx.htm">继续教育与培训</a></dd>
+          <dd><a href="/dffw1/yxhd.htm">研学活动</a></dd>
+          <dd><a href="/dffw1/kpjd.htm">科普基地</a></dd>
+          <dd><a href="/dffw1/xdhz.htm">校地合作</a></dd>
+        </dl>
+      </li>
+
+      <li class="withdrop"><i></i> <a href="javascript:;">实验室管理</a>
+                <dl class="withlong">
+          <dd><a href="https://haiyang.nbu.edu.cn/zsjd1/zsjd1/tzgg.htm">中试基地</a></dd>
+          <dd><a href="https://haiyang.nbu.edu.cn/zsjd1/jxsyzx.htm">教学实验中心</a></dd>
+          <dd><a href="https://haiyang.nbu.edu.cn/zsjd1/kyyfyzbglzx.htm">科研用房与装备管理中心</a></dd>
+
+        </dl>
+      </li>
+
+      <li class="withdrop"><i></i> <a href="javascript:;">信息公开</a>
+        <dl>
+          <dd><a href="/xxgk/xywj.htm">学院文件</a></dd>
+          <dd><a href="/xxgk/bgxz.htm">表格下载</a></dd>
+        </dl>
+      </li>
+
+
+    </ul>
+  </nav>
+</div>
+
+
+
+<div class="full-pic pc-show">
+    <img src="../site2023/static/images/banner-honor.jpg" alt="">
+</div>
+
+<div class="honor-container photo-container news-container teamshow">
+    <div class="container">
+        <ul class="row">
+            <div class="col-md-3 nav bluebg">
+                <h2 class="mobile-show">
+
+学院概况
+                <div class="menu"><a href="javascript:;"></a></div></h2>
+                
+                <ul>
+                    <li><b><div>
+学院概况</div></b></li>
+                                    
+                                        
+                    <li class="active"><a href="xyjj.htm">学院简介</a></li>
+
+         
+                    
+                    <li><a href="xyld.htm">学院领导</a></li>
+
+         
+                    
+                    <li><a href="jgsz.htm">机构设置</a></li>
+
+         
+                    
+                    <li><a href="fzlc.htm">发展历程</a></li>
+
+         
+                    
+                    <li><a href="lxfs.htm">联系我们</a></li>
+
+         
+                    
+                    <li><a href="xywh.htm">学院文化</a></li>
+
+         
+
+
+                </ul>
+            </div>
+            <div class="full-pic mobile-show">
+                <img src="../site2023/static/images/banner-honor.jpg" alt="">
+            </div>
+            <div class="col-md-9 list">
+                <h2 class="row flex breadnav">
+                    <div class=" flex flex-edge">
+                        <b class="pc-show">
+<div>
+学院简介</div>
+</b>
+                        <div class="flex bread">
+                            <a href="" class="home"></a>
+                   
+           <a href="../index.htm">- 首页</a>
+    
+
+           <a href="../xygk.htm">- 学院概况</a>
+    
+
+           <a href="xyjj.htm">- 学院简介</a>
+    
+
+                        </div>
+                        <b class="mobile-show cname"><span>
+学院简介</span></b>
+                    </div>
+                </h2>
+                
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1309592351,'wbnews','u9')</script>
+<script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1309592351,11237)</script>
+    
+<div id="vsb_content_11237_u91"><div id="vsb_content"><p style="text-indent: 28px; text-align: justify;"><span style="font-family:宋体;font-size:14px"><span style="font-family:宋体">宁波大学海洋学院是全国高校党建工作标杆院系。学院成立于</span><span style="font-family:Calibri">2011</span><span style="font-family:宋体">年</span><span style="font-family:Calibri">11</span><span style="font-family:宋体">月，因国家海洋局与宁波市政府共建宁大涉海学科而新建。前身为生命科学与生物工程学院，由浙江水产学院水产系和宁波师范学院生物系合并而成，办学历史迄今已有</span><span style="font-family:Calibri">60</span><span style="font-family:宋体">余年。海洋人不忘初心、牢记使命，紧紧围绕国家蓝色粮仓和乡村振兴战略，坚持党建引领，“党建</span><span style="font-family:Calibri">+</span><span style="font-family:宋体">学科”双融双促，不断凝炼学科特色，实现学院高质量发展。</span></span></p><p><br></p><p style="text-indent: 28px; text-align: justify;"><span style="font-family:宋体;font-size:14px">学院现有水产养殖学、生物技术专业，均被认定为国家一流本科专业建设点。现有水产、生物学一级学科博士点，农业专业硕士学位点，水产、生物学博士后流动站两个，已具备本硕博完整的高层次人才培养体系。近几年，水产学科在软科中国最好学科始终排名全国前三；在新一轮学科遴选中，水产学科获批浙江省登峰学科，生物学学科获批<span style="font-family:宋体">浙江省一流学科</span><span style="font-family:Calibri">A</span><span style="font-family:宋体">类</span>。学院已助力动植物学科、农业科学、环境与生态学、生物学与生物化学、毒理学和病理学、地理学等<span style="font-family:Calibri">6</span><span style="font-family:宋体">个学科进入全球</span><span style="font-family:Calibri">ESI</span><span style="font-family:宋体">前</span><span style="font-family:Calibri">1%</span>。</span></p><p><br></p><p style="text-indent: 28px; text-align: justify;"><span style="font-family:宋体;font-size:14px">学院<span style="font-family:宋体">现拥有“海洋生物技术与工程”国家联合工程研究中心，“水产生物技术”教育部重点实验室、浙江海洋高效健康养殖省部共建协同创新中心、农业农村部绿色海水养殖重点实验室等国家、省、市级重大科研平台</span><span style="font-family:Calibri">13</span><span style="font-family:宋体">个。</span></span></p><p style="text-indent:28px"><br></p><p style="text-indent: 28px; text-align: justify;"><span style="font-family:宋体;font-size:14px">学院人才培养卓有成效。现<span style="font-family:宋体">拥有国家级实验教学示范中心1个，省级实验教学示范中心2个，国家级大学生课外实践教育建设基地1项，国家级一流课程1门，</span>省级<span style="font-family:宋体">一流课程6门。由我院教师主编教材3</span>0<span style="font-family:宋体">余部，其中国家级/省级规划教材4部。获浙江省教学成果二等奖1项、宁波市教学成果奖</span>12项。</span><span style="font-size: 14px; font-family: 宋体;">2024届学院毕业生初次就业去向落实率达100%，签约率达93.61%，留甬率达35.04%。学院积极鼓励学生到基层建功立业，入选国家基层项目西部计划、三支一扶共4人，地方基层项目8人，应征义务兵1人。毕业生人才质量得到用人单位的高度认可，对毕业生满意度100%。</span></p><p style="text-indent:28px"><br></p><p style="text-indent: 28px; text-align: justify;"><span style="font-family:宋体;font-size:14px">围绕国家海洋战略需求，依托国家优势特色专业和国家、省级科研创新平台，打造独具学院、学科、专业特色的海洋创新人才培养模式，获<span style="font-family:宋体">国家级教学成果奖二等奖2项、全国农业专业学位研究生实践教学成果特等奖1项，浙江省教学成果奖二等奖1项</span>。目前共建有2个省级研究生教育创新实践基地，近几年<span style="font-family:宋体">获“省优博</span><span style="font-family:Calibri">/</span><span style="font-family:宋体">硕</span>”论文（含提名）<span style="font-family:Calibri">9</span>篇<span style="font-family:宋体">。同时，创新“农业专业硕士渔业发展领域”研究生培养模式改革试点，构建了“学术型”和“专业型”人才分类培养</span>模式。</span></p><p style="text-indent:28px"><br></p><p style="text-indent: 28px; text-align: justify;"><span style="font-family:宋体;font-size:14px">学院注重教学和科研并举，科研项⽬、科研经费、论⽂专著总量逐<span style="font-family:宋体">年提升，年均新批项⽬超过</span>100项，科研项⽬经费超过4000万元/年；年均国家授权发明专利超过50项；年均发表SCI检索论⽂200篇以上。<span style="font-family:宋体">获国家科技进步奖二等奖3项，省部级科研奖项30多项，多项成果达到国际先进、国内领先⽔平，产⽣的经济和社会效益达</span>5000余万元以上/年。 </span></p><p style="text-indent: 28px"><br></p><p style="text-indent: 28px; text-align: justify;"><span style="font-family:宋体;font-size:14px"></span></p><p style="text-align: justify;"><span style="font-family: 宋体;">&nbsp;&nbsp;<span style="font-size: 14px;">学院有教职工183名，其中：正高级教师43名，副高级教师63名，博导41名，硕导82名，具有博士学位的教师151名。学院现有全职院士、共享院士各1名，“杰青”1名，海外优青2名，享受国务院政府特殊津贴专家2名，“国家优秀青年科学基金”、“青年科技奖”获得者、国务院学位委员会水产学科评议组成员、农业硕士教指委委员各1名，农业部岗位科学家3名，省万人领军人才1人，省级“151”等各类人才26名。学院目前有在校本科生</span></span><span style="font-size: 14px;">850</span><span style="font-size: 14px; font-family: 宋体;">人、研究生</span><span style="font-size: 14px;">861</span><span style="font-size: 14px; font-family: 宋体;">人、来华留学生</span><span style="font-size: 14px;">15</span><span style="font-size: 14px; font-family: 宋体;">人。</span></p><p style="text-indent:28px"><br></p><p style="text-indent: 28px; text-align: justify;"><span style="font-family: 宋体, SimSun; font-size: 14px;">2024年，我院学生获国家级大学生创新计划训练项目立项10项、浙江省新苗人才计划立项8项、浙江省教育厅一般科研项目（研究生项目）立项1项、宁波大学生科研项目SRIP校级立项29项、宁波大学研究生科研创新基金立项13项。获中国国际大学生创新大赛（2024）金奖3项、银奖1项，获第十四届“挑战杯”中国大学生创业计划竞赛金奖1项、铜奖1项，获浙江省国际大学生创新大赛奖项15项、获浙江省第十四届“挑战杯”大学生创业计划竞赛奖项4项。</span></p><p><br></p><p style="text-indent: 28px; text-align: justify;"><span style="font-family: 宋体, SimSun; font-size: 14px;">2024年度学院获多项荣誉。博士生陆嘉祺获评第十八届“大学生年度人物”入围奖；本科生黄文莲获评“国家奖学金特别评审奖”、第十四届浙江省大学生职业规划大赛银奖；海洋学院水产养殖硕士第一党支部获评全国高校“百个研究生样板党支部”，硕士生周宇航获评2024年“宁大潮音"思政微课大赛二等奖；硕士生秦康翔获评全国“新时代美德青年”。苏汝腾荣获宁波市优秀辅导员；蒋霞敏荣获浙江教育年度新闻人物；张乐荣获推进文明城市建设(文明城市创建)先进个人；王欢荣获2024中国力量年度人物提名；海洋学院教师第三党支部入选全国高校“强国行”专项行动团队、全省高校“百个艺术院系支部联村共建”名单；海洋学院水产养殖硕士研究生第一党支部荣获宁波市高校“先进大学生集体”；海洋学院荣获新时代雷锋学院称号。</span></p><p style="text-indent: 28px; text-align: justify;"><span style="font-family: calibri; font-size: 14px;">&nbsp; &nbsp; &nbsp;</span><br></p><p style="text-indent: 28px; text-align: justify;"><span style="font-family:宋体;font-size:14px">（上述内容统计截止到2025年4月）</span></p><p><br></p></div></div>    
+
+
+      
+            </div>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<footer>
+    <div class="container">
+<div><script language="javascript" src="../_dwr/engine.js"></script><script language="javascript" src="../_dwr/util.js"></script><script language="javascript" src="../_dwr/interface/PageCounterDWR.js"></script>        <div class="up flex">
+            <div class="flogo">
+                <img src="/static/images/logo.svg" alt="">
+                <div class="link">
+                    <a href="https://webadmin.nbu.edu.cn/" class="manage">管理入口</a>                    <a href="../oldw/INTRO/xyjj.htm">旧版入口</a>
+
+                    <a href="" class="view">总访问量: <span id="a258226" name="a258226">0003257920</span>   
+</a>
+                </div>
+            </div>
+        </div>
+<script>
+function getvisittimea258226()
+{       
+    PageCounterDWR.getVisittime('1309592351','1452','TOTAL_COUNTER','0','10',callbackdataa258226)
+}
+function callbackdataa258226(data)
+{
+    document.getElementById("a258226").innerHTML = data; 
+}
+getvisittimea258226();
+</script></div>
+<div><script language="javascript" src="/system/resource/js/openlink.js"></script>        <div class="friend">
+            <ul class="">
+                <li><b>友情链接</b></li>
+                <li><a href="https://www.nbu.edu.cn/">宁波大学</a></li>
+                <li><a href="http://rsc.nbu.edu.cn/">人事处</a></li>
+                <li><a href="http://kjc.nbu.edu.cn/">科技处</a></li>
+                <li><a href="http://graduate.nbu.edu.cn/">研究生院</a></li>
+                <li><a href="http://sea.nbu.edu.cn/">宁大学工</a></li>
+                <li><a href="http://atri.nbu.edu.cn/default.action">高等技术研究院</a></li>
+                <li><a href="http://haiyangxuey.113244.k0301.com/FormSystemhaiyang/MyAdmin/Admin_Login.asp">教学助手管理入口</a></li>
+            </ul>
+        </div>
+        <div class="address flex">
+            <p>
+                <span>地址：浙江省宁波市北仑区梅山港区七星南路169号 </span>   
+                <span>联系电话：0574-87600551</span>
+                <span>邮编：315832</span>
+            </p>
+        </div>
+        <div class="copyright">
+            © Copyright  © 2014 宁波大学海洋学院 All rights reserved 
+        </div></div>
+
+
+    </div>
+</footer>
+
+
+
+
+
+
+
+<script type="text/javascript" src="../site2023/static/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../site2023/static/js/swiper.min.js"></script>
+<script>
+var swiper = new Swiper ('.banner-swiper', {
+    direction:'horizontal',
+    loop: true,
+    autoplay:3000,
+    speed:1000,
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    pagination : '.swiper-pagination',
+    paginationClickable :true,
+    autoplayDisableOnInteraction : false,
+});
+</script>
+
+</body></html>

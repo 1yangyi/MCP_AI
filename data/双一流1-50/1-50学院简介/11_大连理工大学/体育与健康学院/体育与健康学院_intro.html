@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><title>学院简介-体育与健康学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="体育与健康学院">
+
+
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="IE=EmulateIE8" http-equiv="X-UA-Compatible">
+
+<meta name="description" content="">
+<meta name="generator" content="">
+<meta name="copyright" content="大连理工大体育与健康学院">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow"><link rel="stylesheet" type="text/css" href="../css/global.css"></head><body>&gt;
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307973475c50555742000300034056 -->
+<link rel="stylesheet" type="text/css" href="../dy_ej.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1072,'/dy_ej.jsp',-1,1679603844)</script>
+
+
+<div class="bg01">
+<div class="bg02">
+<div class="wrapper">
+<div class="fl"><a hidefocus="" href="../index.htm" style="hide-focus: true"><img alt="" src="../images/logo.png"></a></div>
+<div align="right" style="padding-top:13px;"><a href="#" style="font-size:14px; color:#ffffff">English</a></div>
+<div class="index_search fr">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script>
+<div id="divu0">
+    <div id="appu0"><div><table border="0" cellspacing="1" cellpadding="0"><tbody><tr><td><input size="12" class="input" style="height: 22px;"></td> <td align="absmiddle" nowrap="nowrap" height="1"><input type="submit" name="FindButton" value="  " class="btn"></td></tr></tbody></table></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+       <table border="0" cellspacing="1" cellpadding="0">
+  <tbody><tr>
+ 
+   <td>
+       
+       <input size="12" class="input" v-model=query.keyWord @keyup.enter="onSubmit" style="height:22px">
+   </td>
+   <td align="absmiddle" nowrap="nowrap" height="1">
+                    <input type="submit" name="FindButton" v-on:click="onSubmit()" class="btn" value="  ">
+   </td>
+  </tr>
+ </tbody></table>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1679603844";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+<div class="cb"></div></div></div></div>
+<div class="bg03">
+<div class="wrapper"><ul id="nav" class="nav clearfix">
+<li class="nLi on">
+    <h3><a hidefocus="" href="../index.htm" style="hide-focus: true">首页</a></h3>
+    <ul class="sub">
+    <li><a hidefocus="" href="../index/zytz.htm" style="hide-focus: true">重要通知</a> </li>
+    <li><a hidefocus="" href="../index/xyxw.htm" style="hide-focus: true">学院新闻</a> </li>
+    <li><a hidefocus="" href="../index/jxxx.htm" style="hide-focus: true">教学信息</a> </li>
+    </ul>
+</li>
+<li class="nLi">
+    <h3><a hidefocus="" href="xyjj.htm" style="hide-focus: true">学院概况</a></h3>
+    <ul class="sub">
+    <li><a hidefocus="" href="xyjj.htm" style="hide-focus: true">学院简介</a> </li>
+    <li><a hidefocus="" href="xrld.htm" style="hide-focus: true">现任领导</a> </li>
+    <li><a hidefocus="" href="zzjg/zhbgs1.htm" style="hide-focus: true">组织机构</a> </li>
+    <li><a hidefocus="" href="szdw/szgk1.htm" style="hide-focus: true">师资队伍</a> </li>
+    <li><a hidefocus="" href="zpxx.htm" style="hide-focus: true">招聘信息</a> </li>
+    </ul>
+</li>
+<li class="nLi">
+    <h3><a hidefocus="" href="http://tjpj.dlut.edu.cn/" style="hide-focus: true">盘锦分院</a></h3>
+</li>
+<li class="nLi">
+    <h3><a hidefocus="" href="../djgz/dw.htm" style="hide-focus: true">党建工作</a></h3>
+    <ul class="sub">
+    <li><a hidefocus="" href="../djgz/dw.htm" style="hide-focus: true">党委</a> </li>
+    <li><a hidefocus="" href="../djgz/dzb.htm" style="hide-focus: true">党支部</a> </li>
+    <li><a hidefocus="" href="../djgz/djhd.htm" style="hide-focus: true">党建活动</a> </li>
+    </ul>
+</li>
+<li class="nLi">
+    <h3><a hidefocus="" href="../tyjx/jxzz.htm" style="hide-focus: true">体育教学</a></h3>
+    <ul class="sub">
+    <li><a hidefocus="" href="../tyjx/jxzz.htm" style="hide-focus: true">教学组织</a> </li>
+    <li><a hidefocus="" href="../tyjx/kcjs.htm" style="hide-focus: true">课程介绍</a> </li>
+    <li><a hidefocus="" href="../tyjx/jxzy.htm" style="hide-focus: true">教学资源</a> </li>
+    <li><a hidefocus="" href="../tyjx/jxcg.htm" style="hide-focus: true">教学成果</a> </li>
+    </ul>
+</li>
+<li class="nLi">
+    <h3><a hidefocus="" href="../kxyj/xsxx.htm" style="hide-focus: true">科学研究</a></h3>
+    <ul class="sub">
+    <li><a hidefocus="" href="../kxyj/xsxx.htm" style="hide-focus: true">学术信息</a> </li>
+    <li><a hidefocus="" href="../kxyj/kytd.htm" style="hide-focus: true">科研团队</a> </li>
+    <li><a hidefocus="" href="../kxyj/kyjg.htm" style="hide-focus: true">科研机构</a> </li>
+    <li><a hidefocus="" href="../kxyj/kycg.htm" style="hide-focus: true">科研成果</a> </li>
+    <li><a hidefocus="" href="../kxyj/gjjl.htm" style="hide-focus: true">国际交流</a> </li>
+    </ul>
+</li>
+<li class="nLi">
+    <h3><a hidefocus="" href="../jkgc/ygty/ygty.htm" style="hide-focus: true">健康工程</a></h3>
+    <ul class="sub">
+    <li><a hidefocus="" href="../jkgc/ygty/ygty.htm" style="hide-focus: true">阳光体育</a> </li>
+    <li><a hidefocus="" href="../jkgc/tzcp/ydjkcjzx1.htm" style="hide-focus: true">体质测评</a> </li>
+    <li><a hidefocus="" href="../jkgc/jkkp.htm" style="hide-focus: true">健康科普</a> </li>
+    </ul>
+</li>
+<li class="nLi">
+    <h3><a hidefocus="" href="" style="hide-focus: true">运动训练</a></h3>
+    <ul class="sub">
+    <li><a hidefocus="" href="../ydxl/gspdbd/nl1.htm" style="hide-focus: true">高水平代表队</a> </li>
+    <li><a hidefocus="" href="../ydxl/zs.htm" style="hide-focus: true">招生</a> </li>
+    <li><a hidefocus="" href="../ydxl/gspdbdpg.htm" style="hide-focus: true">高水平代表队评估</a> </li>
+    </ul>
+</li>
+<li class="nLi">
+    <h3><a hidefocus="" href="../yjspy/xwpy.htm" style="hide-focus: true">研究生培养</a></h3>
+    <ul class="sub">
+    <li><a hidefocus="" href="../yjspy/xwpy.htm" style="hide-focus: true">学位培养</a> </li>
+    <li><a hidefocus="" href="../yjspy/gzzd.htm" style="hide-focus: true">规章制度</a> </li>
+    <li><a hidefocus="" href="../yjspy/txgz.htm" style="hide-focus: true">团学工作</a> </li>
+    <li><a hidefocus="" href="../yjspy/zsxx.htm" style="hide-focus: true">招生信息</a> </li>
+    <li><a hidefocus="" href="../yjspy/xyds.htm" style="hide-focus: true">行业导师</a> </li>
+    </ul>
+</li>
+<li class="nLi">
+    <h3><a hidefocus="" href="../xyyd/xyh.htm" style="hide-focus: true">校友园地</a></h3>
+    <ul class="sub">
+    <li><a hidefocus="" href="../xyyd/xyh.htm" style="hide-focus: true">校友会</a> </li>
+    <li><a hidefocus="" href="../xyyd/xyhd.htm" style="hide-focus: true">校友活动</a> </li>
+    </ul>
+</li>
+<li class="nLi">
+    <h3><a hidefocus="" href="../xzzx.htm" style="hide-focus: true">下载中心</a></h3>
+</li>
+</ul><script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jsd.js"></script>
+<script type="text/javascript" src="../js/jquery.SuperSlide.js"></script>
+<script src="../js/jquery.foucs.js" type="text/javascript"></script>
+<script id="jsID" type="text/javascript">
+            
+            jQuery("#nav").slide({ 
+                type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
+                titCell:".nLi", //鼠标触发对象
+                targetCell:".sub", //titCell里面包含的要显示/消失的对象
+                effect:"slideDown", //targetCell下拉效果
+                delayTime:300 , //效果时间
+                triggerTime:0, //鼠标延迟触发时间（默认150）
+                returnDefault:true //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+            });
+        </script></div></div>
+<div class="bg04">
+<div class="wrapper">
+<div class="ny_banner">
+    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+    </div>
+<div class="ny_left fl">
+<div class="t">
+学院简介</div>
+<div class="menu"><ul>
+            <li><a href="xyjj.htm" title="学院简介">学院简介</a></li>
+        <li><a href="xrld.htm" title="现任领导">现任领导</a></li>
+        <li><a href="zzjg/zhbgs1.htm" title="组织机构">组织机构</a></li>
+        <li><a href="szdw/szgk1.htm" title="师资队伍">师资队伍</a></li>
+        <li><a href="zpxx.htm" title="招聘信息">招聘信息</a></li>
+</ul></div></div>
+<div class="ny_right fr">
+<div class="title"><span>
+学院简介</span>
+<div class="pos fr"><div>
+    当前位置: 
+                        <a href="../index.htm">首页</a>
+                &gt;&gt;
+                <a href="xyjj.htm">学院概况</a>
+                &gt;&gt;
+                <a href="xyjj.htm">学院简介</a>
+</div></div>
+<div class="cb"></div></div>
+<div class="ny_list">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1679603844,'wbnews','u7')</script>
+<script>function seeContenta7(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1679603844,1052)</script>
+<p>
+   
+    </p><div id="vsb_content_1052_u71"><div id="vsb_content"><p style="line-height: 1.75em;"><span style="font-family: 微软雅黑,Microsoft YaHei; font-size: 10.5pt;">&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p style="text-indent: 37px; line-height: 1.75em;"><span style="line-height: 150%; font-family: 微软雅黑,Microsoft YaHei; font-size: 18px;"></span></p><p style="text-indent: 37px; line-height: 1.75em;"><span style="font-family: 微软雅黑; font-size: 16px;">大连理工大学体育与健康学院始建于建校初期，始终坚持“博爱、强体、创新、超越”的院训，继承和发扬中国奥运第一人刘长春精神，坚持立德树人根本任务，培养学生德智体美劳全面发展。</span></p><p style="text-indent: 37px; line-height: 1.75em;"><span style="font-family: 微软雅黑; font-size: 16px;">1950年，学校成立体育教研室，承担全校公共体育课教学工作；1984年，改制为体育教学部；1986年，获批全国普通高等院校非体育院校的首个体育科研所；2004年，获批运动人体科学二级学科硕士学位授予权；2007年，成立国家体育总局体育文化研究基地；2010年，获批体育学一级学科硕士学位授予权，招收体育人文社会学、运动人体科学、体育教育训练学、民族传统体育学四个方向的研究生；2013年开始招收首批体育专业本科生，开设运动康复和运动训练两个本科专业；2019年11月，学校成立体育与健康学院，并在盘锦校区设立分院。</span></p><p style="text-indent: 37px; line-height: 1.75em;"><span style="font-family: 微软雅黑; font-size: 16px;">体育与健康学院拥有着宝贵的体育人文资源。1950年至1983年，中国奥运第一人刘长春教授在我院从事体育教学与训练工作，他的精神影响着一代代的大工人。2008年北京奥运会前夕，雅典市市长赠送我校一份特殊礼物——金橄榄枝，纪念刘长春对中国奥运体育事业做出的贡献。</span></p><p style="text-indent: 37px; line-height: 1.75em;"><span style="font-family: 微软雅黑; font-size: 16px;">学院下设第一教研室、第二教研室、阳光体育教研室、运动训练教研室、体育科研所、国家体育总局体育文化研究基地，盘锦分院设有专业教研室、公共体育两个教研室。现有专任教师47人，教授5人、副教授23人、中级以下19人。教师队伍中5人具有博士学位，40人具有硕士学位，其中宝钢奖教学名师2人，省级教学名师3人，大连市高层次人才3人。国际级健将1人，国家级健将6人，国际级裁判1人，国家级裁判8人。</span></p><p style="text-indent: 37px; line-height: 1.75em;"><span style="font-family: 微软雅黑; font-size: 16px;">学院承担全校公共体育课教学、阳光体育运动组织、体育学科建设、高水平运动队管理及竞赛、大学生体质测试、健康工程等工作，深入探索课堂教学与课外锻炼相结合的课内外一体化的教学模式，每年举办20余项校级群体比赛，参与人数超过三万余人次，学院教师承担30余个体育社团指导工作，带动全校师生开展经常性锻炼。目前学院有篮球（男、女）、田径三支高水平代表队，有乒乓球、羽毛球、足球三支运动训练代表队，有足球、篮球、游泳、网球、羽毛球、健美操等近20支普通学生代表队。近年来，学校各级运动代表队在世界大学生运动会及全国大学生体育比赛中取得了优异成绩。学院目前有本科生231人，研究生69人，依托我校优势工科专业，开展“体医融合”、“体工结合”交叉研究与实践，旨在培养在体育与健康领域中具有创新和实践能力以及国际视野的高层次优秀人才。<br></span></p><p style="text-indent: 37px; line-height: 1.75em;"><span style="font-family: 微软雅黑; font-size: 16px;">体育与健康学院坚持以党的政治建设为统领，推进“一融双高”建设，坚守体育育人与健康助人的初心使命，紧跟高校体育工作新形势，努力构建与学校一流大学建设相适应、具有大工特色的一流大学体育学科，充分发挥体育在立德树人中的重要作用，形成以教学、科研、群体、训练为主的体教融合模式，大力推进健康工程落实，切实提升师生体质健康水平，努力将学院建设成为国内一流、国际知名的体育与健康学院。</span></p><p style="line-height: 1.75em;"><span style="color: black; font-family: 宋体,SimSun; font-size: 16px;"></span></p></div></div>
+    <span id="vsb_content_1052_u7" name="vsb_content_1052_u7"></span><br><br>
+    
+<p></p>
+
+
+
+</div></div>
+<div class="cb"></div></div></div>
+<div class="bg03">
+<div class="footer"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：大连市凌工路2号·大连理工大学体育与健康学院 | 邮编：116023 | 电话：0411-84708580 | 传真：0411-84708580</p></div></div>
+
+
+</body></html>

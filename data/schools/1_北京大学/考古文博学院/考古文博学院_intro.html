@@ -1,0 +1,1075 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学院简介-北京大学考古文博学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="北京大学考古文博学院">
+
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/public.css">
+    <link rel="stylesheet" href="../style/ny2.css">
+    <link rel="stylesheet" href="../style/ny_media2.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/public.js"></script>
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e78475053575742000500094655 -->
+<link rel="stylesheet" type="text/css" href="../jjy.vsb.css">
+
+<link rel="apple-touch-icon" href="https://www.pku.edu.cn/pku_logo_red.png">
+<link rel="icon" href="https://www.pku.edu.cn/pku_logo_red.png" sizes="192x192">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1141,'/jjy.jsp',-1,2106968311)</script>
+</head>
+
+<body>
+
+
+   <!-- pc 顶部 导航 -->
+    <div class="b-top">
+        <div class="t-search-zzc"></div>
+        <div class="t-search"><!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script>
+<div id="divu0">
+    <div id="appu0"><div><input type="text" placeholder="请输入关键词" autocomplete="off" class="qwss"> <div class="search-btn"><input type="button" class="tj"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+        <input type="text" class="qwss" placeholder="请输入关键词" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                <div class="search-btn">
+                    <input type="button" class="tj" v-on:click="onSubmit()"/>
+                </div>
+         
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "2106968311";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu0 = document.querySelector("#appu0");
+   if (appElementu0 && appElementu0.__vue__) {
+
+   } else {
+      $("#divu0").html($("#htmlu0").text());
+      var appOwner = "2106968311";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou0 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu0(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu0();
+        }
+      };
+
+      function onSubmitu0(e) {
+        queryInfou0.query.keyWord= $("#appu0  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou0.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script></div>
+    </div>
+    <div class="head pc">
+        <div class="head-top">
+            <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+
+<a href="../index.htm">
+                    <img class="logo1" src="../images/logo.png" alt="">
+                </a>
+</div>
+            <div class="h-right">
+                <div class="h-link"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><a href="http://123.56.144.236/" onclick="_addDynClicks(&quot;wburl&quot;, 2106968311, 106887)">学院OA</a>
+                    <span>|</span>
+                    
+   
+<a href="https://www.pku.edu.cn/" onclick="_addDynClicks(&quot;wburl&quot;, 2106968311, 107372)">北大主页</a>
+                    <span>|</span>
+                    
+   
+ <a class="search-switch head-search"><img src="../images/icon-search.png" alt=""></a>
+</div>
+                <div class="nav"><ul class="">
+   <li>
+                            <a href="../index.htm">首页</a>
+                             
+                        </li>
+                        
+   <li class="active">
+                            <a href="xyjj.htm">学院概况</a>
+                             
+                                <div class="ejnav">
+                                <ul>
+                                        <li><a href="xyjj.htm">学院简介</a></li>            
+                                        <li><a href="lsyg.htm">历史沿革</a></li>            
+                                        <li><a href="ljld1.htm">历届领导</a></li>            
+                                        <li><a href="jgsz.htm">机构设置</a></li>            
+                                        <li><a href="lxwm.htm">联系我们</a></li>            
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        
+   <li>
+                            <a href="../szdw/jxky1/jys/jsqsdkgjys.htm">师资队伍</a>
+                             
+                                <div class="ejnav">
+                                <ul>
+                                        <li><a href="../szdw/jxky1/jys/jsqsdkgjys.htm">教学科研</a></li>            
+                                        <li><a href="../szdw/bsh1/nf/2025n.htm">博士后</a></li>            
+                                        <li><a href="../szdw/xzjf/xzjf/xzbgs.htm">行政教辅</a></li>            
+                                        <li><a href="../szdw/grtx.htm">光荣退休</a></li>            
+                                        <li><a href="../szdw/wpkz/kzjs.htm">外聘客座</a></li>            
+                                        <li><a href="../szdw/yjhn.htm">永久怀念</a></li>            
+                                        <li><a href="../szdw/zxns.htm">招贤纳士</a></li>            
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        
+   <li>
+                            <a href="../jxzs/bksjx1/tz.htm">教学招生</a>
+                             
+                                <div class="ejnav">
+                                <ul>
+                                        <li><a href="../jxzs/bksjx1/tz.htm">本科生教学</a></li>            
+                                        <li><a href="../jxzs/yjsjx/tz.htm">研究生教学</a></li>            
+                                        <li><a href="../jxzs/yjszs1/tz.htm">研究生招生</a></li>            
+                                        <li><a href="../jxzs/kfjx/zxssqkt.htm">开放教学</a></li>            
+                                        <li><a href="../jxzs/jxjy/jxyfx.htm">继续教育</a></li>            
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        
+   <li>
+                            <a href="../xsky/xskw1.htm">学术科研</a>
+                             
+                                <div class="ejnav">
+                                <ul>
+                                        <li><a href="../xsky/xskw1.htm">学术刊物</a></li>            
+                                        <li><a href="../xsky/kyjz.htm">科研进展</a></li>            
+                                        <li><a href="../xsky/jzhy.htm">讲座会议</a></li>            
+                                        <li><a href="../xsky/hzjl1/gnhz.htm">合作交流</a></li>            
+                                        <li><a href="../xsky/xxzl/bjdxtsgkgwbxyfgjj.htm">信息资料</a></li>            
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        
+   <li>
+                            <a href="../xyzx/tzgg.htm">学院资讯</a>
+                             
+                                <div class="ejnav">
+                                <ul>
+                                        <li><a href="../xyzx/xwdt.htm">新闻动态</a></li>            
+                                        <li><a href="../xyzx/tzgg.htm">通知公告</a></li>            
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        
+   <li>
+                            <a href="../xsyd/tzgg.htm">学生园地</a>
+                             
+                                <div class="ejnav">
+                                <ul>
+                                        <li><a href="../xsyd/tzgg.htm">通知公告</a></li>            
+                                        <li><a href="../xsyd/jchd.htm">精彩活动</a></li>            
+                                        <li><a href="../xsyd/jyxx.htm">就业信息</a></li>            
+                                        <li><a href="../xsyd/xsfc.htm">学生风采</a></li>            
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        
+   <li>
+                            <a href="../ysyy/dsj/2021_j.htm">院史院友</a>
+                             
+                                <div class="ejnav">
+                                <ul>
+                                        <li><a href="../ysyy/dsj/2021_j.htm">大事记</a></li>            
+                                        <li><a href="../ysyy/yyml/bks.htm">院友名录</a></li>            
+                                        <li><a href="../ysyy/yszl/lzp.htm">院史资料</a></li>            
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        
+   <li>
+                            <a href="../ztwz1.htm">专题网站</a>
+                             
+                                <div class="ejnav">
+                                <ul>
+                                        <li><a href="../ztwz1/sxjd.htm">实习基地</a></li>            
+                                        <li><a href="../ztwz1/sjk.htm">数据库</a></li>            
+                                        <li><a href="http://csca.pku.edu.cn" target="_blank">北京大学中国考古学研究中心</a></li>            
+                                        <li><a href="https://cate.pku.edu.cn/index.htm" target="_blank">考古国家级虚拟仿真实验教学中心（北京大学）</a></li>            
+                                        <li><a href="https://cate.pku.edu.cn/index.htm" target="_blank">考古国家级实验教学示范中心（北京大学）</a></li>            
+                                        <li><a href="http://klas.pku.edu.cn" target="_blank">考古科学教育部重点实验室（北京大学）</a></li>            
+                                        <li><a href="http://amsm.pku.edu.cn" target="_blank">北京大学赛克勒考古与艺术博物馆</a></li>            
+                                        <li><a href="https://whitrap.pku.edu.cn/index.htm" target="_blank">联合国教科文组织亚太地区世界遗产培训与研究中心北京分中心</a></li>            
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        
+</ul></div>
+            </div>
+        </div>
+    </div>
+    <div class="head2 pc">
+        <div class="head-top">
+            <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+
+<a href="../index.htm">
+                    <img class="logo1" src="../images/logo.png" alt="">
+                </a>
+</div>
+            <div class="h-right">
+                <div class="h-link"><a href="http://123.56.144.236/" onclick="_addDynClicks(&quot;wburl&quot;, 2106968311, 106887)">学院OA</a>
+                    <span>|</span>
+                    
+   
+<a href="https://www.pku.edu.cn/" onclick="_addDynClicks(&quot;wburl&quot;, 2106968311, 107372)">北大主页</a>
+                    <span>|</span>
+                    
+   
+ <a class="search-switch head-search"><img src="../images/icon-search.png" alt=""></a>
+</div>
+                <div class="nav"><ul class="">
+   <li>
+                            <a href="../index.htm">首页</a>
+                             
+                        </li>
+                        
+   <li class="active">
+                            <a href="xyjj.htm">学院概况</a>
+                             
+                                <div class="ejnav">
+                                <ul>
+                                        <li><a href="xyjj.htm">学院简介</a></li>            
+                                        <li><a href="lsyg.htm">历史沿革</a></li>            
+                                        <li><a href="ljld1.htm">历届领导</a></li>            
+                                        <li><a href="jgsz.htm">机构设置</a></li>            
+                                        <li><a href="lxwm.htm">联系我们</a></li>            
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        
+   <li>
+                            <a href="../szdw/jxky1/jys/jsqsdkgjys.htm">师资队伍</a>
+                             
+                                <div class="ejnav">
+                                <ul>
+                                        <li><a href="../szdw/jxky1/jys/jsqsdkgjys.htm">教学科研</a></li>            
+                                        <li><a href="../szdw/bsh1/nf/2025n.htm">博士后</a></li>            
+                                        <li><a href="../szdw/xzjf/xzjf/xzbgs.htm">行政教辅</a></li>            
+                                        <li><a href="../szdw/grtx.htm">光荣退休</a></li>            
+                                        <li><a href="../szdw/wpkz/kzjs.htm">外聘客座</a></li>            
+                                        <li><a href="../szdw/yjhn.htm">永久怀念</a></li>            
+                                        <li><a href="../szdw/zxns.htm">招贤纳士</a></li>            
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        
+   <li>
+                            <a href="../jxzs/bksjx1/tz.htm">教学招生</a>
+                             
+                                <div class="ejnav">
+                                <ul>
+                                        <li><a href="../jxzs/bksjx1/tz.htm">本科生教学</a></li>            
+                                        <li><a href="../jxzs/yjsjx/tz.htm">研究生教学</a></li>            
+                                        <li><a href="../jxzs/yjszs1/tz.htm">研究生招生</a></li>            
+                                        <li><a href="../jxzs/kfjx/zxssqkt.htm">开放教学</a></li>            
+                                        <li><a href="../jxzs/jxjy/jxyfx.htm">继续教育</a></li>            
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        
+   <li>
+                            <a href="../xsky/xskw1.htm">学术科研</a>
+                             
+                                <div class="ejnav">
+                                <ul>
+                                        <li><a href="../xsky/xskw1.htm">学术刊物</a></li>            
+                                        <li><a href="../xsky/kyjz.htm">科研进展</a></li>            
+                                        <li><a href="../xsky/jzhy.htm">讲座会议</a></li>            
+                                        <li><a href="../xsky/hzjl1/gnhz.htm">合作交流</a></li>            
+                                        <li><a href="../xsky/xxzl/bjdxtsgkgwbxyfgjj.htm">信息资料</a></li>            
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        
+   <li>
+                            <a href="../xyzx/tzgg.htm">学院资讯</a>
+                             
+                                <div class="ejnav">
+                                <ul>
+                                        <li><a href="../xyzx/xwdt.htm">新闻动态</a></li>            
+                                        <li><a href="../xyzx/tzgg.htm">通知公告</a></li>            
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        
+   <li>
+                            <a href="../xsyd/tzgg.htm">学生园地</a>
+                             
+                                <div class="ejnav">
+                                <ul>
+                                        <li><a href="../xsyd/tzgg.htm">通知公告</a></li>            
+                                        <li><a href="../xsyd/jchd.htm">精彩活动</a></li>            
+                                        <li><a href="../xsyd/jyxx.htm">就业信息</a></li>            
+                                        <li><a href="../xsyd/xsfc.htm">学生风采</a></li>            
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        
+   <li>
+                            <a href="../ysyy/dsj/2021_j.htm">院史院友</a>
+                             
+                                <div class="ejnav">
+                                <ul>
+                                        <li><a href="../ysyy/dsj/2021_j.htm">大事记</a></li>            
+                                        <li><a href="../ysyy/yyml/bks.htm">院友名录</a></li>            
+                                        <li><a href="../ysyy/yszl/lzp.htm">院史资料</a></li>            
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        
+   <li>
+                            <a href="../ztwz1.htm">专题网站</a>
+                             
+                                <div class="ejnav">
+                                <ul>
+                                        <li><a href="../ztwz1/sxjd.htm">实习基地</a></li>            
+                                        <li><a href="../ztwz1/sjk.htm">数据库</a></li>            
+                                        <li><a href="http://csca.pku.edu.cn" target="_blank">北京大学中国考古学研究中心</a></li>            
+                                        <li><a href="https://cate.pku.edu.cn/index.htm" target="_blank">考古国家级虚拟仿真实验教学中心（北京大学）</a></li>            
+                                        <li><a href="https://cate.pku.edu.cn/index.htm" target="_blank">考古国家级实验教学示范中心（北京大学）</a></li>            
+                                        <li><a href="http://klas.pku.edu.cn" target="_blank">考古科学教育部重点实验室（北京大学）</a></li>            
+                                        <li><a href="http://amsm.pku.edu.cn" target="_blank">北京大学赛克勒考古与艺术博物馆</a></li>            
+                                        <li><a href="https://whitrap.pku.edu.cn/index.htm" target="_blank">联合国教科文组织亚太地区世界遗产培训与研究中心北京分中心</a></li>            
+                                </ul>
+                            </div>
+                            
+                        </li>
+                        
+</ul></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 移动端导航 -->
+    <div class="top wap">
+        <div class="wap-menu">
+            <img src="../images/menu.png" class="menu" alt="">
+            <img src="../images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+    <div class="wap m-head">
+        <div class="m-logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+
+<a href="../index.htm"><img src="../images/logo.png" alt=""></a></div>
+        <div class="m-nav">
+            <div class="m-tlink">
+   <a href="http://123.56.144.236/" onclick="_addDynClicks(&quot;wburl&quot;, 2106968311, 106887)">学院OA</a>
+   
+
+   <a href="https://www.pku.edu.cn/" onclick="_addDynClicks(&quot;wburl&quot;, 2106968311, 107372)">北大主页</a>
+   
+
+</div>
+            <div class="m-search"><!-- 3.1.3版本 -->
+
+
+
+
+<div id="divu9">
+    <div id="appu9"><div><input type="text" placeholder="请输入内容" autocomplete="off" class="qwss"> <input type="image" src="../images/m-search.png" class="tj"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu9">
+    <div id="appu9">
+        <div v-if="!isError">
+        <input type="text" class="qwss" placeholder="请输入内容" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                <input type="image" src="../images/m-search.png" class="tj" v-on:click="onSubmit()"/>
+                
+         
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu9").html($("#htmlu9").text());
+</script>
+<script>
+    var appOwner = "2106968311";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu9",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu9 = document.querySelector("#appu9");
+   if (appElementu9 && appElementu9.__vue__) {
+
+   } else {
+      $("#divu9").html($("#htmlu9").text());
+      var appOwner = "2106968311";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou9 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu9(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu9();
+        }
+      };
+
+      function onSubmitu9(e) {
+        queryInfou9.query.keyWord= $("#appu9  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou9.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script></div>
+            <ul class=""> <li>
+                    <a href="../index.htm">首页</a>
+                </li>
+                
+    
+ <li>
+                    <a href="xyjj.htm">学院概况</a>
+                    <span></span>
+                    <ul>
+
+                        <li> <a href="xyjj.htm">学院简介</a></li>
+
+                        <li> <a href="lsyg.htm">历史沿革</a></li>
+
+                        <li> <a href="ljld1.htm">历届领导</a></li>
+
+                        <li> <a href="jgsz.htm">机构设置</a></li>
+
+                        <li> <a href="lxwm.htm">联系我们</a></li>
+                       
+                    </ul>
+                </li>
+                
+    
+ <li>
+                    <a href="../szdw/jxky1/jys/jsqsdkgjys.htm">师资队伍</a>
+                    <span></span>
+                    <ul>
+
+                        <li> <a href="../szdw/jxky1/jys/jsqsdkgjys.htm">教学科研</a></li>
+
+                        <li> <a href="../szdw/bsh1/nf/2025n.htm">博士后</a></li>
+
+                        <li> <a href="../szdw/xzjf/xzjf/xzbgs.htm">行政教辅</a></li>
+
+                        <li> <a href="../szdw/grtx.htm">光荣退休</a></li>
+
+                        <li> <a href="../szdw/wpkz/kzjs.htm">外聘客座</a></li>
+
+                        <li> <a href="../szdw/yjhn.htm">永久怀念</a></li>
+
+                        <li> <a href="../szdw/zxns.htm">招贤纳士</a></li>
+                       
+                    </ul>
+                </li>
+                
+    
+ <li>
+                    <a href="../jxzs/bksjx1/tz.htm">教学招生</a>
+                    <span></span>
+                    <ul>
+
+                        <li> <a href="../jxzs/bksjx1/tz.htm">本科生教学</a></li>
+
+                        <li> <a href="../jxzs/yjsjx/tz.htm">研究生教学</a></li>
+
+                        <li> <a href="../jxzs/yjszs1/tz.htm">研究生招生</a></li>
+
+                        <li> <a href="../jxzs/kfjx/zxssqkt.htm">开放教学</a></li>
+
+                        <li> <a href="../jxzs/jxjy/jxyfx.htm">继续教育</a></li>
+                       
+                    </ul>
+                </li>
+                
+    
+ <li>
+                    <a href="../xsky/xskw1.htm">学术科研</a>
+                    <span></span>
+                    <ul>
+
+                        <li> <a href="../xsky/xskw1.htm">学术刊物</a></li>
+
+                        <li> <a href="../xsky/kyjz.htm">科研进展</a></li>
+
+                        <li> <a href="../xsky/jzhy.htm">讲座会议</a></li>
+
+                        <li> <a href="../xsky/hzjl1/gnhz.htm">合作交流</a></li>
+
+                        <li> <a href="../xsky/xxzl/bjdxtsgkgwbxyfgjj.htm">信息资料</a></li>
+                       
+                    </ul>
+                </li>
+                
+    
+ <li>
+                    <a href="../xyzx/tzgg.htm">学院资讯</a>
+                    <span></span>
+                    <ul>
+
+                        <li> <a href="../xyzx/xwdt.htm">新闻动态</a></li>
+
+                        <li> <a href="../xyzx/tzgg.htm">通知公告</a></li>
+                       
+                    </ul>
+                </li>
+                
+    
+ <li>
+                    <a href="../xsyd/tzgg.htm">学生园地</a>
+                    <span></span>
+                    <ul>
+
+                        <li> <a href="../xsyd/tzgg.htm">通知公告</a></li>
+
+                        <li> <a href="../xsyd/jchd.htm">精彩活动</a></li>
+
+                        <li> <a href="../xsyd/jyxx.htm">就业信息</a></li>
+
+                        <li> <a href="../xsyd/xsfc.htm">学生风采</a></li>
+                       
+                    </ul>
+                </li>
+                
+    
+ <li>
+                    <a href="../ysyy/dsj/2021_j.htm">院史院友</a>
+                    <span></span>
+                    <ul>
+
+                        <li> <a href="../ysyy/dsj/2021_j.htm">大事记</a></li>
+
+                        <li> <a href="../ysyy/yyml/bks.htm">院友名录</a></li>
+
+                        <li> <a href="../ysyy/yszl/lzp.htm">院史资料</a></li>
+                       
+                    </ul>
+                </li>
+                
+    
+ <li>
+                    <a href="../ztwz1.htm">专题网站</a>
+                    <span></span>
+                    <ul>
+
+                        <li> <a href="../ztwz1/sxjd.htm">实习基地</a></li>
+
+                        <li> <a href="../ztwz1/sjk.htm">数据库</a></li>
+
+                        <li> <a href="http://csca.pku.edu.cn" target="_blank">北京大学中国考古学研究中心</a></li>
+
+                        <li> <a href="https://cate.pku.edu.cn/index.htm" target="_blank">考古国家级虚拟仿真实验教学中心（北京大学）</a></li>
+
+                        <li> <a href="https://cate.pku.edu.cn/index.htm" target="_blank">考古国家级实验教学示范中心（北京大学）</a></li>
+
+                        <li> <a href="http://klas.pku.edu.cn" target="_blank">考古科学教育部重点实验室（北京大学）</a></li>
+
+                        <li> <a href="http://amsm.pku.edu.cn" target="_blank">北京大学赛克勒考古与艺术博物馆</a></li>
+
+                        <li> <a href="https://whitrap.pku.edu.cn/index.htm" target="_blank">联合国教科文组织亚太地区世界遗产培训与研究中心北京分中心</a></li>
+                       
+                    </ul>
+                </li>
+                
+    
+</ul>
+        </div>
+    </div>
+  <div class="banner"><img src="../images/banner-ny2.jpg"></div>
+    <div class="position-box">
+
+        <div class="position d w14">
+            <h3>
+学院简介</h3>
+            <div class=""><!-- <img src="../images/position.png" alt="">   -->
+                <a href="../index.htm">首页</a>
+           <span>/</span>
+                <a href="xyjj.htm">学院概况</a>
+           <span>/</span>
+                <a href="xyjj.htm">学院简介</a>
+</div>
+        </div>
+    </div>
+
+    <div class="nymain">
+        <div class="w14">
+            <div class="channl-menu leftNav">  <h2><b>
+学院概况</b><span></span></h2>
+                <ul>
+<li class="active  on">
+                        <a href="xyjj.htm">学院简介</a>
+                    </li>
+                            
+
+
+<li>
+                        <a href="lsyg.htm">历史沿革</a>
+                    </li>
+                            
+
+
+<li>
+                        <a href="ljld1.htm">历届领导</a>
+                    </li>
+                            
+
+
+<li>
+                        <a href="jgsz.htm">机构设置</a>
+                    </li>
+                            
+
+
+<li>
+                        <a href="lxwm.htm">联系我们</a>
+                    </li>
+                            
+
+</ul></div>
+            <div class="ny-right">
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',2106968311,'wbnews','u16')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css?v=36AA7ADDF1F0458B9369F97CFE4E7466"><script>function seeContenta16(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta16('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',2106968311,5801)</script>
+
+<div id="vsb_content_4_5801_u161"><div id="vsb_content_4"><div>
+ <p style="text-align:center"><img src="/virtual_attach_file.vsb?afc=3LzMB7LNrRolV2nGz6RnRCPUmnkUz9fZLl7DLzWkU8WkM870gihFp2hmCIa0U1hfMSh7M1yaolL8M7-8LmfkoR7YLNr2U4MVLzQkn7lDM7nFM8CbUlV7L4WFUmnfLYbaptveo4OeqD6sCjXsgDTJQty0Lz78LSyioRGPgtA8pUkcc&amp;oid=2106968311&amp;tid=1141&amp;nid=5801&amp;e=.png" width="640" vsbhref="vurl" vurl="/_vsl/BA5D609C44B420B8122EFC3E16BDE64D/7F9AAD32/B4A3" vheight=" 275px" vwidth=" 640px" height="275" border="0" vspace="0" hspace="0" title="" alt="" orisrc="/virtual_attach_file.vsb?afc=3LzMB7LNrRolV2nGz6RnRCPUmnkUz9fZLl7DLzWkU8WkM870gihFp2hmCIa0U1hfMSh7M1yaolL8M7-8LmfkoR7YLNr2U4MVLzQkn7lDM7nFM8CbUlV7L4WFUmnfLYbaptveo4OeqD6sCjXsgDTJQty0Lz78LSyioRGPgtA8pUkcc&amp;oid=2106968311&amp;tid=1141&amp;nid=5801&amp;e=.png" class="img_vsb_content" style="width: 640px; height: 275px;"></p>
+ <p><span style="font-size: 16px;">在中国高等院校中，北京大学最早设立了考古学的教学研究机构。1922年，北京大学国学门下成立考古学研究室；1952年，在历史系内成立考古专业。北大考古的历史，和中国考古学的历史几乎同样久远。考古专业成立以来，几代学者筚路蓝缕、艰苦奋斗、励精图治，将专业发展壮大成今天的基础设施完整、学科覆盖面宽、教研力量雄厚的考古文博学院，为中国考古学术事业的发展，培养了大批优秀专业人才，做出重大贡献。</span></p>
+ <p><span style="font-size: 16px;"><br></span></p>
+ <p><span style="font-size: 16px;">北京大学考古文博学院现有考古学系和文化遗产学系（2007年设立），前者有旧石器时代考古、新石器商周考古、历史时期考古、外国考古、科技考古等5个教研室；后者有博物馆与文化遗产、古代建筑、文物保护等3个教研室。另有考古科学实验室和北京大学考古实验实践国家级教学示范中心（2009年）、北京大学考古虚拟仿真国家级实验教学中心（2016年），以及文化遗产保护研究中心、宗教考古研究所、陶瓷考古与艺术研究所、震旦古代文明研究中心、图书资料室（包括苏秉琦图书室和张政烺文库、张光直文库等）、教学标本室（包括通史、旧石器、陶器、瓷器、动植物、体质人类学、古建筑标本）等多个教学科研机构，建有山东临淄、陕西周原、宁夏盐池、福建安溪等多个考古教学实习基地或考古工作站，并向国内外学生开放。</span></p>
+ <p><span style="font-size: 16px;"><br></span></p>
+ <p><span style="font-size: 16px;">如何提高教学水平，培养合格的专业人才，始终是我院学科建设的核心问题。随着基础条件的逐步改善，适应社会发展的需要，北大考古在考古学和博物馆学两个专业的基础上，先后增设文物保护专业（1993年）、古代建筑专业方向（1998年）和外国语言与外国历史（考古学方向）（2017年），不断完善培养方案，融课程思政教育内容于专业教学，明确专业基础课、专业核心课、专业选修课三个层次的专业课程，已形成以中国考古学为“体”，科技考古、文化遗产保护技术为“用”，外国考古学为补充的学科体系，凝练出以中国考古学和田野考古实习为核心的课程体系。在此基础上，加强通识教育，提升学生人文科学素养。</span></p>
+ <p class="vsbcontent_img"><img width="607" height="410" src="/virtual_attach_file.vsb?afc=3Um-BZUzn7oRGDUGNW2U4TfU87snRffVnmUboRMVUlU8nmC0gihFp2hmCIa0USyDMYh7L1yinR78LlWfnR7DnNVkoRv4M46RM8-iUlM7oRVFnRlYLRCYUzAFLlLioR-Jv2bjo4OeoDxj6DWE6YhXptQ0g47PMR70Mz9aLSbw62k8c&amp;oid=2106968311&amp;tid=1141&amp;nid=5801&amp;e=.png" vsbhref="vurl" vurl="/_vsl/A67D25D141BAD16FAB87377C7B5ACD81/D52062A8/1C582" vheight="410" vwidth="607" alt="" orisrc="/virtual_attach_file.vsb?afc=3nmLB8L4-4nzNYnGNL8M4CiLRQfnmlfDLNQkn77YnR-4UzC0gihFp2hmCIa0nShkL1hfUShRL8CaM4-aM7UZUz7iMNrVU4V2nm-DL7n2LlVFMmLbMm6fM7QFLzlaL8lbgjfJQ4Oeo4xKQs61_jv0qIbtpYyPLzUPg4lZLR7Jqdknx&amp;oid=2106968311&amp;tid=1141&amp;nid=5801&amp;e=.png" class="img_vsb_content"> </p>
+ <p class="vsbcontent_img"><br></p>
+ <p><span style="font-size: 16px;">授业于田野之间，树人于实践之中。田野教学是北京大学考古育人体系的核心环节。自1957年在河北邯郸开始田野考古实习起，北大《田野考古实习》课程已走过六十多年的历程，建立的“北大模式”影响深远，其内涵也与时俱进，不断丰富。如今实习课程实现不同专业学生全覆盖，包括考古、博物馆、文物保护、文物建筑、外国语言与外国历史（考古学方向）等专业及方向，在原有模式的基础上，新增“保护、利用”以及实验考古等环节和信息化内容，以实习基地为依托，积极探讨考古教研与当地经济、文化振兴相结合，从而形成更为完整的全新的训练模式。《田野考古实习》课程先后入选国家级一流本科课程、教育部课程思政示范课程，授课教师入选课程思政教学名师和教学团队。教学团队将解决考古学术问题的重要遗址作为实习基地，将学生学习内容与重大科研相结合。自1990年开始评选“全国十大考古新发现”以来，我院参加或主持的获评项目42项。2021年10月18日，在河南省三门峡市举行的“第三届中国考古学大会”开幕式上，公布了“百年百大考古发现”，其中我院参加或主持的项目有15项。</span></p>
+ <p><span style="font-size: 16px;"><br></span></p>
+ <p class="vsbcontent_img"><img width="491" height="154" src="/virtual_attach_file.vsb?afc=3M7CB8Mm9PMNCsoGlU8L4n7LznRLlVf7Uzl8L4QVMRlaLRN0gihFp2hmCIa0okhkokysLYh2MNQkLNUDnm9iL4fVozQRnlU4nlrfLlLDnzAFLNLDLNMRnzrFLz-aoR7Jv2bjo4OeoDxj6DWE6YhXptQ0g47PMR70Mz9aLSbw62k8c&amp;oid=2106968311&amp;tid=1141&amp;nid=5801&amp;e=.png" align="left" hspace="12" vsbhref="vurl" vurl="/_vsl/8B873F6FB2D6F8530E96CED3EEA1C6E8/2C62CCE5/12081" vheight="154" vwidth="491" alt="" orisrc="/virtual_attach_file.vsb?afc=3ozvBDLmNsLm98UG8LDnmQVLlnRLl7fPnz-PLRUZnmCbLl70gihFp2hmCIa0oSh2oSh2MYyZozTkM8WkozGPnR-4L8LiolrRUm7iozliozQFn7LYLNnkUlWFLzG4oz7igjfJQ4Oeo4xKQs61_jv0qIbtpYyPLzUPg4lZLR7Jqdknx&amp;oid=2106968311&amp;tid=1141&amp;nid=5801&amp;e=.png" class="img_vsb_content"> </p>
+ <p><span style="font-size: 16px;">在田野中寻求真知，守正创新，务实致远。目前，我院积极推动校地合作，正在重点建设山东临淄、陕西周原、宁夏盐池三个标准化的实习基地，同时积极筹措海外考古基地。根据新时期考古学科发展的情况，我院正大力推动考古实习基地的标准化、数字化、信息化、智能化和国际化，即“基地+”的发展模式，积极探索田野考古发掘的新方法和新理论，同时进一步完善田野考古实习课程的教学体系，依托考古实习基地建设虚拟教室，改革田野实习教学模式，积极探索、推动高校田野教学实践中5G和VR技术的新应用，把实习基地及田野实习建设成传播文化自信、道路自信以及中国文化的新名片。</span></p>
+ <p><span style="font-size: 16px;"><br></span></p>
+ <p class="vsbcontent_img"><img src="/virtual_attach_file.vsb?afc=3MmvBbM7L8U8Q7nGRNDL4-4U8UbLmnfVLRlYo7MfL7M2n7L0gihFp2hmCIa0LShkMYyankh7U4v8M8W7LRNbLR6VLNMRozUbMm-ZUz6VnmQFM4rVMRGaUzVFn7-aUSb/v2veo4OeqD6sCjXsgDTJQty0Lz78LSyioRGPgtA8pUkcc&amp;oid=2106968311&amp;tid=1141&amp;nid=5801&amp;e=.jpg" width="500" vsbhref="vurl" vurl="/_vsl/1B70DDC747BD09907E2CC949628A7EF6/75E400A1/DB0A" vheight="" vwidth="500" alt="" orisrc="/virtual_attach_file.vsb?afc=3MmvBbM7L8U8Q7nGRNDL4-4U8UbLmnfVLRlYo7MfL7M2n7L0gihFp2hmCIa0LShkMYyankh7U4v8M8W7LRNbLR6VLNMRozUbMm-ZUz6VnmQFM4rVMRGaUzVFn7-aUSb/v2veo4OeqD6sCjXsgDTJQty0Lz78LSyioRGPgtA8pUkcc&amp;oid=2106968311&amp;tid=1141&amp;nid=5801&amp;e=.jpg" class="img_vsb_content" style="float:right;"> </p>
+ <p><span style="font-size: 16px;">在专业开创初期，北大考古便积极进行考古学话语体系化建设，继1975年初步编纂《中国考古学》各段讲义及其辅助教材之后，1985年以邹衡为主任，进一步成立“北京大学考古学丛书”编委会，旨在出版考古系教材、专著和学术论文。2020年6月，我院决定将建设“北京大学中国考古学教材书系”工程作为学科发展战略，加强学术成果转化，全面提升教学质量，积极建设和完善中国考古学的学术体系、学科体系、话语体系，争取在我国高校中率先建成初具规模的外国考古专业方向的课程体系，同时加快中国特色的文化遗产学课程体系建设，更好地服务国家文化战略和文化遗产保护大局。</span></p>
+ <p><span style="font-size: 16px;"><br></span></p>
+ <p><span style="font-size: 16px;">我院共获得20项国家级、省部级的教学成果奖项。其中邹衡执笔《商周考古》获首次颁发的国家级优秀教材奖；高明《中国古文字学通论》获国家级优秀教材特等奖，《古陶文汇编》获国家首届古籍整理图书三等奖；《田野考古实习课程》获评国家级一流本科课程，《感悟考古》课程获国家精品在线开放课程，《清官式大木作虚拟仿真教学实验》获评国家虚拟仿真实验教学一流课程，《中国建筑的科学认知：北大文物建筑田野记录与价值发现课程体系的创新与实践》先后荣获北京市高等教育教学成果一等奖、国家级教学成果奖二等奖；“新石器时代考古教学与研究”荣获北京市高教局高校教学一等奖；文物保护技术专业获评北京市级一流本科专业建设点；《文化遗产踏查与测绘实习》获评北京市“优质本科课程”，“清官式大木作”虚拟仿真教学课件获第六届全国高等学校教师自制实验教学仪器设备创新大赛自由设计类二等奖，等等。</span></p>
+ <p><span style="font-size: 16px;"><br></span></p>
+ <p class="vsbcontent_end"><span style="font-size: 16px;">如今北大考古拥有国内高校最完整的考古学科体系，学院凝聚了一支年龄结构合理、学科方向均衡、规模效应明显的顶尖师资队伍，截至2024年12月，有教学科研人员40人，其中教授13人，副教授（含新体制副教授）17人，助理教授10人。同时还十分注重发挥退休老教授的作用和借助其他单位的教学科研力量。总之，师资配置日趋合理，师资力量为全国高校考古教学科研单位中最雄厚者。而北京大学考古专业作为国家重点学科，拥有一批在国内乃至国际享有很高威望的专家学者，和一批优秀的中青年学者及学术带头人，考古教学和科研处于领先水平，在国际上也有很大的影响力，享有“中国考古学家的摇篮”“21世纪中国考古学研究中心”的赞誉。</span></p>
+</div></div></div>
+
+    <span id="vsb_content_4_5801_u16" name="vsb_content_4_5801_u16"></span>
+    
+
+
+
+</div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+
+     <div class="footer">
+            <div class="w1520">
+                <div class="foot-c">
+                    <div class="foot-l">
+                        <div class="foot-logo">
+                                <img src="../images/footer-logo.png" alt="">
+                       
+</div>
+
+                        <div class="foot-info">
+                            <div class="foot-link">
+</div>
+                           <div>
+<p>地址：北京市海淀区颐和园路5号 | 邮编：100871</p></div>
+                        </div>
+                    </div>
+                    <div class="foot-r">  <dl>
+                            <dt><a href="../index.htm">首页</a></dt>
+                            
+                        </dl>
+                        
+  
+  <dl>
+                            <dt><a href="xyjj.htm">学院概况</a></dt>
+                               <dd><a href="xyjj.htm">学院简介</a></dd>
+                               <dd><a href="lsyg.htm">历史沿革</a></dd>
+                               <dd><a href="ljld1.htm">历届领导</a></dd>
+                               <dd><a href="jgsz.htm">机构设置</a></dd>
+                               <dd><a href="lxwm.htm">联系我们</a></dd>
+                            
+                        </dl>
+                        
+  
+  <dl>
+                            <dt><a href="../szdw/jxky1/jys/jsqsdkgjys.htm">师资队伍</a></dt>
+                               <dd><a href="../szdw/jxky1/jys/jsqsdkgjys.htm">教学科研</a></dd>
+                               <dd><a href="../szdw/bsh1/nf/2025n.htm">博士后</a></dd>
+                               <dd><a href="../szdw/xzjf/xzjf/xzbgs.htm">行政教辅</a></dd>
+                               <dd><a href="../szdw/grtx.htm">光荣退休</a></dd>
+                               <dd><a href="../szdw/wpkz/kzjs.htm">外聘客座</a></dd>
+                               <dd><a href="../szdw/yjhn.htm">永久怀念</a></dd>
+                               <dd><a href="../szdw/zxns.htm">招贤纳士</a></dd>
+                            
+                        </dl>
+                        
+  
+  <dl>
+                            <dt><a href="../jxzs/bksjx1/tz.htm">教学招生</a></dt>
+                               <dd><a href="../jxzs/bksjx1/tz.htm">本科生教学</a></dd>
+                               <dd><a href="../jxzs/yjsjx/tz.htm">研究生教学</a></dd>
+                               <dd><a href="../jxzs/yjszs1/tz.htm">研究生招生</a></dd>
+                               <dd><a href="../jxzs/kfjx/zxssqkt.htm">开放教学</a></dd>
+                               <dd><a href="../jxzs/jxjy/jxyfx.htm">继续教育</a></dd>
+                            
+                        </dl>
+                        
+  
+  <dl>
+                            <dt><a href="../xsky/xskw1.htm">学术科研</a></dt>
+                               <dd><a href="../xsky/xskw1.htm">学术刊物</a></dd>
+                               <dd><a href="../xsky/kyjz.htm">科研进展</a></dd>
+                               <dd><a href="../xsky/jzhy.htm">讲座会议</a></dd>
+                               <dd><a href="../xsky/hzjl1/gnhz.htm">合作交流</a></dd>
+                               <dd><a href="../xsky/xxzl/bjdxtsgkgwbxyfgjj.htm">信息资料</a></dd>
+                            
+                        </dl>
+                        
+  
+  <dl>
+                            <dt><a href="../xyzx/tzgg.htm">学院资讯</a></dt>
+                               <dd><a href="../xyzx/xwdt.htm">新闻动态</a></dd>
+                               <dd><a href="../xyzx/tzgg.htm">通知公告</a></dd>
+                            
+                        </dl>
+                        
+  
+  <dl>
+                            <dt><a href="../xsyd/tzgg.htm">学生园地</a></dt>
+                               <dd><a href="../xsyd/tzgg.htm">通知公告</a></dd>
+                               <dd><a href="../xsyd/jchd.htm">精彩活动</a></dd>
+                               <dd><a href="../xsyd/jyxx.htm">就业信息</a></dd>
+                               <dd><a href="../xsyd/xsfc.htm">学生风采</a></dd>
+                            
+                        </dl>
+                        
+  
+  <dl>
+                            <dt><a href="../ysyy/dsj/2021_j.htm">院史院友</a></dt>
+                               <dd><a href="../ysyy/dsj/2021_j.htm">大事记</a></dd>
+                               <dd><a href="../ysyy/yyml/bks.htm">院友名录</a></dd>
+                               <dd><a href="../ysyy/yszl/lzp.htm">院史资料</a></dd>
+                            
+                        </dl>
+                        
+  
+  <dl>
+                            <dt><a href="../ztwz1.htm">专题网站</a></dt>
+                               <dd><a href="../ztwz1/sxjd.htm">实习基地</a></dd>
+                               <dd><a href="../ztwz1/sjk.htm">数据库</a></dd>
+                               <dd><a href="http://csca.pku.edu.cn" target="_blank">北京大学中国考古学研究中心</a></dd>
+                               <dd><a href="https://cate.pku.edu.cn/index.htm" target="_blank">考古国家级虚拟仿真实验教学中心（北京大学）</a></dd>
+                               <dd><a href="https://cate.pku.edu.cn/index.htm" target="_blank">考古国家级实验教学示范中心（北京大学）</a></dd>
+                               <dd><a href="http://klas.pku.edu.cn" target="_blank">考古科学教育部重点实验室（北京大学）</a></dd>
+                               <dd><a href="http://amsm.pku.edu.cn" target="_blank">北京大学赛克勒考古与艺术博物馆</a></dd>
+                               <dd><a href="https://whitrap.pku.edu.cn/index.htm" target="_blank">联合国教科文组织亚太地区世界遗产培训与研究中心北京分中心</a></dd>
+                            
+                        </dl>
+                        
+  
+</div>
+                </div>
+            </div>
+            <div class="bq"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权所有©北京大学考古文博学院</p></div>
+        </div>
+
+    
+
+<div class="hide" id="gotop">
+        <svg t="1684739186087" class="icon" viewBox="0 0 1024 1024" p-id="32468" width="18" height="18"><path d="M544.981333 171.178667l1.621334 1.621333 365.781333 365.994667a40.874667 40.874667 0 0 1-28.8 69.546666 40.405333 40.405333 0 0 1-28.714667-11.946666l-338.688-338.901334-339.029333 338.858667a40.576 40.576 0 0 1-57.514667 0 40.874667 40.874667 0 0 1 0-57.557333L516.266667 142.378667l28.714666 28.8z m0 305.066666l1.621334 1.706667 365.781333 365.952a40.874667 40.874667 0 0 1-28.8 69.546667 40.405333 40.405333 0 0 1-28.714667-11.989334l-338.688-338.858666-339.072 338.858666a40.576 40.576 0 0 1-57.557333 0 40.874667 40.874667 0 0 1 0-57.557333l396.629333-396.458667 28.757334 28.8h0.042666z" p-id="32469"></path></svg>
+    </div>
+
+
+    <script>
+        $(function () {
+            var wow = new WOW({
+                mobile: false,
+                live: true
+            });
+            wow.init();
+        })
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

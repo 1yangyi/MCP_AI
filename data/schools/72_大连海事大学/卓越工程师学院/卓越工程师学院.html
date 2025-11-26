@@ -1,0 +1,1039 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>卓越工程师学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="卓越工程师学院">
+
+
+<META Name="SiteName" Content="卓越工程师学院" />
+<META Name="SiteDomain" Content="gcee.dlmu.edu.cn" />
+
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/slick.css">
+    <link rel="stylesheet" href="style/slick-theme.css">
+    <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/index.css">
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307973465450535742000200024f50 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,2140917030)</script>
+</head>
+
+<body ontouchstart>
+    
+    <!-- pc 顶部 导航 -->
+    <div class="b-top">
+        <div class="t-search-zzc"></div>
+        <div class="t-search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError" class="ss">
+                <input type="text" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                <div class="search-btn">
+                    <input type="image" src="images/search2.png" v-on:click="onSubmit()">
+                </div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "2140917030";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://zq-open.dlmu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+    </div>
+    <div class="head pc">
+        <div class="head-top">
+            <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="卓越工程师学院">
+                    <img class="logo1" src="images/baise.png" alt="">
+                    <img class="logo2" src="images/baise.png" alt="">
+</a></div>
+            <div class="h-right">
+                <div class="h-link"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>        <a href="https://grs.dlmu.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2140917030, 97529)">研究生院</a>
+        <a href="https://www.dlmu.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2140917030, 97530)">学校主页</a>
+
+<a href="javascript:;" class="search-switch"></a>
+</div>
+                <div class="nav"><ul class="">
+                        <li>
+                            <a href="index.htm" title="首页">首页</a>
+                        </li>
+                        <li>
+                            <a href="xygk1/xyjj.htm" title="学院概况">学院概况</a>
+                            <div>
+                                <ul>
+                                    <li><a href="xygk1/xyjj.htm" title="学院简介">学院简介</a></li>
+                                    <li><a href="xygk1/xyld.htm" title="学院领导">学院领导</a></li>
+                                    <li><a href="xygk1/zzjg.htm" title="组织架构">组织架构</a></li>
+                                    <li><a href="xygk1/lshcy.htm" title="理事会成员">理事会成员</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="xqlp1/lpqyxx.htm" title="校企联培">校企联培</a>
+                            <div>
+                                <ul>
+                                    <li><a href="xqlp1/lpqyxx.htm" title="联培企业信息">联培企业信息</a></li>
+                                    <li><a href="xqlp1/cjrhjd.htm" title="产教融合基地">产教融合基地</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="xqds/xnds.htm" title="校企导师">校企导师</a>
+                            <div>
+                                <ul>
+                                    <li><a href="xqds/xnds.htm" title="校内导师">校内导师</a></li>
+                                    <li><a href="xqds/qyds.htm" title="企业导师">企业导师</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="zsgz1/bsszs.htm" title="招生工作">招生工作</a>
+                            <div>
+                                <ul>
+                                    <li><a href="zsgz1/bsszs.htm" title="博士生招生">博士生招生</a></li>
+                                    <li><a href="zsgz1/yjszs.htm" title="研究生招生">研究生招生</a></li>
+                                    <li><a href="zsgz1/zlxz.htm" title="资料下载">资料下载</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="pygz/gztz.htm" title="培养工作">培养工作</a>
+                            <div>
+                                <ul>
+                                    <li><a href="pygz/gztz.htm" title="工作通知">工作通知</a></li>
+                                    <li><a href="pygz/gzzd.htm" title="规章制度">规章制度</a></li>
+                                    <li><a href="pygz/zlxz2.htm" title="资料下载">资料下载</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="xwgz1/gztz.htm" title="学位工作">学位工作</a>
+                            <div>
+                                <ul>
+                                    <li><a href="xwgz1/gztz.htm" title="工作通知">工作通知</a></li>
+                                    <li><a href="xwgz1/gzzd.htm" title="规章制度">规章制度</a></li>
+                                    <li><a href="xwgz1/zlxz2.htm" title="资料下载">资料下载</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="dtgz1/gztz.htm" title="党团工作">党团工作</a>
+                            <div>
+                                <ul>
+                                    <li><a href="dtgz1/gztz.htm" title="工作通知">工作通知</a></li>
+                                    <li><a href="dtgz1/gzzd.htm" title="规章制度">规章制度</a></li>
+                                    <li><a href="dtgz1/zlxz2.htm" title="资料下载">资料下载</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="zxzx1/zxzx.htm" title="资讯中心">资讯中心</a>
+                            <div>
+                                <ul>
+                                    <li><a href="zxzx1/zxzx.htm" title="最新咨询">最新咨询</a></li>
+                                    <li><a href="zxzx1/gzzd.htm" title="规章制度">规章制度</a></li>
+                                    <li><a href="zxzx1/zlxz2.htm" title="资料下载">资料下载</a></li>
+                                </ul>
+                            </div>
+                        </li>
+<div class="clear"></div>
+</ul></div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <!-- 移动端导航 -->
+    <div class="top">
+        <div class="wap wap-menu">
+            <img src="images/menu.png" class="menu" alt="">
+            <img src="images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+    <div class="wap m-head">
+        <div class="m-logo">                            <a href="index.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 2140917030, 1016109)">
+                            <img src="images/baise.png">
+                        </a>  
+</div>
+        <div class="m-nav">
+        <div class="m-tlink"><a href="https://grs.dlmu.edu.cn/">研究生院</a><span>|</span>
+<a href="https://www.dlmu.edu.cn/">学校主页</a>
+
+</div>
+            <div class="m-search">
+
+
+<div id="divu6"></div>
+<script type="text/html" id="htmlu6">
+    <div id="appu6">
+        <div v-if="!isError">
+<input type="text" placeholder="请输入内容" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+<input type="image" src="images/search2.png" v-on:click="onSubmit()">
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu6").html($("#htmlu6").text());
+</script>
+<script>
+    var appOwner = "2140917030";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu6",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultmobile/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://zq-open.dlmu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+            <ul class="">                <li>
+                    <a href="index.htm" title="首页">首页</a>
+                </li>
+                <li>
+                    <a href="xygk1/xyjj.htm" title="学院概况">学院概况</a>
+                    <span></span>
+                    <ul>
+                        <li><a href="xygk1/xyjj.htm" title="学院简介">学院简介</a></li>
+                        <li><a href="xygk1/xyld.htm" title="学院领导">学院领导</a></li>
+                        <li><a href="xygk1/zzjg.htm" title="组织架构">组织架构</a></li>
+                        <li><a href="xygk1/lshcy.htm" title="理事会成员">理事会成员</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="xqlp1/lpqyxx.htm" title="校企联培">校企联培</a>
+                    <span></span>
+                    <ul>
+                        <li><a href="xqlp1/lpqyxx.htm" title="联培企业信息">联培企业信息</a></li>
+                        <li><a href="xqlp1/cjrhjd.htm" title="产教融合基地">产教融合基地</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="xqds/xnds.htm" title="校企导师">校企导师</a>
+                    <span></span>
+                    <ul>
+                        <li><a href="xqds/xnds.htm" title="校内导师">校内导师</a></li>
+                        <li><a href="xqds/qyds.htm" title="企业导师">企业导师</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="zsgz1/bsszs.htm" title="招生工作">招生工作</a>
+                    <span></span>
+                    <ul>
+                        <li><a href="zsgz1/bsszs.htm" title="博士生招生">博士生招生</a></li>
+                        <li><a href="zsgz1/yjszs.htm" title="研究生招生">研究生招生</a></li>
+                        <li><a href="zsgz1/zlxz.htm" title="资料下载">资料下载</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="pygz/gztz.htm" title="培养工作">培养工作</a>
+                    <span></span>
+                    <ul>
+                        <li><a href="pygz/gztz.htm" title="工作通知">工作通知</a></li>
+                        <li><a href="pygz/gzzd.htm" title="规章制度">规章制度</a></li>
+                        <li><a href="pygz/zlxz2.htm" title="资料下载">资料下载</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="xwgz1/gztz.htm" title="学位工作">学位工作</a>
+                    <span></span>
+                    <ul>
+                        <li><a href="xwgz1/gztz.htm" title="工作通知">工作通知</a></li>
+                        <li><a href="xwgz1/gzzd.htm" title="规章制度">规章制度</a></li>
+                        <li><a href="xwgz1/zlxz2.htm" title="资料下载">资料下载</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="dtgz1/gztz.htm" title="党团工作">党团工作</a>
+                    <span></span>
+                    <ul>
+                        <li><a href="dtgz1/gztz.htm" title="工作通知">工作通知</a></li>
+                        <li><a href="dtgz1/gzzd.htm" title="规章制度">规章制度</a></li>
+                        <li><a href="dtgz1/zlxz2.htm" title="资料下载">资料下载</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="zxzx1/zxzx.htm" title="资讯中心">资讯中心</a>
+                    <span></span>
+                    <ul>
+                        <li><a href="zxzx1/zxzx.htm" title="最新咨询">最新咨询</a></li>
+                        <li><a href="zxzx1/gzzd.htm" title="规章制度">规章制度</a></li>
+                        <li><a href="zxzx1/zlxz2.htm" title="资料下载">资料下载</a></li>
+                    </ul>
+                </li>
+</ul>
+            
+        </div>
+    </div>
+
+
+    <div class="banner">    <div class="slick">
+            <div>
+                        <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 2140917030, 1016107)">
+                            <img src="images/qiyeweixinjietu_17544601512649.png">
+                        </a>
+            </div>
+</div></div>
+
+    <div class="index">
+        <div class="s1">
+            <div class="px1400">
+                <div class="s1-tit">
+                    <h2>学院新闻</h2>
+                    <div class="s1-more">
+                        <div class="s1-prev"></div>
+                        <div class="s1-next"></div>
+                        <a href="index/xyxw.htm">查看更多</a>
+                    </div>
+                </div>
+                <div class="s1-banner">
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><ul class="slick">
+                        <li>
+                            <a href="info/1691/1261.htm" title="我校召开卓越工程师学院建设推进会">
+                                <div class="pic">
+                                    <img src="https://news.dlmu.edu.cn/virtual_attach_file.vsb?afc=bM4MEkMzfVM4-bLeNC4MmCDLmC8LRvyaUmQkUmLDLlMkL7-0gihFp2hmCIa0USyZLShVLkhRnm6VLllaUzT2Um7ZnzVfLzNiLzUDMzCYnz6FoR74Lz-ioRAFMRLioRUJqjfjo4OeosAs6YhXptQ0g478M4C0M4NZL4LsgtA8pUhcc" alt="" />
+                                </div>
+                                <div class="s1-tx">
+                                    <p>我校召开卓越工程师学院建设推进会</p>
+                                    <span>2025-08-01</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="info/1691/1241.htm" title="我校举办“匠心‘企’航 卓越未来”——2025年工程硕博士入企启动仪式暨导师培训会">
+                                <div class="pic">
+                                    <img src="https://news.dlmu.edu.cn/virtual_attach_file.vsb?afc=7o7VVRM8-8n7WkL287aMRLYLNrVLz7din7LsUz94UzAfM8l0gihFp2hmCIa0UYh7UYhVLShfL4rVLRNDL46VMmffMmQ2M8nfozrkLRrVUNnFnmvbM49sMNVFM4UsMlUJqjfjo4OeosAs6YhXptQ0g478M4C0M4NsoRNsgtA8pU-cc" alt="" />
+                                </div>
+                                <div class="s1-tx">
+                                    <p>我校举办“匠心‘企’航 卓越未来”——2025年工程硕博士入企启动仪式暨导师培训会</p>
+                                    <span>2025-07-24</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="info/1691/1341.htm" title="我校与中国航天科工集团有限公司举行工程硕博士联合培养座谈交流会">
+                                <div class="pic">
+                                    <img src="https://grs.dlmu.edu.cn/virtual_attach_file.vsb?afc=QUzfq7nmWknRNaUpzCinmGinzVRMR-v4M4VVUmvDL4LZLNL0gihFp2hmCIa0MkyZMkyPMkhRU4CsnRCDLRQVnm9PM7VfU4N8MNrRo7VVLmnFMRvPLz9bUzQFMNC8LzNJqjfjo4OeosT/vsNYLR-8gDTJQty0Lz-aL1yYL4UbLSbw6268c" alt="" />
+                                </div>
+                                <div class="s1-tx">
+                                    <p>我校与中国航天科工集团有限公司举行工程硕博士联合培养座谈交流会</p>
+                                    <span>2025-07-03</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="info/1691/1251.htm" title="我校与中国市政工程西南设计研究总院有限公司举行2024级工程硕博士联合培养座谈会">
+                                <div class="pic">
+                                    <img src="https://grs.dlmu.edu.cn/virtual_attach_file.vsb?afc=ZU4fbVnN-sU47sLEl7bnlMfn7nknz7eYnmVVozV7LmNYMm-0gihFp2hmCIa0L1yaMYy8UShVnzUZL4W7oRA2MmLPMRCZnRLsLlLYMz-snRfFUz67Um-bnzAFLzrRn7MkgjfJQ4Oeo4xbqjMbLmGYMkhXptQ0g47YLR-0LmL8L47Jqdynx" alt="" />
+                                </div>
+                                <div class="s1-tx">
+                                    <p>我校与中国市政工程西南设计研究总院有限公司举行2024级工程硕博士联合培养座谈会</p>
+                                    <span>2025-07-03</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="info/1691/1351.htm" title="我校与中国石油国家卓越工程师学院举行校企导师见面会">
+                                <div class="pic">
+                                    <img src="https://grs.dlmu.edu.cn/virtual_attach_file.vsb?afc=onRUuPMmNZnzUDoURQ7UNliLlMRUzQnRM7rRoRCZM4GaozC0gihFp2hmCIa0nShVnShVLkybL4rRUm74LzUiL4ARnRGPLzTVL4UYozCaLRnFozviU4AkoznFMmNPMzCJqjfjo4OeosT/vsNYLR-8gDTJQty0Lz-aL1yYL4-ZLSbw62S8c" alt="" />
+                                </div>
+                                <div class="s1-tx">
+                                    <p>我校与中国石油国家卓越工程师学院举行校企导师见面会</p>
+                                    <span>2025-06-23</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="info/1691/1361.htm" title="我校与中国交通建设集团有限公司举行工程硕博士联合培养座谈交流会">
+                                <div class="pic">
+                                    <img src="https://grs.dlmu.edu.cn/virtual_attach_file.vsb?afc=PnzTYRLNUioRWVM4z9aUmr7M4liL7r8fUl-aMNQRMzfknRv0gihFp2hmCIa0n1h7nSyiL1hRLRAVL498Um-4LR-YMNQfLz-YnRCYLzLbnlrFLNCYLRLiMNWFMRAVLRLJqjfjo4OeosT/vsNYLR-8gDTJQty0Lz-aL1yYL4-PLSbw62i8c" alt="" />
+                                </div>
+                                <div class="s1-tx">
+                                    <p>我校与中国交通建设集团有限公司举行工程硕博士联合培养座谈交流会</p>
+                                    <span>2025-06-04</span>
+                                </div>
+                            </a>
+                        </li>
+</ul><script>_showDynClickBatch(['dynclicks_u9_1261','dynclicks_u9_1241','dynclicks_u9_1341','dynclicks_u9_1251','dynclicks_u9_1351','dynclicks_u9_1361'],[1261,1241,1341,1251,1351,1361],"wbnews", 2140917030)</script>
+</div>
+                <div class="s1-list">
+<ul>
+                        <li>
+                            <a href="info/1691/1371.htm" title="我校卓越工程师学院与大连中远海运集装箱运输有限公司举办2024级工程硕博士联合培养座谈会">
+                                    <div class="s1-tx">
+                                        <p>我校卓越工程师学院与大连中远海运集装箱运输有限公司举办2024级工程硕博士联合培...</p>
+                                        <span>2025-05-27</span>
+                                    </div>
+                             </a>
+                        </li>
+                        <li>
+                            <a href="info/1691/1381.htm" title="卓越工程师学院举行工程硕博士研究生导师座谈交流会">
+                                    <div class="s1-tx">
+                                        <p>卓越工程师学院举行工程硕博士研究生导师座谈交流会</p>
+                                        <span>2025-05-16</span>
+                                    </div>
+                             </a>
+                        </li>
+                        <li>
+                            <a href="info/1691/3521.htm" title="我校卓越工程师学院与大连中远海运川崎船舶工程有限公司举办2024级工程硕博士联合培养座谈会">
+                                    <div class="s1-tx">
+                                        <p>我校卓越工程师学院与大连中远海运川崎船舶工程有限公司举办2024级工程硕博士联合...</p>
+                                        <span>2025-05-16</span>
+                                    </div>
+                             </a>
+                        </li>
+                        <li>
+                            <a href="info/1691/3531.htm" title="我校卓越工程师学院与大连中远海运重工有限公司举办2024级工程硕博士产教融合联合培养座谈会">
+                                    <div class="s1-tx">
+                                        <p>我校卓越工程师学院与大连中远海运重工有限公司举办2024级工程硕博士产教融合联合...</p>
+                                        <span>2025-05-16</span>
+                                    </div>
+                             </a>
+                        </li>
+                        <li>
+                            <a href="info/1691/3541.htm" title="我校卓越工程师学院与大连船舶重工集团有限公司举办2024级工程硕博士联合培养座谈会">
+                                    <div class="s1-tx">
+                                        <p>我校卓越工程师学院与大连船舶重工集团有限公司举办2024级工程硕博士联合培养座谈...</p>
+                                        <span>2025-04-27</span>
+                                    </div>
+                             </a>
+                        </li>
+                        <li>
+                            <a href="info/1691/3551.htm" title="我校卓越工程师学院举行“工程硕博士咨询接待日”活动">
+                                    <div class="s1-tx">
+                                        <p>我校卓越工程师学院举行“工程硕博士咨询接待日”活动</p>
+                                        <span>2025-04-18</span>
+                                    </div>
+                             </a>
+                        </li>
+</ul><script>_showDynClickBatch(['dynclicks_u10_1261','dynclicks_u10_1241','dynclicks_u10_1341','dynclicks_u10_1251','dynclicks_u10_1351','dynclicks_u10_1361','dynclicks_u10_1371','dynclicks_u10_1381','dynclicks_u10_3521','dynclicks_u10_3531','dynclicks_u10_3541','dynclicks_u10_3551'],[1261,1241,1341,1251,1351,1361,1371,1381,3521,3531,3541,3551],"wbnews", 2140917030)</script>
+</div>
+            </div>
+        </div>
+        <div class="s2">
+            <div class="px1400">
+                <div class="s1-tit">
+                    <h2>通知公告</h2>
+                    <div class="s1-more">
+                        <a href="index/tzgg.htm">查看更多</a>
+                    </div>
+                </div>
+                <div class="s2-list">
+<ul>
+                        <li>
+                            <a href="info/1711/1321.htm" title="关于开展大连海事大学2025年优秀博士学位论文培育项目评选工作的通知">
+                                    <div class="s2-date">
+                                        <b>05</b><span>2025-08</span>
+                                    </div>
+                                    <div class="s2-tx">
+                                        <p>关于开展大连海事大学2025年优秀博士学位论文培育项目评选工作的通知</p>
+                                    </div>
+                                    <div class="clear"></div>
+                             </a>
+                         </li>
+                        <li>
+                            <a href="info/1711/3621.htm" title="关于发放2025级博士研究生录取通知书的通知">
+                                    <div class="s2-date">
+                                        <b>09</b><span>2025-07</span>
+                                    </div>
+                                    <div class="s2-tx">
+                                        <p>关于发放2025级博士研究生录取通知书的通知</p>
+                                    </div>
+                                    <div class="clear"></div>
+                             </a>
+                         </li>
+                        <li>
+                            <a href="info/1711/3631.htm" title="大连海事大学2025级博士、硕士研究生入学须知">
+                                    <div class="s2-date">
+                                        <b>02</b><span>2025-07</span>
+                                    </div>
+                                    <div class="s2-tx">
+                                        <p>大连海事大学2025级博士、硕士研究生入学须知</p>
+                                    </div>
+                                    <div class="clear"></div>
+                             </a>
+                         </li>
+                        <li>
+                            <a href="info/1711/3641.htm" title="关于发放2025级博士研究生调档函和考生确认录取通知书邮寄信息的通知">
+                                    <div class="s2-date">
+                                        <b>02</b><span>2025-07</span>
+                                    </div>
+                                    <div class="s2-tx">
+                                        <p>关于发放2025级博士研究生调档函和考生确认录取通知书邮寄信息的通知</p>
+                                    </div>
+                                    <div class="clear"></div>
+                             </a>
+                         </li>
+                        <li>
+                            <a href="info/1711/1391.htm" title="大连海事大学关于开展2026年推免生报名工作的通知">
+                                    <div class="s2-date">
+                                        <b>02</b><span>2025-07</span>
+                                    </div>
+                                    <div class="s2-tx">
+                                        <p>大连海事大学关于开展2026年推免生报名工作的通知</p>
+                                    </div>
+                                    <div class="clear"></div>
+                             </a>
+                         </li>
+                        <li>
+                            <a href="info/1711/3651.htm" title="关于公示学校2025年博士研究生招生拟录取考生名单的通知">
+                                    <div class="s2-date">
+                                        <b>25</b><span>2025-06</span>
+                                    </div>
+                                    <div class="s2-tx">
+                                        <p>关于公示学校2025年博士研究生招生拟录取考生名单的通知</p>
+                                    </div>
+                                    <div class="clear"></div>
+                             </a>
+                         </li>
+<div class="clear"></div>
+</ul><script>_showDynClickBatch(['dynclicks_u11_1321','dynclicks_u11_3621','dynclicks_u11_3631','dynclicks_u11_3641','dynclicks_u11_1391','dynclicks_u11_3651'],[1321,3621,3631,3641,1391,3651],"wbnews", 2140917030)</script>
+</div>
+            </div>
+        </div>
+        <div class="s3">
+            <div class="px1400">
+                <div class="s1-tit">
+                    <h2>联培企业信息</h2>
+                </div>
+                <div class="s3-c">
+                    <div class="s3-banner">
+                        <ul class="slick">
+                            <li>
+                                <a href="info/1521/6531.htm" title="中国航天科技集团有限公司">
+                                    <div class="pic">
+                                        <img src="/__local/6/D9/F8/B407B9AA0482FE0CD0AA065DAAE_C0A68C56_8250.png" alt="" />
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/3891.htm" title="中国航天科工集团有限公司">
+                                    <div class="pic">
+                                        <img src="/__local/0/19/55/3F132A3A4A999F7E7B2CAC8A190_966B177F_F72A.png" alt="" />
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/3871.htm" title="中国船舶集团有限公司">
+                                    <div class="pic">
+                                        <img src="/__local/E/E4/A1/84124B6E6EE30F9E89D0DF4E113_81999F00_27A0E.png" alt="" />
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/3851.htm" title="中国电子科技集团有限公司">
+                                    <div class="pic">
+                                        <img src="/__local/F/4D/CA/534E2D50510F2B8FB685677D724_F906BAE4_103FA.png" alt="" />
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/3831.htm" title="中国石油天然气集团有限公司">
+                                    <div class="pic">
+                                        <img src="/__local/0/C3/96/2F98A01E33861404C0D98CE62BF_A9B28479_E595.png" alt="" />
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/6561.htm" title="中国海洋石油集团有限公司">
+                                    <div class="pic">
+                                        <img src="/__local/4/8B/B1/7696DD250CB9604E13A2D95966D_B69C0081_A52D.jpeg" alt="" />
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/6541.htm" title="中国第一汽车集团有限公司">
+                                    <div class="pic">
+                                        <img src="/__local/C/50/DD/9D48BD75DCFF58580440745D7B4_412EBC29_16C73.png" alt="" />
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/3821.htm" title="中国远洋海运集团有限公司">
+                                    <div class="pic">
+                                        <img src="/__local/A/E8/DB/4E1A818DCFFB1157883B8A77771_9A0DF9A2_1DAB2.png" alt="" />
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/3881.htm" title="招商局集团有限公司">
+                                    <div class="pic">
+                                        <img src="/__local/B/DE/E7/8B8BE1311C8C2E5BEDD7F0FBD32_36CE6722_19057.png" alt="" />
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/6551.htm" title="中国中车集团有限公司">
+                                    <div class="pic">
+                                        <img src="/__local/1/1D/7F/97BD1959BC0DF80FE92BD409902_C7D70D45_D1C2.jpeg" alt="" />
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/3841.htm" title="中国交通建设集团有限公司">
+                                    <div class="pic">
+                                        <img src="/__local/9/21/C6/DF5806423705C5D78F753DEA3AB_D0C4D9B5_B8DD.jpg" alt="" />
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/3861.htm" title="中国电力建设集团有限公司">
+                                    <div class="pic">
+                                        <img src="/__local/2/DD/57/EA5AE2926FCE095566902EB9224_E897A395_1AFCC.png" alt="" />
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="s3-tx">
+                        <ul class="slick">
+                            <li>
+                                <a href="info/1521/6531.htm" title="中国航天科技集团有限公司">
+                                    <span class="s3-date"></span>
+                                    <h3>中国航天科技集团有限公司</h3>
+                                    <p>中国航天科技集团有限公司是在我国战略高技术领域拥有自主知识产权和著名品牌，创新能力突出、核心竞争力强的特大型国有企业。</p>
+                                    <div class="s3-tx-more">
+                                        <span>查看详情</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/3891.htm" title="中国航天科工集团有限公司">
+                                    <span class="s3-date"></span>
+                                    <h3>中国航天科工集团有限公司</h3>
+                                    <p>中国航天科工集团有限公司中国航天科工集团有限公司（简称中国航天科工）是我国航天事业和国防科技工业的中坚力量。</p>
+                                    <div class="s3-tx-more">
+                                        <span>查看详情</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/3871.htm" title="中国船舶集团有限公司">
+                                    <span class="s3-date"></span>
+                                    <h3>中国船舶集团有限公司</h3>
+                                    <p>中国船舶集团有限公司是我国海军装备建设的主体力量、全球造船业发展的引领力量、建设海洋强国的支撑力量，是全球最大的造船集团。</p>
+                                    <div class="s3-tx-more">
+                                        <span>查看详情</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/3851.htm" title="中国电子科技集团有限公司">
+                                    <span class="s3-date"></span>
+                                    <h3>中国电子科技集团有限公司</h3>
+                                    <p>中国电子科技集团有限公司是中央直接管理的国有重要骨干企业，是我国军工电子主力军、网信事业国家队、国家战略科技力量。</p>
+                                    <div class="s3-tx-more">
+                                        <span>查看详情</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/3831.htm" title="中国石油天然气集团有限公司">
+                                    <span class="s3-date"></span>
+                                    <h3>中国石油天然气集团有限公司</h3>
+                                    <p>中国石油天然气集团有限公司（简称“中国石油”，英文缩写：CNPC）是国有重要骨干企业和全球主要的油气生产商和供应商之一。</p>
+                                    <div class="s3-tx-more">
+                                        <span>查看详情</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/6561.htm" title="中国海洋石油集团有限公司">
+                                    <span class="s3-date"></span>
+                                    <h3>中国海洋石油集团有限公司</h3>
+                                    <p>中国海洋石油集团有限公司是1982年2月15日经国务院批准成立的特大型国有企业，是中国最大的海上油气生产运营商。</p>
+                                    <div class="s3-tx-more">
+                                        <span>查看详情</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/6541.htm" title="中国第一汽车集团有限公司">
+                                    <span class="s3-date"></span>
+                                    <h3>中国第一汽车集团有限公司</h3>
+                                    <p>中国第一汽车集团有限公司（以下简称中国一汽）是国有特大型汽车企业集团，国家“一五”计划重点建设项目之一。</p>
+                                    <div class="s3-tx-more">
+                                        <span>查看详情</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/3821.htm" title="中国远洋海运集团有限公司">
+                                    <span class="s3-date"></span>
+                                    <h3>中国远洋海运集团有限公司</h3>
+                                    <p> 截至2024年12月31日，中国远洋海运集团经营船队综合运力1.3亿载重吨/1535艘，排名世界第一。</p>
+                                    <div class="s3-tx-more">
+                                        <span>查看详情</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/3881.htm" title="招商局集团有限公司">
+                                    <span class="s3-date"></span>
+                                    <h3>招商局集团有限公司</h3>
+                                    <p>招商局集团有限公司招商局集团是中央直接管理的国有重要骨干企业，总部位于香港，是在香港成立运营最早的中资企业之一。</p>
+                                    <div class="s3-tx-more">
+                                        <span>查看详情</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/6551.htm" title="中国中车集团有限公司">
+                                    <span class="s3-date"></span>
+                                    <h3>中国中车集团有限公司</h3>
+                                    <p>中国中车集团有限公司（简称中国中车集团）是经国务院同意，国务院国资委批准的国有独资企业，我国轨道交通装备唯一一家产业化集团。</p>
+                                    <div class="s3-tx-more">
+                                        <span>查看详情</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/3841.htm" title="中国交通建设集团有限公司">
+                                    <span class="s3-date"></span>
+                                    <h3>中国交通建设集团有限公司</h3>
+                                    <p>中国交通建设集团有限公司（以下简称“中交集团”）是全球领先的特大型基础设施综合服务商。</p>
+                                    <div class="s3-tx-more">
+                                        <span>查看详情</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="info/1521/3861.htm" title="中国电力建设集团有限公司">
+                                    <span class="s3-date"></span>
+                                    <h3>中国电力建设集团有限公司</h3>
+                                    <p>中国电力建设集团有限公司是经国务院批准，于2011年9月成立的跨国经营的综合性特大型中央企业。</p>
+                                    <div class="s3-tx-more">
+                                        <span>查看详情</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="s1-more">
+                        <div class="s1-prev"></div>
+                        <div class="s1-next"></div>
+                        <a href="xqlp1/lpqyxx.htm">查看更多</a>
+                    </div>
+                    <div class="clear"></div><script>_showDynClickBatch(['dynclicks_u12_6531','dynclicks_u12_3891','dynclicks_u12_3871','dynclicks_u12_3851','dynclicks_u12_3831','dynclicks_u12_6561','dynclicks_u12_6541','dynclicks_u12_3821','dynclicks_u12_3881','dynclicks_u12_6551','dynclicks_u12_3841','dynclicks_u12_3861'],[6531,3891,3871,3851,3831,6561,6541,3821,3881,6551,3841,3861],"wbnews", 2140917030)</script>
+</div>
+            </div>
+        </div>
+        <div class="s4" style="display:none;">
+            <div class="px1400">
+                <div class="s4-l">
+                    <div class="s4-tit"> 
+                        <h2>活动实录<img src="images/icon-tit.png" alt=""></h2>
+                    </div>
+                    <div class="s4-pic">
+    <ul>
+                            <li>
+                                <a href="info/1691/1261.htm" title="我校召开卓越工程师学院建设推进会">
+                                    <div class="pic">
+                                        <img src="https://news.dlmu.edu.cn/virtual_attach_file.vsb?afc=bM4MEkMzfVM4-bLeNC4MmCDLmC8LRvyaUmQkUmLDLlMkL7-0gihFp2hmCIa0USyZLShVLkhRnm6VLllaUzT2Um7ZnzVfLzNiLzUDMzCYnz6FoR74Lz-ioRAFMRLioRUJqjfjo4OeosAs6YhXptQ0g478M4C0M4NZL4LsgtA8pUhcc" alt="" />
+                                    </div>
+                                    <p class="s4-tx">我校召开卓越工程师学院建设推进会</p>
+                                </a>
+                            </li>
+    
+    
+                            <li>
+                                <a href="info/1691/1241.htm" title="我校举办“匠心‘企’航 卓越未来”——2025年工程硕博士入企启动仪式暨导师培训会">
+                                    <div class="pic">
+                                        <img src="https://news.dlmu.edu.cn/virtual_attach_file.vsb?afc=7o7VVRM8-8n7WkL287aMRLYLNrVLz7din7LsUz94UzAfM8l0gihFp2hmCIa0UYh7UYhVLShfL4rVLRNDL46VMmffMmQ2M8nfozrkLRrVUNnFnmvbM49sMNVFM4UsMlUJqjfjo4OeosAs6YhXptQ0g478M4C0M4NsoRNsgtA8pU-cc" alt="" />
+                                    </div>
+                                    <p class="s4-tx">我校举办“匠心‘企’航 卓越未来”——2025年工程硕博士入企启动仪式暨导师培训会</p>
+                                </a>
+                            </li>
+    </ul>
+    <ul>
+                            <li>
+                                <a href="info/1691/1341.htm" title="我校与中国航天科工集团有限公司举行工程硕博士联合培养座谈交流会">
+                                    <div class="pic">
+                                        <img src="https://grs.dlmu.edu.cn/virtual_attach_file.vsb?afc=QUzfq7nmWknRNaUpzCinmGinzVRMR-v4M4VVUmvDL4LZLNL0gihFp2hmCIa0MkyZMkyPMkhRU4CsnRCDLRQVnm9PM7VfU4N8MNrRo7VVLmnFMRvPLz9bUzQFMNC8LzNJqjfjo4OeosT/vsNYLR-8gDTJQty0Lz-aL1yYL4UbLSbw6268c" alt="" />
+                                    </div>
+                                    <p class="s4-tx">我校与中国航天科工集团有限公司举行工程硕博士联合培养座谈交流会</p>
+                                </a>
+                            </li>
+    
+    
+                            <li>
+                                <a href="info/1691/1251.htm" title="我校与中国市政工程西南设计研究总院有限公司举行2024级工程硕博士联合培养座谈会">
+                                    <div class="pic">
+                                        <img src="https://grs.dlmu.edu.cn/virtual_attach_file.vsb?afc=ZU4fbVnN-sU47sLEl7bnlMfn7nknz7eYnmVVozV7LmNYMm-0gihFp2hmCIa0L1yaMYy8UShVnzUZL4W7oRA2MmLPMRCZnRLsLlLYMz-snRfFUz67Um-bnzAFLzrRn7MkgjfJQ4Oeo4xbqjMbLmGYMkhXptQ0g47YLR-0LmL8L47Jqdynx" alt="" />
+                                    </div>
+                                    <p class="s4-tx">我校与中国市政工程西南设计研究总院有限公司举行2024级工程硕博士联合培养座谈会</p>
+                                </a>
+                            </li>
+    </ul>
+
+<div class="clear"></div><script>_showDynClickBatch(['dynclicks_u13_1261','dynclicks_u13_1241','dynclicks_u13_1341','dynclicks_u13_1251'],[1261,1241,1341,1251],"wbnews", 2140917030)</script>
+</div>
+                </div>
+                <div class="s4-r">
+                    <div class="s4-tit">
+                        <h2>专题报道<img src="images/icon-tit.png" alt=""></h2>
+                    </div>
+                    <div class="s4-list">
+<ul>
+                            <li><a href="info/1691/1261.htm" title="我校召开卓越工程师学院建设推进会">
+                                    <div class="s4-date">
+                                        <b>01</b>
+                                        <span>2025.08</span>
+                                    </div>
+                                    <div class="s4-info">
+                                        <p>我校召开卓越工程师学院建设推进会</p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </a></li>
+                            <li><a href="info/1691/1241.htm" title="我校举办“匠心‘企’航 卓越未来”——2025年工程硕博士入企启动仪式暨导师培训会">
+                                    <div class="s4-date">
+                                        <b>24</b>
+                                        <span>2025.07</span>
+                                    </div>
+                                    <div class="s4-info">
+                                        <p>我校举办“匠心‘企’航 卓越未来”——2025年工程硕博士入企启动仪式暨导师培训会</p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </a></li>
+                            <li><a href="info/1691/1341.htm" title="我校与中国航天科工集团有限公司举行工程硕博士联合培养座谈交流会">
+                                    <div class="s4-date">
+                                        <b>03</b>
+                                        <span>2025.07</span>
+                                    </div>
+                                    <div class="s4-info">
+                                        <p>我校与中国航天科工集团有限公司举行工程硕博士联合培养座谈交流会</p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </a></li>
+                            <li><a href="info/1691/1251.htm" title="我校与中国市政工程西南设计研究总院有限公司举行2024级工程硕博士联合培养座谈会">
+                                    <div class="s4-date">
+                                        <b>03</b>
+                                        <span>2025.07</span>
+                                    </div>
+                                    <div class="s4-info">
+                                        <p>我校与中国市政工程西南设计研究总院有限公司举行2024级工程硕博士联合培养座谈会</p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </a></li>
+                            <li><a href="info/1691/1351.htm" title="我校与中国石油国家卓越工程师学院举行校企导师见面会">
+                                    <div class="s4-date">
+                                        <b>23</b>
+                                        <span>2025.06</span>
+                                    </div>
+                                    <div class="s4-info">
+                                        <p>我校与中国石油国家卓越工程师学院举行校企导师见面会</p>
+                                    </div>
+                                    <div class="clear"></div>
+                                </a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u14_1261','dynclicks_u14_1241','dynclicks_u14_1341','dynclicks_u14_1251','dynclicks_u14_1351'],[1261,1241,1341,1251,1351],"wbnews", 2140917030)</script>
+</div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <!-- foot -->
+        <div class="foot">
+            <div class="px1400">
+                <div class="f-logo">                            <a href="" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 2140917030, 1016108)">
+                            <img src="images/baise.png">
+                        </a>  
+</div>
+                <div class="f-lx">
+                    <script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+
+                    <div class="f-mt">    </div>
+                </div>
+                <div class="f-lk"><ul>
+                        <li>
+                            <a href="https://grs.dlmu.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2140917030, 97529)">
+                                <div class="ico">
+                                    <img src="images/foot-icon1.png" alt="">
+                                </div>
+                                <p>研究生院</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.dlmu.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 2140917030, 97530)">
+                                <div class="ico">
+                                    <img src="images/foot-icon2.png" alt="">
+                                </div>
+                                <p>学校主页</p>
+                            </a>
+                        </li>
+</ul></div>
+            </div>
+            <div class="f-bq"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址:大连市凌海路1号&nbsp; 邮编:116026&nbsp; &nbsp;<a href="https://beian.miit.gov.cn/">版权所有&nbsp;©&nbsp;大连海事大学研究生院/ 辽ICP备05001354号-1</a></p><p><br /></p>
+</div>
+        </div>
+    </div>
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/public.js"></script>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,388 @@
+<!DOCTYPE html><html lang=""><head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中心简介-武汉大学信息资源研究中心</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="中心简介">
+<meta name="keywords" content="武汉大学信息资源研究中心">
+
+    <script type="module" crossorigin="" src="../assets/academicPicture-20e52ac5.js"></script>
+    <link rel="modulepreload" crossorigin="" href="../assets/page-footer-184359b4.js">
+    <link rel="modulepreload" crossorigin="" href="../assets/time-aac50abf.js">
+    <link rel="modulepreload" crossorigin="" href="../assets/watch-0bfac65d.js">
+    <link rel="modulepreload" crossorigin="" href="../assets/newUtil-961179da.js">
+    <link rel="modulepreload" crossorigin="" href="../assets/my-breadcrumb-e50b200c.js">
+    <link rel="modulepreload" crossorigin="" href="../assets/nav-button-c0a02b76.js">
+    <link rel="stylesheet" href="../assets/page-footer-26221945.css">
+    <link rel="stylesheet" href="../assets/my-breadcrumb-7e1e4187.css">
+    <link rel="stylesheet" href="../assets/nav-button-bb8e22ff.css">
+    <link rel="stylesheet" href="../assets/new-academic-picture-d329b17d.css">
+  <!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../xq1.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1961,'/xq1.jsp',-1,1948724615)</script>
+</head>
+
+  <body>
+    
+    <div class="template hide">
+      <div class="logo">
+        
+
+<img src="../images/logo.png" class="logo">
+<img src="../images/logo-right.png" class="logo">
+      </div>
+      <div class="search">
+        
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script>
+<script type="text/html" id="htmlu1">
+    <div id="appu1" >
+        <div v-if="!isError" style="
+                display: flex;
+                width: 198px;
+                height: 26px;
+                border: 1px solid #7f7f7f;
+                border-radius: 26px;
+                align-items: center;
+              ">
+            <input type="text"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"  style="
+                  width: 157px;
+                  min-width: auto;
+                  height: 16px;
+                  display: block;
+                  margin: 4px;
+                  outline: none;
+                  border-top: none;
+                  border-right: 1px solid #7f7f7f;
+                  border-bottom: none;
+                  border-left: none;
+                  border-image: initial;
+                " >
+            <button
+                name="submit_button"
+               
+                style="border: none; background: none; cursor: pointer"
+                v-on:click="onSubmit()"
+                ><img src="../images/search.png" width="14" height="14" /></button
+            ></div>
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1948724615";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+      </div>
+      <div class="nav">
+        <table>
+    <tbody><tr>
+        <td>
+            <div class="nav_menustyle_1_1">
+                <ul>
+                    <li><a href="../index.htm">首页<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+                    <!--[if lte IE 6]></a><![endif]-->
+                    </li>
+                    <li><a href="zxjj.htm">中心概况<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <ul>
+                        <li><a href="zxjj.htm">中心简介<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="xswyh.htm">学术委员会<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="nsjg.htm">内设机构<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                    </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                    </li>
+                    <li><a href="../zzyjy.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1221">学术队伍<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <ul>
+                        <li><a href="../zzyjy.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1681">首席科学家<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../zzyjy.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1221">专职研究员<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../jzyjy.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1231">兼职研究员<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../zzyjy.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1691">博士后<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../zzyjy.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1701">访问学者<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                    </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                    </li>
+                    <li><a href="../kxyj/qtzxxm.htm">科研项目<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <ul>
+                        <li><a href="../kxyj/jdzdxm.htm">基地重大项目<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../kxyj/jdzsxm.htm">基地自设项目<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../kxyj/qtzxxm.htm">其他纵向项目<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../kxyj/hxxm.htm">横向项目<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                    </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                    </li>
+                    <li><a href="../kycg/xszz.htm">科研成果<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <ul>
+                        <li><a href="../kycg/xszz.htm">学术著作<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../kycg/zylw.htm">重要论文<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../kycg/hylw.htm">会议论文<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../kycg/rjyf.htm">软件研发<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../kycg/zscq.htm">知识产权<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../kycg/cgjl.htm">成果奖励<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                    </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                    </li>
+                    <li><a href="../liebiaoye.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1141">学术交流<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <ul>
+                        <li><a href="../liebiaoye.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1751">学术会议<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../liebiaoye.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1761">学术讲座<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                    </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                    </li>
+                    <li><a href="../rcpy/jpkc.htm">人才培养<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <ul>
+                        <li><a href="../rcpy/jpkc.htm">精品课程<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../rcpy/jycg.htm">教研成果<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../rcpy/pyzz.htm">培养资质<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../rcpy/yxxwlw.htm">优秀学位论文<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../rcpy/gjlhpy.htm">国际联合培养<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                    </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                    </li>
+                    <li><a href="../xkdh/iSchool.htm">学科导航<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <ul>
+                        <li><a href="../xkdh/iSchool.htm">iSchool<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../xkdh.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=2071">国际学术刊物<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../xkdh.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=2081">国内学术刊物<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                    </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                    </li>
+                    <li><a href="../xszy/tszl.htm">学术资源<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <ul>
+                        <li><a href="../xszy/tszl.htm">图书资料<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../xszy/sjkjs.htm">数据库建设<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../liebiaoye.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1411">其他资源<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                    </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                    </li>
+                    <li><a href="../liebiaoye.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1181">社会服务<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <ul>
+                        <li><a href="../liebiaoye.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1621">产学研合作<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../liebiaoye.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1631">咨询报告<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        <li><a href="../liebiaoye.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1641">社会培训<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                    </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                    </li>
+                    <li><a href="../textlist.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1791">下载中心<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+                    <!--[if lte IE 6]></a><![endif]-->
+                    </li>
+                    <li><a href="../En.htm">En<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+                    <!--[if lte IE 6]></a><![endif]-->
+                    </li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</tbody></table>
+      </div>
+      <div class="qrcode">
+            <script language="javascript" src="/system/resource/js/dynclicks.js"></script><img src="../qrcode.png" class="qrcode">
+      </div>
+      <div class="banner">
+        
+
+
+
+
+
+<table border="0" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+    <td><img src="../images/banner1.png" width="200" height="40" hspace="3" vspace="2" border="0"></td>
+        </tr>
+        </tbody></table>
+      </div>
+      
+      <div class="other_link">
+        <script language="javascript" src="/system/resource/js/openlink.js"></script><a href="zxjj.htm">中心简介</a>
+<a href="xswyh.htm">学术委员会</a>
+<a href="nsjg.htm">内设机构</a>
+
+      </div>
+      <div class="content_list">
+        
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1948724615,'wbnews','u7')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta7(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1948724615,1161)</script>
+<li>
+    <img src="/__local/B/F4/8B/C29697EEE96216CB53DC365A080_49878A29_28B8.jpg">
+    <a class="content_title" href="/system/defaultcontent.jsp">武汉大学信息资源研究中心</a>
+    <div class="content_watch">1513</div>
+    <div class="content_time">2023-08-07</div>
+    
+</li>
+
+      </div>
+    </div>
+    
+    <div id="app" data-v-app=""><div data-v-3103f572="" class="container"><div data-v-a4ce7d18="" data-v-3103f572="" class="header-container"><div data-v-a4ce7d18="" class="header"><div data-v-a4ce7d18="" class="left_logo"><a data-v-a4ce7d18="" href="//csir.whu.edu.cn/"><img data-v-a4ce7d18="" alt="" height="38" src="https://csir.whu.edu.cn/images/logo.png"></a></div><div data-v-a4ce7d18="" class="nav"><div data-v-a4ce7d18="" class="nav_item"><div data-v-a4ce7d18="" class="nav_title"><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/index.htm">首页</a></div><!----></div><div data-v-a4ce7d18="" class="nav_item"><div data-v-a4ce7d18="" class="nav_title"><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/zxgk/zxjj.htm">中心概况</a></div><div data-v-a4ce7d18="" class="nav_option"><div data-v-a4ce7d18=""><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/zxgk/zxjj.htm">中心简介</a></div><div data-v-a4ce7d18=""><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/zxgk/xswyh.htm">学术委员会</a></div><div data-v-a4ce7d18=""><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/zxgk/nsjg.htm">内设机构</a></div></div></div><div data-v-a4ce7d18="" class="nav_item"><div data-v-a4ce7d18="" class="nav_title"><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/zzyjy.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1221">学术队伍</a></div><div data-v-a4ce7d18="" class="nav_option"><div data-v-a4ce7d18=""><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/zzyjy.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1681">首席科学家</a></div><div data-v-a4ce7d18=""><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/zzyjy.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1221">专职研究员</a></div><div data-v-a4ce7d18=""><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/jzyjy.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1231">兼职研究员</a></div><div data-v-a4ce7d18=""><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/zzyjy.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1691">博士后</a></div><div data-v-a4ce7d18=""><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/zzyjy.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1701">访问学者</a></div></div></div><div data-v-a4ce7d18="" class="nav_item"><div data-v-a4ce7d18="" class="nav_title"><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/liebiaoye.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1141">学术交流</a></div><div data-v-a4ce7d18="" class="nav_option"><div data-v-a4ce7d18=""><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/liebiaoye.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1751">学术会议</a></div><div data-v-a4ce7d18=""><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/liebiaoye.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1761">学术讲座</a></div></div></div><div data-v-a4ce7d18="" class="nav_item"><div data-v-a4ce7d18="" class="nav_title"><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/rcpy/jpkc.htm">人才培养</a></div><div data-v-a4ce7d18="" class="nav_option"><div data-v-a4ce7d18=""><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/rcpy/jpkc.htm">精品课程</a></div><div data-v-a4ce7d18=""><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/rcpy/jycg.htm">教研成果</a></div><div data-v-a4ce7d18=""><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/rcpy/pyzz.htm">培养资质</a></div><div data-v-a4ce7d18=""><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/rcpy/yxxwlw.htm">优秀学位论文</a></div><div data-v-a4ce7d18=""><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/rcpy/gjlhpy.htm">国际联合培养</a></div></div></div><div data-v-a4ce7d18="" class="nav_item"><div data-v-a4ce7d18="" class="nav_title"><a data-v-a4ce7d18="" href="https://csir.whu.edu.cn/En.htm">En</a></div><!----></div></div><div data-v-a4ce7d18="" class="search" style="margin-top: 10px; margin-left: 78px;"><div id="divu1" class="search_box">
+    <div id="appu1"><div style="display: flex; width: 198px; height: 26px; border: 1px solid rgb(127, 127, 127); border-radius: 26px; align-items: center;"><input type="text" autocomplete="off" style="width: 157px; min-width: auto; height: 16px; display: block; margin: 4px; outline: none; border-top: none; border-right: 1px solid rgb(127, 127, 127); border-bottom: none; border-left: none; border-image: initial;"> <button name="submit_button" style="border: none; background: none; cursor: pointer;"><img src="../images/search.png" width="14" height="14"></button></div></div>
+    
+</div></div><div data-v-a4ce7d18="" class="right_logo"><img data-v-a4ce7d18="" alt="logo" width="65" height="53" src="https://csir.whu.edu.cn/images/logo-right.png"></div></div></div><div data-v-3103f572="" class="banner"><img data-v-3103f572="" src="https://csir.whu.edu.cn/images/banner1.png" alt="banner"></div><div data-v-d65dbac1="" data-v-3103f572="" class="breadcrumb_list"><div data-v-d65dbac1="" class="breadcrumb"><img data-v-d65dbac1="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAvpJREFUSEu1lE9IFGEYxp933LUQY/egh8CDkJSWumsldAhcIUHbWXcWOwgR5CGyU0SXAiEvgVDQsYLAQ0J/SHbG3XUJFBciKFCaXZc0FPLQocjDSgbp7M4bMzuzae6fCprTzrzf+/uefb7n/Qj/6aFK3GP9SpNTEPzMQjOIswRe1TWaTcXEdLnekmCvFG4Equ8BLDF4k0CrYGSZuJlAtWDMgLRLqhxaK7ZBUXCrNH2oCnqCgCyzcGNj44uylhj6YQJ8ow6P68QAEY0B7NZZ6E0p/re/w/eAG33j+92uukUGZXl7qycVH/hUTJFXCruZHXEQNWjb1Pl+2v9557o9YK8UuwXmEZ2rWlNTfR+MxcZmLld9FzEcELTXqhzKGN/b+yYbqHrfChEeqLJ4rQI4+o6BdFIWLxgL81475wy+2chYzxF6F2VxwXj1BGP3ifTBTGb9YMEuALsUH/U9r61213xjFgaTytln+cboExBOk45hkyvgATGWVUXsMTcOxYJglgGtQ5VDqq16F9hS9xHgblUOJCzwEsByUgncNEHB6B0GxKQituT/UcQH0JwOPpOSA7NFwYcDkbqaKvqqg86lZP+k1RgGyEskXOQcsizoTwmYUWVxyKz3R85DoImsnutMTwXni4LzCiNLRPSm0CiFG5mdcSI0W02qvrUVsNPikaKPCSyqmYV6JEazJcFeKXaVmceItJZC+H2jjvYDx09CFzZT3+eXbUB7f/yIQLk0gx8llcCVsqkwo+WuXyFgVZXF7pJjmx+UVwRq2taorWKO875F/RAQZabhpOJ/WAzukaLXCbi78zzKKraLXik6zozBXZZYRcMCopwKwgs77xVH+hc47GY4FwFeS2YWugsHY1lgjDJBa7On8I/BOy0BY0RVxNtmaiwLoENUp8RYqTOoeB/blgiC4xSggXWaB2HCjuM/g83bzl2/xMAmjEuIUFvOgpI5LqagIzTdxaybI86M3qQiviwZQ6tQ0Qob4AnGLhu/S8Xvrw6vkqpy9Z+791ImqJI+JwAAAABJRU5ErkJggg==" alt="" class="icon"><span data-v-d65dbac1="">当前位置：</span><span data-v-d65dbac1="" class="breadcrumb_item"><a data-v-d65dbac1="" href="https://csir.whu.edu.cn/index.htm" class="breadcrumb_link"> &nbsp;首页&nbsp; </a></span><span data-v-d65dbac1="" class="breadcrumb_item"><a data-v-d65dbac1="" href="https://csir.whu.edu.cn/zxgk/zxjj.htm" class="breadcrumb_link"> &nbsp;中心概况&nbsp; </a></span><span data-v-d65dbac1="" class="breadcrumb_item"><a data-v-d65dbac1="" href="https://csir.whu.edu.cn/zxgk/zxjj.htm" class="breadcrumb_link"> &nbsp;中心简介&nbsp; </a></span></div></div><div data-v-3103f572="" class="breadcrumb_slot"><div class="breadcrumb">
+        <div class="breadcrumb"> 
+当前位置：
+                        <a href="../index.htm">首页</a>
+                &gt;
+                <a href="zxjj.htm">中心概况</a>
+                &gt;
+                <a href="zxjj.htm">中心简介</a>
+</div>
+      </div></div><div data-v-c74aaf7e="" data-v-3103f572="" class="button_links" style="--21986816: 34px; --7de8186a: 36px; --566c284b: transparent;"><a data-v-c74aaf7e="" class="link select" href="https://csir.whu.edu.cn/zxgk/zxjj.htm">中心简介</a><a data-v-c74aaf7e="" class="link" href="https://csir.whu.edu.cn/zxgk/xswyh.htm">学术委员会</a><a data-v-c74aaf7e="" class="link" href="https://csir.whu.edu.cn/zxgk/nsjg.htm">内设机构</a></div><div data-v-3103f572="" class="content_box"><div data-v-3103f572="" class="content_image"><img data-v-3103f572="" src="https://csir.whu.edu.cn/__local/B/F4/8B/C29697EEE96216CB53DC365A080_49878A29_28B8.jpg"></div><div data-v-3103f572="" class="content"><div data-v-3103f572="" class="content_title">武汉大学信息资源研究中心</div><div data-v-3103f572="" class="content_info"><div data-v-3103f572="" class="content_time"><img data-v-3103f572="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAOCAYAAAD0f5bSAAAAAXNSR0IArs4c6QAAAPdJREFUKFOdkrFKxUAQRbOTzBIJYpVYWVjY5AMMMcWC2IhY2dnY+GMi2FlZCSKEgBFryQ/YJZVFMMySGXkioia+lbfVNueeO7ujPM/z8jxfi6JIL+7LTt/3VNf1myqKYh0AzkTk1QUppTaY+UJlWbYZhuFuWZY3c9Bn6HZVVc/GmKNhGJ6c0CI0CIIdRHwUkcMvCBFPfN9/cdUbx3HLWnv9YULEfWZ+cEEAsGetvXfW+x5kjDn+MVPXdbdxHJ8zM/w2AgAR0aXW+uBfD7HURER3iHgqIhOTUoqttVezpjRNdZIkE6htW26ahiYz/fW5s/VWWqNVFvYdyZyY49md7uIAAAAASUVORK5CYII="> 2023-08-07</div><div data-v-3103f572="" class="content_watch"><img data-v-3103f572="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAAAXNSR0IArs4c6QAAAkdJREFUOE+tlD9oE3EUx7/vd7nE0SGBChEqDgpGaEmXgmCFCknuDglRcBHN4OSgQwcHxYgODlkKOkdxETQESe6SoWCdKqTQgBF0EAsWDCSDo0nu7skLdyH+AUFy44/v+7zH933fEebw0RwY+CvEcZyznuddBrAEIA5gQES7SqlXuVzu7e+Nf4HUarVFXdcrANYA7AN4B6AXgOQtCWBrOBwWC4XCQQibQprN5gnP87YBuER0yzCM6mzHUqkUSafTBSIqi0YptZ7L5T6LZgKpVCqHEonEHjNHXNc9n8/n923bXvB9/wYRnSSi7mg02szn89+r1WoyGo2+kbrBYHC6WCz+mEBs277HzHc0TUtls9lPtVrtsK7rewAWmLkDIEVE4suqYRi9Vqt1ynXdXSK6bRjG5gTSaDS+Atg2TfNKCPV9f0PTtCUZ2XGc477vd5m5bFnW3aBm4p1pmsdIxmbmbwCumab5LBC8ZOakZVmroS/1en2HiA5M07wUaK4CeEpER8JJvjDzlmVZ10VQr9cfENGGUioVTuJ5XkcpVTYM434AeR5McjT05CYzP4pEIiuZTOZDMN0OM0tGukQkeemNx+NlMTfYpLw/FOh0O/F4/L10GI1G5yQDYm40GhV4ipk/KqWeiKnhdojI7ff7y9PtSHFgnuQEkpN2u/26VCq5s1mxbfsCMz8GENE0bU02Oc1JKJQusVhMXF8HIIkU6CBI7BkAi/I2Ho+LkqU/EjvbUW7H9/2LzLwS3g6AjqZpL/55O/970XP5FfwELpkUWFxGMRMAAAAASUVORK5CYII=" width="17" height="17"> 1513</div></div><hr data-v-3103f572=""><div data-v-3103f572="" class="content_slot"><div class="content"><div id="vsb_content_2_1161_u71" style="width: auto !important; height: auto !important;"><div id="vsb_content_2" style="width: auto !important; height: auto !important;"><p class="vsbcontent_start" style="font-size: 18px; line-height: 40px; color: rgb(61, 61, 61); margin-block: 0px; margin-inline: 0px; word-break: break-all;">武汉大学信息资源研究中心是国家普通高等学校人文社会科学重点研究基地，也是本专业领域内唯一入选的重点研究机构。中心是在成立于1984年的原武汉大学图书馆学情报学研究所的基础上，于1999年2月改制后重新组建而成的新型研究机构，实行学校领导下的主任负责制。</p><p style="font-size: 18px; line-height: 40px; color: rgb(61, 61, 61); margin-block: 0px; margin-inline: 0px; word-break: break-all;">中心的宗旨是聚集国内外社会资源，创新学术研究机制，通过承担重大科研课题，产出重大科研成果，使本机构成为在国内处于领先地位，在国际上具有较大影响和较高知名度的信息资源研究基地。</p><p style="font-size: 18px; line-height: 40px; color: rgb(61, 61, 61); margin-block: 0px; margin-inline: 0px; word-break: break-all;">本中心现设有信息资源规划、大数据治理、数据分析、信息组织等研究室，并与互联网企业在大数据应用领域设立了若干联合实验室。现有专兼职研究人员40余人。</p><p style="font-size: 18px; line-height: 40px; color: rgb(61, 61, 61); margin-block: 0px; margin-inline: 0px; word-break: break-all;">中心自2000年正式批准建立以来，以信息资源的组织、管理和开发利用为核心，积极探索科学研究发展新模式，在教育部组织的评估中三次被评为优秀基地，成为武汉大学“211”、“985”和“双一流”信息管理学科平台建设的重要支撑。与iSchool、IFLA等国际学术组织和大学有着广泛合作，成为在国内处于领先地位，在国际上具有较大影响和较高知名度的信息资源研究基地。</p><p style="font-size: 18px; line-height: 40px; color: rgb(61, 61, 61); margin-block: 0px; margin-inline: 0px; word-break: break-all;">现任中心主任李纲教授、副主任孙永强教授、副主任安璐教授、副主任冉从敬教授。</p><p style="font-size: 18px; line-height: 40px; color: rgb(61, 61, 61); margin-block: 0px; margin-inline: 0px; word-break: break-all;">电 话：027－68754541</p><p style="font-size: 18px; line-height: 40px; color: rgb(61, 61, 61); margin-block: 0px; margin-inline: 0px; word-break: break-all;"><br></p></div></div></div></div></div></div><div data-v-b25d220c="" data-v-3103f572="" class="footer_container" style="--f12c97e6: #eee;"><div data-v-b25d220c="" class="footer"><div data-v-b25d220c="" class="footer_nav"><div data-v-b25d220c="" class="to_home"><a data-v-b25d220c="" class="link" href="https://csir.whu.edu.cn/index.htm"> 首页 </a></div><div data-v-b25d220c="" class="link_groups"><!----><dl data-v-b25d220c=""><dt data-v-b25d220c="" class="list_head"><a data-v-b25d220c="" class="link" href="https://csir.whu.edu.cn/zxgk/zxjj.htm">中心概况</a></dt><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/zxgk/zxjj.htm" class="link">中心简介</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/zxgk/xswyh.htm" class="link">学术委员会</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/zxgk/nsjg.htm" class="link">内设机构</a></dd></dl><dl data-v-b25d220c=""><dt data-v-b25d220c="" class="list_head"><a data-v-b25d220c="" class="link" href="https://csir.whu.edu.cn/zzyjy.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1221">学术队伍</a></dt><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/zzyjy.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1681" class="link">首席科学家</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/zzyjy.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1221" class="link">专职研究员</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/jzyjy.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1231" class="link">兼职研究员</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/zzyjy.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1691" class="link">博士后</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/zzyjy.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1701" class="link">访问学者</a></dd></dl><dl data-v-b25d220c=""><dt data-v-b25d220c="" class="list_head"><a data-v-b25d220c="" class="link" href="https://csir.whu.edu.cn/kxyj/qtzxxm.htm">科研项目</a></dt><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/kxyj/jdzdxm.htm" class="link">基地重大项目</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/kxyj/jdzsxm.htm" class="link">基地自设项目</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/kxyj/qtzxxm.htm" class="link">其他纵向项目</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/kxyj/hxxm.htm" class="link">横向项目</a></dd></dl><dl data-v-b25d220c=""><dt data-v-b25d220c="" class="list_head"><a data-v-b25d220c="" class="link" href="https://csir.whu.edu.cn/kycg/xszz.htm">科研成果</a></dt><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/kycg/xszz.htm" class="link">学术著作</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/kycg/zylw.htm" class="link">重要论文</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/kycg/hylw.htm" class="link">会议论文</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/kycg/rjyf.htm" class="link">软件研发</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/kycg/zscq.htm" class="link">知识产权</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/kycg/cgjl.htm" class="link">成果奖励</a></dd></dl><dl data-v-b25d220c=""><dt data-v-b25d220c="" class="list_head"><a data-v-b25d220c="" class="link" href="https://csir.whu.edu.cn/liebiaoye.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1141">学术交流</a></dt><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/liebiaoye.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1751" class="link">学术会议</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/liebiaoye.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1761" class="link">学术讲座</a></dd></dl><dl data-v-b25d220c=""><dt data-v-b25d220c="" class="list_head"><a data-v-b25d220c="" class="link" href="https://csir.whu.edu.cn/rcpy/jpkc.htm">人才培养</a></dt><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/rcpy/jpkc.htm" class="link">精品课程</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/rcpy/jycg.htm" class="link">教研成果</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/rcpy/pyzz.htm" class="link">培养资质</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/rcpy/yxxwlw.htm" class="link">优秀学位论文</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/rcpy/gjlhpy.htm" class="link">国际联合培养</a></dd></dl><dl data-v-b25d220c=""><dt data-v-b25d220c="" class="list_head"><a data-v-b25d220c="" class="link" href="https://csir.whu.edu.cn/xkdh/iSchool.htm">学科导航</a></dt><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/xkdh/iSchool.htm" class="link">iSchool</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/xkdh.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=2071" class="link">国际学术刊物</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/xkdh.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=2081" class="link">国内学术刊物</a></dd></dl><dl data-v-b25d220c=""><dt data-v-b25d220c="" class="list_head"><a data-v-b25d220c="" class="link" href="https://csir.whu.edu.cn/xszy/tszl.htm">学术资源</a></dt><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/xszy/tszl.htm" class="link">图书资料</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/xszy/sjkjs.htm" class="link">数据库建设</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/liebiaoye.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1411" class="link">其他资源</a></dd></dl><dl data-v-b25d220c=""><dt data-v-b25d220c="" class="list_head"><a data-v-b25d220c="" class="link" href="https://csir.whu.edu.cn/liebiaoye.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1181">社会服务</a></dt><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/liebiaoye.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1621" class="link">产学研合作</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/liebiaoye.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1631" class="link">咨询报告</a></dd><dd data-v-b25d220c=""><a data-v-b25d220c="" href="https://csir.whu.edu.cn/liebiaoye.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1641" class="link">社会培训</a></dd></dl><dl data-v-b25d220c=""><dt data-v-b25d220c="" class="list_head"><a data-v-b25d220c="" class="link" href="https://csir.whu.edu.cn/textlist.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1791">下载中心</a></dt></dl><!----></div></div><div data-v-b25d220c="" class="copyright"><div data-v-b25d220c="" class="copyright_info copyright_item"> Copyright © 2025武汉大学信息资源研究中心 </div><div class="address copyright_item" data-v-b25d220c=""><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAArlJREFUSEu1VTFoFFEQnfmb4gqLCyikUEhjITGgWGhA0EaiGDGggoJFBAtFRUHb+3/mbyGCYBPRRozdFYIRI8ZCMCiooIiViEICBkwhmMIiRfaPTPgr67m3eyBeuTcz782bN/MR/vMPe6lPRE1EHM2ybAAA+pIkWRCROSL6XpdfCUBEgyJyFQCOauGOYqsA0EZEJqIv3YC6AlhrRxGxDQANALidJEk7hPAJAFaNMUNZlo0DwBkFFpHj3vvHZSClAK1Wa8gY8xoAlhBxHxEtlCUT0UYReQAAW0VkzHv/rDOuFMA59woABhFxpFvxvBARDYiIxgMibiGilSLIXwBRmlkRmfDe39NgIuoLIVxExJMqkYjMGGOu5cWstYcRcVpETnvv71QCOOduqLaI2J8XcM7dinqra3S46qY2M5+IBBoi8g0AXjLzoTqAJwDQZOaRmLxORH4AwCwiHosdqO5jiLght6pz7oUCM/PmOgDVc5mZD0QAteq8iJz33t/Ub9bac4g4iYibiGhRvznnlNguZu6vA1hzRZGJc+5rZH5FbYmI1wFgpSNmHgB+MvNw3ZAva4EkSbZZaz9ocKvV2mOMmVbpYvJiCGEsTdO1/733O7Ise6v7wsxnKwGi7ZSNDvFUwY4NY8xO7SSE8K5oR+fcI51JkVSe120P1EmXQgh70zSdq7o31tojiHgfAKaKhCoBiEht97Hb8hS6aorIZ50HIg4T0XJPm1zQ/Xk3ZtE5dwFgIp6J3m9RziJfMBEZ994/LLKz1h5ExJkqAmsKVOlbkKqBiNuJaCnuxnoReR8lLJWmcgZF0GhRler3achdIyL7vfdPq0j29KIVpJqIrKcAYJKZL1QVr5WouAPRVXrk9BzrO6GS/XGay8B66qDDVbpou9M0fVPHvucO8kJ693WTuz2P/9RBL2zLYn4BmkBbKO46jb4AAAAASUVORK5CYII=" alt="" data-v-b25d220c=""> 武汉市武昌珞珈山 武汉大学信息管理学院大楼三楼 </div><div class="postcode copyright_item" data-v-b25d220c=""><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAkNJREFUSEvFlTFoVEEQhv/Zd4VFigjpTBFBwTIiAcHCxkKIYsAmheAVgqWxFL198/YCBrQRbAIHahmwiKBgoYXYGBAUVLAIaKEYMKCFRYq7/WXk3fHuJafvToMLj4VlZ76Zf2bnCXZ5yS77x0CAqk4BsK/K2lTVtztd3BHgvb8qIotVPBfuPBaR06raLtptA6jqGMmvAO6KyHIVSIzxiIi0nHMn0jR9+ifAFMkPzrm5NE0fqOokgImCkcnxqehEVcdJfnPO1dM0vVcZQHKN5JdSFm0R2auqP7rnIwMsgxDCcZLjXWcisuG9X/snGeQSWSf1AOVsrHtUtUbyTpIkS977dwMlUtU9AA6QfGM1GCBRH4NkPYTwS/fc3vatXsYFHSfMcV7QWqHI04MyIGn1eGE+YoyXROQagC0ROayqG3bea9Msy2ZjjA8BrAKYA/A6xrjQbDaf/a5VG43GMedcC8AhAGZ/qhtcGXAmxrgqIvs7nc4+59xtABa9vYcr3YhKGd8AUAfwPsZ4IUmSz8UWHwhQ1Y+mZ4zxoogsAfhOUkMIy1bQGON5EblpDkguOudu2Qu28VIZUIh0kqRFOm+ymcYAjgK4LyKXi49uJEAX5L2fFRGTrU1yIYTwqFybvwLkbVjL976BVsh2eImqDLthAQdVdX0Yx5UAqjpN8hXJ+RDCyigA7/1ZEbHiz6jqy742zefJ87z3WyQ3h4GIiI30cwDWsyyb2TYq8uLZuLgO4CSAsWEAAGx8Pyk/yv/30x8y+oHXfwK0NogoJqKLgQAAAABJRU5ErkJggg==" alt="" data-v-b25d220c=""> 430072 </div><div class="contact copyright_item" data-v-b25d220c=""><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAzhJREFUSEu1lE+oVVUUxr/vHAcvUFAweIJCQYEDgyLFJzlwYEQk9KTAJMQaRAVCQQRCtvda+yg5eKKC0Js48kFJSQ8sGjQo6YEGBkZFDhwIPfBBQQ4d3LtXrMs+l3Ov78/IO7r3nn1+61trf98iHtGHq3FFZF1VVc/3er19JLcCWGdmi3Vd3zSzayLyYKX3lwU7MOf8LskTACYB3AewCKAHwAtsLv/NktTlCjwEFpGtZvYNgGcBzNV1fSGE8GtXmYhsN7OjAD4EsJRznm6a5rfumRGwiDxhZj/6gZzzgaZp/hxv1bsBsFFE/i0ivgCwM+e8t2maoYAhWEQmzOxnb5PkHhFZGoeGED4gKQ4G8BPJwz4SM/sewFMkd7XvDcHlpdN1XU+FEEba8gIppd39fv8GgBkz+4PkSQALqnpYRCbN7C8AX6vqO35+CI4x3gMwr6rvL3fTIYRPSB5T1S3+vAiZIfmYiPRCCB+RPE1yi49pAE4pvdDv9xeK2l9WAB8iOZdz3t80zTVVfTXnPE9yk4jcF5GNZvaPmb2XUro4AJdqx1X18ZV86ZdmZlcBTJHclnM+SvIcyQ2t3WKM1wHcVtW3B+AY41kA+1T1uTUCM2Vm10k+Y2bRPa2qe9p3YoxfAVivqi+34M/dMqq6azVwjPEz924B/25mx1NK5zvgSx4oVX2xBTcA3lLVbe2hEMJrJPea2e2qqi7nnP33rJkJyR3eIcknu6mLMXoGFlX1yACsqq/knL8l+bSI3IkxeiGP8y0A2wFMlIIOXvBLNLM3UkqXWyEisr5c3omU0pkBuITjnpmdq6rqTDlwMqV0yj1KcjfJxV6v5+GZL3490h1bCOFNL1i6uNv1sas8Vub3t5m9nlK6Ugq3S2mmJO5gdwRFmAfklqoeHAmIt+Ibraqq82b2QxnBXFE17ZEFcIHkx+PbrLjhgIvyUY6Ax7bXZjNzC+4v6/FGznm2aZqR8BSl7oRpM5tOKX3XctZa9DsB3PFkjRWeyDl7Egf7ulzkELqi4s6F/leA7o675bsv/qnilC9Jftq23y2+luLJnPNLJH0kDvRdvGRmN6uquiIibbGHcrUqeLUUrvXsfyIgtyali0K4AAAAAElFTkSuQmCC" alt="" data-v-b25d220c=""> +86-27-68754541 </div><div class="email copyright_item" data-v-b25d220c=""><img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAX1JREFUSEvtlS9Mw1AQxr/rJhAIxAQCh8AgEHhCQgJiAgI4EpBMM4FY23uvk6CBgMQBCQkICALwCCwCPzGBQCC6HrmlI9syuj/NBAtVTe/u+7373rs+wpAfGrI+RgjAzONRFG0DyKW07cNxnBNm/lKdH4t83z8CsJtSvFF+bIwptAMe4+gLgCKAMyIqMHOYBGXmrIicAtgBcABgXvONMYsdARrwPM8nIgZwR0RrjXbbQcw8JiIXAPIiwtZa4/t+faGJAE3wPG+PiHRFCtlk5s9mgO5ZLL4iIkVr7aHGewbEkHUiOgfwGndS0e/MPCkiNwBmRWTLWnvVgPcFiCHLRHQNoEJEdV9F5AHAlIisWmvvmzvrG6DFrusuOI5zC6Aai+WiKMoHQfDcvi8DAVSkVCrNZDKZS32v1Wob5XL5rdPpGhjQ63z8A7o6lWSRTuSSnvmuKskJcwCejDFrLb+KIAimwzDUyZ1ICahms9l913XfWwApRX8tH6Eb7c9a9A0BRM0ZqJQshQAAAABJRU5ErkJggg==" alt="" data-v-b25d220c=""> irc@whu.edu.cn </div><div class="manage copyright_item" data-v-b25d220c=""><a href="" class="link" data-v-b25d220c=""> 管理入口 </a></div></div><div data-v-b25d220c="" class="qrcode copyright_item"><img data-v-b25d220c="" class="qrcode_image" src="https://csir.whu.edu.cn/qrcode.png" alt=""></div></div></div></div></div>
+    
+  
+
+</body></html>

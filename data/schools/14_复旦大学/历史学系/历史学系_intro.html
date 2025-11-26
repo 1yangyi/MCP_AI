@@ -1,0 +1,686 @@
+<!DOCTYPE html><html lang="zh-CN"><head></head><body><a href="/_raylink"></a>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>本系简介-复旦大学历史学系</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="本系简介">
+<meta name="keywords" content="复旦大学历史学系,本系简介">
+
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/public.css">
+    <link rel="stylesheet" href="../style/ny2.css">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="../style/ny_media2.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/public.js"></script>
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:776562626572323074684757505a5742000400014451 -->
+<link rel="stylesheet" type="text/css" href="../jjy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1011,'/jjy.jsp',-1,2015466555)</script>
+
+
+
+
+
+      <!-- pc 顶部 导航 -->
+    <div class="b-top">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script>
+<div id="divu0">
+    <div id="appu0"><div><div class="t-search-zzc"></div> <div class="t-search"><div><input type="text" placeholder="全文搜索" autocomplete="off"> <div class="search-btn"><input type="image" src="../images/search.png" name="submit_button"></div></div></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+<div class="t-search-zzc"></div>
+<div class="t-search">
+    <div>
+        <input type="text" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+        <div class="search-btn">
+            <input type="image" src="../images/search.png" name="submit_button" v-on:click="onSubmit()"/>
+        </div>
+    </div>
+</div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "2015466555";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+    <div class="head pc fadeInDown animated">
+        <div class="head-top">
+
+            <div class="">
+                <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="复旦大学历史系部网站"><img src="../images/logo.png" alt=""></a></div>
+                <div class="nav">
+                    <ul class="">
+     <li class=" indexzz">
+           <a href="../index.htm" title="首页">首页</a>
+             
+          
+     </li>
+    <li class="noabef"><img src="../images/nav-fgx.png" alt=""></li>
+     <li class="active">
+           <a href="bxjj.htm" title="本系概况">本系概况</a>
+              <div class="ejnav" style="left: -31.6484px;">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="../images/gaikuo.jpg" alt="" style="object-fit: cover;    width: auto;">
+                                    </div>
+                                </div>
+                                <ul>
+                                            <li><a href="bxjj.htm" title="本系简介">本系简介</a></li>
+                                            <li><a href="zzjg.htm" title="组织机构">组织机构</a></li>
+                                            <li><a href="zysz.htm" title="专业设置">专业设置</a></li>
+                                            <li><a href="lxfs.htm" title="联系方式">联系方式</a></li>
+                               </ul>
+                            </div>  
+          
+     </li>
+    <li class="noabef"><img src="../images/nav-fgx.png" alt=""></li>
+     <li class="">
+           <a href="../xwzx/xwdt.htm" title="新闻中心">新闻中心</a>
+              <div class="ejnav" style="left: -31.6484px;">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="../images/piclist-pic.jpg" alt="" style="object-fit: cover;    width: auto;">
+                                    </div>
+                                </div>
+                                <ul>
+                                            <li><a href="../xwzx/xwdt.htm" title="新闻动态">新闻动态</a></li>
+                                            <li><a href="../xwzx/tzgg.htm" title="通知公告">通知公告</a></li>
+                               </ul>
+                            </div>  
+          
+     </li>
+    <li class="noabef"><img src="../images/nav-fgx.png" alt=""></li>
+     <li class="">
+           <a href="../szdw/zzjs.htm" title="师资队伍">师资队伍</a>
+              <div class="ejnav" style="left: -31.6484px;">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="../images/sjizi.png" alt="" style="object-fit: cover;    width: auto;">
+                                    </div>
+                                </div>
+                                <ul>
+                                            <li><a href="../szdw/zzjs.htm" title="在职教师">在职教师</a></li>
+                                            <li><a href="../szdw/glzc.htm" title="管理支撑">管理支撑</a></li>
+                                            <li><a href="../szdw/rxjs.htm" title="荣休教师">荣休教师</a></li>
+                               </ul>
+                            </div>  
+          
+     </li>
+    <li class="noabef"><img src="../images/nav-fgx.png" alt=""></li>
+     <li class="">
+           <a href="../xsky/xshd.htm" title="学术科研">学术科研</a>
+              <div class="ejnav" style="left: -31.6484px;">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="" alt="" style="object-fit: cover;    width: auto;">
+                                    </div>
+                                </div>
+                                <ul>
+                                            <li><a href="../xsky/xshd.htm" title="学术活动">学术活动</a></li>
+                                            <li><a href="../xsky/xsdt.htm" title="学术动态">学术动态</a></li>
+                                            <li><a href="../xsky/zxzz.htm" target="_blank" title="最新著作">最新著作</a></li>
+                               </ul>
+                            </div>  
+          
+     </li>
+    <li class="noabef"><img src="../images/nav-fgx.png" alt=""></li>
+     <li class="">
+           <a href="../rcpy1/bkspy.htm" title="人才培养">人才培养</a>
+              <div class="ejnav" style="left: -31.6484px;">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="../images/xueshukeyan.jpg" alt="" style="object-fit: cover;    width: auto;">
+                                    </div>
+                                </div>
+                                <ul>
+                                            <li><a href="../rcpy1/bkspy.htm" title="本科生培养">本科生培养</a></li>
+                                            <li><a href="../rcpy1/yjspy.htm" title="研究生培养">研究生培养</a></li>
+                                            <li><a href="../rcpy1/fxljy.htm" title="非学历教育">非学历教育</a></li>
+                               </ul>
+                            </div>  
+          
+     </li>
+    <li class="noabef"><img src="../images/nav-fgx.png" alt=""></li>
+     <li class="">
+           <a href="../xyfw/bbz/a1950_1960.htm" title="校友访问">校友访问</a>
+              <div class="ejnav" style="right: -31.6409px;">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="../images/remcaipeyan.jpg" alt="" style="object-fit: cover;    width: auto;">
+                                    </div>
+                                </div>
+                                <ul>
+                                            <li><a href="../xyfw/bbz/a1950_1960.htm" title="毕业照">毕业照</a></li>
+                                            <li><a href="../xyfw/xydt.htm" title="校友动态">校友动态</a></li>
+                                            <li><a href="../xyfw/zlfz.htm" title="助力发展">助力发展</a></li>
+                               </ul>
+                            </div>  
+          
+     </li>
+    <li class="noabef"><img src="../images/nav-fgx.png" alt=""></li>
+</ul>
+
+                    <div class="nav-use">
+                        <div>    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+            
+                
+                    
+                        <a href="../index.htm" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 2015466555, 1008431)" target="_blank">
+                            <img src="../images/head-icon-home.png">
+                        </a>  
+                   
+               
+       
+</div>
+                        <div><a href="javascript:;" class="search-switch"><img src="../images/head-icon-search.png" alt=""></a></div>
+                        <div><script language="javascript" src="/system/resource/js/openlink.js"></script>
+    <a href="#" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2015466555, 96553)">EN</a>
+</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 移动端导航 -->
+    <div class="top">
+        <div class="wap wap-menu">
+            <img src="../images/menu.png" class="menu" alt="">
+            <img src="../images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+    <div class="wap m-head">
+        <div class="m-logo">    
+           
+               
+                  
+                        <a href="../index.htm" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 2015466555, 1008989)" target="_blank">
+                            <img src="../images/logo.png">
+                        </a>  
+                    
+                
+        
+</div>
+        <div class="m-nav">
+            <div class="m-tlink">
+    <a href="https://www.fudan.edu.cn/451/list.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2015466555, 95718)">复旦标志</a>
+    <a href="https://www.fudan.edu.cn/451/list.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2015466555, 95719)">校园地图</a>
+    <a href="https://jwc.fudan.edu.cn/ea/47/c27267a322119/page.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2015466555, 95720)">复旦校历</a>
+    <a href="https://zongwuchu.fudan.edu.cn/cyfw/list.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2015466555, 95721)">校园服务</a>
+    <a href="https://www.fudan.edu.cn/396/list.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2015466555, 95722)">新媒体管理</a>
+</div>
+            
+
+
+<div id="divu7">
+    <div id="appu7"><div><div class="m-search"><input type="text" placeholder="请输入内容" autocomplete="off"> <input name="submit_button" type="image" src="../images/search.png"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu7">
+    <div id="appu7">
+        <div v-if="!isError">
+        <div class="m-search">
+            <input type="text" placeholder="请输入内容" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input name="submit_button"  type="image" src="../images/search.png" v-on:click="onSubmit()"/>
+             </div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu7").html($("#htmlu7").text());
+</script>
+<script>
+    var appOwner = "2015466555";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu7",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+            <ul class="">    <li><a href="../index.htm" title="首页">首页</a>
+    </li>
+    
+    <li><a href="bxjj.htm" title="本系概况">本系概况</a><span></span>
+             <ul>
+
+                  <li><a href="bxjj.htm" title="本系简介">本系简介</a> </li>
+
+                  <li><a href="zzjg.htm" title="组织机构">组织机构</a> </li>
+
+                  <li><a href="zysz.htm" title="专业设置">专业设置</a> </li>
+
+                  <li><a href="lxfs.htm" title="联系方式">联系方式</a> </li>
+             </ul>
+    </li>
+    
+    <li><a href="../xwzx/xwdt.htm" title="新闻中心">新闻中心</a><span></span>
+             <ul>
+
+                  <li><a href="../xwzx/xwdt.htm" title="新闻动态">新闻动态</a> </li>
+
+                  <li><a href="../xwzx/tzgg.htm" title="通知公告">通知公告</a> </li>
+             </ul>
+    </li>
+    
+    <li><a href="../szdw/zzjs.htm" title="师资队伍">师资队伍</a><span></span>
+             <ul>
+
+                  <li><a href="../szdw/zzjs.htm" title="在职教师">在职教师</a> </li>
+
+                  <li><a href="../szdw/glzc.htm" title="管理支撑">管理支撑</a> </li>
+
+                  <li><a href="../szdw/rxjs.htm" title="荣休教师">荣休教师</a> </li>
+             </ul>
+    </li>
+    
+    <li><a href="../xsky/xshd.htm" title="学术科研">学术科研</a><span></span>
+             <ul>
+
+                  <li><a href="../xsky/xshd.htm" title="学术活动">学术活动</a> </li>
+
+                  <li><a href="../xsky/xsdt.htm" title="学术动态">学术动态</a> </li>
+
+                  <li><a href="../xsky/zxzz.htm" target="_blank" title="最新著作">最新著作</a> </li>
+             </ul>
+    </li>
+    
+    <li><a href="../rcpy1/bkspy.htm" title="人才培养">人才培养</a><span></span>
+             <ul>
+
+                  <li><a href="../rcpy1/bkspy.htm" title="本科生培养">本科生培养</a> </li>
+
+                  <li><a href="../rcpy1/yjspy.htm" title="研究生培养">研究生培养</a> </li>
+
+                  <li><a href="../rcpy1/fxljy.htm" title="非学历教育">非学历教育</a> </li>
+             </ul>
+    </li>
+    
+    <li><a href="../xyfw/bbz/a1950_1960.htm" title="校友访问">校友访问</a><span></span>
+             <ul>
+
+                  <li><a href="../xyfw/bbz/a1950_1960.htm" title="毕业照">毕业照</a> </li>
+
+                  <li><a href="../xyfw/xydt.htm" title="校友动态">校友动态</a> </li>
+
+                  <li><a href="../xyfw/zlfz.htm" title="助力发展">助力发展</a> </li>
+             </ul>
+    </li>
+    
+</ul>
+        </div>
+    </div>
+
+    <div class="banner"><img src="../images/e4475e55-c800-43ae-9bd8-626c4c8fda01.png"></div>
+
+    <div class="nymain">
+        <div class="w14">
+            <div class="channl-menu leftNav">
+                <h2>
+本系简介<span></span></h2>
+                <ul>    <li class="active ">
+        <a href="bxjj.htm" title="本系简介">本系简介</a>
+        <ul>
+        </ul>
+        
+    </li>
+    <li class=" ">
+        <a href="zzjg.htm" title="组织机构">组织机构</a><span></span>
+        <ul>
+                    <li>
+                                <a href="zzjg/fdw.htm" title="分党委">分党委</a>
+                            </li>
+                    <li>
+                                <a href="zzjg/xxz.htm" title="系行政">系行政</a>
+                            </li>
+                    <li>
+                                <a href="zzjg/szdwxswyh.htm" title="历史学系学术委员会委员">历史学系学术委员会委员</a>
+                            </li>
+                    <li>
+                                <a href="zzjg/qwsadrghuknb.htm" title="历史学系教学指导委员会委员">历史学系教学指导委员会委员</a>
+                            </li>
+                    <li>
+                                <a href="zzjg/lsxkxwpdwyh.htm" title="历史学科学位评定委员会">历史学科学位评定委员会</a>
+                            </li>
+        </ul>
+        
+    </li>
+    <li class=" ">
+        <a href="zysz.htm" title="专业设置">专业设置</a><span></span>
+        <ul>
+                    <li>
+                                <a href="zysz/bkzy.htm" title="本科专业">本科专业</a>
+                            </li>
+                    <li>
+                                <a href="zysz/yjszy.htm" title="研究生专业">研究生专业</a>
+                            </li>
+                    <li>
+                                <a href="zysz/bszy.htm" title="博士专业">博士专业</a>
+                            </li>
+        </ul>
+        
+    </li>
+    <li class=" ">
+        <a href="lxfs.htm" title="联系方式">联系方式</a>
+        <ul>
+        </ul>
+        
+    </li>
+</ul>
+            </div>
+            <div class="ny-right">
+                <div class="position d">
+                    <h3>
+本系简介<img src="../images/ny-dqlm.png" alt=""></h3>
+                    <div class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1" width="9.474547386169434" height="13.464934349060059" viewBox="0 0 9.474547386169434 13.464934349060059">
+                            <g>
+                                <path d="M4.73727,13.4649Q9.47455,9.22597,9.47455,4.82078C9.43474,2.16104,7.32486,0,4.73727,0C2.14969,0,0,2.16104,0,4.82078Q0,9.39221,4.73727,13.4649ZM2.14969,4.94545C2.14969,3.44935,3.30415,2.24416,4.73727,2.24416C6.1704,2.24416,7.32486,3.44935,7.32486,4.94545C7.32486,6.44156,6.1704,7.64675,4.73727,7.64675C3.30415,7.64675,2.14969,6.4,2.14969,4.94545Z" fill="#FFFFFF" fill-opacity="1"></path>
+                            </g>
+                        </svg><span>
+    当前位置: 
+                    
+            
+                <a href="../index.htm">首页</a>
+            <style>.yc{display:none !IMPORTANT;}</style>
+             <span>   &gt;</span>
+            
+            
+                <a href="bxjj.htm">本系概况</a>
+            <style>.yc{display:none !IMPORTANT;}</style>
+             <span>   &gt;</span>
+            
+            
+                <a href="bxjj.htm">本系简介</a>
+            <style>.yc{display:none !IMPORTANT;}</style>
+</span></div>
+                </div>
+                <div class="pcleftnav"><ul>
+    <li class="active"><a href="bxjj.htm" title="本系简介">本系简介</a>
+        
+    </li>
+
+    <li class=""><a href="zzjg.htm" title="组织机构">组织机构</a>
+        
+    </li>
+
+    <li class=""><a href="zysz.htm" title="专业设置">专业设置</a>
+        
+    </li>
+
+    <li class=""><a href="lxfs.htm" title="联系方式">联系方式</a>
+        
+    </li>
+</ul></div>
+
+                <div class="ny-rmain">
+                    <div class="xbcont">
+                        <div class="xbcont-l">
+                            <img src="../images/xbls.png" alt=""> 
+                        </div>
+                        <div class="xbcont-r">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',2015466555,'wbnews','u15')</script>
+<script>function seeContenta15(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta15('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',2015466555,1002)</script>
+<p>
+    
+    </p><div id="vsb_content_1002_u151"><div id="vsb_content"><p style="text-indent: 2em;">历史学系创建于1925年，时称史学系。1937年，全面抗战爆发，史学系部分随复旦大夏第一联合大学迁至江西牯岭。1938年，大部随校本部迁至重庆北碚，改称史地学系。1946年，史地学系随校本部迁回上海。</p><p style="text-indent: 2em;">1949年夏，暨南大学、同济大学文学院史地系史学组并入复旦大学史地学系，浙江大学史地系史学组部分学生转入复旦学习，史地学系复改为史学系。1952年全国院系调整后，江浙多所大学著名史学家加盟，名家云集。中国史领域有周予同、谭其骧、陈守实、胡厚宣、杨宽、马长寿、蔡尚思等，古史学家顾颉刚也曾担任本系教授；世界史领域则有周谷城、王造时、耿淡如、章巽、田汝康等；还有当时已脱颖而出的中青年史学家，如程博洪、张荫桐、胡绳武、赵人龙、金冲及等。复旦历史学系的研究特色也由此逐步形成，如陈守实的中国土地制度史研究，周予同的中国经学史研究，周谷城的世界古代史研究，耿淡如的西方史学史研究，蔡尚思的中国思想文化史研究，谭其骧的中国历史地理研究，胡厚宣的甲骨文研究，杨宽的先秦史研究，章巽的中西交通史研究，田汝康的中外关系史研究等，他们开拓性的学术贡献领学术研究之先，也奠定了复旦历史学系在中国史学界的学术地位。</p><p style="text-indent: 2em;">改革开放以来，历史学系获得了新的发展。1981年，中国古代史、历史地理学、世界上古史中古史3个学科点获批国家首批博士点，1986年新增世界近现代史、世界地区史国别史2个博士点。1994年复旦历史学系列入教育部“国家文科基础学科人才培养基地”，1996年建立历史学博士后流动站，1997年成为国内首批5家获得历史学一级学科博士学位授予权的单位之一，2004年“中外现代化进程研究中心”列入教育部人文社会科学重点研究基地。</p><p style="text-indent: 2em;">在学术建制方面，1959年设立中国历史地理研究室，1982年成立独立建制的中国历史地理研究所；1984年创办文物与博物馆学专业，1996年成立独立建制的文物与博物馆学系；1989年开设旅游与旅游文化类课程，1993年获准设立旅游管理专业，2002年正式组建旅游学系，行政由历史学系兼管。</p><p style="text-indent: 2em;">目前，历史学系拥有中国史和世界史2个一级学科。中国史学科下设中国古代史、中国近现代史、中国当代史、史学理论及中国史学史、专门史、历史文献学6个二级学科；世界史学科下设史学理论及外国史学史、世界上古史中古史、世界近现代史、世界地区国别史4个二级学科；并设中国史和世界史两个博士后流动站。2018年，中国史学科入选上海市高峰学科建设计划；2019年，历史学专业入选国家级一流本科专业建设点；2020年入选教育部基础学科拔尖人才培养基地。2022年，在教育部第五轮学科评估中，中国史学科蝉联A+，世界史学科获评A-。</p></div></div>
+    <span id="vsb_content_1002_u15" name="vsb_content_1002_u15"></span><br><br>
+    
+<p></p>
+</div>
+                    </div>
+                </div>
+                 
+            </div>
+        </div>
+    </div>
+
+   <div class="footer">
+        <div class="w16">
+            <div class="foot-c">
+                <div class="foot-l">
+                    <h3>快速链接</h3>
+                    <ul>
+    <li><a href="https://www.fudan.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2015466555, 95715)">复旦大学</a></li>
+    <li><a href="https://www.fudan.edu.cn/451/list.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2015466555, 95713)">复旦标志</a></li>
+    <li><a href="https://zlapp.fudan.edu.cn/site/schoolMap/model" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2015466555, 95714)">校园地图</a></li>
+    <li><a href="https://zongwuchu.fudan.edu.cn/cyfw/list.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2015466555, 95716)">校园服务</a></li>
+    <li><a href="https://tourism.fudan.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2015466555, 95717)">旅游学系</a></li>
+    <li><a href="https://mta.fudan.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2015466555, 96554)">旅游管理MTA</a></li>
+    <li><a href="https://www.chm.fudan.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2015466555, 96555)">文物与博物馆学系</a></li>
+    <li><a href="https://yugong.fudan.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2015466555, 96556)">中国历史地理研究所</a></li>
+    <li><a href="https://iahs.fudan.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2015466555, 96557)">文史研究院</a></li>
+</ul>
+                </div>
+                <div class="foot-r">
+                    <div class="foot-rl">
+                        <h3>联系我们</h3>
+                        <div>
+<p><span noto="" serif="" cjk="" sc",="" "noto="" cjk",="" "source="" han="" "‘source="" serif’",="" source-han-serif-sc,="" serif,="" arial,="" u5b8bu4f53,="" tahoma,="" geneva,="" sans-serif;="" font-size:="" 14px;="" text-wrap:="" wrap;="" background-color:="" rgb(51,="" 53,="" 52);"="" style="color: rgb(194, 195, 194); font-family: "></span>地址：上海市杨浦区邯郸路220号<br>邮编：200433<br>电话：021-65642717<span noto="" serif="" cjk="" sc",="" "noto="" cjk",="" "source="" han="" "‘source="" serif’",="" source-han-serif-sc,="" serif,="" arial,="" u5b8bu4f53,="" tahoma,="" geneva,="" sans-serif;="" font-size:="" 14px;="" text-wrap:="" wrap;="" background-color:="" rgb(51,="" 53,="" 52);"="" style="color: rgb(194, 195, 194); font-family: "></span></p></div>
+                    </div>
+                    <div class="foot-rr">
+                            <ul>        
+       
+               
+                    <li>
+                        <div>
+                            <img src="../images/shiji.jpg"></div>
+                          <p style="     text-align: center;">史迹</p>
+
+                   
+                </li>
+               
+                    <li>
+                        <div>
+                            <img src="../images/lishixi.jpg"></div>
+                          <p style="     text-align: center;">复旦大学历史学系</p>
+
+                   
+                </li>
+       
+</ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="bq">
+                <div class="w16">
+                    <div class="bq-c">
+                        <div class="bq-l">        
+     
+                
+                   
+                        <a href="" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 2015466555, 1008268)" target="_blank">
+                            <img src="../images/foot-logo.png" alt="">
+                        </a>  
+                    
+     
+    
+</div>
+                        <div class="bq-r"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权所有©2024复旦大学历史学系</p></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

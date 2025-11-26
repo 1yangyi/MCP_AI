@@ -1,0 +1,261 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>基本信息-武汉大学国际法研究所</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="基本信息">
+<meta name="keywords" content="武汉大学国际法研究所,基本信息">
+<meta name="Description" content="武汉大学国际法研究所"><link rel="stylesheet" href="../dfiles/18119/wcs/tpl/home/default/css/common.css"><!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1561,'/about.jsp',-1,1952871452)</script>
+</head><body><script src="../dfiles/18119/wcs/include/layer/layer.min.js"></script><script type="text/javascript"> function check(){
+        if($.trim($('#key').val())==''){
+            layer.tips('请输入关键字','#key',{tips:[2,'#009688'],time:3});
+            return false;
+        }
+    }
+</script><div class="header w_1150 clearfix"><h1>    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<a href="../index.htm"><img src="../dfiles/18119/wcs/tpl/home/default/images/logo.jpg" alt=""></a>
+
+</h1><div class="head_rit"><p>    <a href="../index.htm" class="on rit1" target="" onclick="_addDynClicks(&quot;wbimage&quot;, 1952871452, 70927)"><img src="../dfiles/18119/wcs/tpl/home/default/images/cn.png" alt=""></a>
+<a href="../ywb/HOME.htm" target="" onclick="_addDynClicks(&quot;wbimage&quot;, 1952871452, 70928)"><img src="../dfiles/18119/wcs/tpl/home/default/images/en.png" alt=""></a>
+</p><img src="../dfiles/18119/wcs/tpl/home/default/images/top_txt.jpg" alt=""><div class="search" onsubmit="return check();">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2">
+    <div id="appu2"><div><input type="text" placeholder="请输入关键字" autocomplete="off" class="text"> <input name="submit_button" type="button" value="搜索" class="subBtn"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="text" placeholder="请输入关键字" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="subBtn" name="submit_button" type="button" value="搜索" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1952871452";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div></div></div><div class="nav_box clearfix"><ul id="nav" class="nav clearfix"><ul id="nav" class="nav clearfix">
+<li class="nLi"><h3><a href="../index.htm">首页</a></h3>
+</li>
+<li class="nLi"><h3><a href="../kyry/kyryjxzry/zzyjry_axspypx_.htm">科研人员</a></h3>
+<ul class="sub">
+<li><a href="../kyry/kyryjxzry/zzyjry_axspypx_.htm">科研人员及行政人员</a></li>
+<li><a href="../kyry/jdgw.htm">基地顾问</a></li>
+<li><a href="../kyry/xswyh.htm">学术委员会</a></li>
+<li><a href="../kyry/rcjh.htm">人才计划</a></li>
+<li><a href="../kyry/swwyh.htm">所务委员会</a></li>
+<li><a href="../kyry/lshcymd.htm">理事会成员名单</a></li>
+</ul>
+</li>
+<li class="nLi"><h3><a href="../xsky.htm">学术科研</a></h3>
+<ul class="sub">
+<li><a href="../xsky/kxyjzk.htm">科学研究状况</a></li>
+<li><a href="../xsky/kyxm.htm">科研项目</a></li>
+<li><a href="../xsky/xscg.htm">学术成果</a></li>
+<li><a href="../xsky/xzgd.htm">学者观点</a></li>
+<li><a href="../xsky/xszy.htm">学术资源</a></li>
+<li><a href="../xsky/xskw2.htm">学术刊物</a></li>
+<li><a href="../xsky/fxyjh2.htm">法学研究会</a></li>
+</ul>
+</li>
+<li class="nLi"><h3><a href="../rcpy/rcpyzk.htm">人才培养</a></h3>
+<ul class="sub">
+<li><a href="../rcpy/rcpyzk.htm">人才培养状况</a></li>
+<li><a href="../rcpy/mnft.htm">模拟法庭</a></li>
+<li><a href="../rcpy/ryhj.htm">荣誉获奖</a></li>
+</ul>
+</li>
+<li class="nLi"><h3><a href="../dwjl/xsjl.htm">对外交流</a></h3>
+<ul class="sub">
+<li><a href="../dwjl/xsjl.htm">学术交流</a></li>
+<li><a href="../dwjl/xshy.htm">学术会议</a></li>
+<li><a href="../dwjl/xssl.htm">学术沙龙</a></li>
+</ul>
+</li>
+<li class="nLi"><h3><a href="../zkzl/zkdt.htm">智库专栏</a></h3>
+<ul class="sub">
+<li><a href="../zkzl/zkdt.htm">智库动态</a></li>
+</ul>
+</li>
+<li class="nLi"><h3><a href="../xyzj/xydt.htm">校友之家</a></h3>
+<ul class="sub">
+<li><a href="../xyzj/xydt.htm">校友动态</a></li>
+<li><a href="../xyzj/jcxy.htm">杰出校友</a></li>
+<li><a href="../xyzj/wdgjfs.htm">我的国际法所</a></li>
+<li><a href="../xyzj/gynh.htm">光影年华</a></li>
+</ul>
+</li>
+<li class="nLi"><h3><a href="../hdpfxjjh/hdpxsspjj.htm">韩德培法学基金会</a></h3>
+<ul class="sub">
+<li><a href="../hdpfxjjh/hdpxsspjj.htm">韩德培先生生平简介</a></li>
+<li><a href="../hdpfxjjh/jjhzchcy.htm">基金会章程和成员</a></li>
+<li><a href="../hdpfxjjh/jzfshzhxx.htm">捐赠方式和账户信息</a></li>
+<li><a href="../hdpfxjjh/jzxx.htm">捐赠信息</a></li>
+<li><a href="../hdpfxjjh/gyhd.htm">公益活动</a></li>
+<li><a href="../hdpfxjjh/xw.htm">新闻</a></li>
+<li><a href="../hdpfxjjh/tzgg.htm">通知公告</a></li>
+<li><a href="../hdpfxjjh/lxwm.htm">联系我们</a></li>
+<li><a href="../hdpfxjjh/hdpfxj.htm">韩德培法学奖</a></li>
+<li><a href="../hdpfxjjh/jzzs.htm">捐赠证书</a></li>
+</ul>
+</li>
+</ul></ul></div>
+<script src="../dfiles/18119/wcs/tpl/home/default/js/jquery-1.9.1.js"></script><script src="../dfiles/18119/wcs/tpl/home/default/js/jquery.superslide.2.1.1.js"></script><script src="../dfiles/18119/wcs/tpl/home/default/js/common.js">
+<script id="jsID" type="text/javascript">            jQuery("#nav").slide({ 
+                type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
+                titCell:".nLi", //鼠标触发对象
+                targetCell:".sub", //titCell里面包含的要显示/消失的对象
+                effect:"slideDown", //targetCell下拉效果
+                delayTime:300 , //效果时间
+                triggerTime:0, //鼠标延迟触发时间（默认150）
+                returnDefault:true //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+            });
+        </script><div class="w_1150 clearfix"><div class="location clearfix">    <span>您所在的位置：
+                        <a href="../index.htm">首页</a>
+                &nbsp;&gt;&nbsp;
+                <a href="jbxx.htm">基本信息</a>
+</span></div><div class="left_nav clearfix"><h5>
+关于我们</h5><div class="sideMen"><h3 class="on"><a href="jbxx.htm">基本信息</a></h3>
+<ul>
+</ul>
+<h3><a href="lsyg.htm">历史沿革</a></h3>
+<ul style="display: none;">
+</ul>
+<h3><a href="fzjg.htm">分支机构</a></h3>
+<ul style="display: none;">
+</ul>
+<h3><a href="gzzd.htm">规章制度</a></h3>
+<ul style="display: none;">
+</ul>
+<h3><a href="lrsz.htm">历任所长</a></h3>
+<ul style="display: none;">
+</ul>
+</div><!-- sideMen End --><script type="text/javascript">         jQuery(".sideMen").slide({titCell:"h3",targetCell:"ul",trigger:"click"});
+        </script></div><div class="main_rig clearfix"><div class="location_tit clearfix">
+<span>基本信息</span></div><div class="cont_news clearfix">
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1952871452,'wbnews','u8')</script>
+<script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1952871452,5351)</script>
+<div id="vsb_content_5351_u81"><div id="vsb_content"><div class="cont_box clearfix"><p><span style="line-height:2"><span style="font-size:20px">&nbsp; &nbsp; &nbsp; &nbsp; 武汉大学国际法研究所是1980年由原国家教委（现国家教育部）批准成立的中国高校第一个国际法研究机构。</span></span></p><p><span style="line-height:2"><span style="font-size:20px">&nbsp; &nbsp; &nbsp; &nbsp; 1981年设立博士点；</span></span></p><p><span style="line-height:2"><span style="font-size:20px">&nbsp; &nbsp; &nbsp; &nbsp; 1995年建立博士后流动站；</span></span></p><p><span style="line-height:2"><span style="font-size:20px">&nbsp; &nbsp; &nbsp; &nbsp; 1996年被列为国家“211”工程重点建设基地；</span></span></p><p><span style="line-height:2"><span style="font-size:20px">&nbsp; &nbsp; &nbsp; &nbsp; 2000年被教育部批准为普通高等学校人文社会科学重点研究基地；</span></span></p><p><span style="line-height:2"><span style="font-size:20px">&nbsp; &nbsp; &nbsp; &nbsp; 2004年获批成为“985”工程哲学社会科学创新基地；</span></span></p><p><span style="line-height:2"><span style="font-size:20px">&nbsp; &nbsp; &nbsp; &nbsp; 2014年以国际法所为支撑单位申报的“国家领土主权与海洋权益协同创新平台”被教育部批准为“2011协同创新平台”；</span></span></p><p><span style="line-height:2"><span style="font-size:20px">&nbsp; &nbsp; &nbsp; &nbsp; 2015年被中宣部批准为首批国家高端智库试点建设单位；</span></span></p><p><span style="line-height:2"><span style="font-size:20px">&nbsp; &nbsp; &nbsp; &nbsp; 2016年通过教育部社科司下发的《关于公布2015年高校人文社会科学重点研究基地测评结果的通知》（教社科司函【2016】100号），国际法所被评为“优秀”基地；</span></span></p><p><span style="line-height:2"><span style="font-size:20px">&nbsp; &nbsp; &nbsp; &nbsp; 2017年国际法入选国家“双一流学科”。</span></span></p></div></div></div>
+</div></div></div><footer class="clearfix"><div class="w_1150 clearfix"><div class="foot_left clearfix"><h5><img src="../dfiles/18119/wcs/tpl/home/default/images/f_logo.jpg" alt=""></h5><dl><dt><img src="../dfiles/18119/wcs/upload/201709/59ae4d5f5987b.jpg" alt=""><span>微信公众号</span></dt><dd><p>传真：027-68754154</p><p>电话：027-68753621</p><p>地址：湖北省武汉市武昌区珞珈山</p><p>邮编：430072  </p></dd></dl></div><!--外链--><ul class="clearfix"><script language="javascript" src="/system/resource/js/openlink.js"></script><li><h5>友情链接</h5></li>
+<li><a href="https://www.whu.edu.cn/" target="_blank">武汉大学</a></li>
+<li><a href="https://www.sinoss.net/" target="_blank">中国高校人文社会科学信息网</a></li>
+<li><a href="https://fxpl.cbpt.cnki.net/WKG/WebPublication/index.aspx?mid=fxpl" target="_blank">《法学评论》</a></li>
+<li><a href="http://cmips.org/" target="_blank">中国哲学社会科学管理创新研究中心</a></li>
+</ul><ul class="clearfix"><li><h5>友情链接</h5></li>
+<li><a href="http://fxy.whu.edu.cn/" target="_blank">武汉大学法学院</a></li>
+<li><a href="https://www.chinalaw.org.cn/" target="_blank">中国法学会</a></li>
+<li><a href="http://www.cspil.org/" target="_blank">中国国际私法研究会</a></li>
+</ul><ul class="clearfix"><li><h5>友情链接</h5></li>
+<li><a href="http://www.riel.whu.edu.cn/" target="_blank">武汉大学环境法研究所</a></li>
+<li><a href="http://lib.whu.edu.cn/" target="_blank">武汉大学图书馆</a></li>
+<li><a href="http://ilr.whu.edu.cn/" target="_blank">《武大国际法评论》</a></li>
+</ul></div></footer><div class="copyright clearfix">Copyright All rights reserved© 武汉大学国际法研究所鄂ICP备02423266</div>
+
+</body></html>

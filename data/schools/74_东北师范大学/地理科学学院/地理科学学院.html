@@ -1,0 +1,796 @@
+
+
+<!DOCTYPE html>
+<html class="en no-js"><head><title>地理科学学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="地理科学学院">
+<META Name="keywords" Content="地理科学学院" />
+
+
+
+
+
+<meta charset="UTF-8">
+<meta content="IE=edge, chrome=1" http-equiv="x-ua-compatible">
+<meta name="renderer" content="webkit">
+<link rel="shortcut icon" href="images/wztb2022414.png" />
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/index.css">
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307668465750545742000400054754 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1297912256)</script>
+</head>
+<body>
+  <style>
+             @media (max-width:1200px){
+                .yjjcuo{display: block!important;}
+.yjjcuo img{width:100%;}
+            }
+.yjjcuo{    bottom: 40px!important;
+    right: 40px!important;}
+            .yjjcuo {
+                width: auto;
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 9999;}
+        </style>
+        <div class="yjjcuo">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+
+            <a href="https://oa.nenu.edu.cn/wui/index.html#/main/portal/portal-1522-1?wfid=97" target="_blank">
+                <img src="images/yjjc.png">
+            </a>
+        
+
+</div>
+<div id="geography-wrapper">
+<div class="geography-header">
+<div class="top">
+<div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="地理科学学院"><img src="images/1ogo.png" alt="" width="437" height="64"></a></div>
+<div class="search-box">
+<ul><script language="javascript" src="/system/resource/js/openlink.js"></script>    <li><a href="http://www.nenu.edu.cn" target="_blank">学校主页</a>
+    |</li>
+    <li><a href="http://mail.nenu.edu.cn" target="_blank">邮箱登陆</a>
+    |</li>
+    <li><a href="English/Message_from_the_Dean.htm" target="_blank">English</a>
+    </li>
+</ul>
+<div class="clear"></div>
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu3 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu3 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu3"></div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError" class="form">
+        
+        <input  width="200px"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+ <input type="image" src="images/seach22.gif" align="absmiddle" style="cursor: hand;float:right"  v-on:click="onSubmit()">
+        
+         
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "1297912256";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div></div>
+<div class="nav" style="width: 1200px;    margin: 0px auto;"><ul class="mainnav">
+ 
+    <li><a href="index.htm" title="首页">首页</a>
+    </li>
+     
+ 
+    <li><a href="xygk/xyjj.htm" title="学院概况">学院概况</a>
+    <div class="subnav">
+        <img src="images/xl.jpg" alt="学院概况">
+    <ul class="submenu">
+    <li><a href="xygk/xyjj.htm">学院简介</a></li> 
+    <li><a href="xygk/xydw.htm">学院定位</a></li> 
+    <li><a href="xygk/yzzc.htm">院长致辞</a></li> 
+    <li><a href="xygk/xyld.htm">学院领导</a></li> 
+    <li><a href="xygk/lsyg/fzlc.htm">历史沿革</a></li> 
+    <li><a href="xygk/zzjg.htm">组织机构</a></li> 
+    <li><a href="xygk/yhjs.htm">院徽介绍</a></li> 
+</ul>
+</div>
+    </li>
+     
+ 
+    <li><a href="szdw1.htm" title="师资队伍">师资队伍</a>
+    <div class="subnav">
+        <img src="images/xl.jpg" alt="师资队伍">
+    <ul class="submenu">
+    <li><a href="szdw1/jcrc.htm">杰出人才</a></li> 
+    <li><a href="szdw1/jzyg1/azc1/js.htm">教职员工</a></li> 
+    <li><a href="szdw1/tpjs.htm">特聘教师</a></li> 
+    <li><a href="szdw1/txjg.htm">退休教工</a></li> 
+    <li><a href="szdw1/jgxx.htm">教工信息</a></li> 
+</ul>
+</div>
+    </li>
+     
+ 
+    <li><a href="jyjx1.htm" title="教育教学">教育教学</a>
+    <div class="subnav">
+        <img src="images/xl.jpg" alt="教育教学">
+    <ul class="submenu">
+    <li><a href="jyjx1/bksjy/zysz.htm">本科生教育</a></li> 
+    <li><a href="jyjx1/yjsjy/zysz.htm">研究生教育</a></li> 
+    <li><a href="jyjx1/lxsjy/fzgk.htm">留学生教育</a></li> 
+    <li><a href="jyjx1/jpkc.htm">精品课程</a></li> 
+    <li><a href="jyjx1/jxcg/jccb.htm">教学成果</a></li> 
+</ul>
+</div>
+    </li>
+     
+ 
+    <li><a href="kxyj1.htm" title="科学研究">科学研究</a>
+    <div class="subnav">
+        <img src="images/xl.jpg" alt="科学研究">
+    <ul class="submenu">
+    <li><a href="kxyj1/yjly.htm">研究领域</a></li> 
+    <li><a href="kxyj1/kyjg.htm">科研机构</a></li> 
+    <li><a href="kxyj1/kyxm.htm">科研项目</a></li> 
+    <li><a href="kxyj1/kycg1.htm">科研成果</a></li> 
+</ul>
+</div>
+    </li>
+     
+ 
+    <li><a href="xkjs1.htm" title="学科建设">学科建设</a>
+    <div class="subnav">
+        <img src="images/xl.jpg" alt="学科建设">
+    <ul class="submenu">
+    <li><a href="xkjs1/zdxk.htm">重点学科</a></li> 
+    <li><a href="xkjs1/xsxwsyxk.htm">学术学位授予学科</a></li> 
+    <li><a href="xkjs1/zyxwsyxk.htm">专业学位授予学科</a></li> 
+</ul>
+</div>
+    </li>
+     
+ 
+    <li><a href="hzjl1.htm" title="合作交流">合作交流</a>
+    <div class="subnav">
+        <img src="images/xl.jpg" alt="合作交流">
+    <ul class="submenu">
+    <li><a href="hzjl1/hzdw.htm">合作单位</a></li> 
+    <li><a href="hzjl1/lfxz.htm">来访学者</a></li> 
+    <li><a href="hzjl1/lxds.htm">留学东师</a></li> 
+    <li><a href="hzjl1/jbhy.htm">举办会议</a></li> 
+    <li><a href="hzjl1/jscf.htm">教师出访</a></li> 
+    <li><a href="hzjl1/jwlx.htm">境外留学</a></li> 
+</ul>
+</div>
+    </li>
+     
+ 
+    <li><a href="djgz/dwjs.htm" title="党建工作">党建工作</a>
+    <div class="subnav">
+        <img src="images/xl.jpg" alt="党建工作">
+    <ul class="submenu">
+    <li><a href="djgz/dwjs.htm">党委介绍</a></li> 
+    <li><a href="jjy.jsp?urltype=tree.TreeTempUrl&wbtreeid=1293">组织机构</a></li> 
+    <li><a href="djgz/djhd.htm">党建活动</a></li> 
+</ul>
+</div>
+    </li>
+     
+ 
+    <li><a href="xsgz.htm" title="学生工作">学生工作</a>
+    <div class="subnav">
+        <img src="images/xl.jpg" alt="学生工作">
+    <ul class="submenu">
+    <li><a href="xsgz/xgdw.htm">学工队伍</a></li> 
+    <li><a href="xsgz/xstz.htm">学生通知</a></li> 
+    <li><a href="xsgz/xsxw.htm">学生新闻</a></li> 
+    <li><a href="xsgz/xzfc.htm">学子风采</a></li> 
+</ul>
+</div>
+    </li>
+     
+ 
+    <li><a href="xyyd/xyml.htm" title="校友园地">校友园地</a>
+    <div class="subnav">
+        <img src="images/xl.jpg" alt="校友园地">
+    <ul class="submenu">
+    <li><a href="xyyd/xyml.htm">校友名录</a></li> 
+    <li><a href="xyyd/xyfc.htm">校友风采</a></li> 
+    <li><a href="xyyd/hjzp.htm">怀旧照片</a></li> 
+    <li><a href="xyyd/xyll.htm">学院联络</a></li> 
+</ul>
+</div>
+    </li>
+     
+<div class="clear"></div>
+</ul>
+</div></div>
+<div class="banner">    <div class="float-ad-div float-ad-div-left">
+    <span class="close"></span>
+      </div>    <div class="float-ad-div float-ad-div-right">
+
+    <span class="close"></span>
+      </div>
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><ul class="banner-list">
+   <li class="active"><a href="xygk/xyjj.htm" target="_blank" title="东北师范大学•地理科学学院  欢迎您"><img src="/__local/3/BB/F6/E8EA8F4BC15FAA55DFBD452E64D_37D11085_23789.jpg"></a>
+    
+
+</li>
+   <li><a href="info/1105/9165.htm" target="_blank" title="地理科学学院祝全体教师节日快乐！"><img src="/__local/4/21/32/666A3B8B8299B2546BF3462CC23_A17062E9_16466.png"></a>
+    
+
+</li>
+   <li><a href="info/1105/9025.htm" target="_blank" title="热烈欢迎2025级新同学！"><img src="/__local/1/6F/EC/207CB497D22143281A054D02224_F5A1D926_3AA0D.png"></a>
+    
+
+</li>
+   <li><a href="info/1105/8575.htm" target="_blank" title="祝2025届全体毕业生毕业快乐！"><img src="/__local/C/BE/41/09484297BDBEF6FBE3087C4AA44_963541CA_26A74.png"></a>
+    
+
+</li>
+   <li><a href="info/1105/7039.htm" target="_blank" title="地理科学学院祝全体师生元旦快乐!"><img src="/__local/0/BA/D2/4EF8A5D8B8870C88FD2AD9FB58E_D481FE67_9A927.png"></a>
+    
+
+</li>
+   <li><a href="info/1105/6886.htm" target="_blank" title="地理科学学院祝全体教师节日快乐！"><img src="/__local/3/E9/60/20E1F16388E14E514866535111C_84A0DA8F_2C656.jpg"></a>
+    
+
+</li>
+   <li><a href="info/1105/6810.htm" target="_blank" title="青春不散场，祝2024届全体毕业生毕业快乐"><img src="/__local/8/38/80/A018F9676F7D38411C5AB891E79_50CAA727_A7A3B.png"></a>
+    
+
+</li>
+</ul><script>_showDynClickBatch(['dynclicks_u7_1018','dynclicks_u7_9165','dynclicks_u7_9025','dynclicks_u7_8575','dynclicks_u7_7039','dynclicks_u7_6886','dynclicks_u7_6810'],[1018,9165,9025,8575,7039,6886,6810],"wbnews", 1297912256)</script>
+
+<div class="btns"><span class="prev"></span><span class="next"></span></div>
+<ul class="tab-dots">
+<li class="now"></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li></ul></div>
+<div class="geography-content">
+<div class="news">
+<div class="news-header header">
+<p class="topic">学院新闻</p>
+<p class="english">NEWS</p><a class="more" href="dtzx/xyxw.htm"><img alt="" src="images/geography-wrapper/more.png"></a> </div>
+<div class="gap">
+<div class="blue"></div>
+<div class="gray"></div></div>
+<div class="news-main">
+
+<ul>
+<li class="hot">
+              <img src="/__local/6/F0/C5/1AFC059E2D2E2B06FA7C7E8F64B_AADD28CA_23F0A.jpg" alt="我院三个本科专业全部入选国家级一流本科专业建设点" width="184" height="88">
+              <a href="info/1086/5793.htm" target="_blank">我院三个本科专业全部入选国家级一流本科专业建设点</a>
+              <p class="time">2022-06-13</p>
+              <p class="summary">近日，教育部办公厅公布了2021年度国家级一流本科专业建设点名单，我院地理信息科学专业入选国家级一流本科专业建设点。至此，我院三个本科专业均为国家级一流专业建设点。教育部一流本科专业建设“双万计划”于2019年4月正式启动，旨在深入落实全国教育大会精神，贯彻落实新时代全国高校本科教育工作会议和《教育部关于加快建设高水平本科教育 全面提高人才培养能力的意见》“六卓越一拔尖”计划2.0系列文件等要求，做强一流本...</p>
+            </li>
+
+            <li>
+              <span class="time">2025-10-28</span>
+              <a href="info/1086/9505.htm" target="_blank">学院2025级本科生开展“踏经纬观山河，溯史章鉴古今”主题教育活动</a>
+            </li>
+
+            <li>
+              <span class="time">2025-10-17</span>
+              <a href="info/1086/9405.htm" target="_blank">我院召开2025级本科生专业解读见面会</a>
+            </li>
+
+            <li>
+              <span class="time">2025-10-16</span>
+              <a href="info/1086/9385.htm" target="_blank">东北师范大学中国东北研究院成功入选中国智库综合评价AMI智库入库单位</a>
+            </li>
+
+            <li>
+              <span class="time">2025-10-14</span>
+              <a href="info/1086/9375.htm" target="_blank">我院举办2025年社科项目申报回头看暨2026年预申报启动说明会</a>
+            </li>
+</ul><script>_showDynClickBatch(['dynclicks_u8_5793','dynclicks_u8_9505','dynclicks_u8_9405','dynclicks_u8_9385','dynclicks_u8_9375'],[5793,9505,9405,9385,9375],"wbnews", 1297912256)</script>
+</div></div>
+<div class="notices">
+<div class="notices-header header">
+<p class="topic">通知公告</p>
+<p class="english">NOTICES</p>
+<ul class="tabs">
+<li class="notice-now">全部 </li>
+<li>学院公告 </li>
+<li>本科生通知 </li>
+<li>研究生通知 </li>
+<li>教师通知</li></ul><a class="more" href="dtzx/tzgg/qb.htm"><img alt="" src="images/geography-wrapper/more.png"></a> </div>
+<div class="notice-wrapper">
+
+<ul class="notices-list notice-active">
+   <li>
+              <span class="group">学院公告</span>
+              <a href="content.jsp?urltype=news.NewsContentUrl&wbtreeid=1101&wbnewsid=9465" target="_blank">关于2025-2026学年优秀教师奖推荐人选的公示</a>
+              <span class="time">2025-10-23</span>
+            </li>
+   <li>
+              <span class="group">学院公告</span>
+              <a href="content.jsp?urltype=news.NewsContentUrl&wbtreeid=1101&wbnewsid=9435" target="_blank">关于2025年比亚迪奖教金推荐人选的公示</a>
+              <span class="time">2025-10-22</span>
+            </li>
+   <li>
+              <span class="group">教师通知</span>
+              <a href="info/1102/9425.htm" target="_blank">地理科学学院2026年博士生导师招生资格认定结果公示</a>
+              <span class="time">2025-10-20</span>
+            </li>
+   <li>
+              <span class="group">教师通知</span>
+              <a href="info/1102/9355.htm" target="_blank">地理科学学院关于2025年专业技术职务评聘推荐人选的公示</a>
+              <span class="time">2025-10-09</span>
+            </li>
+   <li>
+              <span class="group">学院公告</span>
+              <a href="info/1101/9255.htm" target="_blank">关于地理科学学院2025年秋季学期本科教材选用结果的公示</a>
+              <span class="time">2025-09-26</span>
+            </li>
+   <li>
+              <span class="group">教师通知</span>
+              <a href="info/1102/9235.htm" target="_blank">地理科学学院关于2025年专业技术职务评聘申报人员材料的公示</a>
+              <span class="time">2025-09-23</span>
+            </li>
+   <li>
+              <span class="group">研究生通知</span>
+              <a href="info/1103/9195.htm" target="_blank">东北师范大学地理科学学院2026年接收优秀应届本科毕业生免试攻读研究生复试录取工作实施细则</a>
+              <span class="time">2025-09-11</span>
+            </li>
+</ul><script>_showDynClickBatch(['dynclicks_u9_9465','dynclicks_u9_9435','dynclicks_u9_9425','dynclicks_u9_9355','dynclicks_u9_9255','dynclicks_u9_9235','dynclicks_u9_9195'],[9465,9435,9425,9355,9255,9235,9195],"wbnews", 1297912256)</script>
+
+
+<ul class="notices-list">
+   <li>
+              <span class="group">学院公告</span>
+              <a href="content.jsp?urltype=news.NewsContentUrl&wbtreeid=1101&wbnewsid=9465" target="_blank">关于2025-2026学年优秀教师奖推荐人选的公示</a>
+              <span class="time">2025-10-23</span>
+            </li>
+
+   <li>
+              <span class="group">学院公告</span>
+              <a href="content.jsp?urltype=news.NewsContentUrl&wbtreeid=1101&wbnewsid=9435" target="_blank">关于2025年比亚迪奖教金推荐人选的公示</a>
+              <span class="time">2025-10-22</span>
+            </li>
+
+   <li>
+              <span class="group">学院公告</span>
+              <a href="info/1101/9255.htm" target="_blank">关于地理科学学院2025年秋季学期本科教材选用结果的公示</a>
+              <span class="time">2025-09-26</span>
+            </li>
+
+   <li>
+              <span class="group">学院公告</span>
+              <a href="https://mp.weixin.qq.com/s/20IGZB_VG3leH02c4qQQWQ" target="_blank">才聚东师·智擎未来|东北师范大学青年学者论坛诚邀英才</a>
+              <span class="time">2025-08-10</span>
+            </li>
+
+   <li>
+              <span class="group">学院公告</span>
+              <a href="info/1101/8825.htm" target="_blank">关于地理科学学院第二届全国教材建设奖全国优秀教材（高等教育）遴选推荐结果的公示</a>
+              <span class="time">2025-07-06</span>
+            </li>
+
+   <li>
+              <span class="group">学院公告</span>
+              <a href="info/1101/8795.htm" target="_blank">关于地理科学学院2025年暑假放假及工作安排的通知</a>
+              <span class="time">2025-07-04</span>
+            </li>
+
+   <li>
+              <span class="group">学院公告</span>
+              <a href="info/1101/8035.htm" target="_blank">关于2025年度地理科学学院修购基金项目实施方案的公示</a>
+              <span class="time">2025-05-19</span>
+            </li>
+
+</ul><script>_showDynClickBatch(['dynclicks_u10_9465','dynclicks_u10_9435','dynclicks_u10_9255','dynclicks_u10_8935','dynclicks_u10_8825','dynclicks_u10_8795','dynclicks_u10_8035'],[9465,9435,9255,8935,8825,8795,8035],"wbnews", 1297912256)</script>
+
+
+<ul class="notices-list">
+   <li>
+              <span class="group">本科生通知</span>
+              <a href="info/1104/9145.htm" target="_blank">关于地理科学学院2026届本科毕业生免试攻读硕士学位研究生拟推荐人选的公示</a>
+              <span class="time">2025-09-07</span>
+            </li>
+   <li>
+              <span class="group">本科生通知</span>
+              <a href="info/1104/9135.htm" target="_blank">关于地理科学学院2026届申请推免资格学生的科研创新成果、竞赛获奖奖项及内容审核鉴定结果公示</a>
+              <span class="time">2025-09-06</span>
+            </li>
+   <li>
+              <span class="group">本科生通知</span>
+              <a href="info/1104/9095.htm" target="_blank">关于地理科学学院拟推荐2026届公费师范免试攻读本研衔接教育硕士研究生名单的公示</a>
+              <span class="time">2025-09-03</span>
+            </li>
+   <li>
+              <span class="group">本科生通知</span>
+              <a href="info/1104/7455.htm" target="_blank">地理科学学院关于2025年全日制本科生转专业工作的通知</a>
+              <span class="time">2025-04-15</span>
+            </li>
+   <li>
+              <span class="group">本科生通知</span>
+              <a href="info/1104/7415.htm" target="_blank">关于地理科学学院2025年春季学期本科教材选用结果的公示</a>
+              <span class="time">2025-04-10</span>
+            </li>
+   <li>
+              <span class="group">本科生通知</span>
+              <a href="info/1104/7395.htm" target="_blank">2025年“九五地理筑梦基金”获奖学生名单公示</a>
+              <span class="time">2025-04-08</span>
+            </li>
+   <li>
+              <span class="group">本科生通知</span>
+              <a href="info/1104/7056.htm" target="_blank">地理科学学院2023级创新人才培养基地班拟选拔名单公示</a>
+              <span class="time">2025-01-06</span>
+            </li>
+</ul><script>_showDynClickBatch(['dynclicks_u11_9145','dynclicks_u11_9135','dynclicks_u11_9095','dynclicks_u11_7455','dynclicks_u11_7415','dynclicks_u11_7395','dynclicks_u11_7056'],[9145,9135,9095,7455,7415,7395,7056],"wbnews", 1297912256)</script>
+
+
+<ul class="notices-list">
+   <li>
+              <span class="group">研究生通知</span>
+              <a href="info/1103/9195.htm" target="_blank">东北师范大学地理科学学院2026年接收优秀应届本科毕业生免试攻读研究生复试录取工作实施细则</a>
+              <span class="time">2025-09-11</span>
+            </li>
+   <li>
+              <span class="group">研究生通知</span>
+              <a href="info/1103/9075.htm" target="_blank">关于2025秋季学期拟毕业研究生加入QQ群的通知</a>
+              <span class="time">2025-09-02</span>
+            </li>
+   <li>
+              <span class="group">研究生通知</span>
+              <a href="info/1103/8685.htm" target="_blank">地理科学学院2025年博士研究生中期考核结果公示</a>
+              <span class="time">2025-06-24</span>
+            </li>
+   <li>
+              <span class="group">研究生通知</span>
+              <a href="info/1103/8415.htm" target="_blank">地理科学学院2025年硕博连读（第二批）研究生拟录取名单公示（20250626更新）</a>
+              <span class="time">2025-06-10</span>
+            </li>
+   <li>
+              <span class="group">研究生通知</span>
+              <a href="info/1103/8365.htm" target="_blank">东北师范大学地理科学学院“学术之星”评选工作通知</a>
+              <span class="time">2025-06-04</span>
+            </li>
+   <li>
+              <span class="group">研究生通知</span>
+              <a href="info/1103/8275.htm" target="_blank">东北师范大学地理科学学院2025年暑期夏令营招生通知</a>
+              <span class="time">2025-05-28</span>
+            </li>
+   <li>
+              <span class="group">研究生通知</span>
+              <a href="info/1103/7675.htm" target="_blank">2025年度东北师范大学优秀博士硕士学位论文地理科学学院推选结果公示</a>
+              <span class="time">2025-04-24</span>
+            </li>
+</ul><script>_showDynClickBatch(['dynclicks_u12_9195','dynclicks_u12_9075','dynclicks_u12_8685','dynclicks_u12_8415','dynclicks_u12_8365','dynclicks_u12_8275','dynclicks_u12_7675'],[9195,9075,8685,8415,8365,8275,7675],"wbnews", 1297912256)</script>
+ 
+
+<ul class="notices-list">
+   <li>
+              <span class="group">教师通知</span>
+              <a href="info/1102/9425.htm" target="_blank">地理科学学院2026年博士生导师招生资格认定结果公示</a>
+              <span class="time">2025-10-20</span>
+            </li>
+   <li>
+              <span class="group">教师通知</span>
+              <a href="info/1102/9355.htm" target="_blank">地理科学学院关于2025年专业技术职务评聘推荐人选的公示</a>
+              <span class="time">2025-10-09</span>
+            </li>
+   <li>
+              <span class="group">教师通知</span>
+              <a href="info/1102/9235.htm" target="_blank">地理科学学院关于2025年专业技术职务评聘申报人员材料的公示</a>
+              <span class="time">2025-09-23</span>
+            </li>
+   <li>
+              <span class="group">教师通知</span>
+              <a href="info/1102/9005.htm" target="_blank">地理科学学院2026年兼职博士生导师任职资格遴选通过人员信息公示</a>
+              <span class="time">2025-08-27</span>
+            </li>
+   <li>
+              <span class="group">教师通知</span>
+              <a href="info/1102/8385.htm" target="_blank">地理科学学院2026年博士生导师任职资格遴选通过人员信息公示</a>
+              <span class="time">2025-06-06</span>
+            </li>
+   <li>
+              <span class="group">教师通知</span>
+              <a href="info/1102/8245.htm" target="_blank">地理科学学院2025年“东北师范大学卓越青年研究生导师”推荐名单公示</a>
+              <span class="time">2025-05-26</span>
+            </li>
+   <li>
+              <span class="group">教师通知</span>
+              <a href="info/1102/7035.htm" target="_blank">地理科学学院关于2024年教师岗位评聘推荐人选的公示</a>
+              <span class="time">2024-12-28</span>
+            </li>
+</ul><script>_showDynClickBatch(['dynclicks_u13_9425','dynclicks_u13_9355','dynclicks_u13_9235','dynclicks_u13_9005','dynclicks_u13_8385','dynclicks_u13_8245','dynclicks_u13_7035'],[9425,9355,9235,9005,8385,8245,7035],"wbnews", 1297912256)</script>
+</div></div>
+<div class="clear"></div>
+<div class="events">
+<div class="events-header header">
+<p class="topic">活动预告</p>
+<p class="english">EVENTS</p><a class="more" href="dtzx/hdyg.htm"><img alt="" src="images/geography-wrapper/more.png"></a> </div>
+<div class="gap">
+<div class="blue"></div>
+<div class="gray"></div></div>
+<div class="events-main">
+
+<ul>
+   <li>
+<div class="date">
+                <p class="month">2025年11月</p>
+                <p class="day">4日</p>
+              </div>
+<div class="event">
+<a href="info/1096/9495.htm" target="_blank" title="【长白山地学论坛(第三十四期)】Maxwell Hartt：Aging Playfully: Reimagining Expectations for Later Life" class="title" style="width:240px;">【长白山地学论坛(第三十四期)】Maxwell Hartt：Aging Playfully: Reimagining Expectations for ...</a>
+<p class="time">时间：<span>下午15:00-16:00</span></p>
+                <p class="location">地点：<span>地理科学学院310会议室</span></p>
+              </div>
+</li>
+   <li>
+<div class="date">
+                <p class="month">2025年11月</p>
+                <p class="day">4日</p>
+              </div>
+<div class="event">
+<a href="info/1096/9485.htm" target="_blank" title="【长白山地学论坛(第三十四期)】Mark Rosenberg：What does it mean for the health and well-being of older people to live in age-friendly city?" class="title" style="width:240px;">【长白山地学论坛(第三十四期)】Mark Rosenberg：What does it mean for the health and well-bei...</a>
+<p class="time">时间：<span>下午14:00-15:00</span></p>
+                <p class="location">地点：<span>地理科学学院310会议室</span></p>
+              </div>
+</li>
+   <li>
+<div class="date">
+                <p class="month">2025年9月</p>
+                <p class="day">19日</p>
+              </div>
+<div class="event">
+<a href="info/1096/8995.htm" target="_blank" title="第十七届中国空间经济学年会会议通知" class="title" style="width:240px;">第十七届中国空间经济学年会会议通知</a>
+<p class="time">时间：<span>上午8:00</span></p>
+                <p class="location">地点：<span>东北师范大学</span></p>
+              </div>
+</li>
+   <li>
+<div class="date">
+                <p class="month">2025年9月 </p>
+                <p class="day">6日</p>
+              </div>
+<div class="event">
+<a href="info/1096/9035.htm" target="_blank" title="【长白山地学论坛(第三十三期)】贺灿飞：区域新产业发展与演化研究" class="title" style="width:240px;">【长白山地学论坛(第三十三期)】贺灿飞：区域新产业发展与演化研究</a>
+<p class="time">时间：<span>下午15:30-17:00</span></p>
+                <p class="location">地点：<span>地理科学学院四楼报告厅</span></p>
+              </div>
+</li>
+</ul><script>_showDynClickBatch(['dynclicks_u14_9495','dynclicks_u14_9485','dynclicks_u14_8995','dynclicks_u14_9035'],[9495,9485,8995,9035],"wbnews", 1297912256)</script>
+</div></div>
+<div class="research">
+<div class="research-header header">
+<p class="topic">科研动态</p>
+<p class="english">RESEARCH PROGRESS</p><a class="more" href="dtzx/kydt.htm"><img alt="" src="images/geography-wrapper/more.png"></a> </div>
+<div class="gap">
+<div class="blue"></div>
+<div class="gray"></div></div>
+<div class="research-main">
+<ul>
+
+<ul>
+   <li><a href="info/1097/9445.htm" target="_blank" title="浩飞龙等：《Cities》城市舒适性如何促进创新：中国城市人才与高新技术企业的中介机制">浩飞龙等：《Cities》城市舒适性如何促进创新：中国城市人才...</a><span class="time">2025-10-22</span></li>
+   <li><a href="info/1097/9415.htm" target="_blank" title="吕明珠等：《Journal of hydrology》从概率角度分析不同干旱情境对粮食作物水足迹的影响">吕明珠等：《Journal of hydrology》从概率角度分析不同干旱...</a><span class="time">2025-10-18</span></li>
+   <li><a href="info/1097/9365.htm" target="_blank" title="陈健成等：《ISME Communications》微生物群落演替驱动凋落物分解的新机制">陈健成等：《ISME Communications》微生物群落演替驱动凋落物...</a><span class="time">2025-10-11</span></li>
+   <li><a href="info/1097/9185.htm" target="_blank" title="李潇等：《IEEE Transactions on Geoscience and Remote Sensing》结合光谱角余弦和波段深度有效减弱镜面反射对多角度高光谱叶片生化参数估算的影响">李潇等：《IEEE Transactions on Geoscience and Remote Sens...</a><span class="time">2025-09-11</span></li>
+   <li><a href="info/1097/9175.htm" target="_blank" title="冉东杰等：《New Phytologist》DARSIs指数：有效消除异面叶多角度反射不对称效应，提升叶片与植株冠层生化性状估算精度">冉东杰等：《New Phytologist》DARSIs指数：有效消除异面叶多...</a><span class="time">2025-09-10</span></li>
+   <li><a href="info/1097/9115.htm" target="_blank" title="孟迪等：《Global Change Biology》基于氨基糖的土壤微生物残体碳转换系数优化研究">孟迪等：《Global Change Biology》基于氨基糖的土壤微生物残...</a><span class="time">2025-09-04</span></li>
+</ul><script>_showDynClickBatch(['dynclicks_u15_9445','dynclicks_u15_9415','dynclicks_u15_9365','dynclicks_u15_9185','dynclicks_u15_9175','dynclicks_u15_9115'],[9445,9415,9365,9185,9175,9115],"wbnews", 1297912256)</script>
+</ul></div></div>
+<div class="quick-passage">
+<p>快速通道</p>
+<ul>
+<li><a class="office" href="kstd/bgzn.htm">办公指南</a> </li>
+<li><a class="calendar" href="xygk/zzjg.htm">机构设置</a> </li>
+<li><a class="curriculum" href="kstd/gzzd/cwcg.htm">规章制度</a> </li>
+<li><a class="courses" href="jyjx1/jpkc.htm">精品课程</a> </li>
+<li><a class="download" href="kstd/cyxz/cwcg.htm">常用下载</a> </li>
+<li><a class="location" href="https://oa.nenu.edu.cn/spa/workflow/static4form/index.html?#/main/workflow/req?iscreate=1&workflowid=36021&_key=hsx57b">场所预定</a> </li>
+<li><a class="technology" href="https://kjgl.webvpn.nenu.edu.cn/w10200/search.do?actionType=projectSearch">科技成果查询</a> </li>
+<li><a class="society" href="https://skgl.webvpn.nenu.edu.cn/w10200/search.do?actionType=projectList">社科成果查询</a> </li></ul>
+<li><a class="curriculum" href="kstd/xxfblc.htm">信息发布流程</a> </li></ul></div>
+<div class="friendlylink">
+<p class="title">常用链接</p><div class="link-header">
+    <a href="http://jwc.nenu.edu.cn" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1297912256, 19614)">教务处</a>
+    <span>|</span>
+    <a href="http://yjsy.nenu.edu.cn" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1297912256, 19615)">研究生院</a>
+    <span>|</span>
+    <a href="http://rsc.nenu.edu.cn" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1297912256, 19616)">人事处</a>
+    <span>|</span>
+    <a href="http://cwc.nenu.edu.cn" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1297912256, 19617)">财务处</a>
+    <span>|</span>
+    <a href="http://kyc.nenu.edu.cn" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1297912256, 19618)">科技处</a>
+    <span>|</span>
+    <a href="http://skc.nenu.edu.cn" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1297912256, 19619)">社科处</a>
+    <span>|</span>
+    <a href="http://www.nsfc.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1297912256, 19620)">国家自然科学基金委员会</a>
+    <span>|</span>
+    <a href="http://www.npopss-cn.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1297912256, 23567)">全国哲学社会科学规划办公室</a>
+    <span>|</span>
+    <a href="https://www.sinoss.net/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1297912256, 23558)">中国高校人文社会科学信息网</a>
+    <span>|</span>
+    <a href="http://www.gsc.org.cn/" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1297912256, 19621)">中国地理学会</a>
+    
+</div>
+    <ul>
+          <li><a target="_blank" href="http://gpes.nenu.edu.cn/"><img src="images/link33.jpg" alt=""></a></li>
+          <li><a target="_blank" href="http://cbs.nenu.edu.cn/"><img src="images/dongbeishifandaxuezhangbaishandixueluntanzhuantitu.png" alt=""></a></li>
+          <li><a target="_blank" href="dtzx/yxdl.htm"><img src="images/lianjie2.jpg" alt=""></a></li>
+        </ul></div></div>
+    <div class="geography-footer">
+      <img src="images/geography-wrapper/academy.png" class="academy" alt="学院">
+      <a href="javascript:;" class="backtop"><img src="images/geography-wrapper/backtop.png" alt="返回顶部"></a>
+      <div class="clear"></div><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<div class="footer-text"><p>通讯地址：吉林省长春市人民大街5268号</p><p>邮编：130024</p><p>电话：0431-85099550</p><p>E-mail：dili@nenu.edu.cn　dlsdsf@nenu.edu.cn（师德师风监督举报邮箱）</p><p>版权所有：东北师范大学地理科学学院</p></div><p><a href="http://mark.nenu.edu.cn/info/1012/1188.htm"><img src="/__local/7/A4/57/C3FF4400CAFFB0D05ED7BA2E93C_159FF9AC_3BBF.png?e=.png" style="position: relative; float: right; top: 20px; left: -350px" /></a></p>
+
+<div class="footer-wx">    <ul>
+          <li><img src="images/weixin2.jpg" class="academy-wx" alt=""></a><p>学院官方微信公众号</p></li>
+          <li><img src="images/2016-12-28_130249.png" class="academy-league" alt=""></a><p>学院团委微信公众号</p></li>
+        </ul></div>
+<div class="clear"></div>
+<div class="copyright">
+<p class="block"></p>
+<p>School of Geographical Sciences , Northeast Normal University, 5268 Renmin Street, Changchun, Jilin Province, PRC</p>
+<p style="    font-size: 16px;">网站访问量： 
+<script language="javascript" src="_dwr/engine.js"></script><script language="javascript" src="_dwr/util.js"></script><script language="javascript" src="_dwr/interface/PageCounterDWR.js"></script><span id="a241541" name="a241541"></span>   
+
+<script>
+function getvisittimea241541()
+{       
+    PageCounterDWR.getVisittime('1297912256','1001','TOTAL_COUNTER','1070221','7',callbackdataa241541)
+}
+function callbackdataa241541(data)
+{
+    document.getElementById("a241541").innerHTML = data; 
+}
+getvisittimea241541();
+</script></p></div></div></div>
+<div id="geography-bgs">
+<div class="header-bgs">
+<div class="top-bg"></div>
+<div class="nav-bg"></div>
+<div class="banner-bg"></div></div>
+<div class="footer-bg"><img alt="" src="images/geography-bgs/footer-bg.png"> 
+<div class="bg-block"></div></div></div>
+<div class="mark"></div><script src="js/jquery.js"></script><!-- IE7，8 圆角兼容和媒体查询--><script src="js/index.js"></script>
+
+<!--[if lte IE 8]>
+ 
+  <script src="js/ie-nav.js"></script>
+  <style>
+    #geography-wrapper .banner .tab-dots li {
+      height: 15px;
+      background: url(images/geography-wrapper/tabs-index.png) no-repeat;
+      background-position: 0 -14px;
+      border: none;}
+    #geography-wrapper .banner .tab-dots li.now {
+      background: url(images/geography-wrapper/tabs-index.png) no-repeat;
+      background-position: 0 0;}
+  </style>
+  <![endif]-->
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

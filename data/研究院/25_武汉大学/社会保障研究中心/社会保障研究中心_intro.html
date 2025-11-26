@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>中心简介-武汉大学社会保障研究中心</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="中心简介">
+<meta name="keywords" content="武汉大学社会保障研究中心,中心简介">
+
+
+<meta name="description" content="">
+<link type="text/css" href="../../dfiles/11304/themes/default/css/style.css" rel="stylesheet">
+<script type="text/javascript" src="../../dfiles/11304/themes/default/js/jquery.js"></script>
+<script type="text/javascript" src="../../dfiles/11304/themes/default/js/drawimage.js"></script>
+<script type="text/javascript" src="../../dfiles/11304/themes/default/js/jquery.banner.js"></script>
+<script type="text/javascript" src="../../dfiles/11304/themes/default/js/banner01.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../../page.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1041,'/page.jsp',-1,1932094285)</script>
+</head>
+
+<body>
+<div class="main01">
+    <div class="top">
+    <div class="middle">
+    <h2>欢迎进入武汉大学社会保障研究中心官网！
+</h2>
+        <h3><a href="/">CN</a>
+            <a href="../../en.htm">EN</a></h3>
+    </div>
+</div>
+<div class="clearfloat"></div>
+<div class="head">
+    <div class="middle">
+        <div class="logo"><a href="../../">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+</a><a href="../../index.htm" title="社会保障研究中心"><img src="../../dfiles/11304/themes/default/images/logo.png" width="371" height="75" border="0" alt="社会保障研究中心" title="社会保障研究中心"></a></div>
+        <h2><img src="../../dfiles/11304/themes/default/images/01.png"></h2>
+        <div class="sous">
+            
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu3 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 226px;
+        outline: none;
+        padding-left: 10px;
+        border: 1px solid #e4e7ed;}
+    #appu3 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        height: 32px;
+        border: 1px solid #ccc;
+        border-left:none;
+        position: relative;
+        width: 32px;}
+</style>
+<div id="divu3">
+    <div id="appu3"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="qwss"> <input name="submit_button" type="button" value="" class="tj"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "1932094285";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+        </div>
+    </div>
+</div>
+<div class="clearfloat"></div>
+<div class="nav">
+    <div class="nav_text">
+        <ul class="menu"><script>
+    var newimg1 = new Image();
+    newimg1.src = "/system/resource/images/nav/imgnav_vsb_level1_bg_1.gif";
+    var newimg2 = new Image();
+    newimg2.src = "/system/resource/images/nav/imgnav_vsb_level1_bg_2.gif";
+    var newimg3 = new Image();
+    newimg3.src = "/system/resource/images/nav/imgnav_vsb_level2_bg_1.png";
+</script>
+<!--[if IE 6]> <style>#c1069030{behavior: url("/system/resource/js/hover.htc");}</style><![endif]--> 
+<div id="c1069030"> 
+<ul class="menu">
+<li><a href="../../">首页</a>
+</li>
+<li><a id="current" href="../zxgk.htm">中心概况</a>
+<ul class="submenu">
+  <li><a href="zxjj.htm">中心简介</a></li>
+  <li><a href="zxls.htm">中心历史</a></li>
+  <li><a href="zxbs.htm">中心标识</a></li>
+  <li><a href="xrld.htm">现任领导</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1081">通知公告</a></li>
+  <li><a href="lxwm.htm">联系我们</a></li>
+</ul>
+</li>
+<li><a href="../jgsz.htm">机构设置</a>
+<ul class="submenu">
+  <li><a href="../jgsz/zzjg.htm">组织结构</a></li>
+  <li><a href="../jgsz/xswyh.htm">学术委员会</a></li>
+  <li><a href="../jgsz/yjjg.htm">研究机构</a></li>
+</ul>
+</li>
+<li><a href="../../pic.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1191">学术队伍</a>
+<ul class="submenu">
+  <li><a href="../../pic.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1201">中心顾问</a></li>
+  <li><a href="../../pic.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1211">专职研究员</a></li>
+  <li><a href="../../pic.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1221">兼职研究员</a></li>
+  <li><a href="../../pic.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1231">博士后</a></li>
+  <li><a href="../../pic.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1241">访问学者</a></li>
+</ul>
+</li>
+<li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1011">科学研究</a>
+<ul class="submenu">
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1021">科研项目</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1101">专著出版</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1111">期刊论文</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1121">研究报告</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1131">科研获奖</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1141">数据库</a></li>
+</ul>
+</li>
+<li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1251">人才培养</a>
+<ul class="submenu">
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1261">精品课程</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1271">教学获奖</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1281">培训服务</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1291">社会实践</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1301">优秀人才</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1311">教研成果</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1521">教学活动</a></li>
+</ul>
+</li>
+<li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1321">智库建设</a>
+<ul class="submenu">
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1361">建设成就</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1371">社会服务</a></li>
+</ul>
+</li>
+<li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1331">合作交流</a>
+<ul class="submenu">
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1381">中心会议</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1391">学术讲座</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1401">国际交流</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1411">国内交流</a></li>
+</ul>
+</li>
+<li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1341">出版刊物</a>
+<ul class="submenu">
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1421">《社会保障研究》</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1431">《管理研究》</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1441">重大文集</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1451">项目文库</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1461">《社会保障研究》征稿启事</a></li>
+</ul>
+</li>
+<li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1351">媒体聚焦</a>
+<ul class="submenu">
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1471">社保新闻</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1481">政策解读</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1491">学者专栏</a></li>
+  <li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1501">活动报道</a></li>
+</ul>
+</li>
+</ul>
+</div></ul>
+    </div>
+</div>
+<div class="clearfloat"></div>
+    <div class="ny_banner">
+        <div class="middle">
+        <div style="width:1200px; height:280px; overflow:hidden"><img src="../../dfiles/11304/public/upfile/pic/15486017223529.jpg" onload="DrawImage(this,1200,280)" style="width: 1200px; height: 280px; margin-top: 0px;">
+        </div>
+    </div>
+    <div class="clearfloat"></div>
+    <div class="inside">
+        <div class="middle">
+            <div class="inside_left">
+                <h2>
+中心概况</h2>
+                <ul class="navMenu"><li class=""><a href="zxjj.htm" class="afinve"><span class="nav-text">中心简介</span></a></li>
+<li class=""><a href="zxls.htm" class="afinve"><span class="nav-text">中心历史</span></a></li>
+<li class=""><a href="zxbs.htm" class="afinve"><span class="nav-text">中心标识</span></a></li>
+<li class=""><a href="xrld.htm" class="afinve"><span class="nav-text">现任领导</span></a></li>
+<li class=""><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1081" class="afinve"><span class="nav-text">通知公告</span></a></li>
+<li class=""><a href="lxwm.htm" class="afinve"><span class="nav-text">联系我们</span></a></li>
+</ul>
+            </div>
+            <div class="inside_right">
+                <div class="inside_nav">
+                    <h2>
+中心简介</h2>
+                    <h3>当前位置：
+        <a href="../zxgk.htm">中心概况</a>&nbsp;&gt;&nbsp;
+        <a href="zxjj.htm">中心简介</a>&nbsp;&gt;&nbsp;
+</h3>
+                </div>
+                <div class="inside_cen">
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1932094285,'wbnews','u10')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1932094285,1031)</script>
+<p>
+    </p><h2 style="text-align:center;font-weight:bold;">武汉大学社会保障研究中心简介</h2>
+    <div id="vsb_content_4_1031_u101"><div id="vsb_content_4"><p class="vsbcontent_start">武汉大学社会保障研究中心（英文：Center for Social Security Studies of Wuhan University, 缩写：CSSS）成立于1993年，2000年获批教育部人文社会科学重点研究基地。中心现拥有社会保障专业和公共经济管理专业两个博士点，拥有公共管理博士后科研流动站和全国唯一的社会保障国家级重点学科。同时，社会保障学科还被列入国家“十五”“211工程”建设项目加以建设。2004年，中心又成为国家“985工程”二期建设项目——社会保障研究创新基地，这是全国唯一的国家级社会保障研究创新平台。中心现有研究人员75人，90%具有海外研修经历。目前中心主任为王增文教授，中心副主任为薛惠元副教授和张平副教授。</p><p>2003年以来，中心承担省部级以上科研项目100余项，各类横向课题300余项，总经费4000多万元；出版著作和教材70余部；发表学术论文1700余篇；获得省部级以上科研奖励40余项；获省部级以上教育教学成果奖30余项，其中获全国百篇优秀博士论文提名奖2篇。中心非常重视与实际部门的合作，近年来被各级政府部门采纳或批示的咨询报告有200多份，其中多份咨询报告被中央领导人批示；中心每年与实际部门合作撰写《中国社会保障改革与发展报告》，并联合召开成果发布会，受到社会公众、政府部门、专家学者和广大媒体的广泛关注。此外，中心研究人员还担任多个政府部门、社会团体和高校的顾问与学术兼职。通过开展咨政服务活动，中心提高了综合研究能力和参与政府决策的能力，成为全国知名的社会保障思想库和高端智库。2015年在全国参与评估的151个教育部人文社科重点研究基地中，中心获评优秀，综合排名全国第八，其中社会服务能力排名第六，决策支持能力排名第五。中心在2016年入选“中国智库索引（CTTI）”首批来源智库的基础上，2017年入选教育部“高校高端智库联盟”成员单位（全国共31家）。根据全球智库研究中心发布的《中国大学智库发展报告（2017）》，中心在全国大学智库中综合排名第41名。2018年，中心入选中国智库索引（CTTI）高校智库百强榜，获评等级为A-。同年，中心编写的《中国社会保障改革与发展报告2012-2015》获中国社会科学评价研究院中国智库学术成果“优秀报告奖”。2022年中心顺利通过教育部组织的“十三五”高校人文社会科学重点研究基地测评工作。同年，中心入选湖北省残疾人事业发展智库第一批研究基地，并再次入选中国智库索引（CTTI）高校智库百强榜，获评等级为A+。</p><p>另外，中心还主办《社会保障研究》和《管理研究》（集刊）两本学术期刊，其中《社会保障研究》为CSSCI扩展版来源期刊。</p><p>中心的研究方向有：养老保险研究、医疗卫生与工伤保险研究、就业与失业保险研究、社会福利与救助研究、养老服务与医养融合研究、社会保障法研究、社会保障基金管理研究、公共经济与公共政策研究、健康大数据与保障研究、儿童发展与保障研究、贫困问题研究等。</p><p>中心网站：<a href="http://csss.whu.edu.cn/">http://csss.whu.edu.cn/</a>。</p><p style="text-align: center;"><br></p><p class="vsbcontent_img"><img title="1624409163140283.png" alt="微信图片_20210623084431.png" src="/__local/B/BB/8A/F1FB60DD5EEC387EA6985AEC06D_651E7B90_26518.png?e=.png" vwidth="" vheight="" vurl="/_vsl/BBB8AF1FB60DD5EEC387EA6985AEC06D/651E7B90/26518?e=.png" vsbhref="vurl" orisrc="/__local/B/BB/8A/F1FB60DD5EEC387EA6985AEC06D_651E7B90_26518.png?e=.png" class="img_vsb_content"></p><p class="vsbcontent_img"><img title="1624409171128738.png" alt="微信图片_20210623084424.png" src="/__local/7/17/79/38E04C7641D5B819BA9CEF26586_2E9202CC_22A04.png?e=.png" vwidth=" 549px" vheight=" 376px" vurl="/_vsl/7177938E04C7641D5B819BA9CEF26586/2E9202CC/22A04?e=.png" vsbhref="vurl" width="549" height="376" orisrc="/__local/7/17/79/38E04C7641D5B819BA9CEF26586_2E9202CC_22A04.png?e=.png" class="img_vsb_content" style="width: 549px; height: 376px;"></p><p class="vsbcontent_img"><img title="1624409181427994.png" alt="微信图片_20210623084409.png" src="/__local/7/35/C4/2DAB8F4DC01B9FBA1793D7C7DD4_09B253B5_1C6A8.png?e=.png" vwidth="" vheight="" vurl="/_vsl/735C42DAB8F4DC01B9FBA1793D7C7DD4/09B253B5/1C6A8?e=.png" vsbhref="vurl" orisrc="/__local/7/35/C4/2DAB8F4DC01B9FBA1793D7C7DD4_09B253B5_1C6A8.png?e=.png" class="img_vsb_content"></p><p class="vsbcontent_img"><img alt="" src="/__local/C/52/29/E5333D325FC1124B96147E2CDF4_3B3754BF_24CF.jpg?e=.jpg" vwidth="" vheight="" vurl="/_vsl/C5229E5333D325FC1124B96147E2CDF4/3B3754BF/24CF?e=.jpg" vsbhref="vurl" orisrc="/__local/C/52/29/E5333D325FC1124B96147E2CDF4_3B3754BF_24CF.jpg" class="img_vsb_content"></p><p style="text-align: center;"><strong>扫描二维码关注我们</strong></p><p style="text-align: center;">武汉大学社会保障研究中心公众号</p><p class="vsbcontent_end" style="text-align: center;">“武大CSSS”</p></div></div>
+    <span id="vsb_content_4_1031_u10" name="vsb_content_4_1031_u10"></span><br><br>
+    
+<p></p>
+</div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfloat"></div>
+    
+        <div class="bottom">
+        <div class="middle">
+            <div class="db_left">
+                <h3>
+<img src="../../dfiles/11304/public/upfile/article/201906241650588429.jpg"></h3>
+                <h4>微信公众号</h4>
+            </div>
+            <div class="db_cen">
+                <h2><img src="../../dfiles/11304/themes/default/images/f_logo.png"></h2>
+                <ul><li><a href="../../">首页</a></li>
+<li><a href="../zxgk.htm">中心概况</a></li>
+<li><a href="../jgsz.htm">机构设置</a></li>
+<li><a href="../../pic.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1191">学术队伍</a></li>
+<li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1011">科学研究</a></li>
+<li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1251">人才培养</a></li>
+<li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1321">智库建设</a></li>
+<li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1331">合作交流</a></li>
+<li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1341">出版刊物</a></li>
+<li><a href="../../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1351">媒体聚焦</a></li>
+</ul>
+            </div>
+            <div class="db_right">
+                <div class="gb_resLay">
+                    <div class="bdsharebuttonbox">
+                        <ul class="gb_resItms">
+                            <li><a href="mailto:csss@whu.edu.cn" class="bds_yx"></a><h3>官方邮箱</h3></li>
+                            <li><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a><h3>微信分享</h3></li>
+                            <li><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><h3>微博分享</h3> </li>
+                            <li><a title="分享到QQ好友" href="#" class="bds_sqq" data-cmd="sqq"></a><h3>QQ分享</h3></li>
+                            <li><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><h3>空间分享 </h3></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfloat"></div>
+    <div class="footer">
+        <div class="middle">
+        <p><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+</p><p>主办单位：武汉大学社会保障研究中心&nbsp;<a href="http://www.beian.miit.gov.cn/" target="_blank">鄂ICP备05003330号-1</a> 地址：湖北省武汉市武昌区八一路299号 邮编：430072 电话：027-68752238/027-68755887 邮箱：csss@whu.edu.cn</p><p></p>
+        </div>
+    </div>  
+</div>
+<div class=" clearfloat"></div>
+<div class="xf">
+    <ul>
+        <!--<li class="xf01">
+            <div class="xf_wx"><img src="/dfiles/11304/public/upfile/article/201906241650588429.jpg" alt="" /></div>
+        </li>
+        <li class="xf02">
+            <form action="/index.php/Index/search.html">
+                <button type="submit"></button>
+                <input placeholder="请输入关键词搜索" name="kws" />
+            </form>
+        </li>-->
+        <li class="xf03"><a href="#"></a></li>
+    </ul>
+</div>
+
+
+
+</div></body></html>

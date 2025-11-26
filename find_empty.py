@@ -2,14 +2,13 @@ from asyncio.windows_events import NULL
 from src.config import PROJECT_ROOT
 from urllib.parse import urljoin
 input_dir = PROJECT_ROOT / "data" / "input"
+import os
 if __name__ == "__main__":
     # Load school websites from JSON file
     import json
     chinese_schools_path = input_dir / "top500_school_websites.json"
     with open(chinese_schools_path, 'r', encoding='utf-8') as f:
         schools_data = json.load(f)
-    school_urls = {school['school']: school['website'] for school in schools_data}
-
     input_dir = PROJECT_ROOT / "data" / "output"
     empty_count = 0
     empty_list = []
@@ -19,15 +18,24 @@ if __name__ == "__main__":
     以下被注释的部分为URL拼接功能
     """
     spliced_list = []
-
     for school in schools_data:
         university_name = school['school']
         school_website = school['website']
+        rank = school['rank']
+        path = input_dir / f"{rank}_{university_name}_schools_result.json"
         matching_files = list(input_dir.glob(f"*_{university_name}_schools_result.json"))
         if not matching_files:
-            #print(f" {university_name} json文件不存在")
-            lost_count += 1
-            lost_list.append(json_path)
+            # #print(f" {university_name} json文件不存在")
+            # lost_count += 1
+            # # 指定路径（请修改为您想要的路径）
+            # path = input_dir / f"{rank}_{university_name}_schools_result.json"
+
+            # # 创建空文件
+            # with open(path, 'w') as file:
+            #     file.write('')
+
+            # print(f"已创建空JSON文件: {path}")
+            # lost_list.append(path)
             continue
         if len(matching_files) > 1:
             print(f" {university_name} 存在多个json文件，使用第一个: {matching_files[0]}")
@@ -35,7 +43,11 @@ if __name__ == "__main__":
         json_path = matching_files[0]
 
         with open(json_path, 'r', encoding='utf-8') as f:
-            colleges = json.load(f)
+            try:
+                colleges = json.load(f)
+            except json.JSONDecodeError:
+                print(f" 无法解析 {json_path}，跳过")
+                continue
             if len(colleges) == 0:
                 # print(f" {university_name} 没有学院信息: {json_path}")
                 empty_count += 1
@@ -68,6 +80,7 @@ if __name__ == "__main__":
     print(f"{lost_count}个学校json文件不存在:")
     for item in lost_list:
         print(item)
+
     # print("进行了拼接的学校和学院:")
     # for item in spliced_list:
     #     print(item)

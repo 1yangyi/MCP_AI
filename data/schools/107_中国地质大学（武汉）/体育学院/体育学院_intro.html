@@ -1,0 +1,741 @@
+<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>学院介绍-中国地质大学（武汉）体育学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院介绍">
+<meta name="keywords" content="体育学院">
+
+        
+        <meta name="description" content="">
+        <link href="../dfiles/10694/templets/default/css/style.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="../dfiles/10694/templets/default/css/jquery.min.js"></script>
+        <script src="../dfiles/10694/templets/default/css/responsiveslides.min.js"></script>
+        <script src="../dfiles/10694/templets/default/css/dtqh.js"></script>
+        <script src="../dfiles/10694/templets/default/css/slide.js"></script>
+<script type="text/javascript" src="../dfiles/10694/templets/default/css/counter.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475250545742000400004f55 -->
+<link rel="stylesheet" type="text/css" href="../danye.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1014,'/danye.jsp',-1,1507380546)</script>
+</head>
+
+    <body>
+        <div class="wrapper" id="header">
+            <div class="inner">
+                <div class="logo">
+                    
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="113-体育学院"><img src="../images/cugtylogo.png" width="627" height="74" border="0" alt="113-体育学院" title="113-体育学院"></a>
+                    <div class="logo-r clearfix">
+                        <div class="js"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><a title="" href="http://www.cug.edu.cn/" target="_blank">学校主页</a>
+
+<a title="" href="http://ty.cug.edu.cn/xygk/xyjs.htm" target="_blank">中国登山户外运动学院</a>
+
+</div>
+                        <div class="ss">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2">
+    <div id="appu2"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="ssk"> <input name="submit_button" type="button" value="" class="ss_btn"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="ssk" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="ss_btn" name="submit_button" type="button" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1507380546";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                    </div>
+                </div>
+                <!--汉堡包-->
+                <div class="navBtns"></div>
+
+            </div>
+        </div>
+        <div class="wrapper" id="nav">
+            <div class="inner">
+               <div class="nav"><ul class="navList">
+            <li>
+            <a href="../index.htm">首页</a>
+        </li>
+        <i>|</i>
+        
+        <li>
+            <a href="../xygk.htm">学院概况</a>
+                <ul class="subnav">
+
+                        <li>
+                            <a href="xyjs.htm">学院介绍</a>
+                        </li>
+
+                        <li>
+                            <a href="jgsz.htm">机构设置</a>
+                        </li>
+
+                        <li>
+                            <a href="xrld.htm">现任领导</a>
+                        </li>
+
+                        <li>
+                            <a href="jsdw.htm">教师队伍</a>
+                        </li>
+
+                        <li>
+                            <a href="tywh.htm">体育文化</a>
+                        </li>
+                </ul>
+        </li>
+        <i>|</i>
+        
+        <li>
+            <a href="../xwzx.htm">新闻中心</a>
+                <ul class="subnav">
+
+                        <li>
+                            <a href="../xwzx/xyxw.htm">学院新闻</a>
+                        </li>
+
+                        <li>
+                            <a href="../xwzx/tzgg.htm">通知公告</a>
+                        </li>
+                </ul>
+        </li>
+        <i>|</i>
+        
+        <li>
+            <a href="../djgz.htm">党建工作</a>
+                <ul class="subnav">
+
+                        <li>
+                            <a href="../djgz/llxx.htm">理论学习</a>
+                        </li>
+
+                        <li>
+                            <a href="../djgz/dxgz.htm">党校工作</a>
+                        </li>
+
+                        <li>
+                            <a href="../djgz/zbhd.htm">支部活动</a>
+                        </li>
+                </ul>
+        </li>
+        <i>|</i>
+        
+        <li>
+            <a href="../xkjs.htm">学科建设</a>
+                <ul class="subnav">
+
+                        <li>
+                            <a href="../xkjs/xkjs.htm">学科介绍</a>
+                        </li>
+
+                        <li>
+                            <a href="../xkjs/kxyj.htm">科学研究</a>
+                        </li>
+
+                        <li>
+                            <a href="../xkjs/xsjl.htm">学术交流</a>
+                        </li>
+                </ul>
+        </li>
+        <i>|</i>
+        
+        <li>
+            <a href="../rcpy.htm">人才培养</a>
+                <ul class="subnav">
+
+                        <li>
+                            <a href="../rcpy/bkspy.htm">本科生培养</a>
+                        </li>
+
+                        <li>
+                            <a href="../rcpy/yjspy.htm">研究生培养</a>
+                        </li>
+
+                        <li>
+                            <a href="../rcpy/jycg.htm">教研成果</a>
+                        </li>
+
+                        <li>
+                            <a href="../rcpy/sxsj.htm">实习实践</a>
+                        </li>
+                </ul>
+        </li>
+        <i>|</i>
+        
+        <li>
+            <a href="../xsgz.htm">学生工作</a>
+                <ul class="subnav">
+
+                        <li>
+                            <a href="../xsgz/jycy.htm">就业创业</a>
+                        </li>
+
+                        <li>
+                            <a href="../xsgz/btjs.htm">班团建设</a>
+                        </li>
+
+                        <li>
+                            <a href="../xsgz/xshd.htm">学生活动</a>
+                        </li>
+
+                        <li>
+                            <a href="../xsgz/jzqk.htm">奖助情况</a>
+                        </li>
+                </ul>
+        </li>
+        <i>|</i>
+        
+        <li>
+            <a href="../tsty.htm">特色体育</a>
+                <ul class="subnav">
+
+                        <li>
+                            <a href="../tsty/dsyd.htm">登山运动</a>
+                        </li>
+
+                        <li>
+                            <a href="../tsty/ywsc.htm">野外生存</a>
+                        </li>
+
+                        <li>
+                            <a href="../tsty/sdhw.htm">山地户外</a>
+                        </li>
+
+                        <li>
+                            <a href="../tsty/ssyd.htm">水上运动</a>
+                        </li>
+
+                        <li>
+                            <a href="../tsty/hkyd.htm">航空运动</a>
+                        </li>
+                </ul>
+        </li>
+        <i>|</i>
+        
+        <li>
+            <a href="../dxty.htm">大学体育</a>
+                <ul class="subnav">
+
+                        <li>
+                            <a href="../dxty/jjty.htm">竞技体育</a>
+                        </li>
+
+                        <li>
+                            <a href="../dxty/qzty.htm">群众体育</a>
+                        </li>
+
+                        <li>
+                            <a href="../dxty/tyst.htm">体育社团</a>
+                        </li>
+
+                        <li>
+                            <a href="../dxty/tzcs.htm">体质测试</a>
+                        </li>
+                </ul>
+        </li>
+        <i>|</i>
+        
+        <li>
+            <a href="../gjjl.htm">国际交流</a>
+        </li>
+        <i>|</i>
+        
+        <li>
+            <a href="../shfw.htm">社会服务</a>
+                <ul class="subnav">
+
+                        <li>
+                            <a href="../shfw/cgjd.htm">场馆基地</a>
+                        </li>
+
+                        <li>
+                            <a href="../shfw/pxxm.htm">培训项目</a>
+                        </li>
+
+                        <li>
+                            <a href="../shfw/ghzx.htm">规划咨询</a>
+                        </li>
+
+                        <li>
+                            <a href="http://gymwx.cug.edu.cn/gisdzdx/index.html">拓展基地</a>
+                        </li>
+                </ul>
+        </li>
+        <i>|</i>
+        
+        <li>
+            <a href="../ghgz.htm">工会工作</a>
+                <ul class="subnav">
+
+                        <li>
+                            <a href="../ghgz/zgqy.htm">职工权益</a>
+                        </li>
+
+                        <li>
+                            <a href="../ghgz/ghhd.htm">工会活动</a>
+                        </li>
+                </ul>
+        </li>
+        <i>|</i>
+        
+        <li>
+            <a href="../xygz.htm">校友工作</a>
+        </li>
+        <i>|</i>
+        
+        <li>
+            <a href="../fxljy.htm">非学历教育</a>
+        </li>
+        <i>|</i>
+        
+        <li>
+            <a href="../zlxz.htm">资料下载</a>
+        </li>
+        
+</ul></div>
+            </div>
+        </div>
+
+        <!--xiang yin shi dao hang-->
+        <div class="welcome" style="display:none">
+            <div class="welBox">
+                <ul class="welList">
+                
+    <li class="selAct2s"><a href="../">首页</a></li>
+<li class="selAct2s">
+         <a href="javascript:;">学院概况</a>
+<dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=46">学院介绍</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=5">机构设置</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=4">现任领导</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=2">教师队伍</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=70">体育文化</a>
+             </dd>                                                     
+          </dl>
+</li><li class="selAct2s">
+         <a href="javascript:;">新闻中心</a>
+<dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=7">学院新闻</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=8">通知公告</a>
+             </dd>                                                     
+          </dl>
+</li><li class="selAct2s">
+         <a href="javascript:;">党建工作</a>
+<dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=35">理论学习</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=36">党校工作</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=50">支部活动</a>
+             </dd>                                                     
+          </dl>
+</li><li class="selAct2s">
+         <a href="javascript:;">学科建设</a>
+<dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=15">学科介绍</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=17">科学研究</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=49">学术交流</a>
+             </dd>                                                     
+          </dl>
+</li><li class="selAct2s">
+         <a href="javascript:;">人才培养</a>
+<dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=12">本科生培养</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=13">研究生培养</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=47">教研成果</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=48">实习实践</a>
+             </dd>                                                     
+          </dl>
+</li><li class="selAct2s">
+         <a href="javascript:;">学生工作</a>
+<dl class="comeList">
+             <dd>
+                 <a href="../html/xueshenggongzuo/jiuyechuangye">就业创业</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=53">班团建设</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=54">学生活动</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=56">奖助情况</a>
+             </dd>                                                     
+          </dl>
+</li><li class="selAct2s">
+         <a href="javascript:;">特色体育</a>
+<dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=30">登山运动</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=32">野外生存</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=31">山地户外</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=66">水上运动</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=67">航空运动</a>
+             </dd>                                                     
+          </dl>
+</li><li class="selAct2s">
+         <a href="javascript:;">大学体育</a>
+<dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=24">竞技体育</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=25">群众体育</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=51">体育社团</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=68">体质测试</a>
+             </dd>                                                     
+          </dl>
+</li><li class="selAct2s">
+         <a href="javascript:;">国际交流</a>
+
+</li><li class="selAct2s">
+         <a href="javascript:;">社会服务</a>
+<dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=27">场馆基地</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=28">培训项目</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=69">规划咨询</a>
+             </dd>                                                     
+          </dl>
+</li><li class="selAct2s">
+         <a href="javascript:;">工会工作</a>
+<dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=38">职工权益</a>
+             </dd>                                                     
+          </dl><dl class="comeList">
+             <dd>
+                 <a href="../plus/list.php?tid=39">工会活动</a>
+             </dd>                                                     
+          </dl>
+</li><li class="selAct2s">
+         <a href="javascript:;">资料下载</a>
+
+</li>
+</ul>
+            </div>
+        </div>
+        
+        <div class="wrapper" id="container">
+            <div class="inner">
+                <div class="col">
+<div class="col-menu">
+ <span class="col-menu-head">
+学院概况</span>
+    <div class="col-menu-con">
+        <ul class="submain listcolumn">
+                
+             <li class="col-item column column-1"><a href="xyjs.htm" title="学院介绍" class="col-item-link">学院介绍</a></li>
+
+             <li class="col-item column column-1"><a href="jgsz.htm" title="机构设置" class="col-item-link">机构设置</a></li>
+
+             <li class="col-item column column-1"><a href="xrld.htm" title="现任领导" class="col-item-link">现任领导</a></li>
+
+             <li class="col-item column column-1"><a href="jsdw.htm" title="教师队伍" class="col-item-link">教师队伍</a></li>
+
+             <li class="col-item column column-1"><a href="tywh.htm" title="体育文化" class="col-item-link">体育文化</a></li>
+           
+       </ul>
+</div>
+</div>
+
+                    <div class="col-news">
+                        <div class="col-news-head">
+                            <span class="col-title">
+学院介绍</span>
+                <div class="col-path"><a class="path-name">当前位置：</a>
+        <a href="../index.htm" target="_self">首页</a>
+        <a>&gt;</a>
+        <a href="../xygk.htm" target="_self">学院概况</a>
+        <a>&gt;</a>
+        <a href="xyjs.htm" target="_self">学院介绍</a>
+</div>
+                            <div class="clear"></div>
+                        </div>
+                        
+                        <div class="col-news-con">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1507380546,'wbnews','u8')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format501.css"><script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1507380546,1405)</script>
+<div class="read">
+<div id="vsb_content_501_1405_u81"><div id="vsb_content_501"><div>
+ <p style="text-align: center;"><br></p>
+ <p><br></p>
+ <p style="text-align: center;"><script name="_videourl" vurl="/__local/7/FB/2F/21E624D50BE6A78F46F17FF9479_2452E47F_1762E14.mp4?e=.mp4" vwidth="420" vheight="280" rand="null" align="" vsbhrefname="vurl" style="float: none">showVsbVideo("/__local/7/FB/2F/21E624D50BE6A78F46F17FF9479_2452E47F_1762E14.mp4?e=.mp4","height=\"280\"","width=\"420\"","","float: none","false");</script><video controlslist="nodownload" controls="" id="_vsb_player" style="background-color:#474747;float: none" align="" width="420" height="280"><source src="/__local/7/FB/2F/21E624D50BE6A78F46F17FF9479_2452E47F_1762E14.mp4?e=.mp4" type="video/mp4"></video> </p>
+</div>
+<div>
+ <p style="text-align: center;"><br></p>
+</div>
+<p class="vsbcontent_start"><span style="font-size: 16px;">习近平总书记在党的十九大报告中，提出了健康中国、全民健身的国家战略，中国已经开启体育强国建设的新征程。</span></p>
+<p><span style="font-size: 16px;"></span></p>
+<p style="line-height: 32px; text-indent: 32px;"><span style="font-family: 宋体; font-size: 16px;">中国地质大学（武汉）是一所具有优良体育传统和雄厚体育基础的大学，被誉为中国登山户外运动的“黄埔军校”，著名登山家王富洲、李致新、王勇峰就是从这里毕业。2018年11月16日，学校为了适应新时代人才培养和学科发展的需要，更好地服务经济社会发展和健康中国战略，在原体育部基础上成立了体育学院，同时与中国登山协会签订合作协议共建中国登山户外运动学院。这是学校在“双一流”建设征程中，瞄准国家战略、聚焦人才培养、激发学科动能的重大举措。</span></p>
+<p style="line-height: 32px; text-indent: 32px;"><span style="font-family: 宋体; font-size: 16px;">体育学院坚持弘扬体育传统与健全人格培养相融合，坚持群众体育与竞技体育相融合，坚持登山运动与地球科学相融合，逐步形成了“追求卓越、勇攀高峰”的校园体育文化、特色鲜明的体育教育体系和登山户外人才培养体系。“地大体育”已经成为学校一张靓丽的名片。</span></p>
+<p style="line-height: 32px; text-indent: 32px;"><strong><span style="font-family: 宋体; font-size: 16px;">办学目标</span></strong></p>
+<p style="line-height: 32px; text-indent: 32px;"><span style="font-family: 宋体; font-size: 16px;">体育学院以创建国际知名国内一流的专门运动学院为目标，逐步构建完善中国登山户外运动的完整理论体系和高层次人才培养体系，为促进中国登山户外运动健康快速发展提供支撑。</span></p>
+<p style="line-height: 32px; text-indent: 32px;"><strong><span style="font-family: 宋体; font-size: 16px;">发展历程</span></strong></p>
+<p style="line-height: 32px; text-indent: 32px;"><span style="font-family: 宋体; font-size: 16px;">1952</span><span style="font-family: 宋体; font-size: 16px;">年建校时成立体育教研室，1985年更名为体育部，2005年创办全国首个户外运动方向本科专业，2007年招收培养体育教育训练学登山户外方向硕士研究生，2014年获批体育硕士专业学位授权点，2018年成立体育学院暨中国登山户外运动学院。</span></p>
+<p style="line-height: 32px; text-indent: 32px;"><strong><span style="font-family: 宋体; font-size: 16px;">师资力量</span></strong></p>
+<p style="line-height: 32px; text-indent: 32px;"><span style="font-family: 宋体; font-size: 16px;">体育学院现有教职工49人、专任教师37人、教授11人、副教授14人、博士11人、在读博士6人。先后获批国家社科基金、教育部人文社科基金、湖北省教育厅社科基金重大项目、国家体育总局研究项目十余项，荣获国家精品课程、湖北省精品课程、湖北省教学成果一等奖、二等奖、三等奖等一批优秀教学研究成果。学院采取“引进高层次人才”和“支持年轻教师在职攻读博士”相结合的方式加强师资队伍建设，一批素质优良、经验丰富的体育教师和教练员队伍为学院发展奠定了坚实的基础。</span></p>
+<p style="line-height: 32px; text-indent: 32px;"><strong><span style="font-family: 宋体; font-size: 16px;">人才培养</span></strong></p>
+<p style="line-height: 32px; text-indent: 32px;"><span style="font-family: 宋体; font-size: 16px;">竞技体育成绩斐然，学院自1981年创办高水平运动队以来，在国际国内重大比赛中累计获得金牌200余枚，银铜牌400余枚，6次夺得全国学生运动会“校长杯”。群众体育蓬勃发展，学校3次荣获“全国群众体育工作先进单位”，2019年全校本科生体质健康测试合格率提升至91.2%，实现学校“十三五”规划目标。</span></p>
+<p style="line-height: 32px; text-indent: 32px;"><span style="font-family: 宋体; font-size: 16px;">学院依托学校地球科学优势，大力开展登山、攀岩等特色体育项目。2016年12月25日，地大登山队完成“7+2”登山科考任务，即成功登顶七大洲最高峰和徒步穿越南、北极点，成为世界首支完成这一壮举的大学登山队。2017年，梁荣琪、牛笛分别获得全国运动会攀岩速度赛男女冠军；2018年，他们在亚运会攀岩项目上为中国队获得银、铜牌各1枚。近年来，随着潜水、滑翔伞等水上、航空运动的“加盟”，地大户外运动规模不断壮大。</span></p>
+<p style="line-height: 32px; text-indent: 32px;"><span style="font-family: 宋体; font-size: 16px;">在体育学科建设上，学院坚持以户外运动理论与实践为主要方向，创建了具有地大鲜明特色的“登山户外国内一流，多领域协同发展”的二级学科学位点。学院已经建成昆山、神农架、湛江、黄石等产学研基地以及分布全国的就业实习基地40余家，与中国登山协会、万科、万达、深圳登协等知名企事业单位达成合作协议。此外，与多地政府、行业协会和企业在“政策制定、赛事培训、资源规划、标准制定”等方面进行合作，取得良好的社会效果。</span></p>
+<p style="line-height: 32px; text-indent: 32px;"><span style="font-family: 宋体; font-size: 16px;">培养的毕业生深受社会用人单位欢迎，近5年均保持较高就业率，2019年本科生升学率达46.67%。其中次落、陈晨分别成为我国第一位登顶珠峰的在校男、女大学生；多名学生获得“全国大学生年度人物”、“国家体育荣誉奖章”等称号。学院学生联合党支部在学生思想引领、专业学习、志愿服务、社会实践、就业创业和体育文化建设等方面发挥战斗堡垒作用，引领学校学生在国内外重大赛事活动中顽强拼搏、勇创佳绩，彰显登山精神和体育育人价值，形成了“本研一体、七级联动”链条式的学生党建工作常态化、长效化机制，成功入选第二批“全国党建工作样板支部”培育创建单位。</span></p>
+<p style="line-height: 32px; text-indent: 32px;"><strong><span style="font-family: 宋体; font-size: 16px;">国际交流</span></strong></p>
+<p style="line-height: 32px; text-indent: 32px;"><span style="font-family: 宋体; font-size: 16px;">体育学院先后与俄罗斯、日本、韩国等10余个国家和地区的运动员，联合开展登山、攀岩、羽毛球等项目的训练、交流和比赛。积极支持本科生、研究生参与国际交流活动，拓展学生国际视野，已经成功组织全球“7+2”登山科考、中日联合登山科考、中日韩大学生登山交流考察等多项活动。</span></p>
+<p><span style="font-size: 16px;"></span><br></p>
+<p class="vsbcontent_end"><span style="font-size: 16px;"></span></p>
+<div>
+ <p style="text-align: center;"><img width="500" alt="1FDF0" src="/__local/4/E0/2A/7FBB60C41500E4D3BE8601D0BF4_ED12CD76_1FDF0.jpg" vwidth="500" vheight="" vurl="/_vsl/4E02A7FBB60C41500E4D3BE8601D0BF4/ED12CD76/1FDF0" vsbhref="vurl" orisrc="/__local/4/E0/2A/7FBB60C41500E4D3BE8601D0BF4_ED12CD76_1FDF0.jpg" class="img_vsb_content"></p>
+</div>
+<p class="vsbcontent_end"><span style="font-size: 16px;"></span><br></p></div></div>
+</div>
+</div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+ <div class="wrapper" id="footer">
+            <div class="inner"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<div class="foot"><p class="copyright">电话/传真：86-27-67883185 Email：tybb@cug.edu.cn&nbsp;地址：中国 湖北 武汉市洪山区鲁磨路388号 邮编：430074<br>中国地质大学(武汉) 体育学院 版权所有</p></div></div>
+        </div>
+    
+    <script type="text/javascript">
+        $('.mod6r .w1').hover(function() {
+            $('#pic1').stop(true, true).fadeIn(200);
+        }, function() {
+            $('#pic1').stop(true, true).fadeOut(200);
+        })
+
+        $('.mod6r .w2').hover(function() {
+            $('#pic2').stop(true, true).fadeIn(200);
+        }, function() {
+            $('#pic2').stop(true, true).fadeOut(200);
+        })
+
+        $('.welList li').click(function(ev) {
+            ev.stopPropagation();
+            var isTrue = $(this).is('.on');
+
+            if(isTrue) {
+                $(this).find('dl').slideUp();
+                //$(this).find('i').removeClass('jt_2');
+                $(this).removeClass('on');
+            } else {
+                $(this).find('dl').slideDown();
+                //$(this).find('i').addClass('jt_2');
+                $(this).addClass('on');
+            }
+            $(this).siblings().removeClass('on');
+            $(this).siblings().find('dl').slideUp();
+        });
+
+        $(document).click(function() {
+            $('welList li').find('dl').slideUp();
+            $('welList li').removeClass('on');
+        })
+
+        //xin zeng an niu  js
+        var onOff = true;
+        $('.navBtns').click(function() {
+
+            if(onOff) {
+
+                $(this).css('transform', 'rotate(-90deg)')
+                $('.welcome').slideDown(600);
+
+            } else {
+                $(this).css('transform', 'rotate(0deg)')
+                $('.welcome').slideUp(600);
+
+            }
+            onOff = !onOff;
+
+        });
+    </script>
+
+
+</body></html>

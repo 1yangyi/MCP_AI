@@ -1,0 +1,762 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>学院简介-武汉大学马克思主义学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+
+
+<meta name="SiteName" content="武汉大学马克思主义学院">
+<meta name="SiteDomain" content="marx.whu.edu.cn">
+<meta name="ColumnName" content="学院简介">
+<meta name="ColumnKeywords" content="学院简介">
+
+<link rel="stylesheet" href="../dfiles/6150/wdmarx/css/swiper.css" type="text/css">
+<link rel="stylesheet" href="../dfiles/6150/wdmarx/css/animate.min.css" type="text/css">
+<link rel="stylesheet" href="../dfiles/6150/wdmarx/css/style.css" type="text/css">
+<link rel="stylesheet" href="../dfiles/6150/wdmarx/css/nycss.css" type="text/css">
+<script src="../dfiles/6150/wdmarx/js/jquery1.42.min.js"></script>
+<script src="../dfiles/6150/wdmarx/js/swiper.min.js"></script>
+<script src="../dfiles/6150/wdmarx/js/swiper.animate1.0.2.min.js"></script>
+<script src="../dfiles/6150/wdmarx/js/jquery.superslide.2.1.js"></script>
+<script src="../dfiles/6150/wdmarx/js/wow.min.js" type="text/javascript"></script>
+<script>
+    new WOW().init(0);
+</script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1071,'/about.jsp',-1,1947622398)</script>
+</head><body>
+<div class="content">
+ 
+ 
+ <div class="header">
+    <div class="headerbox">
+        <h1 class="logo"><a href="../index.htm"><img src="../dfiles/6150/wdmarx/images/logo1.png" class="c1"><img src="../dfiles/6150/wdmarx/images/logo2.png" class="c2"></a></h1>
+        
+        <div class="header_r">
+            <div class="top">
+                <div class="ssbtn">
+                
+                 <p></p>
+                 
+                    <div class="ssbox">
+                     
+                        
+                        
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu0">
+    <div id="appu0"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="wby3"> <button type="button" value="" class="btn3"></button></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+        
+            <input type="text" class="wby3" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+             <button  type="button" value="" v-on:click="onSubmit()" class="btn3"></button>
+
+ 
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+        
+        
+ 
+                        
+                        
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1947622398";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                <!--<div class="yznr">
+                    <p><img src="dfiles/6150/wdmarx/images/a_03.png" />EN</p>
+                    <ul>
+                        <li><a href="">EN</a></li>
+                        <li><a href="">简体中文</a></li>
+                    </ul>
+                </div> -->
+                
+                
+          <script src="../dfiles/6150/wdmarx/js/jquery1.42.min.js"></script>
+<script src="../dfiles/6150/wdmarx/js/swiper.min.js"></script>
+<script src="../dfiles/6150/wdmarx/js/swiper.animate1.0.2.min.js"></script>
+<script src="../dfiles/6150/wdmarx/js/jquery.superslide.2.1.js"></script>
+<script src="../dfiles/6150/wdmarx/js/wow.min.js" type="text/javascript"></script>
+                
+                <div class="topnav">
+                    <ul>
+                    
+                    
+                        <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>  <li><a href="http://www.whu.edu.cn/" target="_blank" title="">武汉大学</a>|</li>
+  <li><a href="mailto:mydzb@whu.edu.cn" title="">学院邮箱</a>|</li>
+  <li><a href="http://115.156.84.156" target="_blank" title="">AI工作台</a></li>
+
+
+                         
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="dhbtn"></div>
+            <div class="nav">
+                <ul>
+                
+                
+                          
+                    
+                   <li class="m">
+                     
+                      <h3><a href="../index.htm" title="首页" target="_blank">首页</a></h3>
+                      
+                                               
+                        
+                        
+                    </li>
+
+      
+                    
+                   <li class="m on">
+                     
+                      <h3><a href="xyjj.htm" title="学院概况" target="_blank">学院概况<b></b></a></h3>
+                      
+                      
+                              <div class="sub">
+                            <dl>
+                            
+                              
+                                <dt><a href="xyjj.htm" title="学院简介">学院简介</a></dt>
+                              
+                              
+                                <dt><a href="xrld.htm" title="现任领导">现任领导</a></dt>
+                              
+                              
+                                <dt><a href="zzjg/xsjgjfzr.htm" title="组织机构">组织机构</a></dt>
+                              
+                              
+                                <dt><a href="lsyg.htm" title="历史沿革">历史沿革</a></dt>
+                              
+                              
+                                <dt><a href="lrfzr.htm" title="历任负责人">历任负责人</a></dt>
+                              
+                              
+                                <dt><a href="daohang/dlwz.htm" title="学院导航">学院导航</a></dt>
+                              
+                              
+                                
+                                
+                            </dl>
+                        </div>            
+                      
+                                               
+                        
+                        
+                    </li>
+
+      
+                    
+                   <li class="m">
+                     
+                      <h3><a href="../teacher/mkszyjbllx.htm" title="师资团队" target="_blank">师资团队<b></b></a></h3>
+                      
+                      
+                              <div class="sub">
+                            <dl>
+                            
+                              
+                                <dt><a href="../teacher/mkszyjbllx.htm" title="马克思主义基本理论系">马克思主义基本理论系</a></dt>
+                              
+                              
+                                <dt><a href="../teacher/zgdsdjx.htm" title="中共党史党建系">中共党史党建系</a></dt>
+                              
+                              
+                                <dt><a href="../teacher/mkszyzghx.htm" title="马克思主义中国化系">马克思主义中国化系</a></dt>
+                              
+                              
+                                <dt><a href="../teacher/sxzzjyx.htm" title="思想政治教育系">思想政治教育系</a></dt>
+                              
+                              
+                                <dt><a href="../teacher/syzx.htm" title="实验中心">实验中心</a></dt>
+                              
+                              
+                                <dt><a href="../teacher/rxjs.htm" title="荣休教师">荣休教师</a></dt>
+                              
+                              
+                                
+                                
+                            </dl>
+                        </div>            
+                      
+                                               
+                        
+                        
+                    </li>
+
+      
+                    
+                   <li class="m">
+                     
+                      <h3><a href="../xuekejs/xkdsj.htm" title="学科建设" target="_blank">学科建设<b></b></a></h3>
+                      
+                      
+                              <div class="sub">
+                            <dl>
+                            
+                              
+                                <dt><a href="../xuekejs/xkdsj.htm" title="学科大事记">学科大事记</a></dt>
+                              
+                              
+                                <dt><a href="../xuekejs/xspt.htm" title="学术平台">学术平台</a></dt>
+                              
+                              
+                                <dt><a href="../xuekejs/xscg.htm" title="学术成果">学术成果</a></dt>
+                              
+                              
+                                <dt><a href="../xuekejs/xshd.htm" title="学术活动">学术活动</a></dt>
+                              
+                              
+                                <dt><a href="../xuekejs/xskw.htm" title="学术刊物">学术刊物</a></dt>
+                              
+                              
+                                <dt><a href="../xuekejs/gdtj.htm" title="观点推介">观点推介</a></dt>
+                              
+                              
+                                
+                                
+                            </dl>
+                        </div>            
+                      
+                                               
+                        
+                        
+                    </li>
+
+      
+                    
+                   <li class="m">
+                     
+                      <h3><a href="../rcpy.htm" title="人才培养" target="_blank">人才培养<b></b></a></h3>
+                      
+                      
+                              <div class="sub">
+                            <dl>
+                            
+                              
+                                <dt><a href="../rcpy/dszk.htm" title="大思政课">大思政课</a></dt>
+                              
+                              
+                                <dt><a href="../rcpy/bksjx.htm" title="本科生教学">本科生教学</a></dt>
+                              
+                              
+                                <dt><a href="../rcpy/yjsjx.htm" title="研究生教学">研究生教学</a></dt>
+                              
+                              
+                                <dt><a href="../rcpy/bksgz.htm" title="本科生工作">本科生工作</a></dt>
+                              
+                              
+                                <dt><a href="../rcpy/yjsgz.htm" title="研究生工作">研究生工作</a></dt>
+                              
+                              
+                                
+                                
+                            </dl>
+                        </div>            
+                      
+                                               
+                        
+                        
+                    </li>
+
+      
+                    
+                   <li class="m">
+                     
+                      <h3><a href="../dqgz.htm" title="党群工作" target="_blank">党群工作<b></b></a></h3>
+                      
+                      
+                              <div class="sub">
+                            <dl>
+                            
+                              
+                                <dt><a href="../djgz/zzjg.htm" target="_blank" title="党建工作">党建工作</a></dt>
+                              
+                              
+                                <dt><a href="../dqgz/ghgz.htm" title="工会工作">工会工作</a></dt>
+                              
+                              
+                                <dt><a href="../dqgz/gqtgz.htm" title="共青团工作">共青团工作</a></dt>
+                              
+                              
+                                <dt><a href="../dqgz/tzgz.htm" title="统战工作">统战工作</a></dt>
+                              
+                              
+                                <dt><a href="../dqgz/ltxgz.htm" title="离退休工作">离退休工作</a></dt>
+                              
+                              
+                                
+                                
+                            </dl>
+                        </div>            
+                      
+                                               
+                        
+                        
+                    </li>
+
+      
+                    
+                   <li class="m">
+                     
+                      <h3><a href="../hzjl.htm" title="合作交流" target="_blank">合作交流<b></b></a></h3>
+                      
+                      
+                              <div class="sub">
+                            <dl>
+                            
+                              
+                                <dt><a href="../hzjl/gnhz.htm" title="国内合作">国内合作</a></dt>
+                              
+                              
+                                <dt><a href="../hzjl/gjjl.htm" title="国际交流">国际交流</a></dt>
+                              
+                              
+                                
+                                
+                            </dl>
+                        </div>            
+                      
+                                               
+                        
+                        
+                    </li>
+
+      
+                    
+                   <li class="m">
+                     
+                      <h3><a href="../yyhome/yyml.htm" title="院友之家" target="_blank">院友之家<b></b></a></h3>
+                      
+                      
+                              <div class="sub">
+                            <dl>
+                            
+                              
+                                <dt><a href="../yyhome/yyml.htm" title="院友名录">院友名录</a></dt>
+                              
+                              
+                                <dt><a href="../yyhome/yyfc.htm" title="院友风采">院友风采</a></dt>
+                              
+                              
+                                <dt><a href="../yyhome/lyhd.htm" title="联谊活动">联谊活动</a></dt>
+                              
+                              
+                                
+                                
+                            </dl>
+                        </div>            
+                      
+                                               
+                        
+                        
+                    </li>
+
+      
+                    
+                   <li class="m">
+                     
+                      <h3><a href="../xxgk.htm" title="信息公开" target="_blank">信息公开</a></h3>
+                      
+                                               
+                        
+                        
+                    </li>
+
+      
+                    
+                   <li class="m">
+                     
+                      <h3><a href="../pxxm.htm" title="培训项目" target="_blank">培训项目</a></h3>
+                      
+                                               
+                        
+                        
+                    </li>
+
+
+            
+         
+            
+            
+            
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+ <div class="nyBanner" style="background-image: url(../dfiles/6150/wdmarx/images/ny-banner.png);"></div>
+  <section id="nav_slide">
+  <div class="n_title"> <a id="bnt_back" href="javascript:history.back(-1);"> <img src="../dfiles/6150/wdmarx/images/icon_bnt_back2.png" alt=""> </a>
+  
+    <h1 class="margin_auto_1">
+学院概况</h1>
+    
+    <div id="bnt_sub_nav"> <img src="../dfiles/6150/wdmarx/images/bnt_sub_nav2.png" alt=""> </div>
+  </div>
+  <div id="sub_nav_content">
+    <ul class="am-list admin-sidebar-list" id="collapase-nav-1">
+    
+    
+       <li class="am-panel on"> <a href="xyjj.htm" title="学院简介">学院简介</a><i>&gt;</i> </li>
+      <li class="am-panel "> <a href="xrld.htm" title="现任领导">现任领导</a><i>&gt;</i> </li>
+      <li class="am-panel "> <a href="zzjg/xsjgjfzr.htm" title="组织机构">组织机构</a><i>&gt;</i> </li>
+      <li class="am-panel "> <a href="lsyg.htm" title="历史沿革">历史沿革</a><i>&gt;</i> </li>
+      <li class="am-panel "> <a href="lrfzr.htm" title="历任负责人">历任负责人</a><i>&gt;</i> </li>
+      <li class="am-panel "> <a href="daohang/dlwz.htm" title="学院导航">学院导航</a><i>&gt;</i> </li>
+
+
+      
+      
+      
+    </ul>
+  </div>
+</section>
+  <div class="nyWrap">
+  <div class="dwpre w1400 clearfix">
+    
+<div class="left_nav fl">
+  <div class="titleny">
+    <h3>
+学院概况</h3>
+     <h4>ABOUT US</h4>
+     
+  </div>
+  <ul class="clearfix">
+  
+        <li class="nLi on"><a href="xyjj.htm" title="学院简介" class="block fz16 on"><span>学院简介</span></a></li>
+      <li class="nLi "><a href="xrld.htm" title="现任领导" class="block fz16 "><span>现任领导</span></a></li>
+      <li class="nLi "><a href="zzjg/xsjgjfzr.htm" title="组织机构" class="block fz16 "><span>组织机构</span></a></li>
+      <li class="nLi "><a href="lsyg.htm" title="历史沿革" class="block fz16 "><span>历史沿革</span></a></li>
+      <li class="nLi "><a href="lrfzr.htm" title="历任负责人" class="block fz16 "><span>历任负责人</span></a></li>
+      <li class="nLi "><a href="daohang/dlwz.htm" title="学院导航" class="block fz16 "><span>学院导航</span></a></li>
+
+    
+    
+  </ul>
+</div>
+
+
+
+
+<script>
+     $(function () {
+                        var idx = $('.left_nav .nLi.on').find('.navSub').stop().slideDown(300);
+                    
+                        $('.left_nav .nLi h3').click(function () {
+                            var _this = $(this);
+                            if ($(_this).parents('.nLi').hasClass('on')) {
+                                $(_this).parents('.nLi').removeClass('on').find('.navSub').stop().slideUp(300);
+                                 $(_this).parents('.nLi').siblings('.nLi').removeClass('on');
+                            } else {
+                                $(_this).parents('.nLi').addClass('on').find('.navSub').stop().slideDown(300);
+                                $(_this).parents('.nLi').siblings('.nLi').removeClass('on');
+                                $(_this).parents('.nLi').siblings('.nLi').find('.navSub').stop().slideUp(300);
+                            }
+                        })
+                    })
+</script> 
+    <div class="nyContent fr">
+      
+<div class="bread clearfix">
+    <h3 class="fl">
+学院简介</h3>
+    
+    <div class="path fr"><div>
+    当前位置: 
+                        <a href="../index.htm">首页</a>
+                &gt;&gt;
+                <a href="xyjj.htm">学院概况</a>
+                &gt;&gt;
+                <a href="xyjj.htm">学院简介</a>
+</div></div>
+    
+    
+</div>
+
+
+<div class="about clearfix">
+       
+       
+       
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1947622398,'wbnews','u10')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1947622398,1001)</script>
+
+    <div id="vsb_content_2_1001_u101"><div id="vsb_content_2"><p class="vsbcontent_start">武汉大学是我国最早研究和传播马克思主义的重要阵地之一。马克思主义理论学科建设历史悠久，底蕴深厚。早在20世纪20年代，陈潭秋、李汉俊、董必武等中共创始人就在武昌高等师范学校、武昌大学、武昌中山大学（均为武汉大学前身）传播马克思主义。20世纪50年代初李达创建马列主义教研室，70年代成立政治理论教研室，80年代设立马列主义理论基础课部。2011年成立马克思主义学院。学院是首批“全国重点马克思主义学院”、首批“全国党建工作标杆院系”、获评“全国教育系统先进集体”。</p><p>学科优势明显。马克思主义理论学科是全国首批建设的世界“双一流”学科，在第三轮全国学科评估中排名第一，在第四轮、第五轮全国学科评估中连续评为A+。拥有全国首批建立的本科、硕士点、博士点、国家重点学科、马克思主义理论一级学科博士点学科。有3个本科专业（含2个国家级一流本科专业）、9个二级学科硕士点、9个二级学科博士点、马克思主义理论一级学科博士后流动站和政治学博士后流动分站。</p><p>师资力量雄厚。现有专任教师109人，其中教授32人，副教授36人。有国家“万人计划”国家教学名师2人、哲学社会科学领军人才1人、青年拔尖人才2人；教育部国家级教学名师2人、“长江学者”特聘教授3人、青年长江学者2人；“马克思主义理论研究和建设工程”首席专家6人，中宣部文化名家暨“四个一批”人才2人；2023年度“荆楚好老师”获得者1人，湖北省“五一”劳动奖章获得者2人，湖北省优秀青年社科人才1人。国务院学位委员会学科评议组召集人1人。教育部高等学校马克思主义理论类专业教学指导委员会副主任委员1人。教育部思想政治理论课教学指导委员会总教指委主任委员1人，教学指导咨询委员会委员1人，分教学指导委员会主任委员、副主任委员、委员等4人。高校思政课教师影响力标兵人物4人、年度人物1人。有1个国家教学团队、1个教育部思政课教学科研文献共享资源库建设团队。</p><p>学术氛围浓厚。学院坚持把当代中国马克思主义研究作为主攻方向，推出大批标志性研究成果。《马克思主义大辞典》填补了国内整体性视角马克思主义理论辞书空白，获第五届中国出版政府奖。《人民最大：中国共产党人的人民观释讲》深入系统地诠释了中国共产党人的人民观，获第五届湖北出版政府奖图书奖。学术成果获国家哲学社会科学成果文库1项，全国精神文明建设“五个一工程”奖1项，教育部人文社会科学研究优秀成果一等奖4项、二等奖7项、三等奖10项、青年成果奖1项，湖北省人文社会科学优秀成果奖一等奖10项。2011年以来，学院教师主持国家社科基金重大项目或教育部哲学社会科学重大课题攻关项目37项，在《中国社会科学》《马克思主义研究》《求是》《哲学研究》等高水平期刊发表论文150余篇，在《人民日报》《光明日报》发表理论文章180余篇，在人民出版社、武汉大学出版社、社会科学文献出版社等重点出版社出版学术著作200余部。</p><p>学术平台齐全。拥有辛亥革命博物院—武汉大学国家革命文物协同研究中心、教育部高校思想政治工作创新发展中心（武汉大学）、马克思主义理论与中国实践湖北省协同创新中心、中共党史和文献研究院武汉大学海外当代中国研究基地、中国统一战线理论研究会“党外知识分子统战工作理论研究基地”、湖北省人文社会科学重点研究基地“武汉大学主流意识形态研究院”、武汉大学中共党史人物研究中心等科研基地和教育部全国高校思政课教师研修基地。主办学术期刊《党史天地》。设文科综合实验教学中心和思政课录播室。</p><p>教学成果丰硕。获得2项高等教育（本科）国家级教学成果一等奖。1个项目入选2023年高校思政课改革创新典型案例。有4门国家精品课程、4门国家级线上一流课程、2门国家级线上线下混合式一流课程，4门慕课获首届中国大学“最美慕课”一等奖。2门湖北省线下一流本科课程、2门湖北省线上一流本科课程。学院教师获“全国高校思政课教学展示活动”特等奖2项，“湖北省高校青年教师教学竞赛”思政组一等奖2项，“湖北省高校思政课教学展示活动”特等奖7项、一等奖5项。推出了“光明理论慕课”、“马上见”融课等全国首创品牌。与校内外30余家单位共建“大思政课实践教学基地”，搭建起一座座互联互通、生机盎然的思政育人立交桥。</p><p>人才培养成效显著。学院优质生源充足，现有本、硕、博学生900余人。连年获评武汉大学“十大书香学院”。积极推行“全员科研”计划。学生团队获“挑战杯”大学生课外学术科技作品竞赛主赛道全国二等奖、湖北省特等奖，分别在第四届、第五届、第六届全国高校大学生微电影展示活动中获特等奖，在全国高校大学生讲思政课公开课展示活动获一等奖。连续三年斩获全国高校马克思主义理论学科优秀博士学位论文奖。涌现出首批“全国高校研究生党员标兵”、教育部第十六届“大学生年度人物”、武汉市“五四青年奖章”获得者等一批优秀学生代表。</p><p>做好社会服务，加强国际交流。学院以服务国家战略为使命，通过多种方式为经济社会发展和主流意识形态建设作出重要贡献。在教育、社会人才培养等领域发挥我院思政人才与资源优势，与相关地区、高校开展思政课建设“手拉手”对口支援，举办讲座、论坛、培训等活动，与地方相关单位共建党建研究中心等。与美、英、法、德、意、俄、日、韩、波兰、比利时、哈萨克斯坦等国家及港澳台地区的大学或研究机构建立了广泛的学术联系。举办国际学术周，每年有多名国（境）外知名学者应邀前来讲学或从事学术研究。学院亦有数十人次师生外出进修或学术交流。</p><p class="vsbcontent_end">（更新时间：2024年3月）</p></div></div>
+    
+    
+     
+  
+
+
+        <div class="aboutScroll">
+          <div class="swiper mySwiper swiper-container-horizontal swiper-container-wp8-horizontal">
+          <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1792px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate" title="武汉大学马克思主义学院" data-swiper-slide-index="5" style="width: 896px;">
+              <div class="pic"><em class="tran500" style="background-image: url(../dfiles/6150/wdmarx/images/about5.jpg)"></em></div>
+              <h5 class="TXTovehid"><span>武汉大学马克思主义学院</span></h5>
+            </div>
+            <div class="swiper-slide swiper-slide-prev" title="武汉大学马克思主义学院" data-swiper-slide-index="0" style="width: 896px;">
+              <div class="pic"><em class="tran500" style="background-image: url(../dfiles/6150/wdmarx/images/about0.jpg)"></em></div>
+              <h5 class="TXTovehid"><span>武汉大学马克思主义学院</span></h5>
+            </div>
+            <div class="swiper-slide swiper-slide-active" title="武汉大学马克思主义学院" data-swiper-slide-index="1" style="width: 896px;">
+              <div class="pic"><em class="tran500" style="background-image: url(../dfiles/6150/wdmarx/images/about1.jpg)"></em></div>
+              <h5 class="TXTovehid"><span>武汉大学马克思主义学院</span></h5>
+            </div>
+            <div class="swiper-slide swiper-slide-next" title="武汉大学马克思主义学院" data-swiper-slide-index="2" style="width: 896px;">
+              <div class="pic"><em class="tran500" style="background-image: url(../dfiles/6150/wdmarx/images/about2.jpg)"></em></div>
+              <h5 class="TXTovehid"><span>武汉大学马克思主义学院</span></h5>
+            </div>
+            <div class="swiper-slide" title="武汉大学马克思主义学院" data-swiper-slide-index="3" style="width: 896px;">
+              <div class="pic"><em class="tran500" style="background-image: url(../dfiles/6150/wdmarx/images/about3.jpg)"></em></div>
+              <h5 class="TXTovehid"><span>武汉大学马克思主义学院</span></h5>
+            </div>
+            <div class="swiper-slide" title="武汉大学马克思主义学院" data-swiper-slide-index="4" style="width: 896px;">
+              <div class="pic"><em class="tran500" style="background-image: url(../dfiles/6150/wdmarx/images/about4.jpg)"></em></div>
+              <h5 class="TXTovehid"><span>武汉大学马克思主义学院</span></h5>
+            </div>
+            <div class="swiper-slide" title="武汉大学马克思主义学院" data-swiper-slide-index="5" style="width: 896px;">
+              <div class="pic"><em class="tran500" style="background-image: url(../dfiles/6150/wdmarx/images/about5.jpg)"></em></div>
+              <h5 class="TXTovehid"><span>武汉大学马克思主义学院</span></h5>
+            </div>
+          <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" title="武汉大学马克思主义学院" data-swiper-slide-index="0" style="width: 896px;">
+              <div class="pic"><em class="tran500" style="background-image: url(../dfiles/6150/wdmarx/images/about0.jpg)"></em></div>
+              <h5 class="TXTovehid"><span>武汉大学马克思主义学院</span></h5>
+            </div></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="footer">
+    <div class="footerbox">
+        <div class="foot_left">
+            <img src="../dfiles/6150/wdmarx/images/a_53.png">
+               
+<p>电话：027-68752880</p>
+<p>地址：武汉大学一校区行政大楼东侧</p>
+        </div>
+        <div class="foot_right">
+            <ul>
+                <li>
+                    <img src="../dfiles/6150/wdmarx/images/a_56.png">
+                    <p>武大马院官微</p>
+                </li>
+                <li>
+                    <img src="../dfiles/6150/wdmarx/images/a_56.png">
+                    <p>马跃珞珈</p>
+                </li>
+                <li>
+                    <img src="../dfiles/6150/wdmarx/images/a_56.png">
+                    <p>珞珈青马研声</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="bqxx">
+         <p>Copyright © 2023 &nbsp;武汉大学马克思主义学院 All Rights Reserved. &nbsp; 版权所有</p>
+    </div>
+</div></div>
+
+
+
+
+<script type="text/javascript">
+    $(function(){
+        $(window).scroll(function(){
+            var heig = $(window).scrollTop();
+            console.log(heig);
+            if(heig>40){
+                $('.header').addClass('on');
+            }else{
+                $('.header').removeClass('on');
+            }
+        })
+    })
+</script>
+<script type="text/javascript">
+    $('.dhbtn').click(function(){
+        if($(this).hasClass('on')){
+            $(this).removeClass('on');
+            $('.nav').animate({left:'-200px'},500);
+            $('.dhbj').fadeOut();
+        }else{
+            $(this).addClass('on');
+            $('.dhbj').fadeIn();
+            $('.nav').animate({left:0},500);    
+        }   
+    })
+    
+</script>
+<script type="text/javascript">
+    jQuery(".nav").slide({ type:"menu",  titCell:".m", targetCell:".sub",effect:"slideDown", delayTime:300, triggerTime:0,returnDefault:true  });
+</script>
+
+
+<script> 
+
+    
+    var swiper = new Swiper(".aboutScroll .mySwiper", {
+            autoplay:true,
+            loop:true,
+            navigation: {
+              nextEl: ".aboutScroll .swiper-button-next",
+              prevEl: ".aboutScroll .swiper-button-prev",
+            },
+          });
+
+  </script>
+  <script type="text/javascript">
+$(function(){
+    
+      //移动端内页导航
+    $("#bnt_sub_nav").click(function(){
+    $(this).toggleClass("on");
+        $("#sub_nav_content").slideToggle();
+      });
+
+    $("#sub_nav_content dt.title a").attr("href","javascript:void(0)");
+    $("#sub_nav_content dt.title_on").next("dd").show();
+    $("#sub_nav_content dt.title").click(function() {
+        if ($(this).hasClass("title_on")) {
+            $(this).next("dd").slideToggle();
+            $(this).removeClass("title_on");
+        } else {
+            $("#sub_nav_content dd").slideUp();
+            $("#sub_nav_content dt.title").removeClass("title_on").removeClass("on");
+            $(this).toggleClass("title_on");
+            $(this).next("dd").slideDown();
+        }
+    });  
+    $("#sub_nav_content ul li i").click(function(){
+        $(this).next("ul").slideToggle();
+        $(this).parents("#sub_nav_content ul li").siblings().find("ul").slideUp();
+    });
+    
+    if ($(".list_box00").length) {
+        $(".list_box00 li").each(function (i) {
+            $(this).css({ 'transition-delay': i * 200 + 200 + 'ms' });
+        });
+    }
+    
+})
+
+</script>
+
+<script type="text/javascript">
+            $('.ssbtn p').click(function(){
+        if($(this).hasClass('on')){
+            $(this).removeClass('on');
+            $('.ssbox').fadeOut();
+        }else{
+            $(this).addClass('on');
+            
+            $('.ssbox').fadeIn();   
+        }   
+    })
+</script>
+</body></html>

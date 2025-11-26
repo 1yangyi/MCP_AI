@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>书院概况-崖州书院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="书院概况">
+<meta name="keywords" content="崖州书院,书院总览">
+
+<meta name="description" content="海南大学乘风书院 | Hainan University">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css">
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307c784750505b5742000300004354 -->
+<link rel="stylesheet" type="text/css" href="dy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1002,'/dy.jsp',-1,1983145902)</script>
+</head>
+<body>
+
+
+<link href="home2022/axui/css/ax.css?20222230" rel="stylesheet" type="text/css">
+<link href="home2022/css/swiper.min-my.css?202442230" rel="stylesheet" type="text/css">
+<link href="home2022/css/z2022.css?20222230" rel="stylesheet" media="screen" type="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script language="javascript" type="text/javascript" src="home2022/js/jquery-min.js"></script>
+<script language="javascript" type="text/javascript" src="home2022/js/jquery.SuperSlide.js"></script> 
+
+
+
+<header class="header-w min-w">
+<div class="header-bg">
+    <dl class="header">
+        <div class="header-left">
+<a href="index.htm" target="_self"><img src="home2022/imgs/logo.png"></a></div> 
+        <div class="header-right">
+            <dl class="top-tis">
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><a href="http://www.hainanu.edu.cn" target="_blank">海大首页</a>
+<a href="https://ehall.hainanu.edu.cn/ywtb-portal/Lite/index.html#/work_bench/Lite_workbench" target="_blank">网上服务大厅</a>
+            </dl>
+            <dl class="search-web">
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu3 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu3 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu3">
+    <div id="appu3"><div><div id="search-form"><input type="search" placeholder="请输入搜索内容" autocomplete="off"> <button><i class="ax-iconfont ax-icon-search"></i></button></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError">
+       
+<div id="search-form" >
+
+<input type="search" placeholder="请输入搜索内容"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" />
+<button v-on:click="onSubmit()"><i class="ax-iconfont ax-icon-search"></i></button>
+
+</div>
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "1983145902";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+            </dl>
+        </div>
+    </dl>
+        <script language="javascript" type="text/javascript" src="home2022/js/jquery-min.js"></script>
+<script language="javascript" type="text/javascript" src="home2022/js/jquery.SuperSlide.js"></script> 
+<nav class="navz">
+<ul id="nav" class="nav clearfix">
+<p class="nLi on" id="fixed-logo"></p>
+
+
+        <li class="nLi">  
+
+        <h3><a href="index.htm" title="首页">首页</a></h3>
+
+        </li>
+        <li class="nLi">  
+
+        <h3><a href="sygk.htm" title="书院概况">书院概况</a></h3>
+
+        </li>
+        <li class="nLi">  
+
+        <h3><a href="syxw.htm" title="书院新闻">书院新闻</a></h3>
+
+        </li>
+        <li class="nLi">  
+
+        <h3><a href="tzgg.htm" title="通知公告">通知公告</a></h3>
+
+        </li>
+        <li class="nLi">  
+
+        <h3><a href="dtjs.htm" title="党团建设">党团建设</a></h3>
+
+        </li>
+        <li class="nLi">  
+
+        <h3><a href="sqsh.htm" title="社区生活">社区生活</a></h3>
+
+        </li>
+        <li class="nLi">  
+
+        <h3><a href="syfw.htm" title="书院服务">书院服务</a></h3>
+
+        <ul class="sub">
+           <a href="syfw/xljk.htm">心理健康</a>
+           <a href="syfw/jyzd.htm">就业指导</a>
+           <a href="syfw/qgzx.htm">勤工助学</a>
+           <a href="syfw/zlbgxz.htm">资料表格下载</a>
+        </ul>
+        </li>
+
+
+</ul>
+</nav>
+
+<script id="jsID" type="text/javascript">
+jQuery("#nav").slide({ type:"menu", titCell:".nLi", targetCell:".sub",delayTime:300,triggerTime:0,returnDefault:true});
+</script> 
+</div>
+</header>
+
+
+
+
+
+
+<div class="lmdaohang" style="background:url(home2022/imgc/nbj.jpg) no-repeat center"></div>
+
+<div class="m2atcConWpr">
+<div class="m2atcCon">
+    <div class="m2atcMenu">
+        <div class="news-list-vertical nei_tu">
+            
+<span>
+            <em><b>书院概况</b></em>
+            </span>
+        </div>
+        <div class="m_new3">
+        <ul>
+</ul>
+        </div>  
+    </div>
+    <div class="m2atcRcon">
+        <div class="fdiv muc">
+            <ul>
+<span>书院概况</span></ul>
+            <div class="current-w">
+ <span>
+    当前位置: 
+                        <a href="index.htm">首页</a>
+                &gt;&gt;
+                <a href="sygk.htm">书院概况</a>
+  </span>
+</div>
+        </div>  
+        <!--单页-->
+        <div class="kanz">
+            
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1983145902,'wbnews','u10')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format501.css"><script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1983145902,4772)</script>
+<div class="InfoContent neirong">
+
+    <div class="lnmu" style="display:none">
+    <ul>书院简介</ul>
+    </div>
+    <div class="InfoContent neirong">
+        <div id="vsb_content_501_4772_u101"><div id="vsb_content_501"><p class="vsbcontent_start" style="text-align: center;">书院简介</p><p>　　崖州书院，成立于2023年6月，当前在崖学生2469人(本科生619人、硕士1388人、博士462人)，主要由南繁学院(三亚南繁研究院)及生物医学工程学院的学生组成，涵盖生物医学工程 、电子信息 、作物学 、农艺与种业 、种子科学与工程(生物育种) 等多个专业。书院坐落在美丽的崖州湾科技城，下辖四个宿舍区，分别是南繁人才公寓宿舍区、创新研学谷宿舍区、南繁安置区南区宿舍区、招商壹间宿舍区。</p><p class="vsbcontent_end">　　“崖州”是三亚的古称之一，三亚自崖州起，因崖州兴，以崖州名。两千年建置史，八朝州郡之所，崖州被誉为千年人文圣地，多种中国传统文化类型，汇集于此，相融共生。书院以“崖州”为名，寓意广大学子既要内涵深远，更应志向远大，要肩负历史使命，坚定前进信心，立大志、明大德、成大才、担大任，努力成为堪当民族复兴重任的时代新人。</p></div></div>
+        <span id="vsb_content_501_4772_u10" name="vsb_content_501_4772_u10"></span><br><br>
+        
+    </div>
+
+</div>
+
+
+        </div>
+
+
+
+    </div>      
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer footx">
+    <div class="w3">
+    <ul>
+        
+<dl class="foot-d3">
+
+
+
+
+            <li>版权所有2023©海南大学崖州书院</li>
+            <li>地址：海南省三亚市崖州区甘农北路海南大学崖州书院</li>
+           <li>电话：0898-38816025</li><li></li>
+           
+        </dl>
+    </ul>
+    <article>
+<img src="home2022/imgs/logo.png"></article>
+    <ol>
+
+
+    </ol>
+    </div>
+</footer>
+
+
+<script src="home2022/axui/js/ax.js" type="text/javascript" charset="utf-8"></script>
+<script src="home2022/js/axuimy.js?202210" type="text/javascript" charset="utf-8"></script>
+ 
+
+
+
+</body></html>

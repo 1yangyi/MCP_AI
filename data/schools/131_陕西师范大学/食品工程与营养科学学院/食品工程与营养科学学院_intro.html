@@ -1,0 +1,426 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" href="../images/favicon.ico">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no">
+  <title>学院简介-食品工程与营养科学学院新版</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="食品工程与营养科学学院新版,学院简介">
+<meta name="pageType" content="1">
+
+  <!-- Bootstrap -->
+  <link href="../static/css/animate.min.css" rel="stylesheet">
+  <link href="../static/css/bootstrap.css" rel="stylesheet">
+  <link href="../static/css/slick.css" rel="stylesheet">
+  <link href="../static/css/style.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="../static/css/index.vsb.css">
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232306975475253535742000400004152 -->
+<link rel="stylesheet" type="text/css" href="../simple.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1018,'/simple.jsp',-1,1932296201)</script>
+</head>
+
+<body>
+    <div class="layer" id="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><span class="close"><img src="../static/image/close.png"></span>
+<div id="divu0">
+    <div id="appu0"><div><div class="search_box"><input type="text" placeholder="全文搜索" autocomplete="off" class="kw"> <input name="submit_button" type="button" value="提交" class="ok"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <div class="search_box">
+                <input type="text" class="kw" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                <input class="ok" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+            </div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1932296201";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+    <div class="header clearfix ">
+        <div class="headerDiv">
+            <div class="header-title clearfix">
+                <div class="header-a">
+                    <ul class="head-nav">
+                        <li>
+                            <a href="http://www.snnu.edu.cn" target="_blank">
+                                <img src="../static/image/shanxi_zhuye.png" alt="">
+                                学校主页
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../ggfw1/xxyx.htm" target="">
+                                <img src="../static/image/shanxi_xinfeng.png" alt="">
+                                领导邮箱
+                            </a>
+                        </li>
+                        <li class="shj">
+                            <a href="../index.htm" target="">
+                                <img src="../static/image/shanxi_phone.png" alt="">
+                                手机站
+                                <div class="erweima" style="display: none;"><img src="../static/image/ercode.png" style="width:143px;height:143px;"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pull-left logo">
+                <a href="http://www.snnu.edu.cn" title="陕西师范大学">
+<img src="../static/image/shanxi_002.png"></a>
+            </div>
+            <div class="pull-left logo2">
+                <a href="../index.htm" title="食品工程与营养科学学院"><img src="../static/image/shanxi_logo.png"></a>
+            </div>
+            <div class="search">
+                <a role="button" class="search-a sc"><img src="../static/image/search.png"></a>
+            </div>
+            <div class="menu-button">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="logo-title pull-right">
+                <ul class="clearfix">
+                    <li>耕食凿饮</li>
+                    <li>正学笃行</li>
+                    <li>励精图治</li>
+                    <li>潜心发展</li>
+                    <div class="m-tlink">
+                        <a href="../6081.html">书记信箱</a>
+                        <a href="../6082.html">院长信箱</a>
+                        <a href="http://www.snnu.edu.cn/">学校主页</a>
+                        <a href="">ENGLISH</a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div class="nav"><ul class="nav-list clearfix">
+            <li><a href="xyjj.htm" title="学院概况">学院概况</a><span class="nav-click"><span class="caret"></span></span>
+                <div class="nav-down">
+                    <ul>
+                            <li><a href="xyjj.htm">学院简介</a></li>
+                            <li><a href="xksz.htm">学科设置</a></li>
+                            <li><a href="zzjg.htm">组织机构</a></li>
+                            <li><a href="xrld.htm">现任领导</a></li>
+                                </ul><ul>
+                            <li><a href="../simple.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1061">历史沿革</a></li>
+                            <li><a href="../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1062">大事记</a></li>
+                            <li><a href="../simple.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1063">联系我们</a></li>
+                    </ul>
+                </div>
+        </li>
+        <li><a href="../szdw1/jxky.htm" title="师资队伍">师资队伍</a><span class="nav-click"><span class="caret"></span></span>
+                <div class="nav-down">
+                    <ul>
+                            <li><a href="../szdw1/jxky.htm">教学科研</a></li>
+                            <li><a href="../szdw1/glry.htm">管理人员</a></li>
+                                </ul><ul>
+                            <li><a href="../szdw1/syjs.htm">实验技术</a></li>
+                            <li><a href="../szdw1/txry.htm">退休人员</a></li>
+                    </ul>
+                </div>
+        </li>
+        <li><a href="../rcpy1/bkspy.htm" title="人才培养">人才培养</a><span class="nav-click"><span class="caret"></span></span>
+                <div class="nav-down">
+                    <ul>
+                            <li><a href="../rcpy1/bkspy.htm">本科生培养</a></li>
+                            <li><a href="../rcpy1/yjspy.htm">研究生培养</a></li>
+                            <li><a href="../rcpy1/ldsr.htm">立德树人</a></li>
+                                </ul><ul>
+                            <li><a href="../rcpy1/jpkc.htm">精品课程</a></li>
+                            <li><a href="../rcpy1/jxcg.htm">教学成果</a></li>
+                            <li><a href="../rcpy1/xsrc.htm">学术人才</a></li>
+                    </ul>
+                </div>
+        </li>
+        <li><a href="../kxyj1/kyyxs.htm" title="学科建设">学科建设</a><span class="nav-click"><span class="caret"></span></span>
+                <div class="nav-down">
+                    <ul>
+                            <li><a href="../kxyj1/kyyxs.htm">科研与学术</a></li>
+                            <li><a href="../kxyj1/fmzl.htm">发明专利</a></li>
+                            <li><a href="../kxyj1/kyxm.htm">科研项目</a></li>
+                            <li><a href="../kxyj1/kycg.htm">科研成果</a></li>
+                                </ul><ul>
+                            <li><a href="../kxyj1/zzjc.htm">著作教材</a></li>
+                            <li><a href="../kxyj1/ptxm.htm">平台项目</a></li>
+                            <li><a href="../kxyj1/cghj.htm">成果获奖</a></li>
+                            <li><a href="../kxyj1/gdrc.htm">高端人才</a></li>
+                    </ul>
+                </div>
+        </li>
+        <li><a href="../dqgz1/djg.htm" title="党群工作">党群工作</a><span class="nav-click"><span class="caret"></span></span>
+                <div class="nav-down">
+                    <ul>
+                            <li><a href="../dqgz1/djg.htm">党建工作</a></li>
+                            <li><a href="../dqgz1/xxyd.htm">学习园地</a></li>
+                                </ul><ul>
+                            <li><a href="../dqgz1/ghgz.htm">工会工作</a></li>
+                    </ul>
+                </div>
+        </li>
+        <li><a href="../xsgz1/gggs.htm" title="学生工作">学生工作</a><span class="nav-click"><span class="caret"></span></span>
+                <div class="nav-down">
+                    <ul>
+                            <li><a href="../xsgz1/gggs.htm">公告公示</a></li>
+                            <li><a href="../xsgz1/txhd.htm">团学活动</a></li>
+                            <li><a href="../xsgz1/jzxj.htm">奖助学金</a></li>
+                                </ul><ul>
+                            <li><a href="../xsgz1/jyfw.htm">就业服务</a></li>
+                            <li><a href="../xsgz1/xzfc.htm">学子风采</a></li>
+                    </ul>
+                </div>
+        </li>
+        <li><a href="http://syzxspxy.snnu.edu.cn/" title="实验中心">实验中心</a><span class="nav-click"><span class="caret"></span></span>
+        </li>
+        <li><a href="../ggfw1/xzzq.htm" title="公共服务">公共服务</a><span class="nav-click"><span class="caret"></span></span>
+                <div class="nav-down">
+                    <ul>
+                            <li><a href="../ggfw1/xzzq.htm">下载专区</a></li>
+                            <li><a href="../ggfw1/gzzd.htm">规章制度</a></li>
+                            <li><a href="../ggfw1/rczp.htm">人才招聘</a></li>
+                            <li><a href="../ggfw1/xxyx.htm">学校邮箱</a></li>
+                                </ul><ul>
+                            <li><a href="https://ywtb.snnu.edu.cn/ihome/schoolbus?ifRegister=0">校车时刻表</a></li>
+                            <li><a href="http://www.snnu.edu.cn/xysh/bgdh.htm">办公电话</a></li>
+                            <li><a href="http://www.snnu.edu.cn/xysh/xl.htm">校历</a></li>
+                    </ul>
+                </div>
+        </li>
+</ul></div>
+        </div>
+            <script language="javascript" src="/system/resource/js/dynclicks.js"></script><div class="banner slick-initialized slick-slider slick-dotted" role="toolbar"><button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="">Previous</button>
+            <div aria-live="polite" class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 6400px; transform: translate3d(-2560px, 0px, 0px);" role="listbox"><div class="slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" style="width: 1280px;" tabindex="-1">
+                <a title="" tabindex="-1"><img src="../11.jpg"></a>
+           
+        </div><div class="slick-slide" data-slick-index="0" aria-hidden="true" style="width: 1280px;" tabindex="-1" role="option" aria-describedby="slick-slide00">
+                <a target="_blank" title="" href="../content.jsp?urltype=news.NewsContentUrl&amp;wbtreeid=1002&amp;wbnewsid=29301" tabindex="-1"><img src="../first1.jpg"></a>
+           
+        </div><div class="slick-slide slick-current slick-active" data-slick-index="1" aria-hidden="false" style="width: 1280px;" tabindex="-1" role="option" aria-describedby="slick-slide01">
+                <a title="" tabindex="0"><img src="../shouyedatu.jpg"></a>
+           
+        </div><div class="slick-slide" data-slick-index="2" aria-hidden="true" style="width: 1280px;" tabindex="-1" role="option" aria-describedby="slick-slide02">
+                <a title="" tabindex="-1"><img src="../11.jpg"></a>
+           
+        </div><div class="slick-slide slick-cloned" data-slick-index="3" id="" aria-hidden="true" style="width: 1280px;" tabindex="-1">
+                <a target="_blank" title="" href="../content.jsp?urltype=news.NewsContentUrl&amp;wbtreeid=1002&amp;wbnewsid=29301" tabindex="-1"><img src="../first1.jpg"></a>
+           
+        </div></div></div>
+        
+        
+<button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="">Next</button><ul class="slick-dots" style="" role="tablist"><li class="" aria-hidden="true" role="presentation" aria-selected="true" aria-controls="navigation00" id="slick-slide00"><button type="button" data-role="none" role="button" tabindex="0">1</button></li><li aria-hidden="false" role="presentation" aria-selected="false" aria-controls="navigation01" id="slick-slide01" class="slick-active"><button type="button" data-role="none" role="button" tabindex="0">2</button></li><li aria-hidden="true" role="presentation" aria-selected="false" aria-controls="navigation02" id="slick-slide02"><button type="button" data-role="none" role="button" tabindex="0">3</button></li></ul></div>
+        <div class="list">
+            <div class="container clearfix head">
+                <div class="left-nav head_left">
+                    <div class="con_flex">
+                        <p class="head_icon">
+                            <img src="../static/image/content_08.png" alt="">
+                        </p><br>
+                        <div class="head_con_title" style="clear: both">        学院概况
+        <br>
+        <span 学院概况<="" span="">
+</span></div>
+                    </div>
+                </div>
+                <div class="head_right title_head_right">
+                    <p class="curr_tilte">
+学院简介</p>
+                    <p class="label"><img src=".././pc/public/images/mapIcon_03.png" alt="">当前位置：
+    <a href="../index.htm" style="color:#005a39;">首页</a><span>&gt; 
+    <a href="xyjj.htm" style="color:#005a39;">学院概况</a><span>&gt; 
+    <a href="xyjj.htm" style="color:#005a39;">学院简介</a><span>&gt; 
+</span></span></span></p>
+                </div>
+            </div>
+            <div class="container clearfix">
+                <div class="left-nav pull-left"><ul>
+                             <li class="change"><a href="xyjj.htm" class="a_hover ">
+                            学院简介
+                        </a>
+                        </li>
+                         <li><a href="xksz.htm">
+                            
+                            学科设置
+                        </a>
+                        </li>
+                         <li><a href="zzjg.htm">
+                            
+                            组织机构
+                        </a>
+                        </li>
+                         <li><a href="xrld.htm">
+                            
+                            现任领导
+                        </a>
+                        </li>
+                         <li><a href="../simple.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1061">
+                            
+                            历史沿革
+                        </a>
+                        </li>
+                         <li><a href="../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1062">
+                            
+                            大事记
+                        </a>
+                        </li>
+                         <li><a href="../simple.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1063">
+                            
+                            联系我们
+                        </a>
+                        </li>
+</ul></div>
+                <div class="head_right">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1932296201,'wbnews','u13')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta13(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta13('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1932296201,29261)</script>
+<p>
+    </p><div id="vsb_content_4_29261_u131"><div id="vsb_content_4"><p style="margin: 5px 0px; line-height: 180%; text-indent: 32px; -ms-word-break: break-all;"><strong><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">一、学院概况</span></strong></p><p style="margin: 5px 0px; line-height: 180%; text-indent: 32px; -ms-word-break: break-all;"><strong> </strong><strong><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">历史沿革：</span></strong></p><p style="text-align: left; line-height: 150%; text-indent: 32px; -ms-word-break: break-all;"><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">陕西师范大学是教育部直属、世界一流学科建设高校（原</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">211</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">），是国家培养高等院校、中等学校师资和教育管理干部以及其他高级专门人才的重要基地，被誉为</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">“</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">教师的摇篮</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">”</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">。</span></p><p style="text-align: left; line-height: 150%; text-indent: 32px; -ms-word-break: break-all;"><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">食品工程与营养科学学院是陕西师范大学下属的二级办学单位（处级建制），其前身为</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">1994</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">年设立于陕西师范大学生物系的食品营养教育专科，</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">1996</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">年成立生命科学学院食品工程系，</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">2000</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">年食品工程系独立建制，</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">2007</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">年</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">9</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">月成立了食品工程与营养科学学院。学院办学地址位于西安市长安和雁塔两校区。长安校区目前已成为学院的主校区，主要承担本科三、四年级及研究生的教育培养任务；雁塔校区主要承担本科一、二年级基础和通识教育的任务。</span></p><p style="text-align: left; line-height: 150%; text-indent: 32px; -ms-word-break: break-all;"><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">学院高擎学校</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">“</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">西部红烛精神</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">”</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">火炬，以</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">“</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">果汁泰斗</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">”</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">仇农学和</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">“</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">红枣奶奶</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">”</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">陈锦屏等老一辈食品人扎根西部、服务产业、科技报国的事迹，教育学生服务西部食品工业和大健康产业的理想信念。近年来，学院坚持理工结合、学科交叉和教师教育融合的发展理念，经过</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">20</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">多年的锐意进取和不懈努力，形成以</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">“</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">食品营养及健康科学教育</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">”</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">为特色的加工工程与产业服务融合发展的世界一流工科学院。</span></p><p style="text-align: left; line-height: 150%; text-indent: 32px; -ms-word-break: break-all;"><strong><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">学科概况：</span></strong></p><p style="text-align: left; line-height: 150%; text-indent: 32px; -ms-word-break: break-all;"><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">面向食品科技前沿和人民生命健康需求，立足区域优势农产品及秦岭特色食品资源，结合</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">“</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">一带一路</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">”</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">、脱贫攻坚和乡村振兴国家战略，形成了</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">“</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">食品营养与健康（教育）</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">”1</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">个优势学科，并构建了以苹果、猕猴桃、羊乳及秦岭药食两用动植物资源的营养物质基础理论、加工技术与工程及装备研究为重点的</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">“</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">果蔬营养与加工工程</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">”</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">、</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">“</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">畜产营养与加工工程</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">”</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">和</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">“</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">谷物营养与加工工程</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">”3</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">个特色学科。</span></p><p style="text-align: left; line-height: 150%; text-indent: 32px; -ms-word-break: break-all;"><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;"></span></p><p style="margin: 0pt;"><span style="color: rgb(0, 0, 0);"><span style="font-size: 14pt; font-family: 宋体;">学院</span><span style="font-size: 14pt; font-family: 宋体;">现有食品科学与工程一级学科博士点，自主设置食品化学二级博士点；也拥有</span><span style="font-family: &quot;Times New Roman&quot;; font-size: 14pt;"><span style="font-family: 宋体;">食品科学与工程、生物与医药两个一级学科硕士学位授权点，以及</span>5<span style="font-family: 宋体;">个二级学科硕士学位授权点。<span style="line-height: 150%; font-family: 宋体; font-size: 19px;">具备本硕博完整的人才培养体系。</span></span></span></span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">2015年学院支撑的陕西师范大学“农业科学(<em>Agricultural Sciences</em>)”学科排名进入全球ESI的前1%，2021年全球ESI排名进入前0.5%。近5年的软科世界一流学科排名中，我校“食品科学与工程"学科进入世界一流，稳居西北地区第2位，科学研究在国内外具有一定影响力。</span></p><p style="text-align: left; line-height: 150%; text-indent: 32px; -ms-word-break: break-all;"><strong><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">二、师资队伍</span></strong></p><p style="margin: 5px 0px; line-height: 150%; text-indent: 32px; -ms-word-break: break-all;"><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">学院师资力量雄厚，现有教职工近百人，其中博士生导师37人，硕士生导师68人，校外专硕导师22人。教授、副教授占教师人数的<span lang="EN-US">73.7%</span>，教师队伍中具有博士教师总数的<span lang="EN-US">98%</span>，具有<span lang="EN-US">10</span>个月以上海外留学经历人数占教师总数的<span lang="EN-US">65%</span>。形成了一支学历较高、结构合理、素质优良、富有活力的师资队伍。学院按照学科研究方向设立了果蔬深加工与贮藏技术、特色粮豆食品、乳品科学、食品绿色制造与安全控制、果品加工及资源循环利用、食品物理场加工技术、食品营养与安全、食品保藏与风味调控研究、微生物工程与技术研究院九个研究团队。多名教师在国内学术机构担任理事、执委、委员及国内外多个学术期刊担任编委等社会职务。拥有一批优秀学者和学术带头人。</span></p><p style="margin: 5px 0px; line-height: 150%; -ms-word-break: break-all;"><strong> </strong><strong><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">三、教学科研</span></strong></p><p style="margin: 5px 0px; line-height: 180%; text-indent: 32px; -ms-word-break: break-all;"><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">围绕国家脱贫攻坚和乡村振兴战略，面向食品工业经济主战场和人民生命健康的重大需求，并通过</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">“</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">基础研究与应用研究相促进，科学研究与产业应用相结合</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">”</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">的建设思路和发展策略，学院获批</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">3</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">个省级科技创新团队、</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">3</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">个省级教学团队，设立</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">4 </span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">个教学团队和</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">“</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">果蔬深加工与贮藏技术、特色粮豆食品、乳品科学、食品绿色制造与安全控制、果品加工及资源循环利用、食品物理场加工技术、食品营养与安全、食品保藏与植物油脂工程、秦巴特色资源食品研究、微生物工程与技术研究（院）</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">”</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">等</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">10</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">个研究团队；已建立“陕西师范大学本科</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">/</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">硕士生教学实践基地</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">”10</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">余个，设立了“银桥奖学金”等学生奖助学金；通过</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">“</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">中试</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">+</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">推广</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">”</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">、</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">“</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">理论</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">+</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">实践</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">”</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">、</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">“</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">科学</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">+</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">工程</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">”</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">、</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">“</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">教授</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">+</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">工程师</span><span lang="EN-US" style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">”</span><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">等模式，建立高水平科技成果转化通道，制定行业标准，指导行业进步。</span></p><p style="margin: 5px 0px; text-align: left; line-height: 150%; text-indent: 32px; -ms-word-break: break-all;"><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">学院</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">30 </span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">多位老师担任陕西省科技特派员、陕西及内蒙古</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">“</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">三区</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">”</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">科技人才、云南景谷和陕西岚皋定点扶贫专家、陕西省农业产业体系岗位专家及陕西省各地市农业专家等。学院拥有</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">2500 </span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">平米新工科实训中心、</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">2 </span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">个农业部产业体系研究室；陕西省食品科学技术学会、陕西省农业工程学会两个省一级学会挂靠学院建设；我院已经拥有</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">8</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">个省部级工程研究中心或实验室、</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">1</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">个省级实验教学示范中心、</span><span lang="EN-US" style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">3</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">个校级平台（重点实验室），平台建设为全校理工学院和西部高校食品领域之最。</span></p><p style="margin: 5px 0px; text-align: left; line-height: 150%; text-indent: 32px; -ms-word-break: break-all;"><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">教育部平台：</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">西部果品资源高值利用教育部工程研究中心</span></p><p style="margin: 5px 0px; text-align: left; line-height: 150%; text-indent: 32px; -ms-word-break: break-all;"><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">省部平台：</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">陕西省果蔬深加工技术研究中心、陕西省食品绿色加工与安全控制工程实验室、陕西省食品与健康科学国际联合研究中心、陕西省农产品贮藏加工危害因子风险评估实验室、农业部国家苹果加工技术研发专业中心、谷物科学国际联合研究中心、西安市特色水果贮藏与保鲜重点实验室</span></p><p style="margin: 5px 0px; text-align: left; line-height: 150%; text-indent: 32px; -ms-word-break: break-all;"><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">校级平台：</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">陕西省食品加工副产物深度开发与高值化利用重点实验室、陕西师范大学微生物工程与技术研究院、陕西师范大学畜产品质量控制工程中心</span></p><p style="margin: 5px 0px; text-align: left; line-height: 150%; text-indent: 32px; -ms-word-break: break-all;"><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">实验平台：</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">食品科学与工程实验教学中心、大型科学仪器共享平台、食品中试实验室</span></p><p style="margin: 5px 0px; text-align: left; line-height: 150%; text-indent: 32px; -ms-word-break: break-all;"><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">挂靠学会：</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">陕西省食品科学技术学会、陕西省农业工程学会</span></p><p style="margin: 5px 0px; text-align: left; line-height: 150%; text-indent: 32px; -ms-word-break: break-all;"><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">精品课程：</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">食品化学、食品科学概论、机械基础、食品工程原理</span></p><p style="margin: 5px 0px; text-align: left; line-height: 150%; text-indent: 32px; -ms-word-break: break-all;"><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">省级一流课程</span><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">：食品化学</span><span style="color: black; line-height: 150%; font-family: ms gothic; font-size: 19px;"></span></p><p style="margin: 5px 0px; text-align: left; line-height: 150%; -ms-word-break: break-all;"><strong> </strong><strong><span style="color: black; line-height: 150%; font-family: 宋体; font-size: 19px;">四、合作交流</span></strong></p><p style="margin: 5px 0px; line-height: 180%; text-indent: 32px; -ms-word-break: break-all;"><span style="color: black; line-height: 180%; font-family: 宋体; font-size: 19px;">学院本科生大学英语四、六级考试通过率在我校名列前茅，在“挑战杯”、大学生英语竞赛、全国大学生创新创业训练项目等各类竞赛中成绩突出，多次为学校争得荣誉。近年来在本科生毕业考研率近60<span lang="EN-US">%</span>，多年来名列学校前茅，推免或录取院校多为国内知名高校。部分学生选择留学深造，分别赴美国普渡大学、加拿大圭尔夫大学、荷兰瓦赫宁根大学、香港中文大学等国际知名学院攻读博士学位。美国康奈尔大学、马里兰大学、加拿大圭尔夫大学、比利时鲁汶大学、澳大利亚昆士兰大学等专家来访讲学，进行学术交流。在国家留学基金委、陕西省外事办公室、学校人事部门的支持下，先后派出<span lang="EN-US">15</span>名教师赴美国、加拿大、澳大利亚、新西兰进行为期一年的合作研究和学术交流，学院每年派专家参加国际谷物化学大会、国际食品科学技术年会、国际燕麦大会、荞麦国际研讨会，并进行大会报告，扩大了学科的国内外影响力。受澳大利亚谷物进出口公司委托和经费支持，开展国际合作，系统研究澳大利亚燕麦食品加工特性。学院以陕西师范大学深化教育综合改革为契机，积极推进一流学科与一流学院的“双一流”建设，全面提高教育教学质量、科研水平和社会服务能力，正朝着建设工程特色鲜明的高水平研究型学院的目标努力奋斗。</span></p><p>&nbsp;</p><p>&nbsp;</p></div></div>
+    <span id="vsb_content_4_29261_u13" name="vsb_content_4_29261_u13"></span><br><br>
+    
+<p></p>
+</div>
+            </div>
+        </div>
+    
+  <div class="footer">
+    <div class="container footer_title">
+      <div class="content">
+        <div class="link">
+            <p>友情链接：</p>
+            <ul><script language="javascript" src="/system/resource/js/openlink.js"></script><li><a href="https://www.snnu.edu.cn/" target="target=_blank">陕西师范大学</a></li>                 
+<li><a href="http://kjc.snnu.edu.cn/" target="target=_blank">科学技术处</a></li>                 
+<li><a href="http://www.moe.edu.cn/" target="target=_blank">教育部</a></li>                 
+<li><a href="http://spgcx.snnu.edu.cn/home/Index/" target="target=_blank">陕西师范大学实验教学中心</a></li>                 
+<li><a href="http://www.sciencemag.org/" target="target=_blank">中国科学在线</a></li>                 
+</ul>
+        </div>
+        <div class="email">
+            <p>陕西师范大学食品工程与营养科学学院</p>
+            <p>地址：西安市长安区西长安街620号</p>
+            <p>电话：029-85310517</p>
+            <p>邮箱：spgcx@snnu.edu.cn</p>
+        </div>
+        <div class="ercode">
+            <img src="../static/image/ercode.png" alt="">
+            <p>微信公众号</p>
+        </div>
+      </div>
+        <p class="end"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+</p><p><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+</p><p>陕西师范大学食品工程与营养科学学院 版权所有 Copyright @ 2022-2023 ALl Rights Reserved</p><p></p><p></p>
+    </div>
+  </div>
+
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/common.js"></script>
+<script src="../static/js/slick.js"></script>
+<script type="text/javascript">
+  $('.banner').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    centerMode: false,
+    arrows: true,
+    dots: true,
+  });
+$(function() {
+    $(".erweima").hide();
+    $(".shj").mouseover(function() {
+        $(this).find(".erweima").show();
+    });
+    $(".shj").mouseout(function() {
+        $(this).find(".erweima").hide();
+    });
+})
+</script>
+
+</body></html>

@@ -1,0 +1,607 @@
+<!DOCTYPE html><html lang="zh"><head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>中心简介-新版基础实验教学中心</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="中心简介">
+<meta name="keywords" content="新版基础实验教学中心,中心概况">
+
+    <link rel="stylesheet" href="../css/aos.css">
+    <link rel="stylesheet" href="../css/flexslider.css">
+    <link rel="stylesheet" href="../css/liMarquee.css">
+    <link rel="stylesheet" href="../css/owl.carousel.css">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/media-1.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232306975475253535742000400004152 -->
+<link rel="stylesheet" type="text/css" href="../single.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1010,'/single.jsp',-1,1791213435)</script>
+</head>
+<body>
+<!-- header -->
+    <div id="header">
+        <div class="header-1">
+            <div class="container">
+                <div class="logo fl">
+                    
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="新版基础实验教学中心"><img src="../images/logo.png" alt=""></a>
+                </div>
+                <div class="search fr">
+                    
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script>
+<div id="divu1">
+    <div id="appu1"><div><form action="#"><input type="text" placeholder="请输入关键字" autocomplete="off"> <input type="image" src="../images/wen1.png"></form></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+        
+        <form action="#">
+                        <input type="text" placeholder="请输入关键字" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                        <input type="image" src="../images/wen1.png" v-on:click="onSubmit()">
+                    </form>
+        
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1791213435";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                </div>
+                <div class="clear"></div>
+                <div class="po">
+                   <a href="https://www.snnu.edu.cn/" target="_blank">学校主页</a>　　<a href="#">主任信箱</a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-wp">
+            <div class="container">
+                <div class="nav">
+                    <ul class="list-unstyled">
+												<li><a href="../index.htm">首页</a>
+						</li>
+						<li class="active"><a href="zxjj.htm">中心概况</a>
+							<ul class="list-unstyled">
+								<li><a href="zxjj.htm">中心简介</a></li>
+								<li><a href="xrld1.htm">现任领导</a></li>
+								<li><a href="lrld1.htm">历任领导</a></li>
+								<li><a href="zzjg1.htm">组织机构</a></li>
+								<li><a href="lxwm1.htm">联系我们</a></li>
+							</ul>
+						</li>
+						<li><a href="../szdw/wlsyjstd1.htm">师资队伍</a>
+							<ul class="list-unstyled">
+								<li><a href="../szdw/wlsyjstd1.htm">物理实验技术团队</a></li>
+								<li><a href="../szdw/hxsyjstd.htm">化学实验技术团队</a></li>
+								<li><a href="../szdw/clsyjstd1.htm">材料实验技术团队</a></li>
+								<li><a href="../szdw/swsyjstd1.htm">生物实验技术团队</a></li>
+								<li><a href="../szdw/spsyjstd1.htm">食品实验技术团队</a></li>
+								<li><a href="../szdw/jsjsyjstd.htm">计算机实验技术团队</a></li>
+								<li><a href="../szdw/dlsyjstd1.htm">地理实验技术团队</a></li>
+								<li><a href="../szdw/grtxry.htm">光荣退休人员</a></li>
+							</ul>
+						</li>
+						<li><a href="../gzzd/sysaqzd.htm">规章制度</a>
+							<ul class="list-unstyled">
+								<li><a href="../gzzd/sysaqzd.htm">实验室安全制度</a></li>
+								<li><a href="../gzzd/sysglzd.htm">实验室管理制度</a></li>
+								<li><a href="../gzzd/sysjxzd.htm">实验室教学制度</a></li>
+							</ul>
+						</li>
+						<li><a href="../syjx/jcsyjx_wl_/jxdg.htm">实验教学</a>
+							<ul class="list-unstyled">
+								<li><a href="../syjx/jcsyjx_wl_/jxdg.htm">基础实验教学（物理）</a></li>
+								<li><a href="../syjx/jcsyjx_hx_/jxdg.htm">基础实验教学（化学）</a></li>
+								<li><a href="../syjx/jcsyjx_cl_/jxdg.htm">基础实验教学（材料）</a></li>
+								<li><a href="../syjx/jcsyjx_sw_/jxdg.htm">基础实验教学（生物）</a></li>
+								<li><a href="../syjx/jcsyjx_sp_/jxdg.htm">基础实验教学（食品）</a></li>
+								<li><a href="../syjx/jcsyjx_jisuanj_/jxdg.htm">基础实验教学（计算机）</a></li>
+								<li><a href="../syjx/jcsyjx_dili_/jxdg.htm">基础实验教学（地理）</a></li>
+								<li><a href="../syjx/tsxxsy/jxdg.htm">通识选修实验</a></li>
+							</ul>
+						</li>
+						<li><a href="../sysjs/wlzysys1/sysjj.htm">实验室建设</a>
+							<ul class="list-unstyled">
+								<li><a href="../sysjs/wlzysys1/sysjj.htm">物理专业实验室</a></li>
+								<li><a href="../sysjs/hxzysys1/sysjj.htm">化学专业实验室</a></li>
+								<li><a href="../sysjs/clzysys1/sysjj.htm">材料专业实验室</a></li>
+								<li><a href="../sysjs/swzysys1/sysjj.htm">生物专业实验室</a></li>
+								<li><a href="../sysjs/spzysys1/sysjj.htm">食品专业实验室</a></li>
+								<li><a href="../sysjs/jsjzysys1/sysjj.htm">计算机专业实验室</a></li>
+								<li><a href="../sysjs/dlzysys1/sysjj.htm">地理专业实验室</a></li>
+							</ul>
+						</li>
+						<li><a href="../aqjy/aqzc.htm">安全教育</a>
+							<ul class="list-unstyled">
+								<li><a href="../aqjy/aqzc.htm">安全政策</a></li>
+								<li><a href="../aqjy/aqzs.htm">安全知识</a></li>
+								<li><a href="../aqjy/jsal.htm">警示案例</a></li>
+							</ul>
+						</li>
+						<li><a href="../djgz/dzbjj1.htm">党建工作</a>
+							<ul class="list-unstyled">
+								<li><a href="../djgz/dzbjj1.htm">党支部简介</a></li>
+								<li><a href="../djgz/dzbhd.htm">党支部活动</a></li>
+								<li><a href="../djgz/ghhd.htm">工会活动</a></li>
+							</ul>
+						</li>
+						<li><a href="../kxpj/kpsp.htm">科学普及</a>
+							<ul class="list-unstyled">
+								<li><a href="../kxpj/kpsp.htm">科普视频</a></li>
+								<li><a href="../kxpj/kpyq.htm">科普仪器</a></li>
+							</ul>
+						</li>
+					</ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- header -->
+<div id="header-2">
+    <div class="logo-2 fl">
+        <a href="../"><img src="../images/logo2.png" alt=""></a>
+    </div>
+    <div class="menu2 fr">
+        <ul class="list-unstyled">
+            <li><a id="sanlan"><img src="../images/sanlan.png" alt=""></a></li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div class="nav-2">
+        <div class="nav-2-form">
+            
+
+
+
+<div id="divu3">
+    <div id="appu3"><div><form><input type="text" autocomplete="off" class="form-control"> <input type="image" src="../images/wen.png"></form></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError">
+        <form  >
+                    <input type="text" class="form-control"autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" >
+                    <input type="image" src="../images/wen.png" v-on:click="onSubmit()">
+                </form>
+        
+          
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "1791213435";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+        </div>
+        <ul class="list-unstyled">
+						<li><a href="../index.htm">首页</a>
+			</li>
+			<li><a href="zxjj.htm">中心概况</a>
+				<span class="jiaspan"></span>
+				<ul class="list-unstyled">
+					<li><a href="zxjj.htm">中心简介</a></li>
+					<li><a href="xrld1.htm">现任领导</a></li>
+					<li><a href="lrld1.htm">历任领导</a></li>
+					<li><a href="zzjg1.htm">组织机构</a></li>
+					<li><a href="lxwm1.htm">联系我们</a></li>
+				</ul>
+			</li>
+			<li><a href="../szdw/wlsyjstd1.htm">师资队伍</a>
+				<span class="jiaspan"></span>
+				<ul class="list-unstyled">
+					<li><a href="../szdw/wlsyjstd1.htm">物理实验技术团队</a></li>
+					<li><a href="../szdw/hxsyjstd.htm">化学实验技术团队</a></li>
+					<li><a href="../szdw/clsyjstd1.htm">材料实验技术团队</a></li>
+					<li><a href="../szdw/swsyjstd1.htm">生物实验技术团队</a></li>
+					<li><a href="../szdw/spsyjstd1.htm">食品实验技术团队</a></li>
+					<li><a href="../szdw/jsjsyjstd.htm">计算机实验技术团队</a></li>
+					<li><a href="../szdw/dlsyjstd1.htm">地理实验技术团队</a></li>
+					<li><a href="../szdw/grtxry.htm">光荣退休人员</a></li>
+				</ul>
+			</li>
+			<li><a href="../gzzd/sysaqzd.htm">规章制度</a>
+				<span class="jiaspan"></span>
+				<ul class="list-unstyled">
+					<li><a href="../gzzd/sysaqzd.htm">实验室安全制度</a></li>
+					<li><a href="../gzzd/sysglzd.htm">实验室管理制度</a></li>
+					<li><a href="../gzzd/sysjxzd.htm">实验室教学制度</a></li>
+				</ul>
+			</li>
+			<li><a href="../syjx/jcsyjx_wl_/jxdg.htm">实验教学</a>
+				<span class="jiaspan"></span>
+				<ul class="list-unstyled">
+					<li><a href="../syjx/jcsyjx_wl_/jxdg.htm">基础实验教学（物理）</a></li>
+					<li><a href="../syjx/jcsyjx_hx_/jxdg.htm">基础实验教学（化学）</a></li>
+					<li><a href="../syjx/jcsyjx_cl_/jxdg.htm">基础实验教学（材料）</a></li>
+					<li><a href="../syjx/jcsyjx_sw_/jxdg.htm">基础实验教学（生物）</a></li>
+					<li><a href="../syjx/jcsyjx_sp_/jxdg.htm">基础实验教学（食品）</a></li>
+					<li><a href="../syjx/jcsyjx_jisuanj_/jxdg.htm">基础实验教学（计算机）</a></li>
+					<li><a href="../syjx/jcsyjx_dili_/jxdg.htm">基础实验教学（地理）</a></li>
+					<li><a href="../syjx/tsxxsy/jxdg.htm">通识选修实验</a></li>
+				</ul>
+			</li>
+			<li><a href="../sysjs/wlzysys1/sysjj.htm">实验室建设</a>
+				<span class="jiaspan"></span>
+				<ul class="list-unstyled">
+					<li><a href="../sysjs/wlzysys1/sysjj.htm">物理专业实验室</a></li>
+					<li><a href="../sysjs/hxzysys1/sysjj.htm">化学专业实验室</a></li>
+					<li><a href="../sysjs/clzysys1/sysjj.htm">材料专业实验室</a></li>
+					<li><a href="../sysjs/swzysys1/sysjj.htm">生物专业实验室</a></li>
+					<li><a href="../sysjs/spzysys1/sysjj.htm">食品专业实验室</a></li>
+					<li><a href="../sysjs/jsjzysys1/sysjj.htm">计算机专业实验室</a></li>
+					<li><a href="../sysjs/dlzysys1/sysjj.htm">地理专业实验室</a></li>
+				</ul>
+			</li>
+			<li><a href="../aqjy/aqzc.htm">安全教育</a>
+				<span class="jiaspan"></span>
+				<ul class="list-unstyled">
+					<li><a href="../aqjy/aqzc.htm">安全政策</a></li>
+					<li><a href="../aqjy/aqzs.htm">安全知识</a></li>
+					<li><a href="../aqjy/jsal.htm">警示案例</a></li>
+				</ul>
+			</li>
+			<li><a href="../djgz/dzbjj1.htm">党建工作</a>
+				<span class="jiaspan"></span>
+				<ul class="list-unstyled">
+					<li><a href="../djgz/dzbjj1.htm">党支部简介</a></li>
+					<li><a href="../djgz/dzbhd.htm">党支部活动</a></li>
+					<li><a href="../djgz/ghhd.htm">工会活动</a></li>
+				</ul>
+			</li>
+			<li><a href="../kxpj/kpsp.htm">科学普及</a>
+				<span class="jiaspan"></span>
+				<ul class="list-unstyled">
+					<li><a href="../kxpj/kpsp.htm">科普视频</a></li>
+					<li><a href="../kxpj/kpyq.htm">科普仪器</a></li>
+				</ul>
+			</li>
+		</ul>
+    </div>
+</div>
+<!-- header -->
+<div class="chenggao"></div>
+<div id="nav-2-heidi"></div>
+<!-- main -->
+    <div id="main">
+            <script language="javascript" src="/system/resource/js/dynclicks.js"></script>		<div class="banner-2" style="background-image: url(../images/banner-2.jpg)">
+			<img src="../images/banner-2.jpg" alt="">
+		</div>
+
+        <div class="erji">
+            <div class="container">
+                <div class="erji-title visible-lg-block">
+                    <h1 class="fl"><img src="../images/h1.png" alt="">
+中心概况</h1>
+                    <div class="mianbaoxie fr">当前位置:
+						<a href="../index.htm">首页</a>
+						&gt;&gt;
+<a href="zxjj.htm">中心概况</a>
+						&gt;&gt;
+<a href="zxjj.htm">中心简介</a>
+</div>
+                    <div class="clear"></div>
+                </div>
+                <div class="erji-title hidden-lg">
+                    <h1 class="fl">
+中心简介</h1>
+                    <div class="clear"></div>
+                </div>
+                <div class="erji-div">
+                    <div class="menu fl">
+                        <div class="menu-dl">
+                            <dl>
+                                                                <dd class="cur">
+                                 <a href="zxjj.htm">中心简介</a>
+                            </dd>
+                                <dd>
+                                 <a href="xrld1.htm">现任领导</a>
+                            </dd>
+                                <dd>
+                                 <a href="lrld1.htm">历任领导</a>
+                            </dd>
+                                <dd>
+                                 <a href="zzjg1.htm">组织机构</a>
+                            </dd>
+                                <dd>
+                                 <a href="lxwm1.htm">联系我们</a>
+                            </dd>
+                        </dl>
+                        </div>
+                        <div class="menu-pic">
+                            <a href="#"><img src="../images/menu-1.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="erji-content">
+                        <div class="danpian">
+
+                        
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1791213435,'wbnews','u10')</script>
+<script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1791213435,1342)</script>
+
+                                                        <div class="danpian-h1">中心简介</div>
+                            <div class="danpian-con">
+                                <div id="vsb_content_1342_u101"><div id="vsb_content"><p style="line-height: 2em; text-indent: 2em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 16px;">&nbsp;基础实验教学中心（以下简称 “中心”）成立于2011年，中心实验室大楼建筑面积15000平方米（包括雁塔校区教学七楼及其附楼、教学三楼计算机房及长安校区逸夫楼计算机房），拥有实验室、准备室、标本室等145余间，每学年开设70门基础实验课程，约700个实验项目，实验教学工作量达到59万人时数。<br></span></p><p style="line-height: 2em; text-indent: 2em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 16px;">&nbsp;基础实验教学中心吸纳了各学科高素质的教师参与本科生实验能力培养和实验室的建设，拥有一支专门从事实验室管理的技术队伍，目前中心教职工27人，其中专任教师3人，行政人员3人，实验技术人员19人，技术工2人。实验用药品、耗材实行网络化管理。中心实验室不仅配备了相应的实验教学仪器，还安装有多媒体教学设备，经过资源的整合和建设，实验教学仪器设备台套数有较大幅度提高，目前中心实验室拥有各类教学仪器6000余台件，设备总价值4800万元。中心承担我校理工科一、二年级物理学、化学、生物学、材料、食品科学、地理学、计算机科学等专业7000余名本科生基础实验教学工作，同时实验室资源面向师资培训及教师教育开放，使中心实验教学资源最大限度地服务于基础实验教学。</span></p><p style="line-height: 2em; text-indent: 2em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 16px;">&nbsp;基础实验教学中心实验室建设与发展坚守教师教育主责主业，以人才培养为根本，以提升本科实验教学质量为中心，以实验教学体系改革为先导，本着“确保基础，完善专业，重点突破，特色推动”的原则不断提升实验室建设管理水平，为学校本科基础实验教学做好有力保障。</span></p><p style="line-height: 2em; text-indent: 2em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 16px;"><br></span></p><p style="text-align: center;"><img title="" alt="" src="/__local/2/C7/55/B05182F7AEB4938EF1F6FDE381F_1728A35F_7BB35.png" vsbhref="vurl" vurl="/_vsl/2C755B05182F7AEB4938EF1F6FDE381F/1728A35F/7BB35" vheight=" 596px" vwidth=" 1120px" width="1120" vspace="0" hspace="0" height="596" border="0" orisrc="/__local/5/1E/74/D916F148015CE3903F303DFC26B_53ACD80F_9D686.png" class="img_vsb_content" style="width: 1120px; height: 596px;"></p><p style="line-height: 2em; text-indent: 2em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 16px;"></span></p><p style="line-height: 2em; text-indent: 2em;"><br></p></div></div>
+                            </div>
+
+                    </div>  
+                    </div>
+                    <div class="clear"></div>   
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- main -->
+<!-- footer -->
+    <div id="footer">
+        <div class="footer-1">
+            <div class="container">
+                <div class="footer-1-div fl">
+                    <div class="footer1-title">校内链接</div>
+                    <script language="javascript" src="/system/resource/js/openlink.js"></script><div class="footer-1-a str_wrap no_drag" id="footer-1-a1" style="height: 20px;"><div class="str_move str_origin" style="left: -81.24px;">
+                                                <a href="http://rsc.snnu.edu.cn/">人力资源部</a> |　
+                        <a href="http://jwc.snnu.edu.cn/">教务处</a> |　
+                        <a href="http://kjc.snnu.edu.cn/">科学技术处</a> |　
+                        <a href="http://dlca.snnu.edu.cn/">实验室建设与管理</a> |　
+                        <a href="http://cwc.snnu.edu.cn/">计划财务处</a> |　
+                        <a href="http://zbb.snnu.edu.cn/sfw_cms/e?page=cms.index">采购招标管理办公室</a> |　
+                        <a href="http://xxc.snnu.edu.cn/index.htm">信息化建设与管理处</a> |　
+                        <a href="http://www.lib.snnu.edu.cn">图书馆</a> |　
+                    <div class="str_move str_move_clone" style="left: 100%; right: auto; width: 862.359px;">
+                                                <a href="http://rsc.snnu.edu.cn/">人力资源部</a> |　
+                        <a href="http://jwc.snnu.edu.cn/">教务处</a> |　
+                        <a href="http://kjc.snnu.edu.cn/">科学技术处</a> |　
+                        <a href="http://dlca.snnu.edu.cn/">实验室建设与管理</a> |　
+                        <a href="http://cwc.snnu.edu.cn/">计划财务处</a> |　
+                        <a href="http://zbb.snnu.edu.cn/sfw_cms/e?page=cms.index">采购招标管理办公室</a> |　
+                        <a href="http://xxc.snnu.edu.cn/index.htm">信息化建设与管理处</a> |　
+                        <a href="http://www.lib.snnu.edu.cn">图书馆</a> |　
+                    </div><div class="str_move str_move_clone" style="right: 100%; left: auto; width: 862.359px;">
+                                                <a href="http://rsc.snnu.edu.cn/">人力资源部</a> |　
+                        <a href="http://jwc.snnu.edu.cn/">教务处</a> |　
+                        <a href="http://kjc.snnu.edu.cn/">科学技术处</a> |　
+                        <a href="http://dlca.snnu.edu.cn/">实验室建设与管理</a> |　
+                        <a href="http://cwc.snnu.edu.cn/">计划财务处</a> |　
+                        <a href="http://zbb.snnu.edu.cn/sfw_cms/e?page=cms.index">采购招标管理办公室</a> |　
+                        <a href="http://xxc.snnu.edu.cn/index.htm">信息化建设与管理处</a> |　
+                        <a href="http://www.lib.snnu.edu.cn">图书馆</a> |　
+                    </div></div></div>
+                </div>
+                <div class="footer-1-div fr">
+                    <div class="footer1-title">校外链接</div>
+                    <div class="footer-1-a str_wrap no_drag" id="footer-1-a2" style="height: 20px;"><div class="str_move str_origin" style="left: -81.22px;">
+                                                <a href="http://www.moe.gov.cn/">中华人民共和国教育部</a> |                                                   <a href="http://www.most.gov.cn/index.html">中华人民共和国科学技术部</a> |                                                   <a href="https://www.cahe.edu.cn">中国高等教育学会</a> |                                                   <a href="http://jyt.shaanxi.gov.cn/">陕西省教育厅</a> |                                                   <a href="http://www.xatrm.com/xatrm/index.html">西安科技大市场</a> |                           
+                    <div class="str_move str_move_clone" style="left: 100%; right: auto; width: 658.172px;">
+                                                <a href="http://www.moe.gov.cn/">中华人民共和国教育部</a> |                                                   <a href="http://www.most.gov.cn/index.html">中华人民共和国科学技术部</a> |                                                   <a href="https://www.cahe.edu.cn">中国高等教育学会</a> |                                                   <a href="http://jyt.shaanxi.gov.cn/">陕西省教育厅</a> |                                                   <a href="http://www.xatrm.com/xatrm/index.html">西安科技大市场</a> |                           
+                    </div><div class="str_move str_move_clone" style="right: 100%; left: auto; width: 658.172px;">
+                                                <a href="http://www.moe.gov.cn/">中华人民共和国教育部</a> |                                                   <a href="http://www.most.gov.cn/index.html">中华人民共和国科学技术部</a> |                                                   <a href="https://www.cahe.edu.cn">中国高等教育学会</a> |                                                   <a href="http://jyt.shaanxi.gov.cn/">陕西省教育厅</a> |                                                   <a href="http://www.xatrm.com/xatrm/index.html">西安科技大市场</a> |                           
+                    </div></div></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="footer-2">
+            <div class="container">
+                <div class="er fr">
+                        
+                </div>
+                <div class="footer-2-con-wp">
+                    <div class="footer-2-con">
+                        <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>Copyright （C）2020 &nbsp;jcsy.snnu.edu.cn All Rights Reserved.陕西师范大学基础实验教学中心 版权所有<br>
+						地址：西安市长安南路199号,陕西师范大学雁塔校区教学七楼　邮编：710062<br>
+						办公电话：+86-29-85303683 E-mail: jcsy@snnu.edu. cn 技术支持：<a href="https://www.guifeng.net/" target="_blank">硅峰网络</a> 陕ICP备：05001611　</p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+<!-- footer -->
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/holder.js"></script>
+<script src="../js/aos.js"></script>
+<script src="../js/jquery.liMarquee.js"></script>
+<script src="../js/owl.carousel.js"></script>
+<script src="../js/jquery.mousewheel.min.js"></script>
+<script src="../js/jquery.flexslider.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/lib.js"></script>
+<script>
+    $(function(){
+        //页面插件调用处...
+
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

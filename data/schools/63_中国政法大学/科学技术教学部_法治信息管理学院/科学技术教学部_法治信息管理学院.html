@@ -1,0 +1,523 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1">
+    <meta charset="UTF-8">
+    <title>中国政法大学</title><META Name="keywords" Content="中国政法大学" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .iosSliderDemo {
+    clear: both;
+    width: 100%;
+    /* padding: 0 0 30% 0; */
+    padding: 0 0 400px;
+    margin: 0 0 0px 0;
+    position: relative;}
+
+.fluidHeight {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    padding: 0;}
+
+.sliderContainer {
+    height: 100%;
+    max-height: 400px;
+    padding: 0 0;}
+
+.iosSlider {
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;}
+
+.iosSlider .slider {
+    width: 100%;
+    height: 100%;}
+
+.iosSlider .slider .item {
+    width: 1000px;
+    height: 100%;
+    padding: 0 0 0 0;
+    text-align: center;}
+
+.iosSlider .slider .item .inner {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    box-shadow: 0 0 10px -5px #000;
+    background-position: 50% 0;
+    background-repeat: no-repeat;}
+
+.iosSlider .slider .item .inner img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;}
+
+.iosSlider .slider .item .inner .selectorShadow {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url(_img/selector-shadow.png) no-repeat 0 0;
+    width: 120px;
+    height: 30px;
+    display: none;}
+
+.iosSlider .slider .item .inner .text1 {
+    background: none repeat scroll 0 0 #000000;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: absolute;
+    left: 100px;
+    top: 30px;
+    padding: 0 2px 0 7px;
+    height: 75px;
+    text-align: left;}
+
+.iosSlider .slider .item .inner .text1 span {
+    color: #fff;
+    font-size: 420%;
+    font-weight: 100;
+    line-height: 76px;
+    padding: 0 8px;}
+
+.iosSlider .slider .item .inner .text1 span i {
+    margin: 0 0 0 5px;}
+
+.iosSlider .slider .item .inner .text2 {
+    background: none repeat scroll 0 0 #000000;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    padding: 10px 7px 7px;
+    position: absolute;
+    left: 100px;
+    top: 115px;
+    text-align: left;}
+
+.iosSlider .slider .item .inner .text2 span {
+    display: block;
+    color: #fff;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 120%;
+    line-height: 120%;
+    font-weight: 100;
+    padding: 0 8px;}
+
+.sliderContainer .slideSelectors {
+    position: relative;
+    bottom: -17px;
+    left: 0;
+    width: 137px;
+    margin: 0 auto;
+    z-index: 1;
+    height: 11px;}
+
+.sliderContainer .slideSelectors .prev {
+    float: left;
+    width: 11px;
+    height: 11px;
+    background: url(_img/selector-prev.png) no-repeat 50% 0;}
+
+.sliderContainer .slideSelectors .next {
+    float: left;
+    width: 11px;
+    height: 11px;
+    margin: 0 0 0 10px;
+    background: url(_img/selector-next.png) no-repeat 50% 0;}
+
+.sliderContainer .slideSelectors .item {
+    float: left;
+    width: 9px;
+    height: 9px;
+    background: #aaa;
+    margin: 1px 1px 1px 11px;
+    /* opacity: 0.25; */
+    filter: alpha(opacity=25);
+    border-radius: 10px;}
+
+.sliderContainer .slideSelectors .item.first {
+    margin-left: 1px;}
+
+.sliderContainer .slideSelectors .selected {
+    width: 11px;
+    height: 11px;
+    margin: 0 0 0 10px;
+    background: #eee;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    box-shadow: none;}
+
+.sliderContainer .slideSelectors .selected.first {
+    margin-left: 0;}
+
+.sliderContainer .scrollbarContainer {
+    position: relative;
+    bottom: 4px;
+    left: 0;
+    width: 1024px;
+    height: 4px;
+    margin: 0 auto;
+    z-index: 1;}
+.iosSlider i{display:none!important;}
+    </style>
+        <script src="js/bdtxk2.min.js"></script>
+            <script type="text/javascript">
+            $(document).ready(function() {
+        
+                $('.iosSlider').iosSlider({
+                    desktopClickDrag: true,
+                    snapToChildren: true,
+                    infiniteSlider: true,
+                    snapSlideCenter: true,
+                    navSlideSelector: '.sliderContainer .slideSelectors .item',
+                    navPrevSelector: '.sliderContainer .slideSelectors .prev',
+                    navNextSelector: '.sliderContainer .slideSelectors .next',
+                    onSlideComplete: slideComplete,
+                    onSliderLoaded: sliderLoaded,
+                    onSlideChange: slideChange,
+                    autoSlide: true,
+                    scrollbar: true,
+                    scrollbarContainer: '.sliderContainer .scrollbarContainer',
+                    scrollbarMargin: '0',
+                    scrollbarBorderRadius: '0',
+                    keyboardControls: true
+                });
+            
+            });
+            
+            function slideChange(args) {
+                        
+                $('.sliderContainer .slideSelectors .item').removeClass('selected');
+                $('.sliderContainer .slideSelectors .item:eq(' + (args.currentSlideNumber - 1) + ')').addClass('selected');
+            
+            }
+            
+            function slideComplete(args) {
+                
+                if(!args.slideChanged) return false;
+                    
+                $(args.sliderObject).find('.text1, .text2').attr('style', '');
+                
+                $(args.currentSlideObject).find('.text1').animate({
+                    left: '30px',
+                    opacity: '0.8'
+                }, 700, 'easeOutQuint');
+                
+                $(args.currentSlideObject).find('.text2').delay(200).animate({
+                    left: '30px',
+                    opacity: '0.8'
+                }, 600, 'easeOutQuint');
+                
+            }
+            
+            function sliderLoaded(args) {
+                    
+                $(args.sliderObject).find('.text1, .text2').attr('style', '');
+                
+                $(args.currentSlideObject).find('.text1').animate({
+                    left: '30px',
+                    opacity: '0.8'
+                }, 700, 'easeOutQuint');
+                
+                $(args.currentSlideObject).find('.text2').delay(200).animate({
+                    left: '30px',
+                    opacity: '0.8'
+                }, 600, 'easeOutQuint');
+                
+                slideChange(args);
+                
+            }
+        </script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230797947545253574103090004 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1388032209)</script>
+</head>
+
+<body class="major">
+    <div class="header">
+        <div class="box">
+            <div class="box_img">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="法治信息管理" style="margin-left:50px;"><img src="images/logo.png" alt=""></a></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="daohang"><div class="nav"><ul class="navs">
+<li class="lanmu"><a href="index.htm" style="font-family:宋体;">首页</a>
+    <ul class="un">
+            <li><a href="index/bydt.htm" style="font-family:宋体;">部院动态</a></li>
+            <li><a href="index/tzgg.htm" style="font-family:宋体;">通知公告</a></li>
+    </ul>
+</li>
+<li class="lanmu"><a href="bygk.htm" style="font-family:宋体;">部院概况</a>
+    <ul class="un">
+            <li><a href="bygk/kjbjj.htm" style="font-family:宋体;">科教部简介</a></li>
+            <li><a href="bygk/xyjj.htm" style="font-family:宋体;">学院简介</a></li>
+            <li><a href="bygk/jgsz.htm" style="font-family:宋体;">机构设置</a></li>
+            <li><a href="bygk/byld.htm" style="font-family:宋体;">部院领导</a></li>
+    </ul>
+</li>
+<li class="lanmu"><a href="szdw.htm" style="font-family:宋体;">师资队伍</a>
+    <ul class="un">
+            <li><a href="szdw/szjj.htm" style="font-family:宋体;">师资简介</a></li>
+            <li><a href="szdw/jxjg.htm" style="font-family:宋体;">教学机构</a></li>
+            <li><a href="szdw/jsfc.htm" style="font-family:宋体;">教师风采</a></li>
+    </ul>
+</li>
+<li class="lanmu"><a href="xkjs.htm" style="font-family:宋体;">学科建设</a>
+    <ul class="un">
+            <li><a href="xkjs/xszx.htm" style="font-family:宋体;">学术资讯</a></li>
+            <li><a href="xkjs/kytd.htm" style="font-family:宋体;">科研团队</a></li>
+            <li><a href="xkjs/xscg.htm" style="font-family:宋体;">学术成果</a></li>
+    </ul>
+</li>
+<li class="lanmu"><a href="xspy.htm" style="font-family:宋体;">学生培养</a>
+    <ul class="un">
+            <li><a href="xspy/xgzy.htm" style="font-family:宋体;">信管专业</a></li>
+            <li><a href="xspy/ggkjx.htm" style="font-family:宋体;">公共课教学</a></li>
+    </ul>
+</li>
+<li class="lanmu"><a href="djgz.htm" style="font-family:宋体;">党建工作</a>
+    <ul class="un">
+            <li><a href="djgz/ddjs.htm" style="font-family:宋体;">党的建设</a></li>
+            <li><a href="djgz/txyd.htm" style="font-family:宋体;">团学园地</a></li>
+            <li><a href="djgz/zgzj.htm" style="font-family:宋体;">职工之家</a></li>
+    </ul>
+</li>
+<li class="lanmu"><a href="hzjl.htm" style="font-family:宋体;">合作交流</a>
+    <ul class="un">
+            <li><a href="hzjl/dwjl.htm" style="font-family:宋体;">对外交流</a></li>
+    </ul>
+</li>
+<li class="lanmu"><a href="sjjx.htm" style="font-family:宋体;">实践教学</a>
+    <ul class="un">
+            <li><a href="sjjx/xkjs.htm" style="font-family:宋体;">学科竞赛</a></li>
+            <li><a href="sjjx/sxsj.htm" style="font-family:宋体;">实习实践</a></li>
+    </ul>
+</li>
+<li class="lanmu"><a href="dl.htm" style="font-family:宋体;">登录</a>
+</li>
+</ul></div></div>
+        <div class="iosSliderDemo">
+            
+            <div class="fluidHeight">
+                
+                <div class="sliderContainer">
+                
+                    <div class="iosSlider">
+                    
+                        <div class="slider">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>    <div class="item item1">
+        <div class="inner">                          
+    
+            <img src="images/yezi.png">
+    
+            <div class="selectorShadow"></div>
+            
+        </div>
+    </div>                           
+    <div class="item item2">
+        <div class="inner">                          
+    
+            <img src="images/lan.png">
+    
+            <div class="selectorShadow"></div>
+            
+        </div>
+    </div>                           
+    <div class="item item3">
+        <div class="inner">                          
+    
+            <img src="images/hanshu.png">
+    
+            <div class="selectorShadow"></div>
+            
+        </div>
+    </div>                           
+    <div class="item item4">
+        <div class="inner">                          
+    
+            <img src="images/tushugaun.png">
+    
+            <div class="selectorShadow"></div>
+            
+        </div>
+    </div>                           
+</div>
+                    
+                    </div>
+                 
+                </div>
+            
+            </div>
+        
+        </div>
+        
+        <div class="content">
+            <div class="list" style="min-height:600px;">
+                <div class="column column1">
+                    <div class="title">
+                        <h2 class="f_left" style="font-family:宋体;">部院动态</h2>
+                        <span class="more f_right">
+                            <a href="index/bydt.htm" style="font-family:Verdana,'Microsoft YaHei';">MORE</a>
+                        </span>
+                    </div>
+                    <script language="javascript" src="/system/resource/js/ajax.js"></script><ul class="list_content">
+        <li>
+        <div class="f_left date">
+        <span class="day">21</span>
+        <span class="line"></span>
+        <span class="month">10月</span>
+        </div>
+        <div class="f_left state" style="font-family:Microsoft YaHei;font-size:16px;">
+        <a href="info/1044/2154.htm">我院召开2025年第十二次党政联席会扩大会议</a>
+        </div>
+    </li>
+       
+    <li>
+        <div class="f_left date">
+        <span class="day">25</span>
+        <span class="line"></span>
+        <span class="month">09月</span>
+        </div>
+        <div class="f_left state" style="font-family:Microsoft YaHei;font-size:16px;">
+        <a href="info/1044/2134.htm">我院召开2025年第十一次党政联席会扩大会议</a>
+        </div>
+    </li>
+       
+    <li>
+        <div class="f_left date">
+        <span class="day">04</span>
+        <span class="line"></span>
+        <span class="month">09月</span>
+        </div>
+        <div class="f_left state" style="font-family:Microsoft YaHei;font-size:16px;">
+        <a href="info/1044/2123.htm">我院召开2025年第十次党政联席会扩大会议</a>
+        </div>
+    </li>
+       
+    <li>
+        <div class="f_left date">
+        <span class="day">26</span>
+        <span class="line"></span>
+        <span class="month">07月</span>
+        </div>
+        <div class="f_left state" style="font-family:Microsoft YaHei;font-size:16px;">
+        <a href="info/1044/2122.htm">学院紧急部署暑期实习实践安全工作 筑牢学生安全防线</a>
+        </div>
+    </li>
+       
+    <li>
+        <div class="f_left date">
+        <span class="day">23</span>
+        <span class="line"></span>
+        <span class="month">07月</span>
+        </div>
+        <div class="f_left state" style="font-family:Microsoft YaHei;font-size:16px;">
+        <a href="info/1044/2121.htm">我院召开2025年第九次党政联席会扩大会议</a>
+        </div>
+    </li>
+       
+</ul>
+
+<script>_showDynClickBatch(['dynclicks_u3_2154','dynclicks_u3_2134','dynclicks_u3_2123','dynclicks_u3_2122','dynclicks_u3_2121'],[2154,2134,2123,2122,2121],"wbnews", 1388032209)</script>
+
+                     
+                </div>
+                <div class="column column2">
+                    <div class="title">
+                        <h2 class="f_left" style="font-family:宋体;">通知公告</h2>
+                        <span class="more f_right">
+                            <a href="index/tzgg.htm" style="font-family:Verdana,'Microsoft YaHei';">MORE</a>
+                        </span>
+                    </div>
+                    <ul class="list_content">
+    <li>
+        <div class="state" style="font-family:Microsoft YaHei;font-size:16px;">
+        <a href="info/1045/2174.htm">讲座通知：人工智能与信息管理—智能时代的系统思维</a>
+        </div>
+    </li>
+    <li>
+        <div class="state" style="font-family:Microsoft YaHei;font-size:16px;">
+        <a href="info/1045/2173.htm">讲座通知：面向群智感知的隐私保护研究</a>
+        </div>
+    </li>
+    <li>
+        <div class="state" style="font-family:Microsoft YaHei;font-size:16px;">
+        <a href="info/1045/2165.htm">讲座通知：交错型和中心型拉格朗日格式的统一框架</a>
+        </div>
+    </li>
+    <li>
+        <div class="state" style="font-family:Microsoft YaHei;font-size:16px;">
+        <a href="info/1045/2164.htm">讲座通知：从“小模型”到“大模型”的智能浪潮：...</a>
+        </div>
+    </li>
+    <li>
+        <div class="state" style="font-family:Microsoft YaHei;font-size:16px;">
+        <a href="info/1045/2163.htm">讲座通知：国家太空安全战略研究与思考</a>
+        </div>
+    </li>
+</ul><script>_showDynClickBatch(['dynclicks_u4_2174','dynclicks_u4_2173','dynclicks_u4_2165','dynclicks_u4_2164','dynclicks_u4_2163'],[2174,2173,2165,2164,2163],"wbnews", 1388032209)</script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer_box">
+            <div class="f_left">
+                <script language="javascript" src="/system/resource/js/openlink.js"></script><span style="font-family:宋体;">常用链接：
+    <a href="http://www.cupl.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1388032209, 37410)" style="color:white;font-family:宋体;">中国政法大学</a><span class="line">|</span>
+    
+    <a href="http://news.cupl.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1388032209, 37411)" style="color:white;font-family:宋体;">法大新闻网</a><span class="line">|</span>
+    
+    <a href="http://cloud.cupl.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1388032209, 37412)" style="color:white;font-family:宋体;">法大云盘</a>
+    
+</span>
+        <span>    <a href="test.cupl.edu.cn" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1388032209, 37784)" style="color:white;font-family:宋体;">科学技术教学部</a><span class="line">|</span>
+    <a href="index.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1388032209, 37785)" style="color:white;font-family:宋体;">法治信息管理学院</a>
+</span>
+                <span style="font-family:宋体;"><p><span>地址：北京市昌平区府学路27号 邮编：102249</span></p></span>
+            </div>
+                <div class="f_right">
+        <a href="http://weibo.com/cupl?c=spr_qdhz_bd_baidusmt_weibo_s&nick=%E4%B8%AD%E5%9B%BD%E6%94%BF%E6%B3%95%E5%A4%A7%E5%AD%A6"><img src="images/17/08/25/1erdv2bzus/sina1.png" alt="" style="width:60px;height:50px;"></a>
+    <a href="http://www.cupl.edu.cn/info/1015/4273.htm"><img src="images/17/08/25/1erdv2bzus/weixin1.png" alt="" style="width:60px;height:50px;"></a>
+    <a href="http://mail.cupl.edu.cn/"><img src="images/17/08/25/1erdv2bzus/mail1.png" alt="" style="width:60px;height:50px;"></a>
+    <a href="http://cupl.dooland.com/site/"><img src="images/17/08/25/1erdv2bzus/book1.png" alt="" style="width:60px;height:50px;"></a>
+</div>
+
+        </div>
+    </div>
+    <script src="js/SuperSlide.js"></script>
+    <script src="js/iosslider.js">
+    <script src="js/index.js"></script>
+        <script type="text/javascript">
+    $(document).ready(function(){
+        $('.navs li').mousemove(function(){                                  
+                  
+            $(this).find('ul').slideDown(300);                                      
+        });
+        $('.navs li').mouseleave(function(){                                      
+            $(this).find('ul').slideUp(300);
+        });  
+    }); 
+</script>
+</body>
+
+</html>

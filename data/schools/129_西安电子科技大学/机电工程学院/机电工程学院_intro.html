@@ -1,0 +1,419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><title>学院概况-西安电子科技大学机电工程学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院概况">
+<meta name="keywords" content="西安电子科技大学机电工程学院">
+
+
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no"><meta name="viewport" content="width=device-width,initial-scale=0.3,maximum-scale=0.3,user-scalable=1">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"><link rel="stylesheet" href="../css/style.css"><script type="text/javascript" src="../js/bdtxk.js"></script><script type="text/javascript" src="../js/slide.js"></script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232306975475350545742000400004256 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1017,'/dpzw.jsp',-1,1570631687)</script>
+</head>
+<body>
+<div class="backtop"><img src="../images/back-top.png"> </div>
+<div class="top-box w10">
+<div class="w12">
+<div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" target="_blank"><img src="../images/logo.png" width="529" height="76" border="0" alt="中文-机电工程学院-新" title="中文-机电工程学院-新"></a></div>
+<div class="right">
+<div class="top-link"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><a href="mailto:eme@xidian.edu.cn" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1570631687, 71300)">书记信箱</a> 
+<a href="mailto:eme@xidian.edu.cn" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1570631687, 71299)">院长信箱</a> 
+<a href="http://www.xidian.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1570631687, 52329)">学校主页</a> 
+<a href="http://emen.xidian.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1570631687, 52331)">English</a> 
+</div>
+<div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu2 .qwss{}
+    #appu2 .tj{
+    float: left;
+    outline: none;
+    width: 42px;
+    height: 42px;
+background:url(../images/search.png) no-repeat center center;
+background-size:100% 100%;
+border:0px;
+width: 45px;
+height: 45px;}
+</style>
+<div id="divu2">
+    <div id="appu2"><div><input type="text" placeholder="" autocomplete="off" class="qwss input1"> <input name="submit_button" type="button" value="" class="tj"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="qwss input1" placeholder="" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1570631687";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+
+<script type="text/javascript" src="../js/bdtxk.js"></script>
+<script type="text/javascript" src="../js/slide.js"></script>
+
+<div class="clear"></div></div>
+<div class="clear"></div></div>
+<div class="clear"></div></div></div><!-- nav bar -->
+<div class="nav-banner">
+<div class="navBar w10">
+<div class="w12"><ul class="nav">
+
+
+<li class="m">
+    <h3><a href="../index.htm" target="_blank">网站首页</a></h3>
+</li>
+
+
+
+
+
+
+
+
+<li class="m on">
+    <h3><a href="../xygk.htm" target="_blank">学院概况</a></h3>
+<ul class="sub">
+    <li><a href="xygk.htm" target="_blank">学院概况</a> </li>
+    <li><a href="xyld.htm" target="_blank">学院领导</a> </li>
+    <li><a href="bgry2.htm" target="_blank">办公人员</a> </li>
+    <li><a href="xssz.htm" target="_blank">系所设置</a> </li>
+
+</ul>
+</li>
+
+
+
+
+
+
+
+
+<li class="m">
+    <h3><a href="../djgz.htm" target="_blank">党建工作</a></h3>
+<ul class="sub">
+    <li><a href="../djgz/zzjg.htm" target="_blank">组织机构</a> </li>
+    <li><a href="../djgz/gzdt.htm" target="_blank">工作动态</a> </li>
+    <li><a href="../djgz/gztz.htm" target="_blank">工作通知</a> </li>
+    <li><a href="../djgz/xczx.htm" target="_blank">乡村振兴</a> </li>
+
+</ul>
+</li>
+
+
+
+
+
+
+
+
+<li class="m">
+    <h3><a href="../rcpy.htm" target="_blank">人才培养</a></h3>
+<ul class="sub">
+    <li><a href="../rcpy/bkjx.htm" target="_blank">本科教学</a> </li>
+    <li><a href="../rcpy/yjspy.htm" target="_blank">研究生培养</a> </li>
+
+</ul>
+</li>
+
+
+
+
+
+
+
+
+<li class="m">
+    <h3><a href="../xkky.htm" target="_blank">学科科研</a></h3>
+<ul class="sub">
+    <li><a href="../xkky/xkjs.htm" target="_blank">学科建设</a> </li>
+    <li><a href="../xkky/kxyj.htm" target="_blank">科学研究</a> </li>
+    <li><a href="../xkky/hzjl.htm" target="_blank">合作交流</a> </li>
+
+</ul>
+</li>
+
+
+
+
+
+
+
+
+<li class="m">
+    <h3><a href="../szdw.htm" target="_blank">师资队伍</a></h3>
+<ul class="sub">
+    <li><a href="../szdw/js_yjy_.htm" target="_blank">教授（研究员）</a> </li>
+    <li><a href="../szdw/fjs_fyjy_gjsys.htm" target="_blank">副教授（副研究员，高级实验师）</a> </li>
+    <li><a href="../szdw/js_sys_gcs.htm" target="_blank">讲师（实验师，工程师）</a> </li>
+    <li><a href="../szdw/zj.htm" target="_blank">助教</a> </li>
+    <li><a href="../szdw/kytd.htm" target="_blank">科研团队</a> </li>
+    <li><a href="../szdw/gccrcyp.htm" target="_blank">高层次人才引聘</a> </li>
+    <li><a href="../szdw/jsgwyp.htm" target="_blank">教师岗位引聘</a> </li>
+    <li><a href="../szdw/bshldz.htm" target="_blank">博士后流动站</a> </li>
+    <li><a href="../szdw/sdjb.htm" target="_blank">师德举报</a> </li>
+    <li><a href="../szdw/zzpyryzp.htm" target="_blank">自主聘用人员招聘</a> </li>
+
+</ul>
+</li>
+
+
+
+
+
+
+
+
+<li class="m">
+    <h3><a href="../xsgz.htm" target="_blank">学生工作</a></h3>
+<ul class="sub">
+    <li><a href="../xsgz/jygl.htm" target="_blank">教育管理</a> </li>
+    <li><a href="../xsgz/xshd.htm" target="_blank">学生活动</a> </li>
+    <li><a href="../xsgz/fdydw.htm" target="_blank">辅导员队伍</a> </li>
+    <li><a href="../xsgz/jyfw.htm" target="_blank">就业服务</a> </li>
+    <li><a href="../xsgz/bszn.htm" target="_blank">办事指南</a> </li>
+    <li><a href="../xsgz/zlxz.htm" target="_blank">资料下载</a> </li>
+
+</ul>
+</li>
+
+
+
+
+
+
+
+
+<li class="m">
+    <h3><a href="../xyzs.htm" target="_blank">校友之声</a></h3>
+</li>
+
+
+
+
+
+
+
+
+<li class="m">
+    <h3><a href="../wjxz.htm" target="_blank">文件下载</a></h3>
+<ul class="sub">
+    <li><a href="../wjxz/rsxz.htm" target="_blank">人事行政</a> </li>
+    <li><a href="../wjxz/bkjx.htm" target="_blank">本科教学</a> </li>
+    <li><a href="../wjxz/yjspy.htm" target="_blank">研究生培养</a> </li>
+    <li><a href="../wjxz/xkky.htm" target="_blank">学科科研</a> </li>
+
+</ul>
+</li>
+
+
+
+
+
+
+
+
+<li class="m">
+    <h3><a href="../mtjd.htm" target="_blank">媒体机电</a></h3>
+</li>
+
+
+
+
+
+
+</ul></div></div><!-- ny-banner -->
+<div class="ny-banner"><img src="../images/nybanner.png"></div>
+<div class="news-list w12">
+<div class="left-nav">
+<div class="title">
+<h4>
+ 
+              学院概况
+
+</h4></div>
+<ul><li class="on"><a href="xygk.htm" target="_blank">学院概况</a> </li>
+<li><a href="xyld.htm" target="_blank">学院领导</a> </li>
+<li><a href="bgry2.htm" target="_blank">办公人员</a> </li>
+<li><a href="xssz.htm" target="_blank">系所设置</a> </li>
+</ul></div>
+<div class="nry-right-text">
+<div class="now">
+<div class="now-l">    您所在位置:  
+                        <a href="../index.htm" target="_blank">网站首页</a>
+                 &gt; 
+                <a href="../xygk.htm" target="_blank">学院概况</a>
+                 &gt; 
+                <a href="xygk.htm" target="_blank">学院概况</a>
+</div></div>
+<div class="content" style="margin-bottom:60px;">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1570631687,'wbnews','u8')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1570631687,1491)</script>
+<div class="con-h">学院概况</div>
+   
+    <div id="vsb_content_4_1491_u81"><div id="vsb_content_4"><p class="vsbcontent_start">&nbsp; &nbsp; &nbsp; 机电工程学院前身可追溯到我校1960年成立的雷达技术系，1979年改称为电子机械系，1994年更名为电子机械学院，1999年由原电子机械学院、原检测与仪器系、原电子工程学院的工业自动化、自动控制和电气技术三个教研室合并成立机电工程学院。</p>
+<p>学院下设电子机械、工业设计、自动控制、电气工程、测控工程与仪器、电子封装、智能机器人7个系和1个本科实验教学中心。学院建有“电子装备结构设计”教育部重点实验室、“电子器件复合材料结构力学”国际合作联合实验室、“空间太阳能电站”陕西省重点实验室、“电子装备机电耦合基础理论与关键技术”111国家创新引智基地、“复杂系统国际联合研究中心”陕西省国际科技合作基地、“智能制造与工业大数据”陕西省工业大数据中心、“创新工业设计”陕西省工业设计中心和综合性工程训练国家级实验教学示范中心。</p>
+<p>国家级科研基地一：电子装备机电耦合实验室旨在集中优势力量突破高性能电子装备的机电耦合理论、设计、控制与应用等关键理论与关键核心技术，引领我国高性能电子装备设计水平、技术创新与服务国家重大需求能力的提升。实验室以面向陆、海、空、天等国家应用的电子装备为研究对象，涉及的主要专业领域有：机电热多场耦合、精密测试、智能设计、聚酰亚胺薄膜材料、多尺度建模、天线与微波技术、热管理与热设计、电磁计算、力学分析、优化设计、可展开结构、超材料及微波器件。</p>
+<p>国家级科研基地二：高性能电子装备机电集成制造实验室围绕高性能电子装备机电集成制造的基础共性技术、关键核心技术、“卡脖子”技术和颠覆性技术，在机电集成制造理论、数字制造技术、高密度封装与组装、特种制造等方向开展原创性、引领性科技攻关，打造多学科交叉融合、产学研协同发展、高水平开放合作、高质量科研产出的重大平台，服务国家高性能电子装备制造重大需求。</p>
+<p>学院现有教职工236人，其中两院院士2人，国家级人才6人，国家级青年人才4人，全国教学指导委员会委员4人，IEEE Fellow 3人，IET Fellow 1人，享受政府特殊津贴专家6人，省部级人才11人，省级科技创新团队4个，德国洪堡学者4人。现有7个本科专业（其中6个为国家一流本科专业）、5个一级学科硕士点、3个一级学科博士点和3个博士后科研流动站。现有机械工程、控制科学与工程、仪器科学与技术、电气工程和力学五个学科。（电子）机械工程在全国第五轮学科评估中取得重大突破，进入全国第一方阵。</p>
+<p>近年来，学院承担了包括国家自然科学基金重大、“973”、“863”、重大武器型号项目等一批高水平科研项目，获得国家科技进步一等奖1项、二等奖6项、国家自然科学二等奖3项，省部级科学技术奖40余项。在国内外著名期刊发表了一批高质量学术论文，获得全国百篇优秀博士学位论文1篇，全国百篇优秀博士学位论文提名2篇，中国电子学会优秀博士论文提名1篇，学院入选 ESI高被引论文 40余篇。</p>
+<p>学院始终以创新和发展为主题，以学科建设为主线，坚持立德树人、育人为本，打通教产学研合作，致力于培养高质量复合型人才。学院全体师生将凝心聚力、团结拼搏，为把学院早日建成国内一流、国际知名的机电工程学院而努力奋斗。</p>
+<p class="vsbcontent_end">（2024年4月更新）</p></div></div>
+
+    <span id="vsb_content_4_1491_u8" name="vsb_content_4_1491_u8"></span>
+    
+
+ </div></div>
+<div class="clear"></div></div><!-- footer -->
+<div class="footer">
+<div class="w12"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p class="copyright">西安电子科技大学 机电工程学院 版权所有 Copyright©2009-2016 S.E.M.E ALL Rights Reserved&nbsp;&nbsp; 技术支持：西安聚力</p></div></div><script type="text/javascript">
+			jQuery(".nav").slide({
+				type: "menu", //效果类型
+				titCell: ".m", // 鼠标触发对象
+				targetCell: ".sub", // 效果对象，必须被titCell包含
+				effect: "slideDown", //下拉效果
+				delayTime: 300, // 效果时间
+				triggerTime: 0, //鼠标延迟触发时间
+				returnDefault: true //返回默认状态
+			});
+		</script><script type="text/javascript">
+			jQuery(".slideBox").slide({
+				mainCell: ".bd ul",
+				autoPlay: true
+			});
+		</script><script type="text/javascript">
+			var doc = $(document),
+				win = $(window);
+			win.scroll(function() {
+				if (doc.scrollTop() >= 200) {
+					$('.head').addClass('head2');
+					$('.back').fadeIn();
+				} else {
+					$('.head2').removeClass('head2');
+					$('.back').fadeOut();
+				}
+			})
+			$('.backtop').click(function() {
+				$('html, body').animate({
+					scrollTop: 0
+				}, 1000);
+			})
+		</script></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

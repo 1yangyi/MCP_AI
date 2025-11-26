@@ -165,6 +165,7 @@ def process_lost_university_website(university_name: str, university_url: str, r
             click_url = "https://" + click_url
 
         print(f"导航到URL: {click_url}")
+        click_url = 'https://enu.kz/kz/page/university/faculties'
         # 直接导航到URL
         click_response = requests.post(
             f"{BROWSER_MCP_URL}/navigate",
@@ -350,11 +351,12 @@ def process_lost_university_website(university_name: str, university_url: str, r
 
 
 if __name__ == "__main__":
-    from check import get_missing_list
-    missing_list = get_missing_list()
-    i = 0
-    for item in missing_list:
-        print(f"Rank: {item[0]}, School: {item[1]}, Website: {item[2]}")
-        process_lost_university_website(item[1], item[2], item[0])
-        i += 1
-        print(f"{i}/{len(missing_list)}:{item[0]}_{item[1]} 已处理完成")
+    # from check import get_missing_list
+    # missing_list = get_missing_list()
+    # i = 0
+    # for item in missing_list:
+    #     print(f"Rank: {item[0]}, School: {item[1]}, Website: {item[2]}")
+    #     process_lost_university_website(item[1], item[2], item[0])
+    #     i += 1
+    #     print(f"{i}/{len(missing_list)}:{item[0]}_{item[1]} 已处理完成")
+    process_lost_university_website("菲律宾大学", "https://up.edu.ph/", 336)

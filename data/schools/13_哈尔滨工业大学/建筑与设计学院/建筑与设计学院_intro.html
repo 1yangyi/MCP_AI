@@ -1,0 +1,1449 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>哈尔滨工业大学-建筑学院</title>
+<meta name="keywords" content="建筑学院">
+<meta name="description" content="哈尔滨工业大学">
+
+<link type="text/css" href="/_css/_system/system.css" rel="stylesheet">
+<link type="text/css" href="/_upload/site/1/style/3/3.css" rel="stylesheet">
+<link type="text/css" href="/_upload/site/00/ee/238/style/220/220.css" rel="stylesheet">
+       <link href="/_css/tpl2/system.css" type="text/css" rel="stylesheet"> 
+<link type="text/css" href="/_js/_portletPlugs/sudyNavi/css/sudyNav.css" rel="stylesheet">
+<link type="text/css" href="/_js/_portletPlugs/datepicker/css/datepicker.css" rel="stylesheet">
+<link type="text/css" href="/_js/_portletPlugs/simpleNews/css/simplenews.css" rel="stylesheet">
+       <link href="/_css/tpl2/default/default.css" type="text/css" rel="stylesheet"> 
+
+<script language="javascript" src="/_js/jquery.min.js" sudy-wp-context="" sudy-wp-siteid="238"></script>
+<script language="javascript" src="/_js/jquery.sudy.wp.visitcount.js"></script>
+<script type="text/javascript" src="/_js/_portletPlugs/sudyNavi/jquery.sudyNav.js"></script>
+<script type="text/javascript" src="/_js/_portletPlugs/datepicker/js/jquery.datepicker.js"></script>
+<script type="text/javascript" src="/_js/_portletPlugs/datepicker/js/datepicker_lang_HK.js"></script>
+<script language="javascript" src="/_upload/tpl/02/d6/726/template726/js/clock.js"></script>
+<script type="text/javascript" src="/_upload/tpl/02/d6/726/template726/extends/extends.js"></script><link rel="stylesheet" type="text/css" href="/_upload/tpl/02/d6/726/template726/extends/extends.css"><script type="text/javascript" src="/_upload/tpl/02/d6/726/template726/extends/libs/jquery.sudy.js"></script>
+<script type="text/javascript" src="/_upload/tpl/02/d6/726/template726/extends/common.js"></script>
+<link rel="stylesheet" href="/_upload/tpl/02/d6/726/template726/style.css" type="text/css">
+<link href="/_upload/tpl/02/d6/726/template726/favicon.ico" type="image/x-icon" rel="shortcut icon">
+<!--[if lt IE 9]>
+<script src="/_upload/tpl/02/d6/726/template726/extends/libs/html5.js"></script>
+<![endif]-->
+</head>
+<body class="main">
+<!--Start||headTop-->
+<div class="wrapper headtop" id="headtop">
+	<div class="inner">
+		<div class="mod clearfix">
+			<!--头部信息-->
+			<div class="top-left">
+			  <p id="demo">2025.10.17 （八月廿六）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;秋季学期</p>
+                          <script type="text/javascript">
+						function TodayInfo(start,holiday,Tomorrow) {
+						var WEEKLEN = 7, // 一周7天为常量
+							WEEKDAYS = ["日", "一", "二", "三", "四", "五", "六"],
+							weekInfo = {"week": null, "day": null, "Hyear": null}, // 初始化返回信息，默认第null周，星期null
+							oneDay = 24 * 60 * 60 * 1000, // 一天的毫秒时长
+							weekLeave, 	  // 开学当天所在周剩余天数
+							weekStart,	 // 开学当天start是星期几
+							today, 		// 今天
+							//holiday, // 放假时间
+							dateDiff, // 今天与开学当天日期差
+							sDate; //开学之日，日期对象
+						var rDateStr = /\d{4}[\/-]\d{1,2}[\/-]\d{1,2}/g; // 简单的日期格式校验：2013/12/19
+						if (!rDateStr.test(start)) {
+							alert("请使用合法的开学日期！！！");
+							return weekInfo;
+						}
+						sDate  = new Date(start.replace("-", "/"));   // 转化开学时间
+						sDate  = new Date(start.replace("-", "/"));   // 转化开学时间
+						hDate  = new Date(holiday.replace("-", "/")); // 转化放假时间
+						TDate  = new Date(Tomorrow.replace("-", "/")); // 转化下个开学时间
+						sMonth = sDate.getMonth() +1;                 // 开学所处的月份 
+						//console.log(sMonth);
+						
+						weekStart = sDate.getDay();                   // 计算开学是星期几
+						weekStart = weekStart === 0 ? 7 : weekStart;  // JS中周日的索引为0，这里转换为7，方便计算
+						weekLeave = WEEKLEN - weekStart;
+						
+						today = new Date();
+						weekInfo.day = WEEKDAYS[today.getDay()];
+						today = new Date(today.getFullYear() + "/" + (today.getMonth() + 1) + "/" + today.getDate());
+						dateDiff = today - sDate;
+						dateDiffs = today - hDate;
+						dateDiffss = today - TDate;
+						//console.log(dateDiffss);
+						
+						dateDiff = parseInt(dateDiff / oneDay);       // 计算日期差天数
+						dateDiffss = parseInt(dateDiffss / oneDay);       // 计算日期差天数
+						//console.log(dateDiffss);
+						weekInfo.week = Math.ceil((dateDiff - weekLeave) / WEEKLEN) + 1;
+						if (dateDiffs >0){    //  判断是否是假期		     
+							if(sMonth > 8){   //  判断上半年还是下半年
+								weekInfo.week = "寒假";
+							}else{
+								weekInfo.week = "暑假";
+							}
+						}
+						/*下个开学时间*/
+						if(dateDiffss >0){
+							//alert();
+							weekInfo.week = Math.ceil((dateDiffss - weekLeave) / WEEKLEN) + 1;
+						}
+						return weekInfo;
+					}
+				</script>
+                         <div class="week">
+                                            <script type="text/javascript">
+												var td = TodayInfo("2025/09/01","2025/09/01","2025/09/01").week;
+												document.write("<span class='days'>"+"第"+td+"周"+"</span>");
+											</script><span class="days">第7周</span>
+                                        </div>						
+			</div>
+                         
+
+			<div class="top-right">
+				<div class="site-lang" frag="窗口05" portletmode="simpleSudyNavi" contents="{'c2':'0', 'c1':'/English,/РУССКИЙ'}">
+											
+						<ul class="clearfix">
+							
+							<li class="links i1"><a href="http://enarch.hit.edu.cn" target="_self">English</a>  </li>
+							
+							<li class="links i2"><a href="http://ruarch.hit.edu.cn/" target="_self">РУССКИЙ</a>  </li>
+							
+						</ul>
+						
+					
+				</div>	
+
+                              <div class="searchbox" frag="窗口03" portletmode="search">
+											<!--搜索组件-->
+						<div class="wp-search clearfix">
+							<form action="/_web/_search/api/search/new.rst?locale=zh_CN&amp;request_locale=zh_CN&amp;_p=YXM9MjM4JnQ9NzI2JmQ9MjE4MiZwPTEmbT1TTiY_" method="post" target="_blank">
+								<div class="search-input">
+									<input name="keyword" class="search-title" type="text" placeholder="">
+								</div>
+								<div class="search-btn">
+									<input name="submit" class="search-submit" type="submit" value="">
+								</div>
+							</form>
+						</div>
+						<!--//复制以上代码到自定义搜索-->
+					
+				</div>			
+
+
+			
+			</div>			
+		</div>
+    </div>
+</div>
+<!--End||headTop-->
+<!--Start||head-->
+<div class="wrapper header" id="header">
+	<div class="inner">
+		<div class="mod clearfix">
+			<div class="head-left" frag="面板01">
+				<!--logo开始-->
+				<a href="/main.htm" title="返回建筑学院2019首页"><img border="0" src="/_upload/tpl/02/d6/726/template726/images/logo.png"></a>
+				<!--//logo结束-->
+			</div>
+			<div class="head-right">
+				<div class="nav clearfix" frag="窗口02" portletmode="simpleSudyNavi" configs="{'c5':'1','c9':'0','c6':'0','c4':'_self','c8':'2','c2':'1','c7':'2','c3':'10','c1':'1'}" contents="{'c2':'0', 'c1':'/首页 ,/学院概况,/党建工作,/ 师资队伍 ,/教育教学,/科学研究         ,/国际合作,/学生工作,/新闻中心,/学院荣光'}"> 
+					<div id="wp_nav_w02"> 
+
+ 
+<ul class="wp_nav" data-nav-config="{drop_v: 'down', drop_w: 'right', dir: 'y', opacity_main: '-1', opacity_sub: '-1', dWidth: '0'}">
+      
+     <li class="nav-item i1 "> 
+         <a href="http://arch.hit.edu.cn/main.htm" title="首页 " target="_self"><span class="item-name">首页 </span></a><i class="mark"></i> 
+          
+     </li> 
+      
+     <li class="nav-item i2 "> 
+         <a href="/11908/list.htm" title="学院概况" target="_self"><span class="item-name">学院概况</span></a><i class="mark"></i> 
+          
+         <ul class="sub-nav" style="width: 80px; height: 240px; top: 79px; left: 0px;"> 
+              
+             <li class="nav-item i2-1 " style="display: block; width: 100%;"> 
+                 <a href="/11954/list.htm" title="学院简介 " target="_self" style="display: block; width: auto;"><span class="item-name">学院简介 </span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i2-2 " style="display: block; width: 100%;"> 
+                 <a href="/11955/list.htm" title="历史沿革 " target="_self" style="display: block; width: auto;"><span class="item-name">历史沿革 </span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i2-3 " style="display: block; width: 100%;"> 
+                 <a href="/11957/list.htm" title=" 现任领导" target="_self" style="display: block; width: auto;"><span class="item-name"> 现任领导</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i2-4 " style="display: block; width: 100%;"> 
+                 <a href="/zzjg/list.htm" title="组织机构" target="_self" style="display: block; width: auto;"><span class="item-name">组织机构</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i2-5 " style="display: block; width: 100%;"> 
+                 <a href="http://arch.hit.edu.cn/11949/list.htm" title="平台建设" target="_self" style="display: block; width: auto;"><span class="item-name">平台建设</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i2-6 " style="display: block; width: 100%;"> 
+                 <a href="/xyfm/list.htm" title="校园风貌" target="_self" style="display: block; width: auto;"><span class="item-name">校园风貌</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+     </li> 
+      
+     <li class="nav-item i3 "> 
+         <a href="/11913/list.htm" title="党建工作" target="_self"><span class="item-name">党建工作</span></a><i class="mark"></i> 
+          
+         <ul class="sub-nav" style="width: 80px; height: 240px; top: 79px; left: 0px;"> 
+              
+             <li class="nav-item i3-1 " style="display: block; width: 100%;"> 
+                 <a href="/11943/list.htm" title="党建概况" target="_self" style="display: block; width: auto;"><span class="item-name">党建概况</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-2 " style="display: block; width: 100%;"> 
+                 <a href="/dwgk/list.htm" title="党务公开" target="_self" style="display: block; width: auto;"><span class="item-name">党务公开</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-3 " style="display: block; width: 100%;"> 
+                 <a href="/11944/list.htm" title=" 党建动态 " target="_self" style="display: block; width: auto;"><span class="item-name"> 党建动态 </span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-4 " style="display: block; width: 100%;"> 
+                 <a href="/11945/list.htm" title="教代会工会" target="_self" style="display: block; width: auto;"><span class="item-name">教代会工会</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-5 " style="display: block; width: 100%;"> 
+                 <a href="/11946/list.htm" title="分党校建设" target="_self" style="display: block; width: auto;"><span class="item-name">分党校建设</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i3-6 " style="display: block; width: 100%;"> 
+                 <a href="/wjxz/list.htm" title="常用下载" target="_self" style="display: block; width: auto;"><span class="item-name">常用下载</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+     </li> 
+      
+     <li class="nav-item i4 "> 
+         <a href="#" title=" 师资队伍 " target="_self"><span class="item-name"> 师资队伍 </span></a><i class="mark"></i> 
+          
+         <ul class="sub-nav" style="width: 80px; height: 40px; top: 79px; left: 0px;"> 
+              
+             <li class="nav-item i4-1 " style="display: block; width: 100%;"> 
+                 <a href="/11963/list.htm" title=" 专任教师" target="_self" style="display: block; width: auto;"><span class="item-name"> 专任教师</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+     </li> 
+      
+     <li class="nav-item i5 "> 
+         <a href="http://arch.hit.edu.cn/11921/list.htm" title="教育教学" target="_self"><span class="item-name">教育教学</span></a><i class="mark"></i> 
+          
+         <ul class="sub-nav" style="width: 80px; height: 120px; top: 79px; left: 0px;"> 
+              
+             <li class="nav-item i5-1 " style="display: block; width: 100%;"> 
+                 <a href="/11914/list.htm" title="招生信息" target="_self" style="display: block; width: auto;"><span class="item-name">招生信息</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i5-2 " style="display: block; width: 100%;"> 
+                 <a href="/11921/list.htm" title="本科生教育" target="_self" style="display: block; width: auto;"><span class="item-name">本科生教育</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i5-3 " style="display: block; width: 100%;"> 
+                 <a href="/11922/list.htm" title="研究生教育" target="_self" style="display: block; width: auto;"><span class="item-name">研究生教育</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+     </li> 
+      
+     <li class="nav-item i6 "> 
+         <a href="http://arch.hit.edu.cn/11938/list.htm" title="科学研究         " target="_self"><span class="item-name">科学研究         </span></a><i class="mark"></i> 
+          
+         <ul class="sub-nav" style="width: 80px; height: 160px; top: 79px; left: 0px;"> 
+              
+             <li class="nav-item i6-1 " style="display: block; width: 100%;"> 
+                 <a href="/11938/list.htm" title="科研概况" target="_self" style="display: block; width: auto;"><span class="item-name">科研概况</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i6-2 " style="display: block; width: 100%;"> 
+                 <a href="/11939/list.htm" title="科研方向" target="_self" style="display: block; width: auto;"><span class="item-name">科研方向</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i6-3 " style="display: block; width: 100%;"> 
+                 <a href="/11940/list.htm" title="科研平台" target="_self" style="display: block; width: auto;"><span class="item-name">科研平台</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i6-4 " style="display: block; width: 100%;"> 
+                 <a href="/shgx/list.htm" title="科研成果" target="_self" style="display: block; width: auto;"><span class="item-name">科研成果</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+     </li> 
+      
+     <li class="nav-item i7 "> 
+         <a href="/11912/list.htm" title="国际合作" target="_self"><span class="item-name">国际合作</span></a><i class="mark"></i> 
+          
+         <ul class="sub-nav" style="width: 117px; height: 120px; top: 79px; left: 0px;"> 
+              
+             <li class="nav-item i7-1 " style="display: block; width: 100%;"> 
+                 <a href="/11942/list.htm" title="国际交流与合作概述" target="_self" style="display: block; width: auto;"><span class="item-name">国际交流与合作概述</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i7-2 " style="display: block; width: 100%;"> 
+                 <a href="/jlzs/list.htm" title="学生国际交流项目" target="_self" style="display: block; width: auto;"><span class="item-name">学生国际交流项目</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i7-3 " style="display: block; width: 100%;"> 
+                 <a href="/zlxz/list.htm" title="资料下载" target="_self" style="display: block; width: auto;"><span class="item-name">资料下载</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+     </li> 
+      
+     <li class="nav-item i8 "> 
+         <a href="/11916/list.htm" title="学生工作" target="_self"><span class="item-name">学生工作</span></a><i class="mark"></i> 
+          
+         <ul class="sub-nav" style="width: 80px; height: 440px; top: 79px; left: 0px;"> 
+              
+             <li class="nav-item i8-1 " style="display: block; width: 100%;"> 
+                 <a href="/gzdw/list.htm" title="工作队伍" target="_self" style="display: block; width: auto;"><span class="item-name">工作队伍</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-2 " style="display: block; width: 100%;"> 
+                 <a href="/gztx_12459/list.htm" title="工作体系" target="_self" style="display: block; width: auto;"><span class="item-name">工作体系</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-3 " style="display: block; width: 100%;"> 
+                 <a href="/tzgg_12460/list.htm" title="通知公告" target="_self" style="display: block; width: auto;"><span class="item-name">通知公告</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-4 " style="display: block; width: 100%;"> 
+                 <a href="/xsdj/list.htm" title="学生党建" target="_self" style="display: block; width: auto;"><span class="item-name">学生党建</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-5 " style="display: block; width: 100%;"> 
+                 <a href="/gqtgz/list.htm" title="共青团工作" target="_self" style="display: block; width: auto;"><span class="item-name">共青团工作</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-6 " style="display: block; width: 100%;"> 
+                 <a href="/jyzd/list.htm" title="就业指导" target="_self" style="display: block; width: auto;"><span class="item-name">就业指导</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-7 " style="display: block; width: 100%;"> 
+                 <a href="/jzdb/list.htm" title="奖助贷补" target="_self" style="display: block; width: auto;"><span class="item-name">奖助贷补</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-8 " style="display: block; width: 100%;"> 
+                 <a href="/xljk/list.htm" title="心理健康" target="_self" style="display: block; width: auto;"><span class="item-name">心理健康</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-9 " style="display: block; width: 100%;"> 
+                 <a href="/txzz/list.htm" title="团学组织" target="_self" style="display: block; width: auto;"><span class="item-name">团学组织</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-10 " style="display: block; width: 100%;"> 
+                 <a href="/byyl/list.htm" title="榜样引领" target="_self" style="display: block; width: auto;"><span class="item-name">榜样引领</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i8-11 " style="display: block; width: 100%;"> 
+                 <a href="/cyxz/list.htm" title="常用下载" target="_self" style="display: block; width: auto;"><span class="item-name">常用下载</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+     </li> 
+      
+     <li class="nav-item i9 "> 
+         <a href="/11917/list.htm" title="新闻中心" target="_self"><span class="item-name">新闻中心</span></a><i class="mark"></i> 
+          
+         <ul class="sub-nav" style="width: 80px; height: 80px; top: 79px; left: 0px;"> 
+              
+             <li class="nav-item i9-1 " style="display: block; width: 100%;"> 
+                 <a href="/11952/list.htm" title="综合新闻" target="_self" style="display: block; width: auto;"><span class="item-name">综合新闻</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+             <li class="nav-item i9-2 " style="display: block; width: 100%;"> 
+                 <a href="/11953/list.htm" title=" 通知公告" target="_self" style="display: block; width: auto;"><span class="item-name"> 通知公告</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+     </li> 
+      
+     <li class="nav-item i10 "> 
+         <a href="/12509/list.htm" title="学院荣光" target="_self"><span class="item-name">学院荣光</span></a><i class="mark"></i> 
+          
+         <ul class="sub-nav" style="width: 139px; height: 40px; top: 79px; left: 0px;"> 
+              
+             <li class="nav-item i10-1 " style="display: block; width: 100%;"> 
+                 <a href="/jwntxjsxscj/list.htm" title="近五年退休教师学术成就" target="_self" style="display: block; width: auto;"><span class="item-name">近五年退休教师学术成...</span></a><i class="mark"></i> 
+                  
+             </li> 
+              
+         </ul> 
+          
+     </li> 
+      
+</ul> 
+ 
+ 
+ </div>
+				</div>
+				
+			</div>
+
+		</div>
+	</div>
+</div>
+<!--End||head-->
+<!--Start||nav-->
+<div class="wrapper nav wp-navi" id="nav">
+	<div class="inner clearfix">
+		<div class="wp-panel">
+			<div class="wp-window" frag="窗口1">
+				
+			</div>
+		</div>
+	</div>
+</div>
+<!--End||nav-->
+<!--Start||focus-->
+<div class="wrapper mbanner" id="banner">
+	<div class="inner clearfix">
+		<div frag="窗口2" portletmode="simpleNews" configs="{'c28':'320','c14':'1','c1':'1','c29':'1','c39':'300','c38':'100','c21':'1','c4':'1','c6':'30','c9':'0','c12':'0','c30':'0','c37':'1','c31':'0','c16':'1','c27':'320','c15':'0','c32':'','c5':'_blank','c40':'1','c17':'0','c19':'yyyy-MM-dd','c33':'500','c2':'标题','c23':'4','c41':'240','c22':'0','c7':'1','c13':'200','c43':'0','c24':'560','c35':'-1:-1','c3':'6','c8':'1','c44':'0','c25':'1920','c34':'300','c18':'yyyy-MM-dd','c20':'0','c42':'320','c10':'50','c11':'1','c36':'0','c26':'1'}" contents="{'c2':'1', 'c1':'/大图切换'}">
+			<div class="focus focus-box" style="width: 1420px; height: 414.167px;"><div class="focus-container" style="width: 1420px; height: 414.167px; visibility: visible;"><div class="focus-item" style="display: block;"><a href="/2022/0624/c11925a278118/page.htm" target="_blank"><img src="/_upload/article/images/8a/79/c7f5364943d680a7d8c1bc592423/07ab2344-7d96-4b5e-887c-6ee1caef1da3.png"></a></div><div class="focus-item" style="display: none;"><img src="/_upload/article/images/1f/79/fab922344c5eb8656483d1670a00/6e72a918-3a02-4b5e-9f2c-2cc1188263fb.jpg"></div><div class="focus-item" style="display: none;"><img src="/_upload/article/images/bd/19/84be45d24edda05f4eca36e08e2e/f85a16c4-77b8-4d36-a739-ad700059bd40.png"></div><div class="focus-item" style="display: none;"><img src="/_upload/article/images/48/e5/3fc87bb943dba1b280b477b16174/98a72701-95d3-41c2-962f-209e5216eb7e.png"></div><div class="focus-item" style="display: none;"><img src="/_upload/article/images/5e/30/b372b83c42279c41930732606519/d7459d60-ee5d-412f-aec7-73f21f4a557a.jpg"></div></div><div class="focus-title-bar" style="display: block; width: 730px;"><div class="focus-title-bg"></div><h2 class="focus-title">关于举办哈尔滨工业大学建筑学院2023年优秀研究生生源选拔暑期夏令营的通知</h2></div><a class="focus-navigation focus-prev">&lt;</a><a class="focus-navigation focus-next">&gt;</a><div class="focus-pagination"><a class="focus-page focus-page-1 focus-page-active"><span>1</span></a><a class="focus-page focus-page-2"><span>2</span></a><a class="focus-page focus-page-3"><span>3</span></a><a class="focus-page focus-page-4"><span>4</span></a><a class="focus-page focus-page-5"><span>5</span></a></div></div>
+			<script type="text/javascript">
+				var w2imgJsons = [
+				
+				{
+					title:"关于举办哈尔滨工业大学建筑学院2023年优秀研究生生源选拔暑期夏令营的通知",
+					src:"/_upload/article/images/8a/79/c7f5364943d680a7d8c1bc592423/07ab2344-7d96-4b5e-887c-6ee1caef1da3.png",
+					url:"/2022/0624/c11925a278118/page.htm"
+				},
+				
+				{
+					title:"【卓越新百年永远跟党走】热烈庆祝中国共产党成立100周年",
+					src:"/_upload/article/images/1f/79/fab922344c5eb8656483d1670a00/6e72a918-3a02-4b5e-9f2c-2cc1188263fb.jpg",
+					url:"/2021/0701/c11925a256427/page.htm"
+				},
+				
+				{
+					title:"哈尔滨工业大学建筑学院2021招生宣传片",
+					src:"/_upload/article/images/bd/19/84be45d24edda05f4eca36e08e2e/f85a16c4-77b8-4d36-a739-ad700059bd40.png",
+					url:"/2021/0514/c11925a254275/page.htm"
+				},
+				
+				{
+					title:"哈工大建筑学院智慧建筑与建造专业招生宣传片",
+					src:"/_upload/article/images/48/e5/3fc87bb943dba1b280b477b16174/98a72701-95d3-41c2-962f-209e5216eb7e.png",
+					url:"/2020/0723/c11925a244287/page.htm"
+				},
+				
+				{
+					title:"2020哈尔滨工业大学“印记哈尔滨 • 城市循踪”云端国际暑期学校盛大开幕",
+					src:"/_upload/article/images/5e/30/b372b83c42279c41930732606519/d7459d60-ee5d-412f-aec7-73f21f4a557a.jpg",
+					url:"/2020/0707/c11925a243742/page.htm"
+				},
+				
+				{}
+				];
+				w2imgJsons.pop();							
+			</script>
+		</div>
+	</div>
+</div>
+<!--End||focus-->
+<!--Start||content-->
+<div class="inner1">
+<div frag="窗口10" portletmode="simpleNews" configs="{'c28':'1420','c14':'1','c1':'1','c29':'1','c39':'300','c38':'100','c21':'1','c4':'1','c6':'15','c9':'0','c12':'0','c30':'0','c37':'1','c31':'0','c16':'1','c27':'320','c15':'0','c32':'','c5':'_blank','c40':'1','c17':'0','c19':'yyyy-MM-dd','c33':'500','c2':'图片','c23':'1','c41':'240','c22':'0','c7':'0','c13':'200','c43':'0','c24':'240','c35':'-1:-1','c3':'1','c8':'1','c44':'0','c25':'320','c34':'300','c18':'yyyy-MM-dd','c20':'0','c42':'320','c10':'50','c11':'1','c36':'0','c26':'1'}" contents="{'c2':'0', 'c1':'/首页固定长图'}" class="c">
+ <div id="wp_news_w10"> 
+ 
+<ul class="wp_article_list"> 
+      
+     <li class="list_item i1"> 
+          
+         <span class="Article_Image"><a href="http://100.hit.edu.cn/xqsy" target="_blank" title="百年校庆专栏"><img src="/_upload/article/images/8f/34/235468c54ed3ac7b500ce0db2910/49c3ae72-c005-4efe-99e9-0a6bd5ad44ce.png" width="1420"></a></span> 
+          
+     </li> 
+      
+</ul> 
+</div> 
+</div>
+
+</div>
+
+
+
+
+<div class="wrapper main1" id="container-1">
+	<div class="inner">
+		<div class="mod clearfix">
+			<div class="ml">
+		           <div class="post post1 post-11 mbox" frag="窗口11" portletmode="simpleNews" configs="{'c28':'320','c14':'1','c1':'1','c29':'1','c39':'300','c38':'100','c21':'0','c4':'1','c6':'15','c9':'0','c12':'0','c30':'0','c37':'1','c31':'0','c16':'1','c27':'320','c15':'0','c32':'','c5':'_blank','c40':'1','c17':'0','c19':'yyyy-MM-dd','c33':'500','c2':'序号,标题,发布时间','c23':'1','c41':'240','c22':'0','c7':'1','c13':'200','c43':'0','c24':'240','c35':'-1:-1','c3':'0','c8':'1','c44':'0','c25':'320','c34':'300','c18':'yyyy-MM-dd','c20':'0','c42':'320','c10':'50','c11':'1','c36':'0','c26':'1'}" contents="{'c2':'0', 'c1':'/新闻中心/综合新闻'}">
+					<div class="tt">
+						<h3 class="tit"><span class="title" frag="标题">综合新闻</span> </h3>
+						<div class="more_btn" frag="按钮" type="更多"> <a href="/11952/list.htm" class="w11_more"><span class="more_text" frag="按钮内容">更多</span></a> </div>
+					</div>
+                                 <!-- No Data -->
+                             </div>       
+			
+				<div class="post post1 post-12 mbox" frag="窗口12" portletmode="simpleNews" configs="{'c28':'320','c14':'1','c1':'1','c29':'1','c39':'300','c38':'100','c21':'0','c4':'1','c6':'22','c9':'0','c12':'0','c30':'0','c37':'1','c31':'0','c16':'1','c27':'320','c15':'0','c32':'','c5':'_blank','c40':'1','c17':'0','c19':'yyyy-MM-dd','c33':'500','c2':'标题,缩略图,简介','c23':'4','c41':'240','c22':'0','c7':'1','c13':'200','c43':'0','c24':'196','c35':'-1:-1','c3':'2','c8':'1','c44':'0','c25':'472','c34':'300','c18':'yyyy-MM-dd','c20':'0','c42':'320','c10':'50','c11':'1','c36':'0','c26':'1'}" contents="{'c2':'1', 'c1':'/新闻中心/综合新闻'}">
+					
+					
+						
+				
+					<div class="con link_text">
+						
+							<ul class="news_list clearfix">
+								
+								<li class="news i1 clearfix">
+									<div class="news_imgs"><a href="/2025/0926/c11952a378949/page.htm" target="_blank" title="第18届全国三维数字化创新设计大赛黑龙江赛评审会成功举办"><img src="/_upload/article/images/56/b1/6a5739cd4054bbbbf911f923a478/cf620cbc-6f66-4c5b-a2e4-22cfafb554ef_s.jpg" height="196"></a></div>
+									<div class="news_wz">
+										<div class="news_con">
+											<div class="news_title"><a href="/2025/0926/c11952a378949/page.htm" target="_blank" title="第18届全国三维数字化创新设计大赛黑龙江赛评审会成功举办">第18届全国三维数字化创新设计大赛黑龙江赛评审...</a></div>
+											
+											<div class="news_text"><a href="/2025/0926/c11952a378949/page.htm" target="_blank" title="第18届全国三维数字化创新设计大赛黑龙江赛评审会成功举办">2025年9月17日下午，金秋的冰城哈尔滨迎来了一场数字化创新设计的盛会——第18届全国三维数字化创新设计大赛...</a></div>
+										</div>
+									</div>
+								</li>
+								
+								<li class="news i2 clearfix">
+									<div class="news_imgs"><a href="/2025/0917/c11952a377995/page.htm" target="_blank" title="建筑与设计学院召开“匠心铸魂强师道 设计赋能筑华章”庆祝教师节活动暨2025年秋季学期工作会议"><img src="/_upload/article/images/10/b4/230393994d6ebfe8f2a6be4f379c/d8ae2e87-31ed-4a4c-9179-11e5aac3614a_s.jpg" height="196"></a></div>
+									<div class="news_wz">
+										<div class="news_con">
+											<div class="news_title"><a href="/2025/0917/c11952a377995/page.htm" target="_blank" title="建筑与设计学院召开“匠心铸魂强师道 设计赋能筑华章”庆祝教师节活动暨2025年秋季学期工作会议">建筑与设计学院召开“匠心铸魂强师道 设计赋能...</a></div>
+											
+											<div class="news_text"><a href="/2025/0917/c11952a377995/page.htm" target="_blank" title="建筑与设计学院召开“匠心铸魂强师道 设计赋能筑华章”庆祝教师节活动暨2025年秋季学期工作会议">在第41个教师节到来之际，建筑与设计学院举行“匠心铸魂强师道 设计赋能筑华章”庆祝教师节大会暨2025年秋...</a></div>
+										</div>
+									</div>
+								</li>
+								
+							</ul>							
+						
+					</div>
+<div class="morebtn" frag="按钮" type="更多"> <a href="/11952/list.htm" class="w12_more"><span class="moretext" frag="按钮内容">
+更多</span></a> </div>
+				</div>
+				<div class="post post1 post-13 mbox" frag="窗口13" portletmode="simpleNews" configs="{'c28':'320','c14':'1','c1':'1','c29':'1','c39':'300','c38':'100','c21':'0','c4':'1','c6':'22','c9':'0','c12':'0','c30':'0','c37':'1','c31':'0','c16':'1','c27':'320','c15':'0','c32':'','c5':'_blank','c40':'1','c17':'0','c19':'yyyy-MM-dd','c33':'500','c2':'标题,缩略图,简介','c23':'4','c41':'240','c22':'0','c7':'1','c13':'200','c43':'0','c24':'196','c35':'-1:-1','c3':'2','c8':'1','c44':'0','c25':'472','c34':'300','c18':'yyyy-MM-dd','c20':'0','c42':'320','c10':'50','c11':'1','c36':'0','c26':'1'}" contents="{'c2':'1', 'c1':'/新闻中心/综合新闻'}">
+				<div class="con news_text">
+													<ul class="news_list clearfix">
+								
+								<li class="news i1 clearfix">
+									<div class="news_imgs"><a href="/2025/0926/c11952a378949/page.htm" target="_blank" title="第18届全国三维数字化创新设计大赛黑龙江赛评审会成功举办"><img src="/_upload/article/images/56/b1/6a5739cd4054bbbbf911f923a478/cf620cbc-6f66-4c5b-a2e4-22cfafb554ef_s.jpg" height="196"></a></div>
+									<div class="news_wz">
+										<div class="news2">
+											<div class="news_title"><a href="/2025/0926/c11952a378949/page.htm" target="_blank" title="第18届全国三维数字化创新设计大赛黑龙江赛评审会成功举办">第18届全国三维数字化创新设计大赛黑龙江赛评审...</a></div>
+											
+											<div class="news_text"><a href="/2025/0926/c11952a378949/page.htm" target="_blank" title="第18届全国三维数字化创新设计大赛黑龙江赛评审会成功举办">2025年9月17日下午，金秋的冰城哈尔滨迎来了一场数字化创新设计的盛会——第18届全国三维数字化创新设计大赛...</a></div>
+										</div>
+									</div>
+								</li>
+								
+								<li class="news i2 clearfix">
+									<div class="news_imgs"><a href="/2025/0917/c11952a377995/page.htm" target="_blank" title="建筑与设计学院召开“匠心铸魂强师道 设计赋能筑华章”庆祝教师节活动暨2025年秋季学期工作会议"><img src="/_upload/article/images/10/b4/230393994d6ebfe8f2a6be4f379c/d8ae2e87-31ed-4a4c-9179-11e5aac3614a_s.jpg" height="196"></a></div>
+									<div class="news_wz">
+										<div class="news2">
+											<div class="news_title"><a href="/2025/0917/c11952a377995/page.htm" target="_blank" title="建筑与设计学院召开“匠心铸魂强师道 设计赋能筑华章”庆祝教师节活动暨2025年秋季学期工作会议">建筑与设计学院召开“匠心铸魂强师道 设计赋能...</a></div>
+											
+											<div class="news_text"><a href="/2025/0917/c11952a377995/page.htm" target="_blank" title="建筑与设计学院召开“匠心铸魂强师道 设计赋能筑华章”庆祝教师节活动暨2025年秋季学期工作会议">在第41个教师节到来之际，建筑与设计学院举行“匠心铸魂强师道 设计赋能筑华章”庆祝教师节大会暨2025年秋...</a></div>
+										</div>
+									</div>
+								</li>
+								
+							</ul>							
+						
+					</div>
+ <div class="morebtn2" frag="按钮" type="更多"> <a href="/11952/list.htm" class="w13_more"><span class="moretext" frag="按钮内容">
+更多</span></a> </div>
+				</div>
+                        
+			</div>
+			
+			<div class="mr">
+				<div class="post post2 post-31 mbox" frag="窗口31" portletmode="simpleNews" configs="{'c28':'320','c14':'1','c1':'1','c29':'1','c39':'300','c38':'100','c21':'0','c4':'1','c6':'28','c9':'0','c12':'0','c30':'0','c37':'1','c31':'0','c16':'1','c27':'320','c15':'0','c32':'','c5':'_blank','c40':'1','c17':'0','c19':'MM-dd','c33':'500','c2':'序号,标题,发布时间','c23':'1','c41':'240','c22':'0','c7':'1','c13':'200','c43':'0','c24':'240','c35':'-1:-1','c3':'9','c8':'1','c44':'0','c25':'320','c34':'300','c18':'yyyy-MM-dd','c20':'0','c42':'320','c10':'50','c11':'1','c36':'0','c26':'1'}" contents="{'c2':'0', 'c1':'/新闻中心/ 通知公告'}">
+					<div class="tt">
+						<h3 class="tit"><span class="title" frag="标题"> 通知公告</span> </h3>
+						<div class="more_btn" frag="按钮" type="更多"> <a href="/11953/list.htm" class="w31_more"><span class="more_text" frag="按钮内容">更多
+
+
+</span></a> </div>
+					</div>
+					<div class="con1">
+						
+							<ul class="news_list clearfix">
+								
+								<li class="news i1 clearfix">
+									
+									
+										<div class="newscon">
+                                                                                       <div class="time">04-03</div>
+											<div class="title"><a href="/2025/0403/c11953a365913/page.htm" target="_blank" title="哈尔滨启航劳务派遣有限公司派遣到哈尔滨工业大学建筑与设计学院 英文期刊编辑部招聘公告">哈尔滨启航劳务派遣有限公司派遣到哈尔滨工业大学建筑与设计...</a></div>
+											
+											
+										</div>
+									
+								</li>
+								
+								<li class="news i1 clearfix">
+									
+									
+										<div class="newscon">
+                                                                                       <div class="time">10-11</div>
+											<div class="title"><a href="/2025/1011/c11953a379480/page.htm" target="_blank" title="哈尔滨工业大学建筑与设计学院2026年推免生拟录取名单公示">哈尔滨工业大学建筑与设计学院2026年推免生拟录取名单公示</a></div>
+											
+											
+										</div>
+									
+								</li>
+								
+								<li class="news i1 clearfix">
+									
+									
+										<div class="newscon">
+                                                                                       <div class="time">09-28</div>
+											<div class="title"><a href="/2025/0928/c11953a379030/page.htm" target="_blank" title="拟推荐申报2025年北京市高等教育教学成果奖项目的公示">拟推荐申报2025年北京市高等教育教学成果奖项目的公示</a></div>
+											
+											
+										</div>
+									
+								</li>
+								
+								<li class="news i1 clearfix">
+									
+									
+										<div class="newscon">
+                                                                                       <div class="time">09-25</div>
+											<div class="title"><a href="/2025/0924/c11953a378803/page.htm" target="_blank" title="建筑与设计学院“未来英才”计划推荐人申报材料公示通知">建筑与设计学院“未来英才”计划推荐人申报材料公示通知</a></div>
+											
+											
+										</div>
+									
+								</li>
+								
+								<li class="news i1 clearfix">
+									
+									
+										<div class="newscon">
+                                                                                       <div class="time">09-22</div>
+											<div class="title"><a href="/2025/0922/c11953a378535/page.htm" target="_blank" title="建筑与设计学院党委关于出席中国共产党哈尔滨工业大学第十四次党员代表大会代表候选人初步人选的公示">建筑与设计学院党委关于出席中国共产党哈尔滨工业大学第十四...</a></div>
+											
+											
+										</div>
+									
+								</li>
+								
+								<li class="news i1 clearfix">
+									
+									
+										<div class="newscon">
+                                                                                       <div class="time">09-18</div>
+											<div class="title"><a href="/2025/0918/c11953a378267/page.htm" target="_blank" title="关于参加黑龙江省2025年“我的青春有版权”创意设计大赛的通知">关于参加黑龙江省2025年“我的青春有版权”创意设计大赛的通...</a></div>
+											
+											
+										</div>
+									
+								</li>
+								
+								<li class="news i1 clearfix">
+									
+									
+										<div class="newscon">
+                                                                                       <div class="time">09-17</div>
+											<div class="title"><a href="/2025/0926/c11953a378943/page.htm" target="_blank" title="2024年度浙江省科学技术奖提名项目公示">2024年度浙江省科学技术奖提名项目公示</a></div>
+											
+											
+										</div>
+									
+								</li>
+								
+								<li class="news i1 clearfix">
+									
+									
+										<div class="newscon">
+                                                                                       <div class="time">09-11</div>
+											<div class="title"><a href="/2025/0912/c11953a377490/page.htm" target="_blank" title="建筑与设计学院2025年度研究生导师资格审核材料公示">建筑与设计学院2025年度研究生导师资格审核材料公示</a></div>
+											
+											
+										</div>
+									
+								</li>
+								
+								<li class="news i1 clearfix">
+									
+									
+										<div class="newscon">
+                                                                                       <div class="time">09-10</div>
+											<div class="title"><a href="/2025/0910/c11953a377355/page.htm" target="_blank" title="关于组织参加2025年第十三届全国大学生数字媒体科技作品及创意竞赛的通知">关于组织参加2025年第十三届全国大学生数字媒体科技作品及创...</a></div>
+											
+											
+										</div>
+									
+								</li>
+								
+							</ul>			
+						
+					</div>
+				</div>			
+			
+				
+			</div>
+		</div>
+	</div>
+</div>
+<div class="wrapper main2" id="container-2">
+	<div class="inner">
+		<div class="mod clearfix">
+        <div class="ml">
+       		<div class="post post2 post-31 mbox" frag="窗口41" portletmode="simpleNews" configs="{'c28':'320','c14':'1','c1':'1','c29':'1','c39':'300','c38':'100','c21':'0','c4':'1','c6':'26','c9':'0','c12':'0','c30':'0','c37':'1','c31':'0','c16':'1','c27':'320','c15':'0','c32':'','c5':'_blank','c40':'1','c17':'0','c19':'MM-dd','c33':'500','c2':'序号,标题,发布时间','c23':'1','c41':'240','c22':'0','c7':'1','c13':'200','c43':'0','c24':'240','c35':'-1:-1','c3':'9','c8':'1','c44':'0','c25':'320','c34':'300','c18':'yyyy-MM-dd','c20':'0','c42':'320','c10':'50','c11':'1','c36':'0','c26':'1'}" contents="{'c2':'0'}">
+					<div class="tt">
+						<h3 class="tit"><span class="title" frag="标题">标题31</span> </h3>
+						<div class="more_btn" frag="按钮" type="更多"> <a href="javascript:void(0);" class="w41_more"><span class="more_text" frag="按钮内容">更多
+
+
+</span></a> </div>
+					</div>
+					<div class="con1">
+						<!-- No Data -->
+					</div>
+				</div>	
+        </div>
+        <div class="mc">
+     		<div class="post post2 post-31 mbox" frag="窗口42" portletmode="simpleNews" configs="{'c28':'320','c14':'1','c1':'1','c29':'1','c39':'300','c38':'100','c21':'0','c4':'1','c6':'26','c9':'0','c12':'0','c30':'0','c37':'1','c31':'0','c16':'1','c27':'320','c15':'0','c32':'','c5':'_blank','c40':'1','c17':'0','c19':'MM-dd','c33':'500','c2':'序号,标题,发布时间','c23':'1','c41':'240','c22':'0','c7':'1','c13':'200','c43':'0','c24':'240','c35':'-1:-1','c3':'9','c8':'1','c44':'0','c25':'320','c34':'300','c18':'yyyy-MM-dd','c20':'0','c42':'320','c10':'50','c11':'1','c36':'0','c26':'1'}" contents="{'c2':'0'}">
+					<div class="tt">
+						<h3 class="tit"><span class="title" frag="标题">标题31</span> </h3>
+						<div class="more_btn" frag="按钮" type="更多"> <a href="javascript:void(0);" class="w42_more"><span class="more_text" frag="按钮内容">更多
+
+
+</span></a> </div>
+					</div>
+					<div class="con1">
+						<!-- No Data -->
+					</div>
+				</div>	
+        </div>
+        <div class="mr">
+        	<div class="post post2 post-31 mbox" frag="窗口43" portletmode="tpl2_scrollnews" contents="{'c2':'0', 'c1':'/专题栏目'}">
+					<div class="tt">
+						<h3 class="tit"><span class="title" frag="标题">专题栏目</span> </h3>
+						<div class="more_btn" frag="按钮" type="更多"> <a href="/12391/list.htm" class="w43_more"><span class="more_text" frag="按钮内容">更多
+
+
+</span></a> </div>
+					</div>
+					<div class="con1">
+						<div id="topw43" class="scrollnews_top" style="width:100%;height:200px;overflow:hidden;">
+    <div id="middlew43">
+        
+            <li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xjgcsjdjs/" title="学习贯彻十九大精神">学习贯彻十九大精神</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xq/" title="纪念建校百年">纪念建校百年</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bbzs" title="哈工大“八百壮士”">哈工大“八百壮士”</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bwcx/" title="不忘初心，牢记使命">不忘初心，牢记使命</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://100.hit.edu.cn/xqsy" title="百年校庆">百年校庆</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://www.hit.edu.cn/" title="哈尔滨工业大学">哈尔滨工业大学</a>
+                
+            </li>
+        
+    
+        
+            <li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xjgcsjdjs/" title="学习贯彻十九大精神">学习贯彻十九大精神</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xq/" title="纪念建校百年">纪念建校百年</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bbzs" title="哈工大“八百壮士”">哈工大“八百壮士”</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bwcx/" title="不忘初心，牢记使命">不忘初心，牢记使命</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://100.hit.edu.cn/xqsy" title="百年校庆">百年校庆</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://www.hit.edu.cn/" title="哈尔滨工业大学">哈尔滨工业大学</a>
+                
+            </li>
+        
+    
+        
+            <li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xjgcsjdjs/" title="学习贯彻十九大精神">学习贯彻十九大精神</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xq/" title="纪念建校百年">纪念建校百年</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bbzs" title="哈工大“八百壮士”">哈工大“八百壮士”</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bwcx/" title="不忘初心，牢记使命">不忘初心，牢记使命</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://100.hit.edu.cn/xqsy" title="百年校庆">百年校庆</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://www.hit.edu.cn/" title="哈尔滨工业大学">哈尔滨工业大学</a>
+                
+            </li>
+        
+    </div>
+    <div id="bottomw43">
+        
+            <li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xjgcsjdjs/" title="学习贯彻十九大精神">学习贯彻十九大精神</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xq/" title="纪念建校百年">纪念建校百年</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bbzs" title="哈工大“八百壮士”">哈工大“八百壮士”</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bwcx/" title="不忘初心，牢记使命">不忘初心，牢记使命</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://100.hit.edu.cn/xqsy" title="百年校庆">百年校庆</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://www.hit.edu.cn/" title="哈尔滨工业大学">哈尔滨工业大学</a>
+                
+            </li>
+        
+    
+        
+            <li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xjgcsjdjs/" title="学习贯彻十九大精神">学习贯彻十九大精神</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xq/" title="纪念建校百年">纪念建校百年</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bbzs" title="哈工大“八百壮士”">哈工大“八百壮士”</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bwcx/" title="不忘初心，牢记使命">不忘初心，牢记使命</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://100.hit.edu.cn/xqsy" title="百年校庆">百年校庆</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://www.hit.edu.cn/" title="哈尔滨工业大学">哈尔滨工业大学</a>
+                
+            </li>
+        
+    
+        
+            <li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xjgcsjdjs/" title="学习贯彻十九大精神">学习贯彻十九大精神</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xq/" title="纪念建校百年">纪念建校百年</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bbzs" title="哈工大“八百壮士”">哈工大“八百壮士”</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bwcx/" title="不忘初心，牢记使命">不忘初心，牢记使命</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://100.hit.edu.cn/xqsy" title="百年校庆">百年校庆</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://www.hit.edu.cn/" title="哈尔滨工业大学">哈尔滨工业大学</a>
+                
+            </li>
+        
+    
+        
+            <li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xjgcsjdjs/" title="学习贯彻十九大精神">学习贯彻十九大精神</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xq/" title="纪念建校百年">纪念建校百年</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bbzs" title="哈工大“八百壮士”">哈工大“八百壮士”</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bwcx/" title="不忘初心，牢记使命">不忘初心，牢记使命</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://100.hit.edu.cn/xqsy" title="百年校庆">百年校庆</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://www.hit.edu.cn/" title="哈尔滨工业大学">哈尔滨工业大学</a>
+                
+            </li>
+        
+    
+        
+            <li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xjgcsjdjs/" title="学习贯彻十九大精神">学习贯彻十九大精神</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xq/" title="纪念建校百年">纪念建校百年</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bbzs" title="哈工大“八百壮士”">哈工大“八百壮士”</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bwcx/" title="不忘初心，牢记使命">不忘初心，牢记使命</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://100.hit.edu.cn/xqsy" title="百年校庆">百年校庆</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://www.hit.edu.cn/" title="哈尔滨工业大学">哈尔滨工业大学</a>
+                
+            </li>
+        
+    
+        
+            <li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xjgcsjdjs/" title="学习贯彻十九大精神">学习贯彻十九大精神</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xq/" title="纪念建校百年">纪念建校百年</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bbzs" title="哈工大“八百壮士”">哈工大“八百壮士”</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bwcx/" title="不忘初心，牢记使命">不忘初心，牢记使命</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://100.hit.edu.cn/xqsy" title="百年校庆">百年校庆</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://www.hit.edu.cn/" title="哈尔滨工业大学">哈尔滨工业大学</a>
+                
+            </li>
+        
+    
+        
+            <li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xjgcsjdjs/" title="学习贯彻十九大精神">学习贯彻十九大精神</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xq/" title="纪念建校百年">纪念建校百年</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bbzs" title="哈工大“八百壮士”">哈工大“八百壮士”</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bwcx/" title="不忘初心，牢记使命">不忘初心，牢记使命</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://100.hit.edu.cn/xqsy" title="百年校庆">百年校庆</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://www.hit.edu.cn/" title="哈尔滨工业大学">哈尔滨工业大学</a>
+                
+            </li>
+        
+    
+        
+            <li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xjgcsjdjs/" title="学习贯彻十九大精神">学习贯彻十九大精神</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xq/" title="纪念建校百年">纪念建校百年</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bbzs" title="哈工大“八百壮士”">哈工大“八百壮士”</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bwcx/" title="不忘初心，牢记使命">不忘初心，牢记使命</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://100.hit.edu.cn/xqsy" title="百年校庆">百年校庆</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://www.hit.edu.cn/" title="哈尔滨工业大学">哈尔滨工业大学</a>
+                
+            </li>
+        
+    
+        
+            <li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xjgcsjdjs/" title="学习贯彻十九大精神">学习贯彻十九大精神</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/xq/" title="纪念建校百年">纪念建校百年</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bbzs" title="哈工大“八百壮士”">哈工大“八百壮士”</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://news.hit.edu.cn/bwcx/" title="不忘初心，牢记使命">不忘初心，牢记使命</a>
+                
+            </li><li class="r scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://100.hit.edu.cn/xqsy" title="百年校庆">百年校庆</a>
+                
+            </li><li class="ar scrollnews_li news i1 clearfix ">
+                
+                    <span class="news_icon"></span>
+                    <a class="col_name articlelist1_a_title " target="_blank" href="http://www.hit.edu.cn/" title="哈尔滨工业大学">哈尔滨工业大学</a>
+                
+            </li>
+        
+    </div>
+</div>
+<script language="javascript">
+    var middlew43 = document.getElementById("middlew43");
+    var bottomw43 = document.getElementById("bottomw43");
+    middlew43.innerHTML = middlew43.innerHTML;
+    middlew43.innerHTML = middlew43.innerHTML + middlew43.innerHTML + middlew43.innerHTML;
+    bottomw43.innerHTML = middlew43.innerHTML + middlew43.innerHTML + middlew43.innerHTML;
+
+    function marqueecw43() {
+        if (document.getElementById('bottomw43').offsetTop - document.getElementById('topw43').scrollTop <= 0) {
+            document.getElementById('topw43').scrollTop -= document.getElementById('middlew43').offsetHeight;
+        } else {
+            document.getElementById('topw43').scrollTop += 1;
+        }
+    }
+
+    function startscrollcw43() {
+        var scrollobjc = setInterval(marqueecw43, 150);
+        document.getElementById('topw43').onmouseover = function() {
+            clearInterval(scrollobjc);
+        };
+        document.getElementById('topw43').onmouseout = function() {
+            scrollobjc = setInterval(marqueecw43, 150);
+        };
+    }
+    startscrollcw43();
+</script>
+					</div>
+				</div>	
+        </div>
+		</div>
+	</div>
+</div>
+
+<!--End||content-->
+<!--Start||footer-->
+<div class="wrapper footer" id="footer">
+  <div class="inner">
+    <div class="mod clearfix">
+      <div class="foot-left">
+        <div class="" frag="窗口90" portletmode="simpleSiteAttri">
+          <p class="copyright"><span>黑龙江省哈尔滨市西大直街92 号</span><span> &nbsp;  邮编：150006</span></p>
+          <p class="copyright"><span>CopyRight © 哈尔滨工业大学建筑与设计学院 黑ICP 备05006863 号</span></p>
+          <p class="copyright"> 电话：0451-86412114</p>
+        </div>
+        <div class="" frag="窗口91" portletmode="simpleNews" configs="{'c28':'320','c14':'1','c1':'1','c29':'1','c39':'300','c38':'100','c21':'0','c4':'1','c6':'15','c9':'0','c12':'0','c30':'0','c37':'1','c31':'0','c16':'1','c27':'320','c15':'0','c32':'','c5':'_blank','c40':'1','c17':'0','c19':'yyyy-MM-dd','c33':'500','c2':'序号,标题,发布时间,缩略图','c23':'1','c41':'240','c22':'0','c7':'1','c13':'200','c43':'0','c24':'240','c35':'-1:-1','c3':'3','c8':'0','c44':'0','c25':'320','c34':'300','c18':'yyyy-MM-dd','c20':'0','c42':'320','c10':'50','c11':'1','c36':'0','c26':'1'}" contents="{'c2':'1', 'c1':'/二维码'}">
+          <div class="shares">
+            
+              <ul class="clearfix">
+                
+                <li class="i1">
+                  <div class="con"><a href="/2019/0613/c11930a225501/page.htm" target="_blank" title="哈尔滨工业大学微信公众号"><img src="/_upload/article/images/12/d3/0c7b6ecf4777b3686571e5b15d66/8b1d6419-5cde-499c-8141-9657040bf93f_s.jpg" width="320"></a></div>
+                  <div>哈尔滨工业大学微信公众号</div>
+                </li>
+                
+                <li class="i2">
+                  <div class="con"><a href="/2019/0613/c11930a225500/page.htm" target="_blank" title="建筑与设计学院微信公众号"><img src="/_upload/article/images/07/44/98aa8b5f4f6f94d42360b0b0f7eb/9e519b17-5371-4158-9740-454ccfbfadd8_s.jpg" width="320"></a></div>
+                  <div>建筑与设计学院微信公众号</div>
+                </li>
+                
+              </ul>
+            
+          </div>
+        </div>
+      </div>
+      <div class="foot-right clearfix">
+        <div class="fl clearfix"> 
+        <span class="yq">学院概况：</span>
+          <div class="foot_yq" frag="窗口100" portletmode="simpleSudyNavi" configs="{'c5':'0','c9':'0','c6':'','c4':'_self','c8':'2','c2':'1','c7':'2','c3':'6','c1':'1'}" contents="{'c2':'0', 'c1':'/学院概况/学院简介 ,/学院概况/历史沿革 ,/学院概况/ 现任领导,/学院概况/组织机构,/学院概况/校园风貌'}">
+             
+              
+              <ul class="clearfix">
+                
+                <li class="links i1"><a href="/11954/list.htm" target="_self">学院简介 </a> </li>
+                
+                <li class="links i2"><a href="/11955/list.htm" target="_self">历史沿革 </a> </li>
+                
+                <li class="links i3"><a href="/11957/list.htm" target="_self"> 现任领导</a> </li>
+                
+                <li class="links i4"><a href="/zzjg/list.htm" target="_self">组织机构</a> </li>
+                
+                <li class="links i5"><a href="/xyfm/list.htm" target="_self">校园风貌</a> </li>
+                
+              </ul>
+               
+            
+          </div>
+       
+        </div>
+        <div class="fc clearfix">
+        	<span class="yq">党建工作：</span>
+          <div class="foot_yq" frag="窗口101" portletmode="simpleSudyNavi" configs="{'c5':'0','c9':'0','c6':'0','c4':'_self','c8':'2','c2':'1','c7':'2','c3':'6','c1':'1'}" contents="{'c2':'0', 'c1':'/党建工作/党建概况,/党建工作/党务公开,/党建工作/ 党建动态 ,/党建工作/教代会工会,/党建工作/分党校建设,/党建工作/常用下载'}">
+             
+              
+              <ul class="clearfix">
+                
+                <li class="links i1"><a href="/11943/list.htm" target="_self">党建概况</a> </li>
+                
+                <li class="links i2"><a href="/dwgk/list.htm" target="_self">党务公开</a> </li>
+                
+                <li class="links i3"><a href="/11944/list.htm" target="_self"> 党建动态 </a> </li>
+                
+                <li class="links i4"><a href="/11945/list.htm" target="_self">教代会工会</a> </li>
+                
+                <li class="links i5"><a href="/11946/list.htm" target="_self">分党校建设</a> </li>
+                
+                <li class="links i6"><a href="/wjxz/list.htm" target="_self">常用下载</a> </li>
+                
+              </ul>
+               
+            
+          </div>
+
+       
+        </div>
+        <div class="fr clearfix"> 
+        <span class="yq">师资队伍：</span>
+          <div class="foot_yq" frag="窗口102" portletmode="simpleSudyNavi" configs="{'c5':'0','c9':'0','c6':'0','c4':'_self','c8':'2','c2':'1','c7':'2','c3':'6','c1':'1'}" contents="{'c2':'0', 'c1':'/ 师资队伍 / 专任教师'}">
+             
+              
+              <ul class="clearfix">
+                
+                <li class="links i1"><a href="/11963/list.htm" target="_self"> 专任教师</a> </li>
+                
+              </ul>
+               
+            
+          </div>
+
+        
+        </div>
+        
+      </div>
+     <div class="foot-right clearfix">
+        <div class="fl clearfix"> 
+        <span class="yq">人才培养：</span>
+          <div class="foot_yq" frag="窗口103" portletmode="simpleSudyNavi" configs="{'c5':'0','c9':'0','c6':'0','c4':'_self','c8':'2','c2':'1','c7':'2','c3':'6','c1':'1'}" contents="{'c2':'0', 'c1':'/教育教学/本科生教育,/教育教学/研究生教育'}">
+             
+              
+              <ul class="clearfix">
+                
+                <li class="links i1"><a href="/11921/list.htm" target="_self">本科生教育</a> </li>
+                
+                <li class="links i2"><a href="/11922/list.htm" target="_self">研究生教育</a> </li>
+                
+              </ul>
+               
+            
+          </div>
+        </div>
+        <div class="fc clearfix">
+        	<span class="yq">科学研究：</span>
+          <div class="foot_yq" frag="窗口104" portletmode="simpleSudyNavi" configs="{'c5':'0','c9':'0','c6':'0','c4':'_self','c8':'2','c2':'1','c7':'2','c3':'6','c1':'1'}" contents="{'c2':'0', 'c1':'/科学研究         /科研概况,/科学研究         /科研方向,/科学研究         /科研平台,/科学研究         /科研成果'}">
+             
+              
+              <ul class="clearfix">
+                
+                <li class="links i1"><a href="/11938/list.htm" target="_self">科研概况</a> </li>
+                
+                <li class="links i2"><a href="/11939/list.htm" target="_self">科研方向</a> </li>
+                
+                <li class="links i3"><a href="/11940/list.htm" target="_self">科研平台</a> </li>
+                
+                <li class="links i4"><a href="/shgx/list.htm" target="_self">科研成果</a> </li>
+                
+              </ul>
+               
+            
+          </div>
+        </div>
+        <div class="fr clearfix"> 
+        <span class="yq">国际合作：</span>
+          <div class="foot_yq" frag="窗口105" portletmode="simpleSudyNavi" configs="{'c5':'0','c9':'0','c6':'0','c4':'_self','c8':'2','c2':'1','c7':'2','c3':'10','c1':'1'}" contents="{'c2':'0', 'c1':'/国际合作/通知公告,/国际合作/国际交流与合作概述,/国际合作/学生国际交流项目,/国际合作/资料下载'}">
+             
+              
+              <ul class="clearfix">
+                
+                <li class="links i1"><a href="/11941/list.htm" target="_self">通知公告</a> </li>
+                
+                <li class="links i2"><a href="/11942/list.htm" target="_self">国际交流与合作概述</a> </li>
+                
+                <li class="links i3"><a href="/jlzs/list.htm" target="_self">学生国际交流项目</a> </li>
+                
+                <li class="links i4"><a href="/zlxz/list.htm" target="_self">资料下载</a> </li>
+                
+              </ul>
+               
+            
+          </div>
+        </div>
+        
+      </div>
+
+
+      <div class="foot-right clearfix">
+        <div class="fl clearfix"> 
+        <span class="yq">招生信息：</span>
+          <div class="foot_yq" frag="窗口106" portletmode="simpleSudyNavi" configs="{'c5':'0','c9':'0','c6':'0','c4':'_self','c8':'2','c2':'1','c7':'2','c3':'6','c1':'1'}" contents="{'c2':'0', 'c1':'/教育教学/招生信息/本科生招生,/教育教学/招生信息/ 研究生招生'}">
+             
+              
+              <ul class="clearfix">
+                
+                <li class="links i1"><a href="/11947/list.htm" target="_self">本科生招生</a> </li>
+                
+                <li class="links i2"><a href="/11948/list.htm" target="_self"> 研究生招生</a> </li>
+                
+              </ul>
+               
+            
+          </div>
+        </div>
+        <div class="fc clearfix">
+        	<span class="yq">平台建设：</span>
+          <div class="foot_yq" frag="窗口107" portletmode="simpleSudyNavi" configs="{'c5':'0','c9':'0','c6':'0','c4':'_self','c8':'2','c2':'1','c7':'2','c3':'10','c1':'1'}" contents="{'c2':'0', 'c1':'/学院概况/平台建设/教学实验中心,/学院概况/平台建设/寒地建筑科学与工程研究中心,/学院概况/平台建设/ 规划院,/学院概况/平台建设/数字创新设计中心,/学院概况/平台建设/实验教学设备预约'}">
+             
+              
+              <ul class="clearfix">
+                
+                <li class="links i1"><a href="/11949/list.htm" target="_self">教学实验中心</a> </li>
+                
+                <li class="links i2"><a href="http://cichsnc-hit-edu-cn.ivpn.hit.edu.cn:1080/" target="_self">寒地建筑科学与工程研...</a> </li>
+                
+                <li class="links i3"><a href="http://www.hitupdi.com/" target="_self"> 规划院</a> </li>
+                
+                <li class="links i4"><a href="/szcxsjzx/list.htm" target="_self">数字创新设计中心</a> </li>
+                
+                <li class="links i5"><a href="/syjxhjyyxt/list.htm" target="_self">实验教学设备预约</a> </li>
+                
+              </ul>
+               
+            
+          </div>
+        </div>
+        <div class="fr clearfix"> 
+        <span class="yq">新闻公告：</span>
+          <div class="foot_yq" frag="窗口108" portletmode="simpleSudyNavi" configs="{'c5':'0','c9':'0','c6':'0','c4':'_self','c8':'2','c2':'1','c7':'2','c3':'6','c1':'1'}" contents="{'c2':'0', 'c1':'/新闻中心/综合新闻,/新闻中心/ 通知公告'}">
+             
+              
+              <ul class="clearfix">
+                
+                <li class="links i1"><a href="/11952/list.htm" target="_self">综合新闻</a> </li>
+                
+                <li class="links i2"><a href="/11953/list.htm" target="_self"> 通知公告</a> </li>
+                
+              </ul>
+               
+            
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="goTop"> <img src="/_upload/tpl/02/d6/726/template726/images/top.jpg"> </div>
+</div>
+
+<!--End||footer-->
+
+<script type="text/javascript" src="/_upload/tpl/02/d6/726/template726/js/comcus.js"></script>
+<script type="text/javascript" src="/_upload/tpl/02/d6/726/template726/js/main.js"></script>
+
+
+ <img src="/_visitcount?siteId=238&amp;type=1&amp;columnId=11906" style="display:none" width="0" height="0"></body></html>

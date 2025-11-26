@@ -1,0 +1,351 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios">
+    <title>实验室概况-质谱成像与代谢组学国家民委重点实验室</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="实验室概况">
+<meta name="keywords" content="质谱成像与代谢组学国家民委重点实验室,关于我们">
+
+    <link rel="stylesheet" href="style/animate.min.css">
+    <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/ny.css">
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+<![endif]-->
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css">
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e784654525a5742000200024253 -->
+<link rel="stylesheet" type="text/css" href="jjy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1002,'/jjy.jsp',-1,1790691648)</script>
+</head>
+
+<body>
+    <!-- pc 顶部 导航 -->
+    <div class="head pc">
+        <div class="t-search" style="overflow: hidden;">
+           <div>
+           
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><input type="text" autocomplete="off"> <div class="search-btn"><input type="image" src="images/search2.png"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+        
+        <input type="text" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                <div class="search-btn">
+                    <input type="image" src="images/search2.png" v-on:click="onSubmit()">
+                </div>
+        
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1790691648";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.119.129.127:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+        </div>
+        <div class="head-top px1400">
+            <div class="logo">
+<a href="index.htm"><img src="images/logo.png" alt=""></a></div>
+            <div class="nav">
+
+                <ul class=""><li>
+                        <a href="index.htm">首页</a>
+
+                    </li>
+<li>
+                        <a href="sysgk.htm">实验室概况</a>
+                        <div>
+                            <ul>
+                                <li><a href="sysgk/sysjs.htm">实验室介绍</a></li>
+                                <li><a href="sysgk/sysglry.htm">实验室管理人员</a></li>
+                                <li><a href="sysgk/xswyhcy.htm">学术委员会成员</a></li>
+                            </ul>
+                        </div>
+                    </li>
+<li>
+                        <a href="kytd.htm">科研团队</a>
+                        <div>
+                            <ul>
+                                <li><a href="kytd/tdgk.htm">团队概况</a></li>
+                                <li><a href="kytd/yjfxxsdtr.htm">研究方向学术带头人</a></li>
+                                <li><a href="kytd/ggjs.htm">骨干教师</a></li>
+                                <li><a href="kytd/wpjs.htm">外聘教师</a></li>
+                            </ul>
+                        </div>
+                    </li>
+<li>
+                        <a href="kxyj.htm">科学研究</a>
+                        <div>
+                            <ul>
+                                <li><a href="kxyj/yjfxjnr.htm">研究方向及内容</a></li>
+                                <li><a href="kxyj/kyxm.htm">科研项目</a></li>
+                                <li><a href="kxyj/dbxyjcg.htm">代表性研究成果</a></li>
+                                <li><a href="kxyj/zzjkfkt1.htm">自主及开放课题</a></li>
+                            </ul>
+                        </div>
+                    </li>
+<li>
+                        <a href="rcpy.htm">人才培养</a>
+
+                    </li>
+<li>
+                        <a href="kfyjl.htm">开放与交流</a>
+
+                    </li>
+<div class="clear"></div></ul>
+                <div class="clear"></div>
+
+            </div>
+            <div class="search-box">
+                <div>
+                    <img class="search-switch" src="images/search.png" alt="">
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+
+    </div>
+    <!-- 移动端导航 -->
+    <div class="top">
+        <div class="wap wap-menu">
+            <img src="images/menu.png" class="menu" alt="">
+            <img src="images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+    <div class="wap m-head">
+        <div class="m-logo">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+    
+<a href="index.htm" onclick="_addDynClicks(&quot;wbimage&quot;, 1790691648, 63884)"><img src="images/logo.png" alt=""></a>
+
+</div>
+        <div class="m-nav">
+
+            <ul class="">   <li>
+                    <a href="index.htm">首页</a>
+                </li>
+   <li>
+                    <a href="sysgk.htm">实验室概况</a>
+<span></span>
+                    <ul>
+                        <li><a href="sysgk/sysjs.htm">实验室介绍</a></li>
+                        <li><a href="sysgk/sysglry.htm">实验室管理人员</a></li>
+                        <li><a href="sysgk/xswyhcy.htm">学术委员会成员</a></li>
+                    </ul>
+                </li>
+   <li>
+                    <a href="kytd.htm">科研团队</a>
+<span></span>
+                    <ul>
+                        <li><a href="kytd/tdgk.htm">团队概况</a></li>
+                        <li><a href="kytd/yjfxxsdtr.htm">研究方向学术带头人</a></li>
+                        <li><a href="kytd/ggjs.htm">骨干教师</a></li>
+                        <li><a href="kytd/wpjs.htm">外聘教师</a></li>
+                    </ul>
+                </li>
+   <li>
+                    <a href="kxyj.htm">科学研究</a>
+<span></span>
+                    <ul>
+                        <li><a href="kxyj/yjfxjnr.htm">研究方向及内容</a></li>
+                        <li><a href="kxyj/kyxm.htm">科研项目</a></li>
+                        <li><a href="kxyj/dbxyjcg.htm">代表性研究成果</a></li>
+                        <li><a href="kxyj/zzjkfkt1.htm">自主及开放课题</a></li>
+                    </ul>
+                </li>
+   <li>
+                    <a href="rcpy.htm">人才培养</a>
+                </li>
+   <li>
+                    <a href="kfyjl.htm">开放与交流</a>
+                </li>
+<div class="clear"></div></ul>
+        </div>
+    </div>
+
+     <div class="banner"><img src="images/banner.jpg" alt=""></div>
+    <div class="position wow fadeInUpd">
+        <div class="px1400"><span>当前位置：</span>
+        
+                <a href="index.htm">首页</a>
+        
+             <span>-&gt;</span>
+
+                <a href="sysgk.htm">实验室概况</a>
+        
+</div>
+    </div>
+    <div class="nymain px1400">
+       <div class="channl-menu leftNav">
+            <h2>
+实验室概况</h2>
+            <ul><li class="active wow fadeInUp  ">
+                    <a href="sysgk/sysjs.htm">实验室介绍</a>
+
+                </li>
+                
+<li class="active wow fadeInUp  ">
+                    <a href="sysgk/sysglry.htm">实验室管理人员</a>
+
+                </li>
+                
+<li class="active wow fadeInUp  ">
+                    <a href="sysgk/xswyhcy.htm">学术委员会成员</a>
+
+                </li>
+                
+</ul>
+        </div>
+        <div class="ny-right">
+            <div class="art-main">
+                <div class="art-body wow fadeInUpd">
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1790691648,'wbnews','u9')</script>
+<script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1790691648,1684)</script>
+<div class="dpzw ">
+
+
+
+    <div id="vsb_content_1684_u91"><div id="vsb_content"><style><!--         p.MsoNormal, li.MsoNormal, div.MsoNormal{ mso-style-parent:""; margin-top:0.0pt; margin-bottom:0.0pt; text-align:justify; text-justify:inter-ideograph; margin-left:0.0pt; text-indent:0.0pt; line-height:normal; font-size:10.5pt; font-family:等线; font-weight:normal;}                  p.MsoHeader, li.MsoHeader, div.MsoHeader{ margin-top:0.0pt; margin-bottom:0.0pt; text-align:center; margin-left:0.0pt; text-indent:0.0pt; line-height:normal; vsb_temp-mode:char; tab-stops:center Blank 207.65pt right Blank 415.3pt ; border-bottom:solid #000 1.0pt; padding:0.0pt 0.0pt 1.0pt 0.0pt; font-size:9.0pt; font-family:等线; font-weight:normal;}                  p.MsoFooter, li.MsoFooter, div.MsoFooter{ margin-top:0.0pt; margin-bottom:0.0pt; text-align:left; margin-left:0.0pt; text-indent:0.0pt; line-height:normal; vsb_temp-mode:char; tab-stops:center Blank 207.65pt right Blank 415.3pt ; font-size:9.0pt; font-family:等线; font-weight:normal;}                  @list l0{ mso-list-id:268435337; mso-list-type:hybrid; mso-list-template-ids:0;}                  @list l0:level1{ mso-level-number-format:bullet; mso-level-style-link:"列表项目符号"; mso-level-text:"●"; mso-level-tab-stop:18.0pt; mso-level-number-position:left; margin-left:18.0pt; text-indent:-18.0pt; font-family:Dialog;}                  @list l1{ mso-list-id:268435336; mso-list-type:hybrid; mso-list-template-ids:0;}                  @list l1:level1{ mso-level-style-link:"列表编号"; mso-level-text:"%1."; mso-level-tab-stop:18.0pt; mso-level-number-position:left; margin-left:18.0pt; text-indent:-18.0pt;}                  @list l2{ mso-list-id:268435331; mso-list-type:hybrid; mso-list-template-ids:0;}                  @list l2:level1{ mso-level-number-format:bullet; mso-level-style-link:"列表项目符号 2"; mso-level-text:"●"; mso-level-tab-stop:39.0pt; mso-level-number-position:left; margin-left:39.0pt; text-indent:-18.0pt; font-family:Dialog;}                  @list l3{ mso-list-id:268435330; mso-list-type:hybrid; mso-list-template-ids:0;}                  @list l3:level1{ mso-level-number-format:bullet; mso-level-style-link:"列表项目符号 3"; mso-level-text:"●"; mso-level-tab-stop:60.0pt; mso-level-number-position:left; margin-left:60.0pt; text-indent:-18.0pt; font-family:Dialog;}                  @list l4{ mso-list-id:268435329; mso-list-type:hybrid; mso-list-template-ids:0;}                  @list l4:level1{ mso-level-number-format:bullet; mso-level-style-link:"列表项目符号 4"; mso-level-text:"●"; mso-level-tab-stop:81.0pt; mso-level-number-position:left; margin-left:81.0pt; text-indent:-18.0pt; font-family:Dialog;}                  @list l5{ mso-list-id:268435328; mso-list-type:hybrid; mso-list-template-ids:0;}                  @list l5:level1{ mso-level-number-format:bullet; mso-level-style-link:"列表项目符号 5"; mso-level-text:"●"; mso-level-tab-stop:102.0pt; mso-level-number-position:left; margin-left:102.0pt; text-indent:-18.0pt; font-family:Dialog;}                  @list l6{ mso-list-id:268435327; mso-list-type:hybrid; mso-list-template-ids:0;}                  @list l6:level1{ mso-level-style-link:"列表编号 2"; mso-level-text:"%1."; mso-level-tab-stop:39.0pt; mso-level-number-position:left; margin-left:39.0pt; text-indent:-18.0pt;}                  @list l7{ mso-list-id:268435326; mso-list-type:hybrid; mso-list-template-ids:0;}                  @list l7:level1{ mso-level-style-link:"列表编号 3"; mso-level-text:"%1."; mso-level-tab-stop:60.0pt; mso-level-number-position:left; margin-left:60.0pt; text-indent:-18.0pt;}                  @list l8{ mso-list-id:268435325; mso-list-type:hybrid; mso-list-template-ids:0;}                  @list l8:level1{ mso-level-style-link:"列表编号 4"; mso-level-text:"%1."; mso-level-tab-stop:81.0pt; mso-level-number-position:left; margin-left:81.0pt; text-indent:-18.0pt;}                  @list l9{ mso-list-id:268435324; mso-list-type:hybrid; mso-list-template-ids:0;}                  @list l9:level1{ mso-level-style-link:"列表编号 5"; mso-level-text:"%1."; mso-level-tab-stop:102.0pt; mso-level-number-position:left; margin-left:102.0pt; text-indent:-18.0pt;}                  @page{}                  @page Section1{ size:595.3pt 841.9pt; margin:72.0pt 89.0pt 72.0pt 90.0pt; padding:24.0pt 24.0pt 24.0pt 24.0pt; vsb_temp:15.6pt;}                  div.Section1{ page:Section1;}                  @font-face{ font-family:黑体; panose-1:2 1 6 9 6 1 1 1 1 1; mso-font-alt:Dialog; mso-font-charset:134; mso-generic-font-family:modern; mso-font-pitch:variable; mso-font-signature:-2147482945 953122042 22 0 262145 0;}                  @font-face{ font-family:Dialog; panose-1:0 0 0 0 0 0 0 0 0 0; mso-font-charset:0; mso-generic-font-family:auto; mso-font-pitch:variable; mso-font-signature:0 0 0 0 0 0;}                  @font-face{ font-family:Times New Roman; panose-1:2 2 6 3 5 4 5 2 3 4; mso-font-alt:Lucida Sans; mso-font-charset:0; mso-generic-font-family:roman; mso-font-pitch:variable; mso-font-signature:-536859905 -1073711039 9 0 511 0;}                  @font-face{ font-family:等线; panose-1:2 1 6 0 3 1 1 1 1 1; mso-font-alt:Dialog; mso-font-charset:134; mso-generic-font-family:auto; mso-font-pitch:variable; mso-font-signature:-1610612033 953122042 22 0 262159 0;}                  @font-face{ font-family:宋体; panose-1:2 1 6 0 3 1 1 1 1 1; mso-font-alt:Dialog; mso-font-charset:134; mso-generic-font-family:auto; mso-font-pitch:variable; mso-font-signature:3 680460288 22 0 262145 0;}                  @font-face{ font-family:Arial; panose-1:2 11 6 4 2 2 2 2 2 4; mso-font-alt:Lucida Sans; mso-font-charset:0; mso-generic-font-family:auto; mso-font-pitch:variable; mso-font-signature:31367 -2147483648 8 0 1073742335 -65536;}                --></style><div class="Section1"><p class="MsoNormal" style="margin-bottom:1.0gd; text-align:center; line-height:150%"><span style="font-size:18.0pt; line-height:150%; font-family:黑体; font-weight:bold">实验室介绍</span></p><p class="MsoNormal" style="text-indent:28.0pt; line-height:150%"><span style="font-size:14.0pt; line-height:150%; font-family:宋体">“质谱成像与代谢组学”国家民委重点实验室于2020年12月经国家民族事务委员会批准成立。实验室是在再帕尔·阿不力孜教授带领下，以中央民族大学生物成像与系统生物学研究中心为核心平台，依托北京高校高精尖学科“质谱成像与代谢组学”（新兴交叉前沿学科类）建设项目，整合生命与环境科学学院和药学院的生物学、化学、中药学及民族医药学等优势学科，构建的以质谱技术为核心的多学科交叉、跨学科协同攻关、技术先进的研究体系与前沿技术平台。</span></p><p class="MsoNormal" style="text-indent:28.0pt; line-height:150%"><span style="font-size:14.0pt; line-height:150%; font-family:宋体">实验室拥有固定人员20名，含研究生导师18名（7名博士生导师），高级职称13名，45岁以下青年教师占比60%，博士学位比例100%。主要由国家民委领军人才、国家民委中青年英才、教育部新世纪优秀人才、北京市高校教学名师、北京市青年英才、北京市优秀青年骨干人才、中央民族大学高层次人才杰出人才和优秀人才，以及优秀青年骨干人员组成。实验室注重青年骨干教师培育，近三年内3名青年教师荣升为高级职称，6名骨干人员获得硕士研究生指导教师资格，14人承担有国家或省部级科研项目。2022年，实验室骨干成员龙春林教授荣获第二届中央民族大学“杰出育人奖”（教学类），王晓东教授被评为北京市优秀本科毕业论文优秀指导教师，高飞教授的“生物信息学实践”课程获得研究生精品示范课程培育项目。此外，为加强与一流大学和科研院所合作，本实验室还聘请本领域6名专家或青年人才作为实验室流动人员。</span></p><p class="MsoNormal" style="text-indent:28.0pt; line-height:150%"><span style="font-size:14.0pt; line-height:150%; font-family:宋体">实验室主要围绕质谱成像技术和代谢组学的关键科学问题和前沿技术难题，聚焦分析新技术、新方法的研究；同时，整合质谱成像与代谢组学技术，发展基于质谱成像技术的（原位）空间分辨代谢组学前沿与新兴交叉平台体系；拓展相关技术与方法在精准医学、疾病生物标志物、药物研发、民族医药、细胞分析、药用植物等领域的应用途径。此外，将质谱技术与智能识别功能研发相结合，旨在研制智能化的代谢物成像与原位分析质谱装置，实现生物组织中代谢物的高覆盖、高灵敏原位分析和精准化成像分析。</span></p><p class="MsoNormal" style="margin-top:0.5gd; text-indent:28.0pt; line-height:150%"><span style="font-size:14.0pt; line-height:150%; font-family:宋体">根据研究目标和内容，实验室设定5个研究方向：</span></p><p class="MsoNormal" style="text-indent:28.0pt; line-height:150%"><span style="font-size:14.0pt; line-height:150%; font-family:宋体">（一）质谱成像和代谢组学新技术与方法研究；</span></p><p class="MsoNormal" style="text-indent:28.0pt; line-height:150%"><span style="font-size:14.0pt; line-height:150%; font-family:宋体">（二）单细胞质谱成像方法及其应用研究；</span></p><p class="MsoNormal" style="text-indent:28.0pt; line-height:150%"><span style="font-size:14.0pt; line-height:150%; font-family:宋体">（三）基于质谱成像技术的体内功能分子表征方法及其应用研究；</span></p><p class="MsoNormal" style="text-indent:28.0pt; line-height:150%"><span style="font-size:14.0pt; line-height:150%; font-family:宋体">（四）代谢组学在精准医学及药物研发等领域的应用研究；</span></p><p class="MsoNormal" style="margin-bottom:0.5gd; text-indent:28.0pt; line-height:150%"><span style="font-size:14.0pt; line-height:150%; font-family:宋体">（五）相关技术在民族医药及药用植物中的应用研究。</span></p><p class="MsoNormal" style="text-indent:28.0pt; line-height:150%"><span style="font-size:14.0pt; line-height:150%; font-family:宋体">实验室通过北京高校高精尖学科“质谱成像与代谢组学”建设项目，不断推进质谱成像与代谢组学交叉学科体系建设。2020年以来通过在生物学硕士一级学科下增设“质谱成像与代谢组学”二级方向，加强了该前沿与交叉学科方向的人才培养力度。同时，实验室依托“理工科拔尖创新人才培养实验班”的本科生培养模块新模式，推进“化学与生物学”交叉学科复合型人才培养模式的改革。</span></p><p class="MsoNormal" style="text-indent:28.0pt; line-height:150%"><span style="font-size:14.0pt; line-height:150%; font-family:宋体">实验室的建设立足国际科学前沿、多学科交叉融合，以国家和北京市科技发展需求为导向，旨在建设国际先进、国内一流的“质谱成像与代谢组学”交叉学科科研平台，建成高层次人才培养和学术合作与交流基地。该实验室建设将突显“前沿与特色”的紧密结合，为提升中央民族大学理工医药学科整体实力与影响力，推动新兴交叉学科建设与发展等方面发挥重要作用。</span></p><p class="MsoNormal" style="text-indent:28.0pt; line-height:150%"><span style="font-size:14.0pt; line-height:150%; font-family:宋体"><br></span></p><p class="MsoNormal" style="text-indent: 28pt; line-height: 150%; text-align: right;"><span style="font-size:14.0pt; line-height:150%; font-family:宋体">（数据更新至2023年12月31日）<br></span></p><p class="MsoNormal" style="text-indent:28.0pt; line-height:150%"><span style="font-size:14.0pt; line-height:150%; font-family:Times New Roman"><br></span></p><p class="MsoNormal" style="text-indent:28.0pt; line-height:150%"><span style="font-size:14.0pt; line-height:150%; font-family:Times New Roman"><br></span></p></div></div></div>
+    <span id="vsb_content_1684_u9" name="vsb_content_1684_u9"></span><br><br>
+    
+
+</div></div>
+
+
+
+            </div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+
+    
+    <div class="footer">
+        <div class="px1400">
+            <div class="bq"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>质谱成像与代谢组学国家民委重点实验室©版权所有</p></div>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/public.js"></script>
+
+
+
+
+</body></html>

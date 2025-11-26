@@ -1,0 +1,307 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<title>北京理工大学继教院</title>
+<!-- Whaty Uikit CSS -->
+<link rel="stylesheet" href="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/font/iconfont.css">
+<link rel="stylesheet" href="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/css/main.css">
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/css/swiper2/idangerous.swiper.css">
+    <script src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/scripts/jquery.min.js"></script>
+<script>
+    function showDateFormat(dateStr, showType) {
+        if (dateStr == null) {
+            return ''
+        }
+        if (showType == 'month') {
+            return dateStr.substr(0, 7).replace("-", "/");
+        }
+
+        if (showType == 'day') {
+            return dateStr.substr(8, 2);
+        }
+
+        if (showType == 'yyyy.mm.dd') {
+            return dateStr.substr(0, 10).replace("-", ".").replace("-", ".");
+        }
+    }
+</script><script src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/scripts/mCustomScrollbar/jquery.mousewheel.min.js"></script></head>
+
+<body>
+<div class="top">
+    <div class="container">
+        <div class="header clearfix">
+            <div class="header-logo pull-left">
+                <a href="/cms"><img src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/images/logo.png" class="mb-hidden"></a>
+                <a href="/cms"><img src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/images/logo-mb.png" class="pc-hidden"></a>
+            </div>
+
+            <!--<div class="header-search pull-right">
+                <i class="whaty icon-search"></i>
+                <input type="text" placeholder="请输入关键词..."/>
+            </div>-->
+            <div class="header-mb-right pull-right pc-hidden">
+                <!-- search trigger -->
+                <!--<a href="javascript:;" class="search-trigger" data-toggle="collapse" data-target="#search-panel">
+                    <i class="whaty icon-search"></i>
+                </a>-->
+                <!-- nav trigger -->
+                <a href="javascript:;" class="menu-trigger" data-toggle="collapse" data-target="#nav-panel">
+                    <i class="whaty icon-nav"></i>
+                </a>
+            </div>
+            <div class="header-login pull-right">
+                <a href="http://www.bitsde.com/mdes/security/profile/login.jsp" target="_blank">登录</a>
+                <span>/</span>
+                <a href="http://www.bitsde.com/mdes/security/profile/login.jsp" target="_blank">注册</a></div>
+        </div>
+        <div class="nav">
+            <ul>
+
+                <li>
+                    <a href="javascript:;" class="trans"><i class="whaty icon-right-stroke pull-right"></i>关于学院<span class="trans"></span></a>
+                    <div class="nav-dropdown">
+                        <ul class="clearfix">
+                            <li><a href="https://sce.bit.edu.cn/cms/xyjj/index.htm">学院简介</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/ldjt/index.htm">领导集体</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/jgsz/index.htm">机构设置</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/lxwm/index.htm">联系我们</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="/cms/xyxwej/index.htm" class="trans"><i class="whaty icon-right-stroke pull-right"></i>新闻 · 活动<span class="trans"></span></a>
+                    <div class="nav-dropdown">
+                        <ul class="clearfix">
+                            <li><a href="https://sce.bit.edu.cn/cms/xyxw/index.htm">学院新闻</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/xyhd/index.htm">学院活动</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" class="trans"><i class="whaty icon-right-stroke pull-right"></i>项目 · 课程<span class="trans"></span></a>
+                    <div class="nav-dropdown">
+                        <ul class="clearfix">
+                            <li><a href="https://sce.bit.edu.cn/cms/tsxmPicture/index.htm">特色项目</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/yszyPicture/index.htm">精品课程</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="javascript:;" class="trans"><i class="whaty icon-right-stroke pull-right"></i>招生咨询<span class="trans"></span></a>
+                    <div class="nav-dropdown">
+                        <ul class="clearfix">
+                            <li><a href="https://sce.bit.edu.cn/cms/zkzxzxxm/4586.htm">自学考试</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/ydxHome/index.htm">成人教育</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/cglxxm1/index.htm">出国留学项目</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/gdpxxm1/index.htm">高端培训项目</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/zyjnpxxm1/index.htm">职继融合培训项目</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/yjspyyjspy/index.htm">研究生教育</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/wljyzszl/index.htm">网络教育</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="javascript:;" class="trans"><i class="whaty icon-right-stroke pull-right"></i>课程思政<span class="trans"></span></a>
+                    <!--<a href="javascript:;" class="trans">课程思政<span class="trans"></span></a>-->
+                    <div class="nav-dropdown">
+                        <ul class="clearfix">
+                            <li><a href="https://sce.bit.edu.cn/cms/szxw/index.htm">思政新闻</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/szkt/index.htm">思政课堂</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/szzs/index.htm">思政展示</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/szzyk/index.htm">思政资源库</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/szalk/index.htm">思政案例库</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" class="trans"><i class="whaty icon-right-stroke pull-right"></i>通知公告<span class="trans"></span></a>
+                    <!--<a href="javascript:;" class="trans">通知公告<span class="trans"></span></a>-->
+                    <div class="nav-dropdown">
+                        <ul class="clearfix">
+                            <li><a href="https://sce.bit.edu.cn/cms/zxkstz1/index.htm">自学考试</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/zsjyjxtz/index.htm">成人教育</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/gdpxdt1/index.htm">高端培训动态</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/gjjjdxwgg/index.htm">国家级基地</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/ysjk/index.htm">雅思机考</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/yjsxwgg/index.htm">研究生教育</a></li>
+                            <li><a href="https://sce.bit.edu.cn/cms/zsjyzstz/index.htm">网络教育</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" class="trans"><i class="whaty icon-right-stroke pull-right"></i>校友之家<span class="trans"></span></a>
+                    <div class="nav-dropdown">
+                        <ul class="clearfix">
+                            <ul class="clearfix">
+                                <li><a href="https://sce.bit.edu.cn/cms/zsjy/index.htm">校友会章程</a></li>
+                                <li><a href="https://sce.bit.edu.cn/cms/zxks1/index.htm">校友活动</a></li>
+                                <li><a href="https://sce.bit.edu.cn/cms/xyzjxyfc/index.htm">校友风采</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" class="trans"><i class="whaty icon-right-stroke pull-right"></i>常用下载<span class="trans"></span></a>
+                    <div class="nav-dropdown">
+                        <ul class="clearfix">
+                            <ul class="clearfix">
+                                <li><a href="https://sce.bit.edu.cn/cms/xljy/index.htm">学历教育</a></li>
+                                <li><a href="https://sce.bit.edu.cn/cms/fxljy/index.htm">非学历教育</a></li>
+                                <li><a href="https://sce.bit.edu.cn/cms/qt/index.htm">其他</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <!---------- inbanner start ---------->
+    <div class="subBanner"><img src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/images/ban/inban01.jpg" alt=""></div>
+    <!---------- banner end ---------->
+
+    <!---------- main start---------->
+    <div class="main">
+        <div class="container">
+            <div class="subpage-container clearfix">
+                <div class="subpage-menu">
+                    <div class="subpage-menu-title">
+                        <h3 class="text">关于学院</h3>
+                        <!--<span class="text-en">News · Activities</span>-->
+                    </div>
+                    <div class="subpage-menu-list">
+                        <ul>
+                            <li class="active"><span class="icon-bar"></span><a href="https://sce.bit.edu.cn/cms/xyjj/index.htm">学院简介<i class="whaty icon-right-stroke"></i></a></li>
+                            <li><span class="icon-bar"></span><a href="https://sce.bit.edu.cn/cms/ldjt/index.htm">领导集体<i class="whaty icon-right-stroke"></i></a></li>
+                            <li><span class="icon-bar"></span><a href="https://sce.bit.edu.cn/cms/jgsz/index.htm">机构设置<i class="whaty icon-right-stroke"></i></a></li>
+                            <li><span class="icon-bar"></span><a href="https://sce.bit.edu.cn/cms/lxwm/index.htm">联系我们<i class="whaty icon-right-stroke"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="subpage-main">
+                    <!-- subpage title -->
+                    <div class="subpage-title">
+                        <span class="subpage-title-icon"></span>
+                        <span class="subpage-title-text">学院简介</span>
+                        <span class="crumb pull-right">
+                            <i class="whaty icon-home"></i>
+                            您当前所在位置：
+                            <a href="/cms">首页</a>
+                            <i>&gt;</i>
+                            <a href="https://sce.bit.edu.cn/cms/xyjj/index.htm">学院简介</a>
+                        </span>
+                    </div>
+                    <div class="inner">
+                        <!-- subpage title end -->
+                        <div class="subDetail">
+                            <div class="newsInfo_title">北京理工大学继续教育学院</div>
+                            <div class="newsInfo_tips">
+                                <span>发布时间：
+                                    <script>
+                                        document.write(showDateFormat("2023-04-19 14:50:06", 'yyyy.mm.dd'))
+                                    </script>2023.04.19
+                                </span>
+                                <span>浏览次数：27450</span>
+                            </div>
+                            <div class="newsInfo_con">
+<p>														</p><p><span style="font-family:39;PingFang SC Regular39;,sans-serif">　　北京理工大学继续教育开始于1956年，目前建立了由继续教育学院、远程教育学院组成并合署办公的继续教育办学单位。办学类型涵盖继续教育、自学考试、研究生教育、非学历继续教育等。学历层次包括博士、硕士、本科教育。北京理工大学继续教育学院是国内外知名的开展继续教育的办学机构，坚持“质量核心、特色发展”，培养了一大批优秀人才。2011年获得国家教育部“高等学校继续教育示范基地”称号，2016年获得国家人力资源和社会保障部“国家级专业技术人员继续教育基地”称号，2021年获“教育部继续教育课程思政教学研究示范中心”称号。</span></p><p>												</p>                            </div>
+                            <!--<div class="rNews">
+                                <ul>
+                                    <li>上一篇：<a href="#">无</a></li>
+                                    <li>下一篇：<a href="#">北理工继续教育学院召开全体教职工大会</a></li>
+                                </ul>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------- main end ---------->
+<div class="footer">
+    <div class="container">
+        <div class="link">
+            <h3 class="foot-title">友情链接</h3>
+            <ul>
+                <li><i class="whaty icon-right-stroke"></i><a href="https://www.bit.edu.cn/">北京理工大学</a></li>
+                <li><i class="whaty icon-right-stroke"></i><a href="https://www.bjeea.edu.cn/">北京教育考试院</a></li>
+            </ul>
+        </div>
+        <div class="font-contact">
+            <h3 class="foot-title">关于我们</h3>
+            <ul>
+                <li><i class="whaty icon-mail"></i>院长邮箱：cecbit@bit.edu.cn </li>
+                <li><i class="whaty icon-phone"></i>学院电话：010-68918807</li>
+            </ul>
+        </div>
+        <div class="font-contact">
+            <h3 class="foot-title">联系电话</h3>
+            <ul>
+                <li><i class="whaty icon-phone"></i>学历继续教育：010-68913146</li>
+                <li><i class="whaty icon-phone"></i>非学历教育：010-68918950</li>
+                <li><i class="whaty icon-phone"></i>研究生教育：010-68914575</li>
+                <li><i class="whaty icon-phone"></i>自学考试：010-68911823</li>
+                <li><i class="whaty icon-phone"></i>雅思考试：010-68918918</li>
+            </ul>
+        </div>
+        <div class="foot-logo">
+            <!--<img src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/images/white-logo.png">-->
+            <img src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/images/qrCode/xinl1.png">
+            <img src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/images/qrCode/douyin1.png">
+            <img src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/images/qrCode/jxjy1.png">
+            <img src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/images/qrCode/ycjy1.png">
+        </div>
+        <div class="copyright"><p>版权所有 ©北京理工大学继续教育学院 远程教育学院 |
+            <a href="https://beian.miit.gov.cn/" target="blank"><font style="color:white;">京ICP备10019879号-1</font></a>
+            京公网安备11040202430169号</p></div>
+    </div>
+</div>
+<!-- Jquery JS -->
+<!-- <script src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/scripts/jquery.min.js"></script> -->
+<script src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/scripts/jquery.min.js"></script>
+
+<!-- Scroll JS -->
+<script src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/scripts/mCustomScrollbar/jquery.mCustomScrollbar.min.js"></script>
+
+<!-- Swiper JS -->
+<!-- <script src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/scripts/swiper4/swiper.min.js"></script> -->
+<script src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/scripts/swiper2/idangerous.swiper.min.js"></script>
+    
+<!-- Whaty Uikit JS -->
+<script src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/scripts/common.js"></script>
+<script src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/scripts/form.js"></script>
+
+<!-- IE Compatiblity  -->
+<!-- placeholder for IE8 -->
+<!--[if IE 8]>
+<script src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/scripts/jquery.min.js"></script>
+<script src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/scripts/placeholder/placeholderForIE.js"></script>
+<body class="ie8">
+<![endif]-->
+
+<!-- placeholder for IE9 -->
+<!--[if IE 9]>
+<script type="text/javascript" src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/scripts/placeholder/jquery.placeholder.min.js"></script>
+<script type="text/javascript">
+   $(function() {
+        $('input, textarea').placeholder();
+   });
+</script>
+<body class="ie9">
+<![endif]-->
+    
+<!--[if lt IE 9]>
+<script type="text/javascript" src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/scripts/ieCompatiblity/html5shiv.min.js"></script>
+<script type="text/javascript" src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/scripts/ieCompatiblity/respond.min.js"></script>
+<![endif]-->
+    
+<!--[if (gte IE 6)&(lte IE 8)]>
+<script type="text/javascript" src="https://sce.bit.edu.cn/cms/res_base/bjlg_cms/default/scripts/ieCompatiblity/selectivizr-min.js"></script>
+<![endif]-->
+
+
+
+</body></html>

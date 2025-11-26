@@ -1,0 +1,716 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>学院简介-电子信息学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="电子信息学院,学院简介">
+
+    <link rel="stylesheet" href="../../20208/css/common.css">
+    <link rel="stylesheet" href="../../20208/css/style.css">
+    <link rel="stylesheet" href="../../20208/css/slick.css">
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232306975475152555742000200014156 -->
+<link rel="stylesheet" type="text/css" href="../../20208/danye.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1370,'/20208/danye.jsp',-1,990213371)</script>
+</head>
+<body>
+
+<!--头部-->
+<div class="head" style="/*background:url(../../20208/images/headbg2.jpg) no-repeat center;*/ background-color: #0E419C">
+    <div class="container2">
+        <div class="headLeft fl">
+            <a href="#"><img src="../../20208/images/headlogo.png" alt="" width="550"></a>
+            
+        </div>
+        <div class="headRight fr">
+            <ul class="headtool fr">
+               
+                <div class="serBox">
+    <div>
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><input type="text" placeholder="电子信息学院" autocomplete="off" class="serK"> <input name="submit_button" type="image" src="../../20208/images/icons/headsericon.png" class="serBtn"></div> <!----></div>
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <input type="text" class="serK" placeholder="电子信息学院" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input name="submit_button" type="image" class="serBtn" src="../../20208/images/icons/headsericon.png" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "990213371";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://yykfpt.nwpu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+</div>
+            </ul>
+            
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+   
+    <div class="container2" style="margin-top:30px; width:1190px; float:right; background-color:#0E419C; /*line-height:35px; height:35px;*/ margin-right:50px;">
+ <ul class="nav fr">
+
+                <li><a href="../index.htm">首页</a>
+                </li>
+                
+
+
+                <li class="cur"><a href="../xygk.htm">学院概况</a>
+                <div class="erji">
+
+                        <a href="xyjj.htm">学院简介</a>
+                       
+
+                        <a href="xyld1/xrld.htm">学院领导</a>
+                       
+
+                        <a href="zzjg/jgsz.htm">组织机构</a>
+                       
+
+                        <a href="gzzd.htm">规章制度</a>
+                       
+                        
+                    </div>
+                </li>
+                
+
+
+                <li><a href="../szdw1/szll/dzkxyjsx.htm">师资队伍</a>
+                <div class="erji">
+
+                        <a href="../szdw1/szll/dzkxyjsx.htm">师资力量</a>
+                       
+
+                        <a href="../szdw1/ryxx.htm">荣誉学衔</a>
+                       
+                        
+                    </div>
+                </li>
+                
+
+
+                <li><a href="../rcpy/bkspy/gk.htm">人才培养</a>
+                <div class="erji">
+
+                        <a href="../rcpy/bkspy/gk.htm">本科生培养</a>
+                       
+
+                        <a href="../rcpy/yjspy/kcjj.htm">研究生培养</a>
+                       
+
+                        <a href="../rcpy/jcyy1/ss.htm">杰出院友</a>
+                       
+                        
+                    </div>
+                </li>
+                
+
+
+                <li><a href="../kxyj1/kypt.htm">科学研究</a>
+                <div class="erji">
+
+                        <a href="../kxyj1/kypt.htm">科研平台</a>
+                       
+
+                        <a href="../kxyj1/kytd.htm">科研团队</a>
+                       
+
+                        <a href="../kxyj1/kyfx.htm">科研方向</a>
+                       
+
+                        <a href="../kxyj1/kycg.htm">科研成果</a>
+                       
+
+                        <a href="../kxyj1/qnyc.htm">青年英才</a>
+                       
+                        
+                    </div>
+                </li>
+                
+
+
+                <li><a href="../xkjjians/dzkxyjs.htm">学科建设</a>
+                <div class="erji">
+
+                        <a href="../xkjjians/dzkxyjs.htm">电子科学与技术</a>
+                       
+
+                        <a href="../xkjjians/xxytxgc.htm">信息与通信工程</a>
+                       
+
+                        <a href="../xkjjians/kzkxygc.htm">控制科学与工程</a>
+                       
+                        
+                    </div>
+                </li>
+                
+
+
+                <li><a href="../dwjl/gjhgk.htm">对外交流</a>
+                <div class="erji">
+
+                        <a href="../dwjl/gjhgk.htm">国际化概况</a>
+                       
+
+                        <a href="../dwjl/xsjl.htm">学生交流</a>
+                       
+
+                        <a href="../dwjl/gjhy.htm">国际会议</a>
+                       
+
+                        <a href="../dwjl/dwhz/gjhz.htm">对外合作</a>
+                       
+                        
+                    </div>
+                </li>
+                
+
+
+                <li><a href="../xsgz.htm">学生工作</a>
+                <div class="erji">
+
+                        <a href="../xsgz/xszz.htm">学生组织</a>
+                       
+
+                        <a href="../xsgz/xsfc.htm">学生风采</a>
+                       
+
+                        <a href="../xsgz/xshd.htm">学生活动</a>
+                       
+
+                        <a href="../xsgz/cxcy.htm">创新创业</a>
+                       
+                        
+                    </div>
+                </li>
+                
+
+
+                <li><a href="../djyd1/djgk.htm">党建园地</a>
+                <div class="erji">
+
+                        <a href="../djyd1/djgk.htm">党建概况</a>
+                       
+
+                        <a href="../djyd1/djdt.htm">党建动态</a>
+                       
+
+                        <a href="../djyd1/djkt.htm">党建课堂</a>
+                       
+                        
+                    </div>
+                </li>
+                
+
+
+                <li><a href="../yczp.htm">英才招聘</a>
+                <div class="erji">
+
+                        <a href="../yczp.htm">英才招聘</a>
+                       
+
+                        <a href="../yczp/hwycds.htm">海外引才大使</a>
+                       
+                        
+                    </div>
+                </li>
+                
+
+
+                <li><a href="../zsjy.htm">招生就业</a>
+                <div class="erji">
+
+                        <a href="../zsjy/bkszs.htm">本科生招生</a>
+                       
+
+                        <a href="../zsjy/yjszs.htm">研究生招生</a>
+                       
+
+                        <a href="https://job.nwpu.edu.cn/">就业信息网</a>
+                       
+                        
+                    </div>
+                </li>
+                
+
+
+                <li><a href="../xzzx.htm">下载中心</a>
+                <div class="erji">
+
+                        <a href="../xzzx/jsxz.htm">教师下载</a>
+                       
+
+                        <a href="../xzzx/xsxz.htm">学生下载</a>
+                       
+
+                        <a href="../xzzx/gzlc.htm">工作流程</a>
+                       
+                        
+                    </div>
+                </li>
+                
+</ul>  
+   </div>
+    
+</div>
+
+
+
+<!--banner开始-->
+<div class="banner">
+    <div class="slcik" id="slick1">
+        <div><a href=""><img src="../../20208/images/banner1.jpg" alt=""></a></div>
+    </div>
+
+
+    <div class="bannerbg bannerbg1"></div>
+  <!--  <div class="ejlm">
+            <div class="yj">院系设置</div>
+            <div class="ej">
+                <ul><li><a href="#">> 系所简介</a></li>
+                <li><a href="#">> 校园风采</a></li>
+                <li><a href="#">> 校园风采</a></li>
+                <li><a href="#">> 学院历届领导名单</a></li>
+                <li><a href="#">> 组织机构</a></li></ul>
+            </div>-->
+    </div>
+
+<!--banner结束-->
+
+<!--内容开始-->
+<!--内容开始--><!--添加左侧 -->
+ 
+ <div class="bttzy-content container">   
+    
+    <div style="float:left; width:300px; min-height:400px;">
+    
+     <link rel="stylesheet" href="../../20208/css/index.css">
+<center>
+<dl class="list_dl">
+
+<dt class="list_dt11">
+        
+        <p>
+学院概况</p>
+        
+    </dt>
+
+       
+  <dt class="list_dt" id="open">
+        <span class="_after"></span>
+        <p><a href="xyjj.htm">学院简介</a></p>
+        <i class="list_dt_icon"></i>
+    </dt> 
+   <dd class="list_dd" style="display: block;">
+        <ul>
+ <li class="list_li"><a href="xyjj/xybz.htm">学院标志</a></li>
+        </ul>
+    </dd>
+   
+   
+   
+  <dt class="list_dt">
+        <span class="_after"></span>
+        <p><a href="xyld1/xrld.htm">学院领导</a></p>
+        <i class="list_dt_icon"></i>
+    </dt> 
+   <dd class="list_dd">
+        <ul>
+ <li class="list_li"><a href="xyld1/xrld.htm">现任领导</a></li>
+ <li class="list_li"><a href="xyld1/lrld.htm">历任领导</a></li>
+        </ul>
+    </dd>
+   
+   
+   
+  <dt class="list_dt">
+        <span class="_after"></span>
+        <p><a href="zzjg/jgsz.htm">组织机构</a></p>
+        <i class="list_dt_icon"></i>
+    </dt> 
+   <dd class="list_dd">
+        <ul>
+ <li class="list_li"><a href="zzjg/jgsz.htm">机构设置</a></li>
+ <li class="list_li"><a href="zzjg/bgdh.htm">办公电话</a></li>
+        </ul>
+    </dd>
+   
+   
+   
+  <dt class="list_dt">
+        <span class="_after"></span>
+        <p><a href="gzzd.htm">规章制度</a></p>
+        
+    </dt> 
+   
+
+</dl>
+<!--为了浏览器兼容性jqeury版本推荐使用1.12.0，其他版本会出现不支持某些浏览器-->
+<script type="text/javascript" src="../../20208/js/jquery.min.js"></script>
+<script type="text/javascript">
+$(".list_dt").on("click",function () {
+    $('.list_dd').stop();
+    $(this).siblings("dt").removeAttr("id");
+    if($(this).attr("id")=="open"){
+        $(this).removeAttr("id").siblings("dd").slideUp();
+    }else{
+        $(this).attr("id","open").next().slideDown().siblings("dd").slideUp();
+    }
+});
+</script>
+</center>
+    </div>
+    
+    <div style="float: right; width:900px;">
+    <div class=" container3">
+    <div class="title1">
+        <div class="lm fl" style="font-size:22px;color:#2357B3;">
+&gt; 学院简介</div>
+        <div class="current fr">当前位置：
+    
+<a href="../index.htm">首页</a> 
+    
+    
+  &gt; <a href="../xygk.htm">学院概况</a>
+    
+    
+  &gt; <a href="xyjj.htm">学院简介</a>
+    
+</div>
+    </div>
+ 
+ </div>  
+    <div class="dpzw-text">
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',990213371,'wbnews','u6')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta6(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta6('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',990213371,12860)</script>
+<!--
+ <div class="dpzw-title">学院概况</div>
+ -->
+    <div class="dpzw-nr">
+  
+    <div id="vsb_content_4_12860_u61"><div id="vsb_content_4"><div class="Section1">
+ <p style="margin-top:0.0pt; margin-right:0%; margin-bottom:0.0pt; text-indent:28.0pt; line-height:19.0pt; page-break-before:auto; page-break-after:auto; vsb_temp-mode:both; punctuation-trim:none; punctuation-wrap:hanging; text-autospace:ideograph-numeric ideograph-other; word-break:normal; direction:ltr"><strong style="font-size:12.0pt; font-family:微软雅黑; color:#666666; font-variant:normal; text-transform:none; letter-spacing:0.0pt; font-style:normal"></strong></p>
+ <p style="font-size: 16px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="letter-spacing: 0px; font-size: 16px; font-family: 宋体;">历史沿革：</span></p>
+ <p style="text-align:justify;margin-right: 0;margin-bottom: 0;font-size: 14px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="letter-spacing: 0px; font-size: 16px; font-family: 宋体;">1958年创建西北工业大学无线电系，是全国最早设立的无线电技术专业和电子工程专业的单位之一。</span></p>
+ <p style="text-align:justify;margin-right: 0;margin-bottom: 0;font-size: 14px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="letter-spacing: 0px; font-size: 16px; font-family: 宋体;">1970年哈尔滨军事工程学院空军工程系航空武器控制、航空武器设计专业整体并入，国防特色更加鲜明。</span></p>
+ <p style="text-align:justify;margin-right: 0;margin-bottom: 0;font-size: 14px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="letter-spacing: 0px; font-size: 16px; font-family: 宋体;">2003年5月更名为西北工业大学电子信息学院。</span></p>
+ <p style="text-align:justify;margin-right: 0;margin-bottom: 0;font-size: 14px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="letter-spacing: 0px; font-size: 16px; font-family: 宋体;">60余来，学院坚持面向国家及国防重大战略需求，强化“军工报国”教育，培养了我国70%以上的航空电子与火力控制系统总师，为我国火力控制系统工程学科、航空工业系统信号与信息处理学科分别培养了第一位博士，研制了我国第一架无线电测控中小型无人机、第一部机载航行雷达、第一套无人机宽幅面航空摄影对地观测系统等，为党和国家事业发展贡献了力量。</span></p>
+ <p style="font-size: 16px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-size: 16px;"><strong><span style="font-family: 宋体; letter-spacing: 0px;">党建工作：</span></strong></span></p>
+ <p style="text-align:justify;margin-right: 0;margin-bottom: 0;font-size: 14px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">坚持以习近平新时代中国特色社会主义思想为指导，深入学习贯彻学校第十四次党代会精神，紧紧围绕“127”发展目标和“天下工大、世界三航”远景目标，打造“E路党旗飘扬”学院党委品牌，按照“党建统领、思政育人、协同发展”的思路，实施“E路领航”“E路铸魂”“E路融合”三大工程，以高质量党建引领学院高质量发展。近年来，学院荣获校级党建工作“标杆学院”，校级“学生党建先进学院”3次，获批党建工作“样板支部”省级1个、校级3个，校级“双带头人”支部书记工作室2个，“三创三力”样板学生党支部3个。学院师生获评校级及以上优秀党员、优秀党务工作者、学生党员标兵等荣誉称号13人次，涌现出“中国大学生自强之星”“陕西青年五四奖章提名奖”获得者、“陕西好青年”等先进个人。</span></p>
+ <p style="font-size: 16px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-size: 16px;"><strong><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">人才培养：</span></strong></span></p>
+ <p style="text-align:justify;margin-right: 0;margin-bottom: 0;font-size: 14px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">以立德树人为根本任务，坚持为党育人、为国育才,着力培养“具有家国情怀,追求卓越、引领未来的领军人才”。现有在校学生2231人，其中本科生1292人、博士生351人、硕士生588人。本科生采用电子信息大类招生和大类培养模式。60余年来，为国家培养了13800余名高级人才，造就一批“专业精、系统强、重实践、能担当”的优秀毕业生，涌现出中国工程院院士张平教授等国家领军人才，10余位将军、40余位国家重大型号航电/任务系统总师、30余位厂（所）领导，以及一大批院所、高校和企业等行业领军人物。</span></p>
+ <p style="text-align:justify;margin-right: 0;margin-bottom: 0;font-size: 14px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">近年来承担国家级创新型人才培养国际合作项目1项；获国家教学成果一等奖1项、二等奖2项，陕西省教学成果特等奖2项、一等奖2项、二等奖5项；国家精品课程1门，国家级精品资源共享课1门，国家一流课程4门，工信部特色优质课程1门，陕西省精品课程8门，陕西省双语教学示范课程1门，陕西省一流课程12门，陕西省虚拟仿真实验教学项目1项；国家级精品教材1部，国家规划教材2部，国防特色教材4部，工信部精品教材1部、工信部规划教材7部。</span></p>
+ <p style="font-size: 16px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-size: 16px;"><strong><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">师资力量：</span></strong></span></p>
+ <p style="font-size: 16px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">现有教职工242人，其中全职中国科学院院士1人、外聘中国科学院院士1人，外聘中国工程院院士2人，国家级领军人才10人，国家级青年人才15人，国家级专业组专家13人，省部级人才38人，形成了良好的人才梯队。拥有1个国家级教学团队、1个国防科技创新团队、2个陕西省科技创新团队,1个陕西省高校青年创新团队，1个陕西省劳模创新团队、6个陕西省教学团队、4个省级课程思政教学团队，4个教学名师工作室。</span></p>
+ <p style="font-size: 16px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-size: 16px;"><strong><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">学科建设：</span></strong></span></p>
+ <p style="margin-right: 0;margin-bottom: 0;text-align: left;font-size: 14px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">主建一级学科：电子科学与技术、信息与通信工程</span></p>
+ <p style="margin-right: 0;margin-bottom: 0;text-align: left;font-size: 14px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">主建二级学科：系统工程</span></p>
+ <p style="text-align:justify;margin-right: 0;margin-bottom: 0;font-size: 14px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">参建一级学科：集成电路科学与工程</span></p>
+ <p style="text-align:justify;margin-right: 0;margin-bottom: 0;font-size: 14px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">电子科学与技术一级学科包含“电路与系统”、“电磁场与微波技术”、“微电子学与固体电子学”、“物理电子学”、“航空电子综合技术”五个二级学科，立足服务国家与国防重大需求，坚持多学科交叉和宽口径专业教育，持续推动我国空天地海电子科学与技术领域国防装备跨越式发展。学科水平稳步提升，特色进一步增强。</span></p>
+ <p style="text-align:justify;margin-right: 0;margin-bottom: 0;font-size: 14px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">信息与通信工程一级学科涵盖信号与信息处理、通信与信息系统两个二级学科。其中信号与信息处理二级学科主要包括：“空天信息获取与智能处理”、“空天电磁感知与利用”、“智能声学与海洋探测”三个培养方向。通信与信息系统二级学科主要包括：“全域信息传输与组网”、“跨域协同导航与定位”两个培养方向。面向国际科技前沿和空天地海遥感、通信、导航等方向的国家重大任务需求，致力于培养一批德才兼备、具有家国情怀、追求卓越、引领未来的信息与通信工程学科“总师型”人才和领军人才。在全国第五轮一级学科评估中喜获佳绩，取得新突破。上海软科中国最好学科排名位居全国前10%。</span></p>
+ <p style="text-align:justify;margin-right: 0;margin-bottom: 0;font-size: 14px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">系统工程二级学科隶属于“控制科学与工程”一级学科，面向国家重大战略需求，开展武器系统探测、制导与控制、复杂系统设计与分析、装备体系对抗与效能评估、无人系统指挥与控制等方向研究，在国内行业中有很高的知名度，负责了90%以上军机/民机型号的火力控制与作战技术攻关，为综合电子系统与火力指挥控制领域输送了大批高素质领军人才，为我国国防建设做出重要贡献。</span></p>
+ <p style="font-size: 16px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-size: 16px;"><strong><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">科学研究：</span></strong></span></p>
+ <p style="text-align:justify;font-size: 16px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">学院坚持“四个面向”，以航空、航天、航海电子信息为特色，服务工业化、信息化和国防现代化，在航空电子综合系统、航空火力与指挥控制、智能空战与对抗、机载雷达与侦察、空天机器视觉与人工智能、空天遥感信息获取与处理、电磁场与微波、光电信息处理与测试、卫星导航与定位、通信与导航抗干扰、宽带无线通信与网络、无人机测控通信、航空微纳传感器、专用集成电路等研究方向特色鲜明，优势显著。</span></p>
+ <p style="text-align:justify;font-size: 16px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">近年来，承担国防重大重点项目、国家重点研发计划、国家自然科学基金等国家级重点以上项目百余项，先后以第一单位获国防科技进步一等奖1项、二等奖8项、三等奖5项；国防技术发明一等奖1项；陕西省自然科学一等奖1项、陕西省科学技术二等奖7项、陕西省技术发明二等奖2项；中国指挥与控制学会科学技术一等1项。获CVPR 2012最佳论文奖、APSIPA领导与贡献奖、国际无线电科学联盟青年科学家奖为代表的国际学术奖20余项。</span></p>
+ <p style="font-size: 16px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-size: 16px;"><strong><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">支撑平台：</span></strong></span></p>
+ <p style="text-align:justify;font-size: 16px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">6个国家级实验室/基地/研究中心</span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">无人飞行器技术全国重点实验室（共建）</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">空基信息感知与融合重点实验室</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">飞行器综合体效能分析国家级国际科技合作基地</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">物联网技术及应用国家地方联合工程实验室</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">空天地海一体化大数据应用技术国家工程实验室（共建）</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">集成电路技术国家地方联合工程研究中心（共建）</span></span></p>
+ <p style="text-align:justify;font-size: 16px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">10个省部级重点实验室/基地/研究中心</span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">空天电子信息感知与光电控制教育部重点实验室</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">智能空天电子系统技术工业和信息化部重点实验室</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">柔性电子材料与器件工业和信息化部重点实验室（共建）</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">陕西省信息获取与处理重点实验室</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">陕西省物联网工程实验室</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">陕西省多域协调探测与导航高校工程研究中心</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">陕西省空天极端环境电子信息技术创新中心</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">陕西省智能视觉计算与对抗工程研究中心</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="letter-spacing: 0px; font-size: 16px; font-family: 宋体;">陕西省“四主体一联合”高可靠无线通信技术工程技术研究中心（共建）</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">航空火力与指挥控制系统航空科技重点实验室</span></span></p>
+ <p style="text-align:justify;font-size: 16px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">5个协同创新中心</span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">西安虚拟现实工程技术协同创新中心</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="letter-spacing: 0px; font-size: 16px; font-family: 宋体;">华为-西工大移动通信技术协同创新中心</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="letter-spacing: 0px; font-size: 16px; font-family: 宋体;">海格-西工大先进信息技术协同创新中心</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="letter-spacing: 0px; font-size: 16px; font-family: 宋体;">西工大-中兴通讯工程实践教育中心</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">陕西通用飞机协同创新中心</span></span></p>
+ <p style="text-align:justify;font-size: 16px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">4个省部级国际联合研究中心</span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">陕西省信息获取与处理国际联合研究中心</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">陕西省脑机一体化及其无人系统应用国际联合研究中心</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">陕西省飞行器综合体效能分析国际科技合作基地</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="letter-spacing: 0px; font-size: 16px; font-family: 宋体;">陕西省“一带一路”文化遗产科技保护国际联合研究中心（共建）</span></span></p>
+ <p style="font-size: 16px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-size: 16px;"><strong><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">国际合作：</span></strong></span></p>
+ <p style="text-align:justify;font-size: 16px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;"><span style="font-size: 16px; font-family: 宋体;">学院积极实施“信达天下，通感四海”计划，先后与美国、英国、德国、法国、日本、芬兰、俄罗斯、澳大利亚、韩国、新加坡等国家的多所大学和研究机构建立了合作关系，建立了省部级以上国际科技合作基地3个。5位国际著名院士专家担任顾问教授，1人荣获“中国政府友谊奖”及“陕西省三秦友谊奖”，2人分别当选亚太工程组织联合会FEIAP主席和亚太信号与信息处理联合会APSIPA副主席，1人担任IEEE遥感频率技术委员会联合主席，20余人担任 IEEE TGRS、JSTARS、TIP 等重要国际期刊编委。多次主办/承办高水平行业国际学术盛会，先后主办 IEEE ICSPCC、IoTaaS等国际会议；学院创建中外学生同堂授课、同卷考试、同室科研、同班活动的培养国际化人才本土教育模式的“国际班”，学院现有</span>66名学位留学生。开设本科全英文课71<span style="font-size: 16px; font-family: 宋体;">门，研究生全英文课程10</span>2<span style="font-size: 16px; font-family: 宋体;">门。目前学院有5个国际合作研究机构，1个国家级国合基地，2个省级国合基地。聘请了12名长期外籍专家，并每年邀请几十余名短期外籍专家来访。</span></span></p>
+ <p style="text-align:justify;font-size: 16px;white-space: normal;text-indent: 37px;padding: 0;line-height: 35px"><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">学院联合培养项目包括：</span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="letter-spacing: 0px; font-size: 16px; font-family: 宋体;">英国布里托斯大学“3+1项目”</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">莫斯科航空学院硕士双学位项目</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="letter-spacing: 0px; font-size: 16px; font-family: 宋体;">新加坡国立大学“3+1+1项目”</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">喀山国立技术大学硕士联合培养项目</span></span></p>
+ <p style="text-align:justify;margin: 0 0 0 84px;font-size: 16px;white-space: normal;padding: 0;line-height: 35px"><span style="font-size: 16px;"><span style="font-family: wingdings; letter-spacing: 0px; font-size: 16px;">ü </span><span style="letter-spacing: 0px; font-size: 16px; font-family: 宋体;">西工大-哈萨克斯坦分校信息与通信工程硕士联培项目</span></span></p>
+ <p style="text-align:justify;font-size: 16px;text-indent: 0px;white-space: normal;padding: 0;line-height: 35px"><br></p>
+ <p style="text-align:justify;font-size: 16px;text-indent: 0px;white-space: normal;padding: 0;line-height: 35px"><br></p>
+ <p style="text-align:justify;font-size: 16px;text-indent: 0px;white-space: normal;padding: 0;line-height: 35px"><br></p>
+ <p style="text-align: right; font-size: 16px; white-space: normal; text-indent: 320px; padding: 0px; line-height: 35px;"><span style="font-family: 宋体; letter-spacing: 0px; font-size: 16px;">（<span style="font-size: 16px; font-family: 宋体;">数据截至20</span>25年5月16日）</span></p>
+ <p style="margin-top:0.0pt; margin-right:0%; margin-bottom:0.0pt; text-indent:28.0pt; line-height:19.0pt; page-break-before:auto; page-break-after:auto; vsb_temp-mode:both; punctuation-trim:none; punctuation-wrap:hanging; text-autospace:ideograph-numeric ideograph-other; word-break:normal; direction:ltr"><span style="color: rgb(89, 89, 89); font-family: 宋体; font-size: 16px;"></span><br></p>
+</div></div></div>
+    <span id="vsb_content_4_12860_u6" name="vsb_content_4_12860_u6"></span>
+    
+   </div>
+
+
+</div>
+</div> </div>
+<!--内容结束-->
+
+
+
+
+
+<!--底部版权-->
+<div class="footer">
+    <div class="container">
+        <div class="footTop">
+            <ul style="overflow:hidden;">
+                <li class="footlogo">
+                    <a href="#" class="logo1"><img src="../../20208/images/footlogo1.png" alt=""></a>
+                    
+                </li>
+                <li class="footlinks" style="float:left; width:300px; color:#fff; line-height:30px;">
+                    <div class="footlink fl">
+                        地址：西安市长安区东祥路1号<br>电话：029-88431206 <br>Copyright 2020 西北工业大学版权所有  <a href="http://www.nwpu.edu.cn" style="color:#fff;">西北工业大学首页</a>
+                    </div>
+                  
+                </li>
+                <li class="footser">
+                    <div>    
+<img src="../../20208/images/ewm.png" width="90" height="90"> 
+
+</div>微信二维码
+                </li>
+            </ul>
+        </div>
+      
+    </div>
+</div>
+
+
+
+<span class="backTop"><img src="../../20208/images/backtopicon.png" alt=""></span>
+<script src="../../20208/js/jquery.js"></script>
+<script src="../../20208/js/jqthumb.js"></script>
+<script src="../../20208/js/slick.min.js"></script>
+<!--回顶部特效-->
+<script>
+    $(function(){
+        //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+        $(function () {
+            $(window).scroll(function(){
+                if ($(window).scrollTop()>100){
+                    $(".backTop").fadeIn(1500);
+                }
+                else
+                {
+                    $(".backTop").fadeOut(1500);
+                }
+            });
+
+            //当点击跳转链接后，回到页面顶部位置
+            $(".backTop").click(function(){
+                //$('body,html').animate({scrollTop:0},1000);
+                if ($('html').scrollTop()) {
+                    $('html').animate({ scrollTop: 0 }, 1000);
+                    return false;
+                }
+                $('body').animate({ scrollTop: 0 }, 1000);
+                return false;
+            });
+        });
+    });
+</script>
+<!--导航-->
+<script>
+    $(".nav li").hover(function(){
+            $(this).addClass("cur").siblings().removeClass("cur");
+            $(this).children(".erji").stop().slideDown();
+        },function(){
+            $(this).removeClass("cur");
+            $(this).children(".erji").stop().slideUp();
+        }
+    )
+</script>
+<!--搜索特效-->
+<script>
+    var srTarget;
+    $(".headsericon").click(function(e){
+        srTarget=e.target;
+        $(".serBox").slideToggle();
+    })
+    $(".serBox div").click(function(e){
+        srTarget=e.target;
+    })
+    $("html").click(function(event) {
+        if (event.target !=srTarget) {
+            $(".serBox").slideUp();
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

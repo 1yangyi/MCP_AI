@@ -1,0 +1,1011 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">
+        <meta http-equiv="X-UA-Compatible" content="IE=10">
+        <meta name="renderer" content="webkit">
+        <title>上海大学马克思主义学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="上海大学马克思主义学院">
+<META Name="keywords" Content="上海大学马克思主义学院" />
+
+        <link rel="stylesheet" href="css/index.css">
+        <script src="js/jquery.js"></script>
+        <script src="js/index.js"></script>
+        <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+        <script src="js/swiper-bundle.min.js"></script>
+    <!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="_sitegray/_sitegray_d.css" />
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307468475d53575742000200034554 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1001,'/index.jsp',-1,1653118915)</script>
+</head>
+    <body>
+        <div id="header">
+            <div class="header container clearfix">
+                <img src="img/logo.png">
+                
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu0" style="float:right;"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <div class="ss-div fr clearfix">
+                    <button name="submit_button" type="button" class="ss-btn fr" v-on:click="onSubmit()"></button>
+                    <input type="text" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" class="ss-ipt fl" placeholder="请输入你要搜索的内容">
+                </div>
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1653118915";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://2022openlab.shu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+            </div>
+            <div id="nav">
+                <div class="container">
+                    <div class="nav">
+                        <ul class="fNav clearfix">
+                                                        <li class=""><a href="index.htm">首页</a>
+
+                            </li>
+                            
+                            <li class=""><a href="javascript:void(0);">学院概况</a>
+                                   <ul class="sNav">
+
+                                    <li><a href="xygk/xyjj.htm">学院简介</a>
+
+                                    </li>
+
+                                    <li><a href="xygk/xrld.htm">现任领导</a>
+
+                                    </li>
+
+                                    <li><a href="xygk/yhyy.htm">院徽寓意</a>
+
+                                    </li>
+
+                                    <li><a href="xygk/smyj.htm">使命愿景</a>
+
+                                    </li>
+
+                                    <li><a href="xygk/zljg1.htm">治理架构</a>
+                                        <ul class="tNav">
+                                            <li><a href="xygk/zljg1/zgshdxmkszyxywyh.htm">中共上海大学马克思主义学院委员会</a></li>
+                                            <li><a href="xygk/zljg1/zgshdxmkszyxyjljcwyh.htm">中共上海大学马克思主义学院纪律检查委员会</a></li>
+                                            <li><a href="xygk/zljg1/xsfwyh.htm">学术分委员会</a></li>
+                                            <li><a href="xygk/zljg1/pyjprgzldxz.htm">聘用及聘任工作领导小组</a></li>
+                                            <li><a href="xygk/zljg1/jxzdwyh.htm">教学指导委员会</a></li>
+                                            <li><a href="xygk/zljg1/jcgzxz_jxddz.htm">教材工作小组、教学督导组</a></li>
+                                            <li><a href="xygk/zljg1/ghwyh.htm">工会委员会</a></li>
+                                            <li><a href="xygk/zljg1/qnjslyh.htm">青年教师联谊会</a></li>
+                                        </ul>
+
+                                    </li>
+
+                                    <li><a href="xygk/jgsz.htm">机构设置</a>
+                                        <ul class="tNav">
+                                            <li><a href="https://zxx.shu.edu.cn/index.htm">哲学系</a></li>
+                                            <li><a href="xygk/jgsz/mkszyjbyljyb.htm">马克思主义基本原理教研部</a></li>
+                                            <li><a href="xygk/jgsz/mkszyzghjyb.htm">马克思主义中国化教研部</a></li>
+                                            <li><a href="xygk/jgsz/sxzzjyjyb.htm">思想政治教育教研部</a></li>
+                                            <li><a href="xygk/jgsz/zgjxdsgyjyb.htm">中国近现代史纲要教研部</a></li>
+                                            <li><a href="xygk/jgsz/xjpxsdzgtsshzysxgljyb.htm">习近平新时代中国特色社会主义思想概论教研部</a></li>
+                                            <li><a href="xygk/jgsz/jslljys.htm">军事理论教研室</a></li>
+                                            <li><a href="xygk/jgsz/xsyzcjys.htm">形势与政策教研室</a></li>
+                                            <li><a href="xygk/jgsz/tsjyjys_.htm">通识教育教研室 </a></li>
+                                            <li><a href="xygk/jgsz/bshkyldz.htm">博士后科研流动站</a></li>
+                                            <li><a href="xygk/jgsz/ybgs.htm">院办公室</a></li>
+                                            <li><a href="xygk/jgsz/yxgb.htm">院学工办</a></li>
+                                        </ul>
+
+                                    </li>
+                                </ul>
+
+                            </li>
+                            
+                            <li class=""><a href="javascript:void(0);">师资队伍</a>
+                                   <ul class="sNav">
+
+                                    <li><a href="szdw/js.htm">教授</a>
+
+                                    </li>
+
+                                    <li><a href="szdw/fjs.htm">副教授</a>
+
+                                    </li>
+
+                                    <li><a href="szdw/js1.htm">讲师</a>
+
+                                    </li>
+
+                                    <li><a href="szdw/bsh.htm">博士后</a>
+
+                                    </li>
+                                </ul>
+
+                            </li>
+                            
+                            <li class=""><a href="javascript:void(0);">科学研究</a>
+                                   <ul class="sNav">
+
+                                    <li><a href="javascript:void(0);">科研信息</a>
+                                        <ul class="tNav">
+                                            <li><a href="kxyj/kyxx/lxxm.htm">立项项目</a></li>
+                                            <li><a href="kxyj/kyxx/hjqk.htm">获奖情况</a></li>
+                                        </ul>
+
+                                    </li>
+
+                                    <li><a href="kxyj/xgxz.htm">相关下载</a>
+
+                                    </li>
+                                </ul>
+
+                            </li>
+                            
+                            <li class=""><a href="javascript:void(0);">教育培养</a>
+                                   <ul class="sNav">
+
+                                    <li><a href="jypy/bkjy.htm">本科教育</a>
+
+                                    </li>
+
+                                    <li><a href="jypy/yjsjy.htm">研究生教育</a>
+
+                                    </li>
+                                </ul>
+
+                            </li>
+                            
+                            <li class=""><a href="javascript:void(0);">学生工作</a>
+                                   <ul class="sNav">
+
+                                    <li><a href="xsgong_z/xsfc.htm">学生风采</a>
+
+                                    </li>
+
+                                    <li><a href="xsgong_z/jygz.htm">就业工作</a>
+
+                                    </li>
+                                </ul>
+
+                            </li>
+                            
+                            <li class=""><a href="javascript:void(0);">校友工作</a>
+                                   <ul class="sNav">
+
+                                    <li><a href="xygzuo/xyfc.htm">校友风采</a>
+
+                                    </li>
+
+                                    <li><a href="xygzuo/xyhd.htm">校友活动</a>
+
+                                    </li>
+
+                                    <li><a href="xygzuo/xyh1.htm">校友会</a>
+
+                                    </li>
+                                </ul>
+
+                            </li>
+                            
+                            <li class=""><a href="javascript:void(0);">信息公开</a>
+                                   <ul class="sNav">
+
+                                    <li><a href="xxgkai/xxgk.htm">信息公开</a>
+
+                                    </li>
+
+                                    <li><a href="xxgkai/xyfw.htm">学院发文</a>
+
+                                    </li>
+                                </ul>
+
+                            </li>
+                            
+                            <li class=""><a href="javascript:void(0);">党群工作</a>
+                                   <ul class="sNav">
+
+                                    <li><a href="dqgz/djzt.htm">党建专题</a>
+
+                                    </li>
+
+                                    <li><a href="dqgz/gh.htm">工会</a>
+
+                                    </li>
+
+                                    <li><a href="dqgz/fw.htm">妇委</a>
+
+                                    </li>
+
+                                    <li><a href="dqgz/qlh.htm">青联会</a>
+
+                                    </li>
+
+                                    <li><a href="http://www.dwgk.shu.edu.cn/Default.aspx?alias=www.dwgk.shu.edu.cn/skxy">党务公开</a>
+
+                                    </li>
+                                </ul>
+
+                            </li>
+                            
+                            <li class=""><a href="lxwm.htm">联系我们</a>
+
+                            </li>
+                            
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="body">
+
+            <div class="swiper main-swiper">
+                    <script language="javascript" src="/system/resource/js/dynclicks.js"></script><div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/lunboxuexiao.png" alt="">
+
+                    </div>                    <div class="swiper-slide">
+                        <img src="images/weixintupian_20250926094741.png" alt="">
+
+                    </div>                    <div class="swiper-slide">
+                        <img src="images/f1a646257a9bdb01b0d1985b4c934d99.png" alt="">
+
+                    </div>                    <div class="swiper-slide">
+                        <img src="images/weixintupian_20250926093449.png" alt="">
+
+                    </div>                    <div class="swiper-slide">
+                        <img src="images/lunbo.png" alt="">
+
+                    </div>
+                                    </div>
+                <div class="swiper-pagination"></div>
+                <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+            </div>
+            <script>
+                $(function() {
+                    var swiper = new Swiper(".main-swiper", {
+                        pagination: {
+                            el: ".swiper-pagination",
+                            bulletClass: 'main-bullet',
+                            bulletActiveClass: 'main-bullet-active',
+                            clickable: true,
+                        },
+                        /* navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        }, */
+                        autoplay: true,
+                        loop: true,
+                    });
+                });
+            </script>
+            <div class="blog">
+                <div id="blog1" class="blog1">
+                    <div class="container clearfix">
+                        <div class="blog1-1 fl">
+                            <div class="title changetitle1"><span class="active">学院新闻</span><span>半月志</span></div>
+                            <div>
+                                <div class="changelist1">
+                                    <script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><ul>
+
+                                        <li class="clearfix"><a href="info/1136/78714.htm" target="_blank">
+                                                <div class="date fl">
+                                                    <p>
+                                                        29
+                                                    </p>
+                                                    <span>2025-10</span>
+                                                </div>
+                                                <p class="fr">金秋岁月暖，心传敬老情 ——马克思主义学院举行2025年敬老节茶话会</p>
+                                            </a></li>
+
+                                        <li class="clearfix"><a href="info/1136/78674.htm" target="_blank">
+                                                <div class="date fl">
+                                                    <p>
+                                                        24
+                                                    </p>
+                                                    <span>2025-10</span>
+                                                </div>
+                                                <p class="fr">马克思主义学院师生学习并热议党的二十届四中全会精神</p>
+                                            </a></li>
+
+                                        <li class="clearfix"><a href="info/1136/78734.htm" target="_blank">
+                                                <div class="date fl">
+                                                    <p>
+                                                        24
+                                                    </p>
+                                                    <span>2025-10</span>
+                                                </div>
+                                                <p class="fr">上海大学第八届本科生学术论坛（马克思主义学院分论坛）顺利举办！</p>
+                                            </a></li>
+                                    </ul>
+                                    <a href="sylm/xyxw.htm" target="_blank" class="more">更多</a><script>_showDynClickBatch(['dynclicks_u3_78714','dynclicks_u3_78674','dynclicks_u3_78734'],[78714,78674,78734],"wbnews", 1653118915)</script>
+
+                                </div>
+                                <div class="changelist1">
+                                    <ul>
+
+                                        <li class="clearfix"><a href="2025niandi3qi-zongdi38qi.pdf" target="_blank">
+                                                <div class="date fl">
+                                                    <p>
+                                                        16
+                                                    </p>
+                                                    <span>2025-04</span>
+                                                </div>
+                                                <p class="fr">2025年第3期（总第38期）</p>
+                                            </a></li>
+
+                                        <li class="clearfix"><a href="2025niandi2qi-zongdi37qi.pdf" target="_blank">
+                                                <div class="date fl">
+                                                    <p>
+                                                        16
+                                                    </p>
+                                                    <span>2025-04</span>
+                                                </div>
+                                                <p class="fr">2025年第2期（总第37期）</p>
+                                            </a></li>
+
+                                        <li class="clearfix"><a href="2025niandi1qi-zongdi36qi.pdf" target="_blank">
+                                                <div class="date fl">
+                                                    <p>
+                                                        16
+                                                    </p>
+                                                    <span>2025-04</span>
+                                                </div>
+                                                <p class="fr">2025年第1期（总第36期）</p>
+                                            </a></li>
+                                    </ul>
+                                    <a href="sylm/byz.htm" target="_blank" class="more">更多</a><script>_showDynClickBatch(['dynclicks_u4_76974','dynclicks_u4_76964','dynclicks_u4_76954'],[76974,76964,76954],"wbnews", 1653118915)</script>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="blog1-2 fl">
+                            <div class="title changetitle2"><span class="active">学术活动</span><span>通知公告</span></div>
+                            <div>
+                                <div class="changelist2">
+                                <ul>
+
+                                        <li class="clearfix">
+                                            <a href="info/2211/78554.htm" target="_blank">【25-10-16】张国祚：习近平文化思想</a>
+                                            <span>
+                                                2025-10-13
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2211/78524.htm" target="_blank">【25-10-10】陈大文：国家社科基金思政专项辅导</a>
+                                            <span>
+                                                2025-10-10
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2211/77724.htm" target="_blank">【25-06-13】聂锦芳：近年来马克思文本文献研究的回顾与省思</a>
+                                            <span>
+                                                2025-06-13
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2211/77244.htm" target="_blank">【25-04-25】徐嘉：中国古代伦理的起源</a>
+                                            <span>
+                                                2025-04-28
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2211/77034.htm" target="_blank">【25-05-24】“人机融合发展的马克思主义研究”学术研讨会</a>
+                                            <span>
+                                                2025-04-23
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2211/75884.htm" target="_blank">【24-12-27】陈新汉：在问题意识中研究马克思主义哲学</a>
+                                            <span>
+                                                2024-12-26
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2211/75264.htm" target="_blank">【24-11-21】哲学的未来——上海大学世界哲学日论坛</a>
+                                            <span>
+                                                2024-11-19
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2211/75034.htm" target="_blank">【24-10-27】张凤阳：文体视角下的《共产党宣言》创作：一项政治修辞分析</a>
+                                            <span>
+                                                2024-10-25
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <a href="sylm/xshd.htm" target="_blank" class="more">更多</a><script>_showDynClickBatch(['dynclicks_u5_78554','dynclicks_u5_78524','dynclicks_u5_77724','dynclicks_u5_77244','dynclicks_u5_77034','dynclicks_u5_75884','dynclicks_u5_75264','dynclicks_u5_75034'],[78554,78524,77724,77244,77034,75884,75264,75034],"wbnews", 1653118915)</script>
+
+                                    
+                                </div>
+                                <div class="changelist2">
+                                    <ul>
+
+                                        <li class="clearfix">
+                                            <a href="info/1129/78634.htm" target="_blank">2025年上海大学马克思主义学院招聘启事</a>
+                                            <span>
+                                                2025-10-15
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1129/78664.htm" target="_blank">上海大学2025年青年学者论坛 马克思主义学院专场</a>
+                                            <span>
+                                                2025-10-23
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1129/78244.htm" target="_blank">上海大学马克思主义学院2026年接收推荐免试攻读研究生（含直博生）复试方案</a>
+                                            <span>
+                                                2025-09-16
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1129/78214.htm" target="_blank">上海大学马克思主义学院2026年接收推荐免试攻读研究生（含直博生）预报名通知</a>
+                                            <span>
+                                                2025-09-12
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1129/78164.htm" target="_blank">上海大学马克思主义学院2026年拟推荐应届优秀本科毕业生免试攻读研究生名单公示</a>
+                                            <span>
+                                                2025-09-07
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1129/78134.htm" target="_blank">上海大学马克思主义学院 2026年推荐优秀应届本科毕业生免试 攻读研究生工作实施方案</a>
+                                            <span>
+                                                2025-09-04
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1129/77394.htm" target="_blank">马克思主义学院2025年博士研究生招生复试名单</a>
+                                            <span>
+                                                2025-05-08
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1129/77384.htm" target="_blank">上海大学马克思主义学院 2025年博士研究生招生复试工作方案</a>
+                                            <span>
+                                                2025-05-08
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <a href="sylm/tzgg.htm" target="_blank" class="more">更多</a><script>_showDynClickBatch(['dynclicks_u6_78634','dynclicks_u6_78664','dynclicks_u6_78244','dynclicks_u6_78214','dynclicks_u6_78164','dynclicks_u6_78134','dynclicks_u6_77394','dynclicks_u6_77384'],[78634,78664,78244,78214,78164,78134,77394,77384],"wbnews", 1653118915)</script>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="blog1-3 fr">
+                            <div class="title"><a href="http://zxx.shu.edu.cn" target="_blank"><span class="active">哲学系</span></a></div>
+                            <ul>
+
+                                        <li class="clearfix">
+                                            <a href="info/2221/78444.htm" target="_blank">我院举办“国外马克思主义研究前沿”学术研讨会</a>
+                                            <span>
+                                                2025-09-28
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2221/77354.htm" target="_blank">《价值论研究》杂志邀稿函</a>
+                                            <span>
+                                                2025-05-07
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2221/76464.htm" target="_blank">哲学学位授权点建设2020-2024年度报告</a>
+                                            <span>
+                                                2025-03-24
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2221/75954.htm" target="_blank">上海市逻辑学会第十三届第一次会员大会 暨“逻辑教育”学术研讨会在上海大学举行</a>
+                                            <span>
+                                                2024-12-31
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2221/75924.htm" target="_blank">学术讲座“在问题意识中研究马克思主义哲学”顺利举办</a>
+                                            <span>
+                                                2024-12-31
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2221/75794.htm" target="_blank">香港浸会大学-上海大学联合哲学研讨会（第9期）顺利举办</a>
+                                            <span>
+                                                2024-12-19
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2221/75584.htm" target="_blank">新时代价值哲学研讨会 暨上海大学“价值与社会”研究中心成立二十周年纪念会成功举办</a>
+                                            <span>
+                                                2024-12-09
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2221/75394.htm" target="_blank">上海大学哲学硕士学位授权点周期性合格评估专家现场评估会顺利举行</a>
+                                            <span>
+                                                2024-11-23
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <a href="sylm/zxx.htm" target="_blank" class="more">更多</a><script>_showDynClickBatch(['dynclicks_u7_78444','dynclicks_u7_77354','dynclicks_u7_76464','dynclicks_u7_75954','dynclicks_u7_75924','dynclicks_u7_75794','dynclicks_u7_75584','dynclicks_u7_75394'],[78444,77354,76464,75954,75924,75794,75584,75394],"wbnews", 1653118915)</script>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div id="blog2" class="blog2">
+                    <div class="container clearfix">
+                        <div class="title"><span class="active">学科平台</span></div>
+                        <script language="javascript" src="/system/resource/js/openlink.js"></script><ul>
+
+                            <li><a href="https://shukcsz.mh.chaoxing.com/" target="_blank">课程思政教学研究示范中心</a></li>
+
+                            <li><a href="sylm/xkptai/shdxzgdsdjyjy.htm" target="_blank">上海大学中共党史党建研究院</a></li>
+
+                            <li><a href="sylm/xkptai/gxzggcdwdjdjsyjzxshdxfzx.htm" target="_blank">高校中国共产党伟大建党精神研究中心上海大学分中心</a></li>
+
+                            <li><a href="sylm/xkptai/shsxjpxsdzgtsshzysxyjjd_shdx_.htm" target="_blank">上海市习近平新时代中国特色社会主义思想研究基地（上海大学）</a></li>
+
+                            <li><a href="sylm/xkptai/shdxznshywhyjy.htm" target="_blank">上海大学智能社会与文化研究院</a></li>
+
+                            <li><a href="sylm/xkptai/shszgdsxhyylyjzwh.htm" target="_blank">上海市中共党史学会渔阳里研究专委会</a></li>
+
+                            <li><a href="sylm/xkptai/shgxmkszyllzk_qgzlyhyqyjzx_.htm" target="_blank">上海高校马克思主义理论智库“强国战略与话语权研究中心”</a></li>
+
+                            <li><a href="sylm/xkptai/shgxsxzzllkjsyxjd.htm" target="_blank">上海高校思想政治理论课教师研修基地</a></li>
+
+                            <li><a href="sylm/xkptai/shdxjzyshyjzx.htm" target="_blank">上海大学价值与社会研究中心</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+                <div id="blog3" class="blog3">
+                    <div class="container clearfix">
+                        <div class="blog3-1 fl">
+                            <div class="title changetitle3"><span class="active">教育教学</span><span>科学研究</span><span>国际交流</span></div>
+                            <div>
+                                <div class="changelist3">
+                                    <ul>
+
+                                        <li class="clearfix">
+                                            <a href="info/1133/78284.htm" target="_blank">沪闽寻红脉，协作探良方 ——马克思主义学院教师赴三明学院开展思政课实践教学研讨交流</a>
+                                            <span>
+                                                2025-09-17
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1133/78154.htm" target="_blank">传承抗战精神 赋能思政教学——马院召开纪念中国人民抗日战争暨 世界反法西斯战争胜利80周年“伟大抗战精神融入纲要课”集体备课会</a>
+                                            <span>
+                                                2025-09-04
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1133/78104.htm" target="_blank">喜报！我院新增上海市级重点课程立项2项！</a>
+                                            <span>
+                                                2025-08-08
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1133/77834.htm" target="_blank">上海大学-宝山区大中小学思政课一体化建设推进会成功举办</a>
+                                            <span>
+                                                2025-07-04
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1133/76614.htm" target="_blank">“AI融入思想政治理论课”教学研讨会暨结对共建马院集体备课会在上海大学成功举办</a>
+                                            <span>
+                                                2025-03-31
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1133/76534.htm" target="_blank">2024年度国家社会科学基金重大项目“数字智能技术与哲学发展及知识生产范式变革研究”开题研讨会举行</a>
+                                            <span>
+                                                2025-03-25
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <a href="sylm/jyjx.htm" target="_blank" class="more">更多</a><script>_showDynClickBatch(['dynclicks_u9_78284','dynclicks_u9_78154','dynclicks_u9_78104','dynclicks_u9_77834','dynclicks_u9_76614','dynclicks_u9_76534'],[78284,78154,78104,77834,76614,76534],"wbnews", 1653118915)</script>
+
+                                </div>
+                                <div class="changelist3">
+                                <ul>
+
+                                        <li class="clearfix">
+                                            <a href="info/2612/78124.htm" target="_blank">我院4位学者入选上海市第十七届哲学社会科学优秀成果奖拟表彰名单</a>
+                                            <span>
+                                                2025-08-20
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2612/77554.htm" target="_blank">第七届“预流”的中国哲学研究工作坊在上海大学举行</a>
+                                            <span>
+                                                2025-05-27
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2612/77534.htm" target="_blank">“人机融合发展的马克思主义研究”学术研讨会 在上海大学召开</a>
+                                            <span>
+                                                2025-05-27
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2612/77444.htm" target="_blank">第二届中国李大钊研究会青年学术研讨会在上海大学召开</a>
+                                            <span>
+                                                2025-05-18
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2612/77144.htm" target="_blank">东南大学徐嘉教授受邀赴我校马克思主义学院讲学</a>
+                                            <span>
+                                                2025-04-27
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2612/76414.htm" target="_blank">马克思主义学院组织召开《价值论研究》编研会</a>
+                                            <span>
+                                                2025-03-19
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <a href="sylm/kxyj.htm" target="_blank" class="more">更多</a><script>_showDynClickBatch(['dynclicks_u10_78124','dynclicks_u10_77554','dynclicks_u10_77534','dynclicks_u10_77444','dynclicks_u10_77144','dynclicks_u10_76414'],[78124,77554,77534,77444,77144,76414],"wbnews", 1653118915)</script>
+
+                                </div>
+                                <div class="changelist3">
+                                    <ul>
+
+                                        <li class="clearfix">
+                                            <a href="info/1137/77414.htm" target="_blank">马克思主义学院代表团访问乌兹别克斯坦高校</a>
+                                            <span>
+                                                2025-05-09
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1137/75294.htm" target="_blank">上海大学马克思主义学院与英国埃塞克斯大学哲学、历史与跨学科研究学院合作交流会 顺利举行</a>
+                                            <span>
+                                                2024-11-20
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1137/72534.htm" target="_blank">上海大学国际部来马克思主义学院调研</a>
+                                            <span>
+                                                2024-01-22
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1137/70104.htm" target="_blank">弗赖恩哈根教授讲座成功举行</a>
+                                            <span>
+                                                2023-09-14
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1137/68953.htm" target="_blank">马克思主义学院哲学系与香港浸会大学宗教及哲学系 签署教育合作协议</a>
+                                            <span>
+                                                2023-06-20
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1137/14917.htm" target="_blank">上海大学——香港浸会大学签署筹建“人工智能与伦理联合研究中心”协议</a>
+                                            <span>
+                                                2022-07-04
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <a href="sylm/gjjl.htm" target="_blank" class="more">更多</a><script>_showDynClickBatch(['dynclicks_u11_77414','dynclicks_u11_75294','dynclicks_u11_72534','dynclicks_u11_70104','dynclicks_u11_68953','dynclicks_u11_14917'],[77414,75294,72534,70104,68953,14917],"wbnews", 1653118915)</script>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="blog3-2 fr">
+                            <div class="title changetitle4"><span class="active">党建工作</span><span>学生动态</span><span>社会服务</span></div>
+                            <div>
+                                <div class="changelist4">
+                                    <ul>
+
+                                        <li class="clearfix">
+                                            <a href="info/1134/75834.htm" target="_blank">校党委书记成旦红赴马克思主义学院开展2024年度落实全面从严治党主体责任实地调研</a>
+                                            <span>
+                                                2024-12-20
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1134/75334.htm" target="_blank">访守常故里，传星火之志 ——守常党支部赴河北乐亭开展纪念李大钊诞辰135周年主题党日活动</a>
+                                            <span>
+                                                2024-11-20
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1134/75084.htm" target="_blank">守常党支部开展纪念李大钊同志诞辰135周年主题党日系列活动</a>
+                                            <span>
+                                                2024-10-30
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1134/72904.htm" target="_blank">马院马克思主义中国化党支部与临港南大智慧城第二党支部开展党建共建活动</a>
+                                            <span>
+                                                2024-03-25
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1134/71864.htm" target="_blank">我院三个项目入选上海大学第二批基层党组织“溯源创优”计划</a>
+                                            <span>
+                                                2023-11-21
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1134/70674.htm" target="_blank">马克思主义学院召开党的纪律教育专题党委理论学习中心组（扩大）学习会</a>
+                                            <span>
+                                                2023-09-25
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <a href="sylm/djgz.htm" target="_blank" class="more">更多</a><script>_showDynClickBatch(['dynclicks_u12_75834','dynclicks_u12_75334','dynclicks_u12_75084','dynclicks_u12_72904','dynclicks_u12_71864','dynclicks_u12_70674'],[75834,75334,75084,72904,71864,70674],"wbnews", 1653118915)</script>
+
+                                </div>
+                               
+                                <div class="changelist4">
+                                    <ul>
+
+                                        <li class="clearfix">
+                                            <a href="info/1135/78704.htm" target="_blank">上海大学第八届本科生学术论坛（马克思主义学院分论坛）顺利举办！</a>
+                                            <span>
+                                                2025-10-28
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1135/78574.htm" target="_blank">马克思主义学院“无问西东”聊天室第29期——推免研究生经验分享会顺利举行</a>
+                                            <span>
+                                                2025-10-13
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1135/78564.htm" target="_blank">砥砺奋进，青春筑梦——上海大学马克思主义学院第六次学生代表大会顺利召开</a>
+                                            <span>
+                                                2025-10-13
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1135/78364.htm" target="_blank">薪火相传 扬帆起航—— 马克思主义学院2025年新生开学典礼暨首日教育顺利举行</a>
+                                            <span>
+                                                2025-09-19
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1135/78314.htm" target="_blank">“研”途启航，“新”火相传——马克思主义学院2025级研究生新生顺利报到</a>
+                                            <span>
+                                                2025-09-17
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/1135/78254.htm" target="_blank">骄阳淬炼青春志，亲切慰问润心田——马克思主义学院开展2025年学生军训慰问</a>
+                                            <span>
+                                                2025-09-17
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <a href="sylm/xsdt1.htm" target="_blank" class="more">更多</a><script>_showDynClickBatch(['dynclicks_u13_78704','dynclicks_u13_78574','dynclicks_u13_78564','dynclicks_u13_78364','dynclicks_u13_78314','dynclicks_u13_78254'],[78704,78574,78564,78364,78314,78254],"wbnews", 1653118915)</script>
+
+                                </div>
+                                 <div class="changelist4">
+                                <ul>
+
+                                        <li class="clearfix">
+                                            <a href="info/2622/78064.htm" target="_blank">【暑期实践】上海大学乡村振兴推普先锋团赴四川金川县、陕西柞水县开展“推普助力乡村振兴”暑期社会实践志愿服务</a>
+                                            <span>
+                                                2025-07-31
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2622/78034.htm" target="_blank">马克思主义学院“青马之声”理论宣讲团赴新疆喀什宣讲并成为“沪喀青年宣讲联盟”首批成员</a>
+                                            <span>
+                                                2025-07-31
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2622/77844.htm" target="_blank">上海大学-宝山区大中小学思政课一体化建设推进会成功举办</a>
+                                            <span>
+                                                2025-07-04
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2622/76094.htm" target="_blank">马克思主义学院招宣组赴上海市控江中学开展2025年首场招生宣传活动</a>
+                                            <span>
+                                                2025-01-15
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2622/75454.htm" target="_blank">上海大学招就处携马克思主义学院四川招宣组赴四川开展调研交流</a>
+                                            <span>
+                                                2024-11-29
+                                            </span>
+                                        </li>
+
+                                        <li class="clearfix">
+                                            <a href="info/2622/75244.htm" target="_blank">马克思主义学院退休教师刘铮教授获评上海市“‘老有所为 强国复兴有我’优秀典型人物”称号</a>
+                                            <span>
+                                                2024-11-13
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <a href="sylm/shfw.htm" target="_blank" class="more">更多</a><script>_showDynClickBatch(['dynclicks_u14_78064','dynclicks_u14_78034','dynclicks_u14_77844','dynclicks_u14_76094','dynclicks_u14_75454','dynclicks_u14_75244'],[78064,78034,77844,76094,75454,75244],"wbnews", 1653118915)</script>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="blog4" class="blog4">
+                    <div class="container clearfix">
+                        <img src="img/footerlogo.png" alt="" class="footerlogo fl">
+                        <div class="links fl">
+                            <p>友情链接：</p>
+                            <ul class="clearfix">
+
+                                <li><a href="https://data.lilun.cn" target="_blank">中国共产党思想理论资源数据库</a></li>
+                                <li><a href="https://cpcedu.cnki.net" target="_blank">中国知网-高校党建与思政知识服务平台</a></li>
+                                <li><a href="https://mks.cnki.net/login.aspx" target="_blank">中国知网-马克思主义理论学科知识服务平台</a></li>
+                                <li><a href="http://eportal.shu.edu.cn/indexA.html" target="_blank">上海大学信息门户</a></li>
+                                                            </ul>
+                        </div>  
+                        <div class="erCode fr">
+                                <img src="images/150.jpg" alt="">
+<p>扫一扫关注公众号</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div id="footer" class="footer">
+            <div class="container clearfix">
+                <div class="copy">
+                    <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p><span style="font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center; color: rgb(255, 255, 255); text-decoration: none;">版权所有 ©</span><a href="http://www.shu.edu.cn/" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center; white-space: normal; color: rgb(255, 255, 255); text-decoration: none;"><span style="color: rgb(255, 255, 255);">&nbsp;上海大学</span></a><span style="font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center; color: rgb(255, 255, 255); text-decoration: none;">&nbsp;&nbsp;&nbsp;</span><a href="http://beian.miit.gov.cn/" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center; white-space: normal; color: rgb(255, 255, 255); text-decoration: none;"><span style="color: rgb(255, 255, 255);">沪ICP备09014157&nbsp;</span></a><span style="font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center; color: rgb(255, 255, 255); text-decoration: none;">&nbsp;&nbsp;</span><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31009102000049" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center; white-space: normal; color: rgb(255, 255, 255); text-decoration: none;"><span style="color: rgb(255, 255, 255);">沪公网安备31009102000049号</span></a><span style="font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center; color: rgb(255, 255, 255); text-decoration: none;">&nbsp;&nbsp;地址：上海市宝山区上大路99号&nbsp; &nbsp;邮编：200444 &nbsp;&nbsp;</span><a href="http://www.shu.edu.cn/dhcx.htm" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center; white-space: normal; color: rgb(255, 255, 255); text-decoration: none;"><span style="color: rgb(255, 255, 255);">电话查询</span></a><br style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; color: rgb(255, 255, 255); font-size: 12px; text-align: center; white-space: normal; background-color: rgb(27, 70, 123);" /><span style="font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center; color: rgb(255, 255, 255); text-decoration: none;">技术支持：</span><a href="https://its.shu.edu.cn/" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center; white-space: normal; color: rgb(255, 255, 255); text-decoration: none;"><span style="color: rgb(255, 255, 255);">上海大学信息化工作办公室&nbsp;&nbsp;&nbsp;</span></a><a href="mailto:info@shu.edu.cn" style="padding: 0px; margin: 0px; font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center; white-space: normal; color: rgb(255, 255, 255); text-decoration: none;"><span style="color: rgb(255, 255, 255);">联系我们&nbsp;</span></a><span style="font-family: 微软雅黑, 黑体, sans-serif; font-size: 12px; text-align: center; color: rgb(255, 255, 255); text-decoration: none;">&nbsp;&nbsp;</span></p>
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<title>学院简介-大连海事大学公共管理与人文学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+
+
+<meta name="SiteName" content="大连海事大学公共管理与人文学院">
+<meta name="SiteDomain" content="hums.dlmu.edu.cn">
+<meta name="ColumnName" content="学院简介">
+
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+<link rel="stylesheet" href="../css/publice.css" type="text/css">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307973465450535742000200024f50 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1072,'/dpzw.jsp',-1,1689219672)</script>
+</head>
+<body>
+<!--top s-->    
+<div class="topWrap clearfix">
+    <div class="topDiv">
+        
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<div class="logo">
+<a href="../index.htm"><img src="../images/logo20250324.png"></a>
+</div>
+        <div class="topR fr">
+            <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><div class="topR_t fr">
+</div>
+
+
+
+            
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2">
+    <div id="appu2"><div><div class="Search"><input type="text" value="请输入关键字搜索" autocomplete="off" onfocus="test3()" onblur="test4()" class="search_text"> <div class="fdj fr"><input type="submit" name="submit_button" value="" class="button pngFix"></div></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+  
+            <div class="Search">
+
+ <input  type="text" value="请输入关键字搜索"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" class="search_text"onfocus="test3()" onblur="test4()"  />
+                <div class="fdj fr"> <input type="submit"  name="submit_button"  v-on:click="onSubmit()" class="button pngFix"value=""style="cursor: hand" ></div>
+
+</div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1689219672";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://zq-open.dlmu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+        </div>
+    </div>
+</div>
+<!--nav-->
+<div class="navWrap  clearfix">
+    <div class="nav">
+    <ul>
+            <li>
+            <a class="link" href="http://hums.dlmu.edu.cn/">首页</a>
+                        
+        </li>
+        <li class="mainmenu">
+                <a class="link" href="javascript:void(0);">学院概况</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="xyjj.htm">学院简介</a></dd>
+                    <dd><a href="yxyh.htm">院训院徽</a></dd>
+                    <dd><a href="xrld.htm">现任领导</a></dd>
+                    <dd><a href="zzjg.htm">组织机构</a></dd>
+                    <dd><a href="mdsy.htm">明德书院</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+                <a class="link" href="javascript:void(0);">师资队伍</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../szdw/szdw.htm">师资队伍</a></dd>
+                    <dd><a href="../szdw/jzjs1.htm">讲座教授</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+                <a class="link" href="javascript:void(0);">人才培养</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../rcpy/bksjy.htm">本科生教育</a></dd>
+                    <dd><a href="../rcpy/yjsjy.htm">研究生教育</a></dd>
+                    <dd><a href="../rcpy/gjhbx.htm">国际化办学</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+                <a class="link" href="javascript:void(0);">科学研究</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../kxyj/yjgk.htm">研究概况</a></dd>
+                    <dd><a href="../kxyj/kycgjj.htm">科研成果简介</a></dd>
+                    <dd><a href="../kxyj/yjglyjzx.htm">应急管理研究中心</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+                <a class="link" href="javascript:void(0);">MPA教育</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../MPAjy/zxgk.htm">中心概况</a></dd>
+                    <dd><a href="../MPAjy/tzgg.htm">通知公告</a></dd>
+                    <dd><a href="../MPAjy/jxgl.htm">教学管理</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+                <a class="link" href="javascript:void(0);">党建工作</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../djgz/zzjg1.htm">组织机构</a></dd>
+                    <dd><a href="../djgz/dwgk.htm">党务公开</a></dd>
+                    <dd><a href="../djgz/xxzl.htm">学习资料</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+                <a class="link" href="javascript:void(0);">人才招聘</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../rczp/zpqs.htm">招聘启事</a></dd>
+                    <dd><a href="http://rcb.dlmu.edu.cn/zczd/gjsswj.htm" target="_blank">政策制度</a></dd>
+            </dl>
+        </li>
+     
+    </ul>
+</div>
+</div>
+<script type="text/javascript">
+
+    $(".mainmenu dl").hide();
+
+</script>
+        <!--banner-->
+<div class="vsb-box">
+    
+    
+    <div class="vsb-container a" containerid="1" columns="6">
+
+        
+    </div>
+</div>
+<div class="mainWrap clearfix" style="min-height:300px;">
+    <div class="main_tit">
+        <div class="main_titT main_titTa">
+            <img src="../img/bri_icon1.png">
+
+<a href="http://hums.dlmu.edu.cn/">首页</a>&gt;
+<a href="../xygk.htm">学院概况</a>&gt;
+<a href="xyjj.htm" class="cur">学院简介</a>
+        </div>
+</div>
+
+    <div class="main_con">
+        <div class="main_conL">
+            <div class="main_conLT">
+                <dl>
+                    
+<dt>学院概况</dt>
+                    <dd><a href="xyjj.htm" class="cur">学院简介</a></dd>
+<dd><a href="yxyh.htm">院训院徽</a></dd>
+<dd><a href="xrld.htm">现任领导</a></dd>
+<dd><a href="zzjg.htm">组织机构</a></dd>
+<dd><a href="mdsy.htm">明德书院</a></dd>
+
+                </dl>
+            </div>
+            <div class="informBox informBoxb informBoxb1">
+                
+   
+        </div>
+        </div>
+        
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1689219672,'wbnews','u7')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta7(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1689219672,1031)</script>
+<div class="main_conR">
+       <div class="dpzw_title"><h2>学院简介</h2></div>
+            <div class="main_conRC">
+         <div id="vsb_content_4_1031_u71"><div id="vsb_content_4"><div><p class="vsbcontent_start"><span style="font-family: 楷体, 楷体_GB2312, SimKai; font-size: 21px;">大连海事大学自创校伊始就设有人文课程，1983年创设大连海运学院社科系，1989年设立港航行政管理专业本科，2001年更名为“人文与社会科学学院”，2017年更名为“公共管理与人文艺术学院”，现名为“公共管理与人文学院”，现设有公共管理系、社会工作与心理系、哲学系、文化艺术教育中心、国防教育中心等教学科研机构，2019年成立明德书院。</span></p><p><span style="font-family: 楷体, 楷体_GB2312, SimKai; font-size: 21px;">学院设有国家安全学一级学科博士学位授权点、公共管理学一级学科硕士学位授权点、哲学一级学科硕士学位授权点，以及公共管理硕士专业学位授权点（MPA）、社会工作硕士专业学位授权点（MSW）。设有行政管理、公共事业管理、政治学与行政学、社会工作四个本科专业。行政管理专业突出海大特色，公共事业管理强调学生实践能力的培养，政治学与行政学专业紧密依托学校航运特色加强相关技能的培训，社会工作专业注重学生社会工作基本技能的提升。</span></p><p><span style="font-family: 楷体, 楷体_GB2312, SimKai; font-size: 21px;">学院现有教职工61人，博/硕士研究生导师29人，教授、副教授20人，专任教师中具有博士学位的41人，另有兼职教授10余人。全日制在校生592人，其中本科生442人，硕士研究生146人，博士生4人；非全日制硕士生276人。</span></p><p><span style="font-family: 楷体, 楷体_GB2312, SimKai; font-size: 21px;">学院具有较强的科研实力，近五年，先后承担国家、省、部、市各类科研课题百余项，公开出版各类学术著作和教材20余部，发表高水平教学/科研论文百余篇。</span></p><p><span style="font-family: 楷体, 楷体_GB2312, SimKai; font-size: 21px;">学院高度重视国际合作与合作办学，与英国哈德斯菲尔德大学、美国伊利诺伊大学、美国南加州大学等国外大学建立了多种形式的学生联合培养、学术交流和师资互换等活动。学院聘有外籍教师，长期服务学院教学工作。邀请多名国外学者来校讲学或承担短期教学任务，并为学生提供短期出国学习的机会。</span></p><p><span style="font-family: 楷体, 楷体_GB2312, SimKai; font-size: 21px;">学院在学校人文素质教育和文化环境建设中发挥重要作用。依托明德书院开展形式内容丰富的文化活动，在学生人文素养提升方面发挥了积极作用。学院社团数量多，学生积极活跃，在学校的各类活动中表现突出。通过多种形式活动的展开，有效地提高了学生的综合素质。</span></p><p><span style="font-family: 楷体, 楷体_GB2312, SimKai; font-size: 21px;">学院本科专业实行导师制，为每一位本科生配备导师，随时为学生提供学习等方面的指导，学生也可与研究生一起协助导师进行科研工作，锻炼学生的科研能力。</span></p><p class="vsbcontent_end"><span style="font-family: 楷体, 楷体_GB2312, SimKai; font-size: 21px;">学院从1983年开始招生至今，为交通运通部所属各大港航企事业单位培养了大批人才，学院毕业生受到了港航企事业用人单位的普遍欢迎，并有一批毕业生考取了研究生和国家公务员。经过40多年的发展和建设，学院已成为一个多学科、多专业、多层次、学位点齐全的办学机构。</span></p></div></div></div>
+    </div>
+    <span id="vsb_content_4_1031_u7" name="vsb_content_4_1031_u7"></span><br><br>
+    
+        </div>
+
+    </div>
+</div>
+<!--foot-->
+<div class="footWrap">
+
+<div class="footDiv_three">
+<div class="foot_three">
+<div class="foot-left-logo logo"><a href="../index.htm"><img src="../img/rw_logo20250326.png"></a></div>
+<div class="foot-left">
+
+<!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：大连市凌海路1号</p><p>邮编：116026</p><p>版权所有 © 大连海事大学公共管理与人文学院</p>
+
+<div class="foot-left-gzh"><img src="../img/rwxygzh.jpg"></div>
+<div class="foot-left-gzh"><img src="../img/erweima20250321.png"></div>
+<p></p></div>
+
+
+</div>
+</div></div>
+
+
+<script type="text/javascript" src="../js/bd.js"></script>
+<script type="text/javascript" src="../js/soChange.js"></script>
+<script type="text/javascript">
+$(function(){
+    $(".mainmenu dl").hide();
+    $("li.mainmenu").hover(function(){
+        $(this).find("dl").stop(true,true);
+        $(this).find("dl").slideDown();
+    },function(){
+        $(this).find("dl").stop(true,true);
+        $(this).find("dl").slideUp();
+    });
+})
+</script>
+<script type="text/javascript">
+$(function () {
+
+//切换对象为其他，这里为包含图片和标题的层
+    $('#change_32 div.changeDiv').soChange({//对象指向层，层内包含图片及标题
+        thumbObj:'#change_32 .ul_change_a2 span',
+        thumbNowClass:'on'//自定义导航对象当前class为on
+    });
+
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

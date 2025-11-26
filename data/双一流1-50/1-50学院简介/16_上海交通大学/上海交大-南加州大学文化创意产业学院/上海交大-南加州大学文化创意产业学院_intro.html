@@ -1,0 +1,812 @@
+<!DOCTYPE html><html lang="en"><head>
+	<meta charset="UTF-8">
+	<title>学院介绍 ｜ ICCI上海交大-南加州大学文化创意产业学院</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<script src="/public/js/jquery-1.11.2.min.js"></script>
+	<link rel="shortcut icon" href="/public/images/icon.png" type="image/gif">
+	<link href="/public/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/public/css/swiper.min.css" rel="stylesheet">
+	<link href="/public/css/animations.css" rel="stylesheet">
+	<link href="/public/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/public/layui/css/layui.css" media="all">
+	<link href="/public/css/portal.css?t=20221207" rel="stylesheet">
+	<link href="/public/css/inner.css?t=20231031" rel="stylesheet">
+	<style type="text/css">
+	::-moz-selection{background:#60AAD7; color:#fff;} 
+	::selection {background:#60AAD7; color:#fff;} 
+	</style><link id="layuicss-layer" rel="stylesheet" href="https://icci.sjtu.edu.cn/public/layui/css/modules/layer/default/layer.css?v=3.1.1" media="all"></head>
+<body>
+	<!-- header -->
+	<header>
+		<div class="header">
+			<div class="header-top hidden-xs hidden-sm">
+				<div class="container">
+					<ul class="menu-top no-style inline-block">
+									       	<li>
+				       		<a title="加入我们" href="/icci/index/join-us" target="_self">加入我们</a>
+				       	</li>
+				    				       	<li>
+				       		<a title="媒体中心" href="/icci/index/media" target="_self">媒体中心</a>
+				       	</li>
+				    				       	<li>
+				       		<a title="校友会" href="/icci/index/alumni" target="_self">校友会</a>
+				       	</li>
+				    				       	<li>
+				       		<a title="教室预约中心" href="/bs" target="_blank">教室预约中心</a>
+				       	</li>
+				    				       	<li>
+				       		<a title="实验室开放共享平台" href="https://labs.icci.sjtu.edu.cn/" target="_blank">实验室开放共享平台</a>
+				       	</li>
+				    				       	<li>
+				       		<a title="Canvas" href="https://oc.sjtu.edu.cn" target="_blank">Canvas</a>
+				       	</li>
+				    				       	<li class="toggle">
+						  	<a class="toggle-btn">
+							    学术事务管理系统 <i class="fa fa-angle-down"></i>
+						  	</a>
+						  	<ul class="sub-menu">
+							    <li><a href="http://aao.icci.sjtu.edu.cn/students/" target="_blank">学术事务管理信息系统-学生端</a></li>
+							    <li><a href=" http://aao.icci.sjtu.edu.cn/faculty/" target="_blank">学术事务管理信息系统-教师端</a></li>
+							    <li><a href="http://aao.icci.sjtu.edu.cn/manage/" target="_blank">学术事务管理信息系统-管理端</a></li>
+						  	</ul>
+				       	</li>
+				       	<li>
+				       		<a title="" href="/en" target="" style="color: #fff;"><strong>EN</strong></a>
+				       	</li>
+				    </ul>
+				    <div class="clearB"></div>
+				</div>
+			</div>
+			<div class="logo">
+				<div class="container">
+					<a href="/">
+						<img src="/public/images/logo.png" alt="">
+					</a>
+					<div class="search hidden-xs hidden-sm">
+						<div class="search-form">
+							<form action="/search#container" method="post">
+								<input type="text" name="Search" class="form-text" placeholder="搜索..." id="search-input">
+								<button type="submit" class="form-submit"><i class="fa fa-search"></i></button>
+							</form>
+							
+						</div>
+					</div>
+					<div class="header-mobile visible-xs visible-sm">
+						<div class="site-tree-mobile">
+							<span class="fa fa-reorder"></span>
+						</div>
+						<div class="site-mobile-shade"></div>
+					</div>
+				</div>
+			</div>
+			<div class="header-nav">
+				<div class="container">
+					<ul class="nav nav-pills" id="nav-animate">
+						<li class="mobile-nav-header" style="margin-left: -15px;margin-right: -15px">
+							<div class="closeIcon"><img src="/public/images/menu2.png" alt="关闭" height="18"></div>
+						</li>
+					  						  	<li role="presentation" class="dropdown">
+	                    <a title="首页" href="/"><span>首页</span></a>					  	</li>
+	                    					  	<li role="presentation" class="dropdown">
+	                    					    	<a title="人才培养" class="dropdown-toggle" data-toggle="dropdown" href="/icci/index/1">
+					    		<span>人才培养</span><i class="fa fa-angle-down"></i>
+					    	</a>
+					    	<ul class="dropdown-menu animated" data-animation="fadeInUp">
+					      		<div class="row">
+					      			<li class="col-md-12 mobile-nav-header">
+					      				<div class="back"><img src="/public/images/back.png" alt="返回上一级" height="18"></div>
+					      				<div class="closeIcon"><img src="/public/images/menu2.png" alt="关闭" height="18"></div>
+					      			</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="全日制项目" href="/icci/index/full-time" class="sub-title">全日制项目</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="数字文创与管理硕士项目" href="https://icci.sjtu.edu.cn/program/index/229">数字文创与管理硕士项目</a></li>
+	                                     						      				<li><a title="设计硕士项目（原艺术硕士项目）" href="https://icci.sjtu.edu.cn/program/index/168">设计硕士项目（原艺术硕士项目）</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="微专业" href="/program/index/246" class="sub-title">微专业</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="AI+数字内容创作" href="/program/index/246">AI+数字内容创作</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="合作交流项目" href="/icci/index/communication" class="sub-title">合作交流项目</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="上海交大-法国凯致商学院国际在职MBA项目" href="/program/index/kedge/151">上海交大-法国凯致商学院国际在职MBA项目</a></li>
+	                                     						      				<li><a title="国际暑期学校" href="/program/index/15">国际暑期学校</a></li>
+	                                     						      				<li><a title="台湾学子“文创之旅”夏令营" href="/program/index/16">台湾学子“文创之旅”夏令营</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="高层管理教育" href="/icci/index/ee" class="sub-title">高层管理教育</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="MPA-ICCI国际影视大师训练营" href="/program/index/192">MPA-ICCI国际影视大师训练营</a></li>
+	                                     						      				<li><a title="“新文创”CEO企业家研修班（第九期）" href="/program/index/17">“新文创”CEO企业家研修班（第九期）</a></li>
+	                                     						      				<li><a title="文创赋能 - 复合型企业家研修班" href="/program/index/161">文创赋能 - 复合型企业家研修班</a></li>
+	                                     						      				<li><a title="文创赋能 - 商业IP化运营研修班（十八期）" href="/program/index/20">文创赋能 - 商业IP化运营研修班（十八期）</a></li>
+	                                     						      				<li><a title="舒适家居行业CEO研修班" href="/program/index/19">舒适家居行业CEO研修班</a></li>
+	                                     						      				<li><a title="定制课程" href="/program/index/203">定制课程</a></li>
+	                                     						      				<li><a title="教育咨询/教学支持服务项目" href="https://icci.sjtu.edu.cn/icci/index/191">教育咨询/教学支持服务项目</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                					    		</div>
+					    	</ul>
+	                        					  	</li>
+	                    					  	<li role="presentation" class="dropdown">
+	                    					    	<a title="学生风采" class="dropdown-toggle" data-toggle="dropdown" href="/icci/index/2">
+					    		<span>学生风采</span><i class="fa fa-angle-down"></i>
+					    	</a>
+					    	<ul class="dropdown-menu animated" data-animation="fadeInUp">
+					      		<div class="row">
+					      			<li class="col-md-12 mobile-nav-header">
+					      				<div class="back"><img src="/public/images/back.png" alt="返回上一级" height="18"></div>
+					      				<div class="closeIcon"><img src="/public/images/menu2.png" alt="关闭" height="18"></div>
+					      			</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="学在文创" href="/icci/index/22" class="sub-title">学在文创</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="文创学子" href="/news/category/9">文创学子</a></li>
+	                                     						      				<li><a title="学生活动" href="/news/category/27">学生活动</a></li>
+	                                     						      				<li><a title="游学足迹" href="/news/category/44">游学足迹</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="教学教务" href="/icci/index/25" class="sub-title">教学教务</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="管理规定" href="/download/regulation">管理规定</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="学生事务" href="/icci/index/23" class="sub-title">学生事务</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="团学工作" href="/news/category/13">团学工作</a></li>
+	                                     						      				<li><a title="奖助补贷" href="/announcement/category/14">奖助补贷</a></li>
+	                                     						      				<li><a title="办事指南" href="/announcement/category/15">办事指南</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="职业发展" href="/icci/index/24" class="sub-title">职业发展</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="职业发展规划" href="/news/category/16">职业发展规划</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                					    		</div>
+					    	</ul>
+	                        					  	</li>
+	                    					  	<li role="presentation" class="dropdown">
+	                    					    	<a title="全球师资" class="dropdown-toggle" data-toggle="dropdown" href="/faculty">
+					    		<span>全球师资</span><i class="fa fa-angle-down"></i>
+					    	</a>
+					    	<ul class="dropdown-menu animated" data-animation="fadeInUp">
+					      		<div class="row">
+					      			<li class="col-md-12 mobile-nav-header">
+					      				<div class="back"><img src="/public/images/back.png" alt="返回上一级" height="18"></div>
+					      				<div class="closeIcon"><img src="/public/images/menu2.png" alt="关闭" height="18"></div>
+					      			</li>
+	                                						      		<li class="col-md-6">
+						      			<a title="学术导师" href="/faculty" class="sub-title">学术导师</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="全职" href="/faculty/category/40">全职</a></li>
+	                                     						      				<li><a title="校内双聘" href="/faculty/category/42">校内双聘</a></li>
+	                                     						      				<li><a title="兼职" href="/faculty/category/41">兼职</a></li>
+	                                     						      				<li><a title="访问" href="/faculty/category/43">访问</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-6">
+						      			<a title="产业导师" href="/faculty/industry" class="sub-title">产业导师</a>
+						      			<ul class="no-style outside">
+	                                    						      			</ul>
+						      		</li>
+	                                					    		</div>
+					    	</ul>
+	                        					  	</li>
+	                    					  	<li role="presentation" class="dropdown">
+	                    					    	<a title="产业合作" class="dropdown-toggle" data-toggle="dropdown" href="/icci/index/4">
+					    		<span>产业合作</span><i class="fa fa-angle-down"></i>
+					    	</a>
+					    	<ul class="dropdown-menu animated" data-animation="fadeInUp">
+					      		<div class="row">
+					      			<li class="col-md-12 mobile-nav-header">
+					      				<div class="back"><img src="/public/images/back.png" alt="返回上一级" height="18"></div>
+					      				<div class="closeIcon"><img src="/public/images/menu2.png" alt="关闭" height="18"></div>
+					      			</li>
+	                                						      		<li class="col-md-6">
+						      			<a title="合作企业" href="/icci/index/40" class="sub-title">合作企业</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="教育发展合作单位" href="/icci/index/42">教育发展合作单位</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-6">
+						      			<a title="产业合作" href="/icci/index/132" class="sub-title">产业合作</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="产学活动" href="/news/category/45">产学活动</a></li>
+	                                     						      				<li><a title="文创观点" href="/news/category/47">文创观点</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                					    		</div>
+					    	</ul>
+	                        					  	</li>
+	                    					  	<li role="presentation" class="dropdown">
+	                    					    	<a title="跨界研究" class="dropdown-toggle" data-toggle="dropdown" href="/icci/index/5">
+					    		<span>跨界研究</span><i class="fa fa-angle-down"></i>
+					    	</a>
+					    	<ul class="dropdown-menu animated" data-animation="fadeInUp">
+					      		<div class="row">
+					      			<li class="col-md-12 mobile-nav-header">
+					      				<div class="back"><img src="/public/images/back.png" alt="返回上一级" height="18"></div>
+					      				<div class="closeIcon"><img src="/public/images/menu2.png" alt="关闭" height="18"></div>
+					      			</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="全球文创合作与教育发展中心" href="/program/index/44" class="sub-title">全球文创合作与教育发展中心</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="产教共创" href="/program/index/44/49">产教共创</a></li>
+	                                     						      				<li><a title="全球合作" href="/program/index/44/50">全球合作</a></li>
+	                                     						      				<li><a title="公共文创" href="/program/index/44/51">公共文创</a></li>
+	                                     						      				<li><a title="中心团队" href="/program/index/44/133">中心团队</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="紫竹中美网络视听传媒管理联合研究中心" href="/program/index/45" class="sub-title">紫竹中美网络视听传媒管理联合研究中心</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="中心介绍" href="/program/index/45/52">中心介绍</a></li>
+	                                     						      				<li><a title="中心主任" href="/program/index/45/53">中心主任</a></li>
+	                                     						      				<li><a title="中美联合研究专家" href="/program/index/45/54">中美联合研究专家</a></li>
+	                                     						      				<li><a title="研究成果" href="/program/index/45/134">研究成果</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="文化创新发展研究中心" href="/program/index/155" class="sub-title">文化创新发展研究中心</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="中心介绍" href="/program/index/155">中心介绍</a></li>
+	                                     						      				<li><a title="中心成员" href="/program/index/155/157">中心成员</a></li>
+	                                     						      				<li><a title="科研成果" href="/program/index/155/158">科研成果</a></li>
+	                                     						      				<li><a title="交流活动" href="/program/index/155/159">交流活动</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="时空未来博物馆项目" href="/program/index/206" class="sub-title">时空未来博物馆项目</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="项目介绍" href="https://icci.sjtu.edu.cn/program/index/206/207">项目介绍</a></li>
+	                                     						      				<li><a title="团队成员" href="https://icci.sjtu.edu.cn/program/index/206/208">团队成员</a></li>
+	                                     						      				<li><a title="预期成果" href="https://icci.sjtu.edu.cn/program/index/206/209">预期成果</a></li>
+	                                     						      				<li><a title="相关作品" href="https://icci.sjtu.edu.cn/program/index/206/210">相关作品</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="艺术研究中心" href="/program/index/241" class="sub-title">艺术研究中心</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="中心介绍" href="/program/index/241">中心介绍</a></li>
+	                                     						      				<li><a title="中心成员" href="/program/index/241/243">中心成员</a></li>
+	                                     						      				<li><a title="科研成果" href="/program/index/241/244">科研成果</a></li>
+	                                     						      				<li><a title="在研项目" href="/program/index/241/245">在研项目</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="公共教育中心" href="https://icci.sjtu.edu.cn/program/index/224" class="sub-title">公共教育中心</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="中心介绍" href="https://icci.sjtu.edu.cn/program/index/224/225">中心介绍</a></li>
+	                                     						      				<li><a title="项目简介" href="https://icci.sjtu.edu.cn/program/index/224/227">项目简介</a></li>
+	                                     						      				<li><a title="面向公众" href="https://icci.sjtu.edu.cn/program/index/224/228">面向公众</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="4D电影艺术和科技实验室" href="/program/index/48" class="sub-title">4D电影艺术和科技实验室</a>
+						      			<ul class="no-style outside">
+	                                    						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="智能音乐与影视音效实验室" href="/program/index/175" class="sub-title">智能音乐与影视音效实验室</a>
+						      			<ul class="no-style outside">
+	                                    						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="影视后期全媒体中心(CSW)" href="/program/index/179" class="sub-title">影视后期全媒体中心(CSW)</a>
+						      			<ul class="no-style outside">
+	                                    						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="智能影视前沿技术研究中心" href="/program/index/183" class="sub-title">智能影视前沿技术研究中心</a>
+						      			<ul class="no-style outside">
+	                                    						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="文创学院-度量科技 CG创意与科技实验室" href="/program/index/185" class="sub-title">文创学院-度量科技 CG创意与科技实验室</a>
+						      			<ul class="no-style outside">
+	                                    						      			</ul>
+						      		</li>
+	                                					    		</div>
+					    	</ul>
+	                        					  	</li>
+	                    					  	<li role="presentation" class="dropdown">
+	                    					    	<a title="国际交流" class="dropdown-toggle" data-toggle="dropdown" href="/icci/index/6">
+					    		<span>国际交流</span><i class="fa fa-angle-down"></i>
+					    	</a>
+					    	<ul class="dropdown-menu animated" data-animation="fadeInUp">
+					      		<div class="row">
+					      			<li class="col-md-12 mobile-nav-header">
+					      				<div class="back"><img src="/public/images/back.png" alt="返回上一级" height="18"></div>
+					      				<div class="closeIcon"><img src="/public/images/menu2.png" alt="关闭" height="18"></div>
+					      			</li>
+	                                						      		<li class="col-md-4">
+						      			<a title="国际合作" href="/icci/index/62" class="sub-title">国际合作</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="合作院校与项目" href="/icci/index/64">合作院校与项目</a></li>
+	                                     						      				<li><a title="国际交流动态" href="/news/category/46">国际交流动态</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-4">
+						      			<a title="国际文化创意产业研究学会" href="/program/index/137/199" class="sub-title">国际文化创意产业研究学会</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="学会介绍" href="/program/index/137/199">学会介绍</a></li>
+	                                     						      				<li><a title="理事会成员" href="/program/index/137/200">理事会成员</a></li>
+	                                     						      				<li><a title="国际会议" href="/program/index/137/201">国际会议</a></li>
+	                                     						      				<li><a title="项目申请" href="/program/index/137/202">项目申请</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-4">
+						      			<a title="ICCI ART VALLEY - Visiting Artists 艺术创意谷-国际访问艺术家活动" href="/program/index/144" class="sub-title">ICCI ART VALLEY - Visiting Artists 艺术创意谷-国际访问艺术家活动</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="2023艺术创意谷" href="/program/index/144/240">2023艺术创意谷</a></li>
+	                                     						      				<li><a title="2022艺术创意谷" href="/program/index/144/239">2022艺术创意谷</a></li>
+	                                     						      				<li><a title="2021艺术创意谷" href="/program/index/144/198">2021艺术创意谷</a></li>
+	                                     						      				<li><a title="2020艺术创意谷" href="/program/index/144/160">2020艺术创意谷</a></li>
+	                                     						      				<li><a title="2019艺术创意谷" href="/program/index/144/145">2019艺术创意谷</a></li>
+	                                     						      				<li><a title="2018艺术创意谷" href="/program/index/144/146">2018艺术创意谷</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                					    		</div>
+					    	</ul>
+	                        					  	</li>
+	                    					  	<li role="presentation" class="dropdown">
+	                    					    	<a title="党建工作" class="dropdown-toggle" data-toggle="dropdown" href="/icci/index/7">
+					    		<span>党建工作</span><i class="fa fa-angle-down"></i>
+					    	</a>
+					    	<ul class="dropdown-menu animated" data-animation="fadeInUp">
+					      		<div class="row">
+					      			<li class="col-md-12 mobile-nav-header">
+					      				<div class="back"><img src="/public/images/back.png" alt="返回上一级" height="18"></div>
+					      				<div class="closeIcon"><img src="/public/images/menu2.png" alt="关闭" height="18"></div>
+					      			</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="支部概况" href="/icci/index/68" class="sub-title">支部概况</a>
+						      			<ul class="no-style outside">
+	                                    						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="党建动态" href="/news/category/10" class="sub-title">党建动态</a>
+						      			<ul class="no-style outside">
+	                                    						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="学习园地" href="/announcement/category/17" class="sub-title">学习园地</a>
+						      			<ul class="no-style outside">
+	                                    						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-3">
+						      			<a title="资料下载" href="/download/party" class="sub-title">资料下载</a>
+						      			<ul class="no-style outside">
+	                                    						      			</ul>
+						      		</li>
+	                                					    		</div>
+					    	</ul>
+	                        					  	</li>
+	                    					  	<li role="presentation" class="dropdown">
+	                    					    	<a title="关于文创" class="dropdown-toggle" data-toggle="dropdown" href="/icci/index/about">
+					    		<span>关于文创</span><i class="fa fa-angle-down"></i>
+					    	</a>
+					    	<ul class="dropdown-menu animated" data-animation="fadeInUp">
+					      		<div class="row">
+					      			<li class="col-md-12 mobile-nav-header">
+					      				<div class="back"><img src="/public/images/back.png" alt="返回上一级" height="18"></div>
+					      				<div class="closeIcon"><img src="/public/images/menu2.png" alt="关闭" height="18"></div>
+					      			</li>
+	                                						      		<li class="col-md-6">
+						      			<a title="关于文创" href="/icci/index/about-icci" class="sub-title">关于文创</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="学院介绍" href="/icci/index/introduction">学院介绍</a></li>
+	                                     						      				<li><a title="领导寄语" href="/icci/index/leader-message">领导寄语</a></li>
+	                                     						      				<li><a title="机构设置" href="/icci/index/institution">机构设置</a></li>
+	                                     						      				<li><a title="大事记" href="/icci/index/milestones">大事记</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                						      		<li class="col-md-6">
+						      			<a title="媒体中心" href="/icci/index/media" class="sub-title">媒体中心</a>
+						      			<ul class="no-style outside">
+	                                    						      				<li><a title="通知公告" href="/announcement/category/29">通知公告</a></li>
+	                                     						      				<li><a title="新闻" href="/news">新闻</a></li>
+	                                     						      				<li><a title="活动" href="/event">活动</a></li>
+	                                     						      				<li><a title="图集" href="/album">图集</a></li>
+	                                     						      				<li><a title="视频" href="/video">视频</a></li>
+	                                     						      			</ul>
+						      		</li>
+	                                					    		</div>
+					    	</ul>
+	                        					  	</li>
+	                    					  	<!-- 手机端才显示 -->
+					  	<li role="presentation" class="dropdown visible-sm visible-xs">
+					    	<a title="" class="dropdown-toggle" data-toggle="dropdown" href="/en">
+					    		<span>EN</span>
+					    	</a>
+					  	</li>
+					</ul>
+					<div class="clearB"></div>
+				</div>
+			</div>
+		</div>
+	</header>	<!-- header END-->
+
+	<!-- inner-banner -->
+	<div class="inner-banner" style="background-image: url(/upload/image/image20180822234101.jpg);">
+		<div class="container">
+			<div class="banner-con">
+				<div class="breadCrumb">
+					<a href="/"><i class="fa fa-home"></i></a> &gt; 
+					<a href="/">关于文创</a> &gt; 
+					学院介绍				</div>
+				<div class="banner-title">
+					学院介绍				</div>
+			</div>
+		</div>
+	</div>
+	<!-- banner END -->
+
+	<!-- page-content -->
+	<div class="page">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9">
+					<div class="main-col">
+						<div class="page-content">
+														<div class="row">
+	<div class="col-lg-6">
+		<p style="text-align:center;">
+			<img src="/upload/editor/image/20181115/20181115093204_67028.jpg" alt=""> 
+		</p>
+	</div>
+	<div class="col-lg-6">
+		<p>
+			上海交大-南加州大学文化创意产业学院（上海交大文创学院）由上海交通大学于2015年成立，美国南加州大学、闵行区政府、上海紫竹高新区（集团）有限公司多方参与共建，是上海交通大学的国际化办学学院（详见www.sjtu.edu.cn院系设置）。作为上海交大国际化发展战略的重要组成部分，文创学院根据产业价值链和市场需求整合全球优质资源，以“国际化、学科交叉、产业导向”为培养特色，以培育具有“创意、创新和创业”精神的文化创意产业领袖人才为使命，为有志青年学子实现梦想提供全球教育资源。
+		</p>
+	</div>
+</div>
+<div class="blockquote-line">
+	<div class="row">
+		<div class="col-md-4">
+			<h3 style="text-align:center;">
+				<strong><span style="color:#9f2138;">学院愿景</span></strong> 
+			</h3>
+			<p style="text-align:center;">
+				努力建成国际一流的科学、艺术和管理复合性交叉型创新学院，在更广泛的全球范围内共享资源，从合作中塑造全球智力，为人类的文明和进步做出持续的贡献。
+			</p>
+			<p>
+				<br>
+			</p>
+		</div>
+		<div class="col-md-4">
+			<h3 style="text-align:center;">
+				<strong><span style="color:#9f2138;">学院使命</span></strong> 
+			</h3>
+			<p style="text-align:center;">
+				培养文化创意产业领袖人才，为有志于创意、创新和创业的学子实现梦想提供全球教育资源及产学研互动的教学平台；融合学科交叉领域，创新科研承载机制，开展相关科学研究；借助产业布局特色，实现文创教育和产业发展的良性活动。
+			</p>
+			<p>
+				<br>
+			</p>
+		</div>
+		<div class="col-md-4">
+			<h3 style="text-align:center;">
+				<strong><span style="color:#9f2138;">学院定位</span></strong> 
+			</h3>
+			<p style="text-align:center;">
+				立足于数字文化创意产业领域，坚持“国际化、学科交叉、产业导向”的办学特色，将专业教育、产业教育和通识教育三结合，重在培养实践型产业领军人才。
+			</p>
+			<p>
+				<br>
+			</p>
+		</div>
+	</div>
+</div>
+<p>
+	<br>
+</p>
+<fieldset class="layui-elem-field">
+	<legend style="text-align:center;"><span style="font-size:20px;color:#9F2138;"><strong>学院院训</strong></span></legend>
+	<h3 style="text-align:center;">
+		<strong><span style="color:#9f2138;">真诚&nbsp; &nbsp; 专业&nbsp; &nbsp; 创新</span></strong>
+	</h3>
+</fieldset>						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="sidebar sidebar-right">
+						<div class="sidebar-item">
+							<h4>
+								最新新闻
+								<a href="/news" title="Read more"><i class="more"> →</i></a>
+							</h4>
+							<ul class="no-style related">
+															<li>
+									<a title="文创学院在习近平用典大赛中荣获“优秀组织奖”" href="/news/view/2019" target="">
+										<div class="title">文创学院在习近平用典大赛中荣获“优秀组织奖”</div>
+										<span class="time-tag">2025-10-15</span>
+									</a>
+								</li>
+															<li>
+									<a title="文创学院2025秋季学期师资会议暨教师沙龙（第三期）顺利举行" href="/news/view/2021" target="">
+										<div class="title">文创学院2025秋季学期师资会议暨教师沙龙（第三期）顺利举行</div>
+										<span class="time-tag">2025-10-14</span>
+									</a>
+								</li>
+															<li>
+									<a title="课程回顾｜文创学生走进巴拉巴拉：中国童装领导者的品牌战略与全球化实践" href="/news/view/2018" target="">
+										<div class="title">课程回顾｜文创学生走进巴拉巴拉：中国童装领导者的品牌战略与全球化实践</div>
+										<span class="time-tag">2025-10-14</span>
+									</a>
+								</li>
+															<li>
+									<a title="创基金在行动｜第六届“交大文创-德必产教链通创基金”终极答辩路演暨《文化原创力的产教共创之路》专题研究成果汇报" href="/news/view/2013" target="">
+										<div class="title">创基金在行动｜第六届“交大文创-德必产教链通创基金”终极答辩路演暨《文化原创力的产教共创之路》专题研究成果汇报</div>
+										<span class="time-tag">2025-09-30</span>
+									</a>
+								</li>
+															<li>
+									<a title="学术研讨｜聚焦中国微短剧出海，海内外专家共话机遇与挑战" href="/news/view/2017" target="">
+										<div class="title">学术研讨｜聚焦中国微短剧出海，海内外专家共话机遇与挑战</div>
+										<span class="time-tag">2025-09-27</span>
+									</a>
+								</li>
+														</ul>
+						</div>
+						<div class="sidebar-item">
+							<h4>
+								通知公告
+								<a href="/announcement" title="Read more"><i class="more"> →</i></a>
+							</h4>
+							<ul class="no-style related">
+															<li>
+									<a title="学术研讨｜聚焦中国微短剧出海，海内外专家共话机遇与挑战" href="/announcement/view/2012" target="">
+										<div class="title">文创学院2026全日制硕士研究生统考全攻略</div>
+										<span class="time-tag">2025-10-01</span>
+									</a>
+								</li>
+															<li>
+									<a title="学术研讨｜聚焦中国微短剧出海，海内外专家共话机遇与挑战" href="/announcement/view/1995" target="">
+										<div class="title">上海交通大学上海交大-南加州大学文化创意产业学院2026年招收优秀应届本科生免试攻读研究生实施办法</div>
+										<span class="time-tag">2025-09-20</span>
+									</a>
+								</li>
+															<li>
+									<a title="学术研讨｜聚焦中国微短剧出海，海内外专家共话机遇与挑战" href="/announcement/view/1968" target="">
+										<div class="title">2025年文创学院暑期值班表</div>
+										<span class="time-tag">2025-07-15</span>
+									</a>
+								</li>
+															<li>
+									<a title="学术研讨｜聚焦中国微短剧出海，海内外专家共话机遇与挑战" href="/announcement/view/1951" target="">
+										<div class="title">上海交大-南加州大学文化创意产业学院2025年度学术启明星评选启动</div>
+										<span class="time-tag">2025-06-27</span>
+									</a>
+								</li>
+															<li>
+									<a title="学术研讨｜聚焦中国微短剧出海，海内外专家共话机遇与挑战" href="/announcement/view/1929" target="">
+										<div class="title">上海交大-南加州大学文化创意产业学院2026 ICCI ELITE CAMP 暑期菁英拓训营报名通知</div>
+										<span class="time-tag">2025-06-04</span>
+									</a>
+								</li>
+														</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- main END -->
+
+	<!-- footer -->
+	<footer>
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-6">
+						<h3 class="title">联系我们</h3>
+						<ul class="no-style">
+							<li>邮箱：<a href="mailto:icci@sjtu.edu.cn">icci@sjtu.edu.cn</a></li>
+						</ul>
+						<p>紫竹教研基地</p>
+						<ul class="no-style">
+							<li>电话：(+86 21) 34205059</li>
+							<li>地址：上海市谈家塘路155号 A7-A8号楼</li>
+						</ul>
+						<p>徐汇教研基地</p>
+						<ul class="no-style">
+							<li>电话： (+86 21) 62933041</li>
+							<li>地址：上海市徐汇区华山路1954号上海交通大学教一楼</li>
+						</ul>
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<h3 class="title">
+							友情链接
+						</h3>
+						<ul class="no-style outside">
+											       	<li>
+					       		<a title="上海交通大学" href="https://www.sjtu.edu.cn/" target="_blank"><i class="square"></i>上海交通大学</a>
+					       	</li>
+					    					       	<li>
+					       		<a title="南加州大学" href="https://www.usc.edu/" target="_blank"><i class="square"></i>南加州大学</a>
+					       	</li>
+					    					       	<li>
+					       		<a title="全球文化创意产业合作与发展国际会议" href="http://conference.icci.sjtu.edu.cn/" target="_blank"><i class="square"></i>全球文化创意产业合作与发展国际会议</a>
+					       	</li>
+					    					       	<li>
+					       		<a title="第五届" 汇创青春"国际赛商业分赛优秀作品展示"="" href="http://hcqc.icci.sjtu.edu.cn/" target="_self"><i class="square"></i>第五届"汇创青春"国际赛商业分赛优秀作品展示</a>
+					       	</li>
+					    						</ul>
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<h3 class="title">
+							快速通道
+						</h3>
+						<ul class="no-style outside">
+												       	<li>
+					       		<a title="加入我们" href="/icci/index/join-us" target="_self"><i class="square"></i>加入我们</a>
+					       	</li>
+					    					       	<li>
+					       		<a title="媒体中心" href="/icci/index/media" target="_self"><i class="square"></i>媒体中心</a>
+					       	</li>
+					    					       	<li>
+					       		<a title="校友会" href="/icci/index/alumni" target="_self"><i class="square"></i>校友会</a>
+					       	</li>
+					    						</ul>
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<h3 class="title">
+							社交媒体
+						</h3>
+						<!-- <div class="media">
+							<a href="#"><span class="fa fa-weibo"></span></a>
+						</div> -->
+						<div class="qrcode">
+							<p><img src="/public/images/qrcode.png" alt="" width="140"></p>
+							<p>( 文创学院官方微信公众号 )</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container">
+				版权所有 © 2018 上海交大-南加州大学文化创意产业学院 <a href="http://www.beian.miit.gov.cn/" target="_blank">沪交ICP备20170117</a>，技术支持：<a href="http://www.alawang.com" target="_blank">ALA</a>
+			</div>
+		</div>
+	</footer>
+	<!-- Back To Top -->
+	<a href="#" id="button-to-top" style="display: none;">↑</a>
+	<script src="/public/js/bootstrap.min.js"></script>
+	<script src="/public/js/bootstrap-dropdown-on-hover.js"></script>
+	<script src="/public/js/swiper.min.js"></script>
+	<script type="text/javascript" src="/public/layui/layui.js"></script>
+	<script type="text/javascript" src="/public/js/index.js?t=20181015"></script>
+	<script>
+		//banner
+	    var swiper = new Swiper('.swiper-container', {
+	        pagination: '.swiper-pagination',
+	        paginationClickable: true,
+	        prevButton:'.swiper-button-prev',
+			nextButton:'.swiper-button-next',
+	        autoplay : 3000,
+	        // loop : true
+	    });
+
+		var flex = new Swiper('.responsive.flex-2', {
+	        paginationClickable: true,
+	        pagination: '.swiper-pagination',
+	        prevButton:'.swiper-button-prev',
+			nextButton:'.swiper-button-next',
+	        slidesPerView: 2,
+	        spaceBetween: 30,
+	        breakpoints: {
+	        	1200: {
+	                slidesPerView: 3,
+	                spaceBetween: 30
+	            },
+	            991: {
+	                slidesPerView: 2,
+	                spaceBetween: 30
+	            },
+	            767: {
+	                slidesPerView: 2,
+	                spaceBetween: 20
+	            },
+	            567: {
+	                slidesPerView: 1,
+	                spaceBetween: 20
+	            }
+	        },
+	        // autoplay : 3000,
+	    });
+	    var flex = new Swiper('.responsive.flex-4', {
+	        paginationClickable: true,
+	        pagination: '.swiper-pagination',
+	        prevButton:'.swiper-button-prev',
+			nextButton:'.swiper-button-next',
+	        slidesPerView: 4,
+	        spaceBetween: 30,
+	        breakpoints: {
+	            991: {
+	                slidesPerView: 3,
+	                spaceBetween: 30
+	            },
+	            767: {
+	                slidesPerView: 2,
+	                spaceBetween: 20
+	            },
+	            567: {
+	                slidesPerView: 1,
+	                spaceBetween: 20
+	            }
+	        },
+	        // autoplay : 3000,
+	    });
+    </script>
+    <script>
+		layui.use(['form','flow','laypage','layer','element'],function(){
+		    var form = layui.form;
+		    var flow = layui.flow;
+		    var element = layui.element;
+		    var laypage = layui.laypage;
+		    var layer = parent.layer === undefined ? layui.layer : parent.layer;
+		    var $ = layui.jquery;
+		   //  flow.load({
+			  //   elem: '.layui-tab' //流加载容器
+			  //   ,done: function(page, next){ //执行下一页的回调
+					// setTimeout(function(){
+					// 	var lis = [];
+					// 	$.get('/news/more/'+page,function(res){
+					// 		res = JSON.parse(res);
+					// 		layui.each(res.data, function(index, item){
+			  //                 	lis.push('<li>' + item.PostID + '</li>');
+			  //                 	console.log(item.PostID);
+			  //               }); 
+					// 	})
+					// 	next(lis.join(''), page<10); //假设总页数为 10
+					// }, 500);
+			  //   }
+			  // });
+		    form.render();
+		    // 分页
+		  //   laypage.render({
+			 //    elem: 'pages'
+			 //    ,count: 100
+			 //    ,theme: '#9A0038'
+			 //    ,first: '首页'
+			 //    ,last: '尾页'
+			 //    ,prev: '<em>←</em>'
+			 //    ,next: '<em>→</em>'
+			 //    ,groups:3
+			 //    ,jump: function(obj, first){
+				//     //obj包含了当前分页的所有参数，比如：
+				//     console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
+				//     console.log(obj.limit); //得到每页显示的条数
+				    
+				//     //首次不执行
+				//     if(!first){
+				//       //do something
+				//     }
+				// }
+		  // 	});
+		  if($('.albums .slide .img-box').length){
+		  	$('.albums .slide .img-box').on('click',function(){
+				layer.photos({
+				    photos: '.albums' //格式见API文档手册页
+				    ,anim: 5 //0-6的选择，指定弹出图片动画类型，默认随机
+			  	});
+			})
+		  }
+		})
+	</script>
+	
+</body></html>

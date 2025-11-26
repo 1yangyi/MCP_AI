@@ -1,0 +1,723 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>学院简介-卫生应急学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<META Name="keywords" Content="卫生应急学院,学院简介" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" href="../css/slick.css" type="text/css">
+<link rel="stylesheet" href="../css/swiper.min.css" type="text/css">
+<link rel="stylesheet" href="../css/base.css" type="text/css">
+<link rel="stylesheet" href="../css/style.css?v=65" type="text/css">
+<link rel="stylesheet" href="../style/banner.css" type="text/css">
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e004657505a5742000400054652 -->
+<link rel="stylesheet" type="text/css" href="../about.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1011,'/about.jsp',-1,2098404135)</script>
+</head>
+
+<body class="show sub">
+<div class="container">
+  <div class="g-head">
+    <div class=""><!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+          
+            
+              <div class="ilogo"><a href="/" class="logo"></a></div>
+        <div class="head-r">
+            <div class="ilan"><a href="/" class="active">中</a><a href="#">EN</a></div>
+            <div class="isearch">
+                 <form  >
+                 
+                    <input  type="text"  placeholder="请输入关键词" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                    <input type="submit" value="" v-on:click="onSubmit()">
+                </form>
+            </div>
+        </div>
+
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "2098404135";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+     <a href="javascript:;" class="navA"></a>
+
+<script>
+   var appElementu0 = document.querySelector("#appu0");
+   if (appElementu0 && appElementu0.__vue__) {
+
+   } else {
+      $("#divu0").html($("#htmlu0").text());
+      var appOwner = "2098404135";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou0 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu0(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu0();
+        }
+      };
+
+      function onSubmitu0(e) {
+        queryInfou0.query.keyWord= $("#appu0  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou0.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script>
+    </div>
+    <nav><ul class="nav_ul iflex">
+<li class=" "><a href="../index.htm">首页</a>
+</li>
+<li class="active nav_d"><a href="../xygk.htm">学院概况</a>
+<ul class="thirdmenu">
+<li><a href="xyjj.htm">学院简介</a></li>
+<li><a href="zzjg.htm">组织架构</a></li>
+<li><a href="rszp.htm">人事招聘</a></li>
+<li><a href="lxwm.htm">联系我们</a></li>
+</ul>
+</li>
+<li class=" nav_d"><a href="../szdw.htm">师资队伍</a>
+<ul class="thirdmenu">
+<li><a href="../szdw/azx.htm">按中心</a></li>
+<li><a href="../szdw/azc.htm">按职称</a></li>
+<li><a href="../szdw/axs.htm">按姓氏</a></li>
+</ul>
+</li>
+<li class=" nav_d"><a href="../rcpy.htm">人才培养</a>
+<ul class="thirdmenu">
+<li><a href="../rcpy/bkpy.htm">本科培养</a></li>
+<li><a href="../rcpy/yjspy.htm">研究生培养</a></li>
+</ul>
+</li>
+<li class=" nav_d"><a href="../kxyj.htm">科学研究</a>
+<ul class="thirdmenu">
+<li><a href="../kxyj/kygk.htm">科研概况</a></li>
+<li><a href="../kxyj/kyfx.htm">科研方向</a></li>
+<li><a href="../kxyj/kypt.htm">科研平台</a></li>
+<li><a href="../kxyj/kydt.htm">科研动态</a></li>
+<li><a href="../kxyj/cgzh.htm">成果转化</a></li>
+</ul>
+</li>
+<li class=" nav_d"><a href="../ssyd.htm">师生园地</a>
+<ul class="thirdmenu">
+<li><a href="../ssyd/djgz.htm">党建工作</a></li>
+<li><a href="../ssyd/ssfc.htm">师生风采</a></li>
+<li><a href="../ssyd/xsgz.htm">学生工作</a></li>
+<li><a href="../ssyd/xzzq.htm">下载专区</a></li>
+</ul>
+</li>
+<li class=" nav_d"><a href="../shfw.htm">社会服务</a>
+<ul class="thirdmenu">
+<li><a href="../shfw/pxyl.htm">培训演练</a></li>
+<li><a href="../shfw/kpyd.htm">科普园地</a></li>
+</ul>
+</li>
+<li class=" nav_d"><a href="../jydw.htm">救援队伍</a>
+<ul class="thirdmenu">
+<li><a href="../jydw/jydwjs.htm">救援队伍介绍</a></li>
+<li><a href="../jydw/lcjysz.htm">历次救援实战</a></li>
+</ul>
+</li>
+<li class=" nav_d"><a href="../jlhz.htm">交流合作</a>
+<ul class="thirdmenu">
+<li><a href="../jlhz/gnhz.htm">国内合作</a></li>
+<li><a href="../jlhz/gnhzdt.htm">国内合作动态</a></li>
+<li><a href="../jlhz/gjhz.htm">国际合作</a></li>
+<li><a href="../jlhz/gjhzdt.htm">国际合作动态</a></li>
+</ul>
+</li>
+<li class=" nav_d"><a href="../xyzj.htm">校友之家</a>
+<ul class="thirdmenu">
+<li><a href="../xyzj/xljyxy.htm">学历教育校友</a></li>
+<li><a href="../xyzj/fxljyxy.htm">非学历教育校友</a></li>
+<li><a href="../xyzj/xydt.htm">校友动态</a></li>
+</ul>
+</li>
+</ul></nav>
+    </div>
+      <div class="g-nav2">  <style>
+  .g-nav2 .scroll li .list dd.m1046{width:33%;}
+   .g-nav2 .scroll li .list dd.m1047{width:33%;}
+    .g-nav2 .scroll li .list dd.m1048{width:33%;}
+  </style>
+  <div class="scroll">
+    <ul>
+                <li>
+            <h2><a href="../index.htm" title="首页">首页</a></h2>
+      </li>
+
+      <li>
+            <h2><a href="../xygk.htm" title="学院概况">学院概况</a></h2>
+        <div class="list">
+          <h3><a href="xyjj.htm" title="学院简介">学院简介</a></h3>
+          <h3><a href="zzjg.htm" title="组织架构">组织架构</a></h3>
+          <dl>
+            <dd class="m1014"><a href="zzjg/xyzzjg.htm" title="学院组织架构">学院组织架构</a></dd>
+            <dd class="m1015"><a href="zzjg/xrld.htm" title="现任领导">现任领导</a></dd>
+            <dd class="m1016"><a href="zzjg/zhbgs.htm" title="综合办公室">综合办公室</a></dd>
+          </dl>
+          <h3><a href="rszp.htm" title="人事招聘">人事招聘</a></h3>
+          <h3><a href="lxwm.htm" title="联系我们">联系我们</a></h3>
+        </div>
+      </li>
+
+      <li>
+            <h2><a href="../szdw.htm" title="师资队伍">师资队伍</a></h2>
+        <div class="list">
+          <h3><a href="../szdw/azx.htm" title="按中心">按中心</a></h3>
+          <dl>
+            <dd class="m1046"><a href="../szdw/azx/yjyxzbyjzx.htm" title="应急医学装备研究中心">应急医学装备研究中心</a></dd>
+            <dd class="m1047"><a href="../szdw/azx/yjyxjsyjzx.htm" title="应急医学技术研究中心">应急医学技术研究中心</a></dd>
+            <dd class="m1048"><a href="../szdw/azx/wsyjglyjzx.htm" title="卫生应急管理研究中心">卫生应急管理研究中心</a></dd>
+          </dl>
+          <h3><a href="../szdw/azc.htm" title="按职称">按职称</a></h3>
+          <dl>
+            <dd class="m1049"><a href="../szdw/azc/js.htm" title="教授">教授</a></dd>
+            <dd class="m1050"><a href="../szdw/azc/fjs.htm" title="副教授">副教授</a></dd>
+            <dd class="m1051"><a href="../szdw/azc/js1.htm" title="讲师">讲师</a></dd>
+            <dd class="m1052"><a href="../szdw/azc/bsh_zlyjy.htm" title="博士后 助理研究员">博士后 助理研究员</a></dd>
+          </dl>
+          <h3><a href="../szdw/axs.htm" title="按姓氏">按姓氏</a></h3>
+          <dl>
+            <dd class="m1020"><a href="../szdw/axs/A.htm" title="A">A</a></dd>
+            <dd class="m1021"><a href="../szdw/axs/B.htm" title="B">B</a></dd>
+            <dd class="m1022"><a href="../szdw/axs/C.htm" title="C">C</a></dd>
+            <dd class="m1023"><a href="../szdw/axs/D.htm" title="D">D</a></dd>
+            <dd class="m1024"><a href="../szdw/axs/E.htm" title="E">E</a></dd>
+            <dd class="m1025"><a href="../szdw/axs/F.htm" title="F">F</a></dd>
+            <dd class="m1026"><a href="../szdw/axs/G.htm" title="G">G</a></dd>
+            <dd class="m1027"><a href="../szdw/axs/H.htm" title="H">H</a></dd>
+            <dd class="m1028"><a href="../szdw/axs/I.htm" title="I">I</a></dd>
+            <dd class="m1029"><a href="../szdw/axs/J.htm" title="J">J</a></dd>
+            <dd class="m1030"><a href="../szdw/axs/K.htm" title="K">K</a></dd>
+            <dd class="m1031"><a href="../szdw/axs/L.htm" title="L">L</a></dd>
+            <dd class="m1032"><a href="../szdw/axs/M.htm" title="M">M</a></dd>
+            <dd class="m1033"><a href="../szdw/axs/N.htm" title="N">N</a></dd>
+            <dd class="m1034"><a href="../szdw/axs/O.htm" title="O">O</a></dd>
+            <dd class="m1035"><a href="../szdw/axs/P.htm" title="P">P</a></dd>
+            <dd class="m1036"><a href="../szdw/axs/Q.htm" title="Q">Q</a></dd>
+            <dd class="m1037"><a href="../szdw/axs/R.htm" title="R">R</a></dd>
+            <dd class="m1038"><a href="../szdw/axs/S.htm" title="S">S</a></dd>
+            <dd class="m1039"><a href="../szdw/axs/T.htm" title="T">T</a></dd>
+            <dd class="m1040"><a href="../szdw/axs/U.htm" title="U">U</a></dd>
+            <dd class="m1041"><a href="../szdw/axs/V.htm" title="V">V</a></dd>
+            <dd class="m1042"><a href="../szdw/axs/W.htm" title="W">W</a></dd>
+            <dd class="m1043"><a href="../szdw/axs/X.htm" title="X">X</a></dd>
+            <dd class="m1044"><a href="../szdw/axs/Y.htm" title="Y">Y</a></dd>
+            <dd class="m1045"><a href="../szdw/axs/Z.htm" title="Z">Z</a></dd>
+          </dl>
+        </div>
+      </li>
+
+      <li>
+            <h2><a href="../rcpy.htm" title="人才培养">人才培养</a></h2>
+        <div class="list">
+          <h3><a href="../rcpy/bkpy.htm" title="本科培养">本科培养</a></h3>
+          <h3><a href="../rcpy/yjspy.htm" title="研究生培养">研究生培养</a></h3>
+          <dl>
+            <dd class="m1055"><a href="../rcpy/yjspy/zszy.htm" title="招生专业">招生专业</a></dd>
+            <dd class="m1057"><a href="../rcpy/yjspy/dscx.htm" title="导师查询">导师查询</a></dd>
+          </dl>
+        </div>
+      </li>
+
+      <li>
+            <h2><a href="../kxyj.htm" title="科学研究">科学研究</a></h2>
+        <div class="list">
+          <h3><a href="../kxyj/kygk.htm" title="科研概况">科研概况</a></h3>
+          <h3><a href="../kxyj/kyfx.htm" title="科研方向">科研方向</a></h3>
+          <h3><a href="../kxyj/kypt.htm" title="科研平台">科研平台</a></h3>
+          <h3><a href="../kxyj/kydt.htm" title="科研动态">科研动态</a></h3>
+          <h3><a href="../kxyj/cgzh.htm" title="成果转化">成果转化</a></h3>
+          <dl>
+            <dd class="m1066"><a href="../kxyj/cgzh/cgzhpt.htm" title="成果转化平台">成果转化平台</a></dd>
+            <dd class="m1067"><a href="../kxyj/cgzh/cgzhal.htm" title="成果转化案例">成果转化案例</a></dd>
+          </dl>
+        </div>
+      </li>
+
+      <li>
+            <h2><a href="../ssyd.htm" title="师生园地">师生园地</a></h2>
+        <div class="list">
+          <h3><a href="../ssyd/djgz.htm" title="党建工作">党建工作</a></h3>
+          <dl>
+            <dd class="m1073"><a href="../ssyd/djgz/djdt.htm" title="党建动态">党建动态</a></dd>
+            <dd class="m1074"><a href="../ssyd/djgz/llxx.htm" title="理论学习">理论学习</a></dd>
+          </dl>
+          <h3><a href="../ssyd/ssfc.htm" title="师生风采">师生风采</a></h3>
+          <h3><a href="../ssyd/xsgz.htm" title="学生工作">学生工作</a></h3>
+          <h3><a href="../ssyd/xzzq.htm" title="下载专区">下载专区</a></h3>
+        </div>
+      </li>
+
+      <li>
+            <h2><a href="../shfw.htm" title="社会服务">社会服务</a></h2>
+        <div class="list">
+          <h3><a href="../shfw/pxyl.htm" title="培训演练">培训演练</a></h3>
+          <dl>
+            <dd class="m1077"><a href="../shfw/pxyl/pxzxjj.htm" title="培训中心简介">培训中心简介</a></dd>
+            <dd class="m1078"><a href="../shfw/pxyl/pxtd.htm" title="培训团队">培训团队</a></dd>
+            <dd class="m1079"><a href="../shfw/pxyl/zypx.htm" title="专业培训">专业培训</a></dd>
+            <dd class="m1080"><a href="../shfw/pxyl/pxylal.htm" title="培训演练案例">培训演练案例</a></dd>
+          </dl>
+          <h3><a href="../shfw/kpyd.htm" title="科普园地">科普园地</a></h3>
+          <dl>
+            <dd class="m1081"><a href="../shfw/kpyd/kpzs.htm" title="科普知识">科普知识</a></dd>
+            <dd class="m1082"><a href="../shfw/kpyd/kphd.htm" title="科普活动">科普活动</a></dd>
+            <dd class="m1083"><a href="../shfw/kpyd/kppx.htm" title="科普培训">科普培训</a></dd>
+          </dl>
+        </div>
+      </li>
+
+      <li>
+            <h2><a href="../jydw.htm" title="救援队伍">救援队伍</a></h2>
+        <div class="list">
+          <h3><a href="../jydw/jydwjs.htm" title="救援队伍介绍">救援队伍介绍</a></h3>
+          <h3><a href="../jydw/lcjysz.htm" title="历次救援实战">历次救援实战</a></h3>
+        </div>
+      </li>
+
+      <li>
+            <h2><a href="../jlhz.htm" title="交流合作">交流合作</a></h2>
+        <div class="list">
+          <h3><a href="../jlhz/gnhz.htm" title="国内合作">国内合作</a></h3>
+          <h3><a href="../jlhz/gnhzdt.htm" title="国内合作动态">国内合作动态</a></h3>
+          <h3><a href="../jlhz/gjhz.htm" title="国际合作">国际合作</a></h3>
+          <h3><a href="../jlhz/gjhzdt.htm" title="国际合作动态">国际合作动态</a></h3>
+        </div>
+      </li>
+
+      <li>
+            <h2><a href="../xyzj.htm" title="校友之家">校友之家</a></h2>
+        <div class="list">
+          <h3><a href="../xyzj/xljyxy.htm" title="学历教育校友">学历教育校友</a></h3>
+          <h3><a href="../xyzj/fxljyxy.htm" title="非学历教育校友">非学历教育校友</a></h3>
+          <h3><a href="../xyzj/xydt.htm" title="校友动态">校友动态</a></h3>
+        </div>
+      </li>
+
+      </li>
+
+      </li>
+
+    <li class="en_phone"><h2><a href="/Home.htm" target="_blank">English</a></h2></li>
+
+    </ul>
+  </div>
+
+</div>
+
+   <div class="nybanner"><img src="../images/xueyuangaikuang.jpg" alt=""><h2>学院概况</h2>
+</div>
+<div class="submenu"><div class="wrapper2">
+    <ul class="iflex2">
+        <li class="active">
+    <a href="xyjj.htm">学院简介</a>
+    </li>
+    <li>
+    <a href="zzjg.htm">组织架构</a>
+        <ul class="thirdmenu"> 
+<li><a href="zzjg/xyzzjg.htm">学院组织架构</a></li>
+<li><a href="zzjg/xrld.htm">现任领导</a></li>
+<li><a href="zzjg/zhbgs.htm">综合办公室</a></li>
+</ul>
+    </li>
+    <li>
+    <a href="rszp.htm">人事招聘</a>
+    </li>
+    <li>
+    <a href="lxwm.htm">联系我们</a>
+    </li>
+ 
+    </ul>
+    </div></div>
+    <div class="wrapper">
+    <div class="list-r">
+        <div class="mbx">  
+                <a href="../index.htm">首页</a>
+
+                <a href="../xygk.htm">学院概况</a>
+
+                <a href="xyjj.htm">学院简介</a>
+</div>
+        <div class="typename">
+学院简介</div>
+<div class="fck about_a">
+            <p style="text-align: center"><img src="../images/gywm-pic.jpg" alt=""></p>
+            <div class="about_one"><P>　　天津大学卫生应急学院成立于2024年5月9日，其前身为侯世科教授带领研究团队在天津大学组建的应急医学研究院。学院是国内第一所专门从事应急医学教学培训和科研转化的专业机构，学院骨干成员先后参加了印尼海啸、巴基斯坦地震、海地地震、阿尔及利亚地震、玉树地震、汶川地震、黑龙江大兴安岭火灾、天津港“8·12”特大火灾爆炸、安徽抗洪抢险、抗战胜利70周年外军保障等26批次国际国内救援行动和重大活动保障，在应急医学领域形成了具有明显优势和特色的研究方向。</P></div>
+            <div class="about_list">
+            <h2>　　一、师资队伍</h2>
+            <P>　　学院现有教职工45人，其中专任教师32人。拥有国家百千万人才1人，中国科协“求是杰出青年贡献奖”2人，天津市青年优秀科技人才2人。学院与天津大学温州安全(应急)研究院实行“两院一体化”建设，天津大学温州安全(应急)研究院共有教职工28人，其中专任教师10人。</P>
+            </div>
+            <div class="about_list">
+            <h2>　　二、人才培养</h2>
+            <P>　　建院团队在2006年开设了国内第一个“救援医学”本科专业，编写本科教材《全民防灾自救知识读本》《健康教育与健康促进》。学院于2020年获批教育部首个“救援医学”一级学科硕士点，2024年获批国内首个“应急医学”一级学科博士点和“应急医学技术与工程”二级学科博士点，预计2025年开始预防医学(应急医学方向)本科专业招生。学院联合美国匹兹堡大学开展国际化合作，着力打造应急医学“本硕博”贯通的人才培养体系，为国家培养应急医学专业复合型高层次人才。</P>
+            </div>
+            <div class="about_list">
+            <h2>　　三、科学研究</h2>
+            <P>　　学院根据应急医学救援领域面临“缺管理”“缺技术”“缺装备”三大科学技术问题的现状，不断凝练明确科研方向,形成应急医学装备、应急医学技术、卫生应急管理三大研究中心，建有应急管理部医学救援关键技术装备重点实验室、天津市灾难医学技术重点实验室、中国智库索引(CTTI)来源智库、天津市职业健康应急救援指导中心等省部级学科平台，依托天津大学温州安全(应急)研究院与天津大学卫生应急学院转化基地进行“两院一体化”建设，开展科研成果转化。</P>
+            <P>　　学院5年来先后承担国家科技部重点研发计划、国家自然科学基金等国家级和省部级项目50余项，获批科研经费2.8亿元。共获批国家科技进步二等奖2项、全军教学成果一等奖1项、武警部队科技进步一等奖2项、天津市科技进步一等奖2项等。</P>
+            </div>
+            <div class="about_list">
+            <h2>　　四、社会服务</h2>
+            <P>　　学院建有集网络推演、技能实操、模拟演练于一体的应急医学专业化培训中心。先后获批中国医师协会卫生应急培训学院、天津市卫生应急培训演练基地(卫生应急管理、紧急医学救援、传染病防控、突发中毒、核与辐射)、HQCC中国标准化心肺复苏培训基地、中国医学救援协会心肺复苏急救培训基地以及天津大学市级退役军人就业创业承训机构。发挥天津大学作为高校示范和辐射效应，针对不同层次，不同专业人群，围绕卫生应急管理、技术、装备、特种医学、科普素质等领域，编写面向国内专业救援队的《中国灾难医学高级教程》《突发事件卫生应急培训系列教材》及面向公众的科普教材《中国灾难医学初级教程》，并引进《哈佛高级灾难医学教程》。先后培训浙江、山西、辽宁、广东、广西、吉林、新疆等近30个省份的各级各类卫生应急、院前急救专业人员5300余人。协同中国医学救援协会在新乡，唐山，张家口，锦州，郑州等地建设心肺复苏培训基地5个，先后组织医院，企业，社区等全国心肺复苏培训及天津大学本校各类人员心肺复苏培训30余场次，共计9000余人。显著提高了专业队伍卫生应急处置能力和公众心肺复苏急救技能普及率。</P>
+            </div>
+            <div class="about_list">
+            <h2>　　五、交流合作</h2>
+            <P>　　学院为世界急救与灾难医学协会(WADEM)理事单位，中华医学会灾难医学分会、中国医师协会急救复苏和灾难医学专业委员会、中国应急管理学会紧急医学工作委员会、中国医学救援协会生命支持技术分会、中国医学救援协会救援防护分会等多个应急医学领域重要学术组织的主委和牵头单位。参与论证建设国家应急医学研究中心。多次受国家卫健委医疗应急司邀请参加国家救援队伍建设评估工作。受邀参加“2024国家应急使命”超强台风防范和特大洪涝灾害联合救援演习。</P>
+            <P>　　在国际合作层面，学院是“上合组织医院合作联盟急救复苏和灾难医学专科合作平台”的主任单位，秉持开放包容的态度，积极构建全球应急医学交流网络。与美国哈佛大学灾难医学训练中心、美国匹兹堡大学、法国巴黎笛卡尔大学急救医学中心、美国国家灾难生命支持基金会(NDLSF)、美国佐治亚大学-公共卫生学院等世界知名机构建立了深厚的学术交流与合作关系。有效拓宽国际视野，促进了应急医学领域先进理念、技术与管理经验的互鉴共享，共同推动全球应急医学事业的进步与发展。</P>
+            <P>　　未来，学院将从应急医学装备、应急医学技术和卫生应急管理三个方向开展科学研究和人才培养，打造本-硕-博贯通培养模式，建立国内一流、天大特色，医、工、信、管多学科融合的应急医学交叉学科，以塑造具有家国情怀、全球视野、创新精神和实践能力的卓越人才为目标，着力培养具备医、管、工相结合的创新型高级复合型人才。</P>
+            </div>
+        </div>
+    </div>
+    <div class="list-l">
+                
+
+        <div class="lefttname"><a>学院概况</a></div>
+         <div class="list-left">
+        <div class="subNav currentDd">
+        <a href="xyjj.htm">
+        <h2>学院简介</h2>
+         
+        </a>
+        </div>
+            <ul class="navContent" id="aa1011" style="display:block">
+
+                </ul>
+        
+        <div class="subNav ">
+        <a href="JavaScript:;">
+        <h2>组织架构</h2>
+         <span></span> 
+        </a>
+        </div>
+            <ul class="navContent" id="aa1012">
+          <li><a href="zzjg/xyzzjg.htm"><h2 class="aa1014">学院组织架构</h2></a></li>
+          <li><a href="zzjg/xrld.htm"><h2 class="aa1015">现任领导</h2></a></li>
+          <li><a href="zzjg/zhbgs.htm"><h2 class="aa1016">综合办公室</h2></a></li>
+
+                </ul>
+        
+        <div class="subNav ">
+        <a href="rszp.htm">
+        <h2>人事招聘</h2>
+         
+        </a>
+        </div>
+            <ul class="navContent" id="aa1072">
+
+                </ul>
+        
+        <div class="subNav ">
+        <a href="lxwm.htm">
+        <h2>联系我们</h2>
+         
+        </a>
+        </div>
+            <ul class="navContent" id="aa1013">
+
+                </ul>
+        
+  <img src="../images/left-bg.jpg" alt="" class="leftimg">
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="left-news">
+            <div class="left-news-t"><a href="../xwdt.htm">新闻动态</a>
+</div>
+            <div class="left-news-pic">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><a href="../info/1096/6760.htm">
+<div class="p1-img"><b>20<span>2025-10</span></b><img src="../virtual_attach_file.vsb?afc=5U4-CPnNL8U49iLQ4n2M4NDLmvYnzVqkMzGaMlUPU8l4nl70gihFp2hmCIa0MSyYMkybMSyDL4NYMmU4M47PMzW7UzARL4vaLmGsLR-aL46FMmLPn7r2LRrFLNUYMmLJqjfjo4OeosMNQI80qIbtpYyxLYyxLYbw62p8c&oid=2098404135&e=.jpg" alt="" class="img88"></div>
+<div class="p1-title"><h2>我院成功开发离子驱动光传导穿戴式汗液传感平台，可用于人代谢水平的...</h2></div>
+</a>            
+<script>_showDynClickBatch(['dynclicks_u9_6760'],[6760],"wbnews", 2098404135)</script>
+</div>
+            <div class="left-more"><a href="../xwdt.htm">查看更多</a>
+</div>
+        </div>
+        <div class="left-notice">
+            <div class="left-notice-t"><a href="../tzgg.htm">通知公告</a>
+</div>
+            <div class="left-notice-list">
+
+
+
+
+
+<ul>
+                    
+<li>
+                        <a href="../info/1107/6600.htm">
+                            <b>30<span>2025-09</span></b>
+                            <div class="p2-right-z">
+                                <h2>2025年天津大学博士生学术论坛-第一届应急医学分论坛暨第八届北洋国际...</h2>
+                            </div>
+                        </a>
+                    </li>
+                    
+<li>
+                        <a href="../info/1108/6550.htm">
+                            <b>19<span>2025-09</span></b>
+                            <div class="p2-right-z">
+                                <h2>培训通知 |《卫生应急能力提升培训班》第五期</h2>
+                            </div>
+                        </a>
+                    </li>
+                    
+<li>
+                        <a href="../info/1107/6380.htm">
+                            <b>08<span>2025-09</span></b>
+                            <div class="p2-right-z">
+                                <h2>医学救援关键技术装备应急管理部重点实验室关于发布2025年度开放基金...</h2>
+                            </div>
+                        </a>
+                    </li>
+                    
+<li>
+                        <a href="../info/1104/6370.htm">
+                            <b>07<span>2025-09</span></b>
+                            <div class="p2-right-z">
+                                <h2>天津大学卫生应急学院2026级推荐免试攻读硕士学位研究生接收办法</h2>
+                            </div>
+                        </a>
+                    </li>
+                    
+</ul><script>_showDynClickBatch(['dynclicks_u12_6600','dynclicks_u12_6550','dynclicks_u12_6380','dynclicks_u12_6370'],[6600,6550,6380,6370],"wbnews", 2098404135)</script>
+</div>
+            <div class="left-more"><a href="../tzgg.htm">查看更多</a>
+</div>
+        </div>
+    </div>
+    </div>
+<footer><div class="wrapper">
+        <div class="foot-l">
+            <div class="flogo"><a href="/"><img src="../images/logo.png" alt=""></a></div>
+            <div class="copyright">Copyright &copy; 2025 sdem.tju.edu.cn All Rights Reserved.</div>
+        </div>
+        <div class="foot-r iflex">
+            <div class="address">
+                <h2>联系我们</h2>
+                <ul>
+                    <li><i></i><p>办公地点：天津市南开区卫津路92号<br>天津大学（卫津路校区）第十教学楼东配楼</p></li>
+                    <li><i></i><p>电话：022-87370177&nbsp;&nbsp;&nbsp;&nbsp;022-27893596</p></li>
+                </ul>
+            </div>
+            <div class="qr">
+                <img src="../images/qr.jpg" alt="">
+                <p>天津大学卫生应急学院<br>微信公众号</p>
+            </div>
+        </div>
+    </div></footer>
+</div>
+</body>
+<script src="../js/jquery.min.js" type="text/javascript"></script>
+<script src="../js/set.js" type="text/javascript"></script>
+<script src="../js/hammer.min.js" type="text/javascript"></script>
+<script src="../js/slider.js" type="text/javascript"></script>
+<script src="../js/head.js" type="text/javascript"></script>
+<script src="../js/jquery.SuperSlide.js" type="text/javascript"></script>
+<script src="../js/swiper.min3.js" type="text/javascript"></script>
+<script src="../js/slick.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+    $('nav ul > li').hover(
+        function() {
+            $(this).find('.thirdmenu').stop(true, true).slideDown(200);
+        },
+        function() {
+            $(this).find('.thirdmenu').stop(true, true).slideUp(200);
+        }
+    );
+    $('.submenu ul > li').hover(
+        function() {
+            $(this).find('.thirdmenu').stop(true, true).slideDown(200);
+        },
+        function() {
+            $(this).find('.thirdmenu').stop(true, true).slideUp(200);
+        }
+    );
+    
+}); 
+   $(function(){
+      $(".subNav").click(function(){
+        $(this).toggleClass("currentDd").siblings(".subNav").removeClass("currentDd");
+        $(this).next(".navContent").slideToggle(300).siblings(".navContent").slideUp(500);
+});
+    
+    }); 
+</script>
+</html>
+
+
+
+
+
+
+
+

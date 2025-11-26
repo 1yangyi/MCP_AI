@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>学部简介-东北师范马克思主义学部</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学部简介">
+<meta name="keywords" content="东北师范马克思主义学部,学部简介">
+
+<link type="text/css" rel="stylesheet" href="../style/style.css">
+<link type="text/css" rel="stylesheet" href="../style/gyys.css">
+
+    <script type="text/javascript" src="../js/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.vsbclub.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307668465750545742000400054754 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1013,'/dpzw.jsp',-1,1287845054)</script>
+</head>
+
+<body>
+<div class="top">
+    <div class="W1200">
+    <div class="FL">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<img src="../images/logo_031.png" width="721" height="101" usemap="#Map">
+</div>
+        <div class="FR top_r">
+        <div class="dl"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>    <a href="../index.htm">首页</a>
+|
+    <a href="#">怀念旧版</a>
+
+</div>
+        
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2">
+    <div id="appu2"><div><div class="sousuo"><span style="float: left; padding-top: 6px;"><input type="text" placeholder="输入关键字..." autocomplete="off" class="srk"></span> <div style="float: left; padding-top: 6px;"><input type="image" src="../images/ser_03.jpg" align="absmiddle"></div></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+        
+        <div class="sousuo">
+<span style="float:left; padding-top:6px">
+<input type="text" class="srk" placeholder="输入关键字..."  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" />
+</span>
+    <div style="float:left;padding-top:6px">
+<input type="image" src="../images/ser_03.jpg" align="absmiddle" style="cursor: hand" v-on:click="onSubmit()"/></div></div>
+
+ 
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1287845054";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="menu_a">
+    <div class="menu">
+            <li><a href="../index.htm">首页</a></li>
+    <li class="chushi"><a href="xbjj.htm">学部概况</a></li>
+    <li><a href="../szdw/azcpx.htm">师资队伍</a></li>
+    <li><a href="../bksjy/zysz.htm">本科生教育</a></li>
+    <li><a href="../yjsjy/zysz/ssyjs_1.htm">研究生教育</a></li>
+    <li><a href="../xkjs/xkgl_.htm">学科建设</a></li>
+    <li><a href="../kxyj/xslw_.htm">科学研究</a></li>
+    <li><a href="../djgz/xxyd.htm">党建工作</a></li>
+    <li><a href="../xsgz/jgsz/ryzc.htm">学生工作</a></li>
+    <li><a href="../bzfw/wjxz_/xbwj_.htm">文件下载</a></li>
+
+    </div>
+</div>
+<div class="clear DivH25"></div>
+<div class="W1200">
+    <div>        
+
+                
+                            <img class="bordb" src="../images/nimg_03.jpg" width="100%">
+                        
+
+</div>
+<div class="clear DivH25"></div>
+    <div class="FL W220">
+        <div class="nylanmu">
+学部概况</div>
+        <div class="clear DivH25"></div>
+        <div class="nydaoh">
+            <ul>
+    <li>
+<a href="xbjj.htm">学部简介</a></li>
+    <li>
+<a href="gljg/dzbz.htm">管理机构</a></li>
+<div class="nerji">
+                <ul>
+                    <li>•&nbsp;<a href="gljg/dzbz.htm">党政班子</a></li>
+                    <li>•&nbsp;<a href="gljg/jswyh.htm">教授委员会</a></li>
+                    <li>•&nbsp;<a href="gljg/jwwyh.htm">教务委员会</a></li>
+                    <li>•&nbsp;<a href="gljg/xwwyh.htm">学位委员会</a></li>
+                    <li>•&nbsp;<a href="gljg/xkjswyh.htm">学科建设委员会</a></li>
+                    <li>•&nbsp;<a href="gljg/bgs.htm">办公室</a></li>
+                </ul>
+                </div>
+    <li>
+<a href="jxjg.htm">教学机构</a></li>
+    <li>
+<a href="kyjg.htm">科研机构</a></li>
+    <li>
+<a href="qtzz/gh.htm">群团组织</a></li>
+<div class="nerji">
+                <ul>
+                    <li>•&nbsp;<a href="qtzz/gh.htm">工会</a></li>
+                    <li>•&nbsp;<a href="qtzz/tw.htm">团委</a></li>
+                </ul>
+                </div>
+    <li class="last">
+<a href="shjg.htm">社会机构</a></li>
+</ul>
+        </div>
+    </div>
+    <div class="FR W920">
+        <div class="dqwz">    当前位置：
+                        <a href="../index.htm">首页</a>
+                &gt;
+                <a href="xbjj.htm">学部概况</a>
+                &gt;
+                <a href="xbjj.htm">学部简介</a>
+ </div>
+        <div class="clear DivH25"></div>
+        
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1287845054,'wbnews','u8')</script>
+<script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script>_addDynClicks('wbnews',1287845054,1067)</script>
+<div class="nry">
+
+   <div> <div id="vsb_content_1067_u81"><div id="vsb_content"><p class="vsbcontent_start">老校长成公仿吾先生于一九五三年始建中国革命史、马列主义基础、政治经济学、辩证唯物主义和历史唯物主义四教研室，加强吾校马列主义教育，越八年统名马列主义教研室，斯为学部之前身也。一九五六至一九七八年间，马列主义教研室与政治教育系历经四度合分，一九八三年马列主义教研室更名马列主义教研部。一九九六年与思想政治教育研究室合署，二零零一年建马克思主义学院。二零零四年因置国际政治本科而马克思主义研究院、国际关系学院二名并称。二零零九年专业调整而复名马克思主义学院。二零一三年整合相关学科成立马克思主义学部。</p>
+<p>溯顾既往，大跡略铭:共和国之初建四室专于马克思主义教学及研究，为全国最早之一；新时期改革伊始，于全国较早置马克思主义理论系列硕士点；一九九三年教育部列我校为全国高校马克思主义理论课改革四试点院校之一；一九九八年获马克思主义理论与思想政治教育二级学科博士学位授权，为本专业全国最早六博士点之一；二零零三年置国际政治本科；二零零六年全国首批获马克思主义理论一级学科博士学位授权，与政法学院合力获马克思主义哲学二级学科博士学位授权；二零零七年国家人事部准设马克思主义理论学科博士后科研流动站，并以马克思主义理论学科为基础，获高校辅导员培训和研修基地；同年思想政治教育二级学科评获国家级重点学科；二零零九年马克思主义理论学科全国评估，我校列第四；同年学校专业调整，调国际政治本科于政法学院，迁政法学院哲学本科于我院；二零一一年全国学科评估，马克思主义理论一级学科名列第三，思想政治教育二级学科名列第二;同年，获哲学一级学科博士学位授权，马克思主义理论及哲学两个一级学科双获省级优秀特色重点学科。</p>
+<p>历近甲子，吾校育英才十九万余，其马克思主义教育皆学部同仁之作为；改革以降，学部育专业博硕英才千余，本科英才百余，实乃桃李芬芳也。究往昔辉煌之底蕴，渊于厚积“信仰弥坚、术业专精、立德成人”之精神。此学部往攀高峰之秉持，再跻宏巅之依皈，当永续贯之！</p>
+<p>目下，学部置四院五系三所，聚教学与研究之和谐共同体，担当全校本科生研究生思想政治理论课程教学任务，尚拥马克思主义理论、哲学、社会学一级学科硕士学位授权与思想政治教育、哲学、社会学本科专业，值厚基良势，可堪再续宏业！</p>
+<p>值国家固本马克思主义研究及教育之良时，吾师生将秉信念信仰“主义真”之价值理想，自强不息“民族魂”之精神传统，以人为本“发展观”之实践理念，知行合一“道与德”之人生境界；深犁马克思主义经典，践履中国特色社会主义理论体系，创“识大体、顾大局、求和谐、谋发展”之氛围，融思想政治理论教育于中华民族精神之弘扬，志存高远，续延恢宏！</p>
+<p>是为马克思主义教学与研究记。</p>
+<p class="vsbcontent_end">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="vsbcontent_end">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 二零一三年九月</p></div></div></div>
+
+    <span id="vsb_content_1067_u8" name="vsb_content_1067_u8"></span><br><br>
+    
+<p></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+<div class="clear DivH25"></div>
+<div class="boot"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>Copyright ©2016 marxism.nenu.edu.cn All Rights Reserved.<br>东北师范大学马克思主义学部</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

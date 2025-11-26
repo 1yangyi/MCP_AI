@@ -1,0 +1,365 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <title>社会法学研究网</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="/templates/shfxyjw/css/common.css">
+<link rel="stylesheet" href="/templates/shfxyjw/css/swiper.min.css">
+<script src="/templates/shfxyjw/js/jquery.min.js"></script>
+<script src="/templates/shfxyjw/js/swiper.min.js"></script>
+   <!--访问统计-->
+    <script src="/scripts/web_extend.js" type="text/javascript"></script>
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"KQrO0QNAfThLsJUS",ck:"KQrO0QNAfThLsJUS"})</script>
+</head>
+<body>
+	<!-- header -->
+<div class="header">
+    <div class="top">
+        <div class="w1200">
+            <div class="fl welcome">欢迎访问中南财经政法大学社会法学研究网!</div>
+            <div class="fr weather">
+                <iframe frameborder="0" scrolling="no" width="200" height="25" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&amp;id=10&amp;color=%23FFFFFF&amp;icon=1&amp;site=12"></iframe>
+            </div>
+            <div class="fr link">
+                <a href="/zxjj/about-13.html"><img src="/templates/shfxyjw/images/top_icon1.png">研究中心简介</a>
+                <a href="/lxwm/about-36.html"><img src="/templates/shfxyjw/images/top_icon2.png">联系我们</a>
+            </div>
+        </div>
+    </div>
+    <div class="mid">
+        <div class="w1200 clearfix">
+            <a class="fl logo" href="/index.html"> <img src="/upload/20190619/201906190951496241.png" alt=""></a>
+            <div class="menu-btn"><span></span><span></span><span></span></div>
+            <form class="fr search">
+                <input class="text-input" id="txtsearch" type="text" name="" value="" placeholder="请输入关键词">
+                <input class="sub-btn" id="btnSubmit" type="button" name="" value="">
+            </form>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $("#btnSubmit").click(function () {
+                var txt = $("#txtsearch").val();
+                if (txt != "") {
+                    window.location.href = "search.jlHtml?keyword=" + txt;
+                }
+            });
+            document.onkeyup = function (e) {      //onkeyup是javascript的一个事件、当按下某个键弹起 var _key;                                                 //的时触发
+                if (e == null) { // ie
+                    _key = event.keyCode;
+                } else { // firefox              //获取你按下键的keyCode
+                    _key = e.which;          //每个键的keyCode是不一样的
+                }
+                if (_key == 13) {   //判断keyCode是否是13，也就是回车键(回车的keyCode是13)
+                    $("#btnSubmit").click();
+                }
+            }
+        });
+
+    </script>
+
+
+    
+    <div class="nav-box">
+        <ul class="nav w1200">
+            <li><a href="/index.html">首页</a></li>
+
+            
+            <li class="on"><a href="/zxjj/about-13.html">中心简介</a>
+                
+                <!--二级栏目列表-->
+                
+            </li>
+            
+            <li><a href="/xwzx/list-14.html">新闻资讯</a>
+                
+                <!--二级栏目列表-->
+                
+            </li>
+            
+            <li><a href="/flxr/about-15.html">法律学人</a>
+                
+                <!--二级栏目列表-->
+                
+            </li>
+            
+            <li><a href="/xsdt/list-16.html">学术动态</a>
+                
+                <!--二级栏目列表-->
+                
+            </li>
+            
+            <li><a href="/llyj/list-17.html">理论研究</a>
+                
+                <!--二级栏目列表-->
+                
+            </li>
+            
+            <li><a href="/jdal/list-20.html">经典案例</a>
+                
+                <!--二级栏目列表-->
+                
+            </li>
+            
+            <li><a href="/xsyd/list-23.html">学术园地</a>
+                
+                <!--二级栏目列表-->
+                
+            </li>
+            
+            <li><a href="/flsw/list-25.html">法律实务</a>
+                
+                <!--二级栏目列表-->
+                
+            </li>
+            
+            <li><a href="/flfg/list-26.html">法律法规</a>
+                
+                <!--二级栏目列表-->
+                
+            </li>
+            
+            <li><a href="/jdyd/list-31.html">经典阅读</a>
+                
+                <!--二级栏目列表-->
+                
+            </li>
+            
+
+        </ul>
+    </div>
+</div>
+<script>
+	//导航
+	var windowWidth = $(window).width();  //注：该值为不包含自定义右侧滚动条时的宽度
+	if(windowWidth > 1024){
+		//PC端
+		//渲染导航二级真实高度
+		$(".nav-2nd").each(function(){
+			var $2ndInitialHeight = $(this).height();
+			var $3rd = $(this).find('.nav-3rd');
+			var $3rdLength = $3rd.length;
+			var arr = [];
+	        var max;
+	        $3rd.each(function() {
+	            arr.push($(this).height());
+	        });
+	        max = Math.max.apply(null, arr);
+	        max = max > $2ndInitialHeight ? max : $2ndInitialHeight;
+	        $(this).height(max+16);
+		})
+		//默认显示第一个三级
+		$(".nav > li").on('mouseenter',function(){
+			$(this).children('.nav-2nd').children('li').removeClass('on').eq(0).addClass('on');
+		})
+		//三级显示切换
+		$(".nav-2nd > li").on('mouseenter',function(){
+			$(this).addClass('on').siblings().removeClass('on');
+		})
+	}else{
+		//移动端
+		//点击菜单按钮
+		$(".menu-btn").click(function(){
+			var navStat = $(".nav-box").css('display');
+			if(navStat == 'none'){
+				$(".nav-box").slideDown();
+				$(this).addClass('close');
+				//阻止弹层背景滚动，但会回到页面顶部
+				$("html,body").css({
+					height:100+'%',
+					overflow:'hidden'
+				})
+			}else{
+				$(".nav-box").slideUp();
+				$(this).removeClass('close');
+				$("html,body").css({
+					height:'auto',
+					overflow:'visible'
+				})
+			}
+		})
+		//二级显示&隐藏
+		$(".nav li").click(function(){
+			var $2nd = $(this).children('.nav-2nd');
+			if($2nd.hasClass('show')){
+				$(this).removeClass('on');
+				$2nd.removeClass('show');
+			}else{
+				$(this).addClass('on');
+				$2nd.addClass('show');
+			}
+		})
+	}
+</script>
+<!-- header end -->
+
+	<!-- 主体部分 -->
+	<div class="container w1200 clearfix">
+		<!-- inner-banner -->
+		<div class="inner-banner">
+			<img src="/upload/20190619/201906190953326309.jpg" alt="">
+		</div>
+		<!-- inner-banner -->
+		<div class="con-l">
+			<div class="menu-left">
+    <div class="title">
+        <div class="cn">中心简介</div>
+        <div class="en">CENTER INTRODUCTION</div>
+    </div>
+    
+    <ul class="menu">
+        
+        <li class="on">
+            <a href="/zxjj/about-13.html">中心简介</a>
+        </li>
+        
+    </ul>
+</div>
+		</div>
+		<div class="con-r">
+			<div class="inner-title">
+                <div class="tit">中心简介</div>
+				<div class="bread">
+    你当前的位置：
+
+    
+    <a href="/index.html" class="home">首页</a> <a href="/zxjj/about-13.html">中心简介</a>  <a class="on" href="javascript:void(0)">中心简介</a>
+
+</div>
+			</div>
+            <div class="about">
+                
+
+                <!--<div class="title">简介</div>-->
+                <p class="p" style="margin-top:0.0000pt; margin-right:0.0000pt; margin-bottom:0.0000pt; margin-left:0.0000pt; padding:0pt 0pt 0pt 0pt ; margin:5pt 0pt; text-align:left"><span style="font-size:12pt"><span style="background:#ffffff"><span style="line-height:18.4000pt"><span style="font-family:Calibri">&nbsp; &nbsp;<span style="font-size:9.5000pt"><span style="background:#ffffff"><span style="font-family:宋体"><span style="color:#333333"><span style="letter-spacing:0.0000pt"><span style="text-transform:none"><span style="font-style:normal">&nbsp;&nbsp;劳动法和社会保障法研究中心于2010年11月由中南财经政法大学批准并正式成立，本中心以中南财经政法大学法学院强劲的师资力量为依托，由法学院专门从事劳动法与社会保障法及相关法律专业的资深教授、副教授、讲师为核心力量，并吸收公共管理学院、工商管理学院等专门从事劳动关系、社会保障、行政管理等相关专业的教授、副教授和讲师共同参加，并特邀知名大学知名学者加盟。中心主任徐智华教授现任中南财经政法大学法学院教授、博士生导师。兼任湖北省社会法学研究会副会长、中国劳动法学研究会常务理事，中国劳动关系研究会常务理事、中国社会法学研究会常务理事等，主要从事劳动法、社会保障法、社会法、经济法等的教学与研究工作。</span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p class="p" style="margin-top:0.0000pt; margin-right:0.0000pt; margin-bottom:4.8000pt; margin-left:0.0000pt; padding:0pt 0pt 0pt 0pt ; margin:5pt 0pt; text-align:left"><span style="font-size:12pt"><span style="background:#ffffff"><span style="line-height:18.0000pt"><span style="font-family:Calibri"><span style="font-size:9.5000pt"><span style="background:#ffffff"><span style="font-family:宋体"><span style="color:#333333"><span style="letter-spacing:0.0000pt"><span style="text-transform:none"><span style="font-style:normal"><font face="宋体">研究方向：中心在劳动法与社会保障法科学研究过程中，根据国家经济发展需要及学科发展趋势，统筹考虑整体发展与凸显特色，统筹考虑理论上的自治性和学科上的通融性，着力研究一带一路劳动法治构建机制、共享经济环境下劳动法律制度的完善、供给侧改革背景下劳动法的应对与挑战、互联网</font>+新型劳动关系的认定与规制、社会保障法的顶层设计、劳动合同法的立法与实践、集体劳动关系与劳动争议的处理、劳工权益维护等区域性、全国性的重大劳动法和社会保障法问题，力争为政府决策部门提供切实可行的咨询意见与建议，为劳动法和社会保障法的学术理论研究提供前沿性、系统性及有应用价值的理论研究参考，为我国构建和谐劳动关系、实现和谐的社会主义社会做出基础性、战略性和前瞻性贡献。</span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p class="p" style="margin-top:0.0000pt; margin-right:0.0000pt; margin-bottom:4.8000pt; margin-left:0.0000pt; padding:0pt 0pt 0pt 0pt ; margin:5pt 0pt; text-align:left"><span style="font-size:12pt"><span style="background:#ffffff"><span style="line-height:18.0000pt"><span style="font-family:Calibri"><span style="font-size:9.5000pt"><span style="background:#ffffff"><span style="font-family:宋体"><span style="color:#333333"><span style="letter-spacing:0.0000pt"><span style="text-transform:none"><span style="font-style:normal"><font face="宋体">中心特色：</font>1.专业化程度高。中心主要研究成员对劳动与社会保障法的有关理论及司法实践均较为熟悉，有参与国家及地方相关立法研究工作经验，熟知学科研究前沿并具有国际视野。中心的研究人员均主要从事劳动与社会保障法教学和研究工作及劳动关系与社会保障课程教学和研究工作。课程负责人和核心成员在全国劳动和社会保障法学界及劳动关系与社会保障学术界享有较高的声誉；2.实践经验丰富。中心和部分地方政府、法院和律师事务所建立了良好的合作关系，外聘了具有理论素养和丰富办案经验的法官、律师、仲裁员等做兼职研究员。3.人员组成专业齐全，中心借助于中南财经政法大学法学院强大的学科和人才优势，广泛吸收宪法与行政法、国际法、经济法等相关法律专业的学者和专家共同参加，同时还吸收了我校具有劳动经济、行政管理、工商管理专业背景的学者专家参加，以多学科的优势组合和专业互补来共同协力开展研究工作。</span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p class="p" style="margin-top:0.0000pt; margin-right:0.0000pt; margin-bottom:4.8000pt; margin-left:0.0000pt; padding:0pt 0pt 0pt 0pt ; margin:5pt 0pt; text-align:left"><span style="font-size:12pt"><span style="background:#ffffff"><span style="line-height:18.0000pt"><span style="font-family:Calibri"><span style="font-size:9.5000pt"><span style="background:#ffffff"><span style="font-family:宋体"><span style="color:#333333"><span style="letter-spacing:0.0000pt"><span style="text-transform:none"><span style="font-style:normal"><font face="宋体">中心宗旨：为提高劳动法与社会保障法理论研究水平、维护劳资双方合法权益、构造和谐劳动关系，本中心具有三个方面的目标：</font>1.关注民生。研究中心将致力于对公民社会人权保障法律问题的研究，着力维护公民人权及相关合法权益；2.服务社会。加强社会稳定问题研究，为企事业单位、其他经济组织及其劳动者提供法律咨询和法律服务，为国家各级人力资源与社会保障、民政、各级司法机关等管理部门提供理论参考和立法建议，为促进我国社会的和谐发展贡献力量；3.研究前沿。研究中心将重点关注劳动法与社会保障法理论前沿问题，加强社会保障的信息网络建设和平台建设，开展广泛的国内和国际学术交流，通过组织有关劳动和社会保障等重大课题研究，为构建和完善符合中国国情的劳动法和社会保障法理论体系奠定基础。</span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p style="margin:0pt 0pt 0.0001pt; text-align:justify">&nbsp;</p>
+                
+            </div>
+		</div>
+	</div>
+	<!-- 主体部分 end -->
+
+	<!-- footer -->
+<div class="footer">
+	<div class="top">
+		<div class="w1200">
+            <ul class="foot-nav">
+                
+                <li>
+                   
+                    <a href="/shfxyjw/flxr/about-15.html"> <img src="/upload/20190620/201906201045531608.png">法律学人</a>
+                </li>
+                    
+                <li>
+                   
+                    <a href="/shfxyjw/xsdt/list-16.html"> <img src="/upload/20190620/201906201046280206.png">学术动态</a>
+                </li>
+                    
+                <li>
+                   
+                    <a href="/shfxyjw/jdal/list-20.html"> <img src="/upload/20190620/201906201046496643.png">经典案例</a>
+                </li>
+                    
+                <li>
+                   
+                    <a href="/shfxyjw/flfg/list-26.html"> <img src="/upload/20190620/201906201047355468.png">法律法规</a>
+                </li>
+                    
+                <li>
+                   
+                    <a href="/shfxyjw/llyj/list-17.html"> <img src="/upload/20190620/201906201048345776.png">理论研究</a>
+                </li>
+                    
+                <li>
+                   
+                    <a href="/shfxyjw/zxtg/form-35.html"> <img src="/upload/20190620/201906201049004884.png">在线投稿</a>
+                </li>
+                    
+      
+            </ul>
+		</div>
+	</div>
+	<div class="mid">
+		<div class="w1200">
+			<div class="foot-info">
+				<div class="item">
+					<div class="title">联系方式</div>
+					<div class="info">
+                        <p><img src="/templates/shfxyjw/images/location_icon.png">地址：湖北武汉洪山区南湖大道1号</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="title">导航链接</div>
+                    <div class="links">
+                        
+                        <a href="/shfxyjw/zxjj/about-13.html">中心简介</a>
+                        
+                        <a href="/shfxyjw/xwzx/list-14.html">新闻资讯</a>
+                        
+                        <a href="/shfxyjw/flxr/about-15.html">法律学人</a>
+                        
+                        <a href="/shfxyjw/xsdt/list-16.html">学术动态</a>
+                        
+                        <a href="/shfxyjw/llyj/list-17.html">理论研究</a>
+                        
+                        <a href="/shfxyjw/jdal/list-20.html">经典案例</a>
+                        
+                        <a href="/shfxyjw/xsyd/list-23.html">学术园地</a>
+                        
+                        <a href="/shfxyjw/flsw/list-25.html">法律实务</a>
+                        
+                        <a href="/shfxyjw/flfg/list-26.html">法律法规</a>
+                        
+                        <a href="/shfxyjw/jdal/list-20.html">经典阅读</a>
+                        
+              
+                    </div>
+				</div>
+                <div class="item">
+                    <div class="title">友情链接</div>
+                    
+
+                    <div class="links">
+                        
+                        <a href="#" target="_blank">中国民商法法律网</a>
+                        
+                        <a href="#" target="_blank">中国法院网</a>
+                        
+                        <a href="#" target="_blank">中南财经政法大学</a>
+                        
+                    </div>
+                </div>
+				<div class="item">
+					<div class="title" style="text-align: center;">社会法学研究网微信</div>
+                    <div class="ewm-area">
+                        
+
+                        <img src="/upload/20190619/201906191710071505.jpg" alt="">
+                        
+                   
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bot">
+		<div class="w1200">
+            <div class="cr">版权所有©2017中南财经政法大学劳动法与社会保障法研究中心 <a href="https://beian.miit.gov.cn/" style="color:#fff">鄂ICP备09005423号-7</a></div>
+		</div>
+	</div>
+</div>
+<!-- footer end -->
+
+</body></html>

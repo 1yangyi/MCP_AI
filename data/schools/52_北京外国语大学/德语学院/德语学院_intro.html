@@ -1,0 +1,343 @@
+<!DOCTYPE html><html><head><title>学院介绍-北京外国语大学德语学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院介绍">
+<meta name="keywords" content="北京外国语大学德语学院,学院介绍">
+
+
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.js"></script>
+
+
+
+<link rel="stylesheet" type="text/css" href="style/style.css" media="all">
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e78475153505742000400014153 -->
+<link rel="stylesheet" type="text/css" href="list.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1035,'/list.jsp',-1,1592681503)</script>
+</head>
+<body>
+<div id="header">
+<div id="top">
+<div class="w cl">
+<div class="f fl">&nbsp; </div>
+<div class="f fr cl"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><div class="frr">
+    <ul>
+    </ul>
+</div></div></div><!--.w--></div><!--/top-->
+<div id="mid">
+<div class="logo w">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="德语学院新"><img src="images/untitled1.png" width="457" height="77" border="0" alt="德语学院新" title="德语学院新"></a>
+<div><!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><div id="divu2">
+    <div id="appu2"><div><div class="search fr cleafix"><span><input type="image" name="submit_button" src="images/search.png"></span> <input type="text" placeholder="请输入关键字进行搜索" autocomplete="off" class="searchText"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+        <div class="search fr cleafix">
+         <span><input  type="image"  name="submit_button" src="images/search.png" v-on:click="onSubmit()"/></span>
+           <input type="text"  class="searchText" placeholder="请输入关键字进行搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            
+        </div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1592681503";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu2 = document.querySelector("#appu2");
+   if (appElementu2 && appElementu2.__vue__) {
+
+   } else {
+      $("#divu2").html($("#htmlu2").text());
+      var appOwner = "1592681503";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou2 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu2(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu2();
+        }
+      };
+
+      function onSubmitu2(e) {
+        queryInfou2.query.keyWord= $("#appu2  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou2.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script></div>
+<div class="toplink">
+    <a href="https://global.bfsu.edu.cn/de/Lehre/Fakult_t/School_of_German_Studies.htm" class="linka">Deutsch</a>
+    <a href="http://cnsubsites.chinadaily.com.cn/bfsu/german.html" class="linka">English</a>
+</div>
+</div><!--.logo--></div><!--/mid-->
+<div id="bot"><!--.nav 菜单开始-->
+<div class="nav w">
+<ul class="cl">
+<li><a href="index.htm">网站首页</a> 
+
+</li><li><a href="xyjs.htm">学院介绍</a> 
+<ul>
+<li><a href="xyjs/xyzwjs.htm">学院中文介绍</a></li>
+<li><a href="xyjs/xyywjs.htm">学院英文介绍</a></li>
+<li><a href="xyjs/zzjg.htm">组织机构</a></li>
+<li><a href="xyjs/szdw.htm">师资队伍</a></li>
+</ul></li>
+
+<li><a href="dangwuxingzheng.htm">党务行政</a> 
+<ul>
+<li><a href="dangwuxingzheng/dzzgz.htm">党总支工作</a></li>
+<li><a href="dangwuxingzheng/dzbjs.htm">党支部建设</a></li>
+<li><a href="dangwuxingzheng/xxyhd.htm">学习与活动</a></li>
+<li><a href="dangwuxingzheng/ghgz.htm">工会工作</a></li>
+<li><a href="dangwuxingzheng/bgxz.htm">表格下载</a></li>
+</ul></li>
+
+<li><a href="jiaoxuekeya.htm">教学科研</a> 
+<ul>
+<li><a href="jiaoxuekeya/bksjx.htm">本科生教学</a></li>
+<li><a href="jiaoxuekeya/yjsjx.htm">研究生教学</a></li>
+<li><a href="jiaoxuekeya/jydt.htm">教研动态</a></li>
+<li><a href="jiaoxuekeya/xscg.htm">学术成果</a></li>
+<li><a href="jiaoxuekeya/xsjl.htm">学术交流</a></li>
+</ul></li>
+
+<li><a href="duiwaijiaoli.htm">对外交流</a> 
+<ul>
+<li><a href="duiwaijiaoli/dwjldt.htm">对外交流动态</a></li>
+<li><a href="duiwaijiaoli/xjjlxm.htm">校际交流项目</a></li>
+</ul></li>
+
+<li><a href="zhaoshengjiu.htm">招生就业</a> 
+<ul>
+<li><a href="zhaoshengjiu/zsgz.htm">招生工作</a></li>
+<li><a href="zhaoshengjiu/jygz.htm">就业工作</a></li>
+</ul></li>
+
+<li><a href="xstiand.htm">学生天地</a> 
+<ul>
+<li><a href="xstiand/bkshd.htm">本科生活动</a></li>
+<li><a href="xstiand/yjshd.htm">研究生活动</a></li>
+<li><a href="xstiand/tzzxsh.htm">团总支学生会</a></li>
+<li><a href="xstiand/yxxsfc.htm">优秀学生风采</a></li>
+</ul></li>
+
+<li><a href="xyzl.htm">校友专栏</a> 
+<ul>
+<li><a href="xyzl/xymd.htm">校友名单</a></li>
+</ul></li>
+
+</ul></div><!--.nav 菜单结束--></div><!--/bot--><!--内页banner开始-->
+<div class="main cl">
+<div class="wape-left">
+<div>
+学院介绍</div><ul>
+
+<li><a href="xyjs/xyzwjs.htm" title="学院中文介绍">学院中文介绍</a> </li>
+
+
+
+
+<li><a href="xyjs/xyywjs.htm" title="学院英文介绍">学院英文介绍</a> </li>
+
+
+
+
+<li><a href="xyjs/zzjg.htm" title="组织机构">组织机构</a> </li>
+
+
+
+
+<li><a href="xyjs/szdw.htm" title="师资队伍">师资队伍</a> </li>
+
+
+
+</ul>
+</div><!--wape-left-->
+<div class="wape-right">
+<div class="biaoTi"><span>
+学院介绍</span><span>
+    当前位置： 
+                        <a href="index.htm">网站首页</a>
+                &gt;&gt;
+                <a href="xyjs.htm">学院介绍</a>
+</span></div><!--biaoTi-->
+
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script>    <ul class="ss">
+        </ul>
+  <link rel="stylesheet" content-type="text/css" href="/system/resource/css/pagedown/sys.css"><div class="pb_sys_common pb_sys_full pb_sys_style4" style="margin-top:10px;text-align:center;"><span class="p_pages"><span class="p_first_d p_fun_d">首页</span><span class="p_prev_d p_fun_d">上页</span><span class="p_no_d">1</span><span class="p_next_d p_fun_d">下页</span><span class="p_last_d p_fun_d">尾页</span></span></div>
+</div><!--wape-right--></div><!-- main部分结束 --><!-- 底部开始 -->
+<div id="footer">
+<div class="w cl">
+<div class="f fl"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p></p><p microsoft="" hiragino="" sans="" white-space:="" color:="" margin-top:="" background-color:="" style="box-sizing: border-box; font-size: 14px; font-family: ">
+    <span microsoft="" style="font-size: 14px; font-family: 微软雅黑,"></span>
+</p>
+<p>
+    <span microsoft="" color:="" style="font-size: 14px; font-family: 微软雅黑,">地址：北京市海淀区西三环北路19号北京外国语大学西校区国际大厦10层</span>
+</p>
+<p>
+    <span microsoft="" color:="" style="font-size: 14px; font-family: 微软雅黑,"></span><span microsoft="" color:="" style="font-size: 14px; font-family: 微软雅黑,">电话：(+8610) 88816516 /传真： (+8610) 88817206</span>
+</p>
+<p>
+    <span microsoft="" color:="" text-align:="" style="font-size: 14px; font-family: 微软雅黑,">Copyright @ BFSU. 北京外国语大学版权所有. 地址：北京市海淀区西三环北路19号&nbsp;&nbsp;&nbsp; 邮编：100089&nbsp;&nbsp;Supported by BFSU ITC<span style="font-size: 14px; font-family: 微软雅黑; text-align: center"></span></span>
+</p>
+<p>
+    <span microsoft="" color:="" text-align:="" style="font-size: 14px; font-family: 微软雅黑,">意见反馈：bwdyxb@bfsu.edu.cn</span>
+</p><p></p></div>
+<div class="f fr cl">
+<div class="frr">
+<p>
+
+
+
+
+
+</p><table border="0" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+    <td><img src="images/deyuxueyuanweixingongzhonghaoerweima.jpg" width="120" height="120" hspace="1" vspace="1" border="0"></td>
+        </tr>
+        </tbody></table><p></p>
+<p>北外德语学院公众号</p></div></div></div></div><!-- 底部结束 -->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

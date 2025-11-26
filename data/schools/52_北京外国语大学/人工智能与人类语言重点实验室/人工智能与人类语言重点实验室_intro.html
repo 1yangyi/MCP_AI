@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>实验室简介-北京外国语大学人工智能与人类语言重点实验室</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="实验室简介">
+<meta name="keywords" content="北京外国语大学人工智能实验室,北外人工智能语言实验室，北外AI实验室">
+
+
+<link href="../style/style.css" rel="stylesheet" type="text/css">
+<!--导航开始-->
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e78475153505742000400014153 -->
+<link rel="stylesheet" type="text/css" href="../about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1035,'/about.jsp',-1,1606996712)</script>
+</head>
+
+<body>
+<div class="top">
+  <div class="topc">
+<div class="topcl">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="人工智能与人类语言重点实验"><img src="../images/logo.jpg" width="451" height="148" border="0" alt="人工智能与人类语言重点实验" title="人工智能与人类语言重点实验"></a></div>
+    <div class="topcr">
+      <div class="language">
+        <!--<P><a href="#">ENGLISH</a></P><P>|</P>--><p class="ri"><a href="https://ai.bfsu.edu.cn/">中文</a></p>  
+      </div>
+      <div class="hsearch"> <!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 34px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -35px;}
+</style>
+<div id="divu1">
+    <div id="appu1"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="qwss"> <input name="submit_button" type="button" value="搜索" class="tj"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="搜索" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1606996712";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu1 = document.querySelector("#appu1");
+   if (appElementu1 && appElementu1.__vue__) {
+
+   } else {
+      $("#divu1").html($("#htmlu1").text());
+      var appOwner = "1606996712";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou1 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu1(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu1();
+        }
+      };
+
+      function onSubmitu1(e) {
+        queryInfou1.query.keyWord= $("#appu1  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou1.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script>
+      </div>
+</div>
+  </div>
+
+  
+</div>
+<div class="main"><style type="text/css">
+td.b1_2_{FONT-SIZE:9pt;padding-left: 20px;padding-right: 20px;}
+td.b2_2_{FONT-SIZE:9pt;}
+td.b3_2_{FONT-SIZE:9pt;line-height: 32px;background-color: #696969;border-right: 1px solid #cccccc;border-bottom: 1px solid #cccccc;position: relative;left: 10px;}
+td.b4_2_{FONT-SIZE:9pt;border-bottom: 1px solid #cccccc;background-color: #e8f0fb;border-right: 1px solid #cccccc;position: relative;left: 10px;}
+a.menu0_2_:link {TEXT-DECORATION: none;};
+a.menu0_2_:visited { TEXT-DECORATION: none;};
+a.menu0_2_:hover {TEXT-DECORATION: none;};
+a.menu0_2_:active {TEXT-DECORATION: none;};
+table.tb1_2_{FONT-SIZE:9pt;border:0;}
+span.s1_2_{color: #ea8d00;font-size: 15px;text-decoration: none;padding-left: 20px;padding-right: 20px;}
+span.s2_2_{line-height: 100%;color: #ea8d00;font-size: 15px;position: relative;padding-left: 10px;padding-right: 10px;}
+span.s10_2_{COLOR: #222222;FONT-SIZE: 15px;FONT-WEIGHT: normal;TEXT-DECORATION: none;}
+span.s20_2_{color: #ffffff;font-size: 15px;padding-left: 10px;padding-right: 10px;}
+</style>
+<script language="javascript"> 
+ var showfix_2_ = 1;
+ var isvertical_2_ = false;
+</script>
+<script language="javascript" src="/system/resource/js/menu/text.js"></script>
+<table id="t1_2_" cellspacing="0" cellpadding="0" border="0" height="0" width="0"><tbody><tr><td valign="center"></td><td valign="middle" height="50" width="0" nowrap="" class="b1_2_" align="center" id="a_2_1001" onmouseover="tshowLayers('1001','b2_2_', '_2_')" onmouseout="thideLayers('1001','b1_2_', '_2_','true','true')"><a class="menu0_2_" href="../index.htm"><span class="fontstyle248793">&nbsp;首页&nbsp;</span></a></td><td valign="center"></td><td valign="middle" width="0" nowrap="" class="b1_2_" align="center" id="a_2_1029" onmouseover="tshowLayers('1029','b2_2_', '_2_')" onmouseout="thideLayers('1029','b1_2_', '_2_','true','true')"><a class="menu0_2_" href="../js.htm"><span class="fontstyle248793">&nbsp;实验室介绍&nbsp;</span></a></td><td valign="center"></td><td valign="middle" width="0" nowrap="" class="b1_2_" align="center" id="a_2_1014" onmouseover="tshowLayers('1014','b2_2_', '_2_')" onmouseout="thideLayers('1014','b1_2_', '_2_','true','true')"><a class="menu0_2_" href="../xwzx.htm"><span class="fontstyle248793">&nbsp;新闻资讯&nbsp;</span></a></td><td valign="center"></td><td valign="middle" width="0" nowrap="" class="b1_2_" align="center" id="a_2_1023" onmouseover="tshowLayers('1023','b2_2_', '_2_')" onmouseout="thideLayers('1023','b1_2_', '_2_','true','true')"><a class="menu0_2_" href="../yjzx.htm"><span class="fontstyle248793">&nbsp;研究中心&nbsp;</span></a></td><td valign="center"></td><td valign="middle" width="0" nowrap="" class="b1_2_" align="center" id="a_2_1030" onmouseover="tshowLayers('1030','b2_2_', '_2_')" onmouseout="thideLayers('1030','b1_2_', '_2_','true','true')"><a class="menu0_2_" href="../ktycg.htm"><span class="fontstyle248793">&nbsp;课题与成果&nbsp;</span></a></td><td valign="center"></td><td valign="middle" width="0" nowrap="" class="b1_2_" align="center" id="a_2_1031" onmouseover="tshowLayers('1031','b2_2_', '_2_')" onmouseout="thideLayers('1031','b1_2_', '_2_','true','true')"><a class="menu0_2_" href="../xshd.htm"><span class="fontstyle248793">&nbsp;学术活动&nbsp;</span></a></td><td valign="center"></td><td valign="middle" width="0" nowrap="" class="b1_2_" align="center" id="a_2_1032" onmouseover="tshowLayers('1032','b2_2_', '_2_')" onmouseout="thideLayers('1032','b1_2_', '_2_','true','true')"><a class="menu0_2_" href="../rcpy.htm"><span class="fontstyle248793">&nbsp;人才培养&nbsp;</span></a></td><td valign="center"></td><td valign="middle" width="0" nowrap="" class="b1_2_" align="center" id="a_2_1033" onmouseover="tshowLayers('1033','b2_2_', '_2_')" onmouseout="thideLayers('1033','b1_2_', '_2_','true','true')"><a class="menu0_2_" href="../dj.htm"><span class="fontstyle248793">&nbsp;党建&nbsp;</span></a></td><td valign="center"></td><td valign="middle" width="0" nowrap="" class="b1_2_" align="center" id="a_2_1034" onmouseover="tshowLayers('1034','b2_2_', '_2_')" onmouseout="thideLayers('1034','b1_2_', '_2_','true','true')"><a class="menu0_2_" href="../lxwm.htm"><span class="fontstyle248793">&nbsp;联系我们&nbsp;</span></a></td></tr><tr><td align="left" nowrap=""></td><td></td><td align="left" nowrap=""><div class="main_2_" id="layer_2_1029" onmouseover="tshownull('1029','b2_2_', '_2_')" onmouseout="thideLayers('1029','b1_2_', '_2_','true')" style="z-index:99999;display: none; POSITION: absolute;"><table align="center" class="tb1_2_" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td height="50" align="left" nowrap="" onmouseover="TOVT(this,'b4_2_', '_2_');" onmouseout="TOUT(this,'b3_2_', '_2_');" class="b3_2_">
+<a class="menu0_2_" href="jj.htm"><span class="currentfontStyle248793">&nbsp;实验室简介&nbsp;</span></a></td></tr><tr><td height="50" align="left" nowrap="" onmouseover="TOVT(this,'b4_2_', '_2_');" onmouseout="TOUT(this,'b3_2_', '_2_');" class="b3_2_">
+<a class="menu0_2_" href="zzjg.htm"><span class="ejfontstyle248793">&nbsp;组织架构&nbsp;</span></a></td></tr><tr><td height="50" align="left" nowrap="" onmouseover="TOVT(this,'b4_2_', '_2_');" onmouseout="TOUT(this,'b3_2_', '_2_');" class="b3_2_">
+<a class="menu0_2_" href="zjtd.htm"><span class="ejfontstyle248793">&nbsp;专家团队&nbsp;</span></a></td></tr><tr><td height="50" align="left" nowrap="" onmouseover="TOVT(this,'b4_2_', '_2_');" onmouseout="TOUT(this,'b3_2_', '_2_');" class="b3_2_">
+<a class="menu0_2_" href="yjtd.htm"><span class="ejfontstyle248793">&nbsp;研究团队&nbsp;</span></a></td></tr><tr><td height="50" align="left" nowrap="" onmouseover="TOVT(this,'b4_2_', '_2_');" onmouseout="TOUT(this,'b3_2_', '_2_');" class="b3_2_">
+<a class="menu0_2_" href="xtdw.htm"><span class="ejfontstyle248793">&nbsp;协同单位&nbsp;</span></a></td></tr><tr><td height="50" align="left" nowrap="" onmouseover="TOVT(this,'b4_2_', '_2_');" onmouseout="TOUT(this,'b3_2_', '_2_');" class="b3_2_">
+<a class="menu0_2_" href="yjjc.htm"><span class="ejfontstyle248793">&nbsp;研究基础&nbsp;</span></a></td></tr></tbody></table></div></td><td></td><td align="left" nowrap=""><div class="main_2_" id="layer_2_1014" onmouseover="tshownull('1014','b2_2_', '_2_')" onmouseout="thideLayers('1014','b1_2_', '_2_','true')" style="z-index:99999;display: none; POSITION: absolute;"><table align="center" class="tb1_2_" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td height="50" align="left" nowrap="" onmouseover="TOVT(this,'b4_2_', '_2_');" onmouseout="TOUT(this,'b3_2_', '_2_');" class="b3_2_">
+<a class="menu0_2_" href="../xwzx/xwgg.htm"><span class="ejfontstyle248793">&nbsp;新闻公告&nbsp;</span></a></td></tr><tr><td height="50" align="left" nowrap="" onmouseover="TOVT(this,'b4_2_', '_2_');" onmouseout="TOUT(this,'b3_2_', '_2_');" class="b3_2_">
+<a class="menu0_2_" href="../xwzx/mtbd.htm"><span class="ejfontstyle248793">&nbsp;媒体报道&nbsp;</span></a></td></tr></tbody></table></div></td><td></td><td align="left" nowrap=""><div class="main_2_" id="layer_2_1023" onmouseover="tshownull('1023','b2_2_', '_2_')" onmouseout="thideLayers('1023','b1_2_', '_2_','true')" style="z-index:99999;display: none; POSITION: absolute;"><table align="center" class="tb1_2_" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td height="50" align="left" nowrap="" onmouseover="TOVT(this,'b4_2_', '_2_');" onmouseout="TOUT(this,'b3_2_', '_2_');" class="b3_2_">
+<a class="menu0_2_" href="../yjzx/znjx.htm"><span class="ejfontstyle248793">&nbsp;语言智能教学研究中心&nbsp;</span></a></td></tr><tr><td height="50" align="left" nowrap="" onmouseover="TOVT(this,'b4_2_', '_2_');" onmouseout="TOUT(this,'b3_2_', '_2_');" class="b3_2_">
+<a class="menu0_2_" href="../yjzx/nkx.htm"><span class="ejfontstyle248793">&nbsp;多语言脑科学研究中心&nbsp;</span></a></td></tr><tr><td height="50" align="left" nowrap="" onmouseover="TOVT(this,'b4_2_', '_2_');" onmouseout="TOUT(this,'b3_2_', '_2_');" class="b3_2_">
+<a class="menu0_2_" href="../yjzx/ylk.htm"><span class="ejfontstyle248793">&nbsp;多语种语料库研究中心&nbsp;</span></a></td></tr><tr><td height="50" align="left" nowrap="" onmouseover="TOVT(this,'b4_2_', '_2_');" onmouseout="TOUT(this,'b3_2_', '_2_');" class="b3_2_">
+<a class="menu0_2_" href="../yjzx/jnqz.htm"><span class="ejfontstyle248793">&nbsp;外语健脑强智研究中心&nbsp;</span></a></td></tr><tr><td height="50" align="left" nowrap="" onmouseover="TOVT(this,'b4_2_', '_2_');" onmouseout="TOUT(this,'b3_2_', '_2_');" class="b3_2_">
+<a class="menu0_2_" href="../yjzx/yycl.htm"><span class="ejfontstyle248793">&nbsp;多语自然语言处理研究中心&nbsp;</span></a></td></tr></tbody></table></div></td><td></td><td align="left" nowrap=""><div class="main_2_" id="layer_2_1030" onmouseover="tshownull('1030','b2_2_', '_2_')" onmouseout="thideLayers('1030','b1_2_', '_2_','true')" style="z-index:99999;display: none; POSITION: absolute;"><table align="center" class="tb1_2_" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td height="50" align="left" nowrap="" onmouseover="TOVT(this,'b4_2_', '_2_');" onmouseout="TOUT(this,'b3_2_', '_2_');" class="b3_2_">
+<a class="menu0_2_" href="../ktycg/kyxm.htm"><span class="ejfontstyle248793">&nbsp;科研项目&nbsp;</span></a></td></tr><tr><td height="50" align="left" nowrap="" onmouseover="TOVT(this,'b4_2_', '_2_');" onmouseout="TOUT(this,'b3_2_', '_2_');" class="b3_2_">
+<a class="menu0_2_" href="../ktycg/kycg.htm"><span class="ejfontstyle248793">&nbsp;科研成果&nbsp;</span></a></td></tr></tbody></table></div></td><td></td><td align="left" nowrap=""></td><td></td><td align="left" nowrap=""><div class="main_2_" id="layer_2_1032" onmouseover="tshownull('1032','b2_2_', '_2_')" onmouseout="thideLayers('1032','b1_2_', '_2_','true')" style="z-index:99999;display: none; POSITION: absolute;"><table align="center" class="tb1_2_" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td height="50" align="left" nowrap="" onmouseover="TOVT(this,'b4_2_', '_2_');" onmouseout="TOUT(this,'b3_2_', '_2_');" class="b3_2_">
+<a class="menu0_2_" href="../rcpy/sszs.htm"><span class="ejfontstyle248793">&nbsp;硕士招生&nbsp;</span></a></td></tr><tr><td height="50" align="left" nowrap="" onmouseover="TOVT(this,'b4_2_', '_2_');" onmouseout="TOUT(this,'b3_2_', '_2_');" class="b3_2_">
+<a class="menu0_2_" href="../rcpy/rczp.htm"><span class="ejfontstyle248793">&nbsp;人才招聘&nbsp;</span></a></td></tr></tbody></table></div></td><td></td><td align="left" nowrap=""></td><td></td><td align="left" nowrap=""><div class="main_2_" id="layer_2_1034" onmouseover="tshownull('1034','b2_2_', '_2_')" onmouseout="thideLayers('1034','b1_2_', '_2_','true')" style="z-index:99999;display: none; POSITION: absolute;"><table align="center" class="tb1_2_" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td height="50" align="left" nowrap="" onmouseover="TOVT(this,'b4_2_', '_2_');" onmouseout="TOUT(this,'b3_2_', '_2_');" class="b3_2_">
+<a class="menu0_2_" href="../lxwm/lxwm.htm"><span class="ejfontstyle248793">&nbsp;联系我们&nbsp;</span></a></td></tr><tr><td height="50" align="left" nowrap="" onmouseover="TOVT(this,'b4_2_', '_2_');" onmouseout="TOUT(this,'b3_2_', '_2_');" class="b3_2_">
+<a class="menu0_2_" href="../lxwm/zszx.htm"><span class="ejfontstyle248793">&nbsp;招生咨询&nbsp;</span></a></td></tr></tbody></table></div></td><td></td></tr></tbody></table></div>
+
+<div class="main">
+<div class="banner2"><img src="../images/ai_01.jpg"></div>
+
+
+<div class="mainl"><p></p><div class="mainlt">
+实验室介绍</div>
+  <div class="newsm" id="menul">
+<ul>
+            <li><a href="jj.htm" class="c248800" title="实验室简介">实验室简介</a></li>
+        <li><a href="zzjg.htm" class="c248800" title="组织架构">组织架构</a></li>
+        <li><a href="zjtd.htm" class="c248800" title="专家团队">专家团队</a></li>
+        <li><a href="yjtd.htm" class="c248800" title="研究团队">研究团队</a></li>
+        <li><a href="xtdw.htm" class="c248800" title="协同单位">协同单位</a></li>
+        <li><a href="yjjc.htm" class="c248800" title="研究基础">研究基础</a></li>
+</ul>
+
+  </div>
+  <script>  
+$('#menul li a').click(function () {    
+var f = this;    
+$('#menul li a').each(function () {      
+this.className = this == f ? 'active' : 'none'    
+});  
+});
+</script></div>
+  
+<div class="mainr">
+  <div class="mainrt"><span><div>
+    当前位置: 
+                        <a href="../index.htm">首页</a>
+                &gt;&gt;
+                <a href="../js.htm">实验室介绍</a>
+                &gt;&gt;
+                <a href="jj.htm">实验室简介</a>
+</div></span>
+实验室简介</div>
+ <div class="newsnr2">
+
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1606996712,'wbnews','u7')</script>
+<script>function seeContenta7(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1606996712,1021)</script>
+<p>
+    
+    </p><div id="vsb_content_1021_u71"><div id="vsb_content"><p>北京外国语大学人工智能与人类语言重点实验室正式成立于2019年12月，英文全称为BFSU Artificial Intelligence and &nbsp;Human Languages Lab，简写为BFSU•AI。2021年11月26日，教育部办公厅关于公布首批教育部哲学社会科学实验室名单的通知（教社科厅函〔2021〕22号），北京外国语大学人工智能与人类语言实验室入选培育试点建设名单。</p>
+<p style="text-align: center"><img src="/__local/E/DC/1C/5C7481462540B6D1BD5C9AA8E48_E8687654_2F1C3.jpg" width="500" alt="2F1C3" vsbhref="vurl" vurl="/_vsl/EDC1C5C7481462540B6D1BD5C9AA8E48/E8687654/2F1C3" vheight="" vwidth="500" orisrc="/__local/E/DC/1C/5C7481462540B6D1BD5C9AA8E48_E8687654_2F1C3.jpg" class="img_vsb_content"></p>
+<p>实验室聚焦国家人工智能与教育领域的前沿课题，结合我校“双一流”学科布局，本着“开放、协同、智能、一流”的建设原则，以“阐释人类智能，驾驭人工智能，解码语言奥秘，成就智慧人生”为宗旨，立足学校外语教学与研究传统优势，凝聚国内外交叉学科智库资源，瞄准人工智能与人类语言科学前沿，设定实验室重大科研项目，着力开展语言学习机理研究、基于人工智能的语言教学研究、多语种语料库、多语自然语言处理和外语健脑强智研究，带动语言类基础学科的理论创新、制度创新和实践创新，推动前沿技术赋能语言研究的突破性进展，构建面向每个人、适合每个人、更加开放灵活的教育体系，引领我国外语教育信息化、智能化，力争成为我校具有国际影响力的一流科研创新平台。</p>
+<p><br></p>
+<p>实验室合作单位包括外语教学与研究出版社、科大讯飞股份有限公司、北京大学和华为技术有限公司。</p></div></div>
+    <span id="vsb_content_1021_u7" name="vsb_content_1021_u7"></span><br><br>
+    
+<p></p>
+</div>
+
+  
+</div>
+</div>
+
+<div class="clear"></div>
+<div class="foot">
+  <div class="footc">
+    <div class="footcl"><img src="../images/index_14.jpg" width="493" height="89"></div>
+    
+    <div class="footcr">
+      <p>地址：北京市海淀区西三环北路19号北京外国语大学北外国际大厦8层</p>
+      <p> 电话：010-88817902</p>
+    </div>
+  </div>
+  
+  <div class="footb"><a href="http://www.bfsu.edu.cn/" target="_blank">Copyright @ BFSU. 北京外国语大学版权所有.&nbsp;  </a>   京ICP备10216160号-15 京公网安备110402430025号</div>
+</div>
+
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

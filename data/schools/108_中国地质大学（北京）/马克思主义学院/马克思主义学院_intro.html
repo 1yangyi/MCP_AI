@@ -1,0 +1,610 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>马克思主义学院</title>
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="/css/swiper.min.css">
+    <link rel="stylesheet" href="/css/idangerous.swiper.css">
+    <link rel="stylesheet" type="text/css" href="/css/hometop.css">
+    <link rel="stylesheet" type="text/css" href="/css/indexmb1.css">
+    <link rel="stylesheet" type="text/css" href="/css/list.css">
+    <script src="/js/jquery-1.12.4.min.js"></script>
+    <script src="/js/idangerous.swiper.min.js"></script>
+    <script src="/js/scrollReveal.js" async=""></script>
+    <script src="/js/anime.min.js" async=""></script>
+    <script src="/js/paging.js"></script>
+    <script>
+        function loadJS(url, callback) {
+            var script = document.createElement('script');
+            var fn = callback || function () { };
+            script.type = 'text/javascript';
+
+            if (script.readyState) { //IE
+                script.onreadystatechange = function () {
+                    if (script.readyState == 'loaded' || script.readyState == 'complete') {
+                        script.onreadystatechange = null;
+                        fn();
+                    }
+                };
+
+            } else { //其他浏览器
+                script.onload = function () {
+                    fn();
+                };
+            }
+
+            script.src = url;
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+        function deviceProbing() {
+            var reg = /([a-zA-Z]+)?([a-zA-Z]+.*\;\s([a-zA-Z0-9]+)?)/
+            var newNav = navigator.appVersion.match(reg);
+            if (newNav) {
+                var nav = newNav[0];
+                var navArr = nav.split(/(\s)|((\s\d\.\d)?\;)/);
+                var flag = false;
+                for (var i = 0, len = navArr.length; i < len; i++) {
+                    if (navArr[i] == 'Android' || navArr[i] == 'iPhone' || navArr[i] == 'iPad' || navArr[i] == 'MeeGo' || navArr[i] == 'NokiaN9' || navArr[i] == 'NOKIA') {
+                        flag = true;
+                        break;
+                    } else {
+                        flag = false;
+                    }
+                }
+                return flag;
+            }
+        }
+        function getFontSize() {
+            var deviceWidth = document.documentElement.clientWidth;
+            document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+            window.onresize = function () {
+                var deviceWidth = document.documentElement.clientWidth;
+                document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+            };
+        }
+        function IEVersion() {
+            //取得浏览器的userAgent字符串
+            var userAgent = navigator.userAgent;
+            //判断是否IE浏览器
+            var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1;
+            if (isIE) {
+                var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+                reIE.test(userAgent);
+                var fIEVersion = parseFloat(RegExp["$1"]);
+                if (fIEVersion < 10) {
+                    return true;
+                }
+            } else {
+                return false;
+            }
+        }
+        var page_border_height = '3px';
+        if (deviceProbing()) {
+            page_border_height = '0.03rem';
+            getFontSize();
+            document.write('<link rel="stylesheet" type="text/css" href="/mzxy/css/mobile.css">');
+            document.write('<link rel="stylesheet" type="text/css" href="/mzxy/css/mobilelist.css">');
+            loadJS('/mzxy/js/mobilepclist.js');
+        } else {
+            $('html').css('font-size', '');
+            document.write('<link rel="stylesheet" type="text/css" href="/mzxy/css/pcmedia.css">');
+            if (IEVersion()) {
+                document.write('<link rel="stylesheet" type="text/css" href="/mzxy/css/pcIe.css">');
+                loadJS('/mzxy/js/pclist.js');
+            } else {
+                loadJS('/mzxy/js/pclist.js');
+            }
+        }
+    </script><link rel="stylesheet" type="text/css" href="/mzxy/css/pcmedia.css"><script type="text/javascript" src="/mzxy/js/pclist.js"></script>
+<script src="https://sm.cugb.edu.cn/cms/front/stat/dealer?SiteID=197&amp;CatalogInnerCode=002928000001&amp;Type=Article&amp;LeafID=722962&amp;sr=1280x720&amp;cd=24&amp;ce=1&amp;la=zh-CN&amp;cs=UTF-8&amp;vq=2&amp;Title=%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%AD%A6%E9%99%A2&amp;URL=https://sm.cugb.edu.cn/xygk/xyjj/&amp;Host=sm.cugb.edu.cn"></script></head>
+
+<body>
+    <!--header-->
+    
+<div class="home_headerbox">
+    <div class="home_nav hidebgcolor" id="homehead">
+      <a href="https://sm.cugb.edu.cn/"><div class="hn_logo"><img src="/mzxy/images/logo.svg"></div></a>
+      <div class="hn_main">
+        <div class="hn_main_child hn_main_input">
+          <input type="text" id="searchInput" placeholder="输入关键字" autocomplete="off">
+          <span><a href="javascript:void(0)" onclick="doSearch()"><img src="/mzxy/images/search.png"></a></span>
+        </div>
+        <div class="hn_main_child hn_main_nav">
+          <ul class="hn_mn_ul">
+            <li>
+              <div id="home"><a href="https://sm.cugb.edu.cn/">首页</a></div>
+            </li>
+            
+              
+                <li>
+                  <div><a href="/xygk/xyjj/" id="002928">学院概况</a></div>
+                  
+                    <ul class="hn_mn_nav_second">
+                        
+                          
+                            <li><a href="/xygk/xyjj/">学院简介</a></li>
+                            <li><a href="/xygk/xrld/">现任领导</a></li>
+                        
+                      </ul>
+                    
+                </li>
+                <li>
+                  <div><a href="/jgsz/gljg/" id="002929">机构设置</a></div>
+                  
+                    <ul class="hn_mn_nav_second">
+                        
+                          
+                            <li><a href="/jgsz/gljg/">管理机构</a></li>
+                            <li><a href="/jgsz/jxjg/">教学机构</a></li>
+                            <li><a href="/jgsz/syssz/">实验室设置</a></li>
+                        
+                      </ul>
+                    
+                </li>
+                <li>
+                  <div><a href="/szdw/szgk/" id="002930">师资队伍</a></div>
+                  
+                    <ul class="hn_mn_nav_second" style="width:120%;">
+                        
+                          
+                            <li><a href="/szdw/szgk/">师资概况</a></li>
+                            <li><a href="https://scholar.cugb.edu.cn/scholar/list/31800/1.shtml">正高职称教师</a></li>
+                            <li><a href="https://scholar.cugb.edu.cn/scholar/list/31800/2.shtml">副高职称教师</a></li>
+                            <li><a href="https://scholar.cugb.edu.cn/scholar/list/31800/3.shtml">中级职称教师</a></li>
+                        
+                      </ul>
+                    
+                </li>
+                <li>
+                  <div><a href="/kxyj/xkjs/" id="002931">科学研究</a></div>
+                  
+                    <ul class="hn_mn_nav_second">
+                        
+                          
+                            <li><a href="/kxyj/xkjs/">学科建设</a></li>
+                            <li><a href="/kxyj/xslw/">学术论文</a></li>
+                            <li><a href="/kxyj/kjcg/">科技成果</a></li>
+                            <li><a href="/kxyj/xsjl/">学术交流</a></li>
+                        
+                      </ul>
+                    
+                </li>
+                <li>
+                  <div><a href="/bksjx/kcsz/" id="002932">本科生教学</a></div>
+                  
+                    <ul class="hn_mn_nav_second">
+                        
+                          
+                            <li><a href="/bksjx/kcsz/">课程设置</a></li>
+                            <li><a href="/bksjx/shsj/">社会实践</a></li>
+                        
+                      </ul>
+                    
+                </li>
+                <li>
+                  <div><a href="/yjsjx/ssyjs/" id="002933">研究生教学</a></div>
+                  
+                    <ul class="hn_mn_nav_second">
+                        
+                          
+                            <li><a href="/yjsjx/ssyjs/">硕士研究生</a></li>
+                            <li><a href="/yjsjx/bsyjs/">博士研究生</a></li>
+                        
+                      </ul>
+                    
+                </li>
+                <li>
+                  <div><a href="/zsjy/sszs/" id="003007">招生就业</a></div>
+                  
+                    <ul class="hn_mn_nav_second">
+                        
+                          
+                            <li><a href="/zsjy/sszs/">硕士招生</a></li>
+                            <li><a href="/zsjy/bszs/">博士招生</a></li>
+                            <li><a href="/zsjy/jygz/">就业工作</a></li>
+                        
+                      </ul>
+                    
+                </li>
+                <li>
+                  <div><a href="/djgz/zzjg/" id="002934">党建工作</a></div>
+                  
+                    <ul class="hn_mn_nav_second">
+                        
+                          
+                            <li><a href="/djgz/zzjg/">组织机构</a></li>
+                            <li><a href="/djgz/zdjs/">制度建设</a></li>
+                            <li><a href="/djgz/hdqk/">活动情况</a></li>
+                            <li><a href="/djgz/fzdy/">发展党员</a></li>
+                        
+                      </ul>
+                    
+                </li>
+                <li>
+                  <div><a href="/xsgz/xsgl/" id="002935">学生工作</a></div>
+                  
+                    <ul class="hn_mn_nav_second">
+                        
+                          
+                            <li><a href="/xsgz/xsgl/">学生管理</a></li>
+                            <li><a href="/xsgz/jlzz/">奖励资助</a></li>
+                            <li><a href="/xsgz/jyzc/">就业政策</a></li>
+                        
+                      </ul>
+                    
+                </li>
+                <li>
+                  <div><a href="/ghgz/hdly/" id="002936">工会工作</a></div>
+                  
+                    <ul class="hn_mn_nav_second">
+                        
+                          
+                            <li><a href="/ghgz/hdly/">活动掠影</a></li>
+                            <li><a href="/ghgz/szrys/">思政荣誉室</a></li>
+                            <li><a href="/ghgz/ghzz/">工会组织</a></li>
+                        
+                      </ul>
+                    
+                </li>
+                <li>
+                  <div><a href="/zlxz/" id="002941">资料下载</a></div>
+                  
+                </li>
+                <li>
+                  <div><a href="/sdjb/" id="003214">师德举报</a></div>
+                  
+                </li>
+             
+          </ul>
+        </div>
+        <div class="hn_menu" id="home_head_openIcon"><i></i><i></i><i></i></div>
+      </div>
+    </div>
+  </div>
+
+<!--<script src="${prefix('js/jquery.min.js')}"></script>-->
+<script>
+  function doSearch(){
+    if(!$("#searchInput").val() || !$("#searchInput").val().trim()){
+      console.log('searchParam is null ')
+      return;
+    }
+    var url="https://sm.cugb.edu.cn/search/result.shtml?SiteID=197&query="+encodeURIComponent($("#searchInput").val());
+    window.open(url);
+  }
+
+  $("#searchInput").keydown(function(event){
+    if(event.keyCode ==13){
+      doSearch();
+      console.log('enter');
+    }
+  });
+</script>
+
+    <div class="home_pagemainbox">
+        <div class="home_banner home_listbanner">
+            <div class="container">
+                <div class="timeline">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide" style="background: url(/mzxy/images/01.png) no-repeat top center/100% auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list_banner_botbox">
+                <div class="list_title">学院简介</div>
+                <div class="list_back"><a href="javascript:void(0)" onclick="history.go(-1);"><img src="/images/list/jiantou_icon.png"><label>返回</label></a>
+                </div>
+            </div>
+        </div>
+        <div class="detail_box" id="list_detail_box">
+            <div class="detail_title_box">
+                <div class="detail_title">学院简介</div>
+                <!-- pc端 时间 次数 -->
+                <div class="detail_info"><label>发布时间：2024-12-26</label><label>阅读：<span id="hitcount722962">13875</span><script src="https://sm.cugb.edu.cn/cms/front/counter?Type=Article&amp;ID=722962&amp;DomID=hitcount722962"></script>次</label></div>
+                <!-- 移动端 时间 次数 发布人-->
+                <div class="m_detail_info">
+                    <div>
+                        <label></label>
+                        <label>12月26日</label>
+                    </div>
+                    <div>
+                       <label><span id="hitcount722962">11995</span><script src="https://sm.cugb.edu.cn/cms/front/counter?Type=Article&amp;ID=722962&amp;DomID=hitcount722962"></script>浏览</label>
+                    </div>
+                </div>
+            </div>
+            <div class="detail_content_box">
+                <!-- 详情内容 -->
+                <p style="margin: 0px; padding: 0px; width: 660px; height: auto; color: rgb(0, 0, 0); line-height: 30px; font-family: 宋体; text-align: justify;">&nbsp;</p><p style="text-align: center;"><span style="line-height:250%;"><span style="font-size:16px;"><span style="font-family:宋体;"><strong>中国地质大学（北京）马克思主义学院简介</strong></span></span></span></p><p style="line-height: 150%; text-align: justify;"><span style="line-height:250%;"><span style="font-size:16px;"><span style="font-family:宋体;">　　</span></span></span><span style="line-height: 250%; font-size: 16px; font-family: 宋体;">马克思主义学院是学校思想政治理论课教学科研机构，也是马克思主义理论学科依托单位。学院前身为1952年11月成立的北京地质学院政治课小组。2009年6月，学校成立思想政治教育学院。2015年10月，更名为马克思主义学院。2022年5月，获批北京市重点建设马克思主义学院。</span></p><p style="text-indent:43px"><span style="line-height: 250%; font-size: 16px; font-family: 宋体;">学院机构设置健全，现有马克思主义理论一级学科博士点、马克思主义理论一级学科硕士点、心理学一级学科硕士点、马克思主义理论博士后流动站，有思想道德与法治教研室、马克思主义中国化教研室、马克思主义基本原理教研室、中国近现代史纲要教研室、习近平新时代中国特色社会主义思想概论教研室、形势与政策教研室、思想政治理论课社会实践课程组、中国传统文化与史学研究所、中共党史研究所、思想政治教育心理学研究所10个二级教学科研机构。</span></p><p style="text-indent:43px"><span style="line-height: 250%; font-size: 16px; font-family: 宋体;">学院依托“北京市高校思想政治理论课名师工作室”“社会主义核心价值观与高校思想政治理论课建设协同创新中心”“北京市高校思想政治课教学改革示范点”和“海淀区大中小学思政课一体化共同体成员单位”等教学科研平台，重点实施中青年教师、研究生科研项目培育、青年教师教学能力提升工程。学院在河北涞源、上海淞沪抗战纪念馆、吉林延边、北京延庆区、生态环境部宣传教育中心合作共建20个大学生社会实践教学基地；开发了赋能思政课教学的教学设计平台和思政实践教学服务云平台。</span></p><p style="text-indent:43px"><span style="line-height: 250%; font-size: 16px; font-family: 宋体;">马克思主义学院招收马克思主义理论专业博士、硕士研究生和心理学硕士研究生，接收马克思主义理论专业博士后工作人员。学院为学生提供工作室、资料室、实验室、经典文献网上数据库、学术期刊网、学术沙龙、研究生培育项目基金等研学平台和设施。为学生提供奖学金、国家助学金、北京市马克思主义理论专业奖学金以及学校助管、助研和助教等奖助项目。</span></p><p style="text-indent:43px"><span style="line-height: 250%; font-size: 16px; font-family: 宋体;">学院成立以来，为高校、党政机关、企事业单位输送了大批优秀毕业生，毕业生广受用人单位好评。</span></p><p style="line-height: 150%; text-align: justify;"><span style="line-height:250%;"><span style="font-size:16px;"><span style="font-family:宋体;"></span></span></span><br></p><p style="line-height: 150%; text-align: justify;"><span style="line-height:250%;"><span style="font-size:16px;"><span style="font-family:宋体;">　　</span></span></span></p>
+            </div>
+            
+        </div>
+
+        <!-- 底部 PC -->
+    
+<div class="home_bottom">
+      <div class="home_bot_box">
+        <div class="home_bot_link home_bot_lianjie">
+          <div class="home_bot_linktitle">友情链接</div>
+          <ul class="home_bot_linkbox">
+          
+            
+              <li><a href="http://www.cugb.edu.cn/index.action" target="_blank">中国地质大学（北京）</a></li>
+              <li><a href="http://www.cug.edu.cn/" target="_blank">中国地质大学（武汉）</a></li>
+              <li><a href="http://www.moe.gov.cn/" target="_blank">教育部</a></li>
+              <li><a href="http://www.cugb.edu.cn/shtml/map/index.shtml" target="_blank">中国地质大学（北京）虚拟地图</a></li>
+              <li><a href="http://www.pku.edu.cn/" target="_blank">北京大学</a></li>
+              <li><a href="http://www.tsinghua.edu.cn/" target="_blank">清华大学</a></li>
+          
+          </ul>
+        </div>
+        <div class="home_bot_link home_bot_banquan">
+          <div class="home_bot_linktitle">版权信息</div>
+          <ul class="home_bot_banquanbox">
+            <li>版权所有:中国地质大学(北京)</li>
+            <li>地址:北京市海淀区学院路29号</li>
+            <li>邮编:100083</li>
+            <li>文保网安备案:1101080023</li>
+            <li>技术支持:信息网络与数据中心</li>
+          </ul>
+        </div>
+
+        <div class="home_bot_link home_bot_gongzhong">
+          <div class="home_bot_gongzhong_text">
+            <div class="home_bot_linktitle">公众号 </div>
+            <ul class="home_bot_linkbox">
+              <li>扫码关注公众号</li>
+              <li>浏览最新文章信息</li>
+            </ul>
+          </div>
+          <div class="home_bot_gongzhong_img">
+            
+              <img src="/upload/resources/image/2021/09/15/144669.jpg">
+            
+          </div>
+        </div>
+
+        <div class="home_bot_link m_home_bot_banquanlianxi">
+          <div class="home_bot_linktitle">联系我们</div>
+          <ul class="home_bot_banquanbox">
+            <li>地址:北京市海淀区学院路29号</li>
+            <li>邮编:100083</li>
+            <li>技术支持:信息网络与数据中心</li>
+          </ul>
+          <div class="home_bot_gongzhong_img">
+            
+              <img src="/upload/resources/image/2021/09/15/144669.jpg">
+            
+          </div>
+        </div>
+        <div class="home_bot_link m_home_bot_banquanotherbox">
+          <ul class="m_home_bot_banquanother">
+            <li>© 版权所有:中国地质大学(北京)</li>
+            <li>文保网安备案:1101080023</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <!-- 底部结束 -->
+    </div>
+<!-- 移动端导航弹窗 -->
+   
+<div class="home_headerbox m_home_headerbox_cover">
+    <div class="home_nav">
+      <div class="hn_logo"><a href="https://sm.cugb.edu.cn/"><img src="/images/logo.png"></a></div>
+      <div class="hn_main">
+        <div class="hn_menu hn_close" id="home_head_closeIcon"></div>
+      </div>
+    </div>
+    <div class="n_m_nav">
+      <ul>
+        <li><a href="https://sm.cugb.edu.cn/">首页<span class="n_m_nav_more nav_more_top"></span></a></li>
+        
+           
+             
+                     <li class="have_child_nav">
+                         学院概况
+                          <span class="n_m_nav_more nav_more_top"></span>
+                          <div class="n_m_nav_item">
+                              <ul>
+                                 
+                                   
+                                      <li><a href="/xygk/xyjj/">学院简介</a></li>
+                                      <li><a href="/xygk/xrld/">现任领导</a></li>
+                                 
+                              </ul>
+                          </div>
+                      </li>
+                  
+                  
+             
+                     <li class="have_child_nav">
+                         机构设置
+                          <span class="n_m_nav_more nav_more_top"></span>
+                          <div class="n_m_nav_item">
+                              <ul>
+                                 
+                                   
+                                      <li><a href="/jgsz/gljg/">管理机构</a></li>
+                                      <li><a href="/jgsz/jxjg/">教学机构</a></li>
+                                      <li><a href="/jgsz/syssz/">实验室设置</a></li>
+                                 
+                              </ul>
+                          </div>
+                      </li>
+                  
+                  
+             
+                     <li class="have_child_nav">
+                         师资队伍
+                          <span class="n_m_nav_more nav_more_top"></span>
+                          <div class="n_m_nav_item">
+                              <ul>
+                                 
+                                   
+                                      <li><a href="/szdw/szgk/">师资概况</a></li>
+                                      <li><a href="https://scholar.cugb.edu.cn/scholar/list/31800/1.shtml">正高职称教师</a></li>
+                                      <li><a href="https://scholar.cugb.edu.cn/scholar/list/31800/2.shtml">副高职称教师</a></li>
+                                      <li><a href="https://scholar.cugb.edu.cn/scholar/list/31800/3.shtml">中级职称教师</a></li>
+                                 
+                              </ul>
+                          </div>
+                      </li>
+                  
+                  
+             
+                     <li class="have_child_nav">
+                         科学研究
+                          <span class="n_m_nav_more nav_more_top"></span>
+                          <div class="n_m_nav_item">
+                              <ul>
+                                 
+                                   
+                                      <li><a href="/kxyj/xkjs/">学科建设</a></li>
+                                      <li><a href="/kxyj/xslw/">学术论文</a></li>
+                                      <li><a href="/kxyj/kjcg/">科技成果</a></li>
+                                      <li><a href="/kxyj/xsjl/">学术交流</a></li>
+                                 
+                              </ul>
+                          </div>
+                      </li>
+                  
+                  
+             
+                     <li class="have_child_nav">
+                         本科生教学
+                          <span class="n_m_nav_more nav_more_top"></span>
+                          <div class="n_m_nav_item">
+                              <ul>
+                                 
+                                   
+                                      <li><a href="/bksjx/kcsz/">课程设置</a></li>
+                                      <li><a href="/bksjx/shsj/">社会实践</a></li>
+                                 
+                              </ul>
+                          </div>
+                      </li>
+                  
+                  
+             
+                     <li class="have_child_nav">
+                         研究生教学
+                          <span class="n_m_nav_more nav_more_top"></span>
+                          <div class="n_m_nav_item">
+                              <ul>
+                                 
+                                   
+                                      <li><a href="/yjsjx/ssyjs/">硕士研究生</a></li>
+                                      <li><a href="/yjsjx/bsyjs/">博士研究生</a></li>
+                                 
+                              </ul>
+                          </div>
+                      </li>
+                  
+                  
+             
+                     <li class="have_child_nav">
+                         招生就业
+                          <span class="n_m_nav_more nav_more_top"></span>
+                          <div class="n_m_nav_item">
+                              <ul>
+                                 
+                                   
+                                      <li><a href="/zsjy/sszs/">硕士招生</a></li>
+                                      <li><a href="/zsjy/bszs/">博士招生</a></li>
+                                      <li><a href="/zsjy/jygz/">就业工作</a></li>
+                                 
+                              </ul>
+                          </div>
+                      </li>
+                  
+                  
+             
+                     <li class="have_child_nav">
+                         党建工作
+                          <span class="n_m_nav_more nav_more_top"></span>
+                          <div class="n_m_nav_item">
+                              <ul>
+                                 
+                                   
+                                      <li><a href="/djgz/zzjg/">组织机构</a></li>
+                                      <li><a href="/djgz/zdjs/">制度建设</a></li>
+                                      <li><a href="/djgz/hdqk/">活动情况</a></li>
+                                      <li><a href="/djgz/fzdy/">发展党员</a></li>
+                                 
+                              </ul>
+                          </div>
+                      </li>
+                  
+                  
+             
+                     <li class="have_child_nav">
+                         学生工作
+                          <span class="n_m_nav_more nav_more_top"></span>
+                          <div class="n_m_nav_item">
+                              <ul>
+                                 
+                                   
+                                      <li><a href="/xsgz/xsgl/">学生管理</a></li>
+                                      <li><a href="/xsgz/jlzz/">奖励资助</a></li>
+                                      <li><a href="/xsgz/jyzc/">就业政策</a></li>
+                                 
+                              </ul>
+                          </div>
+                      </li>
+                  
+                  
+             
+                     <li class="have_child_nav">
+                         工会工作
+                          <span class="n_m_nav_more nav_more_top"></span>
+                          <div class="n_m_nav_item">
+                              <ul>
+                                 
+                                   
+                                      <li><a href="/ghgz/hdly/">活动掠影</a></li>
+                                      <li><a href="/ghgz/szrys/">思政荣誉室</a></li>
+                                      <li><a href="/ghgz/ghzz/">工会组织</a></li>
+                                 
+                              </ul>
+                          </div>
+                      </li>
+                  
+                  
+             
+                  
+                    <li><a href="/zlxz/">资料下载<span class="n_m_nav_more nav_more_top"></span></a></li>
+                  
+             
+                  
+                    <li><a href="/sdjb/">师德举报<span class="n_m_nav_more nav_more_top"></span></a></li>
+                  
+        
+      </ul>
+    </div>
+  </div>
+    <!-- 移动端导航弹窗 -->
+    <script>
+        $('.detail_box .detail_bot_box a').hover(function () {
+            $(this).find('.detail_bot_title').css('color', '#22bee6');
+        }, function () {
+            $(this).find('.detail_bot_title').css('color', '#555555');
+        })
+    </script>
+
+<script src="https://sm.cugb.edu.cn/cms/stat/front/stat.js" type="text/javascript"></script>
+<script>
+if(window._zcms_stat)_zcms_stat("SiteID=197&CatalogInnerCode=002928000001&Type=Article&LeafID=722962&Dest=https://sm.cugb.edu.cn/cms/front/stat/dealer");
+</script>
+
+<!-- App=COMBANC(康邦内容管理系统) 3.2.6,CostTime=1,PublishDate=2025-07-01 10:28:13 -->
+
+<script src="https://sm.cugb.edu.cn/cms/recommend/js/recommendstat.js" type="text/javascript"></script>
+<script>
+if(window._zcms_recommendstat)_zcms_recommendstat("SiteID=197&ContentID=722962&RecommendType=Content&Dest=https://sm.cugb.edu.cn/cms/front/recommends/dealer");
+</script>
+
+
+</body></html>

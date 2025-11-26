@@ -1,0 +1,866 @@
+<!DOCTYPE html><html lang="en" style="font-size: 80px;"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios">
+    <title>学院简介-河南大学基础医学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="基础医学院,学院简介">
+
+    <link href="../static/images/favicon.png" rel="shortcut icon" type="image/x-icon">
+
+    <link rel="stylesheet" href="../static/style/public.css">
+    <link rel="stylesheet" href="../static/style/ny.css">
+    <link rel="stylesheet" href="../static/style/pagebar.css">
+    <script src="../static/js/jquery.js"></script>
+    <script src="../static/js/jquery-migrate.min.js"></script>
+    <script src="../static/js/a_miso.js"></script>
+    <script src="../static/js/set.js"></script>
+    <script src="../static/js/public.js"></script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e7a475153535742000400014156 -->
+<link rel="stylesheet" type="text/css" href="../adpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1728,'/adpzw.jsp',-1,1361036835)</script>
+</head>
+
+<body>
+
+
+
+
+    <!--手机版wap头部开始-->
+    <div class="wap-head ar_web">
+        <div class="logo flex-v-center">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script><a href="../index.htm"><img src="../static/images/logo.png" border="0"></a>
+</div>
+        <a href="javascript:;" class="navbtnm">
+            <i></i>
+        </a>
+    </div>
+    <div class="big-nav">
+        <div class="list_box0 ">
+        </div>
+
+        <div class="wap_search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+  
+</style>
+<div id="divu1">
+    <div id="appu1"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="input"> <button type="submit" value="" class="btn_blue"></button></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+            <input type="text" class="input" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"  >
+    
+            <button type="submit" class="btn_blue" value=""  v-on:click="onSubmit()"></button>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1361036835";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+
+        <ul class="list_box_nav_mobile">
+
+            <li><div class="con"><a class="a" href="../index.htm" title="首页">首页</a></div>
+        </li>
+        <li><div class="con"><a class="a" href="xyjj.htm" title="学院概况">学院概况</a><i></i></div>
+                  <div class="list">
+                        <a href="xyjj.htm" title="学院简介">学院简介</a>
+
+                        <a href="lsyg.htm" title="历史沿革">历史沿革</a>
+
+                        <a href="yxyf.htm" title="院训院风">院训院风</a>
+
+                        <a href="dzld.htm" title="党政领导">党政领导</a>
+
+                        <a href="dsj.htm" title="大事记">大事记</a>
+
+                </div>
+
+
+        </li>
+        <li><div class="con"><a class="a" href="../jgsz1/dzjg.htm" title="机构设置">机构设置</a><i></i></div>
+                  <div class="list">
+                        <a href="../jgsz1/dzjg.htm" title="党政机构">党政机构</a>
+
+                        <a href="../jgsz1/xsjg1.htm" title="学术机构">学术机构</a>
+
+                        <a href="../jgsz1/xkx1.htm" title="学科系">学科系</a>
+
+                        <a href="../jgsz1/syjxzx1.htm" title="实验教学中心">实验教学中心</a>
+
+                        <a href="../jgsz1/kypt1.htm" title="科研平台">科研平台</a>
+
+                </div>
+
+
+        </li>
+        <li><div class="con"><a class="a" href="../kxyj/kyjz.htm" title="科学研究">科学研究</a><i></i></div>
+                  <div class="list">
+                        <a href="../kxyj/kyjz.htm" title="科研进展">科研进展</a>
+
+                        <a href="../kxyj/xsbg.htm" title="学术报告">学术报告</a>
+
+                        <a href="../kxyj/kycg.htm" title="科研成果">科研成果</a>
+
+                </div>
+
+
+        </li>
+        <li><div class="con"><a class="a" href="../jwjx/jxdt.htm" title="教务教学">教务教学</a><i></i></div>
+                  <div class="list">
+                        <a href="../jwjx/jxdt.htm" title="教学动态">教学动态</a>
+
+                        <a href="../jwjx/xzzx.htm" title="下载中心">下载中心</a>
+
+                        <a href="../jwjx/jxcg.htm" title="教学成果">教学成果</a>
+
+                        <a href="../jwjx/shpgzl.htm" title="审核评估专栏">审核评估专栏</a>
+
+                        <a href="http://shpg.henu.edu.cn/" title="本科教学工作审核评估网">本科教学工作审核评估网</a>
+
+                </div>
+
+
+        </li>
+        <li><div class="con"><a class="a" href="../szdw/spys.htm" title="师资队伍">师资队伍</a><i></i></div>
+                  <div class="list">
+                        <a href="../szdw/spys.htm" title="双聘院士">双聘院士</a>
+
+                        <a href="../szdw/xsgwytstsjt.htm" title="享受国务院特殊特殊津贴">享受国务院特殊特殊津贴</a>
+
+                        <a href="../szdw/gjjrcch.htm" title="国家级人才称号">国家级人才称号</a>
+
+                        <a href="../szdw/sjrcch.htm" title="省级人才称号">省级人才称号</a>
+
+                        <a href="../szdw/xtpjs.htm" title="校特聘教授">校特聘教授</a>
+
+                        <a href="../szdw/js.htm" title="教授">教授</a>
+
+                        <a href="../szdw/fjs.htm" title="副教授">副教授</a>
+
+                        <a href="../szdw/js1.htm" title="讲师">讲师</a>
+
+                        <a href="../szdw/syjs.htm" title="实验技术">实验技术</a>
+
+                        <a href="../szdw/qtxl.htm" title="其他系列">其他系列</a>
+
+                        <a href="../szdw/txry.htm" title="退休人员">退休人员</a>
+
+                </div>
+
+
+        </li>
+        <li><div class="con"><a class="a" href="../rcpy/bksjy.htm" title="人才培养">人才培养</a><i></i></div>
+                  <div class="list">
+                        <a href="../rcpy/bksjy.htm" title="本科生教育">本科生教育</a>
+
+                        <a href="../rcpy/bksjy/swyxkxzs.htm" target="_blank" title="生物医学科学招生">生物医学科学招生</a>
+
+                        <a href="../rcpy/yjsjy/zsxx.htm" title="研究生教育">研究生教育</a>
+
+                        <a href="../rcpy/bshldz.htm" title="博士后流动站">博士后流动站</a>
+
+                        <a href="../rcpy/jxjy.htm" title="继续教育">继续教育</a>
+
+                </div>
+
+
+        </li>
+        <li><div class="con"><a class="a" href="../dqgz/dwgz/xwsd.htm" title="党群工作">党群工作</a><i></i></div>
+                  <div class="list">
+                        <a href="../dqgz/dwgz/xwsd.htm" title="党务工作">党务工作</a>
+
+                        <a href="../dqgz/ghgz1.htm" title="工会工作">工会工作</a>
+
+                        <a href="../dqgz/txgz1.htm" title="团学工作">团学工作</a>
+
+                        <a href="../dqgz/sdsfjs.htm" title="师德师风建设">师德师风建设</a>
+
+                        <a href="../dqgz/cxllxxzl.htm" title="创新理论学习专栏">创新理论学习专栏</a>
+
+                        <a href="../dqgz/wwxyjy.htm" title="我为学院建言">我为学院建言</a>
+
+                </div>
+
+
+        </li>
+        <li><div class="con"><a class="a" href="../rczp.htm" title="人才招聘">人才招聘</a></div>
+        </li>
+</ul>
+
+    </div>
+    <!--手机版wap头部结束-->
+
+    <div class="head ar_web on">
+
+        <a href="../“#'" class="slide_down_close">
+            <span class="bg"></span>
+            <i></i>
+        </a>
+        <div class="top-jc wp">
+            <div class="logo">    <a href="../index.htm"><img src="../static/images/logo2.png" border="0"></a>
+</div>
+            <div class="search">
+<div class="wap_search">
+
+
+<style>
+  
+</style>
+<div id="divu4">
+    <div id="appu4"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="input"> <button type="submit" value="" class="btn_blue"></button></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu4">
+    <div id="appu4">
+        <div v-if="!isError">
+            <input type="text" class="input" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"  >
+    
+            <button type="submit" class="btn_blue" value=""  v-on:click="onSubmit()"></button>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu4").html($("#htmlu4").text());
+</script>
+<script>
+    var appOwner = "1361036835";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu4",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+            </div>
+        </div>
+        <div id="nav-jc">
+            <div class="wp">            <div class="nav_menustyle_1_1">
+                <ul class="flex">
+                                
+                    <li class="nav-1726"><a href="../index.htm">首页</a>
+                
+                    </li>
+                    
+                
+                    <li class="nav-1727"><a href="xyjj.htm" class="hov">学院概况</a>
+                   
+                    <ul>
+                        <li class="nav-1728  "><a href="xyjj.htm">学院简介</a> 
+                      
+                        </li>
+                        <li class="nav-1729  "><a href="lsyg.htm">历史沿革</a> 
+                      
+                        </li>
+                        <li class="nav-1730  "><a href="yxyf.htm">院训院风</a> 
+                      
+                        </li>
+                        <li class="nav-1731  "><a href="dzld.htm">党政领导</a> 
+                      
+                        </li>
+                        <li class="nav-1953  "><a href="dsj.htm">大事记</a> 
+                      
+                        </li>
+                    </ul>
+                  
+                    </li>
+                    
+                
+                    <li class="nav-2796"><a href="../jgsz1/dzjg.htm">机构设置</a>
+                   
+                    <ul>
+                        <li class="nav-2616  "><a href="../jgsz1/dzjg.htm">党政机构</a> 
+                      
+                        </li>
+                        <li class="nav-2626  "><a href="../jgsz1/xsjg1.htm">学术机构</a> 
+                     
+                        <ul>
+                            <li><a href="../jgsz1/xsjg1/xswyh.htm">学术委员会</a>
+                         
+                            </li>
+                            <li><a href="../jgsz1/xsjg1/xwwyh.htm">学位委员会</a>
+                         
+                            </li>
+                            <li><a href="../jgsz1/xsjg1/jxzdwyh.htm">教学指导委员会</a>
+                         
+                            </li>
+                            <li><a href="../jgsz1/xsjg1/rlzywyh.htm">人力资源委员会</a>
+                         
+                            </li>
+                        </ul>
+                      
+                        </li>
+                        <li class="nav-2636  "><a href="../jgsz1/xkx1.htm">学科系</a> 
+                     
+                        <ul>
+                            <li><a href="../jgsz1/xkx1/rtjpxyzzptxx.htm">人体解剖学与组织胚胎学系</a>
+                         
+                            </li>
+                            <li><a href="../jgsz1/xkx1/yxwlhxx.htm">医学物理化学系</a>
+                         
+                            </li>
+                            <li><a href="../jgsz1/xkx1/xbswxyycxx.htm">细胞生物学与遗传学系</a>
+                         
+                            </li>
+                            <li><a href="../jgsz1/xkx1/slxyblslxx.htm">生理学与病理生理学系</a>
+                         
+                            </li>
+                            <li><a href="../jgsz1/xkx1/myxx.htm">免疫学系</a>
+                         
+                            </li>
+                            <li><a href="../jgsz1/xkx1/blxx.htm">病理学系</a>
+                         
+                            </li>
+                            <li><a href="../jgsz1/xkx1/swhxyfzswxx.htm">生物化学与分子生物学系</a>
+                         
+                            </li>
+                            <li><a href="../jgsz1/xkx1/yxrwllxx.htm">医学人文伦理学系</a>
+                         
+                            </li>
+                            <li><a href="../jgsz1/xkx1/ggwsylxbxx.htm">公共卫生与流行病学系</a>
+                         
+                            </li>
+                            <li><a href="../jgsz1/xkx1/byswxx.htm">病原生物学系</a>
+                         
+                            </li>
+                            <li><a href="../jgsz1/xkx1/ylxx.htm">药理学系</a>
+                         
+                            </li>
+                        </ul>
+                      
+                        </li>
+                        <li class="nav-2646  "><a href="../jgsz1/syjxzx1.htm">实验教学中心</a> 
+                     
+                        <ul>
+                            <li><a href="../jgsz1/syjxzx1/xtsys.htm">形态实验室</a>
+                         
+                            </li>
+                            <li><a href="../jgsz1/syjxzx1/jnsys.htm">机能实验室</a>
+                         
+                            </li>
+                            <li><a href="../jgsz1/syjxzx1/fzswsys.htm">分子生物实验室</a>
+                         
+                            </li>
+                            <li><a href="https://yxxnsyjxzx.henu.edu.cn/mengoo/" target="_blank">医学虚拟仿真实验教学平台</a>
+                         
+                            </li>
+                            <li><a href="../jgsz1/syjxzx1/sysaq.htm">实验室安全</a>
+                         
+                            </li>
+                            <li><a href="../jgsz1/syjxzx1/wlxxzy.htm">网络学习资源</a>
+                         
+                            </li>
+                        </ul>
+                      
+                        </li>
+                        <li class="nav-2656  "><a href="../jgsz1/kypt1.htm">科研平台</a> 
+                     
+                        <ul>
+                            <li><a href="https://pcnp.henu.edu.cn/" target="_blank">河南省核蛋白基因调控国际联合实验室</a>
+                         
+                            </li>
+                            <li><a href="https://cstlab.henu.edu.cn/sysgk/sysjj.htm" target="_blank">河南省肿瘤分子诊断与精准治疗工程技术研究中心</a>
+                         
+                            </li>
+                            <li><a href="../jgsz1/kypt1/hndxstjydkyywyfsys.htm">河南大学受体基因调控与药物研发实验室</a>
+                         
+                            </li>
+                            <li><a href="https://zzlab.henu.edu.cn/kxyj/ptyjdjs/yjpt1/hndxdxyjkyjy.htm" target="_blank">河南大学代谢与健康研究院</a>
+                         
+                            </li>
+                            <li><a href="../jgsz1/kypt1/jcyxynmyxgzxsys.htm">基础医学院纳米医学光子学实验室</a>
+                         
+                            </li>
+                        </ul>
+                      
+                        </li>
+                    </ul>
+                  
+                    </li>
+                    
+                
+                    <li class="nav-1735"><a href="../kxyj/kyjz.htm">科学研究</a>
+                   
+                    <ul>
+                        <li class="nav-1743  "><a href="../kxyj/kyjz.htm">科研进展</a> 
+                      
+                        </li>
+                        <li class="nav-2076  "><a href="../kxyj/xsbg.htm">学术报告</a> 
+                      
+                        </li>
+                        <li class="nav-1747  "><a href="../kxyj/kycg.htm">科研成果</a> 
+                      
+                        </li>
+                    </ul>
+                  
+                    </li>
+                    
+                
+                    <li class="nav-1736"><a href="../jwjx/jxdt.htm">教务教学</a>
+                   
+                    <ul>
+                        <li class="nav-1748  "><a href="../jwjx/jxdt.htm">教学动态</a> 
+                      
+                        </li>
+                        <li class="nav-1749  "><a href="../jwjx/xzzx.htm">下载中心</a> 
+                      
+                        </li>
+                        <li class="nav-1943  "><a href="../jwjx/jxcg.htm">教学成果</a> 
+                      
+                        </li>
+                        <li class="nav-2816  "><a href="../jwjx/shpgzl.htm">审核评估专栏</a> 
+                      
+                        </li>
+                        <li class="nav-1874  "><a href="http://shpg.henu.edu.cn/">本科教学工作审核评估网</a> 
+                      
+                        </li>
+                    </ul>
+                  
+                    </li>
+                    
+                
+                    <li class="nav-1737"><a href="../szdw/spys.htm">师资队伍</a>
+                   
+                    <ul>
+                        <li class="nav-1754  "><a href="../szdw/spys.htm">双聘院士</a> 
+                      
+                        </li>
+                        <li class="nav-1758  "><a href="../szdw/xsgwytstsjt.htm">享受国务院特殊特殊津贴</a> 
+                      
+                        </li>
+                        <li class="nav-2926  "><a href="../szdw/gjjrcch.htm">国家级人才称号</a> 
+                      
+                        </li>
+                        <li class="nav-2906  "><a href="../szdw/sjrcch.htm">省级人才称号</a> 
+                      
+                        </li>
+                        <li class="nav-1756  "><a href="../szdw/xtpjs.htm">校特聘教授</a> 
+                      
+                        </li>
+                        <li class="nav-1759  "><a href="../szdw/js.htm">教授</a> 
+                      
+                        </li>
+                        <li class="nav-1760  "><a href="../szdw/fjs.htm">副教授</a> 
+                      
+                        </li>
+                        <li class="nav-1761  "><a href="../szdw/js1.htm">讲师</a> 
+                      
+                        </li>
+                        <li class="nav-1762  "><a href="../szdw/syjs.htm">实验技术</a> 
+                      
+                        </li>
+                        <li class="nav-1763  "><a href="../szdw/qtxl.htm">其他系列</a> 
+                      
+                        </li>
+                        <li class="nav-1764  "><a href="../szdw/txry.htm">退休人员</a> 
+                      
+                        </li>
+                    </ul>
+                  
+                    </li>
+                    
+                
+                    <li class="nav-1738"><a href="../rcpy/bksjy.htm">人才培养</a>
+                   
+                    <ul>
+                        <li class="nav-1765  "><a href="../rcpy/bksjy.htm">本科生教育</a> 
+                     
+                        <ul>
+                            <li><a href="../rcpy/bksjy/swyxkxzs.htm" target="_blank">生物医学科学招生</a>
+                         
+                            </li>
+                            <li><a href="../rcpy/bksjy/bkszs.htm">本科生招生</a>
+                         
+                            </li>
+                        </ul>
+                      
+                        </li>
+                        <li class="nav-3016  "><a href="../rcpy/bksjy/swyxkxzs.htm" target="_blank">生物医学科学招生</a> 
+                      
+                        </li>
+                        <li class="nav-1766  "><a href="../rcpy/yjsjy/zsxx.htm">研究生教育</a> 
+                     
+                        <ul>
+                            <li><a href="../rcpy/yjsjy/zsxx.htm">招生信息</a>
+                         
+                            </li>
+                            <li><a href="../rcpy/yjsjy/gzzd.htm">规章制度</a>
+                         
+                            </li>
+                            <li><a href="../rcpy/yjsjy/xycg.htm">学业成果</a>
+                         
+                            </li>
+                            <li><a href="../rcpy/yjsjy/dsdw.htm">导师队伍</a>
+                         
+                            </li>
+                        </ul>
+                      
+                        </li>
+                        <li class="nav-2556  "><a href="../rcpy/bshldz.htm">博士后流动站</a> 
+                      
+                        </li>
+                        <li class="nav-1771  "><a href="../rcpy/jxjy.htm">继续教育</a> 
+                      
+                        </li>
+                    </ul>
+                  
+                    </li>
+                    
+                
+                    <li class="nav-1739"><a href="../dqgz/dwgz/xwsd.htm">党群工作</a>
+                   
+                    <ul>
+                        <li class="nav-1772  "><a href="../dqgz/dwgz/xwsd.htm">党务工作</a> 
+                     
+                        <ul>
+                            <li><a href="../dqgz/dwgz/xwsd.htm">新闻速递</a>
+                         
+                            </li>
+                            <li><a href="../dqgz/dwgz/dzbfc.htm">党支部风采</a>
+                         
+                            </li>
+                            <li><a href="../dqgz/dwgz/lxyz.htm">两学一做</a>
+                         
+                            </li>
+                            <li><a href="../dqgz/dwgz/xxsjdjs1.htm">学习十九大精神</a>
+                         
+                            </li>
+                            <li><a href="../dqgz/dwgz/bwcx_ljsm_ztjy.htm">不忘初心 牢记使命 主题教育</a>
+                         
+                            </li>
+                        </ul>
+                      
+                        </li>
+                        <li class="nav-2676  "><a href="../dqgz/ghgz1.htm">工会工作</a> 
+                      
+                        </li>
+                        <li class="nav-2686  "><a href="../dqgz/txgz1.htm">团学工作</a> 
+                      
+                        </li>
+                        <li class="nav-1942  "><a href="../dqgz/sdsfjs.htm">师德师风建设</a> 
+                      
+                        </li>
+                        <li class="nav-1966  "><a href="../dqgz/cxllxxzl.htm">创新理论学习专栏</a> 
+                      
+                        </li>
+                        <li class="nav-1963  "><a href="../dqgz/wwxyjy.htm">我为学院建言</a> 
+                      
+                        </li>
+                    </ul>
+                  
+                    </li>
+                    
+                
+                    <li class="nav-1894"><a href="../rczp.htm">人才招聘</a>
+                
+                    </li>
+                    
+                </ul>
+            </div>
+</div>
+
+        </div>
+    </div>
+
+
+    <div class="n_banner">
+        <div class="img"><img src="../static/images/n_banner.jpg"></div>
+
+    </div>
+
+    <!--手机端 内页菜单-->
+    <div id="m_n_nav">
+        <div id="n_n_title">
+
+<a id="bnt_back" href="javascript:history.go(-1)" class="iconfont">
+<img src="../static/images/m_n_nav_left.png">
+</a>
+<h1>学院概况</h1>
+<div id="bnt_sub_nav" class="iconfont">
+<img src="../static/images/m_n_nav_right.png">
+</div></div>
+        <div id="sub_nav_content"><dl>
+            <dt class="on"> <a href="xyjj.htm" title="学院简介">学院简介</a></dt>
+        <dt> <a href="lsyg.htm" title="历史沿革">历史沿革</a></dt>
+        <dt> <a href="yxyf.htm" title="院训院风">院训院风</a></dt>
+        <dt> <a href="dzld.htm" title="党政领导">党政领导</a></dt>
+        <dt> <a href="dsj.htm" title="大事记">大事记</a></dt>
+ </dl></div>
+    </div>
+    <!--手机端 内页菜单-->
+
+    <div class="n_container">
+        <div class="wp">
+            <div class="leftNav">
+ <div class="sb1_head">
+<a href="xyjj.htm">学院概况</a>
+</div>
+<ul class="lv1">
+    <li class="active"><h2><a href="xyjj.htm" title="学院简介">学院简介</a></h2></li>
+    <li><h2><a href="lsyg.htm" title="历史沿革">历史沿革</a></h2></li>
+    <li><h2><a href="yxyf.htm" title="院训院风">院训院风</a></h2></li>
+    <li><h2><a href="dzld.htm" title="党政领导">党政领导</a></h2></li>
+    <li><h2><a href="dsj.htm" title="大事记">大事记</a></h2></li>
+</ul>
+
+</div>
+            <div class="rightBox">
+
+                <div class="n_tit">
+
+                    <div class="txt">
+                        <h2>
+<span>学院简介</span></h2>
+                        <div class="posi"><img src="../static/images/home.png" alt="">
+                <a href="../index.htm">首页</a>
+                <span>&gt;</span>
+                <a href="xyjj.htm">学院概况</a>
+                <span>&gt;</span>
+                <a href="xyjj.htm">学院简介</a>
+</div>
+                 
+                    </div>
+                </div>
+ 
+<div class="detail">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1361036835,'wbnews','u12')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta12(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta12('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1361036835,4003)</script>
+        <div class="dtl-tit">
+            <h4>    河南大学基础医学院简介</h4>
+
+        </div>
+
+    
+    <div class="dtl-txt">
+    <div id="vsb_content_2_4003_u121"><div id="vsb_content_2"><p class="vsbcontent_start" style="text-align: center;">（2021.05）</p>
+<p class="vsbcontent_img"><img width="550" src="/__local/A/25/D3/692D2B6D0B75BE4287AF1990BBF_D0CF8745_27CC9.jpg" vwidth="550" vheight="" vurl="/_vsl/A25D3692D2B6D0B75BE4287AF1990BBF/D0CF8745/27CC9" vsbhref="vurl" orisrc="/__local/A/25/D3/692D2B6D0B75BE4287AF1990BBF_D0CF8745_27CC9.jpg" class="img_vsb_content"><img width="500" height="376" src="/__local/4/93/69/AD1799030BF235172F527C390D2_D4231C93_19022.jpg" vwidth=" 555px" vheight=" 388px" vurl="/_vsl/49369AD1799030BF235172F527C390D2/D4231C93/19022" vsbhref="vurl" orisrc="/__local/4/93/69/AD1799030BF235172F527C390D2_D4231C93_19022.jpg" class="img_vsb_content" style="width: 555px; height: 388px;"><img width="500" height="375" src="/__local/9/37/86/2189F52B6208415B65422E0940D_196C93F1_18634.jpg" vwidth=" 557px" vheight=" 385px" vurl="/_vsl/937862189F52B6208415B65422E0940D/196C93F1/18634" vsbhref="vurl" orisrc="/__local/7/CC/D1/29569D18B6D4AC44EC2E2445328_C6A2DC08_30F6C9.jpg" class="img_vsb_content" style="width: 557px; height: 385px;"><img width="500" height="333" src="/__local/1/71/15/B7C3A28A2FE3A4202ADFB48CB6F_AE8A4565_17E31.jpg" vwidth=" 556px" vheight=" 359px" vurl="/_vsl/17115B7C3A28A2FE3A4202ADFB48CB6F/AE8A4565/17E31" vsbhref="vurl" orisrc="/__local/0/E9/64/C96FADDF390E704F6075DF5737F_5467B808_64B87A.jpg" class="img_vsb_content" style="width: 556px; height: 359px;"><img width="500" height="332" src="/__local/E/86/23/710F9F2938EDB876312AE50150B_E323AECC_10F06.jpg" vwidth=" 557px" vheight=" 355px" vurl="/_vsl/E8623710F9F2938EDB876312AE50150B/E323AECC/10F06" vsbhref="vurl" orisrc="/__local/0/3F/55/F5BB7A69D8C42B230C1E4EBE351_AC3EB221_A87741.jpg" class="img_vsb_content" style="width: 557px; height: 355px;"><img width="500" height="334" src="/__local/8/EB/3E/6A234D8D6F9A38A5516C4405208_69E85BAD_10A67.jpg" vwidth=" 558px" vheight=" 363px" vurl="/_vsl/8EB3E6A234D8D6F9A38A5516C4405208/69E85BAD/10A67" vsbhref="vurl" orisrc="/__local/C/9B/19/3B3470D9BC21AD217852BF91C29_2C146759_A6A6B9.jpg" class="img_vsb_content" style="width: 558px; height: 363px;"></p>
+<p>河南大学基础医学院坐落于中原腹地、八朝古都--开封市。学院前身是始建于1929年的开封市内地会福音医院护士学校，经过多次更名变迁，于上世纪末发展成为开封医学高等专科学校。2000年与河南大学和开封师范高等专科学校合并为新的河南大学。2001年三校合并成立医学院，2016年10月河南大学成立医学院（部），更名为基础医学院。</p>
+<p>基础医学院是河南大学重点建设学院，也是综合实力领先、社会影响较大的学院之一。2020年获全国抗击新冠肺炎疫情先进集体。</p>
+<p>学院承担临床医学、口腔医学、药学、药物制剂、中药学、临床药学和护理学等7个本科专业的基础课和基础医学研究生的教学工作。设有人体解剖学、组织学与胚胎学、细胞生物学与遗传学、医学免疫学、病理学、病理生理学、人体寄生虫学、生理学、预防医学、生物化学与分子生物学、医学微生物学、医用无机化学、医用有机化学、医用物理学、医学人文15个教研室，设有机能、形态、医用生物3个专业基础实验室。</p>
+<p>学院有一批高水平、复合型人才领衔的人才队伍。现有教职工133人，94名专任教师中，有教授26人，副教授67人；具有博士以上学历64人。拥有双聘院士2人，百千万人才工程入选者2人，享受国务院特殊津贴专家3人，中原学者1人，省特聘教授2人，省科技创新人才1人，杰出人才特区支持计划特聘教授6人，黄河学者3人。</p>
+<p>学院现有河南省一级重点学科：基础医学。一级学科基础医学具有硕士学位授予权，二级学科免疫生物学具有博士学位授予权。有国家级实验室1个：抗体药物开发技术国家地方联合工程实验室；省级实验室4个：抗体药物河南省工程实验室、河南省抗体药物国际联合实验室、河南省核蛋白基因调控国际联合实验室，河南省肿瘤分子诊断与精准治疗工程技术研究中心；地厅级实验室3个：河南省细胞与分子免疫重点实验室，开封市细胞信号转导重点实验室，开封市感染病与生物安全重点实验室；校级科研实验室2个：细胞信号转导实验室、受体基因调控与药物研发实验室；校级研究所5个：转化医学研究所、医学生物信息学研究所、免疫学研究所、分子医学研究所，环境医学研究所；省级科技创新型团队3个，校级优秀学术群体2个。</p>
+<p>学院坚持教学立院的办学宗旨，以培育一流学生为目标，努力创造现代化的教学条件，打造博学严谨的教师队伍和高质量的示范金课。近年来获批省级基础医学实验教学中心1个，省级医学虚拟仿真实验教学中心1个，省级虚拟仿真实验项目2个，省级优秀基层教学组织1个，省级合格基层教学组织2个，省级双语教学示范课程1门，省级一流本科课程6门，省级本科高校思政样板课程1门。有省教学系统标兵4人。</p>
+<p>学院坚持科研强院的办学理念，以一流科研成果产出和一流社会服务为目标，注重整合多学科资源，走基础+临床的联合攻关之路，不断推动科学研究向更高层次迈进。近年来主持完成和在研国家“863”计划子课题2项，国家重大新药创制1项，国家自然科学基金68项；河南省杰出人才创新基金等各类课题280项。发表学术论文941篇，其中SCI收录306篇。获国家发明专利42项，出版专著、教材92部。获省级科研及论文奖励192项。</p>
+<p class="vsbcontent_end">弦歌不辍且步履铿锵，历经沧桑乃成就烁今。学院始终秉承“恒德仁心 精医济世”的院训，传承和发扬“敬业奉献 团结奋进”的院风，为建成“国内知名、区域领先”的一流学院不懈奋斗!</p></div></div>
+    <span id="vsb_content_2_4003_u12" name="vsb_content_2_4003_u12"></span><br><br>
+    
+    </div>
+
+</div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+
+        <div class="ft2">
+            <div class="wp flex">
+
+
+                <div class="ftleft">
+                    <div class="ftlogo">    <a href="#"><img src="../static/images/logo.png" border="0"></a>
+</div>
+                </div>
+                <div class="ftdz">
+<p>地址：河南大学金明校区北门向里基础医学院大楼　</p>
+<p>电话：0371-23880585（院办）</p>
+<p>邮编：475004</p>
+<p>邮箱：jcyxy_2022@163.com</p></div>
+                <div class="ftlj">
+                    <div class="plink plink1 flex"><script language="javascript" src="/system/resource/js/openlink.js"></script><p>友情链接</p>
+                        <i class="iconfont icon-down"></i>
+                        <ul class="linklist">
+    <li><a href="http://www.moe.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1361036835, 94966)">教育部</a></li>
+    <li><a href="http://www.chinapop.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1361036835, 94967)">国家卫生和计划生育委员会</a></li>
+    <li><a href="http://www.haedu.gov.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1361036835, 94968)">省教育厅</a></li>
+    <li><a href="http://www.henu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1361036835, 94969)">河南大学</a></li>
+    <li><a href="http://jwc.henu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1361036835, 94970)">教务处</a></li>
+    <li><a href="http://125.219.33.230/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1361036835, 94971)">校图书馆</a></li>
+</ul></div>
+                    <div class="plink plink2 flex"><p>院系链接</p>
+                        <i class="iconfont icon-down"></i>
+                        <ul class="linklist">
+    <li><a href="http://www.bjmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1361036835, 94972)">北京大学医学部</a></li>
+    <li><a href="http://www.pumc.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1361036835, 94973)">北京协和医学院</a></li>
+    <li><a href="https://hms.harvard.edu/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1361036835, 94974)">哈佛大学医学院</a></li>
+    <li><a href="https://www.medsci.ox.ac.uk/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1361036835, 94975)">牛津大学医学院</a></li>
+    <li><a href="http://www.hnsrmyy.net/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1361036835, 94976)">河南省人民医院</a></li>
+    <li><a href="http://www.huaihe.com.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1361036835, 94977)">淮河临床学院</a></li>
+    <li><a href="http://www.hdyfy.com/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1361036835, 94978)">河南大学第一附属医院</a></li>
+</ul></div>
+                </div>
+                <div class="ftright">
+                    <div class="ftlink">    <a href="#">
+<div class="icon">
+    <img src="../static/images/jc-code.jpg" alt="" class="img01">
+
+</div>
+<p>微信公众号</p>
+
+</a></div><a href="#">
+                </a></div><a href="#">
+
+
+            </a></div><a href="#">
+        </a></div><a href="#">
+        <div class="bq">
+            <div class="wp "><p style="color:#fff;">Copyright @ 河南大学基础医学院 <span id="year">2025</span>  All Rights Reserved </p></div>
+        </div>
+    </a></div><a href="#">
+
+
+
+
+
+</a></body></html>

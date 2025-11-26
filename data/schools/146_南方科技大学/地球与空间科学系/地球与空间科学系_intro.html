@@ -1,0 +1,492 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>南方科技大学-地球与空间科学系</title>
+<meta name="keywords" content="南方科技大学-地球与空间科学系">
+<meta name="description" content="南方科技大学-地球与空间科学系">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"><link rel="stylesheet" href="/statics/index/css/news.css"><script src="/statics/index/js/jquery-1.12.3.min.js"></script><script src="/statics/index/js/jquery.SuperSlide.2.1.1.js"></script><style>
+	.kb p{
+		padding: 0px!important;
+		text-indent: 0em!important;
+	}
+
+</style></head><body><div class="nybanner" style="background:url(/data/slide/20170328_162221_97082.jpg) no-repeat center;background-size: 100% 100%;"><div class="nybn_wenzi"><div class="center_nybn"><h1>本系概况</h1></div></div></div><!--导航--><style>   .submenu2{  margin-left:8%}
+
+   .submenu3{  margin-left:21%}
+
+   .submenu4{  margin-left:34%}
+
+   .submenu5{margin-left: 39%; }
+
+   .submenu6{  margin-left:50%}
+
+   .submenu7{   margin-left:60%}
+
+    .submenu8{  float:right}
+ @media screen and (min-width:1280px) and (max-width:1520px){
+        .nav .nav-left .left-nav>li:first-child {width: 8%!important;}
+
+        .nav .nav-left .left-nav>li {
+            float: left;
+            line-height: 60px;
+            width: 12%;
+            font-size:16px;
+        }
+	.nav .nav-left .left-nav>li>a {
+		font-size: 16px;
+	}
+
+    }
+</style><script type="text/javascript">    function tijiao(){
+
+
+
+        var valueid=$('#name').val();
+
+
+
+        if(valueid==""||valueid==null)
+
+        {
+
+            alert('请输入你要搜索的内容！');
+
+        }
+
+        else{
+
+            document.getElementById('ss').submit();
+
+        }
+
+    }
+
+
+
+</script><script type="text/javascript">    //http://ess.sustc.edu.cn/wap.php?s=/Index-index.html
+
+    var current_url=location.protocol+"//"+location.host;
+    var current_url2=location.protocol+"//"+location.host+"/";
+    if(location.href==current_url || location.href==current_url2){
+        var widthFlag=600;
+        var jump_index=location.protocol+"//"+location.host+"/wap.php?s=/Index-index.html";
+        if(window.screen.width<widthFlag){
+            location.href=jump_index;
+        }
+        if(window.innerWidth<widthFlag){
+            location.href=jump_index;
+        }
+        if(window.outerWidth<widthFlag){
+            location.href=jump_index;
+        }
+        if(document.documentElement.clientWidth<widthFlag){
+            location.href=jump_index;
+        }
+    }
+
+    var trigger;
+
+
+
+	
+
+	
+
+
+
+    function changeyuyan(yuyan){
+
+        $.get('/Index-chagelang.html', {l:yuyan},function(data){
+
+            if(data!==''){
+
+                window.location.href=window.location.href;
+
+
+
+            }
+
+        });
+
+    }
+
+	　function GetUrlRelativePath()
+
+　　{
+
+　　　　var url = document.location.toString();
+
+　　　　var arrUrl = url.split("//");
+
+
+
+　　　　var start = arrUrl[1].indexOf("/");
+
+　　　　var relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
+
+
+
+　　　　if(relUrl.indexOf("?") != -1){
+
+　　　　　　relUrl = relUrl.split("?")[0];
+
+　　　　}
+
+　　　　return relUrl;
+
+　　}
+
+
+
+
+
+jQuery(window).resize(function(event) {
+
+    if(jQuery(window).width()<600){
+
+	// if(jQuery(window).width()<1280){
+
+		t=GetUrlRelativePath();
+
+
+        console.log("准备跳转到手机端 205");
+		 window.location.href="wap.php?s="+t.replace('index.php','');
+
+		
+
+		}
+
+
+
+      jQuery('.nav .logo a').css("margin-top",((120-jQuery('.nav .logo a img').height())/2)+'px');
+
+        
+
+    });
+
+
+
+    jQuery(window).load(function(event) {
+
+      jQuery('.nav .logo a').css("margin-top",((120-jQuery('.nav .logo a img').height())/2)+'px');
+
+    });
+
+    $(document).ready(function(){
+
+		jQuery('.nav .logo a').css("margin-top",((120-jQuery('.nav .logo a img').height())/2)+'px');
+
+	    $('.nav-left .left-nav > li > a').hover(
+
+        function(){
+
+            clearTimeout(trigger);
+
+            $('.nav-left .left-nav li').removeClass('subShow');
+
+            $(this).parent().addClass('subShow');
+
+        },
+
+        function(){
+
+            trigger = setTimeout(function(){
+
+                $(this).parent().removeClass('subShow');
+
+                $('.nav-left .left-nav li').removeClass('subShow');
+
+            },300);
+
+        }
+
+    );
+
+    $('.nav-left .left-nav .subNav').hover(
+
+        function(){
+
+            clearTimeout(trigger);
+
+        },
+
+        function(){
+
+            trigger = setTimeout(function(){
+
+                $('.nav-left .left-nav li').removeClass('subShow');
+
+            },300);
+
+        }
+
+    );
+
+        var daohang="#002d86";
+
+
+
+        $(".wrapnav").css("background",daohang);
+
+        $(".down").css("background",daohang);
+
+        $(".foot").css("background",daohang);
+
+    });
+
+</script><style>/*.nav-left .subShow a {
+
+    color: #fff!important;
+
+    border-color: #fff!important;
+
+}*/
+
+.nav-left .left-nav li.act a {
+
+    border-color: #fff;
+
+}
+
+.nav-left .left-nav li.act a {
+
+    color: #fff;
+
+}
+
+.nav-left .subNav {
+
+    position: absolute;
+
+   z-index: 99999999999999999999;
+
+    top: 420px;
+
+    left: 0px;
+
+    right: 0px;
+
+    width: 100%;
+
+    margin: 0px auto;
+
+    text-align: center;
+
+    background: rgb(0, 45, 134);
+
+    opacity: 0.85;
+
+    filter: alpha(opacity=85);
+
+    display: none;
+
+    transition: all 0.2s linear;
+
+	-webkit-transition: 0.2s linear all;
+
+}
+
+.nav-left .subNav  div {
+
+    text-align: right;
+
+	    width: 70%;
+
+    margin: 0 auto;
+
+}
+
+.nav-left .subNav ul li {
+
+    float: none;
+
+    display: inline-block;
+
+    _zoom: 1;
+
+    _display: inline;
+
+    padding: 20px 0px;    line-height: normal;
+
+}
+
+.ie7 .nav-left .subNav ul li {
+
+    display: inline;
+
+}
+
+.nav-left .subNav ul li a {
+
+    padding: 0px 10px;
+
+    line-height: 28px;
+
+    height: 28px;
+
+    display: inline-block;
+
+    _zoom: 1;
+
+    _display: inline;
+
+    color: #a3b0c2!important;
+
+    font-weight: normal;
+
+    font-size: 14px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    transition: all 0.2s linear;
+
+	-webkit-transition: 0.2s linear all;
+
+}
+
+.nav-left .subNav ul li a:hover,
+
+.nav-left .subNav ul li.act a {
+
+    background: #0073e5;
+
+    color: #fff!important;
+
+}
+
+.nav-left .subShow .subNav {
+
+    display: block;
+
+    transition: all 0.2s linear;
+
+	-webkit-transition: 0.2s linear all;
+
+}
+
+</style><div class="wrapnav" style="background: rgb(0, 45, 134);"><div class="nav" style="display: flex;justify-content: space-between;width:75%;"><div class="nav-left" style="width: unset;float: unset;flex:1;"><div class="left-top"><a href="https://www.sustech.edu.cn/" class="aa" style="padding-right:20px">南科大首页</a><a href="https://sustech.libguides.com/c.php?g=931451&amp;p=6732062" class="aa" target="_blank">图书馆</a><a style="width: 48px;" href="javascript:changeyuyan('zh-en')" class="yuyan">English</a><form id="ss" action="/New-selects.html" type="get" style="position: relative;pointer-events:none;width: 160px;height: 30px;float: left;padding-left: 50px;"><input type="text" class="txt" placeholder="请输入关键词" id="name" name="ss" style="pointer-events: auto;"><input type="button" onclick="return tijiao()" class="btn" style="pointer-events: auto;"></form></div><ul class="left-nav" style="display: flex;gap: 1rem;"><li style="width: 7%;"><a href="/Index-index.html">首页</a></li><li><a href="/About-index.html">本系概况</a><div class="subNav"><div style="width:70%; margin:0 auto"><div class="container" style="width:71%;float:left; text-align:left"><ul class="submenu2"><li><a href="About-index-id-26.html">本系概况</a></li><li><a href="About-index-id-27.html">本系标识</a></li></ul></div></div></div></li><li><a href="/New-index.html">新闻中心</a><div class="subNav"><div style="width:70%; margin:0 auto"><div class="container" style="width:71%;float:left; text-align:left"><ul class="submenu3"><li><a href="New-index-id-1.html">新闻动态</a></li><li><a href="New-index-id-8.html">学术报告</a></li><li><a href="New-index-id-2.html">通知公告</a></li><li><a href="New-index-id-12.html">师生风采</a></li></ul></div></div></div></li><li><a href="/Case-index.html">教职员工</a><div class="subNav"><div style="width:70%; margin:0 auto"><div class="container" style="width:71%;float:left; text-align:left"><ul class="submenu4"><li><a href="Case-index-id-20.html">讲席教授</a></li><li><a href="Case-index-id-21.html">教授</a></li><li><a href="Case-index-id-22.html">副教授</a></li><li><a href="Case-index-id-23.html">助理教授</a></li><li><a href="Case-index-id-24.html">研究教授</a></li><li><a href="Case-index-id-25.html">研究副教授</a></li><li><a href="Case-index-id-26.html">研究助理教授</a></li><li><a href="Case-index-id-1.html">教师系列</a></li><li><a href="Case-index-id-16.html">研究系列</a></li><li><a href="Case-index-id-18.html">博士后</a></li><li><a href="Case-index-id-28.html">研究学者</a></li><li><a href="Case-index-id-19.html">行政服务</a></li></ul></div></div></div></li><li><a href="/New-field.html">科学研究</a><div class="subNav"><div style="width:70%; margin:0 auto"><div class="container" style="width:71%;float:left; text-align:left"><ul class="submenu5"><li><a href="/New-field.html">研究领域</a></li><li><a href="/New-brace.html">支撑平台</a></li><li><a href="/New-research.html">科研进展</a></li></ul></div></div></div></li><li><a href="/Join-index-fid-8.html">学生工作</a><div class="subNav"><div style="width:70%; margin:0 auto"><div class="container" style="width:71%;float:left; text-align:left"><ul class="submenu6"><li><a href="/Join-index-id-6-fid-8.html">本科生培养</a></li><li><a href="/Join-index-id-5-fid-8.html">研究生培养</a></li><li><a href="/Join-index-id-8-fid-4.html">招生就业</a></li><li><a href="/Join-index-id-21-fid-9.html">学生活动</a></li></ul></div></div></div></li><li><a href="/New-partymasses.html">党群园地</a><div class="subNav"><div style="width:70%; margin:0 auto"><div class="container" style="width:71%;float:left; text-align:left"><ul class="submenu7"><li><a href="New-partymasses-id-19.html">党建工作</a></li><li><a href="New-partymasses-id-20.html">工会</a></li></ul></div></div></div></li><li><a href="/Recruitment-index.html">人才招聘</a><div class="subNav"><div style="width:70%; margin:0 auto"><div class="container" style="width:71%;float:left; text-align:left"><ul class="submenu8"><li><a href="Recruitment-index-id-4.html">教师招聘</a></li><li><a href="Recruitment-index-id-14.html">研究员招聘</a></li><li><a href="Recruitment-index-id-6.html">博士后招聘</a></li><li><a href="Recruitment-index-id-7.html">科研助理招聘</a></li><li><a href="Recruitment-index-id-5.html">访问学生招聘</a></li><li><a href="Recruitment-index-id-22.html">实验室助理</a></li></ul></div></div></div></li><li><a href="/Data-catelist.html">资料下载</a><div class="subNav"><div style="width:70%; margin:0 auto"><div class="container" style="width:71%;float:left; text-align:left"><ul class="submenu9"><li><a href="Data-catelist-id-31.html">公有</a></li><li><a href="Data-catelist-id-33.html">私有</a></li></ul></div></div></div></li><li><a href="https://meetingroom.ess.sustech.edu.cn/web/">会议室预约</a></li></ul></div><div class="logo" style="float: unset;"><a href="/Index-index.html" style="margin-top: 31.5px;"><img src="/data/setting/20190312_104900_38064.png" alt=""></a></div></div></div><script>    $(function(){
+
+		
+
+        $(".left-nav li").hover(function(){
+
+            $(this).find(".down").stop().slideDown()
+
+        },function(){
+
+            $(this).find(".down").stop().slideUp()
+
+        })
+
+    })
+
+</script><script>    $(document).ready(function(){
+
+        if($('#xinw').length){
+
+            var h = 0
+
+            $('#xinw li').each(function(index, val) {
+
+                if($(val).find('.summary').height() > h){
+
+                    h = $(val).find('.summary').height();
+
+                }
+
+            });
+
+            $('.news .hd').css({
+
+                bottom: h+80
+
+            });
+
+        }
+
+        var width=document.body.offsetWidth;
+
+        // // ios设备
+
+        // var isiOS = navigator.userAgent.match('iPad') || navigator.userAgent.match('iPhone') ||                                            navigator.userAgent.match('iPod');
+
+        // // 安卓设备
+
+        // var isAndroid = navigator.userAgent.match('Android');
+
+    var ua = navigator.userAgent;
+
+    var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+
+        isIphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+
+        isAndroid = ua.match(/(Android)\s+([\d.]+)/),
+
+        isMobile = isIphone || isAndroid;
+
+
+
+        // if(isiOS || isAndroid || width<1280) {
+
+        if(width<600) {
+
+        // if(isMobile && width<1280) {
+
+		t=GetUrlRelativePath();
+            console.log("准备跳转到手机端 593");
+
+		 window.location.href="wap.php?s="+t.replace('index.php','');
+
+        }
+
+    })
+
+</script><!--导航--><!--内容--><div class="mian"><div class="sidebar_a"><dl><dt>本系概况</dt><dd class="first aa last"><a href="/About-index-id-26.html">本系概况</a></dd><dd class="first aa last"><a href="/About-index-id-27.html">本系标识</a></dd></dl></div><div class="sidebar_b"><div class="dqwz"><ul><li>当前位置：</li><li><a href="/Index-index.html">首页</a><strong>&gt;</strong></li><li><a href="">本系概况</a></li></ul></div><div class="content"><h2>本系概况</h2><div class="contentzt"><style>
+					span{
+						display: inline;
+					}
+				</style><p>
+	<br>
+</p>
+<section data-role="outer" label="Powered by 135editor.com">
+<p style="margin-top:0px;margin-bottom:0px;padding:0px;text-indent:2em;">
+	<span style="font-size:16px;"><br>
+</span> 
+</p>
+<p style="margin-top:0px;margin-bottom:0px;padding:0px;text-indent:2em;">
+	<span style="font-size:16px;">&nbsp;南方科技大学地球与空间科学系成立于2017年1月，由中国科学院院士陈晓非教授担任首届系主任。</span> 
+</p>
+<p style="margin-top:0px;margin-bottom:0px;padding:0px;">
+	<br>
+</p>
+<p style="margin-top:0px;margin-bottom:0px;padding:0px;">
+	<span style="font-size:16px;">&nbsp; &nbsp; &nbsp; 本系建系宗旨是：建设国际化的、一流的地球与空间科学人才培养与科研基地，以促进人类对地球及其所处空间这一复杂自然系统运动规律的探索和认知，为应对当前人类社会发展中所面临的来自于自然环境、资源与灾害方面的严峻挑战以及开展行星际空间探索提供科学基础，并培养具有足够能力解决未来地球与空间科学领域科学问题的学术领军人才与管理人才。</span> 
+</p>
+<p style="margin-top:0px;margin-bottom:0px;padding:0px;">
+	<br>
+</p>
+<p style="margin-top:0px;margin-bottom:0px;padding:0px;">
+	<span style="font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;南方科技大学地球与空间科学系在以下几个研究方向上开展学术研究与人才培养：地球内部物理和动力学、应用地球物理学和空间物理和行星科学。目前，<strong style="color:#333333;font-size:14px;letter-spacing:1.5px;text-align:justify;white-space:normal;background-color:#FFFFFF;"><span style="font-size:16px;color:#000000;">本系已有教研人员31人，包括讲席教授5人，教授5人，副教授17人，助理教授4人；其中包括中国科学院院士1人，国家级领军专家7人，国家级青年专家15人。</span></strong>我们期待更多的优秀人才加盟，共建世界一流地球与空间科学人才培养和科学研究基地。</span> 
+</p>
+<p style="margin-top:0px;margin-bottom:0px;padding:0px;">
+	<br>
+</p>
+<section label="Powered by 135editor.com" data-role="outer" style="margin:0px;padding:0px;font-size:16px;box-sizing:border-box;"><section class="_135editor" data-role="paragraph" style="margin:0px;padding:0px;box-sizing:border-box;">
+<p style="text-align:center;margin-top:0px;margin-bottom:0px;padding:0px;">
+	<img src="/attached/image/20250702/20250702143133_38590.jpg" width="800" height="533" alt=""> 
+</p>
+</section></section><section class="_135editor" data-role="paragraph">
+<p>
+	<br>
+</p>
+</section></section><span style="font-size:16px;"></span> 
+<p>
+	<br>
+</p></div></div></div><div style="clear: both;"></div></div><!--内容--><style>
+	.qwer span{color: #fff;}
+	.foot-link strong{
+		color:white;
+	}
+</style><div style="clear:both"></div><div class="foot" style="background: rgb(0, 45, 134);"><div class="fonter"><div class="logo bk"><a href="/Index-index.html"><img src="/data/setting/20190312_104900_38064.png" alt=""></a></div><dl class="foot-one bk"><dt>网站导航</dt><div style="float: left;margin-top: 10px;width: 100px;"><dd><a href="/Index-index.html">首页</a></dd><dd><a href="/About-index.html">本系概况</a></dd><dd><a href="/New-index.html">新闻中心</a></dd><dd><a href="/Case-index.html">教职员工</a></dd></div><div style="float: left;margin-top: 10px;width: 100px;"><dd><a href="/New-field.html">科学研究</a></dd><dd><a href="/Join-index-fid-8.html">学生工作</a></dd><dd><a href="/New-partymasses.html">党群园地</a></dd><dd><a href="/Recruitment-index.html">人才招聘</a></dd></div><div style="clear: both;"></div></dl><dl class="foot-two bk"><dt>联系我们</dt><p style="margin-top: 10px;width: 275px;color: #fff;" class="qwer">电话：0755-88018693<br>
+传真：0755-88015009<br>
+邮编：518055<br>
+地址：广东省深圳市南山区学苑大道1088号 理学院<br></p></dl><div class="foot-ewm bk"><div class="ewm ewm1"><img src="/data/setting/20250613_154911_53768.jpg" style="width: 100px;" alt=""><p style="width: 100px;">南科大公众号</p></div><div class="ewm"><img src="/data/setting/20180606_172155_54821.png" alt=""><p style="width: 100px;">地空系公众号</p></div></div><div style="clear: both;"></div></div><div class="fonter" style="width: 100%;background: white;"><div style="display: flex;justify-content: center;"><div class="foot-link bk" style="display: flex;align-items: center;"><strong style="color: black;">友情链接</strong><span style="margin-left:0.5rem;color:black;"> &gt;&gt;</span><div style="color: #fff; font-size: 12px;margin-left: 0.5rem;"><a href="https://www.earthquake.ac.cn/" target="_blank" style="color: #00bfff; text-decoration: none;">国家防震减灾公共服务平台</a></div></div></div></div></div><!--版尾--></body></html>

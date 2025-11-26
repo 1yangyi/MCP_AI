@@ -1,0 +1,308 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>认识国交-国际交流学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="认识国交">
+<meta name="keywords" content="国际交流学院,认识国交">
+
+    
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/swiper.min.css">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307b76465550555742000300024752 -->
+<link rel="stylesheet" type="text/css" href="../copy_1_newlist.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(2526,'/copy_1_newlist.jsp',-1,939333268)</script>
+</head>
+<body>
+<div>
+    <header>
+        <div class="container">
+            <div class="left logo">
+                <img src="../static/images/logo.png" alt="宁波大学国际交流学院">
+            </div>
+            <div class="right navs">
+                <div class="searchlang">
+                    <div class="language right">
+                        <img class="left" src="../static/images/earth.png" alt="">
+                        <p class="left current-lang">中文</p>
+                        <i class="left choose-lang right"></i>
+                        <ul>
+                            <li><a href="http://icnbu.nbu.edu.cn/">中文</a></li>
+                            <li><a href="http://icnbu.nbu.edu.cn/Admissions.htm">English</a></li>
+                        </ul>
+                    </div>
+                                      <div class="search right">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu0">
+    <div id="appu0"><div><div class="search right"><input type="text" placeholder="搜索" autocomplete="off"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+          
+            
+             <div class="search right">
+            <input type="text" placeholder="搜索"  autocomplete="off"  v-model=query.keyWord @keyup.enter="onSubmit">
+        </div>
+            
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "939333268";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                </div>
+
+                <div class="nav right">
+    <ul>        <li class="first"><a href="http://icnbu.nbu.edu.cn/">首页</a>
+                </li><li class="first"><a href="#">关于我们</a>
+            <ul class="drop">
+                <li><a href="/gywm/rsgj.htm">认识国交</a></li>
+                <li><a href="/gywm/xyld.htm">学院领导</a></li>
+                <li><a href="/gywm/lrld.htm">历任领导</a></li>
+                <li><a href="/gywm/bmsz.htm">部门设置</a></li>
+                <li><a href="/gywm/fzlc.htm">发展历程</a></li>
+    </ul>
+</li>
+        <li class="first"><a href="/lxnd.htm">留学宁大</a>
+            <ul class="drop">
+                <li><a href="/lxnd/gywm.htm">关于我们</a></li>
+                <li><a href="/lxnd/lxsq.htm">留学申请</a></li>
+                <li><a href="/lxnd/jxj.htm">奖学金</a></li>
+                <li><a href="/lxnd/rxzn.htm">入学指南</a></li>
+                <li><a href="/lxnd/xysh.htm">校园生活</a></li>
+                <li><a href="/lxnd/HSKks.htm">HSK考试</a></li>
+                <li><a href="/lxnd/lxwm.htm">联系我们</a></li>
+    </ul>
+</li>
+
+
+                <li class="first"><a href="#">教学科研</a>
+
+            <ul class="drop">
+
+
+                <li><a href="../jxky1/jx.htm">教学</a></li>
+
+
+
+                <li><a href="../jxky1/ky1.htm">科研</a></li>
+
+
+    </ul>
+</li>
+        <li class="first"><a href="#">党群工作</a>
+
+            <ul class="drop">
+
+
+                <li><a href="../dqgz/dyhd.htm">党员活动</a></li>
+
+
+
+                <li><a href="../dqgz/fghhd.htm">分工会活动</a></li>
+
+
+
+                <li><a href="../dqgz/whhd.htm">文化活动</a></li>
+
+
+    </ul>
+</li>
+        <li class="first"><a href="#">校友工作</a>
+
+            <ul class="drop">
+
+
+                <li><a href="../xygz/wgxs.htm">外国学生</a></li>
+
+
+
+                <li><a href="../xygz/zgxs.htm">中国学生</a></li>
+
+
+    </ul>
+</li>
+</ul></div>
+        </div>
+</div>
+</header>
+
+<div class="news-lists">
+    <div class="container">
+        <div class="left leftnav">
+
+            <a href=""><h2>
+关于我们</h2></a>
+
+         <div><ul class="navs">
+        <ul class="third">
+            
+            <li style="background:rgba(255, 245, 237, 1) ">
+        <a href="rsgj.htm" class="on">认识国交</a>
+            </li>
+
+            <li "="">
+        <a href="xyld.htm">学院领导</a>
+            </li>
+
+            <li "="">
+        <a href="lrld.htm">历任领导</a>
+            </li>
+
+            <li "="">
+        <a href="bmsz.htm">部门设置</a>
+            </li>
+
+            <li "="">
+        <a href="fzlc.htm">发展历程</a>
+            </li>
+
+</ul>
+</ul></div>
+
+        </div>
+        <div class="right rightlist">
+            <div class="newsnav">
+                <div><div class="newsnav">
+    <a href="../index.htm">网站首页</a><span> &gt; </span>
+
+    
+<a href="rsgj.htm">认识国交</a><span> &gt; </span>
+
+
+</div></div>
+            </div>
+
+            <div class="newstext">
+
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',939333268,'wbnews','u5')</script>
+<script>function seeContenta5(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta5('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',939333268,5187)</script>
+ <h1>认识国交</h1>
+                <p class="time"></p>
+ <div class="text"><div id="vsb_content_5187_u51"><div id="vsb_content"><p style="text-indent: 2em; text-align: left; margin-bottom: 20px; line-height: 2em;"><span style="color: rgb(89, 89, 89); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 20px;">宁波大学国际交流学院，前身为1996年成立的教育国际交流中心，1999年底正式更名为国际交流学院,过去的20多年是学院不懈奋斗、取得辉煌成绩的20多年，学院也成为一所年轻而充满底蕴的学院。学院是宁波大学实施国际化办学战略的重要基地，也是引进国际优质教育和培训资源、加强国际合作和教育服务的重要窗口。学院主要承担着全校国际学生招生、管理和服务，国际学生汉语言进修、短期来华交流，中外合作非学历项目、出国留学培训班等项目的举办等重要职能，学院设有面向来华留学生的国家汉语水平考试(HSK)宁波大学考点。</span></p>
+<p style="text-indent: 2em; text-align: left; margin-bottom: 20px; line-height: 2em;"><span style="color: rgb(89, 89, 89); text-indent: 2em; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 20px;">学院是全校国际学生的归口管理单位。目前共有在校国际学生2007人，其中学历生1739人。根据浙江省教育厅统计，我校学历国际学生规模在浙江省属高校中排名第一。在西南交通大学发布的大学国际化水平排名(URI-2019)中，我校整体国际化水平位居全国第69位，其中学生国际化排名位列第50位。</span></p>
+<p style="text-indent: 2em; text-align: left; margin-bottom: 20px; line-height: 2em;"><span style="color: rgb(89, 89, 89); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 20px;">学院积极弘扬“厚德博学、汇通中外”的院训精神，已建立起一支国际化的管理队伍和专兼职相结合的师资队伍。学院与加拿大汉伯学院合作的中加国际商务管理项目釆用“2+1+X”的培养模式，始办于1996年，是省内高校中起步最早、办学最规范、规模最大的中外合作办学项目之一，也是目前浙江省唯一获批的非学历中外合作办学项目。20多年来，已为省市地方经济和社会发展培养输送了一大批具备国际视野的复合型、应用型和外向型人才，曾被教育部誉为 “国内同类合作项目的成功典范”。该项目致力培养德智体美劳全面发展、具有全球竞争力、领导者发展潜质和优秀人文素养的复合型国际化人才,目前已培养出一大批各行各业的杰出人才，包括有荣获浙江省“十佳新生代企业家”、优秀创业企业家、宁波市“3315计划”创业人才、中国最具价值经理人、海创会会长、外资金融机构总裁以及国外高校博士等优秀学生。</span></p>
+<p style="text-indent: 2em; text-align: left; margin-bottom: 20px; line-height: 2em;"><span style="color: rgb(89, 89, 89); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 20px;">学院已形成鲜明的办学特色，并积累了比较丰富的国际教育合作办学和管理经验，赢得了社会各界的普遍赞誉。学院正致力于稳步扩大国际学生招生规模，努力优化生源结构，提升办学层次；2020年参加来华留学教育质量认证，成为浙江省首所正式参加并通过来华留学教育质量认证的高校;以国家教育对外开放政策为指引，进一步彰显国际化办学的特色优势，为推进宁波大学“双一流”建设发挥积极作用。</span></p>
+<p style="text-indent:43px;line-height:39px"><br></p></div></div></div>
+
+    <span id="vsb_content_5187_u5" name="vsb_content_5187_u5"></span><br><br>
+    
+<p></p>
+</div>
+            <div class="pages">
+  
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer-container">
+    <div>    <div class="foot-logo">
+        <img src="/static/images/logo-2.png" alt="">
+    </div>
+    <div class="contact">
+        <a class="tell" href="">0086 574 87600079</a>
+        <a class="email" href="">admissions@nbu.edu.cn</a>
+    </div>
+    <p class="address">
+        © 宁波大学  版权所有    <a href="https://beian.miit.gov.cn/" ;="" target="_blank" style="color: rgba(255, 255, 255, .6)">浙ICP备05018778号-1</a>    地址：浙江省宁波市江北区风华路818号
+    </p>
+       <p><a href="https://www.nbu.edu.cn" style="color: rgba(255, 255, 255, .6)">宁波大学</a>&nbsp;&nbsp; <a href="http://10.22.100.63:8080/system/login.jsp" style="color: rgba(255, 255, 255, .6)">管理入口</a> <br></p>
+</div>
+</div>
+
+<div class="fixbar">
+    <a class="customer" href=""></a>
+</div>
+
+
+
+</div></body></html>

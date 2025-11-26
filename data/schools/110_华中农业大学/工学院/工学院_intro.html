@@ -1,0 +1,752 @@
+<!DOCTYPE html><html lang="zh-cn"><head>
+<meta charset="utf-8">
+<title>学院简介-工学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="工学院,学院简介">
+
+
+<meta name="Description" content="">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="../css/jquery.mmenu.all.css">
+<link rel="stylesheet" href="../css/swiper.min.css">
+<link rel="stylesheet" href="../css/common.css">
+
+
+<!--[if lt IE 9]>
+    <script src="../js/html5shiv.min.js"></script>
+<![endif]-->
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f465553525742000400034351 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1003,'/dpzw.jsp',-1,1794602518)</script>
+</head>
+<body><nav id="menu" class="m_nav mm-menu mm-offcanvas" style="display:none;"><div class="mm-panels"><div class="mm-panel mm-opened mm-current" id="mm-0"><ul class="mm-listview">
+        <li class="nBorder">
+            <a href="javascript:vpod(0);">
+                <div class="navForm clearfix">
+                    <!-- 3.1.3版本 -->
+
+
+
+<div id="divu3">
+    <div id="appu3"><div><input type="text" autocomplete="off" placeholder="输入搜索内容" class="text fl"> <input type="submit" value=" " class="subm fl"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError">
+        
+     
+
+            <input type="text" class="text fl" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" placeholder="输入搜索内容">
+            <input type="submit" class="subm fl" value=" " v-on:click="onSubmit()">
+ 
+ 
+ 
+
+        
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "1794602518";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu3 = document.querySelector("#appu3");
+   if (appElementu3 && appElementu3.__vue__) {
+
+   } else {
+      $("#divu3").html($("#htmlu3").text());
+      var appOwner = "1794602518";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou3 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu3(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu3();
+        }
+      };
+
+      function onSubmitu3(e) {
+        queryInfou3.query.keyWord= $("#appu3  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou3.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="mm-next" href="#mm-1" data-target="#mm-1"></a><a href="">语言</a>
+                      
+    </li>
+<li>
+            <a href="../index.htm">网站首页</a>
+</li>
+<li>
+            <a class="mm-next" href="#mm-2" data-target="#mm-2"></a><a href="xyjj.htm">学院概况</a>
+            
+</li>
+<li>
+            <a class="mm-next" href="#mm-5" data-target="#mm-5"></a><a href="../szll/jsfc.htm">师资力量</a>
+            
+</li>
+<li>
+            <a class="mm-next" href="#mm-7" data-target="#mm-7"></a><a href="../rcpy/bkspy.htm">人才培养</a>
+            
+</li>
+<li>
+            <a class="mm-next" href="#mm-8" data-target="#mm-8"></a><a href="../xkky.htm">学科科研</a>
+            
+</li>
+<li>
+            <a class="mm-next" href="#mm-9" data-target="#mm-9"></a><a href="../dqgz/djyd.htm">党群工作</a>
+            
+</li>
+<li>
+            <a class="mm-next" href="#mm-10" data-target="#mm-10"></a><a href="../zsjy/bkszs.htm">招生就业</a>
+            
+</li>
+<li>
+            <a class="mm-next" href="#mm-11" data-target="#mm-11"></a><a href="../xssw/dtjs.htm">学生工作</a>
+            
+</li>
+<li>
+            <a href="../sjyzyx.htm">书记院长邮箱</a>
+</li>
+
+        
+       
+    </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-1"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-0" data-target="#mm-0"></a><a class="mm-title" href="#mm-0">语言</a></div><ul class="mm-listview">
+              <li><a href="http://cet.hzau.edu.cn" class="tran300">中文</a></li>
+              <li><a href="http://cet.hzau.edu.cn/en/About_Us.htm" class="tran300">English</a></li>
+            </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-2"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-0" data-target="#mm-0"></a><a class="mm-title" href="#mm-0">学院概况</a></div><ul class="mm-listview">
+                <li>
+                    <a href="xyjj.htm" class="tran300">学院简介</a>
+                </li>
+                <li>
+                    <a href="dzld.htm" class="tran300">党政领导</a>
+                </li>
+                <li>
+                    <a class="mm-next" href="#mm-3" data-target="#mm-3"></a><a href="zzjg.htm" class="tran300">组织机构</a>
+                    
+                </li>
+                <li>
+                    <a class="mm-next" href="#mm-4" data-target="#mm-4"></a><a href="fwjg/xybgs.htm" class="tran300">服务机构</a>
+                    
+                </li>
+            </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-3"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-2" data-target="#mm-2"></a><a class="mm-title" href="#mm-2">组织机构</a></div><ul class="mm-listview">
+                        <li><a href="zzjg/xydw.htm" class="tran300">学院党委</a></li>
+                        <li><a href="zzjg/xyxz.htm" class="tran300">学院行政</a></li>
+                        <li><a href="zzjg/qtzz.htm" class="tran300">群团组织</a></li>
+                        <li><a href="zzjg/xszz.htm" class="tran300">学术组织</a></li>
+                        <li><a href="zzjg/x_zy_kcfzr.htm" class="tran300">系、专业、课程负责人</a></li>
+                    </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-4"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-2" data-target="#mm-2"></a><a class="mm-title" href="#mm-2">服务机构</a></div><ul class="mm-listview">
+                        <li><a href="fwjg/xybgs.htm" class="tran300">学院办公室</a></li>
+                        <li><a href="fwjg/rcpybgs.htm" class="tran300">人才培养办公室</a></li>
+                        <li><a href="fwjg/xsgzbgs_xytw.htm" class="tran300">学生工作办公室、学院团委</a></li>
+                        <li><a href="fwjg/syjxzx.htm" class="tran300">实验教学中心</a></li>
+                    </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-5"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-0" data-target="#mm-0"></a><a class="mm-title" href="#mm-0">师资力量</a></div><ul class="mm-listview">
+                <li>
+                    <a href="../szll/jsfc.htm" class="tran300">教授风采</a>
+                </li>
+                <li>
+                    <a class="mm-next" href="#mm-6" data-target="#mm-6"></a><a href="../szll/jsdw.htm" class="tran300">教师队伍</a>
+                    
+                </li>
+                <li>
+                    <a href="../szll/rczp.htm" class="tran300">人才招聘</a>
+                </li>
+            </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-6"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-5" data-target="#mm-5"></a><a class="mm-title" href="#mm-5">教师队伍</a></div><ul class="mm-listview">
+                        <li><a href="../szll/jsdw/nygcx.htm" class="tran300">农业工程系</a></li>
+                        <li><a href="../szll/jsdw/jxgcx.htm" class="tran300">机械工程系</a></li>
+                        <li><a href="../szll/jsdw/jdgcx.htm" class="tran300">机电工程系</a></li>
+                        <li><a href="../szll/jsdw/gdgcx.htm" class="tran300">光电工程系</a></li>
+                        <li><a href="../szll/jsdw/xz_sy.htm" class="tran300">行政、实验</a></li>
+                    </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-7"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-0" data-target="#mm-0"></a><a class="mm-title" href="#mm-0">人才培养</a></div><ul class="mm-listview">
+                <li>
+                    <a href="../rcpy/bkspy.htm" class="tran300">本科生培养</a>
+                </li>
+                <li>
+                    <a href="../rcpy/yjspy.htm" class="tran300">研究生培养</a>
+                </li>
+            </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-8"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-0" data-target="#mm-0"></a><a class="mm-title" href="#mm-0">学科科研</a></div><ul class="mm-listview">
+                <li>
+                    <a href="../xkky/xsky.htm" class="tran300">学术科研</a>
+                </li>
+                <li>
+                    <a href="../xkky/xkjs.htm" class="tran300">学科建设</a>
+                </li>
+                <li>
+                    <a href="http://gxysyzx.hzau.edu.cn/yqsb.htm" class="tran300">仪器设备</a>
+                </li>
+            </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-9"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-0" data-target="#mm-0"></a><a class="mm-title" href="#mm-0">党群工作</a></div><ul class="mm-listview">
+                <li>
+                    <a href="../dqgz/djyd.htm" class="tran300">党建园地</a>
+                </li>
+                <li>
+                    <a href="../dqgz/ghgz.htm" class="tran300">工会工作</a>
+                </li>
+            </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-10"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-0" data-target="#mm-0"></a><a class="mm-title" href="#mm-0">招生就业</a></div><ul class="mm-listview">
+                <li>
+                    <a href="../zsjy/bkszs.htm" class="tran300">本科生招生</a>
+                </li>
+                <li>
+                    <a href="../zsjy/yjszs.htm" class="tran300">研究生招生</a>
+                </li>
+                <li>
+                    <a href="../zsjy/jygz.htm" class="tran300">就业工作</a>
+                </li>
+            </ul></div><div class="mm-panel mm-hasnavbar mm-hidden" id="mm-11"><div class="mm-navbar"><a class="mm-btn mm-prev" href="#mm-0" data-target="#mm-0"></a><a class="mm-title" href="#mm-0">学生工作</a></div><ul class="mm-listview">
+                <li>
+                    <a href="../xssw/dtjs.htm" class="tran300">党团建设</a>
+                </li>
+                <li>
+                    <a href="../xssw/jyxx.htm" class="tran300">就业信息</a>
+                </li>
+                <li>
+                    <a href="../xssw/shsj.htm" class="tran300">社会实践</a>
+                </li>
+                <li>
+                    <a href="../xssw/bszn.htm" class="tran300">办事指南</a>
+                </li>
+            </ul></div></div></nav>
+
+<div id="page" class="mm-page mm-slideout">
+<div class="header">
+    <div class="w1280 clearfix">
+        <a href="../index.html" class="logo fl"><img src="../images/logo.png" alt=""></a>
+        <div class="fr">
+            <div class="link"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><a href="http://www.hzau.edu.cn" class="tran300">华中农业大学</a>
+<a href="https://portal-paas.hzau.edu.cn/main.html#/Index" class="tran300">信息门户</a>
+<a href="http://cet.hzau.edu.cn/en/About_Us.htm" class="tran300">EN</a>
+</div>
+            <div class="form clearfix"><!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><div id="divu1">
+    <div id="appu1"><div><input type="text" autocomplete="off" class="text fl"> <input type="submit" value="" class="subm fl"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+         
+       
+                    <input type="text"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"  class="text fl">
+                    <input type="submit" v-on:click="onSubmit()" class="subm fl" value="">
+ 
+ 
+ 
+
+        
+           
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1794602518";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu1 = document.querySelector("#appu1");
+   if (appElementu1 && appElementu1.__vue__) {
+
+   } else {
+      $("#divu1").html($("#htmlu1").text());
+      var appOwner = "1794602518";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou1 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu1(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu1();
+        }
+      };
+
+      function onSubmitu1(e) {
+        queryInfou1.query.keyWord= $("#appu1  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou1.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script></div>
+        </div>
+
+        <a href="#menu" class="menuIcon fr">
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+        </a>
+
+    </div>
+</div><!-- header end -->
+<div class="navBox">
+       <div class="w1280">
+<ul class="nav">
+    <li class="nLi fl ">
+        <h3><a href="../index.htm"><span>网站首页</span></a></h3>
+    </li>
+    <li class="nLi fl on">
+        <h3><a href="xyjj.htm"><span>学院概况</span></a></h3>
+        <div class="navSub">
+            <ul>
+                <li><a href="xyjj.htm" class="tran300">学院简介</a></li>
+                
+                <li><a href="dzld.htm" class="tran300">党政领导</a></li>
+                
+                <li><a href="zzjg.htm" class="tran300">组织机构</a></li>
+                
+                <li><a href="fwjg/xybgs.htm" class="tran300">服务机构</a></li>
+                
+            </ul>
+        </div>
+    </li>
+    <li class="nLi fl ">
+        <h3><a href="../szll/jsfc.htm"><span>师资力量</span></a></h3>
+        <div class="navSub">
+            <ul>
+                <li><a href="../szll/jsfc.htm" class="tran300">教授风采</a></li>
+                
+                <li><a href="../szll/jsdw.htm" class="tran300">教师队伍</a></li>
+                
+                <li><a href="../szll/rczp.htm" class="tran300">人才招聘</a></li>
+                
+            </ul>
+        </div>
+    </li>
+    <li class="nLi fl ">
+        <h3><a href="../rcpy/bkspy.htm"><span>人才培养</span></a></h3>
+        <div class="navSub">
+            <ul>
+                <li><a href="../rcpy/bkspy.htm" class="tran300">本科生培养</a></li>
+                
+                <li><a href="../rcpy/yjspy.htm" class="tran300">研究生培养</a></li>
+                
+            </ul>
+        </div>
+    </li>
+    <li class="nLi fl ">
+        <h3><a href="../xkky.htm"><span>学科科研</span></a></h3>
+        <div class="navSub">
+            <ul>
+                <li><a href="../xkky/xsky.htm" class="tran300">学术科研</a></li>
+                
+                <li><a href="../xkky/xkjs.htm" class="tran300">学科建设</a></li>
+                
+                <li><a href="http://gxysyzx.hzau.edu.cn/yqsb.htm" class="tran300">仪器设备</a></li>
+                
+            </ul>
+        </div>
+    </li>
+    <li class="nLi fl ">
+        <h3><a href="../dqgz/djyd.htm"><span>党群工作</span></a></h3>
+        <div class="navSub">
+            <ul>
+                <li><a href="../dqgz/djyd.htm" class="tran300">党建园地</a></li>
+                
+                <li><a href="../dqgz/ghgz.htm" class="tran300">工会工作</a></li>
+                
+            </ul>
+        </div>
+    </li>
+    <li class="nLi fl ">
+        <h3><a href="../zsjy/bkszs.htm"><span>招生就业</span></a></h3>
+        <div class="navSub">
+            <ul>
+                <li><a href="../zsjy/bkszs.htm" class="tran300">本科生招生</a></li>
+                
+                <li><a href="../zsjy/yjszs.htm" class="tran300">研究生招生</a></li>
+                
+                <li><a href="../zsjy/jygz.htm" class="tran300">就业工作</a></li>
+                
+            </ul>
+        </div>
+    </li>
+    <li class="nLi fl ">
+        <h3><a href="../xssw/dtjs.htm"><span>学生工作</span></a></h3>
+        <div class="navSub">
+            <ul>
+                <li><a href="../xssw/dtjs.htm" class="tran300">党团建设</a></li>
+                
+                <li><a href="../xssw/jyxx.htm" class="tran300">就业信息</a></li>
+                
+                <li><a href="../xssw/shsj.htm" class="tran300">社会实践</a></li>
+                
+                <li><a href="../xssw/bszn.htm" class="tran300">办事指南</a></li>
+                
+            </ul>
+        </div>
+    </li>
+    <li class="nLi fl ">
+        <h3><a href="../sjyzyx.htm"><span>书记院长邮箱</span></a></h3>
+    </li>
+</ul>
+</div>
+
+
+</div>
+<!-- nav end -->
+
+<!-- wap nav end -->
+
+<div class="cd-popup">
+    <div class="cd-popup-container hidden_search">
+        <form action="">
+            <div class="search_wrap clearfix">
+                <input type="text" name="" id="" class="text" placeholder="搜索关键词">
+                <input type="submit" value="搜索" class="btn">
+            </div>
+        </form>
+        <a href="javascript:;" class="cd-popup-close close_btn">
+        </a>
+    </div>
+</div><!-- search popUp end -->
+
+    <div class="nyBanner" style="background-image:url(../images/3.jpg)"></div>
+
+
+<div class="nyWrap">
+    <div class="w1280">
+        <div class="path">当前所在位置：
+    <a href="../index.htm" class="tran300">网站首页</a>
+      -- 
+    <a href="xyjj.htm" class="tran300">学院概况</a>
+      -- 
+    <a href="xyjj.htm" class="tran300">学院简介</a>
+</div>
+
+
+        <div class="nyContent clearfix">
+            <div class="nySide fl">
+                <div class="title">
+                    <h3>
+学院概况</h3>
+                    <h4></h4>
+                </div>
+                <ul><li class="tran300 on"><a href="xyjj.htm" class="tran300">学院简介</a></li>
+<li class="tran300 "><a href="dzld.htm" class="tran300">党政领导</a></li>
+<li class="tran300 "><a href="zzjg.htm" class="tran300">组织机构</a></li>
+<li class="tran300 "><a href="fwjg/xybgs.htm" class="tran300">服务机构</a></li>
+</ul>
+            </div><!-- nySide end -->
+
+            <div class="nyRight fr">
+                <div class="bread clearfix">
+                    <h3 class="fl">
+学院简介</h3>
+                    
+                </div><!-- bread end -->
+
+                <div class="about pageStyle">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1794602518,'wbnews','u11')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta11(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta11('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1794602518,1192)</script>
+    <div id="vsb_content_4_1192_u111"><div id="vsb_content_4"><p class="vsbcontent_start">华中农业大学工学院前身为1958年成立的农业机械化系，1985年更名为农业工程系，1998年更名为工程技术学院，2010年更名为工学院。2023年7月，学校优化调整数理化基础理科布局，原理学院物理相关学科师生并入工学院。</p><p>学院现有农业工程系、机械工程系、机电工程系、光电工程系4个系，拥有农业农村部长江中下游农业装备重点实验室、农业农村部水产养殖设施工程重点实验室、农业农村部油菜全程机械化科研基地、农业农村部柑橘全程机械化科研基地、国家数字种植业（果园）创新分中心、湖北省智能农业装备技术创新中心、教育部华中农业大学农业智能装备创新支撑中心（在建）、优势农作物机械化生产技术与装备湖北省工程实验室、湖北省现代农业装备工程技术研究中心等省部级学科平台，设有油菜机械化生产技术与装备、柑橘机械化生产技术与装备、水稻与水生蔬菜机械化生产技术与装备、畜禽水产工程技术与装备、农产品智能检测及数字化装备、农业生物质增值化技术与装备、光-机-电共性技术与装备、农业工程基础研究等8个科研团队。</p><p>学院现有教职员工169人，其中专任教师131人，实验技术人员20人，党政管理人员18人。教师中有教授27人，副教授78人，讲师26人；具有博士、硕士学位的教师129人，占教师总数的98%；教师中有国际欧亚科学院院士1人，国家万人计划教学名师1人，国家神农领军英才2人，国家级青年拔尖人才2人，国家现代农业产业体系岗位科学家3人，湖北教学名师1人，湖北省杰青、武汉英才等青年人才15人。</p><p>目前，学院设有农业机械化及其自动化、机械设计制造及其自动化、机械电子工程、自动化、能源与动力工程、机器人工程、光电信息科学与工程等7个全日制本科专业。其中，农业机械化及其自动化专业、机械电子工程、机械设计制造及其自动化入选国家级一流本科专业建设点，自动化、能源与动力工程专业入选省级一流本科专业建设点。目前，在校全日制本科生2258人、研究生830人。学院设有农业工程一级学科博士点，农业工程一级学科博士后科研流动站，农业专博，农业工程、机械工程一级学科硕士点，设有农业机械化工程、农业生物环境与能源工程、农业电气化与自动化、现代农业装备工程、智慧农业技术与装备5个二级学科，智慧农业技术与装备入选湖北省优势特色学科群，同时设有机械、农业工程与信息技术、电子信息、能源动力等4个专业学位点。近年来，学院全日制本科毕业生和硕士、博士毕业生一次就业率均位居前列。</p><p>“十三五”以来，学院获批教育部农业机械化及其自动化虚拟教研室1个，主编出版规划教材10余部，含教育部农业工程类“101计划”教材2部；国家和省级一流课程等8门，先后获湖北省教学成果一等奖等各类奖项10余项；主持承担国家农业重大科技项目、国家重点研发计划项目、国家自然科学基金项目、国家现代农业产业体系岗位科学家项目等各类科研项目500余项，获批经费近3亿元；获湖北省科技进步奖和发明奖一等奖等各类奖项20余项；先后向国家和湖北省委、省政府提交产业发展咨询报告2份并得到领导指示性批示。学院与德国亚琛工业大学、英国卡迪夫大学、日本京都大学、美国德州农工大学等建立友好合作关系。</p><p class="vsbcontent_end">更新日期：2025年10月9日</p></div></div>    
+</div>
+            </div><!-- nyRight end -->
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="w1280">
+       <div class="selectWrap clearfix">
+            <dl class="select fl"><dt>校内网站</dt>
+                <dd>
+                    <ul>                       
+</ul>
+</dd></dl>
+            <dl class="select fl"><dt>高校网站</dt>
+                <dd>
+                    <ul>                       
+</ul>
+</dd></dl>
+            <dl class="select fl"><dt>其他网站</dt>
+                <dd>
+                    <ul>                       
+<li><a href="#" class="tran300">工程技术实验教学中心</a></li>
+                        
+<li><a href="http://www.hbaes.org.cn/index.asp" class="tran300">湖北省农业工程学会</a></li>
+                        
+</ul>
+</dd></dl>
+        </div>
+
+        <div class="text"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：中国·湖北·武汉市洪山区狮子山街1号华中农业大学工学院邮编：430070电话：027-87282120</p><p>Copyright© 华中农业大学工学院 版权所有 &nbsp; &nbsp;网站备案号：鄂ICP备13013419-1号</p></div>
+
+        <div class="qrcode">    <img src="../images/gxy.jpg" alt="">
+            <p>工学院微信公众号</p>
+</div>
+    </div>
+</div><!-- footer -->
+</div>
+
+
+
+
+
+
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/swiper.js"></script>
+<script src="../js/jquery.mmenu.min.all.js"></script>
+<script src="../js/common.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="mm-blocker" class="mm-slideout"></div></body></html>

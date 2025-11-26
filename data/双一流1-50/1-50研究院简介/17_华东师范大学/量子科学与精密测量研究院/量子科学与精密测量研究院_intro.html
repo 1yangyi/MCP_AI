@@ -1,0 +1,269 @@
+<!DOCTYPE html><html><!--<![endif]--><!-- Mirrored from www.baqis.ac.cn/about/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Apr 2023 04:29:11 GMT --><!-- Added by HTTrack --><head><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+	<title>研究院概况</title>
+	<meta name="keywords" content="研究院概况">
+	<meta name="description" content="研究院概况">
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" type="image/x-icon">
+    <link rel="shortcut icon" type="image/x-icon">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="HandheldFriendly" content="true">
+    <!--浏览器强制竖屏-->
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+    
+    
+    <link rel="stylesheet" href="../css/animate.min.css">     
+    <link rel="stylesheet" href="../css/owl.carousel.css">  
+    <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../css/bdueditor.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>   
+    <script type="text/javascript" src="../js/layer/layer.js"></script><link rel="stylesheet" href="https://iqspm.ecnu.edu.cn/js/layer/skin/default/layer.css?v=3.0.3303" id="layuicss-skinlayercss">   
+</head>
+
+<body style=""> 
+
+<!--header begin-->
+<header>
+
+		<!--header_bot begin-->
+		<div class="header_bot" style="margin-left: -150px">
+			<div class="clearfix inner">
+				<h1 class="logo"><a href="index.html">
+					<img src="../upload/image/top logo.png" alt="量子科学与精密测量研究院" title="量子科学与精密测量研究院">
+				</a></h1>
+
+					<!--nav begin-->
+					<div class="nav">
+						<a href="javascript:void(0);" class="menu_phone"><span><i></i><i></i><i></i></span></a>
+						<!--nav_list begin-->
+						<ul class="clearfix nav_list">
+							<li style="animation-delay: 0s;">
+								<a href="../index.html" class="n_a0"><strong>首页</strong></a>
+							</li>
+							<li style="animation-delay: 0.1s;">
+								<a class="n_a0"><strong>院况介绍</strong></a>
+								<div class="subclass">
+									<a href="index.html"><strong>研究院概况</strong></a>
+									<a href="index001.html"><strong>研究院领导</strong></a>
+									<a href="index002.html"><strong>党支部</strong></a>
+								</div>
+							</li>
+							<li style="animation-delay: 0.2s;">
+								<a href="../research/index.html" class="n_a0"><strong>研究部门</strong></a>
+								<div class="subclass">
+									<a href="../research/divisions/index001.html"><strong>量子计算和模拟研究部</strong></a>
+									<a href="../research/divisions/index003.html"><strong>量子精密测量研究部</strong></a>
+									<a href="../research/divisions/index002.html"><strong>量子器件研究部</strong></a>
+									</div>
+							</li>
+							<li style="animation-delay: 0.3s;">
+								<a href="../people/index.html" class="n_a0"><strong>师资队伍</strong></a>
+							</li>
+							<li style="animation-delay: 0.4s;">
+								<a href="../research/publications/index.html" class="n_a0"><strong>科学研究</strong></a>
+							</li>
+
+							<li style="animation-delay: 0.5s;">
+								<a href="../english/index.html" class="n_a0" style="font-family: 'Times New Roman'"><strong>English</strong></a>
+							</li>
+						</ul>
+						<!--nav_list end-->
+					</div>
+					<!--nav end-->
+				</div>
+			</div>
+
+		
+		<!--header_bot end-->
+		<div style="background: -webkit-linear-gradient(left,rgba(0,0,0,0), #35477d,rgba(0,0,0,0));display: block;width: auto;min-height: 5px; margin-top: 5px"></div>
+
+		<script type="text/javascript">
+
+		$('.link_log').click(function(){
+			$("#wrap_log").stop().fadeIn();
+		});
+			$(".top_search_txt").click(function () {
+				$(".search_wrap").toggle();
+                $("#search_txt").focus();
+			});
+			$(".top_search_btn").click(function () {
+                $(".search_wrap").toggle();
+                $("#search_txt").focus();
+
+			});
+			$("#search_btn").click(function () {
+				var keyword = $("#search_txt").val();
+				if (keyword == "") {
+                    alert("请输入关键字");
+					return false;
+				}
+				window.location.href = "/search/?keyword=" + keyword;
+			});
+
+			$(function () {
+				//获取锚点
+				var hash = window.location.hash;
+				if (hash == "#Login") {
+                    $("#wrap_log").stop().fadeIn();
+                }
+				$("#btn_login").click(function () {
+                    var MemberName = $("#membername").val();
+					var MemberPwd = $("#memberpwd").val();
+					var loginyzm = $("#loginyzm").val();
+                    if (MemberName == "") {
+                        alert("请输入帐户名。");
+                        return false;
+                    }
+                    if (MemberPwd == "") {
+                        alert("请输入密码。");
+                        return false;
+                    }
+                    if (loginyzm == "") {
+                        alert("请输入验证码。");
+                        return false;
+                    }
+                    $("#btn_login").val("登录中");
+                    $("#btn_login").attr("disabled", "disabled");
+                    $.post("/ashx/web.ashx?type=login", { MemberName: MemberName, MemberPwd: MemberPwd, loginyzm: loginyzm }, function (data) {
+						if (data == "ok") {
+							alert("登录成功");
+							window.location.href ="index.html";
+                        } else {
+                            alert(data);
+                            $("#btn_login").val("登 录");
+                            $("#btn_login").removeAttr("disabled");
+                        }
+
+
+                    });
+				});
+			});
+        </script>
+	</header>
+<!--header end-->
+
+	<!--main begin-->
+	<main>
+	<br><br>
+	<!--con_wrap begin-->
+		<div class="con_wrap">
+			<div class="clearfix inner"> 
+				<!--president begin-->
+				<p class="clearfix president">
+					<!--president_left begin-->
+					</p><p class="president_left" style="background-color: white">
+
+						</p><p style="text-align: center; text-indent: 0em;"><span style="font-size: 16px;"><img src="../upload/image/optics building.jpg" title="光学大楼图片.jpg" alt="光学大楼图片.jpg" width="800" height="410" border="0" vspace="0" style="width: 800px; height: 410px;"></span></p>
+						<br>
+						<p class="f20" style="text-indent: 2em; text-align: justify;line-height: 40px; font-family: 'Times New Roman'"><span>
+						华东师范大学量子科学与精密测量研究院，以建设世界一流新型科技研发机构为目标，面向世界量子科技重大科学问题与量子精密测量前沿，瞄准国家在量子科学等领域的重大战略亟需，开展核心关键技术攻关，已建成超冷原子量子计算/模拟和量子精密测量等多个具有国际竞争力的科研平台。研究院将进一步聚焦量子计算、量子模拟、量子器件、量子精密测量和量子交叉等，推进上海市科技创新策源、华东师范大学科技自主创新，在重点实验室重组和重点学科评估中发挥更大的作用，发挥新动能新优势，助力我国量子科技创新和实用化产业化进程。
+						</span></p>
+						<p class="f20" style="text-indent: 2em; text-align: justify;line-height: 40px; font-family: 'Times New Roman'"><span>
+                        量子科学为国家战略，是国家十四五规划重要组成部分，为新一轮科技革命和产业变革的前沿领域。习总书记在中央政治局第二十四次集体学习时指出，量子科技发展具有重大科学意义和战略价值，是一项对传统技术体系产生冲击、进行重构的重大颠覆性技术创新，将引领新一轮科技革命和产业变革方向。
+						</span></p>
+						<p class="f20" style="text-indent: 2em; text-align: justify; line-height: 40px; font-family: 'Times New Roman'"><span>
+                        研究院在“量子科学与精密测量”相关研究领域建成国内外优势科研团队和研究平台，近年来取得了一系列具有国际影响力的重大创新成果，率先实现了光学腔内稳态费米超辐射量子相变，被评价为“里程碑的研究工作”；首次发现标度对称不变性强相互作用量子气体膨胀动力学研究工作入选中国科学十大进展前30项代表；首次实现超冷量子热机的量子器件研究工作被Science News专题报道“这是迈向量子热机至关重要的第一步”；研究成果多次发表在《Science》、《Nature Communications》、《Science Advances》、《Physical Review Letters》等国际物理学权威杂志。获得科技部2030重大专项、量子调控重点专项、国家自然科学基金重点项目、国家自然科学基金杰出青年基金项目、上海市市级重大专项和重大基础研究项目等多项重大项目支持； 研究院汇聚了以国家杰出青年、优秀青年基金、上海市学术带头人和上海市东方特聘教授等多名国家级和省部级人才为主的一批高水平的青年科研人才队伍。
+						</span></p>
+						<br><br>
+						<p class="f22" style="text-indent: 2em; text-align: justify;line-height: 60px; font-family: 'Times New Roman'"><span>
+						<strong>量子科学与精密测量研究院Logo介绍</strong>
+						</span></p>
+						<p class="f20" style="text-indent: 2em; text-align: justify;line-height: 40px; font-family: 'Times New Roman'"><span>
+						整个标志结合了华东师范大学标志的红色和量子科学与精密测量研究院的蓝色，以“华”字小篆体作为基础造型，在寓意量子科学与精密测量研究院依托华东师范大学创立的同时，“华”字旨在开展具有中国特色的量子科学研究。
+						</span></p>
+						<p class="f20" style="text-indent: 2em; text-align: justify;line-height: 40px; font-family: 'Times New Roman'"><span>
+						标志上中下部分由3种基础的物理算符Ψ，i，hbar构成，其中Ψ代表波函数，i代表复空间，hbar代表普朗克常数，立意从基本物理研究出发，积极探索领域及其应用。中部两侧的4个"人"字元素组成内容各异，添加了量子计算和量子光学的表现形式，比如 、 量子态、光场电场线等，寓意量子科学与精密测量研究院旨在组建一支有战斗力的高水平青年科研人才队伍。
+						</span></p>
+						<p class="f20" style="text-indent: 2em; text-align: justify;line-height: 40px; font-family: 'Times New Roman'"><span>
+						标志背景为浅蓝色“费米海”，代表费米子在低温时表现出能态从低至高的填充形式，寓意不断攀登的探索精神。
+						</span></p>
+					<p></p>
+						<div style="width:80%; padding-left:25%;margin-top:40px">
+							<div style="float:left">
+								<img src="../upload/image/hua.jpg" title="华字小篆图片.jpg" alt="华字小篆图片.jpg" class="center">
+								<p class="f20" style="text-indent: 2em; text-align: justify;line-height: 40px; font-family: 'Times New Roman';padding-left: 26%"><span><b>“华”字小篆体</b>
+							</span></p>
+							</div>
+
+							<div style="float:left;padding-left: 0%">
+							<img src="../upload/image/logo.jpg" title="研究院logo图片.jpg" alt="研究院logo图片.jpg" width="400" height="400" style="width: 400px; height: 400px;">
+								<p class="f20" style="text-indent: 2em; text-align: justify;line-height: 40px; font-family: 'Times New Roman';padding-left: 30%"><span><b>研究院logo</b>
+							</span></p></div>
+						</div>
+
+				<p></p>
+					<!--president_left end--> 
+			</div>
+				<!--president end-->
+		</div>
+		<!--con_wrap end-->
+	</main>
+	<!--main end-->
+	<!--footer begin-->
+
+<footer>
+	<div class="clearfix inner" style="height: 230px">
+			<div class="footer_bot">
+				<a class="contact_link" style="font-size: 18px"><span><em>联系我们</em></span></a>
+				<div class="f14 footer_bot_info" style="font-size: 16px; text-align: center; margin-left: 190px">
+					<div style="float: right; clear:both; margin-right: 100px; margin-top: -20px" align="center">
+						<img src="../upload/image/qcode.jpg" style="width: 80px" alt=""><br>
+						微信公众号
+					</div>
+					<p>版权所有 ©2023 华东师范大学量子科学与精密测量研究院保留所有权利</p><p>固定电话: (86)21-54836079　　地址:上海市闵行区东川路500号光学大楼</p>
+				</div>
+			</div>
+	</div>
+</footer>
+
+<!--公用js文件 begin-->  
+	<script type="text/javascript" src="../js/owl.carousel2.js"></script>
+	<script type="text/javascript" src="../js/jquery.mCustomScrollbar.concat.min.js"></script>  
+	<script type="text/javascript" src="../js/wow.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.parallax.js"></script>          
+	<script type="text/javascript" src="../js/web.js"></script>  
+	<!--[if lt IE 10]> 
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script> 
+	<p class="browserupgrade">您在使用一个 <strong>旧版本的</strong> 浏览器。建议 <a href="https://support.microsoft.com/zh-cn/help/17621/internet-explorer-downloads" target="_blank">更新您的浏览器</a> 来更好的体验本网站.<a class="upgrade_close">×</a></p>
+	<![endif]--> 
+	<!--公用js文件 end--> 
+<script type="text/javascript">
+        $(function () {
+            var $el = $(".foot_set ul li");
+            $el.find(".down p").click(function (e) {
+                // var hl = $(this).html();
+                $(this).parents('.down').removeClass('active')
+                // $(this).parents('li').find('.fa span').html(hl)
+                e.stopPropagation();
+
+            })
+            $el.click(function (e) {
+                e.stopPropagation();
+                $(this).find('.down').toggleClass('active').parents('li').siblings('li').find('.down').removeClass('active');
+            });
+            $(document).on('click', function () {
+                $el.find('.down').removeClass('active');
+            });
+        })
+</script>
+	<!--footer end-->
+	
+
+
+
+
+
+</body><!-- Mirrored from www.baqis.ac.cn/about/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Apr 2023 04:29:11 GMT --></html>

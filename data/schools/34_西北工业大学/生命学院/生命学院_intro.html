@@ -1,0 +1,412 @@
+<!DOCTYPE html><html><head><title>学院简介-生命学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="生命学院">
+
+
+
+
+
+<meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../newwebsite/css/style.css">
+<meta content="IE=9" http-equiv="x-ua-compatible">
+<meta content="IE=EmulateIE9" http-equiv="x-ua-compatible">
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232306975475152555742000200014156 -->
+<link rel="stylesheet" type="text/css" href="../newwebsite/jjy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1013,'/newwebsite/jjy.jsp',-1,871905539)</script>
+</head>
+<body style="zoom: 1">
+<div class="top"><div style="width: 900px; text-align: center; margin-left: auto; margin-right: auto"><span style="float: left">欢迎访问西北工业大学生命学院网站，新版本上线试运行中！</span><a href="../Home.htm" style="color: #ffffff; margin-left: 250px">ENGLISH</a><img alt="" src="../newwebsite/newwebsite/images/map.png" width="9" height="9" style="margin-top: -3px; vertical-align: middle; margin-left: 5px;">&nbsp;&nbsp;<a href="http://www.nwpu.edu.cn" target="" style="color:#ffffff">学校主页</a><img alt="" src="../newwebsite/newwebsite/images/phone.png" width="7" height="9" style="margin-top: -3px; vertical-align: middle; margin-left: 5px;">&nbsp;&nbsp;<a href="bgdh.htm" style="color:#ffffff">联系我们</a>&nbsp;&nbsp;<img alt="" src="../newwebsite/newwebsite/images/weixin.png" width="17" height="16" style="vertical-align: middle">&nbsp;&nbsp;<a href="#"><img alt="" src="../newwebsite/newwebsite/images/weibo.png" width="17" height="17" style="vertical-align: middle"></a></div></div>
+<div class="clear"></div>
+<div class="header">
+<div style="width: 900px; text-align: center; margin-left: auto; margin-right: auto">
+<div class="logo"><img alt="" src="../newwebsite/images/logo.png" width="343" height="37"></div>
+<div class="search"> 
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><input type="text" placeholder="请输入搜索信息！" autocomplete="off" style="width: 150px; border: 1px solid rgb(24, 138, 0); color: rgb(24, 138, 0);"> <input type="submit" value="" name="submit_button" class="pic"></div> <!----></div>
+    
+
+    
+    
+    
+    
+    
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <input type="text" placeholder="请输入搜索信息！" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" style="width:150px;border:1px #188a00 solid;color:#188a00;" type="text">
+            <input type="submit" class="pic" value="" name="submit_button" type="button"  v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+    
+
+    
+    
+    
+    
+    
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "871905539";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://yykfpt.nwpu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script> </div></div></div>
+<div class="lead"><style type="text/css">
+td.b1_1_{FONT-SIZE:9pt;}
+td.b2_1_{FONT-SIZE:9pt;}
+td.b3_1_{FONT-SIZE:9pt;BORDER-RIGHT: #cccccc 1px solid;WIDTH: 120px;BORDER-BOTTOM: #cccccc 1px solid;POSITION: relative;TEXT-ALIGN: center;TOP: -8px;BACKGROUND-COLOR: #ffffff;}
+td.b4_1_{FONT-SIZE:9pt;BORDER-RIGHT: #cccccc 1px solid;WIDTH: 120px;BORDER-BOTTOM: #cccccc 1px solid;POSITION: relative;TEXT-ALIGN: center;TOP: -8px;BACKGROUND-COLOR: #e6e6fa;}
+a.menu0_1_:link {TEXT-DECORATION: none;};
+a.menu0_1_:visited { TEXT-DECORATION: none;};
+a.menu0_1_:hover {TEXT-DECORATION: none;};
+a.menu0_1_:active {TEXT-DECORATION: none;};
+table.tb1_1_{FONT-SIZE:9pt;border:0;}
+span.s1_1_{FONT-SIZE: 18px;TEXT-DECORATION: none;FONT-FAMILY: '微软雅黑';FONT-WEIGHT: bold;COLOR: #188a00;LINE-HEIGHT: 200%;}
+span.s2_1_{FONT-SIZE: 11pt;TEXT-DECORATION: none;FONT-FAMILY: '微软雅黑';FONT-WEIGHT: bold;COLOR: #188a00;LINE-HEIGHT: 160%;}
+span.s10_1_{FONT-SIZE: 18px;TEXT-DECORATION: none;FONT-FAMILY: '微软雅黑';FONT-WEIGHT: bold;COLOR: #188a00;LINE-HEIGHT: 200%;}
+span.s20_1_{FONT-SIZE: 11pt;TEXT-DECORATION: none;FONT-FAMILY: '微软雅黑';FONT-WEIGHT: bold;COLOR: #188a00;LINE-HEIGHT: 200%;}
+</style>
+<script language="javascript"> 
+ var showfix_1_ = 1;
+ var isvertical_1_ = false;
+</script>
+<script language="javascript" src="/system/resource/js/menu/text.js"></script>
+<table id="t1_1_" cellspacing="0" cellpadding="0" border="0" height="0" width="0"><tbody><tr><td valign="center"></td><td valign="middle" height="0" width="110" nowrap="" class="b1_1_" align="center" id="a_1_1001" onmouseover="tshowLayers('1001','b2_1_', '_1_')" onmouseout="thideLayers('1001','b1_1_', '_1_','true','true')"><a class="menu0_1_" href="../index.htm"><span class="fontstyle212282">&nbsp;首页&nbsp;</span></a></td><td valign="center"></td><td valign="middle" width="110" nowrap="" class="b1_1_" align="center" id="a_1_1002" onmouseover="tshowLayers('1002','b2_1_', '_1_')" onmouseout="thideLayers('1002','b1_1_', '_1_','true','true')"><a class="menu0_1_" href="../xygk.htm"><span class="fontstyle212282">&nbsp;学院概况&nbsp;</span></a></td><td valign="center"></td><td valign="middle" width="110" nowrap="" class="b1_1_" align="center" id="a_1_1003" onmouseover="tshowLayers('1003','b2_1_', '_1_')" onmouseout="thideLayers('1003','b1_1_', '_1_','true','true')"><a class="menu0_1_" href="../jgsz.htm"><span class="fontstyle212282">&nbsp;机构设置&nbsp;</span></a></td><td valign="center"></td><td valign="middle" width="110" nowrap="" class="b1_1_" align="center" id="a_1_1004" onmouseover="tshowLayers('1004','b2_1_', '_1_')" onmouseout="thideLayers('1004','b1_1_', '_1_','true','true')"><a class="menu0_1_" href="../szdw.htm"><span class="fontstyle212282">&nbsp;师资队伍&nbsp;</span></a></td><td valign="center"></td><td valign="middle" width="110" nowrap="" class="b1_1_" align="center" id="a_1_1005" onmouseover="tshowLayers('1005','b2_1_', '_1_')" onmouseout="thideLayers('1005','b1_1_', '_1_','true','true')"><a class="menu0_1_" href="../xkjs.htm"><span class="fontstyle212282">&nbsp;学科建设&nbsp;</span></a></td><td valign="center"></td><td valign="middle" width="110" nowrap="" class="b1_1_" align="center" id="a_1_1006" onmouseover="tshowLayers('1006','b2_1_', '_1_')" onmouseout="thideLayers('1006','b1_1_', '_1_','true','true')"><a class="menu0_1_" href="../jxgz.htm"><span class="fontstyle212282">&nbsp;教学工作&nbsp;</span></a></td><td valign="center"></td><td valign="middle" width="110" nowrap="" class="b1_1_" align="center" id="a_1_1007" onmouseover="tshowLayers('1007','b2_1_', '_1_')" onmouseout="thideLayers('1007','b1_1_', '_1_','true','true')"><a class="menu0_1_" href="../kxyj.htm"><span class="fontstyle212282">&nbsp;科学研究&nbsp;</span></a></td><td valign="center"></td><td valign="middle" width="110" nowrap="" class="b1_1_" align="center" id="a_1_1008" onmouseover="tshowLayers('1008','b2_1_', '_1_')" onmouseout="thideLayers('1008','b1_1_', '_1_','true','true')"><a class="menu0_1_" href="../zdsy.htm"><span class="fontstyle212282">&nbsp;重点实验室&nbsp;</span></a></td><td valign="center"></td><td valign="middle" width="110" nowrap="" class="b1_1_" align="center" id="a_1_1009" onmouseover="tshowLayers('1009','b2_1_', '_1_')" onmouseout="thideLayers('1009','b1_1_', '_1_','true','true')"><a class="menu0_1_" href="../dqgz.htm"><span class="fontstyle212282">&nbsp;党群工作&nbsp;</span></a></td><td valign="center"></td><td valign="middle" width="110" nowrap="" class="b1_1_" align="center" id="a_1_1010" onmouseover="tshowLayers('1010','b2_1_', '_1_')" onmouseout="thideLayers('1010','b1_1_', '_1_','true','true')"><a class="menu0_1_" href="../xsgz.htm"><span class="fontstyle212282">&nbsp;学生工作&nbsp;</span></a></td><td valign="center"></td><td valign="middle" width="110" nowrap="" class="b1_1_" align="center" id="a_1_1011" onmouseover="tshowLayers('1011','b2_1_', '_1_')" onmouseout="thideLayers('1011','b1_1_', '_1_','true','true')"><a class="menu0_1_" href="../rcpy.htm"><span class="fontstyle212282">&nbsp;人才培养&nbsp;</span></a></td><td valign="center"></td><td valign="middle" width="110" nowrap="" class="b1_1_" align="center" id="a_1_1059" onmouseover="tshowLayers('1059','b2_1_', '_1_')" onmouseout="thideLayers('1059','b1_1_', '_1_','true','true')"><a class="menu0_1_" href="../rcyj.htm"><span class="fontstyle212282">&nbsp;人才引进&nbsp;</span></a></td><td valign="center"></td><td valign="middle" width="110" nowrap="" class="b1_1_" align="center" id="a_1_1012" onmouseover="tshowLayers('1012','b2_1_', '_1_')" onmouseout="thideLayers('1012','b1_1_', '_1_','true','true')"><a class="menu0_1_" href="../zsjy.htm"><span class="fontstyle212282">&nbsp;招生就业&nbsp;</span></a></td></tr><tr><td align="left" nowrap=""></td><td></td><td align="left" nowrap=""><div class="main_1_" id="layer_1_1002" onmouseover="tshownull('1002','b2_1_', '_1_')" onmouseout="thideLayers('1002','b1_1_', '_1_','true')" style="z-index:99999;display: none; POSITION: absolute;"><table align="center" class="tb1_1_" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="xyjj.htm"><span class="ejfontstyle212282">&nbsp;学院简介&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="xyld.htm"><span class="ejfontstyle212282">&nbsp;学院领导&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="bgdh.htm"><span class="ejfontstyle212282">&nbsp;办公电话&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="smxylrld.htm"><span class="ejfontstyle212282">&nbsp;生命学院历任领导&nbsp;</span></a></td></tr></tbody></table></div></td><td></td><td align="left" nowrap=""><div class="main_1_" id="layer_1_1003" onmouseover="tshownull('1003','b2_1_', '_1_')" onmouseout="thideLayers('1003','b1_1_', '_1_','true')" style="z-index:99999;display: none; POSITION: absolute;"><table align="center" class="tb1_1_" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../jgsz/ydzb.htm"><span class="ejfontstyle212282">&nbsp;学院办公室&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../jgsz/xi.htm"><span class="ejfontstyle212282">&nbsp;系&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../jgsz/zdsys.htm"><span class="ejfontstyle212282">&nbsp;重点实验室&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../jgsz/yjs.htm"><span class="ejfontstyle212282">&nbsp;研究所&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../jgsz/syzx.htm"><span class="ejfontstyle212282">&nbsp;实验中心&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../jgsz/syjxzx.htm"><span class="ejfontstyle212282">&nbsp;实验教学中心&nbsp;</span></a></td></tr></tbody></table></div></td><td></td><td align="left" nowrap=""><div class="main_1_" id="layer_1_1004" onmouseover="tshownull('1004','b2_1_', '_1_')" onmouseout="thideLayers('1004','b1_1_', '_1_','true')" style="z-index:99999;display: none; POSITION: absolute;"><table align="center" class="tb1_1_" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../newwebsite/ters.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1022"><span class="ejfontstyle212282">&nbsp;教授&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../newwebsite/ters.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1023"><span class="ejfontstyle212282">&nbsp;副教授&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../newwebsite/ters.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1024"><span class="ejfontstyle212282">&nbsp;讲师&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../newwebsite/ters.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1025"><span class="ejfontstyle212282">&nbsp;博士后&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../newwebsite/ters.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1235"><span class="ejfontstyle212282">&nbsp;实验中心&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../newwebsite/ters.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1236"><span class="ejfontstyle212282">&nbsp;实验教学中心&nbsp;</span></a></td></tr></tbody></table></div></td><td></td><td align="left" nowrap=""><div class="main_1_" id="layer_1_1005" onmouseover="tshownull('1005','b2_1_', '_1_')" onmouseout="thideLayers('1005','b1_1_', '_1_','true')" style="z-index:99999;display: none; POSITION: absolute;"><table align="center" class="tb1_1_" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../xkjs/swyxgc.htm"><span class="ejfontstyle212282">&nbsp;生物医学工程&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../xkjs/swx.htm"><span class="ejfontstyle212282">&nbsp;生物学&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../xkjs/tsxk.htm"><span class="ejfontstyle212282">&nbsp;特色学科&nbsp;</span></a></td></tr></tbody></table></div></td><td></td><td align="left" nowrap=""><div class="main_1_" id="layer_1_1006" onmouseover="tshownull('1006','b2_1_', '_1_')" onmouseout="thideLayers('1006','b1_1_', '_1_','true')" style="z-index:99999;display: none; POSITION: absolute;"><table align="center" class="tb1_1_" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../jxgz/bksjx.htm"><span class="ejfontstyle212282">&nbsp;本科生教学&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../jxgz/ysjx.htm"><span class="ejfontstyle212282">&nbsp;研究生教学&nbsp;</span></a></td></tr></tbody></table></div></td><td></td><td align="left" nowrap=""><div class="main_1_" id="layer_1_1007" onmouseover="tshownull('1007','b2_1_', '_1_')" onmouseout="thideLayers('1007','b1_1_', '_1_','true')" style="z-index:99999;display: none; POSITION: absolute;"><table align="center" class="tb1_1_" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../kxyj/kygk.htm"><span class="ejfontstyle212282">&nbsp;科研概况&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../kxyj/kydt.htm"><span class="ejfontstyle212282">&nbsp;科研动态&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../kxyj/kycg.htm"><span class="ejfontstyle212282">&nbsp;科研成果&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../kxyj/kytd.htm"><span class="ejfontstyle212282">&nbsp;科研团队&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../kxyj/xshd.htm"><span class="ejfontstyle212282">&nbsp;学术活动&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../kxyj/gjhzjl.htm"><span class="ejfontstyle212282">&nbsp;国际合作交流&nbsp;</span></a></td></tr></tbody></table></div></td><td></td><td align="left" nowrap=""><div class="main_1_" id="layer_1_1008" onmouseover="tshownull('1008','b2_1_', '_1_')" onmouseout="thideLayers('1008','b1_1_', '_1_','true')" style="z-index:99999;display: none; POSITION: absolute;"><table align="center" class="tb1_1_" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../zdsy/kjswsymnjszdsys.htm"><span class="ejfontstyle212282">&nbsp;空间生物实验模拟技术重点实验室&nbsp;</span></a></td></tr></tbody></table></div></td><td></td><td align="left" nowrap=""><div class="main_1_" id="layer_1_1009" onmouseover="tshownull('1009','b2_1_', '_1_')" onmouseout="thideLayers('1009','b1_1_', '_1_','true')" style="z-index:99999;display: none; POSITION: absolute;"><table align="center" class="tb1_1_" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../dqgz/djgk.htm"><span class="ejfontstyle212282">&nbsp;党建概况&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../dqgz/zbsz.htm"><span class="ejfontstyle212282">&nbsp;支部设置&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../dqgz/llxx.htm"><span class="ejfontstyle212282">&nbsp;理论学习&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../dqgz/ghgz.htm"><span class="ejfontstyle212282">&nbsp;工会工作&nbsp;</span></a></td></tr></tbody></table></div></td><td></td><td align="left" nowrap=""><div class="main_1_" id="layer_1_1010" onmouseover="tshownull('1010','b2_1_', '_1_')" onmouseout="thideLayers('1010','b1_1_', '_1_','true')" style="z-index:99999;display: none; POSITION: absolute;"><table align="center" class="tb1_1_" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../xsgz/xsdj.htm"><span class="ejfontstyle212282">&nbsp;学生党建&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../xsgz/xsst.htm"><span class="ejfontstyle212282">&nbsp;学生社团&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../xsgz/xshd.htm"><span class="ejfontstyle212282">&nbsp;学生活动&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../xsgz/shsj.htm"><span class="ejfontstyle212282">&nbsp;社会实践&nbsp;</span></a></td></tr></tbody></table></div></td><td></td><td align="left" nowrap=""><div class="main_1_" id="layer_1_1011" onmouseover="tshownull('1011','b2_1_', '_1_')" onmouseout="thideLayers('1011','b1_1_', '_1_','true')" style="z-index:99999;display: none; POSITION: absolute;"><table align="center" class="tb1_1_" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../rcpy/bshpy.htm"><span class="ejfontstyle212282">&nbsp;博士后培养&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../rcpy/byxy.htm"><span class="ejfontstyle212282">&nbsp;毕业校友&nbsp;</span></a></td></tr></tbody></table></div></td><td></td><td align="left" nowrap=""><div class="main_1_" id="layer_1_1059" onmouseover="tshownull('1059','b2_1_', '_1_')" onmouseout="thideLayers('1059','b1_1_', '_1_','true')" style="z-index:99999;display: none; POSITION: absolute;"><table align="center" class="tb1_1_" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../rcyj.htm"><span class="ejfontstyle212282">&nbsp;人才引进&nbsp;</span></a></td></tr></tbody></table></div></td><td></td><td align="left" nowrap=""><div class="main_1_" id="layer_1_1012" onmouseover="tshownull('1012','b2_1_', '_1_')" onmouseout="thideLayers('1012','b1_1_', '_1_','true')" style="z-index:99999;display: none; POSITION: absolute;"><table align="center" class="tb1_1_" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../zsjy/bkszs.htm"><span class="ejfontstyle212282">&nbsp;本科生招生&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../zsjy/yjszs.htm"><span class="ejfontstyle212282">&nbsp;研究生招生&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../zsjy/bysxx.htm"><span class="ejfontstyle212282">&nbsp;学生风采&nbsp;</span></a></td></tr><tr><td height="0" align="left" nowrap="" onmouseover="TOVT(this,'b4_1_', '_1_');" onmouseout="TOUT(this,'b3_1_', '_1_');" class="b3_1_">
+<a class="menu0_1_" href="../zsjy/jyxx.htm"><span class="ejfontstyle212282">&nbsp;就业信息&nbsp;</span></a></td></tr></tbody></table></div></td><td></td></tr></tbody></table></div>
+<div class="btt"></div>
+<div class="content" style="margin-top:35px;">
+<div class="left">
+<div class="sectitle" style="width: 205px"><span class="windowstyle212476">
+学院概况</span></div>
+<div style="width: 200px; text-align: center; margin-left: auto; margin-top: 25px; margin-right: auto"><style type="text/css">
+td.b1_4_{FONT-SIZE:9pt;text-align:center;}
+td.b2_4_{FONT-SIZE:9pt;TEXT-ALIGN: center;BACKGROUND-COLOR: #e6e6fa;}
+td.b3_4_{FONT-SIZE:9pt;BORDER-BOTTOM: #cccccc 1px solid;BACKGROUND-COLOR: #eeeeee;BORDER-RIGHT: #cccccc 1px solid;}
+td.b4_4_{FONT-SIZE:9pt;BORDER-BOTTOM: #cccccc 1px solid;BACKGROUND-COLOR: #eeeeee;BORDER-RIGHT: #cccccc 1px solid;}
+a.menu0_4_:link {TEXT-DECORATION: none;};
+a.menu0_4_:visited { TEXT-DECORATION: none;};
+a.menu0_4_:hover {TEXT-DECORATION: none;};
+a.menu0_4_:active {TEXT-DECORATION: none;};
+table.tb1_4_{FONT-SIZE:9pt;border:0;}
+span.s1_4_{FONT-SIZE: 11pt;TEXT-DECORATION: none;FONT-FAMILY: '微软雅黑';FONT-WEIGHT: bold;COLOR: #188a00;LINE-HEIGHT: 300%;}
+span.s2_4_{LINE-HEIGHT: 160%;FONT-FAMILY: 宋体;COLOR: #cc0000;FONT-SIZE: 11pt;TEXT-DECORATION: none;}
+span.s10_4_{FONT-SIZE: 11pt;TEXT-DECORATION: none;FONT-FAMILY: '微软雅黑';FONT-WEIGHT: bold;COLOR: #188a00;LINE-HEIGHT: 300%;}
+span.s20_4_{LINE-HEIGHT: 160%;FONT-FAMILY: 宋体;COLOR: #000000;FONT-SIZE: 11pt;TEXT-DECORATION: none;}
+</style>
+<script language="javascript"> 
+ var showfix_4_ = 1;
+ var isvertical_4_ = true;
+</script>
+
+<table id="t1_4_" cellspacing="0" cellpadding="0" border="0" height="0" width="0"><tbody><tr><td valign="middle" height="0" width="185" class="b1_4_" align="left" id="a_4_1013" onmouseover="tshowLayers('1013','b2_4_', '_4_')" onmouseout="thideLayers('1013','b1_4_', '_4_','true')"> <a class="menu0_4_" href="xyjj.htm"><span class="fontstyle212474">&nbsp;学院简介&nbsp;</span></a></td></tr><tr><td valign="middle" height="0" width="185" class="b1_4_" align="left" id="a_4_1014" onmouseover="tshowLayers('1014','b2_4_', '_4_')" onmouseout="thideLayers('1014','b1_4_', '_4_','true')"> <a class="menu0_4_" href="xyld.htm"><span class="fontstyle212474">&nbsp;学院领导&nbsp;</span></a></td></tr><tr><td valign="middle" height="0" width="185" class="b1_4_" align="left" id="a_4_1015" onmouseover="tshowLayers('1015','b2_4_', '_4_')" onmouseout="thideLayers('1015','b1_4_', '_4_','true')"> <a class="menu0_4_" href="bgdh.htm"><span class="fontstyle212474">&nbsp;办公电话&nbsp;</span></a></td></tr><tr><td valign="middle" height="0" width="185" class="b1_4_" align="left" id="a_4_1225" onmouseover="tshowLayers('1225','b2_4_', '_4_')" onmouseout="thideLayers('1225','b1_4_', '_4_','true')"> <a class="menu0_4_" href="smxylrld.htm"><span class="fontstyle212474">&nbsp;生命学院历任领导&nbsp;</span></a></td></tr></tbody></table></div></div>
+<div class="right">
+<div class="sectitle">
+<div style="width: 100px; float: left"><span class="windowstyle212478">
+学院简介</span></div>
+<div style="float: right; margin-top: 5px">  
+<table class="winstyle212479" cellspacing="0" cellpadding="0"><tbody><tr><td nowrap="">Position:   
+<a href="../index.htm"><span class="fontstyle212479">首页</span></a><span class="splitflagstyle212479">&nbsp;&gt;&nbsp;</span><a href="../xygk.htm"><span class="fontstyle212479">学院概况</span></a><span class="splitflagstyle212479">&nbsp;&gt;&nbsp;</span><a href="xyjj.htm"><span class="fontstyle212479">学院简介</span></a></td></tr></tbody></table></div></div>
+<div style="margin-top: 25px">
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script>
+function seeContenta7(contentid,size,displayid)
+{
+	document.getElementById(contentid).innerHTML = "[";
+	for(var i=0;i<=size;i++)
+	{
+		var allcontentid = contentid+(i+1);
+		if(allcontentid==displayid)
+		{
+			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"' "+' class="wb_content" '+" >"+(i+1)+"</span> ";
+			document.getElementById(displayid).style.display = 'block';
+		}else
+		{
+			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"') "+' class="wb_content" '+" >"+(i+1)+"</span> ";
+			document.getElementById(allcontentid).style.display = "none";
+		}
+	}
+
+	document.getElementById(contentid).innerHTML += "]";
+}
+</script>
+<table class="wb_window" width="100%">
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+		<script>
+		_addDynClicks('wbnews',871905539,3707)
+		</script>
+
+		<tbody><tr><td align="center"><span class="titlestyle212816"><span style="color:#080008;">生命学院简介</span></span></td></tr>
+<tr><td align="center"><span class="timestyle212816">
+	</span><span class="authorstyle212816"></span></td></tr>
+<tr><td class="contentstyle212816"><div id="vsb_content_501_3707_u71"><div id="vsb_content_501"><link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format501.css"><div class="v_news_content"><p class="vsbcontent_start">西北工业大学生命学院坚持社会主义办学方向，认真贯彻落实党的教育方针，坚持落实立德树人根本任务，把教书与育人相统一、言传与身教相统一、潜心问道与关注社会相统一、学术自由与学术规范相统一，认真履行传播知识、培养人才、创新科技和服务社会的职责，牢记“公诚勇毅”校训，坚持全员育人、全程育人、全方位育人，努力实现四个服务目标。</p>
+<p>生命学院的前身为“生命科学院”，成立于2004年4月，2010年3月正式更名为“生命学院”，成为学校第十五个专业学院。面临“双一流”建设，学院的发展定位是：以国家航天、航空和航海领域重大需求为牵引，以生命科学主流学科为支撑，将基础学科与技术、工程学科交叉融合、基础研究与应用研究相贯通，旨在建成学科特色鲜明、国际知名、国内一流的高水平人才培养与科学研究基地。</p>
+<p><br></p>
+<p style="text-align: center;"><strong style="font-size: 14pt; text-indent: 2em; text-align: center;">师资队伍</strong></p>
+<p>学院现有教职工96人，教师59人（兼职2人），其中教授15人（兼职1人），副教授44人（兼职1人），在站博士后8人。教师队伍中学院拥有国际宇航科学院院士1人，教育部新世纪优秀人才2人、国家自然科学基金优秀青年基金获得者1人、陕西省“青年百人”1人等优秀人才。</p>
+<p><br></p>
+<p style="text-align: center;"><strong>学科建设</strong></p>
+<p>生命学院拥有两个一级学科学位授权点——生物医学工程一级学科博士点和生物学一级学科硕士点；1个本科专业——生物技术；1个国防特色学科——空间生物科学与技术。同时依托我校“航空宇航科学与技术”和“材料学”一级学科招收博士研究生；以及在“航空宇航科学与技术”“材料学”“生物医学工程”博士后流动站招收博士后研究人员。</p>
+<p><br></p>
+<p style="text-align: center;"><strong>人才培养</strong></p>
+<p>学院下设生物医学工程和生物学2个教学系，拥有陕西省生命科学实验教学示范中心1个，陕西省生物技术国际化人才培养创新实验中心1个。每年招收本科生80-100人，研究生（硕士&amp;博士）120余人。</p>
+<p>学院拥有大型仪器设备开放共享平台——实验中心，承担科研分析测试和本科生、研究生实验教学任务，设备总值5000余万元，其中100万元以上大型设备11台套。</p>
+<p>学院以提升人才培养质量为核心，持续推进教育教学改革，不断优化人才培养体系。人才培养瞄准国家科技发展重大战略需求，定位于培养具有家国情怀、追求卓越、引领未来的领军人才，使学生具备健康体魄、高尚品质、广博学识、创新精神、全球视野与持久竞争力，德智体美劳全面发展。</p>
+<p><br></p>
+<p style="text-align: center;"><strong>科学研究</strong></p>
+<p>学院结合我校航空、航天、航海工程技术教育与研究特色，重点开展“特殊环境生物学”与“材料生物学与医学工程”两大学科领域的前沿基础和应用技术研究，重点研究方向包括空间环境生命科学、（极端）力生物学、磁生物学、缺氧应激生物学、生物医用材料、生物大分子机器结构功能、纳米酶与微纳生物材料、生物酶催化与绿色合成等。学院多学科交叉融合优势明显，研究内容涵盖生物化学、分子细胞生物学、生物物理学、微生物学、生物材料、药剂学、药理学、药物化学、生物信息学、生物力学、生物医学工程、磁生物学等多个学科。学院现有各级科研平台12个：</p>
+<p>⟡特殊环境生命与健康学科与技术中心（部级）；</p>
+<p>⟡空天特殊环境生物诊疗与防护技术装备教育部工程研究中心（部级）；</p>
+<p>⟡陕西省柔性电子与健康科学国际联合研究中心（省级，联合共建）；</p>
+<p>⟡西安市特种医学与健康工程重点实验室（市级）；</p>
+<p>⟡西北工业大学特殊环境生物物理学研究所（校级）；</p>
+<p>⟡西北工业大学-香港浸会大学空间肌肉骨骼健康转化医学联合研究中心（校级）；</p>
+<p>⟡中德空间生物材料与技术转化联合实验室（校级）；</p>
+<p>⟡特种医学与健康系统工程联合研究中心（校级）；</p>
+<p>⟡西北工业大学-港澳生物电子与健康工程联合实验室（校级）；</p>
+<p>⟡生物力学与医学工程研究中心（院级）</p>
+<p>⟡西北工业大学生命学院-诺道中科（北京）生物科技有限公司分子免疫诊断联合实验室（院级）</p>
+<p>⟡西北工业大学生命学院太赫兹生物医学交叉联合研究中心（院级）</p>
+<p>学院共获得各类基金项目700余项，其中省部级以上项目388项，包括国家973计划项目课题、国家863计划课题、国家科技支撑计划，国家自然科学基金优秀青年科学基金项目、国家自然科学基金面上项目和青年项目，国防科技创新项目等，科研项目合同经费7亿元。获得国防技术发明奖、陕西科学技术奖等科研奖项28项。截止2025年7月全院师生共发表论文1500篇（其中SCI收录935篇），授权国家发明专利94项，实用新型11项。</p>
+<p><br></p>
+<p style="text-align: center;"><strong>国际合作与交流</strong></p>
+<p>学院深入实施国际化办学战略，与美国、英国、加拿大、德国、澳大利亚、俄罗斯等国的顶尖高校和科研机构建立了实质性合作与交流，在国际上具有良好的学术声誉，聘请外籍副教授1人，博士后3人。通过公派留学、短期交流、合作研究、英国布里斯托大学“3+1”本硕联合培养项目、“翱翔四海”寒暑期交流项目等多种形式开展学生联合培养与国际交流活动。学院积极开展国际学生教育，面向全球招收本科及研究生层次留学生，开设全英文课程50余门，生物技术（全英文授课）国际化班整建制招收本科留学生，学院现有来自西班牙、俄罗斯、墨西哥、印度尼西亚、摩洛哥、印度等20余个国家的留学生80余人。</p>
+<p><br></p>
+<p class="vsbcontent_end">（数据更新至2025年7月）</p></div></div></div></td></tr>
+<tr><td class="wb_content" align="left" id="vsb_content_501_3707_u7" name="vsb_content_501_3707_u7"></td></tr>
+
+</tbody></table>
+<table cellspacing="" cellpadding="" border="0">
+<tbody><tr><td align="center"></td></tr>
+</tbody></table></div></div></div>
+<div class="clear"></div>
+<div class="main-box3" style="background-color: #ffffff">
+<div class="foot">
+<div style="width: 1230px; text-align: center; margin-left: auto; margin-right: auto"><br><span style="position: relative; color: #ffffff; left: -450px; top: 20px">友情链接:</span> 
+<div class="bottom">     
+     
+  
+     
+ 
+
+<table border="0" width="0">     
+    <tbody><tr>   
+            <td align="absmiddle">
+<span class="leaderstyle212463"></span></td>     
+            <td width="180" align="left">   
+                <a class="c212463" href="http://life.tsinghua.edu.cn/" onclick="_addDynClicks('wburl',871905539,43978)" target="_blank">清华大学生命科学院</a>
+                 
+            </td>     
+   
+            <td align="absmiddle">
+
+                <span class="jumpstyle212463"></span>
+            <span class="leaderstyle212463"></span></td>     
+            <td width="180" align="left">   
+                <a class="c212463" href="http://www.bio.pku.edu.cn//" onclick="_addDynClicks('wburl',871905539,43979)" target="_blank">北京大学生命科学院</a>
+                 
+            </td>     
+   
+            <td align="absmiddle">
+
+                <span class="jumpstyle212463"></span>
+            <span class="leaderstyle212463"></span></td>     
+            <td width="180" align="left">   
+                <a class="c212463" href="http://life.fudan.edu.cn/" onclick="_addDynClicks('wburl',871905539,43981)" target="_blank">复旦大学生命科学院</a>
+                 
+            </td>     
+   
+            <td align="absmiddle">
+
+                <span class="jumpstyle212463"></span>
+            <span class="leaderstyle212463"></span></td>     
+            <td width="180" align="left">   
+                <a class="c212463" href="https://biox.ustc.edu.cn/" onclick="_addDynClicks('wburl',871905539,43980)" target="_blank">中国科学技术大学生命科学院</a>
+                 
+            </td>     
+</tr></tbody></table></div>
+<div class="bottom"><span style="font-size:10pt;color:white;line-height:120%;font-weight:normal">地址：西安市长安区东祥路1号&nbsp; 邮编：710129  联系电话：029-88430180</span></div></div></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

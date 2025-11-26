@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>书院简介-乘风书院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="书院简介">
+<meta name="keywords" content="乘风书院,书院简介">
+
+<meta name="description" content="海南大学乘风书院 | Hainan University">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307c784750505b5742000300004354 -->
+<link rel="stylesheet" type="text/css" href="../dy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1041,'/dy.jsp',-1,1833194878)</script>
+</head>
+<body>
+
+
+<link href="../home2022/axui/css/ax.css?20222230" rel="stylesheet" type="text/css">
+<link href="../home2022/css/swiper.min-my.css?202442230" rel="stylesheet" type="text/css">
+<link href="../home2022/css/z2022.css?20222230" rel="stylesheet" media="screen" type="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script language="javascript" type="text/javascript" src="../home2022/js/jquery-min.js"></script>
+<script language="javascript" type="text/javascript" src="../home2022/js/jquery.SuperSlide.js"></script> 
+
+
+
+<header class="header-w min-w">
+<div class="header-bg">
+    <dl class="header">
+        <div class="header-left">
+<a href="../index.htm" target="_self"><img src="../home2022/imgs/logo.png"></a></div> 
+        <div class="header-right">
+            <dl class="top-tis">
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><a href="http://www.hainanu.edu.cn" target="_blank">海大首页</a>
+<a href="https://ehall.hainanu.edu.cn/ywtb-portal/Lite/index.html#/work_bench/Lite_workbench" target="_blank">网上服务大厅</a>
+            </dl>
+            <dl class="search-web">
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu3 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu3 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu3">
+    <div id="appu3"><div><div id="search-form"><input type="search" placeholder="请输入搜索内容" autocomplete="off"> <button><i class="ax-iconfont ax-icon-search"></i></button></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError">
+       
+<div id="search-form" >
+
+<input type="search" placeholder="请输入搜索内容"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" />
+<button v-on:click="onSubmit()"><i class="ax-iconfont ax-icon-search"></i></button>
+
+</div>
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "1833194878";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+            </dl>
+        </div>
+    </dl>
+        <script language="javascript" type="text/javascript" src="../home2022/js/jquery-min.js"></script>
+<script language="javascript" type="text/javascript" src="../home2022/js/jquery.SuperSlide.js"></script> 
+<nav class="navz">
+<ul id="nav" class="nav clearfix">
+<p class="nLi on" id="fixed-logo"></p>
+
+
+        <li class="nLi">  
+
+        <h3><a href="../index.htm" title="首页">首页</a></h3>
+
+        </li>
+        <li class="nLi">  
+
+        <h3><a href="../sygk.htm" title="书院概况">书院概况</a></h3>
+
+        <ul class="sub">
+           <a href="syjj.htm">书院简介</a>
+           <a href="yhbs.htm">院徽标识</a>
+           <a href="jgsz.htm">机构设置</a>
+           <a href="sytd.htm">书院团队</a>
+        </ul>
+        </li>
+        <li class="nLi">  
+
+        <h3><a href="../syxw.htm" title="书院新闻">书院新闻</a></h3>
+
+        </li>
+        <li class="nLi">  
+
+        <h3><a href="../tzgg.htm" title="通知公告">通知公告</a></h3>
+
+        </li>
+        <li class="nLi">  
+
+        <h3><a href="../dtjs.htm" title="党团建设">党团建设</a></h3>
+
+        <ul class="sub">
+           <a href="../dtjs/djgz.htm">党建工作</a>
+           <a href="../dtjs/txgz.htm">团学工作</a>
+        </ul>
+        </li>
+        <li class="nLi">  
+
+        <h3><a href="../sqsh.htm" title="社区生活">社区生活</a></h3>
+
+        <ul class="sub">
+           <a href="../sqsh/syjt.htm">书院讲坛</a>
+           <a href="../sqsh/cfby.htm">乘风榜样</a>
+           <a href="../sqsh/hdyg.htm">活动预告</a>
+        </ul>
+        </li>
+        <li class="nLi">  
+
+        <h3><a href="../syfw.htm" title="书院服务">书院服务</a></h3>
+
+        <ul class="sub">
+           <a href="../syfw/xljk.htm">心理健康</a>
+           <a href="../syfw/jyzd.htm">就业指导</a>
+           <a href="../syfw/qgzx.htm">勤工助学</a>
+           <a href="../syfw/zlbgxz.htm">资料表格下载</a>
+        </ul>
+        </li>
+
+
+</ul>
+</nav>
+
+<script id="jsID" type="text/javascript">
+jQuery("#nav").slide({ type:"menu", titCell:".nLi", targetCell:".sub",delayTime:300,triggerTime:0,returnDefault:true});
+</script> 
+</div>
+</header>
+
+
+
+
+
+
+<div class="lmdaohang" style="background:url(../home2022/imgc/nbj.jpg) no-repeat center"></div>
+
+<div class="m2atcConWpr">
+<div class="m2atcCon">
+    <div class="m2atcMenu">
+        <div class="news-list-vertical nei_tu">
+            
+<span>
+            <em><b>书院概况</b></em>
+            </span>
+        </div>
+        <div class="m_new3">
+        <ul>
+
+<li class="on"><a href="syjj.htm" title="书院简介">书院简介</a></li>
+
+
+
+<li><a href="yhbs.htm" title="院徽标识">院徽标识</a></li>
+
+
+
+<li><a href="jgsz.htm" title="机构设置">机构设置</a></li>
+
+
+
+<li><a href="sytd.htm" title="书院团队">书院团队</a></li>
+
+
+</ul>
+        </div>  
+    </div>
+    <div class="m2atcRcon">
+        <div class="fdiv muc">
+            <ul>
+<span>书院简介</span></ul>
+            <div class="current-w">
+ <span>
+    当前位置: 
+                        <a href="../index.htm">首页</a>
+                &gt;&gt;
+                <a href="../sygk.htm">书院概况</a>
+                &gt;&gt;
+                <a href="syjj.htm">书院简介</a>
+  </span>
+</div>
+        </div>  
+        <!--单页-->
+        <div class="kanz">
+            
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1833194878,'wbnews','u10')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format501.css"><script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1833194878,1061)</script>
+<div class="InfoContent neirong">
+
+    <div class="lnmu" style="display:none">
+    <ul>海南大学乘风书院简介</ul>
+    </div>
+    <div class="InfoContent neirong">
+        <div id="vsb_content_501_1061_u101"><div id="vsb_content_501"><p class="vsbcontent_start"><span style="font-size: 21px; font-family: 仿宋, SimSum;">海南大学乘风书院成立于2022年3月29日，是海南大学贯彻落实习近平总书记“要支持海南大学创建世界一流学科”重要指示精神，加快“双一流”建设，创新人才培养模式，推进书院制改革而成立的16个书院之一。</span></p><p><span style="font-size: 21px; font-family: 仿宋, SimSum;">书院下设综合办公室、学生工作办公室（团委），并设有学生成长研究中心、学生党建会、学生融媒体中心等。书院现有专职教师12人，并从各专业院系聘请200余位优秀教师担任学业导师。现有学生3000余名。</span></p><p><span style="font-size: 21px; font-family: 仿宋, SimSum;">书院围绕立德树人根本任务，聚焦个性化人才培养，立足社区育人，通过书院与学院的双院协同、辅导员与学业导师的双导协同，推动专业教学、通识教育学术科研与实践育人“多线发力”，实现全方位“共促”学生成长。</span></p><p><span style="font-size: 21px; font-family: 仿宋, SimSum;">乘风书院秉承"红色引航、绿色筑基、蓝色逐梦"三位一体人才培养理念，致力于培育德才兼备、全面发展的新时代高素质人才。</span></p><p><span style="font-size: 21px; font-family: 仿宋, SimSum;">【红色引航】铸魂育人，培育政治坚定、思想过硬的时代新人。书院全面贯彻党的教育方针，落实立德树人根本任务，以培养社会主义建设者和接班人为使命担当。依托马克思主义理论学科优势，持续推进"大学生网络评论大赛""大学生讲思政课"等思政育人品牌矩阵构建，通过浸润式、互动式教育模式筑牢青年学子的理想信念根基。</span></p><p><span style="font-size: 21px; font-family: 仿宋, SimSum;">【绿色筑基】厚植沃土，培育素质全面、底蕴深厚的复合人才。书院构建"第二课堂+通识教育"协同育人体系，通过特色书院文化建设涵养精神内涵。重点建设开放式阅览区、研讨型自习空间、多功能活动中心，系统开展学术沙龙、社团实践、体育美育等素质拓展活动，促进学生知识、能力、素养有机融合，实现德智体美劳全面发展。</span></p><p class="vsbcontent_end"><span style="font-size: 21px; font-family: 仿宋, SimSum;">【蓝色逐梦】创新赋能，培育视野开阔、敢为人先的卓越人才。书院着力营造"敢闯会创"的育人氛围，通过建设创新创业实践平台、举办创新创业训练营、开展校企协同项目等举措，构建"教学-竞赛-实践"全链条培养体系，为国家创新发展和海南自由贸易港建设输送具有竞争力的优秀人才。</span></p></div></div>
+        <span id="vsb_content_501_1061_u10" name="vsb_content_501_1061_u10"></span><br><br>
+        
+    </div>
+
+</div>
+
+
+        </div>
+
+
+
+    </div>      
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer footx">
+    <div class="w3">
+    <ul>
+        
+<dl class="foot-d3">
+            <li>版权所有2022©海南大学乘风书院</li>
+            <li>地址：海南省海口市人民大道58号海南大学22号公寓楼（紫荆2）</li>
+            <li>邮编：570228</li>
+            <li>学工办邮箱：cfxgb@hainanu.edu.cn</li>
+            <li>团委邮箱：cftw@hainanu.edu.cn</li>
+            <li>综合办邮箱：cfzhb@hainanu.edu.cn</li>
+           
+        </dl>
+    </ul>
+    <article>
+<img src="../home2022/imgs/logo.png"></article>
+    <ol>
+
+        <h1>关注我们</h1>
+        <li>
+            <span><img src="../home2022/imgs/wx.jpg"><b>乘风书院公众号</b></span>
+        </li>
+    </ol>
+    </div>
+</footer>
+
+
+<script src="../home2022/axui/js/ax.js" type="text/javascript" charset="utf-8"></script>
+<script src="../home2022/js/axuimy.js?202210" type="text/javascript" charset="utf-8"></script>
+ 
+
+
+
+</body></html>

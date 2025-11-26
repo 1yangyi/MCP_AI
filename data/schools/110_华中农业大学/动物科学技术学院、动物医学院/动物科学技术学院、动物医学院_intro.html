@@ -1,0 +1,499 @@
+<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>学院简介-动物科学技术学院、动物医学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="动物科学技术学院、动物医学院,学院简介">
+
+        <link rel="stylesheet" type="text/css" href="../css/base.css">
+        <link rel="stylesheet" type="text/css" href="../css/page.css">
+    <!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f465553525742000400034351 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1003,'/dpzw.jsp',-1,1416815194)</script>
+</head>
+    <body>
+        <!--头部-->
+        <div class="tops">
+            <!--logo层-->            
+            <div class="logo">
+                <div class="logos">                                 
+                    <div class="logoleft">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<img src="../img/logo.png"></div>
+                    <div class="logoright">
+                        <div class="logolj"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><a href="http://my.hzau.edu.cn" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1416815194, 40625)">中文版</a>|
+<a href="http://astvet.hzau.edu.cn" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1416815194, 40626)" style="margin-right: 0px">English</a>
+</div>
+                        <div class="ssjg">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu2">
+    <div id="appu2"><div><input type="text" name="" id="" value="" placeholder="" autocomplete="off" class="inptext"> <img src="img/ssjg.png" class="inpimg"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+        <input type="text" name="" id="" value="" class="inptext" placeholder="" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" />
+                            <img src="img/ssjg.png" class="inpimg" v-on:click="onSubmit()"/>
+ 
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1416815194";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                    </div>
+                </div>
+                <div id="dhl"></div>
+            </div>          
+            <!--导航层-->
+            <div class="nva"><ul class="navul">                                    
+<li class="mainlevel">
+    <a href="../index.htm">首      页</a>
+</li>
+                    
+<li class="mainlevel">
+    <a href="xyjj.htm" class="dhdqa">学院概况</a>
+    <ul class="dhl">
+        <li><a href="xyjj.htm">学院简介</a></li>
+        <li><a href="zzjg.htm">组织机构</a></li>
+        <li><a href="xyld.htm">学院领导</a></li>
+        <li><a href="ywgk.htm">院务公开</a></li>
+        <li><a href="xyzd.htm">学院制度</a></li>
+        <li><a href="lxwm.htm">联系我们</a></li>
+    </ul>
+</li>
+                    
+<li class="mainlevel">
+    <a href="../szdw/jsml.htm">师资队伍</a>
+    <ul class="dhl">
+        <li><a href="../szdw/jsml.htm">教师名录</a></li>
+        <li><a href="../szdw/xxyjzx.htm">学系研究中心</a></li>
+        <li><a href="../szdw/ys.htm">院士</a></li>
+        <li><a href="../szdw/zyrcjh.htm">重要人才计划</a></li>
+        <li><a href="../szdw/kzjs_jzjs.htm">客座教授-兼职教授</a></li>
+        <li><a href="../szdw/bsh.htm">博士后</a></li>
+        <li><a href="../szdw/jkfry.htm">教科辅人员</a></li>
+        <li><a href="../szdw/ltxjzg.htm">离退休教职工</a></li>
+    </ul>
+</li>
+                    
+<li class="mainlevel">
+    <a href="../kxyj/kygk.htm">科学研究</a>
+    <ul class="dhl">
+        <li><a href="../kxyj/kygk.htm">科研概况</a></li>
+        <li><a href="../kxyj/kyjz.htm">科研进展</a></li>
+        <li><a href="../kxyj/cxtd.htm">创新团队</a></li>
+        <li><a href="../kxyj/kypt.htm">科研平台</a></li>
+        <li><a href="../kxyj/xzzq.htm">下载专区</a></li>
+    </ul>
+</li>
+                    
+<li class="mainlevel">
+    <a href="../rcpy.htm">人才培养</a>
+    <ul class="dhl">
+        <li><a href="../rcpy/bkspy.htm">本科生培养</a></li>
+        <li><a href="../rcpy/yjspy.htm">研究生培养</a></li>
+        <li><a href="../rcpy/lxspy.htm">留学生培养</a></li>
+        <li><a href="../rcpy/bshpy.htm">博士后培养</a></li>
+        <li><a href="../rcpy/jxdt.htm">教学动态</a></li>
+    </ul>
+</li>
+                    
+<li class="mainlevel">
+    <a href="../xshd.htm">学术活动</a>
+    <ul class="dhl">
+        <li><a href="../xshd/xsbg.htm">学术报告</a></li>
+        <li><a href="../xshd/yth.htm">研讨会</a></li>
+        <li><a href="../xshd/yxlw.htm">优秀论文</a></li>
+    </ul>
+</li>
+                    
+<li class="mainlevel">
+    <a href="../dqjs/ghgz.htm">党群建设</a>
+    <ul class="dhl">
+        <li><a href="../dqjs/djgz/djgz.htm">党建工作</a></li>
+        <li><a href="../dqjs/ltxgz.htm">离退休工作</a></li>
+        <li><a href="../dqjs/ghgz.htm">工会工作</a></li>
+    </ul>
+</li>
+                    
+<li class="mainlevel">
+    <a href="../xsgz/txyd.htm">学生工作</a>
+    <ul class="dhl">
+        <li><a href="../xsgz/txyd.htm">团学园地</a></li>
+        <li><a href="../xsgz/ygdt.htm">研工动态</a></li>
+        <li><a href="../xsgz/xsfc.htm">学生风采</a></li>
+        <li><a href="../xsgz/ydss.htm">跃动狮山</a></li>
+        <li><a href="../xsgz/xzzq.htm">下载专区</a></li>
+    </ul>
+</li>
+                    
+<li class="mainlevel">
+    <a href="../jlhz/dwjlgk.htm">交流合作</a>
+    <ul class="dhl">
+        <li><a href="../jlhz/dwjlgk.htm">对外交流概况</a></li>
+        <li><a href="../jlhz/dwjlxm.htm">对外交流项目</a></li>
+    </ul>
+</li>
+                    
+<li class="mainlevel">
+    <a href="../zsjy/zsxx.htm">招生就业</a>
+    <ul class="dhl">
+        <li><a href="../zsjy/zsxx.htm">招生信息</a></li>
+        <li><a href="../zsjy/jyxx.htm">就业信息</a></li>
+    </ul>
+</li>
+                    
+<li class="mainlevel">
+    <a href="../dqjs/djgz/ztjy.htm">主题教育</a>
+</li>
+                    
+<li class="mainlevel">
+    <a href="../xyxx.htm">学院信箱</a>
+</li>
+                    
+</ul>
+</div>
+            <div class="nva nva2"><ul class="navul">                                    
+<li class="mainlevel">
+    <a href="../index.htm">首      页</a>
+</li>
+                    
+<li class="mainlevel">
+    <a href="javascript:void(0);" class="dhdqa">学院概况</a>
+    <ul class="dhl">
+        <li><a href="xyjj.htm">学院简介</a></li>
+        <li><a href="zzjg.htm">组织机构</a></li>
+        <li><a href="xyld.htm">学院领导</a></li>
+        <li><a href="ywgk.htm">院务公开</a></li>
+        <li><a href="xyzd.htm">学院制度</a></li>
+        <li><a href="lxwm.htm">联系我们</a></li>
+    </ul>
+</li>
+                    
+<li class="mainlevel">
+    <a href="javascript:void(0);">师资队伍</a>
+    <ul class="dhl">
+        <li><a href="../szdw/jsml.htm">教师名录</a></li>
+        <li><a href="../szdw/xxyjzx.htm">学系研究中心</a></li>
+        <li><a href="../szdw/ys.htm">院士</a></li>
+        <li><a href="../szdw/zyrcjh.htm">重要人才计划</a></li>
+        <li><a href="../szdw/kzjs_jzjs.htm">客座教授-兼职教授</a></li>
+        <li><a href="../szdw/bsh.htm">博士后</a></li>
+        <li><a href="../szdw/jkfry.htm">教科辅人员</a></li>
+        <li><a href="../szdw/ltxjzg.htm">离退休教职工</a></li>
+    </ul>
+</li>
+                    
+<li class="mainlevel">
+    <a href="javascript:void(0);">科学研究</a>
+    <ul class="dhl">
+        <li><a href="../kxyj/kygk.htm">科研概况</a></li>
+        <li><a href="../kxyj/kyjz.htm">科研进展</a></li>
+        <li><a href="../kxyj/cxtd.htm">创新团队</a></li>
+        <li><a href="../kxyj/kypt.htm">科研平台</a></li>
+        <li><a href="../kxyj/xzzq.htm">下载专区</a></li>
+    </ul>
+</li>
+                    
+<li class="mainlevel">
+    <a href="javascript:void(0);">人才培养</a>
+    <ul class="dhl">
+        <li><a href="../rcpy/bkspy.htm">本科生培养</a></li>
+        <li><a href="../rcpy/yjspy.htm">研究生培养</a></li>
+        <li><a href="../rcpy/lxspy.htm">留学生培养</a></li>
+        <li><a href="../rcpy/bshpy.htm">博士后培养</a></li>
+        <li><a href="../rcpy/jxdt.htm">教学动态</a></li>
+    </ul>
+</li>
+                    
+<li class="mainlevel">
+    <a href="javascript:void(0);">学术活动</a>
+    <ul class="dhl">
+        <li><a href="../xshd/xsbg.htm">学术报告</a></li>
+        <li><a href="../xshd/yth.htm">研讨会</a></li>
+        <li><a href="../xshd/yxlw.htm">优秀论文</a></li>
+    </ul>
+</li>
+                    
+<li class="mainlevel">
+    <a href="javascript:void(0);">党群建设</a>
+    <ul class="dhl">
+        <li><a href="../dqjs/djgz/djgz.htm">党建工作</a></li>
+        <li><a href="../dqjs/ltxgz.htm">离退休工作</a></li>
+        <li><a href="../dqjs/ghgz.htm">工会工作</a></li>
+    </ul>
+</li>
+                    
+<li class="mainlevel">
+    <a href="javascript:void(0);">学生工作</a>
+    <ul class="dhl">
+        <li><a href="../xsgz/txyd.htm">团学园地</a></li>
+        <li><a href="../xsgz/ygdt.htm">研工动态</a></li>
+        <li><a href="../xsgz/xsfc.htm">学生风采</a></li>
+        <li><a href="../xsgz/ydss.htm">跃动狮山</a></li>
+        <li><a href="../xsgz/xzzq.htm">下载专区</a></li>
+    </ul>
+</li>
+                    
+<li class="mainlevel">
+    <a href="javascript:void(0);">交流合作</a>
+    <ul class="dhl">
+        <li><a href="../jlhz/dwjlgk.htm">对外交流概况</a></li>
+        <li><a href="../jlhz/dwjlxm.htm">对外交流项目</a></li>
+    </ul>
+</li>
+                    
+<li class="mainlevel">
+    <a href="javascript:void(0);">招生就业</a>
+    <ul class="dhl">
+        <li><a href="../zsjy/zsxx.htm">招生信息</a></li>
+        <li><a href="../zsjy/jyxx.htm">就业信息</a></li>
+    </ul>
+</li>
+                    
+<li class="mainlevel">
+    <a href="javascript:void(0);">主题教育</a>
+</li>
+                    
+<li class="mainlevel">
+    <a href="javascript:void(0);">学院信箱</a>
+</li>
+                    
+</ul>
+</div>
+        </div>
+<!--主体内容区域-->       
+        <div class="content">
+            <div class="ctt">
+                <div class="ctimg">    
+
+                    <img src="../img/bgt3.png">
+                
+
+</div>
+                <div class="divs">
+                    <div class="divleft">
+                        <p>
+学院概况</p>
+                        <div>
+                            <ul class="divdhl"><li><a href="xyjj.htm" class="dqact" title="学院简介">学院简介</a></li>
+                                
+<li><a href="zzjg.htm" title="组织机构">组织机构</a></li>
+                                
+<li><a href="xyld.htm" title="学院领导">学院领导</a></li>
+                                
+<li><a href="ywgk.htm" title="院务公开">院务公开</a></li>
+                                
+<li><a href="xyzd.htm" title="学院制度">学院制度</a></li>
+                                
+<li><a href="lxwm.htm" title="联系我们">联系我们</a></li>
+                                
+</ul>
+                                
+<img src="../img/bgt2.png">
+
+
+                        </div>
+                    </div>
+                    <div class="divright">
+                        <div class="dqwz">
+                            <p>
+学院简介</p>
+                            <div><span>当前位置：</span>
+
+    <a href="../index.htm">首      页</a>
+&nbsp;&gt;&nbsp;
+    <a href="xyjj.htm">学院概况</a>
+&nbsp;&gt;&nbsp;
+    <a href="xyjj.htm">学院简介</a>
+</div>
+                        </div>
+                        <div class="dpzw">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1416815194,'wbnews','u11')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta11(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta11('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1416815194,1590)</script>
+<h3>学院简介</h3>
+ <div class="cont">
+    <div id="vsb_content_2_1590_u111"><div id="vsb_content_2"><p class="vsbcontent_start" style="font-size: 16px;"><span style="font-size: 16px;">动物科学技术学院、动物医学院是华中农业大学最早设立的院系之一。1898年，湖广总督张之洞创办湖北农务学堂（华中农业大学前身），“招有志讲求农学者入堂学习，研求种植畜牧之学”。1902年更名为湖北高等农业学堂，开设农学、畜牧、林学三科。1916年学堂一分为二，由湖北省第二高级农业学校开设畜医科（学制三年）。1952年全国院系调整组建华中农学院畜牧兽医系，首任系主任是我国著名的兽医学家秦礼让教授；1995年10月成立华中农业大学畜牧兽医学院；2002年7月更名为华中农业大学动物科学技术学院、动物医学院。</span></p><p style="font-size: 16px;"><span style="font-size: 16px;">建（院）系70余年来，几代牧医人弘扬“团结 严谨 求实 创新”的院风，传承“创新 创造 创业”的精神，坚持“人才立国、科技强国、产业兴国”的理念，筚路蓝缕，接续奋斗，不断推动学院发展壮大，形成了学科优势特色鲜明、教育教学体系完备的办学格局。</span></p><p style="font-size: 16px;"><span style="font-size: 16px;">学院下辖动物遗传育种系、动物营养与饲料科学系、动物繁殖与特种经济动物学系、智能养殖学系、基础兽医学系、预防兽医学系、临床兽医学系、兽药科学系、公共卫生学系等9个学系。</span></p><p style="font-size: 16px;"><span style="font-size: 16px;">现有在岗教职工219人，其中专任教师170人（正高85人、副高80人）、实验技术系列26人、党政管理干部23人；博士后81人。全国高校黄大年式教师团队1个，国家自然科学基金委创新研究群体2个，部（省）级创新团队18个。中国工程院院士2名，国家创新人才长期项目专家1人，国家杰出基金获得者8人，国家优秀青年科学基金获得者8人，海外优秀青年基金获得者6人，国家级领军人才项目入选者16人次，国家级青年人才项目入选者27人次，“新世纪百千万人才工程”国家级人选4人，国家现代农业产业技术体系岗位科学家9人，教育部“新世纪（跨世纪）优秀人才支持计划”入选者13人。</span></p><p style="font-size: 16px;"><span style="font-size: 16px;">现设有动物科学、动物医学2个本科专业，均为国家级特色专业、湖北省品牌专业，皆入选首批国家一流专业建设点。拥有畜牧学、兽医学、兽医专业博士、农业专业博士学位4个一级学科博士学位授权学科，畜牧学、兽医学2个博士后科研流动站，下设动物遗传育种与繁殖、动物营养与饲料科学、特种经济动物饲养、动物生产与畜牧工程、基础兽医学、预防兽医学、临床兽医学、兽医公共卫生与食品安全等8个二级学科方向。现有全日制在校生4028人，其中本科生1802人，硕士生1328人、博士生845人，留学生53人。</span></p><p style="font-size: 16px;"><span style="font-size: 16px;">畜牧学、兽医学两个学科实力雄厚，稳居全国高校前列。2017年，均入选国家“双一流”建设学科，并在第四轮学科评估中双双获评A+；2022年，均再次滚动入选国家“双一流”建设学科名单。</span></p><p style="font-size: 16px;"><span style="font-size: 16px;">学院拥有省部级及以上科研平台基地36个，其中国家级平台3个（国家家畜工程技术研究中心、国家生物育种产教融合创新平台&lt;生猪&gt;、动物育种与健康养殖教育部前沿科学中心），国际科技合作基地5个（动物疾病防控国际联合研究中心、动物遗传育种与繁殖国际联合研究中心、动物育种与疾病防治技术国际科技合作基地、兽医流行病学国际联合研究与培训中心、“科创中国”“一带一路”养殖与疫病防控创新院），其它省部级平台基地28个（农业动物遗传育种与繁殖教育部重点实验室、生猪健康养殖省部共建协同创新中心、动物生物药物教育部工程研究中心、农业农村部猪遗传育种重点实验室、农业农村部兽药残留检测重点实验室、农业农村部畜禽产品质量安全风险评估实验室（武汉）、农业农村部农业微生物资源利用重点实验室、农业农村部兽用诊断制剂创制重点实验室、农业农村部非洲猪瘟等重大生猪疾病防控重点实验室、农业农村部种猪质量检验测试中心（武汉）、国家数字畜牧业&lt;生猪&gt;创新分中心、武汉国家生物产业基地实验动物中心、国家兽药残留基准实验室、国家兽药安全评价实验室、国家动物结核病专业实验室（武汉）实验室、华中动物生物制品区域共性技术公共研发平台、国家伪狂犬病参考实验室、动物疫病防控技术国家地方联合工程实验室（湖北)、华中农业大学动物生物安全三级实验室、预防兽医学湖北省重点实验室、动物疫病防控湖北省工程实验室、生猪精准饲养与饲料安全技术湖北省工程实验室、湖北省地方猪品种改良工程技术研究中心、湖北省生猪健康养殖工程技术研究中心、生猪健康养殖湖北省协同创新中心、湖北省动物疫苗工程技术研究中心、湖北家畜种业技术创新中心、湖北省饲料质量监督检验站）。</span></p><p style="text-indent: 28px;"><span style="font-size: 16px;">学院科研实力雄厚，成果产出丰硕。“十四五”以来，累计到账科研经费逾11亿元，年均发表SCI科研论文400余篇（高水平论文近30篇），荣</span><span style="font-size: 16px;">获国家技术发明二等奖1项、全国创新争先奖1项、教育部高等学校科学研究优秀成果自然科学奖一等奖1项、教育部高等学校科学研究优秀成果青年科学奖一等奖1项、神农中</span><span style="font-size: 16px;">华农业科技一等奖1项、全国农牧渔业丰收奖农业技术推广成果奖一等奖1项、神农英才奖1项、湖北省科技进步一等奖1项、湖北省技术发明一等奖2项、中华农业科技奖优秀创新团队一等奖1项。</span></p><p style="font-size: 16px;"><span style="font-size: 16px;">学院坚持以服务求发展，深入推进校企合作，服务支撑产业高质量发展。同扬翔、科前、回盛、罗牛山、中粮、正大等40余家企业建立有深度合作关系，探索形成的华农-扬翔产科教深度融合发展模式、华农-科前“三创”产学研一体化模式成为农牧行业校企合作的典范。</span></p><p style="font-size: 16px;"><span style="font-size: 16px;">学院秉承开放办学的理念，将“走出去”与“引进来”紧密结合，不断拓展国际合作与交流的广度与深度。目前已与美国、德国、日本、澳大利亚、新西兰、匈牙利、泰国等十余个国家或地区的多所大学和科研机构建立了实质性合作关系。学院先后多次选派学生赴美国加州大学戴维斯分校、澳大利亚默多克大学、新西兰梅西大学、匈牙利布达佩斯兽医大学、日本北里大学、泰国朱拉隆功大学、泰国清迈大学、埃及爱资哈尔大学等海外知名高校开展海外实习实践及短期交流，有效拓宽了学生的国际视野与跨文化沟通能力。学院积极主办、承办一系列高水平的国际学术会议，包括亚洲猪病学会第八次学术会议、第二届One Health世界青年兽医大会、动物功能基因组学与健康线上国际会议、牛奶成分和奶牛生物标记检测新技术及其应用国际研讨会、寄生虫病原生物学国际研讨会、2024国际宠物健康科教创新会议、动物疾病与健康国际研讨会等。学院先后获批两项高校学科创新引智基地，为进一步提升国际化办学水平和科研创新能力奠定了坚实基础。</span></p><p style="font-size: 16px;"><span style="font-size: 16px;">学院坚持“特色办学、内涵发展”的办学理念和“有特色、高水平、研究型”的办学定位，大力实施特色建院、质量立院、人才强院、科技兴院战略，力争在“十五五”建成整体水平国内领先、优势学科在国际上有重要影响力的特色鲜明世界一流学院。</span></p><p style="font-size: 16px;"><span style="font-size: 16px;">电话：027-87282091</span></p><p style="font-size: 16px;"><span style="font-size: 16px;">传真：027-87280408</span></p><p style="font-size: 16px;"><span style="font-size: 16px;">E-mail：myoffice@mail.hzau.edu.cn</span></p><p class="vsbcontent_end" style="text-align: right; font-size: 16px;"><span style="font-size: 16px;">（截至2025年9月）</span></p></div></div>
+    <span id="vsb_content_2_1590_u11" name="vsb_content_2_1590_u11"></span><br><br>
+    
+</div>
+</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bgt1 bgts"></div>
+        </div>
+        
+        <!--底部-->
+        <div class="bottoms">
+            <div class="btm_div">
+                    
+<img src="../img/dblg.png">
+
+
+                <span class="spans1"></span>
+                <span class="spans2"></span>
+                <div class="btm_bq"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>
+    版权所有：Copyright © 华中农业大学 动物科学技术学院动物医学院
+</p>
+<p>
+    地址：湖北省武汉市洪山区狮子山1号华中农业大学第四综合楼
+</p>
+<p>
+    邮箱：myoffice@mail.hzau.edu.cn
+</p>
+<p>
+    电话：027-87282091
+</p>
+<p>
+    邮政编码：430070
+</p>
+<p>
+    <span class="btm_p" id="spans1"><em class="iconfont icon-weixin"></em>微信公众号<img src="/__local/A/04/4A/90DD932E06AC1FF3DFAB6EF6E7F_8A9EF05A_EC68.png?e=.png" width="200" height="200/"></span>
+</p></div>
+                <span class="spans1"></span>
+                <span class="spans2"></span>
+                <div class="yqlj">
+                    <p>友情链接 :</p>
+                    <ul class="yqljul">
+                        <li class="mainlevel">                            <a>------　常用网站　------</a>
+                            <ul>
+                                                            <li><a href="http://www.hzau.edu.cn" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1416815194, 40628)">华中农业大学</a></li>                                <li><a href="http://news.hzau.edu.cn" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1416815194, 40629)">南湖新闻网</a></li>                                <li><a href="http://xwgk.hzau.edu.cn" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1416815194, 40630)">校务公开</a></li>                                <li><a href="http://mail.hzau.edu.cn" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1416815194, 40631)">华中农业大学电子邮箱系统</a></li>                                <li><a href="https://nyt.hubei.gov.cn/" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1416815194, 40632)">湖北省畜牧兽医局</a></li>                                <li><a href="http://www.agri.cn" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1416815194, 41097)">中国农业信息网</a></li>                                <li><a href="http://www.moe.gov.cn" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1416815194, 41098)">教育部网站</a></li>
+                            </ul>
+                        
+
+</li>
+                        <li class="mainlevel" style="margin-top: 10px"><a>------　合作单位　------</a>
+                            <ul>
+                                
+<li><a href="http://cast1.cau.edu.cn/" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1416815194, 41100)">中国农业大学动物科学技术学院</a></li>
+                                
+<li><a href="http://cvm.cau.edu.cn/" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1416815194, 41101)">中国农业大学动物医学</a></li>
+                                
+<li><a href="http://dkxy.nwsuaf.edu.cn" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1416815194, 41102)">西北农林科技大学动物科技学院</a></li>
+                                
+<li><a href="http://dky.njau.edu.cn" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1416815194, 41103)">南京农业大学动物科学技术学院</a></li>
+                                
+<li><a href="http://www.yangxiang.com/" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1416815194, 41105)">广西扬翔股份有限公司</a></li>
+                                
+<li><a href="http://www.xinnongfeed.com/" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1416815194, 41106)">上海新农饲料股份有限公司</a></li>
+                                
+</ul></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../js/bdtxk9.js"></script>
+        <script type="text/javascript" src="../js/index.js"></script> 
+        <script type="text/javascript">
+            var spans1=document.getElementById("spans1");
+            var imgs1=document.getElementById("imgs1");
+            spans1.onclick=function(){imgs1.style.display="block"}
+        </script>     
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>黑名单页面</title>
+	<style>
+	    html, body {
+	    	margin: 0;
+	    	padding: 0;
+	    	background: #f7f7f7;
+	   	}
+	   	.wrap{
+	   		width: 100%;
+	   		position: relative;
+	   		margin: auto;
+	   		text-align: center;
+	   		margin-top: 6.5%;
+	   	}
+			.wrap img{
+				max-width: 1000px;
+			}
+	   	.content{
+	   		margin-top: -5%;
+	   		margin-bottom: 43px;
+	   	}
+	   	.content p.title{
+	   		font-size: 25px;
+	   		color: #444;
+	   	}
+		.content .center{
+			text-align: center;
+		    color: #999;
+		}
+	   	.content .reason{
+	   		font: 16px;
+	   		color: #999;
+	   		line-height: 12px;
+	   		text-align: left;
+	   		margin-left: 43%;
+	   	}
+	   	span.line{
+	   		display: inline-block;
+	   		content: "";
+	   		
+	   	}
+	   	.footer{
+	   		width: 55%;
+	   		border-top: 2px solid #e3e3e3;
+	   		margin: auto;
+	   	}
+	   	.footer p{
+	   		font: 16px;
+	   		color: #999;
+	   		line-height: 15px;
+	   		text-align: left;
+	   		padding: 0 20px;
+	   	}
+		.footer p span{
+			line-height:20px;
+			white-space: normal; 
+		}
+	    </style>
+</head>
+<body>
+ <div class="wrap" style="display: block;">
+    	<img src="https://error.websaas.cn/img/420s.png">
+		<div class="content">
+    		<p class="title">您的IP地址最近有可疑的攻击行为，已被列入黑名单</p>
+    	</div>
+		<div class="footer">
+			<p style="text-align: center;">我是网站管理员，<span id="callBack" style="color: #1e80ff;cursor: pointer;">我要处理此异常</span></p>
+		</div>
+	</div>
+<script src="https://custompages.websaas.cn/sha1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	let wrap = document.getElementsByClassName('wrap')[0]
+	let host = window.location.href
+	var demoFlag = false
+	var imgFlag = false
+	var timeOut = 2000
+	function requestConfig() {
+	    const xhr1 = new XMLHttpRequest()
+	    xhr1.open('get','https://custompages.websaas.cn/7bef9456-a3a9-4306-a9ca-5cadc03f6879.js',true)
+	    xhr1.setRequestHeader('XWD-Token', 'waduxawe124asdx');
+	    xhr1.onreadystatechange = function(){
+			if(xhr1.readyState == 4){
+				demoFlag = true
+				if((xhr1.status>=200&&xhr1.status<300)||xhr1.status==0){
+					if(xhr1.responseText.length>0){
+						eval(xhr1.responseText)
+						if(jsonData[420].length == 0){
+							showDefault()
+						}else{
+							for (let i = 0,num=0; i < jsonData[420].length; i++) {
+							    const element = jsonData[420][i];
+						        if(element['target']&&host.includes(element['host'])){
+						            CheckStatus(element['target'])
+						            xhr1.onreadystatechange = null;
+									return
+								} 
+						        if(jsonData[420].length-1 == num){
+						            showDefault()
+						        }
+								num++   
+							}
+						}
+					}else{
+						showDefault();
+					}
+				}else{
+					showDefault();
+				}
+			}
+	    }
+	    xhr1.send()
+		timeOutFn(xhr1)
+	}
+	requestConfig();
+	
+	function CheckStatus(target){
+		let link = target
+	    const xhr2 = new XMLHttpRequest()
+	    xhr2.onreadystatechange = function() {
+	            if (xhr2.readyState === 4) {
+					imgFlag = true
+	                if (xhr2.status === 200) {
+	                    window.location.href = target
+	                    xhr2.onreadystatechange = null;
+	                } else {
+	                    showDefault();
+	                }
+	            }
+	    };
+	    xhr2.open("HEAD",link,true)
+	    xhr2.send()
+		timeOutFn(xhr2,true)
+	}
+	function showDefault() {
+		setTimeout(()=>{
+			wrap.style.display='block'
+		},500)
+	   
+	}
+	function timeOutFn(xhr,second){
+		if(demoTime){clearTimeout(demoTime)}
+		var demoTime = setTimeout(()=>{
+			if(!demoFlag||(second&&!imgFlag)){
+				xhr.onreadystatechange = null;
+				xhr.abort()
+				showDefault()
+			}
+		},timeOut)
+	}
+</script>
+<script src="https://custompages.websaas.cn/udesk.js" type="text/javascript" charset="utf-8"></script>
+
+
+</body></html>

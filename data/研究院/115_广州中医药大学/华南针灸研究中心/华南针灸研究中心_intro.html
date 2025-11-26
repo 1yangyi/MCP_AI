@@ -1,0 +1,353 @@
+<!DOCTYPE html><html lang="zh-Hans"><head>
+<title>中心简介-华南针灸研究中心</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="中心简介">
+<meta name="keywords" content="华南针灸研究中心 广州中医药大学,中心简介">
+
+<meta charset="utf-8">
+<meta content="IE=edge,Chrome=1" http-equiv="X-UA-Compatible">
+<link rel="stylesheet" href="../styles/bootstrap.min.css">
+<link rel="stylesheet" href="../styles/website.css">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="../scripts/html5shiv.min.js"></script>
+      <script src="../scripts/respond.min.js"></script>
+<![endif]-->
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307c78475650575742000200014251 -->
+<link rel="stylesheet" type="text/css" href="../xxy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1098,'/xxy.jsp',-1,1261151578)</script>
+</head>
+<body>
+<header class="header">
+  <div class="topbar">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-1 topbar_univlogo"><a href="http://www.gzucm.edu.cn"><img alt="广州中医药大学" src="../images/xh-nt.jpg"></a> </div>
+        <div class="col-xs-2 topbar_univname"><a href="http://www.gzucm.edu.cn"><img alt="广州中医药大学" src="../images/xm-nt.jpg"></a> </div>
+        <div class="col-xs-6 topbar_deptname"><a href="../index.htm"><img alt="华南针灸研究中心" src="../images/hnzjyjzx-nt.jpg"></a> </div>
+        <div class="col-xs-3 topbar_right">
+          <div class="topbar_right_lang"><span class="topbar_right_lang_label">语言：</span><a href="#"><span>中文</span></a><span>|</span><a href="#"><span>English</span></a> </div>
+          
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+    height: 31px;
+    font-size: 12px;
+    min-width: 170px;
+    max-width: 600px;
+    width: 60%;
+    /* margin-top: -15px; */
+    outline: none;
+    padding-left: 10px;
+    border-radius: 2px;
+    border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="qwss"> <input name="submit_button" type="button" value="提交" class="tj"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1261151578";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+      </div>
+    </div>
+  </div>
+  <div role="navigation" class="navbar navbar-default">
+    <div class="container">
+      <div id="navigation" class="navbar-collapse collapse" style="height: 1px"><ul class="nav navbar-nav">
+<li class=" "><a href="../index.htm">首页</a>
+</li>
+<li class="active dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">机构概况</a>
+<ul class="dropdown-menu">
+<li><a href="zxjj.htm">中心简介</a></li>
+<li><a href="tdcy.htm">团队成员</a></li>
+<li><a href="lxwm.htm">联系我们</a></li>
+</ul>
+</li>
+<li class=" dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">科研团队</a>
+<ul class="dropdown-menu">
+<li><a href="../kytd/sxkxj_973.htm">973 首席科学家</a></li>
+<li><a href="../kytd/hzjs.htm">合作教授</a></li>
+<li><a href="../kytd/zxjs.htm">中心教授</a></li>
+<li><a href="../kytd/zzry.htm">在职人员</a></li>
+<li><a href="../kytd/bsh.htm">博士后</a></li>
+</ul>
+</li>
+<li class=" dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">科研设施</a>
+<ul class="dropdown-menu">
+<li><a href="../kyss/mpqs.htm">膜片钳室</a></li>
+<li><a href="../kyss/dsls.htm">电生理室</a></li>
+<li><a href="../kyss/fzswxs.htm">分子生物学室</a></li>
+<li><a href="../kyss/xbswxs.htm">细胞生物学室</a></li>
+<li><a href="../kyss/txcls.htm">图像处理室</a></li>
+<li><a href="../kyss/dhxs.htm">电化学室</a></li>
+<li><a href="../kyss/xtxs.htm">形态学室</a></li>
+<li><a href="../kyss/xwxs.htm">行为学室</a></li>
+<li><a href="../kyss/zhsys.htm">综合实验室</a></li>
+<li><a href="../kyss/SPFdws.htm">SPF动物室</a></li>
+</ul>
+</li>
+<li class=" dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">科研成果</a>
+<ul class="dropdown-menu">
+<li><a href="../kycg/lw.htm">论文</a></li>
+<li><a href="../kycg/sqzl.htm">授权专利</a></li>
+<li><a href="../kycg/hjcg.htm">获奖成果</a></li>
+</ul>
+</li>
+<li class=" dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">合作交流</a>
+<ul class="dropdown-menu">
+<li><a href="../hzjl/yqsyyy.htm">仪器使用预约</a></li>
+<li><a href="../hzjl/jllf.htm">交流来访</a></li>
+</ul>
+</li>
+<li class=" dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">学术资源</a>
+<ul class="dropdown-menu">
+<li><a href="../xszy/cyzylj.htm">常用资源链接</a></li>
+<li><a href="../xszy/spzylj.htm">视屏资源链接</a></li>
+<li><a href="../xszy/xzzx.htm">下载中心</a></li>
+</ul>
+</li>
+</ul></div>
+    </div>
+    <div class="menu_multiRow"></div>
+  </div>
+</header>
+<div class="container content">
+  <div class="row">
+    <div id="main">
+      <div class="cols">
+        <div class="col"><div class="location">
+<a href="../index.htm" title="首页">首页</a>
+<span class="loc_s">»</span>
+<a href="../jggk.htm" title="机构概况">机构概况</a>
+<span class="loc_s">»</span>
+<a href="zxjj.htm" title="中心简介">中心简介</a>
+</div>
+          <div class="l_line"></div>
+          <div class="content">
+            
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1261151578,'wbnews','u3')</script>
+<script>function seeContenta3(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta3('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1261151578,1145)</script>
+<div class="a_article">
+<h1 class="wz_title">华南针灸研究中心简介</h1>
+<h2 class="wz_sub_title"></h2>
+<div class="a_content"><div id=""><div id="vsb_content_1145_u31"><div id="vsb_content"><p><iframe width="100%" height="600" src="/__local/3/65/52/9FE0E72E2AA592788BBBE3897B7_EEE4CD72_9CD01.pdf?e=.pdf" style="border: 1px solid rgb(221, 221, 221)"></iframe></p>
+<ul class=" list-paddingleft-2">
+ <li><p>如果您无法在线浏览此 PDF 文件，则可以</p></li>
+ <li><p>下载免费小巧的 <a href="http://www.fuxinsoftware.com.cn/" target="_blank" style="color: blue">福昕(Foxit) PDF 阅读器</a>,安装后即可在线浏览 &nbsp;或</p></li>
+ <li><p>下载免费的 <a href="http://www.adobe.com/products/reader.html" target="_blank" style="color: blue">Adobe Reader PDF 阅读器</a>,安装后即可在线浏览 &nbsp;或</p></li>
+ <li><p>下载此 <a href="/__local/3/65/52/9FE0E72E2AA592788BBBE3897B7_EEE4CD72_9CD01.pdf?e=.pdf" target="_blank" style="color: blue">PDF 文件</a></p></li>
+</ul>
+<p> </p>
+<link rel="stylesheet" type="text/css" href="/system/resource/style/ueditor/olul.css"></div></div></div></div>
+<div class="a_article_attach"></div>
+<div style="display:none;">
+<p align="right">华南针灸研究中心</p>
+<p align="right">2016年09月01日</p>
+</div>
+<div class="p_action"><a class="text-editLink" href="javascript:window.opener=null;window.open('','_self');window.close();">[关闭]</a> </div></div>
+
+            <div class="l_line" style="margin-bottom: 20px"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row"></div>
+</div>
+<div class="container section_2">
+  <div class="row">
+    <div><img alt="" src="../images/11.jpg" width="228" height="228"> <img alt="" src="../images/22.jpg" width="228" height="228"> <img alt="" src="../images/33.jpg" width="228" height="228"> <img alt="" src="../images/44.jpg" width="228" height="228"> <img alt="" src="../images/55.jpg" width="228" height="228"> </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="footer_block"></div>
+  <div class="footer_copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <p>广州中医药大学华南针灸研究中心 版权所有　Copyright ? 2016　@VSB-BY-DTF　总访问量：<script language="javascript" src="../_dwr/engine.js"></script><script language="javascript" src="../_dwr/util.js"></script><script language="javascript" src="../_dwr/interface/PageCounterDWR.js"></script><span id="a129248" name="a129248">00072671</span>   
+<script>
+function getvisittimea129248()
+{       
+    PageCounterDWR.getVisittime('1261151578','1098','IP_TOTAL','3534','8',callbackdataa129248)
+}
+function callbackdataa129248(data)
+{
+    document.getElementById("a129248").innerHTML = data; 
+}
+getvisittimea129248();
+</script></p>
+          <p>通讯地址：广东省广州市番禺区广州大学城外环东路232号广州中医药大学办公楼　邮编：510006　制作与维护：广州中医药大学信息中心</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../scripts/jquery.min.js"></script><script src="../scripts/bootstrap.min.js"></script><script type="text/javascript"></script>
+
+<!--[if lt IE 8]>
+<style>
+/*f*** IE6*/
+.menu_multiRow {margin:0 auto;width:970px;display:block;height:0;overflow:hidden;background:#e1e1e1;}
+.menu_multiRow ul{display:block;margin:0 15px;width:100%;}
+.menu_multiRow ul li{float:left;}
+.menu_multiRow ul li a{height:auto;font-size:16px;color:#033;line-height:normal;width:auto;background:none;padding:0 15px;line-height: 40px;display:inline-block;}
+.menu_multiRow ul li.hover ul li a{border-bottom:1px solid #fff;}
+.menu_multiRow ul li.hover ul li a:hover{border-bottom:1px solid #03554f;}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".dropdown").click(function(){
+		if($(this).hasClass("display_menu")) {
+			$(".menu_multiRow").animate({
+				"height": "0"
+			},500,"swing",(function(){
+				$(".display_menu").removeClass("display_menu");
+				$(".menu_multiRow").css({"border-top":"none"});
+				$(".menu_multiRow").empty();
+			}));
+		} else {
+			var cheight = $(".menu_multiRow").height();
+			$(".display_menu").removeClass("display_menu");
+			$(".menu_multiRow").empty();
+			$(this).addClass("display_menu");
+			$(".menu_multiRow").css({"border-top":"1px dashed #03554f"});
+			$(this).children("ul").clone().removeClass().appendTo($(".menu_multiRow"));
+			var height = $(".menu_multiRow").height("auto").height();
+			$(".menu_multiRow").height(cheight);
+			$(".menu_multiRow").animate({
+				"height": height + "px"
+			});
+		}
+	});
+});
+</script>
+<![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<title>学院简介-中央民族大学文学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="中央民族大学文学院,学院简介">
+
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+<link rel="stylesheet" href="../css/publice.css" type="text/css">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e784654525a5742000200024253 -->
+<link rel="stylesheet" type="text/css" href="../dpzw-sz.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1057,'/dpzw-sz.jsp',-1,1632946457)</script>
+</head>
+<body>
+<!--top s-->    
+<div class="topWrap clearfix">
+    <div class="topDiv">
+        
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<div class="logo">
+<a href="../index.htm"><img src="../images/logotu.png" style="width:490px; margin-top:10px;"></a>
+</div>
+        <div class="topR fr">
+            <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><div class="topR_t fr">
+    <a href="https://www.muc.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1632946457, 50549)">学校首页</a>
+     
+</div>
+
+
+
+            
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2">
+    <div id="appu2"><div><input type="text" value="请输入关键字搜索" autocomplete="off" onfocus="test3()" onblur="test4()" class="search_text"> <div class="fdj fr"><input type="submit" name="submit_button" value="" class="button pngFix"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+      
+   <input  type="text" value="请输入关键字搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" class="search_text"onfocus="test3()" onblur="test4()" />
+                <div class="fdj fr"> <input type="submit"  name="submit_button"  v-on:click="onSubmit()" class="button pngFix"value=""style="cursor: hand" ></div>
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1632946457";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.119.129.127:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+        </div>
+    </div>
+</div>
+<!--nav-->
+<div class="navWrap  clearfix">
+    <div class="nav">
+    <ul>
+			<li>
+			<a class="link" href="../index.htm">网站首页</a>
+						
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="xyjj1.htm">学院概况</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl style="display: none;">
+					<dd><a href="xyjj1.htm">学院简介</a></dd>
+					<dd><a href="xrld1.htm">现任领导</a></dd>
+					<dd><a href="zzjg1.htm">组织结构</a></dd>
+					<dd><a href="yjyxjdhyjzx.htm">院级研学基地和研究中心</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="../szdw/zggdwxjys.htm">师资队伍</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl style="display: none;">
+					<dd><a href="../szdw/zggdwxjys.htm">中国古代文学教研室</a></dd>
+					<dd><a href="../szdw/zgxddwxjys1.htm">中国现当代文学教研室</a></dd>
+					<dd><a href="../szdw/wyxywgwxjys1.htm">文艺学与外国文学教研室</a></dd>
+					<dd><a href="../szdw/yyxjys.htm">语言学教研室</a></dd>
+					<dd><a href="../szdw/yjsds.htm">研究生导师</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="../xrcpy/bksjx.htm">人才培养</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl style="display: none;">
+					<dd><a href="../xrcpy/bksjx.htm">本科生教学</a></dd>
+					<dd><a href="../xrcpy/yjsjx.htm">研究生教学</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="../xdjytx/djyszgz.htm">党建与团学</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl style="display: none;">
+					<dd><a href="../xdjytx/djyszgz.htm">党建与思政工作</a></dd>
+					<dd><a href="../xdjytx/txgz.htm">团学工作</a></dd>
+			</dl>
+		</li>
+     
+    </ul>
+</div>
+</div>
+<script type="text/javascript">
+
+	$(".mainmenu dl").hide();
+
+</script>
+<!--banner-->
+<div class="vsb-box">
+
+    <div class="vsb-container a" containerid="1" columns="5">
+        <!--banner-->
+        <div class="vsb-space banner_three" columns="5">
+            <div class="eachBox">
+                <div class="changeBox_a1" id="change_32">    <div class="changeDiv" style="display: block;">
+                        <h3><a href="" target="_blank"></a></h3>
+                        <a href="" onclick="_addDynClicks(&quot;wbimage&quot;, 1632946457, 69537)"><img src="../images/20221031094712.jpg" border="0" width="1000" height="335"></a>
+                    </div>
+<div class="changeDiv" style="display: none;">
+                        <h3><a href="#" target="_blank">全国重点大学中文发展论坛第二十次会议</a></h3>
+                        <a href="#" onclick="_addDynClicks(&quot;wbimage&quot;, 1632946457, 54704)"><img src="../images/banner0325lz2.png" border="0" width="1000" height="335"></a>
+                    </div>
+<ul class="ul_change_a2">
+<li><span class="on"></span></li>
+<li><span></span></li>
+</ul></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--main--> 
+<div class="mainWrap clearfix" style="min-height:300px;">
+    <div class="main_tit">
+        <div class="main_titT main_titTa">
+            <img src="../img/bri_icon1.png">
+
+<a href="../index.htm">网站首页</a>&gt;
+<a href="xyjj1.htm">学院概况</a>&gt;
+<a href="xyjj1.htm" class="cur">学院简介</a>
+        </div>
+</div>
+
+    <div class="main_con">
+        <div class="main_conL">
+            <div class="main_conLT">
+                <dl>
+                    
+<dt>学院概况</dt>
+                    <dd><a href="xyjj1.htm" class="cur">学院简介</a></dd>
+<dd><a href="xrld1.htm">现任领导</a></dd>
+<dd><a href="zzjg1.htm">组织结构</a></dd>
+<dd><a href="yjyxjdhyjzx.htm">院级研学基地和研究中心</a></dd>
+
+                </dl>
+            </div>
+            
+        </div>
+        
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1632946457,'wbnews','u8')</script>
+<script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1632946457,1312)</script>
+<div class="main_conR">
+            
+            <div class="main_conRC">
+	  <h2></h2>
+         <div id="vsb_content_1312_u81"><div id="vsb_content"><style><!--  /* Font Definitions */  @font-face {font-family:宋体; panose-1:2 1 6 0 3 1 1 1 1 1;} @font-face {font-family:黑体; panose-1:2 1 6 9 6 1 1 1 1 1;} @font-face {font-family:"\@宋体"; panose-1:2 1 6 0 3 1 1 1 1 1;} @font-face {font-family:"\@黑体"; panose-1:2 1 6 9 6 1 1 1 1 1;}  /* Style Definitions */  p.MsoNormal, li.MsoNormal, div.MsoNormal {margin:0cm; margin-bottom:.0001pt; text-align:justify; text-justify:inter-ideograph; font-size:10.5pt; font-family:"Times New Roman";} p {margin-top:3.15pt; margin-right:0cm; margin-bottom:3.15pt; margin-left:0cm; font-size:12.0pt; font-family:宋体;} p.1, li.1, div.1 {margin:0cm; margin-bottom:.0001pt; text-align:center; line-height:150%; font-size:16.0pt; font-family:黑体; font-weight:bold;} p.a, li.a, div.a {margin:0cm; margin-bottom:.0001pt; text-align:center; line-height:150%; font-size:16.0pt; font-family:黑体; font-weight:bold;} p.vsbcontentstart, li.vsbcontentstart, div.vsbcontentstart {margin-top:3.15pt; margin-right:0cm; margin-bottom:3.15pt; margin-left:0cm; font-size:12.0pt; font-family:宋体;} p.vsbcontentend, li.vsbcontentend, div.vsbcontentend {margin-top:3.15pt; margin-right:0cm; margin-bottom:3.15pt; margin-left:0cm; font-size:12.0pt; font-family:宋体;}  /* Page Definitions */  @page Section1 {size:595.3pt 841.9pt; margin:72.0pt 90.0pt 72.0pt 90.0pt; vsb_temp:15.6pt;} div.Section1 {page:Section1;} --></style>
+<div class="Section1" style="vsb_temp: 15.6pt;">
+ <p class="vsbcontentstart" style="text-indent: 24pt; -ms-word-break: break-all;"><span style="font-family: 宋体,SimSun; font-size: 16px;">从1941年在陕北公学民族部的基础上建立延安民族学院，到1951年中央民族学院成立，再到1964年中央民族大学汉语言文学系成立，文学院办学历史悠久，人文传统深厚。我国民族语文研究开创者、著名语言学家闻宥先生，著名古典文学学者、李白研究专家裴斐先生等先后在此弘文励教。半个多世纪以来，本着培育英才、奉献社会、服务民族地区的办学宗旨，文学院为全国特别是少数民族地区培养了大批知行并重、守正创新的研究型或综合型人才。</span></p>
+ <p class="vsbcontentstart" style="text-indent: 24pt; -ms-word-break: break-all;"><span style="font-family: 宋体,SimSun; font-size: 16px;"></span><span style="font-family: 宋体,SimSun; font-size: 16px;">1986年，学院获中国语言文学一级学科硕士学位授予权；2006年，获中国语言文学一级学科博士学位授予权；2011年，获批为北京市重点学科。学院现设有汉语言文学1个本科专业，中国古代文学、中国现当代文学、汉语言文字学、文艺学4个硕士学位点,中国古代文学、中国现当代文学、汉语言文字学、文艺学4个博士学位点及中国语言文学博士后流动站。学院现有本科生、研究生和留学生500余人，其中少数民族学生占比约为40%。学院主办“人文知识竞赛”“诗词大会”“文化盛典”等多项专业赛事与特色活动，致力于培养“博人文、厚基础、重创新、有特色”的中国语言文学拔尖人才。</span></p>
+ <p class="vsbcontentend" style="text-indent: 24pt; -ms-word-break: break-all;"><span style="font-family: 宋体,SimSun; font-size: 16px;">文学院师资团队以资深教授为骨干、以中青年学者为主体，高级职称教师占70%，具有博士学位教师占94%。多位教师先后获得北京市教学名师、北京市优秀教师、宝钢优秀教师、北京市青年优秀骨干教师等荣誉称号，入选新世纪优秀人才支持计划、北京高校青年英才计划、国家民委中青年英才培养计划等，近年来在教学与科研方面都取得较为突出的成绩。</span></p>
+</div></div></div>
+    </div>
+    <span id="vsb_content_1312_u8" name="vsb_content_1312_u8"></span><br><br>
+    
+        </div>
+
+    </div>
+</div>
+<!--foot-->
+<div class="footWrap">
+<div class="footDiv_one">
+        <div class="foot_one">
+<p>学院地址：北京市海淀区中关村南大街27号文华楼13层&nbsp; 邮政编码：100081 2019© 中央民族大学文学院</p>
+
+</div></div>
+<ul style="text-align:center;background-color:#224B77;">
+</ul></div>
+
+<script type="text/javascript" src="../js/min.js"></script>
+<script type="text/javascript" src="../js/bd.js"></script>
+<script type="text/javascript" src="../js/superslide.js"></script>
+<script type="text/javascript" src="../js/soChange.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".mainmenu dl").hide();
+        $("li.mainmenu").hover(function(){
+            $(this).find("dl").stop(true,true);
+            $(this).find("dl").slideDown();
+        },function(){
+            $(this).find("dl").stop(true,true);
+            $(this).find("dl").slideUp();
+        });
+    })
+</script>
+
+<script type="text/javascript">
+$(function () {
+
+//切换对象为其他，这里为包含图片和标题的层
+    $('#change_32 div.changeDiv').soChange({//对象指向层，层内包含图片及标题
+        thumbObj:'#change_32 .ul_change_a2 span',
+        thumbNowClass:'on'//自定义导航对象当前class为on
+    });
+
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

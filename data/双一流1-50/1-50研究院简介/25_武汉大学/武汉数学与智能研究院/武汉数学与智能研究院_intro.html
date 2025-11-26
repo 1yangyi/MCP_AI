@@ -1,0 +1,462 @@
+<!DOCTYPE html><html lang="en" style="font-size: 80px;"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研究院简介-武汉数学与智能研究院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="研究院简介">
+
+
+<meta name="SiteName" content="武汉数学与智能研究院">
+<meta name="SiteDomain" content="imai.whu.edu.cn">
+<meta name="ColumnName" content="研究院简介">
+
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/mobile.css">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../introduce.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1021,'/introduce.jsp',-1,1964742071)</script>
+</head>
+
+<body>
+    <header>
+        <div class="header-cont container clearfix">
+            <div class="logo">
+                <a href="../index.htm"><img src="../images/logo.png" alt=""></a>
+            </div>
+            <div class="search">
+                <div class="contact">
+                    <ul class="clearfix">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>    <li><img src="../images/wuda.png" alt=""><a href="https://www.whu.edu.cn/" onclick="_addDynClicks(&quot;wbimage&quot;, 1964742071, 72308)" target="_blank">武汉大学</a></li>
+                        
+    <li><img src="../images/xxmh2.png" alt=""><a href="https://zhlj.whu.edu.cn/pc/index" onclick="_addDynClicks(&quot;wbimage&quot;, 1964742071, 72311)" target="_blank">智慧珞珈</a></li>
+                        
+    <li><img src="../images/contact.png" alt=""><a href="../index/lxwm.htm" onclick="_addDynClicks(&quot;wbimage&quot;, 1964742071, 72309)" target="_blank">联系我们</a></li>
+                        
+    <li><img src="../images/zhongyingwen.png" alt=""><a href="https://imai.whu.edu.cn/english/Home.htm" onclick="_addDynClicks(&quot;wbimage&quot;, 1964742071, 72310)" target="_blank">English</a></li>
+                        
+</ul>
+                </div>
+                <div class="search-box">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu1">
+    <div id="appu1"><div><input type="text" placeholder="请输入关键词"> <input type="button" class="btn"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+            <input type="text" placeholder="请输入关键词" v-model=query.keyWord @keyup.enter="onSubmit">
+            <input type="button" class="btn" type="button" v-on:click="onSubmit()">
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1964742071";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                <button type="button" class="navbar-toggle"> 
+                    <span class="icon-bar icon-bar1"></span> 
+                    <span class="icon-bar icon-bar2"></span> 
+                    <span class="icon-bar icon-bar3"></span> 
+                </button>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <ul class="navs flex">                <li class="select">
+                    <a href="../index.htm">首页</a>
+                        <ul class="sub-nav">
+                                <li style="display:none;">
+                                    <a href="../index/lxwm.htm">联系我们</a>
+                                </li>
+                        </ul>
+                </li>
+                <li class="select">
+                    <a href="yjyjj.htm">研究院概况</a>
+                        <ul class="sub-nav">
+                                <li>
+                                    <a href="yjyjj.htm">研究院简介</a>
+                                </li>
+                                <li>
+                                    <a href="yjyld.htm">研究院领导</a>
+                                </li>
+                        </ul>
+                </li>
+                <li class="select">
+                    <a href="../yjydt/xwzx.htm">研究院动态</a>
+                        <ul class="sub-nav">
+                                <li>
+                                    <a href="../yjydt/xwzx.htm">新闻中心</a>
+                                </li>
+                                <li>
+                                    <a href="../yjydt/tzgg.htm">通知公告</a>
+                                </li>
+                        </ul>
+                </li>
+                <li class="select">
+                    <a href="../rydw/jyry/qz/qb.htm">人员队伍</a>
+                        <ul class="sub-nav">
+                                <li>
+                                    <a href="../rydw/jyry/qz/qb.htm">教研人员</a>
+                                </li>
+                                <li>
+                                    <a href="../rydw/bsh/zzbsh.htm">博士后</a>
+                                </li>
+                                <li>
+                                    <a href="../rydw/xzry.htm">行政人员</a>
+                                </li>
+                        </ul>
+                </li>
+                <li class="select">
+                    <a href="../xsyj/zhbg.htm">学术研究</a>
+                        <ul class="sub-nav">
+                                <li>
+                                    <a href="../xsyj/zhbg.htm">综合报告</a>
+                                </li>
+                                <li>
+                                    <a href="../xsyj/xshy.htm">学术会议</a>
+                                </li>
+                                <li>
+                                    <a href="../xsyj/dqkc.htm">短期课程</a>
+                                </li>
+                        </ul>
+                </li>
+                <li class="select">
+                    <a href="../rcpy/yjsqhb.htm">人才培养</a>
+                        <ul class="sub-nav">
+                                <li>
+                                    <a href="../rcpy/yjsqhb.htm">研究生强化班</a>
+                                </li>
+                                <li>
+                                    <a href="../rcpy/sq_djxx.htm">暑期/冬季学校</a>
+                                </li>
+                                <li>
+                                    <a href="../rcpy/bssds.htm">博士生导师</a>
+                                </li>
+                        </ul>
+                </li>
+                <li class="select">
+                    <a href="../zxns/jygw.htm">招贤纳士</a>
+                        <ul class="sub-nav">
+                                <li>
+                                    <a href="../zxns/jygw.htm">教研岗位</a>
+                                </li>
+                                <li>
+                                    <a href="../zxns/bshgw.htm">博士后岗位</a>
+                                </li>
+                                <li>
+                                    <a href="../zxns/zcgw.htm">支撑岗位</a>
+                                </li>
+                        </ul>
+                </li>
+</ul>
+        </div>
+    </nav>
+    <nav class="mobile-nav">
+        <div class="container">
+            <ul class="navs">                <li class="select">
+                    <a href="../index.htm">首页</a><strong>+</strong>
+                        <ul class="sun-nav">
+                                <li>
+                                    <a href="../index/lxwm.htm">联系我们</a>
+                                </li>
+                        </ul>
+                </li>
+                <li class="select">
+                    <a href="yjyjj.htm">研究院概况</a><strong>+</strong>
+                        <ul class="sun-nav">
+                                <li>
+                                    <a href="yjyjj.htm">研究院简介</a>
+                                </li>
+                                <li>
+                                    <a href="yjyld.htm">研究院领导</a>
+                                </li>
+                        </ul>
+                </li>
+                <li class="select">
+                    <a href="../yjydt/xwzx.htm">研究院动态</a><strong>+</strong>
+                        <ul class="sun-nav">
+                                <li>
+                                    <a href="../yjydt/xwzx.htm">新闻中心</a>
+                                </li>
+                                <li>
+                                    <a href="../yjydt/tzgg.htm">通知公告</a>
+                                </li>
+                        </ul>
+                </li>
+                <li class="select">
+                    <a href="../rydw/jyry/qz/qb.htm">人员队伍</a><strong>+</strong>
+                        <ul class="sun-nav">
+                                <li>
+                                    <a href="../rydw/jyry/qz/qb.htm">教研人员</a>
+                                </li>
+                                <li>
+                                    <a href="../rydw/bsh/zzbsh.htm">博士后</a>
+                                </li>
+                                <li>
+                                    <a href="../rydw/xzry.htm">行政人员</a>
+                                </li>
+                        </ul>
+                </li>
+                <li class="select">
+                    <a href="../xsyj/zhbg.htm">学术研究</a><strong>+</strong>
+                        <ul class="sun-nav">
+                                <li>
+                                    <a href="../xsyj/zhbg.htm">综合报告</a>
+                                </li>
+                                <li>
+                                    <a href="../xsyj/xshy.htm">学术会议</a>
+                                </li>
+                                <li>
+                                    <a href="../xsyj/dqkc.htm">短期课程</a>
+                                </li>
+                        </ul>
+                </li>
+                <li class="select">
+                    <a href="../rcpy/yjsqhb.htm">人才培养</a><strong>+</strong>
+                        <ul class="sun-nav">
+                                <li>
+                                    <a href="../rcpy/yjsqhb.htm">研究生强化班</a>
+                                </li>
+                                <li>
+                                    <a href="../rcpy/sq_djxx.htm">暑期/冬季学校</a>
+                                </li>
+                                <li>
+                                    <a href="../rcpy/bssds.htm">博士生导师</a>
+                                </li>
+                        </ul>
+                </li>
+                <li class="select">
+                    <a href="../zxns/jygw.htm">招贤纳士</a><strong>+</strong>
+                        <ul class="sun-nav">
+                                <li>
+                                    <a href="../zxns/jygw.htm">教研岗位</a>
+                                </li>
+                                <li>
+                                    <a href="../zxns/bshgw.htm">博士后岗位</a>
+                                </li>
+                                <li>
+                                    <a href="../zxns/zcgw.htm">支撑岗位</a>
+                                </li>
+                        </ul>
+                </li>
+</ul>
+        </div>
+    </nav>
+    <div class="list-banner">
+            
+
+        <img src="../images/banner1.jpg" alt="">
+    
+
+
+    </div>
+    <main>
+        <div class="container clearfix  main-bg">
+            <div class="left">
+                <aside>
+                    <h2>
+研究院概况</h2>
+                    <ul>    <li class="act"><a href="yjyjj.htm">研究院简介</a></li>                 
+    <li><a href="yjyld.htm">研究院领导</a></li>                 
+</ul>
+                </aside>
+            </div>
+            <div class="right">
+                <div class="position">        <a href="../index.htm">首页</a> 
+    
+        <img src="../images/t.jpg" alt="">
+        <a href="yjyjj.htm">研究院概况</a> 
+    
+        <img src="../images/t.jpg" alt="">
+        <a href="yjyjj.htm">研究院简介</a> 
+    
+</div>
+                <div class="col">
+                    <h2>
+研究院简介</h2>
+                    <h3>Institute for Math &amp; AI, Wuhan</h3>
+                </div>
+                <div class="introduce">
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1964742071,'wbnews','u10')</script>
+<script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1964742071,1011)</script>
+
+    <div id="vsb_content_1011_u101"><div id="vsb_content"><p style="text-align: center"><img src="/__local/6/28/8B/4DDF86B8440E3168B4289A26C90_E16D3C47_166700.jpg" width="601" alt="166700" vsbhref="vurl" vurl="/_vsl/6288B4DDF86B8440E3168B4289A26C90/E16D3C47/166700" vheight=" 326px" vwidth=" 601px" height="326" orisrc="/__local/6/28/8B/4DDF86B8440E3168B4289A26C90_E16D3C47_166700.jpg" class="img_vsb_content" style="width: 601px; height: 326px;"></p><p style="text-align: justify;font-family: calibri;font-size: 14px;white-space: normal;text-indent: 43px;line-height: 21px"><span style="line-height: 32px; font-size: 21px; font-family: 宋体;"> 武汉数学与智能研究院成立于2023年6月，是武汉大学实体科研机构，现坐落于武汉大学雷军科技楼。研究院聚焦数学、统计学、计算机科学、网络空间安全、人工智能等核心领域，致力于建设中部地区人才高地；建设具有国际影响力的学术研究中心；建设具有底层原始创新能力的科创中心和应用落地示范基地。</span></p><p style="text-align: justify;font-family: calibri;font-size: 14px;white-space: normal;text-indent: 43px;line-height: 21px"><span style="line-height: 32px; font-size: 21px; font-family: 宋体, SimSun;">武汉数学与智能研究院将充分挖掘武汉大学积淀的学科优势，通过机制体制创新、资源协调整合，不断加强队伍建设、学科建设、人才培养，深化对外交流与对内合作，密切协同数学与统计学院、计算机学院、国家网络安全学院、人工智能学院，系统推进数学与智能相关学科高质量发展。</span></p><p style="text-align: center; font-family: calibri; font-size: 14px; white-space: normal; text-indent: 43px; line-height: 21px;"><span style="line-height: 32px; font-size: 21px; font-family: 宋体, SimSun;"></span></p></div></div>
+
+</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container clearfix">
+            <div class="footer-logo">
+                <img src="../images/footer-logo.png" alt="">
+            </div>
+            <div class="footer-contact">
+                <p class="hx">联系我们</p>
+                <ul>
+<ul>
+ <li>电话：027-68789303</li>
+ <li>邮箱：imai_wh@whu.edu.cn</li>
+ <li>地址：武汉大学雷军科技楼</li>
+</ul></ul>
+            </div>
+            <div class="footer-link">
+                <p class="hx">友情链接</p>
+                <ul><script language="javascript" src="/system/resource/js/openlink.js"></script>    <li><a href="http://maths.whu.edu.cn/" target="_blank">武汉大学数学与统计学院</a></li>
+                    
+    <li><a href="https://cs.whu.edu.cn/" target="_blank">武汉大学计算机学院</a></li>
+                    
+    <li><a href="https://cse.whu.edu.cn/" target="_blank">武汉大学国家网络安全学院</a></li>
+                    
+    <li><a href="https://sai.whu.edu.cn/" target="_blank">武汉大学人工智能学院</a></li>
+                    
+    <li><a href="https://hbncam.whu.edu.cn/index.htm" target="_blank">湖北国家应用数学中心</a></li>
+                    
+    <li><a href="http://hbsiam.whu.edu.cn/" target="_blank">湖北省工业与应用数学学会</a></li>
+                    
+</ul>
+            </div>
+            <div class="footer-about">
+              <ul>    
+
+                <li>
+                  <a href="javascript:;">
+                    <img src="../images/guanzhu.png" alt="">
+                    <span>关注我们</span>
+                        <div class="about-ewm">
+                          <img src="../images/ewm.png" alt="">
+                        </div>
+                  </a>
+                </li>
+          
+
+
+                <li>
+                  <a href="http://115.156.77.10:88/" target="_blank">
+                    <img src="../images/yuyue.png" alt="">
+                    <span>会议室预定</span>
+                  </a>
+                </li>
+          
+</ul>
+            </div>
+        </div>
+    </footer>
+
+<script src="../js/jquery-1.9.1.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/mobile.js"></script>
+
+</body></html>

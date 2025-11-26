@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学院简介-民航学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<META Name="keywords" Content="民航学院,学院简介" />
+
+    <link rel="stylesheet" href="../css/style.css">
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css" />
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232306975475152555742000200014156 -->
+<link rel="stylesheet" type="text/css" href="../page.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1010,'/page.jsp',-1,1711241470)</script>
+</head>
+<body>
+ <div class="top">
+        <div class="top_box">
+            <div class="logo fl">
+                
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="民航学院2021"><img src="../img/logo.png" alt=""></a>
+            </div>
+            <div class="top_right fr">
+                <img src="../img/search.png" alt="" class="button" id="button">
+                <div class="top_link">
+                    <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><a href="https://www.nwpu.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1711241470, 62752)">学校官网</a>
+<span>|</span>
+
+<a href="https://art-reservation.nwpu.edu.cn/h5/?iTerminal=%E6%B0%91%E8%88%AA%E5%AD%A6%E9%99%A2%E5%9C%BA%E5%9C%B0%E9%A2%84%E7%BA%A6~1635546031580971010" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1711241470, 90484)">会议室/工位预约</a>
+<span>|</span>
+
+<a href="https://minhang.nwpu.edu.cn/info/1042/6363.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1711241470, 90914)">院徽、院标下载</a>
+<span>|</span>
+
+<a href="https://minhang.nwpu.edu.cn/info/1072/10043.htm" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1711241470, 95519)">宣传片</a>
+
+
+                </div>
+
+                <div id="searchbox" class="searchbox">
+                    
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="text" placeholder="请输入" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="submit" name="submit_button" type="button"  v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1711241470";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://yykfpt.nwpu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                </div>
+
+                <div class="navBar">
+                    <ul class="nav cleafix">
+ 
+    <li id="m1" class="m on">
+    <h3><a href="xyjj.htm" title="学院概况">学院概况</a></h3>
+        <ul class="sub">
+
+            <li><a href="xyjj.htm" title="学院简介">学院简介</a></li>
+
+            <li><a href="xyld.htm" title="学院领导">学院领导</a></li>
+
+            <li><a href="jgsz.htm" title="机构设置">机构设置</a></li>
+        </ul>
+</li>
+
+ 
+    <li id="m2" class="m ">
+    <h3><a href="../szdw/jsml.htm" title="师资队伍">师资队伍</a></h3>
+        <ul class="sub">
+
+            <li><a href="../szdw/lyys.htm" title="两院院士">两院院士</a></li>
+
+            <li><a href="../szdw/gccrc1/gjjljrc.htm" title="高层次人才">高层次人才</a></li>
+
+            <li><a href="../szdw/jsml.htm" title="教师名录">教师名录</a></li>
+        </ul>
+</li>
+
+ 
+    <li id="m3" class="m ">
+    <h3><a href="../rcpy.htm" title="人才培养">人才培养</a></h3>
+        <ul class="sub">
+
+            <li><a href="../rcpy/bkspy1/jxdt.htm" title="本科生培养">本科生培养</a></li>
+
+            <li><a href="../rcpy/yjspy1/zyjs.htm" title="研究生培养">研究生培养</a></li>
+        </ul>
+</li>
+
+ 
+    <li id="m4" class="m ">
+    <h3><a href="../kxyj.htm" title="科学研究">科学研究</a></h3>
+        <ul class="sub">
+
+            <li><a href="../kxyj/kygk.htm" title="科研概况">科研概况</a></li>
+
+            <li><a href="../kxyj/kydt1.htm" title="科研动态">科研动态</a></li>
+
+            <li><a href="../kxyj/kypt.htm" title="科研平台">科研平台</a></li>
+
+            <li><a href="../kxyj/kyzx.htm" title="科研中心">科研中心</a></li>
+
+            <li><a href="../kxyj/wjxz/kyfw.htm" title="文件下载">文件下载</a></li>
+        </ul>
+</li>
+
+ 
+    <li id="m5" class="m ">
+    <h3><a href="../dqgz.htm" title="党群工作">党群工作</a></h3>
+        <ul class="sub">
+
+            <li><a href="../dqgz/djdt.htm" title="党建动态">党建动态</a></li>
+
+            <li><a href="../dqgz/llxx.htm" title="理论学习">理论学习</a></li>
+
+            <li><a href="../dqgz/ghgz.htm" title="工会工作">工会工作</a></li>
+
+            <li><a href="../dqgz/xgxz.htm" title="相关下载">相关下载</a></li>
+        </ul>
+</li>
+
+ 
+    <li id="m6" class="m ">
+    <h3><a href="../rcyj.htm" title="人才引进">人才引进</a></h3>
+        <ul class="sub">
+
+            <li><a href="../rcyj/rczc.htm" title="人才政策">人才政策</a></li>
+
+            <li><a href="../rcyj/zpgg.htm" title="招聘公告">招聘公告</a></li>
+        </ul>
+</li>
+
+ 
+    <li id="m7" class="m ">
+    <h3><a href="../xsgz.htm" title="学生工作">学生工作</a></h3>
+        <ul class="sub">
+
+            <li><a href="../xsgz/xgdw.htm" title="学工队伍">学工队伍</a></li>
+
+            <li><a href="../xsgz/gzdt.htm" title="工作动态">工作动态</a></li>
+
+            <li><a href="../xsgz/zlxz.htm" title="资料下载">资料下载</a></li>
+        </ul>
+</li>
+
+ 
+    <li id="m8" class="m ">
+    <h3><a href="../hzjl.htm" title="合作交流">合作交流</a></h3>
+        <ul class="sub">
+
+            <li><a href="../hzjl/gjhz.htm" title="国际合作">国际合作</a></li>
+
+            <li><a href="../hzjl/hzpt.htm" title="合作平台">合作平台</a></li>
+
+            <li><a href="../hzjl/xsjl.htm" title="学术交流">学术交流</a></li>
+
+            <li><a href="../hzjl/cxyhz.htm" title="产学研合作">产学研合作</a></li>
+        </ul>
+</li>
+
+</ul>
+                </div>
+            </div>
+        </div>
+   </div>
+
+<div class="topbanner">
+          <img src="../images/taicangzhihuigang2.png" title="" border="0">
+
+
+</div>
+
+<div class="news-main cleafix">
+    <div class="main-box">
+        <!--左侧导航-->
+        <div class="left-nav fl">
+            <ul>
+                <li> <span style="font-size: 24px;">
+学院概况</span> </li>
+                <li class="actived"><a href="xyjj.htm" title="学院简介">学院简介</a></li>
+<li><a href="xyld.htm" title="学院领导">学院领导</a></li>
+<li><a href="jgsz.htm" title="机构设置">机构设置</a></li>
+
+            </ul>
+        </div>
+
+        <!--正文右侧-->
+        <div class="zw fr">
+            <div class="dqwz">
+                <p class="fl">
+学院简介</p>
+                <p class="fr">        
+                <a href="../index.htm" style="display:none;">首页</a>
+
+                <a href="xyjj.htm">学院概况</a>
+
+                >>
+                <a href="xyjj.htm">学院简介</a>
+</p>
+            </div>
+
+
+            <div class="zw">
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1711241470,'wbnews','u9')</script>
+<link rel="stylesheet" Content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1711241470,1858)</script>
+<p>
+   
+    <div id="vsb_content_4_1858_u91"><div id="vsb_content_4"><p class="vsbcontent_start">西北工业大学民航学院成立于2018年12月。其前身是西北工业大学民航工程学院（1994），是经中国航空工业总公司和国家民航总局批准，由西北工业大学、北京飞机维修工程有限公司(AMECO)和中国西北航空公司联合组建的。学院坚持“建一流学院、办一流专业，育一流人才”的建设目标，围绕民航领域的科技发展前沿、重大需求和国家重点科研任务深入开展人才培养、学科建设和科学研究。</p><p>学院以江苏太仓校区为主体办学，以现有西安友谊校区辅助办学。具有国家211和985学科建设平台以及航空宇航科学与技术、力学两个博士学位授权点。开设飞行器设计与工程、飞行器控制与信息工程和<span style="font-size: 18.6667px; text-indent: 37.3333px;">低空技术与工程</span>3个本科专业，开展航空宇航科学与技术和力学学术型博士和硕士研究生培养，以及机械、电子信息、材料与化工工程博士和硕士研究生培养。</p><p>学院聚焦绿色航空、智慧民航和航空安全与管理等特色方向，<span style="font-size: 21px;">搭建</span><span style="font-size: 21px;">新型飞行器与推进技术研究</span><span style="font-family: calibri; font-size: 21px;"><span style="font-family:宋体">、</span></span><span style="font-size: 21px;">可持续航空材料、结构轻量化与智能设计、民航大数据、智慧机场、智能运维、适航审定技术、无人机与通用航空</span><span style="font-size: 21px;">等八个研究中心</span><span style="font-family: calibri; font-size: 21px;"><span style="font-family:宋体">。</span></span></p><p>建有冲击动力学及工程应用国际联合研究中心、结构力学行为科学与技术创新引智基地、飞行器结构力学与强度技术重点学科实验室、民航航空器冲击防护与安全评估重点实验室、陕西省通用飞机协同创新中心等科研平台，以及机载设备适航技术、通航大数据、智慧通用机场、中德通用飞机设计及适航认证等联合实验室。学院是民航科教创新攻关联盟成员单位，中国航空器拥有者及驾驶员协会（中国AOPO）理事单位，第十三届全国表面工程大会支持单位，中国航空学会鸟撞分会挂靠单位。</p><p>民航学院现有教职工98人，其中师资队伍80人，包含教授15人，研究员6人，副教授34人，副研究员2人，高级工程师3人，博士后12人。长江学者特聘教授1人，国家级人才5人，中国科协“青年人才托举工程”3人。</p><p>现有学生757人，其中，本科生442人，硕士生207人，博士生108人。</p><p class="vsbcontent_end">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;（数据截至2025年5月）</p><p class="vsbcontent_img"><img src="/__local/E/F7/2B/5C19E2B09907EC9E1257BD375FC_62AA03EF_969964.png" width="900" height="334" border="0" vspace="0" hspace="0" title="" alt="" vsbhref="vurl" vurl="/_vsl/EF72B5C19E2B09907EC9E1257BD375FC/62AA03EF/969964" vheight=" 334px" vwidth=" 900px" orisrc="/__local/E/F7/2B/5C19E2B09907EC9E1257BD375FC_62AA03EF_969964.png" class="img_vsb_content" style="width: 900px; height: 334px;"></p></div></div>
+    <span id="vsb_content_4_1858_u9" name="vsb_content_4_1858_u9"></span><br /><br />
+    
+</p>
+</div>
+        </div>
+    </div>
+</div>
+
+<!--footer-->
+<div class="footer">
+    <div class="footer_box">
+        <div class="dz fl">
+            
+<h3><span style="font-size: 20px">联系我们</span></h3> 
+<p>地址：陕西省西安市友谊西路127号&nbsp;&nbsp; 邮编：710072</p> 
+<p>联系：西北工业大学毅字楼223办公室</p> 
+<p>TEL：029-88460937</p> 
+<p>邮箱：<a href="mailto:minhang@nwpu.edu.cn" style="text-decoration: none; color: #4f81bd"><span style="text-decoration: none; color: #000000"><strong><span style="text-decoration: none; color: #4f81bd">minhang@nwpu.edu.cn</span></strong></span><span style="color: #548dd4"></span></a></p>
+        </div>
+        <div class="ewm fr">
+            <h3>关注我们<span>(扫描关注微信公众号)</span></h3>
+                    <img src="../img/ewm.jpg" title="" border="0" alt="" class="hvr-bounce-in">
+
+        </div>
+    </div>
+</div>
+
+<div class="bq">
+    <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权所有 ©2021-2023 &nbsp; &nbsp;西北工业大学民航学院</p>
+</div>
+
+<script src="../js/jquery_1.js"></script>
+<script src="../js/jquery.SuperSlide.js"></script>
+<script type="text/javascript">
+    //搜索框
+    $(function() {
+        var tiemer = "";
+        var time = 500; //每次点击三秒后才能bai再次点击
+        var fun = function searClick() {
+            var o = $(".searchbox");
+            if (!o.hasClass('on')) {
+                o.addClass('on')
+                $(".searchbox").animate({ width: 250 }, 500, 'linear')
+            } else {
+                o.removeClass('on');
+                $(".searchbox").animate({ width: 0 }, 500, 'linear')
+            }
+            $(".button").unbind("click");
+
+            tiemer = setTimeout(function() {
+                $(".button").click(fun);
+            }, time);
+        };
+        $(".button").click(fun);
+    })
+    jQuery(".nav").slide({
+        type:"menu", //效果类型
+        titCell:".m", // 鼠标触发对象
+        targetCell:".sub", // 效果对象，必须被titCell包含
+        delayTime:300, // 效果时间
+        triggerTime:0//鼠标延迟触发时间
+    });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

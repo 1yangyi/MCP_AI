@@ -1,0 +1,375 @@
+<!DOCTYPE html><html><head>
+  <meta charset="utf-8">
+<meta name="robots" content="NOINDEX,NOFOLLOW,noarchive">
+  <title>学院概况 - 北京大学软件与微电子学院</title>
+  <link rel="stylesheet" href="/templates/sspku_index_content_no_right/css/bootstrap/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="/templates/sspku_index_content_no_right/css/template.css" type="text/css">
+  <script src="/templates/sspku_index_content_no_right/js/jquery.js" type="text/javascript"></script>
+  <script src="/templates/sspku_index_content_no_right/js/bootstrap.js" type="text/javascript"></script>
+  <script src="/templates/sspku_index_content_no_right/js/respond.min.js" type="text/javascript"></script>
+  <script src="/templates/sspku_index_content_no_right/js/scripts.js" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    var timeout = 500;
+    var closetimer = 0;
+    var ddmenuitem = 0;
+    var linkitem = 0;
+
+    function jsddm_open() {
+      jsddm_canceltimer();
+      jsddm_close();
+      if (!$(this).find('a').eq(0).hasClass('top-link-hover')) {
+        linkitem = $(this).find('a').eq(0).addClass('top-link-hover');
+      }
+      ddmenuitem = $('#d_' + $(this).find('a').eq(0).attr('id')).eq(0);
+      ddmenuitem.fadeIn();
+    }
+
+    function jsddm_close() {
+      if (ddmenuitem) {
+        linkitem.removeClass('top-link-hover');
+        ddmenuitem.fadeOut();
+      }
+    }
+
+    function jsddm_timer() { closetimer = window.setTimeout(jsddm_close, timeout); }
+
+    function jsddm_canceltimer() {
+      if (closetimer) {
+        window.clearTimeout(closetimer);
+        closetimer = null;
+      }
+    }
+
+    $(document).ready(function () {
+      $('#jsddm > li').bind('mouseover', jsddm_open);
+      $('#jsddm > li').bind('mouseout', jsddm_timer);
+      $('.d_panel').bind('mouseover', jsddm_canceltimer);
+      $('.d_panel').bind('mouseout', jsddm_timer);
+    });
+
+    document.onclick = jsddm_close;
+  </script>
+</head>
+
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <ul class="nav">
+        <li class="active"><a href="/">首页</a></li>
+        <li><a href="http://icampus.ss.pku.edu.cn/">综合信息服务平台</a></li>
+      </ul>
+      <ul class="nav pull-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-target="#">快速链接<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://www.pku.edu.cn/"><i class="icon-home icon-pos-adjust-for-yahei"></i>&nbsp;&nbsp;北大主站</a></li>
+            <li><a href="/newscenter/"><i class="icon-flag icon-pos-adjust-for-yahei"></i>&nbsp;&nbsp;新闻中心</a></li>
+            <li><a href="/education/"><i class="icon-book icon-pos-adjust-for-yahei"></i>&nbsp;&nbsp;教学信息</a></li>
+            <li><a href="/admission/"><i class="icon-bookmark icon-pos-adjust-for-yahei"></i>&nbsp;&nbsp;招生教育</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+
+
+  <div id="header" class="header">
+    <div class="header-inner">
+      <div class="container">
+        <div>
+          <div class="pull-left logo">
+            <img class="logo-img" src="/templates/sspku_index_content_no_right/images/logo-v4.png">
+          </div>
+          <div class="pull-right">
+            <div class="header-ribbon pull-right">
+              <a href="/calendar/"><img src="/images/images/99_others/ribbon.png"></a>
+            </div>
+            <div class="logo-links pull-right">
+            </div>
+            <div class="form-search search-form pull-right">
+              <div class="my-input-append">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-nav">
+      <div class="container">
+        <div class="row-fluid">
+          <ul id="jsddm" class="unstyled">
+
+          <li><a class="top-link" href="/overview/" id="tl-overview">学院概况</a></li><li><a class="top-link" href="/teacherteam/" id="tl-teacher">师资团队</a></li><li><a class="top-link" href="/research/" id="tl-research">研究合作</a></li><li><a class="top-link" href="/education/" id="tl-education">教育教学</a></li><li><a class="top-link" href="/admission/" id="tl-admission">招生信息</a></li><li><a class="top-link" href="/student/" id="tl-student">学生天地</a></li></ul>
+        </div>
+      </div>
+    </div>
+    <div id="d_panel_group">
+      <div id="d_tl-overview" class="d_panel">
+        <div class="container">
+          <div class="row-fluid">
+            <div class="span4" id="d_tl-overview-div">
+            <a class="d_panel_link" href="/overview/inscription.html">领导致辞</a><a class="d_panel_link" href="/overview/organization.html">组织体系</a><a class="d_panel_link" href="/overview/contact.html">联系方式</a><a class="d_panel_link" href="/overview/map.html">校园地图</a></div>
+            <div class="span4">
+              <p class="d_panel_intro">
+                &nbsp;&nbsp;&nbsp;&nbsp;北京大学软件与微电子学院按照北京大学建设世界一流大学的总体规划，按新模式建立、新机制运行的北京大学的新型学院，学院实行理事会领导下的院长负责制，探索多途径合作办学的管理体制与运行机制，与国内外企业合作，实现培养高层次、实用型、复合交叉型、国际化人才的目标。
+              </p>
+            </div>
+            <div class="span4">
+              <img class="d_panel_img" src="/templates/sspku_index_content_no_right/images/d_panel_01.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="d_tl-teacher" class="d_panel">
+        <div class="container">
+          <div class="row-fluid">
+            <div class="span4" id="d_tl-teacher-div">
+            <a class="d_panel_link" href="/teacherteam/scicommittee/">学术委员会</a><a class="d_panel_link" href="/teacherteam/adcommittee/">学位委员会</a><a class="d_panel_link" href="/teacherteam/guidecommittee/">教学指导委员会</a><a class="d_panel_link" href="/teacherteam/teacherlist/">师资名单</a></div>
+            <div class="span4">
+              <p class="d_panel_intro">
+                &nbsp;&nbsp;&nbsp;&nbsp;按照建设世界一流大学的总体规划要求，本着建立高起点、国际化北京大学软件学院的目标，软件与微电子学院教师队伍将由国内外知名学者、国内外IT企业资深专家、北京大学校内教师组成。
+              </p>
+            </div>
+            <div class="span4">
+              <img class="d_panel_img" src="/templates/sspku_index_content_no_right/images/d_panel_02.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="d_tl-research" class="d_panel">
+        <div class="container">
+          <div class="row-fluid">
+            <div class="span4" id="d_tl-research-div">
+            <a class="d_panel_link" href="/research/academic/">科学研究</a><a class="d_panel_link" href="/research/fexpert/">外国专家</a><a class="d_panel_link" href="/research/cooperation/">合作机构</a><a class="d_panel_link" href="/research/cooperationnews/">合作动态</a></div>
+            <div class="span4">
+              <p class="d_panel_intro">
+                &nbsp;&nbsp;&nbsp;&nbsp;北京大学软件与微电子学院设有多个科研中心，从单纯教学的领域走向教学科研相结合的领域。学院设立有国际国内合作办公室，与国内外政府机构、高校、企业均开展有全方位、多层次的交流与合作。
+              </p>
+            </div>
+            <div class="span4">
+              <img class="d_panel_img" src="/templates/sspku_index_content_no_right/images/d_panel_03.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="d_tl-education" class="d_panel">
+        <div class="container">
+          <div class="row-fluid">
+            <div class="span4" id="d_tl-education-div">
+            <a class="d_panel_link" href="/education/department/">科系设置</a><a class="d_panel_link" href="/education/edunotice/">教务通知</a><a class="d_panel_link" href="/education/eqoedu/">素质教育</a></div>
+            <div class="span4">
+              <p class="d_panel_intro">
+                &nbsp;&nbsp;&nbsp;&nbsp;软件与微电子学院软件工程专业的课程体系为：多层次、多方向、多领域、模块化
+                的课程体系。素质教育贯穿学院教学过程始终。学院所有建筑全部实现网络覆盖，包括所有教室、图书馆和宿舍，各类专业实验室支持大型专业课题的实践，开展共享研究项目，支持毕业设计。
+              </p>
+            </div>
+            <div class="span4">
+              <img class="d_panel_img" src="/templates/sspku_index_content_no_right/images/d_panel_04.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="d_tl-admission" class="d_panel">
+        <div class="container">
+          <div class="row-fluid">
+            <div class="span4" id="d_tl-admission-div">
+            <a class="d_panel_link" href="/admission/admnotice/">招生通知</a><a class="d_panel_link" href="/admission/admbrochure/">招生简章</a></div>
+            <div class="span4">
+              <p class="d_panel_intro">
+                &nbsp;&nbsp;&nbsp;&nbsp;学院以培养多层次、实用型、复合型、国际化软件与微电子人才为目标。目前拥有软件技术与服务工程、微纳电子与嵌入式系统、金融信息与管理技术、新兴交叉学科4个领域研究方向，同时于2012年起设立工程博士专业学位。
+              </p>
+            </div>
+            <div class="span4">
+              <img class="d_panel_img" src="/templates/sspku_index_content_no_right/images/d_panel_05.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="d_tl-student" class="d_panel">
+        <div class="container">
+          <div class="row-fluid">
+            <div class="span4" id="d_tl-student-div">
+            <a class="d_panel_link" href="/student/stuaffair/">学生工作</a><a class="d_panel_link" href="/student/internjob/">实习就业</a><a class="d_panel_link" href="/student/download/">常用下载</a></div>
+            <div class="span4">
+              <p class="d_panel_intro">
+                &nbsp;&nbsp;&nbsp;&nbsp;北京大学软件与微电子学院开展有广泛的学生活动，以人才培养为中心，全面贯彻党的教育方针，为全面推进素质教育提供强有力的精神动力和思想保证。学院及时发布大量的最新实习、就业信息，并且提供相关指导，服务同学，努力做到“学有所用、人职匹配、人尽其才”。
+              </p>
+            </div>
+            <div class="span4">
+              <img class="d_panel_img" src="/templates/sspku_index_content_no_right/images/d_panel_06.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="main-content">
+      <div class="container">
+        <div class="row-fluid">
+          <div class="span12">
+            <div class="page-nav">
+              <div id="top-sub-menu-div" class=" clearfix">
+
+                <ul class="nav menu_sssm" id="top_sub_menu">
+                  <li class="item-102 current active deeper parent"><a href="/overview/">学院概况</a>
+                    <ul class="nav-child unstyled small">
+                      <li class="item-103"><a href="/overview/inscription.html">领导致辞</a></li>
+                      <li class="item-104"><a href="/overview/organization.html">组织体系</a></li>
+                      <li class="item-105"><a href="/overview/contact.html">联系方式</a></li>
+                      <li class="item-106"><a href="/overview/map.html">校园地图</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                
+                
+
+                <br style="clear:both;">
+              </div>
+            </div>
+            <div class="breadcrumbs">
+              <div id="breadcrumbs-div">
+
+                <ul class="breadcrumb clearfix">
+                  <li class="active"><span class="divider icon-location hasTooltip" title="当前位置："></span></li>
+                  <li><a href="/" class="pathway">首页</a><span class="divider"><img src="/sysimages/arrow.png" alt=""></span></li>
+                  <li><span>学院概况</span></li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row-fluid">
+          <div class="span12">
+
+
+            <div class="row-fluid">
+              <div class="span12">
+                <div class="content-wrapper">
+                  
+                  
+                  <div>
+                    
+                    
+                    <div style="clear:both;"></div>
+                  </div>
+                  <div>
+                    
+                    
+                    <div style="clear:both;"></div>
+                  </div>
+                  <div class="mainbody">
+                    <div class="section-block ss-article no-border static">
+                      <div class="item-page">
+
+
+
+
+                        <div class="article-content">
+                          <div class="span12 a_words">
+                            <div class="a_wrapper" style="margin-top: 10px;">
+                              <p class="p_font_big" style="line-height: 2.5em; text-align: justify;"><span class="first-letter">为</span>适应我国经济结构战略性调整的要求和软件产业发展对人才的迫切需要，实现我国软件人才培养的跨越式发展，教育部和国家发展计划委员会以教高[2001]6号文正式批准北京大学等35所高等学校试办示范性软件学院，根据文件精神，北京大学经2002年3月15日第451次校长办公会研究，决定成立“北京大学软件学院”。
+                              </p>
+                              <p class="p_font_big" style="line-height: 2.5em;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;根据教育部、科技部教高[2003]2号文件：关于批准在北京大学建立“国家集成电路人才培养基地”的精神，北京大学经2004年4月20日第531次校长办公会研究决定，将“北京大学软件学院”与“北京大学国家集成电路人才培养基地”结合，“北京大学软件学院”更名为“北京大学软件与微电子学院”。
+                              </p>
+                              <p class="p_font_big" style="line-height: 2.5em;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2003年12月，在教育部组织的对全国35所示范性软件学院中期评估中，北京大学软件学院综合评比排名第一，被誉为“示范中的示范”；2004年11月9日，学院荣获“北京大学教学成果一等奖”；2004年12月9日，荣获“北京市高等教育教学成果一等奖”；2005年9月,荣获高等教育“国家级教学成果一等奖”；2006年，北京大学软件与微电子学院顺利通过了教育部组织的示范性软件学院的验收评估，评估结果为“综合排名第一”。
+                              </p>
+                              <p class="p_font_big" style="line-height: 2.5em;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京大学软件与微电子学院按照北京大学建设世界一流大学的总体规划，按新模式建立、新机制运行的北京大学的新型学院。学院在北京大学领导下，坚持党对学院的全面领导，探索多途径合作办学的管理体制与运行机制，与国内外企业合作，不断深化产教融合，实现培养高层次、实用型、复合交叉型、国际化人才的目标。北京大学软件与微电子学院秉承北京大学“民主科学、兼容并蓄”的传统，坚持北大“勤奋、严谨、求实、创新”的学风，以坚持创新创业、坚持面向需求、坚持质量第一为建院宗旨。
+                              </p>
+                              <p class="p_font_big" style="line-height: 2.5em; text-align: justify;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;学院于2002年3月成立至今，已形成了一个学院（北京大学软件与微电子学院）、两个学科（软件工程、集成电路工程）、三个基地（国家软件人才国际培训北京基地、国家集成电路人才培养基地、软件工程国家工程研究中心北京工程化基地）的综合性软件与微电子人才培养实体。目前，学院以培养软件工程、集成电路工程等专业领域工程硕博士研究生为主体，每年可为国家培养输送800名左右毕业生。
+                              </p>
+                              <p class="p_font_big" style="line-height: 2.5em; text-align: justify;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img class="img-polaroid" style="font-size: 14px; text-align: center;" src="/images/images/01_overview/overview-bj.jpg" alt="" width="700" height="421">
+                              </p>
+                            </div>
+                          </div>
+                          <div class="span6 a_photo" style="margin-left: 0px;">
+                            <div class="sec-img-div">
+                              <div class="sec-img-div-inner" style="text-align: center;"><span style="font-size: 10px;">&nbsp;</span></div>
+                            </div>
+                          </div>
+                          <div class="attachmentsContainer">
+
+                            <div class="attachmentsList" id="attachmentsList_com_content_default_1"></div>
+
+                          </div>
+                        <div style="text-align:center;"><ul class="article-index-pager inline" style="margin:20px 0;font-size:10px;"></ul></div></div>
+
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <hr class="hr-dashed">
+              </div>
+            </div>
+            <div class="loadmodules_div">
+              <div>
+                
+
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer" class="footer">
+    <div class="container">
+      <div class="row-fluid" style="margin-bottom:15px;">
+        <div>
+          <a id="backtotop" href="#" class="back2top pull-right" title="返回顶部">▲<br>Top</a>
+        </div>
+        <div class="slogan-div pull-left">
+          <blockquote class="slogan" style="float:left;">
+            <h3>开拓&nbsp;&nbsp;求实&nbsp;&nbsp;创业&nbsp;&nbsp;严谨&nbsp;&nbsp;进取&nbsp;&nbsp;育人</h3>
+          </blockquote>
+          <div style="float:left; margin-left:30px;">
+            <a href="/images/images/99_others/qrcode1.jpg" title="点击查看大图"><img src="/images/images/99_others/qrcode1.jpg" style="width:80px;"></a>
+          </div>
+          <div style="float:left; margin-left:30px;">
+            <a href="/images/images/99_others/qrcode2.jpg" title="点击查看大图"><img src="/images/images/99_others/qrcode2.jpg" style="width:80px;"></a>
+          </div>
+        </div>
+        <div class="footer-links pull-right" style="width: 350px;">
+          <div>
+            <ul class="pull-right">
+              <li><i class="icon-user icon-white icon-pos-adjust-for-yahei"></i>&nbsp;&nbsp;关于我们</li>
+              <li><a href="/overview/map.html">校园地图</a></li>
+              <li><a href="/overview/contact.html">联系方式</a></li>
+              <li style="clear:both;"></li>
+            </ul>
+            <br style="clear:both;">
+          </div>
+        </div>
+      </div>
+      <hr class="soften">
+      <div class="row">
+        <div class="span12 copyright">
+          <p>Copyright © 北京大学软件与微电子学院 2013&nbsp;&nbsp;·&nbsp;&nbsp;北京市大兴工业开发区金苑路24号&nbsp;&nbsp;102600</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    jQuery("#backtotop").click(function () {
+      jQuery('body,html').animate({ scrollTop: 0 }, 1000);
+      return false;
+    });
+  </script>
+
+
+
+</body></html>

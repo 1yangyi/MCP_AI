@@ -1,0 +1,549 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>研究院介绍-西北工业大学-青岛研究院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="研究院介绍">
+<META Name="keywords" Content="西北工业大学-青岛研究院" />
+
+    <link rel="stylesheet" href="../css/aos.css">
+    <link rel="stylesheet" href="../css/flexslider.css">
+    <link rel="stylesheet" href="../css/liMarquee.css">
+    <link rel="stylesheet" href="../css/owl.carousel.css">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/media-1.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css" />
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232306975475152555742000200014156 -->
+<link rel="stylesheet" type="text/css" href="../single.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1129,'/single.jsp',-1,1578192724)</script>
+</head>
+<body>
+<!-- header -->
+    <div id="header">
+        <div class="header-1">
+            <div class="container">
+                <div class="logo fl">
+                  <img src="../images/logo.png">
+                </div>
+                <div class="header-1-right fr">
+                    <div class="header-1-right-a">
+                        <a href="#">翱翔门户</a>&nbsp | &nbsp<a href="../newweb/index.jsp?urltype=tree.TreeTempUrl&wbtreeid=1076#">学校主页</a>&nbsp | &nbsp<a href="#">电子邮件</a>&nbsp | &nbsp<a href="../english/Home.htm">English</a>
+                    </div>
+                    <div class="search">
+                        
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+
+    #appu0 .tj{
+        border: 0;}
+</style>
+<div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <input type="text"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"    value="请输入关键字"  onfocus="if(value=='请输入关键字'){value=''}" onblur="if (value ==''){value='请输入关键字'}">
+            <input name="submit_button" type="image" src="../images/wen1.png" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1578192724";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://yykfpt.nwpu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="nav-wp">
+            <div class="container">
+                <div class="nav">
+                    <ul class="list-unstyled">
+												<li><a href="../index.htm">首页</a>
+						</li>
+						<li class="active"><a href="yjyjs.htm">研究院概况</a>
+							<ul class="list-unstyled">
+								<li><a href="xxjs.htm">学校介绍</a></li>
+								<li><a href="yjyjs.htm">研究院介绍</a></li>
+								<li><a href="zzjg.htm">组织架构</a></li>
+								<li><a href="lxwm.htm">联系我们</a></li>
+							</ul>
+						</li>
+						<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1134">新闻资讯</a>
+							<ul class="list-unstyled">
+								<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1134">研究院动态</a></li>
+								<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1135">通知公告</a></li>
+								<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1136">西工大新闻</a></li>
+							</ul>
+						</li>
+						<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1141">科研力量</a>
+							<ul class="list-unstyled">
+								<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1249">研究方向</a></li>
+								<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1141">研发平台</a></li>
+								<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1142">研发动态</a></li>
+								<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1143">研发团队</a></li>
+							</ul>
+						</li>
+						<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1146">合作交流</a>
+							<ul class="list-unstyled">
+								<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1146">国际合作</a></li>
+								<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1299">技术服务</a></li>
+							</ul>
+						</li>
+						<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1148">教育培训</a>
+							<ul class="list-unstyled">
+								<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1148">招生信息</a></li>
+							</ul>
+						</li>
+						<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1153">党建工作</a>
+							<ul class="list-unstyled">
+								<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1153">党建活动</a></li>
+								<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1154">理论学习</a></li>
+							</ul>
+						</li>
+						<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1156">人才引进</a>
+							<ul class="list-unstyled">
+								<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1156">人才政策</a></li>
+								<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1157">高层次人才</a></li>
+								<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1239">非事业编招聘</a></li>
+							</ul>
+						</li>
+						<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1160">企业入驻</a>
+							<ul class="list-unstyled">
+								<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1160">入驻企业</a></li>
+								<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1162">其他工作</a></li>
+							</ul>
+						</li>
+					</ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- header -->
+<div id="header-2">
+    <div class="logo-2 fl">
+        
+<a href="../index.htm"><img src="../images/logo.png" alt="青岛研究院"></a>
+    </div>
+    <div class="menu2 fr">
+        <ul class="list-unstyled">
+            <li><a id="sanlan"><img src="../images/sanlan.png" alt=""></a></li>
+        </ul>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div class="nav-2">
+        <div class="nav-2-form">
+            
+
+
+<style>
+    #appu3 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+</style>
+<div id="divu3"></div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError">
+            <input type="text" class="form-control"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="image" src="../images/wen.png" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "1578192724";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultmobile/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://yykfpt.nwpu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+        </div>
+        <ul class="list-unstyled">
+						<li><a href="../index.htm">首页</a>
+			</li>
+			<li><a href="yjyjs.htm">研究院概况</a>
+				<span class="jiaspan"></span>
+				<ul class="list-unstyled">
+					<li><a href="xxjs.htm">学校介绍</a></li>
+					<li><a href="yjyjs.htm">研究院介绍</a></li>
+					<li><a href="zzjg.htm">组织架构</a></li>
+					<li><a href="lxwm.htm">联系我们</a></li>
+				</ul>
+			</li>
+			<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1134">新闻资讯</a>
+				<span class="jiaspan"></span>
+				<ul class="list-unstyled">
+					<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1134">研究院动态</a></li>
+					<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1135">通知公告</a></li>
+					<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1136">西工大新闻</a></li>
+				</ul>
+			</li>
+			<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1141">科研力量</a>
+				<span class="jiaspan"></span>
+				<ul class="list-unstyled">
+					<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1249">研究方向</a></li>
+					<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1141">研发平台</a></li>
+					<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1142">研发动态</a></li>
+					<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1143">研发团队</a></li>
+				</ul>
+			</li>
+			<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1146">合作交流</a>
+				<span class="jiaspan"></span>
+				<ul class="list-unstyled">
+					<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1146">国际合作</a></li>
+					<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1299">技术服务</a></li>
+				</ul>
+			</li>
+			<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1148">教育培训</a>
+				<span class="jiaspan"></span>
+				<ul class="list-unstyled">
+					<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1148">招生信息</a></li>
+				</ul>
+			</li>
+			<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1153">党建工作</a>
+				<span class="jiaspan"></span>
+				<ul class="list-unstyled">
+					<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1153">党建活动</a></li>
+					<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1154">理论学习</a></li>
+				</ul>
+			</li>
+			<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1156">人才引进</a>
+				<span class="jiaspan"></span>
+				<ul class="list-unstyled">
+					<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1156">人才政策</a></li>
+					<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1157">高层次人才</a></li>
+					<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1239">非事业编招聘</a></li>
+				</ul>
+			</li>
+			<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1160">企业入驻</a>
+				<span class="jiaspan"></span>
+				<ul class="list-unstyled">
+					<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1160">入驻企业</a></li>
+					<li><a href="../list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1162">其他工作</a></li>
+				</ul>
+			</li>
+		</ul>
+    </div>
+</div>
+<!-- header -->
+<div class="chenggao"></div>
+<div id="nav-2-heidi"></div>
+<!-- main -->
+    <div id="main">
+            <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+        
+                <div class="banner-2 visible-lg-block" style="background-image: url(../images/1.jpg)">
+			<img src="images/banner-2x.jpg" alt="">
+		</div>
+      
+
+           
+            
+              
+                       <div class="banner-2 hidden-lg" style="background-image: url(../images/banner-2-1.jpg)">
+			<img src="../images/banner-2-1.jpg" alt="">
+		</div>
+        
+
+        <div class="erji">
+            <div class="container">
+                <div class="menu fl">
+
+                    <h1>
+研究院概况</h1>
+                    <ul class="list-unstyled">
+												<li><a href="xxjs.htm" title="学校介绍">学校介绍</a></li>
+						<li class="active"><a href="yjyjs.htm" title="研究院介绍">研究院介绍</a></li>
+						<li><a href="zzjg.htm" title="组织架构">组织架构</a></li>
+						<li><a href="lxwm.htm" title="联系我们">联系我们</a></li>
+					</ul>
+                </div>
+                <div class="erji-content">
+                    <div class="erji-title">
+                        <div class="fl">
+研究院介绍</div>
+                        <div class="mianbaoxie fr">
+    您当前所在位置是： 
+                        <a href="../index.htm">首页</a>
+                >>
+                <a href="yjyjs.htm">研究院概况</a>
+                >>
+                <a href="yjyjs.htm">研究院介绍</a>
+</div>
+
+
+                        <div class="clear"></div>
+                    </div>
+                    <div class="erji-content-div">
+                        
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1578192724,'wbnews','u11')</script>
+<link rel="stylesheet" Content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta11(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta11('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1578192724,1469)</script>
+						<div class="danpian">
+							<div class="danpian-h1">西北工业大学青岛研究院介绍</div>						
+								<div class="danpian-con">
+								 <div id="vsb_content_2_1469_u111"><div id="vsb_content_2"><p class="vsbcontent_start">西北工业大学青岛研究院（以下简称“研究院”）是西北工业大学贯彻落实新发展理念、发挥青岛产业和地缘优势成立的创新型研究机构，正式成立于2017年8月，由西北工业大学与青岛市科技局、青岛市教育局、蓝谷管理局四方共建。</p>
+<p class="vsbcontent_end">研究院以“海洋强国”战略为指引，结合山东省和青岛市经济结构调整和产业转型升级，服务青岛新旧动能转换，紧抓“军民融合”，依托西北工业大学航空、航天、航海、机电、控制等优势学科，以海洋科学与工程为主攻方向，围绕海洋信息与装备、海洋观测平台与技术、海洋生命与材料科学等重点领域，打造集科技成果研发、领军人才集聚、科技企业孵化培育、高新技术转移转化、高端人才培养“五位一体”的新型研发机构。</p></div></div>
+							</div>
+						</div>
+
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+<!-- main -->
+<!-- footer -->
+    <div id="footer">
+        <div class="container">
+            <div class="er-wp fr">
+                     
+				<div class="er fl ">
+					<img src="../images/5cb6ce33a4e86.png" alt="">
+					学校公众号
+				</div>
+
+				<div class="er  fr">
+					<img src="../images/5cb6cd80afbc9.png" alt="">
+					研究院公众号
+				</div>
+
+                <div class="clear"></div>
+            </div>
+            <div class="foo-con">
+                <div class="youq">
+                    <span class="fl">友情链接：</span>
+                    <div class="youq-dl">
+                        <dl>
+                            <dd><script language="javascript" src="/system/resource/js/openlink.js"></script><select class="form-control" onchange="window.open(this.options[this.selectedIndex].value)">
+								<option value="#">校内链接</option>
+															</select></dd>
+                            <dd><select class="form-control" onchange="window.open(this.options[this.selectedIndex].value)">
+								<option value="#">校外链接</option>
+															</select></dd>
+                        </dl>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="foo-p">
+                    <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>All rights reserved:西北工业大学青岛研究院 &nbsp; &nbsp;Tel:029-88431664<br />Address:陕西省西安市长安区西北工业大学长安校区895号 &nbsp; &nbsp;Zip code:710129<br /></p>
+                    
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+<!-- footer -->
+</body>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/holder.js"></script>
+<script src="../js/aos.js"></script>
+<script src="../js/jquery.liMarquee.js"></script>
+<script src="../js/owl.carousel.js"></script>
+<script src="../js/jquery.mousewheel.min.js"></script>
+<script src="../js/jquery.flexslider.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/lib.js"></script>
+<script>
+    $(function(){
+        //页面插件调用处...
+
+    })
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

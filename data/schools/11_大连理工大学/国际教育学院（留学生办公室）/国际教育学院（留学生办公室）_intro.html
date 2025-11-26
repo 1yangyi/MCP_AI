@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>学院介绍-大连理工大学国际教育学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院介绍">
+<meta name="keywords" content="国际教育学院">
+
+    
+    <meta name="description" content="">
+    <meta name="generator" content="">
+    <meta name="copyright" content="大连理工大学国际教育学院">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link href="../css/global.css" rel="stylesheet" type="text/css">
+ 
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307973475c50555742000300034056 -->
+<link rel="stylesheet" type="text/css" href="../tydy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1014,'/tydy.jsp',-1,1894224773)</script>
+</head>
+
+<body>
+    <div class="bg01">
+        <div class="wrapper">
+            <div class="fl"><a href="../index.htm"><img alt="" src="../images/logo.png"></a></div>
+            <div class="index_lan fr">
+                 <a href="../English.htm">English</a> | <a href="mailto:siesuggestion@dlut.edu.cn" title="siesuggestion@dlut.edu.cn">院长信箱</a> |
+                <a id="search_btn" href="#"><img alt="" src="../images/btn01.png"></a>
+                 
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><div id="index_search" class="index_search hide"><input name="INTEXT" placeholder="Search this site..." autocomplete="off" class="input"> <input type="submit" value="搜索" class="btn"> <input id="btn1" type="button" value="关闭" class="btn1"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+        
+         <div class="index_search hide" id="index_search">
+        <input name="INTEXT" placeholder="Search this site..." class="input" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+        <input type="submit" class="btn"   value="搜索"  v-on:click="onSubmit()">
+         <input class="btn1" id="btn1" type="button" value="关闭">
+          </div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1894224773";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+            </div>
+            <div class="cb"></div>
+             <ul id="nav" class="nav clearfix">
+                <li class="nLi">
+                   <h3><a href="../index.htm" style="font-size:16px;">学院首页</a></h3>
+                </li>
+                <li class="nLi">
+                    <h3><a href="xxjs.htm" style="font-size:16px;">关于我们</a></h3>
+                    <ul class="sub">
+                         <li><a href="xxjs.htm">学校介绍</a></li>
+                                <li><a href="xyjs.htm">学院介绍</a></li>
+                                <li><a href="xrld1.htm">现任领导</a></li>
+                                <li><a href="jgsz.htm">机构设置</a></li>
+                                <li><a href="szdw.htm">师资队伍</a></li>
+                            
+                    </ul>
+                </li>
+                <li class="nLi on">
+                <!-- 假设当前频道为“预告片”，手动或后台程序添加titOnClassName类名（默认是'on'），相当于设置参数defaultIndex:1。若同时设置参数returnDefault:true，则鼠标移走后0.3秒返回当前频道 -->
+                    <h3><a href="#" style="font-size:16px;">新生相关</a></h3>
+                    <ul class="sub">
+                        <li><a href="#" style="line-height:45px;font-size:16px;"><strong>招生信息</strong></a></li>
+                         <li><a href="../zsxx/xlxm/bks/hyybks_jmfx__.htm">学历项目</a></li>
+                                     <li><a href="../zsxx/fxlxm/hyyjxs3/hypxzqxm.htm">非学历项目</a></li>
+                        <li><a href="#" style="line-height:45px;font-size:16px;"><strong>奖学金</strong></a></li>
+                         <li><a href="../jxj/zgzfjxj/zgzfjxj.htm">中国政府奖学金</a></li>
+                                     <li><a href="../jxj/lnszfjxj/lnszfjxj.htm">辽宁省政府奖学金</a></li>
+                                     <li><a href="../jxj/xxjxj/xxjxj.htm">大连理工大学校长奖学金</a></li>
+                                     <li><a href="../jxj/gjzwjsjxj/gjzwjsjxj.htm">国际中文教师奖学金</a></li>
+                    </ul>
+                </li>
+                <li class="nLi">
+                    <h3><a href="../zxsh1/flfg1/jlxk.htm" style="font-size:16px;">在校生活</a></h3>
+                    <ul class="sub">
+                          <li><a href="../zxsh1/flfg1/jlxk.htm">法律法规</a></li>
+                                <li><a href="../zxsh1/xgxj1/zsgd.htm">校规校纪</a></li>
+                                <li><a href="../zxsh1/whhd/wthd.htm">文化活动</a></li>
+                                <li><a href="../zxsh1/cxts/xnjt.htm">出行提示</a></li>
+                                <li><a href="../zxsh1/xnzy/wtcg.htm">校内资源</a></li>
+                                <li><a href="../zxsh1/shfw/xyy.htm">生活服务</a></li>
+                                
+                                 <li><a href="../zxsh1/zxjxjs/jxjglgd.htm">在校奖学金</a></li>
+                                  <li><a href="../zxsh1/cygn/grxxbg.htm">常用功能</a></li>
+                                  <li><a href="../zxsh1/cjwt/dxsxyzysm.htm">常见问题</a></li>
+                    </ul>
+                </li>
+                <li class="nLi">
+                    <h3><a href="../xygz/sjdgr/xygk1.htm" style="font-size:16px;">校友工作</a></h3>
+ <ul class="sub">
+                          <li><a href="../xygz/sjdgr/xygk1.htm">世界大工人</a></li>
+                                <li><a href="../xygz/gjxyh/xyhjj1.htm">国际校友会</a></li>
+                                <li><a href="../xygz/zxsd/xwdt.htm">资讯速递</a></li>
+                                <li><a href="../xygz/qlwll/fxsq1.htm">情连万里路</a></li>
+                    </ul>
+                </li>
+                <li class="nLi">
+                    <h3><a href="../kygz/kyjs.htm" style="font-size:16px;">孔院工作</a></h3>
+                    <ul class="sub">
+                       <li><a href="../kygz/kyjs.htm">孔院介绍</a></li>
+                                <li><a href="../kygz/kyfeng_cai.htm">孔院风采</a></li>
+                                 <li><a href="../kygz/kygg.htm">孔院公告</a></li>
+                    </ul>
+                </li>
+                <li class="nLi">
+                    <h3><a href="../wzlist.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1121" style="font-size:16px;">党建工作</a></h3>
+<ul class="sub">
+                       <li><a href="../wzlist.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1121">党建工作</a></li>
+                                <li><a href="../wzlist.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1122">团建工作</a></li>
+                                 <li><a href="../wzlist.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1123">资料下载</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="ny_banner" style="background: url(../images/ny_banner.png) no-repeat center; height: 400px;"></div>
+    <div class="bg06">
+        <div class="wrapper">
+            <div class="ny_left fl">
+                <div class="t">
+关于我们<span><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+About us</span></div>
+                   <div class="con">
+           
+  <ul>
+<li><a href="xxjs.htm">学校介绍</a></li>   
+                       
+                    
+                  </ul>
+
+
+       
+  <ul>
+<li><a href="xyjs.htm">学院介绍</a></li>   
+                       
+                    
+                  </ul>
+
+
+       
+  <ul>
+<li><a href="xrld1.htm">现任领导</a></li>   
+                       
+                    
+                  </ul>
+
+
+       
+  <ul>
+<li><a href="jgsz.htm">机构设置</a></li>   
+                       
+                    
+                  </ul>
+
+
+       
+  <ul>
+<li><a href="szdw.htm">师资队伍</a></li>   
+                       
+                    
+                  </ul>
+
+
+   </div>
+            </div>
+            <div class="ny_right fr">
+                <div class="t"> 
+                    <div class="ny_pos"><div>
+    当前位置: 
+                        <a href="../index.htm">首页</a>
+                &gt;&gt;
+                关于我们
+                &gt;&gt;
+                <a href="xyjs.htm">学院介绍</a>
+</div></div>
+                    <div class="cb"></div>
+                </div>
+                <div class="con">
+                    <div class="content">
+                        <div class="details">
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1894224773,'wbnews','u6')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta6(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta6('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+
+<script>_addDynClicks('wbnews',1894224773,2192)</script>
+<p>
+   
+    </p><div id="vsb_content_2_2192_u61"><div id="vsb_content_2"><p class="vsbcontent_start" style="text-align: center;"><br></p><p style="text-align: center;"><img width="716" src="/__local/6/05/D2/C2D4262DD8C308B155A0BCBFDB9_F912A3C5_273EB.gif" vsbhref="vurl" vurl="/_vsl/605D2C2D4262DD8C308B155A0BCBFDB9/F912A3C5/273EB" vheight="" vwidth="716" orisrc="/__local/6/05/D2/C2D4262DD8C308B155A0BCBFDB9_F912A3C5_273EB.gif" class="img_vsb_content"></p><p class="vsbcontent_start"><br></p><p class="vsbcontent_start">大连理工大学国际教育学院正式成立于2013年3月8日，是大连理工大学国际学生教育教学管理部门，负责全校国际学生的招收、培养、管理、汉语教学和培训、 教学科研等工作。国际教育学院坚持学校60多年的办学宗旨，秉承“海纳百川，厚德笃学”的精神，致力于培养熟悉中国文化、了解多元文化的国际化精英人才， 为大连理工大学建设国际知名的高水平研究型大学贡献力量。</p><p>学院设有8个部门，分别是对外汉语系、汉语培训中心、综合办公室、学生事务办公室、教务与培养办公室、招生与拓展办公室、短期项目办公室以及孔子学院管理办公室。 学院拥有一支精通专业、教学经验丰富的教师队伍，50%以上的教师为副教授；同时学院还有一支专业精干的国际化管理队伍，管理人员多数拥有国外学习经历， 长期从事留学生教育管理服务工作。</p><p>大连理工大学的国际学生教育始于二十世纪五十年代，截至目前我校已经陆续接收了来自110多个国家的16000余名国际学生来校学习。多年来大连理工大学的留学生教育依托学校雄厚的科学研究实力和优质的教育教学资源，逐渐形成了独具特色的国际学生非学历教育和优质的国际学生学历教育体系。2012年大连理工大学被辽宁省教育厅评定为“辽宁省来华留学生教育示范基地”，2021年获评辽宁省来华留学教育先进单位、辽宁省来华留学示范高校，2024年以优秀结果通过全国来华留学高等教育质量再认证。非学历教育包括由国际教育学院汉语培训中心提供的各种汉语长短期培训课程项目、国际暑期学校项目、学分项目等。学历教育包括汉语言本科专业（国际学生）、英语授课本科专业、英语授课硕士专业、 英文培养博士专业以及全校其他本硕博专业。</p><p>学院重视国际学生的校园文化生活及中国文化体验，每年组织许多语言实践活动、文化旅游及企业管理参观活动，开展丰富多彩的汉语演讲比赛、 中国文化体验社团、国际文化交流、国际文化节等活动。</p><p class="vsbcontent_end">大连理工大学国际教育学院欢迎来自全世界各个国家和地区的国际学生到大连理工大学来学习！</p></div></div>
+    <span id="vsb_content_2_2192_u6" name="vsb_content_2_2192_u6"></span><br><br>
+    
+<p></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cb"></div>
+        </div>
+    </div>
+    <div class="bg05">
+        <div class="wrapper">
+            <div class="foot01 fl">
+                <img alt="" src="../images/s_logo.png">
+                <div class="address">
+                     <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：中国·辽宁省大连市甘井子区凌工路2号</p><p>邮编：116024</p><p>招生咨询：(86)-411-84706048</p><p>Email：dutsice@dlut.edu.cn</p>
+                </div>
+            </div>
+            <img class="fr" alt="" src="../images/erweima.png" style="margin-top: 30px;">
+            <div class="cb"></div>
+            <div class="copyright">Copyright 2014 sie.dlut.edu.cn. All Rights Reserved. 版权所有 大连理工大学国际教育学院</div>
+        </div>
+    </div>
+    
+    
+            <script src="../js/jquery-min.js"></script>
+    <script type="text/javascript" src="../js/jquery.SuperSlide.js"></script>
+    <script type="text/javascript" src="../js/FlexoCalendar.js"></script>
+    <script type="text/javascript" src="../js/js.js"></script>
+
+
+
+
+
+</body></html>

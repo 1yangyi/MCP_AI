@@ -1,0 +1,777 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学院简介-华中师范大学文学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="文学院,学院简介">
+
+    <link rel="stylesheet" href="../style/animate.min.css">
+    <link rel="stylesheet" href="../style/public.css">
+    <link rel="stylesheet" href="../style/ny.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/wow.min2.js"></script>
+    <script src="../js/public.js"></script>
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475c50575742000400034456 -->
+<link rel="stylesheet" type="text/css" href="../jj_list.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1064,'/jj_list.jsp',-1,1920438193)</script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="head-top px1800">
+            <div class="head-l">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="文学院新"><img src="../images/778c71320251010.png"></a></div>
+            <div class="head-r">
+                <div class="top-r">
+                
+               <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>
+                   <a href="http://wxyhy.ccnu.edu.cn" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1920438193, 86780)"><img src="../images/link-icon.png" alt="">会议室预约</a>
+
+
+                   <a href="../zxtg.htm" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1920438193, 82729)"><img src="../images/link-icon.png" alt="">在线投稿</a>
+
+
+                    
+                    
+                    <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2">
+    <div id="appu2"><div><input type="text" placeholder="搜索" autocomplete="off"> <input type="image" src="../images/search.png"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+        <input type="text" placeholder="搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+        <input type="image" src="../images/search.png" v-on:click="onSubmit()">
+          
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1920438193";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+</div>
+                </div>
+                <div class="nav">
+                    <ul>                        
+<li><a href="../index.htm">首页</a>
+
+
+                        </li>
+                        
+<li><a href="xyjj.htm">学院概况</a>
+
+
+                            <ul>
+                            
+
+                                <li><a href="xyjj.htm">学院简介</a></li>
+
+                                <li><a href="jgsz.htm">机构设置</a></li>
+
+                                <li><a href="xrld.htm">现任领导</a></li>
+                            </ul>
+                            
+                        </li>
+                        
+<li><a href="../szdw/zzls.htm">师资队伍</a>
+
+
+                            <ul>
+                            
+
+                                <li><a href="../szdw/zzls.htm">在职老师</a></li>
+
+                                <li><a href="../szdw/ltxjs.htm">离退休教师</a></li>
+                            </ul>
+                            
+                        </li>
+                        
+<li><a href="../djdt/djgz.htm">党建工作</a>
+
+
+                            <ul>
+                            
+
+                                <li><a href="../djdt/djgz.htm">党建工作</a></li>
+                            </ul>
+                            
+                        </li>
+                        
+<li><a href="../rcpy/yjs.htm">人才培养</a>
+
+
+                            <ul>
+                            
+
+                                <li><a href="../rcpy/bks.htm">本科生</a></li>
+
+                                <li><a href="../rcpy/yjs.htm">研究生</a></li>
+                            </ul>
+                            
+                        </li>
+                        
+<li><a href="../xkjs/zyxm.htm">学术研究</a>
+
+
+                            <ul>
+                            
+
+                                <li><a href="../xkjs/xscg.htm">学术成果</a></li>
+
+                                <li><a href="../xkjs/zyxm.htm">主要项目</a></li>
+
+                                <li><a href="../xkjs/xshd.htm">学术活动</a></li>
+                            </ul>
+                            
+                        </li>
+                        
+<li><a href="../dwjl/jsjl.htm">对外交流</a>
+
+
+                            <ul>
+                            
+
+                                <li><a href="../dwjl/jsjl.htm">教师交流</a></li>
+
+                                <li><a href="../dwjl/xsjl.htm">学生交流</a></li>
+                            </ul>
+                            
+                        </li>
+                        
+<li><a href="../xylx/xydt.htm">校友联线</a>
+
+
+                            <ul>
+                            
+
+                                <li><a href="../xylx/xydt.htm">校友动态</a></li>
+
+                                <li><a href="../xylx/xyfc.htm">校友风采</a></li>
+                            </ul>
+                            
+                        </li>
+                        
+<li><a href="../hdzwqklm.htm">华大中文期刊联盟</a>
+
+
+                            <ul>
+                            
+
+                                <li><a href="../hdzwqklm/lmcy/wgwxyj.htm">联盟成员</a></li>
+
+                                <li><a href="../hdzwqklm/lmxw.htm">联盟新闻</a></li>
+
+                                <li><a href="../hdzwqklm/jszl.htm">建设资料</a></li>
+                            </ul>
+                            
+                        </li>
+                        
+<li><a href="../sjyzxx.htm">书记院长信箱</a>
+
+
+                        </li>
+                        
+</ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    
+    <!-- 移动端导航 -->
+    <div class="top">
+        <div class="wap wap-menu">
+            <img src="../images/menu.png" class="menu" alt="">
+            <img src="../images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+    <div class="wap m-head">
+        <div class="m-logo">    
+
+                       <a href="../index.htm" onclick="_addDynClicks(&quot;wbimage&quot;, 1920438193, 79117)"><img src="../images/logo.png" alt=""></a>
+        
+
+</div>
+        <div class="m-nav">
+            <div class="m-tlink">
+<script language="javascript">
+function dosuba1077008a()
+{
+    try{
+        var ua = navigator.userAgent.toLowerCase();
+        if(ua.indexOf("msie 8")>-1)
+        {
+            window.external.AddToFavoritesBar(document.location.href,document.title,"");//IE8
+        }else if(ua.toLowerCase().indexOf("rv:")>-1)
+        {
+            window.external.AddToFavoritesBar(document.location.href,document.title,"");//IE11+
+        }else{
+            if (document.all) 
+            {
+                window.external.addFavorite(document.location.href, document.title);
+            }else if(window.sidebar)
+            {
+                window.sidebar.addPanel( document.title, document.location.href, "");//firefox
+            }
+            else
+            {
+                alert(hotKeysa1077008a());
+            }
+        }
+
+    }
+    catch (e){alert("无法自动添加到收藏夹，请使用 Ctrl + d 手动添加");}
+}
+function hotKeysa1077008a() 
+{
+    var ua = navigator.userAgent.toLowerCase(); 
+    var str = "";    
+    var isWebkit = (ua.indexOf('webkit') != - 1); 
+    var isMac = (ua.indexOf('mac') != - 1);     
+    if (ua.indexOf('konqueror') != - 1) 
+    {  
+        str = 'CTRL + B'; // Konqueror   
+    } 
+    else if (window.home || isWebkit || isMac) 
+    {        
+        str = (isMac ? 'Command/Cmd' : 'CTRL') + ' + D'; // Netscape, Safari, iCab, IE5/Mac   
+    }
+    return ((str) ? '无法自动添加到收藏夹，请使用' + str + '手动添加' : str);
+}
+function setHomepagea1077008a()
+{
+    var url = document.location.href;
+    if (document.all)
+    {
+        document.body.style.behavior='url(#default#homepage)';
+        document.body.setHomePage(url);
+    }
+    else if (window.sidebar)
+    {
+        if(window.netscape)
+        {
+             try{
+                  netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+             }catch (e){
+                   alert("该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true");
+             }
+        }
+    var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components. interfaces.nsIPrefBranch);
+    prefs.setCharPref('browser.startup.homepage',url);
+    }
+    else
+    {
+        alert("浏览器不支持自动设为首页，请手动设置");
+    }
+}
+</script>
+
+
+
+<a href="javascript:setHomepagea1077008a()">设为首页</a>
+<a onclick="javascript:dosuba1077008a();" href="#">加入收藏</a>
+
+
+</div>
+            <div class="m-search">
+
+
+<style>
+    #appu6 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu6 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu6">
+    <div id="appu6"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="qwss"> <input name="submit_button" type="button" value="提交" class="tj"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu6">
+    <div id="appu6">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu6").html($("#htmlu6").text());
+</script>
+<script>
+    var appOwner = "1920438193";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu6",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+</div>
+            <ul class="">
+                
+<li>
+                  <a href="../index.htm">首页</a>
+                    
+                    
+                    
+                </li>
+                
+<li>
+                  <a href="xyjj.htm">学院概况</a>
+                    
+                    
+                    <span></span>
+                    <ul>
+                    
+
+                        <li><a href="xyjj.htm">学院简介</a></li>
+
+                        <li><a href="jgsz.htm">机构设置</a></li>
+
+                        <li><a href="xrld.htm">现任领导</a></li>
+                    </ul>
+                    
+                </li>
+                
+<li>
+                  <a href="../szdw/zzls.htm">师资队伍</a>
+                    
+                    
+                    <span></span>
+                    <ul>
+                    
+
+                        <li><a href="../szdw/zzls.htm">在职老师</a></li>
+
+                        <li><a href="../szdw/ltxjs.htm">离退休教师</a></li>
+                    </ul>
+                    
+                </li>
+                
+<li>
+                  <a href="../djdt/djgz.htm">党建工作</a>
+                    
+                    
+                    <span></span>
+                    <ul>
+                    
+
+                        <li><a href="../djdt/djgz.htm">党建工作</a></li>
+                    </ul>
+                    
+                </li>
+                
+<li>
+                  <a href="../rcpy/yjs.htm">人才培养</a>
+                    
+                    
+                    <span></span>
+                    <ul>
+                    
+
+                        <li><a href="../rcpy/bks.htm">本科生</a></li>
+
+                        <li><a href="../rcpy/yjs.htm">研究生</a></li>
+                    </ul>
+                    
+                </li>
+                
+<li>
+                  <a href="../xkjs/zyxm.htm">学术研究</a>
+                    
+                    
+                    <span></span>
+                    <ul>
+                    
+
+                        <li><a href="../xkjs/xscg.htm">学术成果</a></li>
+
+                        <li><a href="../xkjs/zyxm.htm">主要项目</a></li>
+
+                        <li><a href="../xkjs/xshd.htm">学术活动</a></li>
+                    </ul>
+                    
+                </li>
+                
+<li>
+                  <a href="../dwjl/jsjl.htm">对外交流</a>
+                    
+                    
+                    <span></span>
+                    <ul>
+                    
+
+                        <li><a href="../dwjl/jsjl.htm">教师交流</a></li>
+
+                        <li><a href="../dwjl/xsjl.htm">学生交流</a></li>
+                    </ul>
+                    
+                </li>
+                
+<li>
+                  <a href="../xylx/xydt.htm">校友联线</a>
+                    
+                    
+                    <span></span>
+                    <ul>
+                    
+
+                        <li><a href="../xylx/xydt.htm">校友动态</a></li>
+
+                        <li><a href="../xylx/xyfc.htm">校友风采</a></li>
+                    </ul>
+                    
+                </li>
+                
+<li>
+                  <a href="../hdzwqklm.htm">华大中文期刊联盟</a>
+                    
+                    
+                    <span></span>
+                    <ul>
+                    
+
+                        <li><a href="../hdzwqklm/lmcy/wgwxyj.htm">联盟成员</a></li>
+
+                        <li><a href="../hdzwqklm/lmxw.htm">联盟新闻</a></li>
+
+                        <li><a href="../hdzwqklm/jszl.htm">建设资料</a></li>
+                    </ul>
+                    
+                </li>
+                
+<li>
+                  <a href="../sjyzxx.htm">书记院长信箱</a>
+                    
+                    
+                    
+                </li>
+                
+<div class="clear"></div></ul>
+        </div>
+    </div>
+  <div class="banner">
+        <div class="slick">
+            <div><a><img src="../images/22.jpg">   </a></div>
+
+        </div>
+
+
+    </div>
+    <!-- 中间 -->
+    <div class="nymain px1400">
+        <div class="channl-menu leftNav">
+            <p class="wow fadeInUp" style="visibility: visible;">
+学院概况<span></span></p>
+            <ul><li class="active wow fadeInUp" style="visibility: visible;">
+                    <a href="xyjj.htm">学院简介</a>
+                    
+                </li>
+                
+<li class="wow fadeInUp" style="visibility: visible;">
+                    <a href="jgsz.htm">机构设置</a>
+                    
+                </li>
+                
+<li class="wow fadeInUp" style="visibility: visible;">
+                    <a href="xrld.htm">现任领导</a>
+                    
+                </li>
+                
+</ul>
+        </div>
+        <div class="ny-right">
+            <div class="ny-title">
+                <h3>
+学院简介</h3>
+                <div class="position wow fadeInUp" style="visibility: visible;"><span>当前位置：</span> 
+                        <a href="../index.htm">首页</a>
+               <span>-&gt;</span>
+                <a href="xyjj.htm">学院概况</a>
+               <span>-&gt;</span>
+                <a href="xyjj.htm">学院简介</a>
+</div>
+            </div>
+
+            <div class="art-main">
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1920438193,'wbnews','u13')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format501.css?v=309317D66A2F49AAA4709378EBF08402"><script>function seeContenta13(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta13('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1920438193,7315)</script>
+
+<div class="art-tit cont-tit wow fadeInUp" style="visibility: visible;">
+                    <h3> 文学院简介</h3>
+                   <!-- <p><span>作者：</span><span>来源：阅读次数：次 </span><span>日期：</span></p>-->
+                </div>
+                <div class="art-body wow fadeInUp" style="text-align: justify; visibility: visible;">
+                     <div id="vsb_content_501_7315_u131"><div id="vsb_content_501"><p class="vsbcontent_start">文学院前身可追溯到1903年创建的武昌文华书院大学部，大学部自成立之初就高度重视中文教育，为学生开设了多门中文课程，至今已有逾百年办学历史。2013年,在教育部学位与研究生教育发展中心公布的全国高校一级学科排行榜中，中国语言文学学科居全国并列第5名。2017年9月，中国语言文学学科入选国家“双一流”建设学科名单。2019年12月，汉语言文学专业获批为国家级一流本科专业建设点，2020年2月，汉语言专业获批为国家级一流本科专业建设点。2021年11月，中国语言文学拔尖人才培养基地入选国家基础学科拔尖学生培养计划2.0。</p><p>文学院下设中文系和语言学系两个系，有2个本科专业：汉语言文学、汉语言。汉语言文学专业包括公费师范（含优师计划）、非公费师范两种类型。除公费师范和优师计划外，其他类型人才培养采用中国语言文学类大类招生的方式，学习两年后进行专业分流。</p><p>汉语言文学国家拔尖学生培养基地班面向中国语言文学大类学生选拔，每学年滚动选拔一次。汉语言文学国家拔尖学生培养基地班采取导师制、小班化、个性化、国际化的培养方式，培养中国语言文学基础学科的拔尖创新人才。文学院还实施了面向汉语言文学师范专业的卓越教师培养计划、面向汉语言专业的语言学复合创新型人才培养计划。</p><p>文学院现有在职教职工101人，其中教授34人。拥有资深教授等省部级及以上高层次人才数十名。截至2023年3月，学院现有在读本科生1398人、硕博研究生598人，是华中师范大学学生人数最多的学院之一。</p><p>文学院拥有博士学位授权一级学科和一级学科博士后流动站，现有国家人文社科重点研究基地1个（语言与语言教育研究中心），省级人文社科重点研究基地2个（湖北文学理论与批评研究中心、湖北省汉语国际推广工作研究基地），国家语委基地1个（国家语言文字推广基地），国家级重点学科1个（汉语言文字学），国家级重点（培育）学科1个(文艺学）。</p><p>文学院现有10个博士学位点，9个科学硕士学位点，2个专业硕士学位点。</p><p>文学院拥有国家级一流本科专业2个（汉语言文学、汉语言），国家级优秀教学团队2支（文艺学、中国现当代文学）、湖北省优秀教学团队1支（语言学）、湖北省优秀教学基层组织1个（文艺学），国家级一流课程4门（文学经典导读、比较文学、文学批评、外国文学1）、湖北省一流课程6门（习字与书法艺术、应用语言学、语言艺术的魅力、古代汉语、语言学概论、教师口语）。</p><p>挂靠文学院的全国性学术团体有全国马列文论研究会和新文学学会。文学院主办的学术期刊有《外国文学研究》《汉语学报》《华中学术》《语文教学与研究》《新文学评论》等5种，面向海内外发行。</p><p>文学院教师承担了国家社科及教育部重大招标项目9项，4部著作入选《国家哲学社会科学成果文库》。近5年来，文学院教师承担了国家重点和一般项目、部委、省级以及横向社会科学研究课题150余项，有22项研究成果获得国家、教育部和省级社科成果奖励。</p><p>在国际学术交流方面，文学院与美国、法国、日本、俄罗斯、韩国、英国等国家和中国台湾、香港、澳门等地区的高校和科研机构建立了广泛的学术交流与合作关系，学生有机会出国（境）交流学习。</p><p>文学院设有院资料中心，学院共有藏书11万余册，供师生借阅。</p><p class="vsbcontent_end">文学院现有文华勾沉剧社、非物质文化遗产传承协会、南湖书画协会、摇篮文学社、寒梅诗社、“博采”辩论社等学生社团。</p><p class="vsbcontent_end"><strong>（更新日期：2023年5月）</strong></p></div></div>
+    <span id="vsb_content_501_7315_u13" name="vsb_content_501_7315_u13"></span>
+    
+                  
+   </div>
+
+</div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+     <div id="footer">
+            <div id="link">
+                <div class="link px1400  wow fadeInUp" style="visibility: hidden; animation-name: inherit;"><span>校内链接：</span>
+                    
+<a href="http://chineseonline.ccnu.edu.cn" onclick="_addDynClicks(&quot;wburl&quot;, 1920438193, 82713)" target="_blank">云上中文</a>
+                    
+<a href="http://www.ccnu.edu.cn/" onclick="_addDynClicks(&quot;wburl&quot;, 1920438193, 82670)" target="_blank">华中师范大学</a>
+                    
+<a href="http://online.ccnu.com.cn/" onclick="_addDynClicks(&quot;wburl&quot;, 1920438193, 82672)" target="_blank">华中师大在线</a>
+                    
+<a href="http://lib.ccnu.edu.cn/" onclick="_addDynClicks(&quot;wburl&quot;, 1920438193, 82673)" target="_blank">华中师大图书馆</a>
+                    
+</div>
+            </div>
+            <div class="footer wow fadeInUp" style="visibility: hidden; animation-name: inherit;">
+                <div class="foot px1400"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：武汉市洪山区珞喻路152号华中师范大学&nbsp;邮政编码:430079<br>华中师范大学文学院&nbsp;2013&nbsp;ALL&nbsp;RIGHTS&nbsp;RESERWED.&nbsp;<a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备05003325号-9</a></p></div>
+            </div>
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

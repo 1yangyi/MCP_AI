@@ -1,0 +1,503 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=2.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>简介-测绘遥感信息工程全国重点实验室</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="简介">
+<meta name="keywords" content="测绘遥感信息工程全国重点实验室">
+
+<link rel="shortcut icon" href="../images/icon.ico" type="image/x-icon">
+<link type="text/css" rel="stylesheet" href="../styles/base.css">
+<link type="text/css" rel="stylesheet" href="../styles/main.css">
+<link type="text/css" rel="stylesheet" href="../styles/swiper-3.4.0.min.css">
+<link type="text/css" rel="stylesheet" href="../styles/mobile.css">
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1126,'/about.jsp',-1,2070870823)</script>
+</head>
+
+<body>
+<div class="chyg-top-bg">
+  <div class="chyg-search-box" style="display:none;">
+    <div class="chyg-contain-box"><div class="chyg-contain-padding clearfix">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><input type="text" placeholder="请输入搜索关键字" autocomplete="off" class="chyg-txt"> <input name="submit_button" type="button" value="搜索" class="chyg-btn"> <a href="javascript:;" class="chyg-close-search"></a></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <input type="text" class="chyg-txt" placeholder="请输入搜索关键字" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="chyg-btn" name="submit_button" type="button" value="搜索" v-on:click="onSubmit()"/>
+            <a href="javascript:;" class="chyg-close-search"></a>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "2070870823";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div></div>
+  </div>
+</div>
+<div class="chyg-nav-box-bg">
+    <div class="chyg-contain-box">
+     <div class="chyg-contain-padding">
+      <div class="chyg-logo"> <a href="../index.htm" target=""><img src="../images/logo.png"></a> </div>
+      <div class="chyg-header-right-box">
+        <ul class="chyg-zt-page chyg-header-right">
+          <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><li class="li1"><a href="javascript:;" target="_blank">学生工作</a></li>      
+<li class="li2"><a href="javascript:;" target="_blank">党建专栏</a></li>      
+<li class="li3"><a href="../hbzs/bkszs.htm" target="_blank">湖北招生</a></li>      
+<li class="en"><a href="http://www.lmars.whu.edu.cn/en">EN</a></li>
+<li class="search-icon"><a href="javascript:;"><img src="../images/search1.png"></a></li>
+<li class="chyg-nav-icon"><a href="javascript:;"><img src="../images/nav-icon.png"></a></li>
+        </ul>
+        <div class="chyg-nav-box">
+                 <ul class="chyg-nav clearfix">
+                  <li><a href="jj.htm">本室概况</a>
+          <ul class="chyg-suNnav">
+          <li><a href="jj.htm">简介</a></li>
+          <li><a href="zzjg.htm">组织架构</a></li>
+          <li><a href="xrld.htm">现任领导</a></li>
+          <li><a href="xswyh.htm">学术委员会</a></li>
+          <li><a href="jswyh.htm">教授委员会</a></li>
+          <li><a href="jxzdwyh.htm">教学指导委员会</a></li>
+          <li><a href="lsyg.htm">历史沿革</a></li>
+           </ul>
+          </li>
+          <li><a href="../kxyj.htm">科学研究</a>
+          <ul class="chyg-suNnav">
+          <li><a href="../kxyj/yjfx.htm">研究方向</a></li>
+          <li><a href="../kxyj/kyxm.htm">科研项目</a></li>
+          <li><a href="../kxyj/kyjz.htm">科研进展</a></li>
+          <li><a href="../kxyj/kycg.htm">科研成果</a></li>
+          <li><a href="../kxyj/cxyy.htm">产学研用</a></li>
+           </ul>
+          </li>
+          <li><a href="../yjry/gccrc.htm">研究人员</a>
+          <ul class="chyg-suNnav">
+          <li><a href="../yjry/gccrc.htm">高层次人才</a></li>
+          <li><a href="../yjry/gdyjry.htm">固定研究人员</a></li>
+          <li><a href="../yjry/bsh_arzsj_.htm">博士后（按入站时间）</a></li>
+          <li><a href="../yjry/jz_jzjs.htm">讲座/兼职教授</a></li>
+          <li><a href="../yjry/xzry.htm">行政与技术支撑</a></li>
+           </ul>
+          </li>
+          <li><a href="../yjspy.htm">研究生培养</a>
+          <ul class="chyg-suNnav">
+          <li><a href="../yjspy/zs.htm">招生</a></li>
+          <li><a href="../yjspy/py.htm">培养</a></li>
+          <li><a href="../yjspy/xwgl.htm">学位管理</a></li>
+          <li><a href="../yjspy/xyzc.htm">校友之窗</a></li>
+           </ul>
+          </li>
+          <li><a href="../kfjl.htm">开放交流</a>
+          <ul class="chyg-suNnav">
+          <li><a href="../kfjl/xsbg/xhdjt.htm">讲座报告</a></li>
+          <li><a href="../kfjl/xshy.htm">学术会议</a></li>
+          <li><a href="../kfjl/gjxsjl.htm">国际学术交流</a></li>
+          <li><a href="../kfjl/kxjjsjyjd.htm">科学家精神教育基地</a></li>
+          <li><a href="../kfjl/mtLIESMARS.htm">媒体LIESMARS</a></li>
+           </ul>
+          </li>
+          <li><a href="../ptyss/kypt.htm">平台与设施</a>
+          <ul class="chyg-suNnav">
+          <li><a href="../ptyss/kypt.htm">科研平台</a></li>
+          <li><a href="../ptyss/whdxygwxdmz.htm">武汉大学遥感卫星地面站</a></li>
+          <li><a href="../ptyss/ljxlkxsywx.htm">珞珈系列科学实验卫星</a></li>
+          <li><a href="../ptyss/xwkyjd_ss_zw_cb_.htm">校外科研基地（嵩山、中卫、赤壁）</a></li>
+           </ul>
+          </li>
+          <li><a href="../xxgk/bszn.htm">信息公开</a>
+          <ul class="chyg-suNnav">
+          <li><a href="../xxgk/bszn.htm">办事指南</a></li>
+          <li><a href="../xxgk/aqjy.htm">安全教育</a></li>
+          <li><a href="http://www.lmars.whu.edu.cn/hys/" target="_blank">会议室预订</a></li>
+          <li><a href="https://202.114.114.18/LmarsOA/" target="_blank">成果管理</a></li>
+          <li><a href="../xxgk/dzgs.htm">党政公示</a></li>
+          <li><a href="../xxgk/zpxx.htm">招聘信息</a></li>
+           </ul>
+          </li>
+        </ul>
+        </div>
+    </div>
+  </div>
+ </div>
+</div>
+<div class="chyg-ny-banner" style="background:url(../images/1.jpg) no-repeat top center;"></div>
+<div class="chyg-contain-box">
+  <div class="chyg-contain-padding clearfix">
+    <div class="chyg-ny-left">
+      <div class="chyg-ny-nav-box">
+        <div class="chyg-ny-nav-bg">
+          <h4 class="chyg-nav-en">OVERVIEW</h4>
+          <h3 class="chyg-nav-name">
+本室概况</h3>
+        </div>
+        <div class="chyg-nav-list"><ul>        
+<li class="on"><a href="jj.htm">简介</a><i class="nav-right-icon"></i>
+</li>
+            
+<li><a href="zzjg.htm">组织架构</a><i class="nav-right-icon"></i>
+</li>
+            
+<li><a href="xrld.htm">现任领导</a><i class="nav-right-icon"></i>
+</li>
+            
+<li><a href="xswyh.htm">学术委员会</a><i class="nav-right-icon"></i>
+</li>
+            
+<li><a href="jswyh.htm">教授委员会</a><i class="nav-right-icon"></i>
+</li>
+            
+<li><a href="jxzdwyh.htm">教学指导委员会</a><i class="nav-right-icon"></i>
+</li>
+            
+<li><a href="lsyg.htm">历史沿革</a><i class="nav-right-icon"></i>
+</li>
+            
+</ul></div>
+      </div>
+    </div>
+    <div class="chyg-ny-right">
+    <div class="chyg-column-box clearfix">
+      <h3 class="chyg-column-h3">
+简介</h3>
+      <div class="chyg-place"><div>
+                        <a href="../index.htm">首页</a>
+                &gt;&gt;
+                <a href="jj.htm">本室概况</a>
+                &gt;&gt;
+                <a href="jj.htm">简介</a>
+</div></div>      
+      </div>
+      <div class="chyg-ny-cont">
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',2070870823,'wbnews','u9')</script>
+<script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',2070870823,5211)</script>
+<div id="vsb_content_5211_u91"><div id="vsb_content"><p style="text-align: center"><img src="/__local/6/98/46/08B5286E438BACC6872CD67F89D_6B70DAD9_315C0.jpg" vsbhref="vurl" vurl="/_vsl/6984608B5286E438BACC6872CD67F89D/6B70DAD9/315C0" vheight="" vwidth="" orisrc="/__local/6/98/46/08B5286E438BACC6872CD67F89D_6B70DAD9_315C0.jpg" class="img_vsb_content"></p><p style="text-indent: 2em;"><br></p><p style="margin-bottom:0;text-indent:40px;line-height:150%;background:white"><span style="font-size:20px;line-height:150%;font-family:仿宋_gb2312;color:#333333">测绘遥感信息工程全国重点实验室在原“测绘遥感信息工程国家重点实验室”基础上重组，于<span lang="EN-US">2025</span>年<span lang="EN-US">1</span>月获批建设。实验室前身测绘遥感信息工程国家重点实验室于<span lang="EN-US">1989</span>年成立，是我国测绘学科第一个国家级重点实验室。<span lang="EN-US">2004</span>年，实验室被授予国家重点实验室建设<span lang="EN-US">20</span>周年先进集体称号，获“金牛奖”； <span lang="EN-US">2000</span>年、<span lang="EN-US">2005</span>年、<span lang="EN-US">2010</span>年、<span lang="EN-US">2015</span>年连续四次被评为“优秀”国家重点实验室。</span></p><p style="margin-bottom:0;text-indent:40px;line-height:150%;background:white"><span style="font-size:20px;line-height:150%;font-family:仿宋_gb2312;color:#333333">实验室现任主任为杨必胜教授，中国科学院院士、中国工程院院士李德仁为学术委员会名誉主任，中国科学院院士龚健雅为学术委员会主任。现有固定人员<span lang="EN-US">154</span>人，其中国家级人才<span lang="EN-US">51</span>人，包括<span lang="EN-US">3</span>名两院院士、<span lang="EN-US">1</span>名外国籍院士、<span lang="EN-US">13</span>名国家杰出人才。拥有<span lang="EN-US">1</span>个国家自然科学基金创新群体和<span lang="EN-US">1</span>个教育部创新团队，获得国家科技进步奖一等奖<span lang="EN-US">3</span>项，二等奖<span lang="EN-US">34</span>项，<span lang="EN-US">2013</span>年获得国家科技进步国际合作奖，<span lang="EN-US">2014</span>年获得国家科技进步（创新团队）奖。 <span lang="EN-US">2024</span>年李德仁院士获得国家最高科学技术奖。</span></p><p style="margin-bottom:0;text-align:justify;text-justify: inter-ideograph;text-indent:40px;line-height:150%;background:white"><span style="font-size:20px;line-height:150%;font-family:仿宋_gb2312;color:#333333">实验室面向“新一代国家空间基础设施”“数字中国”等国家重大战略需求和测绘遥感领域国际学术前沿，开展应用基础研究，设置未知空间自主测绘、实时遥感与智能解译、时空计算与智能服务三个重点研究方向。近<span lang="EN-US">10</span>年，主持国家重点研发计划、国家自然科学基金重大、重点项目等国家级项目<span lang="EN-US">300</span>余项，牵头研制珞珈系列卫星以及无人测绘遥感设备，突破了国产卫星遥感数据高精度处理、全数字化自动测图、高分辨率遥感智能信息解译、国家基础地理信息系统等关键理论与技术，引领测绘学科从传统向数字化、信息化的历史变革，为我国自主高分辨率智能遥感卫星技术体系建设、国家公共地理信息服务平台“天地图”的建设及全球地理信息资源建设等重大工程做出突出贡献。有力支撑武汉大学“测绘科学与技术”一流学科评估获<span lang="EN-US">A+</span>，支撑 “遥感科学与技术”一级交叉学科连续<span lang="EN-US">8</span>年被软科排名世界第一。</span></p><p style="margin-bottom:0;text-align:justify;text-justify: inter-ideograph;text-indent:40px;line-height:150%;background:white"><span style="font-size:20px;line-height:150%;font-family:仿宋_gb2312;color:#333333">实验室坚持高质量国际化发展路线，建设地球空间信息国际合作联合实验室、联合国灾害管理与应急反应天基信息平台中国区域支持办公室等国际合作平台，<span lang="EN-US">9</span>位教授获得国际摄影测量与遥感学会<span lang="EN-US">Brock</span>金奖等国际荣誉。实验室注重科学传播与公众教育，持续设立开放研究基金项目，依托全国科学家精神教育基地——武汉大学测绘遥感精神教育基地，打造珞珈星·武汉站开放日、大中小思政一体化科普课堂等科普教育品牌，年均对社会公众开放<span lang="EN-US">5000</span>余人次。</span></p><p style="text-indent:40px;line-height:150%;background:white"><span style="font-size:20px;line-height:150%;font-family:仿宋_gb2312;color:#333333">实验室以实现近地空间、地月空间乃至行星空间近实时、高精准、高可靠的泛在融合智能信息服务为目标，将突破全球高时空分辨率态势感知、环境智能适应的实时自主测绘、全球时空信息实时服务等关键技术，提升我国近地空间资源开发利用泛在时空信息服务能力，实现空间物质开发和利用整体水平国际领先，建设突破型、引领型、国际化的空间领域科研平台，打造测绘遥感领域国家战略科技力量。</span></p><p><br></p><p style="text-indent: 2em;"><br></p></div></div>
+</div>
+    </div>
+  </div>
+</div>
+<div class="chyg-footer-box">
+    <div class="chyg-contain-box">
+      <div class="chyg-contain-padding">
+        <div class="chyg-link-list"><ul>
+            
+<li><a href="https://www.whu.edu.cn/">武汉大学</a></li>
+            
+<li><a href="http://kfy.whu.edu.cn/">科学技术发展研究院</a></li>
+            
+<li><a href="#">实验室期刊</a></li>
+            
+<li><a href="https://pole.whu.edu.cn/cn/">南极测绘研究中心</a></li>
+            
+<li><a href="https://gnsscenter.whu.edu.cn/index.htm">武汉大学卫星定位导航技术研究中心</a></li>
+            
+<li><a href="https://www.sgg.whu.edu.cn/">武汉大学测绘学院</a></li>
+            
+<li><a href="https://rsgis.whu.edu.cn/">遥感信息工程学院</a></li>
+            
+<li><a href="http://sres.whu.edu.cn/">资源与环境科学学院</a></li>
+            
+<li><a href="#">“珞珈一号”数据</a></li>
+            
+<li><a href="http://innogst.whu.edu.cn/index.jsp">地球空间信息技术协同创新中心</a></li>
+            
+</ul></div>
+        <div class="chyg-footer-center">
+          <div class="chyg-footer-logo">
+            <p><a href="../index.htm"><img src="../images/footer-logo.png"></a></p>
+          </div>
+          <div class="chyg-address">
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',2070870823,'wbnews','u11')</script>
+<script>function seeContenta11(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta11('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+
+<script>_addDynClicks('wbnews',2070870823,5211)</script>
+<p>地址：武汉市洪山区珞喻路129号武汉大学信息学部</p>
+<p>联系电话：+86-27-68778229</p>
+<p>传真：027-68778229</p>
+<p>邮箱：liesmars@whu.edu.cn</p>
+</div>
+          <div class="chyg-footer-wx"><ul>
+              <li><a href="javascript:;">
+                  <p class="img"><img src="../images/gzh.png"></p>
+                  <p class="txt">公众号</p>
+                </a>
+                <p class="wx"><img src="../images/gzh-wx.png"></p>
+              </li>
+              <li><a href="javascript:;">
+                  <p class="img"><img src="../images/sph.png"></p>
+                  <p class="txt">视频号</p>
+                </a>
+                <p class="wx"><img src="../images/sph-wx.png"></p>
+              </li>
+            </ul></div>
+        </div>
+      </div>
+    </div>
+    <div class="chyg-copyright">
+      <p>Copyright @ 2023 | LIESMARS 版权所有</p>
+    </div>
+  </div>
+<div class="chyg-return-top" style="cursor: pointer; display: none; position: fixed; right: 15px; bottom: 90px;"><a href="javascript:;"><img src="../images/goToTop.png"></a></div>
+<div class="chyg-layer-box">
+  <div class="chyg-layer"><i class="chyg-layer-close"></i>
+<ul class="chyg-layer-nav clearfix">
+      <li><a href="jj.htm">本室概况</a><i class="jiahao"></i>
+      <ul class="chyg-suNnav">
+          <li><a href="jj.htm">简介</a>
+          </li>
+          <li><a href="zzjg.htm">组织架构</a>
+          </li>
+          <li><a href="xrld.htm">现任领导</a>
+          </li>
+          <li><a href="xswyh.htm">学术委员会</a>
+          </li>
+          <li><a href="jswyh.htm">教授委员会</a>
+          </li>
+          <li><a href="jxzdwyh.htm">教学指导委员会</a>
+          </li>
+          <li><a href="lsyg.htm">历史沿革</a>
+          </li>
+      </ul>
+      </li>
+      <li><a href="../kxyj.htm">科学研究</a><i class="jiahao"></i>
+      <ul class="chyg-suNnav">
+          <li><a href="../kxyj/yjfx.htm">研究方向</a>
+          </li>
+          <li><a href="../kxyj/kyxm.htm">科研项目</a>
+          </li>
+          <li><a href="../kxyj/kyjz.htm">科研进展</a>
+          </li>
+          <li><a href="../kxyj/kycg.htm">科研成果</a>
+          </li>
+          <li><a href="../kxyj/cxyy.htm">产学研用</a>
+          </li>
+      </ul>
+      </li>
+      <li><a href="../yjry/gccrc.htm">研究人员</a><i class="jiahao"></i>
+      <ul class="chyg-suNnav">
+          <li><a href="../yjry/gccrc.htm">高层次人才</a>
+          </li>
+          <li><a href="../yjry/gdyjry.htm">固定研究人员</a>
+          </li>
+          <li><a href="../yjry/bsh_arzsj_.htm">博士后（按入站时间）</a>
+          </li>
+          <li><a href="../yjry/jz_jzjs.htm">讲座/兼职教授</a>
+          </li>
+          <li><a href="../yjry/xzry.htm">行政与技术支撑</a>
+          </li>
+      </ul>
+      </li>
+      <li><a href="../yjspy.htm">研究生培养</a><i class="jiahao"></i>
+      <ul class="chyg-suNnav">
+          <li><a href="../yjspy/zs.htm">招生</a>
+          </li>
+          <li><a href="../yjspy/py.htm">培养</a>
+          </li>
+          <li><a href="../yjspy/xwgl.htm">学位管理</a>
+          </li>
+          <li><a href="../yjspy/xyzc.htm">校友之窗</a>
+            <ul class="chyg-nav-sub-nav">
+               <li><a href="../yjspy/xyzc/xyll.htm">校友联络</a>
+               </li>
+               <li><a href="../yjspy/xyzc/xydt.htm">校友动态</a>
+               </li>
+               <li><a href="../yjspy/xyzc/xyjz.htm">校友捐赠</a>
+               </li>
+               <li><a href="../yjspy/xyzc/lxwm.htm">联系我们</a>
+               </li>
+          </ul>
+          </li>
+      </ul>
+      </li>
+      <li><a href="../kfjl.htm">开放交流</a><i class="jiahao"></i>
+      <ul class="chyg-suNnav">
+          <li><a href="../kfjl/xsbg/xhdjt.htm">讲座报告</a>
+            <ul class="chyg-nav-sub-nav">
+               <li><a href="../kfjl/xsbg/xhdjt.htm">星湖大讲坛</a>
+               </li>
+               <li><a href="../kfjl/xsbg/LIESMARSqyjz.htm">LIESMARS前沿讲座</a>
+               </li>
+               <li><a href="../kfjl/xsbg/GEOCAFE.htm">GEOCAFE</a>
+               </li>
+          </ul>
+          </li>
+          <li><a href="../kfjl/xshy.htm">学术会议</a>
+          </li>
+          <li><a href="../kfjl/gjxsjl.htm">国际学术交流</a>
+          </li>
+          <li><a href="../kfjl/kxjjsjyjd.htm">科学家精神教育基地</a>
+          </li>
+          <li><a href="../kfjl/mtLIESMARS.htm">媒体LIESMARS</a>
+          </li>
+      </ul>
+      </li>
+      <li><a href="../ptyss/kypt.htm">平台与设施</a><i class="jiahao"></i>
+      <ul class="chyg-suNnav">
+          <li><a href="../ptyss/kypt.htm">科研平台</a>
+          </li>
+          <li><a href="../ptyss/whdxygwxdmz.htm">武汉大学遥感卫星地面站</a>
+          </li>
+          <li><a href="../ptyss/ljxlkxsywx.htm">珞珈系列科学实验卫星</a>
+          </li>
+          <li><a href="../ptyss/xwkyjd_ss_zw_cb_.htm">校外科研基地（嵩山、中卫、赤壁）</a>
+          </li>
+      </ul>
+      </li>
+      <li><a href="../xxgk/bszn.htm">信息公开</a><i class="jiahao"></i>
+      <ul class="chyg-suNnav">
+          <li><a href="../xxgk/bszn.htm">办事指南</a>
+          </li>
+          <li><a href="../xxgk/aqjy.htm">安全教育</a>
+          </li>
+          <li><a href="http://www.lmars.whu.edu.cn/hys/" target="_blank">会议室预订</a>
+          </li>
+          <li><a href="https://202.114.114.18/LmarsOA/" target="_blank">成果管理</a>
+          </li>
+          <li><a href="../xxgk/dzgs.htm">党政公示</a>
+          </li>
+          <li><a href="../xxgk/zpxx.htm">招聘信息</a>
+          </li>
+      </ul>
+      </li>
+</ul>
+  
+
+</div>
+</div>
+<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script> 
+<script type="text/javascript" src="../js/main.js"></script>  
+<script type="text/javascript" src="../js/jquery.toTop.js"></script> 
+<script type="text/javascript">
+$(function() {
+    $(".chyg-return-top").toTop();
+});
+</script> 
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

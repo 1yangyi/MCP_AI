@@ -1,0 +1,928 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>本系简介-厦门大学中国语言文学系</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="本系简介">
+
+
+<meta name="keywords" content="厦门大学中国语言文学系,本系简介">
+
+    <link rel="stylesheet" href="../style/slick.css">
+    <link rel="stylesheet" href="../style/slick-theme.css">
+    <link rel="stylesheet" href="../style/aos.css">
+    <link rel="stylesheet" href="../style/public.css">
+    <link rel="stylesheet" href="../style/ny.css">
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778465750545742000400024e5c -->
+<link rel="stylesheet" type="text/css" href="../jjy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1101,'/jjy.jsp',-1,1905331939)</script>
+</head>
+
+<body>
+    <!-- pc 顶部 导航 -->
+    <div class="pc">
+        <div class="top">
+            <div class="px1400 clearfix">
+                <div class="logo fl">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="中国语言文学系">
+    <img src="../images/LOGO1.png">
+</a></div>
+                <div class="top-r fr"><div class="search"><!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><div id="divu1">
+    <div id="appu1"><div><input type="text" placeholder="请输入关键词搜索" autocomplete="off" class="text"> <input type="submit" name="submit" value="" class="button"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+
+            <input type="text" placeholder="请输入关键词搜索" class="text" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"/>
+            <input type="submit" name="submit" value="" class="button" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1905331939";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu1 = document.querySelector("#appu1");
+   if (appElementu1 && appElementu1.__vue__) {
+
+   } else {
+      $("#divu1").html($("#htmlu1").text());
+      var appOwner = "1905331939";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou1 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu1(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu1();
+        }
+      };
+
+      function onSubmitu1(e) {
+        queryInfou1.query.keyWord= $("#appu1  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou1.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script></div></div>
+            </div>
+            <div class="nav"><div class="nav">
+    <ul class="px1400 clearfix">
+                            <li>
+                            <a href="../index.htm" title="首页">首页</a>
+                        </li>
+                        <li class="active">
+                            <a href="../jggk.htm" title="机构概况">机构概况</a>
+                                        <div>
+                                            <ul>
+                                                    <li>
+                                                        <a href="bxjj.htm" title="本系简介">本系简介</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="dzld.htm" title="党政领导">党政领导</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="zzjg.htm" title="组织机构">组织机构</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="kyjg.htm" title="科研机构">科研机构</a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                        </li>
+                        <li>
+                            <a href="../djsz.htm" title="党建思政">党建思政</a>
+                                        <div>
+                                            <ul>
+                                                    <li>
+                                                        <a href="../djsz/dzdg.htm" title="党章党规">党章党规</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../djsz/djdt.htm" title="党建动态">党建动态</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../djsz/dwgk.htm" title="党务公开">党务公开</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../djsz/zbfc.htm" title="支部风采">支部风采</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../djsz/llyd.htm" title="理论园地">理论园地</a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                        </li>
+                        <li>
+                            <a href="../szdw.htm" title="师资队伍">师资队伍</a>
+                                        <div>
+                                            <ul>
+                                                    <li>
+                                                        <a href="../szdw/szll.htm" title="师资力量">师资力量</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../szdw/jsdw1.htm" title="教师队伍">教师队伍</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../szdw/txjs.htm" title="退休教师">退休教师</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../szdw/rczp.htm" title="人才招聘">人才招聘</a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                        </li>
+                        <li>
+                            <a href="../rcpy.htm" title="人才培养">人才培养</a>
+                                        <div>
+                                            <ul>
+                                                    <li>
+                                                        <a href="../rcpy/bksjy.htm" title="本科生教育">本科生教育</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../rcpy/sssjy.htm" title="硕士生教育">硕士生教育</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../rcpy/bssjy.htm" title="博士生教育">博士生教育</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../rcpy/jydt.htm" title="教育动态">教育动态</a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                        </li>
+                        <li>
+                            <a href="../xsky.htm" title="学术科研">学术科研</a>
+                                        <div>
+                                            <ul>
+                                                    <li>
+                                                        <a href="../xsky/kydt.htm" title="科研动态">科研动态</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../xsky/jzlt.htm" title="讲座论坛">讲座论坛</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../xsky/zbqk.htm" title="主办期刊">主办期刊</a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                        </li>
+                        <li>
+                            <a href="../xsgz.htm" title="学生工作">学生工作</a>
+                                        <div>
+                                            <ul>
+                                                    <li>
+                                                        <a href="../xsgz/xshd.htm" title="学生活动">学生活动</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../xsgz/pjpy.htm" title="评奖评优">评奖评优</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../xsgz/jyzp.htm" title="就业招聘">就业招聘</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../xsgz/kcjs.htm" title="科创竞赛">科创竞赛</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../xsgz/gszl.htm" title="公示专栏">公示专栏</a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                        </li>
+                        <li>
+                            <a href="../hzjl/hzjlgk.htm" title="合作交流">合作交流</a>
+                                        <div>
+                                            <ul>
+                                                    <li>
+                                                        <a href="../hzjl/hzjlgk.htm" title="合作交流概况">合作交流概况</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../hzjl/jlxm.htm" title="交流项目">交流项目</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../hzjl/zxdt.htm" title="最新动态">最新动态</a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                        </li>
+                        <li>
+                            <a href="../qtgz/gh.htm" title="群团工作">群团工作</a>
+                                        <div>
+                                            <ul>
+                                                    <li>
+                                                        <a href="../qtgz/gh.htm" title="工会">工会</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../qtgz/fwh.htm" title="妇委会">妇委会</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../qtgz/ggw.htm" title="关工委">关工委</a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                        </li>
+                        <li>
+                            <a href="../xygz.htm" title="校友工作">校友工作</a>
+                                        <div>
+                                            <ul>
+                                                    <li>
+                                                        <a href="../xygz/byly.htm" title="毕业留影">毕业留影</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../xygz/xydt.htm" title="校友动态">校友动态</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../xygz/a100nxq.htm" title="100年系庆">100年系庆</a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                        </li>
+                        <li>
+                            <a href="../mtzw.htm" title="媒体中文">媒体中文</a>
+                        </li>
+                        <li>
+                            <a href="../xzzq.htm" title="下载专区">下载专区</a>
+                                        <div>
+                                            <ul>
+                                                    <li>
+                                                        <a href="../xzzq/dj.htm" title="党建">党建</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../xzzq/rs.htm" title="人事">人事</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../xzzq/jxsj.htm" title="教学实践">教学实践</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../xzzq/kygl.htm" title="科研管理">科研管理</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../xzzq/cwzc.htm" title="财务资产">财务资产</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../xzzq/dwjl.htm" title="对外交流">对外交流</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="../xzzq/gzzd.htm" title="规章制度">规章制度</a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                        </li>
+    </ul>
+</div></div>
+        </div>
+
+    </div>
+    <!-- 移动端导航 -->
+    <div class="m-top">
+        <div class="wap wap-menu">
+            <img src="../images/menu.png" class="menu" alt="">
+            <img src="../images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+    <div class="wap m-head">
+        <div class="m-logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="中国语言文学系">
+    <img src="../images/LOGO1.png">
+</a></div>
+        <div class="m-nav">
+            <div class="m-search"><!-- 3.1.3版本 -->
+
+
+
+
+<div id="divu4">
+    <div id="appu4"><div><input type="text" placeholder="输入关键词搜索..." autocomplete="off"> <input type="image" src="../images/fdj.png"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu4">
+    <div id="appu4">
+        <div v-if="!isError">
+            <input type="text" placeholder="输入关键词搜索..." autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input type="image" src="../images/fdj.png" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu4").html($("#htmlu4").text());
+</script>
+<script>
+    var appOwner = "1905331939";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu4",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultmobile/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu4 = document.querySelector("#appu4");
+   if (appElementu4 && appElementu4.__vue__) {
+
+   } else {
+      $("#divu4").html($("#htmlu4").text());
+      var appOwner = "1905331939";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou4 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu4(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu4();
+        }
+      };
+
+      function onSubmitu4(e) {
+        queryInfou4.query.keyWord= $("#appu4  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultmobile/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou4.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script></div>
+            <ul class="">                <li>
+                    <a href="../index.htm" title="首页">首页</a>
+                            <span></span>
+                            <ul>
+                                    <li>
+                                        <a href="../index/xwdt.htm" title="新闻动态">新闻动态</a>
+                                    </li>
+                                    <li>
+                                        <a href="../index/tzgg.htm" title="通知公告">通知公告</a>
+                                    </li>
+                                    <li>
+                                        <a href="../index/jzxx.htm" title="讲座信息">讲座信息</a>
+                                    </li>
+                                    <li>
+                                        <a href="../index/jxxx.htm" title="教学信息">教学信息</a>
+                                    </li>
+                                    <li>
+                                        <a href="../index/zsxx.htm" title="招生信息">招生信息</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li>
+                    <a href="../jggk.htm" title="机构概况">机构概况</a>
+                            <span></span>
+                            <ul>
+                                    <li>
+                                        <a href="bxjj.htm" title="本系简介">本系简介</a>
+                                    </li>
+                                    <li>
+                                        <a href="dzld.htm" title="党政领导">党政领导</a>
+                                    </li>
+                                    <li>
+                                        <a href="zzjg.htm" title="组织机构">组织机构</a>
+                                    </li>
+                                    <li>
+                                        <a href="kyjg.htm" title="科研机构">科研机构</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li>
+                    <a href="../djsz.htm" title="党建思政">党建思政</a>
+                            <span></span>
+                            <ul>
+                                    <li>
+                                        <a href="../djsz/dzdg.htm" title="党章党规">党章党规</a>
+                                    </li>
+                                    <li>
+                                        <a href="../djsz/djdt.htm" title="党建动态">党建动态</a>
+                                    </li>
+                                    <li>
+                                        <a href="../djsz/dwgk.htm" title="党务公开">党务公开</a>
+                                    </li>
+                                    <li>
+                                        <a href="../djsz/zbfc.htm" title="支部风采">支部风采</a>
+                                    </li>
+                                    <li>
+                                        <a href="../djsz/llyd.htm" title="理论园地">理论园地</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li>
+                    <a href="../szdw.htm" title="师资队伍">师资队伍</a>
+                            <span></span>
+                            <ul>
+                                    <li>
+                                        <a href="../szdw/szll.htm" title="师资力量">师资力量</a>
+                                    </li>
+                                    <li>
+                                        <a href="../szdw/jsdw1.htm" title="教师队伍">教师队伍</a>
+                                    </li>
+                                    <li>
+                                        <a href="../szdw/txjs.htm" title="退休教师">退休教师</a>
+                                    </li>
+                                    <li>
+                                        <a href="../szdw/rczp.htm" title="人才招聘">人才招聘</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li>
+                    <a href="../rcpy.htm" title="人才培养">人才培养</a>
+                            <span></span>
+                            <ul>
+                                    <li>
+                                        <a href="../rcpy/bksjy.htm" title="本科生教育">本科生教育</a>
+                                    </li>
+                                    <li>
+                                        <a href="../rcpy/sssjy.htm" title="硕士生教育">硕士生教育</a>
+                                    </li>
+                                    <li>
+                                        <a href="../rcpy/bssjy.htm" title="博士生教育">博士生教育</a>
+                                    </li>
+                                    <li>
+                                        <a href="../rcpy/jydt.htm" title="教育动态">教育动态</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li>
+                    <a href="../xsky.htm" title="学术科研">学术科研</a>
+                            <span></span>
+                            <ul>
+                                    <li>
+                                        <a href="../xsky/kydt.htm" title="科研动态">科研动态</a>
+                                    </li>
+                                    <li>
+                                        <a href="../xsky/jzlt.htm" title="讲座论坛">讲座论坛</a>
+                                    </li>
+                                    <li>
+                                        <a href="../xsky/zbqk.htm" title="主办期刊">主办期刊</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li>
+                    <a href="../xsgz.htm" title="学生工作">学生工作</a>
+                            <span></span>
+                            <ul>
+                                    <li>
+                                        <a href="../xsgz/xshd.htm" title="学生活动">学生活动</a>
+                                    </li>
+                                    <li>
+                                        <a href="../xsgz/pjpy.htm" title="评奖评优">评奖评优</a>
+                                    </li>
+                                    <li>
+                                        <a href="../xsgz/jyzp.htm" title="就业招聘">就业招聘</a>
+                                    </li>
+                                    <li>
+                                        <a href="../xsgz/kcjs.htm" title="科创竞赛">科创竞赛</a>
+                                    </li>
+                                    <li>
+                                        <a href="../xsgz/gszl.htm" title="公示专栏">公示专栏</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li>
+                    <a href="../hzjl/hzjlgk.htm" title="合作交流">合作交流</a>
+                            <span></span>
+                            <ul>
+                                    <li>
+                                        <a href="../hzjl/hzjlgk.htm" title="合作交流概况">合作交流概况</a>
+                                    </li>
+                                    <li>
+                                        <a href="../hzjl/jlxm.htm" title="交流项目">交流项目</a>
+                                    </li>
+                                    <li>
+                                        <a href="../hzjl/zxdt.htm" title="最新动态">最新动态</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li>
+                    <a href="../qtgz/gh.htm" title="群团工作">群团工作</a>
+                            <span></span>
+                            <ul>
+                                    <li>
+                                        <a href="../qtgz/gh.htm" title="工会">工会</a>
+                                    </li>
+                                    <li>
+                                        <a href="../qtgz/fwh.htm" title="妇委会">妇委会</a>
+                                    </li>
+                                    <li>
+                                        <a href="../qtgz/ggw.htm" title="关工委">关工委</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li>
+                    <a href="../xygz.htm" title="校友工作">校友工作</a>
+                            <span></span>
+                            <ul>
+                                    <li>
+                                        <a href="../xygz/byly.htm" title="毕业留影">毕业留影</a>
+                                    </li>
+                                    <li>
+                                        <a href="../xygz/xydt.htm" title="校友动态">校友动态</a>
+                                    </li>
+                                    <li>
+                                        <a href="../xygz/a100nxq.htm" title="100年系庆">100年系庆</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li>
+                    <a href="../mtzw.htm" title="媒体中文">媒体中文</a>
+                </li>
+                <li>
+                    <a href="../xzzq.htm" title="下载专区">下载专区</a>
+                            <span></span>
+                            <ul>
+                                    <li>
+                                        <a href="../xzzq/dj.htm" title="党建">党建</a>
+                                    </li>
+                                    <li>
+                                        <a href="../xzzq/rs.htm" title="人事">人事</a>
+                                    </li>
+                                    <li>
+                                        <a href="../xzzq/jxsj.htm" title="教学实践">教学实践</a>
+                                    </li>
+                                    <li>
+                                        <a href="../xzzq/kygl.htm" title="科研管理">科研管理</a>
+                                    </li>
+                                    <li>
+                                        <a href="../xzzq/cwzc.htm" title="财务资产">财务资产</a>
+                                    </li>
+                                    <li>
+                                        <a href="../xzzq/dwjl.htm" title="对外交流">对外交流</a>
+                                    </li>
+                                    <li>
+                                        <a href="../xzzq/gzzd.htm" title="规章制度">规章制度</a>
+                                    </li>
+                            </ul>
+                </li>
+</ul>
+        </div>
+    </div>
+
+    <div class="banner">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>    <img src="../images/zibanner.jpg" alt="">
+</div>
+
+    <div class="nymain">
+        <div class="px1400">
+            <div class="channl-menu leftNav">        <h2>机构概况<span></span></h2>
+        
+                <ul>
+                        <li class="active on">
+                            <a href="bxjj.htm">› 本系简介</a>
+                        </li>
+                        <li class="active on">
+                            <a href="dzld.htm">› 党政领导</a>
+                        </li>
+                        <li class="active on">
+                            <a href="javascript:;">› 组织机构</a>
+                                    <span></span>
+                                    <ul>
+                                            <li>
+                                                <a href="zzjg/xsjg.htm" title="学术机构">› 学术机构</a>
+                                            </li>
+                                            <li>
+                                                <a href="zzjg/bgs.htm" title="办公室">› 办公室</a>
+                                            </li>
+                                            <li>
+                                                <a href="zzjg/tw.htm" title="团委">› 团委</a>
+                                            </li>
+                                            <li>
+                                                <a href="zzjg/gh.htm" title="工会">› 工会</a>
+                                            </li>
+                                            <li>
+                                                <a href="zzjg/fwh.htm" title="妇委会">› 妇委会</a>
+                                            </li>
+                                    </ul>
+                        </li>
+                        <li class="active on">
+                            <a href="javascript:;">› 科研机构</a>
+                                    <span></span>
+                                    <ul>
+                                            <li>
+                                                <a href="kyjg/yjs_zx_.htm" title="研究所（中心）">› 研究所（中心）</a>
+                                            </li>
+                                            <li>
+                                                <a href="kyjg/jys.htm" title="教研室">› 教研室</a>
+                                            </li>
+                                            <li>
+                                                <a href="kyjg/sys.htm" title="实验室">› 实验室</a>
+                                            </li>
+                                    </ul>
+                        </li>
+                </ul>
+</div>
+            <div class="ny-right">
+                <div class="position">
+                    <div class=""><img src="../images/weizhi.png" alt="">
+                <a href="../index.htm">首页</a>
+                <span>&gt;</span>
+                <a href="../jggk.htm">机构概况</a>
+                <span>&gt;</span>
+                <a href="bxjj.htm">本系简介</a>
+</div>
+                </div>
+                <div class="art-main">
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1905331939,'wbnews','u9')</script>
+<script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1905331939,18391)</script>
+<div class="art-body1">
+    <div id="vsb_content_18391_u91"><div id="vsb_content"><style>@font-face{ font-family:"Times New Roman";} @font-face{ font-family:"宋体";} @font-face{ font-family:"Wingdings";} @font-face{ font-family:"Calibri";} p.MsoNormal{ mso-style-name:正文; mso-style-parent:""; margin:0pt; margin-bottom:.0001pt; mso-pagination:none; text-align:justify; text-justify:inter-ideograph; font-family:Calibri; mso-fareast-font-family:宋体; mso-bidi-font-family:'Times New Roman'; font-size:10.5000pt; mso-font-kerning:1.0000pt;} h1{ mso-style-name:"标题 1"; mso-style-next:正文; mso-margin-top-alt:auto; mso-margin-bottom-alt:auto; mso-pagination:none; text-align:left; mso-outline-level:1; font-family:宋体; mso-bidi-font-family:'Times New Roman'; font-weight:bold; font-size:24.0000pt; mso-font-kerning:22.0000pt;} span.10{ font-family:'Times New Roman';} span.15{ font-family:'Times New Roman'; font-weight:bold;} span.16{ font-family:宋体; color:rgb(0,0,0); font-weight:normal; font-style:normal; font-size:11.0000pt;} span.17{ font-family:Calibri; mso-fareast-font-family:宋体; mso-bidi-font-family:'Times New Roman'; font-size:9.0000pt; mso-font-kerning:1.0000pt;} span.18{ font-family:Calibri; mso-fareast-font-family:宋体; mso-bidi-font-family:'Times New Roman'; font-size:9.0000pt; mso-font-kerning:1.0000pt;} p.MsoHeader{ mso-style-name:页眉; margin:0pt; margin-bottom:.0001pt; border-bottom:1.0000pt solid #000; mso-border-bottom-alt:0.7500pt solid #000; padding:0pt 0pt 1pt 0pt ; vsb_temp-mode:char; mso-pagination:none; text-align:center; font-family:Calibri; mso-fareast-font-family:宋体; mso-bidi-font-family:'Times New Roman'; font-size:9.0000pt; mso-font-kerning:1.0000pt;} p.MsoFooter{ mso-style-name:页脚; margin:0pt; margin-bottom:.0001pt; vsb_temp-mode:char; mso-pagination:none; text-align:left; font-family:Calibri; mso-fareast-font-family:宋体; mso-bidi-font-family:'Times New Roman'; font-size:9.0000pt; mso-font-kerning:1.0000pt;} span.msoIns{ mso-style-type:export-only; mso-style-name:""; text-decoration:underline; text-underline:single; color:blue;} span.msoDel{ mso-style-type:export-only; mso-style-name:""; text-decoration:line-through; color:red;} table.MsoNormalTable{ mso-style-name:普通表格; mso-style-parent:""; mso-style-noshow:yes; mso-tstyle-rowband-size:0; mso-tstyle-colband-size:0; mso-padding-alt:0.0000pt 5.4000pt 0.0000pt 5.4000pt; mso-para-margin:0pt; mso-para-margin-bottom:.0001pt; mso-pagination:widow-orphan; font-family:'Times New Roman'; font-size:10.0000pt; mso-ansi-language:#0400; mso-fareast-language:#0400; mso-bidi-language:#0400;} @page{mso-page-border-surround-header:no; mso-page-border-surround-footer:no;}@page Section0{ margin-top:56.7000pt; margin-bottom:56.7000pt; margin-left:89.8500pt; margin-right:89.8500pt; size:595.3000pt 841.9000pt; vsb_temp:15.6000pt; mso-header-margin:42.5500pt; mso-footer-margin:49.6000pt;} div.Section0{page:Section0;}</style><div class="Section0"><p style="text-align: left; text-indent: 28pt; line-height: 2em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">1921年，厦门大学成立，设文、理、商、教四部，文学部始创而居首，这也标志着厦门大学中文学科的创立。在校主陈嘉庚委任的校长林文庆“本校首重国文”之办学理念指引下，厦大中文不仅成为首批建系的学科单位，而且还得到极大的重视与发展。鲁迅、林语堂、罗常培、沈兼士、顾颉刚、张星烺、孙伏园、陈衍、周辨明、毛常、杨树达、台静农、黎锦熙、缪篆等享誉海内外的一流专家学者先后执教于厦门大学中文系，可谓大师云集，群星璀璨，为我系的发展奠定了一个坚实的基础与高水准的起点。这一时期厦大中文的人文景观与学术辉煌，已成为我系代代相传相承的精神财富，成为厦大中文人不懈追求的动力与发扬光大的源泉。</span><br></p><p style="text-indent: 21pt; line-height: 2em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">1937年抗日</span><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">战争爆发，学校虽然被迫内迁山城长汀，办学条件艰苦，但仍自强不怠。至1949年,在我系先后任教的有周辨明、余春、刘大杰、施蛰存、洪深、林庚、李笠、戴锡璋、徐元度等教授。在动乱不安的艰难岁月里，他们依然“戮力研究高深学术”，在各自研究领域里突显其特色，成果斐然。通过包括中文系在内的全校师生的共同努力，厦门大学在极为艰苦的条件下，以“南方之强”名世，被誉为“加尔各答以东最好大学”。</span></p><p style="text-indent: 21pt; line-height: 2em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">新中国成立以来，经过一代代学者的不懈努力，中文系的发展日新月异。进入新世纪以来，文艺学在“超越实践美学”与文学主体间性问题、“现代性”与中国现代文论与思潮、中西比较美学与比较诗学研究、艺术人类学、中国古代美学、国学思潮、汉学与汉学主义等方面的研究；古典文学在隋唐五代文学、汉魏六朝文学等方面的研究；中国现当代文学在现代文学的鲁迅研究、茅盾研究、现当代文学思潮与生成关系、女性文学、性别与文化、革命文学、台湾文学、东南亚华文文学等方面的研究；比较文学在东西方中国形象学、生态主义文学、外国文学等方面的研究；汉语言文字学在汉语音韵学、方言学、域外汉语史、文字学、语法学等方面的研究，应用语言学在词汇学、辞书学、教材语言、计算语言学、比较语言学等方面的研究，成就斐然，不少研究成果具有开创性意义，为我系赢得了全国性学术声誉。</span></p><p style="text-indent: 21pt; line-height: 2em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">目前，中文系学科建设体系完整，富有成效。本科设有汉语言和汉语言文学两个专业，先后于2021、2022年入选国家一流本科专业，中国语言文学“鼓浪文兴”拔尖学生培养基地，2021年入选教育部公布的第三批国家“拔尖计划2.0”。中国语言文学1978年获批硕士点，1986年获批博士点，2007年获批博士后流动站，2011年获批一级学科博士授予权。学位点目前建有文艺学、语言学及应用语言学、汉语言文字学、中国古典文献学、中国古代文学、中国现当代文学、比较文学和世界文学7个二级学科。中文系设有中国语言文学研究所、国家语言资源监测与研究教育教材中心、国家语言文字推广基地等部委级平台3个，另有古籍整理研究所、东南亚华文文学研究中心、国际汉语史研究中心、语言学实验室、普通话培训测试中心等5个校级教学科研平台，还出版有《厦大中文学报》《国际汉语史研究》等学术刊物。</span></p><p style="text-indent: 21pt; line-height: 2em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px; text-align: justify; text-indent: 28px; text-wrap: wrap;"></span><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px; text-indent: 28px; text-wrap-mode: wrap;"></span><span style="text-wrap-mode: wrap; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; text-align: justify; text-indent: 28px; font-size: 18px;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px; text-align: justify; text-indent: 28px; text-wrap-mode: wrap;">中国语言文学系现有专任教师</span><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px; text-align: justify; text-indent: 28px; text-wrap-mode: wrap;">51人，其中教授18人、副教授14人、助理教授19人</span><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px; text-align: justify; text-indent: 28px; text-wrap-mode: wrap;">，博士后3</span><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px; text-align: justify; text-indent: 28px; text-wrap-mode: wrap;">人，</span>博士生导师12人、硕士生导师41人。拥有国家级有突出</span><span style="text-wrap-mode: wrap; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; text-align: justify; text-indent: 28px; font-size: 18px;">贡献专家1人，入选教育部高等学校教学指导委员会委员1人、</span><span style="text-wrap-mode: wrap; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px; text-align: justify; text-indent: 28px;">教育部新世纪优秀人才</span><span style="text-wrap-mode: wrap; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px; text-align: justify; text-indent: 28px;">2人、闽江学者特聘教授2人、福建省文化名家1人、福建省新世纪优秀人才5人、福建省哲学社会科学领军人才1人、厦门大学南强重点岗位教授4人、厦门大学南强青年拔尖人才5人，福建省高层次人才15人，厦门市高层次人才17人。</span><img src="/virtual_attach_file.vsb?afc=HMlUgsMlUZUzLsLL8lYo7QfLzUbL7QMRozW7UzGbUzTRUzl0gihFp2hmCIa0L1yaL1hVUYyaozUYMzCYMRv8oz-sUmlinmNPolCYM4-4olQFLz6RLmf7LRnFMRU4M7-Jqjfjo4OeosXb6sAZgDTJQty0Lz7aLSyPoRLbLSbw62o8c&amp;oid=1905331939&amp;tid=1101&amp;nid=18391&amp;e=.jpg" width="1" height="1" vsbhref="vurl" vurl="/_vsl/202EC0942562474927B55F919F27239F/17C20D04/4434B" vheight=" 1px" vwidth=" 1px" alt="" orisrc="/virtual_attach_file.vsb?afc=HMRCg4L7Q7MN74nLlVfL4GDL8-YolnM7ozVRUlU4Mll8L490gihFp2hmCIa0UYyDM1yYL1yaLRN8MzQVnm94UNQ7U8Q2oRMVLmlDLmVfLmrFUlQ7LRCaU46FLzfVL4UPgtXaQ4Oeo4xE_56Z_khXptQ0g47PLR70Lz94oz7Jqdonx&amp;oid=1905331939&amp;tid=1101&amp;nid=18391&amp;e=.jpg" class="img_vsb_content" style="text-indent: 32px; text-wrap-mode: wrap; text-align: center; width: 1px; height: 1px;"></span></p><p style="text-indent: 21pt; line-height: 2em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">经过百年的发展，厦大中文学科发展已经形成了立足国内、面向东南亚、走向世界的整体格局，在全国高校中文学科建设中具有鲜明的特色。2022年11月，为了适应新时代新要求，打造一流的文史哲学科，厦门大学决定将中文系提升为直属系，这是中文学科迈入新发展阶段的起点，将为中文学科发展提供更广阔的舞台。中文系全体师生定将团结合作谋发展，携手共进创辉煌，夯实现有基础，寻求各方支持，创造有利条件，打造更大平台，为厦大中文系可持续发展，为人文科学的繁荣发展，更好发挥人文精神的社会功能而奋斗。</span><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;"></span></p></div></div></div>
+   
+    <span id="vsb_content_18391_u9" name="vsb_content_18391_u9"></span><br><br>
+    
+</div>
+</div>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="foot">
+        <div class="px1400 clearfix">
+            <div class="foot-l fl">    <img src="../images/LOGO1.png" alt="">
+</div>
+            <div class="foot-c fl">
+                <div class="link">
+                    <div><script language="javascript" src="/system/resource/js/openlink.js"></script><p>校内链接</p>
+                        <div>
+    <a href="http://172.27.66.188:8080/meeting-system/open/login.jsp" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88923)">会议室预约系统</a>
+    <a href="https://www.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88924)">厦门大学</a>
+    <a href="https://zs.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88925)">厦门大学招生网</a>
+    <a href="https://jwc.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88926)">厦门大学教务处</a>
+    <a href="https://library.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88934)">厦门大学图书馆</a>
+    <a href="https://rsc.xmu.edu.cn/main.htm" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88935)">厦门大学人事处</a>
+    <a href="https://skc.xmu.edu.cn/main.htm" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88936)">厦门大学社科处</a>
+    <a href="https://gs.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88937)">厦门大学研究生院</a>
+    <a href="https://ice.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88938)">厦门大学国际合作与交流处</a>
+                        </div></div>
+                    <div><p>校外链接</p>
+                        <div>
+    <a href="http://chinese.pku.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88949)">北京大学中文系</a>
+    <a href="http://wxy.bnu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88948)">北京师范大学文学院</a>
+    <a href="http://chinese.fudan.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88947)">复旦大学中文系</a>
+    <a href="https://zhwx.ecnu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88946)">华东师范大学中文系</a>
+    <a href="https://chin.nju.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88945)">南京大学文学院</a>
+    <a href="http://www.lit.zju.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88944)">浙江大学文学院</a>
+    <a href="https://www.lit.sdu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88943)">山东大学文学院</a>
+    <a href="http://lj.scu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88852)">四川大学文学与新闻学院</a>
+    <a href="http://wenxueyuan.ruc.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88851)">中国人民大学文学院</a>
+    <a href="https://chinese.cnu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88933)">首都师范大学文学院</a>
+    <a href="https://wxy.nankai.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88932)">南开大学文学院</a>
+    <a href="http://wxy.njnu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88931)">南京师范大学文学院</a>
+    <a href="http://chinese.whu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88930)">武汉大学文学院</a>
+    <a href="https://chinese.sysu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1905331939, 88929)">中山大学中文系</a>
+                        </div></div>
+                    <div class="clear"></div>
+
+                </div>
+            </div>
+            <div class="foot-r fr clearfix">
+                    <img src="../images/erweima1.jpg" alt="">
+
+                <div>
+</div>
+            </div>
+        </div>
+    </div>
+    <div class="foot-bq"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>Copyright© 2023&nbsp; 厦门大学中国语言文学系&nbsp; 版权所有 &nbsp;&nbsp;<a href="https://beian.miit.gov.cn/" target="_self">闽ICP备05005471号</a> &nbsp;&nbsp; 闽公网安备 35020302001480号&nbsp;&nbsp; 地址：福建省厦门市思明区思明南路厦门大学中国语言文学系</p></div>
+    
+    <script src="../js/jquery.js"></script>
+    <script src="../js/slick.js"></script>
+    <script src="../js/public.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

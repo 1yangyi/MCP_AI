@@ -1,0 +1,708 @@
+<!DOCTYPE html><html><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>学院介绍 - 南方科技大学马克思主义学院</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<link rel="stylesheet" href="/static/site/css/animate.min.css">
+	<link rel="stylesheet" href="/static/site/css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="/static/site/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/static/site/css/com.css">
+	<link rel="stylesheet" href="/static/site/css/base-zj.css">  <!-- 常用组件 -->
+	<link rel="stylesheet" href="/static/site/css/rili.css">
+
+	<link rel="stylesheet" href="/static/site/css/index.css">
+	<link rel="stylesheet" href="/static/site/css/innerpage.css">
+	<link rel="stylesheet" href="/static/site/css/screen.css">
+
+	<!-- 不是首页时进行加载 -->
+	
+
+	<script src="/static/site/js/jquery.min.js"></script>
+	<script src="/static/site/js/swiper-bundle.min.js"></script>
+	<script src="/static/site/js/flexble.js"></script><style>html{font-size:66.66666666666667px;}</style>
+	<script src="/static/site/js/wow.js"></script>
+	<script>
+		new WOW().init()
+	</script>
+
+	<script type="text/javascript">
+		function gxListsHtml(link) {
+			var dataHtml;
+			$.ajax({
+				type:"GET",
+				url:link,
+				dataType:"",
+				async:false,
+				data:{},
+				success:function (data) {
+					dataHtml = data;
+				}, error:function () {}
+			});
+			return dataHtml;
+		}
+
+		$(function () {
+			$(document).on('click','.gxListsHtml .pages a',function () {
+				var thref_ = $(this).attr('href');
+				if (thref_ != undefined){
+					var getPLHtml = gxListsHtml(thref_);
+					$(this).parents('.gxListsHtml').html(getPLHtml);
+				}
+				for(var i = 0 ; i< $(".donghua_list ul li").length ; i++) {
+					$(".donghua_list ul li").eq(i).css({"animation": "bannerInUp .8s ease-in-out "+ Math.floor( i * 10 + 15) / 100  +"s forwards"});
+				}
+				return false;
+			});
+		});
+	</script>
+
+	<style type="text/css">
+		.childlist ul {     max-height: 275px;  overflow-y: scroll; }
+
+.news_inerlist .img16_9 img { width: auto;  }
+
+#v-windows video { max-height : 100%; }
+
+.pages ul a.active {
+    background-color: #2db7b3;
+    color: #fff;
+}
+
+.info table { max-width: 100%; width: auto; height: auto; }
+.info table tr td { padding: 5px; }
+
+.page-tuisong  .haibao {
+    text-align: center;
+    display: none;
+}
+
+h3.news-tittle {
+    min-height: 60px;
+}
+
+.t-type ul li:nth-child(1) {
+    display: none;
+}
+
+.person_timeline  .tab-head {     width: 106%; height: 100%; }
+.person_timeline  .tab-head ul  { height: 100%; overflow-x: hidden; overflow-y: scroll; }	</style>
+
+</head>
+<body style="font-size: 16px;">
+<!-- <button> <i class="icon-jt"> </i></button> -->
+
+<!-- 菜单面板 -->
+<div class="menu-panle ">
+
+	<div class="fixed_right theme_skyblue ">
+
+		<div class="close3 phone">
+			<span></span><span></span>
+		</div>
+
+		<div class="searchbox pc">
+			<form action="/search.html">
+				<input type="text" name="ws" placeholder="请输入您想搜索的内容" class="menus-input font-30">
+				<button class="btn_search"></button>
+			</form>
+
+			<!---->
+		</div>
+
+		<hr class="line-bai pc">
+
+		<h1 class="english-tittle color_bai font-36 pc">SITE MAP</h1>
+
+
+
+		<div class="dot_menus pc_effect ">
+			<ul>
+				<li><p><a href="/index.html?lang=zh-cn">首页</a></p></li>
+
+								<li class="top-navid-1 active">
+					<p><a href="/about.html?lang=zh-cn" target="">学院概况</a></p>
+					
+					<ol>
+												<a class="alnavcla-7" href="/about.html?lang=zh-cn" target="">学院介绍</a>
+												<a class="alnavcla-8" href="/about/jys.html?lang=zh-cn" target="">教研室</a>
+											</ol>
+
+									</li>
+								<li class="top-navid-2">
+					<p><a href="/faculty/index/cid/203.html?lang=zh-cn" target="">师资队伍</a></p>
+					
+					<ol>
+												<a class="alnavcla-9" href="/faculty/index/cid/203.html?lang=zh-cn&amp;nvid=9" target="">师资队伍</a>
+											</ol>
+
+									</li>
+								<li class="top-navid-3">
+					<p><a href="/news.html?lang=zh-cn" target="">新闻资讯</a></p>
+					
+					<ol>
+												<a class="alnavcla-10" href="/news.html?lang=zh-cn&amp;nvid=10" target="">新闻动态</a>
+												<a class="alnavcla-11" href="/notice.html?lang=zh-cn&amp;nvid=11" target="">通知公告</a>
+												<a class="alnavcla-12" href="/lecture.html?lang=zh-cn" target="">讲座信息</a>
+												<a class="alnavcla-13" href="/plams.html?lang=zh-cn&amp;nvid=13" target="">展播平台</a>
+											</ol>
+
+									</li>
+								<li class="top-navid-4">
+					<p><a href="/research.html?lang=zh-cn&amp;nvid=16" target="">教学科研</a></p>
+					
+					<ol>
+												<a class="alnavcla-16" href="/research.html?lang=zh-cn&amp;nvid=16" target="">思想政治理论课</a>
+												<a class="alnavcla-17" href="/research/tskc.html?lang=zh-cn&amp;nvid=17" target="">特色课程</a>
+												<a class="alnavcla-18" href="/research/xkjs.html?lang=zh-cn&amp;nvid=18" target="">学科建设</a>
+												<a class="alnavcla-28" href="http://172.18.19.69:8093/" target="_blank">形势与政策课修读管理系统</a>
+												<a class="alnavcla-29" href="http://172.18.19.69:8092/" target="_blank">思政课修读情况查询系统</a>
+												<a class="alnavcla-19" href="/research/study.html?lang=zh-cn&amp;nvid=19" target="">学习交流</a>
+												<a class="alnavcla-20" href="/research/downs.html?lang=zh-cn" target="">下载专区</a>
+											</ol>
+
+									</li>
+								<li class="top-navid-5">
+					<p><a href="/party.html?lang=zh-cn" target="">党群园地</a></p>
+					
+					<ol>
+												<a class="alnavcla-24" href="/party.html?lang=zh-cn&amp;nvid=24" target="">支部概况</a>
+												<a class="alnavcla-25" href="/party/zbfc.html?lang=zh-cn" target="">支部风采</a>
+												<a class="alnavcla-26" href="/party/zbdt.html?lang=zh-cn" target="">支部动态</a>
+											</ol>
+
+									</li>
+								<li class="top-navid-6">
+					<p><a href="/contact.html?lang=zh-cn" target="">联系我们</a></p>
+					
+					<ol>
+												<a class="alnavcla-27" href="/contact.html?lang=zh-cn&amp;nvid=27" target="">联系我们</a>
+											</ol>
+
+									</li>
+							</ul>
+
+			<div class="clearfix"></div>
+		</div>
+
+
+
+		<div class="ft-bottom">
+
+			<div class="phone">
+				<div class="tool">
+
+					<!--<a href="#" class="lang">En</a>-->
+										<a href="/index/languages/lang/en.html" class="lang">En</a>
+										<!-- 登录 -->
+					<div class="position_rela">
+						<a class="icon-svg ">
+							<svg id="icon-login" xmlns="http://www.w3.org/2000/svg" width="22.72" height="22.906" viewBox="0 0 22.72 22.906">
+								<metadata><!--?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?-->
+									<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+										<rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+											<rdf:description rdf:about=""></rdf:description>
+										</rdf:rdf>
+									</x:xmpmeta>
+									<!--?xpacket end="w"?--></metadata>
+								<defs>
+
+								</defs>
+								<path id="login-1" data-name="login-1" class="login-svg" d="M3215.02,40.976A6.023,6.023,0,1,1,3209,47,6.018,6.018,0,0,1,3215.02,40.976Z" transform="translate(-3203.66 -39.469)"></path>
+								<path id="login-2" data-name="login-2" class="login-svg" d="M3205.16,62.879c0-4.35,4.41-7.877,9.85-7.877s9.86,3.527,9.86,7.877" transform="translate(-3203.66 -39.469)"></path>
+							</svg>
+						</a>
+
+
+						<div class="dropdown-link">
+														<a href="" target="_blank">内部登录</a>
+														<a href="/user/login.html" target="_blank">校园内网登录</a>
+													</div>
+					</div>
+
+					<!-- 登录组件 -->
+
+					<a href="/search.html"><img src="/static/site/img/icons/icon-search.png"></a>
+				</div>
+			</div>
+
+
+
+			<div class="menus-foot pc">
+
+				<div class="ft-wx">
+										<img src="/uploads/202509/qrcode_for_gh_86c076a28d1a_430[-]17092832_65357.jpg">
+										<p>微信公众号：南方科技大学马克思主义学院<br> 扫一扫关注我们</p>
+				</div>
+
+
+				<p class="copyright text-right">
+					<a href="https://www.sustech.edu.cn/" class="color_bai" target="_blank">南科大官网</a>
+					版权所有 南方科技大学马克思主义学院				</p>
+			</div>
+
+
+		</div>
+
+
+	</div>
+
+</div>
+<!-- 菜单面板-end -->
+
+<header>
+	<div class="headtop">
+		<div class="container">
+			<div class="logo">
+				<a href="/">
+					<img src="/uploads/202506/logo_marxism_bai[-]13134820_65975_29134912.png" class="old">
+					<img src="/uploads/202505/makesi-2[-]21110255_45097_34378154.png" class="on-color">
+				</a>
+			</div>
+
+			<div class="menu">
+				<!-- 滑块 -->
+				<button class="active_line"></button>
+				<ul>
+					<li><p><a href="/index.html?lang=zh-cn">首页</a></p></li>
+
+
+										<li class="top-navid-1 active">
+						<p><a href="/about.html?lang=zh-cn" target="">学院概况</a></p>
+						
+						<ol>
+														<a class="alnavcla-7" href="/about.html?lang=zh-cn" target="">学院介绍</a>
+														<a class="alnavcla-8" href="/about/jys.html?lang=zh-cn" target="">教研室</a>
+													</ol>
+
+											</li>
+										<li class="top-navid-2">
+						<p><a href="/faculty/index/cid/203.html?lang=zh-cn" target="">师资队伍</a></p>
+						
+						<ol>
+														<a class="alnavcla-9" href="/faculty/index/cid/203.html?lang=zh-cn&amp;nvid=9" target="">师资队伍</a>
+													</ol>
+
+											</li>
+										<li class="top-navid-3">
+						<p><a href="/news.html?lang=zh-cn" target="">新闻资讯</a></p>
+						
+						<ol>
+														<a class="alnavcla-10" href="/news.html?lang=zh-cn&amp;nvid=10" target="">新闻动态</a>
+														<a class="alnavcla-11" href="/notice.html?lang=zh-cn&amp;nvid=11" target="">通知公告</a>
+														<a class="alnavcla-12" href="/lecture.html?lang=zh-cn" target="">讲座信息</a>
+														<a class="alnavcla-13" href="/plams.html?lang=zh-cn&amp;nvid=13" target="">展播平台</a>
+													</ol>
+
+											</li>
+										<li class="top-navid-4">
+						<p><a href="/research.html?lang=zh-cn&amp;nvid=16" target="">教学科研</a></p>
+						
+						<ol>
+														<a class="alnavcla-16" href="/research.html?lang=zh-cn&amp;nvid=16" target="">思想政治理论课</a>
+														<a class="alnavcla-17" href="/research/tskc.html?lang=zh-cn&amp;nvid=17" target="">特色课程</a>
+														<a class="alnavcla-18" href="/research/xkjs.html?lang=zh-cn&amp;nvid=18" target="">学科建设</a>
+														<a class="alnavcla-28" href="http://172.18.19.69:8093/" target="_blank">形势与政策课修读管理系统</a>
+														<a class="alnavcla-29" href="http://172.18.19.69:8092/" target="_blank">思政课修读情况查询系统</a>
+														<a class="alnavcla-19" href="/research/study.html?lang=zh-cn&amp;nvid=19" target="">学习交流</a>
+														<a class="alnavcla-20" href="/research/downs.html?lang=zh-cn" target="">下载专区</a>
+													</ol>
+
+											</li>
+										<li class="top-navid-5">
+						<p><a href="/party.html?lang=zh-cn" target="">党群园地</a></p>
+						
+						<ol>
+														<a class="alnavcla-24" href="/party.html?lang=zh-cn&amp;nvid=24" target="">支部概况</a>
+														<a class="alnavcla-25" href="/party/zbfc.html?lang=zh-cn" target="">支部风采</a>
+														<a class="alnavcla-26" href="/party/zbdt.html?lang=zh-cn" target="">支部动态</a>
+													</ol>
+
+											</li>
+										<li class="top-navid-6">
+						<p><a href="/contact.html?lang=zh-cn" target="">联系我们</a></p>
+						
+						<ol>
+														<a class="alnavcla-27" href="/contact.html?lang=zh-cn&amp;nvid=27" target="">联系我们</a>
+													</ol>
+
+											</li>
+									</ul>
+
+				<div class="clearfix"></div>
+			</div>
+
+			<div class="tool">
+				<a href="https://www.sustech.edu.cn/" class="nkd-home" target="_blank">南科大官网</a>
+
+<!--				<a href="#" class="lang">En</a>-->
+
+								<a href="/index/languages/lang/en.html" class="lang">En</a>
+				
+				<!-- 登录 -->
+				<div class="position_rela">
+					<a class="icon-svg ">
+						<svg id="icon-login" xmlns="http://www.w3.org/2000/svg" width="22.72" height="22.906" viewBox="0 0 22.72 22.906">
+							<metadata><!--?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?-->
+								<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+									<rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+										<rdf:description rdf:about=""></rdf:description>
+									</rdf:rdf>
+								</x:xmpmeta>
+								<!--?xpacket end="w"?--></metadata>
+							<defs>
+
+							</defs>
+							<path id="login-1" data-name="login-1" class="login-svg" d="M3215.02,40.976A6.023,6.023,0,1,1,3209,47,6.018,6.018,0,0,1,3215.02,40.976Z" transform="translate(-3203.66 -39.469)"></path>
+							<path id="login-2" data-name="login-2" class="login-svg" d="M3205.16,62.879c0-4.35,4.41-7.877,9.85-7.877s9.86,3.527,9.86,7.877" transform="translate(-3203.66 -39.469)"></path>
+						</svg>
+					</a>
+
+
+					<div class="dropdown-link">
+												<a href="" target="_blank">内部登录</a>
+
+												<a href="/user/login.html" target="_blank">校园内网登录</a>
+											</div>
+				</div>
+				<!-- 登录组件 -->
+
+
+			</div>
+
+			<div class="dot">
+				<span></span><span></span><span></span>
+			</div>
+
+
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</header>
+
+
+<section>
+
+
+	<!-- innerban -->
+	<div class="innerban" style="background-image: url('/uploads/202306/innerban-about[-]08213720_39846.png');">
+
+	<div class="container">
+
+		<h2 class="innerban-tittle color_bai font-24">
+			<strong class="english-tittle font-48">About Us</strong>
+			学院概况		</h2>
+
+		<div class="sub_nav unerline_stick">
+			<a class="icons icon-home theme_skyblue" href="index.html"></a>
+
+			<button class="active_stickline" style="width: 48px; left: calc(35px + 0.8rem); display: inline-block;"></button>
+			<ul>
+
+				
+<li class="navcla-7 active" ts="学院介绍" tsen="Overview"><a href="/about.html?lang=zh-cn" target="">学院介绍</a></li><!-- active -->
+
+
+<li class="navcla-8" ts="教研室" tsen="Teaching and Research Office"><a href="/about/jys.html?lang=zh-cn" target="">教研室</a></li><!-- active -->
+
+			</ul>
+			<div class="clearfix"></div>
+		</div>
+
+	</div>
+	<div class="black_wamp"></div>
+</div>
+	<!-- innerban-end -->
+
+	<div class="container mode-about">
+		<div class="mainbody">
+
+			<div class="row ">
+				<div class="col-lg-4" style="height: 2254.83px;">
+					<h2 class="co-innertittle">
+						马克思主义学院						<span class="english-tittle color_skyblue">SCHOOL OF MARXISM</span>
+					</h2>
+					<h2 class="co-jjtitle" style="display: none;">
+						马克思主义学院						<span class="english-tittle color_skyblue">SCHOOL OF MARXISM</span>
+					</h2>
+
+					<!-- 数据 -->
+					<div class="li-line-2 about-data pc">
+						<ul>
+							
+
+						</ul>
+						<div class="clearfix"></div>
+					</div>
+
+					<!-- 数据-end -->
+				</div>
+
+				<div class="col-lg-7 col-lg-offset-1">
+
+					<div class="info about-info">
+						<p><span style="font-family: 宋体; font-size: 19px; text-indent: 37px; text-wrap-mode: wrap;">南方科技大学马克思主义学院是学校学习研究宣传马克思主义的主阵地。学院坚持以习近平新时代中国特色社会主义思想为指导，充分发挥思政课立德树人关键课程作用和马克思主义理论学科引领作用，着力培养具有坚定理想信念、深厚家国情怀的社会主义建设者和接班人，为全面建设社会主义现代化国家、实现中华民族伟大复兴的中国梦提供坚实学理支撑和人才支持。</span></p><p><br></p><p><img src="/uploads/image/20230522/1684736898651520.png"></p><p><br></p><p><span style="text-indent: 37px; text-wrap-mode: wrap; font-family: 宋体; font-size: 19px;">学院现有专职思政课教师1</span><span style="text-indent: 37px; text-wrap-mode: wrap; font-family: 宋体; font-size: 19px;">2</span><span style="text-indent: 37px; text-wrap-mode: wrap; font-family: 宋体; font-size: 19px;">人，其中，讲席教授1人，教授2人，副教授7人，讲师</span><span style="text-indent: 37px; text-wrap-mode: wrap; font-family: 宋体; font-size: 19px;">2</span><span style="text-indent: 37px; text-wrap-mode: wrap; font-family: 宋体; font-size: 19px;">人；公共课教师1人；行政教辅8人，初步打造了一支老中青结合的高水平思政课教师队伍。此外，学校“通识教育教研组”有思政教师29人，负责劳动教育、成长通识教育、国防与军事理论教育、思政实践课。</span></p><p><br></p><p><img src="/uploads/image/20230522/1684736898980938.png"></p><p><br></p><p><span style="text-indent: 37px; text-wrap-mode: wrap; font-family: 宋体; font-size: 19px;">学院承担全校本科生“思想道德与法治”“中国近现代史纲要”“马克思主义基本原理”“毛泽东思想和中国特色社会主义理论体系概论”“习近平新时代中国特色社会主义思想概论”“形势与政策”等课程；硕士研究生“自然辩证法概论”“新时代中国特色社会主义理论与实践”，博士研究生“中国马克思主义与当代”等必修及选修课程。2024年学院</span><span style="text-indent: 37px; text-wrap-mode: wrap; font-family: 宋体; font-size: 19px;">成立</span><span style="text-indent: 37px; text-wrap-mode: wrap; font-family: 宋体; font-size: 19px;">中国式现代化深圳实践创新研究中心</span><span style="text-indent: 37px; text-wrap-mode: wrap; font-family: 宋体; font-size: 19px;">。</span></p><p><span style="text-indent: 37px; text-wrap-mode: wrap; font-family: 宋体; font-size: 19px;"><br></span></p><p><span style="text-indent: 37px; text-wrap-mode: wrap; font-family: 宋体; font-size: 19px;"><span style="font-family: 宋体; font-size: 19px; letter-spacing: 0px; text-indent: 37px; text-wrap-mode: wrap; background: rgb(255, 255, 255);">面向未来，</span><span style="font-family: 宋体; font-size: 19px; letter-spacing: 0px; text-indent: 37px; text-wrap-mode: wrap; background: rgb(255, 255, 255);">南方科技</span><span style="font-family: 宋体; font-size: 19px; letter-spacing: 0px; text-indent: 37px; text-wrap-mode: wrap; background: rgb(255, 255, 255);">大学马克思主义学院正在为建成全国一流、世界知名的马克思主义教学、科研和理论宣传</span><span style="font-family: 宋体; font-size: 19px; letter-spacing: 0px; text-indent: 37px; text-wrap-mode: wrap; background: rgb(255, 255, 255);">高地</span><span style="font-family: 宋体; font-size: 19px; letter-spacing: 0px; text-indent: 37px; text-wrap-mode: wrap; background: rgb(255, 255, 255);">而奋斗！</span></span></p><p><span style="text-indent: 37px; text-wrap-mode: wrap; font-family: 宋体; font-size: 19px;"><span style="font-family: 宋体; font-size: 19px; letter-spacing: 0px; text-indent: 37px; text-wrap-mode: wrap; background: rgb(255, 255, 255);"><br></span></span></p><p><span style="text-indent: 37px; text-wrap-mode: wrap; font-family: 宋体; font-size: 19px;"><span style="font-family: 宋体; font-size: 19px; letter-spacing: 0px; text-indent: 37px; text-wrap-mode: wrap; background: rgb(255, 255, 255);"><br></span></span></p><p><br></p><p><span style="text-indent: 37px; text-wrap-mode: wrap; font-family: 宋体; font-size: 19px;"><span style="font-family: 宋体; font-size: 19px; letter-spacing: 0px; text-indent: 37px; text-wrap-mode: wrap; background: rgb(255, 255, 255);"></span></span></p><p><br></p><p><br></p><p><br></p><p><img src="/uploads/image/20250904/1756958193298473.jpg" title="1756958193298473.jpg" alt="马院组织机构_01.jpg"></p><p><br></p><p><br></p><p><br></p><p><br></p><p><img src="/uploads/image/20250908/1757317897888538.jpg" title="1757317897888538.jpg" alt="马院组织机构_04.jpg"></p><p><img src="/uploads/image/20250905/1757035320103739.jpg" title="1757035320103739.jpg" alt="马院组织机构_05.jpg"><img src="/uploads/image/20250904/1756958238442149.jpg" title="1756958238442149.jpg" alt="马院组织机构_06.jpg"></p><p><br></p>					</div>
+
+
+
+					<!-- 数据移动端 -->
+					<div class="li-line-2 about-data phone">
+						<ul>
+
+
+													</ul>
+						<div class="clearfix"></div>
+					</div>
+
+					<!-- 数据-end -->
+
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</section>
+
+<script type="text/javascript">
+	$(function () {
+		setTimeout(function () {
+			$('.co-innertittle').html($('.co-jjtitle').html());
+		},100);
+	});
+</script>
+
+<footer>
+	<!-- 返回顶部 -->
+	<div class="btn_backtop"> <span class="angle"></span> Top</div>
+
+	<div class="foot" style="background-image: url('/static/site/img/ft-bg.png');">
+		<div class="container">
+			<div class="ft-logo float-left">
+				<a href="/"><img src="/uploads/202506/logo_marxism_bai[-]13134820_65975_29134912.png"></a>
+			</div>
+
+			<!-- 移动端 -->
+			<div class="ft-content phone">
+				<dl>
+					<dt>
+												<img src="/uploads/202509/qrcode_for_gh_86c076a28d1a_430[-]17092832_65357.jpg" alt="">
+											</dt>
+
+					<dd>
+						<div class="tab-head">
+							<ul>
+								<li class="active_skyblue">本科教务</li>
+								<li>研究生教务</li>
+							</ul>
+							<div class="clearfix"></div>
+						</div>
+
+						<div class="tab-body">
+							<p class="phone_num"></p>
+							<p class="phone_num"></p>
+						</div>
+					</dd>
+
+					<div class="clearfix"></div>
+				</dl>
+
+
+				<p>地址：深圳市南山区西丽学苑大道1088号创园6栋4楼</p>
+				<p>邮编：518055</p>
+
+				<!--<p>tels</p>
+				<p>chuanz</p>-->
+
+				<div class="copyright">
+					<p class="font-14">联系邮箱：<a href="mailto:sizheng@sustech.edu.cn">sizheng@sustech.edu.cn</a> <span>版权所有 南方科技大学马克思主义学院</span></p>
+				</div>
+			</div>
+			<!-- 移动端-end -->
+
+			<div class="float-right pc">
+				<div class="ft-menu">
+					<ul>
+						<li><p><a href="/index.html?lang=zh-cn">首页</a></p></li>
+
+												<li>
+							<p><a href="/about.html?lang=zh-cn" target="">学院概况</a></p>
+
+
+							
+							<ol>
+																<a class="alnavcla-7" href="/about.html?lang=zh-cn" target="">学院介绍</a>
+																<a class="alnavcla-8" href="/about/jys.html?lang=zh-cn" target="">教研室</a>
+															</ol>
+
+													</li>
+												<li>
+							<p><a href="/faculty/index/cid/203.html?lang=zh-cn" target="">师资队伍</a></p>
+
+
+							
+							<ol>
+																<a class="alnavcla-9" href="/faculty/index/cid/203.html?lang=zh-cn&amp;nvid=9" target="">师资队伍</a>
+															</ol>
+
+													</li>
+												<li>
+							<p><a href="/news.html?lang=zh-cn" target="">新闻资讯</a></p>
+
+
+							
+							<ol>
+																<a class="alnavcla-10" href="/news.html?lang=zh-cn&amp;nvid=10" target="">新闻动态</a>
+																<a class="alnavcla-11" href="/notice.html?lang=zh-cn&amp;nvid=11" target="">通知公告</a>
+																<a class="alnavcla-12" href="/lecture.html?lang=zh-cn" target="">讲座信息</a>
+																<a class="alnavcla-13" href="/plams.html?lang=zh-cn&amp;nvid=13" target="">展播平台</a>
+															</ol>
+
+													</li>
+												<li>
+							<p><a href="/research.html?lang=zh-cn&amp;nvid=16" target="">教学科研</a></p>
+
+
+							
+							<ol>
+																<a class="alnavcla-16" href="/research.html?lang=zh-cn&amp;nvid=16" target="">思想政治理论课</a>
+															</ol>
+
+													</li>
+												<li>
+							<p><a href="/party.html?lang=zh-cn" target="">党群园地</a></p>
+
+
+							
+							<ol>
+															</ol>
+
+													</li>
+												<li>
+							<p><a href="/contact.html?lang=zh-cn" target="">联系我们</a></p>
+
+
+							
+							<ol>
+															</ol>
+
+													</li>
+						
+
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+
+				<div class="copyright">
+					<p class="font-14">联系邮箱：<a href="mailto:sizheng@sustech.edu.cn">sizheng@sustech.edu.cn</a> <span><a href="https://www.unisonbrand.com/" target="_blank" style="display: none;">Design by unison.</a>版权所有 南方科技大学马克思主义学院</span></p>
+				</div>
+
+			</div>
+
+			<div class="clearfix"></div>
+
+		</div>
+	</div>
+
+
+</footer>
+
+<!-- 弹窗 -->
+<div id="v-windows"> </div>
+
+
+
+<script type="text/javascript">
+	var parnidvalss = "";
+	var topparnidvalss = "1";
+	var nvidval = "1";
+	var cidvalss = "";
+	var reqActionStr = "index";
+	var uidvvss = "";
+	$(function () {
+		if ($('.pages a').length < 1){
+			$('.pages').hide();
+		}
+		/*if (parnidvalss){
+			$('.chnavcla-'+parnidvalss).addClass('active');
+		}*/
+		if (topparnidvalss){
+			$('.top-navid-'+topparnidvalss).addClass('active');
+		}
+		if (nvidval){
+			$('.navcla-'+nvidval).addClass('active');
+			$('.chnavcla-'+nvidval).addClass('active');
+		}
+		/*if (cidvalss){
+			linkAppendParam();
+		}*/
+
+		if (!uidvvss){
+			//$('.alnavcla-20,.navcla-20').css('display','none');
+		}
+
+		$('.dot_menus ul li ol').each(function () {
+			if ($(this).find('a').length < 1){
+				$(this).hide();
+			}
+		});
+
+
+		navselOpt('.sub_nav ul li a','active');
+
+		setTimeout(function () {
+			var cots = $('.sub_nav .active').attr('ts');
+			var cotsen = $('.sub_nav .active').attr('tsen');
+
+			if (cots){
+				$('.co-innertittle').html(cots+'<span class="english-tittle color_skyblue">'+cotsen+'</span>');
+			}
+			$('.co-innertittle').show();
+		},10);
+
+	});
+
+	function navselOpt(obj,cla,parele) {
+		var locah = location.href;
+		var cidlink = cidvalss ? '/'+reqActionStr+'/cid/'+cidvalss : '';
+		var pareleval = parele ? parele : 'li' ;
+		$(obj).each(function(){
+			var sellink = $(this).attr('href');
+			var sellinks = sellink.split('?');
+			var sellinksq = sellink.split('.html');
+			var sellinksq_x = sellinksq[0].split('/');
+
+			if (sellink){
+				if (locah.indexOf(sellinks[0]) !== -1 || locah.indexOf(sellinksq[0]+'.') !== -1 || locah.indexOf(sellinksq[0]+'/index') !== -1 || (cidlink && sellink.indexOf(cidlink) !== -1) || (sellinksq_x.length > 2 && locah.indexOf(sellinksq[0]+'/') !== -1)){
+					$(this).parents(pareleval).addClass(cla);
+				}
+			}
+		});
+	}
+
+	function linkAppendParam() {
+		//var AnvidStr = 'nvid='+nvidval;
+		var AnvidStr = 'cid='+cidvalss;
+		$('.mainbody a').each(function () {
+			var AlinkHref = $(this).attr('href');
+			if (AlinkHref && AlinkHref.indexOf('http') < 0 && AlinkHref.indexOf('#') < 0 && AlinkHref.indexOf('cid=') < 0){
+				var aParam = (AlinkHref.indexOf('?') < 0) ? '?'+AnvidStr : '&'+AnvidStr ;
+				$(this).attr('href',AlinkHref+aParam);
+				// console.log(AlinkHref+aParam);
+			}
+		});
+	}
+</script>
+
+
+<script src="/static/site/js/jquery.mousewheel.js"></script>
+<script src="/static/site/js/new_rl_date.js"></script>
+<script src="/static/site/js/normaol_zj.js"></script>
+<script src="/static/site/js/index.js"></script>
+<script src="/static/site/js/donghua.js"></script>
+
+
+
+</body></html>

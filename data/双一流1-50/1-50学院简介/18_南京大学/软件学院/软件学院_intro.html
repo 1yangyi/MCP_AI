@@ -1,0 +1,405 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>软件学院</title>
+    <script type="text/javascript" src="/njdx/front/ui/jquery/jquery.js?v=v4.0.2"></script><script type="text/javascript" src="/njdx/front/ui/jquery/jquery.base64.js?v=v4.0.2"></script><script type="text/javascript" src="/njdx/front/ui/boshan/ui.js" data-appurl="/njdx"></script><script type="text/javascript" src="/njdx/front/ui/jquery/jquery.js"></script><script type="text/javascript" src="/njdx/front/ui/jquery/jquery.base64.js"></script><link type="text/css" rel="stylesheet" href="/njdx/front/ui/page/info.css?v=v4.0.2"><link type="text/css" rel="stylesheet" href="/njdx/front/ui/page/channel.css?v=v4.0.2"><script type="text/javascript" src="/njdx/front/ui/visit/visit.js?s=86&amp;c=6446&amp;v=v4.0.2"></script><script type="text/javascript" src="/njdx/front/ui/jwplayer/jwplayer.js?v=v4.0.2"></script><script type="text/javascript" src="/njdx/front/ui/jwplayer/bs.js?v=v4.0.2"></script><script type="text/javascript" src="/njdx/front/ui/pdf/build/pdf.js?v=v4.0.2"></script><script type="text/javascript" src="/njdx/front/ui/pdf/showpdf.js?v=v4.0.2"></script><script type="text/javascript" src="/njdx/front/ui/layer/layer.js?v=v4.0.2"></script><link rel="stylesheet" href="https://software.nju.edu.cn/njdx/front/ui/layer/skin/layer.css" id="layui_layer_skinlayercss" style=""><script type="text/javascript" src="/njdx/front/ui/layer/bs.js?v=v4.0.2"></script><script type="text/javascript" src="/njdx/front/ui/template/es5-shim.min.js?v=v4.0.2"></script><script type="text/javascript" src="/njdx/front/ui/template/es5-sham.min.js?v=v4.0.2"></script><script type="text/javascript" src="/njdx/front/ui/template/template-web.js?v=v4.0.2"></script><script type="text/javascript" src="/njdx/front/ui/template/template-bs.js?v=v4.0.2"></script>
+    <link rel="stylesheet" href="/DFS//template/1322/images/common.css">
+    <link rel="stylesheet" href="/DFS//template/1327//images/index.css">
+    <link rel="stylesheet" href="/DFS//template/1322/images/header_footer.css">
+    <link rel="stylesheet" href="/DFS//template/1327//images/zsy_index.css">
+    <link rel="stylesheet" href="/DFS//template/1322/images/zsy_common.css">
+    <link rel="icon" href="/DFS//template/1327//images/rjxy.png" type="image/x-icon">
+
+    <style>
+      .top{background: url(/DFS/template/1324/images/main_bg.png) #fffefc;}
+      .wz {border-bottom: 1px solid #ececec;background:none;}
+      .wz_main{width:100%;}
+      .dqlm{border-bottom: 1px solid #73116f;display: inline-block;text-align: center;padding: 0px 10px;font-size: 16px;font-weight: bold;color: #73116f;cursor: pointer;}
+      .left ul{top:93px;}
+      .left{padding-top:20px;}
+      .content{padding-top:30px;}
+      .content table{margin:auto;}
+      .content table,.content table tr,.content table tr td{border:1px solid #333;}
+      .main{padding-bottom:30px;}
+    </style>
+  </head>
+
+  <body>
+    <!-- 头部 -->
+    <script src="/DFS//template/1322/images/header.js"></script><!--头部开始-->
+<div class="wp-wrapper wp-header">
+  <div class="wp-inner clearfix">
+      <!--logo开始-->
+      <div class="wp-panel logo-panel panel-1"> 
+          <a class="navi-aside-toggle navi-aside-toggle-show"></a>
+          <div class="wp-window logo-window window-1">
+              <a href="/main.htm">
+                  <img class="site-logo" src="/DFS/template/1322/images/logo.png">
+              </a>
+          </div>
+      </div>
+      <!--//logo结束-->
+      <!--搜索开始-->
+      <div class="wp-panel search-panel panel-3">
+          <div class="searchbtn"></div>
+          <div class="wp-window search-window window-3" portletmode="search">
+              <div class="wp-search clearfix">
+                  <form method="post" action="/njdx/front/aisearch/search.do" target="_blank">
+                      <div class="search-input">
+<input class="search-title" name="wd" id="wd" type="text" value="Search..." onclick="if(this.value == 'Search...')this.value=''" ;="" onblur="if(this.value == '')this.value='Search...';">
+                          <input type="hidden" name="siteid" id="siteid" value="86">
+                          <input type="hidden" name="tplid" id="tplid" value="1371">
+                          <input type="hidden" name="indexids" id="indexids" value="1">
+                      </div>
+                      <div class="search-btn">
+                          <input class="search-submit" name="submit" type="submit" value="">
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+      <a href="/English/index.html" target="_blank" class="fr" style="float:left;color:#fff;padding-left:10px;border-left:1px solid;position:absolute;top:52px;right:10px;">English</a>
+      <script type="text/javascript">
+          $('body,html').click(function () {
+              $('.search-window').animate({ 'width': '45px' });
+              $('.searchbtn').stop(true, true).fadeIn();
+              $('.navlist').slideUp();
+          });
+
+          $('.searchbtn').click(function () {
+              $(this).stop(true, true).fadeOut();
+              $('.search-window').stop(true, true).animate({ 'width': '250px' });
+              return false;
+          });
+          $('.search-input').click(function () {
+              return false;
+          });
+
+          $('.kxbtn').hover(function () {
+              $('.btncon').fadeIn();
+          }, function () {
+              $('.btncon').fadeOut();
+          });
+
+          $('.site-logo').parent('a').attr('href', '/main.htm');
+
+          var href = $('.post-23').find('a').attr('href');
+          var length = $('.post-22').find('li.newsn').length;
+          $('.post-22').find('li.newsn').each(function (index, el) {
+              if ($(this).find('a').attr('href') == href) {
+                  $(this).remove();
+              }
+          });
+          if (length > 2) {
+              $('.post-22').find('li.newsn').eq(2).remove();
+
+          }
+      </script>
+      <!--//搜索结束-->
+  </div>
+</div>
+<!--头部结束-->
+<!--手机导航开始-->
+<div class="wp-navi-aside" id="wp-navi-aside">
+  <div class="aside-inner">
+      <div class="navi-aside-wrap">
+          <div class="navi-aside-head">
+              <h3 class="navi-aside-title">导航</h3>
+          </div>
+          <ul class="wp-menu clearfix">
+              <li class="menu-item i1">
+                  <a class="menu-link" href="#" target="_self">学院概况</a>
+                  <em class="menu-switch-arrow"></em>
+                  <ul class="sub-menu clearfix">
+                      <li class="sub-item i1-1"> <a href="/xygk/bxdw/index.html">学院简介</a></li>
+                      <li class="sub-item i1-1"> <a href="/xygk/ysjl/index.html">院史纪略</a></li>
+                      <li class="sub-item i1-1"> <a href="/xygk/jxss/index.html">机构设置</a></li>
+                  </ul>
+              </li>
+              <li class="menu-item i1">
+                  <a class="menu-link" href="#" target="_self">师资力量</a>
+                  <em class="menu-switch-arrow"></em>
+                  <ul class="sub-menu clearfix">
+                      <li class="sub-item i1-1"> <a href="/szll/szdw/index.html">专业教师</a></li>
+                      <li class="sub-item i1-1"> <a href="/szll/yjsds/index.html">科研团队</a></li>
+                  </ul>
+              </li>
+              <li class="menu-item i1">
+                  <a class="menu-link" href="#" target="_self">人才培养</a>
+                  <em class="menu-switch-arrow"></em>
+                  <ul class="sub-menu clearfix">
+                      <li class="sub-item i1-1"> <a href="/rcpy/bks/index.html">本科生</a></li>
+                      <li class="sub-item i1-1"> <a href="/rcpy/yjs/index.html">硕士生</a></li>
+                      <li class="sub-item i1-1"> <a href="/rcpy/bss/index.html">博士生</a></li>
+                  </ul>
+              </li>
+              <li class="menu-item i1">
+                  <a class="menu-link" href="#" target="_self">招生就业</a>
+                  <em class="menu-switch-arrow"></em>
+                  <ul class="sub-menu clearfix">
+                      <li class="sub-item i1-1"> <a href="/zsjy/bkszs/index.html">本科生招生</a></li>
+                      <li class="sub-item i1-1"> <a href="/zsjy/ssszs/index.html">硕士生招生</a></li>
+                      <li class="sub-item i1-1"> <a href="/zsjy/bsszs/index.html">博士生招生</a></li>
+                      <li class="sub-item i1-1"> <a href="/zsjy/bksjy/index.html">毕业生就业</a></li>
+                  </ul>
+              </li>
+              <li class="menu-item i1">
+                <a class="menu-link" href="#" target="_self">党的建设</a>
+                <em class="menu-switch-arrow"></em>
+                <ul class="sub-menu clearfix">
+                    <li class="sub-item i1-1"> <a href="/ddjs/zbjs/index.html">支部建设</a></li>
+                    <li class="sub-item i1-1"> <a href="/ddjs/tzgg/index.html">通知公告</a></li>
+                    <li class="sub-item i1-1"> <a href="/ddjs/xxjy/index.html">学习教育</a></li>
+                    <li class="sub-item i1-1"> <a href="/ddjs/qtgz/index.html">群团工作</a></li>
+                    <li class="sub-item i1-1"> <a href="/ddjs/gzzd/index.html">规章制度</a></li>
+                    <li class="sub-item i1-1"> <a href="/ddjs/zlhb/index.html">资料汇编 </a></li>
+                </ul>
+              </li>
+              <li class="menu-item i1">
+          <a class="menu-link" href="/esznyq/index.html">二十周年院庆</a>
+                <em class="menu-switch-arrow"></em>
+                <ul class="sub-menu clearfix">
+                   <li class="sub-item i1-1"><a href="/esznyq/yqgg/index.html">院庆公告</a></li>
+                   <li class="sub-item i1-1"><a href="/esznyq/yqesznxcp/index.html">院庆二十周年宣传片</a></li>
+                   <li class="sub-item i1-1"><a href="/esznyq/yqxlhd/index.html">院庆系列活动</a></li>
+                   <li class="sub-item i1-1"><a href="/esznyq/yqjzlt/index.html">院庆讲座论坛</a></li>
+                   <li class="sub-item i1-1"><a href="/esznyq/yqzw/index.html">院庆征文</a></li>
+                   <li class="sub-item i1-1"><a href="/esznyq/jzzn/index.html">捐赠指南</a></li>
+                   <li class="sub-item i1-1"><a href="/esznyq/jzzx/index.html">捐赠致谢</a></li>
+                </ul>
+      </li>
+              <li class="menu-item i1">
+                <a class="menu-link" href="#" target="_self">院友之家</a>
+                <em class="menu-switch-arrow"></em>
+                <ul class="sub-menu clearfix">
+                    <li class="sub-item i1-1"> <a href="/yyzj/ljbyz/index.html">历届毕业照</a></li>
+                    <li class="sub-item i1-1"> <a href="/yyzj/yyfc/index.html">院友风采</a></li>
+                    <li class="sub-item i1-1"> <a href="/yyzj/yydt/index.html">院友动态</a></li>
+                </ul>
+              </li>
+              <li class="menu-item i1">
+                <a class="menu-link" href="/cpyc/index.html" target="_self">诚聘英才</a>
+                <em class="menu-switch-arrow"></em>
+              </li>
+              <li class="menu-item i1">
+                <a class="menu-link" href="/jxpt/index.html" target="_self">教学平台</a>
+                <em class="menu-switch-arrow"></em>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div class="navi-aside-mask"></div>
+</div>
+<!-- 手机导航结束 -->
+<!--PC导航-->
+<div class="nav fr">
+  <ul class="nav_pc">
+      <li>
+          <a class="s1" href="/">首页</a>
+      </li>
+      <li class="nav_li">
+          <a class="s1" href="/xygk/index.html">学院概况</a>
+          <div class="s2 mad1" style="margin-left: 0px; margin-right: 0px;">
+              <div class="s3">
+                  <a href="/xygk/bxdw/index.html">学院简介</a>
+                  <a href="/xygk/ysjl/index.html">院史纪略</a>
+                  <a href="/xygk/jxss/index.html">机构设置</a>
+              </div>
+              <div class="clear"></div>
+          </div>
+      </li>
+      <li class="nav_li">
+          <a class="s1" href="/szll/index.html">师资力量</a>
+          <div class="s2 mad2" style="margin-left: 0px; margin-right: 0px;">
+              <div class="s3">
+                  <a href="/szll/szdw/index.html">专业教师</a>
+                  <a href="/szll/yjsds/index.html">科研团队</a>
+              </div>
+              <div class="clear"></div>
+          </div>
+      </li>
+      <li class="nav_li">
+          <a class="s1" href="/rcpy/index.html">人才培养</a>
+          <div class="s2 mad3" style="margin-left: 0px; margin-right: 0px;">
+              <div class="s3">
+                  <a class="pad" href="/rcpy/bks/index.html">本科生</a>
+                  <a href="/rcpy/yjs/index.html">硕士生</a>
+                  <a href="/rcpy/bss/index.html">博士生</a>
+              </div>
+              <div class="clear"></div>
+          </div>
+      </li>
+      <li class="nav_li">
+          <a class="s1" href="/zsjy/index.html">招生就业</a>
+          <div class="s2 mad4" style="margin-left: 0px; margin-right: 0px;">
+              <div class="s3">
+                  <a class="pad" href="/zsjy/bkszs/index.html">本科生招生</a>
+                  <a href="/zsjy/ssszs/index.html">硕士生招生</a>
+                  <a href="/zsjy/bsszs/index.html">博士生招生</a>
+                  <a href="/zsjy/bksjy/index.html">毕业生就业</a>
+              </div>
+              <div class="clear"></div>
+          </div>
+      </li>
+      <li class="nav_li">
+          <a class="s1" href="/ddjs/index.html">党的建设 </a>
+          <div class="s2 mad5" style="margin-left: 0px; margin-right: 0px;">
+              <div class="s3">
+                    <a class="pad" href="/ddjs/zbjs/index.html">支部建设</a>
+                    <a href="/ddjs/tzgg/index.html">通知公告</a>
+                    <a href="/ddjs/xxjy/index.html">学习教育</a>
+                    <a href="/ddjs/qtgz/index.html">群团工作</a>
+                    <a href="/ddjs/gzzd/index.html">规章制度</a>
+                    <a href="/ddjs/zlhb/index.html">资料汇编 </a>
+              </div>
+              <div class="clear"></div>
+          </div>
+      </li>
+     <!-- <li style="nav_li">
+          <a class="s1" href="/kyzt/index.html">抗疫专题</a>
+      </li>-->
+      <li class="nav_li">
+          <a class="s1" href="/esznyq/index.html">二十周年院庆</a>
+          <div class="s2 mad6" style="margin-left: 0px; margin-right: 0px;">
+              <div class="s3">
+                  <a href="/esznyq/yqgg/index.html">院庆公告</a>
+                  <a href="/esznyq/yqesznxcp/index.html">院庆二十周年宣传片</a>
+                  <a href="/esznyq/yqxlhd/index.html">院庆系列活动</a>
+                  <a href="/esznyq/yqjzlt/index.html">院庆讲座论坛</a>
+                  <a href="/esznyq/yqzw/index.html">院庆征文</a>
+                  <a href="/esznyq/jzzn/index.html">捐赠指南</a>
+                  <a href="/esznyq/jzzx/index.html">捐赠致谢</a>
+              </div>
+              <div class="clear"></div>
+          </div>
+      </li>
+      <li class="nav_li">
+          <a class="s1" href="/yyzj/index.html">院友之家</a>
+          <div class="s2 mad6" style="margin-left: 0px; margin-right: 0px;">
+              <div class="s3">
+                  <a href="/yyzj/ljbyz/index.html">历届毕业照</a>
+                  <a href="/yyzj/yyfc/index.html">院友风采</a>
+                  <a href="/yyzj/yydt/index.html">院友动态</a>
+              </div>
+              <div class="clear"></div>
+          </div>
+      </li>
+      <li>
+          <a class="s1" href="/cpyc/index.html">诚聘英才</a>
+      </li>
+      <li style="background: none;">
+          <a class="s1" href="/jxpt/index.html">教学平台</a>
+      </li>
+      <div class="clear"></div>
+  </ul>
+</div>
+<!-- PC导航结束 -->
+<script type="text/javascript" src="/DFS/template/1322/images/app.js"></script>
+<script>
+  $(function () {
+      // 初始化SDAPP
+      new SDAPP({
+          "menu": {
+              type: "aside,slide"
+          }
+      });
+  });
+</script>
+<link rel="stylesheet" href="/DFS/template/1322/images/medie.css">
+<script src="/DFS/template/1322/images/jquery.sudy.js"></script>
+<script type="text/javascript" src="/DFS/template/1322/images/jquery.sudyNav.js"></script>
+
+    <!-- 主体 -->
+    <div class="main_bg fl">
+      <!-- 图片 -->
+      <div class="top">
+        <script type="text/javascript" language="JavaScript1.1">
+
+          //Script that refreshes on browser refresh and display a different image
+          //store the quotations in arrays
+          quotes = new Array(5);
+          quotes[0] = "<img src='/DFS/template/1322/images/banner1.png' width='1200' height='200' usemap='#eco1'>";
+          quotes[1] = "<img src='/DFS/template/1322/images/banner2.png' width='1200' height='200' usemap='#eco2'>";
+          quotes[2] = "<img src='/DFS/template/1322/images/banner3.png' width='1200' height='200' usemap='#eco2'>";
+          quotes[3] = "<img src='/DFS/template/1322/images/banner4.png' width='1200' height='200' usemap='#eco2'>";
+          quotes[4] = "<img src='/DFS/template/1322/images/banner5.png' width='1200' height='200' usemap='#eco2'>";
+
+          //calculate a random index
+          index = Math.floor(Math.random() * quotes.length);   
+          //display the quotation
+          document.write("" + quotes[index] + "");   
+          // 
+        </script><img src="/DFS/template/1322/images/banner2.png" width="1200" height="200" usemap="#eco2">
+
+      </div>
+      <div class="main dis_flex">
+        <!-- 左侧 -->
+        <div class="left fl ml_li pr">
+          <div class="lb_name">
+              学院概况
+          </div>
+          <ul class="pa">
+              <li class=" active" id="学院简介"><a href="https://software.nju.edu.cn//xygk/bxdw/index.html" class="dis_block">学院简介</a></li>
+              <li class="channelname fl" id="院史纪略"><a href="https://software.nju.edu.cn//xygk/ysjl/index.html" class="dis_block">院史纪略</a></li>
+              <li class="channelname fl" id="机构设置"><a href="https://software.nju.edu.cn//xygk/jxss/index.html" class="dis_block">机构设置</a></li>
+          </ul>
+          <script language="javascript"> 
+            window.onload=function(){
+              学院简介.className=" active";
+            }
+          </script>
+        </div>
+        <!-- 右侧 -->
+        <div class="right ml">
+          <div class="wz">
+            <div class="wz_main">
+              <span class="dqlm">
+                    学院简介
+              </span>
+              <ul class="fr" style="padding-right:10px;">
+                <li class="fl">当前位置：</li>
+                <li class="fl"><a href="https://software.nju.edu.cn/">首页</a></li>
+                 &gt; <a href="https://software.nju.edu.cn//xygk/index.html">学院概况</a> &gt; <a href="https://software.nju.edu.cn//xygk/bxdw/index.html">学院简介</a>
+              </ul>
+            </div>
+          </div>
+              <!-- <h3 style="text-align:center;margin:20px;">学院介绍</h3> -->
+              <div class="content"><p style="text-align: left; text-indent: 2em; line-height: 3em;"><span style="font-size: 16px;"><strong>【发展历程】</strong></span></p><p style="text-align: left; text-indent: 2em; line-height: 2em;">2002年南京大学软件学院正式成立，是教育部首批国家级示范性软件学院之一；2003年起，学院开始系统地研究软件工程专业人才培养体系，在国内率先连续推出《 南京大学软件工程学科教程 》系列化版本，确立了具有明显软件工程专业特色的、覆盖本科和研究生的、独立完善的学科教育体系；2005年，学院 “ 软件工程专业工程化实践教学体系的构建与实施 ” 首次获得国家教学成果二等奖； 2011年获批软件工程一级学科博士学位授予点；2015年入选江苏省品牌专业（ A类 ）；2019年软件工程专业入选首批国家级一流本科专业建设点；2021年学院入选首批特色化示范性软件学院，获批重点建设领域为关键基础软件和行业应用软件。</p><p style="text-align: left; text-indent: 2em; line-height: 2em;">学院现建有软件工程一级博士学位授权点和硕士学位授权点、电子信息类软件工程和大数据技术与工程领域专业学位授权点、软件工程本科专业。依托软件工程一级（ A类 ）学科和计算机软件新技术全国重点实验室，建有 “ 江苏省实验教学与实践教育中心 -- 南京大学软件工程实验教学中心 ” 和 “ 计算机科学技术与软件工程国家级实验教学示范中心（ 南京大学 ）”（ 与计算机科学与技术系共建 ）等教学平台，以及 “ 南京大学应用软件工程技术中心 ”、“ 南京大学 - 星环科技 星云数据技术联合研究中心 ” 等科研机构。</p><p><br style="text-align: left;"></p><p style="text-align: left; text-indent: 2em; line-height: 4em;"><span style="font-size: 16px;"><strong>【学科建设】</strong></span></p><p style="text-align: left; text-indent: 2em; line-height: 2em;">在学科建设方面，近十年来软件学院有力支持了我校软件工程一级学科建设和计算机科学与技术国家双一流学科建设，为计算机软件新技术国家重点实验室连续三次评估优秀做出贡献。软件工程学科在全国一级学科评估中获评 A 类学科，先后入选江苏省优势学科和江苏省重点学科，据 CSRanking 国际高水平论文统计（ 2011-2023 ）南京大学软件工程方向位列世界第一。</p><p style="text-align: left; text-indent: 2em; line-height: 2em;">软件学院入选首批国家特色化示范性软件学院，与华为、南瑞、星环科技紧密合作，聚焦关键基础软件、行业应用软件领域的创新人才培养。</p><p><br style="text-align: left;"></p><p style="text-align: left; text-indent: 2em; line-height: 4em;"><span style="font-size: 16px;"><strong>【师资队伍】</strong></span></p><p style="text-align: left; text-indent: 2em; line-height: 2em;">学院建成包括 IEEE Fellow / CCF青年科学家奖 / 中创软件人才奖 / NASAC青年软件创新奖等人才的 “ 软件工程国家级教学团队 ”，现有全职教授9人，副教授11人，准长聘教师4人，讲师 1 人，专职科研教师 9 人。</p><p style="text-align: left; text-indent: 2em; line-height: 2em;">学院现拥有 “ 软件研发效能 ”、“ 智能软件工程 ”、“ 媒体识别与理解研究组 ”、“ 语言智能处理研究组 ”、“ 人机交互 ”、“ 计算机网络 ”等专业科研和教学实验室，和国内外40余家著名软件企业合作建立了教学实践基地。</p><p><br style="text-align: left;"></p><p style="text-align: left; text-indent: 2em; line-height: 4em;"><span style="font-size: 16px;"><strong>【人才培养】</strong></span></p><p style="text-align: left; text-indent: 2em; line-height: 2em;">学院高度重视教学和人才培养。软件工程本科专业2019年首批入选国家级一流本科专业建设点，先后获得国家级教学成果一等奖1次（ 与计算机科学与技术系联合申请 ），国家级教学成果二等奖3次，入选 “ 十一五 ” 国家级特色专业，“ 十二五 ” 国家级专业综合改革试点，国家级人才培养模式创新实验区，国家级教学团队，教育部卓越工程师教育培养计划和国家工程实践教育基地，以及江苏省重点专业，江苏省卓越工程师（ 软件类 ）教育培养计划和江苏省品牌专业（ A类 ）；软件工程专业硕士是全国工程硕士研究生教育特色工程领域。</p><p style="text-align: left; text-indent: 2em; line-height: 2em;">学院教师撰写了一系列优秀教材，其中1本获全国教材二等奖、8本为国家精品规划教材。3门课程获评国家精品课程；4门课程获评国家一流课程；9门慕课课程上线（ 国内外多个平台累计选课人数达50万 ）。</p><p style="text-align: left; text-indent: 2em; line-height: 2em;">中国计算机学会杰出教育奖获得者陈道蓄教授（ 我院首任院长 ）主持承担中国工程教育专业认证工作，代表 CCF 在教育部工程教育认证通用标准和相关条例的制定及全国认证培训中发挥了重要作用；为中国的教育认证及高等教育发展作出了卓越贡献。</p><p style="text-align: left; text-indent: 2em; line-height: 2em;">学生在科技竞赛中屡获佳绩，其中获得第二届中国 “ 互联网+ ” 大学生创新创业大赛全国总决赛一金( 全国亚军 ）一银；第八届中国国际 “ 互联网+ ” 大学生创新创业大赛全国总决赛一金一银；ACM Student Research Competition ( 学生研究竞赛 ）本科生组冠军（ ASE2019 ）、研究生组亚军（ ICSE2019 ）等良好成绩。</p><p style="text-align: left; text-indent: 2em; line-height: 2em;">软科2024中国大学专业排名中南京大学软件工程专业位居全国第二名。</p><p style="text-align: left; text-indent: 2em; line-height: 2em;">自2002年建院以来，已向社会输送了近7000名毕业生，就业去向落实率连续12年达100%。</p><p><br style="text-align: left;"></p><p style="text-align: left; text-indent: 2em; line-height: 4em;"><span style="font-size: 16px;"><strong>【科学研究】</strong></span></p><p style="text-align: left; text-indent: 2em; line-height: 2em;">在科学研究方面，南京大学软件学院以 “ 产业问题驱动、创新研究引领 ” 为导向，近年来在智能化软件技术支撑智慧法院信息化建设、智能软件系统质量保障、软件开发运维一体化等方面取得重要成果。</p><p style="text-align: left; text-indent: 2em; line-height: 2em;">在智能化软件技术支撑智慧法院信息化建设方面，相关成果应用于中央政法委国家司法改革重点示范工程；主持完成天津智慧法院大型软件系统研发项目，全面提升天津法院系统信息化和智能化水平，服务于天津市辖区高级、中级、基层法院等22家法院，获中国电子学会科技进步一等奖。</p><p style="text-align: left; text-indent: 2em; line-height: 2em;">在智能软件系统质量保障方面，主持国家自然科学基金重点项目和国家重点研发计划项目课题，聚焦数据驱动的智能软件系统测试技术开展研究工作取得系列创新突破，相关技术发明专利在中航科工、中国船舶、中国电科、国家电网、华为、百度、阿里、腾讯和国家软件产品质量监督检验中心等得到转化与推广应用。</p><p style="text-align: left; text-indent: 2em; line-height: 2em;">在软件开发运维一体化方面，主持承担国家重点研发计划项目和江苏省重点研发计划项目，围绕开发运维一体化关键技术，取得一系列创新研究突破，研究成果在华为、腾讯、百度、美团等一线企业转化落地；牵头制定相关国家标准、出版专著，持续发布《 DevOps中国年度调查报告 》，在工业界产生重要影响。</p><p style="text-align: left; text-indent: 2em; line-height: 2em;">软件学院近五年来主持承担了国家重点研发计划项目和课题，国防项目，国家自然科学基金重点、面上和青年项目，华为、腾讯、百度、天津法院等企事业单位关键技术攻关项目等，科研到账经费达亿元，牵头1项、参与5项国家和行业标准制定，成立了南大 - 星环科技、南大 - 数兑科技联合研究中心等。</p><p style="text-align: left; text-indent: 2em; line-height: 2em;">学院在软件工程领域的技术创新研究取得规模性突破，以南大为第一单位在软件工程领域国际顶级期刊和会议（ ACM TOSEM、IEEE TSE、ICSE、FSE、ASE、ISSTA ）上发表了一批高水平学术研究论文，并连续多年获得软件工程领域顶级会议 ICSE、FSE、ISSTA、ASE 等的杰出论文奖，为我校在软件工程领域的创新研究进入国际先进行列做出了重要贡献。</p><p><br style="text-align: left;"></p><p style="text-align: left; text-indent: 2em; line-height: 4em;"><span style="font-size: 16px;"><strong>【国际合作】</strong></span></p><p style="text-align: left; text-indent: 2em; line-height: 2em;">在国际合作方面，学院与世界顶尖大学保持着良好的合作关系，学院积极推进与国际高水平大学的科研、人才培养合作。</p><p style="text-align: left; text-indent: 2em; line-height: 2em;">学院近年来先后组织召开了包括国际软件工程评估大会（ EASE ）、软件过程国际会议（ ICSSP ）、亚太软件工程大会（ APSEC ）、软件工程教育国际会议（ CSEE&amp;T ）等一系列国际会议，提升了学院的全球影响力。学院发起并组织了全球大学生软件测试大赛，已在中国 / 北美洲 / 南美洲 / 欧洲分别举办，全球500多所大学、数万名学生参与。</p><p style="text-align: left; text-indent: 2em; line-height: 2em;">在科研方面，学院牵头承担的国家重点研发计划政府间国际科技创新合作重点专项项目 “ 中挪联合面向供应链的高性能区块链系统支撑平台关键技术研究 ” 已经顺利完成。学院一直积极邀请多位外国专家来华进行讲座，已经成功举办了近100场。此外，学院作为发起方之一，与挪威科技大学、美国马里兰大学、清华大学共同发起 IPIT（ 信息技术国际合作伙伴 ）项目，该项目由挪威研究理事会资助，总经费440万元人民币。十年间成功输送近50人访问挪威，同时也接纳了近80名外国师生来南大进行访问。这些讲座和交流活动为学院师生提供了与国际专家深度交流的机会，加强了学院在国际学术领域的影响力。这些努力不仅在学术研究上取得了显著成果，也为培养具有国际视野的人才奠定了坚实的基础。</p><p style="text-align: left; text-indent: 2em; line-height: 2em;">在国际合作办学方面，学院与早稻田大学达成了硕士博士联合培养合作项目，并在过去十年间成功输送近50名学生去攻读硕士和博士学位。此外，学院还成功举办了澳门大学暑期研习营项目，为学生提供了丰富的学术体验和实践机会。</p><p style="text-align: left; text-indent: 2em; line-height: 2em;"><br></p><p style="text-align: left; text-indent: 2em; line-height: 2em;"><br></p><p style="text-align: left; text-indent: 2em; line-height: 2em;"><br></p><p><br style="text-align: left;"></p></div>
+            </div>
+        </div>
+      </div>
+      <!-- 底部 -->
+      <script src="/DFS//template/1322/images/footer.js"></script><div class="footer fl">
+    <div class="footer_main">
+        <span class="s6 fl">版权所有：南京大学软件学院Copyright © All Rights Reserverd</span>
+        <span class="s6 fl ml">通讯地址：南京市汉口路22号，南京大学软件学院（费彝民楼）</span>
+        <span class="b3 s6 fl ml">邮编：210093</span>
+        <span class="b4 s6 fl ml">
+            <ul>
+                <li class="fl s7"><a href="/lxwm/index.html">联系我们</a></li>
+            </ul>
+        </span>
+    </div>
+</div>
+
+      <!--手机端JS-->
+      <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.6.4/jquery.min.js"></script>
+      <script>
+        $(function () {
+          $(".lb_name").click(function () {
+            $(this).next().toggle(200, function () {
+
+            });
+          });
+        });
+      </script>
+
+      <!--手机导航栏JS-->
+      <link rel="stylesheet" href="/DFS//template/1322/images/medie.css">
+      <script src="/DFS//template/1327//images/jquery-1.11.0.js"></script>
+      <script src="/DFS//template/1322/images/jquery.sudy.js"></script>
+      <script type="text/javascript" src="/DFS//template/1322/images/jquery.sudyNav.js"></script>
+      
+
+    </body></html>

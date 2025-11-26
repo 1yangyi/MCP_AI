@@ -1,0 +1,401 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+
+   <!--防止IE进入怪异模式-->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+   <meta name="renderer" content="webkit">
+   <!--让部分国产浏览器默认采用高速模式渲染页面-->
+
+   <title>学院简介-中央民族大学美术学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="中央民族大学美术学院,学院概述">
+
+   <!-- Bootstrap -->
+   <link href="../css/bootstrap.min.css" rel="stylesheet">
+   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+   
+   <link rel="stylesheet" type="text/css" href="../css/slick.css">
+   <link rel="stylesheet" type="text/css" href="../css/layout.css">
+  
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e784654525a5742000200024253 -->
+<link rel="stylesheet" type="text/css" href="../zwy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1012,'/zwy.jsp',-1,1681929250)</script>
+</head>
+
+<body>
+   <!-- header -->
+     <div class="header">
+      <div class="container-fluid clearfix">
+         <div class="fl logo">
+           
+  <a href="../index.htm"><img src="../images/logo.png" alt=""></a>
+         </div>
+         <div class="fr nav">
+             
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu1">
+    <div id="appu1"><div class="fr form"><input type="image" src="../images/search.png" alt="搜索" class="fl image"> <input type="text" placeholder="请搜索您想要的信息" autocomplete="off" class="fl text"> <input type="submit" value="搜索" class="fl submit"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError" class="fr form">
+        
+        <input type="image" class="fl image" src="../images/search.png" alt="搜索">
+               <input type="text"  class="fl text" placeholder="请搜索您想要的信息" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+               <input type="submit" class="fl submit" value="搜索" v-on:click="onSubmit()">
+       
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1681929250";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.119.129.127:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+            <ul class="fl">
+
+<li>
+                  <h3><a href="../index.htm">网站首页</a> <em>+</em> </h3>
+                  <dl>
+                     <dd><a href="../index/xwdt.htm">新闻动态</a></dd>
+                     <dd><a href="../index/tzgg.htm">通知公告</a></dd>
+                  </dl>
+               </li>
+               
+
+<li>
+                  <h3><a href="xyjj.htm">学院概况</a> <em>+</em> </h3>
+                  <dl>
+                     <dd><a href="xyjj.htm">学院简介</a></dd>
+                     <dd><a href="xyls.htm">学院历史</a></dd>
+                     <dd><a href="xrld.htm">现任领导</a></dd>
+                     <dd><a href="lxwm.htm">联系我们</a></dd>
+                  </dl>
+               </li>
+               
+
+<li>
+                  <h3><a href="../szdw/yhx.htm">师资队伍</a> <em>+</em> </h3>
+                  <dl>
+                     <dd><a href="../szdw/yhx.htm">油画系</a></dd>
+                     <dd><a href="../szdw/zghysfx.htm">中国画与书法系</a></dd>
+                     <dd><a href="../szdw/msjyysfx.htm">美术教育与师范系</a></dd>
+                     <dd><a href="../szdw/sjcdsjx.htm">视觉传达设计系</a></dd>
+                     <dd><a href="../szdw/hjsjx.htm">环境设计系</a></dd>
+                     <dd><a href="../szdw/fzyfssjx.htm">服装与服饰设计系</a></dd>
+                     <dd><a href="../szdw/msysjlljys.htm">美术与设计理论教研室</a></dd>
+                  </dl>
+               </li>
+               
+
+<li>
+                  <h3><a href="../kyzl/xsky.htm">科研展览</a> <em>+</em> </h3>
+                  <dl>
+                     <dd><a href="../kyzl/xsky.htm">学术科研</a></dd>
+                     <dd><a href="../kyzl/zljdwjl.htm">展览及对外交流</a></dd>
+                  </dl>
+               </li>
+               
+
+<li>
+                  <h3><a href="../zsjy1/bkszs.htm">招生就业</a> <em>+</em> </h3>
+                  <dl>
+                     <dd><a href="../zsjy1/bkszs.htm">本科生招生</a></dd>
+                     <dd><a href="../zsjy1/yjszs.htm">研究生招生</a></dd>
+                     <dd><a href="../zsjy1/jy.htm">就业</a></dd>
+                  </dl>
+               </li>
+               
+
+<li>
+                  <h3><a href="../dqjs/djgz.htm">党群建设</a> <em>+</em> </h3>
+                  <dl>
+                     <dd><a href="../dqjs/djgz.htm">党建工作</a></dd>
+                     <dd><a href="../dqjs/txdt.htm">团学动态</a></dd>
+                  </dl>
+               </li>
+               
+</ul>
+         </div>
+         <div class="fr menu">
+            <span></span>
+            <span></span>
+            <span></span>
+         </div>
+      </div>
+   </div>
+   <!-- banner -->
+   <div class="nybanner">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<img src="../images/33.jpg">
+
+</div>
+
+
+<div class="ny">
+<div class="ny_left">
+  <div class="ny_left_top">
+学院概况</div>
+<div class="sidenav">
+          <ul id="accordion" class="accordion"><li>
+                <div class="nav-link hover"><a href="xyjj.htm">学院简介</a></div>
+                            
+            </li>
+<li>
+                <div class="nav-link"><a href="xyls.htm">学院历史</a></div>
+                            
+            </li>
+<li>
+                <div class="nav-link"><a href="xrld.htm">现任领导</a></div>
+                            
+            </li>
+<li>
+                <div class="nav-link"><a href="lxwm.htm">联系我们</a></div>
+                            
+            </li>
+</ul>
+        </div>
+        
+</div>
+
+
+<div class="ny_right">
+<div class="ny_right_top"><div class="nytit1">
+学院简介</div>
+
+<div class="nytit">
+    当前位置: 
+                        <a href="../index.htm">网站首页</a>
+               -&gt; 
+                <a href="xyjj.htm">学院概况</a>
+               -&gt; 
+                <a href="xyjj.htm">学院简介</a>
+</div>
+<div class="clear"></div>
+</div>
+      <div class="ny_right_con">
+      
+<div class="dpzw">
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1681929250,'wbnews','u8')</script>
+<script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1681929250,1246)</script>
+    <div id="vsb_content_1246_u81"><div id="vsb_content"><p style="text-align: center;"><img width="500" title="undefined" alt="undefined" src="/__local/6/D2/5D/FDFFC4788AD81F8246B4C51F91F_03D289D6_37FA77.jpg" border="0" vspace="0" hspace="0" vsbhref="vurl" vurl="/_vsl/6D25DFDFFC4788AD81F8246B4C51F91F/03D289D6/37FA77" vheight="" vwidth="500" orisrc="/__local/6/D2/5D/FDFFC4788AD81F8246B4C51F91F_03D289D6_37FA77.jpg" class="img_vsb_content"></p><p style="background: white; text-align: justify; line-height: 21px; text-indent: 32px; margin-bottom: 0px; -ms-text-justify: inter-ideograph;"><span style="color: black; font-family: 仿宋;"></span></p><p style="background: white; line-height: 37px; text-indent: 41px;"><span style="font-family: 仿宋_gb2312; font-size: 21px;"></span></p><p><span style="font-size: 18px;">&nbsp; &nbsp; 中央民族大学美术学院始建于1959年，是传承和弘扬中华优秀传统文化的重要基地，设有美术与书法博士专业学位，艺术学、美术与书法、设计等3个硕士一级学科（专业学位），中国画、绘画、美术学、视觉传达设计、服装与服饰设计、环境设计等6个本科专业，其中美术学、服装与服饰设计、视觉传达设计等3个专业为“国家级一流本科专业建设点”。学院坚持铸牢中华民族共同体意识工作主线，建有“国家民委民族美术创意创新研究中心” “民族古籍插图艺术研究所” “中央民族大学美术学院科学艺术中心”等研创平台，承建“民族艺术学”北京市高精尖学科。学院形成了本科、硕士、博士等多层次教育齐备，集教学、科研、创作、实践为一体，具有鲜明特色的办学体系，成为了培养各民族高水平美术与设计专门人才的重要教育基地。</span></p><p><span style="font-size: 18px;">&nbsp; &nbsp; 美术学院赓续优秀办学文脉，致力于凝聚一流的师资队伍。目前学院有专任教师55人，具有教授、副教授等高级职称的有25人，其中多名教师荣获全国中青年德艺双馨优秀工作者、中国青年五四奖章、宝钢优秀教师奖、国家民委突出贡献专家、北京市四个一批人才等荣誉。学院还聘请了多位具有较高学术造诣和影响力的校外专家为兼职博士生导师。</span></p><p><span style="font-size: 18px;">&nbsp; &nbsp; 近年来，美术学院牢记立德树人根本任务，在人才培养、科研创作、服务社会等方面取得了丰硕成果。16件作品入选全国最高规格的美术大展--第十四届全国美术作品展，其中进京作品4件；8个项目获批2025年国家艺术基金，在全国综合类大学中排名前列；出版《蒙藏古版画集成》50卷，荣获第34届“金牛杯”全国优秀美术图书金奖；学院教学成果获北京市高等教育教学成果奖、北京市优质本科课程、北京市优质本科教材等奖励。学生党支部荣获“全国党建工作样板党支部”称号，学生创新创业项目在中国国际大学生创新大赛、“挑战杯”中国大学生创业计划竞赛中取得多个全国总决赛、北京赛区奖项。</span></p><p><span style="font-size: 18px;">&nbsp; &nbsp; 学院主办和承办一系列高水平国家级民族美术作品创作大展，获业内专家同行广泛好评。承办中国美术家协会“第六届中国民族美术作品展览”、中国少数民族美术促进会“三十而励·中国少数民族美术促进会成立三十周年特邀作品与文献展”，主办“繁花竞放——西部民族地区青年美术家创作高研班成果汇报展”、“高山仰止 经典传承”--中央民族大学美术学院院藏名家作品展。在海外举办“大道无分：中国园林文化当代艺术”国际巡展，推动中华优秀传统文化创造性转化及国际传播。</span></p><p><span style="font-size: 18px;">&nbsp; &nbsp; 美术学院积极开展国际合作与交流，在海南校区举办中外合作办学项目，每年选派优秀学生前往欧美、港澳台等地高校进行交换学习或深造，形成了稳定的国际化人才培养合作机制，学院的国际知名度不断提升。</span></p><p style="background: white; line-height: 37px; text-indent: 41px;"><span style="font-family: 仿宋_gb2312; font-size: 21px;"></span><br></p><p style="background: white; text-align: justify; line-height: 21px; text-indent: 32px; margin-bottom: 0px; -ms-text-justify: inter-ideograph;"><br></p></div></div>
+    <span id="vsb_content_1246_u8" name="vsb_content_1246_u8"></span><br><br>
+    
+</div>
+
+      </div>
+
+</div>
+
+
+
+
+<div class="clear"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+      <!-- footer -->
+       <div class="footer">
+         <div class="container">
+            <div class="fl f-logo">
+                   
+    
+<a href="../index.htm" onclick="_addDynClicks(&quot;wbimage&quot;, 1681929250, 58509)">
+                  <img src="../images/f-logo.png" alt="">
+               </a>
+
+              <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p class="mt15">京ICP备10039345号 京公网安备：110402430036</p><p>中央民族大学美术学院 © 2014 M.U.C. All rights reserved.</p>
+            </div>
+  
+              
+<dl class="fl">
+ <dt>
+  联系我们
+ </dt>
+ <dd class="address">
+  <h5>地址：</h5>北京市海淀区中关村南大街27号
+ </dd>
+ <dd class="tel">
+  <h5>电话：</h5>（010）68932806 &nbsp;
+  <br>
+ </dd>
+ <dd>
+  <h5>E-mail：</h5>mdmsxy@126.com
+ </dd>
+</dl>
+
+            <dl class="fr">
+               <dt>友情链接</dt>
+             <script language="javascript" src="/system/resource/js/openlink.js"></script>
+<dd><a href="https://www.muc.edu.cn/" onclick="_addDynClicks(&quot;wburl&quot;, 1681929250, 69043)">中央民族大学</a></dd>
+<dd><a href="http://ca.muc.edu.cn/zfca/login" onclick="_addDynClicks(&quot;wburl&quot;, 1681929250, 69044)">民大信息门户平台</a></dd>
+
+            </dl>
+         </div>
+      </div>
+
+
+ 
+   
+   <script src="../js/jquery.min.js"></script>
+   <script type="text/javascript" src="../js/respond.min.js"></script>
+   <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <script type="text/javascript" src="../js/slick.min.js"></script>
+   <script type="text/javascript" src="../js/jquery.masonry.min.js"></script>
+   <script type="text/javascript" src="../js/base.js"></script>
+   <!--[if lt IE 9]>
+        <script type="text/javascript">
+        var str = "你的浏览器版本太低了,请升级至最新版再次访问 :(";
+        var str2 = "推荐使用:<a href='https://www.baidu.com/s?ie=UTF-8&wd=%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8' target='_blank' style='color:#f93;'>谷歌</a>,"
+                + "<a href='https://www.baidu.com/s?ie=UTF-8&wd=%E7%81%AB%E7%8B%90%E6%B5%8F%E8%A7%88%E5%99%A8' target='_blank' style='color:#f93;'>火狐</a>,"
+                + "其他双核极速模式";
+        document.writeln("<pre style='text-align:center;color:#fff;background-color:#8a1b20; height:100%;border:0;position:fixed;top:0;left:0;width:100%;z-index:1234'>" +
+                "<h2 style='padding-top:200px;margin:0'><strong>" + str + "<br/></strong></h2><h2>" +
+                str2 + "</h2><h2 style='margin:0'><strong>如果你的使用的是双核浏览器,请切换到极速模式访问<br/></strong></h2></pre>");
+        document.execCommand("Stop");
+        </script>
+    <![endif]-->
+<script>
+
+   $(function () {
+     
+      // 瀑布流
+      var $container = $('.waterfall');
+      $container.imagesLoaded(function () {
+         $container.masonry({
+            itemSelector: 'li',
+            isAnimated: true,
+            gutterWidth: 29,
+            isFitWidth: true,
+            isResizableL: true,
+         });
+         tab($('.waterfall-box .item'), $('.waterfall-box .title h3'), 'on');
+      });
+   });
+</script>
+
+
+</body><!--[if lt IE 9]>
+<script src="../src=" js/html5shiv.min.js"></script>
+<script src="../src=" js/respond.min.js"></script>
+<![endif]--><!-- jQuery (necessary for Bootstrap's JavaScript plugins) --></html>

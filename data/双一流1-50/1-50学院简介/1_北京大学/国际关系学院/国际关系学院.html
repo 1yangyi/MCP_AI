@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>学院简介</title>
+    <meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <meta HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+    <meta HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+    <meta HTTP-EQUIV="expires" CONTENT="0">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <link rel="stylesheet" href="../css/bootstrap.offcanvas.min.css"/>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/banner.css">
+    <link rel="stylesheet" href="../css/bootstrap-glyphicons.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.offcanvas.min.js"></script>
+    <script src="../js/autosize.js"></script>
+</head>
+<body>
+
+
+<div class="top-nav">
+    <div class="container top-nav-bar">
+        <nav class="navbar navbar-expand-xl bg-pku navbar-dark" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggler  offcanvas-toggle border-0" data-toggle="offcanvas" data-target="#menu-top">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="">
+                <nav class=" align-items-center justify-content-end" style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
+                    <div class="" style="display:flex">
+                        <div class="top-icon"><a href="http://www.sis.pku.edu.cn/en">EN</a></div>
+                        <div class="top-icon"><a href="#" onclick="document.forms['searchForm'].submit();"><span class="glyphicon glyphicon-search" ></span></a></div>
+                    </div>
+                </nav>
+
+                <form id="searchForm" name="searchForm" action="/cms/search/searchResults.jsp" target="_blank" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';return false;" >
+                    <input name="siteID" value="1201886" type = "hidden">
+                    <input type="hidden" autocomplete="off" id="query" name="query" onsearch="cmsSubmit()" placeholder="请输入关键词" class="input-kw">
+                </form>
+                <script type="text/javascript">
+
+                    function submitSearch(idx)
+                    {
+                        if($("#form_Searchword" + idx).val()==""){return;}
+                        $("#query").val($("#form_Searchword" + idx).val());
+                        document.forms["searchForm"].submit();
+                        $("#form_Searchword" + idx).val("");
+                        $("#query").val("");
+                    }
+                    
+                    function doSearch(keypressed,idx){
+                        var key;
+                        if(document.all)  {
+                            key=window.event.keyCode;
+                        }else  {
+                            key=keypressed.which;
+                        };
+                        if(key==13||key==10){
+                            submitSearch(idx);
+                        }
+                    }
+                </script>
+            </div>
+        </nav>
+    </div>
+    <div id="menu-top" class="top-nav-con navbar-offcanvas navbar-offcanvas-touch navbar-offcanvas-fade">
+        <div class="navbar-header nav-float-header">
+            <button type="button" class="navbar-toggle offcanvas-toggle border-0 closebtn" data-toggle="offcanvas" data-target="#menu-top">
+                <span class="glyphicon glyphicon-remove "></span>
+            </button>
+        </div>
+        <ul class="nav">
+            <li class="nav-item "><a class="nav-link"  href="../index.htm">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+                                                    <!--网站主栏目栏目-->
+                                
+                                <!--学院概况需要在Top展开的栏目以TOPEX开始-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"  id="navbardrop" data-toggle="dropdown" href="index.htm">学院概况</a>
+                    <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="1305928.htm">院长寄语</a>
+                                                <a class="dropdown-item" href="1305929.htm">学院简介</a>
+                                                <a class="dropdown-item" href="1305930.htm">党政领导</a>
+                                                <a class="dropdown-item" href="https://www.sis.pku.edu.cn/schoolprofile77/institution/index.htm">组织机构</a>
+                                            </div>
+                </li>
+                                                                    <!--网站主栏目栏目-->
+                                
+                                <li class="nav-item "><a class="nav-link" href="../teachers24/index.htm">师资力量</a></li>
+                                                                    <!--网站主栏目栏目-->
+                                
+                                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="../teaching_management/index.htm">教学管理</a>
+                    <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="http://www.sis.pku.edu.cn/undergraduate/index.htm">本科生/双学位</a>
+                                                <a class="dropdown-item" href="http://www.sis.pku.edu.cn/postgraduate/index.htm">研究生</a>
+                                            </div>
+                </li>
+                                                                    <!--网站主栏目栏目-->
+                                
+                                <li class="nav-item "><a class="nav-link" href="../researchmanagement6/index.htm">科研工作</a></li>
+                                                                    <!--网站主栏目栏目-->
+                                
+                                <li class="nav-item "><a class="nav-link" href="../internationalexchange10064/index.htm">国际交流</a></li>
+                                                                    <!--网站主栏目栏目-->
+                                
+                                <li class="nav-item "><a class="nav-link" href="../students56/index.htm">学生工作</a></li>
+                                                                    <!--网站主栏目栏目-->
+                                
+                                <li class="nav-item "><a class="nav-link" href="../continuing_education/index.htm">继续教育</a></li>
+                                                                    <!--网站主栏目栏目-->
+                                
+                                <li class="nav-item "><a class="nav-link" href="../sislib/index.htm">图书馆</a></li>
+                                                                    <!--网站主栏目栏目-->
+                                
+                                <li class="nav-item "><a class="nav-link" href="../labour_union/index.htm">工会之家</a></li>
+                                                                    <!--网站主栏目栏目-->
+                                
+                                <li class="nav-item "><a class="nav-link" href="../yuanyouhui47/index.htm">院友会</a></li>
+                                                                    <!--网站主栏目栏目-->
+                                
+                                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="../organization/index.htm">实体机构</a>
+                    <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="http://www.iiss.pku.edu.cn/">北京大学国际战略研究院</a>
+                                            </div>
+                </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+    </div>
+</div>
+
+<div class="banner ">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-9 col-xl-9">
+                <div class="row" style="margin-top:1rem;margin-bottom:1rem;">                
+                    <div class="col-auto d-none d-md-block" style="height:4rem;">
+                        <a href="http://www.pku.edu.cn"><img src="../images/pku-logo.png" style="height:100%;" /></a>
+                    </div>
+                    <div class="col-auto d-none d-md-block" style="height:4rem;" ><img src="../images/line-logo.png" style="height:100%;" /></div>
+                    <div class="col-auto"  style="height:4rem;">
+                        <a href="http://www.sis.pku.edu.cn"><img src="../images/sis-logo.png" style="height:100%;" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none d-sm-none d-lg-block col-lg-3  col-xl-3">
+                <nav class=" align-items-center justify-content-center" style="--bs-breadcrumb-divider: '';height:100%; display:flex" aria-label="breadcrumb">
+                    <div class="" style="display:flex">
+                        <div class=""><div class="top-icon"><a href="http://www.sis.pku.edu.cn/en">EN</a></div></div>
+                        <div class=""><div class="top-icon"><a href="#" onclick="document.forms['searchForm'].submit();"><span class="glyphicon glyphicon-search" ></span></a></div></div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mid-nav">
+    <div class="container ">
+        <ul class="nav nav-justified">
+            <li class="nav-item "><a class="nav-link" href="../index.htm">首页</a></li>
+                                    <!--网站主栏目栏目-->
+                        
+                        <li class="nav-item active"><a href="index.htm" class="nav-link">学院概况</a></li>
+                                                <!--网站主栏目栏目-->
+                        
+                        <li class="nav-item "><a href="../teachers24/index.htm" class="nav-link">师资力量</a></li>
+                                                <!--网站主栏目栏目-->
+                        
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown"  href="#">教学管理</a>
+                <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="http://www.sis.pku.edu.cn/undergraduate/index.htm">本科生/双学位</a>
+                                        <a class="dropdown-item" href="http://www.sis.pku.edu.cn/postgraduate/index.htm">研究生</a>
+                                    </div>
+            </li>
+                                                <!--网站主栏目栏目-->
+                        
+                        <li class="nav-item "><a href="../researchmanagement6/index.htm" class="nav-link">科研工作</a></li>
+                                                <!--网站主栏目栏目-->
+                        
+                        <li class="nav-item "><a href="../internationalexchange10064/index.htm" class="nav-link">国际交流</a></li>
+                                                <!--网站主栏目栏目-->
+                        
+                        <li class="nav-item "><a href="../students56/index.htm" class="nav-link">学生工作</a></li>
+                                                <!--网站主栏目栏目-->
+                        
+                        <li class="nav-item "><a href="../continuing_education/index.htm" class="nav-link">继续教育</a></li>
+                                                <!--网站主栏目栏目-->
+                        
+                        <li class="nav-item "><a href="../sislib/index.htm" class="nav-link">图书馆</a></li>
+                                                <!--网站主栏目栏目-->
+                        
+                        <li class="nav-item "><a href="../labour_union/index.htm" class="nav-link">工会之家</a></li>
+                                                <!--网站主栏目栏目-->
+                        
+                        <li class="nav-item "><a href="../yuanyouhui47/index.htm" class="nav-link">院友会</a></li>
+                                                <!--网站主栏目栏目-->
+                        
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown"  href="#">实体机构</a>
+                <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="http://www.iiss.pku.edu.cn/">北京大学国际战略研究院</a>
+                                    </div>
+            </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </ul>
+    </div>
+</div>
+
+
+<!--正文-->
+<div class="content-container container">
+    <div class="row">
+        <div class="d-none d-lg-block col-lg-3">
+
+            <ul class="nav navbar-nav nav-left">
+                <a class="navbar-brand header_nav" href="#">
+                    <div>学院概况</div>
+                </a>
+                                                    <li class="nav-item"><a href="1305928.htm" title="院长寄语" class="nav-link">院长寄语</a></li>
+                                                                        <li class="nav-item active"><a href="1305929.htm" title="学院简介" class="nav-link">学院简介</a></li>
+                                                                        <li class="nav-item"><a href="1305930.htm" title="党政领导" class="nav-link">党政领导</a></li>
+                                                                        <li class="nav-item"><a href="https://www.sis.pku.edu.cn/schoolprofile77/institution/index.htm" title="组织机构" class="nav-link">组织机构</a></li>
+                                                </ul>
+        </div>
+        <div class="col-md-12 col-lg-9">
+            <div class="container">
+                <div class="item-panel breadcrumb-panel row">
+                    <!--
+<ol class="breadcrumb col-12">
+        <li class="breadcrumb-item"><a href="../index.htm">首页</a></li>
+        <li class="breadcrumb-item"><a href="index.htm">学院概况</a></li>
+    </ol>-->
+                    <h3 class="item-title col-12">学院简介</h3>
+
+                    <!--内容-->
+                    <span class="item-content col-12">
+                    <p>　　北京大学国际关系学院是国内普通高校中建立最早的国际关系学院，致力于培养国际问题的专门研究人才、从事外事工作的高端人才，以及具有全球视野、中国情怀、跨文化背景、能适应社会不同需求的高素质复合型人才。</p>
+
+<p><img alt="" src="../images/content/2025-07/20250729001303955281.jpg" style="width: 800px; height: 600px;" /></p>
+
+<p>　　学院拥有百年的学科建制和深厚的学术传统，前身是京师大学堂政治学门、北京大学政治学系。1964年，北京大学在原政治系的基础上建立国际政治系。1996年，原北京大学国际政治系、国际关系研究所和亚非研究所合并调整，组成现在的北京大学国际关系学院。目前，北大国际关系学院由6个系和3个研究所组成，即国际政治系、外交学与外事管理系、国际政治经济学系、比较政治学系、国际组织与国际公共政策系和国家安全学系，以及国际关系研究所、亚非研究所和世界社会主义研究所。<br />
+　　学院在本科层次设有国际政治（含国际政治经济学专业方向、国际组织与国际公共政策专业方向）和外交学两个专业，并设立了“国际政治与国际金融”和“涉外法治与全球治理”跨学科联合培养项目，其中，国际政治和外交学均为国家级一流本科专业；在硕士层次设有国际政治、国际关系、外交学、国际政治经济学、比较政治学、中共党史、科学社会主义与国际共产主义运动，以及国际组织与国际公共政策8个学术硕士专业，同时设有公共管理（国际公共政策方向）专业硕士项目；在博士层次设有国际政治、国际关系、外交学、国际政治经济学、比较政治学、科学社会主义与国际共产主义运动，以及国家安全学7个专业，其中国际政治和科学社会主义与国际共产主义运动属全国重点学科。学院还与北大政府管理学院、马克思主义学院共同设立了政治学博士后科研流动站。<br />
+　　学院教师的学术研究领域广阔，主要包括五个方面：一是外交与国际关系，即外交与国家间关系的历史、现状和理论；二是国际安全与国际战略；三是世界政治，涉及主要的国际组织（包括政府间和非政府组织）和国际机制、国际法等；四是国别与地区研究，涉及中国在内世界各国家和地区的政治、经济、文化和外交，及其比较研究；五是国际问题的专题性、交叉性研究，包括国际政治经济关系、环境与气候、全球健康治理、人工智能与国际关系、深海极地与太空研究等众多研究领域。<br />
+　　学院倡导和鼓励多学科交叉研究，开展有组织的科研，大力推进新型智库建设。现有科研机构18个，其中教育部、文旅部等省部级研究基地4个，同时建设北京大学全球风险政治分析实验室。实体科研机构国际战略研究院连续多年位居全球高校智库排名前列，在亚洲高校智库中排名第一。学院编辑出版的《国际政治研究》现为中文核心期刊（政治学类）、中国人文社会科学核心期刊、中文社会科学引文索引（CSSCI）来源期刊。国际战略研究院编辑出版英文刊物China International Strategy Review，在国内外学术界具有重要影响力。学院还建有北京大学图书馆国际关系分馆。<br />
+　　高水平的国际办学与国际合作是学院在教学科研和人才培养方面的一大特色。目前，学院与国外二十多所高校执行学位项目或交流项目，与近三十所高校保持着密切的交流关系，已形成了本、硕、博三个层次的全链条国际化人才培养模式。在本科阶段，学院与日本早稻田大学开设双学位项目，与瑞士日内瓦高等国际关系及发展研究院执行本硕连读项目。在硕士阶段，学院与英国伦敦经济政治学院、法国巴黎政治大学、日本东京大学和韩国首尔国立大学开设双学位项目。在博士阶段，学院与日本早稻田大学开展双学位项目。学院还与美国康奈尔大学、新加坡国立大学、新加坡南洋理工大学、日本东京大学、韩国高丽大学、德国维尔茨堡大学、德国图宾根大学、挪威奥斯陆大学、丹麦奥胡斯大学、泰国法政大学等高校开展交流项目。此外，学院与全球顶尖高校和研究机构开展访学交流，共同推进合作研究，定期举办“北大—哈佛中美关系研讨会”“北大—东大论坛”“北大—普林斯顿—东京大学—高丽大学—新加坡国立大学五校会议”等高端国际学术论坛。</p>
+
+                    </span>
+                    <!--//内容-->
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!--//正文-->
+
+<!--底部导航-->
+<div class="bottom_panel">
+    <div class="container">
+        <div class="row">
+            <div class="container llink-panel">
+                <div class="row llink-list">
+                    <div class="col-6  col-lg-3"><a target="_blank"  href="../bdggxslt/index.htm" ><img class="img-fluid"  src="../images/llink1.png"></a></div>
+                    <div class="col-6  col-lg-3"><a target="_blank"  href="../bjlt/index.htm"><img class="img-fluid"  src="../images/llink2.png"></a></div>
+                    <div class="col-6  col-lg-3"><a target="_blank"  href="../gjzz/index.htm"><img class="img-fluid"  src="../images/llink3.png"></a></div>
+                    <div class="col-6  col-lg-3"><a target="_blank"  href="../dszz/index.htm"><img class="img-fluid"  src="../images/llink4.png"></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-6 col-lg-2">
+                <div class="header">学院历史</div>
+                <div class="link_list">
+                                                                                                    <div class="item"><a href="../history9001/yq20zn/index.htm">院庆20周年</a></div>
+                                                                                                                                                                                                                        </div>
+            </div>
+            <div class="col-6 col-sm-6 col-lg-2">
+                <div class="header">国际关系学院大楼</div>
+                <div class="link_list">
+                                        <div class="item"><a href="../sisbuilding12/1305629.htm">陈瑞鸿楼</a></div>
+                                        <div class="item"><a href="../sisbuilding12/1305630.htm">瓦洛里楼</a></div>
+                                        <div class="item"><a href="../sisbuilding12/1305631.htm">新鸿基楼</a></div>
+                                    </div>
+            </div>
+            <!--<div class="col-6 col-sm-6 col-lg-2">-->
+                <!--<div class="header">我们与你们</div>-->
+                <!--<div class="link_list">-->
+                    <!---->
+                    <!--<div class="item"><a href="../sisfamily75/1310358.htm">管理规定</a></div>-->
+                    <!---->
+                    <!--<div class="item"><a href="../sisfamily75/1310356.htm">会场租用</a></div>-->
+                    <!---->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="col-6 col-sm-6 col-lg-2">
+                <div class="header">友情链接</div>
+                <div class="link_list">
+                                        <div class="item"><a href="http://www.fmprc.gov.cn/web/">中华人民共和国外交部</a></div>
+                                        <div class="item"><a href="http://www.idcpc.org.cn/">中共中央对外联络部</a></div>
+                                        <div class="item"><a href="http://www.mofcom.gov.cn/">中华人民共和国商务部</a></div>
+                                    </div>
+            </div>
+            <div class="col-6 col-sm-6 col-lg-2">
+                <div class="header">联系我们</div>
+                <div class="link_list">
+                                        <div class="item"><a href="../contact_us/1305921.htm">通信地址</a></div>
+                                        <div class="item"><a href="../contact_us/1305920.htm">学院办公室</a></div>
+                                        <div class="item"><a href="../contact_us/1310926.htm">会场租用</a></div>
+                                        <div class="item"><a href="../contact_us/1310357.htm">交通路线</a></div>
+                                    </div>
+            </div>
+            <div class="col-6 col-sm-6 col-lg-2">
+                <div class="header">公众号</div>
+                <div class="link_list">
+                                        <div id="p_1366423" class="item" data-toggle="popover" data-placement="left">国际关系学院</div>
+                                        <div id="p_1324069" class="item" data-toggle="popover" data-placement="left">国际政治研究</div>
+                                        <div id="p_1305923" class="item" data-toggle="popover" data-placement="left">爱国关天下</div>
+                                        <div id="p_1305924" class="item" data-toggle="popover" data-placement="left">院友会</div>
+                                    </div>
+                <script>
+                                        $('#p_1366423').popover({
+                        trigger : 'hover',//鼠标以上时触发弹出提示框
+                        html:true,//开启html 为true的话，data-content里就能放html代码了
+                        content:"<img src='../images/content/2023-04/20230419152300416898.png'>"
+                    });
+                                        $('#p_1324069').popover({
+                        trigger : 'hover',//鼠标以上时触发弹出提示框
+                        html:true,//开启html 为true的话，data-content里就能放html代码了
+                        content:"<img src='../images/content/2020-04/20200412230620148687.jpg'>"
+                    });
+                                        $('#p_1305923').popover({
+                        trigger : 'hover',//鼠标以上时触发弹出提示框
+                        html:true,//开启html 为true的话，data-content里就能放html代码了
+                        content:"<img src='../images/content/2019-06/20190601171358426124.jpg'>"
+                    });
+                                        $('#p_1305924').popover({
+                        trigger : 'hover',//鼠标以上时触发弹出提示框
+                        html:true,//开启html 为true的话，data-content里就能放html代码了
+                        content:"<img src='../images/content/2019-06/20190601171454833208.jpg'>"
+                    });
+                                    </script>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="copyright_panel">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 copyright">
+                <P>&copy;版权所有：北京大学国际关系学院<br>
+                    地址：北京市海淀区颐和园路5号　TEL：010-62751634　FAX：010-62751639</P>
+            </div>
+        </div>
+    </div>
+</div></body></html>

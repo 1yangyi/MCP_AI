@@ -1,0 +1,422 @@
+<!DOCTYPE html><html><head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta charset="utf-8">
+<title>学院简介-中央民族大学生命与环境科学学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="中央民族大学生命与环境科学学院">
+
+<link rel="stylesheet" href="../style/public.css">
+<link rel="stylesheet" href="../style/master.css">
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e784654525a5742000200024253 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1268,'/dpzw.jsp',-1,1499286151)</script>
+</head>
+<body>
+<!--top-->
+<div class="stick"></div>
+<div class="header cleafix">
+    
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a class="logo" href="../index.htm" onfocus="undefined"><img src="../images/smyhj.png"></a>
+    
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu1">
+    <div id="appu1"><div><div class="search fr cleafix"><span><input type="image" src="../images/search.png" align="absmiddle"></span> <input type="text" placeholder="请输入关键字进行搜索" autocomplete="off" class="searchText"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+        
+        <div class="search fr cleafix">
+ <span><input type="image" src="../images/search.png" align="absmiddle" style="cursor: hand"  v-on:click="onSubmit()"></span>
+<input   type="text" placeholder="请输入关键字进行搜索" class="searchText"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" />
+
+ </div>
+    
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1499286151";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.119.129.127:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+</div>
+
+<!--nav-->
+<div class="nav">
+<div class="innav">
+
+<ul class="cleafix">
+
+
+
+ <li class="mainmenu">
+                <a class="link" href="../index.htm" title="网站首页">网站首页</a>
+
+            </li>
+
+
+ <li class="mainmenu">
+                <a class="link" href="../xygk.htm" title="学院概况">学院概况</a>
+
+                <div id="nav" style="display: none;">
+
+                    <a class="marr" href="xyjj.htm" title="学院简介">学院简介</a>
+                   
+
+                    <a href="xyjg.htm" title="学院机构">学院机构</a>
+                   
+
+                    <a href="xrld.htm" title="现任领导">现任领导</a>
+                   
+
+                    <a href="zzjg.htm" title="组织机构">组织机构</a>
+                   
+
+                    <a href="lxfs.htm" title="联系方式">联系方式</a>
+                   
+                </div>  
+
+            </li>
+
+
+ <li class="mainmenu">
+                <a class="link" href="../xkjs.htm" title="学科建设">学科建设</a>
+
+            </li>
+
+
+ <li class="mainmenu">
+                <a class="link" href="../szdw.htm" title="师资队伍">师资队伍</a>
+
+                <div id="nav" style="display: none;">
+
+                    <a href="../szdw/szgk.htm" title="师资概况">师资概况</a>
+                   
+
+                    <a href="../szdw/yxrc.htm" title="优秀人才">优秀人才</a>
+                   
+
+                    <a href="../szdw/zgjs1.htm" title="在岗教师">在岗教师</a>
+                   
+
+                    <a href="../szdw/txjsmd.htm" title="退休教师名单">退休教师名单</a>
+                   
+                </div>  
+
+            </li>
+
+
+ <li class="mainmenu">
+                <a class="link" href="../bkspy.htm" title="本科生培养">本科生培养</a>
+
+                <div id="nav" style="display: none;">
+
+                    <a href="../bkspy/jgjy.htm" title="教学改革">教学改革</a>
+                   
+
+                    <a href="../bkspy/zypy.htm" title="专业培养">专业培养</a>
+                   
+                </div>  
+
+            </li>
+
+
+ <li class="mainmenu">
+                <a class="link" href="../yjspy.htm" title="研究生培养">研究生培养</a>
+
+            </li>
+
+
+ <li class="mainmenu">
+                <a class="link" href="../kxyj.htm" title="科学研究">科学研究</a>
+
+            </li>
+
+
+ <li class="mainmenu">
+                <a class="link" href="../dqgz.htm" title="党群工作">党群工作</a>
+
+            </li>
+
+
+ <li class="mainmenu">
+                <a class="link" href="../xzyd.htm" title="学子园地">学子园地</a>
+
+            </li>
+
+
+ <li class="mainmenu">
+                <a class="link" href="../xytd.htm" title="校友天地">校友天地</a>
+
+            </li>
+
+
+ <li class="mainmenu">
+                <a class="link" href="../sspt.htm" title="设施平台">设施平台</a>
+
+                <div id="nav" style="display: none;">
+
+                    <a href="https://cles.muc.edu.cn/smhx/" title="化学实验教学中心">化学实验教学中心</a>
+                   
+
+                    <a href="https://cles.muc.edu.cn/swzx/" title="生物实验教学中心">生物实验教学中心</a>
+                   
+
+                    <a href="#" title="大型仪器共享平台">大型仪器共享平台</a>
+                   
+
+                    <a href="https://hlles.muc.edu.cn/" title="呼伦湖草原生态试验站">呼伦湖草原生态试验站</a>
+                   
+
+                    <a href="https://kleema.muc.edu.cn/" title="民族地区生态环境国家民委重点实验室">民族地区生态环境国家民委重点实验室</a>
+                   
+
+                    <a href="http://mmsi.muc.edu.cn" title="质谱成像与代谢组学国家民委重点实验室">质谱成像与代谢组学国家民委重点实验室</a>
+                   
+                </div>  
+
+            </li>
+
+        </ul>
+
+</div></div>
+
+<!--内页主体部分-->
+<div class="vsb-box">
+    <div class="vsb-container main" containerid="4" columns="4">
+        <div class="vsb-space n_left" columns="1">
+            
+<h2>学院概况</h2>
+            <ul class="n_nav">
+               
+ <li><a href="xyjj.htm" class="cur">学院简介</a>
+
+</li>
+
+               
+ <li><a href="xyjg.htm">学院机构</a>
+
+</li>
+
+               
+ <li><a href="xrld.htm">现任领导</a>
+
+</li>
+
+               
+ <li><a href="zzjg.htm">组织机构</a>
+
+</li>
+
+               
+ <li class="marr"><a href="lxfs.htm">联系方式</a>
+
+</li>
+
+</ul>
+        </div>
+        <div class="vsb-space n_right" columns="3">
+            <div class="n_tit cleafix">
+    当前位置：
+               <a href="../index.htm">网站首页</a>
+               <font>&gt;</font>
+               <a href="../xygk.htm">学院概况</a>
+               <font>&gt;</font>
+               <a href="xyjj.htm">学院简介</a>
+</div>
+
+
+            
+
+
+<h1 class="Title cleafix">
+                <span class="tit">学院简介</span>
+                <!--<span class="line">
+                    <b class="line_l"></b>
+                    <b class="line_s"></b>
+                </span>-->
+            </h1>
+
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1499286151,'wbnews','u7')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format501.css"><script>function seeContenta7(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1499286151,3525)</script>
+  <div class="brief">
+
+
+    <div style="font-weight:bold ;text-align:center;font-size:18px">学院简介</div><br>
+
+
+  <p>  </p><div id="vsb_content_501_3525_u71"><div id="vsb_content_501"><p class="vsbcontent_start">学院前身是创建于1986年的生物与化学系，2002年更名为生命与环境科学学院。历经38年的建设和发展，学院先后获得国家级教学成果二等奖（2005年）、北京市优秀教育创新集体（2006年）、北京市高校德育工作先进集体（2014年），学院党委入选教育部首批全国党建工作标杆院系（2018年）。</p><p>学院是学校“211工程”、“985工程”、“双一流”重点建设的理工医类学院，是教育部-国家外国专家局“111工程”的建设单位，中国生态学学会科普教育基地。学校建立的“生物成像与系统生物学研究中心”和“转化神经科学中心”两个科研平台挂靠于学院。</p><p>学院现有生态学、生物学、环境科学与工程3个硕士一级学科和1个资源与环境专业硕士点，其中生态学和环境科学与工程为国家民委重点学科；依托化学和生物学的“质谱成像与代谢组学”是北京市高精尖学科；生态环境学科进入全球ESI排名前1%行列。目前学院以夯实化学和生物学基础学科，发展环境生态交叉应用学科，形成新的增长点。在读博士研究生45人，硕士研究生296人。</p><p>学院现有6个本科专业：生物科学、生态学、环境科学、环境工程、化学、中外合作办学项目(MUC-UCC)-环境科学。其中生态学专业为国家级特色专业、入选国家级一流专业建设点，环境科学专业入选国家级一流专业建设点，生物科学专业入选北京市一流专业建设点。学院是学校拔尖创新人才培养首批试点单位，已完成四届学生培养。目前本科学生人数1488人，升学率55%左右。</p><p>学院现有教职员工83人，由专任教师（59人）、实验技术人员（12人）和专职行政人员（12人）组成，其中教授20人，专任教师具有博士学位的超过95%。学院目前有西部长江学者1人，教育部新世纪优秀人才3人，宝钢优秀教师奖2人，国家民委领军人才3人，国家民委中青年英才4人，北京市优秀青年人才4人。北京市优秀教学团队1个，国家民委创新团队1个。</p><p>学院现有平台：国家级化学实验教学示范中心、北京市生物实验教学示范中心、北京市食品环境与健康工程技术研究中心、民族地区生态环境国家民委重点实验室、质谱成像与代谢组学国家民委重点实验室、学院大型仪器共享平台。另外，还有北京市校外人才培养基地（小龙门国家森林公园）；依托学院，学校与北京市气象局、北控水务（中国）投资有限公司签署合作框架协议。学院在内蒙呼伦湖国家自然保护区建立草原生态实验站，在北京科卓检测技术有限公司、乌梁素海、宁夏德坤环保科技实业集团有限公司、北京上甸子大气成分本底国家野外科学观测研究站等地建立了教学科研基地；目前学院是中国生态环境产教联盟会员单位、全国生态环保行业产教融合共同体常务理事单位。</p><p class="vsbcontent_end">学院坚持落实立德树人根本任务，以铸牢中华民族共同体意识为主线，在服务国家战略需求的基础上，聚焦民族地区生态环境、资源保护、人民生命健康等问题开展科学研究和人才培养，具有鲜明办学特色。</p></div></div><p></p>
+ <span>（数据更新至2024年11月11日）</span>
+    <span id="vsb_content_501_3525_u7" name="vsb_content_501_3525_u7"></span><br><br>
+    
+
+
+
+</div>
+        </div>
+    </div>
+    <div class="cleafix"></div>
+    
+    
+</div>
+
+
+
+<!--footer-->
+<div class="footer">
+
+            <!--footthree-->
+            <div class="footthree">
+                <div class="foot cleafix">
+                    <div class="foott_l">
+                        <p>
+                            
+</p><p style="text-align: center">&nbsp; &nbsp; 地址：北京市海淀区中关村南大街27号理工楼10层 &nbsp;邮政编码：100081</p> 
+<p style="text-align: center">2013版权所有©中央民族大学生命与环境科学学院</p>
+                        <p></p>
+                    </div>
+<div class="foott_r"><img src="../images/erweima.png"><p>“生声不息”公众号</p></div>
+                </div>
+            </div>
+        </div>
+        
+        
+   <script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery.SuperSlide.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>     
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

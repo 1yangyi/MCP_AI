@@ -1,0 +1,538 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+
+
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no">
+    <title>学院简介-中央民族大学法学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="中央民族大学法学院,学院简介">
+
+    <!-- Bootstrap -->
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/slick.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e784654525a5742000200024253 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1003,'/dpzw.jsp',-1,1779811220)</script>
+</head>
+<body>
+    <div class="header-top"></div>
+    <div class="header">
+        <div class="container clearfix">
+             <div class="pull-left logo"><a href="../index.htm">
+<img src="../js/logo.png">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script> 
+            
+               
+                            <img class="logo-s" src="../images/logo-b.png">
+                        
+        
+</a></div>
+            <div class="pull-right header-right">
+                <div class="pull-left header-img">     
+           
+            
+                            <img src="../images/header-img.png">
+                        
+        
+</div>
+                <div class="pull-left">
+                    <script language="javascript" src="/system/resource/js/openlink.js"></script> <div class="home-link text-right">
+    <a href="https://www.muc.edu.cn/" onclick="_addDynClicks(&quot;wburl&quot;, 1779811220, 75049)">学校官网</a>
+</div>
+
+                      
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu4 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu4 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu4">
+    <div id="appu4"><div><div class="search-c"><input type="text" placeholder="请输入关键字" autocomplete="off" class="form-control"> <input type="submit" value="" class="btn btn-ss"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu4">
+    <div id="appu4">
+        <div v-if="!isError">
+        
+        <div class="search-c">
+                        <input type="text" class="form-control" placeholder="请输入关键字"   autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                        <input type="submit" class="btn btn-ss" value="" v-on:click="onSubmit()">
+                    </div>
+        
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu4").html($("#htmlu4").text());
+</script>
+<script>
+    var appOwner = "1779811220";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu4",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.119.129.127:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-box">
+        <div class="container">
+             <ul class="nav-ul clearfix text-center">
+
+    <li>
+                    <a href="../index.htm">首页</a>
+                </li>
+
+ 
+
+    <li>
+                    <a href="../xyxw.htm">学院新闻</a>
+                </li>
+
+ 
+
+    <li>
+                    <a href="xyjj.htm">学院概况</a><span class="nav-click"><span class="caret"></span></span>
+
+                    <ul class="nav-down-ul">
+             <li><a href="xyjj.htm">学院简介</a></li>
+                       
+
+
+             <li><a href="xyld.htm">学院领导</a></li>
+                       
+
+
+             <li><a href="xzry1/zzy.htm">行政人员</a></li>
+                       
+
+
+           
+                    </ul>
+                </li>
+
+ 
+
+    <li>
+                    <a href="../szdw1.htm">师资队伍</a><span class="nav-click"><span class="caret"></span></span>
+
+                    <ul class="nav-down-ul">
+             <li><a href="../szdw1/zrjs.htm">专任教师</a></li>
+                       
+
+
+             <li><a href="../szdw1/tpjs.htm">特聘教授</a></li>
+                       
+
+
+             <li><a href="../szdw1/rxjs.htm">荣休教师</a></li>
+                       
+
+
+           
+                    </ul>
+                </li>
+
+ 
+
+    <li>
+                    <a href="../djgz/zzkj.htm">党建工作</a><span class="nav-click"><span class="caret"></span></span>
+
+                    <ul class="nav-down-ul">
+             <li><a href="../djgz/zzkj.htm">组织框架</a></li>
+                       
+
+
+             <li><a href="../djgz/djdt.htm">党建动态</a></li>
+                       
+
+
+           
+                    </ul>
+                </li>
+
+ 
+
+    <li>
+                    <a href="../xsgz1/xssw.htm">学生工作</a><span class="nav-click"><span class="caret"></span></span>
+
+                    <ul class="nav-down-ul">
+             <li><a href="../xsgz1/xssw.htm">学生事务</a></li>
+                       
+
+
+             <li><a href="../xsgz1/txhd.htm">团学活动</a></li>
+                       
+
+
+           
+                    </ul>
+                </li>
+
+ 
+
+    <li>
+                    <a href="../zsjy/zsgz.htm">招生就业</a><span class="nav-click"><span class="caret"></span></span>
+
+                    <ul class="nav-down-ul">
+             <li><a href="../zsjy/zsgz.htm">招生工作</a></li>
+                       
+
+
+             <li><a href="../zsjy/jygz.htm">就业工作</a></li>
+                       
+
+
+           
+                    </ul>
+                </li>
+
+ 
+
+    <li>
+                    <a href="../jyjx/bkjx.htm">教育教学</a><span class="nav-click"><span class="caret"></span></span>
+
+                    <ul class="nav-down-ul">
+             <li><a href="../jyjx/bkjx.htm">本科教学</a></li>
+                       
+
+
+             <li><a href="../jyjx/yjsjx.htm">研究生教学</a></li>
+                       
+
+
+           
+                    </ul>
+                </li>
+
+ 
+
+    <li>
+                    <a href="../ke_xue_yan_ji/xsyj.htm">科学研究</a><span class="nav-click"><span class="caret"></span></span>
+
+                    <ul class="nav-down-ul">
+             <li><a href="../ke_xue_yan_ji/xsyj.htm">学术研究</a></li>
+                       
+
+
+             <li><a href="../ke_xue_yan_ji/kyhd.htm">科研活动</a></li>
+                       
+
+
+             <li><a href="../ke_xue_yan_ji/ssdnb.htm">硕士点年报</a></li>
+                       
+
+
+           
+                    </ul>
+                </li>
+
+ 
+
+    <li>
+                    <a href="../xzzq/dtsw.htm">下载专区</a><span class="nav-click"><span class="caret"></span></span>
+
+                    <ul class="nav-down-ul">
+             <li><a href="../xzzq/dtsw.htm">党团事务</a></li>
+                       
+
+
+             <li><a href="../xzzq/jxsw.htm">教学事务</a></li>
+                       
+
+
+             <li><a href="../xzzq/rcsw.htm">日常事务</a></li>
+                       
+
+
+           
+                    </ul>
+                </li>
+
+ 
+
+    <li>
+                    <a href="../hzjl.htm">合作交流</a>
+                </li>
+
+ 
+
+    <li>
+                    <a href="../xyh.htm">校友会</a>
+                </li>
+
+ 
+</ul>
+        </div>
+        <div class="menu-button">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <div class="list-banner"><img src="../images/southerngate.jpg"></div>
+    <div class="container clearfix list-content">
+        <div class="pull-left list-left wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+            <div class="list-left-top text-center">
+学院概况<span class="nav-click"><span class="caret"></span></span></div>
+            <ul class="list-left-nav">
+
+
+ <li><a href="xyjj.htm" class="active"> 学院简介 </a>
+
+
+</li>
+
+ 
+
+
+ <li><a href="xyld.htm"> 学院领导 </a>
+
+
+</li>
+
+ 
+
+
+ <li><a href="xzry1/zzy.htm" class="active down-a"><span>行政人员</span> </a>
+
+
+  <ul class="list-left-nav-down" style="display: block;">
+
+<li><a href="xzry1/zzy.htm"><font>组织员</font></a></li>
+
+<li><a href="xzry1/dzgzbgs.htm"><font>党政工作办公室</font></a></li>
+
+<li><a href="xzry1/jxkygzbgs.htm"><font>教学科研工作办公室</font></a></li>
+
+<li><a href="xzry1/xsgzbgs.htm"><font>学生工作办公室</font></a></li>
+</ul>
+
+</li>
+
+ 
+</ul>
+
+        </div>
+        <div class="pull-right list-right">
+            <div class="list-right-tt clearfix wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+                <div class="pull-left list-right-l">
+学院简介</div>
+                <div class="pull-right nav-b">当前位置：
+                        <a href="../index.htm">首页</a>
+               -&gt;
+                <a href="xyjj.htm">学院概况</a>
+               -&gt;
+                <a href="xyjj.htm" class="active">学院简介</a>
+</div>
+            </div>
+            
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1779811220,'wbnews','u11')</script>
+<script>function seeContenta11(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta11('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1779811220,4215)</script>
+<div class="about-txt wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
+
+    <div id="vsb_content_4215_u111"><div id="vsb_content"><p style="text-align: justify; margin-top: 0px; margin-bottom: 0px; text-indent: 43px; background: rgb(255, 255, 255); line-height: 1.5em;"><span style="font-family: 仿宋; font-size: 21px;">中央民族大学法学院具有鲜明的红色传统和坚定的法治理想，长期坚持为党育人、为国育才，为中华文明做传承，为国家强盛献智慧。自1979年开始招收法学专业学生以来，在教育教学、人才培养、科学研究、学科建设、社会服务、国际交流等方面取得了长足进步，逐步探索出一条主流化与特色化兼备的法学教育之路。2011年获批法学一级学科硕士点，2012年入选中央政法委员会、教育部首批应用型、复合型“卓越法律人才”教育培养基地，2019年获批国家级“一流专业”，2021年获批教育部首批“新文科研究与改革实践项目”和国家留学基金委“文明互鉴国际组织后备人才培养项目”，2025年获批中宣部宣传文化法治研究基地（试点）。在第五轮学科评估和2025年软科排名中的影响力持续提升，保持稳步发展的良好态势。</span></p><p style="text-indent: 43px; background: rgb(255, 255, 255); text-align: justify; line-height: 1.5em;"><span style="font-family: 仿宋; font-size: 21px;">学院学科体系完备，专业特色鲜明。设有公法与理论法学、刑事法学、民商与经济法学、国际法与涉外法学4个系，法学理论、宪法学、行政法学、民商法学、刑法学、国际经济法学6个学术型硕士学位授权点，以及法律硕士（法学）和法律硕士（非法学）两个专业学位授予点。重点建设中央民族大学人权研究中心和中央民族大学台港澳研究中心两个校级科研平台，依托学校基地推进建设中央民族大学习近平法治思想研究所和中央民族大学中亚研究院中亚法律研究小组。</span></p><p style="text-indent: 43px; background: rgb(255, 255, 255); text-align: justify; line-height: 1.5em;"><span style="font-family: 仿宋; font-size: 21px;">学院人才梯队持续完善，教育体系不断健全。现有教职员工65人，其中专任教师53人。多名教师获得“宝钢优秀教师奖”、“北京市教育系统教书育人先锋”、“国家民委中青年英才”、“国家民委青年教学标兵”、“北京市高校青年教师教学基本功比赛一等奖”、“中国法学家论坛一等奖”、“董必武青年法学成果奖”、“王保树商法学优秀博士论文奖”、“北京市优秀辅导员”、“中央民族大学杰出育人奖”等各级各类荣誉。依托中华民族共同体学、国家安全学、民族学等学科，培养法学交叉方向博士生。现有在校博士生、硕士生和本科生2200余人。截至2025年9月共培养5600余名本科生、2800余名硕士生、190余名博士生，毕业生遍布各级党政机关、企业事业单位、知名律所和海外机构，积极投身于国家法治建设一线和相关行业前沿，赢得用人单位的良好反馈与社会满意评价，涌现出“全国脱贫攻坚先进个人”荣城、“全国五一劳动奖章”获得者王静、“最美大学生村官”迟得双等多位先进典型。</span></p><p style="text-indent: 43px; text-align: justify; line-height: 1.5em;"><span style="font-family: 仿宋; font-size: 21px;">学院坚持高质量党建引领高质量发展，打造“党旗引航”等特色党建品牌，聚焦铸牢中华民族共同体意识主线，落实立德树人根本任务，以党建推动教学提升、促进科研创新、护航立德树人，不断攻坚克难取得新的成绩。自2018年以来，学院教师在《中国社会科学》《法学研究》《中国法学》《人民日报》《光明日报》等核心期刊、报刊发表文章650余篇，承担国家社科基金、教育部、司法部、国家民委、北京市等各类纵向科研、教改项目100余项，出版学术专著、译著、教材等50余部，对国家决策有重要参考价值的研究报告或资政报告近50篇。多名教师参与<span style="font-family: 仿宋; font-size: 21px; text-align: justify; text-indent: 43px; text-wrap-mode: wrap;">中宣部工作专班，国家民委政法专班、学科专班、理论专班和社团专班<span style="font-family: 仿宋; font-size: 21px; text-align: justify; text-indent: 43px; text-wrap-mode: wrap; color: rgb(0, 0, 0);">，中央纪委国家监委驻</span>国家民委专班，中央港澳办专班等重要工作，</span>为《民法典》《民族团结进步促进法》《文物保护法》等30余部法律提供立法论证，为全国人大常委会、中央统战部、中央港澳办、中央台办、最高人民法院、司法部、国家民委等40余家中央和地方各级党政机关以及联合国教科文组织、联合国人权理事会等国际组织提供决策咨询和调研参考。2024年，八名学者入选法学学科“2024年中国知网高被引学者TOP1%”榜单。近年来，学院积极举办“两岸关系新形势与中华民族共同体建设新课题”学术交流会、“‘一国两制’与港澳台治理”学术论坛、“政法研究与法律人类学对话”学术研讨会、“党内法规学与政法法学的对话”学术研讨会、文化遗产法国际研讨会等，邀请一大批国内外知名法学家来学院开展讲座交流，有效提升了学院知名度、影响力和对外学术交流能力。</span></p><p style="text-indent: 43px; text-align: justify; line-height: 1.5em;"><span style="font-family: 仿宋; font-size: 21px;">新时代，新征程，新机遇，新使命。站在新的起点上，学院将始终坚持中国特色社会主义正确方向，坚持习近平法治思想和习近平文化思想，坚持铸牢中华民族共同体意识主线，坚持法学学科发展规律和立德树人根本任务，坚持走主流化、特色化、交叉化、国际化的高质量均衡发展之路。学院将结合国家改革、建设、发展的时代需求，实事求是，开拓进取，努力建设成为国家需要、人民满意、社会认可、国际知名的一流法学院，为强国建设、民族复兴与人类和平发展做出更大贡献。</span></p><p style="text-indent: 43px; text-align: justify; line-height: 1.5em;"><span style="font-family: 仿宋; font-size: 21px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></p><p style="text-indent: 43px; text-align: justify; line-height: 1.5em;"><span style="font-family: 仿宋; font-size: 21px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;（数据更新于2025年9月）</span></p><p><br style="text-wrap-mode: wrap;"></p><p style="text-align:justify;margin-top:0;margin-bottom:0;text-indent:43px;text-justify:inter-ideograph;background:rgb(255,255,255)"><br></p></div></div>
+    <span id="vsb_content_4215_u11" name="vsb_content_4215_u11"></span>
+    
+
+  </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+              <div class="friends-box text-center wow fadeInUp" style="visibility: hidden; animation-name: none;">
+ <font>友情链接：</font>
+     <a href="https://www.law.pku.edu.cn/" onclick="_addDynClicks(&quot;wburl&quot;, 1779811220, 75050)">北大法学院</a>
+<span>|</span>
+     <a href="http://www.law.ruc.edu.cn/home/" onclick="_addDynClicks(&quot;wburl&quot;, 1779811220, 75051)">人大法学院</a>
+<span>|</span>
+     <a href="https://www.law.tsinghua.edu.cn/" onclick="_addDynClicks(&quot;wburl&quot;, 1779811220, 75052)">清华法学院</a>
+<span>|</span>
+     <a href="http://www.cupl.edu.cn/" onclick="_addDynClicks(&quot;wburl&quot;, 1779811220, 75053)">中国政法</a>
+<span>|</span>
+     <a href="http://iolaw.cssn.cn/" onclick="_addDynClicks(&quot;wburl&quot;, 1779811220, 75054)">社科院法学所</a>
+<span>|</span>
+     <a href="https://www.swupl.edu.cn/" onclick="_addDynClicks(&quot;wburl&quot;, 1779811220, 75055)">西南政法</a>
+<span>|</span>
+     <a href="http://www.zuel.edu.cn/" onclick="_addDynClicks(&quot;wburl&quot;, 1779811220, 75056)">中南政法</a>
+<span>|</span>
+     <a href="http://law.whu.edu.cn/xygk/xrld.htm" onclick="_addDynClicks(&quot;wburl&quot;, 1779811220, 75057)">武大法学院</a>
+
+</div>
+            <div class="clearfix">
+                <div class="pull-left logo-b wow fadeInUp" style="visibility: hidden; animation-name: none;">     
+          
+             
+                        <a href="../index.htm" onclick="_addDynClicks(&quot;wbimage&quot;, 1779811220, 63833)">
+                            
+                            <img src="../images/logo-b.png">
+                        </a>  
+                   
+                 
+      
+</div>
+                <div class="pull-left footer-center wow fadeInUp" style="visibility: hidden; animation-name: none;">
+                    <div class="footer-tt">联系我们</div>
+                    <div class="footer-p">
+                        <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：北京市丰台区魏各庄路27号明德楼5层</p><p>邮编：100073</p><p>联系电话：010-83875043</p><p>Email: faxueyuan2661@126.com</p><p>Copyright©2017中央民族大学法学院版权所有</p>
+                    </div>
+                </div>
+                     
+          
+
+
+<div class="pull-right text-center ewm-txt wow fadeInUp" style="visibility: hidden; animation-name: none;"><img src="../images/ewm.png"><br>中央民族大学法学院 官方平台</div>
+
+
+ 
+       
+
+            </div>
+        </div>  
+    </div>
+
+
+
+
+
+
+
+
+
+<script src="../js/jquery.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/common.js"></script><script src="../js/slick.js"></script><script src="../js/wow.min.js"></script><script>
+if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+  new WOW().init();
+};
+
+</script>
+
+<script>  function BrowserType() {
+            var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+            var isOpera = userAgent.indexOf("Opera") > -1; //判断是否Opera浏览器
+            var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera; //判断是否IE浏览器
+            var isEdge = userAgent.indexOf("Windows NT 6.1; Trident/7.0;") > -1 && !isIE; //判断是否IE的Edge浏览器
+
+            if (isIE) {
+                var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+                reIE.test(userAgent);
+                var fIEVersion = parseFloat(RegExp["$1"]);
+                if (fIEVersion < 9) {
+                    alert("浏览器版本过低，请升级或更换浏览器（谷歌、火狐等）")
+                    return false;
+                }//IE版本过低
+            } 
+            if (isEdge) {
+                alert("浏览器版本过低，请升级或更换浏览器（谷歌、火狐等）")
+                return false;
+            } 
+        }
+        BrowserType()  // 浏览器是否为ie
+        </script>
+
+
+</body></html>

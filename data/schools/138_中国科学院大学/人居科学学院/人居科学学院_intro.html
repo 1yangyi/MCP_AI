@@ -1,0 +1,223 @@
+<!DOCTYPE html><html class="js"><!--<![endif]--><head>
+    <title>中国科学院大学-人居科学学院</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="/templates/static/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/templates/static/js/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <link href="/templates/static/css/theme-style.css" rel="stylesheet" type="text/css">
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!----font-Awesome----->
+    <link rel="stylesheet" href="/templates/static/fonts/css/font-awesome.min.css">
+    <!----font-Awesome----->
+    <!----webfonts---->
+    <link href="/templates/static/js/font.css" rel="stylesheet" type="text/css">
+    <!----//webfonts---->
+    <link href="/templates/static/css/demo.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/templates/static/css/jquery.sweet-dropdown.min.css">
+    <script src="/templates/static/js/showLoading.js"></script>
+    <!----start-top-nav-script---->
+    <script>
+        $(function() {
+            var pull 		= $('#pull');
+            menu 		= $('nav ul');
+            menuHeight	= menu.height();
+            $(pull).on('click', function(e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+            $(window).resize(function(){
+                var w = $(window).width();
+                if(w > 320 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
+    <!----//End-top-nav-script---->
+    <!----start-slider-script---->
+    <script src="/templates/static/js/responsiveslides.min.js"></script>
+    <script>
+        // You can also use "$(window).load(function() {"
+        $(function () {
+            // Slideshow 4
+            $("#slider4").responsiveSlides({
+                auto: true,
+                //height:document.body.clientHeight,
+                pager: true,
+                nav: true,
+                speed: 500,
+                namespace: "callbacks",
+                before: function () {
+                    $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                    $('.events').append("<li>after event fired.</li>");
+                }
+            });
+        });
+    </script>
+    <!----//End-slider-script---->
+    <!---- Slider ------>
+    <link rel="stylesheet" href="/templates/static/css/slider.css" type="text/css">
+    <script type="text/javascript" src="/templates/static/js/jquery.cslider.js"></script>
+    <script type="text/javascript" src="/templates/static/js/modernizr.custom.28468.js"></script>
+    <script type="text/javascript">
+        $(function() {
+
+            $('#da-slider').cslider({
+                autoplay	: true,
+                bgincrement	: 450
+            });
+
+        });
+    </script>
+    <script type="text/javascript">
+        $(function() {
+
+            $('#da-slider1').cslider({
+                autoplay	: true,
+                bgincrement	: 450
+            });
+
+        });
+    </script>
+
+    <!---- Flod ------>
+    <script>document.documentElement.className = "js";</script>
+    <script type="text/javascript" src="/templates/static/js/flod/json2.js"></script>
+    <script type="text/javascript" src="/templates/static/js/flod/jquery.collapse.js"></script>
+    <script type="text/javascript" src="/templates/static/js/flod/jquery.collapse_storage.js"></script>
+    <script type="text/javascript" src="/templates/static/js/flod/jquery.collapse_cookie_storage.js"></script>
+</head>    <body style="">
+        <div id="hello header" class="top-header">
+    <!-----start-conatiner---->
+    <div class="inner">
+        <!-----start-header:css "container"---->
+        <div class="header mod clearfix"><a class="navi-aside-toggle navi-aside-toggle-show"></a>
+            <div class="container">
+                <div class="logo">
+                    <a href="/index.php/zh"><img src="/templates/static/images/logo.png"></a>
+                </div>
+
+                <nav class="top-nav wapper">
+                            <ul class="top-nav">
+<li class="page-scroll"><a page-scroll="" class="bm-btn " href="/index.php/zh/">首页</a></li><li class="active"><a active="" class="bm-btn " href="/index.php/zh/gaikuang/jianjie">学院概况</a><div class="dropdown-menu dropdown-anchor-top-left dropdown-has-anchor dropdown-opened" id="dropdown-standard"><ul><li class=""><a class=" " href="/index.php/zh/gaikuang/jianjie">学院简介</a></li><li class=""><a class=" " href="/index.php/zh/gaikuang/jianjie-2">组织架构</a></li><li class=""><a class=" " href="/index.php/zh/gaikuang/zhici">院长寄语</a></li></ul></div></li><li class="page-scroll"><a page-scroll="" class="bm-btn " href="/index.php/zh/home-zh-cn-3/news">新闻公告</a><div class="dropdown-menu dropdown-anchor-top-left dropdown-has-anchor dropdown-opened" id="dropdown-standard"><ul><li class=""><a class=" " href="/index.php/zh/home-zh-cn-3/news">学院新闻</a></li><li class=""><a class=" " href="/index.php/zh/home-zh-cn-3/tongzhi">通知公告</a></li><li class=""><a class=" " href="/index.php/zh/home-zh-cn-3/tongzhi-2">学术讲座</a></li></ul></div></li><li class="page-scroll"><a page-scroll="" class="bm-btn " href="/index.php/zh/shiziduiwu/yuanshi">师资队伍</a><div class="dropdown-menu dropdown-anchor-top-left dropdown-has-anchor dropdown-opened" id="dropdown-standard"><ul><li class=""><a class=" " href="/index.php/zh/shiziduiwu/yuanshi">建筑与城市系</a></li><li class=""><a class=" " href="/index.php/zh/shiziduiwu/gwjs">李政道科学与艺术中心</a></li><li class=""><a class=" " href="/index.php/zh/shiziduiwu/gwjs-2">艺术与创意设计系（筹）</a></li><li class=""><a class=" " href="/index.php/zh/shiziduiwu/gw">岗位教授</a></li><li class=""><a class=" " href="/index.php/zh/shiziduiwu/gw-2">师资招聘</a></li></ul></div></li><li class="page-scroll"><a page-scroll="" class="bm-btn " href="/index.php/zh/gaikuang-2/txznx">教学科研</a><div class="dropdown-menu dropdown-anchor-top-left dropdown-has-anchor dropdown-opened" id="dropdown-standard"><ul><li class=""><a class=" " href="/index.php/zh/gaikuang-2/txznx">教学科研动态</a></li><li class=""><a class=" " href="/index.php/zh/gaikuang-2/txznx-2">科研平台</a></li></ul></div></li><li class="page-scroll"><a page-scroll="" class="bm-btn " href="/index.php/zh/zhaosheng/pxgz">招生培养</a><div class="dropdown-menu dropdown-anchor-top-left dropdown-has-anchor dropdown-opened" id="dropdown-standard"><ul><li class=""><a class=" " href="/index.php/zh/zhaosheng/pxgz">招生动态</a></li><li class=""><a class=" " href="/index.php/zh/zhaosheng/pxgz-4">研究生培养</a></li></ul></div></li><li class="page-scroll"><a page-scroll="" class="bm-btn " href="/index.php/zh/2023-12-12-08-35-00/2023-12-12-08-35-1">联系我们</a><div class="dropdown-menu dropdown-anchor-top-left dropdown-has-anchor dropdown-opened" id="dropdown-standard"><ul><li class=""><a class=" " href="/index.php/zh/2023-12-12-08-35-00/2023-12-12-08-35-1">联系方式</a></li><li class=""><a class=" " href="/index.php/zh/2023-12-12-08-35-00/2023-12-12-08-35-2">师资招聘</a></li></ul></div></li><li class="page-scroll"><a page-scroll="" class="bm-btn " href="/index.php/zh/2023-12-12-08-36-18">相关链接</a></li></ul>
+
+    
+                    <a href="#" id="pull"><img src="/templates/static/images/nav-icon.png" title="menu"></a>
+                </nav>
+
+                <div class="Atop">
+                    <ul>
+                        <li class="langurage">
+                            <a class="search" href="/index.php/zh/component/search"><img src="/templates/static/images/search.png">搜索</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clear"> </div>
+            </div>
+            <!-----//End-header---->
+        </div>
+        <!-----start-top-header----->
+    </div>
+</div>
+        <!-- Slideshow 4 -->
+        
+            ?&gt;
+            <div class="banner">
+    <i>学院概况</i>
+</div>
+<div class="content flod">
+    <nav>
+        <ul>
+<li class=" active"><a active="" class=" " href="/index.php/zh/gaikuang/jianjie">学院简介</a></li><li class=""><a class=" " href="/index.php/zh/gaikuang/jianjie-2">组织架构</a></li><li class=""><a class=" " href="/index.php/zh/gaikuang/zhici">院长寄语</a></li></ul>
+            <div class="Breadcrumbs">
+	
+<a href="/index.php/zh/">首页 /&nbsp;</a><a href="/index.php/zh/gaikuang/jianjie">学院概况 /&nbsp;</a><a href="/index.php/zh/gaikuang/jianjie">学院简介</a></div>
+
+
+                </nav>
+                <div id="system-message-container">
+	</div>
+
+                <div class="P1200">
+
+        <div class="Tleft"><h4>学院简介</h4></div>
+
+        <div class="Tcontent">
+            <div class="haomen">
+		        <p><span style="font-size: 14pt;">中国科学院大学（以下简称国科大）人居科学学院（School of Sciences for Human Habitat, UCAS）是我国首个以“人居科学” 命名的学院，是基于联合国“人居”理念创立的国际化创新型学院。学院以促进社会和环境可持续的城镇和城市发展为愿景，以提升科教融合背景下的建筑、规划与景观学科和“人居环境科学”为宗旨，以建设“人居科学”前沿及交叉学科体系为目标，呼应国家高质量发展和新型城镇化的需求，以培养适应当前和未来社会亟需的人居领域中坚人才为己任，积极服务国家战略。基于国科大“科教融合”战略的办学模式特点，学院以中国科学院和国科大丰富的前沿及交叉学科为基础，在充分整合和提升原有建筑、规划及景观学科积累的基础上，致力于推动新兴特色学科的形成，以建设“人居科学”交叉学科目标。</span></p>
+<p><span style="font-size: 14pt;">学院成立以来，已在长聘体系高端人才引进，人居科学课程体系建设，硕博士研究生招生等方面取得突破性进展。国科大引进北京市战略科学家、北京市建筑设计研究院总建筑师、总规划师吴晨担任讲席教授及学院院长；欧洲科学院院士、英国皇家科学院院士和中国工程院外籍院士、伦敦大学学院（UCL）教授康健及英国剑桥大学教授、剑桥大学建筑系原系主任、现学位委员会主任和马丁建筑与城市研究中心主任金鹰为兼职讲席教授；国际知名钢琴家、伦敦音乐戏剧学院钢琴系教授、《钢琴家》杂志特约钢琴家李晨音为兼职长聘教授。</span></p>
+<p><span style="font-size: 14pt;">学院现下设建筑与城市系、艺术与创意设计系（筹）和李政道科学与艺术中心；建立人居前沿、建筑与城市设计和艺术文化通识三个教研室；强化人居科学实验室、城市设计与城市复兴工程技术中心等专项研究中心及新前沿交叉平台建设。同时，学院已全面推动广泛的国际国内学术交流与合作。</span></p>
+<p><span style="font-size: 14pt;">学院积极推进中国科学院“科教融合”背景下的“院所合作”战略，弘扬两弹一星精神，落实立德树人的根本任务，已与中国科学院地理与资源研究所、中国科学院城市环境研究所、中国科学院大气物理研究所、中国科学院科技战略咨询研究院、中国科学院自然科学史研究所等与人居科学前沿及交叉领域相关的兄弟院所开展了积极交流与合作，形成高水平的岗位教授体系。与更多院所的进一步合作工作在持续推动中。</span></p>
+<p><span style="font-size: 14pt;">人居科学学院关注全球热点科学问题，积极回应国家战略需求，紧扣学科前沿，重点研究领域包含建筑规划景观；人居建成环境；区域规划；可持续发展与双碳目标；生命科学与健康城市；城市复兴与乡村振兴；城市空间发展与决策管理（模型）；数字孪生与智慧城市；文化与生态旅游；艺术设计与科技人文等方面。</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;<img class="insertimg" style="display: block; margin-left: auto; margin-right: auto;" src="/images/2024/202412/215526_678473_7c202a9c62314d6fb1ed05bc2759002f41.png" alt="" width="1103" height="208"></p>
+<p>&nbsp;</p>
+<p style="text-align: right;">&nbsp;</p>
+<p>&nbsp;</p>
+<p style="text-align: right;">&nbsp;</p>            </div>
+            		</div><!--//b-abody:end-->
+		
+  </div>                          
+                       <!-- //b-pagecontent:end -->
+
+
+
+<script type="text/javascript">
+    var videoNode=document.getElementById("insertVideo");
+    var info=videoNode.innerHTML.split('&amp;&amp;');
+    var url = 'https://vfront.ucas.ac.cn/ajax/net-group?resourceId=' + info[3]
+    if(videoNode){
+        var code='<iframe id="video_6b965012-19cd-49a6-9301-fd49f47cea3e" allow="fullscreen" width="' + info[0] + '" height="' + info[1] + '" src="' + url + '"></iframe>';
+        videoNode.innerHTML=code;
+    }
+</script>
+
+            </div>
+                <div style="clear:both"></div>
+<footer id="footer">
+
+
+		   <div class="container">
+			<div class="b-footer-link">
+				 <div class="b-footer-link">
+    <div class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="/index.php/zh/2023-12-12-08-36-18">友情链接 <b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+				<li>
+					<a href="http://www.cas.cn/" rel="no follow">中国科学院</a>
+									</li>
+				<li>
+					<a href="http://www.ucas.ac.cn/" rel="no follow">中国科学院大学</a>
+									</li>
+				<li>
+					<a href="http://admission.ucas.ac.cn/" rel="no follow">中国科学院大学研究生招生网</a>
+									</li>
+		</ul>
+	</div>
+</div>
+
+
+			</div>
+
+
+<div class="custom">
+	<div class="b-footer-copy">@ 中国科学院大学版权所有</div>
+<div class="b-footer-add">地址：北京市海淀区中关村南一条3号</div>
+<div class="b-footer-beian"><a>京ICP备07017956号 | 京公网安备 11010702001635号</a></div></div>
+
+
+			</div>
+
+</footer>
+        <!---- //End-slider----->
+
+
+        <script src="/templates/static/js/jquery.sweet-dropdown.js"></script>
+    
+</body></html>

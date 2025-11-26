@@ -1,0 +1,810 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html class=" js flexbox opacity"><head><title>语言与语言教育研究中心-华中师范大学语言与语言教育研究中心</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="语言与语言教育研究中心">
+<meta name="keywords" content="华中师范大学语言与语言教育研究中心">
+
+
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><script src="../dfiles/12691/js/modernizr.custom.js"></script><link rel="stylesheet" type="text/css" href="../dfiles/12691/css/style002.css"><link rel="stylesheet" type="text/css" href="../dfiles/12691/css/sidemenu.css"><link rel="stylesheet" type="text/css" href="../dfiles/12691/css/banner.css">
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475c50575742000400034456 -->
+<link rel="stylesheet" type="text/css" href="../jj.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1011,'/jj.jsp',-1,1199325268)</script>
+</head>
+<body>
+<div id="header">
+<div id="logo"><a href="../index.html">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+</a><a href="../index.htm" title="语言研究中心"><img src="../dfiles/12691/image/logo1.png" width="595" height="84" border="0" alt="语言研究中心" title="语言研究中心"></a><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script></div>
+<div id="search">
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu1">
+    <div id="appu1"><div class="form"><input type="text" autocomplete="off" class="keyword"> <input id="searchbtn" type="submit" value="" align="absmiddle"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError" class="form">
+        
+        <input  class="keyword" type="text" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+ <input id="searchbtn" type="submit" value="" align="absmiddle" style="cursor: hand" v-on:click="onSubmit()">
+ 
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1199325268";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+ </div>
+<div id="about" class="chl-poster simple">
+<div id="site-nav">
+<ul class="quick-menu">
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><li class="mytaobao menu-item"><div class="menu"><a class="menu-hd" href="javascript:void(0);" rel="nofollow" target="_top">关于<b></b></a> 
+<div class="menu-bd">
+<div class="menu-bd-panel">
+<div id="contact"><a id="quickmenu1" href="../index/gy/gyzx.htm" rel="nofollow">关于中心</a>
+ <a id="quickmenu2" href="../index/gy/lxwm.htm" rel="nofollow">联系方式</a>
+</div></div></div></div></li>
+<li class="old"><a id="quickmenu3" href="#">旧版回顾</a> </li>
+
+
+</ul></div></div></div>
+<div id="wrapper">
+<div id="main-nav-holder" class="main-nav-holder"><nav id="main-nav">
+<div id="wrap_all">
+<div id="top">
+<div id="menulist" class="navwrap">
+<ul id="nav"> <li>
+<a href="../index.htm">中心首页</a></li>
+
+  <li>
+<a href="yyyyyjyyjzx.htm">中心概况</a>
+
+<ul class="children">
+
+<li class="page_item">
+<a href="yyyyyjyyjzx.htm">语言与语言教育研究中心</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="yyyjs.htm">语言研究所</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="hygjtggzyjjd.htm">汉语国际推广工作研究基地</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="hyywzxxk.htm">汉语言文字学学科</a>
+
+
+</li>
+
+
+
+<li class="page_item btmbord">
+<a href="xrld.htm">现任领导</a>
+
+</li>
+
+
+</ul>
+
+</li>  <li>
+<a href="../xsdw/zzry.htm">学术队伍</a>
+
+<ul class="children">
+
+<li class="page_item">
+<a href="../xsdw/zzry.htm">专职人员</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../xsdw/xnjzry.htm">校内兼职人员</a>
+
+
+</li>
+
+
+
+<li class="page_item btmbord">
+<a href="../xsdw/xwjzry.htm">校外兼职人员</a>
+
+</li>
+
+
+</ul>
+
+</li>  <li>
+<a href="../kxyj/kyxm.htm">科学研究</a>
+
+<ul class="children">
+
+<li class="page_item">
+<a href="../kxyj/kyxm.htm">科研项目</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../kxyj/kycg.htm">科研成果</a>
+
+
+</li>
+
+
+
+<li class="page_item btmbord">
+<a href="../kxyj/cghj.htm">成果获奖</a>
+
+</li>
+
+
+</ul>
+
+</li>  <li>
+<a href="../rcpy/sss/ssspyzx.htm">人才培养</a>
+
+<ul class="children">
+
+<li class="page_item">
+<a href="../rcpy/sss/ssspyzx.htm">硕士生</a>
+
+
+<ul class="children">
+<li class="page_item">
+<a href="../rcpy/sss/ssspyzx.htm">硕士生培养中心</a>
+</li>
+
+
+ <li class="page_item btmbord">
+<a href="../rcpy/sss/sssds.htm">硕士生导师</a></li>
+
+
+ </ul></li>
+
+
+
+<li class="page_item">
+<a href="../rcpy/bss/bsspyzx.htm">博士生</a>
+
+
+<ul class="children">
+<li class="page_item">
+<a href="../rcpy/bss/bsspyzx.htm">博士生培养中心</a>
+</li>
+
+
+ <li class="page_item btmbord">
+<a href="../rcpy/bss/bssds.htm">博士生导师</a></li>
+
+
+ </ul></li>
+
+
+
+<li class="page_item">
+<a href="../rcpy/lxs.htm">留学生</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../rcpy/zyxw.htm">专业学位</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../rcpy/xjgl.htm">学籍管理</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../rcpy/zsxx.htm">招生信息</a>
+
+
+</li>
+
+
+
+<li class="page_item btmbord">
+<a href="../rcpy/xgwj.htm">相关文件</a>
+
+</li>
+
+
+</ul>
+
+</li>  <li>
+<a href="../xsjl/xshy_.htm">合作交流</a>
+
+<ul class="children">
+
+<li class="page_item">
+<a href="../xsjl/gjh.htm">国际化</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../xsjl/jlhz.htm">交流合作</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../xsjl/hzbx.htm">合作办学</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../xsjl/xshy_.htm">学术会议 </a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../xsjl/xsbg.htm">学术报告</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../xsjl/xsxx.htm">学术信息</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../xsjl/lwxd.htm">论文选登</a>
+
+
+</li>
+
+
+
+<li class="page_item btmbord">
+<a href="../xsjl/xssl.htm">学术沙龙</a>
+
+</li>
+
+
+</ul>
+
+</li>  <li>
+<a href="../hyxb/xbjj.htm">汉语学报</a>
+
+<ul class="children">
+
+<li class="page_item">
+<a href="../hyxb/xbjj.htm">学报简介</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../hyxb/lgyq_.htm">来稿要求 </a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../hyxb/xbzd.htm">学报征订</a>
+
+
+</li>
+
+
+
+<li class="page_item btmbord">
+<a href="../hyxb/gqml_.htm">各期目录 </a>
+
+</li>
+
+
+</ul>
+
+</li>  <li>
+<a href="../kydt/hyyj.htm">科研动态</a>
+
+<ul class="children">
+
+<li class="page_item">
+<a href="../kydt/hyyj.htm">汉语研究</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../kydt/fyyj.htm">方言研究</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../kydt/myyj.htm">民语研究</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../kydt/hxyj.htm">汉学研究</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../kydt/wyyj.htm">外语研究</a>
+
+
+</li>
+
+
+
+<li class="page_item btmbord">
+<a href="../kydt/yyjy.htm">语言教育</a>
+
+</li>
+
+
+</ul>
+
+</li>  <li>
+<a href="https://linguistics.streamlit.app/">资料信息</a>
+
+<ul class="children">
+
+<li class="page_item">
+<a href="../zlxx/yyxyjwx.htm">语言学研究文献</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="http://218.199.196.96:8080/jiansuo/TestFuju.jsp">汉语复句语料库</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="http://218.199.196.96:8080/jiansuo/TestDangdai.jsp">现代汉语语料库</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../zlxx/gdhyylk.htm">古代汉语语料库</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../zlxx/hyjxalk.htm">汉语教学案例库</a>
+
+
+</li>
+
+
+
+<li class="page_item btmbord">
+<a href="https://linguistics.streamlit.app/">语言所图书检索</a>
+
+</li>
+
+
+</ul>
+
+</li>  <li>
+<a href="../xsgz.htm">学生工作</a>
+
+<ul class="children">
+
+<li class="page_item">
+<a href="../xsgz/xygz.htm">校友工作</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../xsgz/xshd.htm">学生活动</a>
+
+
+</li>
+
+
+
+<li class="page_item">
+<a href="../xsgz/xsgl.htm">学生管理</a>
+
+
+</li>
+
+
+
+<li class="page_item btmbord">
+<a href="../xsgz/wjxz.htm">文件下载</a>
+
+</li>
+
+
+</ul>
+
+</li>
+</ul></div><!--end navwrap--></div><!--end top--></div></nav></div></div>
+<div id="main">
+<div id="banner" class="subpage_banner default">    
+      
+        
+                    
+                            <img src="../dfiles/12691/image/gaikuangbanner.jpg">
+                    
+               
+   
+</div>
+<div id="side" style="height:auto;border-right:0px">
+<div class="CategoryTree">
+<div style="height: auto">
+<ul><script language="javascript" type="text/javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script>
+<script>
+	function shangse(thisa)
+	{	
+            
+	}
+
+	function quse(thisa)
+	{
+		$(thisa).css("background-image","");
+	}
+	function showSecond(thisa)
+	{
+		$(thisa).css("background-image","url(../dfiles/12691/image/selbar.gif)");
+	    $(thisa).css("background-repeat","no-repeat");
+                $(thisa).children("ul").show();
+	}
+	function hideSecond(thisa)
+	{
+		$(thisa).css("background-image","");
+                $(thisa).children("ul").hide();
+	}
+</script>
+
+
+
+ <li id="firstselected" class="selected">
+<a class="tit h2-tit" href="yyyyyjyyjzx.htm">语言与语言教育研究中心</a>
+</li>
+ <li>
+<a class="tit" href="yyyjs.htm" onmouseover="shangse(this)" onmouseout="quse(this)">语言研究所</a></li>
+
+ <li>
+<a class="tit" href="hygjtggzyjjd.htm" onmouseover="shangse(this)" onmouseout="quse(this)">汉语国际推广工作研究基地</a></li>
+
+ <li>
+<a class="tit" href="hyywzxxk.htm" onmouseover="shangse(this)" onmouseout="quse(this)">汉语言文字学学科</a></li>
+
+ <li>
+<a class="tit" href="xrld.htm" onmouseover="shangse(this)" onmouseout="quse(this)">现任领导</a></li>
+
+</ul></div></div>
+<div id="btnlink">
+<ul>    
+            
+               <li><a href="#"><img src="../dfiles/12691/image/wenxianku2.png" width="228" height="86"></a></li>
+      
+        
+               <li><a href="#"><img src="../dfiles/12691/image/yuliaoku2.png" width="228" height="86"></a></li>
+      
+</ul></div></div>
+<div id="maincontent" style="border-left:1px solid #ccc">
+<ul id="navigator">  <li>  <h1>您的当前位置：</h1>
+</li>
+      <li> 
+            <a href="../index.htm">首页</a>
+
+
+
+                &gt;
+            
+                <a href="yyyyyjyyjzx.htm">中心概况</a>
+
+
+
+                &gt;
+            
+                <a href="yyyyyjyyjzx.htm">语言与语言教育研究中心</a>
+
+
+</li>
+
+
+</ul>
+<div id="maincontent-page">
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1199325268,'wbnews','u8')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css?v=9257B43BDBB1405AB9FBA7C6E49BBB44"><script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1199325268,1001)</script>
+<p class="MsoNormal" style="line-height: 20pt; text-indent: 21.75pt; margin: 0cm 0cm 0pt; mso-line-height-rule: exactly">
+   
+    </p><div id="vsb_content_2_1001_u81"><div id="vsb_content_2"><p style="line-height: 150%; text-indent: 32px; margin: 5px 0px"></p><p style="text-indent:37px"><span style="font-size: 19px; font-family: 宋体, SimSun;">华中师范大学语言与语言教育研究中心成立于1999年5月。2000年11月，通过教育部专家组评审；接着，教育部正式行文，批准为“教育部百所人文社会科学重点研究基地”。中心现有专职人员20人，包括教授4人，副教授5人，讲师7人，行政教辅人员4人。主要研究方向包括现代汉语语法和现代汉语方言。自成立以来，语言与语言教育研究中心根据教育部人文社会科学重点研究基地管理办法的规定，结合学校的总体发展目标和中心的建设规划，在学科建设、科学研究、队伍建设、人才培养、学术交流、社会服务等方面都取得了突出的成绩。</span></p><p style="text-indent:37px"><strong><span style="font-size: 19px; font-family: 宋体, SimSun;">一、学科建设</span></strong></p><p style="text-indent:37px"><span style="font-size: 19px; font-family: 宋体, SimSun;">语言与语言教育研究中心的成立，成了华中师范大学语言学科建设进一步发展的重要起点。以本学科为主要支点，2000年，中国语言文学建成了博士、硕士学位授权一级学科；2001年，中国语言文学建成了博士后科研流动站；2002年，“汉语言文字学”被批准为国家级重点学科，并于2007年顺利通过教育部评估，继续保留国家重点学科资格；2008年，该学科又被评为湖北省高校优势学科。2006年，中心筹建的“华中师范大学汉语国际推广工作研究基地”获批为湖北省人文社会科学重点研究基地。在“学科辐射圈”思路的导引下，华中师范大学语言学科的博士点不断增多。至2007年，除了拥有“汉语言文字学”博士点和“语言学及应用语言学”博士点，又创建“中外语言对比”、“中文信息处理”和“对外汉语教学”三个博士点，并获批了汉语国际教育硕士专业学位硕士授权点。</span></p><p style="text-indent:37px"><span style="font-family: 宋体, SimSun; font-size: 19px;">2012年，中心与我校文学院共建的中国语言文学一级学科排名进入全国并列第4名。2013年，中国语言文学被评为湖北省一级重点学科。2017年9月，我校进入国家“一流学科建设高校”行列，中国语言文学成为首批重点建设的一流学科，中心为建设单位之一。2021年7月，中国语言文学顺利通过国家首轮“双一流”建设验收工作，并于2022年继续入选国家第二轮“双一流”建设学科名单。</span></p><p style="text-indent:37px"><strong><span style="font-size: 19px; font-family: 宋体, SimSun;">二、科学研究</span></strong></p><p style="text-indent:37px"><span style="font-family: 宋体, SimSun; font-size: 19px;">2010年以来，中心承担国家社科基金等各类项目100余项。其中，邢福义教授于2011年获批国家社科基金重大项目“全球华语语法研究”，并于2022年以“优秀”结项；在商务印书馆、中国社会科学出版社等出版著作100余部，在《中国语文》《方言》等刊物及AHCI、SSCI期刊上发表论文数百篇；获得高级别奖项10余项，其中，邢福义教授的著作《语法问题献疑集》，继第一、二、四届荣获一等奖之后，于2013年再次荣获高等学校科学研究优秀成果奖（人文社会科学）一等奖。</span></p><p style="text-indent:37px"><strong><span style="font-size: 19px; font-family: 宋体, SimSun;">三、队伍建设</span></strong></p><p style="text-indent:37px"><span style="font-size: 19px; font-family: 宋体, SimSun;">通过外引内培，充实第二梯队，组建第三梯队，形成了一支学历层次高、结构合理、团结合作、富有活力的“老中青”金字塔式的学术团队。1人享受国务院特殊津贴、1人入选国家级青年人才计划、1人荣获湖北省先进工作者称号、1人被评为湖北省有突出贡献的中青年专家， 2人分别入选华中师范大学桂子学者和桂子青年学者。</span></p><p style="text-indent:37px"><strong><span style="font-size: 19px; font-family: 宋体, SimSun;">四、人才培养</span></strong></p><p style="text-indent:37px"><span style="font-size: 19px; font-family: 宋体, SimSun;">中心注重复合型应用性人才的培养。在拓展层次、扩大规模、努力提高培养能力的同时，中心着力推进研究生教育方式的改革与创新，把突出两条教学链（学习链、指导链）、强调三个着眼点（问题意识、研究能力、良好学风）作为研究生培养的指导方针；把落实三个结合（学习与研究相结合、读书与写作相结合、务实与创新相结合）、过好三关（选题关、研究关、表达关）作为研究生学习的基本要求。研究生在读期间，大都发表了多篇论文，其中有些论文发表在专业权威期刊、重点核心期刊，或者被人大复印资料全文转载。2010年以来，2篇博士学位论文被评为全国优秀博士学位论文提名论文，3篇博士学位论文、6篇硕士学位论文被评为湖北省优秀学位论文。参与的教学成果获得国家教学成果奖二等奖1项，湖北省高等学校教学成果奖一等奖1项、二等奖1项；“现代汉语”课程荣获国家精品课程和国家级一流本科课程；《现代汉语（第2版）》入选首批“十四五”职业教育国家规划教材。</span></p><p style="text-indent:37px"><strong><span style="font-size: 19px; font-family: 宋体, SimSun;">五、学术交流</span></strong></p><p style="text-indent:37px"><span style="font-family: 宋体, SimSun; font-size: 19px;">2010年以来，中心主办或联办国际、国内学术会议20余次，其中“汉语语法专题系列国际学术研讨会”自2000年创办以来，已成功举办十届，形成专题化、系列化、讲求实效的特色，国内外与会学者给予了高度评价。开辟了两个学术交流阵地——《汉语学报》和“华中语学论库”，产生了广泛的学术影响。《汉语学报》入选国内三大期刊检索系统（CSSCI来源期刊、北大中文核心期刊、中国人文社会科学AMI核心期刊），并荣获国家哲学社会科学文献中心2023年度语言学最受欢迎期刊；“华中语学论库”丛书荣获湖北图书奖。与境内外高校和科研机构保持密切合作，学术互访活动日益频繁。年均10余位国内外知名学者来校访问讲学，中心研究人员年均赴境内外参加重要学术会议或讲学数十人次。建立了专业图书资料室和大型汉语语料库，现有近3万册藏书和累计5000万字的语料数据，积累了丰富的图书资料和研究素材。</span></p><p style="text-indent:37px"><strong><span style="font-size: 19px; font-family: 宋体, SimSun;">六、社会服务</span></strong></p><p style="text-indent:37px"><span style="font-size: 19px; font-family: 宋体, SimSun;">中心充分发挥汉语专业优势，积极对接国家需求，主动服务社会发展。向中央办公厅、中宣部、教育部、国家语委、湖北省政府等提交了大量调研报告和咨询报告，其中多份被中央领导批示，为各级部门了解舆情信息、制定语言文字战略提供了一些具有理论价值和实践意义的意见和建议。2020年新冠疫情期间，中心迅速加入“战疫语言服务团”，与多家单位联合攻关，发布《抗击疫情湖北方言通》。2022年，作为首批联合发起单位之一，与北京语言大学、武汉大学等20多家单位联合成立“国家应急语言服务团”。连续多年承接语委干部能力提升培训班、国家通用语言文字能力提升培训班等各类培训工作；连续多年开展“推普助力乡村振兴”志愿服务活动。全面完成“中国语言资源保护工程”湖北项目的调查任务，主编出版《中国语言资源集（湖北卷）》，为湖北方言文化的保护传承做出了贡献。</span></p><p style="text-indent:37px"><br></p><p style="text-align: right;"><span style="font-size: 19px; font-family: 宋体, SimSun;">（2025年5月13日更新）</span></p><p style="line-height: 150%; text-indent: 32px; margin: 5px 0px"><span style="font-family: 宋体, SimSun; line-height: 150%;"><br></span></p><p><span style="font-family: 宋体, SimSun;"></span></p><p class="vsbcontent_start" style="text-align: justify;"><br></p></div></div>
+    <span id="vsb_content_2_1001_u8" name="vsb_content_2_1001_u8"></span><br><br>
+    
+<p></p>
+</div></div></div>
+<div id="footer">
+<div id="footer-links">
+<ul>
+<li><span>
+<h5>友情链接</h5></span>
+<div style="padding-left: 70px;line-height: 16px">  <a target="_blank" href="http://www.cashl.edu.cn/portal/">中国高校人文社会科学文献中心</a>
+  <a target="_blank" href="http://www.sinoss.net/">中国高校人文社会科学信息网</a>
+  <a target="_blank" href="http://cssci.nju.edu.cn/login_u.html">中国社科评价中心</a>
+  <a target="_blank" href="http://www.npopss-cn.gov.cn/">全国哲社规划办公室</a>
+  <a target="_blank" href="http://ccl.pku.edu.cn/">北京大学汉语语言学研究中心</a>
+  <a target="_blank" href="http://rlls.hlju.edu.cn/">黑龙江大学俄罗斯语言文学与文化研究中心</a>
+</div></li></ul></div>
+<div id="footer-info"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>地址：武汉市珞喻路152号 邮编：430079&nbsp; 版权所有：华中师范大学语言与语言教育研究中心 Copyright © 2012 All Right Reserved 鄂ICP备05003325</p></div></div><nav>
+<ul>
+<li><a title="返回顶端" class="top hidden" href="#">Top</a> </li></ul></nav><script src="../dfiles/12691/js/jquery001.js"></script>
+<script src="../dfiles/12691/js/jsd.js"></script>
+
+<script src="../dfiles/12691/js/waypoints.js"></script><script type="text/javascript">
+
+    function GetRequest() {
+        var url = location.search; //获取url中？符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for (var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = (strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+
+    $(document).ready(function () {
+        $('.top').addClass('hidden');
+        $.waypoints.settings.scrollThrottle = 30;
+        $('#wrapper').waypoint(function (event, direction) {
+            $('.top').toggleClass('hidden', direction === "up");
+        }, {
+            offset: '-100%'
+        }).find('#main-nav-holder').waypoint(function (event, direction) {
+            $(this).parent().toggleClass('sticky', direction === "down");
+            event.stopPropagation();
+        });
+
+        // Ajax请求
+        $.get("Pages/About.aspx", {}, function (result) {
+            var obj = eval('(' + result + ')');
+            for (var i = 0; i < obj.length; i++) {
+                $("#quickmenu" + (i+1)).attr("href", obj[i]);
+            }
+        });
+        $.get("Pages/MenuList.aspx", {}, function (result) {
+            $("#menulist").html(result);
+            $(".children li:last-child").addClass("page_item btmbord");
+        });
+        $.get("Pages/Buttom.aspx", {}, function (result) {
+            $("#footer").append(result);
+        });
+        var res = GetRequest();
+        var path = res["path"];
+
+        //var classname = path.substring(0, path.indexOf('|'));
+
+        //$("#banner").removeClass().addClass("subpage_banner " + classname);
+        
+        $.get("Pages/LeftNavigation.aspx?path=" + res["path"] + "&id=" + res["id"], {}, function (result) {
+            $(".CategoryTree").html(result);
+         jQuery(function () {
+                $(".CategoryTree > ul > li").hover(function () {
+                    $(this).addClass("selected");
+                    $(this).children("a:eq(0)").addClass("h2-tit");
+                    $(this).children("ul").show();
+                }, function () {
+                    $(this).removeClass("selected");
+                    $(this).children(".tit").removeClass("h2-tit");
+                    $(this).children("ul").hide();
+                });
+
+            });
+           
+        });
+
+    
+
+        $.get("Pages/RightContent.aspx?path=" + res["path"] + "&id=" + res["id"], {}, function (result) {
+            $("#maincontent").html(result);
+            document.getElementById("side").style.height = document.getElementById("maincontent").scrollHeight + "px";
+        });
+    });
+
+    function FreshContent(obj, id) {
+//        $(".title003").attr("class", "title002");
+//        $(obj).parent().attr("class", "title003");
+        $.get("Pages/NewsList.aspx?classId=" + id, {}, function (result) {
+            $("#maincontent-page").html(result);
+            document.getElementById("side").style.height = document.getElementById("maincontent").scrollHeight + "px";
+        });
+    }
+    function FreshPageContent(id, page) {
+        $.get("Pages/NewsList.aspx?classId=" + id + "&page=" + page, {}, function (result) {
+            $("#maincontent-page").html(result);
+            document.getElementById("side").style.height = document.getElementById("maincontent").scrollHeight + "px";
+        });
+    }
+</script>
+
+
+</body></html>

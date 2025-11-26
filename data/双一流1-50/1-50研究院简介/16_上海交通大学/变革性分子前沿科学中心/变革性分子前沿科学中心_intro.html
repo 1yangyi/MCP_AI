@@ -1,0 +1,1188 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="toTop" content="true">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <title>中心介绍-变革性分子前沿科学中心</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="中心介绍">
+<meta name="keywords" content="变革性分子前沿科学中心,中心简介">
+
+    <link rel="stylesheet" href="../style/bootstrap.min.css">
+    <link href="../style/swiper.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/animate.css">
+    <link href="https://51eweb.cn/Assets/fonts/SourceHanSerifCN-Regular/result.css" rel="stylesheet">
+    <link type="text/css" href="../style/common.css" rel="stylesheet">
+    <link type="text/css" href="../style/index.css" rel="stylesheet">
+    <link type="text/css" href="../style/ny.css" rel="stylesheet">
+     <script type="text/javascript" src="../script/jquery.min.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307468475d5051574200030003455c -->
+<link rel="stylesheet" type="text/css" href="../cnt.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1008,'/cnt.jsp',-1,1721367394)</script>
+</head>
+
+<body>
+    <div class="box">
+        <div class="search-box hidden-xs">
+            <div class="container">
+                <h2>搜索</h2>
+                <div class="search-form">
+                    
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu0">
+    <div id="appu0"><div><input type="text" placeholder="输入关键词..." autocomplete="off" class="form-text"> <button type="submit" name="submit_button" class="form-submit"><i class="fa fa-search"></i></button></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <input type="text" class="form-text" placeholder="输入关键词..." autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <button type="submit" class="form-submit" v-on:click="onSubmit()" name="submit_button"><i class="fa fa-search"></i></button>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1721367394";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.119.10.191:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                </div>
+                <div class="close">
+                    关闭<i class="iconfont icon-close"> X</i>
+                </div>
+            </div>
+        </div>
+        <!--search-box end-->
+        <!-- nav导航开始 -->
+        <nav class="header navbar navbar-default visible-xs visible-sm">
+            <!--大屏头部-->
+            <div class="navbar-header ">
+                <div class="container">
+                    <div class="row">
+                        <a href="../" class="visible-xs visible-sm logo1" target="_self">
+                            <img src="../images/logo.png" id="img" class="img-responsive">
+                        </a>
+                        <div class="header-mobile visible-xs visible-sm">
+                            <div class="site-tree-mobile">
+                                <span class="fa fa-reorder"></span>
+                            </div>
+                            <div class="site-mobile-shade"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-nav">
+    <div class="container">
+        <div class="row">
+
+            <ul class="nav nav-pills " id="nav-animate" data-animation="fadeIndown">
+                <li class="mobile-nav-header">
+                    <div class="closeIcon">×</div>
+                </li>
+
+                
+                    <li role="presentation" class="dropdown">
+                        <a data-href="../index.htm" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" target="_self">
+                            <span>首页</span>
+                            <i class="fa fa-angle-down" style="display: none;"></i>
+                        </a>
+                    </li>
+
+
+                    <li role="presentation" class="dropdown">
+                        <a data-href="zxjs.htm" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" target="_self">
+                            <span>中心概况</span>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                            <ul class="dropdown-menu animated" data-animation="fadeIn">
+
+                                <div class="row">
+
+                                    <li class="col-md-12 mobile-nav-header">
+                                        <div class="back"><i class="fa fa-long-arrow-left"></i></div>
+                                        <div class="closeIcon">×</div>
+                                    </li>
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="zxjs.htm" class="sub-title">中心介绍</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="sxkxjjy.htm" class="sub-title">首席科学家寄语</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="zxld.htm" class="sub-title">中心领导</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="zzjg.htm" class="sub-title">组织架构</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="xue_shu_wei_yuan_hui.htm" class="sub-title">学术委员会</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="dsj.htm" class="sub-title">大事记</a>
+                                        </li>
+
+
+                                    <div class="clearfix"></div>
+                                </div>
+                            </ul>
+                    </li>
+
+
+                    <li role="presentation" class="dropdown">
+                        <a data-href="../ryxx1/ktzz.htm" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" target="_self">
+                            <span>人员信息</span>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                            <ul class="dropdown-menu animated" data-animation="fadeIn">
+
+                                <div class="row">
+
+                                    <li class="col-md-12 mobile-nav-header">
+                                        <div class="back"><i class="fa fa-long-arrow-left"></i></div>
+                                        <div class="closeIcon">×</div>
+                                    </li>
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../ryxx1/ktzz.htm" class="sub-title">课题组长</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../ryxx1/tdcy.htm" class="sub-title">团队成员</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../ryxx1/bsh.htm" class="sub-title">博士后</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../ryxx1/yjs.htm" class="sub-title">研究生</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../ryxx1/glzcry.htm" class="sub-title">管理支撑人员</a>
+                                        </li>
+
+
+                                    <div class="clearfix"></div>
+                                </div>
+                            </ul>
+                    </li>
+
+
+                    <li role="presentation" class="dropdown">
+                        <a data-href="../kxyj1/yjfx.htm" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" target="_self">
+                            <span>科学研究</span>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                            <ul class="dropdown-menu animated" data-animation="fadeIn">
+
+                                <div class="row">
+
+                                    <li class="col-md-12 mobile-nav-header">
+                                        <div class="back"><i class="fa fa-long-arrow-left"></i></div>
+                                        <div class="closeIcon">×</div>
+                                    </li>
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../kxyj1/yjfx.htm" class="sub-title">研究方向</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../kxyj1/kydt.htm" class="sub-title">科研动态</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../kxyj1/kyxm1/rcljh.htm" class="sub-title">科研项目</a>
+                                                <ul class="no-style outside">
+
+                                                        <li>
+                                                            <a target="_self" href="../kxyj1/kyxm1/rcljh.htm">人才类计划</a>
+                                                        </li>
+                                                        <li>
+                                                            <a target="_self" href="../kxyj1/kyxm1/ndxm.htm">年度项目</a>
+                                                        </li>
+                                                </ul>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../kxyj1/ryhj/gjjjx.htm" class="sub-title">荣誉获奖</a>
+                                                <ul class="no-style outside">
+
+                                                        <li>
+                                                            <a target="_self" href="../kxyj1/ryhj/gjjjx.htm">国家级奖项</a>
+                                                        </li>
+                                                        <li>
+                                                            <a target="_self" href="../kxyj1/ryhj/sbjjx.htm">省部级奖项</a>
+                                                        </li>
+                                                </ul>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../info/1075/1195.htm" class="sub-title">专著论文</a>
+                                                <ul class="no-style outside">
+
+                                                        <li>
+                                                            <a target="_self" href="../kxyj1/zzlw/n2021.htm">2021年</a>
+                                                        </li>
+                                                        <li>
+                                                            <a target="_self" href="../kxyj1/zzlw/n2020.htm">2020年</a>
+                                                        </li>
+                                                        <li>
+                                                            <a target="_self" href="../kxyj1/zzlw/kyzz.htm">科研专著</a>
+                                                        </li>
+                                                </ul>
+                                        </li>
+
+
+                                    <div class="clearfix"></div>
+                                </div>
+                            </ul>
+                    </li>
+
+
+                    <li role="presentation" class="dropdown">
+                        <a data-href="../xshd1/jzbg.htm" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" target="_self">
+                            <span>学术活动</span>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                            <ul class="dropdown-menu animated" data-animation="fadeIn">
+
+                                <div class="row">
+
+                                    <li class="col-md-12 mobile-nav-header">
+                                        <div class="back"><i class="fa fa-long-arrow-left"></i></div>
+                                        <div class="closeIcon">×</div>
+                                    </li>
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../xshd1/jzbg.htm" class="sub-title">讲座报告</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../xshd1/xshy.htm" class="sub-title">学术会议</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../xshd1/hzjl.htm" class="sub-title">合作交流</a>
+                                        </li>
+
+
+                                    <div class="clearfix"></div>
+                                </div>
+                            </ul>
+                    </li>
+
+
+                    <li role="presentation" class="dropdown">
+                        <a data-href="../GTTJS/qysq.htm" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" target="_self">
+                            <span>共同体建设</span>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                            <ul class="dropdown-menu animated" data-animation="fadeIn">
+
+                                <div class="row">
+
+                                    <li class="col-md-12 mobile-nav-header">
+                                        <div class="back"><i class="fa fa-long-arrow-left"></i></div>
+                                        <div class="closeIcon">×</div>
+                                    </li>
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../GTTJS/zbdj.htm" class="sub-title">支部党建</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../GTTJS/qysq.htm" class="sub-title">前沿社群</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../GTTJS/shgy.htm" class="sub-title">社会公益</a>
+                                        </li>
+
+
+                                    <div class="clearfix"></div>
+                                </div>
+                            </ul>
+                    </li>
+
+
+                    <li role="presentation" class="dropdown">
+                        <a data-href="../fwzn1/shzn.htm" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" target="_self">
+                            <span>服务指南</span>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                            <ul class="dropdown-menu animated" data-animation="fadeIn">
+
+                                <div class="row">
+
+                                    <li class="col-md-12 mobile-nav-header">
+                                        <div class="back"><i class="fa fa-long-arrow-left"></i></div>
+                                        <div class="closeIcon">×</div>
+                                    </li>
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../news.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1022" class="sub-title">规章制度</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../fwzn1/shzn.htm" class="sub-title">生活指南</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../fwzn1/gzzn.htm" class="sub-title">工作指南</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../fwzn1/hysyd.htm" class="sub-title">会议室预定</a>
+                                        </li>
+
+
+                                    <div class="clearfix"></div>
+                                </div>
+                            </ul>
+                    </li>
+
+
+                    <li role="presentation" class="dropdown">
+                        <a data-href="../zszp1/PI.htm" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" target="_self">
+                            <span>招生招聘</span>
+                            <i class="fa fa-angle-down"></i>
+                        </a>
+                            <ul class="dropdown-menu animated" data-animation="fadeIn">
+
+                                <div class="row">
+
+                                    <li class="col-md-12 mobile-nav-header">
+                                        <div class="back"><i class="fa fa-long-arrow-left"></i></div>
+                                        <div class="closeIcon">×</div>
+                                    </li>
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../zszp1/PI.htm" class="sub-title">PI</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../zszp1/bsh.htm" class="sub-title">博士后</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../zszp1/yjs.htm" class="sub-title">研究生</a>
+                                        </li>
+
+
+                                        <li class="col-md-3">
+                                            <a target="_self" href="../zszp1/glry.htm" class="sub-title">管理人员</a>
+                                        </li>
+
+
+                                    <div class="clearfix"></div>
+                                </div>
+                            </ul>
+                    </li>
+
+
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+        </nav>
+        <!-- nav导航end -->
+        <div class="wc-top hidden-xs d-none">
+            <div class="container">
+                <div class="row tbg">
+                    <div class="logo  col-lg-8 col-md-9 col-sm-9 ">
+                        <a href="../" target="_self">
+                            <img src="../images/logox.png" class="img-responsive" alt="上海交通大学变革性分子前沿科学中心" title="上海交通大学变革性分子前沿科学中心">
+                        </a>
+                    </div>
+                    <div class="top-right col-lg-4 col-md-3 col-sm-3">
+                        <ul>
+                            <li><a href="javascript:;" onclick="FClick()" target="_self">EN</a></li>
+                            <li><a class=" search-btn" target="_self"><img src="../images/search.png"></a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!--wc-top end-->
+        <div class="wc-menu hidden-xs d-none">
+            <div class="container">
+                <div class="row">
+                    <ul class="col-lg-12 col-md-12 col-xsm-12">
+<li>
+       <a href="../index.htm" class="sub-title" target="_self">
+    <span>首页</span>
+    </a>
+ </li>
+<li>
+      <a href="zxjs.htm" data-id="2" class="selected sub-title" target="_self">
+    <span>中心概况</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a href="zxjs.htm" target="_self">
+                 中心介绍
+                </a>
+            </li>
+            <li>
+                <a href="sxkxjjy.htm" target="_self">
+                 首席科学家寄语
+                </a>
+            </li>
+            <li>
+                <a href="zxld.htm" target="_self">
+                 中心领导
+                </a>
+            </li>
+            <li>
+                <a href="zzjg.htm" target="_self">
+                 组织架构
+                </a>
+            </li>
+            <li>
+                <a href="xue_shu_wei_yuan_hui.htm" target="_self">
+                 学术委员会
+                </a>
+            </li>
+            <li>
+                <a href="dsj.htm" target="_self">
+                 大事记
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+<li>
+       <a href="../ryxx1/ktzz.htm" class="sub-title" target="_self">
+    <span>人员信息</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a href="../ryxx1/ktzz.htm" target="_self">
+                 课题组长
+                </a>
+            </li>
+            <li>
+                <a href="../ryxx1/tdcy.htm" target="_self">
+                 团队成员
+                </a>
+            </li>
+            <li>
+                <a href="../ryxx1/bsh.htm" target="_self">
+                 博士后
+                </a>
+            </li>
+            <li>
+                <a href="../ryxx1/yjs.htm" target="_self">
+                 研究生
+                </a>
+            </li>
+            <li>
+                <a href="../ryxx1/glzcry.htm" target="_self">
+                 管理支撑人员
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+<li>
+       <a href="../kxyj1/yjfx.htm" class="sub-title" target="_self">
+    <span>科学研究</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a href="../kxyj1/yjfx.htm" target="_self">
+                 研究方向
+                </a>
+            </li>
+            <li>
+                <a href="../kxyj1/kydt.htm" target="_self">
+                 科研动态
+                </a>
+            </li>
+            <li>
+                <a href="../kxyj1/kyxm1/rcljh.htm" target="_self">
+                 科研项目
+                </a>
+            </li>
+            <li>
+                <a href="../kxyj1/ryhj/gjjjx.htm" target="_self">
+                 荣誉获奖
+                </a>
+            </li>
+            <li>
+                <a href="../info/1075/1195.htm" target="_self">
+                 专著论文
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+<li>
+       <a href="../xshd1/jzbg.htm" class="sub-title" target="_self">
+    <span>学术活动</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a href="../xshd1/jzbg.htm" target="_self">
+                 讲座报告
+                </a>
+            </li>
+            <li>
+                <a href="../xshd1/xshy.htm" target="_self">
+                 学术会议
+                </a>
+            </li>
+            <li>
+                <a href="../xshd1/hzjl.htm" target="_self">
+                 合作交流
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+<li>
+       <a href="../GTTJS/qysq.htm" class="sub-title" target="_self">
+    <span>共同体建设</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a href="../GTTJS/zbdj.htm" target="_self">
+                 支部党建
+                </a>
+            </li>
+            <li>
+                <a href="../GTTJS/qysq.htm" target="_self">
+                 前沿社群
+                </a>
+            </li>
+            <li>
+                <a href="../GTTJS/shgy.htm" target="_self">
+                 社会公益
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+<li>
+       <a href="../fwzn1/shzn.htm" class="sub-title" target="_self">
+    <span>服务指南</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a href="../news.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1022" target="_self">
+                 规章制度
+                </a>
+            </li>
+            <li>
+                <a href="../fwzn1/shzn.htm" target="_self">
+                 生活指南
+                </a>
+            </li>
+            <li>
+                <a href="../fwzn1/gzzn.htm" target="_self">
+                 工作指南
+                </a>
+            </li>
+            <li>
+                <a href="../fwzn1/hysyd.htm" target="_self">
+                 会议室预定
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+<li>
+       <a href="../zszp1/PI.htm" class="sub-title" target="_self">
+    <span>招生招聘</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a href="../zszp1/PI.htm" target="_self">
+                 PI
+                </a>
+            </li>
+            <li>
+                <a href="../zszp1/bsh.htm" target="_self">
+                 博士后
+                </a>
+            </li>
+            <li>
+                <a href="../zszp1/yjs.htm" target="_self">
+                 研究生
+                </a>
+            </li>
+            <li>
+                <a href="../zszp1/glry.htm" target="_self">
+                 管理人员
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+</ul>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+
+        </div>
+        <!--wc-menu end-->
+
+        <div class="nycon">
+            <div class="nyban pos">
+                <div class="in-top">
+                    <div class="wc-top hidden-xs hidden-sm">
+                        <div class="container container1">
+                            <div class="row pos" style="display: flex;align-items: center;justify-content: space-between;">
+                                <div class="logo col-lg-5 col-md-4 col-sm-4 ">
+                                    <a href="" target="_self">
+                                        <img src="../images/logo.png" class="img-responsive" alt="上海交通大学变革性分子前沿科学中心" title="上海交通大学变革性分子前沿科学中心">
+                                    </a>
+                                </div>
+                                <div class="top-right col-lg-7 col-md-8 col-sm-8">
+                                    <div class="top-rr">
+                                        <ul>
+                                            <li><a href="https://enfsctm.sjtu.edu.cn/" class="english" target="_blank">EN</a></li>
+                                            <li><a class="search-btn" target="_self"><img src="../images/search.png"></a></li>
+                                        </ul>
+                                    </div>
+                                    <!--top-rr end-->
+    
+                                    <div class="wc-menu">                                   
+                                         <ul class="col-lg-12 col-md-12 col-xsm-12">
+<li>
+       <a href="../index.htm" class="sub-title" target="_self">
+    <span>首页</span>
+    </a>
+ </li>
+<li>
+      <a href="zxjs.htm" data-id="2" class="selected sub-title" target="_self">
+    <span>中心概况</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a href="zxjs.htm" target="_self">
+                 中心介绍
+                </a>
+            </li>
+            <li>
+                <a href="sxkxjjy.htm" target="_self">
+                 首席科学家寄语
+                </a>
+            </li>
+            <li>
+                <a href="zxld.htm" target="_self">
+                 中心领导
+                </a>
+            </li>
+            <li>
+                <a href="zzjg.htm" target="_self">
+                 组织架构
+                </a>
+            </li>
+            <li>
+                <a href="xue_shu_wei_yuan_hui.htm" target="_self">
+                 学术委员会
+                </a>
+            </li>
+            <li>
+                <a href="dsj.htm" target="_self">
+                 大事记
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+<li>
+       <a href="../ryxx1/ktzz.htm" class="sub-title" target="_self">
+    <span>人员信息</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a href="../ryxx1/ktzz.htm" target="_self">
+                 课题组长
+                </a>
+            </li>
+            <li>
+                <a href="../ryxx1/tdcy.htm" target="_self">
+                 团队成员
+                </a>
+            </li>
+            <li>
+                <a href="../ryxx1/bsh.htm" target="_self">
+                 博士后
+                </a>
+            </li>
+            <li>
+                <a href="../ryxx1/yjs.htm" target="_self">
+                 研究生
+                </a>
+            </li>
+            <li>
+                <a href="../ryxx1/glzcry.htm" target="_self">
+                 管理支撑人员
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+<li>
+       <a href="../kxyj1/yjfx.htm" class="sub-title" target="_self">
+    <span>科学研究</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a href="../kxyj1/yjfx.htm" target="_self">
+                 研究方向
+                </a>
+            </li>
+            <li>
+                <a href="../kxyj1/kydt.htm" target="_self">
+                 科研动态
+                </a>
+            </li>
+            <li>
+                <a href="../kxyj1/kyxm1/rcljh.htm" target="_self">
+                 科研项目
+                </a>
+            </li>
+            <li>
+                <a href="../kxyj1/ryhj/gjjjx.htm" target="_self">
+                 荣誉获奖
+                </a>
+            </li>
+            <li>
+                <a href="../info/1075/1195.htm" target="_self">
+                 专著论文
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+<li>
+       <a href="../xshd1/jzbg.htm" class="sub-title" target="_self">
+    <span>学术活动</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a href="../xshd1/jzbg.htm" target="_self">
+                 讲座报告
+                </a>
+            </li>
+            <li>
+                <a href="../xshd1/xshy.htm" target="_self">
+                 学术会议
+                </a>
+            </li>
+            <li>
+                <a href="../xshd1/hzjl.htm" target="_self">
+                 合作交流
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+<li>
+       <a href="../GTTJS/qysq.htm" class="sub-title" target="_self">
+    <span>共同体建设</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a href="../GTTJS/zbdj.htm" target="_self">
+                 支部党建
+                </a>
+            </li>
+            <li>
+                <a href="../GTTJS/qysq.htm" target="_self">
+                 前沿社群
+                </a>
+            </li>
+            <li>
+                <a href="../GTTJS/shgy.htm" target="_self">
+                 社会公益
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+<li>
+       <a href="../fwzn1/shzn.htm" class="sub-title" target="_self">
+    <span>服务指南</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a href="../news.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1022" target="_self">
+                 规章制度
+                </a>
+            </li>
+            <li>
+                <a href="../fwzn1/shzn.htm" target="_self">
+                 生活指南
+                </a>
+            </li>
+            <li>
+                <a href="../fwzn1/gzzn.htm" target="_self">
+                 工作指南
+                </a>
+            </li>
+            <li>
+                <a href="../fwzn1/hysyd.htm" target="_self">
+                 会议室预定
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+<li>
+       <a href="../zszp1/PI.htm" class="sub-title" target="_self">
+    <span>招生招聘</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a href="../zszp1/PI.htm" target="_self">
+                 PI
+                </a>
+            </li>
+            <li>
+                <a href="../zszp1/bsh.htm" target="_self">
+                 博士后
+                </a>
+            </li>
+            <li>
+                <a href="../zszp1/yjs.htm" target="_self">
+                 研究生
+                </a>
+            </li>
+            <li>
+                <a href="../zszp1/glry.htm" target="_self">
+                 管理人员
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+</ul>
+                                    </div>
+    
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--wc-top end-->    
+                </div>
+                <!--in-top end-->
+
+                <div class="nybanbg"></div>
+                    <img src="../images/123123.jpg" class="hidden-xs">
+
+                    <img src="../images/zxgk.jpg" class="visible-xs">
+
+                <div class="ke-tit visible-xs">
+                    <div class="container">
+                        <div class="ke">
+中心介绍</div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <!--/ke-tit end-->
+                </div>
+            </div>
+            <!--nyban end-->
+
+            <div class="dd1 container">
+                <div class="row">
+
+
+                    <div class="main-left col-lg-3 col-md-4 col-sm-4 ">
+                        <div class="nav-panel-title hidden-xs">
+中心概况<i></i></div>
+
+
+                        <div class="nav_name pos visible-xs">
+中心概况<img src="../images/menu-dot-w.png"></div>
+
+                        <div class="side-nav-panel">
+                            <ul class="slide-nav-ul">
+              <li>
+         <a href="zxjs.htm" class="active" target="_self">中心介绍</a>
+            <div class="clear"></div>
+        </li>
+        <li>
+         <a href="sxkxjjy.htm" target="_self">首席科学家寄语</a>
+            <div class="clear"></div>
+        </li>
+        <li>
+         <a href="zxld.htm" target="_self">中心领导</a>
+            <div class="clear"></div>
+        </li>
+        <li>
+         <a href="zzjg.htm" target="_self">组织架构</a>
+            <div class="clear"></div>
+        </li>
+        <li>
+         <a href="xue_shu_wei_yuan_hui.htm" target="_self">学术委员会</a>
+            <div class="clear"></div>
+        </li>
+        <li>
+         <a href="dsj.htm" target="_self">大事记</a>
+            <div class="clear"></div>
+        </li>
+ </ul>
+ <div class="clearfix"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <!--/side-nav-panel-->
+
+                    </div>
+                    <!--main-left End-->
+
+                    <div class="main-right col-lg-9 col-md-8 col-sm-8 col-xs-12">
+                        <div class="ke-tit hidden-xs">
+
+                            <div class="ke fl">
+中心介绍</div>
+                            <div class="nav-path fr">
+                                <a href="../index.htm" target="_self">首页</a> /
+<a href="zxjs.htm" target="_self">中心概况</a> /
+<a href="zxjs.htm" target="_self">中心介绍</a>
+
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="right-nr">
+                            
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1721367394,'wbnews','u12')</script>
+<script>function seeContenta12(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta12('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1721367394,1071)</script>
+  <div class="view-cnt">
+     <div id="vsb_content_1071_u121"><div id="vsb_content"><p style="text-align: left; text-indent: 2em;"><strong style="text-indent: 2em;"><span style="font-size: 16px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">变革性分子前沿科学中心</span></strong><span style="text-indent: 2em; font-size: 16px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">由教育部于2019年12月31日批准设立，定位于世界顶尖的分子科学科研机构，由上海交通大学负责建设运行，是上海交通大学校直属二级科研机构。中心坐落于交大张江校区，毗邻上海同步辐射光源，是上海“张江综合性国家科学中心”重要组成部分。</span><br></p>
+<p style="text-indent: 2em;"><span style="font-size: 16px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">中心依托上海交通大学化学与化工两个双一流学科，协同材料科学与工程、生物学、药学三个双一流学科，积极整合并拓展本校化学、化工、材料科学、生命科学、医学科学等学科在变革性分子研究方面的优势，形成变革性小分子、变革性大分子、变革性超分子和超快原位分子表征技术四个研究方向。中心实施管理委员会领导下的首席科学家负责制，并邀请国内外享有崇高声望的顶尖科学家组建学术委员会，中心主任和首席科学家由上海交通大学校长丁奎岭院士担任。</span></p>
+<p style="text-indent: 2em;"><span style="font-size: 16px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">中心将以国家战略需求为导向，以增强自主创新能力为核心，以多学科交叉为抓手，以分子科学领域的前沿研究为对象，以开展国家分子科学与转化研究重大科研项目和高水平实质性国际合作为主要任务，逐步形成具有全球影响力的分子科学研究平台和人才培养摇篮，努力成为在分子科学领域具有国际“领跑者”地位的学术高地。</span></p>
+<p style="text-indent: 0em;"><img src="/__local/1/37/C1/0F9DB04FBCB9A207920686B5D06_9636121B_109FE4.png" width="100%" vsbhref="vurl" vurl="/_vsl/137C10F9DB04FBCB9A207920686B5D06/9636121B/109FE4" vheight="" vwidth="100%" orisrc="/__local/1/37/C1/0F9DB04FBCB9A207920686B5D06_9636121B_109FE4.png" class="img_vsb_content" style="text-align: center;"></p></div></div>
+  </div>
+
+
+                        </div><!--right-nr-->
+                        <div class="clearfix"></div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--ny-con end-->
+
+
+
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="f-left col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            
+<p><br></p>
+<p>地址：上海市浦东新区张衡路429号</p>
+<p>邮编：200240</p>
+<p class="p1"><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" style="color: rgb(255, 255, 255); text-decoration: underline;"><span style="color: rgb(255, 255, 255);">沪ICP备20210169号</span></a> <a href="http://www.shjbzx.cn/" target="_blank" style="color: rgb(255, 255, 255); text-decoration: underline;"><span style="color: rgb(255, 255, 255);">沪举报中心</span></a><span style="color: rgb(255, 255, 255);">&nbsp; </span>版权所有©上海交通大学</p>
+<p><br></p>
+                        </div>
+                        <div class="f-right col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><ul>
+    <li class="pos">
+        <a href="https://fsctm-faculty.sjtu.edu.cn/" target="_blank">
+            <img src="/__local/A/CA/CC/47C2AC23B25079670335CC6075B_D6B151A5_B89.png">
+            <span>教职工登陆</span>
+        </a>
+    </li>
+    <li class="pos">
+        <a href="../info/1043/1036.htm" target="_self">
+            <img src="/__local/B/3D/60/527C032BD60F1A292465FC8130C_F35D5EFD_75E.png">
+            <span>交通指南</span>
+        </a>
+    </li>
+    <li class="pos">
+        <a href="https://safexam.sjtu.edu.cn/safeedu/client/index.jsp" target="_blank">
+            <img src="/__local/D/3D/D9/7544C9D3F50A4D55EE1E2FB2D9F_786AE132_7A7.png">
+            <span>实验室安全管理系统</span>
+        </a>
+    </li>
+    <li class="WeChat pos">
+        <a href="javascript:;" target="_self">
+            <img src="/__local/0/F3/5D/194C010304C8731F6CEE75F6DC7_4B0E511E_8E8.png">
+            <span>中心微信号</span>
+            <div class="codeBox">
+                 <img src="../images/WeChat.jpg" alt="">
+            </div>
+        </a>
+    </li>
+</ul>
+<script>_showDynClickBatch(['dynclicks_u14_3224','dynclicks_u14_1036','dynclicks_u14_1035','dynclicks_u14_1034'],[3224,1036,1035,1034],"wbnews", 1721367394)</script>
+
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <!--footer end-->
+
+        </div>
+
+    </div>
+    <!-- box End-->
+
+    <script type="text/javascript" src="../script/jquery.SuperSlide.js"></script>
+    <script src="../script/swiper.min.js"></script>
+    <script type="text/javascript" src="../script/toTop.js"></script>
+    <script type="text/javascript" src="../script/index.js"></script>
+    <script type="text/javascript" src="../script/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../script/bootstrap-dropdown-on-hover.js"></script>
+    <script type="text/javascript" src="../script/nav.js"></script>
+    <script type="text/javascript">
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="toTop" style="width: 50px; height: 50px; bottom: 30px; right: 25px; position: fixed; cursor: pointer; z-index: 999999; display: none;"><img src="https://fsctm.sjtu.edu.cn/images/top.png"></div></body></html>

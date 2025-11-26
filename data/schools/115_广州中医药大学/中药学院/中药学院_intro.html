@@ -1,0 +1,345 @@
+<!DOCTYPE html><html lang="en"><head><title>学院简介 -广州中医药大学中药学院（新）</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介 ">
+<meta name="keywords" content="广州中医药大学中药学院（新）">
+
+
+
+
+
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="address=no">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta name="renderer" content="webkit"><link rel="stylesheet" href="../css/style.css">
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307c78475650575742000200014251 -->
+<link rel="stylesheet" type="text/css" href="../zwy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1037,'/zwy.jsp',-1,1518468518)</script>
+</head>
+<body><!-- head  logo & nav  -->
+<div class="w10 head">
+<div class="top w12">
+<div class="logo">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+           
+                
+                        <img src="../images/pic.jpg" border="0">
+
+  
+</div>
+<div class="search-box">
+<div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 150px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -10px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -10px;}
+</style>
+<div id="divu1">
+    <div id="appu1"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="qwss"> <input name="submit_button" type="button" value="提交" class="tj"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1518468518";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div><img src="../images/search.png"> 
+<div class="clearfix"></div></div>
+<div class="home"><script language="javascript" src="/system/resource/js/openlink.js"></script><a href="http://www.gzucm.edu.cn/" onclick="_addDynClicks(&quot;wburl&quot;, 1518468518, 50778)" title="">学校首页&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</a> 
+ 
+<a href="#" onclick="_addDynClicks(&quot;wburl&quot;, 1518468518, 50779)" title="">English</a>
+
+
+</div>
+<div class="clearfix"></div></div><!-- nav -->
+<div class="w10 nav-box">
+<div class="navbar w12"><ul id="nav" class="nav clearfix">
+<li class="nLi">
+<h3><a href="../index.htm" target="_self" title="首页">首页</a></h3>
+</li>
+<li class="nLi on">
+<h3><a href="../xygk.htm" target="_self" title="学院概况">学院概况</a></h3>
+<ul class="sub">
+<li><a href="xyjj_.htm" target="_self">学院简介 </a></li>
+<li><a href="lsyg.htm" target="_self">历史沿革 </a></li>
+<li><a href="xrld.htm" target="_self">现任领导</a></li>
+<li><a href="ynjg.htm" target="_self">院内机构</a></li>
+</ul>
+</li>
+<li class="nLi">
+<h3><a href="../szdw/ylfyxb.htm" target="_self" title="师资队伍">师资队伍</a></h3>
+<ul class="sub">
+<li><a href="../szdw/ylfyxb.htm" target="_self">药理方药学部</a></li>
+<li><a href="../szdw/ywhxxb.htm" target="_self">药物化学学部</a></li>
+<li><a href="../szdw/yjxxb.htm" target="_self">药剂学学部</a></li>
+<li><a href="../szdw/zyzyxb.htm" target="_self">中药资源学部</a></li>
+<li><a href="../szdw/gjzyyzhyxyjs.htm" target="_self">国际中医药转化医学研究所</a></li>
+<li><a href="../szdw/yyzwslstyjs.htm" target="_self">药用植物生理生态研究所</a></li>
+<li><a href="../szdw/zyzykxygcyjzx.htm" target="_self">中药资源科学与工程研究中心</a></li>
+<li><a href="../szdw/fzjlydxyjs.htm" target="_self">分子节律与代谢研究所</a></li>
+<li><a href="../szdw/fzyjs.htm" target="_self">方证研究所</a></li>
+<li><a href="../szdw/wpjs.htm" target="_self">外聘教师</a></li>
+</ul>
+</li>
+<li class="nLi">
+<h3><a href="../kxyj.htm" target="_self" title="科学研究">科学研究</a></h3>
+<ul class="sub">
+<li><a href="../kxyj/kyjg.htm" target="_self">科研机构</a></li>
+<li><a href="../kxyj/kyyw.htm" target="_self">科研要闻</a></li>
+<li><a href="http://www.gzucm.edu.cn/yyzwswjxjd" target="_self">药用植物室外教学基地</a></li>
+<li><a href="../sysaq.htm" target="_self">实验室安全</a></li>
+<li><a href="../kxyj/kjcxpt.htm" target="_self">科技创新平台</a></li>
+</ul>
+</li>
+<li class="nLi">
+<h3><a href="../rcpy.htm" target="_self" title="人才培养">人才培养</a></h3>
+<ul class="sub">
+<li><a href="../rcpy/bksjy.htm" target="_self">本科生教育</a></li>
+<li><a href="../rcpy/yjsjy.htm" target="_self">研究生教育</a></li>
+<li><a href="../rcpy/jxjy.htm" target="_self">继续教育</a></li>
+</ul>
+</li>
+<li class="nLi">
+<h3><a href="../xsgz.htm" target="_self" title="学生工作">学生工作</a></h3>
+<ul class="sub">
+<li><a href="../xsgz/sxyl.htm" target="_self">思想引领</a></li>
+<li><a href="../xsgz/xsfc.htm" target="_self">学生风采</a></li>
+<li><a href="../xsgz/jycy.htm" target="_self">就业创业</a></li>
+<li><a href="../xsgz/jdzk.htm" target="_self">奖贷助困</a></li>
+<li><a href="../xsgz/xljk.htm" target="_self">心理健康</a></li>
+<li><a href="../xsgz/xssw.htm" target="_self">学生事务</a></li>
+</ul>
+</li>
+<li class="nLi">
+<h3><a href="../hzjl.htm" target="_self" title="合作交流">合作交流</a></h3>
+</li>
+<li class="nLi">
+<h3><a href="../djgh.htm" target="_self" title="党建工会">党建工会</a></h3>
+<ul class="sub">
+<li><a href="../djgh/djgz.htm" target="_self">党建工作</a></li>
+<li><a href="../djgh/ghdt.htm" target="_self">工会动态</a></li>
+</ul>
+</li>
+<li class="nLi">
+<h3><a href="../zyxz.htm" target="_self" title="资源下载">资源下载</a></h3>
+<ul class="sub">
+<li><a href="../zyxz/zhzl.htm" target="_self">综合资料</a></li>
+</ul>
+</li>
+<li class="nLi">
+<h3><a href="../tswhzykl/djcg.htm" target="_self" title="特色文化资源库">特色文化资源库</a></h3>
+</li>
+</ul>
+
+
+</div></div></div>
+<script type="text/javascript" src="../js/bdtxk.js"></script><script type="text/javascript" src="../js/Slide.js"></script>
+<script>
+        jQuery("#nav").slide({ type:"menu",titCell:".nLi",targetCell:".sub",effect:"slideDown", delayTime:3 , triggerTime:0, returnDefault:true,});
+    </script><!-- banner  --><!-- list  -->
+<div class="w12 nl">
+<div class="subnav fl">
+<div class="titles">
+
+
+
+学院简介 </div>
+<div class="navs"><ul>
+<li class="on"><a href="xyjj_.htm" title="学院简介 ">学院简介 </a></li><li><a href="lsyg.htm" title="历史沿革 ">历史沿革 </a></li><li><a href="xrld.htm" title="现任领导">现任领导</a></li><li><a href="ynjg.htm" title="院内机构">院内机构</a></li></ul></div>
+<div class="left-list">
+<div class="list-title">
+<h4>最新推荐</h4></div><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><ul>
+<li>
+<a href="../info/1011/26461.htm" target="_blank" title="凝聚发展共识 汇聚创新力量  ——中药学院校庆校友工作总结">
+<p>凝聚发展共识 汇聚创新力量  ——中药学院校庆校友工作...</p>
+<i>2024-12-17</i>
+</a>
+</li>
+<li>
+<a href="../info/1011/24591.htm" target="_blank" title="中药学院2024-2025学年度学科博士后、杏林人才系列招聘公告">
+<p>中药学院2024-2025学年度学科博士后、杏林人才系列招聘...</p>
+<i>2024-09-18</i>
+</a>
+</li>
+<li>
+<a href="../info/1011/24421.htm" target="_blank" title="百年校庆·广州中医药大学中药学院捐赠倡议书">
+<p>百年校庆·广州中医药大学中药学院捐赠倡议书</p>
+<i>2024-09-08</i>
+</a>
+</li>
+<li>
+<a href="../info/1043/30041.htm" target="_blank" title="中药资源学学部党支部与佛山勒流中心小学开展中医药文化进校园主题实践活动 ——让中药种子在童年心田发芽">
+<p>中药资源学学部党支部与佛山勒流中心小学开展中医药文...</p>
+<i>2025-10-17</i>
+</a>
+</li>
+<li>
+<a href="../info/1082/30031.htm" target="_blank" title="中药学院2025年度国家励志奖学金评选结果公示（补充）">
+<p>中药学院2025年度国家励志奖学金评选结果公示（补充）</p>
+<i>2025-10-16</i>
+</a>
+</li>
+</ul><script>_showDynClickBatch(['dynclicks_u6_26461','dynclicks_u6_24591','dynclicks_u6_24421','dynclicks_u6_30041','dynclicks_u6_30031'],[26461,24591,24421,30041,30031],"wbnews", 1518468518)</script>
+</div></div>
+<div class="teacher-nry fr">
+<div class="now">
+<div class="now-l">
+
+
+
+学院简介 </div>
+<div class="now-r">您所在位置: 
+                        <a href="../index.htm">首页</a>
+                &gt;
+                <a href="../xygk.htm">学院概况</a>
+                &gt;
+                <a href="xyjj_.htm">学院简介 </a>
+</div></div>
+<div class="nry">
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1518468518,'wbnews','u9')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1518468518,1019)</script>
+<div class="nry-hd"><div class="h3">学院简介</div></div><br>
+<div class="nry-bd" style="line-height:28px;"><div id="vsb_content_2_1019_u91"><div id="vsb_content_2"><style></style><p style="margin: 3pt 0cm 0pt; text-align: justify; line-height: 21pt; text-indent: 25.8pt; -ms-text-justify: inter-ideograph;"><span style="font-size: 18px;"></span></p><p style="text-align:justify;margin-top: 0;margin-bottom: 0;text-indent: 37px;"><span style="font-size: 16px;">我校于1972年试办中草药培训班（一年制），1977年开始招收中药学本科专业（四年制），1984年成立中药系，1997年经国家中医药管理局批准更名为“中药学院”。2006年，中药学院与新药开发研究中心实行合署办公，更名为“中药学院（新药开发研究中心）”。2018年，中药学院与国际中医药转化医学研究所合署，更名为中药学院（国际中医药转化医学研究所）。2020年，与中医药数理工程研究院合署办公，更名为中药学院（中医药数理工程研究院）。2024年，加挂中药资源中心牌子，更名为中药学院（中药资源中心、中医药数理工程研究院）。经过近半个世纪的发展，中药学院为社会培养了一大批中药学、药学高级专门人才，为国家的中医药事业做出了重要贡献。</span></p><p style="text-align:justify;margin-top: 0;margin-bottom: 0;text-indent: 37px;"><span style="font-size: 16px;"><br></span></p><p style="text-align:justify;margin-top: 0;margin-bottom: 0;text-indent: 37px;"><span style="font-size: 16px;">2017年以来，在学校的支持和建设下，学院作为试点单位，科学规划教育综合改革方案，建立“学部”管理运行体制、改造升级教学条件、完善科技创新平台等一批改革创新举措陆续落地并取得明显成效，学院办学条件和办学能力全面提升，在建设“双一流”和高水平大学的征程中迈出了坚实的步伐。2019年获批广东省中药学类专业教学指导委员会主任委员单位，2021年学院党委荣获“广东省教育系统先进基层党组织”， 荣获广东高校第三批“党建工作标杆院系创建单位”。2022年入选“广东省首批高水平中医药学院重点建设名单”。</span></p><p style="text-align:justify;margin-top: 0;margin-bottom: 0;text-indent: 37px;"><span style="font-size: 16px;"><br></span></p><p style="text-align:justify;margin-top: 0;margin-bottom: 0;text-indent: 37px;"><span style="font-size: 16px;">学院下设中药资源学学部、药物化学学部、药理学与方药学学部、药剂学学部等4个学部，有国际中医药转化医学研究所、药用植物生理生态研究所、中药资源科学与工程研究中心、分子节律与代谢研究所、方证研究所等5个研究所。现有教职工243人，其中正高职称81人，副高职称56人，具有博士学位者164人。拥有国家杰青1人、岐黄学者1人、海外杰青2人、国家级“百千万人才”2人、国家“万人计划”科技创新领军人才1人、国家优青4人、国家“万人计划”青年拔尖人才2人、科技部“中青年科技创新领军人才”1人、全国中药传统特色技术传承人3人、省级人才14人。有5个省级教学团队，建设2门国家级一流课程及20余门省级优质课程。</span></p><p style="text-align:justify;margin-top: 0;margin-bottom: 0;text-indent: 37px;"><span style="font-size: 16px;"><br></span></p><p style="text-indent: 38px"><span style="font-size: 16px;">学院现开设中药学和药学两大类4个本科专业，其中“中药学、药学、中药资源与开发”3个专业是国家级一流本科专业建设点，2022年新开设临床药学专业。2023年中药学专业顺利通过教育部专业认证，该专业开设四年制本科班和“4+5”中药学创新人才班（与澳门科技大学联合培养）。学院拥有中药学一级学科硕士、博士学位授权点和博士后科研流动站；药学一级学科硕士学位授权点。中药学和药学学科是国家“双一流”中医学学科群建设学科，也是广东省高水平大学重点建设学科。与中药、药学相关的药理学和毒理学、化学、生物与生物化学、农学、分子生物与遗传学等5各学科进入ESI全球排名前1%。学院在多年的办学历程中，逐步形成了“本科—硕士—博士—博士后”多层次的人才培养体系。目前学院共有全日制在校博士研究生140人、硕士研究生711人、本科生1958人。</span></p><p style="text-indent: 38px"><span style="font-size: 16px;"><br></span></p><p style="text-indent: 37px"><span style="font-size: 16px;">学院拥有教学科研实验室总面积3.8万平方米，拥有1个中药学国家级实验教学示范中心、1个省级虚拟仿真实验教学中心、3个省级实验教学示范中心（中药学、中药资源与开发、药学）。拥有集教学、科研、科普功能于一体的药王山、时珍山药用植物园，占地约81亩。学院还拥有国家中药现代化工程中心、教育部国际联合实验室、教育部重点实验室、广东省重点实验室等12个省部级以上重点实验室或科研平台，仪器设备总值近2亿元。近5年共承担国家和省部级科研161项，累计科研经费超2亿元，以第一或通讯作者发表SCI论文705篇，获国家专利142项。获教育部自然科学一等奖1项和二等奖1项，广东省科学技术奖励一等奖1项、二等奖2项、其他省部级科学技术奖励2项，广东省教育教学成果奖一等奖1项、二等奖1项，制定行业标准22项。</span></p><p style="margin: 3pt 0cm 0pt; text-align: justify; line-height: 21pt; text-indent: 25.8pt; -ms-text-justify: inter-ideograph;"><span style="font-size: 18px;"></span><br></p><p style="text-align:justify;margin-top: 0;margin-bottom: 0;text-indent: 37px;"><span style="font-size: 16px;"></span></p><p style="text-align:justify;margin-top: 0;margin-bottom: 0;text-indent: 37px;"><span style="font-size: 16px;">学院坚持落实立德树人根本任务，通过强化规划设计、坚持重点发力、加强资源支撑，推动“三全育人”综合改革走深走实，构建了与大类招生相适应的“一个核心、三大模块、四大平台”的创新人才培养模式，在本科生中推行班主任制度、导师制和开放实验室制度，加强学生创新能力的培养。近5年来，中药学院共有358个项目在大学生创新创业计划中立项，其中国家级立项30项，省级立项118；学生共获得各类省级以上竞赛奖项83项，其中国家级奖项26项。近5年来平均就业率达到93.49%，推荐优秀毕业生免试入读西湖大学、北京大学、中国科学院大学等国内顶尖高校。</span></p><p style="text-align:justify;margin-top: 0;margin-bottom: 0;text-indent: 37px;"><span style="font-size: 16px;"><br></span></p><p style="text-align:justify;margin-top: 0;margin-bottom: 0;text-indent: 37px;"><span style="font-size: 16px;">学院积极对接国家及广东省的“健康中国”、“一带一路”、粤港澳大湾区建设等发展战略，凭借毗邻港澳的地缘优势、学科优势和文化优势，充分发挥学院在中药基础和应用研究方面的技术、人才和平台优势，服务国家和社会重大需求。牵头承担的广东省第四次全国中药资源普查项目圆满通过验收。近5年来，与广州白云山医药集团、大参林医药集团股份有限公司、华润三九医药股份有限公司、中山市中智药业集团有限公司等知名医药企业合作共建技术服务平台，签订横向科技合作经费超3000万元，合作制订企业质量标准、创新中药饮片质量研究、中药新产品研究开发。主持“广东南药产业技术体系创新团队”，由省内8个相关科研单位、8个中药企业组建成“大南药”创新团队，合作获批建设1个“广东省南药种业创新园”。发挥南药发展“智库”特殊作用，促进区域协调发展，建立“广东省中药原料质量动态监测技术服务中心”，建设“广东省岭南中药资源信息管理数据库”，为政府和中药企业提供重要数据支撑。为国家科技部、广东省中医药局、广东省农业农村厅、广东省林业局、广东省市场监管局完成委托政策或规划研究项目6项。与企业合作新建南药GAP产业化基地5万亩，带动3000多户农户通过“药企+公司+基地+农户”模式推广南药种植基地建设，带动新增销售额5亿元，不仅解决企业自身对优质原料药材的需求，同时带动当地劳动力就业，促进当地经济发展和农民致富。</span></p><p style="text-align:justify;margin-top: 0;margin-bottom: 0;text-indent: 37px;"><span style="font-size: 16px;"><br></span></p><p style="text-align:justify;margin-top: 0;margin-bottom: 0;text-indent: 37px;"><span style="font-size: 16px;">中药学院立足岭南，扎根湾区，争创一流，大力培育塑造“唯真至善、全人教育”理念，实现科学精神与人文精神交相辉映，完美融合，创造良好的教书育人环境，凝聚全院师生的共同愿景，努力营造思想活跃向上、学术氛围浓郁、工作环境舒适、举止文明优雅的学院文化氛围，在继承和发展中与时俱进，开拓创新，焕发出蓬勃生机。</span></p><p style="text-align:justify;margin-top: 0;margin-bottom: 0;text-indent: 37px;"><span style="font-size: 16px;"><br></span></p><p><br></p><p style="text-align:justify;margin-top: 0;margin-bottom: 0;text-indent: 37px;"><span style="font-size: 16px;"><br></span></p></div></div></div>
+    <span id="vsb_content_2_1019_u9" name="vsb_content_2_1019_u9"></span><br><br>
+    
+</div></div>
+<div class="clearfix"></div></div><!-- footer -->
+<div class="footer w10">
+<div class="w12">
+<div class="link">
+<h3>友情链接</h3><ul>
+    <li><a href="https://yjsy.gzucm.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1518468518, 50780)">广州中医药大学研究生院</a><div class="clearfix"></div></li>
+    <li><a href="#" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1518468518, 50781)">中药药理实验基本知识</a><div class="clearfix"></div></li>
+    <li><a href="#" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1518468518, 50782)">本科毕业实习与论文管理</a><div class="clearfix"></div></li>
+</ul>
+<div class="clearfix"></div></div>
+<div class="contact-bq">
+<div class="contact fl">
+<ul class=" list-paddingleft-2">
+ <li><p>广州市番禺区广州大学城外东环路232号</p></li>
+ <li><p>邮编：510006</p></li>
+ <li><p>020-39358253 020-39358051</p></li>
+ <li><p>官网：cctm.gzucm.edu.cn</p>
+  <div class="clearfix"></div></li>
+</ul></div>
+<div class="bq fr"><img src="../images/sydw-img.png"> 
+<div class="text">
+<p>广州中医药大学中药学院 ©版权所有copyright 2016</p>
+<p><a href="https://beian.miit.gov.cn/#/Integrated/index" style="color: rgb(255, 255, 255); text-decoration: none;"><span style="color: rgb(255, 255, 255);">教育网 粤ICP备15098773号-1</span></a></p>
+<p><a href="https://beian.miit.gov.cn/#/Integrated/index" style="color: rgb(255, 255, 255); text-decoration: none;"><span style="color: rgb(255, 255, 255);"> 电信网 粤ICP备05063128号</span></a></p></div>
+<div class="clearfix"></div></div>
+<div class="clearfix"></div></div></div></div>
+
+
+</body></html>

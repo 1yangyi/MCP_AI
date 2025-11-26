@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><title>学院简介-大连海事大学船舶与海洋工程学院（新）</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+
+
+<meta name="SiteName" content="大连海事大学船舶与海洋工程学院（新）">
+<meta name="SiteDomain" content="teoec.dlmu.edu.cn">
+<meta name="ColumnName" content="学院简介">
+
+
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><!-- <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" /> -->
+<meta name="description" content="">
+<meta name="generator" content="">
+<meta name="copyright" content="大连海事大学船舶与海洋工程学院">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow"><link rel="stylesheet" type="text/css" href="../css/global.css">
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307973465450535742000200024f50 -->
+<link rel="stylesheet" type="text/css" href="../tydy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1022,'/tydy.jsp',-1,1778704292)</script>
+</head>
+<body>
+<div class="bg01">
+<div class="wrapper">
+<div class="fl"><a href="../index.htm"><img alt="" src="../images/logo.png"></a></div>
+<div class="index_search fr">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><table border="0" cellspacing="1" cellpadding="0"><tbody><tr><td><input size="12" autocomplete="off" value="关键词搜索" class="input" style="height: 22px;"></td> <td align="absmiddle" nowrap="nowrap" height="1"><input name="submit_button" type="submit" value="  " class="btn"></td></tr></tbody></table></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+      
+            <table border="0" cellspacing="1" cellpadding="0">
+  <tbody><tr>
+   
+   <td>
+       
+       <input size="12" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"  style="height:22px" class="input" value="关键词搜索">
+   </td>
+   <td align="absmiddle" nowrap="nowrap" height="1">
+                    <input class="btn" name="submit_button"  v-on:click="onSubmit()" type="submit"  value="  ">
+   </td>
+  </tr>
+ </tbody></table>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1778704292";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://zq-open.dlmu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script> </div>
+<div class="cb"></div></div></div>
+<div class="bg03">
+<div class="wrapper"><ul id="nav" class="nav clearfix">
+<li class="nLi on">
+<h3><a href="../index.htm">首页</a></h3></li>
+<li class="nLi">
+<h3><a href="xyjj.htm">学院概况</a></h3>
+<ul class="sub">
+<li><a href="xyjj.htm">学院简介</a> </li>
+<li><a href="xrld.htm">现任领导</a> </li>
+<li><a href="zzjg.htm">组织机构</a> </li>
+
+
+</ul></li>
+<li class="nLi">
+<h3><a href="../rcpy/zyjs.htm">人才培养</a></h3>
+<ul class="sub">
+<li><a href="../rcpy/zyjs.htm">专业介绍</a> </li>
+<li><a href="../rcpy/pyfa.htm">培养方案</a> </li>
+<li><a href="../rcpy/xwdjs.htm">学位点介绍</a> </li></ul></li>
+<li class="nLi">
+<h3><a href="../xkgk/xkfang_xiang.htm">学科概况</a></h3>
+<ul class="sub">
+<li><a href="../xkgk/xkfang_xiang.htm">学科方向</a> </li>
+<li><a href="../xkgk/sysjj.htm">实验室简介</a> </li>
+<li><a href="../xkgk/kyc.htm">科研成果</a> </li></ul></li>
+
+
+<li class="nLi">
+<h3><a href="../szdw1/szdw.htm">师资队伍</a></h3>
+<ul class="sub">
+<li><a href="../szdw1/szdw.htm">师资队伍</a> </li>
+<li><a href="../szdw1/yjsds.htm">研究生导师</a> </li></ul>
+
+</li>
+<li class="nLi">
+<h3><a href="../dqgong_zuo/jgshe_zhi.htm">党群工作</a></h3>
+<ul class="sub">
+<li><a href="../dqgong_zuo/jgshe_zhi.htm">机构设置</a> </li>
+<li><a href="../dqgong_zuo/zczd.htm">政策制度</a> </li>
+<li><a href="../dqgong_zuo/dqhd.htm">党群活动</a> </li>
+<li><a href="../dqgong_zuo/xxyd.htm">学习园地</a> </li></ul></li>
+<li class="nLi">
+<h3><a href="../xsgong_zuo/jyguan_li.htm">学生工作</a></h3>
+<ul class="sub">
+<li><a href="../xsgong_zuo/jyguan_li.htm">教育管理</a> </li>
+<li><a href="../xsgong_zuo/twgong_zuo.htm">团委工作</a> </li>
+<li><a href="../xsgong_zuo/jygong_zuo.htm">就业工作</a> </li>
+<li><a href="../xsgong_zuo/yxxzfc.htm">优秀学子风采</a> </li></ul></li>
+<li class="nLi">
+<h3><a href="../hzjl/hzjl.htm">合作交流</a></h3></li>
+<li class="nLi">
+<h3><a href="../xygong_zuo/xygong_zuo.htm">校友工作</a></h3></li>
+</ul>
+</div></div>
+<div class=" wrapper">
+<div class="ny_banner">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script><table align="center">
+            <tbody><tr>
+                <td>
+                        <img src="../images/ny_banner.png" border="0" width="200" height="150">
+                </td>
+        </tr>
+</tbody></table></div>
+<div class="ny_left fl">
+<div class="t">
+学院简介</div>
+<div class="con"><ul>
+            <li><a href="xyjj.htm" title="学院简介">学院简介</a></li>
+        <li><a href="xrld.htm" title="现任领导">现任领导</a></li>
+        <li><a href="zzjg.htm" title="组织机构">组织机构</a></li>
+</ul></div></div>
+<div class="ny_right fr">
+<div class="t"><span class="span">
+学院简介</span>
+<div class="ny_pos"><div>
+    当前位置: 
+                        <a href="../index.htm">首页</a>
+                &gt;&gt;
+                学院概况
+                &gt;&gt;
+                <a href="xyjj.htm">学院简介</a>
+</div></div></div>
+<div class="con">
+<div class="content">
+
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1778704292,'wbnews','u7')</script>
+<script>function seeContenta7(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1778704292,3265)</script>
+<p>
+   
+    </p><div id="vsb_content_3265_u71"><div id="vsb_content"><p style="background: white; text-align: left; text-indent: 40px; line-height: 2em;"><span style="color: black; line-height: 150%; font-family: 仿宋_GB2312; font-size: 21px;">为了适应学校建设世界一流海事大学目标要求，促进相关学科专业快速发展，增强海洋运输学科领域综合实力，学校决定由原交通运输装备与海洋工程学院船舶与海洋工程专业、救助与打捞工程专业、机械设计制造及其自动化专业、机械基础教研室以及轮机工程学院能源与动力工程专业组建成立船舶与海洋工程学院。</span></p><p style="background: white; text-align: left; text-indent: 40px; line-height: 2em;"><span style="color: black; line-height: 150%; font-family: 仿宋_GB2312; font-size: 21px;">学</span><span style="color: black; line-height: 150%; font-family: 仿宋_GB2312; font-size: 21px;">院师资力量雄厚，拥有一批国内船舶与海洋工程、能源与动力工程、机械工程和救助打捞工程领域的知名专家、教授、学者，以及一大批年轻有为的青年教师队伍。学院现有专任教师81人，其中教授25人、副教授33人，71人具有博士学位，在国外取得博士学位和具有国外研修经历的53人，已经形成了以博士生导师为带头人、以中青年教师为骨干的多个学术梯队。</span></p><p style="background: white; text-align: left; text-indent: 40px; line-height: 2em;"><span style="color: black; line-height: 150%; font-family: 仿宋_GB2312; font-size: 21px;">学院设有船舶与海洋工程、能源与动力工程、救助与打捞工程（海洋智能装备）、机械设计制造及其自动化4个本科专业和机械基础教研室。救助与打捞工程专业2011年入选教育部“卓越工程师”培养计划，2022年入选国家一流本科专业建设点。</span><span style="color: black; line-height: 150%; font-family: 仿宋_GB2312; font-size: 21px;">机械设计制造及其自动化专业2022年通过工程专业认证，入选国家一流本科专业建设点。船舶与海洋工程专业2020年入选国家一流本科专业建设点。能源与动力工程专业2021年入选辽宁省一流本科专业建设点。学院拥有3个国家级工程实践教育中心、2个国家级大学生校外实践基地、4个辽宁省大学生校外实践教育基地，人才培养质量得到CCS质量体系认证。</span></p><p style="background: white; text-align: left; text-indent: 40px; line-height: 2em;"><span style="color: black; line-height: 150%; font-family: 仿宋_GB2312; font-size: 21px;">学院现</span><span style="color: black; line-height: 150%; font-family: 仿宋_GB2312; font-size: 21px;">有船舶与海洋工程一级学科博士学位授权点；机械工程一级学科硕士学位授权点以及<span style="font-family: 仿宋_GB2312; font-size: 21px; text-indent: 40px; text-wrap: wrap; background-color: rgb(255, 255, 255);">船舶与海洋工程<span style="font-family: 仿宋_GB2312; font-size: 21px; text-indent: 40px; text-wrap: wrap; background-color: rgb(255, 255, 255);">一级学科下设的3个</span></span>二级学科硕士学位授权点；机械工程、船舶工程、动力工程三个专业学位研究生授权点，设有船舶与海洋工程学科博士后科研流动站。学院所属极地安全保障技术与装备实验室、救助与打捞工程实验室为辽宁省重点实验室，交通装备先进制造与控制技术实验室为辽宁省高校重点实验室。</span></p><p style="background: white; text-align: left; line-height: 150%; text-indent: 40px;"><br></p><p style="text-indent: 28px; line-height: 2em;"><span style="color: black; line-height: 150%; font-family: 仿宋_GB2312; font-size: 21px;">&nbsp;学院具有较强的科研实力，科研工作紧密结合交通运输行业发展的实际需求，在船舶动力机械气动热力学、船舶与运输机械空调与制冷、船舶动力机械结构强度与振动控制、船舶设计制造理论与方法、船舶与海洋结构物结构性能安全和制造工艺技术、“绿色”船舶与海洋工程、无人海洋航行器、极地航行安全技术与装备、救助打捞与海洋工程装备技术、船舶液压气动元件控制系统、机电系统集成与智能化、摩擦学及其控制技术以及先进制造技术等领域积极开展科学应用研究。</span></p><p style="background: white; text-align: left; text-indent: 40px; line-height: 2em;"><span style="color: black; line-height: 150%; font-family: 仿宋_GB2312; font-size: 21px;">学院不断推进和完善学生教育管理体系，贯彻“待生如子”的教育理念，强调人性化教育和柔性管理模式。在学院教师的精心指导下，学生积极参与国家、省、市、校级各项活动，并取得了优异的成绩。近几年毕业生就业率及就业质量一直稳居学校前列，毕业生综合表现受到了用人单位的一致好评。</span></p><p>&nbsp;</p></div></div>
+    <span id="vsb_content_3265_u7" name="vsb_content_3265_u7"></span><br><br>
+    
+<p></p>
+
+
+ </div></div></div>
+<div class="cb"></div></div>
+<div class="bg04">
+<div class="footer">
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody>
+<tr>
+<td><img alt="" src="../images/s_logo.png"><br><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权所有：大连海事大学船舶与海洋工程学院&nbsp; 电话：0411-84723959</p><p>地址：大连市凌海路1号机电楼407 邮编：116026&nbsp; 技术支持：<a href="http://www.jiqunzhihui.com" target="_blank" style="color: #ffffff">集群智慧</a></p>
+</td>
+<td align="right"><img alt="" src="../images/index05.png"></td></tr></tbody></table></div></div><script src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery.SuperSlide.js"></script><script type="text/javascript" src="../js/js.js"></script>
+<div></div>
+
+
+</body></html>

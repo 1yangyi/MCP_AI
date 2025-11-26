@@ -1,0 +1,740 @@
+<!DOCTYPE html><html lang="zh"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <title>学院简介-厦门大学海洋与地球学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+
+
+<meta name="keywords" content="厦门大学海洋与地球学院,学院简介">
+
+  <meta name="description" content="厦门大学海洋与地球学院">
+  
+  <link rel="stylesheet" href="../style/bootstrap.table.css">
+  <link rel="stylesheet" href="../style/swiper.min.css">
+  <link rel="stylesheet" href="../style/animation.css">
+  <link rel="stylesheet" href="../fonts/iconfont.css">
+  <link rel="stylesheet" href="../style/app.css">
+    <link rel="stylesheet" href="../style/zzf.css">
+  <script src="../js/browser.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778465750545742000400024e5c -->
+<link rel="stylesheet" type="text/css" href="../page.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1351,'/page.jsp',-1,1860198500)</script>
+</head>
+
+<body id="app">
+
+  <!-- 返回顶部按钮 -->
+  <div class="back-top-menu" id="backTopMenu">
+    <span class="iconfont icon-jiantouhong"></span>
+  </div>
+
+  <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <a href="../" class="header__logo">
+                    <img src="../images/logo.png" alt="">
+                </a> <span class="header__nav-open iconfont icon-daohang" data-nav-open="">&nbsp;</span>
+            </div>
+        </div>
+        <div class="header__bottom" data-nav-wrapper="">
+            <div class="container"> <span class="header__nav-close iconfont icon-shanchu" data-nav-close="">&nbsp;</span>
+                <div class="web-menus">
+                     <a href="lxwm.htm" class="web-menus__item"> <span class="iconfont icon-jiaoshi" target="_blank"></span>
+                        联系我们</a>
+                    <a href="http://coeadmin.xmu.edu.cn/En/" class="web-menus__item"> <span class="iconfont icon-yingyu" target="_blank"></span>
+                        英文版</a> <span class="divider"></span>
+                    <div class="popover">
+                        <!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><div id="divu0">
+    <div id="appu0"><div><div class="popover__title"><p class="web-menus__item"><span class="iconfont icon-sousuoxiao"></span> 搜索</p></div> <div class="popover__content" style="display: none;"><div class="search-input"><input type="text" placeholder="全文搜索" autocomplete="off" class="search-input__input"> <a name="submit_button" href="" class="search-input__button"></a></div></div></div></div></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+            <div class="popover__title">
+                <p class="web-menus__item"> <span class="iconfont icon-sousuoxiao"></span> 搜索</p>
+            </div>
+            <div class="popover__content">
+                <div class="search-input">
+                    <input type="text" class="search-input__input" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                    <a name="submit_button" href="" class="search-input__button" v-on:click="onSubmit()"></a>
+                </div>
+            </div>   
+            <!--<div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+            </div>-->
+        </div>
+</script>         
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1860198500";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu0 = document.querySelector("#appu0");
+   if (appElementu0 && appElementu0.__vue__) {
+
+   } else {
+      $("#divu0").html($("#htmlu0").text());
+      var appOwner = "1860198500";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou0 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu0(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu0();
+        }
+      };
+
+      function onSubmitu0(e) {
+        queryInfou0.query.keyWord= $("#appu0  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou0.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script>
+                    </div>
+                </div>
+                <div class="header__nav" data-nav-content="">
+                    <div class="web-nav">    <ul class="web-nav__1-list" data-nav="">
+                <li class="web-nav__1-item" data-nav-lv1=""> 
+            <a href="../index.htm" class="web-nav__1-link" data-nav-lv1-text="">网站首页</a>
+        </li>
+        <li class="web-nav__1-item" data-nav-lv1=""> 
+            <a href="xyjj.htm" class="web-nav__1-link-active" data-nav-lv1-text="">学院概况</a>
+            <span class="web-nav__1-open iconfont icon-plus" data-nav-lv2-open=""></span>
+            <ul class="web-nav__2-list" data-nav-lv2-wrapper="">
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="xyjj.htm" class="web-nav__2-link">学院简介</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="fzlc.htm" class="web-nav__2-link">发展历程</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="yxld.htm" class="web-nav__2-link">院系领导</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="zzjg_link/xspt.htm" class="web-nav__2-link web-nav__2-link--arrow">组织机构</a>
+                    <span class="web-nav__2-open iconfont icon-plus" data-nav-lv3-open=""></span>
+                    <ul class="web-nav__3-list" data-nav-lv3-wrapper="">
+                        <li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="zzjg_link/xspt.htm" class="web-nav__3-link">系所平台</a>
+                        </li><li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="zzjg_link/wyh.htm" class="web-nav__3-link">委员会</a>
+                    </li></ul>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="ndbg.htm" class="web-nav__2-link">年度报告</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="lxwm.htm" class="web-nav__2-link">联系我们</a>
+                </li>
+            </ul>
+        </li>
+        <li class="web-nav__1-item" data-nav-lv1=""> 
+            <a href="../faculty/zrjs.htm" class="web-nav__1-link" data-nav-lv1-text="">师资力量</a>
+            <span class="web-nav__1-open iconfont icon-plus" data-nav-lv2-open=""></span>
+            <ul class="web-nav__2-list" data-nav-lv2-wrapper="">
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../faculty/szgk.htm" class="web-nav__2-link">师资概况</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../faculty/zrjs.htm" class="web-nav__2-link">专任教师</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../faculty/zjry.htm" class="web-nav__2-link">专技人员</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../faculty/xzry.htm" class="web-nav__2-link">行政人员</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../faculty/rczp.htm" class="web-nav__2-link">人才招聘</a>
+                </li>
+            </ul>
+        </li>
+        <li class="web-nav__1-item" data-nav-lv1=""> 
+            <a href="../rcpy/bkspy_link/tzgg.htm" class="web-nav__1-link" data-nav-lv1-text="">人才培养</a>
+            <span class="web-nav__1-open iconfont icon-plus" data-nav-lv2-open=""></span>
+            <ul class="web-nav__2-list" data-nav-lv2-wrapper="">
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../rcpy/bkspy_link/tzgg.htm" class="web-nav__2-link web-nav__2-link--arrow">本科生培养</a>
+                    <span class="web-nav__2-open iconfont icon-plus" data-nav-lv3-open=""></span>
+                    <ul class="web-nav__3-list" data-nav-lv3-wrapper="">
+                        <li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../rcpy/bkspy_link/xxgk.htm" class="web-nav__3-link">信息公开</a>
+                        </li><li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../rcpy/bkspy_link/tzgg.htm" class="web-nav__3-link">通知公告</a>
+                    </li></ul>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../rcpy/yjspy_link/tzgg.htm" class="web-nav__2-link web-nav__2-link--arrow">研究生培养</a>
+                    <span class="web-nav__2-open iconfont icon-plus" data-nav-lv3-open=""></span>
+                    <ul class="web-nav__3-list" data-nav-lv3-wrapper="">
+                        <li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../rcpy/yjspy_link/zyjs.htm" class="web-nav__3-link">专业介绍</a>
+                        </li><li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../rcpy/yjspy_link/zsxx.htm" class="web-nav__3-link">招生信息</a>
+                        </li><li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../rcpy/yjspy_link/tzgg.htm" class="web-nav__3-link">通知公告</a>
+                    </li></ul>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../rcpy/xsgz_link/xsgz_gztz.htm" class="web-nav__2-link web-nav__2-link--arrow">学生工作</a>
+                    <span class="web-nav__2-open iconfont icon-plus" data-nav-lv3-open=""></span>
+                    <ul class="web-nav__3-list" data-nav-lv3-wrapper="">
+                        <li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../rcpy/xsgz_link/xsgz_gztz.htm" class="web-nav__3-link">工作通知</a>
+                        </li><li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../rcpy/xsgz_link/xsgz_xgxw.htm" class="web-nav__3-link">学工新闻</a>
+                        </li><li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../rcpy/xsgz_link/xsgz_jycy.htm" class="web-nav__3-link">就业创业</a>
+                    </li></ul>
+                </li>
+            </ul>
+        </li>
+        <li class="web-nav__1-item" data-nav-lv1=""> 
+            <a href="../kxyj/kydt.htm" class="web-nav__1-link" data-nav-lv1-text="">科学研究</a>
+            <span class="web-nav__1-open iconfont icon-plus" data-nav-lv2-open=""></span>
+            <ul class="web-nav__2-list" data-nav-lv2-wrapper="">
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../kxyj/kygk.htm" class="web-nav__2-link">科研概况</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../kxyj/zyyjly.htm" class="web-nav__2-link">主要研究领域</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../kxyj/kypt.htm" class="web-nav__2-link">科研平台</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../kxyj/kydt.htm" class="web-nav__2-link">科研动态</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../kxyj/yycg.htm" class="web-nav__2-link web-nav__2-link--arrow">应用成果</a>
+                    <span class="web-nav__2-open iconfont icon-plus" data-nav-lv3-open=""></span>
+                    <ul class="web-nav__3-list" data-nav-lv3-wrapper="">
+                        <li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../kxyj/yycg/hygczb.htm" class="web-nav__3-link">海洋工程装备</a>
+                        </li><li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../kxyj/yycg/hyswzpzy.htm" class="web-nav__3-link">海洋生物制品制药</a>
+                        </li><li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../kxyj/yycg/hyswyzyyz.htm" class="web-nav__3-link">海洋生物育种与养殖</a>
+                        </li><li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../kxyj/yycg/zhhy.htm" class="web-nav__3-link">智慧海洋</a>
+                    </li></ul>
+                </li>
+            </ul>
+        </li>
+        <li class="web-nav__1-item" data-nav-lv1=""> 
+            <a href="../djsz/djzx.htm" class="web-nav__1-link" data-nav-lv1-text="">党建思政</a>
+            <span class="web-nav__1-open iconfont icon-plus" data-nav-lv2-open=""></span>
+            <ul class="web-nav__2-list" data-nav-lv2-wrapper="">
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../djsz/ryjg.htm" class="web-nav__2-link">人员机构</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../djsz/lsyg.htm" class="web-nav__2-link">历史沿革</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../djsz/djzx.htm" class="web-nav__2-link">党建资讯</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../djsz/dwgk.htm" class="web-nav__2-link">党务公开</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../djsz/llyd.htm" class="web-nav__2-link">理论园地</a>
+                </li>
+            </ul>
+        </li>
+        <li class="web-nav__1-item" data-nav-lv1=""> 
+            <a href="../xyzl/yytp.htm" class="web-nav__1-link" data-nav-lv1-text="">校友专栏</a>
+            <span class="web-nav__1-open iconfont icon-plus" data-nav-lv2-open=""></span>
+            <ul class="web-nav__2-list" data-nav-lv2-wrapper="">
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../xyzl/yyzx.htm" class="web-nav__2-link">院友资讯</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../xyzl/yytp.htm" class="web-nav__2-link web-nav__2-link--arrow">院友图片</a>
+                    <span class="web-nav__2-open iconfont icon-plus" data-nav-lv3-open=""></span>
+                    <ul class="web-nav__3-list" data-nav-lv3-wrapper="">
+                        <li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../xyzl/yytp/byhy.htm" class="web-nav__3-link">毕业合影</a>
+                        </li><li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../xyzl/yytp/hylzp.htm" class="web-nav__3-link">海洋老照片</a>
+                    </li></ul>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../xyzl/yyml.htm" class="web-nav__2-link">院友名录</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../info/3291/121880.htm" class="web-nav__2-link web-nav__2-link--arrow">校友捐赠</a>
+                    <span class="web-nav__2-open iconfont icon-plus" data-nav-lv3-open=""></span>
+                    <ul class="web-nav__3-list" data-nav-lv3-wrapper="">
+                        <li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../xyzl/xyjz/jzfs.htm" class="web-nav__3-link">捐赠方式</a>
+                        </li><li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="https://edfjzxt.xmu.edu.cn/website/page/Information/xxgk.html#" class="web-nav__3-link">捐赠芳名录</a>
+                    </li></ul>
+                </li>
+            </ul>
+        </li>
+        <li class="web-nav__1-item" data-nav-lv1=""> 
+            <a href="../kxpj/kpzs.htm" class="web-nav__1-link" data-nav-lv1-text="">科学普及</a>
+            <span class="web-nav__1-open iconfont icon-plus" data-nav-lv2-open=""></span>
+            <ul class="web-nav__2-list" data-nav-lv2-wrapper="">
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../kxpj/COSEE_China.htm" class="web-nav__2-link">COSEE China</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../kxpj/hymtsys.htm" class="web-nav__2-link">70.8海洋媒体实验室</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../kxpj/hykjbwg/bwgjj.htm" class="web-nav__2-link web-nav__2-link--arrow">海洋科技博物馆</a>
+                    <span class="web-nav__2-open iconfont icon-plus" data-nav-lv3-open=""></span>
+                    <ul class="web-nav__3-list" data-nav-lv3-wrapper="">
+                        <li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../kxpj/hykjbwg/bwgjj.htm" class="web-nav__3-link">博物馆简介</a>
+                        </li><li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../kxpj/hykjbwg/fwzz.htm" class="web-nav__3-link">服务宗旨</a>
+                        </li><li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../kxpj/hykjbwg/yycg.htm" class="web-nav__3-link">预约参观</a>
+                    </li></ul>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../kxpj/kpzs.htm" class="web-nav__2-link web-nav__2-link--arrow">科普知识</a>
+                    <span class="web-nav__2-open iconfont icon-plus" data-nav-lv3-open=""></span>
+                    <ul class="web-nav__3-list" data-nav-lv3-wrapper="">
+                        <li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../kxpj/kpzs/qwhy.htm" class="web-nav__3-link">趣味海洋</a>
+                    </li></ul>
+                </li>
+            </ul>
+        </li>
+        <li class="web-nav__1-item" data-nav-lv1=""> 
+            <a href="../jlhz/jlxm.htm" class="web-nav__1-link" data-nav-lv1-text="">交流合作</a>
+            <span class="web-nav__1-open iconfont icon-plus" data-nav-lv2-open=""></span>
+            <ul class="web-nav__2-list" data-nav-lv2-wrapper="">
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../jlhz/jlxm.htm" class="web-nav__2-link">交流项目</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../jlhz/jzbg.htm" class="web-nav__2-link">讲座报告</a>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../jlhz/zg_dmhyxy1.htm" class="web-nav__2-link web-nav__2-link--arrow">中国—东盟海洋学院</a>
+                    <span class="web-nav__2-open iconfont icon-plus" data-nav-lv3-open=""></span>
+                    <ul class="web-nav__3-list" data-nav-lv3-wrapper="">
+                        <li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../jlhz/zg_dmhyxy1/xmjj.htm" class="web-nav__3-link">项目简介</a>
+                        </li><li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../jlhz/zg_dmhyxy1/xktxjrcpy.htm" class="web-nav__3-link">学科体系及人才培养</a>
+                        </li><li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../jlhz/zg_dmhyxy1/szdw.htm" class="web-nav__3-link">师资队伍</a>
+                        </li><li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../jlhz/zg_dmhyxy1/jxjkysb.htm" class="web-nav__3-link">教学及科研设备</a>
+                        </li><li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../jlhz/zg_dmhyxy1/kygz.htm" class="web-nav__3-link">科研工作</a>
+                        </li><li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../jlhz/zg_dmhyxy1/hzjl.htm" class="web-nav__3-link">合作交流</a>
+                        </li><li class="web-nav__3-item" data-nav-lv3="">
+                        <a href="../jlhz/zg_dmhyxy1/shxy.htm" class="web-nav__3-link">社会效益</a>
+                    </li></ul>
+                </li>
+                <li class="web-nav__2-item" data-nav-lv2=""> 
+                    <a href="../jlhz/gjdkxjh.htm" class="web-nav__2-link">国际大科学计划</a>
+                </li>
+            </ul>
+        </li>
+    </ul></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  <!-- banner -->
+  <section class="static-banner"><img src="../images/banner/10-2/banner_30.jpeg"></section>
+
+  <!-- 内页 -->
+  <main class="inner-page">
+    <div class="container">
+      <div class="inner-page__wrapper">
+        <div class="inner-page__left">
+          <!-- 侧边栏 -->
+          <div class="side-bar">
+            <h2 class="side-bar__heading">
+学院概况</h2>
+            <div class="side-nav"><ul class="side-nav__1-list">
+            <li class="side-nav__1-item active"> <a href="xyjj.htm" class="side-nav__1-link">学院简介</a>
+        </li>
+        <li class="side-nav__1-item"> <a href="fzlc.htm" class="side-nav__1-link">发展历程</a>
+        </li>
+        <li class="side-nav__1-item"> <a href="yxld.htm" class="side-nav__1-link">院系领导</a>
+        </li>
+        <li class="side-nav__1-item"> <a href="zzjg_link/xspt.htm" class="side-nav__1-link">组织机构</a>
+            <ul class="side-nav__2-list">
+                <li class="side-nav__2-item"> <a href="zzjg_link/xspt.htm" class="side-nav__2-link">系所平台</a>
+                </li>
+                <li class="side-nav__2-item"> <a href="zzjg_link/wyh.htm" class="side-nav__2-link">委员会</a>
+                </li>
+            </ul>
+        </li>
+        <li class="side-nav__1-item"> <a href="ndbg.htm" class="side-nav__1-link">年度报告</a>
+        </li>
+        <li class="side-nav__1-item"> <a href="lxwm.htm" class="side-nav__1-link">联系我们</a>
+        </li>
+</ul></div>
+            </div>
+        </div>
+        <div class="inner-page__medium">
+            <div class="inner-page__medium--top">
+                <!-- 面包屑 -->
+                <div class="custom-breadcrumb">
+                  <h2 class="title">
+学院简介</h2>
+                  <div class="breadcrumb-navs"><p class="pos"></p>
+<nav>
+<a href="../index.htm">网站首页</a>
+<a href="xyjj.htm">学院概况</a>
+<a href="xyjj.htm">学院简介</a>
+</nav></div>
+                </div>
+              </div>
+          <div class="inner-page__medium--bottom">
+            <!-- 内容 -->
+             <div class="article-details">
+               <div class="side-nav-phone"><script>
+var selectId="";
+var selectLevel="";
+       selectId="1351";selectLevel="1";  
+         
+         
+         
+                
+                
+         
+         
+</script>
+<ul class="side-nav-phone__1-list">
+        <li class="side-nav-phone__1-item active" select="true" id="1351" level="1" style="display:"> <a href="xyjj.htm" class="side-nav-phone__1-link">学院简介</a>
+           
+        </li>
+                 <li class="side-nav-phone__1-item" id="1371" level="1" style="display:"> <a href="fzlc.htm" class="side-nav-phone__1-link">发展历程</a>
+           
+        </li>
+                 <li class="side-nav-phone__1-item" id="1391" level="1" style="display:"> <a href="yxld.htm" class="side-nav-phone__1-link">院系领导</a>
+           
+        </li>
+                 <li class="side-nav-phone__1-item" id="2841" level="1" style="display:"> <a href="zzjg_link/xspt.htm" class="side-nav-phone__1-link">组织机构</a>
+           
+        </li>
+            
+             <li class="side-nav-phone__1-item" id="2811" level="2" style="display:none"> <a href="zzjg_link/xspt.htm" class="side-nav-phone__1-link">系所平台</a>
+           
+        </li>   
+             <li class="side-nav-phone__1-item" id="2831" level="2" style="display:none"> <a href="zzjg_link/wyh.htm" class="side-nav-phone__1-link">委员会</a>
+           
+        </li>   
+        <li class="side-nav-phone__1-item" id="3301" level="1" style="display:"> <a href="ndbg.htm" class="side-nav-phone__1-link">年度报告</a>
+           
+        </li>
+                 <li class="side-nav-phone__1-item" id="1401" level="1" style="display:"> <a href="lxwm.htm" class="side-nav-phone__1-link">联系我们</a>
+           
+        </li>
+         </ul> </div>
+               <div class="article-details__content">
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1860198500,'wbnews','u8')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format10011.css?v=160EB1898E4F4E53B2D546EDD3D53165"><script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1860198500,15320)</script>
+<div id="vsb_content_10011_15320_u81"><div id="vsb_content_10011"><p>蓝色摇篮，历史可溯。厦门大学因海而生，伴海而长，厦门大学海洋学科伴随着这所“南方之强”走过了百载峥嵘岁月，同时也见证了中国海洋科学发展的光辉历程，被誉为我国海洋科教的“蓝色摇篮”。早在上个世纪20年代建校之初，厦门大学就在国内率先开展海洋生物科学的研究，文昌鱼研究成果见诸《Science》期刊；1946年成立中国第一个海洋学系；1996年组建海洋与环境学院；2011年成立海洋与地球学院。</p><p>近百年来，名家荟萃、贤达辈出，涌现了唐世凤、陈子英、郑重、李法西、陈国珍、何恩典、伍献文、曾呈奎，以及陈宜瑜、洪华生、焦念志、戴民汉等一大批杰出科学家，为社会输送了数以千计具有家国情怀、“海洋”视野，创新精神和实践能力突出的高素质人才。</p><p>一流学科，今日可嘉。嘉庚远航传百年薪火，海丝腾空谱时代新篇。经过一代代海洋人的辛勤耕耘，如今的厦门大学海洋学科优势愈发明显，已经成为我国海洋科学研究与人才培养的“重镇”，在国际上享有嘉誉。2017年、2022年，厦门大学海洋学科两次入选国家“双一流”建设学科名单；2017年，在全国第四轮学科评估中斩获“A+”；2021年，“海洋科学”与“海洋技术”专业在“软科中国大学专业排名”中分列全国第一、第二。</p><p>教育优先发展。学院全面落实立德树人根本任务，牢记为党育人为国育才使命，专注培养拔尖创新人才。现有在校生1226人，其中本科生498人、硕士研究生404人、博士研究生324人。已建成了一个涵盖海洋生物科学与技术、海洋化学与地球化学、物理海洋与气象、应用海洋物理与工程、地质海洋学等学科的门类齐全、层次完整的学科体系；拥有海洋科学国家一级重点学科，海洋科学一级学科博士学位授权点和博士后流动站；形成海洋科学国家理科基础科学研究和教学人才培养基地、海洋环境科学国家实验教学示范中心等国家级人才培养基地；开设“海洋科学拔尖学生培养基地”，并于2020年入选首批国家基础学科拔尖学生培养计划2.0基地；依托“嘉庚”号科考船实施“海丝学堂”人才培养计划，建成跨洋越海的教学实习与培训平台；建设“5大项目+2大竞赛+1个俱乐部”创新实践教学平台。</p><p>学院持续推进国际合作交流与国际化办学，构建了具有国际化特色的海洋科学研究型教学和创新性人才培养体系。形成了与欧美、以东盟为核心的东南亚国家及“一带一路”沿线国家的高水平国际学术交流与合作格局，合作足迹遍及七大洲61个国家和地区。举办美国特拉华大学海洋学双博士学位项目，设立“MEL海洋环境创新型人才国际合作培养项目”， 面向本科生开展美国缅因大学交流项目，设立国际化本科生拔尖班。作为我国海洋学科首次走出国门办学，由国家外交部和财政部于2014年支持建设的中国-东盟海洋学院于2016年开始招生，现拥有海洋生物技术、海洋环境化学本科专业和海洋生物技术硕士专业，为中国和东盟各国培养高层次海洋人才，促进“海丝”沿线国家积极开展教育与人文交流，推动共建世界一流海洋学科发挥了积极作用。</p><p>人才引领驱动。我院拥有一支以中科院院士等国际顶尖海洋专家领衔、国家级创新团队为核心、优秀中青年教师为骨干、教育背景多元化的高层次国际化海洋教师队伍。现有专任教师120人，包括中国科学院院士（2名）、长江学者特聘教授（3名）、国家杰出青年科学基金获得者（9名）等各类国家级高层次人才49人次。焦念志院士荣获新中国成立70周年纪念奖章、首届“全国创新争先奖”、2022年度“海洋人物”、南强杰出贡献奖；戴民汉院士荣获美国地球物理联合（AGU)地球与空间科学大使奖、亚洲-大洋洲地球科学学会（AOGS）艾克斯福特奖、第二届“全国创新争先奖”；王克坚获亚太海洋生物技术学会首届“海洋生物技术奖（学术或工业界）”，柯才焕获张福绥贝类学奖“杰出贡献奖”，刘志宇获曾呈奎海洋科技奖“青年科技奖” 。现拥有3个国家自然科学基金创新群体、1个教育部创新团队及1个国家级优秀教学团队；另有一大批国内外著名专家学者担任学院兼职及讲座教授。在SCOR、AOGS、PAGES/IMAGES、GEOTRACES、中国海洋湖沼学会、中国海洋学会、中国微生物学会等国内外组织或学术期刊任职的教师超百人次。</p><p>科技自立自强。我院拥有海洋生物地球化学全国重点实验室(MEL)、海水养殖生物育种全国重点实验室、海洋生物制备技术国家地方联合工程研究中心等3个国家级科研平台，以及水声通信与海洋信息技术教育部重点实验室和福建省海洋科学与技术创新实验室（鹭江实验室）等十个省部级科研平台，其中MEL为全国海洋领域唯一连续两次获评优秀的国家重点实验室。构建了目前国内高校唯一的“海-陆-空-天”一体化的海洋立体多维观测体系，包括我国第一艘具备痕量金属洁净研究能力的3000吨级“嘉庚”号综合考察船、福建省首个国家野外观测与研究站、我国首颗高分辨率SAR遥感小卫星“海丝”一号和高校首颗高分辨多光谱水色小卫星“海丝”二号。</p><p>近年来，学院聚焦“四个面向”，承担国家重点研发计划项目、国家基金委基础科学中心等国家级重大重点项目，相关科研成果获得国家自然科学二等奖、教育部自然科学一等奖、福建省自然科学一等奖、技术发明一等奖和科技进步一等奖等国家和省部级奖项30余项，并入选“中国十大海洋科技进展”等。面向世界科技前沿，构建海洋生态立体监测系统，实现对区域海洋关键生态环境要素的实时立体监测，推进透明海洋建设；面向经济主战场，培育鲍、螺系列国审水产新品种并大面积推广，开展大黄鱼良种选育工作，推动科技经济融合发展、促进产学研用深度融合、助力乡村振兴；面向国家重大需求，科学定量我国南海CO2源汇格局，构建了边缘海碳循环理论框架，创建“微型生物碳泵（MCP）”理论，提出海洋负排放新范式，为我国实现碳达峰目标以及碳中和愿景贡献厦大力量；面向人民生命健康，在海洋动物抗菌肽、新型环保防污涂料、蜂海绵骨针海洋化妆品、海洋仿生技术和水下机器鱼、水声通信设备等领域取得创新性成果并实现转化应用，保护人民生命安全和身体健康、提升人民生活品质，服务应急响应及防灾减灾。</p><p>厦大海洋，未来可期。“教育者，非为以往，非为现在，而专为将来”。厦门大学海洋与地球学院锚定“国际一流、中国品牌”的学科发展目标，聚焦国家战略需求，瞄准国际科技前沿，推动海洋科技创新，力求答好“育人三问”，培养具有家国情怀、国际视野、全球意识和综合竞争力的高素质海洋人才，建设世界一流的海洋科学人才培养基地和科学研究中心，为我国海洋强国战略、科教兴国战略和人才强国战略贡献厦大海洋的智慧和力量！</p></div></div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer__main">
+        <div class="container">
+            <div class="row">
+                <div class="col-2-of-5">
+                    <div class="footer__heading"> <span class="iconfont icon-gengduo-2"></span>
+                        <p>快捷功能</p>
+                    </div>
+                    <div class="footer__fast-links">
+                        <script language="javascript" src="/system/resource/js/openlink.js"></script><a href="http://coeetc.xmu.edu.cn/front/#/index/home" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86933)">实验教学中心</a>          
+<a href="http://coe.xmu.edu.cn/qtlm/ggfwzx.htm" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 94005)">公共服务中心</a>          
+<a href="http://melcomet.xmu.edu.cn/index.asp" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 93994)">COMET平台</a>          
+<a href="http://coeoa.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86935)">学院办公系统</a>          
+<a href="http://mel2.xmu.edu.cn/member_login.asp" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86934)">教师后台登录</a>          
+<a href="../bszn/jx.htm" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 88704)">常用办事指南</a>          
+<a href="http://coeadmin.xmu.edu.cn/classroom_new.aspx" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86936)">教室查看预约</a>          
+<a href="http://coeadmin.xmu.edu.cn/Other/YJSZW/GSCR.aspx" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86937)">研究生室座位</a>          
+<a href="../zyxz.htm" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 94070)">常用资源下载</a>          
+
+                    </div>
+                </div>
+                <div class="col-2-of-5">
+                    <div class="footer__heading"> <span class="iconfont icon-hezuoguanxi"></span>
+                        <p>友情链接</p>
+                    </div>
+                    <ul class="footer__selector">
+                        <li class="item">
+                            <div class="custom-selector">
+                                <div class="custom-selector__input">
+                                    <p class="custom-selector__placeholder">校内链接</p>
+                                </div>
+                                <nav class="custom-selector__options" style="display: none;">
+                                    <a href="https://www.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86914)">厦门大学</a>                    
+<a href="http://rsc.xmu.edu.cn" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86915)">人事处</a>                    
+<a href="http://std.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86916)">科技处</a>                    
+<a href="https://zchqc.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86917)">资产处</a>                    
+<a href="http://zsb.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86918)">招生网</a>                    
+<a href="http://jwc.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86919)">教务处</a>                    
+<a href="https://gs.xmu.edu.cn/index.htm" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86920)">研究生院</a>                    
+<a href="http://cee.xmu.edu.cn" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86921)">环境与生态学院</a>                    
+<a href="http://ships.xmu.edu.cn" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86922)">“嘉庚”号海洋科考船</a>                    
+
+                                </nav>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="custom-selector">
+                                <div class="custom-selector__input">
+                                    <p class="custom-selector__placeholder">院内链接</p>
+                                </div>
+                                <nav class="custom-selector__options" style="display: none;">
+                                    <a href="http://mel.xmu.edu.cn" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86923)">海洋生物地球化学全国重点实验室</a>                    
+<a href="http://coeetc.xmu.edu.cn/front/#/index/home" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 90457)">海洋环境科学国家实验教学示范中心（厦门大学）</a>                    
+<a href="http://SPMBT.xmu.edu.cn" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86924)">海洋生物制备技术国家地方联合工程实验室</a>                    
+<a href="http://uac.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86925)">水声通信与海洋信息技术教育部重点实验室</a>                    
+<a href="https://msvsc.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86930)">海洋科学虚拟仿真实验教学中心</a>                    
+<a href="http://fiso.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 93981)">福建海洋可持续发展研究院</a>                    
+<a href="http://ime.xmu.edu.cn" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86926)">厦门大学海洋微型生物与地球圈层研究所</a>                    
+<a href="http://dgd.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86927)">石斑鱼多样性信息资源数据化平台</a>                    
+<a href="http://dgo.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86928)">厦门大学地质海洋学系</a>                    
+<a href="https://imclab.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86929)">同位素海洋化学实验室</a>                    
+<a href="http://coe.xmu.edu.cn/qtlm/ggfwzx.htm" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 94003)">公共服务中心</a>                    
+
+                                </nav>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="custom-selector">
+                                <div class="custom-selector__input">
+                                    <p class="custom-selector__placeholder">其他链接</p>
+                                </div>
+                                <nav class="custom-selector__options" style="display: none;">
+                                    <a href="http://ucas.xmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86931)">UCAS | 水环境科学研究高校联盟</a>                    
+<a href="#" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1860198500, 86932)">近海海洋研究与管理联合研究所</a>                    
+
+                                </nav>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-1-of-5">
+                    <div class="footer__heading">
+                        <p>关注我们</p>
+                    </div>
+                    <div class="footer__qr">
+                        <img src="../images/qr-code.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__copyright">
+        <p>
+            
+</p><p>Copyright © 厦门大学 版权所有</p>
+        <p></p>
+    </div>
+  </footer>
+
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/swiper-bundle.min.js"></script>
+  <script src="../js/wow.js"></script>
+  <script src="../js/jquery.extends.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/theme.js"></script>
+  
+<script>
+$('.article-details__content img').height('auto'); 
+var selectIndex = 0;
+var startIndex = 0;
+var endIndex = 0; 
+var items = $(".side-nav-phone__1-item");
+items.each(function(index,value){ 
+    var this_level = $(this).attr("level");
+    var this_select = $(this).attr("select");
+    var this_id = $(this).attr("id"); 
+    if(this_id == selectId)
+    {     
+        selectIndex = index;
+        return false;
+    } 
+}); 
+items.each(function(index,value){ 
+    var this_level = $(this).attr("level");
+    var this_select = $(this).attr("select");
+    var this_id = $(this).attr("id");
+    if(this_id != selectId && this_level  < selectLevel)
+    {     
+        startIndex = index;
+    }
+    if(this_id == selectId)
+    {     
+        return false;
+    } 
+}); 
+items.each(function(index,value){ 
+    var this_level = $(this).attr("level");
+    var this_select = $(this).attr("select");
+    var this_id = $(this).attr("id");
+    if(this_id != selectId && this_level < selectLevel && index > selectIndex )
+    {     
+        endIndex  = index;
+        return false;
+    } 
+    if(index == items.length-1)
+    endIndex=items.length;
+}); 
+if(selectLevel==1)
+{
+startIndex =-1;
+endIndex=items.length;
+}
+items.each(function(index,value){  
+    $(this).attr("style","display:none")
+    if(index > startIndex && index < endIndex)
+    {   var this_level = $(this).attr("level");
+        if(this_level ==selectLevel)
+            $(this).attr("style","display:")
+    }  
+}); 
+</script>
+
+
+
+</body></html>

@@ -1,0 +1,812 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>学院介绍-南昌大学国际教育学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院介绍">
+<meta name="keywords" content="南昌大学国际教育学院,学院介绍">
+
+    <link href="../style/public.css" rel="stylesheet">
+    <link href="../style/ny.css" rel="stylesheet">
+    <style>
+       table{
+          margin:auto;}
+          
+       #vsb_content_4 TABLE{
+          width:100%;}   
+    </style>
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307775465753515742000300024f56 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1014,'/dpzw.jsp',-1,2110553762)</script>
+</head>
+
+<body>
+     <div class="head pc">
+        <div class="head-top px1400">
+            <div class="">
+                <div class="logo">
+                    
+<a href="../index.htm"><img src="../images/logo5.png" alt=""></a>
+                </div>
+                <div class="b-top-c">
+                    <div class="logo2">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<img src="../images/foot-mid-bg.png">
+
+</div>
+
+                    
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2">
+    <div id="appu2"><div class="ser-box"><input type="text" placeholder="请输入关键字" autocomplete="off" class="ser1"> <input type="image" src="../images/ser.png" alt="" class="ser2"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError" class="ser-box">
+         
+            
+            <input type="text" placeholder="请输入关键字" class="ser1" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                        <input type="image" src="../images/ser.png" alt="" class="ser2"  v-on:click="onSubmit()">
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "2110553762";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                    <div class="rukou"><script language="javascript" src="/system/resource/js/openlink.js"></script><a href="../index.htm">CN</a> |
+<a href="http://iec.ncu.edu.cn/en/index.htm">EN</a> |
+<a href="https://lxnd.ncu.edu.cn/">Apply Now</a> 
+</div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="nav">
+            <ul class="px1400 c-nav">
+
+<li>
+                    <a href="../index.htm">首页</a>
+                    <div style="left: -12px;">
+                        <ul>
+                    <li><a href="../index/lhlxsgdjyzlz.htm">来华留学生高等教育质量再认证简报</a></li>
+                     </ul>
+                    </div>
+                     
+                </li>
+ 
+
+<li class="active">
+                    <a href="xyfg.htm">关于我们</a>
+                    <div style="left: -120.344px;">
+                        <ul>
+                    <li><a href="xxjs.htm">学校介绍</a></li>
+                    <li><a href="xyjs.htm">学院介绍</a></li>
+                    <li><a href="zzjg.htm">组织架构</a></li>
+                    <li><a href="glzn.htm">管理职能</a></li>
+                    <li><a href="xyfg.htm">校园风光</a></li>
+                    <li><a href="https://www.720yun.com/vr/294jOsywta9" target="_blank">校园实景地图</a></li>
+                     </ul>
+                    </div>
+                     
+                </li>
+ 
+
+<li>
+                    <a href="../dqgz/zzjj.htm">党群工作</a>
+                    <div style="left: -120.344px;">
+                        <ul>
+                    <li><a href="../dqgz/zzjj.htm">组织简介</a></li>
+                    <li><a href="../dqgz/zbsh.htm">支部生活</a></li>
+                    <li><a href="../dqgz/xxyd.htm">学习园地</a></li>
+                     </ul>
+                    </div>
+                     
+                </li>
+ 
+
+<li>
+                    <a href="../lxnd/bkxm.htm">留学南大</a>
+                    <div style="left: -120.344px;">
+                        <ul>
+                    <li><a href="../lxnd/lhzb.htm">来华准备</a></li>
+                    <li><a href="../lxnd/rxxz.htm">入学须知</a></li>
+                    <li><a href="../lxnd/zsjz.htm">招生简章</a></li>
+                    <li><a href="../lxnd/zsyx.htm">招生院系</a></li>
+                    <li><a href="../lxnd/bkxm.htm">本科项目</a></li>
+                    <li><a href="../lxnd/ssxm.htm">硕士项目</a></li>
+                    <li><a href="../lxnd/bsxm.htm">博士项目</a></li>
+                    <li><a href="../lxnd/fxlxm.htm">非学历项目</a></li>
+                    <li><a href="../lxnd/tsdqxm.htm">特色短期项目</a></li>
+                     </ul>
+                    </div>
+                     
+                </li>
+ 
+
+<li>
+                    <a href="../jxj/zgzfjxj.htm">奖学金</a>
+                    <div style="left: -120.344px;">
+                        <ul>
+                    <li><a href="../jxj/zgzfjxj.htm">中国政府奖学金</a></li>
+                    <li><a href="../jxj/jxszfwglxsjxj.htm">江西省政府外国留学生奖学金</a></li>
+                    <li><a href="../jxj/gjzwjsjxj.htm">国际中文教师奖学金</a></li>
+                    <li><a href="../jxj/ncdxxzjxj.htm">南昌大学校长奖学金</a></li>
+                     </ul>
+                    </div>
+                     
+                </li>
+ 
+
+<li>
+                    <a href="../xysh/qzbl_b_.htm">校园生活</a>
+                    <div style="left: -120.344px;">
+                        <ul>
+                    <li><a href="../xysh/zsgl.htm">住宿管理</a></li>
+                    <li><a href="../xysh/jyxx.htm">就医信息</a></li>
+                    <li><a href="../xysh/xljk.htm">心理健康</a></li>
+                    <li><a href="../xysh/dcxy.htm">多彩校园</a></li>
+                    <li><a href="../xysh/jycy.htm">就业创业</a></li>
+                    <li><a href="../xysh/gzzd.htm">规章制度</a></li>
+                    <li><a href="../xysh/cjwt.htm">常见问题</a></li>
+                     </ul>
+                    </div>
+                     
+                </li>
+ 
+
+<li>
+                    <a href="../kzxy/kyj.htm">孔子学院</a>
+                    <div style="left: -120.344px;">
+                        <ul>
+                    <li><a href="../kzxy/kyj.htm">孔院介绍</a></li>
+                    <li><a href="../kzxy/kydt.htm">孔院动态</a></li>
+                    <li><a href="../kzxy/kyfc.htm">孔院风采</a></li>
+                    <li><a href="../kzxy/gzzd.htm">规章制度</a></li>
+                    <li><a href="../kzxy/gjzwjsjxj.htm">国际中文教师奖学金</a></li>
+                    <li><a href="../kzxy/jsjs.htm">教师介绍</a></li>
+                     </ul>
+                    </div>
+                     
+                </li>
+ 
+
+<li>
+                    <a href="../gjbklxxm/mskgldxgjbklxxm.htm">国际本科留学项目</a>
+                    <div style="left: -104.641px;">
+                        <ul>
+                    <li><a href="../gjbklxxm/mskgldxgjbklxxm.htm">莫斯科国立大学国际本科留学项目</a></li>
+                    <li><a href="../gjbklxxm/xbymxykbxm.htm">西班牙名校预科班项目</a></li>
+                    <li><a href="../gjbklxxm/hgmxykbxm.htm">韩国名校预科班项目</a></li>
+                     </ul>
+                    </div>
+                     
+                </li>
+ 
+
+<li>
+                    <a href="../xyyds/xydj.htm">校友园地</a>
+                    <div style="left: -120.344px;">
+                        <ul>
+                    <li><a href="../xyyds/xydj.htm">校友登记</a></li>
+                    <li><a href="../xyyds/xydt.htm">校友动态</a></li>
+                     </ul>
+                    </div>
+                     
+                </li>
+ 
+
+<li>
+                    <a href="../cyxz.htm">常用下载</a>
+                     
+                </li>
+ 
+ <div class="clear"></div>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!-- 移动端导航 -->
+    <div class="top">
+        <div class="wap wap-menu">
+            <img src="../images/menu.png" class="menu" alt="">
+            <img src="../images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+    <div class="wap m-head">
+        <div class="m-logo">     
+        
+              
+                 
+                        <a href="../index.htm" onclick="_addDynClicks(&quot;wbimage&quot;, 2110553762, 1018284)">
+                         
+                            <img src="../images/logo5.png">
+                        </a>  
+                   
+       
+</div>
+        <div class="rukou"><a href="../index.htm">CN</a> |
+<a href="http://iec.ncu.edu.cn/en/index.htm">EN</a> |
+<a href="https://lxnd.ncu.edu.cn/">Apply Now</a> 
+</div>
+        <div class="m-nav">
+            <div class="m-tlink"></div>
+            <div class="m-search">
+
+
+<style>
+    #appu7 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu7 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu7">
+    <div id="appu7"><div><input type="text" placeholder="请输入关键字" autocomplete="off"> <input type="image" src="../images/search2.png"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu7">
+    <div id="appu7">
+        <div v-if="!isError">
+            <input type="text" placeholder="请输入关键字"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                <input type="image" src="../images/search2.png" v-on:click="onSubmit()">
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu7").html($("#htmlu7").text());
+</script>
+<script>
+    var appOwner = "2110553762";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu7",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+            <ul class="">
+ <li>
+                    <a href="../index.htm">首页</a><span></span>
+                     <ul>
+                    <li><a href="../index/lhlxsgdjyzlz.htm">来华留学生高等教育质量再认证简报</a></li>
+                     </ul>
+                </li>
+ 
+
+ <li>
+                    <a href="xyfg.htm">关于我们</a><span></span>
+                     <ul>
+                    <li><a href="xxjs.htm">学校介绍</a></li>
+                    <li><a href="xyjs.htm">学院介绍</a></li>
+                    <li><a href="zzjg.htm">组织架构</a></li>
+                    <li><a href="glzn.htm">管理职能</a></li>
+                    <li><a href="xyfg.htm">校园风光</a></li>
+                    <li><a href="https://www.720yun.com/vr/294jOsywta9" target="_blank">校园实景地图</a></li>
+                     </ul>
+                </li>
+ 
+
+ <li>
+                    <a href="../dqgz/zzjj.htm">党群工作</a><span></span>
+                     <ul>
+                    <li><a href="../dqgz/zzjj.htm">组织简介</a></li>
+                    <li><a href="../dqgz/zbsh.htm">支部生活</a></li>
+                    <li><a href="../dqgz/xxyd.htm">学习园地</a></li>
+                     </ul>
+                </li>
+ 
+
+ <li>
+                    <a href="../lxnd/bkxm.htm">留学南大</a><span></span>
+                     <ul>
+                    <li><a href="../lxnd/lhzb.htm">来华准备</a></li>
+                    <li><a href="../lxnd/rxxz.htm">入学须知</a></li>
+                    <li><a href="../lxnd/zsjz.htm">招生简章</a></li>
+                    <li><a href="../lxnd/zsyx.htm">招生院系</a></li>
+                    <li><a href="../lxnd/bkxm.htm">本科项目</a></li>
+                    <li><a href="../lxnd/ssxm.htm">硕士项目</a></li>
+                    <li><a href="../lxnd/bsxm.htm">博士项目</a></li>
+                    <li><a href="../lxnd/fxlxm.htm">非学历项目</a></li>
+                    <li><a href="../lxnd/tsdqxm.htm">特色短期项目</a></li>
+                     </ul>
+                </li>
+ 
+
+ <li>
+                    <a href="../jxj/zgzfjxj.htm">奖学金</a><span></span>
+                     <ul>
+                    <li><a href="../jxj/zgzfjxj.htm">中国政府奖学金</a></li>
+                    <li><a href="../jxj/jxszfwglxsjxj.htm">江西省政府外国留学生奖学金</a></li>
+                    <li><a href="../jxj/gjzwjsjxj.htm">国际中文教师奖学金</a></li>
+                    <li><a href="../jxj/ncdxxzjxj.htm">南昌大学校长奖学金</a></li>
+                     </ul>
+                </li>
+ 
+
+ <li>
+                    <a href="../xysh/qzbl_b_.htm">校园生活</a><span></span>
+                     <ul>
+                    <li><a href="../xysh/zsgl.htm">住宿管理</a></li>
+                    <li><a href="../xysh/jyxx.htm">就医信息</a></li>
+                    <li><a href="../xysh/xljk.htm">心理健康</a></li>
+                    <li><a href="../xysh/dcxy.htm">多彩校园</a></li>
+                    <li><a href="../xysh/jycy.htm">就业创业</a></li>
+                    <li><a href="../xysh/gzzd.htm">规章制度</a></li>
+                    <li><a href="../xysh/cjwt.htm">常见问题</a></li>
+                     </ul>
+                </li>
+ 
+
+ <li>
+                    <a href="../kzxy/kyj.htm">孔子学院</a><span></span>
+                     <ul>
+                    <li><a href="../kzxy/kyj.htm">孔院介绍</a></li>
+                    <li><a href="../kzxy/kydt.htm">孔院动态</a></li>
+                    <li><a href="../kzxy/kyfc.htm">孔院风采</a></li>
+                    <li><a href="../kzxy/gzzd.htm">规章制度</a></li>
+                    <li><a href="../kzxy/gjzwjsjxj.htm">国际中文教师奖学金</a></li>
+                    <li><a href="../kzxy/jsjs.htm">教师介绍</a></li>
+                     </ul>
+                </li>
+ 
+
+ <li>
+                    <a href="../gjbklxxm/mskgldxgjbklxxm.htm">国际本科留学项目</a><span></span>
+                     <ul>
+                    <li><a href="../gjbklxxm/mskgldxgjbklxxm.htm">莫斯科国立大学国际本科留学项目</a></li>
+                    <li><a href="../gjbklxxm/xbymxykbxm.htm">西班牙名校预科班项目</a></li>
+                    <li><a href="../gjbklxxm/hgmxykbxm.htm">韩国名校预科班项目</a></li>
+                     </ul>
+                </li>
+ 
+
+ <li>
+                    <a href="../xyyds/xydj.htm">校友园地</a><span></span>
+                     <ul>
+                    <li><a href="../xyyds/xydj.htm">校友登记</a></li>
+                    <li><a href="../xyyds/xydt.htm">校友动态</a></li>
+                     </ul>
+                </li>
+ 
+
+ <li>
+                    <a href="../cyxz.htm">常用下载</a>
+                </li>
+ 
+ <div class="clear"></div></ul>
+        </div>
+    </div>
+
+    <div class="banner"><img src="../images/2top.jpg"></div>
+
+    <div class="nymain">
+        <div class="px1400">
+            <div class="channl-menu leftNav">
+                <h2><b>
+关于我们</b><span></span></h2>
+                <ul>
+<li>
+                        <a href="xxjs.htm">学校介绍</a>
+
+                    </li>
+
+ 
+
+<li class="active  on">
+                        <a href="xyjs.htm">学院介绍</a>
+
+                    </li>
+
+ 
+
+<li>
+                        <a href="zzjg.htm">组织架构</a>
+
+                    </li>
+
+ 
+
+<li>
+                        <a href="glzn.htm">管理职能</a>
+
+                    </li>
+
+ 
+
+<li>
+                        <a href="xyfg.htm">校园风光</a>
+
+                    </li>
+
+ 
+
+<li>
+                        <a href="https://www.720yun.com/vr/294jOsywta9" target="_blank">校园实景地图</a>
+
+                    </li>
+
+ 
+</ul>
+            </div>
+            <div class="ny-right">
+                <div class="position d">
+                    <div>
+                        <h3>
+学院介绍</h3>
+                        <span>位置: </span>
+                        <a href="../index.htm">首页</a>
+               <span>-&gt;</span>
+                <a href="xyfg.htm">关于我们</a>
+               <span>-&gt;</span>
+                <a href="xyjs.htm">学院介绍</a>
+
+                    </div>
+                </div>
+                <div class="art-main">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',2110553762,'wbnews','u14')</script>
+<script>function seeContenta14(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta14('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',2110553762,1136)</script>
+<div class="art-tit cont-tit d">
+                        <h3>南昌大学国际教育学院(跨境教育中心)</h3>
+                    </div>
+                    <div class="art-body d">
+   
+    <div id="vsb_content_1136_u141"><div id="vsb_content"><div class="zhengwen" style="box-sizing: border-box; padding: 20px 0px; line-height: 30px; font-size: 15px; color: rgb(85, 85, 85); font-family: &quot;microsoft yahei&quot;; text-wrap: wrap; background-color: rgb(255, 255, 255);"><div id="vsb_content_2_2808_u101" style="box-sizing: border-box; width: auto !important;"><div id="vsb_content_2" style="box-sizing: border-box; width: auto !important;"><div style="box-sizing: border-box; width: auto !important;"><p style="box-sizing: border-box; padding: 0px 0px 14px; list-style: none; text-indent: 32pt; font-size: 16pt; font-family: 仿宋; text-align: justify; margin-top: 20px; margin-bottom: 20px; line-height: 30px !important;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; color: rgb(0, 0, 0); font-size: 20px;">南昌大学国际教育学院成立于2006年，是学校负责来华留学，海外孔子学院、中外人文交流、援外培训以及部分国际本科留学项目实施等事务的机构。</span></p><p style="box-sizing: border-box; padding: 0px 0px 14px; list-style: none; text-indent: 32pt; font-size: 16pt; font-family: 仿宋; text-align: justify; margin-top: 20px; margin-bottom: 20px; line-height: 30px !important;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 20px;"><span style="font-size: 20px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; color: rgb(0, 0, 0); text-indent: 32pt;">学院位于南昌大学前湖校区，是教育部来华留学</span><span style="font-size: 20px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; color: rgb(0, 0, 0);">示范基地、中国教育交流协会常务理事单位、全国汉语水平HSK网考先进考点、“长江—伏尔加河”高校联盟、“一带一路”建筑类大学国际联盟、中泰高等教育合作联盟等国际教育联盟成员单位。</span></span></p><p style="box-sizing: border-box; padding: 0px 0px 14px; list-style: none; text-indent: 32pt; font-size: 16pt; font-family: 仿宋; text-align: justify; margin-top: 20px; margin-bottom: 20px; line-height: 30px !important;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 20px;"><span style="font-size: 20px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; color: rgb(0, 0, 0); text-indent: 32pt;">学院以来华留学和中外人文交流为工作主线，借助</span><span style="font-size: 20px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; color: rgb(0, 0, 0);">海外孔子学院平台，以多元涉外项目为有益补充，立足江西，着眼全球，主动服务国家外交战略，积极推动南昌大学国际化办学水平提升和世界一流大学建设。</span></span></p></div></div></div></div></div></div>
+    <span id="vsb_content_1136_u14" name="vsb_content_1136_u14"></span>
+    
+</div>
+</div>
+               
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+
+
+    <div class="footer">
+        <div class="px1400">
+            <div class="foot-c">
+
+
+                <div class="foot-l">
+                    <div class="bottom_logo"> <img src="../images/footer-logo-m.png"></div>
+
+                    <div class="bottom_link">
+                        
+<p>地址：江西省南昌市红谷滩区学府大道999号</p> 
+<p>邮编：330031</p> 
+<p>联系方式：+86-791-83969196　</p> 
+<p>邮箱：study@ncu.edu.cn</p> 
+<p><br></p>
+                    </div>
+
+                </div>
+                <div class="foot-r">
+                        <ul>
+            
+                
+                <li>
+                            <div class="ewm">
+                                <a href="javascript:;"><img src="../images/wx.jpg" alt=""></a>
+                            </div>
+                            <p></p>
+                        </li>
+                
+                 
+                
+                <li>
+                            <div class="ewm">
+                                <a href="../info/1071/2415.htm"><img src="../images/lya.png" alt=""></a>
+                            </div>
+                            <p></p>
+                        </li>
+                
+                 
+       
+  <div class="clear"></div>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/slick.js"></script>
+    <script src="../js/public.js"></script>
+
+
+<style type="text/css">
+#browser-modal{width:100%;height:100%;top:0;left:0;text-align:center;color:#303233;position:fixed;z-index:99999;display: none;}
+#browser-modal .browser-modal-cover{position:fixed;left:0;top:0;height:100%;width:100%;background-color:#111;opacity:.9;z-index:-1;}
+#browser-modal .browser-content{width:700px;margin-top:120px;margin-left:auto;margin-right:auto;padding-bottom:80px;padding-top:30px;background-color:#fff;border-radius:5px;}
+#browser-modal .browser-content .browser-dpc-logo img{height:62px;margin:45px auto 30px;}
+#browser-modal .browser-content .browser-text-title{text-transform:uppercase;font-size:24px;}
+#browser-modal .browser-content .browser-text-desc{margin-top:30px;margin-bottom:40px;font-size:14px;}
+#browser-modal .browser-content .browser-list{width:600px;margin:40px auto;height:130px;}
+#browser-modal .browser-content .browser-item{float:left;width:150px;padding-top:20px;padding-bottom:20px;margin-left:auto;margin-right:auto;}
+#browser-modal .browser-content .browser-item .iconfont{width:100px;height:100px;margin:0 auto;font-size:80px;line-height:80px;margin-bottom:30px;}
+#browser-modal .browser-content .browser-item a{color:#921041;cursor:pointer;display:block;}
+#browser-modal .browser-content .browser-item a img{display:block;margin:0 auto;max-width:100px;width:100px;height:100px;}
+#browser-modal .browser-content .browser-item a h4{text-align:center;margin-top:20px;font-size:18px;font-weight:700;}
+.fixedok .banner {opacity:0;}
+
+#browser-modal .browser-content .browser-item .iconchrome{background:url(../images/bro.png) no-repeat 0 0;}
+#browser-modal .browser-content .browser-item .iconfirefox{background:url(../images/bro.png) no-repeat 0 -100px;}
+#browser-modal .browser-content .browser-item .iconopera{background:url(../images/bro.png) no-repeat 0 -200px;}
+#browser-modal .browser-content .browser-item .iconEdge{background:url(../images/bro.png) no-repeat 0 -300px;}
+
+
+</style>
+<div id="browser-modal">
+    <div class="browser-modal-cover">
+    </div>
+    <div class="browser-content">
+        <div class="browser-text">
+            
+            <h3 class="browser-text-title">请升级浏览器版本</h3>
+            <p class="browser-text-desc">
+        你正在使用旧版本浏览器。请升级浏览器以获得更好的体验。
+            </p>
+        </div>
+        <div class="browser-list">
+            <div class="browser-item">
+                <a href="https://www.google.cn/intl/zh-CN/chrome/" target="_blank">
+                <div class="iconfont iconchrome">
+                </div>
+                <h4>Chrome</h4>
+                </a>
+            </div>
+            <div class="browser-item">
+                <a href="http://www.firefox.com.cn/" target="_blank">
+                <div class="iconfont iconfirefox">
+                </div>
+                <h4>Firefox</h4>
+                </a>
+            </div>
+            <div class="browser-item">
+                <a href="https://www.opera.com/zh-cn" target="_blank">
+                <div class="iconfont iconopera">
+                </div>
+                <h4>Opera</h4>
+                </a>
+            </div>
+            <div class="browser-item">
+                <a href="https://www.microsoft.com/zh-cn/edge" target="_blank">
+                <div class="iconfont iconEdge">
+                </div>
+                <h4>Edge</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        if(navigator.appName == "Microsoft Internet Explorer"&&parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE","")) < 11){
+            document.getElementById('browser-modal').style.display='block';
+            console.log("您的浏览器版本过低，请使用IE10以上版本");
+    }
+    </script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

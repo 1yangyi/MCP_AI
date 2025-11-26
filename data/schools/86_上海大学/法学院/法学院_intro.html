@@ -1,0 +1,511 @@
+<!DOCTYPE html><html lang="en"><head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">
+		<meta http-equiv="X-UA-Compatible" content="IE=10">
+		<meta name="renderer" content="webkit">
+		<title>学院简介-上海大学法学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="上海大学法学院">
+
+		<link rel="stylesheet" href="../css/index.css">
+		<script src="../js/jquery.js"></script>
+		<script src="../js/index.js"></script>
+	<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307468475d53575742000200034554 -->
+<link rel="stylesheet" type="text/css" href="../jjy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1065,'/jjy.jsp',-1,1498770058)</script>
+</head>
+	<body>
+		<div id="header">
+			<div class="header container clearfix">
+				<img src="../img/logo.png">
+
+				
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0" style="    float: right;">
+    <div id="appu0"><div><div class="ss-div fr clearfix"><button name="submit_button" class="ss-btn fr"></button> <input type="text" value="" placeholder="请输入你要搜索的内容" class="ss-ipt fl"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+          
+            
+            <div class="ss-div fr clearfix">
+                    <button class="ss-btn fr"  name="submit_button" v-on:click="onSubmit()"></button>
+                    <input type="text" v-model=query.keyWord @keyup.enter="onSubmit" value="" class="ss-ipt fl" placeholder="请输入你要搜索的内容" />
+                </div>
+            
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1498770058";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://2022openlab.shu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+				<script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><ul class="headerlink fr clearfix">
+				
+				</ul>
+			</div>
+			<div id="nav">
+				<div class="container">
+					<div class="nav">
+						<ul class="fNav clearfix">
+    
+    <li><a href="../index.htm">首页</a>
+    </li>
+
+    <li class="active"><a href="../gk.htm">概况</a>
+        <ul class="sNav">
+
+            <li><a href="xyls.htm">学院历史</a>
+            </li>
+
+            <li><a href="xyjj.htm">学院简介</a>
+            </li>
+
+            <li><a href="xywh.htm">学院文化</a>
+            </li>
+
+            <li><a href="myyz.htm">名誉院长</a>
+            </li>
+
+            <li><a href="xydz.htm">学院党政</a>
+            </li>
+
+            <li><a href="lrld.htm">历任领导</a>
+            </li>
+
+            <li><a href="xszz.htm">学术组织</a>
+            </li>
+
+            <li><a href="kypt.htm">科研平台</a>
+            </li>
+
+            <li><a href="xzjg.htm">行政机构</a>
+            </li>
+            
+        </ul>
+    </li>
+
+    <li><a href="../list.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1272">院务公开</a>
+    </li>
+
+    <li><a href="../dj.htm">党建</a>
+        <ul class="sNav">
+
+            <li><a href="../dj/dwjg.htm">党务机构</a>
+            </li>
+
+            <li><a href="../dj/xwdt.htm">新闻动态</a>
+            </li>
+
+            <li><a href="../dj/ghfwh.htm">工会妇委会</a>
+            </li>
+            
+        </ul>
+    </li>
+
+    <li><a href="../szdw1/jsml1/flyfsjys.htm">师资队伍</a>
+        <ul class="sNav">
+
+            <li><a href="../szdw1/jsml1/flyfsjys.htm">教师名录</a>
+            </li>
+
+            <li><a href="../szdw1/wpjs.htm">外聘教师</a>
+            </li>
+
+            <li><a href="../szdw1/lzjg.htm">离职教工</a>
+            </li>
+
+            <li><a href="../szdw1/rxjg.htm">荣休教工</a>
+            </li>
+
+            <li><a href="../szdw1/yyhn.htm">永远怀念</a>
+            </li>
+            
+        </ul>
+    </li>
+
+    <li><a href="../zs1.htm">招生</a>
+        <ul class="sNav">
+
+            <li><a href="../zs1/ggtz.htm">公告通知</a>
+            </li>
+
+            <li><a href="../zs1/fxbk1.htm">法学本科</a>
+            </li>
+
+            <li><a href="../zs1/fxss.htm">法学硕士</a>
+            </li>
+
+            <li><a href="../zs1/qrzflyjs.htm">全日制法律研究生</a>
+            </li>
+
+            <li><a href="../zs1/fqrzflyjs.htm">非全日制法律研究生</a>
+            </li>
+            
+        </ul>
+    </li>
+
+    <li><a href="../jx1.htm">教学</a>
+        <ul class="sNav">
+
+            <li><a href="../jx1/xxgg.htm">信息公告</a>
+            </li>
+
+            <li><a href="../jx1/bksjx.htm">本科生教学</a>
+            </li>
+
+            <li><a href="../jx1/fxyjsjx.htm">法学研究生教学</a>
+            </li>
+
+            <li><a href="../jx1/flyjsjx.htm">法律研究生教学</a>
+            </li>
+
+            <li><a href="../jx1/dsh.htm">读书会</a>
+            </li>
+
+            <li><a href="../jx1/jxcg.htm">教学成果</a>
+            </li>
+            
+        </ul>
+    </li>
+
+    <li><a href="../xsgz.htm">学生工作</a>
+        <ul class="sNav">
+
+            <li><a href="../xsgz/zzjg.htm">组织机构</a>
+            </li>
+
+            <li><a href="../xsgz/xwbd.htm">新闻报道</a>
+            </li>
+
+            <li><a href="../xsgz/ggtz.htm">公告通知</a>
+            </li>
+
+            <li><a href="../xsgz/xs.htm">学生党建</a>
+            </li>
+
+            <li><a href="../xsgz/jz.htm">奖助事务</a>
+            </li>
+
+            <li><a href="../xsgz/jyzd.htm">就业指导</a>
+            </li>
+
+            <li><a href="../xsgz/xs1.htm">学生社团</a>
+            </li>
+            
+        </ul>
+    </li>
+
+    <li><a href="../xsyj.htm">学术研究</a>
+        <ul class="sNav">
+
+            <li><a href="../xsyj/kyxx.htm">科研信息</a>
+            </li>
+
+            <li><a href="../xsyj/xsjg.htm">学术机构</a>
+            </li>
+
+            <li><a href="../xsyj/kyxm.htm">科研项目</a>
+            </li>
+            
+        </ul>
+    </li>
+
+    <li><a href="../hzpx.htm">合作培训</a>
+        <ul class="sNav">
+
+            <li><a href="../hzpx/gjhzxm.htm">国际合作项目</a>
+            </li>
+
+            <li><a href="../hzpx/hzxm.htm">合作项目</a>
+            </li>
+
+            <li><a href="../hzpx/gjjl.htm">国际交流</a>
+            </li>
+            
+        </ul>
+    </li>
+
+    <li><a href="../xy.htm">校友</a>
+        <ul class="sNav">
+
+            <li><a href="../xy/xwdt.htm">新闻动态</a>
+            </li>
+
+            <li><a href="../xy/xyml.htm">校友名录</a>
+            </li>
+
+            <li><a href="../xy/xyfc.htm">校友风采</a>
+            </li>
+
+            <li><a href="../xy/xyh.htm">校友会</a>
+            </li>
+            
+        </ul>
+    </li>
+
+    <li><a href="../jz.htm">捐赠</a>
+        <ul class="sNav">
+
+            <li><a href="../jz/jzgzjs.htm">捐赠工作介绍</a>
+            </li>
+
+            <li><a href="../jz/fxyfzjj.htm">法学院发展基金</a>
+            </li>
+
+            <li><a href="../jz/jzzx.htm">捐赠致谢</a>
+            </li>
+            
+        </ul>
+    </li>
+
+    <li><a href="../xgxz.htm">相关下载</a>
+        <ul class="sNav">
+
+            <li><a href="../xgxz/zzxg.htm">组织相关</a>
+            </li>
+
+            <li><a href="../xgxz/rsxg.htm">人事相关</a>
+            </li>
+
+            <li><a href="../xgxz/kyxg.htm">科研相关</a>
+            </li>
+
+            <li><a href="../xgxz/bksxg.htm">本科生相关</a>
+            </li>
+
+            <li><a href="../xgxz/yjsxg.htm">研究生相关</a>
+            </li>
+
+            <li><a href="../xgxz/zhl.htm">综合类</a>
+            </li>
+
+            <li><a href="../xgxz/cwxg.htm">财务相关</a>
+            </li>
+            
+        </ul>
+    </li>
+
+    <li><a href="../zcxy.htm">知产学院</a>
+        <ul class="sNav">
+
+            <li><a href="../zcxy/xygk.htm">学院概况</a>
+            </li>
+
+            <li><a href="../zcxy/rcpy.htm">人才培养</a>
+            </li>
+
+            <li><a href="../zcxy/ky_fw.htm">科研·服务</a>
+            </li>
+
+            <li><a href="../zcxy/bs_hd.htm">比赛·活动</a>
+            </li>
+            
+        </ul>
+    </li>
+    
+</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="body" class="erBody">
+			<div class="list-page container clearfix">
+
+				<div class="fl list-left">
+					<div class="list-location">
+						<span>
+概况</span>
+					</div>
+					<div class="list-ul">
+						<ul>
+
+	<li><a href="xyls.htm">学院历史</a></li>
+
+	<li class="active"><a href="xyjj.htm">学院简介</a></li>
+
+	<li><a href="xywh.htm">学院文化</a></li>
+
+	<li><a href="myyz.htm">名誉院长</a></li>
+
+	<li><a href="xydz.htm">学院党政</a></li>
+
+	<li><a href="lrld.htm">历任领导</a></li>
+
+	<li><a href="xszz.htm">学术组织</a></li>
+
+	<li><a href="kypt.htm">科研平台</a></li>
+
+	<li><a href="xzjg.htm">行政机构</a></li>
+</ul>
+					</div>
+				</div>
+				<div class="fr list-right">
+					<div class="right-title">
+						 
+        <a href="../index.htm">首页</a>
+                -
+<a href="../gk.htm">概况</a>
+                -
+                <a href="xyjj.htm"><span>学院简介</span></a>
+
+					</div>
+					<div class="right-jjy">
+						
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1498770058,'wbnews','u6')</script>
+<script>function seeContenta6(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta6('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1498770058,3381)</script>
+<p>
+  
+    </p><div id="vsb_content_3381_u61"><div id="vsb_content"><p style="text-indent: 37px; line-height: 3em;"><span style="font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">上海大学是上海市属的综合性研究型大学，是教育部与上海市人民政府共建高校，是国家“211工程”重点建设高校、上海市首批高水平地方高校建设试点，是国家“双一流”建设高校。</span><span style="font-family: 黑体, SimHei;"><span style="font-size: 18px;"></span><span style="font-size: 18px;"></span></span></p><p style="text-indent: 37px; line-height: 3em;"><span style="font-family: 黑体, SimHei;"><span style="font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">上海大学法学院的历史，最早可追溯到始建于1978年12月的复旦大学分校政治系，是改革开放后上海地区最早恢复法科教育的院校。学院现有法学、知识产权2个本科专业（其中法学专业为上海市一流专业）、法学一级学科硕士学位授权点、法律硕士专业（法学、非法学）学位授权点、知识产权专业硕士学位授权点。学院现设有知识产权学院和7个教研室（法理法史教研室、宪法与行政法教研室、刑法教研室、民商法教研室、经济法教研室、国际法教研室、诉讼法教研室）；设有2个校级研究机构与20余个院级研究机构。</span><span style="font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;"></span></span></p><p style="text-indent: 37px; line-height: 3em;"><span style="font-family: 黑体, SimHei;"><span style="font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">上海大学法学院名誉院长为全国政协常委、香港中华总商会会长、香港新华集团主席蔡冠深博士，现任院长为上海市优秀中青年法学家、上海大学伟长学者李凤章教授。</span><span style="font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;"></span></span></p><p style="text-indent: 37px; line-height: 3em;"><span style="font-family: 黑体, SimHei;"><span style="font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">学院师资力量雄厚，著名法学家王卫国、赵万一、沈四宝等先后担任学院院长，中国社会科学院学部委员、原中国社科院法学所所长陈甦研究员作为兼职教授在我院任教。学院超过90%的教师具有博士学位，相当比例的教师毕业于美国、日本和英国的著名高校，本土毕业教师也多数具有海内外著名高校访学经历，师资队伍结构合理。专任教师中有教授、博士生导师14人、副教授20人，具有博士学位的教师50人。其中“上海市优秀中青年法学家”1人，“上海市浦江人才计划”5人，“双千计划”2人，国家知识产权专家咨询委员会委员 1人，国家知识产权专家库专家 1人，全国知识产权领军人才2人，入选“上海青年法学法律人才库”7人，拥有上海大学“伟长学者”1人。</span><span style="font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;"></span></span></p><p style="text-indent: 37px; line-height: 3em;"><span style="font-family: 黑体, SimHei;"><span style="font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">学院秉持“维理尚法，恪正克坚”的院训，致力于营造宽松、向上的学术氛围和良好的学术生态，为教师和学生的成长提供优越的学术环境。学院建立了国家社科项目经费配套制度、著作出版资助制度、年度学者奖励制度等，不断筹集资源，优化治理结构，提高教师待遇，提升教学和科研水平。近五年来学院教师承担各类项目数百项，其中主持国家级、省部级项目30余项，获省部级以上奖励多项，科研总经费近2000万元，其中纵向经费近500万元，学院在《法学研究》《中国法学》等 CSSCI、SSCI期刊发表重要学术论文近两百篇。</span><span style="font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;"></span></span></p><p style="text-indent: 37px; line-height: 3em;"><span style="font-family: 黑体, SimHei;"><span style="font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">学院积极推动人才培养、学术研究和社会服务的三位一体模式，鼓励教师立足自身的研究领域，积极参与立法等各类社会服务，多名教师担任政府法律顾问，学院是上海市知识产权培训基地和中国社会科学院当代中国研究所国情国史基地。学院编辑出版有《产权法治研究》、《法律社会学评论》等学术辑刊，开设有英美法实验班，建有法律诊所和丰富的实习基地，依托上海区域优势，利用上海大学的学科综合优势，不断形成自己国际化、重实践的海派学术研究和人才培养特色，2018年QS排名世界高校第251-300位，位列大陆高校第13位。</span><span style="font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;"></span></span></p><p style="text-indent: 37px; line-height: 3em;"><span style="font-family: 黑体, SimHei;"><span style="font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">学院坚持国际化的办学战略，和美国艾默瑞大学、英国利兹大学、爱尔兰科克大学等大学法学院建立有良好的合作关系。学院是亚洲法学院联盟（Asian Law Schools Association）的发起院系之一。学院英美法实验班开设有多门全英文课程，系统介绍和学习英美法知识。学院除招收中文项目的留学生外，还开设有全英文的法律硕士项目（中国商法特色），吸引了来自美国等国家和地区的留学生在校学习。学院和昆山工业园区秉龙基金会合作，招收培养埃塞俄比亚等非洲学生，并形成了有关非洲法律研究的学术团队。</span><span style="font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;"></span></span></p><p style="text-indent: 37px; line-height: 3em;"><span style="font-family: 黑体, SimHei;"><span style="font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">40多年来，学院先后培养毕业生近2万人，他们中既有优秀法官、检察官，政府和企业部门的管理者，学界精英，更有叱咤在国内外的优秀大律师，上海市第一届东方大律师评选，我院毕业生就占了4人。近年来，学院扎实推进“三全育人”改革，厚植学生家国情怀，坚定学生法律信仰，多方拓展资源努力为学生提供学业、自强不息、升学等丰厚的奖助学金，建立了完善的学院学生荣誉表彰体系，在校生的综合素质和培养质量不断提高。先后有多位学生荣获上海大学学生最高荣誉“校长奖学金”，多位同学获国家奖学金；学生的司法考试通过率和就业率、国内外升学率稳步提高，每年约有15%到20%左右的本科毕业生升入伦敦国王学院、新加坡国立大学、北京大学、墨尔本大学等国内外著名高校。学生综合发展，素质全面，雇主满意度不断提升。</span><span style="font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;"></span></span></p><p style="text-indent: 37px; line-height: 3em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">征程万里风正劲，重任千钧再攀登。<span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; text-indent: 40px;">在新时代新征程里，面对新形势、新使命和新任务，学院全体师生将坚持创特色、重实践、国际化的办学模式，以立德树人、德法兼修、为全面依法治国培养卓越法治人才为使命，培养具有宽广国际视野、扎实专业知识和卓越实践能力的复合型高级法治人才，为将法学院建成特色鲜明、国内一流、国际知名的研究型法学院而努力奋斗！</span></span></p><p style="text-indent: 37px; line-height: 3em;"><br></p><p style="text-align: left; text-indent: 37px; line-height: 3em;"><br></p><p style="text-indent: 2em; line-height: 3em;"><span style="font-size: 18px;"></span><br></p></div></div>
+    <span id="vsb_content_3381_u6" name="vsb_content_3381_u6"></span><br><br>
+    
+<p></p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="copy">
+				<div class="container">
+					<!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p style="color:#fff;font-size:12px;">
+    @上海大学法学院 地址：上海市宝山区南陈路333号4号楼 邮政编码：200444 服务指南<br>版权所有 ©<a href="http://www.shu.edu.cn" target="_blank" style="color: #fff"> 上海大学</a> &nbsp;&nbsp;<a href="https://beian.miit.gov.cn/" target="_blank" style="color: #fff">沪ICP备09014157&nbsp;</a>&nbsp;&nbsp;<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31009102000049" target="_blank" style="color: #fff">沪公网安备31009102000049号</a>&nbsp;地址：上海市宝山区上大路99号&nbsp;&nbsp; 邮编：200444 &nbsp;&nbsp;<a href="http://www.shu.edu.cn/dhcx.htm" target="_blank" style="color: #fff">电话查询 </a>&nbsp;<br>技术支持：<a href="https://its.shu.edu.cn" target="_blank" style="color: #fff">上海大学信息化工作办公室&nbsp;&nbsp; </a><a href="mailto:info@shu.edu.cn" target="_blank" style="color: #fff">联系我们 </a>&nbsp;&nbsp;
+</p>
+				</div>
+			</div>
+		</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

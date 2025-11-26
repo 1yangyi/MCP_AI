@@ -1,0 +1,688 @@
+
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="" />
+    
+    <meta name="author" content="厦门大学国际关系学院">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="format-detection" content="telephone=no" />
+    <title>学院简介-厦门大学国际关系学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+
+
+<META Name="keywords" Content="厦门大学国际关系学院,学院简介" />
+
+    <!-- Core -->
+   
+    <!-- Bootstrap -->
+    <link href="../style/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <!-- Plugins -->
+    <!-- Icons -->
+    <link href="../style/all.min.css" rel="stylesheet">
+    <!-- Global style (main) -->
+    <link href="../style/style.css" rel="stylesheet">
+    <link href="../style/content.css" rel="stylesheet">
+    
+ <!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778465750545742000400024e5c -->
+<link rel="stylesheet" type="text/css" href="../page.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1018,'/page.jsp',-1,1655271359)</script>
+</head>
+ <body>
+
+    <!-- 导航 -->
+    <header class="header">
+        <div class="fixline">
+            <img src="../images/line.jpg" />
+        </div>
+        <div class="container top">
+            <div class="row">
+                <div class="col-md-8 col-sm-7 col-xs-12">
+                    <a href="../"><img src="../images/logo.jpg" alt="" /></a>
+                </div>
+                <div class="col-md-4 col-sm-5 col-xs-12">
+                    <ul class="btns">
+                        <li class="en"><a href="https://irsea.xmu.edu.cn/">EN</a></li>
+                        <li class="wx"><a href="#"><img src="../images/weixin.jpg" /></a></li>
+                        <div class="weixin"><img src="../images/code.jpg" /></div>
+                        <li class="email"><a href="mailto:nanyang@xmu.edu.cn" target="_blank"><img src="../images/email.jpg" /></a></li>
+                        <li class="dny"><a href="https://ny.xmu.edu.cn/" target="_blank">东南亚研究中心</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                     <!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><div id="divu0"></div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError" class="f-search">
+        
+         <input type="text" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" />
+    <button v-on:click="onSubmit()"><i class="fa fa-lg fa-search"></i></button>   
+    
+
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1655271359";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu0 = document.querySelector("#appu0");
+   if (appElementu0 && appElementu0.__vue__) {
+
+   } else {
+      $("#divu0").html($("#htmlu0").text());
+      var appOwner = "1655271359";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou0 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu0(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu0();
+        }
+      };
+
+      function onSubmitu0(e) {
+        queryInfou0.query.keyWord= $("#appu0  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou0.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script>
+                </div>
+            </div>
+        </div>
+        <div class="fr nav"> 
+            <div class="container">
+ <ul class="navbar_nav" data-in="fadeInDown" data-out="fadeOutUp">
+    <li class="dropdown"> <a href="../index.htm">首页</a>
+    </li>
+    <li class="dropdown"> <a href="xyjj1.htm">学院概况</a>
+        <ul class="dropdown_menu">
+            <li class="dropdown2"><a href="xyjj1.htm">学院简介</a>
+            </li>
+            <li class="dropdown2"><a href="yzjy1.htm">院长寄语</a>
+            </li>
+            <li class="dropdown2"><a href="jgsz1.htm">机构设置</a>
+            </li>
+            <li class="dropdown2"><a href="xrld.htm">现任领导</a>
+                <ul class="dropdown-menu2">
+                    <li><a href="xrld/xydzld.htm">学院党政领导</a></li>
+                    <li><a href="xrld/xld.htm">系领导</a></li>
+                </ul>
+            </li>
+            <li class="dropdown2"><a href="dzzjry.htm">党政专技人员</a>
+            </li>
+            <li class="dropdown2"><a href="bslc.htm">办事流程</a>
+            </li>
+        </ul>
+    </li>
+    <li class="dropdown"> <a href="../szdw.htm">师资队伍</a>
+        <ul class="dropdown_menu">
+            <li class="dropdown2"><a href="../szdw/js1.htm">教授</a>
+            </li>
+            <li class="dropdown2"><a href="../szdw/fjs1.htm">副教授</a>
+            </li>
+            <li class="dropdown2"><a href="../szdw/zljs1.htm">助理教授</a>
+            </li>
+            <li class="dropdown2"><a href="../szdw/kzjs1.htm">客座教授</a>
+            </li>
+            <li class="dropdown2"><a href="../szdw/bsh1.htm">博士后</a>
+            </li>
+        </ul>
+    </li>
+    <li class="dropdown"> <a href="../xsky.htm">学术科研</a>
+        <ul class="dropdown_menu">
+            <li class="dropdown2"><a href="../xsky/jybgbyqyyjzx_py_.htm">教育部国别与区域研究中心（培育）</a>
+                <ul class="dropdown-menu2">
+                    <li><a href="../xsky/jybgbyqyyjzx_py_/dmyjzx.htm">东盟研究中心</a></li>
+                </ul>
+            </li>
+            <li class="dropdown2"><a href="../xsky/jybgbyqyyjzx_ba_.htm">教育部国别与区域研究中心（备案）</a>
+                <ul class="dropdown-menu2">
+                    <li><a href="../xsky/jybgbyqyyjzx_ba_/ydnxyyjzx.htm">印度尼西亚研究中心</a></li>
+                    <li><a href="../xsky/jybgbyqyyjzx_ba_/xjpyjzx.htm">新加坡研究中心</a></li>
+                    <li><a href="../xsky/jybgbyqyyjzx_ba_/mlxyyjs.htm">马来西亚研究所</a></li>
+                </ul>
+            </li>
+            <li class="dropdown2"><a href="../xsky/smdxhqhryjzx.htm">厦门大学华侨华人研究中心</a>
+            </li>
+            <li class="dropdown2"><a href="../xsky/xsdt.htm">学术动态</a>
+            </li>
+            <li class="dropdown2"><a href="../xsky/ztjz.htm">专题讲座</a>
+            </li>
+            <li class="dropdown2"><a href="https://ny.xmu.edu.cn/zxtsg.htm">图书馆</a>
+            </li>
+        </ul>
+    </li>
+    <li class="dropdown"> <a href="../rcpy.htm">人才培养</a>
+        <ul class="dropdown_menu">
+            <li class="dropdown2"><a href="../rcpy/bks.htm">本科生</a>
+            </li>
+            <li class="dropdown2"><a href="../rcpy/yjs.htm">研究生</a>
+            </li>
+            <li class="dropdown2"><a href="../rcpy/gjxs.htm">国际学生</a>
+            </li>
+        </ul>
+    </li>
+    <li class="dropdown"> <a href="../djsz.htm">党建思政</a>
+        <ul class="dropdown_menu">
+            <li class="dropdown2"><a href="../djsz/djkx.htm">党建快讯</a>
+            </li>
+            <li class="dropdown2"><a href="../djsz/srgczybxgdjsxxjy.htm">深入贯彻中央八项规定精神学习教育</a>
+            </li>
+            <li class="dropdown2"><a href="../djsz/djxxjy.htm">党纪学习教育</a>
+            </li>
+            <li class="dropdown2"><a href="../djsz/xxgcxjpxsdzgtsshzysxztjy.htm">学习贯彻习近平新时代中国特色社会主义思想主题教育</a>
+            </li>
+            <li class="dropdown2"><a href="../djsz/dsxxjiaoy.htm">党史学习教育</a>
+                <ul class="dropdown-menu2">
+                    <li><a href="../djsz/dsxxjiaoy/dybs.htm">动员部署</a></li>
+                    <li><a href="../djsz/dsxxjiaoy/zbdt.htm">支部动态</a></li>
+                    <li><a href="../djsz/dsxxjiaoy/ztpx.htm">专题培训</a></li>
+                    <li><a href="../djsz/dsxxjiaoy/xxzl.htm">学习资料</a></li>
+                    <li><a href="../djsz/dsxxjiaoy/dssdjt.htm">党史上的今天</a></li>
+                </ul>
+            </li>
+            <li class="dropdown2"><a href="../djsz/bwcx_ljsm_ztjy.htm">“不忘初心、牢记使命”主题教育</a>
+                <ul class="dropdown-menu2">
+                    <li><a href="../djsz/bwcx_ljsm_ztjy/gkyb.htm">观看阅兵</a></li>
+                    <li><a href="../djsz/bwcx_ljsm_ztjy/xxzl1.htm">学习资料</a></li>
+                    <li><a href="../djsz/bwcx_ljsm_ztjy/dybs.htm">动员部署</a></li>
+                    <li><a href="../djsz/bwcx_ljsm_ztjy/zbdt.htm">支部动态</a></li>
+                    <li><a href="../djsz/bwcx_ljsm_ztjy/jzxx.htm">集中学习</a></li>
+                    <li><a href="../djsz/bwcx_ljsm_ztjy/dyzt.htm">调研座谈</a></li>
+                    <li><a href="../djsz/bwcx_ljsm_ztjy/gyhd.htm">观影活动</a></li>
+                    <li><a href="../djsz/bwcx_ljsm_ztjy/ztdk.htm">专题党课</a></li>
+                    <li><a href="../djsz/bwcx_ljsm_ztjy/mzshh.htm">民主生活会</a></li>
+                    <li><a href="../djsz/bwcx_ljsm_ztjy/zjdh.htm">总结大会</a></li>
+                </ul>
+            </li>
+            <li class="dropdown2"><a href="../djsz/xztd1.htm">学子天地</a>
+                <ul class="dropdown-menu2">
+                    <li><a href="../djsz/xztd1/xzkx1.htm">学子快讯</a></li>
+                    <li><a href="../djsz/xztd1/jyzl1.htm">就业专栏</a></li>
+                    <li><a href="../djsz/xztd1/_wswjg_ds.htm">“我是外交官”大赛</a></li>
+                    <li><a href="../djsz/xztd1/tzgg.htm">通知公告</a></li>
+                </ul>
+            </li>
+            <li class="dropdown2"><a href="../djsz/ghzj.htm">工会之家</a>
+            </li>
+            <li class="dropdown2"><a href="../djsz/jgfc.htm">巾帼风采</a>
+            </li>
+        </ul>
+    </li>
+    <li class="dropdown"> <a href="../hzyjl.htm">合作与交流</a>
+        <ul class="dropdown_menu">
+            <li class="dropdown2"><a href="../hzyjl/jlkx.htm">交流快讯</a>
+            </li>
+            <li class="dropdown2"><a href="../hzyjl/hzxm.htm">合作项目</a>
+            </li>
+            <li class="dropdown2"><a href="../hzyjl/gjhy.htm">国际会议</a>
+            </li>
+            <li class="dropdown2"><a href="../hzyjl/hwyz.htm">海外游踪</a>
+            </li>
+        </ul>
+    </li>
+    <li class="dropdown"> <a href="../shfw.htm">社会服务</a>
+        <ul class="dropdown_menu">
+            <li class="dropdown2"><a href="http://ggpx.xmu.edu.cn/">继续教育</a>
+            </li>
+            <li class="dropdown2"><a href="../shfw/hzxx.htm">合作信息</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+            </div>
+        </div>
+        <a href="javascript:void(0)" id="navToggle">
+            <span></span>
+        </a>
+    </header>
+    
+    <!--移动端的导航-->
+    <div class="m_nav">
+        <div class="top clearfix">
+            <img src="../images/close.png" alt="" class="closed" />
+        </div>
+        <ul class="ul" data-in="fadeInDown" data-out="fadeOutUp">
+
+    <li class="dropdown"><a href="../index.htm">首页</a>
+    </li>
+    <li class="dropdown"><a href="xyjj1.htm">学院概况</a>
+            <ul class="dropdown_menu">
+                    <li class="dropdown2"><a href="xyjj1.htm">学院简介</a>
+                    </li>
+                    <li class="dropdown2"><a href="yzjy1.htm">院长寄语</a>
+                    </li>
+                    <li class="dropdown2"><a href="jgsz1.htm">机构设置</a>
+                    </li>
+                    <li class="dropdown2"><a href="xrld.htm">现任领导</a>
+                            <ul class="dropdown-menu2">
+                                    <li><a href="xrld/xydzld.htm">学院党政领导</a>
+                                    </li>
+                                    <li><a href="xrld/xld.htm">系领导</a>
+                                    </li>
+                            </ul>
+                    </li>
+                    <li class="dropdown2"><a href="dzzjry.htm">党政专技人员</a>
+                    </li>
+                    <li class="dropdown2"><a href="bslc.htm">办事流程</a>
+                    </li>
+            </ul>
+    </li>
+    <li class="dropdown"><a href="../szdw.htm">师资队伍</a>
+            <ul class="dropdown_menu">
+                    <li class="dropdown2"><a href="../szdw/js1.htm">教授</a>
+                    </li>
+                    <li class="dropdown2"><a href="../szdw/fjs1.htm">副教授</a>
+                    </li>
+                    <li class="dropdown2"><a href="../szdw/zljs1.htm">助理教授</a>
+                    </li>
+                    <li class="dropdown2"><a href="../szdw/kzjs1.htm">客座教授</a>
+                    </li>
+                    <li class="dropdown2"><a href="../szdw/bsh1.htm">博士后</a>
+                    </li>
+            </ul>
+    </li>
+    <li class="dropdown"><a href="../xsky.htm">学术科研</a>
+            <ul class="dropdown_menu">
+                    <li class="dropdown2"><a href="../xsky/jybgbyqyyjzx_py_.htm">教育部国别与区域研究中心（培育）</a>
+                            <ul class="dropdown-menu2">
+                                    <li><a href="../xsky/jybgbyqyyjzx_py_/dmyjzx.htm">东盟研究中心</a>
+                                    </li>
+                            </ul>
+                    </li>
+                    <li class="dropdown2"><a href="../xsky/jybgbyqyyjzx_ba_.htm">教育部国别与区域研究中心（备案）</a>
+                            <ul class="dropdown-menu2">
+                                    <li><a href="../xsky/jybgbyqyyjzx_ba_/ydnxyyjzx.htm">印度尼西亚研究中心</a>
+                                    </li>
+                                    <li><a href="../xsky/jybgbyqyyjzx_ba_/xjpyjzx.htm">新加坡研究中心</a>
+                                    </li>
+                                    <li><a href="../xsky/jybgbyqyyjzx_ba_/mlxyyjs.htm">马来西亚研究所</a>
+                                    </li>
+                            </ul>
+                    </li>
+                    <li class="dropdown2"><a href="../xsky/smdxhqhryjzx.htm">厦门大学华侨华人研究中心</a>
+                    </li>
+                    <li class="dropdown2"><a href="../xsky/xsdt.htm">学术动态</a>
+                    </li>
+                    <li class="dropdown2"><a href="../xsky/ztjz.htm">专题讲座</a>
+                    </li>
+                    <li class="dropdown2"><a href="https://ny.xmu.edu.cn/zxtsg.htm">图书馆</a>
+                    </li>
+            </ul>
+    </li>
+    <li class="dropdown"><a href="../rcpy.htm">人才培养</a>
+            <ul class="dropdown_menu">
+                    <li class="dropdown2"><a href="../rcpy/bks.htm">本科生</a>
+                    </li>
+                    <li class="dropdown2"><a href="../rcpy/yjs.htm">研究生</a>
+                    </li>
+                    <li class="dropdown2"><a href="../rcpy/gjxs.htm">国际学生</a>
+                    </li>
+            </ul>
+    </li>
+    <li class="dropdown"><a href="../djsz.htm">党建思政</a>
+            <ul class="dropdown_menu">
+                    <li class="dropdown2"><a href="../djsz/djkx.htm">党建快讯</a>
+                    </li>
+                    <li class="dropdown2"><a href="../djsz/srgczybxgdjsxxjy.htm">深入贯彻中央八项规定精神学习教育</a>
+                    </li>
+                    <li class="dropdown2"><a href="../djsz/djxxjy.htm">党纪学习教育</a>
+                    </li>
+                    <li class="dropdown2"><a href="../djsz/xxgcxjpxsdzgtsshzysxztjy.htm">学习贯彻习近平新时代中国特色社会主义思想主题教育</a>
+                    </li>
+                    <li class="dropdown2"><a href="../djsz/dsxxjiaoy.htm">党史学习教育</a>
+                            <ul class="dropdown-menu2">
+                                    <li><a href="../djsz/dsxxjiaoy/dybs.htm">动员部署</a>
+                                    </li>
+                                    <li><a href="../djsz/dsxxjiaoy/zbdt.htm">支部动态</a>
+                                    </li>
+                                    <li><a href="../djsz/dsxxjiaoy/ztpx.htm">专题培训</a>
+                                    </li>
+                                    <li><a href="../djsz/dsxxjiaoy/xxzl.htm">学习资料</a>
+                                    </li>
+                                    <li><a href="../djsz/dsxxjiaoy/dssdjt.htm">党史上的今天</a>
+                                    </li>
+                            </ul>
+                    </li>
+                    <li class="dropdown2"><a href="../djsz/bwcx_ljsm_ztjy.htm">“不忘初心、牢记使命”主题教育</a>
+                            <ul class="dropdown-menu2">
+                                    <li><a href="../djsz/bwcx_ljsm_ztjy/gkyb.htm">观看阅兵</a>
+                                    </li>
+                                    <li><a href="../djsz/bwcx_ljsm_ztjy/xxzl1.htm">学习资料</a>
+                                    </li>
+                                    <li><a href="../djsz/bwcx_ljsm_ztjy/dybs.htm">动员部署</a>
+                                    </li>
+                                    <li><a href="../djsz/bwcx_ljsm_ztjy/zbdt.htm">支部动态</a>
+                                    </li>
+                                    <li><a href="../djsz/bwcx_ljsm_ztjy/jzxx.htm">集中学习</a>
+                                    </li>
+                                    <li><a href="../djsz/bwcx_ljsm_ztjy/dyzt.htm">调研座谈</a>
+                                    </li>
+                                    <li><a href="../djsz/bwcx_ljsm_ztjy/gyhd.htm">观影活动</a>
+                                    </li>
+                                    <li><a href="../djsz/bwcx_ljsm_ztjy/ztdk.htm">专题党课</a>
+                                    </li>
+                                    <li><a href="../djsz/bwcx_ljsm_ztjy/mzshh.htm">民主生活会</a>
+                                    </li>
+                                    <li><a href="../djsz/bwcx_ljsm_ztjy/zjdh.htm">总结大会</a>
+                                    </li>
+                            </ul>
+                    </li>
+                    <li class="dropdown2"><a href="../djsz/xztd1.htm">学子天地</a>
+                            <ul class="dropdown-menu2">
+                                    <li><a href="../djsz/xztd1/xzkx1.htm">学子快讯</a>
+                                    </li>
+                                    <li><a href="../djsz/xztd1/jyzl1.htm">就业专栏</a>
+                                    </li>
+                                    <li><a href="../djsz/xztd1/_wswjg_ds.htm">“我是外交官”大赛</a>
+                                    </li>
+                                    <li><a href="../djsz/xztd1/tzgg.htm">通知公告</a>
+                                    </li>
+                            </ul>
+                    </li>
+                    <li class="dropdown2"><a href="../djsz/ghzj.htm">工会之家</a>
+                    </li>
+                    <li class="dropdown2"><a href="../djsz/jgfc.htm">巾帼风采</a>
+                    </li>
+            </ul>
+    </li>
+    <li class="dropdown"><a href="../hzyjl.htm">合作与交流</a>
+            <ul class="dropdown_menu">
+                    <li class="dropdown2"><a href="../hzyjl/jlkx.htm">交流快讯</a>
+                    </li>
+                    <li class="dropdown2"><a href="../hzyjl/hzxm.htm">合作项目</a>
+                    </li>
+                    <li class="dropdown2"><a href="../hzyjl/gjhy.htm">国际会议</a>
+                    </li>
+                    <li class="dropdown2"><a href="../hzyjl/hwyz.htm">海外游踪</a>
+                    </li>
+            </ul>
+    </li>
+    <li class="dropdown"><a href="../shfw.htm">社会服务</a>
+            <ul class="dropdown_menu">
+                    <li class="dropdown2"><a href="http://ggpx.xmu.edu.cn/">继续教育</a>
+                    </li>
+                    <li class="dropdown2"><a href="../shfw/hzxx.htm">合作信息</a>
+                    </li>
+            </ul>
+    </li>
+
+           
+        </ul>
+    </div>
+
+    <!--banner开始-->
+    <div class="banner">
+        <div class="container">
+            <div class="banner2">
+                <div class="banner-title">
+                    <div class="banner-title2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--banner结束-->
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-12 sub-menu">
+                    <div class="sub-menu-title">
+学院概况</div>
+                    <ul>
+                            <li><a href="xyjj1.htm" title="学院简介" class="cur"> 学院简介</a>
+    </li>
+    <li><a href="yzjy1.htm" title="院长寄语"> 院长寄语</a>
+    </li>
+    <li><a href="jgsz1.htm" title="机构设置"> 机构设置</a>
+    </li>
+    <li><a href="xrld.htm" title="现任领导"> 现任领导</a>
+            <ul class="sub-menu-ul">
+                    <li><a href="xrld/xydzld.htm" title="学院党政领导">学院党政领导</a>
+                    </li>
+                    <li><a href="xrld/xld.htm" title="系领导">系领导</a>
+                    </li>
+            </ul>
+    </li>
+    <li><a href="dzzjry.htm" title="党政专技人员"> 党政专技人员</a>
+    </li>
+    <li><a href="bslc.htm" title="办事流程"> 办事流程</a>
+    </li>
+
+                    </ul>
+                </div>
+                <div class="col-md-9 col-sm-8 col-xs-12  listcolumn">
+                    <div class="column-local">
+                        <div class="column-local2">
+                            <div class="column-title"><span><i class="fa fa-lg fa-newspaper"></i> 
+学院简介</span></div>
+                            <div class="local">您所在位置：        
+                <a href="../index.htm">首页</a>
+
+                >>
+                <a href="xyjj1.htm">学院概况</a>
+
+                >>
+                <a href="xyjj1.htm">学院简介</a>
+</div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="container-fluid">
+                        
+                          
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1655271359,'wbnews','u7')</script>
+<script>function seeContenta7(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1655271359,2016)</script>
+<div class="chapter-title">国际关系学院/南洋研究院简介</div>
+<div class="chapter">
+<div id="vsb_content_2016_u71"><div id="vsb_content"><p style="text-align: center"><img src="/virtual_attach_file.vsb?afc=EL8LeZL4NZoRTVoyRNsnmNZMzNaMRrhkozlanmUPMR-YolL0gihFp2hmCIa0oSybMkyiMkh7L8n2LNr7M8VRU4r2MlLYLllYM4UaU4NiLmQFL8C4M8UYnmVFL8WfozlJqjfjo4OeoD6ipD6iCIbFptrsgDTJQty0LzGPokyYLR7DgtA8pU3cc&oid=1655271359&tid=1018&nid=2016&e=.jpg" width="200" height="200" border="0" vspace="0" hspace="0" title="" alt="" vsbhref="vurl" vurl="/_vsl/99454D3DF2ED7ACC5F5C21E2740C9526/3F37D2F1/3BA95" vheight=" 200px" vwidth=" 200px" orisrc="/virtual_attach_file.vsb?afc=EL8LeZL4NZoRTVoyRNsnmNZMzNaMRrhkozlanmUPMR-YolL0gihFp2hmCIa0oSybMkyiMkh7L8n2LNr7M8VRU4r2MlLYLllYM4UaU4NiLmQFL8C4M8UYnmVFL8WfozlJqjfjo4OeoD6ipD6iCIbFptrsgDTJQty0LzGPokyYLR7DgtA8pU3cc&oid=1655271359&tid=1018&nid=2016&e=.jpg" class="img_vsb_content" style="width: 200px; height: 200px;"><img src="/virtual_attach_file.vsb?afc=EozGeYM4MkL4rRUy4V2LRrVnNrVL47h4L77sUNQRnRVkMz70gihFp2hmCIa0LSyZU1yDLSybM4-DU8UiLznRLln7L8WVL4-4U4vanl-DnzTFMNMVoR-ZozAFLmTVLmNJqjfjo4OeoD6ipD6iCIbFptrsgDTJQty0LzGPokyYLR7DgtA8pU3cc&oid=1655271359&tid=1018&nid=2016&e=.jpg" width="200" alt="" vsbhref="vurl" vurl="/_vsl/18B619726CD514C1DD3BE323C70EB6E9/6CE82898/29E29?e=.jpg" vheight="" vwidth="200" orisrc="/virtual_attach_file.vsb?afc=EozGeYM4MkL4rRUy4V2LRrVnNrVL47h4L77sUNQRnRVkMz70gihFp2hmCIa0LSyZU1yDLSybM4-DU8UiLznRLln7L8WVL4-4U4vanl-DnzTFMNMVoR-ZozAFLmTVLmNJqjfjo4OeoD6ipD6iCIbFptrsgDTJQty0LzGPokyYLR7DgtA8pU3cc&oid=1655271359&tid=1018&nid=2016&e=.jpg" class="img_vsb_content"></p><p style="text-indent: 2em;"><span style="font-size: 20px;"><strong>学院概况</strong></span></p><p style="text-indent: 2em;"><span style="font-size: 16px;"></span></p><p style="text-indent: 2em;"><span style="font-size: 16px;"></span></p><p style="text-indent:37px"><span style="font-size: 16px;">厦门大学国际关系学院/南洋研究院的前身是南洋研究所。1956年由中国华侨事务委员会创办的南洋研究所，是我国最早设立的东南亚研究机构，也是我国最早设立的区域与国际问题研究机构之一。1996年4月，南洋研究所升格为南洋研究院；2006年12月，成立国际关系学院/南洋研究院。</span></p><p style="text-indent:37px"><span style="font-size: 16px;">学院／研究院现有国际关系系、侨务与外交系共2个系，拥有1个国家“211工程”建设子项目、1个国家“985工程”哲学社会科学创新基地、1个区域国别国家级高端平台，1个教育部区域国别联合平台、1个教育部人文社会科学重点研究基地-厦门大学东南亚研究中心、1个教育部国别和区域研究培育基地-厦门大学东盟研究中心、3个教育部国别和区域研究备案中心-厦门大学马来西亚研究所、厦门大学印度尼西亚研究中心和厦门大学新加坡研究中心、1个福建省高校特色智库-“一带一路”与东南亚研究院、1个“中国-东盟思想库网络（NATC）”福建基地。此外，中国东南亚研究会、福建省东南亚学会、教育部社会科学委员会综合研究部（含国际问题、港澳台、交叉学科）的秘书处也设在我院。</span></p><p style="text-indent:37px"><span style="font-size: 16px;">自创建以来，学院/研究院始终秉承“面向东南亚华侨、面向海洋”的国家使命，努力建设全球知名、中国领先的区域国别研究跨学科平台和国家级高端智库。</span></p><p style="text-indent: 2em;"><span style="font-size: 20px;"></span></p><p style="text-wrap-mode: wrap; text-indent: 2em;"><span style="font-size: 20px;"><strong>党建思政</strong></span></p><p style="text-wrap-mode: wrap; text-indent: 2em;"><span style="font-size: 16px;"></span></p><p style="text-wrap-mode: wrap; text-indent: 2em;"><span style="font-size: 16px;"></span></p><p style="text-indent:28px"><span style="font-size: 16px;">学院/研究院党委坚持以习近平新时代中国特色社会主义思想为指导，以党的二十大精神为指引，坚持立德树人根本任务，以高质量党建引领高质量发展，现有教工党支部3个，学生党支部4个。</span></p><p style="text-indent:28px"><span style="font-size: 16px;">学院/研究院党委全力推进党建“双创”工作，构建了一套聚焦中心、层层压实，多面延伸的学习贯彻习近平外交思想和习近平总书记关于侨务工作的重要论述的实践机制。党建思政工作成效喜人：《中共厦门大学国际关系学院/南洋研究院委员会：以“爱国·关天下”铸魂，以“1+2+3”党建模式强基，培育“外”“侨”人才》成功入选“福建省新时代党建优秀案例”名单。全院共获得国家级、省级等各级党建思政类奖项、立项100余项，相关工作获新华网、光明日报、人民日报等主流媒体报道200余次。</span></p><p style="text-indent: 2em;"><span style="font-size: 20px;"><strong>学科建设</strong></span></p><p style="text-indent: 2em;"><span style="font-size: 16px;"></span></p><p style="text-indent: 2em;"><span style="font-size: 16px;"></span></p><p style="text-indent:37px"><span style="font-size: 16px;">学院／研究院现有2个本科专业（国际政治、外交学），4个硕士点（区域国别学、国际关系、世界史、世界经济）和5个博士点（区域国别学、国际关系、政治学理论、世界史、世界经济）；所设外交学为国家级一流专业，国际政治为省级一流专业；学院／研究院与厦大公共事务学院、台湾研究院共同设立了政治学博士后科研流动站，与人文学院共同设立了世界史博士后科研流动站，与经济学院共同设立了理论经济学博士后科研流动站。此外，学院／研究院还拥有1个福建省重点学科——“东南亚研究”。</span></p><p style="text-indent: 2em;"><span style="font-size: 20px;"><strong>师资队伍</strong></span></p><p style="text-indent: 2em;"><span style="font-size: 16px;"></span></p><p style="text-indent: 2em;"><span style="font-size: 16px;"></span></p><p style="text-indent: 2em; font-size: 16px;"><span style="font-size: 16px;">学院／研究院拥有一支学科结构合理、具有良好专业背景、年龄结构较为优化、国际化程度较高的师资队伍。截至2024年12月，学院／研究院有在职教职工48人，包括专任教师30人，其中教授7人，副教授15人，博士后4人，具有博士学位的教师占比100%；副教授以上职务的教师占比73.33%，45岁以下青年教师12人，占比40%；教师中具有海外学习交流一年以上经历者23人，占比76.67%。</span></p><p style="text-indent: 2em;"><span style="font-size: 20px;"><strong>科研工作</strong></span></p><p style="text-indent: 2em;"><span style="font-size: 16px;"></span></p><p style="text-indent: 2em;"><span style="font-size: 16px;"></span></p><p style="text-indent:37px"><span style="font-size: 16px;">学院／研究院面向东南亚区域，兼顾东南亚区域国别研究和区域性问题，以服务于我国新时代对外战略需求为导向，旨在打造成为具备战略性、综合性、专业性的学术研究中心、智库研究机构和国家级交流平台。以国家发展目标与重大需求为指导，紧密围绕我国的周边外交战略，同时积极推动跨学科、跨机构、跨区域的资源整合，以“面向海洋、贯通东南、放眼全球”为愿景，致力于建设具有中国特色的一流区域国别研究学术平台和具有代表性的高端国际科研与智库机构。</span></p><p style="text-indent:37px"><span style="font-size: 16px;">学院／研究院不断强化东南亚区域国别研究和华侨华人研究的研究优势与特色，以重大问题为牵引持续创新科研管理模式，在东南亚研究领域产出了一批具有较高显示度的标志性和代表性的科研成果。学院／研究院持续以高质量学术活动为牵引，树立“南洋”学术品牌，引领建设覆盖东南亚的学术共同体，稳步提升境内外学术影响力。学院持续深化同中央各部委与地方机关的联系对接，并进一步拓展同我国各级统战、教育、宣传、外事、侨务、商贸等部门的交流合作，紧密对接国家多领域和多层级的综合需求动态，持续推动高水平基础研究与高水平对策研究的相互转化，实现“精准、高效、全面、有力”的资政服务水平，充分发挥中国特色新型智库咨政建言的功能。</span></p><p style="text-indent: 2em;"><span style="font-size: 20px;"><strong>国际交流</strong></span></p><p style="text-indent: 2em;"><span style="font-size: 16px;"></span></p><p style="text-indent: 2em;"><span style="font-size: 16px;"></span></p><p style="text-indent:37px"><span style="font-size: 16px;">学院/研究院积极实施国际化战略，着力加强同海外学术科研机构、智库专家学者友好往来，借助高端国际学术活动平台载体，深化加强与海外高校及学术机构合作与交流，现已与马来亚大学、印度尼西亚大学、加查马达大学、菲律宾大学迪利曼分校、老挝国立大学、泰国法政大学等二十多所一流高校的学术机构建立常态化合作和交流机制。</span></p><p style="text-indent:37px"><span style="font-size: 16px;">学院/研究院每年在海内外举办大型国际学术会议，平均每年邀请十余位国际一流学者带来精彩学术报告/讲座，紧密围绕周边外交形势及国家重大战略需求，广泛开展与海外专家学者的对话交流，目前已经形成“南洋问题与全球视野”、“观世界”、“南洋真人馆”等系列讲座品牌。</span></p><p style="text-indent:37px"><span style="font-size: 16px;">学院/研究院目前已在马来西亚、老挝分别建立海外工作站，拓展在东南亚地区的学术网络，为师生开展境外学术交流提供便利的条件，有力推动区域国别学人才培养模式的创新与实践。同时，为各类学生提供众多赴港澳台地区以及国外著名高校学习交流和从事学术研究的机会。近五年来，我院选派学生赴美国加州大学伯克利分校、荷兰阿姆斯特丹大学、英国利兹大学、挪威奥斯陆大学、美国北卡罗莱纳大学教堂分校、日本京都大学、新加坡南洋理工大学、马来亚大学等知名高校进行交流访问与学习，选派学生占在籍生比例接近30%。</span></p><p style="text-indent: 2em;"><span style="font-size: 20px;"><strong>学生培养</strong></span></p><p style="text-indent: 2em;"><span style="font-size: 16px;"></span></p><p style="text-indent: 2em;"><span style="font-size: 16px;"></span></p><p style="text-indent:37px"><span style="font-size: 16px;">学院/研究院完善“三全育人”工作格局，形成了“放眼世界、面向南洋、聚焦“区域国别”的“小而精”人才培养特色，推动人才培养高质量内涵式发展。依照“宽口径、厚基础、新视野、强素质”的办学理念，通过“本科生导师制”、“海外调研资助”、“学长辅助计划”、“小班教学”、“双语教学”，重点培养学生的外语和专业综合分析应用能力，着力把学生打造成国际化的复合型人才。</span></p><p style="text-indent:37px"><span style="font-size: 16px;">截至2024年12月，学院/研究院有在籍本科生160人（含国际生5人）、硕士研究生83人（含国际生26人，港澳台生2人）、博士研究生49人（含国际生12人）。</span></p><p style="text-indent:37px"><span style="font-size: 16px;">近年来，学院/研究院以雄厚的科研实力和优良的教学条件吸引了大批境外留学生，特别是留学生中的高层次人才，2008年起，开设国际硕士班，国际博士班，全英文授课共12门，并开设泰国语、印尼语、越南语等小语种培训班。至今已培养了来自世界各地40多个国家和地区的国际学生。</span></p><p><span style="font-size: 16px;">本科生升学率持续攀升，大部分同学进入北京大学、清华大学、中国人民大学、复旦大学、浙江大学、南京大学、同济大学、厦门大学等国内一流高校深造。境外升学也集中在QS世界排名前100强的大学，如美国哥伦比亚大学、英国曼彻斯特大学、英国伦敦大学国王学院、英国南安普顿大学、英国杜伦大学、英国华威大学、英国爱丁堡大学、伦敦政治经济学院、韩国首尔国立大学、马来亚大学、中国香港中文大学等。</span></p><p style="text-indent: 2em;"><span style="font-size: 20px;"><strong>资料信息建设</strong></span></p><p style="text-indent: 2em;"><span style="font-size: 16px;"></span></p><p style="text-indent: 2em;"><span style="font-size: 16px;"></span></p><p style="text-indent:37px"><span style="font-size: 16px;">学院／研究院拥有先进的科研与教学设施，在东南亚资料信息收集方面更居国内领先。学院／研究院拥有独立的图书馆，截至2024年12月，馆藏东南亚和华侨华人相关纸本资料11万余册，其中外文图书2万多册；报刊约1400种，其中外文报刊近千种，部分东南亚华文报极为罕见。此外，图书馆还正式出版了《东南亚与华侨华人研究论文索引(2011-2015)》、《东南亚研究中文书目》等11部工具书，参与编撰出版《东南亚华侨口述历史丛编》等资料及研究著作7种61册；另有ProQuest、Gale数据库、旧海关刊载中国近代史料、Adam Matthew Digital（AMD)系列数据库等电子数据库28种，总数量达1165345条；完成8127册报刊资料数字化工作，自建专题数据库，其中包括东南亚与华侨华人研究中文书目与论文索引等；厦门大学南洋数字图书馆首期和二期建成。先后举办了62期国关系列读书会，与新加坡国家图书馆、新加坡国立大学图书馆、美国加州伯克利大学、美国康奈尔大学的文献机构长期保持合作。</span></p><p style="text-indent: 37px;"><span style="font-size: 16px;">《南洋问题研究》（创刊于l974年）和《南洋资料译丛》（创刊于1957年）是学院／研究院向国内外公开出版发行的学术刊物，《南洋问题研究》为《中文核心期刊要目总览》核心期刊、中文社会科学引文索引（CSSCI）来源期刊。</span></p></div></div>
+</div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="footer-title">校内链接：</div>
+            <div class="footer-con">
+                <ul>
+                    <script language="javascript" src="/system/resource/js/openlink.js"></script> <ul>
+    <li><a href="http://www.xmu.edu.cn" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1655271359, 67330)">厦门大学</a></li>
+    <li><a href="http://jwc.xmu.edu.cn" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1655271359, 67331)">教务处</a></li>
+    <li><a href="http://cwc.xmu.edu.cn" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1655271359, 67332)">财务处</a></li>
+    <li><a href="http://xsc.xmu.edu.cn/" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1655271359, 67333)">学生处</a></li>
+    <li><a href="http://skc.xmu.edu.cn" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1655271359, 67334)">社科处</a></li>
+    <li><a href="http://gs.xmu.edu.cn" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1655271359, 67335)">研究生院</a></li>
+    <li><a href="http://library.xmu.edu.cn" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1655271359, 67336)">图书馆</a></li>
+    <li><a href="http://net.xmu.edu.cn" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1655271359, 67337)">网络中心</a></li>
+<ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+
+<p>&nbsp; &nbsp; &nbsp; &nbsp;地址：厦门大学南安楼 &nbsp; 邮编：361005 &nbsp; 电话：0592-2186414 &nbsp; 传真：0592-2186414 &nbsp; &nbsp;Email：nanyang@xmu.edu.cn<br> &nbsp; &nbsp; &nbsp; &nbsp;Copyright ©2020 厦门大学国际关系学院</p> 
+    </div>
+ </body>
+</html>
+<a href="#0" class="cd-top">Top</a>
+ <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <!-- Plugins: Sorted A-Z -->
+    <script type="text/javascript" src="../js/jquery.SuperSlide.js"></script>
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="../js/toTop.js"></script>
+   <script type="text/javascript" src="../js/style.js"></script>
+   <script type="text/javascript">
+        $(function(){
+            $(".wx").mouseenter(function(){
+                $(".weixin img").fadeIn("slow");
+            });
+            $(".wx").mouseleave(function(){
+                $(".weixin img").fadeOut("slow");
+            });
+        }) 
+    </script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var hH = $(".header").height();
+         $(".banner").css("margin-top",hH-30);
+         $(window).resize(function(){
+             var hH = $(".header").height();
+             $(".banner").css("margin-top",hH-30);
+         });
+     });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

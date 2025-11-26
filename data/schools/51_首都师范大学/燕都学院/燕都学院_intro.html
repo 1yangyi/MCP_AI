@@ -1,0 +1,243 @@
+<!DOCTYPE html><html><head><style media="screen"></style>
+<meta charset="utf-8">
+<title>燕都学院</title>
+<link rel="stylesheet" type="text/css" href="../../css/global.css">
+<link rel="stylesheet" type="text/css" href="../../css/topAndfoot.css">
+<link rel="stylesheet" type="text/css" href="../../css/detail.css">
+<script src="../../js/jquery-1.7.2.min.js"></script>
+<script src="../../js/DD_belatedPNG.js"></script>
+<!--[if IE 6]>
+	<script type="text/javascript" src="../../js/DD_belatedPNG.js"></script>	
+	<script type="text/javascript">
+	DD_belatedPNG.fix('.main .banner .slider .txtbg,.header .header_top .logo a,.main .main_cont_common b');
+	</script>
+	<![endif]-->
+<script type="text/javascript">  
+/*if(window.ActiveXObject) {  
+    var ua = navigator.userAgent.toLowerCase();  
+    var ie=ua.match(/msie ([\d.]+)/)[1]  
+    if(ie==6.0){  
+        alert("it动力提醒您的浏览器版本过低，在本系统中不能达到良好的视觉效果，建议你升级到ie8以上！");  
+        window.close();  
+    }  
+}  */
+</script> 
+</head>
+<body>
+<!------head-------->
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<script src="../../js/jquery-1.9.1.js"></script>
+<script>
+$(function(){
+	var nav={
+	    navselect:function(){
+		    $(".header .nav li").mouseover(function(){
+				$(".child_nav").hide();
+				$(this).find(".child_nav").show();
+			}).mouseout(function(){
+				$(this).find(".child_nav").hide();
+			})	
+		} 
+	}
+nav.navselect();
+})
+$(function(){
+    $(".channelFirst").click(function(){
+         var href = $(this).next(".child_nav").find("a:first").attr("href");
+         $(this).attr("href",href );
+   });
+})
+
+</script>
+
+
+<div class="header">
+     <div class="header_top">
+          <div class="logo">
+               <a href="#" title="logo">   
+               </a>
+          </div>
+          <div class="headRight">
+               <span><a class="h_checked" href="http://www.cnu.edu.cn/index.jsp">返回首师主页</a><b>|</b></span>
+               <span><a href="#">设为主页</a><b>|</b></span>
+               <span><a href="#">Enghish</a></span>
+          </div> 
+<div class="search">
+               <form name="dataForm" action="/cms/web/search/index.jsp" target="_blank" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
+                    <input name="siteID" value="55" type="hidden">
+                    <input class="notxt" value="搜索..." name="query" type="text" id="keywords" onfocus="if(value==defaultValue){value='';}" onblur="if(!value){value=defaultValue;}" onclick="if(this.value=='站内搜索'){this.value='';this.form.keywords.style.color='#3c98cc'}">
+                    <input class="notxt1" name="Submit" type="submit" value="">
+                </form>
+           </div>
+     </div>
+     <div class="nav">
+        <ul>
+               <li> 
+                                         <a href="../../index.html">首页</a>
+                                          <div class="child_nav">
+                       </div>
+                </li>
+                                        	              <li>
+                                                         <a href="../index.htm" class="channelFirst">学院概况</a>
+                                                        <div class="child_nav">
+                                                               <a href="index.htm" class="channelSecond">学院简介</a>
+                                                               <a href="../xrld/index.htm" class="channelSecond">现任领导</a>
+                                                               <a href="../jgsz/index.htm" class="channelSecond">机构设置</a>
+                                                               <a href="../xybs/index.htm" class="channelSecond">学院标识</a>
+                                                           </div>                      
+                      </li>
+                                                              	              <li>
+                                                         <a href="../../jswyk/index.htm" class="channelFirst">教授委员会</a>
+                                                        <div class="child_nav">
+                                                               <a href="../../jswyk/jswykzc/index.htm" class="channelSecond">教授委员会章程</a>
+                                                               <a href="../../jswyk/jswyhjj/index.htm" class="channelSecond">现任教授委员会</a>
+                                                               <a href="../../jswyk/ljydxyjswykwyms/index.htm" class="channelSecond">历届教授委员会</a>
+                                                           </div>                      
+                      </li>
+                                                              	              <li>
+                                                         <a href="../../rcpy/index.htm" class="channelFirst">人才培养</a>
+                                                        <div class="child_nav">
+                                                               <a href="../../rcpy/xsxbyzqkh/index.htm" class="channelSecond">学生选拔与考核</a>
+                                                               <a href="../../rcpy/rcpywyh/index.htm" class="channelSecond">人才培养委员会</a>
+                                                           </div>                      
+                      </li>
+                                                              	              <li>
+                                                         <a href="../../jsfc/index.htm" class="channelFirst">教师风采</a>
+                                                        <div class="child_nav">
+                                                               <a href="../../jsfc/xzdsfc/index.htm" class="channelSecond">学术导师风采</a>
+                                                               <a href="../../jsfc/xzdsglbf/index.htm" class="channelSecond">学术导师管理办法</a>
+                                                           </div>                      
+                      </li>
+                                                              	              <li>
+                                                         <a href="../../xywh/index.htm" class="channelFirst">学院文化</a>
+                                                        <div class="child_nav">
+                                                           </div>                      
+                      </li>
+                                                              	              <li>
+                                                         <a href="../../xsfc/index.htm" class="channelFirst">学生风采</a>
+                                                        <div class="child_nav">
+                                                           </div>                      
+                      </li>
+                                                              	              <li>
+                                                         <a href="../../gzzd/index.htm" class="channelFirst">规章制度</a>
+                                                        <div class="child_nav">
+                                                           </div>                      
+                      </li>
+                                                              	              <li>
+                                                         <a href="../../xzzq/index.htm" class="channelFirst">下载专区</a>
+                                                        <div class="child_nav">
+                                                           </div>                      
+                      </li>
+                                                                                                                                  </ul>          
+     </div>
+</div><!---------//head---------->
+
+<!----------body---------->
+<div class="main">
+     <!----------left---------->
+     
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+
+
+<div class="m_l" id="m_l" style="height: 1603px;">
+         <ul>
+                                                                                      <li><b></b><a href="index.htm">学院简介</a></li> 
+                         	                                                               <li><b></b><a href="../xrld/index.htm">现任领导</a></li> 
+                         	                                                               <li><b></b><a href="../jgsz/index.htm">机构设置</a></li> 
+                         	                                                               <li><b></b><a href="../xybs/index.htm">学院标识</a></li> 
+                         	                                 </ul>
+</div>     <div class="m_t" id="m_t">
+          <div class="m_boread clearfix">
+                                             <span><a href="../../index.html">首页</a><b></b></span>
+                                              <span><a href="../index.htm">学院概况</a><b></b></span>
+                                        <span><a class="current" href="index.htm">学院简介</a></span>  
+          </div>
+          <div class="m_text">
+               <h1 class="b_color">首都师范大学燕都学院简介</h1>
+               <div class="d_date">
+                    <span>2014-09-23</span>
+                    <span>点击次数：<script src="/gplog/log/articleVisitLog.jsp?paren.id=18836"></script></span>
+               </div>
+               <div class="d_ct">
+                    <p>
+                      </p><p style="text-align: center"><span style="font-family:宋体"><span style="font-size:16px"><strong><strong>首都师范大学燕都</strong></strong><strong><strong>学院</strong></strong><strong><strong>简介</strong></strong></span></span></p>
+
+<p style="text-align: center">&nbsp;</p>
+
+<p><span style="font-family:宋体"><span style="font-size:16px">&nbsp;首都师范大学燕都学院成立于2014年，是我校人才培养综合改革实验区，致力于探索学科交叉型创新人才培养途径，宫辉力教授兼任学院院长。学院着力培养具有优良道德品质、公民责任感及文化素养、体育精神，视野宽阔，基础扎实，专业拔尖，学习与实践创新能力突出，具备继续深造或优质就业并具有可持续发展潜力，适应未来经济社会发展需要的优秀本科生。</span></span></p>
+
+<p><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px">&nbsp;学院以我校国家重点学科、重点实验室为依托，目前设7个优势专业，分别是汉语言文学、历史学、世界史、数学与应用数学、统计学、地理信息科学专业（2016年开始将不再开设该专业）、生物科学专业。</span></span></span></span></span></span></p>
+
+<p><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px">&nbsp;学生由燕都学院在入校新生中选拔，然后接受分段式培养，包括通识教育阶段、学科基础教育阶段和专业教育阶段。一年级主要修读通识教育课程，积极培养学生良好的思辨能力、人际沟通与协作能力、语言表达能力、国际视野和国际竞争能力。在基础教育阶段，学生按文、理两大类进行共同的专业基础知识学习。在专业教育阶段，学生在学术导师指导下，进行专业核心及专业方向课程学习。同时学院鼓励学生修读校内辅修专业学位，为学生提供多样的开放性自主学习资源。</span></span></span></span></span></span></p>
+
+<p><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px">&nbsp;燕都学院从多方面积极夯实教学质量的基础：1.建设高质量师资队伍，从清华大学、北京大学、本校等聘请高水平教授主讲相关课程；2.推进小班授课制度，通识核心课程、部分专业课程已经实现小班授课；3.鼓励教学方式改革，部分课堂已经实现以学生学为中心的转变；4.建立学术导师制度，聘请校内教授对学生的课程学习、境内外交流、学术训练等进行一对一指导；5.重视国际化发展需求，为学生提供针对性的英语培训，积极支持学生到境内外高水平大学交流学习。</span></span></span></span></span></span></span></span></p>
+
+<p><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px">&nbsp;经过短短两年的积累，燕都学院在学生培养方面有了初步成效：1.实现2014级学生境内外短期游学全覆盖；2名学生参加“外培计划”，已经出色完成国外1学年的专业学习任务；4名学生参加学校交换生项目，将赴境外进行至少1学期的专业学习；6名学生在“胡敏境外游学奖”支持下，赴悉尼大学进行了为期两至三周的学习；2.学生参与各级各类学科竞赛并获奖，目前已经有13人次获奖，其中国家级奖励2人，市级奖励4人，校级获奖7人；3.英语学习效果显著，2014级全国大学英语四级通过率高达97.67%，2014级62.8%的同学已经通过全国大学英语六级考试，两个年级中已有8人取得托福或者雅思成绩；4.已经为两个年级的学生配备学术导师52名，保证每2名学生1名导师，直接指导学生的专业学习、科研训练、境外交流、毕业论文等；5.以科研训练项目锻炼学生的创新能力，有6项项目立项，共有23人主持或者参与，占该年级总人数的53.4%；学院主编学生论文成果集、读书报告集、境内外访学纪实、境外游学奖纪实各1部。</span></span></span></span></span></span></span></span></span></span></p>
+
+<p style="text-align: center"><span style="font-family:宋体">&nbsp;</span></p>
+
+<p style="text-align: center"><span style="font-family:宋体">&nbsp;</span></p>
+
+<p style="text-align: center"><span style="font-family:宋体"><span style="font-size:16px"><strong><strong>Brief Introduction of Honours College of Capital Normal University </strong></strong></span></span></p>
+
+<p style="text-align: center"><span style="font-family:宋体"><span style="font-size:16px">&nbsp;</span></span></p>
+
+<p><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px">Yandu is a honor's college founded by Capital Normal University in 2014. We now have 164&nbsp;students resgistered in 6 majors in total.</span></span></span></span></p>
+
+<p><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-size:16px">The most significant innovation we made for our students is that we developed and adopted whole new educational plans with the best teaching resources we can possibly give, also, we have systematic assessment standards that encourages our students to stand out not only in GPA, but also in lots of other fields, anyone that is disqualified would be sent back to other CNU colleges that contains the same majors we have. </span></span></span></span></span></span></span></p>
+
+<p><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px">Further more, we try to <span style="color:#333333">develop</span>&nbsp;students' international vision. During the four years with us, Almost the students can have at least one college-sponsored chance to study abroad.&nbsp;At present, our students have been to the United States, Canada, Japan, Holland, Singapore, Australia, Italy, Hongkong China and Taiwan China, and a personal tutor would be allocated to them in their second year.</span></span></span></span></span></span></span></span></span></p>
+
+<p><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px">Every fresh man can apply for our college on their enrollment day, except for artistic and teacher-oriented major students. We would take their Gaokao results, psychological examine results and their interview results into consideration of whether or not to make them an offer. </span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px">Speaking of administration system, unlike other colleges, we have an extra professors' commitee to decide educational and academic issues. This gives students a excellent academic atomsphere and helps them to go further and deeper in their fields.</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px">All the reformations we made are aiming at developing talents. According to statistic, 98% of our graduates choose to take postgraduate programmes after completing their bachelor's degree. That, to some extent, reflects the fruit of our successful tempt as well.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+<p><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px"><span style="font-family:宋体"><span style="font-size:16px">Hope you can get a rough idea of our college through this brief introduction.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+
+                    <p></p>                  
+               </div>
+                 
+                        </div>
+     </div>
+</div>
+<div class="clear"></div>
+<!----------//body---------->
+
+<!----------footer---------->
+     
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+
+
+<div class="footer" style="position: relative">
+	<p>
+		Copyright @ 首都师范大学版权所有</p>
+	<p>
+		地址：北京市西三环北路105号 100048 E-mail: cnuyandu@163.com  网站地图</p>
+	<p>
+		<a href="https://beian.miit.gov.cn" style="color:#fff">京ICP备05082108号-1 </a>&nbsp;     京公网安备:110402430068号</p>
+	<div class="wxCode">
+		&nbsp;</div>
+</div>
+     
+<script src="/gplog/log/writeLog.jsp?siteID=55&amp;articl.id=18836"></script>
+<script>
+//m_l m_t
+window.onload=window.onresize=function(){
+if(document.getElementById("m_t").clientHeight<document.getElementById("m_l").clientHeight){
+document.getElementById("m_t").style.height=document.getElementById("m_l").offsetHeight+"px";
+}
+else{
+document.getElementById("m_l").style.height=document.getElementById("m_t").offsetHeight+"px";
+}
+}
+</script><script type="text/javascript" src="../../g_style/g_article.js"></script>
+</body></html>

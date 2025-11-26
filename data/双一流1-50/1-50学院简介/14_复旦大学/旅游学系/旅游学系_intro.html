@@ -1,0 +1,732 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>本系简介-复旦大学旅游学系</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="本系简介">
+<meta name="keywords" content="复旦大学旅游学系,本系简介">
+
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/public.css">
+    <link rel="stylesheet" href="../style/ny2.css">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="../style/ny_media2.css">
+    <script src="../js/jquery.js"></script>
+    <script src="../js/public.js"></script>
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:776562626572323074684757505a5742000400014451 -->
+<link rel="stylesheet" type="text/css" href="../jjy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1011,'/jjy.jsp',-1,2058449989)</script>
+</head>
+
+<body>
+
+
+     <!-- pc 顶部 导航 -->
+    <div class="b-top"><div class="t-search-zzc"></div>
+       
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu0 .qwss{}
+    #appu0 .tj{}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><div class="t-search"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="qwss"> <div class="search-btn "><input type="image" name="submit_button" src="../images/search.png" class="tj"></div></div></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+       <div class="t-search">
+  <div>
+                <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                <div class="search-btn ">
+                    <input type="image" name="submit_button" src="../images/search.png" class="tj"  v-on:click="onSubmit()">
+                </div>
+            </div>
+            
+              </div>
+           
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "2058449989";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script> 
+       </div>
+    <div class="head pc fadeInDown animated">
+        <div class="head-top">
+
+            <div class="">
+                <div class="logo">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm"><img src="../images/logo/logolv.png" alt=""></a></div>
+                <div class="nav">
+                    <ul class="">
+
+     <li class=" indexzz">
+           <a href="../index.htm" title="首页">首页</a>
+             
+          
+     </li>
+    <li class="noabef"><img src="../images/nav-fgx.png" alt=""></li>
+    
+
+     <li class="active">
+           <a href="bxjj.htm" title="本系概况">本系概况</a>
+              <div class="ejnav" style="left: -31.6484px;">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="../images/gaikuo.jpg" alt="" style="object-fit: cover;    width: auto;">
+                                    </div>
+                                </div>
+                                <ul>
+                                            <li><a href="bxjj.htm" title="本系简介">本系简介</a></li>
+                                            <li><a href="zzjg.htm" title="组织机构">组织机构</a></li>
+                                            <li><a href="zysz.htm" title="专业设置">专业设置</a></li>
+                                            <li><a href="lxfs.htm" title="联系方式">联系方式</a></li>
+                               </ul>
+                            </div>  
+          
+     </li>
+    <li class="noabef"><img src="../images/nav-fgx.png" alt=""></li>
+    
+
+     <li class="">
+           <a href="../xwzx/xwdt.htm" title="新闻中心">新闻中心</a>
+              <div class="ejnav" style="left: -31.6484px;">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="../images/piclist-pic.jpg" alt="" style="object-fit: cover;    width: auto;">
+                                    </div>
+                                </div>
+                                <ul>
+                                            <li><a href="../xwzx/xwdt.htm" title="新闻动态">新闻动态</a></li>
+                                            <li><a href="../xwzx/tzgg.htm" title="通知公告">通知公告</a></li>
+                               </ul>
+                            </div>  
+          
+     </li>
+    <li class="noabef"><img src="../images/nav-fgx.png" alt=""></li>
+    
+
+     <li class="">
+           <a href="../szdw/jsml.htm" title="师资队伍">师资队伍</a>
+              <div class="ejnav" style="left: -31.6484px;">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="../images/sjizi.png" alt="" style="object-fit: cover;    width: auto;">
+                                    </div>
+                                </div>
+                                <ul>
+                                            <li><a href="../szdw/jsml.htm" title="教师名录">教师名录</a></li>
+                                            <li><a href="../szdw/xwds.htm" title="校外导师">校外导师</a></li>
+                                            <li><a href="../szdw/rxjs.htm" title="荣休教师">荣休教师</a></li>
+                               </ul>
+                            </div>  
+          
+     </li>
+    <li class="noabef"><img src="../images/nav-fgx.png" alt=""></li>
+    
+
+     <li class="">
+           <a href="../xsky/hdjz.htm" title="学术科研">学术科研</a>
+              <div class="ejnav" style="left: -31.6484px;">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="" alt="" style="object-fit: cover;    width: auto;">
+                                    </div>
+                                </div>
+                                <ul>
+                                            <li><a href="../xsky/hdjz.htm" title="活动讲座">活动讲座</a></li>
+                                            <li><a href="../xsky/kycg1.htm" title="科研成果">科研成果</a></li>
+                                            <li><a href="../xsky/jlhz.htm" target="_blank" title="交流合作">交流合作</a></li>
+                                            <li><a href="../xsky/fdlyxjk.htm" title="复旦旅游学集刊">复旦旅游学集刊</a></li>
+                               </ul>
+                            </div>  
+          
+     </li>
+    <li class="noabef"><img src="../images/nav-fgx.png" alt=""></li>
+    
+
+     <li class="">
+           <a href="../rcpy1/bkspy.htm" title="人才培养">人才培养</a>
+              <div class="ejnav" style="left: -31.6484px;">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="../images/xueshukeyan.jpg" alt="" style="object-fit: cover;    width: auto;">
+                                    </div>
+                                </div>
+                                <ul>
+                                            <li><a href="../rcpy1/bkspy.htm" title="本科生培养">本科生培养</a></li>
+                                            <li><a href="../rcpy1/yjspy.htm" title="研究生培养">研究生培养</a></li>
+                                            <li><a href="../rcpy1/lhpy.htm" title="联合培养">联合培养</a></li>
+                                            <li><a href="../rcpy1/zszx.htm" title="招生资讯">招生资讯</a></li>
+                               </ul>
+                            </div>  
+          
+     </li>
+    <li class="noabef"><img src="../images/nav-fgx.png" alt=""></li>
+    
+
+     <li class="">
+           <a href="http://mta.fudan.edu.cn/" target="_blank" title="MTA">MTA</a>
+              <div class="ejnav" style="left: -44.4453px;">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="" alt="" style="object-fit: cover;    width: auto;">
+                                    </div>
+                                </div>
+                                <ul>
+                                            <li><a href="http://mta.fudan.edu.cn/3839/list.htm" title="项目概况">项目概况</a></li>
+                                            <li><a href="http://mta.fudan.edu.cn/3877/list.htm" title="招生信息">招生信息</a></li>
+                               </ul>
+                            </div>  
+          
+     </li>
+    <li class="noabef"><img src="../images/nav-fgx.png" alt=""></li>
+    
+
+     <li class="">
+           <a href="../xyyd/byz/a1998_2005.htm" title="校友园地">校友园地</a>
+              <div class="ejnav" style="right: -31.4685px;">
+                                <div class="pics">
+                                    <div class="pic">
+                                        <img src="../images/gaikuo.jpg" alt="" style="object-fit: cover;    width: auto;">
+                                    </div>
+                                </div>
+                                <ul>
+                                            <li><a href="../byml/a1998_2005.htm" title="毕业名录">毕业名录</a></li>
+                                            <li><a href="../xyyd/byz/a1998_2005.htm" title="毕业照">毕业照</a></li>
+                                            <li><a href="../xyyd/xyfc.htm" title="校友风采">校友风采</a></li>
+                                            <li><a href="../xyyd/xyhd.htm" title="校友活动">校友活动</a></li>
+                                            <li><a href="../xyyd/zlfz.htm" title="助力发展">助力发展</a></li>
+                               </ul>
+                            </div>  
+          
+     </li>
+    <li class="noabef"><img src="../images/nav-fgx.png" alt=""></li>
+    
+
+</ul>
+
+                    <div class="nav-use">
+                        
+                        <div><a href="javascript:;" class="search-switch"><img src="../images/head-icon-search.png" alt=""></a></div>
+                             </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 移动端导航 -->
+    <div class="top">
+        <div class="wap wap-menu">
+            <img src="../images/menu.png" class="menu" alt="">
+            <img src="../images/close.png" class="close-menu" alt="">
+        </div>
+    </div>
+    <div class="wap m-head">
+        <div class="m-logo">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+           
+               
+                  
+                        <a href="../index.htm" title="" onclick="_addDynClicks(&quot;wbimage&quot;, 2058449989, 1013813)" target="_blank">
+                            <img src="../images/logo/logolv.png">
+                        </a>  
+                    
+                
+        
+</div>
+        <div class="m-nav">
+            <div class="m-tlink"><script language="javascript" src="/system/resource/js/openlink.js"></script>
+</div>
+           
+
+
+<style>
+    #appu5 .qwss{}
+    #appu5 .tj{}
+</style>
+<div id="divu5">
+    <div id="appu5"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="qwss"> <input name="submit_button" type="image" src="../images/search.png" class="tj"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu5">
+    <div id="appu5">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="image" src="../images/search.png"  v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu5").html($("#htmlu5").text());
+</script>
+<script>
+    var appOwner = "2058449989";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu5",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultmobile/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+ <ul class="">    <li><a href="../index.htm" title="首页">首页</a>
+    </li>
+    <li><a href="bxjj.htm" title="本系概况">本系概况</a><span></span>
+             <ul>
+
+                  <li><a href="bxjj.htm" title="本系简介">本系简介</a> </li>
+
+                  <li><a href="zzjg.htm" title="组织机构">组织机构</a> </li>
+
+                  <li><a href="zysz.htm" title="专业设置">专业设置</a> </li>
+
+                  <li><a href="lxfs.htm" title="联系方式">联系方式</a> </li>
+             </ul>
+    </li>
+    <li><a href="../xwzx/xwdt.htm" title="新闻中心">新闻中心</a><span></span>
+             <ul>
+
+                  <li><a href="../xwzx/xwdt.htm" title="新闻动态">新闻动态</a> </li>
+
+                  <li><a href="../xwzx/tzgg.htm" title="通知公告">通知公告</a> </li>
+             </ul>
+    </li>
+    <li><a href="../szdw/jsml.htm" title="师资队伍">师资队伍</a><span></span>
+             <ul>
+
+                  <li><a href="../szdw/jsml.htm" title="教师名录">教师名录</a> </li>
+
+                  <li><a href="../szdw/xwds.htm" title="校外导师">校外导师</a> </li>
+
+                  <li><a href="../szdw/rxjs.htm" title="荣休教师">荣休教师</a> </li>
+             </ul>
+    </li>
+    <li><a href="../xsky/hdjz.htm" title="学术科研">学术科研</a><span></span>
+             <ul>
+
+                  <li><a href="../xsky/hdjz.htm" title="活动讲座">活动讲座</a> </li>
+
+                  <li><a href="../xsky/kycg1.htm" title="科研成果">科研成果</a> </li>
+
+                  <li><a href="../xsky/jlhz.htm" target="_blank" title="交流合作">交流合作</a> </li>
+
+                  <li><a href="../xsky/fdlyxjk.htm" title="复旦旅游学集刊">复旦旅游学集刊</a> </li>
+             </ul>
+    </li>
+    <li><a href="../rcpy1/bkspy.htm" title="人才培养">人才培养</a><span></span>
+             <ul>
+
+                  <li><a href="../rcpy1/bkspy.htm" title="本科生培养">本科生培养</a> </li>
+
+                  <li><a href="../rcpy1/yjspy.htm" title="研究生培养">研究生培养</a> </li>
+
+                  <li><a href="../rcpy1/lhpy.htm" title="联合培养">联合培养</a> </li>
+
+                  <li><a href="../rcpy1/zszx.htm" title="招生资讯">招生资讯</a> </li>
+             </ul>
+    </li>
+    <li><a href="http://mta.fudan.edu.cn/" target="_blank" title="MTA">MTA</a><span></span>
+             <ul>
+
+                  <li><a href="http://mta.fudan.edu.cn/3839/list.htm" title="项目概况">项目概况</a> </li>
+
+                  <li><a href="http://mta.fudan.edu.cn/3877/list.htm" title="招生信息">招生信息</a> </li>
+             </ul>
+    </li>
+    <li><a href="../xyyd/byz/a1998_2005.htm" title="校友园地">校友园地</a><span></span>
+             <ul>
+
+                  <li><a href="../byml/a1998_2005.htm" title="毕业名录">毕业名录</a> </li>
+
+                  <li><a href="../xyyd/byz/a1998_2005.htm" title="毕业照">毕业照</a> </li>
+
+                  <li><a href="../xyyd/xyfc.htm" title="校友风采">校友风采</a> </li>
+
+                  <li><a href="../xyyd/xyhd.htm" title="校友活动">校友活动</a> </li>
+
+                  <li><a href="../xyyd/zlfz.htm" title="助力发展">助力发展</a> </li>
+             </ul>
+    </li>
+</ul>
+        </div>
+    </div>
+
+    <div class="banner"><img src="../images/d.png"></div>
+
+    <div class="nymain">
+        <div class="w14">
+            <div class="channl-menu leftNav">
+                <h2>
+本系简介<span></span></h2>
+                <ul>    <li class="active ">
+        <a href="bxjj.htm" title="本系简介">本系简介</a>
+        <ul>
+        </ul>
+        
+    </li>
+    <li class=" ">
+        <a href="zzjg.htm" title="组织机构">组织机构</a><span></span>
+        <ul>
+                    <li>
+                                <a href="zzjg/fdw.htm" title="分党委">分党委</a>
+                            </li>
+                    <li>
+                                <a href="zzjg/xxz.htm" title="系行政">系行政</a>
+                            </li>
+                    <li>
+                                <a href="zzjg/lsxx_lyxx_xswyh.htm" title="历史学系（旅游学系）学术委员会">历史学系（旅游学系）学术委员会</a>
+                            </li>
+                    <li>
+                                <a href="zzjg/lsxx_lyxx_jxzdwyh.htm" title="历史学系（旅游学系）教学指导委员会">历史学系（旅游学系）教学指导委员会</a>
+                            </li>
+                    <li>
+                                <a href="zzjg/ls_ly_xkxwpdwyh.htm" title="历史（旅游）学科学位评定委员会">历史（旅游）学科学位评定委员会</a>
+                            </li>
+                    <li>
+                                <a href="zzjg/fddxlyglzyxwyjsjyzdwyh.htm" title="复旦大学旅游管理专业学位研究生教育指导委员会">复旦大学旅游管理专业学位研究生教育指导委员会</a>
+                            </li>
+                    <li>
+                                <a href="zzjg/fdMTAxm.htm" title="复旦MTA项目">复旦MTA项目</a>
+                            </li>
+        </ul>
+        
+    </li>
+    <li class=" ">
+        <a href="zysz.htm" title="专业设置">专业设置</a><span></span>
+        <ul>
+                    <li>
+                                <a href="zysz/bkzy.htm" title="本科专业">本科专业</a>
+                            </li>
+                    <li>
+                                <a href="zysz/sszy.htm" title="硕士专业">硕士专业</a>
+                            </li>
+                    <li>
+                                <a href="zysz/bszy.htm" title="博士专业">博士专业</a>
+                            </li>
+        </ul>
+        
+    </li>
+    <li class=" ">
+        <a href="lxfs.htm" title="联系方式">联系方式</a>
+        <ul>
+        </ul>
+        
+    </li>
+</ul>
+            </div>
+            <div class="ny-right">
+                <div class="position d">
+                    <h3>
+本系概况<img src="../images/ny-dqlm.png" alt=""></h3>
+                    <div class=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1" width="9.474547386169434" height="13.464934349060059" viewBox="0 0 9.474547386169434 13.464934349060059">
+                            <g>
+                                <path d="M4.73727,13.4649Q9.47455,9.22597,9.47455,4.82078C9.43474,2.16104,7.32486,0,4.73727,0C2.14969,0,0,2.16104,0,4.82078Q0,9.39221,4.73727,13.4649ZM2.14969,4.94545C2.14969,3.44935,3.30415,2.24416,4.73727,2.24416C6.1704,2.24416,7.32486,3.44935,7.32486,4.94545C7.32486,6.44156,6.1704,7.64675,4.73727,7.64675C3.30415,7.64675,2.14969,6.4,2.14969,4.94545Z" fill="#FFFFFF" fill-opacity="1"></path>
+                            </g>
+                        </svg><span>
+    当前位置: 
+                    
+            
+                <a href="../index.htm">首页</a>
+            <style>.yc{display:none !IMPORTANT;}</style>
+             <span>   &gt;</span>
+            
+            
+                <a href="bxjj.htm">本系概况</a>
+            <style>.yc{display:none !IMPORTANT;}</style>
+             <span>   &gt;</span>
+            
+            
+                <a href="bxjj.htm">本系简介</a>
+            <style>.yc{display:none !IMPORTANT;}</style>
+</span></div>
+                </div>
+                <div class="pcleftnav"><ul>
+    <li class="active"><a href="bxjj.htm" title="本系简介">本系简介</a>
+        
+    </li>
+
+    <li class=""><a href="zzjg.htm" title="组织机构">组织机构</a>
+        
+    </li>
+
+    <li class=""><a href="zysz.htm" title="专业设置">专业设置</a>
+        
+    </li>
+
+    <li class=""><a href="lxfs.htm" title="联系方式">联系方式</a>
+        
+    </li>
+</ul></div>
+
+                <div class="ny-rmain">
+                    <div class="xbcont">
+                        <div class="xbcont-l">
+                            <img src="../images/xbls.png" alt=""> 
+                        </div>
+                        <div class="xbcont-r">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',2058449989,'wbnews','u13')</script>
+<script>function seeContenta13(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta13('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',2058449989,1022)</script>
+<p>
+    
+    </p><div id="vsb_content_1022_u131"><div id="vsb_content"><p style="padding: 0px; margin-top: 0px; margin-bottom: 0in; text-indent: 0.41in;"><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86); font-size: 18px;">复旦大学旅游学系渊源于</span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">1989</span><span style="padding: 0px; margin: 0px; font-size: 18px;">年历史学系开设的旅游与旅游文化类课程，</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">1993</span><span style="padding: 0px; margin: 0px; font-size: 18px;">年经国家教委批准正式设立旅游管理专业。</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">2002</span><span style="padding: 0px; margin: 0px; font-size: 18px;">年正式组建旅游学系。</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">1995</span><span style="padding: 0px; margin: 0px; font-size: 18px;">年获准设立旅游管理硕士点，为上海最早培养旅游管理硕士的高校之一。</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">2005</span><span style="padding: 0px; margin: 0px; font-size: 18px;">年，与管理学院合作申请旅游管理博士点成功，于</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">2006</span><span style="padding: 0px; margin: 0px; font-size: 18px;">年开始招收旅游管理博士研究生。</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">2010</span><span style="padding: 0px; margin: 0px; font-size: 18px;">年</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">9</span><span style="padding: 0px; margin: 0px; font-size: 18px;">月，成为首批旅游管理硕士专业学位（</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">MTA</span><span style="padding: 0px; margin: 0px; font-size: 18px;">）授权点。复旦大学旅游学系是首批</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">C9</span><span style="padding: 0px; margin: 0px; font-size: 18px;">高校中目前唯一本硕博培养体系全覆盖的旅游管理专业。</span></span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0in; text-indent: 0.41in;"><br style="padding: 0px; margin: 0px;"></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0in; text-indent: 0.41in;"><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86); font-size: 18px;">复旦大学旅游学系旅游管理专业旨在培养具有国际视野和服务创新精神，能在文旅产业发展中发挥领先作用，适应新时代文旅需求的复合型人才。办学定位：国内前茅，世界著名。本专业在</span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">2020</span><span style="padding: 0px; margin: 0px; font-size: 18px;">年度国家级一流本科专业建设点名单中顺利入选，成为获批的国家级一流本科专业建设点。</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">2022</span><span style="padding: 0px; margin: 0px; font-size: 18px;">年在“软科中国大学专业排名”中，复旦大学旅游学系旅游管理专业荣获</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">A+</span><span style="padding: 0px; margin: 0px; font-size: 18px;">，并在全国</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">262</span><span style="padding: 0px; margin: 0px; font-size: 18px;">所上榜高校中排名第二；</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">2021</span><span style="padding: 0px; margin: 0px; font-size: 18px;">年</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">QS</span><span style="padding: 0px; margin: 0px; font-size: 18px;">世界大学学科排名，本专业位列全国第三。</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">2021</span><span style="padding: 0px; margin: 0px; font-size: 18px;">年复旦大学“数字文化保护与旅游数据智能计算重点实验室”入选第三批文化和旅游部重点实验室，这是复旦大学学科融合发展取得的重要突破，是复旦大学新文科、新工科建设的重要成果，复旦大学旅游学科、计算机学科学科优势的重要体现，对推动文旅融合向纵深发展、上海著名国际旅游城市建设必将产生重大影响，同时实验室也为旅游管理国家一流专业建设、</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">MTA</span><span style="padding: 0px; margin: 0px; font-size: 18px;">高端文旅人才培养提供重要支撑。</span></span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0in; text-indent: 0em;"><br style="padding: 0px; margin: 0px;"></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0in; text-indent: 0.41in;"><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86); font-size: 18px;">复旦大学旅游学系现有专任教师</span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">19</span><span style="padding: 0px; margin: 0px; font-size: 18px;">人，其中教授、博士生导师</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">5</span><span style="padding: 0px; margin: 0px; font-size: 18px;">人，副教授</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">11</span><span style="padding: 0px; margin: 0px; font-size: 18px;">人，讲师</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">2</span><span style="padding: 0px; margin: 0px; font-size: 18px;">人，青年副研究员</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">1</span><span style="padding: 0px; margin: 0px; font-size: 18px;">人。同时，旅游学系也聘请了多位国内外知名教授及行业资深人士作为兼职教授及兼职硕士生导师。旅游学系师资队伍具有经济学、管理学、历史学、地理学、社会学、哲学、心理学、人类学等学科背景，师资队伍的学科构成齐整合理。</span></span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0in; text-indent: 0em;"><br style="padding: 0px; margin: 0px;"></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0in; text-indent: 0.41in;"><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86); font-size: 18px;">本专业特色优势：</span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0in; text-indent: 0em;"><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">1</span><span style="padding: 0px; margin: 0px; font-size: 18px;">、文旅融合走在前列。专业依托历史系建立，自创立便发挥历史文化特色，在理论研究与学生培养上积极探索文旅融合。</span></span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0in; text-indent: 0em;"><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">2</span><span style="padding: 0px; margin: 0px; font-size: 18px;">、依托复旦大学学科综合性优势，助力高质量专业人才培养。在学校高水平通识教育与大类培养、跨学科训练基础上，通过多元专业教育与实践基地的产学实践，形成学科交叉融合的专业竞争力和创新能力。</span></span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0in; text-indent: 0em;"><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">3</span><span style="padding: 0px; margin: 0px; font-size: 18px;">、发挥学科优势，全面贯彻课程思政。以</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">2018“</span><span style="padding: 0px; margin: 0px; font-size: 18px;">中国民俗旅游”、“旅游实践与社会服务”学校思政示范课程为引领，全面实践“三全育人”。</span></span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0in; text-indent: 0em;"><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">4</span><span style="padding: 0px; margin: 0px; font-size: 18px;">、国际化。每届留学生约占三分之一，已有</span></span><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">3</span><span style="padding: 0px; margin: 0px; font-size: 18px;">门课程被列为国家、上海市留学生英语示范课程，与美国、荷兰等数十所大学建立系际交流协议，为学生提供国际视野机会。</span></span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0in; text-indent: 0em;"><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86);"><span style="padding: 0px; margin: 0px; font-family: 宋体, serif; font-size: 18px;">5</span><span style="padding: 0px; margin: 0px; font-size: 18px;">、以高品质的实践基地与行业资源，与文旅产业紧密联动，助力学术研究。</span></span></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0in; text-indent: 0em;"><br style="padding: 0px; margin: 0px;"></p><p style="padding: 0px; margin-top: 0px; margin-bottom: 0in; text-indent: 0.41in;"><span style="padding: 0px; margin: 0px; color: rgb(86, 86, 86); font-size: 18px;">现任旅游学系系主任为仇鹿鸣，分党委书记为盛晓蕾。</span></p><p style="padding: 0px; margin-top: 0px; text-indent: 0em;"><br style="padding: 0px; margin: 0px; color: rgb(51, 51, 51); font-family: Arial, Helvetica, sans-serif; font-size: 13px; text-wrap: wrap;"></p><p><br></p></div></div>
+    <span id="vsb_content_1022_u13" name="vsb_content_1022_u13"></span><br><br>
+    
+<p></p>
+</div>
+                    </div>
+                </div>
+                 
+            </div>
+        </div>
+    </div>
+
+   <div class="footer">
+        <div class="w16">
+            <div class="foot-c">
+                <div class="foot-l">
+                    <h3>快速链接</h3>
+                    <ul>
+    <li><a href="https://www.fudan.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2058449989, 102742)">复旦大学</a></li>
+    <li><a href="https://www.fudan.edu.cn/451/list.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2058449989, 102743)">复旦标志</a></li>
+    <li><a href="https://zlapp.fudan.edu.cn/site/schoolMap/model?titleID=15" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2058449989, 102744)">校园地图</a></li>
+    <li><a href="https://zongwuchu.fudan.edu.cn/cyfw/list.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2058449989, 102745)">校园服务</a></li>
+    <li><a href="https://mta.fudan.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2058449989, 102746)">复旦MTA项目</a></li>
+    <li><a href="https://history.fudan.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2058449989, 102747)">历史学系</a></li>
+    <li><a href="https://library.fudan.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 2058449989, 102748)">复旦图书馆</a></li>
+</ul>
+                </div>
+                <div class="foot-r">
+                    <div class="foot-rl">
+                        <h3>联系我们</h3>
+                        <div>
+<p> 地址：上海市杨浦区邯郸路220号复旦大学光华楼18-20层 </p> 
+<p> 邮编：200433 </p> 
+<p> 电话：021-65642717 </p></div>
+                    </div>
+                    <div class="foot-rr">
+                            <ul>        
+       
+               
+                    <li>
+                        <div>
+                            <img src="../images/erweima1.png"></div>
+                          <p style="     text-align: center;"></p>
+
+                   
+                </li>
+               
+                    <li>
+                        <div>
+                            <img src="../images/erweima.png"></div>
+                          <p style="     text-align: center;"></p>
+
+                   
+                </li>
+       
+</ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="bq">
+                <div class="w16">
+                    <div class="bq-c">
+                        <div class="bq-l">        </div>
+                        <div class="bq-r"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权所有©2024复旦大学旅游学系</p></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

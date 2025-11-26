@@ -1,0 +1,489 @@
+<html><head><title>学院简介-宁波大学马克思主义学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="宁波大学马克思主义学院">
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><link rel="stylesheet" type="text/css" href="../images/jiwei.css">
+<style type="text/css">
+<!--
+.STYLE1 {
+    font-weight:bold; 
+    font-family:'Times New Roman', Times, serif; color:#333333; 
+    font-size: 24px;}
+-->
+</style>
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307b76465550555742000300024752 -->
+<link rel="stylesheet" type="text/css" href="../jj.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1098,'/jj.jsp',-1,937797070)</script>
+</head>
+<body>
+<table border="0" cellspacing="0" cellpadding="0" width="955" align="center">
+<tbody>
+<tr>
+<td height="20" width="42" align="right" style="padding-left: 8px">今天是:</td>
+<td width="177" style="padding-left: 8px"><script language="javascript" src="/system/resource/js/calendar/simple.js"></script>
+<script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script>
+<script language="JavaScript">
+    //阳历
+    var c_Calendar15101EnDateString;
+    //
+    var c_Calendar15101WeekDayString;
+    //阴历
+    var c_Calendar15101CnDateString;
+    //节气
+    var c_Calendar15101JQString;
+    //年
+    var c_Calendar15101YearString;
+    //月
+    var c_Calendar15101MonthString;
+    //日
+    var c_Calendar15101DayString;
+    //周
+    var c_Calendar15101WeekString;
+    //显示
+    var c_Calendar15101ShowString;
+
+    function RunGLNL15101() {
+        var sc = new Simple_Calendar();
+        sc.init();
+        c_Calendar15101CnDateString = sc.getCnDateString();
+        c_Calendar15101WeekDayString = sc.getCalendarWeekString();
+        c_Calendar15101JQString = sc.getJQString();
+        c_Calendar15101EnDateString = sc.getEnDateString();
+        c_Calendar15101YearString = sc.getYearString();
+        c_Calendar15101MonthString = sc.getMonthString();
+        c_Calendar15101DayString = sc.getDayString();
+        c_Calendar15101ShowString= "";
+    }
+
+    RunGLNL15101();
+
+    function update() {
+        $.ajax({
+            type: "post",
+            data: {
+                "sdate": "2013-02-06",
+                "edate": "2099-12-31",
+                "showtext": "第",
+                "isNotStart": "学期未开始",
+                "isEnd": "学期已结束",
+            },
+            dataType: "json",
+            async: false,
+            url: "/system/resource/calendar/getCurrentWeekMap.jsp",
+            success: function (result) {
+                if(result.code==200){
+                    c_Calendar15101WeekString = result.data;
+                }
+            },
+            error: function () {
+                console.log("出错了")
+            }
+        });
+    }
+    update();
+
+    c_Calendar15101ShowString+=c_Calendar15101EnDateString;
+    c_Calendar15101ShowString+="&nbsp;&nbsp;"+c_Calendar15101WeekDayString;
+    
+</script>
+<div id="c_lunar15101" class="fontstyle15101">2025年10月18日&nbsp;&nbsp;星期六</div>
+<script>
+    document.getElementById("c_lunar15101").innerHTML = c_Calendar15101ShowString;
+</script>
+</td>
+<td width="500" align="center"></td>
+<td width="220" align="right"><script language="javascript">
+function dosuba15102a()
+{
+    try{
+		var ua = navigator.userAgent.toLowerCase();
+		if(ua.indexOf("msie 8")>-1)
+		{
+			window.external.AddToFavoritesBar(document.location.href,document.title,"");//IE8
+		}else if(ua.toLowerCase().indexOf("rv:")>-1)
+        {
+            window.external.AddToFavoritesBar(document.location.href,document.title,"");//IE11+
+        }else{
+			if (document.all) 
+			{
+				window.external.addFavorite(document.location.href, document.title);
+			}else if(window.sidebar)
+			{
+				window.sidebar.addPanel( document.title, document.location.href, "");//firefox
+			}
+			else
+			{
+				alert(hotKeysa15102a());
+			}
+		}
+
+    }
+    catch (e){alert("无法自动添加到收藏夹，请使用 Ctrl + d 手动添加");}
+}
+function hotKeysa15102a() 
+{
+	var ua = navigator.userAgent.toLowerCase(); 
+	var str = "";    
+	var isWebkit = (ua.indexOf('webkit') != - 1); 
+	var isMac = (ua.indexOf('mac') != - 1);     
+	if (ua.indexOf('konqueror') != - 1) 
+	{  
+		str = 'CTRL + B'; // Konqueror   
+	} 
+	else if (window.home || isWebkit || isMac) 
+	{        
+		str = (isMac ? 'Command/Cmd' : 'CTRL') + ' + D'; // Netscape, Safari, iCab, IE5/Mac   
+	}
+	return ((str) ? '无法自动添加到收藏夹，请使用' + str + '手动添加' : str);
+}
+function setHomepagea15102a()
+{
+	var url = document.location.href;
+    if (document.all)
+    {
+        document.body.style.behavior='url(#default#homepage)';
+        document.body.setHomePage(url);
+    }
+    else if (window.sidebar)
+    {
+        if(window.netscape)
+        {
+             try{
+                  netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+             }catch (e){
+                   alert("该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true");
+             }
+    	}
+	var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components. interfaces.nsIPrefBranch);
+	prefs.setCharPref('browser.startup.homepage',url);
+	}
+	else
+	{
+		alert("浏览器不支持自动设为首页，请手动设置");
+	}
+}
+</script><table><tbody><tr><td style="font-size:9pt"><a href="javascript:setHomepagea15102a()"><span class="font15102">设为首页</span></a>&nbsp;<span class="splitcharstyle15102"> | </span>&nbsp;<a onclick="javascript:dosuba15102a();" href="#"><span class="font15102">加入收藏</span></a></td></tr></tbody></table></td></tr></tbody></table>
+<table border="0" cellspacing="0" cellpadding="0" width="955" align="center">
+<tbody>
+<tr>
+<td height="150" background="../images/topbannerbg.jpg" colspan="3" style="padding-left: 50px"></td></tr>
+<tr>
+<td width="32"><img src="../images/topleft.jpg" width="32" height="30"></td>
+<td background="../images/topbg.jpg" width="891" align="center" style="padding-top: 2px">网站导航</td>
+<td width="32"><img src="../images/topright.jpg" width="32" height="30"></td></tr>
+<tr>
+<td background="../images/topbg1.jpg" colspan="3"><img src="../images/topbg1.jpg" width="1" height="5"></td></tr></tbody></table>
+<table border="0" cellspacing="0" cellpadding="0" width="955" background="../images/bodybg.gif" bgcolor="#ffffff" align="center">
+<tbody>
+<tr>
+<td valign="top" background="../images/leftbg.jpg" width="249">
+<table border="0" cellspacing="0" cellpadding="0" width="225" align="center">
+<tbody>
+<tr>
+<td height="6"></td></tr>
+<tr>
+<td height="30" background="../images/adbg.jpg" style="padding-left: 30px;background-repeat: no-repeat"><span class="windowstyle17482">
+学院概况</span></td></tr>
+<tr>
+<td height="50" valign="top" background="../images/leftnavbg.jpg">
+<table border="0" cellspacing="0" cellpadding="0" width="225">
+<tbody>
+<tr>
+<td height="50" valign="top" align="center"><style type="text/css">
+td.b1_3_{FONT-SIZE:9pt;BORDER-BOTTOM: #5a5a5a 1px dotted;WIDTH: 180px;HEIGHT: 30px;}
+td.b2_3_{FONT-SIZE:9pt;BORDER-BOTTOM: #5a5a5a 1px dotted;WIDTH: 180px;HEIGHT: 30px;}
+td.b3_3_{FONT-SIZE:9pt;BACKGROUND-COLOR: #eff8fe;}
+td.b4_3_{FONT-SIZE:9pt;BACKGROUND-COLOR: #e8f0fb;}
+a.menu0_3_:link {TEXT-DECORATION: none;};
+a.menu0_3_:visited { TEXT-DECORATION: none;};
+a.menu0_3_:hover {TEXT-DECORATION: none;};
+a.menu0_3_:active {TEXT-DECORATION: none;};
+table.tb1_3_{FONT-SIZE:9pt;border:0;}
+span.s1_3_{PADDING-LEFT: 20px;COLOR: #cc0000;FONT-SIZE: 10pt;FONT-WEIGHT: bold;TEXT-DECORATION: none;}
+span.s2_3_{FONT-SIZE: 9pt;COLOR: #cc0000;LINE-HEIGHT: 160%;}
+span.s10_3_{PADDING-LEFT: 20px;COLOR: #222222;FONT-SIZE: 10pt;FONT-WEIGHT: bold;TEXT-DECORATION: none;}
+span.s20_3_{FONT-SIZE: 9pt;COLOR: #222222;LINE-HEIGHT: 160%;}
+</style>
+<script language="javascript"> 
+ var showfix_3_ = 1;
+ var isvertical_3_ = true;
+</script>
+<script language="javascript" src="/system/resource/js/menu/text.js"></script>
+<table id="t1_3_" cellspacing="0" cellpadding="0" border="0" height="0" width="0"><tbody><tr><td valign="middle" height="29" width="0" class="b1_3_" align="left" id="a_3_1098" onmouseover="tshowLayers('1098','b2_3_', '_3_')" onmouseout="thideLayers('1098','b1_3_', '_3_','true')"> <a class="menu0_3_" href="xyjj.htm"><span class="fontstyle17484">&nbsp;学院简介&nbsp;</span></a></td></tr><tr><td valign="middle" height="29" width="0" class="b1_3_" align="left" id="a_3_1158" onmouseover="tshowLayers('1158','b2_3_', '_3_')" onmouseout="thideLayers('1158','b1_3_', '_3_','true')"> <a class="menu0_3_" href="xyyx.htm"><span class="fontstyle17484">&nbsp;学院院训&nbsp;</span></a></td></tr><tr><td valign="middle" height="29" width="0" class="b1_3_" align="left" id="a_3_1099" onmouseover="tshowLayers('1099','b2_3_', '_3_')" onmouseout="thideLayers('1099','b1_3_', '_3_','true')"> <a class="menu0_3_" href="xyld.htm"><span class="fontstyle17484">&nbsp;学院领导&nbsp;</span></a></td></tr><tr><td valign="middle" height="29" width="0" class="b1_3_" align="left" id="a_3_1100" onmouseover="tshowLayers('1100','b2_3_', '_3_')" onmouseout="thideLayers('1100','b1_3_', '_3_','true')"> <a class="menu0_3_" href="jgsz.htm"><span class="fontstyle17484">&nbsp;机构设置&nbsp;</span></a></td></tr><tr><td valign="middle" height="29" width="0" class="b1_3_" align="left" id="a_3_1102" onmouseover="tshowLayers('1102','b2_3_', '_3_')" onmouseout="thideLayers('1102','b1_3_', '_3_','true')"> <a class="menu0_3_" href="lxfs.htm"><span class="fontstyle17484">&nbsp;联系方式&nbsp;</span></a></td></tr></tbody></table></td></tr></tbody></table></td></tr>
+<tr>
+<td background="../images/leftnavbg.jpg"><img src="../images/leftnavbt.jpg" width="225" height="10"></td></tr></tbody></table>
+<table border="0" cellspacing="0" cellpadding="0" width="225" align="center" style="margin-top: 8px">
+<tbody>
+<tr>
+<td height="30"><img src="../images/search.jpg" width="225" height="30"></td></tr>
+<tr>
+<td height="80" valign="top" background="../images/leftnavbg.jpg">
+<table border="0" cellspacing="0" cellpadding="0" width="225">
+<tbody>
+<tr>
+<td height="5" colspan="2"></td></tr>
+<tr>
+<td height="35" width="56" align="right"><img src="../images/sch.jpg" width="42" height="35"></td>
+<td width="169">请输入要搜索信息的内容!</td></tr>
+<tr>
+<td height="30" colspan="2" align="right">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu4 .qwss{
+        height: 24px;
+    font-size: 12px;
+    min-width: 125px;
+    max-width: 600px;
+    width: 60%;
+    margin-top: 10px;
+    outline: none;
+    padding-left: 10px;
+    border-radius: 2px;
+    border: 1px solid #e4e7ed;}
+    #appu4 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 24px;
+        border: 0;
+        border-radius: 2px;
+        background-color:#97773a;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu4">
+    <div id="appu4"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="qwss"> <input name="submit_button" type="button" value="提交" class="tj"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu4">
+    <div id="appu4">
+        <div v-if="!isError">
+            <input type="text" class="qwss" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="tj" name="submit_button" type="button" value="提交" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu4").html($("#htmlu4").text());
+</script>
+<script>
+    var appOwner = "937797070";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu4",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></td></tr></tbody></table></td></tr>
+<tr>
+<td background="../images/leftnavbg.jpg"><img src="../images/leftnavbt.jpg" width="225" height="10"></td></tr></tbody></table>
+<table border="0" cellspacing="0" cellpadding="0" width="225" align="center" style="margin-top: 8px">
+<tbody>
+<tr>
+<td background="../images/leftnavbg.jpg"><img src="../images/line.jpg" width="225" height="3"></td></tr>
+<tr>
+<td height="4" valign="top" background="../images/leftnavbg.jpg" align="center">
+<table border="0" cellspacing="0" cellpadding="0" width="220" background="../images/faq1.gif" align="center" height="75" style="background-repeat: no-repeat">
+<tbody>
+<tr>
+<td height="30"></td></tr>
+<tr>
+<td height="150" align="left"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script><table class="winstyle17480" width="100%">
+    <tbody><tr>
+        <td><p style="text-align: left; line-height: 2;"><span style="color: rgb(0, 0, 0);"><span style="font-size: 10pt;">地址：宁波大学包玉书科技楼<span style="color: rgb(0, 0, 0);"><span style="font-size: 10pt;">7号楼4楼、5楼</span></span></span></span></p>
+<p style="text-align: left; line-height: 2;"><span style="color: rgb(0, 0, 0);"><span style="font-size: 10pt;">电话：0574-87609175、87609182</span></span></p>
+<p style="text-align: left; line-height: 2;"><span style="color: rgb(0, 0, 0);"><span style="font-size: 10pt;">Email：<span style="color: rgb(0, 0, 0); font-size: 10pt;">mkszyxy@nbu.edu.cn</span></span></span></p>
+<p dir="ltr" style="text-align: left; line-height: 2;"><a href="https://mks.nbu.edu.cn/info/1136/14479.htm" target="_self"><span style="color: rgb(0, 0, 0);"><span style="font-size: 10pt;"><span style="color: rgb(0, 0, 0);"><span style="font-size: 10pt;"><span style="color: rgb(192, 0, 0); font-size: 16px;"><span style="color: rgb(192, 0, 0); font-family: 黑体, SimHei;"><strong><span style="color: rgb(192, 0, 0); font-family: 黑体, SimHei;">招聘信息</span></strong></span></span></span></span></span></span></a></p>
+<p style="text-align: left; line-height: 2;"><a href="https://webadmin.nbu.edu.cn" target="_blank"><span style="color: rgb(192, 0, 0); font-family: 黑体, SimHei; font-size: 10pt; text-decoration: none;">管理员登录</span></a><span style="color: rgb(192, 0, 0); font-family: 黑体, SimHei; font-size: 10pt; text-decoration: none;"><strong><span style="color: rgb(192, 0, 0); font-family: 黑体, SimHei; font-size: 12px; text-decoration: none;"><br></span></strong></span></p></td>
+    </tr>
+</tbody></table></td></tr></tbody></table></td></tr>
+<tr>
+<td height="4"><img src="../images/leftline2.jpg" width="225" height="4"></td></tr></tbody></table></td>
+<td valign="top" width="6">&nbsp;</td>
+<td valign="top" width="692">
+<table border="0" cellspacing="0" cellpadding="0" width="698">
+<tbody>
+<tr>
+<td valign="top" width="692">
+<table border="0" cellspacing="0" cellpadding="0" width="692">
+<tbody>
+<tr>
+<td height="6" width="710"></td></tr>
+<tr>
+<td height="35" valign="bottom" background="../images/righttop.jpg" align="left" style="padding-bottom: 5px;padding-left: 35px;background-repeat: no-repeat"><span class="windowstyle17477">
+学院简介</span></td></tr>
+<tr>
+<td background="../images/rightbg.jpg" style="background-repeat: repeat-y;background-position: left 50%">
+<table border="0" cellspacing="0" cellpadding="0" width="692">
+<tbody>
+<tr>
+<td valign="top" width="10"><img src="../images/coulmn1.jpg" width="9" height="229"></td>
+<td height="466" valign="top" width="671">
+<table border="0" cellspacing="0" cellpadding="0" width="670">
+<tbody>
+<tr>
+<td height="500" valign="top" colspan="2">
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script>
+function seeContenta7(contentid,size,displayid)
+{
+	document.getElementById(contentid).innerHTML = "[";
+	for(var i=0;i<=size;i++)
+	{
+		var allcontentid = contentid+(i+1);
+		if(allcontentid==displayid)
+		{
+			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"' "+' class="wb_content" '+" >"+(i+1)+"</span> ";
+			document.getElementById(displayid).style.display = 'block';
+		}else
+		{
+			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"') "+' class="wb_content" '+" >"+(i+1)+"</span> ";
+			document.getElementById(allcontentid).style.display = "none";
+		}
+	}
+
+	document.getElementById(contentid).innerHTML += "]";
+}
+</script>
+<table class="wb_window" width="100%">
+
+		<script>
+		_addDynClicks('wbnews',937797070,3552)
+		</script>
+
+		<tbody><tr><td align="center"><span class="titlestyle216328">宁波大学马克思主义学院简介</span></td></tr>
+<tr><td align="center"><span class="timestyle216328">
+	</span><span class="authorstyle216328"></span></td></tr>
+<tr><td class="contentstyle216328"><div id="vsb_content_3552_u71"><div id="vsb_content"><div class="v_news_content"><p style="margin: 10px 0px;font-family: 宋体;font-size: 14px;white-space: normal;line-height: 1.75em;text-indent: 2em;text-align: justify"><span style="font-size: 16px;font-family: 宋体, simsun"><strong>马克思主义学院于2011年4月成立</strong>，是学校思想政治理论课教学单位和马克思主义理论研究机构，是马克思主义理论学科点的依托单位。虽建院14年，溯源历史已有43年。源于宁波师范专科学校政史科（1982.9－1984.3），后历经宁波师范学院政史系思想政治教育专业（1984.3－1994.7）；宁波师范学院政治经济系思想政治教育专业（1994.7-1998.9）；宁波大学社会科学系思想政治教育专业（1998.9-2000.5）；宁波大学法学院马克思主义理论学系思想政治教育专业、政治学与行政学专业，马克思主义理论与思想政治教育硕士学位点，马克思主义基本原理、思想政治教育、马克思主义中国化二级硕士点（2000.5-2011.5）；宁波大学马克思主义学院思想政治教育专业、马克思主义理论一级硕士学位授予点（2011.5-2021.5）。</span></p>
+<p style="margin: 10px 0px;font-family: 宋体;font-size: 14px;white-space: normal;line-height: 1.75em;text-indent: 2em;text-align: justify"><span style="font-size: 16px;font-family: 宋体, simsun">学院在历任领导和全体师生的努力下，现设有马克思主义基本原理、马克思主义中国化研究、国外马克思主义研究、思想政治教育4个稳定的研究方向以及MPA（党务管理）中心、思想政治教育系、社会工作部等教研和社会服务组织，主要做好科学研究、人才培养、服务地方和文化传承工作。</span></p>
+<p style="margin: 10px 0px;font-family: 宋体;font-size: 14px;white-space: normal;line-height: 1.75em;text-indent: 2em;text-align: justify"><strong style="font-family: 宋体, simsun;font-size: 16px;text-indent: 2em">2016</strong><strong style="font-family: 宋体, simsun;font-size: 16px;text-indent: 2em">年，宁波市委宣传部与宁波大学共建马克思主义学院；2017年，学院获首批浙江省“重点建设高校马克思主义学院”。</strong><br></p>
+<p style="margin: 10px 0px;font-family: 宋体;font-size: 14px;white-space: normal;line-height: 1.75em;text-indent: 2em;text-align: justify"><span style="font-size: 16px;font-family: 宋体, simsun"><strong>学院马克思主义理论学科建设进步明显。</strong>1999年，马克思主义与思政教育学科获批市重点扶持学科，2002年成为市重点建设学科；2007年，思想政治教育学科获批市重点学科A类；马克思主义理论学科列为校重点建设学科；2013年，马克思主义与当代中国社会实践获批宁波市重点学科；2018年，马克思主义理论学科被批准为市重点学科A类。2017年，被列为4星级中国高水平学科，并列40名（艾瑞深中国校友会网排名）。<span lang="EN-US" style="color: rgb(34, 34, 34)">2020</span><span style="color: rgb(34, 34, 34)">年，在软科中国最好学科排名发布的中国大学学科排行榜中，被列为<span lang="EN-US">5</span>星级中国一流学科专业，位列全国前<span lang="EN-US">20.9%</span>；2021年，<span style="text-indent: 24px;background-color: rgb(255, 255, 255)">软科中国最好学科排名前20%；</span><span style="text-indent: 24px;background-color: rgb(255, 255, 255)">2022年和2023年，软科中国最好学科排名位列前10%，</span>思想政治教育专业获批国家一流本科专业建设点，</span></span><span style="font-size: 16px;font-family: 宋体, simsun">在“2023年软科中国大学专业排名”中进入全国前20名。</span></p>
+<p style="margin: 10px 0px;font-family: 宋体;font-size: 14px;white-space: normal;line-height: 1.75em;text-indent: 2em;text-align: justify"><span style="font-size: 16px;font-family: 宋体, simsun"><strong>学院拥有一支结构合理、敬业爱岗的师资队伍。</strong>现有教职员工67名，兼职教师77名。其中，教授14名，副教授18名，博</span><span style="font-family: 宋体, simsun;font-size: 16px">士35名。入选省级教指委成员1名，有全国高校思想政治理论课教师2015年度影响力提名人物1名；浙江省“151人才”培养人员2名，省“万人计划哲学社会科学领军人才”1名，省“五个一批”（理论）人才2名、青年英才1名，省“之江青年”等省级人才9名，省“思政星课堂”高校优秀思政课教师2名；有宁波市“六个一批”（理论）人才4名，市“文化名家”1名，市“泛3315”人才2名，市社会科学带头人5名，宁波市“4321”人才1名。</span></p>
+<p style="margin: 10px 0px;font-family: 宋体;font-size: 14px;white-space: normal;line-height: 1.75em;text-indent: 2em;text-align: justify"><span style="font-family: 宋体, simsun;font-size: 16px">学院秉持立德树人教育理念，努力提升教学质量。涌现了一些优秀思政课教师，《光明日报》、央视《新闻30分》等重要媒体多次报道了</span><span style="font-size: 16px;font-family: 宋体, simsun">我院教师风采。有50多人次教师获得省、市教书育人先进分子、优秀思想政治工作者、市教育系统优秀共产党员、优秀教职工等各类荣誉称号。20多人次获市高校思想政治理论课教学“名师”“中青年骨干教师”、市高校“优秀思想政治理论课教师”等荣誉称号。一批教师在国家、省和市相关学会中担任重要职务。</span></p>
+<p style="margin: 10px 0px;font-family: 宋体;font-size: 14px;white-space: normal;line-height: 1.75em;text-indent: 2em;text-align: justify"><span style="font-size: 16px;font-family: 宋体, simsun"><strong>教研业绩突出。</strong>自2004年至今，共获各级各类课题200多项，其中国家社科基金重大项目2项、国家社科基金重点项目2项、国家社科基金一般项目（含后期资助项目）27项、省部级40项；出版专著46部；在《中国社会科学》《马克思主义研究》《哲学研究》等发表核心期刊论文300多篇（含高级别论文60余篇）；获省市级领导批示决策咨询成果20多个；获省部级科研奖10多项，获市厅级科研奖30多项；举办第八届世界社会主义论坛宁波分论坛、“中国道路与人类命运共同体”国际论坛等国际学术会议及全国性学术会议20余场；师生在各级各类学术交流中，获优秀论文奖100多项。</span></p>
+<p style="margin: 10px 0px;font-family: 宋体;font-size: 14px;white-space: normal;line-height: 1.75em;text-indent: 2em;text-align: justify"><span style="font-size: 16px;font-family: 宋体, simsun">学院教师主持和参与的教学成果分别获国家级教学成果奖二等奖2项、省级教学成果奖3项、市级教学成果奖1项；围绕“八个一”思政课教学改革要求，打造新时代高校思政金课，拥有省级社会实践一流课程1门，省级课程思政教研项目1项，省级课程思政教改论文特等奖1项；获省高校优秀中青年思想政治理论课教师择优资助计划1项；获<span style="text-indent: 24px;background-color: rgb(255, 255, 255)">全国高校青年教师教学竞赛二等奖1项，</span>省青年教师教学竞赛特等奖、一等奖、二等奖各1项，市高校优秀思政理论课“精彩一课”二、三等奖各1项。</span></p>
+<p style="margin: 10px 0px;font-family: 宋体;font-size: 14px;white-space: normal;line-height: 1.75em;text-indent: 2em;text-align: justify"><span style="font-size: 16px;font-family: 宋体, simsun"><strong>学院拥有多个创新平台和实践基地。</strong>学院是“中国统一战线理论研究会非公有制经济人士统战工作理论研究基地”主要参与成员单位，共建共享该平台；拥有省</span><span style="font-size: 16px;font-family: 宋体, simsun">级“浙江省习近平新时代中国特色社会主义思想研究中心宁波大学研究基地”“浙</span><span style="font-size: 16px;font-family: 宋体, simsun">江省中国特色社会主义理论体系研究中心宁波大学基地”；与中国社科院世界社会主义研究中心合作共建“世界社会主义研究中心宁波分中心”；与市委宣传部合作共建“宁波市中国特色社会主义理论体系研究中心”；与宁波市教育局合作共建“宁波高校思想政治教育研究中心”；与宁波市台办合作共建浙江省新型高校智库“宁波市海峡两岸融合发展研究院”；建有“宁波大学国学哲学研究中心”“宁波大学软实力研究中心”“东海战略研究院海洋政治研究中心”等校级研究平台。</span></p>
+<p style="margin: 10px 0px;font-family: 宋体;font-size: 14px;white-space: normal;line-height: 1.75em;text-indent: 2em;text-align: justify"><span style="font-size: 16px;font-family: 宋体, simsun">拥有浙江省高校思想政治理论课“名师工作室”、省“易班“建设首批试点项目和宁波市高校思想政治理论课教学“名师工作室”；学院在台州三门、舟山嵊泗、宁波各市县区建有一批省、市、校级大学生实践教学基地。</span></p>
+<p style="margin: 10px 0px;font-family: 宋体;font-size: 14px;white-space: normal;line-height: 1.75em;text-indent: 2em;text-align: justify"><span style="font-size: 16px;font-family: 宋体, simsun"><strong>人才培养成效显著。</strong>1988年起，先后培养了上千名本科毕业生，硕士毕业生200多名。有1名本科生荣获全国马克思主义理论学科学生奖励基金，1名研究生入选全国“青马工程”高校班学员，1名研究生获“浙江省十佳大学生”荣誉称号，1名研究生当选市波市第十四次党代会唯一的学生代表。研究生联合团支部被评为2020年度“全国五四红旗团支部”。近5年，本科就业率达100%、升学率近40%，多名本科考取“双一流”建设高校；研究生就业率、签约率达100%，近80%的毕业生到企事业单位担任思政课教师和辅导员、从事党务管理工作；已有30余名研究生考取中国社会科学院、中国人民大学等国内知名院校的博士生。研究生发表高级别论文100多篇，学术论文获50多项省市级奖。学生竞赛成绩优异。荣获第十七届“挑战杯”全国大学生课外学术科技作品竞赛 “红色专项活动”一等奖（2021年）、</span><span style="font-size: 16px"><span style="font-family: 宋体, simsun">第18届全国大学生课外学术</span></span><span style="font-size: 16px;font-family: 宋体, simsun">科技作品竞赛主赛道国家二等奖（2023年）</span><span style="font-size: 16px;background-color: rgb(255, 255, 255)"><span style="color: rgb(34, 34, 34);font-family: 仿宋">、</span></span><span style="text-indent: 2em;font-size: 16px;font-family: 宋体, simsun">第五届全国高校思政微课大赛特等奖（2024年）、第四届全省高校微型党课大赛一等奖、浙江省属高校党团知识竞赛冠军、“卡尔·马克思杯”浙江省大学生理论知识竞赛一等奖（2024年）、浙江省创新创业大赛铜奖、全国高校大学</span><span style="text-indent: 2em;font-size: 16px;font-family: 宋体, simsun">生讲思政课公开课展示活动优秀奖等。一本科团队被评为第十七</span><span style="text-indent: 2em;font-size: 16px;font-family: 宋体, simsun">届浙江省“挑战杯”红色专项十佳团队（2021年）。1实践团队荣获全国“三下乡”社会实践优秀团队称号。</span></p>
+<p style="margin: 10px 0px;font-family: 宋体;font-size: 14px;white-space: normal;line-height: 1.75em;text-indent: 2em;text-align: justify"><span style="font-size: 16px;font-family: 宋体, simsun">学生理论宣讲团已形成品牌效应。宣讲团以学生党员为骨干、以优秀团员青年为主力，成为浙江省高校第一支基层宣讲的学生队伍。宣讲团长期在基层政府、企业、社区、乡村开展党的理论和时事政治为主题的公益宣讲，从2012年迄今宣讲次数达800余场，受众人数8万多人，网络点击量200多万，受到了社会各界的关注和赞扬，获得了“省级暑期实践优秀团队”“最美宁大学子”等荣誉称号，央视《新闻联播》等重要媒体多次报道了相关活动。</span></p>
+<p style="margin: 10px 0px;font-family: 宋体;font-size: 14px;white-space: normal;line-height: 1.75em;text-indent: 2em;text-align: justify"><span style="font-size: 16px;font-family: 宋体, simsun">秉承“实事求是，经世致用”的校训和“兼容并包、自强不息、务实创新、与时偕行”的宁大精神，马克思主义学院“砺学砺行，求实求是”，深入贯彻落实中央和省有关马克思主义理论学科和思想政治理论课建设改革文件精神，在学校党委和行政的领导和支持下，扎实推进学院建设，不断提高马克思主义理论学科建设和思想政治理论课的教育教学水平，为宁波大学建设高水平大学而努力奋斗。（数据截止日期2024年11月）</span></p>
+<div>
+ <span style="font-size: 16px;font-family: 宋体, simsun"><br></span>
+</div>
+<p><br></p></div></div></div></td></tr>
+<tr><td class="wb_content" align="left" id="vsb_content_3552_u7" name="vsb_content_3552_u7"></td></tr>
+
+</tbody></table>
+<table cellspacing="" cellpadding="" border="0">
+<tbody><tr><td align="center"></td></tr>
+</tbody></table></td></tr>
+<tr>
+<td>&nbsp;</td></tr></tbody></table></td>
+<td valign="top" width="11"><img src="../images/coulmn2.jpg" width="11" height="229"></td></tr></tbody></table></td></tr>
+<tr>
+<td><img src="../images/rightbt.jpg" width="692" height="24"></td></tr></tbody></table></td>
+<td width="10">&nbsp;</td></tr></tbody></table></td></tr></tbody></table>
+<table border="0" cellspacing="0" cellpadding="0" width="955" background="../images/bodybg.gif" bgcolor="#ffffff" align="center">
+<tbody>
+<tr>
+<td>&nbsp;</td></tr>
+<tr>
+<td background="../images/btbg.jpg"><img src="../images/btbg.jpg" width="20" height="18"></td></tr>
+<tr>
+<td height="80" background="../images/btbg.gif" align="center"><font color="#444444"></font><p style="text-align:center;"><span class="title1"><span class="footer_font">Copyright © 2011 宁波大学马克思主义学院 All rights reserved。<br>E-mail:mkszyxy@nbu.edu.cn </span></span></p></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

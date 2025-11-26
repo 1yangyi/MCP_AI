@@ -1,0 +1,532 @@
+<!DOCTYPE html><html><head>
+       <meta charset="utf-8">
+        <meta name="toTop" content="true">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+        <meta name="renderer" content="webkit">
+        <meta name="description" content="交通大学马克思主义学院  ">
+        <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+        <title>学院简介-马克思主义学院网站</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="马克思主义学院网站">
+
+        <link rel="stylesheet" href="../style/bootstrap.min.css">
+        <link type="text/css" href="../style/common.css" rel="stylesheet">
+        <link type="text/css" href="../style/index.css" rel="stylesheet">
+        <link type="text/css" href="../style/ny.css" rel="stylesheet">
+        <script type="text/javascript" src="../script/jquery.min.js"></script>
+    <!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307468475d5051574200030003455c -->
+<link rel="stylesheet" type="text/css" href="../cnt.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1221,'/cnt.jsp',-1,1633255384)</script>
+</head>
+
+    <body>
+        <div class="box  nbg">  
+              <div class="top">
+                <div class="wc-top">
+                <div class="container">
+                    <div class="row">
+                    <div class="logo fl">
+                        <a href="../"><img src="../images/logo.png" alt="logo-交通大学马克思主义学院" title="logo-交通大学马克思主义学院"></a>
+                    </div>
+                    <div class="top-right fr pos">
+                        <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu0">
+    <div id="appu0"><div class="forms"><input type="text" placeholder="搜索" autocomplete="off" class="inp-text"> <input type="submit" value="" name="submit_button" class="inp-but"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError" class="forms">
+            <input type="text" class="inp-text" placeholder="搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input type="submit" class="inp-but" value="" name="submit_button"  v-on:click="onSubmit()">
+
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1633255384";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.119.10.191:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                        <!-- search end -->
+                        <div class="lang"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script>      <a href="https://mateacher.sjtu.edu.cn/" target="_blank">教师登录</a>
+<script>_showDynClickBatch(['dynclicks_u1_3572'],[3572],"wbnews", 1633255384)</script>
+</div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                </div>
+            </div>
+            <!--wc-top end-->
+                        
+               <div class="wc-menu">
+                   <div class="container">
+                     <div class="row">
+                    <ul>
+<li>
+    
+       <a href="../index.htm" target="" class="sub-title">
+    <span>首页</span>
+    </a>
+ </li>
+<li>
+    
+      <a href="xyjj.htm" target="" data-id="2" class="selected">
+    <span>学院概况</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a target="" href="xyjj.htm">
+                 学院简介
+                </a>
+            </li>
+            <li>
+                <a target="" href="ldbz.htm">
+                 领导班子
+                </a>
+            </li>
+            <li>
+                <a target="" href="jxjg.htm">
+                 教学机构
+                </a>
+            </li>
+            <li>
+                <a target="" href="xsjg.htm">
+                 学术机构
+                </a>
+            </li>
+            <li>
+                <a target="" href="xzjg/dzbgs.htm">
+                 行政机构
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+<li>
+    
+       <a href="../szdw.htm" target="" class="sub-title">
+    <span>师资队伍</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a target="" href="../szdw/jsml.htm">
+                 教师名录
+                </a>
+            </li>
+            <li>
+                <a target="" href="../szdw/bsh.htm">
+                 博士后
+                </a>
+            </li>
+            <li>
+                <a target="" href="../tzgg/dzbgs1/rczp.htm">
+                 人才招聘
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+<li>
+    
+       <a href="../xkky.htm" target="" class="sub-title">
+    <span>学科科研</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a target="" href="../xkky/xsdt.htm">
+                 学术动态
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+<li>
+    
+       <a href="../jxgong_zuo/bksszk.htm" target="" class="sub-title">
+    <span>教学工作</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a target="" href="../jxgong_zuo/bksszk.htm">
+                 本科生思政课
+                </a>
+            </li>
+            <li>
+                <a target="" href="../jxgong_zuo/yjsszk.htm">
+                 研究生思政课
+                </a>
+            </li>
+            <li>
+                <a target="" href="../jxgong_zuo/tstxk.htm">
+                 通识通选课
+                </a>
+            </li>
+            <li>
+                <a target="" href="../jxgong_zuo/zyk.htm">
+                 专业课
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+<li>
+    
+       <a href="../rencai/zsxx.htm" target="" class="sub-title">
+    <span>人才培养</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a target="" href="../rencai/zsxx.htm">
+                 招生信息
+                </a>
+            </li>
+            <li>
+                <a target="" href="../rencai/pyxx.htm">
+                 培养信息
+                </a>
+            </li>
+            <li>
+                <a target="" href="../xxzx/xsgz1.htm">
+                 学生工作
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+<li>
+    
+       <a href="../djgong_zuo/djgk.htm" target="" class="sub-title">
+    <span>党建工作</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a target="" href="../djgong_zuo/djgk.htm">
+                 党建概况
+                </a>
+            </li>
+            <li>
+                <a target="" href="../xxzx/djgz1.htm">
+                 党建动态
+                </a>
+            </li>
+            <li>
+                <a target="" href="../djgong_zuo/xxyd1.htm">
+                 学习园地
+                </a>
+            </li>
+            <li>
+                <a target="" href="../djgong_zuo/ghfc/ghgk.htm">
+                 工会风采
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+<li>
+    
+       <a href="../xyzl/xyml.htm" target="" class="sub-title">
+    <span>校友专栏</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a target="_blank" _blank""="" href="https://giving.sjtu.edu.cn/index.action">
+                 校友捐赠
+                </a>
+            </li>
+            <li>
+                <a target="" href="../xyzl/xyhd.htm">
+                 校友活动
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+<li>
+    
+       <a href="../cywd1/zyzl.htm" target="" class="sub-title">
+    <span>常用文档</span>
+    </a>
+      <div class="ernav">
+         <ul>
+            <li>
+                <a target="" href="../cywd1/zyzl.htm">
+                 重要资料
+                </a>
+            </li>
+            <li>
+                <a target="" href="../cywd1/gzzd1.htm">
+                 规章制度
+                </a>
+            </li>
+            <li>
+                <a target="_blank" _blank""="" href="https://vi.sjtu.edu.cn/">
+                 视觉标识
+                </a>
+            </li>
+          </ul>
+      </div>
+ </li>
+<li>
+ </li>
+<li>
+ </li>
+<li>
+ </li>
+</ul>
+
+                     </div>                  
+                   </div>
+               </div>
+               <!--wc-menu end-->
+            </div>
+            <!-- top end -->
+        <div class="nyban pos text-center"><img src="../images/dao1.jpg">
+</div>  
+                <div class="nycon">
+                 <div class="container">
+                   <div class="row">
+                    <div class="main-left">
+                     <div class="nav-panel-title">
+学院概况</div>
+                     <div class="side-nav-panel">
+    <ul class="slide-nav-ul">
+              <li class="active">
+            <a href="xyjj.htm">学院简介</a>
+            <div class="clear"></div>
+        </li>
+        <li>
+            <a href="ldbz.htm">领导班子</a>
+            <div class="clear"></div>
+        </li>
+        <li>
+            <a href="jxjg.htm">教学机构</a>
+            <div class="clear"></div>
+        </li>
+        <li>
+            <a href="xsjg.htm">学术机构</a>
+            <div class="clear"></div>
+        </li>
+        <li>
+            <a href="xzjg/dzbgs.htm">行政机构</a>
+            <div class="clear"></div>
+        </li>
+   </ul>
+   <div class="clearfix"></div>
+</div>
+<!--/side-nav-panel-->
+                    </div>
+                    <!--main-left End-->
+                    <div class="main-right">
+                        <div class="ke-tit">
+                            <div class="ke fl">
+学院简介</div>
+                             <div class="nav-path fr">—<a href="../index.htm">首页</a>
+/<a href="xyjj.htm">学院概况</a>
+/<a href="xyjj.htm">学院简介</a>
+</div>      
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="right-nr">
+                            
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1633255384,'wbnews','u8')</script>
+<script>function seeContenta8(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta8('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1633255384,5885)</script>
+<div class="view-cnt">
+<div id="vsb_content_5885_u81"><div id="vsb_content"><p style="text-indent: 2em; margin-top: 10px; margin-bottom: 10px; line-height: 2em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">上海交通大学马克思主义学院成立于2009年6月，承担全校博士生、硕士生、本科生的思想政治理论课教学和管理， 负责“马克思主义理论”和“科学技术史”两个一级学科建设，组织开展马克思主义理论教学和研究。 2016年5月，成为首批上海高校示范马克思主义学院建设单位。</span></p><p style="text-indent: 2em; margin-top: 10px; margin-bottom: 10px; line-height: 2em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">学院共设八个教研室（部）、研究院，分别是习近平新时代中国特色社会主义思想概论教研部、马克思主义基本原理教研室、毛泽东思想和中国特色社会主义理论体系概论教研室、中国近现代史纲要教研室、思想道德与法治教研室、形势与政策教研室、研究生公共课教研室和科学史与科学文化研究院；设有七个研究中心，包括中国特色社会主义理论体系研究和教育中心、马克思主义理论研究中心、高校伟大建党精神研究中心上海交通大学分中心、中央党史和文献研究院当代中国马克思主义对外传播研究基地、新时代党的建设研究中心、韬奋研究院、上海市习近平新时代中国特色社会主义思想研究中心上海交通大学基地。</span></p><p style="text-indent: 2em; margin-top: 10px; margin-bottom: 10px; line-height: 2em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">1985年，学校成为全国首批“马克思主义理论与思想政治教育”硕士学位授权点；2006年成功申报“马克思主义理论”一级学科硕士点， 同时成功申报“马克思主义中国化”二级学科博士点。经过12年的发展，二级博士点学科取得了长足发展。2018年，马克思主义理论学科成功新增为博士学位授权一级学科点。学科建设主要体现三大特色：一是研究方向齐全，在符合本学科规范性建设前 提下具有鲜明特色。现有方向既覆盖马克思主义基本原理、马克思主义中国化研究、思想政治教育和国外马克思主义四个二级学科，又凸显意识形态建设、中国发展道路、高校网络思政和当代资本主义研究，实现了规范和特色的有机结合。二是问题导向突出，充分体现理论研究的整体性和实践性。注重把握马克思主义及其中国化的理论体系、学科体系、教材体系、教学体系及相互联系，把当代中国实践中的重大问题作为理论创新的起点和动力，善于发现问题、筛选问题、研究问题、解决问题。三是做到“一身二任”，为思政课建设提供强有力的学科支撑。 重视学科建设中“咨政”和“育人”的统一，以理论研究成果反哺思政课教学、队伍建设及网络思政教育。</span></p><p style="text-indent: 2em; margin-top: 10px; margin-bottom: 10px; line-height: 2em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">学院拥有优秀科研和教学团队，有中央马克思主义理论研究和建设工程首席专家、国务院学位委员会学科评议组成员、教育部社会科学委员会委员、教育部高校思想政治理论课教学指导委员会委员，有国家级教学名师、全国优秀思想政治理论课教师、教育部思想政治理论课年度影响力人物、教学能手等。</span></p><p style="text-indent: 2em; margin-top: 10px; margin-bottom: 10px; line-height: 2em;"><span style="font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">学院坚持“教学立院、人才兴院、学术强院、制度建院、开放办院”的办学理念，正全力建设全国一流的教学研究型马克思主义学院。</span></p><div class="shijzhou"><ul class=" list-paddingleft-2"><li><p class="li-dian">&nbsp;</p><div class="li-time">1949</div><div class="li-shi"><h4>交通大学政治科</h4><p>交通大学在教务处下设政治科（后更名为政教科、马列主义基础教研室），开设社会发展史讲座。</p></div></li><li><p class="li-dian">&nbsp;</p><div class="li-time">1954</div><div class="li-shi"><h4>交通大学马列主义教研组</h4><p>交通大学设立政治辅导处，建立马列主义教研组，负责政治理论课教学并组织对教职工和学生的形势任务教育。</p></div></li><li><p class="li-dian">&nbsp;</p><div class="li-time">1959</div><div class="li-shi"><h4>上海交通大学马列主义教研组</h4><p>交通大学部分西迁，留沪部分（与上海造船学院、南洋工学院、上海第一师范学院）组建上海交通大学马列主义教研组（1966年因文革被解散，1976年重组），系统讲授马克思主义理论课。</p></div></li><li><p class="li-dian">&nbsp;</p><div class="li-time">1985</div><div class="li-shi"><h4>上海交通大学社会科学及工程系</h4><p>在原马列主义教研室和德育教研室基础上成立社会科学及工程系，承担全校马克思主义理论课和思想品德教育课的教学，发展新专业。</p></div></li><li><p class="li-dian">&nbsp;</p><div class="li-time">1997</div><div class="li-shi"><h4>上海交通大学人文社会科学学院“两课”教育中心</h4><p>组建人文社会科学学院（后更名为人文学院），设“两课”教育中心，后更名为“思想政治理论教育中心”。</p></div></li><li><p class="li-dian">&nbsp;</p><div class="li-time">2009</div><div class="li-shi"><h4>上海交通大学马克思主义学院</h4><p>以原人文学院“思想政治理论教育中心”为主体成立马克思主义学院，为学校独立的思想政治理论课教学科研二级机构。2016年5月，成为首批上海高校示范马克思主义学院建设单位。 2018年，马克思主义理论学科成功新增为博士学位授权一级学科点。</p></div></li></ul></div></div></div>
+</div>
+
+                          </div>
+                        <!--/right-nr-->
+                    </div>
+                    <!--/main-right-->
+                    <div class="clearfix"></div>
+
+                </div>
+</div>
+</div>
+<!--ny-con end-->
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+          
+<div class="f-left fl">
+ <p>上海市东川路800号上海交通大学闵行校区老法学楼<br>34208557</p>
+ <p>&nbsp;</p>
+ <p><br></p>
+ <p>版权所有<span style="font-family: Arial, 微软雅黑; font-size: 14px; color: rgb(255, 255, 255);">©</span>上海交通大学马克思主义学院&nbsp;</p>
+ <p style="height: 10px">&nbsp;</p>
+ <p><span style="color: rgb(255, 255, 255);"></span><br></p>
+</div>
+          <div class="f-logo fr">
+                <img title="" border="0" hspace="0" alt="" src="../images/er.jpg" width="97" height="97">
+          </div>
+          <div class="f-link fr">
+               <div><ul>
+  <li><a href="http://paper.people.com.cn/rmrb/html/2021-09/30/nbs.D110000renmrb_01.htm" target="_blank">人民日报</a></li>
+  <li><a href="https://epaper.gmw.cn/" target="_blank">光明日报</a></li>
+  <li><a href="http://paper.ce.cn/jjrb/html/2021-09/30/node_2.htm" target="_blank">经济日报</a></li>
+  <li><a href="http://www.qstheory.cn/" target="_blank">求是杂志</a></li>
+</ul><script>_showDynClickBatch(['dynclicks_u10_1932','dynclicks_u10_1931','dynclicks_u10_1930','dynclicks_u10_1929'],[1932,1931,1930,1929],"wbnews", 1633255384)</script>
+</div>
+          </div>
+          <div class="f-zhong fr">
+                   <ul>
+      <li>
+        <a href="https://www.sjtu.edu.cn/" target="_blank">
+            学校主页
+            <!--<span><img src="../images/lic1.png"></span>
+            <p></p>-->
+        </a>
+    </li>
+    <li>
+        <a href="https://jaccount.sjtu.edu.cn/jaccount/jalogin?sid=jasjtumail&amp;returl=CHsbXdSHEIM2S%2B9MnG4RKKGPBEDD%2F6PX%2B2HohNZXsLdWBpTkqDL8O51N41HYSB746sDZQPt%2FW8PY7WnrWLPCBTU%3D&amp;se=CEhtVE3rjqG2vkXP8fokOEjUoMVvcpmmU82cL9%2BBIdOx%2ByXbmZkBb%2Bs%3D" target="_blank">
+            一门式服务
+            <!--<span><img src="../images/lic2.png"></span>
+            <p></p>-->
+        </a>
+    </li>
+    <li>
+        <a href="https://www.jdcw.sjtu.edu.cn/" target="_blank">
+            财务处
+            <!--<span><img src="../images/lic3.png"></span>
+            <p></p>-->
+        </a>
+    </li>
+    <li>
+        <a href="https://hr.sjtu.edu.cn/" target="_blank">
+            人力资源处
+            <!--<span><img src="../images/lic4.png"></span>
+            <p></p>-->
+        </a>
+    </li>
+</ul>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--footer end-->
+        
+        </div>
+        <!-- box End-->
+
+        <script type="text/javascript" src="../script/toTop.js"></script>
+        <script type="text/javascript">
+            
+            if($("div").hasClass("view-cnt")==false){
+              $(".right-nr").append("<div class='view-cnt'>正在建设中</div>");
+            }
+        
+        </script>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="toTop" style="width: 50px; height: 50px; bottom: 30px; right: 25px; position: fixed; cursor: pointer; z-index: 999999; display: none;"><img src="https://ma.sjtu.edu.cn/images/top.png"></div></body></html>

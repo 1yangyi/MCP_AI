@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><title>实验室简介-海洋能源利用与节能教育部重点实验室（新）</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="实验室简介">
+<meta name="keywords" content="海洋能源利用与节能教育部重点实验室">
+
+
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
+
+<meta name="description" content="">
+<meta name="generator" content="">
+<meta name="copyright" content="大连理工大学海洋能源利用与节能教育部重点实验室">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow"><link rel="stylesheet" type="text/css" href="../shiyanshijieshao/css/global.css"><script type="text/javascript" src="../shiyanshijieshao/js/jquery.min.js"></script><script type="text/javascript" src="../shiyanshijieshao/js/jquery.SuperSlide.js"></script><script type="text/javascript" src="../shiyanshijieshao/js/lrtk.js"></script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307973475d52575742000500004f52 -->
+<link rel="stylesheet" type="text/css" href="../shiyanshijieshao/dy.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1003,'/shiyanshijieshao/dy.jsp',-1,1196206702)</script>
+<script src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=489206"></script></head>
+<body>
+<div class="wrapper">
+<div class="top">
+<div class="logo"><a hidefocus="" href="../" style="hide-focus: true"><img alt="" src="../shiyanshijieshao/images/logo.png"></a></div>
+<div class="english"><a hidefocus="" href="../English1/About_US.htm" target="_blank" style="hide-focus: true">ENGLISH</a></div></div>
+<div><style type="text/css">
+ul,li{
+    padding:0;
+    margin:0;
+    list-style:none;}
+#flashBoxu_u0_{
+    width:999px;
+    height:234px;
+    border:0px solid #EEE;
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;}
+#flashBoxu_u0_ img{
+    /*初始不要显示*/
+    display:none;
+    /*用边框来实现空位，因为margin和paading有时会引起些麻烦*/
+    border:0px solid #FFF;}
+#flashBoxu_u0_ ul{
+    position:absolute;
+    right:7px;
+    bottom:3px;
+    font:9px tahoma;}
+#flashBoxu_u0_ ul li{
+    display:block;
+    float:left;
+    width:12px;
+    height:12px;
+    line-height:12px;
+    margin-right:3px;
+    border:0px solid #999;
+    background:#F0F0F0;
+    text-align:center;
+    cursor:pointer;}
+#flashBoxu_u0_ ul li.hover{
+    border-color:red;
+    background:#FFE1E1;
+    color:red;}
+</style>
+<script type="text/javascript">
+function flashBoxCtrl(o){
+    this.obj=document.getElementById(o);
+    //这个私有方法虽然写了，但暂时没用到
+    function addListener(ele,eventName,functionBody){
+        if (ele.attachEvent){
+            ele.attachEvent("on"+eventName, functionBody);
+        }else if (ele.addEventListener){
+            ele.addEventListener("on"+eventName,functionBody, false);
+        }else{
+            return false;
+        }
+    }
+    //初始化
+    this.init=function(){
+        var objImg=this.obj.getElementsByTagName("img");
+        var tagLength=objImg.length;
+        if (tagLength>0){
+            var oUl=document.createElement("ul");
+            oUl.setAttribute("id",o+"numTag");
+            for (var i=0;i<tagLength;i++){
+                var oLi=oUl.appendChild(document.createElement("li"));
+                if (i==0){
+                    oLi.setAttribute("class","hover"); //初始化时把第一个设置为高亮
+                    oLi.setAttribute("className","hover");
+                }
+                //设置标签的数字
+                oLi.appendChild(document.createTextNode((i+1)));
+            }
+            this.obj.appendChild(oUl);
+            objImg[0].style.display="block";
+            //设置标签事件
+            var oTag=this.obj.getElementsByTagName("li");
+            for (var i=0;i<oTag.length;i++){
+                var flag = 0;
+                var temp = 0;
+                var timeout=null;
+                var step = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    this.className="hover";
+                    flag = flag>=oTag.length-1?0:flag+1;
+                    objImg[flag].style.display="block";
+                    oTag[flag].className = "hover";
+                    timeout = setTimeout(step,4000);
+                };
+                oTag[i].onmouseover=function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                        temp = j;
+                    }
+                    this.className="hover";
+                    objImg[this.innerHTML-1].style.display="block";
+                    temp = this.innerHTML-1;
+                    flag = i;
+                    clearInterval(timeout);
+                }
+                oTag[i].onmouseout = function(){
+                    for (j=0;j<oTag.length;j++){
+                        oTag[j].className="";
+                        objImg[j].style.display="none";
+                    }
+                    flag = temp;
+                    objImg[temp].style.display="block";
+                    oTag[temp].className = "hover";
+                    timeout = setTimeout(step,4000);
+                }
+                if(i==0)
+                {
+                    timeout = setTimeout(step,4000);
+                }
+            }
+        }
+    };
+    //自动滚动的方法还没写
+    this.imgRoll=function(){};
+    //生成对象时自动加载init()方法以初始化对象
+    this.init();
+}
+</script>
+<table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td><div id="flashBoxu_u0_"><img src="../images/7ad4d551jw1eazt0o2ts9j21jk0fy7el.jpg" border="0" width="999" height="234" style="display: none;"><img src="../shiyanshijieshao/images/banner01.jpg" border="0" width="999" height="234" style="display: block;"><img src="../images/banner02.jpg" border="0" width="999" height="234" style="display: none;"><ul id="flashBoxu_u0_numTag"><li class="" classname="hover">1</li><li class="hover">2</li><li class="">3</li></ul></div></td></tr></tbody></table><script language="JavaScript">new flashBoxCtrl("flashBoxu_u0_");</script></div><ul id="nav" class="nav clearfix">
+<li class="nLi on">
+<h3><a hidefocus="" href="/" style="hide-focus: true">首页</a></h3></li>
+<li class="nLi">
+<h3><a hidefocus="" href="sysjj.htm" style="hide-focus: true">团队建设</a></h3>
+<ul class="sub">
+<li><a hidefocus="" href="xswyh.htm" style="hide-focus: true">学术委员会</a> </li>
+<li><a hidefocus="" href="yjdw.htm" style="hide-focus: true">研究队伍</a> </li></ul></li>
+<li class="nLi">
+<h3><a hidefocus="" href="../kxyj/kyxm.htm" style="hide-focus: true">科研成果</a></h3>
+<ul class="sub">
+<li><a hidefocus="" href="../kxyj/kyxm.htm" style="hide-focus: true">科研项目</a> </li>
+<li><a hidefocus="" href="../kxyj/fblw.htm" style="hide-focus: true">发表论文</a> </li>
+<li><a hidefocus="" href="../kxyj/fbzz.htm" style="hide-focus: true">发表著作</a> </li>
+<li><a hidefocus="" href="../kxyj/kyhj.htm" style="hide-focus: true">科研获奖</a> </li></ul></li>
+<li class="nLi">
+<h3><a hidefocus="" href="../yjfx/trqshwkfjqlyjcyj.htm" style="hide-focus: true">研究方向</a></h3>
+<ul class="sub">
+<li><a hidefocus="" href="../yjfx/hytrqshwzykf.htm" style="hide-focus: true">海洋天然气水合物资源开发</a> </li>
+<li><a hidefocus="" href="../yjfx/hsdhgjjsyzb.htm" style="hide-focus: true">海水淡化关键技术与装备</a> </li>
+<li><a hidefocus="" href="../yjfx/jdtjrnsyjzhjl.htm" style="hide-focus: true">极端条件热能输运及转换机理</a> </li>
+<li><a hidefocus="" href="../yjfx/fzxtkzyyhjs.htm" style="hide-focus: true">复杂系统控制与优化技术</a> </li>
+<li><a hidefocus="" href="../yjfx/dsdxtyhdd.htm" style="hide-focus: true">大水电系统优化调度</a> </li></ul></li>
+<li class="nLi">
+<h3><a hidefocus="" href="../rcpy/rcpy.htm" style="hide-focus: true">人才培养</a></h3>
+<ul class="sub">
+<li><a hidefocus="" href="../rcpy/xkjs.htm" style="hide-focus: true">学科介绍</a> </li>
+<li><a hidefocus="" href="../rcpy/yjspy.htm" style="hide-focus: true">研究生培养</a> </li></ul></li>
+<li class="nLi">
+<h3><a hidefocus="" href="../kfjj/glbf.htm" style="hide-focus: true">开放基金</a></h3>
+<ul class="sub">
+<li><a hidefocus="" href="../kfjj/glbf.htm" style="hide-focus: true">管理办法</a> </li>
+<li><a hidefocus="" href="../kfjj/sqzn.htm" style="hide-focus: true">申请指南</a> </li>
+<li><a hidefocus="" href="../kfjj/sqs.htm" style="hide-focus: true">申请表</a> </li>
+<li><a hidefocus="" href="../kfjj/ktml.htm" style="hide-focus: true">开放课题目录</a> </li></ul></li>
+<li class="nLi">
+<h3><a hidefocus="" href="../syssb/syssb.htm" style="hide-focus: true">实验室设备</a></h3>
+<ul class="sub">
+<li><a hidefocus="" href="../syssb/sbylb.htm" style="hide-focus: true">设备一览表</a> </li>
+<li><a hidefocus="" href="../syssb/zysbjs.htm" style="hide-focus: true">主要设备介绍</a> </li></ul></li>
+<li class="nLi">
+<h3><a hidefocus="" href="../xgxz/gjhz.htm" style="hide-focus: true">学术交流</a></h3>
+<ul class="sub">
+<li><a hidefocus="" href="../xgxz/gjhz.htm" style="hide-focus: true">国际合作</a> </li>
+<li><a hidefocus="" href="../xgxz/xshy.htm" style="hide-focus: true">学术会议</a> </li></ul>
+</li></ul>
+<script id="jsID" type="text/javascript">
+            jQuery("#nav").slide({ 
+                type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
+                titCell:".nLi", //鼠标触发对象
+                targetCell:".sub", //titCell里面包含的要显示/消失的对象
+                effect:"slideDown", //targetCell下拉效果
+                delayTime:300 , //效果时间
+                triggerTime:0, //鼠标延迟触发时间（默认150）
+                returnDefault:true //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+            });
+    </script>
+<div class="con" style="padding-bottom: 17px;padding-left: 0px;padding-right: 0px;padding-top: 17px">
+<div class="ny_con">
+<div class="ny_left fl">
+<div class="t"><span>
+团队建设</span></div><ul>
+            <li><a href="xswyh.htm" title="学术委员会"><font color="#666666">学术委员会</font></a></li>
+        <li><a href="yjdw.htm" title="研究队伍"><font color="#666666">研究队伍</font></a></li>
+</ul></div>
+<div class="ny_right fr">
+<!-- <DIV class="t"><SPAN></SPAN></DIV> -->
+<div class="ny_content">
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script>
+function seeContenta4(contentid,size,displayid)
+{
+	document.getElementById(contentid).innerHTML = "[";
+	for(var i=0;i<=size;i++)
+	{
+		var allcontentid = contentid+(i+1);
+		if(allcontentid==displayid)
+		{
+			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"' "+' class="wb_content" '+" >"+(i+1)+"</span> ";
+			document.getElementById(displayid).style.display = 'block';
+		}else
+		{
+			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta4('"+contentid+"','"+size+"','"+allcontentid+"') "+' class="wb_content" '+" >"+(i+1)+"</span> ";
+			document.getElementById(allcontentid).style.display = "none";
+		}
+	}
+
+	document.getElementById(contentid).innerHTML += "]";
+}
+</script>
+<table class="wb_window" width="100%">
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+		<script>
+		_addDynClicks('wbnews',1196206702,1115)
+		</script>
+
+		<tbody><tr><td align="center"><span class="titlestyle75098">团队建设</span></td></tr>
+<tr><td align="center"><span class="timestyle75098">
+	</span><span class="authorstyle75098"></span></td></tr>
+<tr><td class="contentstyle75098"><div id="vsb_content_2_1115_u41"><div id="vsb_content_2"><link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css?v=1A2B687B92844DC9912637E49B1C5C3D"><div class="v_news_content"><p style="text-align: center"> <img width="600" src="/system/resource/virtual_resource_file.jsp?afc=wU87XDnNWfM4vDM/m-inRvPLzrRnm6KRozM2oRAfUlQVMzL0gihFp2hmCIa0LYhVMYyYMkyiLNMfL7MRnlMRL4n2nlC4U8linRUsLz9YLz6FUzMkMR7sMmQFM7CPnNUJqjfjo4OeoDP0QIL0qIbtpYyPLRG4g47PLzlJqdOnx&amp;oid=1196206702&amp;tid=1003&amp;nid=1115&amp;e=.jpg" vsbhref="vurl" vurl="/_vsl/3E72452CA0CCECC34FEF3CE5D4718217/A3B41766/4F1FD" vheight="" vwidth="600" alt="" orisrc="/system/resource/virtual_resource_file.jsp?afc=wU87XDnNWfM4vDM/m-inRvPLzrRnm6KRozM2oRAfUlQVMzL0gihFp2hmCIa0LYhVMYyYMkyiLNMfL7MRnlMRL4n2nlC4U8linRUsLz9YLz6FUzMkMR7sMmQFM7CPnNUJqjfjo4OeoDP0QIL0qIbtpYyPLRG4g47PLzlJqdOnx&amp;oid=1196206702&amp;tid=1003&amp;nid=1115&amp;e=.jpg" class="img_vsb_content"></p> 
+<p><br></p></div></div></div></td></tr>
+<tr><td class="wb_content" align="left" id="vsb_content_2_1115_u4" name="vsb_content_2_1115_u4"></td></tr>
+
+</tbody></table>
+<table cellspacing="" cellpadding="" border="0">
+<tbody><tr><td align="center"></td></tr>
+</tbody></table>
+<div class="fr">
+<div class="bdsharebuttonbox"><a hidefocus="" class="bds_more" href="#" data-cmd="more" style="hide-focus: true"></a><a hidefocus="" class="bds_qzone" title="分享到QQ空间" href="#" data-cmd="qzone" style="hide-focus: true"></a><a hidefocus="" class="bds_tsina" title="分享到新浪微博" href="#" data-cmd="tsina" style="hide-focus: true"></a><a hidefocus="" class="bds_tqq" title="分享到腾讯微博" href="#" data-cmd="tqq" style="hide-focus: true"></a><a hidefocus="" class="bds_renren" title="分享到人人网" href="#" data-cmd="renren" style="hide-focus: true"></a><a hidefocus="" class="bds_weixin" title="分享到微信" href="#" data-cmd="weixin" style="hide-focus: true"></a></div><script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script></div>
+<div class="cb"></div></div></div>
+<div class="cb"></div></div></div></div>
+<div class="footer">
+
+<p>地址：中国 辽宁省大连市甘井子区凌工路2号，邮编116024 电话：0411-84708367邮箱：dutenergy@dlut.edu.cn<br>Copyright © 2015 大连理工大学海洋能源利用与节能教育部重点实验室 版权所有</p>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

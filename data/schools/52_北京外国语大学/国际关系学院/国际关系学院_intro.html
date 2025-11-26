@@ -1,0 +1,581 @@
+<!DOCTYPE html><html><head><title>学院简介-北京外国语大学国际关系学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="北京外国语大学国际关系学院,学院简介">
+
+
+
+
+
+<meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../css/style.css"><link rel="stylesheet" type="text/css" href="../css/publice.css">
+
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e78475153505742000400014153 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1042,'/dpzw.jsp',-1,1505999887)</script>
+</head>
+<body><!--top s-->
+<div class="topWrap clearfix">
+<div class="topDiv">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<div class="logo">
+<a href="../index.htm"><img src="../images/logo.jpg" height="90px"></a>
+</div>
+<div class="topR fr">
+  <table width="100%" border="0" align="right" cellpadding="0" cellspacing="0">
+    <tbody><tr>
+      <td align="right">&nbsp;<script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><div class="topR_t fr">
+     <a href="#" onclick="_addDynClicks(&quot;wburl&quot;, 1505999887, 45471)">中文</a>
+     |
+     <a href="#" onclick="_addDynClicks(&quot;wburl&quot;, 1505999887, 45472)">English</a>
+     
+</div>
+
+
+</td>
+    </tr>
+    <tr>
+      <td align="right" valign="top">&nbsp;<!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><div id="divu2">
+    <div id="appu2"><div class="Search"><input type="text" placeholder="请输入关键字搜索" class="search_text"> <div class="fdj fr"><input type="submit" value="" class="button pngFix"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError" class="Search">
+ <input type="text" placeholder="请输入关键字搜索" class="search_text"  v-model=query.keyWord @keyup.enter="onSubmit"/>
+ <div class="fdj fr"> <input type="submit" class="button pngFix" value="" style="cursor: hand" v-on:click="onSubmit()"></div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1505999887";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu2 = document.querySelector("#appu2");
+   if (appElementu2 && appElementu2.__vue__) {
+
+   } else {
+      $("#divu2").html($("#htmlu2").text());
+      var appOwner = "1505999887";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou2 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu2(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu2();
+        }
+      };
+
+      function onSubmitu2(e) {
+        queryInfou2.query.keyWord= $("#appu2  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou2.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script></td>
+    </tr>
+  </tbody></table>
+</div></div></div><!--nav--><div class="navWrap  clearfix">
+    <div class="nav">
+    <ul>
+			<li>
+			<a class="link" href="../index.htm">首页</a>
+						
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="../xygk.htm">学院概况</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl style="display: none;">
+					<dd><a href="xyjj.htm">学院简介</a></dd>
+					<dd><a href="yzzc.htm">院长致辞</a></dd>
+					<dd><a href="xyld.htm">学院领导</a></dd>
+					<dd><a href="zzjg.htm">组织结构</a></dd>
+					<dd><a href="xswyh.htm">学术委员会</a></dd>
+					<dd><a href="xwwyh.htm">学位委员会</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="../szll.htm">师资力量</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl style="display: none;">
+					<dd><a href="../szll/szdw.htm">师资队伍</a></dd>
+					<dd><a href="../szll/jfry.htm">教辅人员</a></dd>
+					<dd><a href="../szll/rxjs.htm">荣休教师</a></dd>
+					<dd><a href="../szll/wpjs.htm">外聘教师</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="../kyhd.htm">科研活动</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl style="display: none;">
+					<dd><a href="../kyhd/kyxm.htm">科研项目</a></dd>
+					<dd><a href="../kyhd/kygl.htm">科研管理</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="../jxgl.htm">教学管理</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl style="display: none;">
+					<dd><a href="../jxgl/bksgl.htm">本科生管理</a></dd>
+					<dd><a href="../jxgl/yjsgl.htm">研究生管理</a></dd>
+					<dd><a href="../jxgl/lxsgl.htm">留学生管理</a></dd>
+					<dd><a href="../jxgl/sxwgl.htm">双学位管理</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="../zsxx.htm">招生信息</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl style="display: none;">
+					<dd><a href="../zsxx/bkzs.htm">本科招生</a></dd>
+					<dd><a href="../zsxx/yjszs.htm">研究生招生</a></dd>
+					<dd><a href="../zsxx/bsszs.htm">博士生招生</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="../jyxx.htm">就业信息</a>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="../hzbx.htm">合作办学</a>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="../yjzx.htm">研究中心</a>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="../xsgz.htm">学生工作</a>
+			<!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+			<dl style="display: none;">
+					<dd><a href="../xsgz/dthd.htm">党团活动</a></dd>
+					<dd><a href="../xsgz/jyxx.htm">就业信息</a></dd>
+			</dl>
+		</li>
+		<li class="mainmenu">
+		    <a class="link" href="../yyh.htm">院友会</a>
+		</li>
+     
+    </ul>
+</div>
+</div>
+<script type="text/javascript">
+
+	$(".mainmenu dl").hide();
+
+</script><!--banner-->    <div class="banner clearfix">
+            <div class="eachBox">
+                <div class="changeBox_a1" id="change_32">
+		                       <div class="changeDiv" style="display: block;">
+                        <h3><a href="../info/1063/4343.htm" target="_blank"></a></h3>
+                        <a target="_blank" href="../info/1063/4343.htm" title=""><img width="1000" height="335" src="../images/2291750342540_.pic.jpg"></a>
+                    </div>
+
+			
+                    <div class="changeDiv" style="display: none;">
+                        <h3><a href="../info/1063/4263.htm" target="_blank"></a></h3>
+                        <a target="_blank" href="../info/1063/4263.htm" title=""><img width="1000" height="335" src="../images/1234.jpg"></a>
+                    </div>
+
+			
+                    <div class="changeDiv" style="display: none;">
+                        <h3><a href="../info/1101/4073.htm" target="_blank"></a></h3>
+                        <a target="_blank" href="../info/1101/4073.htm" title=""><img width="1000" height="335" src="../images/bfsuk3.png"></a>
+                    </div>
+
+			
+                    
+               
+                    <ul class="ul_change_a2">
+                        <li><span class="on"></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div><!--main-->
+<div class="mainWrap clearfix"><div class="main_tit">
+        <div class="main_titT main_titTa">
+            <img src="../img/bri_icon1.png">
+
+<a href="../index.htm">首页</a>&gt;
+<a href="../xygk.htm" class="cur">学院概况</a>
+        </div>
+</div>
+
+<div class="main_con">
+<div class="main_conL">
+<div class="main_conLT">
+<dl>
+<dt>学院概况</dt><dd><a href="xyjj.htm" class="cur">学院简介</a></dd>
+<dd><a href="yzzc.htm">院长致辞</a></dd>
+<dd><a href="xyld.htm">学院领导</a></dd>
+<dd><a href="zzjg.htm">组织结构</a></dd>
+<dd><a href="xswyh.htm">学术委员会</a></dd>
+<dd><a href="xwwyh.htm">学位委员会</a></dd>
+</dl></div>
+<div class="informBox informBoxb informBoxb1"><!-- 3.1.3版本 -->
+
+
+
+<div id="divu8">
+    <div id="appu8"><div><div class="dynamic dynamicc"><h2>站内搜索</h2></div> <input type="text" placeholder="请输入关键字进行搜索" class="search_text"> <input type="submit" value="搜索" class="h_button"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu8">
+    <div id="appu8">
+        <div v-if="!isError">
+<div class="dynamic dynamicc"><h2>站内搜索</h2></div>
+                <input type="text"  class="search_text"  placeholder="请输入关键字进行搜索"  v-model=query.keyWord @keyup.enter="onSubmit"/>
+                <input type="submit" value="搜索" class="h_button" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu8").html($("#htmlu8").text());
+</script>
+<script>
+    var appOwner = "1505999887";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu8",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu8 = document.querySelector("#appu8");
+   if (appElementu8 && appElementu8.__vue__) {
+
+   } else {
+      $("#divu8").html($("#htmlu8").text());
+      var appOwner = "1505999887";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou8 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu8(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu8();
+        }
+      };
+
+      function onSubmitu8(e) {
+        queryInfou8.query.keyWord= $("#appu8  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou8.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script>    <div class="zp_pic">
+
+                </div></div></div>
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1505999887,'wbnews','u10')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1505999887,2199)</script>
+<div class="main_conR">
+            <h2>学院简介</h2>
+            <div class="main_conRC">
+		 <div id="vsb_content_4_2199_u101"><div id="vsb_content_4"><p style="text-indent: 0em; text-align: center;"><strong> &nbsp;School of International Relations and Diplomacy</strong></p><p style="text-indent: 0em;">The School of International Relations and Diplomacy (SIRD) traces its origins to the Diplomacy program, established in 1999 at Beijing Foreign Studies University (BFSU), long known as the "cradle of diplomats". As the university's earliest interdisciplinary major, the Department of Diplomacy initially merged with the English Department to form the School of English Studies to promote complementary strengths and interdisciplinary integration. In September 2006, the Department of Diplomacy merged with the Institute of International Studies, officially giving rise to the School of International Relations and Diplomacy.</p><p style="text-indent: 0em;"><br></p><p style="text-indent: 0em;">The school consists of the Department of Diplomacy, the Department of Political Science and Public Administration, and the editorial office of <em>International Forum</em>, an academic journal. It offers a master's degree program in Political Science and a doctoral program in International Relations and Area Studies. The school currently enrolls undergraduate students in three majors: Diplomacy, International Organizations and Global Governance, and a Sino-foreign joint program in Diplomacy.</p><p style="text-indent: 0em;"><br></p><p style="text-indent: 0em;">SIRD has developed a talent cultivation model characterized by interdisciplinary knowledge, multilingual capabilities, and global vision. The school currently has 622 Chinese students (441 undergraduates, 138 master's students and 43 doctoral students). Additionally, it hosts 45 international students (22 undergraduates, 19 master's or doctoral students and 4 in exchange programs) hailing from countries such as South Korea, Japan, Indonesia, Russia, the United Kingdom and Spain.</p><p style="text-indent: 0em;"><br></p><p style="text-indent: 0em;">The school has 35 faculty and staff members, including 12 professors and researchers, and 6 associate professors or associate researchers. Many faculty members have been selected for prestigious talent programs. Over the past five years, the faculty members have published 586 academic papers in major domestic and international journals, including 167 high-quality representative papers, authored 17 monographs, and led 14 National Social Science Fund projects—2 key projects and 3 major ones among them. They have also received 13 significant awards at the national, ministerial, and professional-society levels.</p><p style="text-indent: 0em;"><br></p><p style="text-indent: 0em;">Leveraging BFSU's unique strength of offering courses in 101 foreign languages, SIRD relies on the university's 41 Ministry of Education-approved centers and incubators for country and area studies to build a robust academic platform. The school emphasizes language proficiency and academic research, balancing international relations with area and country studies, and major power studies with research on developing countries. It has developed distinct research teams in five key areas, US politics and diplomacy, EU politics and diplomacy, China's international discourse power, global governance, and political thought, earning a strong reputation in China's academic community.</p><p style="text-indent: 0em;"><br></p><p style="text-indent: 0em; text-align: center;"><strong>国际关系学院介绍</strong></p><p>国际关系学院前身为外交学专业，1999年诞⽣于素有"外交官摇篮"之称的北京外国语大学，是我校最早的复合型专业。为推进优势互补和学科交叉融合，外交学系与英语系合并为英语学院。2006年9⽉，外交学系与国际问题研究所合并，国际关系学院正式诞生。</p><p>学院下设外交学系、政治学与行政学系、《国际论坛》编辑部，拥有政治学一级学科硕士点和国际关系与区域研究二级学科博士点，招收外交学、国际组织与全球治理、外交学（中外合作办学）三个本科专业。</p><p>学院以习近平新时代中国特色社会主义思想为指导，坚持立德树人，把社会主义核心价值观教育融入专业教学过程，已形成"复合型、复语型、国际化"的人才培养模式。现有中国籍在校学生622人，其中本科生441人、硕士研究生138人、博士研究生43人；在读留学生45人，其中本科留学生22人、硕博留学生19人、校际交换生4人，来自韩国、日本、印度尼西亚、俄罗斯、英国、西班牙等国家。</p><p>学院现有教职工35⼈，其中教授及研究员12⼈，副教授及副研究员6⼈。多位教师⼊选高层次人才项⽬，包括国家万⼈计划哲学社会科学领军⼈才、中宣部宣传思想⽂化青年英才、教育部"新世纪⼈才"、北京市"四个⼀批"⼈才、北京市⾼校青年英才等。近五年来，学院教师在国内外重要期刊发表学术论文586篇，其中167篇为高质量的代表性论文；出版专著17部；主持14项国家社科基金项目（其中重点项目2项、重大专项3项）；获得国家级、省部级和专业学会级重要奖项13项。</p><p class="vsbcontent_end">学院充分利用北京外国语大学获批开设101门外语的独特优势，依托校内41个教育部国别区域研究中心和培育基地组成的高水平学术平台群，坚持外语技能和学术研究并重、国际关系研究和区域国别研究并重、大国研究和发展中国家研究并重，在美国政治与外交、欧盟政治与外交、中国国际话语权、全球治理、政治思想等五大领域形成了特色研究团队，在国内享有较高声誉。</p></div></div>
+	</div>
+    <span id="vsb_content_4_2199_u10" name="vsb_content_4_2199_u10"></span><br><br>
+    
+        </div>
+</div></div><br><!--link--><div class="linkDiv_two"><div class="link_one clearfix">
+            <dl>
+                <dt>培养项目</dt>
+<dd>
+
+<a href="../zsxm/bkxm.htm" onclick="_addDynClicks(&quot;wburl&quot;, 1505999887, 45473)">本科项目</a>
+
+
+
+<a href="../zsxm/bksxwxm.htm" onclick="_addDynClicks(&quot;wburl&quot;, 1505999887, 45474)">本科双学位项目</a>
+
+
+
+<a href="../zsxm/yjsxm.htm" onclick="_addDynClicks(&quot;wburl&quot;, 1505999887, 45475)">研究生项目</a>
+
+
+
+<a href="../zsxm/lxsxm.htm" onclick="_addDynClicks(&quot;wburl&quot;, 1505999887, 45476)">留学生项目</a>
+
+
+
+<a href="../zsxm/tdxl1.htm" onclick="_addDynClicks(&quot;wburl&quot;, 1505999887, 45477)">同等学历</a>
+
+
+<a href="../zsxm/dqpxxm.htm" class="cur" onclick="_addDynClicks(&quot;wburl&quot;, 1505999887, 45478)">短期培训项目</a>
+
+
+    </dd>         
+            </dl>
+        </div>
+
+
+</div><!--foot--><div class="footWrap"><div class="footDiv_one">
+		<div class="foot_one">
+			<p></p><p>Copyright @ BFSU. 北京外国语大学版权所有. 地址：北京市海淀区西三环北路2号/19号&nbsp;&nbsp;&nbsp; 邮编：100089&nbsp;&nbsp;Supported by BFSU ITC</p><img src="../img/foot_icon.png"><p></p>
+		</div>
+	</div>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery.Change.js"></script>
+<script type="text/javascript">
+$(function(){
+    $(".mainmenu dl").hide();
+    $("li.mainmenu").hover(function(){
+        $(this).find("dl").stop(true,true);
+        $(this).find("dl").slideDown();
+    },function(){
+        $(this).find("dl").stop(true,true);
+        $(this).find("dl").slideUp();
+    });
+})
+</script>
+<script type="text/javascript">
+$(function () {
+
+//切换对象为其他，这里为包含图片和标题的层
+    $('#change_32 div.changeDiv').soChange({//对象指向层，层内包含图片及标题
+        thumbObj:'#change_32 .ul_change_a2 span',
+        thumbNowClass:'on'//自定义导航对象当前class为on
+    });
+
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></body></html>

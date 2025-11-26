@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>首都师范大学历史学院-学院介绍</title>
+<link href="../../css/base.css" type="text/css" rel="stylesheet">
+<link href="../../css/style.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+<script type="text/javascript" src="../../js/jquery-1.9.0.min.js"></script>
+
+<script>
+		function checkXnwk(url, xwssyh) {
+		var url1 = window.location + "";
+		url1 = url1.substring(0, url1.lastIndexOf('/')) + "/" + url;
+		if (xwssyh != '' && xwssyh == 'xn') {
+			var flag = checkSession();
+			if (flag == "true") {
+				window.open(url);
+			} else if (flag == "false") {
+				window.open('/cms/web/checkXnwk.jsp?url=' + url1,'_blank');
+			} else {
+				window.open(url);
+			}
+		} else {
+			window.open(url);
+		}
+	}
+	function checkSession() {
+		var flag = "";
+		jQuery.ajax({
+			type : "POST",
+			url : '/cms/web/getXnwkSession.jsp',
+			async : false,
+			success : function(data) { 
+				var newData = data.replace(/(^\s*)|(\s*$)/g, "");
+				flag = newData;
+			}
+		});
+		return flag;
+	}
+</script>
+
+
+
+<!--  -->
+
+
+<div class="header">
+    	<div class="top">
+        	<div class="logo">
+        		<a href="#" class="logo_link"><img src="../../images/logo_02.png"></a>
+            </div>
+			
+            <div class="search">
+           		<form name="dataForm" action="/cms/web/search/index.jsp" target="_blank" method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8';">
+                    <input name="siteID" value="99" type="hidden">
+                    <input class="notxt" value="搜索......" name="query" type="text" id="keywords" onfocus="if(value==defaultValue){value='';}" onblur="if(!value){value=defaultValue;}" onclick="if(this.value=='站内搜索'){this.value='';this.form.keywords.style.color='#3c98cc'}">
+                    <input class="notxt1" name="Submit" type="submit" value="">
+                </form>
+       		</div>
+			
+        </div>
+        
+</div>
+
+<!--  -->
+<div class="pageBanner">
+       
+
+<div class="nav">
+	<ul id="nav">		
+		<li><a href="../../index.htm">首  页</a></li>
+	
+				
+							<li><a href="index.htm">学院概况</a>
+					 <div class="subNav">
+						<dl>
+													<dd><a href="index.htm">学院介绍</a></dd>
+													<dd><a href="../xrld/index.htm">现任领导</a></dd>
+													<dd><a href="../lrld/index.htm">历任领导</a></dd>
+													<dd><a href="../zzjg/index.htm">组织架构</a></dd>
+													<dd><a href="../xybs/index.htm">学院标识</a></dd>
+													<dd><a href="../lsbwg/index.htm">历史博物馆</a></dd>
+												</dl>
+					 </div>
+				</li>
+						
+				
+							<li><a href="../../xkjs/sjs/index.htm">学科建设</a>
+					 <div class="subNav">
+						<dl>
+													<dd><a href="../../xkjs/sjs/index.htm">世界史</a></dd>
+													<dd><a href="../../xkjs/zgs/index.htm">中国史</a></dd>
+													<dd><a href="../../xkjs/kgx/index.htm">考古学</a></dd>
+												</dl>
+					 </div>
+				</li>
+						
+				
+							<li><a href="../../szdw/dwjs/index.htm">师资队伍</a>
+					 <div class="subNav">
+						<dl>
+													<dd><a href="../../szdw/dwjs/index.htm">队伍建设</a></dd>
+													<dd><a href="../../szdw/jsjj/index.htm">教师简介</a></dd>
+												</dl>
+					 </div>
+				</li>
+						
+				
+							<li><a href="../../kxyj/tzgg/index.htm">科学研究</a>
+					 <div class="subNav">
+						<dl>
+													<dd><a href="../../kxyj/tzgg/index.htm">通知公告</a></dd>
+													<dd><a href="../../kxyj/xzhd/index.htm">学术活动</a></dd>
+													<dd><a href="../../kxyj/yjjg/index.htm">研究机构</a></dd>
+												</dl>
+					 </div>
+				</li>
+						
+				
+							<li><a href="../../bkjx/tzggx/index.htm">本科教学</a>
+					 <div class="subNav">
+						<dl>
+													<dd><a href="../../bkjx/tzggx/index.htm">通知公告</a></dd>
+													<dd><a href="../../bkjx/zyjs2/index.htm">专业介绍</a></dd>
+													<dd><a href="../../bkjx/glgz/index.htm">管理规章</a></dd>
+													<dd><a href="../../bkjx/pyfa/index.htm">培养方案</a></dd>
+													<dd><a href="../../bkjx/kcap/index.htm">教学安排</a></dd>
+													<dd><a href="../../bkjx/jxsj/index.htm">历史教育实践</a></dd>
+													<dd><a href="../../bkjx/jxcg/index.htm">专业实践</a></dd>
+													<dd><a href="../../bkjx/bgxz/index.htm">表格下载</a></dd>
+												</dl>
+					 </div>
+				</li>
+						
+				
+							<li><a href="../../yjsjx/tzggx1/index.htm">研究生教学</a>
+					 <div class="subNav">
+						<dl>
+													<dd><a href="../../yjsjx/tzggx1/index.htm">通知公告</a></dd>
+													<dd><a href="../../yjsjx/gzzd/index.htm">规章制度</a></dd>
+													<dd><a href="../../yjsjx/pyfax/index.htm">培养方案</a></dd>
+													<dd><a href="../../yjsjx/kcapx/index.htm">课程安排</a></dd>
+													<dd><a href="../../yjsjx/bsh/index.htm">博士后</a></dd>
+												</dl>
+					 </div>
+				</li>
+						
+				
+							<li><a href="../../crjy/zsjz/index.htm">成人教育</a>
+					 <div class="subNav">
+						<dl>
+													<dd><a href="../../crjy/zsjz/index.htm">招生简章</a></dd>
+													<dd><a href="../../crjy/zytz/index.htm">重要通知</a></dd>
+													<dd><a href="../../crjy/glgzx/index.htm">管理规章</a></dd>
+													<dd><a href="../../crjy/gpjh/index.htm">国培计划</a></dd>
+													<dd><a href="../../crjy/wbpxjd/index.htm">文博培训基地</a></dd>
+												</dl>
+					 </div>
+				</li>
+						
+				
+							<li><a href="../../zsxx/bkzs/index.htm">招生信息</a>
+					 <div class="subNav">
+						<dl>
+													<dd><a href="../../zsxx/bkzs/index.htm">本科招生</a></dd>
+													<dd><a href="../../zsxx/sszs/index.htm">硕士招生</a></dd>
+													<dd><a href="../../zsxx/bszs/index.htm">博士招生</a></dd>
+												</dl>
+					 </div>
+				</li>
+						
+				
+							<li><a href="../../xwzx/xyxw/index.htm">新闻中心</a>
+					 <div class="subNav">
+						<dl>
+													<dd><a href="../../xwzx/xyxw/index.htm">学院新闻</a></dd>
+													<dd><a href="../../xwzx/ywtb/index.htm">院务通报</a></dd>
+												</dl>
+					 </div>
+				</li>
+						
+				
+							<li><a href="../../djgz/dwhd/index.htm">党建工作</a>
+					 <div class="subNav">
+						<dl>
+													<dd><a href="../../djgz/dwhd/index.htm">党委活动</a></dd>
+													<dd><a href="../../djgz/xydw/index.htm">学院党委</a></dd>
+												</dl>
+					 </div>
+				</li>
+						
+				
+							<li><a href="../../xsgz/tzggx3/index.htm">学生工作</a>
+					 <div class="subNav">
+						<dl>
+													<dd><a href="../../xsgz/tzggx3/index.htm">通知公告</a></dd>
+													<dd><a href="../../xsgz/bksgl/index.htm">本科生管理</a></dd>
+													<dd><a href="../../xsgz/yjsgl/index.htm">研究生管理</a></dd>
+													<dd><a href="../../xsgz/xsk/index.htm">学生会</a></dd>
+													<dd><a href="../../xsgz/yjsk/index.htm">研究生会</a></dd>
+													<dd><a href="../../xsgz/xsst/index.htm">学生社团</a></dd>
+													<dd><a href="../../xsgz/xsky/index.htm">学生科研</a></dd>
+												</dl>
+					 </div>
+				</li>
+						
+				
+							<li><a href="../../zlzx/zxjs/index.htm">资料中心</a>
+					 <div class="subNav">
+						<dl>
+													<dd><a href="../../zlzx/zxjs/index.htm">中心介绍</a></dd>
+													<dd><a href="../../zlzx/tsjy/index.htm">图书借阅</a></dd>
+												</dl>
+					 </div>
+				</li>
+							</ul>       
+	</div>
+
+    <img src="../../images/banner01_03.png">
+</div> 
+<div class="con">
+    <div class="conLeft" id="height1" style="height: 347px;">
+            <div class="title">
+                    <h2>学院概况</h2>
+            </div>
+            <ul>
+												<li class="current"><a href="index.htm">学院介绍</a></li>
+				            									<li><a href="../xrld/index.htm">现任领导</a></li>
+				            									<li><a href="../lrld/index.htm">历任领导</a></li>
+				            									<li><a href="../zzjg/index.htm">组织架构</a></li>
+				            									<li><a href="../xybs/index.htm">学院标识</a></li>
+				            									<li><a href="../lsbwg/index.htm">历史博物馆</a></li>
+				                        </ul>
+    </div>
+    <div class="conRight" id="height2">
+            <div class="subPage">
+                <div class="Bread">
+                     您目前的位置：                 <a href="../../index.htm">首页</a>»
+                 <a href="../index.htm">学院概况</a>»
+        学院介绍
+                </div>
+                <div class="pageList">
+                    <div class="articleList articleList2">
+                            <div class="listTitle listTitle2">
+                               <h2><a href="#">学院介绍</a></h2>
+                            </div>
+                            <ul>
+							                                <li><span>[2018-04-26]</span><a href="javascript:void(0);" title="学院介绍" onclick="checkXnwk('68521.htm','$article.belongUser');">学院介绍</a></li>                             
+							                                <li><span>[2020-03-29]</span><a href="javascript:void(0);" title="历史学院教材建设委员会名单" onclick="checkXnwk('173054.htm','$article.belongUser');">历史学院教材建设委员会名单</a></li>                             
+							                                <li><span>[2019-05-13]</span><a href="javascript:void(0);" title="首都师范大学历史学院本科教学指导委员会" onclick="checkXnwk('../../bkjx/tzggx/159621.htm','$article.belongUser');">首都师范大学历史学院本科教学指导委员会</a></li>                             
+							                                <li><span>[2019-05-13]</span><a href="javascript:void(0);" title="首都师范大学历史学院本科教学督导工作组" onclick="checkXnwk('../../bkjx/tzggx/159624.htm','$article.belongUser');">首都师范大学历史学院本科教学督导工作组</a></li>                             
+							                                <li><span>[2019-05-13]</span><a href="javascript:void(0);" title="首都师范大学历史学院本科课程教学质量评估小组" onclick="checkXnwk('../../bkjx/tzggx/159627.htm','$article.belongUser');">首都师范大学历史学院本科课程教学质量评估小组</a></li>                             
+							                            </ul>
+                     </div>
+                      <div class="page">
+                        <div>
+							<div align="center">
+								<form name="pageForm" action="" method="post">
+								共5条，分1页，当前第<font color="red">1</font>页&nbsp;&nbsp;<a href="index.htm">最前页</a>
+								<a href="index.htm">上一页</a>
+								<a href="index.htm">下一页</a>
+								<a href="index.htm">最后页</a>
+								转到<select name="page" onchange="javascript:PageFormSubmit()">
+																																<option value="index.htm" selected="">1</option>
+																</select>页
+								
+								</form>
+								
+								<script language="JavaScript">
+								function PageFormSubmit()
+								{
+								document.location.href=document.pageForm.page.options[document.pageForm.page.selectedIndex].value;
+								}
+								</script>
+							</div>
+
+						
+                         </div>
+                      </div>
+                </div>
+            </div>
+    </div>
+</div>
+<!--footer  -->
+
+<div class="footer">
+	<div class="footerIn">
+		<div class="footer_left">
+			<div class="copyRight">
+				Copyright @ 首都师范大学版权所有 &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://beian.miit.gov.cn" style="color:#fff">京ICP备05082108号-1 </a>&nbsp;     京公网安备:110402430068号<br>
+				地址：北京市西三环北路83号院文科楼4层 100089<br>
+				电话：010-68902314
+E-mail: history@cnu.edu.cn</div>
+		</div>
+		<div class="footer_right">
+			<ul>
+				<li>
+					<a href="#" onfocus="undefined"><img src="../../images/ewm02_03.png"> </a>
+					<p>
+						<a href="#" onfocus="undefined">官方微博</a></p>
+				</li>
+				<li>
+					<a href="#" onfocus="undefined"><img src="../../images/ewm03_03.png"> </a>
+					<p>
+						<a href="#" onfocus="undefined">微信公众号</a></p>
+				</li>
+				<li>
+					<a href="#" onfocus="undefined"><img src="../../images/ewm05_03.png"> </a>
+					<p>
+						<a href="#" onfocus="undefined">CNU微信门户</a></p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--  -->
+<script type="text/javascript" src="../../js/jquery-1.9.0.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="../../js/script.js"></script>
+<script type="text/javascript">
+    Nav('#nav');
+    var height1 = document.getElementById("height1");
+  var height2 = document.getElementById("height2");   
+  if( height1.offsetHeight > height2.offsetHeight){
+    height2.style.height = height1.offsetHeight + "px";
+  }
+ else{
+       height1.style.height = height2.offsetHeight-5 + "px";
+  }
+</script>
+ 
+
+
+
+<!--IE6透明代码-->
+<!--[if IE 6]>
+<script src="../../js/pngAlaph.js"></script>
+<script>
+DD_belatedPNG.fix('.logo, img');
+</script>
+<![endif]-->
+
+<script type="text/javascript" src="../../g_style/g_index.js"></script>
+</body></html>

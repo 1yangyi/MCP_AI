@@ -1,0 +1,334 @@
+
+<!DOCTYPE html><html><head>
+
+    
+        <meta charset="utf-8">
+        <title>学院简介-西北工业大学网络空间安全学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<META Name="keywords" Content="西北工业大学网络空间安全学院,学院简介" />
+
+        <!--Announced by Visual SiteBuilder 9-->
+        <link href="../css/style.css" rel="stylesheet">
+        <script src="../js/bdtxk.js"></script>
+        <script src="../js/SuperSlide.js"></script>
+    <!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css" />
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232306975475152555742000200014156 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1016,'/dpzw.jsp',-1,1570493975)</script>
+</head>
+    <body>
+<!-- top -->
+<div class="top">
+            <div class="top-c width">
+                <div class="logo fl">
+                    
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="网络空间安全学院"><img src="../images/logo.png" width="524" height="64" border="0" alt="网络空间安全学院" title="网络空间安全学院"></a>
+                </div>
+                <div class="search fr">
+                <p class="pho_sj">        <a href="javascript:void(0);" title="手机版" onclick="_vsb_multiscreen.setDevice('mobile')">手机版</a>
+&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp; <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>   <a href="../English/Home.htm" target="_blank" title="" onclick="_addDynClicks(&#34;wburl&#34;, 1570493975, 62824)">English</a>
+</p>
+                    
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu3 .tj{
+        border: 0;}
+</style>
+<div id="divu3"></div>
+<script type="text/html" id="htmlu3">
+    <div id="appu3">
+        <div v-if="!isError" class="search_form">
+            <input type="text"   autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input name="submit_button" type="image" src="../images/searchico.png" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "1570493975";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://yykfpt.nwpu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+                </div>
+            </div>
+        </div>
+
+<!-- 导航 -->
+<div class="menu">
+    <div class="menu-c width">
+        <ul class="nav clearfix" id="nav">
+<li class="nLi ">
+<h3><a href="../index.htm" title="首页">首页</a></h3>
+</li>
+<li class="nLi on">
+<h3><a href="xyjj.htm" title="学院概况">学院概况</a></h3>
+<ul class="sub">
+<li><a href="xyjj.htm" title="学院简介">学院简介</a></li>
+<li><a href="xyld1/wlkjaqxyld.htm" title="学院领导">学院领导</a></li>
+<li><a href="zzjg.htm" title="组织机构">组织机构</a></li>
+<li><a href="jgwyh.htm" title="机构委员会">机构委员会</a></li>
+<li><a href="lxwm.htm" title="联系我们">联系我们</a></li>
+</ul>
+</li>
+<li class="nLi ">
+<h3><a href="../szdw/szdw.htm" title="师资队伍">师资队伍</a></h3>
+<ul class="sub">
+<li><a href="../szdw/szdw.htm" title="师资队伍">师资队伍</a></li>
+<li><a href="../tpszdw.jsp?urltype=tree.TreeTempUrl&wbtreeid=1022" title="实验教学中心">实验教学中心</a></li>
+<li><a href="../szdw/rczp.htm" title="人才招聘">人才招聘</a></li>
+</ul>
+</li>
+<li class="nLi ">
+<h3><a href="../jxdt/jxdt.htm" title="人才培养">人才培养</a></h3>
+<ul class="sub">
+<li><a href="../jxdt/jxdt.htm" title="教学动态">教学动态</a></li>
+<li><a href="../jxdt/bkspy1/zysz.htm" title="本科生培养">本科生培养</a></li>
+<li><a href="../jxdt/yjspy1/tzgg.htm" title="研究生培养">研究生培养</a></li>
+<li><a href="../jxdt/zsxx.htm" title="招生信息">招生信息</a></li>
+</ul>
+</li>
+<li class="nLi ">
+<h3><a href="../kxyj/kydt.htm" title="科学研究">科学研究</a></h3>
+<ul class="sub">
+<li><a href="../kxyj/kydt.htm" title="科研动态">科研动态</a></li>
+<li><a href="../kxyj/kypt.htm" title="科研平台">科研平台</a></li>
+<li><a href="../kxyj/bmyaq.htm" title="保密与安全">保密与安全</a></li>
+</ul>
+</li>
+<li class="nLi ">
+<h3><a href="../jypx/bmjypx.htm" title="教育培训">教育培训</a></h3>
+<ul class="sub">
+<li><a href="../jypx/bmjypx.htm" title="保密教育培训">保密教育培训</a></li>
+<li><a href="../jypx/sxsbmjysxpt.htm" title="陕西省保密教育实训平台">陕西省保密教育实训平台</a></li>
+<li><a href="../jypx/lxwm.htm" title="联系我们">联系我们</a></li>
+</ul>
+</li>
+<li class="nLi ">
+<h3><a href="../dqgz/dzgk.htm" title="党群工作">党群工作</a></h3>
+<ul class="sub">
+<li><a href="../dqgz/dzgk.htm" title="党委概况">党委概况</a></li>
+<li><a href="../dqgz/djdt.htm" title="党建动态">党建动态</a></li>
+<li><a href="../dqgz/llxx.htm" title="理论学习">理论学习</a></li>
+<li><a href="../dqgz/ghgz.htm" title="工会工作">工会工作</a></li>
+</ul>
+</li>
+<li class="nLi ">
+<h3><a href="../xsgz/xggk.htm" title="学生工作">学生工作</a></h3>
+<ul class="sub">
+<li><a href="../xsgz/xggk.htm" title="学工概况">学工概况</a></li>
+<li><a href="../xsgz/xgdw.htm" title="学工队伍">学工队伍</a></li>
+<li><a href="../xsgz/xsdt.htm" title="学生动态">学生动态</a></li>
+</ul>
+</li>
+<li class="nLi ">
+<h3><a href="../jlyhz/xshy.htm" title="交流与合作">交流与合作</a></h3>
+<ul class="sub">
+<li><a href="../jlyhz/xshy.htm" title="学术会议">学术会议</a></li>
+<li><a href="../jlyhz/gnhz.htm" title="国内合作">国内合作</a></li>
+<li><a href="../jlyhz/gjhz.htm" title="国际合作">国际合作</a></li>
+</ul>
+</li>
+</ul>
+    </div>
+</div>  
+    <script id="jsID" type="text/javascript">
+        
+        jQuery("#nav").slide({ 
+            type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
+            titCell:".nLi", //鼠标触发对象
+            targetCell:".sub", //titCell里面包含的要显示/消失的对象
+            effect:"slideDown", //targetCell下拉效果
+            delayTime:300 , //效果时间
+            triggerTime:0, //鼠标延迟触发时间（默认150）
+            returnDefault:true //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+        });
+    </script>
+    
+<!-- banner -->
+<div class="nybanner">
+    <img src="../images/topbanner.jpg">
+
+</div>
+
+
+<!-- 内容 -->
+<div class="container">
+    <div class="container-c width">
+        <div class="jjy-l fl">
+            <div class="lanm"><h3>
+学院概况</h3></div>
+            <ul>
+                <li class="on "><a href="xyjj.htm" title="学院简介">学院简介</a>
+
+
+</li>
+<li class=" on1"><a href="xyld1/wlkjaqxyld.htm" title="学院领导">学院领导</a>
+<ul style="display:none ;background:#f6f6f5;padding:10px">
+
+<li style="font-size: 19px;line-height: 40px;text-align: left;border:none;background:none;"><a href="xyld1/wlkjaqxyld.htm" title="网络空间安全学院领导" style="color:#494949;">网络空间安全学院领导</a></li>
+
+
+<li style="font-size: 19px;line-height: 40px;text-align: left;border:none;background:none;"><a href="xyld1/gjbmxyld.htm" title="国家保密学院领导" style="color:#494949;">国家保密学院领导</a></li>
+
+</ul>
+
+
+</li>
+<li class=" "><a href="zzjg.htm" title="组织机构">组织机构</a>
+
+
+</li>
+<li class=" "><a href="jgwyh.htm" title="机构委员会">机构委员会</a>
+
+
+</li>
+<li class=" "><a href="lxwm.htm" title="联系我们">联系我们</a>
+
+
+</li>
+
+            </ul>
+        </div>      
+        <div class="jjy-r fr">
+             <div class="current">
+<div class="fl">
+<span style="font-weight:bold;font-size:20px;color:#2267b1;">学院简介</span></div>
+<div class="fr">当前位置: 
+<a href="../index.htm">首页</a>
+ - 
+<a href="xyjj.htm">学院概况</a>
+ - 
+<a href="xyjj.htm">学院简介</a>
+</div>
+<div style="clear:both"></div>
+</div>
+            <div class="jjynr">
+                
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1570493975,'wbnews','u10')</script>
+<link rel="stylesheet" Content-type="text/css" href="/system/resource/style/component/news/content/format4.css"><script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1570493975,1315)</script>
+    <div id="vsb_content_4_1315_u101"><div id="vsb_content_4"><p class="vsbcontent_start">西北工业大学是我国最早开展信息安全相关专业人才培养的高校之一。2000年成立了“信息对抗”本科专业；2002年在计算机科学与技术学科下自设“网络与信息安全”二级学科博士点，开展研究生培养工作，首批信息对抗技术专业学生毕业；信息对抗专业2007年被教育部评为信息安全类特色专业；2016年获得首批国家网络空间安全一级学科博士点；2018年成立网络空间安全学院；2021年信息安全专业入选国家级一流专业建设点；2024年入选国家一流网络安全学院建设示范项目。</p><p><strong>学院坚持立德树人，育人成效显著。</strong>学院着力培养具有家国情怀、追求卓越、引领未来的网安领军人才。在传承近20年信息安全专业人才培养历史积淀的基础上，形成了“厚基础、强系统、重实战、拓交叉”的网安人才培养模式。学院现有网络空间安全一级学科博士学位授权点，设有信息安全专业、网络空间安全专业、保密技术专业。2023年“计算机类（网络安全）”专业报考热度为839.22%，为全校非专班招生类热度第一。近三年，学院学生获国家级学科竞赛奖百余项，承担xx系统攻防演练等重要任务20余项，并多次受到表扬。学院近三年本科生深造率均高于65%，接近70%的毕业生到党政机关、国有企事业、军队等重点单位工作，在网络安全领域成为行业骨干。</p><p><strong>学院加强高层次人才引育，师资力量快速壮大。</strong>学院全面贯彻新时代人才工作新理念，坚持人才引领发展战略地位。已形成了一支以杰出学者和高水平学科带头人为核心的高水平师资队伍，学科现有博导41人、硕导78人。近三年学院新增全职国家级人才4人、国防科技创新团队1个，柔性引进国家级领军人才近20人，其中包括中国工程院院士、IEEE Fellow、国家杰青等领域知名学者。</p><p><strong>学院聚焦国家战略，优势学科方向特色鲜明。</strong>学院服务国家网络强国战略需求，聚焦网络空间安全科技前沿，结合西工大三航特色，在系统软硬件安全、网络空间认知安全与对抗、无人系统安全、工业控制与物联网安全等领域承担了多项国家网络安全重要任务。学院成立以来，科研水平得到跨越式提升，先后承担了国家重点研发计划、国家自然科学基金等多项国家级重大重点科硏任务，先后获得省部级、学会、国防科技奖励10余项，牵头新增建设省部级平台9个，牵头获批千万级项目2项。</p><p><strong>学院勇担时代使命，社会服务能力显著增强</strong>。学院建成的工业互联网实训基地实现了我校牵头民口过亿（含自筹）项目零的突破。借鉴国际先进的网络安全教育体系，开发了网络安全持续胜任教育。挂靠学院的国家保密教育培训基地西安分基地形成了层次完备的课程体系，承担各类保密教育培训近百期，参训人数六千余人次。陕西省保密教育实训平台已全部覆盖陕西省重点党政部门和机构，已完成近五万人次的培训任务。</p><p class="vsbcontent_end">在全面建设社会主义现代化的征程中，学院深入学习贯彻习近平新时代中国特色社会主义思想，坚持社会主义办学方向，牢记“为党育人、为国育才“使命，扎根中国大地，心怀”国之大者”，坚持面向国家网络强国战略需求，不断改革创新，勇毅前行，在建设一流网络空间安全学院和一流网络空间安全学科，加快形成国家网络空间安全领域核心战略科技力量的新征程中，凝心聚力，勇担使命，踔厉奋发，为实现社会主义现代化建设做出更大的贡献！</p></div></div>
+    <span id="vsb_content_4_1315_u10" name="vsb_content_4_1315_u10"></span><br /><br />
+    
+
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+
+<div class="clear"></div>
+<!-- 底部 -->
+<div class="footer">
+    <div class="footer-c width">
+    <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>© 2017- 2019 . All Rights Reserved. 西北工业大学网络空间安全学院 版权所有. 陕西西安市碑林区友谊西路127号，710072</p>
+    </div>
+</div>
+    
+    
+
+
+
+
+</body></html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

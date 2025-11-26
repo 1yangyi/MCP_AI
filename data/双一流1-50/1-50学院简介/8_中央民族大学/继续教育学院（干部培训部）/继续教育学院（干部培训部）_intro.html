@@ -1,0 +1,565 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios">
+    <title>学院介绍-中央民族大学继续教育学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院介绍">
+<meta name="keywords" content="中央民族大学继续教育学院,学院介绍">
+
+    <link href="../css/css.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/public.css" rel="stylesheet">
+    <link href="../css/ny.css" rel="stylesheet">
+  
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307e784654525a5742000200024253 -->
+<link rel="stylesheet" type="text/css" href="../list.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1012,'/list.jsp',-1,1815067731)</script>
+</head>
+
+<body>
+     <!-- pc 顶部 导航 -->
+        <div class="pc">
+        <div class="top-bg">
+            <div class="top w clearfix">
+                <div class="logo fl">
+<a href="../index.htm"><img src="../img/logo.png"></a></div>
+                <div class="top-r fr">
+
+                    <div class="search">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu1">
+    <div id="appu1"><div><input type="text" value="" placeholder="请输入搜索关键词" autocomplete="off" class="text"> <input type="submit" name="submit" id="" value="" class="button"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+        
+         <input type="text" value="" placeholder="请输入搜索关键词" class="text" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"/>
+                        <input type="submit" name="submit" id="" value="" class="button" v-on:click="onSubmit()"/>
+        
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1815067731";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.119.129.127:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-bg"><ul id="nav" class="nav w clearfix">
+
+ <li class="nLi">
+                    <h3><a href="../index.htm">网站首页</a></h3>
+                </li>
+
+ <li class="nLi on">
+                    <h3><a href="xyjs.htm">学院概况</a></h3>
+                    <ul class="sub">
+                        <li>
+                            <a href="xyjs.htm">学院介绍</a>
+                        </li>
+                        <li>
+                            <a href="xyld.htm">学院领导</a>
+                        </li>
+                        <li>
+                            <a href="zzjg.htm">组织机构</a>
+                        </li>
+                        <li>
+                            <a href="lxwm.htm">联系我们</a>
+                        </li>
+                    </ul>
+                </li>
+
+ <li class="nLi">
+                    <h3><a href="../ddld/djdt.htm">党的领导</a></h3>
+                    <ul class="sub">
+                        <li>
+                            <a href="../ddld/djdt.htm">党建动态</a>
+                        </li>
+                        <li>
+                            <a href="../ddld/xxhd.htm">学习活动</a>
+                        </li>
+                        <li>
+                            <a href="../ddld/ghzj.htm">工会之家</a>
+                        </li>
+                    </ul>
+                </li>
+
+ <li class="nLi">
+                    <h3><a href="../xljy/zsxx/tzgg.htm">学历教育</a></h3>
+                    <ul class="sub">
+                        <li>
+                            <a href="../xljy/zsxx/tzgg.htm">招生信息</a>
+                        </li>
+                        <li>
+                            <a href="../xljy/jxgl/tzgg.htm">教学管理</a>
+                        </li>
+                        <li>
+                            <a href="../xljy/xsfw/tzgg.htm">学生服务</a>
+                        </li>
+                    </ul>
+                </li>
+
+ <li class="nLi">
+                    <h3><a href="https://mucpx.mh.chaoxing.com">非学历教育</a></h3>
+                </li>
+
+ <li class="nLi">
+                    <h3><a href="http://guoji.muc.edu.cn/">出国留学培训</a></h3>
+                    <ul class="sub">
+                        <li>
+                            <a href="http://guoji.muc.edu.cn/">2+2国际本科</a>
+                        </li>
+                        <li>
+                            <a href="https://ipc.muc.edu.cn">IPC-本科</a>
+                        </li>
+                        <li>
+                            <a href="http://hongfeiedu.com/event/suoshi.html">IPC-硕士</a>
+                        </li>
+                    </ul>
+                </li>
+
+ <li class="nLi">
+                    <h3><a href="https://hongzhushuyuan.mh.chaoxing.com/">红铸书院</a></h3>
+                </li>
+
+ <li class="nLi">
+                    <h3><a href="../xyxw.htm">学院新闻</a></h3>
+                </li>
+ </ul></div>
+        </div>
+        <!-- 移动端导航 -->
+        <div class="m-top">
+            <div class="wap wap-menu">
+                <img src="../img/menu.png" class="menu" alt="">
+                <img src="../img/close.png" class="close-menu" alt="">
+            </div>
+        </div>
+        <div class="wap m-head">
+            <div class="m-logo">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+
+                <a href="../index.htm"><img src="../img/logo.png" alt=""></a>
+            
+
+</div>
+            <div class="m-nav">
+
+                     <div class="m-search">
+              
+               
+
+
+<style>
+    #appu4 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu4 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu4">
+    <div id="appu4"><div><input type="text" placeholder="请输入内容" autocomplete="off"> <input type="image" src="../img/search2.png"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu4">
+    <div id="appu4">
+        <div v-if="!isError">
+        
+         <input type="text" placeholder="请输入内容" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+                    <input type="image" src="../img/search2.png" v-on:click="onSubmit()">
+        
+          
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu4").html($("#htmlu4").text());
+</script>
+<script>
+    var appOwner = "1815067731";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu4",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultmobile/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "http://10.119.129.127:8083/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                <ul class=""><li>
+                        <a href="../index.htm">网站首页</a>
+                    </li>
+<li>
+                        <a href="xyjs.htm">学院概况</a>
+                        <span></span>
+                        <ul>
+                            <li><a href="xyjs.htm">学院介绍</a></li>
+                            <li><a href="xyld.htm">学院领导</a></li>
+                            <li><a href="zzjg.htm">组织机构</a></li>
+                            <li><a href="lxwm.htm">联系我们</a></li>
+                        </ul>
+                    </li>
+<li>
+                        <a href="../ddld/djdt.htm">党的领导</a>
+                        <span></span>
+                        <ul>
+                            <li><a href="../ddld/djdt.htm">党建动态</a></li>
+                            <li><a href="../ddld/xxhd.htm">学习活动</a></li>
+                            <li><a href="../ddld/ghzj.htm">工会之家</a></li>
+                        </ul>
+                    </li>
+<li>
+                        <a href="../xljy/zsxx/tzgg.htm">学历教育</a>
+                        <span></span>
+                        <ul>
+                            <li><a href="../xljy/zsxx/tzgg.htm">招生信息</a></li>
+                            <li><a href="../xljy/jxgl/tzgg.htm">教学管理</a></li>
+                            <li><a href="../xljy/xsfw/tzgg.htm">学生服务</a></li>
+                        </ul>
+                    </li>
+<li>
+                        <a href="https://mucpx.mh.chaoxing.com">非学历教育</a>
+                    </li>
+<li>
+                        <a href="http://guoji.muc.edu.cn/">出国留学培训</a>
+                        <span></span>
+                        <ul>
+                            <li><a href="http://guoji.muc.edu.cn/">2+2国际本科</a></li>
+                            <li><a href="https://ipc.muc.edu.cn">IPC-本科</a></li>
+                            <li><a href="http://hongfeiedu.com/event/suoshi.html">IPC-硕士</a></li>
+                        </ul>
+                    </li>
+<li>
+                        <a href="https://hongzhushuyuan.mh.chaoxing.com/">红铸书院</a>
+                    </li>
+<li>
+                        <a href="../xyxw.htm">学院新闻</a>
+                    </li>
+</ul>
+            </div>
+        </div>
+
+     <div class="banner"><img src="../img/banner11.jpg"></div>
+
+    <div class="nymain w">
+        <div class="channl-menu leftNav">
+            <h2>
+学院概况</h2>
+            <ul><li class=" active on wow fadeInUp  ">
+                    <a href="xyjs.htm">学院介绍</a>
+                </li>
+<li class=" wow fadeInUp  ">
+                    <a href="xyld.htm">学院领导</a>
+                </li>
+<li class=" wow fadeInUp  ">
+                    <a href="zzjg.htm">组织机构</a>
+                </li>
+<li class=" wow fadeInUp  ">
+                    <a href="lxwm.htm">联系我们</a>
+                </li>
+</ul>
+        </div>
+        <div class="ny-right">
+            <div class="position wow fadeInUpd">
+                <div><img alt="" src="../img/weizhi.png"><span>当前位置：</span>
+
+                <a href="../index.htm">网站首页</a>
+
+              <span>-&gt;</span>
+
+                <a href="xyjs.htm">学院概况</a>
+
+              <span>-&gt;</span>
+
+                <a href="xyjs.htm">学院介绍</a>
+
+</div>
+            </div>
+            <div class="text-list"><script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><ul>
+    
+<li class="wow fadeInUpd"><span>2013-09-10</span><a href="../info/1012/1012.htm">中央民族大学继续教育学院简介</a></li>
+
+
+    </ul>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/css/pagedown/sys.css"><div class="pb_sys_common pb_sys_normal pb_sys_style2" style="margin-top:10px;text-align:center;"><span class="p_pages"><span class="p_first_d p_fun_d">首页</span><span class="p_prev_d p_fun_d">上页</span><span class="p_no_d">1</span><span class="p_next_d p_fun_d">下页</span><span class="p_last_d p_fun_d">尾页</span></span> <span class="p_t">第</span><span class="p_goto"><script language="javascript" src="/system/resource/js/gotopage.js"></script><input type="text" class="p_goto_input" maxlength="10" id="u10_goto" value="1" onkeydown="if(event.keyCode==13){_simple_list_gotopage_fun(1,&quot;u10_goto&quot;,2)}" spellcheck="false"></span><span class="p_t">/1页</span> <span class="p_goto"><a href="javascript:;" onclick="_simple_list_gotopage_fun(1,&quot;u10_goto&quot;,2)">跳转</a></span></div><script>_showDynClickBatch(['dynclicks_u10_1012'],[1012],"wbnews", 1815067731)</script></div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+    <div class="foot-bg" style="margin-top: 0px;">
+            <div class="foot w clearfix">
+
+
+  <div class="lxwm fl">
+                   <h3>联系我们<span>/</span><em>Contact</em></h3>
+                    <div><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<p>电话：68932343<br> 地址：北京市海淀区中关村南大街27号北智楼<br>学院邮箱：mzdxjxjy@163.com</p></div>
+                </div>
+
+                <div class="foot-sx fl"></div>
+                                    
+<img src="../img/foot-logo.png" class="foot-logo fl">
+
+
+                <div class="foot-sx fl"></div>
+                <div class="fr">
+                   
+                        
+<img src="../images/wx.png" class="wx">
+
+
+                </div>
+            </div>
+            <div class="bq-bg">
+                <div class="bq w clearfix">
+                    <div class="bq-tx fl"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权所有 © 中央民族大学继续教育学院</p></div>
+                    <div class="link fr">
+                        <p>友情链接</p>
+                        <div><script language="javascript" src="/system/resource/js/openlink.js"></script>
+
+<a href="#" onclick="_addDynClicks(&quot;wburl&quot;, 1815067731, 77489)">历年分数线 </a>
+
+
+<a href="http://muc.cmr.com.cn/" onclick="_addDynClicks(&quot;wburl&quot;, 1815067731, 77490)">在线学习 </a>
+
+
+<a href="../bszn.htm" onclick="_addDynClicks(&quot;wburl&quot;, 1815067731, 77491)">办事指南 </a>
+
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+          <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+      <script src="../js/respond.min.js"></script>
+<!--[endif]---->
+    <script src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/bd.SuperSlide.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/public.js"></script>
+     <script>  function BrowserType() {
+            var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+            var isOpera = userAgent.indexOf("Opera") > -1; //判断是否Opera浏览器
+            var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera; //判断是否IE浏览器
+            var isEdge = userAgent.indexOf("Windows NT 6.1; Trident/7.0;") > -1 && !isIE; //判断是否IE的Edge浏览器
+
+            if (isIE) {
+                var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+                reIE.test(userAgent);
+                var fIEVersion = parseFloat(RegExp["$1"]);
+                if (fIEVersion < 9) {
+                    alert("浏览器版本过低，请升级或更换浏览器（谷歌、火狐等）")
+                    return false;
+                }//IE版本过低
+            } 
+            if (isEdge) {
+                alert("浏览器版本过低，请升级或更换浏览器（谷歌、火狐等）")
+                return false;
+            } 
+        }
+        BrowserType()  // 浏览器是否为ie
+        </script>
+    <script type="text/javascript">
+        //导航
+        jQuery("#nav").slide({ type:"menu", titCell:".nLi", targetCell:".sub",effect:"slideDown",delayTime:300,triggerTime:0,returnDefault:true});
+    </script>
+
+
+
+
+</body></html>

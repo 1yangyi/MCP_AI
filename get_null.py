@@ -152,99 +152,102 @@ import json
 
 def count_empty_list_files(folder_path):
     """
-    统计文件夹中空列表的JSON文件数量
+    统计文件夹及其子文件夹中空列表的JSON文件数量，并将空文件夹添加到列表
     
     Args:
         folder_path (str): 文件夹路径
         
     Returns:
-        tuple: (空列表文件数量, 总JSON文件数量, 空列表文件列表)
+        tuple: (空列表文件数量, 总JSON文件数量, 空项列表)  # 空项包括空JSON文件/列表和空文件夹
     """
     empty_list_count = 0
     total_json_count = 0
-    empty_list_files = []
+    empty_items = []  # 改名为empty_items以包含文件和文件夹
     
     # 检查文件夹是否存在
     if not os.path.exists(folder_path):
         print(f"错误：文件夹 '{folder_path}' 不存在")
         return 0, 0, []
     
-    # 遍历文件夹中的所有文件
-    for filename in os.listdir(folder_path):
-        file_path = os.path.join(folder_path, filename)
+    # 遍历文件夹及其所有子文件夹
+    for root, dirs, files in os.walk(folder_path):
+        # 检查当前文件夹是否有JSON文件
+        has_json_files = any(filename.endswith('.json') for filename in files)
         
-        # 只处理JSON文件
-        if filename.endswith('.json') and os.path.isfile(file_path):
+        # 如果文件夹没有JSON文件且不是根目录，则认为是空文件夹
+        if not has_json_files and root != folder_path:
+            empty_items.append(f"{os.path.relpath(root, folder_path)}")
+        
+        for filename in files:
             total_json_count += 1
-            
-            try:
-                # 读取并解析JSON文件
-                with open(file_path, 'r', encoding='utf-8') as file:
-                    content = file.read().strip()
-                    
-                    # 检查是否为空文件
-                    if not content:
-                        empty_list_count += 1
-                        empty_list_files.append(filename)
-                        continue
-                    
-                    # 解析JSON内容
-                    data = json.loads(content)
-                    
-                    # 检查是否是空列表
-                    if isinstance(data, list) and len(data) == 0:
-                        empty_list_count += 1
-                        empty_list_files.append(filename)
+            if filename.endswith('.json'):
+                file_path = os.path.join(root, filename)
+                #total_json_count += 1
+                
+                try:
+                    # 读取并解析JSON文件
+                    with open(file_path, 'r', encoding='utf-8') as file:
+                        content = file.read().strip()
                         
-            except json.JSONDecodeError:
-                print(f"警告：文件 '{filename}' 不是有效的JSON格式")
-            except Exception as e:
-                print(f"读取文件 '{filename}' 时出错: {e}")
+                        # 检查是否为空文件
+                        if not content:
+                            empty_list_count += 1
+                            empty_items.append(os.path.relpath(file_path, folder_path))
+                            continue
+                        
+                        # 解析JSON内容
+                        data = json.loads(content)
+                        
+                        # 检查是否是空列表
+                        if isinstance(data, list) and len(data) == 0:
+                            empty_list_count += 1
+                            empty_items.append(os.path.relpath(file_path, folder_path))
+                            
+                except json.JSONDecodeError:
+                    print(f"警告：文件 '{file_path}' 不是有效的JSON格式")
+                except Exception as e:
+                    print(f"读取文件 '{file_path}' 时出错: {e}")
     
-    return empty_list_count, total_json_count, empty_list_files
+    return empty_list_count, total_json_count, empty_items
 
 def main():
     # 设置文件夹路径（请修改为你的实际路径）
-    folder_path = 'MCP_AI\data\output_chinese'
+    folder_path = r'd:\project08\MCP_AI\data\schoolTeachers'
     
     # 如果没有输入路径，使用当前目录
     if not folder_path:
         folder_path = "."
     
     # 统计空列表文件
-    empty_count, total_count, empty_files = count_empty_list_files(folder_path)
+    empty_count, total_count, empty_items = count_empty_list_files(folder_path)
     
     # 输出结果
     print("\n" + "="*50)
     print("统计结果:")
     print(f"文件夹路径: {os.path.abspath(folder_path)}")
     print(f"总JSON文件数量: {total_count}")
-    print(f"空列表文件数量: {empty_count}")
-    print(f"空列表文件占比: {empty_count/total_count*100:.2f}%" if total_count > 0 else "空列表文件占比: 0%")
-    
-    if empty_files:
-        print("\n空列表文件列表:")
-        for i, filename in enumerate(empty_files, 1):
-            print(f"{i}. {filename}")
-    else:
-        print("\n没有找到空列表的JSON文件")
-    print("="*50)
-
-# 更简洁的版本（如果你只需要基本功能）
-def simple_count(folder_path):
-    """简化版本，只返回数量"""
-    count = 0
-    for filename in os.listdir(folder_path):
-        if filename.endswith('.json'):
-            file_path = os.path.join(folder_path, filename)
-            try:
-                with open(file_path, 'r', encoding='utf-8') as file:
-                    data = json.loads(file.read())
-                    if isinstance(data, list) and len(data) == 0:
-                        count += 1
-            except:
-                continue
-    return count
+    print(f"空列表文件数量: {len(empty_items)-147}")
+    print(f"空列表文件占比: {(len(empty_items)-147)/total_count*100:.2f}%" if total_count > 0 else "空列表文件占比: 0%")
+    print(f"空项数量: {len(empty_items)-147}")
+    result = []
+    for item in empty_items:
+        parts = item.split("_", 1)  # 只分割第一个下划线
+        if len(parts) == 2:
+            index = parts[0]
+            name = parts[1]
+            result.append((index, item))
+    result.sort(key=lambda x: int(x[0]))
+    # print(result)
+    with open("empty_items2.txt", "w", encoding="utf-8") as f:
+        for item in result:
+            f.write(item[1] + "\n")
+    # if empty_items:
+    #     print("\n空项列表 (包括空JSON文件/列表和空文件夹):")
+    #     for i, item in enumerate(empty_items, 1):
+    #         print(f"{i}. {item}")
+    # else:
+    #     print("\n没有找到空项")
+    # print("="*50)
 
 if __name__ == "__main__":
     main()

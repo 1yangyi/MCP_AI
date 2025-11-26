@@ -1,0 +1,363 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<meta content="width=device-width,minimum-scale=1,maximum-scale=1" name="viewport">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="baidu-site-verification" content="codeva-VLdki68tbp">
+<title>
+提示“504连接源站超时”是怎么回事 -知道创宇云安全 | 创宇盾 | 抗D保 | 加速乐 – 帮助与文档
+</title>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://help.yunaq.com/xmlrpc.php">
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="知道创宇云安全 - 帮助与文档 » Feed" href="https://help.yunaq.com/feed">
+<link rel="alternate" type="application/rss+xml" title="知道创宇云安全 - 帮助与文档 » 评论Feed" href="https://help.yunaq.com/comments/feed">
+<link rel="alternate" type="application/rss+xml" title="知道创宇云安全 - 帮助与文档 » 提示“504连接源站超时”是怎么回事评论Feed" href="https://help.yunaq.com/faq/110/index.html/feed">
+		<script src="https://hm.baidu.com/hm.js?9db59371fd7e61d048148fb43bde773c"></script><script async="" charset="UTF-8" src="https://static.meiqia.com/widget/loader.js"></script><script src="https://hm.baidu.com/hm.js?f0328dd8b3f1a8b97e47c8a1bd3ec349"></script><script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/help.yunaq.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.3"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="links-auto-replacer-css" href="https://help.yunaq.com/wp-content/plugins/links-auto-replacer/public/css/lar-public.css?ver=2.0.0" type="text/css" media="all">
+<link rel="stylesheet" id="theme-style-css" href="https://help.yunaq.com/wp-content/themes/knowhow/style.css?ut=2025101707&amp;ver=4.7.3" type="text/css" media="all">
+<style id="theme-style-inline-css" type="text/css">
+ 
+				/* Links 
+				a, 
+				a:visited { color:#a03717; }
+				a:hover, 
+				*/
+				.widget a:hover,
+				#primary-nav ul a:hover,
+				#footer-nav a:hover,
+				#breadcrumbs a:hover { color:#a03717; }
+				
+				/* Theme Color */
+				#commentform #submit, 
+				.st_faq h2.active .action, 
+				.widget_categories ul span, 
+				.pagination .current, 
+				.tags a, 
+				.page-links span,
+				#comments .comment-meta .author-badge,
+				input[type="reset"],
+				input[type="submit"],
+				input[type="button"] { background: #1d3fd3; }
+				#live-search #searchsubmit, input[type="submit"] { background-color: #1d3fd3; }
+				.tags a:before { border-color: transparent #1d3fd3 transparent transparent; }
+				#primary-nav { top: px; }
+
+				
+				
+				
+</style>
+<link rel="stylesheet" id="font-awesome-css" href="https://help.yunaq.com/wp-content/themes/knowhow/css/font-awesome.min.css?ver=4.7.3" type="text/css" media="all">
+<!--[if lte IE 7]>
+<link rel='stylesheet' id='font-awesome-ie7-css'  href='https://help.yunaq.com/wp-content/themes/knowhow/css/font-awesome-ie7.min.css?ver=4.7.3' type='text/css' media='all' />
+<![endif]-->
+<link rel="stylesheet" id="shortcodes-css" href="https://help.yunaq.com/wp-content/themes/knowhow/framework/shortcodes/shortcodes.css?ver=4.7.3" type="text/css" media="all">
+<script type="text/javascript" src="https://help.yunaq.com/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script type="text/javascript" src="https://help.yunaq.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<script type="text/javascript" src="https://help.yunaq.com/wp-content/plugins/links-auto-replacer/public/js/lar-public.js?ver=2.0.0"></script>
+<link rel="https://api.w.org/" href="https://help.yunaq.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://help.yunaq.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://help.yunaq.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 4.7.3">
+<link rel="canonical" href="https://help.yunaq.com/faq/110/index.html">
+<link rel="shortlink" href="https://help.yunaq.com/?p=110">
+<link rel="alternate" type="application/json+oembed" href="https://help.yunaq.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhelp.yunaq.com%2Ffaq%2F110%2Findex.html">
+<link rel="alternate" type="text/xml+oembed" href="https://help.yunaq.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhelp.yunaq.com%2Ffaq%2F110%2Findex.html&amp;format=xml">
+<!--[if lt IE 9]><script src="https://help.yunaq.com/wp-content/themes/knowhow/js/html5.js"></script><![endif]--><!--[if (gte IE 6)&(lte IE 8)]><script src="https://help.yunaq.com/wp-content/themes/knowhow/js/selectivizr-min.js"></script><![endif]--><style data-styled="" data-styled-version="4.4.1"></style><style data-styled="" data-styled-version="4.4.1"></style></head>
+<body class="post-template-default single single-post postid-110 single-format-standard">
+
+<!-- #site-container -->
+<div id="site-container" class="clearfix">
+    <!--topNav Star -->
+    <div class="main-menu-yaq clearfix">
+      <div class="yaq-head-menu-ul fl">
+          <span class="yaq-head-menu-li"><a href="https://defense.yunaq.com/" target="_blank">知道创宇云防御</a></span>
+          <span class="yaq-head-menu-li"><a href="https://defense.yunaq.com/cyd/" target="_blank">黑客防御</a></span>
+          <span class="yaq-head-menu-li"><a href="https://defense.yunaq.com/jsl/" target="_blank">CDN加速</a></span>
+          <span class="yaq-head-menu-li"><a href="https://defense.yunaq.com/kangdbao/" target="_blank">DDoS防御</a></span>
+          <span class="yaq-head-menu-li"><a href="https://www.yunaq.com/activity/mfsv2022" target="_blank">免费试用</a></span>
+	  <span class="yaq-head-menu-li"><a href="https://www.aipyaipy.com/?help" target="_blank" class=""><font color="red">AiPy，免费开源，本地Manus</font></a></span>
+      </div>
+    </div>
+    <!--topNav End -->
+
+
+<!-- #header -->
+<header id="site-header" class="clearfix" role="banner">
+<div class="container">
+
+
+<!-- #logo -->
+  <div id="logo" style="white-space:nowrap">
+	<a href="/">
+	知道创宇云安全 | 创宇盾 | 抗D保 | 加速乐 – 帮助与文档</a>
+</div>
+<!-- /#logo -->
+<!-- #primary-nav -->
+<nav id="primary-nav" role="navigation" class="clearfix">
+    </nav>
+<!-- #primary-nav -->
+
+</div>
+</header>
+<!-- /#header -->
+
+<!-- #live-search -->
+    <div id="live-search">
+    <div class="container">
+    <div id="search-wrap">
+      <form role="search" method="get" id="searchform" class="clearfix" action="https://help.yunaq.com/">
+        <input type="text" onfocus="if (this.value == '有什么可以帮到您吗？') {this.value = '';}" onblur="if (this.value == '')  {this.value = '有什么可以帮到您吗？';}" value="有什么可以帮到您吗？" name="s" id="s" autocapitalize="off" autocorrect="off" autocomplete="off">
+        <i class="live-search-loading icon-spinner icon-spin"></i>
+        <button type="submit" id="searchsubmit">
+                <i class="icon-search"></i><span>搜索</span>
+            </button>
+      </form>
+	<div style="margin-top:10px;">热门搜索：
+<a href="/?s=接入图文教程&amp;search_type=default_hot" style="color:#00a2ca;">云安全接入图文教程</a>&nbsp;&nbsp;&nbsp;<a href="/?s=获取访客真实IP&amp;search_type=default_hot" style="color:#00a2ca;">获取访客真实IP</a>&nbsp;&nbsp;&nbsp;<a href="/?s=日志下载&amp;search_type=default_hot" style="color:#00a2ca;">日志下载</a>&nbsp;&nbsp;&nbsp;<a href="/?s=https&amp;search_type=default_hot" style="color:#00a2ca;">https</a>&nbsp;&nbsp;&nbsp;<a href="/?s=非80端口&amp;search_type=default_hot" style="color:#00a2ca;">非80端口</a>&nbsp;&nbsp;&nbsp;<a href="/?s=Websocket&amp;search_type=default_hot" style="color:#00a2ca;">Websocket</a>&nbsp;&nbsp;&nbsp;<a href="/?s=暴力破解&amp;search_type=default_hot" style="color:#00a2ca;">暴力破解</a>&nbsp;&nbsp;&nbsp;<a href="/?s=ICP备案&amp;search_type=default_hot" style="color:#00a2ca;">ICP备案</a>&nbsp;&nbsp;&nbsp;<a href="/?s=黑名单&amp;search_type=default_hot" style="color:#00a2ca;">黑名单</a>&nbsp;&nbsp;&nbsp;<a href="/?s=白名单&amp;search_type=default_hot" style="color:#00a2ca;">白名单</a>&nbsp;&nbsp;&nbsp; </div>
+      </div>
+    </div>
+    </div>
+<!-- /#live-search -->
+<style>
+.entry-content p{
+text-indent: 2em;
+}
+.entry-content img{
+max-width: 570px;
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 20px;
+}
+</style>
+
+<!-- #primary -->
+<div id="primary" class="sidebar-right clearfix"> 
+<!-- .container -->
+<div class="container">
+
+  <!-- #content -->
+  <section id="content" role="main" style="width:100%;">
+  
+<!-- #page-header -->
+<header id="page-header" class="clearfix">
+  <div id="breadcrumbs"><a href="https://help.yunaq.com"><icon class="icon-home"> 首页</icon></a><span class="sep"> -&gt; </span><a href="https://help.yunaq.com/faq/category/yunaqty" title="View all posts in 云安全通用问题">云安全通用问题</a> <span class="sep"> -&gt; </span>提示“504连接源站超时”是怎么回事</div></header>
+<!-- /#page-header --> 
+
+  <h1 class="page-title">提示“504连接源站超时”是怎么回事</h1>
+ 
+
+    
+  
+<ul class="entry-meta clearfix">
+
+<li class="date"> 
+    <i class="icon-time"></i>
+    <time datetime="2016-06-03" itemprop="datePublished">2016年6月3日</time>
+</li>
+
+
+
+<li class="category">
+    <i class="icon-folder-close"></i>
+    <a href="https://help.yunaq.com/faq/category/yunaqty" rel="category tag">云安全通用问题</a>    </li>
+
+
+</ul>
+  
+    <article id="post-110" class="clearfix post-110 post type-post status-publish format-standard hentry category-yunaqty">
+    
+	<!-- .entry-header -->
+	<header class="entry-header">
+    
+        	    
+	</header>
+	<!-- /.entry-header -->
+      
+        
+        <div class="entry-content">
+          <p><strong>一、为什么会出现这种情况：</strong></p>
+<p class="ba-i">我们是<a href="https://defense.yunaq.com/" target="_blank">知道创宇</a>，我们正在为您刚刚访问的网站/APP/小程序提供黑客攻击防护服务，这些服务可能包括<a href="https://defense.yunaq.com/cyd/" target="_blank">黑客入侵防护</a>、<a href="https://defense.yunaq.com/kangdbao/" target="_blank">DDoS 防御</a>、<a href="https://defense.yunaq.com/jsl/" target="_blank">CDN 加速</a>、<a href="https://www.scanv.com/" target="_blank">漏洞扫描</a>等，这些措施将使您访问的系统更加安全，如果你们单位需要同样的安全服务，可以<a href="https://www.yunaq.com/activity/mfsv2022" target="_blank">联系试用</a>。</p>
+<p class="ba-i">而您之所以看到这个页面，这可能是由于受我们保护的网站/APP/小程序服务器故障造成的，您可以按如下操作，或者稍候再尝试访问。</p>
+<p><strong>二、如果您是网民：</strong></p>
+<p>可能由于您访问的网站存在技术故障，暂时无法访问，您可以稍候再尝试访问，或尝试联系网站管理员（不是知道创宇）寻求解决。</p>
+<p><strong>三、如果您是网站/APP/小程序的管理员，可以尝试通过以下方法排查原因：</strong></p>
+<p>出现“504连接源站超时”一般是如下原因：</p>
+<blockquote><p>1、您的服务器宕机</p>
+<p>如果网站服务器宕机，如断网、关机、网络不稳定、关闭IIS/nginx/apache等，均会造成节点无法取源，从而显示504</p>
+<p>2、机房或服务器防火墙拦截了节点</p>
+<p>服务器是否有安全狗、D盾等防火墙等软件拦截了知道创宇云安全节点IP，造成知道创宇云安全节点暂时无法访问您的网站。可设置知道创宇云安全的节点IP为白名单，就能够解决此问题。</p></blockquote>
+<p><strong>注意：如果您是管理员，遇到该问题需要云安全技术顾问帮您协查，请务必先对504页面完整截图，再反馈给技术顾问。</strong></p>
+<p>网站异常不能及时获知将会影响网站业务，建议您使用“知道创宇云监测（<a href="https://www.scanv.com/">www.scanv.com</a>）”对网站进行7X24监控，网站出现问题第一时间获知，及时修复，缩短网站故障时间。</p>
+<p>&nbsp;</p>
+<p>关键词：504链接源站超时，504超时，504连接原站超时，504连接超时</p>
+<p><audio style="display: none;" controls="controls"></audio></p>
+                  </div>
+        
+         
+</article>
+
+    
+	     
+     <section id="related-posts" class="clearfix">
+     <h3 id="related-posts-title">Related Articles</h3>
+     	<ul class="clearfix">        
+		<li class="standard">
+        <h4 class="entry-title"><a href="https://help.yunaq.com/faq/9104/index.html" rel="bookmark" title="IP访问区域限制功能使用说明">IP访问区域限制功能使用说明</a></h4>
+        </li>
+
+        
+		<li class="standard">
+        <h4 class="entry-title"><a href="https://help.yunaq.com/faq/9094/index.html" rel="bookmark" title="IP访问行为限制功能使用说明">IP访问行为限制功能使用说明</a></h4>
+        </li>
+
+        
+		<li class="standard">
+        <h4 class="entry-title"><a href="https://help.yunaq.com/faq/8956/index.html" rel="bookmark" title="如何处理 CDN 413 POST 长度超出限制">如何处理 CDN 413 POST 长度超出限制</a></h4>
+        </li>
+
+        
+		<li class="standard">
+        <h4 class="entry-title"><a href="https://help.yunaq.com/faq/8636/index.html" rel="bookmark" title="挂标验证操作指南">挂标验证操作指南</a></h4>
+        </li>
+
+        
+		<li class="standard">
+        <h4 class="entry-title"><a href="https://help.yunaq.com/faq/4407/index.html" rel="bookmark" title="实时防御动态使用说明">实时防御动态使用说明</a></h4>
+        </li>
+
+        
+		<li class="standard">
+        <h4 class="entry-title"><a href="https://help.yunaq.com/faq/4415/index.html" rel="bookmark" title="通知告警设置功能说明">通知告警设置功能说明</a></h4>
+        </li>
+
+</ul></section>
+      
+    
+    
+</section>
+<!-- #content -->
+
+
+</div>
+<!-- .container -->
+</div>
+<!-- /#primary -->
+
+<!-- #footer-widgets -->
+<div id="footer-widgets" class="clearfix">
+<div class="container">
+
+<div class="row stacked"><div id="text-4" class="widget widget_text column col-half">			<div class="textwidget">    <div id="faqBanner" style="width: 1280px; display: block;">
+        <a href="https://www.aipyaipy.com/?help-footer" target="_blank">
+            <img src="/wp-content/uploads/2017/05/%E6%9C%AA%E5%91%BD%E5%90%8D-1024x40.png" alt="aipy">
+        </a>
+    </div>
+
+    <script>
+        // 检查当前URL是否包含"/faq/"
+        if (window.location.href.includes('/faq/')) {
+            // 如果包含，则显示这个div
+            document.getElementById('faqBanner').style.display = 'block';
+        }
+        // 如果不包含，则保持默认的display: none状态，不显示
+    </script></div>
+		</div></div>
+
+</div>
+</div>
+<!-- /#footer-widgets -->
+
+<!-- #site-footer -->
+<footer id="site-footer" class="clearfix" role="contentinfo">
+<div class="container">
+
+  
+
+  <small id="copyright">
+    © Copyright,&nbsp; Yunaq.com
+<div style="display: none;"><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?f0328dd8b3f1a8b97e47c8a1bd3ec349";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></div>    <span id="beian">
+  京ICP备10040895号-25 | 京公网安备11010502034621  </span>
+  </small>
+  
+</div>
+</footer> 
+<!-- /#site-footer -->
+
+<!-- /#site-container -->
+</div>
+
+	<script type="text/javascript">
+	jQuery(document).ready(function() {
+	//jQuery('#live-search #s').liveSearch({url: 'https://help.yunaq.com/index.php?ajax=1&s='});
+	});
+	</script>
+<script type="text/javascript" src="https://help.yunaq.com/wp-content/themes/knowhow/js/functions.js?ver=4.7.3"></script>
+<script type="text/javascript" src="https://help.yunaq.com/wp-content/themes/knowhow/framework/shortcodes/shortcodes.js?ver=4.7.3"></script>
+<script type="text/javascript" src="https://help.yunaq.com/wp-includes/js/wp-embed.min.js?ver=4.7.3"></script>
+<script type="text/javascript" src="https://help.yunaq.com/wp-content/themes/knowhow/js/jquery.livesearch.js?ver=4.7.3"></script>
+
+<script type="text/javascript">
+    (function(a, b, c, d, e, j, s) {
+        a[d] = a[d] || function() {
+            (a[d].a = a[d].a || []).push(arguments)
+        };
+        j = b.createElement(c),
+            s = b.getElementsByTagName(c)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = 'https://static.meiqia.com/widget/loader.js';
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '_MEIQIA');
+    _MEIQIA('entId', 'eb1902a6b50d33734c2324c1d8735f3c');
+
+</script>
+
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?9db59371fd7e61d048148fb43bde773c";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+<!--
+<div class="yaq_box">
+  <ul>
+	  <li class="yaq_idea" onClick="window.open('https://www.yunaq.com/communication/create/?from=help.yunaq.com')"></li>
+    <li class="yaq_app" onClick="javascript:window.scrollTo( 0, 0 );">
+    </li>
+  </ul>
+</div>
+-->
+
+
+
+<script src="https://static.meiqia.com/fe-widget/v1.4.200.prod.20251009_159/entrypoint-v1.4.200.prod.20251009_159.js"></script><iframe name="meiqia-sdk" id="meiqia-sdk" style="width: 0px !important; height: 0px !important; display: none !important; visibility: hidden !important;"></iframe><div id="meiqia-container"><iframe id="meiqia_custorm" class="base-button__BaseFrame-sc-2suwu8-0 dJyCrJ chat-button__ChatButtonStyle-sc-y0ot1g-0 eWYRDG" name="button" width="92px" height="92px"><div class="router-button__Wrapper-sc-1av93n5-0 uSCwn"><div class="frame-button-content__Wrapper-sc-1mlnz3j-0 fehgOE"><div class="frame-button-content__RoundWrapper-sc-1mlnz3j-3 dgrXOr"><label class="icon__Span-sc-z3re2j-0 bqSIlp"><span type="chat-button-1" width="32px" height="32px" class="base-icon__Container-sc-1lbaetj-0 TIcAr"></span></label></div></div></div></iframe></div><span id="_calculateTextWidth" style="visibility: hidden; font-size: 16px; display: inline-block; position: absolute; left: -100%; top: -100%;">我们在线，来聊聊吧</span></body></html>

@@ -1,0 +1,1954 @@
+<!DOCTYPE html><html lang="zh-cn"><head>
+    <meta charset="UTF-8">
+<meta name="keywords" content="南方科技大学创新创意设计学院，南科大，设计学院">
+<meta name="description" content="南方科技大学创新创意设计学院，设计，创新，创意，南方科技大学，设计学院，南科大">
+<meta name="author" content="sumaart.com">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta property="og:title" content="南方科技大学创新创意设计学院">
+<meta property="og:description" content="南方科技大学创新创意设计学院，设计，创新，创意，南方科技大学，设计学院，南科大">
+<title>南方科技大学创新创意设计学院 - 南方科技大学创新创意设计学院</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/themes/cn/default/styles/app.css?v.ww">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_2283882_npm3ocy7v7g.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_4282540_qtuuuyk22p.css">
+<script src="https://hm.baidu.com/hm.js?ad1566ebc84a2606388dcb6aafa747e7"></script><script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ad1566ebc84a2606388dcb6aafa747e7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<style>/*
+== malihu jquery custom scrollbar plugin ==
+Plugin URI: http://manos.malihu.gr/jquery-custom-content-scroller
+*/
+
+
+
+/*
+CONTENTS: 
+	1. BASIC STYLE - Plugin's basic/essential CSS properties (normally, should not be edited). 
+	2. VERTICAL SCROLLBAR - Positioning and dimensions of vertical scrollbar. 
+	3. HORIZONTAL SCROLLBAR - Positioning and dimensions of horizontal scrollbar.
+	4. VERTICAL AND HORIZONTAL SCROLLBARS - Positioning and dimensions of 2-axis scrollbars. 
+	5. TRANSITIONS - CSS3 transitions for hover events, auto-expanded and auto-hidden scrollbars. 
+	6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS 
+		6.1 THEMES - Scrollbar colors, opacity, dimensions, backgrounds etc. via ready-to-use themes.
+*/
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+1. BASIC STYLE  
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+	.mCustomScrollbar{ touch-action: pinch-zoom; /* direct pointer events to js */ }
+	.mCustomScrollbar.mCS_no_scrollbar, .mCustomScrollbar.mCS_touch_action{ touch-action: auto; }
+	
+	.mCustomScrollBox{ /* contains plugin's markup */
+		position: relative;
+		overflow: hidden;
+		height: 100%;
+		max-width: 100%;
+		outline: none;
+		direction: ltr;
+	}
+
+	.mCSB_container{ /* contains the original content */
+		overflow: hidden;
+		width: auto;
+		height: auto;
+	}
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+2. VERTICAL SCROLLBAR 
+y-axis
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+	.mCSB_inside > .mCSB_container{ margin-right: 30px; }
+
+	.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-right: 0; } /* non-visible scrollbar */
+	
+	.mCS-dir-rtl > .mCSB_inside > .mCSB_container{ /* RTL direction/left-side scrollbar */
+		margin-right: 0;
+		margin-left: 30px;
+	}
+	
+	.mCS-dir-rtl > .mCSB_inside > .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{ margin-left: 0; } /* RTL direction/left-side scrollbar */
+
+	.mCSB_scrollTools{ /* contains scrollbar markup (draggable element, dragger rail, buttons etc.) */
+		position: absolute;
+		width: 16px;
+		height: auto;
+		left: auto;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	.mCSB_outside + .mCSB_scrollTools{ right: -26px; } /* scrollbar position: outside */
+	
+	.mCS-dir-rtl > .mCSB_inside > .mCSB_scrollTools, 
+	.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{ /* RTL direction/left-side scrollbar */
+		right: auto;
+		left: 0;
+	}
+	
+	.mCS-dir-rtl > .mCSB_outside + .mCSB_scrollTools{ left: -26px; } /* RTL direction/left-side scrollbar (scrollbar position: outside) */
+
+	.mCSB_scrollTools .mCSB_draggerContainer{ /* contains the draggable element and dragger rail markup */
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0; 
+		height: auto;
+	}
+
+	.mCSB_scrollTools a + .mCSB_draggerContainer{ margin: 20px 0; }
+
+	.mCSB_scrollTools .mCSB_draggerRail{
+		width: 2px;
+		height: 100%;
+		margin: 0 auto; border-radius: 16px;
+	}
+
+	.mCSB_scrollTools .mCSB_dragger{ /* the draggable element */
+		cursor: pointer;
+		width: 100%;
+		height: 30px; /* minimum dragger height */
+		z-index: 1;
+	}
+
+	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ /* the dragger element */
+		position: relative;
+		width: 4px;
+		height: 100%;
+		margin: 0 auto; border-radius: 16px;
+		text-align: center;
+	}
+	
+	.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
+	.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{ width: 12px; /* auto-expanded scrollbar */ }
+	
+	.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+	.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{ width: 8px; /* auto-expanded scrollbar */ }
+
+	.mCSB_scrollTools .mCSB_buttonUp,
+	.mCSB_scrollTools .mCSB_buttonDown{
+		display: block;
+		position: absolute;
+		height: 20px;
+		width: 100%;
+		overflow: hidden;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+
+	.mCSB_scrollTools .mCSB_buttonDown{ bottom: 0; }
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+3. HORIZONTAL SCROLLBAR 
+x-axis
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+	.mCSB_horizontal.mCSB_inside > .mCSB_container{
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+	
+	.mCSB_horizontal.mCSB_outside > .mCSB_container{ min-height: 100%; }
+
+	.mCSB_horizontal > .mCSB_container.mCS_no_scrollbar_x.mCS_x_hidden{ margin-bottom: 0; } /* non-visible scrollbar */
+
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal{
+		width: auto;
+		height: 16px;
+		top: auto;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	.mCustomScrollBox + .mCSB_scrollTools.mCSB_scrollTools_horizontal,
+	.mCustomScrollBox + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal{ bottom: -26px; } /* scrollbar position: outside */
+
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal a + .mCSB_draggerContainer{ margin: 0 20px; }
+
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail{
+		width: 100%;
+		height: 2px;
+		margin: 7px 0;
+	}
+
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger{
+		width: 30px; /* minimum dragger width */
+		height: 100%;
+		left: 0;
+	}
+
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+		width: 100%;
+		height: 4px;
+		margin: 6px auto;
+	}
+	
+	.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
+	.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{
+		height: 12px; /* auto-expanded scrollbar */
+		margin: 2px auto;
+	}
+	
+	.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+	.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{
+		height: 8px; /* auto-expanded scrollbar */
+		margin: 4px 0;
+	}
+
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft,
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{
+		display: block;
+		position: absolute;
+		width: 20px;
+		height: 100%;
+		overflow: hidden;
+		margin: 0 auto;
+		cursor: pointer;
+	}
+	
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft{ left: 0; }
+
+	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{ right: 0; }
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+4. VERTICAL AND HORIZONTAL SCROLLBARS 
+yx-axis 
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+	.mCSB_container_wrapper{
+		position: absolute;
+		height: auto;
+		width: auto;
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin-right: 30px;
+		margin-bottom: 30px;
+	}
+	
+	.mCSB_container_wrapper > .mCSB_container{
+		padding-right: 30px;
+		padding-bottom: 30px; box-sizing: border-box;
+	}
+	
+	.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_vertical{ bottom: 20px; }
+	
+	.mCSB_vertical_horizontal > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ right: 20px; }
+	
+	/* non-visible horizontal scrollbar */
+	.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden + .mCSB_scrollTools.mCSB_scrollTools_vertical{ bottom: 0; }
+	
+	/* non-visible vertical scrollbar/RTL direction/left-side scrollbar */
+	.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal, 
+	.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ right: 0; }
+	
+	/* RTL direction/left-side scrollbar */
+	.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_scrollTools.mCSB_scrollTools_horizontal{ left: 20px; }
+	
+	/* non-visible scrollbar/RTL direction/left-side scrollbar */
+	.mCS-dir-rtl > .mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden + .mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal{ left: 0; }
+	
+	.mCS-dir-rtl > .mCSB_inside > .mCSB_container_wrapper{ /* RTL direction/left-side scrollbar */
+		margin-right: 0;
+		margin-left: 30px;
+	}
+	
+	.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden > .mCSB_container{ padding-right: 0; }
+	
+	.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden > .mCSB_container{ padding-bottom: 0; }
+	
+	.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden{
+		margin-right: 0; /* non-visible scrollbar */
+		margin-left: 0;
+	}
+	
+	/* non-visible horizontal scrollbar */
+	.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside > .mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden{ margin-bottom: 0; }
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+5. TRANSITIONS  
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+	.mCSB_scrollTools, 
+	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCSB_scrollTools .mCSB_buttonUp,
+	.mCSB_scrollTools .mCSB_buttonDown,
+	.mCSB_scrollTools .mCSB_buttonLeft,
+	.mCSB_scrollTools .mCSB_buttonRight{
+		transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
+	}
+	
+	.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, /* auto-expanded scrollbar */
+	.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail, 
+	.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar, 
+	.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail{ 
+		transition: width .2s ease-out .2s, height .2s ease-out .2s, 
+					margin-left .2s ease-out .2s, margin-right .2s ease-out .2s, 
+					margin-top .2s ease-out .2s, margin-bottom .2s ease-out .2s,
+					opacity .2s ease-in-out, background-color .2s ease-in-out; 
+	}
+
+
+
+/* 
+------------------------------------------------------------------------------------------------------------------------
+6. SCROLLBAR COLORS, OPACITY AND BACKGROUNDS  
+------------------------------------------------------------------------------------------------------------------------
+*/
+
+	/* 
+	----------------------------------------
+	6.1 THEMES 
+	----------------------------------------
+	*/
+	
+	/* default theme ("light") */
+
+	.mCSB_scrollTools{ opacity: 0.75; filter: "alpha(opacity=75)"; -ms-filter: "alpha(opacity=75)"; }
+	
+	.mCS-autoHide > .mCustomScrollBox > .mCSB_scrollTools,
+	.mCS-autoHide > .mCustomScrollBox ~ .mCSB_scrollTools{ opacity: 0; filter: "alpha(opacity=0)"; -ms-filter: "alpha(opacity=0)"; }
+	
+	.mCustomScrollbar > .mCustomScrollBox > .mCSB_scrollTools.mCSB_scrollTools_onDrag,
+	.mCustomScrollbar > .mCustomScrollBox ~ .mCSB_scrollTools.mCSB_scrollTools_onDrag,
+	.mCustomScrollBox:hover > .mCSB_scrollTools,
+	.mCustomScrollBox:hover ~ .mCSB_scrollTools,
+	.mCS-autoHide:hover > .mCustomScrollBox > .mCSB_scrollTools,
+	.mCS-autoHide:hover > .mCustomScrollBox ~ .mCSB_scrollTools{ opacity: 1; filter: "alpha(opacity=100)"; -ms-filter: "alpha(opacity=100)"; }
+
+	.mCSB_scrollTools .mCSB_draggerRail{
+		background-color: #000; background-color: rgba(0,0,0,0.4);
+		filter: "alpha(opacity=40)"; -ms-filter: "alpha(opacity=40)"; 
+	}
+
+	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+		background-color: #fff; background-color: rgba(255,255,255,0.75);
+		filter: "alpha(opacity=75)"; -ms-filter: "alpha(opacity=75)"; 
+	}
+
+	.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
+		background-color: #fff; background-color: rgba(255,255,255,0.85);
+		filter: "alpha(opacity=85)"; -ms-filter: "alpha(opacity=85)"; 
+	}
+	.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+		background-color: #fff; background-color: rgba(255,255,255,0.9);
+		filter: "alpha(opacity=90)"; -ms-filter: "alpha(opacity=90)"; 
+	}
+
+	.mCSB_scrollTools .mCSB_buttonUp,
+	.mCSB_scrollTools .mCSB_buttonDown,
+	.mCSB_scrollTools .mCSB_buttonLeft,
+	.mCSB_scrollTools .mCSB_buttonRight{
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACQCAYAAACPtWCAAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoxMURDMzE5NzIzQkNFMTExOTY0QkYwNzFDNzkwNTlDNCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDOTMwRUZENEMxMUUxMUUzOUYxQkJGN0E1MDMzNTg1MCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDOTMwRUZEM0MxMUUxMUUzOUYxQkJGN0E1MDMzNTg1MCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1MGJlMjMyZC1hNzgzLTI1NGQtOTI4Yy02NDI0YmQxNTg0YWEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MTFEQzMxOTcyM0JDRTExMTk2NEJGMDcxQzc5MDU5QzQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5ZvSKsAAAH5ElEQVR42uyd3Y3jNhRGpZSQ7SJA3lyACtg+psEUoAL2zZjtIgtMBYqcWBsvh5e8/Cel8wECPLZ5JZMHpHj5UTNv2zYh1EozACIARACIUI8AHh/Oja6v9fnTKnee/73+vY7nK54/FUDzg7kRfNOIEB6N//PHVIag9flTAZSonBvBNxSEZuPXhqD1+VMB9N0UzhEgzRngq3X+Io0fA0HMENr6/KkAbkZDb5bX2gaNGUK1M6JS588G36PRXhvQ/KzEEOqDr/T5cwI4K//OPYTmArDJEG72GL6/cw+huQCsOYSXmAXbesotAoLYHiznEF59FmrrKUN7z5QeLOcQ3gJAF2ijDeHVAXSBNtoQ3hrAOUO8ywIofT8k3lUBLJmKGS4Z3TIRPHoeEAABEAABEAARAkAEgAgBIAJAhAAQASBCAIjODyCJ6JTKJRENgAAIgAAIgNUAxI6VACB2rHwA2spgSA0AAENq/BCMJT9hCL66JZ9NSRmBY1NSPIBHY7EtM/LGn22Z8UMwG9Mzzj5TepErbkxvOoR1dP4iEPJojrBJCA8nyggBDyeqNwsuASGPZxvw/DkARAgAEQAiBIAIABECQASACFUDsGQuLkfsrq+vZC4uR+zW16dNRJdo4Byxu76+GBtVzdg9XJ92Ka53+HJfY3LskeDLfY0hsTVmhBHgc9ZHhtjzmeFzVkbgOWyxQwEMnZXMHcOXcn1RMUIaN7SBa8OXcn0ACIDDAsgQzBDcdAhmEsIkpPkkhDQMaZjmaRizIUhEJzQEieh4ABEqJgBEAIgAECEARACIULcAnj5lUvL6zpAyKREjBsCUBrpsYvssiePcMUKH4J4bOcfSXNHHgfQMYY6luagnekXcA7aGsGsjQu8Q9mREkAAsaXfKAeFl7Vg5ILy6HxAAAZAhmCG47yGYSQiTkC4nIaRhSMM0TcOQiM7QwCSi0+8BEcoHPgAiAEQAiBAAIgBEqDWAt/34uh/Lfvz5fO++H+t+/LUf3zwxU8uPXaHz7Pz9e31/K1l+OD0AfDne9uN9k/X+/M4kHKnlhz52ve3H+/RfPtF2PD57K1V+yDoz4PnY/PoQIEotfwb4PhzwHMeHDaLU8qMDeBN6ruNzW092e/n85un5fOVHh+9m67lePrf1ZDdfeU9PeIr6++05Ej/uOf4wb0eE19Pzu19f/raVP8rZlmXM8uIdwhRuv2qhT7//dTnKsjSlqr9HOWFZS1V/j6WxUPtVbR0ALg74pPcW4bUGYKmMCZ/tdY9aJPgc7znrzwOwt/5ewesZwmMW/Pd+/O6AxQbGj/348nz9Wt4V47UiXsu7vjcp4rae+f78/V7/2/8w/Ni/+8Us74phgPSzvOd7ky9uDz1gzh5odgyhmgrYHEP4MEnL2B7oFRJzCFX564zvm/F6BfCuuO8y378Lr7UA3wNA7v3/Bd99912W9531pwD4rgW55/8XfAC4RpRdhddagFcHeHPA+z0oW/0FALxK4En3oD0PwY8Viu8B5b4/y0yZyo8u6i/DSgiJaBLRTVdCWIpjKa76gRkh/+wXM0JEHhAhAEQAiBAAIgBECADRNQEkDZNSoaRhwkQimkQ0e0JYiksuz54Q9oSwJyTznhCXtHtCtOVHF/UXKWlPiEaL8Frr55POqfUT9qRs9Rfg51uESYzWT9jVLNi2J2RzvH5I2hNis9Db3pP2hNgs/CWfrJpj5vtpT8ijsaXXx++37QmxWegFW711T4jNwl/yyaq5esBJ6LFiGj11T0fqnpJesgtRlvjUPR2pe0paAXhXQqLd07B5ytrKTB7QeobvroFEuydEGkK19afcFtoVgGsEQKvw2vZ9W7w1oCfsvedbIwBy1p9iU9JaogduBaBtT4ILIO2eBmnioN3TME9jDLuffr8HIFX9OSYOqvrrdSOStBJCIppENHtCWIpjTwhmhLSUDGaEiDwgQgCIABAhAEQAWGIycanJSe7JxGknJ5XSKZdKz+ROp5w5PTNVSChfKkGdO6F89gS1+UaqM1obT4qZ6pQ2Yw/ljNbGc8RMckqbsWs6og/5npZvyufMdT09Pyae826igzsa59Pyc9WfI2Z0/bUyq5oALg5QpAtcHPEXD3xbYDwNfC0X3xcJFEcDB9WfIuaSAl9t84I5C059Wr4p19PzpQZxxesZvuSn5bviBQAtxusNPlsPiFBTAF3OaPNG2FZmcsTT9lb3wN/Q079xEJ3Rh7fP87R8Z10oe6ug+mv9bxxMANcIYFZH/DViyFxjRr9OIFwjgAmqP0XM4PprCaEJoM8ZbcrnzHU5pWPiaSFsJaczOlf9OWJG118z5zSJaBLRva2EsBTHUlxTR/QhzAhpKRnMCBF5QIQAEAEgQzBDcLNZMJMQJiH4AUnD4Acs5QeUYsX6AZt6AGv7AR2xovyAUwMPYKgf0LXaEOsHlFYuTucH9Kw2RNefsHJxOj+grXFnZRnpM99a8JKwBNcawsXXuBZwgupPsRYcVH+tzQi1/YAacEL9gFqwa8x8i/oBleAE+QEDwK7SAyLUdAg2/YA2/5/Z24T4ATXD5j3id/Tiiv7FDyj4/6ZYP6By2Ayuv5auaJ8fUAPM6oi/RtyzrYPCJ167B5ig+lPcs62jwGcDUPLvScDE+gEl+E7nB/TMNKPrL+XJqQGz6iYrISSiSUTjB2QpDj8gZoS0lAxmhIg8IEJV9Y8AAwCuz3H3j+GlGwAAAABJRU5ErkJggg==); /* css sprites */
+		background-repeat: no-repeat;
+		opacity: 0.4; filter: "alpha(opacity=40)"; -ms-filter: "alpha(opacity=40)"; 
+	}
+
+	.mCSB_scrollTools .mCSB_buttonUp{
+		background-position: 0 0;
+		/* 
+		sprites locations 
+		light: 0 0, -16px 0, -32px 0, -48px 0, 0 -72px, -16px -72px, -32px -72px
+		dark: -80px 0, -96px 0, -112px 0, -128px 0, -80px -72px, -96px -72px, -112px -72px
+		*/
+	}
+
+	.mCSB_scrollTools .mCSB_buttonDown{
+		background-position: 0 -20px;
+		/* 
+		sprites locations
+		light: 0 -20px, -16px -20px, -32px -20px, -48px -20px, 0 -92px, -16px -92px, -32px -92px
+		dark: -80px -20px, -96px -20px, -112px -20px, -128px -20px, -80px -92px, -96px -92px, -112 -92px
+		*/
+	}
+
+	.mCSB_scrollTools .mCSB_buttonLeft{
+		background-position: 0 -40px;
+		/* 
+		sprites locations 
+		light: 0 -40px, -20px -40px, -40px -40px, -60px -40px, 0 -112px, -20px -112px, -40px -112px
+		dark: -80px -40px, -100px -40px, -120px -40px, -140px -40px, -80px -112px, -100px -112px, -120px -112px
+		*/
+	}
+
+	.mCSB_scrollTools .mCSB_buttonRight{
+		background-position: 0 -56px;
+		/* 
+		sprites locations 
+		light: 0 -56px, -20px -56px, -40px -56px, -60px -56px, 0 -128px, -20px -128px, -40px -128px
+		dark: -80px -56px, -100px -56px, -120px -56px, -140px -56px, -80px -128px, -100px -128px, -120px -128px
+		*/
+	}
+
+	.mCSB_scrollTools .mCSB_buttonUp:hover,
+	.mCSB_scrollTools .mCSB_buttonDown:hover,
+	.mCSB_scrollTools .mCSB_buttonLeft:hover,
+	.mCSB_scrollTools .mCSB_buttonRight:hover{ opacity: 0.75; filter: "alpha(opacity=75)"; -ms-filter: "alpha(opacity=75)"; }
+
+	.mCSB_scrollTools .mCSB_buttonUp:active,
+	.mCSB_scrollTools .mCSB_buttonDown:active,
+	.mCSB_scrollTools .mCSB_buttonLeft:active,
+	.mCSB_scrollTools .mCSB_buttonRight:active{ opacity: 0.9; filter: "alpha(opacity=90)"; -ms-filter: "alpha(opacity=90)"; }
+	
+
+	/* theme: "dark" */
+
+	.mCS-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.15); }
+
+	.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }
+
+	.mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: rgba(0,0,0,0.85); }
+
+	.mCS-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: rgba(0,0,0,0.9); }
+
+	.mCS-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -80px 0; }
+
+	.mCS-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -80px -20px; }
+
+	.mCS-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -80px -40px; }
+
+	.mCS-dark.mCSB_scrollTools .mCSB_buttonRight{ background-position: -80px -56px; }
+	
+	/* ---------------------------------------- */
+	
+
+
+	/* theme: "light-2", "dark-2" */
+
+	.mCS-light-2.mCSB_scrollTools .mCSB_draggerRail, 
+	.mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail{
+		width: 4px;
+		background-color: #fff; background-color: rgba(255,255,255,0.1); border-radius: 1px;
+	}
+
+	.mCS-light-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+		width: 4px;
+		background-color: #fff; background-color: rgba(255,255,255,0.75); border-radius: 1px;
+	}
+
+	.mCS-light-2.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+	.mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+	.mCS-light-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+		width: 100%;
+		height: 4px;
+		margin: 6px auto;
+	}
+
+	.mCS-light-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.85); }
+
+	.mCS-light-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-light-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.9); }
+
+	.mCS-light-2.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px 0; }
+
+	.mCS-light-2.mCSB_scrollTools .mCSB_buttonDown{	background-position: -32px -20px; }
+
+	.mCS-light-2.mCSB_scrollTools .mCSB_buttonLeft{	background-position: -40px -40px; }
+
+	.mCS-light-2.mCSB_scrollTools .mCSB_buttonRight{ background-position: -40px -56px; }
+	
+	
+	/* theme: "dark-2" */
+
+	.mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail{
+		background-color: #000; background-color: rgba(0,0,0,0.1); border-radius: 1px;
+	}
+
+	.mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+		background-color: #000; background-color: rgba(0,0,0,0.75); border-radius: 1px;
+	}
+
+	.mCS-dark-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }
+
+	.mCS-dark-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-dark-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }
+
+	.mCS-dark-2.mCSB_scrollTools .mCSB_buttonUp{ background-position: -112px 0; }
+
+	.mCS-dark-2.mCSB_scrollTools .mCSB_buttonDown{ background-position: -112px -20px; }
+
+	.mCS-dark-2.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -120px -40px; }
+
+	.mCS-dark-2.mCSB_scrollTools .mCSB_buttonRight{	background-position: -120px -56px; }
+	
+	/* ---------------------------------------- */
+	
+
+
+	/* theme: "light-thick", "dark-thick" */
+
+	.mCS-light-thick.mCSB_scrollTools .mCSB_draggerRail, 
+	.mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail{
+		width: 4px;
+		background-color: #fff; background-color: rgba(255,255,255,0.1); border-radius: 2px;
+	}
+
+	.mCS-light-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+		width: 6px;
+		background-color: #fff; background-color: rgba(255,255,255,0.75); border-radius: 2px;
+	}
+
+	.mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+	.mCS-dark-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail{
+		width: 100%;
+		height: 4px;
+		margin: 6px 0;
+	}
+
+	.mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-dark-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+		width: 100%;
+		height: 6px;
+		margin: 5px auto;
+	}
+
+	.mCS-light-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.85); }
+
+	.mCS-light-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-light-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.9); }
+
+	.mCS-light-thick.mCSB_scrollTools .mCSB_buttonUp{ background-position: -16px 0; }
+
+	.mCS-light-thick.mCSB_scrollTools .mCSB_buttonDown{	background-position: -16px -20px; }
+
+	.mCS-light-thick.mCSB_scrollTools .mCSB_buttonLeft{	background-position: -20px -40px; }
+
+	.mCS-light-thick.mCSB_scrollTools .mCSB_buttonRight{ background-position: -20px -56px; }
+
+
+	/* theme: "dark-thick" */
+	
+	.mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail{
+		background-color: #000; background-color: rgba(0,0,0,0.1); border-radius: 2px;
+	}
+
+	.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+		background-color: #000; background-color: rgba(0,0,0,0.75); border-radius: 2px;
+	}
+
+	.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }
+
+	.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }
+
+	.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonUp{ background-position: -96px 0; }
+
+	.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonDown{ background-position: -96px -20px; }
+
+	.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -100px -40px; }
+
+	.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonRight{	background-position: -100px -56px; }
+	
+	/* ---------------------------------------- */
+	
+
+
+	/* theme: "light-thin", "dark-thin" */
+	
+	.mCS-light-thin.mCSB_scrollTools .mCSB_draggerRail{ background-color: #fff; background-color: rgba(255,255,255,0.1); }
+
+	.mCS-light-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ width: 2px; }
+
+	.mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+	.mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_draggerRail{ width: 100%; }
+
+	.mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+		width: 100%;
+		height: 2px;
+		margin: 7px auto;
+	}
+
+
+	/* theme "dark-thin" */
+	
+	.mCS-dark-thin.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.15); }
+
+	.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }
+	
+	.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }
+	
+	.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }
+	
+	.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonUp{	background-position: -80px 0; }
+
+	.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonDown{ background-position: -80px -20px; }
+
+	.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -80px -40px; }
+
+	.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonRight{ background-position: -80px -56px; }
+	
+	/* ---------------------------------------- */
+	
+	
+	
+	/* theme "rounded", "rounded-dark", "rounded-dots", "rounded-dots-dark" */
+	
+	.mCS-rounded.mCSB_scrollTools .mCSB_draggerRail{ background-color: #fff; background-color: rgba(255,255,255,0.15); }
+	
+	.mCS-rounded.mCSB_scrollTools .mCSB_dragger, 
+	.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger, 
+	.mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger, 
+	.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger{ height: 14px; }
+	
+	.mCS-rounded.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+		width: 14px;
+		margin: 0 1px;
+	}
+	
+	.mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger, 
+	.mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger, 
+	.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger, 
+	.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger{ width: 14px; }
+	
+	.mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+		height: 14px;
+		margin: 1px 0;
+	}
+	
+	.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
+	.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
+	.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{
+		width: 16px; /* auto-expanded scrollbar */
+		height: 16px;
+		margin: -1px 0;
+	}
+	
+	.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+	.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, 
+	.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+	.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{ width: 4px; /* auto-expanded scrollbar */ }
+	
+	.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
+	.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
+	.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{
+		height: 16px; /* auto-expanded scrollbar */
+		width: 16px;
+		margin: 0 -1px;
+	}
+	
+	.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+	.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, 
+	.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+	.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{
+		height: 4px; /* auto-expanded scrollbar */
+		margin: 6px 0;
+	}
+	
+	.mCS-rounded.mCSB_scrollTools .mCSB_buttonUp{ background-position: 0 -72px; }
+	
+	.mCS-rounded.mCSB_scrollTools .mCSB_buttonDown{ background-position: 0 -92px; }
+	
+	.mCS-rounded.mCSB_scrollTools .mCSB_buttonLeft{ background-position: 0 -112px; }
+	
+	.mCS-rounded.mCSB_scrollTools .mCSB_buttonRight{ background-position: 0 -128px; }
+	
+	
+	/* theme "rounded-dark", "rounded-dots-dark" */
+	
+	.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }
+	
+	.mCS-rounded-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.15); }
+	
+	.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, 
+	.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }
+	
+	.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, 
+	.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }
+	
+	.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -80px -72px; }
+	
+	.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -80px -92px; }
+	
+	.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -80px -112px; }
+	
+	.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonRight{ background-position: -80px -128px; }
+	
+	
+	/* theme "rounded-dots", "rounded-dots-dark" */
+	
+	.mCS-rounded-dots.mCSB_scrollTools_vertical .mCSB_draggerRail, 
+	.mCS-rounded-dots-dark.mCSB_scrollTools_vertical .mCSB_draggerRail{ width: 4px; }
+	
+	.mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail, 
+	.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail, 
+	.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+	.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{
+		background-color: transparent;
+		background-position: center;
+	}
+	
+	.mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail, 
+	.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail{
+		background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANElEQVQYV2NkIAAYiVbw//9/Y6DiM1ANJoyMjGdBbLgJQAX/kU0DKgDLkaQAvxW4HEvQFwCRcxIJK1XznAAAAABJRU5ErkJggg==");
+		background-repeat: repeat-y;
+		opacity: 0.3;
+		filter: "alpha(opacity=30)"; -ms-filter: "alpha(opacity=30)"; 
+	}
+	
+	.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+	.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{
+		height: 4px;
+		margin: 6px 0;
+		background-repeat: repeat-x;
+	}
+	
+	.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonUp{ background-position: -16px -72px; }
+	
+	.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonDown{ background-position: -16px -92px; }
+	
+	.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -20px -112px; }
+	
+	.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonRight{ background-position: -20px -128px; }
+	
+	
+	/* theme "rounded-dots-dark" */
+	
+	.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail{
+		background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALElEQVQYV2NkIAAYSVFgDFR8BqrBBEifBbGRTfiPZhpYjiQFBK3A6l6CvgAAE9kGCd1mvgEAAAAASUVORK5CYII=");
+	}
+	
+	.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -96px -72px; }
+	
+	.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -96px -92px; }
+	
+	.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -100px -112px; }
+	
+	.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonRight{ background-position: -100px -128px; }
+	
+	/* ---------------------------------------- */
+	
+	
+	
+	/* theme "3d", "3d-dark", "3d-thick", "3d-thick-dark" */
+	
+	.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+		background-repeat: repeat-y;
+		background-image: linear-gradient(to right, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);
+	}
+	
+	.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+		background-repeat: repeat-x;
+		background-image: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 100%);
+	}
+	
+	
+	/* theme "3d", "3d-dark" */
+	
+	.mCS-3d.mCSB_scrollTools_vertical .mCSB_dragger, 
+	.mCS-3d-dark.mCSB_scrollTools_vertical .mCSB_dragger{ height: 70px; }
+	
+	.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger, 
+	.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger{ width: 70px; }
+	
+	.mCS-3d.mCSB_scrollTools, 
+	.mCS-3d-dark.mCSB_scrollTools{
+		opacity: 1;
+		filter: "alpha(opacity=30)"; -ms-filter: "alpha(opacity=30)"; 
+	}
+	
+	.mCS-3d.mCSB_scrollTools .mCSB_draggerRail, 
+	.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail, 
+	.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ border-radius: 16px; }
+	
+	.mCS-3d.mCSB_scrollTools .mCSB_draggerRail, 
+	.mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail{
+		width: 8px;
+		background-color: #000; background-color: rgba(0,0,0,0.2);
+		box-shadow: inset 1px 0 1px rgba(0,0,0,0.5), inset -1px 0 1px rgba(255,255,255,0.2);
+	}
+	
+	.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 	 
+	.mCS-3d.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, 
+	.mCS-3d.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-3d.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, 
+	.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, 
+	.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #555; }
+
+	.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ width: 8px; }
+
+	.mCS-3d.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+	.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{
+		width: 100%;
+		height: 8px;
+		margin: 4px 0;
+		box-shadow: inset 0 1px 1px rgba(0,0,0,0.5), inset 0 -1px 1px rgba(255,255,255,0.2);
+	}
+
+	.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+		width: 100%;
+		height: 8px;
+		margin: 4px auto;
+	}
+	
+	.mCS-3d.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px -72px; }
+	
+	.mCS-3d.mCSB_scrollTools .mCSB_buttonDown{ background-position: -32px -92px; }
+	
+	.mCS-3d.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -40px -112px; }
+	
+	.mCS-3d.mCSB_scrollTools .mCSB_buttonRight{ background-position: -40px -128px; }
+	
+	
+	/* theme "3d-dark" */
+	
+	.mCS-3d-dark.mCSB_scrollTools .mCSB_draggerRail{
+		background-color: #000; background-color: rgba(0,0,0,0.1);
+		box-shadow: inset 1px 0 1px rgba(0,0,0,0.1);
+	}
+	
+	.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{ box-shadow: inset 0 1px 1px rgba(0,0,0,0.1); }
+	
+	.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -112px -72px; }
+
+	.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -112px -92px; }
+
+	.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -120px -112px; }
+
+	.mCS-3d-dark.mCSB_scrollTools .mCSB_buttonRight{	background-position: -120px -128px; }
+	
+	/* ---------------------------------------- */
+	
+	
+	
+	/* theme: "3d-thick", "3d-thick-dark" */
+	
+	.mCS-3d-thick.mCSB_scrollTools, 
+	.mCS-3d-thick-dark.mCSB_scrollTools{
+		opacity: 1;
+		filter: "alpha(opacity=30)"; -ms-filter: "alpha(opacity=30)"; 
+	}
+	
+	.mCS-3d-thick.mCSB_scrollTools, 
+	.mCS-3d-thick-dark.mCSB_scrollTools, 
+	.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer, 
+	.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerContainer{ border-radius: 7px; }
+	
+	.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ border-radius: 5px; }
+	
+	.mCSB_inside + .mCS-3d-thick.mCSB_scrollTools_vertical, 
+	.mCSB_inside + .mCS-3d-thick-dark.mCSB_scrollTools_vertical{ right: 1px; }
+	
+	.mCS-3d-thick.mCSB_scrollTools_vertical, 
+	.mCS-3d-thick-dark.mCSB_scrollTools_vertical{ box-shadow: inset 1px 0 1px rgba(0,0,0,0.1), inset 0 0 14px rgba(0,0,0,0.5); }
+	
+	.mCS-3d-thick.mCSB_scrollTools_horizontal, 
+	.mCS-3d-thick-dark.mCSB_scrollTools_horizontal{
+		bottom: 1px;
+		box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), inset 0 0 14px rgba(0,0,0,0.5);
+	}
+	
+	.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+		box-shadow: inset 1px 0 0 rgba(255,255,255,0.4);
+		width: 12px;
+		margin: 2px;
+		position: absolute;
+		height: auto;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	
+	.mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{ box-shadow: inset 0 1px 0 rgba(255,255,255,0.4); }
+	
+	.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,  
+	.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, 
+	.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #555; }
+	
+	.mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+		height: 12px;
+		width: auto;
+	}
+	
+	.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer{
+		background-color: #000; background-color: rgba(0,0,0,0.05);
+		box-shadow: inset 1px 1px 16px rgba(0,0,0,0.1);
+	}
+	
+	.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerRail{ background-color: transparent; }
+	
+	.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px -72px; }
+	
+	.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonDown{ background-position: -32px -92px; }
+
+	.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -40px -112px; }
+
+	.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonRight{	background-position: -40px -128px; }
+	
+	
+	/* theme: "3d-thick-dark" */
+	
+	.mCS-3d-thick-dark.mCSB_scrollTools{ box-shadow: inset 0 0 14px rgba(0,0,0,0.2); }
+	
+	.mCS-3d-thick-dark.mCSB_scrollTools_horizontal{ box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), inset 0 0 14px rgba(0,0,0,0.2); }
+	
+	.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ box-shadow: inset 1px 0 0 rgba(255,255,255,0.4), inset -1px 0 0 rgba(0,0,0,0.2); }
+	 
+	.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{ box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), inset 0 -1px 0 rgba(0,0,0,0.2); }
+	
+	.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,  
+	.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, 
+	.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #777; }
+	
+	.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerContainer{
+		background-color: #fff; background-color: rgba(0,0,0,0.05);
+		box-shadow: inset 1px 1px 16px rgba(0,0,0,0.1);
+	}
+	
+	.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: transparent; }
+	
+	.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -112px -72px; }
+	
+	.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -112px -92px; }
+
+	.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -120px -112px; }
+
+	.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_buttonRight{	background-position: -120px -128px; }
+	
+	/* ---------------------------------------- */
+	
+	
+	
+	/* theme: "minimal", "minimal-dark" */
+	
+	.mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical, 
+	.mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical{
+		right: 0; 
+		margin: 12px 0; 
+	}
+	
+	.mCustomScrollBox.mCS-minimal + .mCSB_scrollTools.mCSB_scrollTools_horizontal, 
+	.mCustomScrollBox.mCS-minimal + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal, 
+	.mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools.mCSB_scrollTools_horizontal, 
+	.mCustomScrollBox.mCS-minimal-dark + .mCSB_scrollTools + .mCSB_scrollTools.mCSB_scrollTools_horizontal{
+		bottom: 0; 
+		margin: 0 12px; 
+	}
+	
+	/* RTL direction/left-side scrollbar */
+	.mCS-dir-rtl > .mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical, 
+	.mCS-dir-rtl > .mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical{
+		left: 0; 
+		right: auto;
+	}
+	
+	.mCS-minimal.mCSB_scrollTools .mCSB_draggerRail, 
+	.mCS-minimal-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: transparent; }
+	
+	.mCS-minimal.mCSB_scrollTools_vertical .mCSB_dragger, 
+	.mCS-minimal-dark.mCSB_scrollTools_vertical .mCSB_dragger{ height: 50px; }
+	
+	.mCS-minimal.mCSB_scrollTools_horizontal .mCSB_dragger, 
+	.mCS-minimal-dark.mCSB_scrollTools_horizontal .mCSB_dragger{ width: 50px; }
+	
+	.mCS-minimal.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+		background-color: #fff; background-color: rgba(255,255,255,0.2);
+		filter: "alpha(opacity=20)"; -ms-filter: "alpha(opacity=20)"; 
+	}
+	
+	.mCS-minimal.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-minimal.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+		background-color: #fff; background-color: rgba(255,255,255,0.5);
+		filter: "alpha(opacity=50)"; -ms-filter: "alpha(opacity=50)"; 
+	}
+	
+	
+	/* theme: "minimal-dark" */
+	
+	.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+		background-color: #000; background-color: rgba(0,0,0,0.2);
+		filter: "alpha(opacity=20)"; -ms-filter: "alpha(opacity=20)"; 
+	}
+	
+	.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+		background-color: #000; background-color: rgba(0,0,0,0.5);
+		filter: "alpha(opacity=50)"; -ms-filter: "alpha(opacity=50)"; 
+	}
+	
+	/* ---------------------------------------- */
+	
+	
+	
+	/* theme "light-3", "dark-3" */
+	
+	.mCS-light-3.mCSB_scrollTools .mCSB_draggerRail, 
+	.mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail{
+		width: 6px;
+		background-color: #000; background-color: rgba(0,0,0,0.2);
+	}
+
+	.mCS-light-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ width: 6px; }
+
+	.mCS-light-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-dark-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-light-3.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+	.mCS-dark-3.mCSB_scrollTools_horizontal .mCSB_draggerRail{
+		width: 100%;
+		height: 6px;
+		margin: 5px 0;
+	}
+	
+	.mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+	.mCS-light-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, 
+	.mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+	.mCS-dark-3.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{
+		width: 12px;
+	}
+	
+	.mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+	.mCS-light-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail, 
+	.mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded + .mCSB_draggerRail, 
+	.mCS-dark-3.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{
+		height: 12px;
+		margin: 2px 0;
+	}
+	
+	.mCS-light-3.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px -72px; }
+	
+	.mCS-light-3.mCSB_scrollTools .mCSB_buttonDown{ background-position: -32px -92px; }
+	
+	.mCS-light-3.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -40px -112px; }
+	
+	.mCS-light-3.mCSB_scrollTools .mCSB_buttonRight{ background-position: -40px -128px; }
+	
+	
+	/* theme "dark-3" */
+	
+	.mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }
+
+	.mCS-dark-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }
+
+	.mCS-dark-3.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-dark-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }
+	
+	.mCS-dark-3.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.1); }
+	
+	.mCS-dark-3.mCSB_scrollTools .mCSB_buttonUp{ background-position: -112px -72px; }
+
+	.mCS-dark-3.mCSB_scrollTools .mCSB_buttonDown{ background-position: -112px -92px; }
+
+	.mCS-dark-3.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -120px -112px; }
+
+	.mCS-dark-3.mCSB_scrollTools .mCSB_buttonRight{	background-position: -120px -128px; }
+	
+	/* ---------------------------------------- */
+	
+	
+	
+	/* theme "inset", "inset-dark", "inset-2", "inset-2-dark", "inset-3", "inset-3-dark" */
+	
+	.mCS-inset.mCSB_scrollTools .mCSB_draggerRail, 
+	.mCS-inset-dark.mCSB_scrollTools .mCSB_draggerRail, 
+	.mCS-inset-2.mCSB_scrollTools .mCSB_draggerRail, 
+	.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail, 
+	.mCS-inset-3.mCSB_scrollTools .mCSB_draggerRail, 
+	.mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail{
+		width: 12px;
+		background-color: #000; background-color: rgba(0,0,0,0.2);
+	}
+
+	.mCS-inset.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-inset-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-inset-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ 
+		width: 6px;
+		margin: 3px 5px;
+		position: absolute;
+		height: auto;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	.mCS-inset.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-inset-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-inset-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-inset-2-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-inset-3.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-inset-3-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
+		height: 6px;
+		margin: 5px 3px;
+		position: absolute;
+		width: auto;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	
+	.mCS-inset.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+	.mCS-inset-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+	.mCS-inset-2.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+	.mCS-inset-2-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+	.mCS-inset-3.mCSB_scrollTools_horizontal .mCSB_draggerRail, 
+	.mCS-inset-3-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{
+		width: 100%;
+		height: 12px;
+		margin: 2px 0;
+	}
+	
+	.mCS-inset.mCSB_scrollTools .mCSB_buttonUp, 
+	.mCS-inset-2.mCSB_scrollTools .mCSB_buttonUp, 
+	.mCS-inset-3.mCSB_scrollTools .mCSB_buttonUp{ background-position: -32px -72px; }
+	
+	.mCS-inset.mCSB_scrollTools .mCSB_buttonDown, 
+	.mCS-inset-2.mCSB_scrollTools .mCSB_buttonDown, 
+	.mCS-inset-3.mCSB_scrollTools .mCSB_buttonDown{ background-position: -32px -92px; }
+	
+	.mCS-inset.mCSB_scrollTools .mCSB_buttonLeft, 
+	.mCS-inset-2.mCSB_scrollTools .mCSB_buttonLeft, 
+	.mCS-inset-3.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -40px -112px; }
+	
+	.mCS-inset.mCSB_scrollTools .mCSB_buttonRight, 
+	.mCS-inset-2.mCSB_scrollTools .mCSB_buttonRight, 
+	.mCS-inset-3.mCSB_scrollTools .mCSB_buttonRight{ background-position: -40px -128px; }
+	
+	
+	/* theme "inset-dark", "inset-2-dark", "inset-3-dark" */
+	
+	.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, 
+	.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }
+
+	.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, 
+	.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, 
+	.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }
+
+	.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-inset-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, 
+	.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-inset-2-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, 
+	.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }
+	
+	.mCS-inset-dark.mCSB_scrollTools .mCSB_draggerRail, 
+	.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail, 
+	.mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.1); }
+	
+	.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonUp, 
+	.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonUp, 
+	.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonUp{ background-position: -112px -72px; }
+
+	.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonDown, 
+	.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonDown, 
+	.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonDown{ background-position: -112px -92px; }
+
+	.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonLeft, 
+	.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonLeft, 
+	.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonLeft{ background-position: -120px -112px; }
+
+	.mCS-inset-dark.mCSB_scrollTools .mCSB_buttonRight, 
+	.mCS-inset-2-dark.mCSB_scrollTools .mCSB_buttonRight, 
+	.mCS-inset-3-dark.mCSB_scrollTools .mCSB_buttonRight{	background-position: -120px -128px; }
+	
+	
+	/* theme "inset-2", "inset-2-dark" */
+	
+	.mCS-inset-2.mCSB_scrollTools .mCSB_draggerRail, 
+	.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail{
+		background-color: transparent;
+		border-width: 1px;
+		border-style: solid;
+		border-color: #fff;
+		border-color: rgba(255,255,255,0.2); box-sizing: border-box;
+	}
+	
+	.mCS-inset-2-dark.mCSB_scrollTools .mCSB_draggerRail{ border-color: #000; border-color: rgba(0,0,0,0.2); }
+	
+	
+	/* theme "inset-3", "inset-3-dark" */
+	
+	.mCS-inset-3.mCSB_scrollTools .mCSB_draggerRail{ background-color: #fff; background-color: rgba(255,255,255,0.6); }
+	
+	.mCS-inset-3-dark.mCSB_scrollTools .mCSB_draggerRail{ background-color: #000; background-color: rgba(0,0,0,0.6); }
+	
+	.mCS-inset-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.75); }
+	
+	.mCS-inset-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.85); }
+	
+	.mCS-inset-3.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-inset-3.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #000; background-color: rgba(0,0,0,0.9); }
+	
+	.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.75); }
+	
+	.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.85); }
+	
+	.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+	.mCS-inset-3-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{ background-color: #fff; background-color: rgba(255,255,255,0.9); }
+	
+	/* ---------------------------------------- */
+.wx-share{margin-top:-85px;margin-left:-70px;border-radius:3px;position:fixed;z-index:1000;top:50%;left:50%;width:140px;padding-top:20px;background-color:#fff;cursor:pointer;box-shadow:0 0 5px 0 rgba(0,0,0,0.1)}.wx-share img{display:block;width:120px;margin:0 auto}.wx-share p{margin:0;font-size:12px;line-height:30px;text-align:center;font-weight:500;color:#000}.wx-share i{position:absolute;top:0;right:0;font-size:12px;width:20px;height:20px;line-height:20px;text-align:center;color:#000}.wx-share i img{display:block;width:12px;height:12px;margin:4px auto}
+.select2-container{box-sizing:border-box;display:inline-block;margin:0;position:relative;vertical-align:middle}.select2-container .select2-selection--single{box-sizing:border-box;cursor:pointer;display:block;height:28px;-moz-user-select:none;user-select:none;-webkit-user-select:none}.select2-container .select2-selection--single .select2-selection__rendered{display:block;padding-left:8px;padding-right:20px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.select2-container .select2-selection--single .select2-selection__clear{background-color:transparent;border:none;font-size:1em}.select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered{padding-right:8px;padding-left:20px}.select2-container .select2-selection--multiple{box-sizing:border-box;cursor:pointer;display:block;min-height:32px;-moz-user-select:none;user-select:none;-webkit-user-select:none}.select2-container .select2-selection--multiple .select2-selection__rendered{display:inline;list-style:none;padding:0}.select2-container .select2-selection--multiple .select2-selection__clear{background-color:transparent;border:none;font-size:1em}.select2-container .select2-search--inline .select2-search__field{box-sizing:border-box;border:none;font-size:100%;margin-top:5px;margin-left:5px;padding:0;max-width:100%;resize:none;height:18px;vertical-align:bottom;font-family:sans-serif;overflow:hidden;word-break:keep-all}.select2-container .select2-search--inline .select2-search__field::-webkit-search-cancel-button{-webkit-appearance:none}.select2-dropdown{background-color:white;border:1px solid #aaa;border-radius:4px;box-sizing:border-box;display:block;position:absolute;left:-100000px;width:100%;z-index:1051}.select2-results{display:block}.select2-results__options{list-style:none;margin:0;padding:0}.select2-results__option{padding:6px;-moz-user-select:none;user-select:none;-webkit-user-select:none}.select2-results__option--selectable{cursor:pointer}.select2-container--open .select2-dropdown{left:0}.select2-container--open .select2-dropdown--above{border-bottom:none;border-bottom-left-radius:0;border-bottom-right-radius:0}.select2-container--open .select2-dropdown--below{border-top:none;border-top-left-radius:0;border-top-right-radius:0}.select2-search--dropdown{display:block;padding:4px}.select2-search--dropdown .select2-search__field{padding:4px;width:100%;box-sizing:border-box}.select2-search--dropdown .select2-search__field::-webkit-search-cancel-button{-webkit-appearance:none}.select2-search--dropdown.select2-search--hide{display:none}.select2-close-mask{border:0;margin:0;padding:0;display:block;position:fixed;left:0;top:0;min-height:100%;min-width:100%;height:auto;width:auto;opacity:0;z-index:99;background-color:#fff;filter:alpha(opacity=0)}.select2-hidden-accessible{border:0 !important;clip:rect(0 0 0 0) !important;-webkit-clip-path:inset(50%) !important;clip-path:inset(50%) !important;height:1px !important;overflow:hidden !important;padding:0 !important;position:absolute !important;width:1px !important;white-space:nowrap !important}.select2-container--default .select2-selection--single{background-color:#fff;border:1px solid #aaa;border-radius:4px}.select2-container--default .select2-selection--single .select2-selection__rendered{color:#444;line-height:28px}.select2-container--default .select2-selection--single .select2-selection__clear{cursor:pointer;float:right;font-weight:bold;height:26px;margin-right:20px;padding-right:0px}.select2-container--default .select2-selection--single .select2-selection__placeholder{color:#999}.select2-container--default .select2-selection--single .select2-selection__arrow{height:26px;position:absolute;top:1px;right:1px;width:20px}.select2-container--default .select2-selection--single .select2-selection__arrow b{border-color:#888 transparent transparent transparent;border-style:solid;border-width:5px 4px 0 4px;height:0;left:50%;margin-left:-4px;margin-top:-2px;position:absolute;top:50%;width:0}.select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__clear{float:left}.select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__arrow{left:1px;right:auto}.select2-container--default.select2-container--disabled .select2-selection--single{background-color:#eee;cursor:default}.select2-container--default.select2-container--disabled .select2-selection--single .select2-selection__clear{display:none}.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{border-color:transparent transparent #888 transparent;border-width:0 4px 5px 4px}.select2-container--default .select2-selection--multiple{background-color:white;border:1px solid #aaa;border-radius:4px;cursor:text;padding-bottom:5px;padding-right:5px;position:relative}.select2-container--default .select2-selection--multiple.select2-selection--clearable{padding-right:25px}.select2-container--default .select2-selection--multiple .select2-selection__clear{cursor:pointer;font-weight:bold;height:20px;margin-right:10px;margin-top:5px;position:absolute;right:0;padding:1px}.select2-container--default .select2-selection--multiple .select2-selection__choice{background-color:#e4e4e4;border:1px solid #aaa;border-radius:4px;box-sizing:border-box;display:inline-block;margin-left:5px;margin-top:5px;padding:0;padding-left:20px;position:relative;max-width:100%;overflow:hidden;text-overflow:ellipsis;vertical-align:bottom;white-space:nowrap}.select2-container--default .select2-selection--multiple .select2-selection__choice__display{cursor:default;padding-left:2px;padding-right:5px}.select2-container--default .select2-selection--multiple .select2-selection__choice__remove{background-color:transparent;border:none;border-right:1px solid #aaa;border-top-left-radius:4px;border-bottom-left-radius:4px;color:#999;cursor:pointer;font-size:1em;font-weight:bold;padding:0 4px;position:absolute;left:0;top:0}.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover,.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:focus{background-color:#f1f1f1;color:#333;outline:none}.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice{margin-left:5px;margin-right:auto}.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice__display{padding-left:5px;padding-right:2px}.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice__remove{border-left:1px solid #aaa;border-right:none;border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:4px;border-bottom-right-radius:4px}.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__clear{float:left;margin-left:10px;margin-right:auto}.select2-container--default.select2-container--focus .select2-selection--multiple{border:solid black 1px;outline:0}.select2-container--default.select2-container--disabled .select2-selection--multiple{background-color:#eee;cursor:default}.select2-container--default.select2-container--disabled .select2-selection__choice__remove{display:none}.select2-container--default.select2-container--open.select2-container--above .select2-selection--single,.select2-container--default.select2-container--open.select2-container--above .select2-selection--multiple{border-top-left-radius:0;border-top-right-radius:0}.select2-container--default.select2-container--open.select2-container--below .select2-selection--single,.select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple{border-bottom-left-radius:0;border-bottom-right-radius:0}.select2-container--default .select2-search--dropdown .select2-search__field{border:1px solid #aaa}.select2-container--default .select2-search--inline .select2-search__field{background:transparent;border:none;outline:0;box-shadow:none;-webkit-appearance:textfield}.select2-container--default .select2-results>.select2-results__options{max-height:200px;overflow-y:auto}.select2-container--default .select2-results__option .select2-results__option{padding-left:1em}.select2-container--default .select2-results__option .select2-results__option .select2-results__group{padding-left:0}.select2-container--default .select2-results__option .select2-results__option .select2-results__option{margin-left:-1em;padding-left:2em}.select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option{margin-left:-2em;padding-left:3em}.select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option{margin-left:-3em;padding-left:4em}.select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option{margin-left:-4em;padding-left:5em}.select2-container--default .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option .select2-results__option{margin-left:-5em;padding-left:6em}.select2-container--default .select2-results__option--group{padding:0}.select2-container--default .select2-results__option--disabled{color:#999}.select2-container--default .select2-results__option--selected{background-color:#ddd}.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{background-color:#5897fb;color:white}.select2-container--default .select2-results__group{cursor:default;display:block;padding:6px}.select2-container--classic .select2-selection--single{background-color:#f7f7f7;border:1px solid #aaa;border-radius:4px;outline:0;background-image:linear-gradient(to bottom, #fff 50%, #eee 100%);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0)}.select2-container--classic .select2-selection--single:focus{border:1px solid #5897fb}.select2-container--classic .select2-selection--single .select2-selection__rendered{color:#444;line-height:28px}.select2-container--classic .select2-selection--single .select2-selection__clear{cursor:pointer;float:right;font-weight:bold;height:26px;margin-right:20px}.select2-container--classic .select2-selection--single .select2-selection__placeholder{color:#999}.select2-container--classic .select2-selection--single .select2-selection__arrow{background-color:#ddd;border:none;border-left:1px solid #aaa;border-top-right-radius:4px;border-bottom-right-radius:4px;height:26px;position:absolute;top:1px;right:1px;width:20px;background-image:linear-gradient(to bottom, #eee 50%, #ccc 100%);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFCCCCCC', GradientType=0)}.select2-container--classic .select2-selection--single .select2-selection__arrow b{border-color:#888 transparent transparent transparent;border-style:solid;border-width:5px 4px 0 4px;height:0;left:50%;margin-left:-4px;margin-top:-2px;position:absolute;top:50%;width:0}.select2-container--classic[dir="rtl"] .select2-selection--single .select2-selection__clear{float:left}.select2-container--classic[dir="rtl"] .select2-selection--single .select2-selection__arrow{border:none;border-right:1px solid #aaa;border-radius:0;border-top-left-radius:4px;border-bottom-left-radius:4px;left:1px;right:auto}.select2-container--classic.select2-container--open .select2-selection--single{border:1px solid #5897fb}.select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow{background:transparent;border:none}.select2-container--classic.select2-container--open .select2-selection--single .select2-selection__arrow b{border-color:transparent transparent #888 transparent;border-width:0 4px 5px 4px}.select2-container--classic.select2-container--open.select2-container--above .select2-selection--single{border-top:none;border-top-left-radius:0;border-top-right-radius:0;background-image:linear-gradient(to bottom, #fff 0%, #eee 50%);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0)}.select2-container--classic.select2-container--open.select2-container--below .select2-selection--single{border-bottom:none;border-bottom-left-radius:0;border-bottom-right-radius:0;background-image:linear-gradient(to bottom, #eee 50%, #fff 100%);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFFFFFFF', GradientType=0)}.select2-container--classic .select2-selection--multiple{background-color:white;border:1px solid #aaa;border-radius:4px;cursor:text;outline:0;padding-bottom:5px;padding-right:5px}.select2-container--classic .select2-selection--multiple:focus{border:1px solid #5897fb}.select2-container--classic .select2-selection--multiple .select2-selection__clear{display:none}.select2-container--classic .select2-selection--multiple .select2-selection__choice{background-color:#e4e4e4;border:1px solid #aaa;border-radius:4px;display:inline-block;margin-left:5px;margin-top:5px;padding:0}.select2-container--classic .select2-selection--multiple .select2-selection__choice__display{cursor:default;padding-left:2px;padding-right:5px}.select2-container--classic .select2-selection--multiple .select2-selection__choice__remove{background-color:transparent;border:none;border-top-left-radius:4px;border-bottom-left-radius:4px;color:#888;cursor:pointer;font-size:1em;font-weight:bold;padding:0 4px}.select2-container--classic .select2-selection--multiple .select2-selection__choice__remove:hover{color:#555;outline:none}.select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice{margin-left:5px;margin-right:auto}.select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice__display{padding-left:5px;padding-right:2px}.select2-container--classic[dir="rtl"] .select2-selection--multiple .select2-selection__choice__remove{border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:4px;border-bottom-right-radius:4px}.select2-container--classic.select2-container--open .select2-selection--multiple{border:1px solid #5897fb}.select2-container--classic.select2-container--open.select2-container--above .select2-selection--multiple{border-top:none;border-top-left-radius:0;border-top-right-radius:0}.select2-container--classic.select2-container--open.select2-container--below .select2-selection--multiple{border-bottom:none;border-bottom-left-radius:0;border-bottom-right-radius:0}.select2-container--classic .select2-search--dropdown .select2-search__field{border:1px solid #aaa;outline:0}.select2-container--classic .select2-search--inline .select2-search__field{outline:0;box-shadow:none}.select2-container--classic .select2-dropdown{background-color:#fff;border:1px solid transparent}.select2-container--classic .select2-dropdown--above{border-bottom:none}.select2-container--classic .select2-dropdown--below{border-top:none}.select2-container--classic .select2-results>.select2-results__options{max-height:200px;overflow-y:auto}.select2-container--classic .select2-results__option--group{padding:0}.select2-container--classic .select2-results__option--disabled{color:grey}.select2-container--classic .select2-results__option--highlighted.select2-results__option--selectable{background-color:#3875d7;color:#fff}.select2-container--classic .select2-results__group{cursor:default;display:block;padding:6px}.select2-container--classic.select2-container--open .select2-dropdown{border-color:#5897fb}
+</style></head>
+<body class="inner-page about-page bgcolor">
+    <!-- STAET 头部开始 -->
+<header class="header">
+    <div class="header-container container-fluid ">
+        <a href="/cn" class="logo">
+            <img src="/themes/cn/default/assets/img/logo.svg" alt="">
+        </a>
+        <nav class="mainnav">
+                        <ul class="topnav navigator">
+                                                <li>
+                    <a href="javascript:;" class="c-play--circles active">
+                        学院介绍
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.367 43.343">
+                            <g transform="translate(-603.992 -41.967)">
+                            <path d="M1120.04,668.216c-4.885-.342-9.975-.522-15.206-.522-37.026,0-66.351,4.7-66.351,15.869,0,6.8,11.054,14.912,28.107,18.578,10.964,2.357,23.323,4.251,37.783,3.483,40.087-2.129,66.817-13.753,66.12-25.158-.922-15.095-45.789-16.415-61.974-15.869-57.366,1.935-71.879,16.907-70.728,23.223,3.456,18.965,56.9,18.774,66.351,18.965,38.244.774,69.115-17.417,72.11-20.126" transform="translate(-433.23 -622.001)"></path>
+                            </g>
+                        </svg>
+                    </a>
+
+                    
+                                        <ul class="dropdown-nav">
+                        <li>
+                            <div class="icon- subItem">
+                                <a href="/cn/about">学院介绍</a>
+                            </div>
+                        </li>
+                                                
+                        
+                        <li>
+                            <div class="icon- subItem">
+                                                                    <a href="/cn/about#mission-and-vision">愿景和使命</a>
+                                                            </div>
+                        </li>
+                                                
+                        
+                        <li>
+                            <div class="icon- subItem">
+                                                                    <a href="/cn/about/dean">院长寄语</a>
+                                                            </div>
+                        </li>
+                                                
+                        
+                        <li>
+                            <div class="icon- subItem">
+                                                                    <a href="/cn/about/team">学院团队</a>
+                                                            </div>
+                        </li>
+                                            </ul>
+                                    </li>
+                                                                <li>
+                    <a href="/cn/news" class="c-play--circles ">
+                        新闻动态
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.367 43.343">
+                            <g transform="translate(-603.992 -41.967)">
+                            <path d="M1120.04,668.216c-4.885-.342-9.975-.522-15.206-.522-37.026,0-66.351,4.7-66.351,15.869,0,6.8,11.054,14.912,28.107,18.578,10.964,2.357,23.323,4.251,37.783,3.483,40.087-2.129,66.817-13.753,66.12-25.158-.922-15.095-45.789-16.415-61.974-15.869-57.366,1.935-71.879,16.907-70.728,23.223,3.456,18.965,56.9,18.774,66.351,18.965,38.244.774,69.115-17.417,72.11-20.126" transform="translate(-433.23 -622.001)"></path>
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+                                                                <li>
+                    <a href="javascript:;" class="c-play--circles ">
+                        教育教学
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.367 43.343">
+                            <g transform="translate(-603.992 -41.967)">
+                            <path d="M1120.04,668.216c-4.885-.342-9.975-.522-15.206-.522-37.026,0-66.351,4.7-66.351,15.869,0,6.8,11.054,14.912,28.107,18.578,10.964,2.357,23.323,4.251,37.783,3.483,40.087-2.129,66.817-13.753,66.12-25.158-.922-15.095-45.789-16.415-61.974-15.869-57.366,1.935-71.879,16.907-70.728,23.223,3.456,18.965,56.9,18.774,66.351,18.965,38.244.774,69.115-17.417,72.11-20.126" transform="translate(-433.23 -622.001)"></path>
+                            </g>
+                        </svg>
+                    </a>
+
+                    
+                                        <ul class="dropdown-nav">
+                        <li>
+                            <div class="icon- subItem">
+                                <a href="/cn/academics">教育教学</a>
+                            </div>
+                        </li>
+                                                
+                        
+                        <li>
+                            <div class="icon- subItem">
+                                                                    <a href="/cn/about/team/faculty">师资队伍</a>
+                                                            </div>
+                        </li>
+                                                
+                        
+                        <li>
+                            <div class="icon- subItem">
+                                                                    <a href="/cn/academics/undergraduate-education">本科教育</a>
+                                                            </div>
+                        </li>
+                                            </ul>
+                                    </li>
+                                                                <li>
+                    <a href="javascript:;" class="c-play--circles ">
+                        招生信息
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.367 43.343">
+                            <g transform="translate(-603.992 -41.967)">
+                            <path d="M1120.04,668.216c-4.885-.342-9.975-.522-15.206-.522-37.026,0-66.351,4.7-66.351,15.869,0,6.8,11.054,14.912,28.107,18.578,10.964,2.357,23.323,4.251,37.783,3.483,40.087-2.129,66.817-13.753,66.12-25.158-.922-15.095-45.789-16.415-61.974-15.869-57.366,1.935-71.879,16.907-70.728,23.223,3.456,18.965,56.9,18.774,66.351,18.965,38.244.774,69.115-17.417,72.11-20.126" transform="translate(-433.23 -622.001)"></path>
+                            </g>
+                        </svg>
+                    </a>
+
+                                                            <ul class="dropdown-nav">
+                                                <li>
+                            <div class="icon- subItem">
+                                <a href="/cn/admission/undergraduate-enrollment">本科招生</a>
+                            </div>
+                        </li>
+                                                <li>
+                            <div class="icon- subItem">
+                                <a href="/cn/admission/masters-admissions">硕士招生</a>
+                            </div>
+                        </li>
+                                            </ul>
+                                    </li>
+                                                                <li>
+                    <a href="javascript:;" class="c-play--circles ">
+                        学术研究
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.367 43.343">
+                            <g transform="translate(-603.992 -41.967)">
+                            <path d="M1120.04,668.216c-4.885-.342-9.975-.522-15.206-.522-37.026,0-66.351,4.7-66.351,15.869,0,6.8,11.054,14.912,28.107,18.578,10.964,2.357,23.323,4.251,37.783,3.483,40.087-2.129,66.817-13.753,66.12-25.158-.922-15.095-45.789-16.415-61.974-15.869-57.366,1.935-71.879,16.907-70.728,23.223,3.456,18.965,56.9,18.774,66.351,18.965,38.244.774,69.115-17.417,72.11-20.126" transform="translate(-433.23 -622.001)"></path>
+                            </g>
+                        </svg>
+                    </a>
+
+                    
+                                        <ul class="dropdown-nav">
+                        <li>
+                            <div class="icon- subItem">
+                                <a href="/cn/research">学术研究</a>
+                            </div>
+                        </li>
+                                                
+                        
+                        <li>
+                            <div class="icon- subItem">
+                                                                    <a href="/cn/research/research-centersamplabs">研究中心</a>
+                                                            </div>
+                        </li>
+                                            </ul>
+                                    </li>
+                                                                <li>
+                    <a href="javascript:;" class="c-play--circles ">
+                        人才招聘
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.367 43.343">
+                            <g transform="translate(-603.992 -41.967)">
+                            <path d="M1120.04,668.216c-4.885-.342-9.975-.522-15.206-.522-37.026,0-66.351,4.7-66.351,15.869,0,6.8,11.054,14.912,28.107,18.578,10.964,2.357,23.323,4.251,37.783,3.483,40.087-2.129,66.817-13.753,66.12-25.158-.922-15.095-45.789-16.415-61.974-15.869-57.366,1.935-71.879,16.907-70.728,23.223,3.456,18.965,56.9,18.774,66.351,18.965,38.244.774,69.115-17.417,72.11-20.126" transform="translate(-433.23 -622.001)"></path>
+                            </g>
+                        </svg>
+                    </a>
+
+                    
+                                        <ul class="dropdown-nav">
+                        <li>
+                            <div class="icon- subItem">
+                                <a href="/cn/jobs-available">人才招聘</a>
+                            </div>
+                        </li>
+                                                <li>
+                            <div class="icon- subItem">
+                                <a href="/cn/jobs-available?type=53">教研系列职位</a>
+                            </div>
+                        </li>
+                                                <li>
+                            <div class="icon- subItem">
+                                <a href="/cn/jobs-available?type=20">科研团队职位</a>
+                            </div>
+                        </li>
+                                            </ul>
+                                    </li>
+                                            </ul>
+        </nav>
+        <div class="header-search-form bgcolor">
+            <div class="container-fluid">
+                <div class="hs-form">
+                    <form action="/cn/search/list" autocomplete="off">
+                        <input type="text" name="keywords" class="hsf-input fz-20 fw-400 black" placeholder="搜索">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="tools" id="sideBarNav">
+            <div class="sidernav">
+                
+                <div class="location">
+                    <!-- <a href="javascript:;" class="link link-href c-play--circles" id="btnPopover" data-id="getInTouch">
+                        在线留言
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.367 43.343">
+                            <g transform="translate(-603.992 -41.967)">
+                            <path d="M1120.04,668.216c-4.885-.342-9.975-.522-15.206-.522-37.026,0-66.351,4.7-66.351,15.869,0,6.8,11.054,14.912,28.107,18.578,10.964,2.357,23.323,4.251,37.783,3.483,40.087-2.129,66.817-13.753,66.12-25.158-.922-15.095-45.789-16.415-61.974-15.869-57.366,1.935-71.879,16.907-70.728,23.223,3.456,18.965,56.9,18.774,66.351,18.965,38.244.774,69.115-17.417,72.11-20.126" transform="translate(-433.23 -622.001)" />
+                            </g>
+                        </svg>
+                    </a> -->
+                    <a style="display:none;" href="http://chchi.icachi.org/24/callforpapers/" target="_blank" class="link link-href c-play--circles">
+                        2024 Chinese CHI 征稿启事
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.367 43.343">
+                            <g transform="translate(-603.992 -41.967)">
+                            <path d="M1120.04,668.216c-4.885-.342-9.975-.522-15.206-.522-37.026,0-66.351,4.7-66.351,15.869,0,6.8,11.054,14.912,28.107,18.578,10.964,2.357,23.323,4.251,37.783,3.483,40.087-2.129,66.817-13.753,66.12-25.158-.922-15.095-45.789-16.415-61.974-15.869-57.366,1.935-71.879,16.907-70.728,23.223,3.456,18.965,56.9,18.774,66.351,18.965,38.244.774,69.115-17.417,72.11-20.126" transform="translate(-433.23 -622.001)"></path>
+                            </g>
+                        </svg>
+                    </a>
+                                        <a href="/cn/events" class="link link-href c-play--circles">
+                        活动与公告
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.367 43.343">
+                            <g transform="translate(-603.992 -41.967)">
+                            <path d="M1120.04,668.216c-4.885-.342-9.975-.522-15.206-.522-37.026,0-66.351,4.7-66.351,15.869,0,6.8,11.054,14.912,28.107,18.578,10.964,2.357,23.323,4.251,37.783,3.483,40.087-2.129,66.817-13.753,66.12-25.158-.922-15.095-45.789-16.415-61.974-15.869-57.366,1.935-71.879,16.907-70.728,23.223,3.456,18.965,56.9,18.774,66.351,18.965,38.244.774,69.115-17.417,72.11-20.126" transform="translate(-433.23 -622.001)"></path>
+                            </g>
+                        </svg>
+                    </a>
+                                        <a href="/cn/about/contact-us" class="link link-href c-play--circles">
+                        联系我们
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.367 43.343">
+                            <g transform="translate(-603.992 -41.967)">
+                            <path d="M1120.04,668.216c-4.885-.342-9.975-.522-15.206-.522-37.026,0-66.351,4.7-66.351,15.869,0,6.8,11.054,14.912,28.107,18.578,10.964,2.357,23.323,4.251,37.783,3.483,40.087-2.129,66.817-13.753,66.12-25.158-.922-15.095-45.789-16.415-61.974-15.869-57.366,1.935-71.879,16.907-70.728,23.223,3.456,18.965,56.9,18.774,66.351,18.965,38.244.774,69.115-17.417,72.11-20.126" transform="translate(-433.23 -622.001)"></path>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="lang">
+                <a href="/en" class="link link-href c-play--circles">
+                    EN
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.367 43.343">
+                        <g transform="translate(-603.992 -41.967)">
+                        <path d="M1120.04,668.216c-4.885-.342-9.975-.522-15.206-.522-37.026,0-66.351,4.7-66.351,15.869,0,6.8,11.054,14.912,28.107,18.578,10.964,2.357,23.323,4.251,37.783,3.483,40.087-2.129,66.817-13.753,66.12-25.158-.922-15.095-45.789-16.415-61.974-15.869-57.366,1.935-71.879,16.907-70.728,23.223,3.456,18.965,56.9,18.774,66.351,18.965,38.244.774,69.115-17.417,72.11-20.126" transform="translate(-433.23 -622.001)"></path>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <div class="header-search black js-btn-search">
+                <svg class="search" viewBox="0 0 40 40" aria-hidden="true">
+                    <use xlink:href="#icon-search"></use>
+                </svg>
+                <svg class="close" viewBox="0 0 40 40" aria-hidden="true">
+                    <use xlink:href="#icon-close"></use>
+                </svg>
+            </div>
+            <a href="javascript:;" class="btn btn-menu icon-menu" id="btnMenu"></a>
+        </div>
+    </div>
+    
+    <nav class="combobox-menu" id="comboboxMenu">
+        <ul class="dropdown-menu"></ul>
+        <div class="shape"></div>
+        <div class="rect"></div>
+    </nav>
+    <nav class="mainnav mMenuNav" id="mMenuNav">
+        <ul class="topnav navigator">
+                        <li>
+                <a href="/cn/about" class="active">
+                    <div class="subItem">
+                        学院介绍
+                    </div>
+                </a>
+                                                        <div class="sliderBar">
+                        <button class="btn btnBack icon-back btnBackMenuNav"><span>BACK</span></button>
+                        <ul class="dropdown-nav">
+                            <li>
+                                <a href="/cn/about">
+                                    <div class="subItem">
+                                        学院介绍
+                                    </div>
+                                </a>
+                            </li>
+                                                            
+                                <li>
+                                                                            <a href="/cn/about#mission-and-vision">
+                                            <div class="subItem">
+                                                愿景和使命
+                                            </div>
+                                        </a>
+                                                                    
+                                </li>
+                                                            
+                                <li>
+                                                                            <a href="/cn/about/dean">
+                                            <div class="subItem">
+                                                院长寄语
+                                            </div>
+                                        </a>
+                                                                    
+                                </li>
+                                                            
+                                <li>
+                                                                            <a href="/cn/about/team">
+                                            <div class="subItem">
+                                                学院团队
+                                            </div>
+                                        </a>
+                                                                    
+                                </li>
+                                                    </ul>
+                        <div class="shape"></div>
+                        <div class="desc"></div>
+                    </div>
+                            </li>
+                        <li>
+                <a href="/cn/news" class="">
+                    <div class="subItem">
+                        新闻动态
+                    </div>
+                </a>
+                                    <div class="sliderBar">
+                        <button class="btn btnBack icon-back btnBackMenuNav"><span>BACK</span></button>
+                        <ul class="dropdown-nav">
+                            <li>
+                                <a href="/cn/news">
+                                    <div class="subItem">
+                                        新闻动态
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="shape"></div>
+                        <div class="desc"></div>
+                    </div>
+                            </li>
+                        <li>
+                <a href="/cn/academics" class="">
+                    <div class="subItem">
+                        教育教学
+                    </div>
+                </a>
+                                                        <div class="sliderBar">
+                        <button class="btn btnBack icon-back btnBackMenuNav"><span>BACK</span></button>
+                        <ul class="dropdown-nav">
+                            <li>
+                                <a href="/cn/academics">
+                                    <div class="subItem">
+                                        教育教学
+                                    </div>
+                                </a>
+                            </li>
+                                                            
+                                <li>
+                                                                            <a href="/cn/academics/faculty">
+                                            <div class="subItem">
+                                                师资队伍
+                                            </div>
+                                        </a>
+                                                                    
+                                </li>
+                                                            
+                                <li>
+                                                                            <a href="/cn/academics/undergraduate-education">
+                                            <div class="subItem">
+                                                本科教育
+                                            </div>
+                                        </a>
+                                                                    
+                                </li>
+                                                    </ul>
+                        <div class="shape"></div>
+                        <div class="desc"></div>
+                    </div>
+                            </li>
+                        <li>
+                <a href="/cn/admission" class="">
+                    <div class="subItem">
+                        招生信息
+                    </div>
+                </a>
+                                                        <div class="sliderBar">
+                        <button class="btn btnBack icon-back btnBackMenuNav"><span>BACK</span></button>
+                        <ul class="dropdown-nav">
+                            <li>
+                                <a href="/cn/admission">
+                                    <div class="subItem">
+                                        招生信息
+                                    </div>
+                                </a>
+                            </li>
+                                                            
+                                <li>
+                                                                            <a href="/cn/admission/undergraduate-enrollment">
+                                            <div class="subItem">
+                                                本科招生
+                                            </div>
+                                        </a>
+                                                                    
+                                </li>
+                                                            
+                                <li>
+                                                                            <a href="/cn/admission/masters-admissions">
+                                            <div class="subItem">
+                                                硕士招生
+                                            </div>
+                                        </a>
+                                                                    
+                                </li>
+                                                    </ul>
+                        <div class="shape"></div>
+                        <div class="desc"></div>
+                    </div>
+                            </li>
+                        <li>
+                <a href="/cn/research" class="">
+                    <div class="subItem">
+                        学术研究
+                    </div>
+                </a>
+                                                        <div class="sliderBar">
+                        <button class="btn btnBack icon-back btnBackMenuNav"><span>BACK</span></button>
+                        <ul class="dropdown-nav">
+                            <li>
+                                <a href="/cn/research">
+                                    <div class="subItem">
+                                        学术研究
+                                    </div>
+                                </a>
+                            </li>
+                                                            
+                                <li>
+                                                                            <a href="/cn/research/research-centersamplabs">
+                                            <div class="subItem">
+                                                研究中心
+                                            </div>
+                                        </a>
+                                                                    
+                                </li>
+                                                    </ul>
+                        <div class="shape"></div>
+                        <div class="desc"></div>
+                    </div>
+                            </li>
+                        <li>
+                <a href="/cn/jobs-available" class="">
+                    <div class="subItem">
+                        人才招聘
+                    </div>
+                </a>
+                                                        <div class="sliderBar">
+                        <button class="btn btnBack icon-back btnBackMenuNav"><span>BACK</span></button>
+                        <ul class="dropdown-nav">
+                            <li>
+                                <a href="/cn/jobs-available">
+                                    <div class="subItem">
+                                        人才招聘
+                                    </div>
+                                </a>
+                            </li>
+                                                    </ul>
+                        <div class="shape"></div>
+                        <div class="desc"></div>
+                    </div>
+                            </li>
+            		<li style="display:none;">
+		    <a href="http://chchi.icachi.org/24/callforpapers/" target="_blank">
+		        <div class="subItem">
+		            2024 Chinese CHI 征稿启事
+		        </div>
+		    </a>                    
+		</li>
+        </ul>
+        <div class="tools-link">
+            <!-- <a href="javascript:;" id="MbtnPopover" data-id="getInTouch">与我联系</a> -->
+            <a href="/cn/events">活动与公告</a>
+            <a href="/cn/about/contact-us">联系我们</a>
+            <a href="/en">EN</a>
+        </div>
+        <div class="shape"></div>
+        <div class="desc"></div>
+    </nav>
+    <div class="header-placeholder" style="height: 100px;"></div>
+</header>
+<!-- END 头部结束 -->
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="0" height="0" style="display: none;">
+    <symbol id="icon-next">
+        <polygon points="23.16 4.67 21.04 6.79 32.75 18.5 1.51 18.5 1.51 21.5 32.74 21.5 21.04 33.21 23.16 35.33 38.49 20 23.16 4.67"></polygon>
+    </symbol>
+    <symbol id="icon-prev">
+        <polygon points="16.84 35.33 18.96 33.21 7.25 21.5 38.49 21.5 38.49 18.5 7.26 18.5 18.96 6.79 16.84 4.67 1.51 20 16.84 35.33"></polygon>
+    </symbol>
+    <symbol id="icon-list">
+        <path d="M38.8,9v2.6H1.2V9H38.8z M1.2,21.3h37.7v-2.6H1.2V21.3z M1.2,31h37.7v-2.6H1.2V31z"></path>
+    </symbol>
+    <symbol id="icon-wechat">
+        <path d="M24.16,16.31H25c-.75-3.45-4.35-6-8.55-6-4.66.15-8.41,3.3-8.41,7.36,0,2.4,1.2,4.2,3.45,5.7l-.9,2.55,3-1.5a21.72,21.72,0,0,0,3,.45h.75a7.88,7.88,0,0,1-.3-1.8A6.94,6.94,0,0,1,24.16,16.31Zm-4.39-2.25h0a1.05,1.05,0,1,1,0,2.1c-.6,0-1.35-.45-1.35-1.05S19.17,14.06,19.77,14.06Zm-4.8,1a1.27,1.27,0,0,1-1.2,1.05,1.17,1.17,0,0,1-1.2-1.05,1.21,1.21,0,0,1,1.35-1,1,1,0,0,1,1.05,1Zm9.9,1.78c-4,0-7.06,2.65-7.06,6s3.09,6,7.06,6a7.83,7.83,0,0,0,2.5-.44l2.36,1.18L29,27.78c1.77-1.32,3-2.94,3-4.86h0C31.94,19.54,28.55,16.89,24.87,16.89Zm-2.35,5h0a.88.88,0,0,1,0-1.76,1,1,0,0,1,1,.88C23.55,21.6,23.25,21.89,22.52,21.89Zm4.56,0h0a.88.88,0,0,1,0-1.76,1,1,0,0,1,1,.88C28.26,21.6,27.81,21.89,27.08,21.89Z"></path>
+    </symbol>
+    <symbol id="icon-weibo">
+        <path d="M27.31,20.28A3.48,3.48,0,0,0,26,19.75c-1-.18-.54-.72-.54-.72a2.37,2.37,0,0,0-.18-2.7c-1.44-1.44-4.78.18-4.78.18-1.26.36-1-.18-.81-1.17,0-1.17-.36-3.16-3.87-2s-6.4,5.32-6.4,5.32c-2.08,2.79-1.8,4.86-1.8,4.86.54,4.69,5.5,6,9.37,6.31,4.06.37,9.65-1.44,11.27-5A3.33,3.33,0,0,0,27.31,20.28Zm-10,8.31h0c-4.06.18-7.3-1.9-7.3-4.6s3.24-4.87,7.3-5,7.39,1.53,7.39,4.23S21.36,28.41,17.3,28.59Zm9.91-11.18s.63-3-2.34-2.35a.63.63,0,0,1,0-1.26s4.24-.81,3.7,3.7v.09a.6.6,0,0,1-.63.54h0C27.57,18.13,27.3,17.77,27.21,17.41Zm4.87,1.26c-.09.72-.45.81-.9.81h0a.92.92,0,0,1-.95-.9,2.77,2.77,0,0,1,.18-.9,4.14,4.14,0,0,0-.27-3.25A5.15,5.15,0,0,0,25.23,12c-.36.09-.9.18-.9.18a1,1,0,0,1-1-1,.88.88,0,0,1,.72-.9h.09a7.84,7.84,0,0,1,3.34,0h0C30,10.82,33.61,13.35,32.08,18.67ZM16.49,20.74a3.87,3.87,0,0,0-3.63,4.08,2.11,2.11,0,0,0,0,.25A2.23,2.23,0,0,0,14,26.87a4.79,4.79,0,0,0,6.13-1.08C21.36,24.17,20.63,20.2,16.49,20.74Zm-1,5.32h0a1.1,1.1,0,0,1-1.33-.85l0-.14a1.46,1.46,0,0,1,1.36-1.35,1.18,1.18,0,0,1,1.41.86l0,.22A1.63,1.63,0,0,1,15.5,26.06Zm2.43-2h0a.46.46,0,0,1-.66,0L17.21,24a.59.59,0,0,1,.18-.81.42.42,0,0,1,.58-.09.49.49,0,0,1,.14.18A.92.92,0,0,1,17.93,24.08Z"></path>
+    </symbol>
+    <symbol id="icon-facebook">
+        <path d="M26.59,7.5v4h-2.4a2.22,2.22,0,0,0-1.76.55A2.49,2.49,0,0,0,22,13.72V16.6h4.47l-.6,4.51H22V32.69H17.3V21.11H13.41V16.6H17.3V13.27a5.92,5.92,0,0,1,1.59-4.4,5.77,5.77,0,0,1,4.22-1.56,25.37,25.37,0,0,1,3.48.19Z"></path>
+    </symbol>
+    <symbol id="icon-twitter">
+        <path d="M28.66,16c0-.2,0-.4,0-.6A9.27,9.27,0,0,0,30.88,13a8.53,8.53,0,0,1-2.57.7,4.57,4.57,0,0,0,2-2.56,8.63,8.63,0,0,1-2.84,1.09,4.44,4.44,0,0,0-3.26-1.54,4.51,4.51,0,0,0-4.46,4.56v.1a4.81,4.81,0,0,0,.12,1.07,12.55,12.55,0,0,1-9.2-5.08A5,5,0,0,0,12,17.7a4.34,4.34,0,0,1-2-.62v.06a4.73,4.73,0,0,0,3.58,4.7A3.91,3.91,0,0,1,12.4,22a4,4,0,0,1-.84-.09,4.53,4.53,0,0,0,4.17,3.32,8.56,8.56,0,0,1-6.61,1.95A12.13,12.13,0,0,0,16,29.33C24.17,29.33,28.66,22.18,28.66,16Z"></path>
+    </symbol>
+    <symbol id="icon-email">
+        <path d="M6.14,8.33H33.86a1.44,1.44,0,0,1,1.54,1.3V30.37a1.44,1.44,0,0,1-1.54,1.3H6.14a1.44,1.44,0,0,1-1.54-1.3V9.63A1.44,1.44,0,0,1,6.14,8.33Zm26.18,5.49L20.11,26,7.68,13.8V29.08H32.32V13.82ZM8.47,10.92,20.1,22.56,31.55,10.92Z"></path>
+    </symbol>
+    <symbol id="icon-map">
+        <path d="M20,3.51h0A12.67,12.67,0,0,0,7.36,16.17c0,5.13,6.53,15,10,19.11A3.44,3.44,0,0,0,20,36.49h0a3.43,3.43,0,0,0,2.6-1.21c3.5-4.14,10-14,10-19.11A12.66,12.66,0,0,0,20,3.51Zm0,3.41a9.27,9.27,0,0,1,9.24,9.25c0,2.26-2.26,6.48-3.24,8.19a64.22,64.22,0,0,1-6,8.72,64.32,64.32,0,0,1-6-8.73c-2.92-5.12-3.24-7.43-3.24-8.18A9.28,9.28,0,0,1,20,6.92Zm0,14.27h0A5.77,5.77,0,0,0,20,9.66h0a5.77,5.77,0,0,0,0,11.53Zm-2.35-5.76A2.36,2.36,0,0,1,20,13.07h0a2.34,2.34,0,0,1,1.66.69,2.31,2.31,0,0,1,.7,1.66,2.38,2.38,0,0,1-.69,1.67,2.36,2.36,0,0,1-4-1.66Z"></path>
+    </symbol>
+    <symbol id="icon-tel">
+        <path d="M28.57,23.43a3.7,3.7,0,0,0-5.21-.73l-1.34,1a.31.31,0,0,1-.43-.06l-5.17-6.87a.3.3,0,0,1,.06-.43l1.34-1a3.73,3.73,0,0,0,.73-5.21l-2-2.68a4.79,4.79,0,0,0-6.68-1,8.12,8.12,0,0,0-3.19,5.38,8.41,8.41,0,0,0,1.28,6.26L18,31.44a8.39,8.39,0,0,0,5.63,2.94,8.74,8.74,0,0,0,1.14.08,8.19,8.19,0,0,0,4.94-1.66,4.81,4.81,0,0,0,.9-6.69ZM16,13.12l-1.35,1A3,3,0,0,0,14,18.4l5.34,7.08a3,3,0,0,0,4.27.6l1.34-1a1,1,0,0,1,1.37.2l1.94,2.57a1.92,1.92,0,0,1-.36,2.68,5.78,5.78,0,0,1-4.3,1.09,5,5,0,0,1-3.38-1.92l-10-13.3a5.07,5.07,0,0,1-.92-3.78,5.83,5.83,0,0,1,2.24-3.82,1.86,1.86,0,0,1,1.14-.38,1.94,1.94,0,0,1,1.54.77l1.94,2.57h0a1.05,1.05,0,0,1,.19.73A1,1,0,0,1,16,13.12Zm17.37,7a1.32,1.32,0,0,1-.52.88,1.28,1.28,0,0,1-.79.27l-.2,0-.19,0a1.36,1.36,0,0,1-1.15-1.52,9.54,9.54,0,0,0-1.82-7h0A9.51,9.51,0,0,0,22.42,9a1.3,1.3,0,0,1-1.1-1.46l.05-.3a1.27,1.27,0,0,1,1.44-1.09,12.37,12.37,0,0,1,10.3,9.25A12.21,12.21,0,0,1,33.36,20.11ZM20.92,11.68l0-.29a1.29,1.29,0,0,1,1.44-1.1,8.15,8.15,0,0,1,7,9.21,1.32,1.32,0,0,1-1.29,1.16h-.18l-.28,0a1.31,1.31,0,0,1-1.1-1.48,5.26,5.26,0,0,0-1-3.94h0a5.32,5.32,0,0,0-3.47-2H22A1.29,1.29,0,0,1,20.92,11.68Z"></path>
+    </symbol>
+    <symbol id="icon-search">
+        <path d="M31.45,29.68l-4.86-4.86a10,10,0,1,0-1.34,1.49L30,31.1ZM12.89,24.56a8,8,0,1,1,11.31,0A8,8,0,0,1,12.89,24.56Z"></path>
+    </symbol>
+    <symbol id="icon-close"><polygon points="29.71 11.71 28.29 10.29 20 18.59 11.71 10.29 10.29 11.71 18.59 20 10.29 28.29 11.71 29.71 20 21.41 28.29 29.71 29.71 28.29 21.41 20 29.71 11.71"></polygon></symbol>
+</svg>    <div class="wrap o-hidden">
+
+        <section class="container-fluid bline-box">
+            <div class="bline-item bline-one"></div>
+            <div class="about-header">
+                <div class="ah-title fz-44">
+                    <h2 class="fw-500">
+                        国际化、高水平、创新性、<br>应用导向的世界一流<br>创新创意设计学院
+                    </h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80"><path class="cls-1" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M141.91,9c-8.14-.6-16.63-.93-25.35-.93C54.84,8.09,6,16.45,6,36.31c0,12.08,18.43,26.51,46.85,33,18.28,4.19,38.88,7.56,63,6.19C182.61,71.75,227.17,51.08,226,30.8,224.47,4,149.68,1.62,122.71,2.59,27.09,6,2.9,32.65,4.81,43.88,10.57,77.6,99.65,77.26,115.41,77.6c63.75,1.37,115.21-31,120.2-35.79"></path></svg>
+                </div>
+
+                                <div class="ah-slick">
+                    <!-- 图片尺寸 1100*660 -->
+                    <div class="slick-ah js-slick-ah slick-initialized slick-slider"><div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 734px; transform: translate3d(0px, 0px, 0px);"><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 734px;"><div><div style="width: 100%; display: inline-block;">
+                            <div class="ahimg-item img-box">
+                                <img src="/media/upload/20241016.jpg" alt="">
+                            </div>
+                        </div></div></div></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-fluid">
+            <div class="about-intro mt-100">
+                <div class="ai-left">
+                    <h2 class="text-uppercase fz-40 fw-500">学院概况</h2>
+                </div>
+                <div class="ai-right">
+                    <div class="about-txt lh-2 fz-16 black">
+                        <p><span style="font-size: 20px;">南方科技大学创新创意设计学院成立于2020年4月，依托学科齐备的新型研究型大学，学院在科研、创新、创业、学科多样性等方面具有可贵的发展优势。地处产业链完备、富有活力的深圳和粤港澳大湾区，学院突出“设计+科技”，秉持“设计向善”，与产业形成相互赋能的紧密联系与合作。设计学院培育有职业责任感和社会创造力的新一代设计领军人才，以科研和知识转化助力构建经济社会可持续创新生态。墨尔本大学前副校长兼建筑、建设与规划学院前院长关道文（Thomas KVAN）教授被聘任为创始院长。</span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size: 20px;"><b>设计+科技驱动创新</b></span></p>
+
+<p><span style="font-size:20px;">创新创意设计学院突出“设计+科技”的设计驱动创新理念，以科研引领产业升级转型，以教育创新对接创意设计高端人才需求，跨学科融合，集教学、科研、展览、科技转移为一体，致力于将学院建成大湾区创新创意设计人才培养中心、成果转化基地和高端智库，进一步提升深圳“创新创业创意之都”国际化水平和国际影响力，更好推动中国制造向中国创造转变、中国速度向中国质量转变、中国产品向中国品牌转变，坚定不移地推进质量强国建设。</span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size: 20px;"><b>设计向善</b></span></p>
+
+<p><span style="font-size: 20px;">从历史中学习，也必须面向未知的未来探索和创造，这是设计的使命和贡献。设计师肩负重大的社会责任，设计的成果直接影响着使用者，包括人民大众、自然和各种生命。设计师必须牢记和践行“设计向善”这一理念，并对自身在各个层面上所作的决定负责。设计的现实应用性决定它必须以科学和技术为基础，不是单纯艺术范畴的活动。</span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:20px;"><strong>培养特色</strong></span></p>
+
+<p><span style="font-size:20px;">创新创意设计学院坚持以“前沿科学引领教学，与产业共同培育”为导向，充分利用研究型大学和城市区域资源，打破课堂、实验室、企业、社会服务之间的“墙”。学院培养学生对设计价值、职业胜任力、职业社会责任和伦理的思考，培养他们进入真实的工作环境，成为未来社会的建设者和创造者。</span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:20px;">学院以“工作室教学”为主要特色，致力于提升学生创意思维、批判思维和创新能力。基于学生自身的想法和主动性，注重培养学生提出、测试和讨论想法的能力，培养面向真实世界设计、跨学科跨界设计、脑手结合、系统思维和个人知识体系的建构能力。</span></p>
+
+                    </div>
+
+                                    </div>
+            </div>
+        </section>
+
+                <section class="container-fluid" id="mission-and-vision">
+            <div class="about-intro mt-100">
+                <div class="ai-left">
+                    <h2 class="text-uppercase fz-40 fw-500">愿景和使命</h2>
+                </div>
+                <div class="ai-right">
+                    <div class="about-txt lh-2 fz-16 black">
+                        <p><span style="font-size:20px;">学院突出“设计+科技”的理念，强调“设计向善”和可持续发展，打造学科融合、科教融合、产教融合体系，致力于以设计连接基础科研和应用实践，集教学、科研、展览、科技转移为一体，建设国际化、高水平、创新性、应用导向的世界一流创新创意设计学院。</span></p>
+
+                    </div>
+
+                                    </div>
+            </div>
+        </section>
+
+                <section class="container-fluid mt-200" id="version">
+                                    <div class="faculty-item">
+                <!-- 820*500 -->
+                <div class="faculty-item__img img-box">
+                    <img src="/media/upload/%E9%A6%96%E9%A1%B5%E7%85%A7%E7%89%87%E5%BA%93/0412-1.jpg" alt="">
+                </div>
+                <div class="faculty-item__txt">
+                    <h3 class="fz-32 fw-500 black text-uppercase">教师队伍</h3>
+                    <div class="faculty-item__desc lh-2 fz-16 black mt-30">
+                        <p><span style="font-size:20px;">学院目前已组建一支具有跨学科特色和高度国际化的教师队伍共17人，来自中国、德国、荷兰、瑞士、意大利、韩国等国家，涵盖工业设计、建筑设计、交互设计、数学、结构与材料、声学、电影、社会学等学科领域。截至2022年秋季，学院有本硕博学生65人，可授予工业设计学士和硕士学位、化工与材料硕士学位、智能制造与机器人硕士和博士学位。</span></p>
+
+                    </div>
+
+                                    </div>
+            </div>
+                        <div class="faculty-item">
+                <!-- 820*500 -->
+                <div class="faculty-item__img img-box">
+                    <img src="/media/upload/LargeFile/DSC_4579.JPG" alt="">
+                </div>
+                <div class="faculty-item__txt">
+                    <h3 class="fz-32 fw-500 black text-uppercase">校区</h3>
+                    <div class="faculty-item__desc lh-2 fz-16 black mt-30">
+                        <p><span style="font-size:20px;">南科大设计学院过渡校区选址南山智园。智园毗邻南方科技大学、深圳大学城等高等院校。按照构想，园区将引进互联网、生物医药、新能源、新材料等重点支持领域的企业。受益于这一地理位置，设计学院将与学界和产业界建立紧密联系，构筑科研、制造和创新创意间的桥梁。</span></p>
+
+                    </div>
+
+                                    </div>
+            </div>
+                    </section>
+
+
+        <div class="mt-140"></div>
+
+    </div>
+
+    
+    <!-- START 底部开始 -->
+<footer class="footer container-fluid page">
+    <a href="/cn" class="logo">
+        <img src="/themes/cn/default/upload/logo2.svg" alt="">
+    </a>
+    <div class="mt-60">
+        <div class="copyright">
+            <p class="text">运用设计构思你的未来<br>通过创新实现我们的未来</p>
+            <p class="copy">© 2025 SUSTech School of Design 
+                <a href="https://www.sumaarts.com/" target="_blank">design by sumaart</a></p>
+        </div>
+        <div class="share">
+            <a href="javascript:;" class="icon-wx">
+                <img src="/themes/cn/default/upload/wx-code.jpg" alt="">
+            </a>
+           <!-- <a href="javascript:;" class="icon-sg"></a> -->
+	    <a href="javascript:;" class="icon-bilibili">
+	        <img src="/themes/cn/default/upload/bilibili-code.jpg" alt="">
+            </a>
+        </div>
+    </div>
+    <a href="javascript:;" class="btn btn-backtop icon-backtop" id="btnGoToTop"></a>
+</footer>
+<!-- END 底部结束 -->
+
+<aside class="popover" id="getInTouch">
+    <div class="mask"></div>
+    <div class="layer-cont">
+        <div class="layer-box layer-inner">
+            <a href="javascript:;" class="btn btn-close btn-popover--close icon-close"></a>
+            <div class="shape"></div>
+            <form class="js-validate--form common-form layer-wrap popover-form" method="POST" action="/cn/feedback/content" id="feedback" novalidate="novalidate">
+                <h1>在线留言</h1>
+                <div class="group-control">
+                    <input type="email" name="email" id="email" class="control">
+                    <label for="email">邮箱</label>
+                </div>
+                <div class="group-control">
+                    <input type="text" name="last_name" id="name" class="control">
+                    <label for="name">姓</label>
+                </div>
+                <div class="group-control">
+                    <input type="text" name="first_name" id="user" class="control">
+                    <label for="user">名</label>
+                </div>
+                <div class="group-control">
+                    <input type="text" name="enquiry" id="enquiry" class="control">
+                    <label for="enquiry">您的问题</label>
+                </div>
+                <div class="btns mt-60">
+                    <button class="submit js-submit on">
+                        提交
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 255.652 79.631">
+                            <g transform="translate(-1423.485 -907.438)">
+                              <g transform="translate(17 39)">
+                                <path d="M1188.635,671.312c-8.957-.627-18.289-.958-27.877-.958-67.883,0-121.647,8.617-121.647,29.094,0,12.464,20.266,27.339,51.531,34.061,20.1,4.321,42.76,7.794,69.271,6.386,73.495-3.9,122.5-25.215,121.224-46.124-1.689-27.674-83.949-30.094-113.621-29.094-105.174,3.548-131.782,31-129.672,42.576,6.336,34.77,104.313,34.419,121.647,34.77,70.116,1.419,126.715-31.932,132.206-36.9" transform="translate(369.77 204.999)"></path>
+                              </g>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="layer-box layer-toast">
+            <div class="toast layer-wrap">
+                <h1>在线留言</h1>
+                <h3><span id="toast">成功</span>&nbsp;&nbsp;</h3>
+                <div class="rect"></div>
+            </div>
+        </div>
+    </div>
+</aside>    <!-- JS -->
+<script src="/themes/cn/default/scripts/main.js"></script>
+<div style="display:none"><script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1280994530&amp;web_id=1280994530"></script></div>
+<!-- JS -->
+</body></html>

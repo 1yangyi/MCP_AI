@@ -1,0 +1,507 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<title>学院简介-大连海事大学理学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+
+
+<meta name="SiteName" content="大连海事大学理学院">
+<meta name="SiteDomain" content="science.dlmu.edu.cn">
+<meta name="ColumnName" content="学院简介">
+<meta name="ColumnKeywords" content="学院简介">
+
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+<link rel="stylesheet" href="../css/publice.css" type="text/css">
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	//$(".mainmenu dl").hide();
+	$("li.mainmenu").hover(function(){
+		$(this).find("dl").stop(true,true);
+		$(this).find("dl").slideDown();
+	},function(){
+		$(this).find("dl").stop(true,true);
+		$(this).find("dl").slideUp();
+	});
+})
+</script>
+<script language="JavaScript">
+    //定时器
+	var timer ;
+var BodyHeight,BodyWidth;
+	var yon = 0;                    
+	var xon = 0;
+	var step = 1;
+	var Hoffset = 0;                    
+	var Woffset = 0; 
+	$(function(){
+		timer = setInterval(function(){rotateBanner(1)},3000);
+		$(".slider_menu").hover(function(){
+			clearInterval(timer);
+		}, function(){
+			timer = setInterval(function(){rotateBanner(1)},3000);
+		});
+       BodyHeight=parseInt(document.body.clientHeight);
+       BodyWidth=parseInt(document.body.clientWidth);
+            //alert(BodyWidth);
+	});
+	// begin:首页视觉区效果
+	var _img = 1;
+	function rotateBanner(step){
+		_img+=step;
+		if (_img>4) {
+			_img=1;
+		} else if (_img<=0) {
+			_img=4;
+		}
+		$("#IndexBanner").stop().animate({opacity: 0},300, function(){
+			$(this).css("background-image", "url(images/banner_0"+_img+".jpg)").animate({opacity: 1},300);
+		});
+
+		$(".slider").stop().animate({backgroundPositionY: 99}, 300, function(){
+			$(this).css("background-color",$("#qiehuan li").eq(_img-1).attr("data-color")).animate({backgroundPositionY: 0}, 200);
+		});
+		$(".slider_menubar").stop().animate({top: 99}, 300, function(){
+			$(this).html($("#qiehuan li").eq(_img-1).html()).animate({top: 0}, 200);
+		});
+	}
+	// end
+</script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307973465450535742000200024f50 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1044,'/dpzw.jsp',-1,1483952784)</script>
+</head>
+<body>
+<!--top-->
+<div class="topWrap clearfix">
+	<div class="topDiv">
+		<div class="topL_t fl"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<p>欢迎光临大连海事大学理学院网站！</p></div>
+		<div class="topR_t fr">
+			<div class="menu">
+				<ul>
+					<li class="mainmenu">
+						<a class="link" href="#">English<em></em></a>
+						<dl style="display: none;">
+							<script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>
+						</dl>
+					</li>
+					
+<li class="mainmenu">
+						<a class="link" href="http://www.dlmu.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1483952784, 40188)">学校首页<span>|</span></a>
+					</li>
+					<li class="mainmenu"><a href="http://science.dlmu.edu.cn/index.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1483952784, 40189)">网站旧版</a></li>
+
+
+				</ul>
+			</div>
+		</div>
+	</div>	
+</div>
+<!--header-->
+<div class="headerWrap clearfix">
+	<div class="header">
+		<div class="logo">
+			
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="理学院"><img src="../images/logo.png"></a>
+		</div>
+		<div class="Search">		    	
+	    
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu4 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu4 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu4">
+    <div id="appu4"><div><input type="text" placeholder="请输入关键字搜索" name="textfield" autocomplete="off" class="search_text"> <div class="fdj fr"><input type="submit" value="" class="button pngFix"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu4">
+    <div id="appu4">
+        <div v-if="!isError">
+        
+        <input  type="text" placeholder="请输入关键字搜索" class="search_text" name="textfield" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"   />
+<div class="fdj fr">
+ <input type="submit" class="button pngFix" value=""  v-on:click="onSubmit()"/ >
+ </div>
+        
+        
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu4").html($("#htmlu4").text());
+</script>
+<script>
+    var appOwner = "1483952784";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu4",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://zq-open.dlmu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+	    </div>
+		<script type="text/javascript">
+			function test3()
+			{
+				var tempStr=document.getElementById('test2').value;
+				if(tempStr=="请输入关键字搜索")
+				{
+					document.getElementById('test2').value="";
+				}
+			}
+			function test4()
+			{
+				var tempStr=document.getElementById('test2').value;
+				if(tempStr=="")
+				{
+					document.getElementById('test2').value="请输入关键字搜索";
+				}
+			}
+		</script>	
+	</div>
+</div>
+<!--nav-->
+<div class="navWrap  clearfix">
+	<div class="nav">
+		<ul>
+<li><a class="link" href="../index.htm">网站首页</a></li>
+
+   <li class="mainmenu"><a class="link" href="../xygk.htm">学院概况<em></em></a>
+<dl style="display: none;">
+<dd><a href="xyjj.htm">学院简介</a></dd>
+<dd><a href="xrld.htm">现任领导</a></dd>
+<dd><a href="zzjg.htm">组织机构</a></dd>
+<dd><a href="lxfs.htm">联系方式</a></dd>
+</dl>
+</li>
+   <li class="mainmenu"><a class="link" href="../szdw.htm">师资队伍<em></em></a>
+<dl style="display: none;">
+<dd><a href="../szdw/zzjs.htm">专职教师</a></dd>
+<dd><a href="../szdw/yjsds.htm">研究生导师</a></dd>
+<dd><a href="../szdw/kzjs.htm">客座教授</a></dd>
+<dd><a href="../szdw/szzp.htm">师资招聘</a></dd>
+</dl>
+</li>
+   <li class="mainmenu"><a class="link" href="../bkjy.htm">本科教育<em></em></a>
+<dl style="display: none;">
+<dd><a href="../bkjy/bkzyyrcpy.htm">本科专业与人才培养</a></dd>
+<dd><a href="../bkjy/jyzxyggjckc.htm">教研中心与公共基础课程</a></dd>
+<dd><a href="../bkjy/syzx.htm">实验中心</a></dd>
+<dd><a href="../bkjy/cgzs.htm">成果展示</a></dd>
+</dl>
+</li>
+   <li class="mainmenu"><a class="link" href="../xkjs.htm">学科建设<em></em></a>
+<dl style="display: none;">
+<dd><a href="../xkjs/sxxkjj.htm">数学学科简介</a></dd>
+<dd><a href="../xkjs/wlxxkjj.htm">物理学学科简介</a></dd>
+<dd><a href="../xkjs/yjsjy.htm">研究生教育</a></dd>
+<dd><a href="../xkjs/wjxz.htm">文件下载</a></dd>
+</dl>
+</li>
+   <li class="mainmenu"><a class="link" href="../kxyj.htm">科学研究<em></em></a>
+<dl style="display: none;">
+<dd><a href="../kxyj/kygk.htm">科研概况</a></dd>
+<dd><a href="../kxyj/kycg.htm">科研成果</a></dd>
+<dd><a href="../kxyj/xsjlygjhz.htm">学术交流与国际合作</a></dd>
+<dd><a href="../kxyj/wjxz.htm">文件下载</a></dd>
+</dl>
+</li>
+   <li class="mainmenu"><a class="link" href="../dqgz.htm">党群工作<em></em></a>
+<dl style="display: none;">
+<dd><a href="../dqgz/djdt.htm">党建动态</a></dd>
+<dd><a href="../dqgz/ghhd.htm">工会活动</a></dd>
+</dl>
+</li>
+   <li class="mainmenu"><a class="link" href="../xsgz.htm">学生工作<em></em></a>
+<dl style="display: none;">
+<dd><a href="../xsgz/xgdt.htm">学工动态</a></dd>
+<dd><a href="../xsgz/txzz.htm">团学组织</a></dd>
+<dd><a href="../xsgz/xzfc.htm">学子风采</a></dd>
+<dd><a href="../xsgz/wjxz.htm">文件下载</a></dd>
+</dl>
+</li>
+</ul>
+
+
+
+
+<script type="text/javascript">
+
+	$(".mainmenu dl").hide();
+	
+</script>
+	</div>
+</div>
+<!--main-->
+<!--banner_one-->
+<div style="width:980px; margin:0 auto;">
+
+    <table align="center">
+            <tbody><tr>
+                <td>
+                        <img src="../images/07511ecc7f5521b440fcf24b221f90e.png" border="0" width="980" height="300">
+                </td>
+        </tr>
+</tbody></table>
+
+</div>
+
+
+
+
+<div class="mainWrap clearfix" style="min-height:300px;">
+	<div class="main_L">
+		<dl>
+			<dt>
+学院概况</dt>
+			<dd><a href="xyjj.htm" class="cur">学院简介</a></dd>
+			
+
+<dd><a href="xrld.htm">现任领导</a></dd>
+			
+
+<dd><a href="zzjg.htm">组织机构</a></dd>
+			
+
+<dd><a href="lxfs.htm">联系方式</a></dd>
+			
+
+
+		</dl>
+	</div>
+	<div class="main_R main_Rb">
+		<div class="main_tit">
+			<h2>
+学院简介</h2>
+			<div class="main_titR">
+				<img src="../images/home.png">
+  
+                <a href="../index.htm">网站首页</a>
+            
+                &gt;
+                <a href="../xygk.htm">学院概况</a>
+            
+                &gt;
+                <a href="xyjj.htm" class="cur">学院简介</a>
+            
+
+
+
+
+			</div>
+		</div>
+		<div class="main_conR main_conRb">
+			
+			
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1483952784,'wbnews','u11')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format501.css"><script>function seeContenta11(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta11('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+
+<script>_addDynClicks('wbnews',1483952784,6186)</script>
+<div class="main_conRCb">
+ <div id="vsb_content_501_6186_u111"><div id="vsb_content_501"><p class="vsbcontent_start" style="text-align: center;"><span style="font-size: 20px;"><strong>理学院</strong></span></p>
+<p class="vsbcontent_start"><br></p>
+<p>大连海事大学理学院的前身是1960年成立的数理力学系，后依次更名为六系、基础部、数理系。2005年，学校撤销数理系，组建数学系和物理系。2017年6月,数学系与物理系合并成立理学院。</p>
+<p>理学院下设应用数学系、统计学系、应用物理系、高等数学教研中心、大学物理教研中心、物理实验教研中心六个教学机构。学院现有专任教师121人，实验教师10人，管理人员（含指导员）10人。教师队伍中，教授33人，副教授55人，博士生导师9人，硕士生导师85人，具有博士学位110人，辽宁省教学名师6人。在校全日制本科生近500人，硕士研究生210余人。</p>
+<p>学院承担了全校本科生与研究生的数学、物理学公共课程教学任务，充分发挥基础学科在学校人才培养中的重要作用。“数学建模”“大学物理”获评国家级一流课程，“聚焦离子束系统虚拟仿真实验”获评国家级虚拟仿真实验项目，“大学物理实验”获评国家级课程思政示范课程、名师和团队，物理实验教学中心获评辽宁省实验教学示范中心，物理虚拟仿真实验教学中心获评辽宁省虚拟仿真实验教学示范中心，《大学物理实验》获评辽宁省首届教材建设奖优秀教材。</p>
+<p>学院的数学和物理学本科专业教育可以上溯到上世纪60年代，2001年设立信息与计算科学本科专业（2012年停止招生），2005年设立应用物理学本科专业，2007年设立数学与应用数学本科专业，2012年设立统计学本科专业。应用物理学专业和数学与应用数学专业先后于2019年和2020年获评辽宁省普通高等学校一流本科教育示范专业。</p>
+<p>学院于20世纪80年代开始研究生教育，1997年批准设立应用数学硕士学位授权点（二级学科），并入选辽宁省重点培育学科，2006年批准设立运筹学与控制论、等离子体物理、凝聚态物理硕士学位授权点（二级学科），2011年批准设立数学和物理学硕士学位授权点（一级学科）。高气压强电场电离放电实验室获评辽宁省重点实验室，强电离放电单分子工程实验室获评辽宁省高校重点实验室。</p>
+<p>学院在组合数学及其应用、微分方程及其应用、数据科学中的数学方法、优化方法及其应用、等离子体气体放电物理与应用工程、固体发光与光电技术、场论与量子信息学、原子分子与物质相互作用等研究方向上取得了丰硕成果。学院自2017年成立以来，共承担国家自然科学基金项目30余项，省部级项目40余项，科研经费累计3000余万元，其中国家科技支撑计划项目1项、国家“863”项目2项、科技部重大专项1项、科技部国际科技合作重点项目2项、杰出青年基金1项、国家自然基金重大仪器专项1项、国家自然科学基金重点资助项目1项；获得国家技术发明二等奖1项、辽宁省政府科技进步一等奖1项、辽宁省政府技术发明三等奖1项、辽宁省政府科技进步三等奖1项、国际知识产权组织专项奖1项、中国专利优秀奖；授权、实审国际国内发明专利90余项，发表高水平学术论文350余篇。</p>
+<p class="vsbcontent_end">在学校深化改革的大背景下、在学校整体加快发展的形势推动下，学院将进一步整合资源、优化结构、扩大影响，全面提升学院教学科研水平，积极履行人才培养、科学研究、服务社会、文化传承创新和国际交流合作的职责，努力为学校“双一流”建设和研究型世界一流海事大学建设贡献力量！</p></div></div>
+    <span id="vsb_content_501_6186_u11" name="vsb_content_501_6186_u11"></span><br><br>
+    
+</div>
+
+			
+		</div>
+	</div>
+</div>
+<!--foot-->
+<div class="footWrap clearfix">
+	<div class="footDiv_three">
+		<div class="foot_three">
+			<div class="list">
+				<dl>
+					
+  <dd><a href="../wzdt.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1483952784, 40190)">网站地图</a></dd>
+
+
+				</dl>
+				<dl>
+					  <dd><a href="http://science.dlmu.edu.cn/index.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1483952784, 40191)">旧版主页</a></dd>
+
+
+				</dl>
+				<dl>
+					  <dd><a href="#" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1483952784, 40192)">隐私版权</a></dd>
+
+
+				</dl>
+				<dl>
+					  <dd><a href="../index/lxwm.htm" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1483952784, 40193)">联系我们</a></dd>
+
+
+				</dl>
+				
+			</div>
+			<div class="foot_ewm" style="padding:5px 5px 0 5px;background:#fff;">
+				
+<!-- 下面这个div是二维码容器,ID不能变-->
+<div id="outputu16"><canvas width="100" height="100"></canvas></div>
+<!-- 下面是生成二维码调用的JS，不要动-->
+
+<script src="/system/resource/qrcode/js/jquery.qrcode.js"></script>
+<script src="/system/resource/qrcode/js/qrcode.js"></script>
+<script>
+var codeInfo = "" ==""? window.location.href:"";
+jQuery(function(){
+    jQuery('#outputu16').qrcode({
+        text:codeInfo,
+        render: !!document.createElement('canvas').getContext?"canvas":"table",//设置渲染方式  
+        width: 100,     //设置宽度  
+        height: 100,     //设置高度  
+        correctLevel: 0,//纠错等级  
+        background: "#ffffff",//背景颜色  
+        foreground: "#000000",//前景颜色  
+        logo:""//图像logo
+    });
+})
+</script>
+			</div>
+		</div>
+	</div>
+	<div class="footDiv_four" style="height:50px;">
+		<div class="foot_four">
+		<p><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+</p><p>中国·辽宁·大连海事大学理学院版权所有 Copyright 2015 All Right Reserved</p>
+
+
+
+
+
+<p></p>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

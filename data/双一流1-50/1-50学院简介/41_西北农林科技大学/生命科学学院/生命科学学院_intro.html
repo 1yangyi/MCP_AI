@@ -1,0 +1,281 @@
+<!DOCTYPE html><html lang="zh"><head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西北农林科技大学生命科学学院</title>
+    <script type="module" crossorigin="" src="/pub/smxy/assets/main-DDJGvEKp.js"></script>
+    <link rel="stylesheet" crossorigin="" href="/pub/smxy/assets/main-DJKGoaub.css">
+</head>
+
+<body>
+<header x-data="{ showMenu: false }" class="bg-gradient-to-r from-green-500 to-green-300">
+
+    <div class="container mx-auto ">
+
+        <div class="flex justify-between items-center py-4 lg:py-12 lg:px-20">
+
+            <button @click="showMenu = ! showMenu" class="flex-none mr-4 lg:hidden border-0 rounded-md border-2 w-8 h-8">
+                <svg xmlns="http://www.w3.org/2000/svg" id="menu-button" class="cursor-pointer block fill-white" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <a id="logo" href="#" class="lg:w-7/12">
+                <img class="" src="/pub/smxy/images/logo.png" srcset="/pub/smxy/images/logo@2x.png 2x,/pub/smxy/images/logo@3x.png 3x,">
+            </a>
+
+            <div class="hidden lg:block">
+                <div class="flex py-2 justify-end ">
+                    <div class="flex justify-center items-center">
+                        <a href="https://www.nwafu.edu.cn" class="mr-4 text-white">学校首页</a>
+                        <form class="flex items-center  border border-gray-400 rounded-md" action="/cms/web/search/index.jsp" method="post">
+                            <input type="hidden" name="siteID" value="27">
+                            <input type="hidden" name="searchScope" value="1">
+                            <input type="text" placeholder="搜索" name="query" class="bg-transparent px-4 py-2 text-black focus:outline-none">
+                            <button class="px-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 text-white">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19a8 8 0 100-16 8 8 0 000 16zm5-5l4 4"></path>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <nav x-show="showMenu" class="lg:hidden " style="display: none;">
+            <div class="grid grid-cols-1">
+
+                <div class="relative" x-data="{ $channel.path: false }" @mouseover="$channel.path = true" @mouseout="$channel.path = false">
+                    <a href="../../index.htm" class="block  text-center px-4 bg:px-4 py-3 text-gray-500 hover:bg-green-500 hover:text-white">
+                        首页
+                    </a>
+                </div>
+                <div class="relative" x-data="{ $channel.path: false }" @mouseover="$channel.path = true" @mouseout="$channel.path = false">
+                    <a href="index.htm" class="block  text-center px-4 bg:px-4 py-3 text-gray-500 hover:bg-green-500 hover:text-white">
+                        学院概况
+                    </a>
+                </div>
+
+                <div class="relative" x-data="{ $channel.path: false }" @mouseover="$channel.path = true" @mouseout="$channel.path = false">
+                    <a href="../../szdw/js2/index.htm" class="block  text-center px-4 bg:px-4 py-3 text-gray-500 hover:bg-green-500 hover:text-white">
+                        师资队伍
+                    </a>
+                </div>
+                <div class="relative" x-data="{ $channel.path: false }" @mouseover="$channel.path = true" @mouseout="$channel.path = false">
+                    <a href="../../bksjy/zysz/index.htm" class="block  text-center px-4 bg:px-4 py-3 text-gray-500 hover:bg-green-500 hover:text-white">
+                        本科生教育
+                    </a>
+                </div>
+                <div class="relative" x-data="{ $channel.path: false }" @mouseover="$channel.path = true" @mouseout="$channel.path = false">
+                    <a href="../../yjsjy/zsjy/index.htm" class="block  text-center px-4 bg:px-4 py-3 text-gray-500 hover:bg-green-500 hover:text-white">
+                        研究生教育
+                    </a>
+                </div>
+                <div class="relative" x-data="{ $channel.path: false }" @mouseover="$channel.path = true" @mouseout="$channel.path = false">
+                    <a href="../../kxyj/kydt/index.htm" class="block  text-center px-4 bg:px-4 py-3 text-gray-500 hover:bg-green-500 hover:text-white">
+                        科学研究
+                    </a>
+                </div>
+                <div class="relative" x-data="{ $channel.path: false }" @mouseover="$channel.path = true" @mouseout="$channel.path = false">
+                    <a href="../../xsgz/xgdw/index.htm" class="block  text-center px-4 bg:px-4 py-3 text-gray-500 hover:bg-green-500 hover:text-white">
+                        学生工作
+                    </a>
+                </div>
+                <div class="relative" x-data="{ $channel.path: false }" @mouseover="$channel.path = true" @mouseout="$channel.path = false">
+                    <a href="../../dwgz/zzjg/index.htm" class="block  text-center px-4 bg:px-4 py-3 text-gray-500 hover:bg-green-500 hover:text-white">
+                        党群工作
+                    </a>
+                </div>
+                <div class="relative" x-data="{ $channel.path: false }" @mouseover="$channel.path = true" @mouseout="$channel.path = false">
+                    <a href="../../xyzc/xydt/index.htm" class="block  text-center px-4 bg:px-4 py-3 text-gray-500 hover:bg-green-500 hover:text-white">
+                        校友之窗
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</header>
+
+
+<nav class="hidden sticky top-0 z-10  lg:block bg-[#F3FEF6]">
+    <div class="container mx-auto lg:px-20">
+        <div class="grid grid-cols-9 text-lg font-bold">
+            <div class="relative">
+                <a href="../../index.htm" class="block text-center px-4 bg:px-4 py-3 text-gray-500 hover:bg-green-500 hover:text-white ">
+                    首页
+                </a>
+            </div>
+
+            <div class="relative" x-data="{ $channel.path: false }" @mouseover="$channel.path = true" @mouseout="$channel.path = false">
+                <a href="index.htm" class="block  text-center px-4 bg:px-4 py-3 text-gray-500 hover:bg-green-500 hover:text-white">
+                    学院概况
+                </a>
+            </div>
+
+            <div class="relative" x-data="{ $channel.path: false }" @mouseover="$channel.path = true" @mouseout="$channel.path = false">
+                <a href="../../szdw/js2/index.htm" class="block  text-center px-4 bg:px-4 py-3 text-gray-500 hover:bg-green-500 hover:text-white">
+                    师资队伍
+                </a>
+            </div>
+            <div class="relative" x-data="{ $channel.path: false }" @mouseover="$channel.path = true" @mouseout="$channel.path = false">
+                <a href="../../bksjy/zysz/index.htm" class="block  text-center px-4 bg:px-4 py-3 text-gray-500 hover:bg-green-500 hover:text-white">
+                    本科生教育
+                </a>
+            </div>
+            <div class="relative" x-data="{ $channel.path: false }" @mouseover="$channel.path = true" @mouseout="$channel.path = false">
+                <a href="../../yjsjy/zsjy/index.htm" class="block  text-center px-4 bg:px-4 py-3 text-gray-500 hover:bg-green-500 hover:text-white">
+                    研究生教育
+                </a>
+            </div>
+            <div class="relative" x-data="{ $channel.path: false }" @mouseover="$channel.path = true" @mouseout="$channel.path = false">
+                <a href="../../kxyj/kydt/index.htm" class="block  text-center px-4 bg:px-4 py-3 text-gray-500 hover:bg-green-500 hover:text-white">
+                    科学研究
+                </a>
+            </div>
+            <div class="relative" x-data="{ $channel.path: false }" @mouseover="$channel.path = true" @mouseout="$channel.path = false">
+                <a href="../../xsgz/xgdw/index.htm" class="block  text-center px-4 bg:px-4 py-3 text-gray-500 hover:bg-green-500 hover:text-white">
+                    学生工作
+                </a>
+            </div>
+            <div class="relative" x-data="{ $channel.path: false }" @mouseover="$channel.path = true" @mouseout="$channel.path = false">
+                <a href="../../dwgz/zzjg/index.htm" class="block  text-center px-4 bg:px-4 py-3 text-gray-500 hover:bg-green-500 hover:text-white">
+                    党群工作
+                </a>
+            </div>
+            <div class="relative" x-data="{ $channel.path: false }" @mouseover="$channel.path = true" @mouseout="$channel.path = false">
+                <a href="../../xyzc/xydt/index.htm" class="block  text-center px-4 bg:px-4 py-3 text-gray-500 hover:bg-green-500 hover:text-white">
+                    校友之窗
+                </a>
+            </div>
+
+        </div>
+    </div>
+</nav><style>
+
+.leading-loose  p img{    display: inline;}
+</style>
+
+
+
+    <div class="">
+        <img src="/pub/smxy/images/2025/b-1.png" class="w-full min-h-[200px] lg:max-h-[370px]">
+    </div>
+    <div class="bg-no-repeat bg-bottom" style="background-image: url('/pub/smxy/images/2025/bg-1.png');">
+        <main class="container mx-auto -mt-14 lg:-mt-28 ">
+            <div class="flex flex-wrap">
+                <aside class="w-full lg:w-1/5 px-4 lg:py-8">
+                    <div class="">
+                        <h2 class="px-12 py-4 lg:py-6 text-xl lg:text-2xl font-semibold text-center text-white bg-green-500/80">
+                              学院概况
+                        </h2>
+                        <ul class="grid grid-cols-1 divide-y divide-solid bg-gray-200/30   divide-gray-300/40">
+                            <li>
+							<a href="index.htm" class="block  text-base lg:text-lg text-center py-4 hover:bg-green-300/20 hover:border-l-8 hover:border-green-300">学院简介</a>
+                            </li>
+                            <li>
+							<a href="../jgsz/index.htm" class="block  text-base lg:text-lg text-center py-4 hover:bg-green-300/20 hover:border-l-8 hover:border-green-300">机构设置</a>
+                            </li>
+                            <li>
+							<a href="../xrld/index.htm" class="block  text-base lg:text-lg text-center py-4 hover:bg-green-300/20 hover:border-l-8 hover:border-green-300">现任领导</a>
+                            </li>
+                            <li>
+							<a href="../lsyg/index.htm" class="block  text-base lg:text-lg text-center py-4 hover:bg-green-300/20 hover:border-l-8 hover:border-green-300">历史沿革</a>
+                            </li>
+                            <li>
+							<a href="../lxwm/index.htm" class="block  text-base lg:text-lg text-center py-4 hover:bg-green-300/20 hover:border-l-8 hover:border-green-300">联系我们</a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <section class="w-full lg:w-4/5 p-4 lg:p-12">
+                    <div class="text-right text-sm lg:pt-8 lg:px-8 lg:mb-8 text-white">
+                        您现在所在的位置：              <a href="../../index.htm">首页</a>»
+             <a href="../index.htm">学院概况</a>»
+    学院简介
+
+                    </div>
+                    <h1 class="text-2xl text-center font-medium py-4 text-blue-700">学院简介</h1>
+					<div class="mb-8 text-gray-700 text-sm text-center">发布日期：2020-05-25</div>
+                    <article class="leading-loose text-lg lg:px-10 py-4 space-y-4">
+                        <p style="text-indent: 2em;">生命科学学院起始于上世纪三十年代，在石声汉、闻洪汉、荆家海、王韶唐、汪佩洪等老一辈学者悉心打造下，经过几代人的努力，形成了重视实践和能力培养的传统，秉承着“厚德、励志、笃学、创新” 的院训不断发展壮大。</p> 
+<p style="text-indent: 2em;">生命科学学院现有在编教职工184名，专任教师138人，其中正高级教师49名，副高级教师60名。学院拥有国家级高层次人才计划入选者5人次，国家级青年人才计划入选者5人次，省部级人才计划入选者21人次，享受国务院政府特殊津贴专家4人，校级人才计划入选者19人次。</p> 
+<p style="text-indent: 2em;">学院设有生物技术系、生物科学系、生物工程系、生物学实验教学中心4个教学系(中心)，涵盖了12个教学研究室、课程组、生物学教学实验室、生物学教学科研平台（测试中心）、生物工程实验实训中心和全国农林高校最大的植物标本馆；有西北农林科技大学旱区生物质能研究中心、微生物研究中心、生物信息研究中心与安康中药材试验示范站。学院承担着全校生物类基础课及本院专业课的教学任务。</p> 
+<p style="text-indent: 2em;">学院有生物学一级学科博士后流动站，生物学一级学科博士学位授权学科点，植物学、生物化学与分子生物学、微生物学、细胞生物学、遗传学、生物信息学（自设）6个二级学科博士学位授权点，有植物学、生物化学与分子生物学、微生物学、细胞生物学、遗传学、生物信息学（自设）、生物与医药（专业硕士）7个二级学科硕士学位授权点；有生物科学、生物技术、生物工程、生物信息学等4个本科专业。植物学和生物化学与分子生物学为陕西省重点学科，生物技术专业、生物工程专业、生物科学专业为国家一流专业建设点。</p> 
+<p style="text-indent: 2em;">生命科学学院师资队伍建设和生命科学学科发展任重而道远，学院全体师生正踏着老一辈人留下的足迹，充满希望地向着更高、更远的目标不断奋斗！</p> 
+<p style="text-indent: 2em; text-align: right;">（数据更新至2025年6月5日）</p> 
+
+						 <div class="leading-8">
+						</div>
+                    </article>
+                </section>
+            </div>
+        </main>
+    </div>
+
+
+
+
+
+<footer>
+    <div class="min-h-[405px] bg-no-repeat bg-cover" style="background-image: url(/pub/smxy/images/fb.png)">
+        <div class="flex items-end justify-center h-96 pb-4">
+            <div class="mx-auto">
+                <div class="flex flex-wrap justify-center items-center space-x-12 leading-loose">
+                    <div class="">
+                        <img class="" src="/pub/smxy/images/qrcode.png">
+                    </div>
+                    <ul class="text-md lg:text-base text-white">
+                        <li>版权所有：西北农林科技大学生命学院</li>
+                        <li>地址：陕西杨凌农业高新技术产业示范区西农路22号</li>
+                        <li>邮编：712100</li>
+                        <li>主管领导：徐三友</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<script src="https://nic.nwafu.edu.cn/js/jquery.min.js"></script>
+
+<script type="text/javascript">
+    jQuery.ajax({
+        url: '/wm/api/visit/write/channel',
+        type: 'get',
+        data: {
+            siteID: '1fc3184b238049619b113072cf5b8812',
+            channelID:'1251',
+            channelName:encodeURIComponent("学院简介")
+        }
+    })
+</script>                                                                                                                                                                                                                               
+
+<script type="text/javascript">
+    jQuery.ajax({
+        url: '/wm/api/visit/write/site',
+        type: 'get',
+        data: {
+            siteID: '1fc3184b238049619b113072cf5b8812'
+        }
+    })
+</script>
+
+<script type="text/javascript">
+    jQuery.ajax({
+        url: '/wm/api/visit/write/article',
+        type: 'get',
+        data: {
+            siteID: '1fc3184b238049619b113072cf5b8812',
+            articleID:'52431',
+            articleName:encodeURIComponent("学院简介")
+        }
+    })
+</script>
+
+
+<script type="text/javascript" src="../../g_style/g_index.js"></script><script type="text/javascript" src="../../g_style/1065_g_channel_index.js"></script><script src="/cms/web/writeLog.jsp?siteID=27" async="async"></script>
+<meta name="author" content=""><meta name="description" content=""><meta name="keywords" content=""><link rel="shortcut icon" href=""><script type="text/javascript" src="/publish/gPublic/all.js"></script><style>.selectTdClass{background-color:#edf5fa !important}.gpTable{ border-collapse:collapse;border:1px solid #000 }.gpTable td,.gpTable th{border:1px solid #000;  padding: 2px 3px;}.gpTable caption{border:1px dashed #DDD;border-bottom:0;padding:3px;text-align:center;}.gpTable th{border-top:1px solid #BBB;background-color:#F7F7F7;}.gpTable tr.firstRow th{border-top-width:2px;}.ue-table-interlace-color-single{ background-color: #fcfcfc; } .ue-table-interlace-color-double{ background-color: #f7faff; }td p{margin:0;padding:0;} th p{margin:0;padding:0;}blockquote {padding: 0 0 0 15px;margin: 0 0 18px;border-left: 5px solid #EEE;}</style>
+</body></html>

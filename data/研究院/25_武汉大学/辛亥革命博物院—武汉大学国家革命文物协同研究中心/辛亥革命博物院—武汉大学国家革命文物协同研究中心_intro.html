@@ -1,0 +1,439 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中心简介-辛亥革命博物院—武汉大学国家革命文物协同研究中心</title><meta name="pageType" content="3">
+<meta name="pageTitle" content="中心简介">
+<meta name="keywords" content="辛亥革命博物院—武汉大学国家革命文物协同研究中心,中心,简介">
+<meta name="description" content="国家革命文物协同研究中心是由教育部、国家文物局批准设立的国家级人文社科重点研究平台，按照教育部人文社会科学重点研究基地管理，旨在发挥高校优势，整合各方力量，打造一批具有创新性、示范性、引领性的红色资源研究高地、革命文物保护利用高端智库、革命文化学术交流重要平台、红色资源共建共享中心，构建多学科交叉、跨领域融合、特色鲜明、布局合理的革命文物研究新格局，发挥好革命文物在党史学习教育、革命传统教育、爱国主义教育、...">
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <script src="../../js/jquery-3.6.4.min.js"></script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../../content.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1081,'/content.jsp',1111,2079733937)</script>
+</head>
+<body>
+    
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script>    <div class="header_top">
+        <div class="w1400 header_top_s">
+            <div class="logo"><img src="../../images/logo.png" alt=""></div>
+            <div id="divu0">
+    <div id="appu0"><div class="header_search"><input type="text" placeholder="全文搜索" autocomplete="off"> <button></button></div> <!----></div>
+</div>
+        </div>
+    </div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError" class="header_search">
+            <input type="text" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <button v-on:click="onSubmit()"></button>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "2079733937";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+    <div class="header">
+<div class="header_nav">
+            <ul>
+<li><a href="https://nrcrcrc.whu.edu.cn"><img src="../../images/icon01.png" alt="">首页</a></li>
+                <li>
+                    <a href=""><img src="../../images/icon02.png" alt="">中心概况</a>
+                    <ol class="children">
+                        <li><a href="1111.htm" target="">中心简介</a></li>
+                        <li><a href="../1101/1141.htm">指导委员会</a></li>
+                        <li><a href="../1091/1131.htm" target="">学术委员会</a></li>
+                        <li><a href="../1111/1161.htm">中心领导</a></li>
+                        <li><a href="../1121/1171.htm">内设机构</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href=""><img src="../../images/icon03.png" alt="">学术队伍</a>
+                    <ol class="children">
+                        <li><a href="../1131/1261.htm">首席专家</a></li>
+                    <li><a href="../1141/1251.htm">研究人员</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href=""><img src="../../images/icon04.png" alt="">学术研究</a>
+                    <ol class="children">
+                        <li><a href="../1151/1201.htm">研究方向</a></li>
+                        <li><a href="../../index/xsyj/xsqk.htm">学术期刊</a></li>
+                        <li><a href="../1171/1221.htm">课题项目</a></li>                    
+                    </ol>                    
+                </li>                 
+                <li>
+                    <a href=""><img src="../../images/icon04.png" alt="">人才培养</a>
+                    <ol class="children">
+                        <li><a href="../1181/1231.htm">专业硕士、专业博士</a></li>
+                    <li><a href="../1191/1241.htm">文博人才</a></li>
+                    </ol>                    
+                </li>                
+                <li>
+                    <a href=""><img src="../../images/icon05.png" alt="">合作交流</a>
+                    <ol class="children">
+                        <li><a href="../../index/hzjl/gmwwbhlylm.htm">革命文物保护利用联盟</a></li>
+                    <li><a href="../../index/hzjl/xhsywwwcsjds.htm">辛亥首义文物文创设计大赛</a></li>
+                    <li><a href="../../index/hzjl/gmwwcbds.htm">革命文物传播大赛</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <a href=""><img src="../../images/icon03.png" alt="">中心成果</a>
+                    <ol class="children">
+                        <li><a href="../../index/zxcg/xslw.htm">学术论文</a></li>
+                    <li><a href="../../index/zxcg/yjbg.htm">研究报告</a></li>
+                    <li><a href="../../index/zxcg/yjzz.htm">研究专著</a></li>
+                    </ol>
+                </li>  
+                <li>
+                    <a href=""><img src="../../images/icon02.png" alt="">新闻与资讯</a>
+                    <ol class="children">
+                        <li><a href="../../index/xwyzx/zxdt.htm">中心动态</a></li>
+                    <li><a href="../../index/xwyzx/zcfg.htm">政策法规</a></li>
+                    <li><a href="../../index/xwyzx/spxw.htm">视频映像</a></li>
+                    </ol>
+                </li>                                    
+</ul>
+</div>
+    </div>    
+    <div class="banner">
+        <div class="swiper-container swiper-container-horizontal">
+            <div class="swiper-wrapper" style="transform: translate3d(-1280px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="3" style="width: 1280px;"><img src="../../images/wd2.jpg" alt=""></div>
+                <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 1280px;"><img src="../../images/banner01.png" alt=""></div>
+                <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 1280px;"><img src="../../images/wd1.jpg" alt=""></div>
+                <div class="swiper-slide" data-swiper-slide-index="2" style="width: 1280px;"><img src="../../images/banner03.png" alt=""></div>
+                <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="3" style="width: 1280px;"><img src="../../images/wd2.jpg" alt=""></div>
+            <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 1280px;"><img src="../../images/banner01.png" alt=""></div></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+        </div>
+    </div>
+<script>
+    $('.header_nav ul > li').hover(function(){
+        $(this).find('.children').animate({ opacity:'show', height:'show' },200);
+        $(this).find('.root').addClass('navhover');
+        }, function() {
+        $('.children').stop(true,true).hide();
+        $('.root').removeClass('navhover');
+    });  
+</script>
+    <div class="container">
+        <div class="Inside_details_box">
+            <div class="crumb w1400"><a href="../../index.htm">首页</a> &gt;&gt;
+        <a href="">正文</a>
+</div>
+            <div class="Inside_details w1400">
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="../../_dwr/interface/NewsvoteDWR.js"></script><script language="javascript" src="../../_dwr/engine.js"></script><script language="javascript" src="/system/resource/js/news/newscontent.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><form name="_newscontent_fromname">
+
+
+                <div class="Inside_details_header">
+                    <div class="Inside_details_header_box">
+                        <h1>
+                            <p>中心简介</p>
+                        </h1>
+                        <div id="othermessage" class="clearfix">
+                            <p class="fl">
+                                <span>发布日期：2024年12月17日 09:37</span>
+                            </p>
+                            <div id="proclaim" class="fr">
+                                <font style="float: left; line-height: 14px; font-size: 14px; width: 50px;">分享：</font>
+                                <!--分享代码s-->
+                                <div class="m-share">
+                                    <div class="share" id="share">
+                                        <a class="share-wechat" href="javascript:;"><i></i>
+                                            <div class="bg-code"></div>
+                                            <div class="qrcode"></div><span class="close-btn">X</span>
+                                        </a>
+                                        <a class="share-weibo"><i></i></a>
+                                        <a class="share-qqzone"><i></i></a>
+                                    </div>
+                                </div>
+                                <!--script type="text/javascript" src="js/jquery.qrcode.min.js" ></script-->
+                                <!--script type="text/javascript" >
+                                    $(function () {
+                                        //分享
+                                        var title = "【"   $.trim(document.title)   "】";
+                                        var description = $.trim($('meta[name="description"]').attr('content'));
+                                        var portalUrl = window.location.href;
+                                        //生成二维码
+                                        function generateQRCode(rendermethod, picwidth, picheight, url) {
+                                            $(".qrcode").qrcode({
+                                                render: rendermethod, // 渲染方式有table方式（IE兼容）和canvas方式
+                                                width: picwidth, //宽度
+                                                height: picheight, //高度
+                                                text: utf16to8(portalUrl), //内容
+                                                typeNumber: -1, //计算模式
+                                                correctLevel: 2, //二维码纠错级别
+                                                background: "#ffffff", //背景颜色
+                                                foreground: "#000000" //二维码颜色
+
+                                            });
+                                        }
+                                        canvas_table = !!document.createElement('canvas').getContext ? 'canvas' : 'table';
+
+                                        function init() {
+                                            generateQRCode(canvas_table, 100, 100, window.location.href);
+                                        }
+                                        //中文编码格式转换
+                                        function utf16to8(str) {
+                                            var out, i, len, c;
+                                            out = "";
+                                            len = str.length;
+                                            for (i = 0; i < len; i  ) {
+                                                c = str.charCodeAt(i);
+                                                if ((c >= 0x0001) && (c <= 0x007F)) {
+                                                    out  = str.charAt(i);
+                                                } else if (c > 0x07FF) {
+                                                    out  = String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
+                                                    out  = String.fromCharCode(0x80 | ((c >> 6) & 0x3F));
+                                                    out  = String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+                                                } else {
+                                                    out  = String.fromCharCode(0xC0 | ((c >> 6) & 0x1F));
+                                                    out  = String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+                                                }
+                                            }
+                                            return out;
+                                        }
+                                        init();
+
+                                        $(".share-wechat").on("click", function () {
+                                            $(".bg-code,.qrcode").toggle();
+                                        });
+                                        //清空二维码
+                                        $(".close-btn").on("click", function (event) {
+                                            $(".bg-code,.qrcode,.close-btn").hide();
+                                            event.stopPropagation();
+                                        });
+
+                                        function showToQzone() {
+                                            var _desc = description;
+                                            var _title = title;
+                                            var _url = portalUrl;
+                                            var _shareUrl = 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?';
+                                            _shareUrl  = 'url='   encodeURIComponent(_url);   //参数url设置分享的内容链接|默认当前页location
+                                            _shareUrl  = '&title='   encodeURIComponent(_title);    //参数title设置分享标题，可选参数
+                                            window.open(_shareUrl, '', 'width=700,height=680,top=0,left=0,toolbar=no,menubar=no,scrollbars=no,resizable=1,location=yes,status=0');
+                                        }
+
+                                        function showToSina(title, portalUrl, desc) {
+                                            var _desc = desc;
+                                            var _t = title   " "   _desc;
+                                            var _url = portalUrl;
+                                            var _appkey = "2806082167"; //你从微薄获得的appkey
+                                            var _site = ''; //你的网站地址
+                                            var _ralateUid = "";
+                                            var _u = 'http://service.weibo.com/share/share.php?url='   _url   '&appkey='   _appkey   '&title='   _t   '&ralateUid='   _ralateUid   '&searchPic=false';
+                                            window.open(_u, '', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no');
+                                        }
+
+                                        $('.share-qqzone').on('click', function () {
+                                            showToQzone(title, portalUrl, description);
+                                        });
+                                        $('.share-weibo').on('click', function () {
+                                            showToSina(title, portalUrl, description);
+                                        });
+                                    });
+                                </script-->
+                                <!--分享代码e-->
+                            </div>
+                            <dl class="fr" id="fontSize">
+                                <script language="JavaScript" type="text/javascript">
+                                    function changeSize(size) {
+                                        document.getElementById('mainText').style.fontSize = size + 'px'
+                                    }
+                                </script>
+                                字号：&nbsp;&nbsp;
+                                <a href="javascript:changeSize(18)">大</a>&nbsp;&nbsp;
+                                <a href="javascript:changeSize(16)" class="on">中</a>&nbsp;&nbsp;
+                                <a href="javascript:changeSize(14)">小</a>
+                            </dl>
+                        </div>
+                        <div class="repeatX"></div>
+                    </div>
+                </div>
+                <div class="mainTextBox">
+                    <div id="mainText">
+                        <div class="mainText_content" id="vsb_content">
+                            <p>
+                                </p><div class="v_news_content">
+<p style="text-indent: 2em; line-height: 2em;">国家革命文物协同研究中心是由教育部、国家文物局批准设立的国家级人文社科重点研究平台，按照教育部人文社会科学重点研究基地管理，旨在发挥高校优势，整合各方力量，打造一批具有创新性、示范性、引领性的红色资源研究高地、革命文物保护利用高端智库、革命文化学术交流重要平台、红色资源共建共享中心，构建多学科交叉、跨领域融合、特色鲜明、布局合理的革命文物研究新格局，发挥好革命文物在党史学习教育、革命传统教育、爱国主义教育、思想政治教育方面的重要作用。</p><p style="text-indent: 2em; line-height: 2em;">辛亥革命博物院—武汉大学国家革命文物协同研究中心，依托辛亥革命博物院和武汉大学，“立足湖北、辐射全国、联络海外”，聚焦辛亥革命史、中国共产党早期历史、中国革命精神谱系等研究，努力建成特色鲜明、影响广泛、成果丰富的一流智库、学术高地、人才培养基地”的总体定位，聚合我省优质革命资源和研究传播力量，深入推进以湖北为主体、为全国作示范的革命文物保护利用工作。</p><p style="text-indent: 2em; line-height: 2em;">中心立足国家重大需求，服务社会发展大局，坚持理论研究与实践应用相结合，按照“守正创新、特色发展、开放共享、动态调整”的管理要求，围绕革命文物的保护、展示、管理、利用，深入开展系统研究、科学保护、价值挖掘、展示传播、社会教育、公共服务、人才培养、咨政建言工作，积极助力新时代革命文物工作高质量发展。</p><h3 style="margin-bottom: 20px;"><span style="font-size: 14px;"></span><br></h3><p><br></p>
+</div>
+                            <p></p>
+                        </div>
+                    </div>
+                    <!-- 文章页底部二维码 s -->
+                    <style>
+                        #qr_wrap{width: 135px;margin: 0 auto;padding-bottom:40px;}
+                    </style>
+                    <div id="qr_wrap"></div>
+                    <!--script type="text/javascript" >
+                        $(function () {
+                            var text = window.location.href;
+                            $('#qr_wrap').qrcode({
+                                text: utf16to8(text),
+                                height: 132,
+                                width: 132,
+                                src: ''
+                            });
+                            function utf16to8(str) { //转码
+                            var out, i, len, c;
+                            out = "";
+                            len = str.length;
+                            for (i = 0; i < len; i  ) {
+                                c = str.charCodeAt(i);
+                                if ((c >= 0x0001) && (c <= 0x007F)) {
+                                    out  = str.charAt(i);
+                                } else if (c > 0x07FF) {
+                                    out  = String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
+                                    out  = String.fromCharCode(0x80 | ((c >> 6) & 0x3F));
+                                    out  = String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+                                } else {
+                                    out  = String.fromCharCode(0xC0 | ((c >> 6) & 0x1F));
+                                    out  = String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+                                }
+                            }
+                            return out;
+                            }
+                        })
+                    </script-->
+                </div>
+            
+
+
+
+
+
+</form>
+</div>
+        </div>
+    </div>
+        <div class="footer anim8">
+        <div class="foot_t w1400">
+            <div class="foot_t_l">
+                <h2>友情链接：</h2>
+                <ul>
+                                        <li><a href="https://www.mct.gov.cn/" target="_blank">文化和旅游部</a></li>
+                                        <li><a href="http://www.ncha.gov.cn/" target="_blank">国家文物局</a></li>
+                                        <li><a href="http://wlt.hubei.gov.cn/" target="_blank">湖北省文化和旅游厅</a></li>
+                                        <li><a href="http://wlj.wuhan.gov.cn/" target="_blank">武汉市文化和旅游局</a></li>
+                                        <li><a href="https://www.chinamuseum.org.cn/" target="_blank">中国博物馆协会</a></li>
+                                        <li><a href="https://www.whu.edu.cn/" target="_blank">武汉大学</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="foot_b">       
+            <div class="w1400 foot_b_c">
+                <span>辛亥革命博物院——武汉大学  国家革命文物协同研究中心</span>
+            </div>
+     </div>
+    </div> 
+
+<script src="../../js/swiper.min.js"></script>
+<script>
+    //banner切换
+    var swiper1 = new Swiper('.banner .swiper-container', {
+        loop:true,
+        autoplay:5000,
+        pagination: '.banner .swiper-pagination',
+        paginationClickable: true
+    });  
+</script>
+<script type="text/javascript">
+    var oDl = document.getElementById('fontSize');
+    var aA = oDl.getElementsByTagName('a');  
+            
+    for(var i = 0;i<aA.length;i++){
+        aA[i].index  = i;     
+        aA[i].onclick = function(){  
+            for(var i = 0;i<aA.length;i++){
+                aA[i].className = '';
+            }
+            this.className = 'on';
+        };
+    }
+</script>
+
+</body></html>

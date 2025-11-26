@@ -1,0 +1,775 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="xym/css/public.css" rel="stylesheet">
+    <link href="xym/css/slick.css" rel="stylesheet">
+    <link href="xym/css/animate.css" rel="stylesheet">
+    <link href="xym/css/style.css" rel="stylesheet">
+    <script src="xym/js/browser.js"></script>
+    <script src="xym/js/jquery.min.js"></script>
+    <script src="xym/js/jquery-migrate.min.js"></script>
+    <title>上海财经大学浙江学院门户网站</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="上海财经大学浙江学院门户网站">
+<META Name="keywords" Content="上海财经大学浙江学院" />
+
+    <style>
+#adu0{z-index:99999999 !important;}
+</style>
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307b76475253555742000500094650 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1002,'/index.jsp',-1,1563431873)</script>
+</head>
+
+<body>
+    <div id="loading">
+    </div>
+    <div><script language="javascript" src="/system/resource/js/dynclicks.js"></script>   
+</SCRIPT></div>
+    <div class="header">
+        <div class="container clearfix">
+            <div class="logo fl wow fadeInLeft">
+                
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="index.htm" title="上海财经大学浙江学院"><img src="xym/images/indexlogo.png" alt=""></a>
+            </div>
+            <div class="fr wow fadeInRight">
+                <!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+        
+        <div class="search">
+<input  class="input" placeholder="输入关键字查询..." autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+<button type="submit" class="submit" v-on:click="onSubmit()"></button>
+ </div>
+        
+          
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1563431873";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu2 = document.querySelector("#appu2");
+   if (appElementu2 && appElementu2.__vue__) {
+
+   } else {
+      $("#divu2").html($("#htmlu2").text());
+      var appOwner = "1563431873";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou2 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu2(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu2();
+        }
+      };
+
+      function onSubmitu2(e) {
+        queryInfou2.query.keyWord= $("#appu2  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou2.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script>
+                <div class="btn">
+                    <div class="search-btn spirit"></div>
+                    <div class="nav-btn">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <ul class="container clearfix">
+<li class="cur">
+<a href="index.htm" title="网站首页">网站首页</a>
+<li>
+<a href="xqzl/xygk.htm" title="校情总览">校情总览</a>
+<i class="down"></i>
+<div class="lv2">
+<h6>校情总览</h6>
+<a href="xqzl/xygk.htm" title="学院概况">学院概况</a>
+<a href="xqzl/xyld.htm" title="学院领导">学院领导</a>
+<a href="xqzl/xcp.htm" title="宣传片">宣传片</a>
+<a href="xqzl/xybz.htm" title="学院标志">学院标志</a>
+<a href="xqzl/xyfg.htm" title="校园风光">校园风光</a>
+</div>
+<li>
+<a href="jgsz/jgsz.htm" title="机构设置">机构设置</a>
+<i class="down"></i>
+<div class="lv2">
+<h6>机构设置</h6>
+<a href="jgsz/jgsz.htm" title="机构设置">机构设置</a>
+</div>
+<li>
+<a href="javascript:void(0);" title="党风党建">党风党建</a>
+<i class="down"></i>
+<div class="lv2">
+<h6>党风党建</h6>
+<a href="http://djw.shufe-zj.edu.cn" target="_blank" title="党建工作">党建工作</a>
+<a href="http://jjjc.shufe-zj.edu.cn" target="_blank" title="纪检监察">纪检监察</a>
+</div>
+<li>
+<a href="javascript:void(0);" title="人才培养">人才培养</a>
+<i class="down"></i>
+<div class="lv2">
+<h6>人才培养</h6>
+<a href="http://jwc.shufe-zj.edu.cn/jxyj/zyyl.htm" target="_blank" title="专业设置">专业设置</a>
+<a href="https://jwc.shufe-zj.edu.cn/index/jxkydt.htm" target="_blank" title="教学动态">教学动态</a>
+<a href="http://jwc.shufe-zj.edu.cn/kxyj.htm" target="_blank" title="科学研究">科学研究</a>
+</div>
+<li>
+<a href="javascript:void(0);" title="招生就业">招生就业</a>
+<i class="down"></i>
+<div class="lv2">
+<h6>招生就业</h6>
+<a href="http://zs.shufe-zj.edu.cn" target="_blank" title="招生网">招生网</a>
+<a href="http://shufe-zj.jysd.com/" target="_blank" title="就业网">就业网</a>
+</div>
+<li>
+<a href="javascript:void(0);" title="校园文化">校园文化</a>
+<i class="down"></i>
+<div class="lv2">
+<h6>校园文化</h6>
+<a href="http://xsc.shufe-zj.edu.cn/bmdt.htm" target="_blank" title="学工动态">学工动态</a>
+<a href="http://tuanwei.shufe-zj.edu.cn/txzx.htm" target="_blank" title="团学资讯">团学资讯</a>
+<a href="http://xsc.shufe-zj.edu.cn/tzgg.htm" target="_blank" title="通知公告">通知公告</a>
+<a href="http://xsc.shufe-zj.edu.cn/zlxz.htm" target="_blank" title="资料下载">资料下载</a>
+<a href="http://tuanwei.shufe-zj.edu.cn/stzx.htm" target="_blank" title="视听在线">视听在线</a>
+<a href="http://xsc.shufe-zj.edu.cn/xzfc.htm" target="_blank" title="学子风采">学子风采</a>
+<a href="http://xsc.shufe-zj.edu.cn/scyb.htm" target="_blank" title="上财易班">上财易班</a>
+<a href="https://ggglc.shufe-zj.edu.cn/lsxx/nygl.htm" target="_blank" title="绿色校园">绿色校园</a>
+</div>
+<li>
+<a href="javascript:void(0);" title="人事师资">人事师资</a>
+<i class="down"></i>
+<div class="lv2">
+<h6>人事师资</h6>
+<a href="http://rsc.shufe-zj.edu.cn/jsml.htm" target="_blank" title="教授名录">教授名录</a>
+<a href="http://rsc.shufe-zj.edu.cn/rcxq.htm" target="_blank" title="人才需求">人才需求</a>
+<a href="http://rsc.shufe-zj.edu.cn/rstz.htm" target="_blank" title="人事通知">人事通知</a>
+<a href="http://rsc.shufe-zj.edu.cn/zczl.htm" target="_blank" title="职称专栏">职称专栏</a>
+<a href="http://shufezj.portal.chaoxing.com/" target="_blank" title="师资培训">师资培训</a>
+</div>
+<li>
+<a href="xxfw/dtfw.htm" title="信息服务">信息服务</a>
+<i class="down"></i>
+<div class="lv2">
+<h6>信息服务</h6>
+<a href="xxfw/dtfw.htm" title="地图方位">地图方位</a>
+<a href="xxfw/ggjt.htm" title="公共交通">公共交通</a>
+<a href="xxfw/cydh.htm" title="常用电话">常用电话</a>
+<a href="xxfw/xl_.htm" title="校历 ">校历 </a>
+<a href="xxfw/xxgk.htm" title="信息公开">信息公开</a>
+</div>
+<li>
+<a href="lxwm/lxwm.htm" title="联系我们">联系我们</a>
+<i class="down"></i>
+<div class="lv2">
+<h6>联系我们</h6>
+<a href="lxwm/lxwm.htm" title="联系我们">联系我们</a>
+<a href="info/1060/8531.htm" title="常用电话">常用电话</a>
+</div>
+</ul>
+    </div>
+        <div class="banner-box">
+<div class="banner wow container fadeIn" data-wow-delay=".2s">
+<div class="slick-slide">
+<a title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1563431873, 1011347)" class="img">
+<img src="images/0afa6ea8a8311616bb6ae49969cf52f1.jpg">
+</a>  
+</div>
+<div class="slick-slide">
+<a title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1563431873, 1011337)" class="img">
+<img src="images/diyike.jpg">
+</a>  
+</div>
+<div class="slick-slide">
+<a title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1563431873, 1011336)" class="img">
+<img src="images/1000.jpg">
+</a>  
+</div>
+<div class="slick-slide">
+<a title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1563431873, 1011328)" class="img">
+<img src="images/10.jpg">
+</a>  
+</div>
+<div class="slick-slide">
+<a title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1563431873, 55021)" class="img">
+<img src="images/XIAOXUN.jpg">
+</a>  
+</div>
+</div>
+</div>
+    <div class="index-main">
+        <div class="part1 container clearfix">
+            <div class="fl wow fadeInUp">
+                
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script><div class="column"><a href="xwzx1/czyw.htm" class="more fr">More</a><h3>财浙要闻<span> / News</span></h3></div>
+<div class="news-slick fl">
+<a href="info/1065/11285.htm" class="img-scale" title="学院召开党委（扩大）会议传达学习党的二十届四中全会精神">
+<div class="img" style="background-image: url(virtual_attach_file.vsb?afc=5nlQC7Ul-8oRNaLQNWRUz6RUlQRnzvqDoRLZnmLYLmNiLzU0gihFp2hmCIa0LYy8M1y4okyin7l8M4nVnzl4M4-Poz7DozLsLRQfMNLPMmAFU49aLzWRnzAFMRG4nzNJqjfjo4OeosMwCDXN_dX/_dN0qIbtpYyxLYyxLYbw62p8c&oid=1563431873&e=.jpg);"></div>
+<p class="title"><span class="tt1">学院召开党委（扩大）会议传达学习党的二十届四中全会精神</span></p>
+</a>
+<a href="info/1065/11185.htm" class="img-scale" title="市委教育工委对我院党委理论学习中心组学习会开展巡听旁听">
+<div class="img" style="background-image: url(virtual_attach_file.vsb?afc=5M4WCRo7LaUNC8UQ4T7UllbL4VVnmGqaLzv4UmGDMmWRLzL0gihFp2hmCIa0n1yPMShRMYh2o7UDnNMRUN-PLR6foRQknlWVM8nRnlCZMmWFnzvbUzA2L8QFMRCPo7CJqjfjo4OeosMwCDXN_dX/_dN0qIbtpYyxLYyxLYbw62p8c&oid=1563431873&e=.jpg);"></div>
+<p class="title"><span class="tt1">市委教育工委对我院党委理论学习中心组学习会开展巡听旁听</span></p>
+</a>
+<a href="https://mp.weixin.qq.com/s/MgZPDHGepWXg-SAzdCuE9Q" class="img-scale" title="首届浙江省大学生企业数智化经营实践竞赛在我院落幕">
+<div class="img" style="background-image: url(virtual_attach_file.vsb?afc=5MlnCRUlQRozG4nQzU4nmfVUmLZL8-qDMmVkLR7ZLm9PU4-0gihFp2hmCIa0USyinkyZUSh7MmU8LNMkUNWVUzT7U4NDnmQkMR78MNrkUmTFo7-soz7DMRWFMRW2Ml-Jqjfjo4OeosMwCDXN_dX/_dN0qIbtpYyxLYyxLYbw62p8c&oid=1563431873&e=.jpg);"></div>
+<p class="title"><span class="tt1">首届浙江省大学生企业数智化经营实践竞赛在我院落幕</span></p>
+</a>
+<a href="https://mp.weixin.qq.com/s/LsJ1NU4wVBUcew21gT4-pg" class="img-scale" title="学院举行2025级学生军训总结大会">
+<div class="img" style="background-image: url(virtual_attach_file.vsb?afc=5nzCC8nmGZUl-aMQmQkLRWRnm6kLRNqDL4V2L4nVL7L8oR-0gihFp2hmCIa0oky8UYy8nkyiLzGZMR7iM4lYnlrkU4GsLmG4nRGaU8lPM8WFolrVU8nRMlWFoz9PLm7Jqjfjo4OeosMwCDXN_dX/_dN0qIbtpYyxLYyxLYbw62p8c&oid=1563431873&e=.jpg);"></div>
+<p class="title"><span class="tt1">学院举行2025级学生军训总结大会</span></p>
+</a>
+<a href="info/1065/10955.htm" class="img-scale" title="学院领导看望慰问第31届义博会志愿者并开展校企合作交流">
+<div class="img" style="background-image: url(virtual_attach_file.vsb?afc=5nmvCbnRGaM49PoQ7UZo7M7LNlaMmUqaozA2Um-PLl7sM7L0gihFp2hmCIa0nSyaUSyiU1hkMNM7Mm6fLlCZo7VkU4UPoz7YM7W2nmNDMRVFo7rkU498U4rFMRN8MRGJqjfjo4OeosMwCDXN_dX/_dN0qIbtpYyxLYyxLYbw62p8c&oid=1563431873&e=.jpg);"></div>
+<p class="title"><span class="tt1">学院领导看望慰问第31届义博会志愿者并开展校企合作交流</span></p>
+</a>
+</div><script>_showDynClickBatch(['dynclicks_u5_11285','dynclicks_u5_11185','dynclicks_u5_11055','dynclicks_u5_11045','dynclicks_u5_10955'],[11285,11185,11055,11045,10955],"wbnews", 1563431873)</script>
+
+
+
+<ul class="list1 fr">
+<li><a href="https://mp.weixin.qq.com/s/GnKl4vC9nmUYOZWS-6R7UQ" class="title tt1" title="学院举办“就在金秋 职面未来”2026届毕业生秋季校园招聘会">学院举办“就在金秋 职面未来”2026届毕业生秋季校园招聘会</a><p class="date">2025-10-31</p></li>
+<li><a href="info/1065/11285.htm" class="title tt1" title="学院召开党委（扩大）会议传达学习党的二十届四中全会精神">学院召开党委（扩大）会议传达学习党的二十届四中全会精神</a><p class="date">2025-10-31</p></li>
+<li><a href="info/1065/11275.htm" class="title tt1" title="学院领导调研会计系">学院领导调研会计系</a><p class="date">2025-10-31</p></li>
+<li><a href="info/1065/11265.htm" class="title tt1" title="学院党委会专题研究党风廉政建设和最小清廉单元创建工作">学院党委会专题研究党风廉政建设和最小清廉单元创建工作</a><p class="date">2025-10-31</p></li>
+<li><a href="info/1065/11185.htm" class="title tt1" title="市委教育工委对我院党委理论学习中心组学习会开展巡听旁听">市委教育工委对我院党委理论学习中心组学习会开展巡听旁听</a><p class="date">2025-10-30</p></li>
+</ul><script>_showDynClickBatch(['dynclicks_u6_11295','dynclicks_u6_11285','dynclicks_u6_11275','dynclicks_u6_11265','dynclicks_u6_11185'],[11295,11285,11275,11265,11185],"wbnews", 1563431873)</script>
+
+
+            </div>
+            <div class="fr wow fadeInUp" data-wow-delay=".2s">
+                
+
+<div class="column"><a href="xwzx1/tzgg.htm" class="more fr">More</a><h3>通知公告<span> / Notice</span></h3></div>
+<ul class="list2">
+<li>
+<div class="date">
+<p>10-30</p>
+<p>2025</p>
+</div>
+<div class="text">
+<a href="info/1066/11225.htm" class="title tt2" title="【单一来源结果公示】上海财经大学浙江学院教师发展综合平台服务项目单一来源采购成交结果公告 （非政府采购项目）">【单一来源结果公示】上海财经大学浙江学院教师发展综合平台服务项目单一来源采购成交结果公告 （非政府采购项目）</a>
+</div>
+</li>
+<li>
+<div class="date">
+<p>10-30</p>
+<p>2025</p>
+</div>
+<div class="text">
+<a href="info/1066/11215.htm" class="title tt2" title="【询价结果公告】上海财经大学浙江学院关于四栋公寓西南侧垃圾房改造项目密封询价结果公告">【询价结果公告】上海财经大学浙江学院关于四栋公寓西南侧垃圾房改造项目密封询价结果公告</a>
+</div>
+</li>
+<li>
+<div class="date">
+<p>10-27</p>
+<p>2025</p>
+</div>
+<div class="text">
+<a href="info/1066/11105.htm" class="title tt2" title="【密封询价】上海财经大学浙江学院关于学院四栋公寓西南侧垃圾房改造项目密封询价采购文件">【密封询价】上海财经大学浙江学院关于学院四栋公寓西南侧垃圾房改造项目密封询价采购文件</a>
+</div>
+</li>
+<li>
+<div class="date">
+<p>10-24</p>
+<p>2025</p>
+</div>
+<div class="text">
+<a href="info/1066/10985.htm" class="title tt2" title="【中标公告】浙江金华阳光招标代理有限公司关于上海财经大学浙江学院2025年度常规广告服务封闭式框架协议采购项目（非政府采购）的中标公告">【中标公告】浙江金华阳光招标代理有限公司关于上海财经大学浙江学院2025年度常规广告服务封闭式框架协议采购项目（非政府采购）的中标公告</a>
+</div>
+</li>
+</ul><script>_showDynClickBatch(['dynclicks_u7_11225','dynclicks_u7_11215','dynclicks_u7_11105','dynclicks_u7_10985'],[11225,11215,11105,10985],"wbnews", 1563431873)</script>
+
+
+            </div>
+        </div>
+        <div class="part2">
+            <div class="container clearfix">
+                <div class="fl wow fadeInLeft">
+                    
+
+<div class="column"><a href="xwzx1/mtgz.htm" class="more fr">More</a><h3>媒体关注<span> / Media attention</span></h3></div>
+<ul class="list3">
+<li><a href="info/1068/11205.htm" class="title tt1" title="金彩云|从“提案”到“实践”，这所高校的安防体验馆“火”了">金彩云|从“提案”到“实践”，这所高校的安防体验馆“火”了</a>
+<p class="date fr">2025-10-30</p>
+</li>
+<li><a href="info/1068/11095.htm" class="title tt1" title="金彩云|首届浙江省大学生企业数智化经营实践竞赛在上财浙院落幕">金彩云|首届浙江省大学生企业数智化经营实践竞赛在上财浙院落幕</a>
+<p class="date fr">2025-10-27</p>
+</li>
+<li><a href="info/1068/11085.htm" class="title tt1" title="橙柿互动|AI赋能商业，创新驱动转型！首届浙江省大学生企业数智化经营实践竞赛在上财浙院圆满落幕">橙柿互动|AI赋能商业，创新驱动转型！首届浙江省大学生企业数智化经营实践竞赛在上财浙院圆满落幕</a>
+<p class="date fr">2025-10-27</p>
+</li>
+<li><a href="info/1068/11075.htm" class="title tt1" title="潮新闻|首届浙江省大学生企业数智化经营实践竞赛在上财浙院落幕">潮新闻|首届浙江省大学生企业数智化经营实践竞赛在上财浙院落幕</a>
+<p class="date fr">2025-10-27</p>
+</li>
+<li><a href="info/1068/11315.htm" class="title tt1" title="金华日报|首届省大学生企业数智化 经营实践赛开展">金华日报|首届省大学生企业数智化 经营实践赛开展</a>
+<p class="date fr">2025-10-27</p>
+</li>
+<li><a href="info/1068/10885.htm" class="title tt1" title="潮新闻|上财浙院深耕产教融合，为地方发展注入 “人才动能”">潮新闻|上财浙院深耕产教融合，为地方发展注入 “人才动能”</a>
+<p class="date fr">2025-10-20</p>
+</li>
+<li><a href="info/1068/10635.htm" class="title tt1" title="中国经济导报|王正以婺韵为笔，绘就乡村振兴“精神图谱”">中国经济导报|王正以婺韵为笔，绘就乡村振兴“精神图谱”</a>
+<p class="date fr">2025-10-14</p>
+</li>
+</ul><script>_showDynClickBatch(['dynclicks_u8_11205','dynclicks_u8_11095','dynclicks_u8_11085','dynclicks_u8_11075','dynclicks_u8_11315','dynclicks_u8_10885','dynclicks_u8_10635'],[11205,11095,11085,11075,11315,10885,10635],"wbnews", 1563431873)</script>
+
+
+                </div>
+                <div class="fr wow fadeInRight">
+                        <div class="column"><div class="fr"><div class="arrow slick-prev"></div><div class="arrow slick-next"></div></div><h3>公共服务<span> / public service</span></h3></div>
+<div class="link-slick">
+<div>
+<a href="https://authx-service.shufe-zj.edu.cn/find-pwd?redirect_uri=https%3A%2F%2Fcass.shufe-zj.edu.cn%2Fcas%2Flogin%3Fservice%3Dhttps%2" title="找回密码" onclick="_addDynClicks(&#34;wbimage&#34;, 1563431873, 54902)" class="l1" target="_blank">
+<i style="background-image: url(xym/images/s_icon8_1.png);"></i>找回密码
+</a>  
+</div>
+<div>
+<a href="https://portal.shufe-zj.edu.cn" title="融合门户" onclick="_addDynClicks(&#34;wbimage&#34;, 1563431873, 54903)" class="l2" target="_blank">
+<i style="background-image: url(xym/images/s_icon8_2.png);"></i>融合门户
+</a>  
+</div>
+<div>
+<a href="http://rsc.shufe-zj.edu.cn/rcxq.htm" title="人才招聘" onclick="_addDynClicks(&#34;wbimage&#34;, 1563431873, 54904)" class="l3" target="_blank">
+<i style="background-image: url(xym/images/s_icon8_3.png);"></i>人才招聘
+</a>  
+</div>
+<div>
+<a href="https://ggglc.shufe-zj.edu.cn/" title="招标投标" onclick="_addDynClicks(&#34;wbimage&#34;, 1563431873, 54905)" class="l4" target="_blank">
+<i style="background-image: url(xym/images/s_icon8_4.png);"></i>招标投标
+</a>  
+</div>
+<div>
+<a href="http://xsc.shufe-zj.edu.cn/scyb.htm" title="财浙易班" onclick="_addDynClicks(&#34;wbimage&#34;, 1563431873, 54906)" class="l5" target="_blank">
+<i style="background-image: url(xym/images/s_icon8_5.png);"></i>财浙易班
+</a>  
+</div>
+<div>
+<a href="http://lib.shufe-zj.edu.cn/" title="校图书馆" onclick="_addDynClicks(&#34;wbimage&#34;, 1563431873, 54907)" class="l6" target="_blank">
+<i style="background-image: url(xym/images/s_icon8_6.png);"></i>校图书馆
+</a>  
+</div>
+<div>
+<a href="https://webvpn.shufe-zj.edu.cn" title="WEBVPN" onclick="_addDynClicks(&#34;wbimage&#34;, 1563431873, 54908)" class="l7" target="_blank">
+<i style="background-image: url(xym/images/s_icon8_7.png);"></i>WEBVPN
+</a>  
+</div>
+<div>
+<a href="ggfw/yqlj.htm" title="友情链接" onclick="_addDynClicks(&#34;wbimage&#34;, 1563431873, 54909)" class="l8" target="_blank">
+<i style="background-image: url(xym/images/s_icon8_8.png);"></i>友情链接
+</a>  
+</div>
+<div>
+<a href="xxfw/cydh.htm" title="常用电话" onclick="_addDynClicks(&#34;wbimage&#34;, 1563431873, 54910)" class="l9" target="_blank">
+<i style="background-image: url(xym/images/s_icon8_9.png);"></i>常用电话
+</a>  
+</div>
+<div>
+<a href="ggfw/bgxz1/gybg.htm" title="表格下载" onclick="_addDynClicks(&#34;wbimage&#34;, 1563431873, 54911)" class="l10" target="_blank">
+<i style="background-image: url(xym/images/s_icon8_10.png);"></i>表格下载
+</a>  
+</div>
+<div>
+<a href="ggfw/sjxx1.htm" title="书记信箱" onclick="_addDynClicks(&#34;wbimage&#34;, 1563431873, 54912)" class="l11" target="_blank">
+<i style="background-image: url(xym/images/s_icon8_11.png);"></i>书记信箱
+</a>  
+</div>
+<div>
+<a href="ggfw/yzxx.htm" title="院长信箱" onclick="_addDynClicks(&#34;wbimage&#34;, 1563431873, 54913)" class="l12" target="_blank">
+<i style="background-image: url(xym/images/s_icon8_11.png);"></i>院长信箱
+</a>  
+</div>
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="part3 container clearfix">
+            <div class="fl wow fadeInUp">
+
+
+<div class="column"><a href="xwzx1/xydt.htm" class="more fr">More</a><h3>校园动态<span> / Campus Dynamics</span></h3></div>
+<ul class="list4">
+<li>
+<a href="https://mp.weixin.qq.com/s/lJk3ECNZ_7ap6vw1yqal1g" class="title tt1" title="第十一届浙江省大学生经济管理案例竞赛（共富赛道）在上财浙院开幕">第十一届浙江省大学生经济管理案例竞赛（共富赛道）在上财浙院开幕</a>
+<p class="date fr">11-02</p>
+</li>
+<li>
+<a href="info/1069/11325.htm" class="title tt1" title="学院举办秋季传染病预防知识讲座">学院举办秋季传染病预防知识讲座</a>
+<p class="date fr">11-01</p>
+</li>
+<li>
+<a href="info/1069/11195.htm" class="title tt1" title="学院在市“实践归来话成长”00后小青团宣讲展示活动中荣获一等奖">学院在市“实践归来话成长”00后小青团宣讲展示活动中荣获一等奖</a>
+<p class="date fr">10-30</p>
+</li>
+<li>
+<a href="info/1069/11115.htm" class="title tt1" title="嘉兴南湖学院人文与艺术学院来院调研交流">嘉兴南湖学院人文与艺术学院来院调研交流</a>
+<p class="date fr">10-26</p>
+</li>
+<li>
+<a href="info/1069/11125.htm" class="title tt1" title="统计系举办首届数据科学与大数据技术实验班导师见面会">统计系举办首届数据科学与大数据技术实验班导师见面会</a>
+<p class="date fr">10-25</p>
+</li>
+<li>
+<a href="info/1069/11135.htm" class="title tt1" title="学院举行网上报销系统操作培训会">学院举行网上报销系统操作培训会</a>
+<p class="date fr">10-24</p>
+</li>
+</ul><script>_showDynClickBatch(['dynclicks_u10_11335','dynclicks_u10_11325','dynclicks_u10_11195','dynclicks_u10_11115','dynclicks_u10_11125','dynclicks_u10_11135'],[11335,11325,11195,11115,11125,11135],"wbnews", 1563431873)</script>
+
+            </div>
+            <div class="fl wow fadeInUp" data-wow-delay=".2s" style="margin-left:2%;">
+                
+
+<div class="column"><a href="xwzx1/jzxx1.htm" class="more fr">More</a><h3>讲座信息<span> / Lecture information</span></h3></div>
+<ul class="list4">
+<li>
+<a href="info/1067/11155.htm" class="title tt1" title="匡时大讲堂第187讲|大模型赋能科教融汇和产教融合">匡时大讲堂第187讲|大模型赋能科教融汇和产教融合</a>
+<p class="date fr">10-28</p>
+</li>
+<li>
+<a href="info/1067/11145.htm" class="title tt1" title="匡时大讲堂第186讲| 儒家文化与个体创业活动：非正式制度视角的研究">匡时大讲堂第186讲| 儒家文化与个体创业活动：非正式制度视角的研究</a>
+<p class="date fr">10-25</p>
+</li>
+<li>
+<a href="info/1067/10755.htm" class="title tt1" title="匡时大讲堂第185讲|解锁统计推断的密钥：统计量抽样分布探秘">匡时大讲堂第185讲|解锁统计推断的密钥：统计量抽样分布探秘</a>
+<p class="date fr">10-15</p>
+</li>
+<li>
+<a href="info/1067/9676.htm" class="title tt1" title="匡时大讲堂第184讲|关于“稳定币”的思考">匡时大讲堂第184讲|关于“稳定币”的思考</a>
+<p class="date fr">06-06</p>
+</li>
+<li>
+<a href="info/1067/9622.htm" class="title tt1" title="匡时大讲堂第183讲|经济目标与经济政策">匡时大讲堂第183讲|经济目标与经济政策</a>
+<p class="date fr">05-16</p>
+</li>
+<li>
+<a href="info/1067/9617.htm" class="title tt1" title="匡时大讲堂第182讲|宏观经济周期与财富管理投资策略联动">匡时大讲堂第182讲|宏观经济周期与财富管理投资策略联动</a>
+<p class="date fr">05-15</p>
+</li>
+</ul><script>_showDynClickBatch(['dynclicks_u11_11155','dynclicks_u11_11145','dynclicks_u11_10755','dynclicks_u11_9676','dynclicks_u11_9622','dynclicks_u11_9617'],[11155,11145,10755,9676,9622,9617],"wbnews", 1563431873)</script>
+
+            </div>
+<div class="fr wow fadeInUp" data-wow-delay=".4s">
+
+
+<div class="column"><a href="xwzx1/czgs1.htm" class="more fr">More</a><h3>财浙故事<span> / Story</span></h3></div>
+<ul class="list4">
+<li>
+<a href="https://mp.weixin.qq.com/s/8-6-StckDJp3funBwZGrXA" class="title tt1" title="师者如是 | 叶丽芳：深耕教学沃土，以“产”“赛”“教”锚定方向">师者如是 | 叶丽芳：深耕教学沃土，以“产”“赛”“教”锚定方向</a>
+<p class="date fr">10-22</p>
+</li>
+<li>
+<a href="info/1155/10815.htm" class="title tt1" title="师者如是 | 斯亚民：以寸心守望校园 以笃行诠释担当">师者如是 | 斯亚民：以寸心守望校园 以笃行诠释担当</a>
+<p class="date fr">10-15</p>
+</li>
+<li>
+<a href="https://mp.weixin.qq.com/s/jygK22XcHTcaRWG4o4m4Yw" class="title tt1" title="师者如是 | 吕颖菲：不断探索“有为”新坐标">师者如是 | 吕颖菲：不断探索“有为”新坐标</a>
+<p class="date fr">09-24</p>
+</li>
+<li>
+<a href="https://mp.weixin.qq.com/s/YaLCQOsXU8EycmebUjM7XQ" class="title tt1" title="师者如是丨左文进：以研促教守初心，数智领域育新人">师者如是丨左文进：以研促教守初心，数智领域育新人</a>
+<p class="date fr">09-24</p>
+</li>
+<li>
+<a href="https://mp.weixin.qq.com/s/ytrlDEQKypAPgk18ysWSuQ" class="title tt1" title="师者如是 | 关春华：做一名有温度的思政教师">师者如是 | 关春华：做一名有温度的思政教师</a>
+<p class="date fr">09-10</p>
+</li>
+<li>
+<a href="https://mp.weixin.qq.com/s/rO9e3QaMZL4HjuMzTG02wA" class="title tt1" title="师者如是 | 这位教授，藏着师者最好的榜样">师者如是 | 这位教授，藏着师者最好的榜样</a>
+<p class="date fr">09-01</p>
+</li>
+</ul><script>_showDynClickBatch(['dynclicks_u12_11305','dynclicks_u12_10815','dynclicks_u12_10385','dynclicks_u12_10365','dynclicks_u12_9935','dynclicks_u12_9895'],[11305,10815,10385,10365,9935,9895],"wbnews", 1563431873)</script>
+
+            </div>
+
+        </div>
+        <div class="part4">
+            <div class="container wow fadeInUp">
+                    <div class="subject-column">
+<span class="s1">专题</span>
+<span class="s2">推荐</span>
+<span class="s3"> / special</span>
+</div>
+<div class="subject-overflow fr">
+<div class="subject-arrow slick-prev"></div>
+<div class="subject-slick">
+<div>
+<a href="https://www.xuexi.cn/" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1563431873, 54957)" target="_blank" class="img-scale">
+<div class="img" style="background-image: url(xym/images/zt-1.png);"></div>
+</a>
+</div>
+<div>
+<a href="http://www.gov.cn/zhuanti/zggcddescqgdbdh/index.htm" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1563431873, 54955)" target="_blank" class="img-scale">
+<div class="img" style="background-image: url(xym/images/zt3.jpg);"></div>
+</a>
+</div>
+<div>
+<a href="https://www.12371.cn/bxgd/" title="" onclick="_addDynClicks(&#34;wbimage&#34;, 1563431873, 54956)" target="_blank" class="img-scale">
+<div class="img" style="background-image: url(images/2.jpg);"></div>
+</a>
+</div>
+</div>
+<div class="subject-arrow slick-next"></div>
+</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container clearfix">
+                <ul class="QRcode  wow fadeInLeft">
+<li>
+<img src="images/fkk.png" alt="">
+<p>访客入口</p>
+</li>
+<li>
+<img src="xym/images/ewm1.jpg" alt="">
+<p>官方微信</p>
+</li>
+<li>
+<img src="xym/images/ewm2.jpg" alt="">
+<p>官方微博</p>
+</li>
+</ul>
+            <div class="contact wow fadeInRight">
+                    <img src="xym/images/foot_img.png">
+
+                <div class="copy">
+                    <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权所有：上海财经大学浙江学院 &nbsp; 地址：金华市环城南路99号 &nbsp; 邮编：321015</p><p><a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备12031395号-1</a>&nbsp;<img src="/virtual_attach_file.vsb?afc=5nzUCPnR7ZU87anQNUDUzGPnRM2nlLqsMznfUN7ZolnVL7C0gihFp2hmCIa0nkyaL1yZoSh7U4ffMRQ2U4rkLzrkL4LDL8Q2UzvZU8CDU46FU4-DM8-4oRQFM7-4okbaptveo4OevDAmqtnZ_tXZ_ShXptQ0gY84gY84gtA8pUpcc&oid=1563431873&e=.png" /><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33070302100009" target="_blank">浙公网安备 33070302100009号</a></p>
+                </div>
+            </div>
+<div class="ba"><script type="text/javascript">document.write(unescape("%3Cspan id='_ideConac' %3E%3C/span%3E%3Cscript src='https://dcs.conac.cn/js/12/192/0000/60919047/CA121920000609190470003.js' type='text/javascript'%3E%3C/script%3E"));</script>
+
+
+<div class="xcc"><a href="https://xyt.xcc.cn/getpcInfo?sn=1684520714062757888&certType=8&url=*.shufe-zj.edu.cn&language=CN"><img src="images/ga-p1.png"></a></div>
+</div>
+        </div>
+    </div>
+    <div class="mask show">
+        <div class="close">
+            <i></i>
+            <i></i>
+        </div>
+    </div>
+    <a id="to-top" href="javascript: $('body, html').animate({scrollTop: 0}, 1000);"></a>
+    <script src="xym/js/slick.min.js"></script>
+    <script src="xym/js/style.js"></script>
+    <script src="xym/js/wow.js"></script>
+    <script>
+        $(function() {
+            setTimeout(function(){
+                $('#loading').fadeOut(300);
+                if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+                    var wow = new WOW({
+                        mobile: false
+                    });
+                    wow.init();
+                };
+            }, 1000);
+            $('.banner').slick({
+                autoplay: true,
+                autoplaySpeed: 5000,
+                speed: 700,
+                pauseOnFocus: false,
+                pauseOnHover: false,
+                centerMode: true,
+                centerPadding: 0
+            });
+            $('.news-slick').slick({
+                autoplay: true,
+                autoplaySpeed: 3500,
+                speed: 450,
+                arrows: false,
+                dots: true,
+            });
+            $('.link-slick').slick({
+                autoplay: true,
+                autoplaySpeed: 5000,
+                speed: 450,
+                prevArrow: '.index-main .part2 .arrow.slick-prev',
+                nextArrow: '.index-main .part2 .arrow.slick-next',
+                rows: 4,
+                slidesPerRow: 3,
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesPerRow: 2,
+                        }
+                    },{
+                        breakpoint: 768,
+                        settings: {
+                            slidesPerRow: 3,
+                        }
+                    },{
+                        breakpoint: 480,
+                        settings: {
+                            slidesPerRow: 2,
+                        }
+                    },
+                ]
+            });
+            $('.subject-slick').slick({
+                autoplay: true,
+                prevArrow: '.subject-arrow.slick-prev',
+                nextArrow: '.subject-arrow.slick-next',
+                slidesToShow: 3,
+                responsive: [
+                    {
+                        breakpoint: 1180,
+                        settings: {
+                            slidesToShow: 3
+                        }
+                    },{
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },{
+                        breakpoint: 420,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        })
+    </script>
+
+
+</body></html>

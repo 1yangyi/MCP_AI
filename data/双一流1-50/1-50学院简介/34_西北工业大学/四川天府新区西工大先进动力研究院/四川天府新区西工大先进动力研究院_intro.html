@@ -1,0 +1,769 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta name="renderer" content="webkit">
+    <title>研究院简介-四川天府新区西工大先进动力研究院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="研究院简介">
+<meta name="keywords" content="四川天府新区西工大先进动力研究院，西工大先进动力研究院,研究院简介">
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <script src="../js/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+            <script type="text/javascript" src="../js/css3-mediaqueries.js"></script>
+            <style type="text/css">
+                html{ margin-left: 0 !important;}
+            </style>
+        <![endif]-->
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232306975475152555742000200014156 -->
+<link rel="stylesheet" type="text/css" href="../about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1381,'/about.jsp',-1,2032731973)</script>
+</head>
+<body>
+  <header> 
+    <div class="headT" style="background: url(../img/navT.jpg) no-repeat center;background-size: cover;">
+      <div class="c1 fx ac jsb"> 
+     
+          
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="四川研究院" class="logo"> <img src="../images/logo.png" alt="四川研究院"></a>
+       
+        
+          
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script> 
+<div id="divu1" class="search">
+     <div id="appu1"><input type="text" placeholder="关键字搜索"> <a href="javascript:;" class="btn"><i class="iconfont"></i></a></div>
+</div>
+<script type="text/html" id="htmlu1">
+     <div id="appu1">
+                <input type="text" placeholder="关键字搜索" v-model=query.keyWord @keyup.enter="onSubmit">
+                <a href="javascript:;" class="btn" v-on:click="onSubmit()"><i class="iconfont">&#xe6c6;</i></a>
+            </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "2032731973";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://yykfpt.nwpu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script> 
+       
+        <div class="mbR">
+          <div class="mb-search">
+            <i class="iconfont lt50"></i>
+          </div>
+          <div class="menu">
+            <p></p>
+          </div>
+        </div>
+      </div>
+      </div>
+    
+     <div class="headB">
+    <div class="headBwrap">
+        <div class="c1">
+            <nav>
+                <ul class="ul-1 fx ac">
+
+                                            <li class=" li-1 ">
+                                    <a href="../index.htm" class="nav-a fs20" "=""> <i class="iconfont"></i>
+                            首页</a>
+                        </li>
+                        <li class=" li-1 active">
+                                <a href="yjyjj.htm" class="nav-a fs20">
+                                     研究院概况
+                                </a>
+                                <div class="drop">
+                                    <ul class="ul-2">
+
+                                                    <li class="li-2"><a href="xxjj.htm" class="fs16">学校简介</a></li>
+
+
+                                                    <li class="li-2"><a href="yjyjj.htm" class="fs16">研究院简介</a></li>
+
+
+                                                    <li class="li-2"><a href="xrld.htm" class="fs16">现任领导</a></li>
+
+
+                                                    <li class="li-2"><a href="sxkxj.htm" class="fs16">首席科学家</a></li>
+
+
+                                                    <li class="li-2"><a href="zzjg.htm" class="fs16">组织架构</a></li>
+
+
+                                                    <li class="li-2"><a href="fzlc.htm" class="fs16">发展历程</a></li>
+
+
+                                                    <li class="li-2"><a href="rycg.htm" class="fs16">荣誉成果</a></li>
+
+
+                                                    <li class="li-2"><a href="lxwm.htm" class="fs16">联系我们</a></li>
+
+                                    </ul>
+                                </div>
+                        </li>
+                        <li class=" li-1 ">
+                                <a href="../notice.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1461" class="nav-a fs20">
+                                     新闻动态
+                                </a>
+                                <div class="drop">
+                                    <ul class="ul-2">
+
+                                                <li class="li-2">
+
+                                                    <a href="../notice.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1461" class="fs16">通知公告</a>
+                                                    <div class="drop2">
+                                                        <ul class="ul-3">
+                                                                <li class="li-3">
+                                                                    <a href="../notice.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1461" class="fs16">省市科技政策</a>
+                                                                </li>
+                                                                <li class="li-3">
+                                                                    <a href="../notice.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=2031" class="fs16">科技项目申报通知</a>
+                                                                </li>
+                                                                <li class="li-3">
+                                                                    <a href="../notice.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1481" class="fs16">人事公示</a>
+                                                                </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+
+
+                                                    <li class="li-2"><a href="../news.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1491" class="fs16">综合资讯</a></li>
+
+
+                                                <li class="li-2">
+
+                                                    <a href="" class="fs16">招投标公告</a>
+                                                    <div class="drop2">
+                                                        <ul class="ul-3">
+                                                                <li class="li-3">
+                                                                    <a href="../news/bidInviting/zbgg.htm" class="fs16">招标公告</a>
+                                                                </li>
+                                                                <li class="li-3">
+                                                                    <a href="../news/bidInviting/zbgg1.htm" class="fs16">中标公告</a>
+                                                                </li>
+                                                                <li class="li-3">
+                                                                    <a href="../news/bidInviting/tbgg.htm" class="fs16">投标公告</a>
+                                                                </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+
+                                    </ul>
+                                </div>
+                        </li>
+                        <li class=" li-1 ">
+                                <a href="../innovate.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1561" class="nav-a fs20">
+                                     科技创新
+                                </a>
+                                <div class="drop">
+                                    <ul class="ul-2">
+
+                                                    <li class="li-2"><a href="../innovate.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1541" class="fs16">院属研究所/工程中心</a></li>
+
+
+                                                <li class="li-2">
+
+                                                    <a href="../innovate.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1561" class="fs16">科创中心</a>
+                                                    <div class="drop2">
+                                                        <ul class="ul-3">
+                                                                <li class="li-3">
+                                                                    <a href="../innovate.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1561" class="fs16">先进动力中心</a>
+                                                                </li>
+                                                                <li class="li-3">
+                                                                    <a href="../innovate.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1571" class="fs16">先进材料中心</a>
+                                                                </li>
+                                                                <li class="li-3">
+                                                                    <a href="../innovate.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1581" class="fs16">先进制造中心</a>
+                                                                </li>
+                                                                <li class="li-3">
+                                                                    <a href="../innovate.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1591" class="fs16">先进控制中心</a>
+                                                                </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+
+
+                                                    <li class="li-2"><a href="../cooperation/gnyzpt.htm" class="fs16">概念验证平台</a></li>
+
+
+                                                    <li class="li-2"><a href="../cooperation/zsshpt.htm" class="fs16">中试熟化平台</a></li>
+
+                                    </ul>
+                                </div>
+                        </li>
+                        <li class=" li-1 ">
+                                <a href="../hr/rctd.htm" class="nav-a fs20">
+                                     人才引育
+                                </a>
+                                <div class="drop">
+                                    <ul class="ul-2">
+
+                                                    <li class="li-2"><a href="../hr/rctd.htm" class="fs16">人才团队</a></li>
+
+
+                                                    <li class="li-2"><a href="../hr/bshgzz.htm" class="fs16">博士后工作站</a></li>
+
+
+                                                    <li class="li-2"><a href="../hr/rczc.htm" class="fs16">人才政策</a></li>
+
+
+                                                <li class="li-2">
+
+                                                    <a href="../hr/rcpy.htm" class="fs16">人才培养</a>
+                                                    <div class="drop2">
+                                                        <ul class="ul-3">
+                                                                <li class="li-3">
+                                                                    <a href="../innovate.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1831" class="fs16">非学历教育培训</a>
+                                                                </li>
+                                                                <li class="li-3">
+                                                                    <a href="../hr/rcpy/xljy/MBA.htm" class="fs16">学历教育</a>
+                                                                </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+
+
+                                                    <li class="li-2"><a href="../job.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1691" class="fs16">招聘信息</a></li>
+
+                                    </ul>
+                                </div>
+                        </li>
+                        <li class=" li-1 ">
+                                <a href="../conact/hzqy.htm" class="nav-a fs20">
+                                     产业发展
+                                </a>
+                                <div class="drop">
+                                    <ul class="ul-2">
+
+                                                    <li class="li-2"><a href="../conact/hzqy.htm" class="fs16">合作企业</a></li>
+
+
+                                                    <li class="li-2"><a href="../conact/yjqy.htm" class="fs16">引进企业</a></li>
+
+
+                                                    <li class="li-2"><a href="../conact/fhqy.htm" class="fs16">孵化企业</a></li>
+
+                                    </ul>
+                                </div>
+                        </li>
+                        <li class=" li-1 ">
+                                <a href="../party/llxx.htm" class="nav-a fs20">
+                                     党建工作
+                                </a>
+                                <div class="drop">
+                                    <ul class="ul-2">
+
+                                                    <li class="li-2"><a href="../party/llxx.htm" class="fs16">理论学习</a></li>
+
+
+                                                    <li class="li-2"><a href="../party.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1741" class="fs16">党建动态</a></li>
+
+                                    </ul>
+                                </div>
+                        </li>
+                        <li class=" li-1 ">
+                                    <a href="../notice.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=2021" class="nav-a fs20" "=""> 相关下载</a>
+                        </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="mb-sidebar">
+    <div class="wrapper">
+        <nav>
+            <ul class="mb-ul">
+                    <li class="mb-li">
+                        <a href="../index.htm"> 首页</a>
+                    </li>
+                    <li class="mb-li">
+                        <a href="yjyjj.htm"> 研究院概况</a>
+                            <div class="items">
+                                <ul class="mb-ul2">
+
+                                                <li class="li-2"><a href="xxjj.htm" class="item">学校简介</a></li>
+
+
+                                                <li class="li-2"><a href="yjyjj.htm" class="item">研究院简介</a></li>
+
+
+                                                <li class="li-2"><a href="xrld.htm" class="item">现任领导</a></li>
+
+
+                                                <li class="li-2"><a href="sxkxj.htm" class="item">首席科学家</a></li>
+
+
+                                                <li class="li-2"><a href="zzjg.htm" class="item">组织架构</a></li>
+
+
+                                                <li class="li-2"><a href="fzlc.htm" class="item">发展历程</a></li>
+
+
+                                                <li class="li-2"><a href="rycg.htm" class="item">荣誉成果</a></li>
+
+
+                                                <li class="li-2"><a href="lxwm.htm" class="item">联系我们</a></li>
+
+                                </ul>
+                            </div> 
+                    </li>
+                    <li class="mb-li">
+                        <a href="../notice.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1461"> 新闻动态</a>
+                            <div class="items">
+                                <ul class="mb-ul2">
+
+                                            <li class="li-2"> <a href="javascript:;" class="item">通知公告</a>
+                                                <ul class="mb-child">
+                                                        <li class="li-child">
+                                                            <a href="../notice.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1461" class="fs16">省市科技政策</a>
+                                                        </li>
+                                                        <li class="li-child">
+                                                            <a href="../notice.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=2031" class="fs16">科技项目申报通知</a>
+                                                        </li>
+                                                        <li class="li-child">
+                                                            <a href="../notice.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1481" class="fs16">人事公示</a>
+                                                        </li>
+                                                </ul>
+
+                                            </li>
+
+
+                                                <li class="li-2"><a href="../news.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1491" class="item">综合资讯</a></li>
+
+
+                                            <li class="li-2"> <a href="javascript:;" class="item">招投标公告</a>
+                                                <ul class="mb-child">
+                                                        <li class="li-child">
+                                                            <a href="../news/bidInviting/zbgg.htm" class="fs16">招标公告</a>
+                                                        </li>
+                                                        <li class="li-child">
+                                                            <a href="../news/bidInviting/zbgg1.htm" class="fs16">中标公告</a>
+                                                        </li>
+                                                        <li class="li-child">
+                                                            <a href="../news/bidInviting/tbgg.htm" class="fs16">投标公告</a>
+                                                        </li>
+                                                </ul>
+
+                                            </li>
+
+                                </ul>
+                            </div> 
+                    </li>
+                    <li class="mb-li">
+                        <a href="../innovate.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1561"> 科技创新</a>
+                            <div class="items">
+                                <ul class="mb-ul2">
+
+                                                <li class="li-2"><a href="../innovate.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1541" class="item">院属研究所/工程中心</a></li>
+
+
+                                            <li class="li-2"> <a href="javascript:;" class="item">科创中心</a>
+                                                <ul class="mb-child">
+                                                        <li class="li-child">
+                                                            <a href="../innovate.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1561" class="fs16">先进动力中心</a>
+                                                        </li>
+                                                        <li class="li-child">
+                                                            <a href="../innovate.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1571" class="fs16">先进材料中心</a>
+                                                        </li>
+                                                        <li class="li-child">
+                                                            <a href="../innovate.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1581" class="fs16">先进制造中心</a>
+                                                        </li>
+                                                        <li class="li-child">
+                                                            <a href="../innovate.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1591" class="fs16">先进控制中心</a>
+                                                        </li>
+                                                </ul>
+
+                                            </li>
+
+
+                                                <li class="li-2"><a href="../cooperation/gnyzpt.htm" class="item">概念验证平台</a></li>
+
+
+                                                <li class="li-2"><a href="../cooperation/zsshpt.htm" class="item">中试熟化平台</a></li>
+
+                                </ul>
+                            </div> 
+                    </li>
+                    <li class="mb-li">
+                        <a href="../hr/rctd.htm"> 人才引育</a>
+                            <div class="items">
+                                <ul class="mb-ul2">
+
+                                                <li class="li-2"><a href="../hr/rctd.htm" class="item">人才团队</a></li>
+
+
+                                                <li class="li-2"><a href="../hr/bshgzz.htm" class="item">博士后工作站</a></li>
+
+
+                                                <li class="li-2"><a href="../hr/rczc.htm" class="item">人才政策</a></li>
+
+
+                                            <li class="li-2"> <a href="javascript:;" class="item">人才培养</a>
+                                                <ul class="mb-child">
+                                                        <li class="li-child">
+                                                            <a href="../innovate.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1831" class="fs16">非学历教育培训</a>
+                                                        </li>
+                                                        <li class="li-child">
+                                                            <a href="../hr/rcpy/xljy/MBA.htm" class="fs16">学历教育</a>
+                                                        </li>
+                                                </ul>
+
+                                            </li>
+
+
+                                                <li class="li-2"><a href="../job.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1691" class="item">招聘信息</a></li>
+
+                                </ul>
+                            </div> 
+                    </li>
+                    <li class="mb-li">
+                        <a href="../conact/hzqy.htm"> 产业发展</a>
+                            <div class="items">
+                                <ul class="mb-ul2">
+
+                                                <li class="li-2"><a href="../conact/hzqy.htm" class="item">合作企业</a></li>
+
+
+                                                <li class="li-2"><a href="../conact/yjqy.htm" class="item">引进企业</a></li>
+
+
+                                                <li class="li-2"><a href="../conact/fhqy.htm" class="item">孵化企业</a></li>
+
+                                </ul>
+                            </div> 
+                    </li>
+                    <li class="mb-li">
+                        <a href="../party/llxx.htm"> 党建工作</a>
+                            <div class="items">
+                                <ul class="mb-ul2">
+
+                                                <li class="li-2"><a href="../party/llxx.htm" class="item">理论学习</a></li>
+
+
+                                                <li class="li-2"><a href="../party.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=1741" class="item">党建动态</a></li>
+
+                                </ul>
+                            </div> 
+                    </li>
+                    <li class="mb-li">
+                        <a href="../notice.jsp?urltype=tree.TreeTempUrl&amp;wbtreeid=2021"> 相关下载</a>
+                    </li>
+
+            </ul>
+        </nav>
+    </div>
+</div>
+  </header>
+  <div class="mbSearch-wrap">
+  
+       
+
+
+ 
+<div id="divu3" class="sea-box lt50 ">
+      <div id="appu3"><input type="text" placeholder="关键字搜索"> <a href="javascript:;" class="btn"><i class="iconfont lt50"></i></a></div>
+        <div class="closed">
+          <i class="iconfont lt50"></i>
+        </div>
+</div>
+<script type="text/html" id="htmlu3">
+      <div id="appu3">
+            <input type="text" placeholder="关键字搜索" v-model=query.keyWord @keyup.enter="onSubmit">
+            <a href="javascript:;" class="btn" v-on:click="onSubmit()"><i class="iconfont lt50">&#xe6c6;</i></a>
+        </div>
+        <div class="closed">
+          <i class="iconfont lt50">&#xe6cb;</i>
+        </div>
+</script>
+<script>
+    $("#divu3").html($("#htmlu3").text());
+</script>
+<script>
+    var appOwner = "2032731973";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu3",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "https://yykfpt.nwpu.edu.cn/" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+    
+  </div>
+  
+    <div class="inn-banner">
+        <figure class="img">
+             
+<img src="../img/pbanner1.jpg" class="nimg target">
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+        </figure>
+    </div>
+    <div class="com-wrap pt56">
+        <div class="bg-img">
+            <img src="../img/1.jpg" alt="">
+        </div>
+        <div class="c1 fx">
+            <div class="comL">
+              <div class="comTit">
+                  <div class="comT">
+                    <h3 class="fs31">
+研究院概况</h3>
+                    <p class="en fs37">
+about</p>
+                  </div>
+                  <div class="line"></div>
+                </div>
+                <ul class="subNav"> 
+                        <li class=" sub-li   no-child" "="">
+                                    <a href="xxjj.htm" class="sub-a fs16" "=""> 学校简介</a>
+                        </li>
+
+                        <li class=" sub-li active  no-child" "="">
+                                    <a href="yjyjj.htm" class="sub-a fs16" "=""> 研究院简介</a>
+                        </li>
+
+                        <li class=" sub-li   no-child" "="">
+                                    <a href="xrld.htm" class="sub-a fs16" "=""> 现任领导</a>
+                        </li>
+
+                        <li class=" sub-li   no-child" "="">
+                                    <a href="sxkxj.htm" class="sub-a fs16" "=""> 首席科学家</a>
+                        </li>
+
+                        <li class=" sub-li   no-child" "="">
+                                    <a href="zzjg.htm" class="sub-a fs16" "=""> 组织架构</a>
+                        </li>
+
+                        <li class=" sub-li   no-child" "="">
+                                    <a href="fzlc.htm" class="sub-a fs16" "=""> 发展历程</a>
+                        </li>
+
+                        <li class=" sub-li   no-child" "="">
+                                    <a href="rycg.htm" class="sub-a fs16" "=""> 荣誉成果</a>
+                        </li>
+
+                        <li class=" sub-li   no-child" "="">
+                                    <a href="lxwm.htm" class="sub-a fs16" "=""> 联系我们</a>
+                        </li>
+</ul></div>
+            <div class="comR pt52 pb238">
+                <div class="rTit fx ac jsb wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;"><h3 class="name fs31">
+研究院简介</h3>
+                    <div class="position fs16"><div class="position fs16">
+                        当前位置：
+                        
+ 
+  <a href="../index.htm">首页&gt;</a>
+                        
+   
+    
+ 
+  <a href="yjyjj.htm">研究院概况&gt;</a>
+                        
+   
+    
+ 
+   <a href="yjyjj.htm">研究院简介</a>
+                        
+   
+    
+
+ </div></div></div>
+                <div class="about talents  com-intro fs16 pt68 wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;"><script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<p dir="ltr">&nbsp; &nbsp; &nbsp; &nbsp;四川天府新区西工大先进动力研究院成立于2023年9月27日，是由四川天府新区管理委员会、成都市科学技术局、西北工业大学三方共建的新型研发机构。研究院遵循科技创新、人才培养、产业培育、成果转化的“四位一体”发展构架，打造国内一流、西部领先的科教融合、产教融合、军民融合创新高地。研究院是西北工业大学在四川开展校地合作的总平台。包括4个科技创新中心、1个概念验证和中试熟化平台、1个科技成果转化基地和1个人才引育中心。</p>
+<p style="text-align: center;"><img src="/__local/1/1F/55/29F7AAEEB62956F9D9A1428AE10_AB242216_45EE.png?e=.png" vsbhref="vurl" vurl="/_vsl/11F5529F7AAEEB62956F9D9A1428AE10/AB242216/45EE?e=.png" vheight="" vwidth="" orisrc="/__local/5/2B/BE/0442BB8AE0DDDD03A881DDF1AA4_D998CAA5_3F97.png" class="img_vsb_content"><br></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;研究院依托西北工业大学的优势学科、科技成果及高端智库力量，先进动力、先进制造、先进材料、先进控制、卫星技术及应用等领域，开展基础研究、应用基础研究、技术研发、其他研发服务、科技成果转化、科技创业孵化及引进、技术咨询转让及评价、人才培养/引进/培训及高端智库咨询等，为服务国家实验室建设，打造服务国家战略大后方的创新策源地提供有力支撑。</p>
+<p><br></p>
+<p style="text-align: center;"><img src="/__local/4/C4/C3/1AA726B6749C3B7CEEC6CCFAA3E_7CBB571E_C8E8.png?e=.png" width="1075" height="595" vsbhref="vurl" vurl="/_vsl/4C4C31AA726B6749C3B7CEEC6CCFAA3E/7CBB571E/C8E8?e=.png" vheight="595" vwidth="1075" orisrc="/__local/4/F4/53/1FD1A35FBF8B8007E4FD9170E85_FF6811C5_2762F.png" class="img_vsb_content" style="width: 1075px; height: 595px;"></p></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+     <div class="toTop">
+        <i class="iconfont lt50 ico1"></i>
+        <i class="iconfont lt50 ico2"></i>
+        <svg class="cir-svg" height="50" width="50">
+          <circle stroke-width="2" fill="transparent" cx="25" cy="25" r="24"></circle>
+          </svg>
+      </div>
+      <div class="bg-img" style="background: url(../img/foot.jpg) no-repeat center top;background-size: cover;"></div>
+      <div class="c1 fx as jsb">
+        <div class="fooL">
+          <div class="logo">
+            <img src="../img/foot.png" alt="">
+          </div>
+          <div class="intro fs16"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p>版权所有 © 四川天府新区西工大先进动力研究院 &nbsp; 蜀ICP备 <a href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow">11064697号-1</a> <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33040202000359" target="_blank" rel="nofollow">蜀公网安备 33040202000359号</a>&nbsp;&nbsp;<a href="https://symansbon.cn/" target="_blank">网站设计：赛门仕博</a></p><p>地址：四川天府新区集萃街619号天府海创园2号地块5号楼12-13层 &nbsp; &nbsp; &nbsp; 电话：028-81535846 &nbsp; &nbsp;邮箱：apri@nwpu.edu.cn</p></div>
+        </div>
+        <div class="fooR fx ac">
+          <p class="fs16">扫一扫二维码<br>关注官方微信</p>
+          <div class="img">
+            <img src="../img/wx.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/plugin.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/page.js"></script>
+
+
+</body></html>

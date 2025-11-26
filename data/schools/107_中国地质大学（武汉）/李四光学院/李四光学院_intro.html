@@ -1,0 +1,532 @@
+<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+        <meta name="renderer" content="webkit">
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=0.26, maxmum-scale=1.0, minimum-scale=0.26">
+        <title>学院简介-李四光学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="李四光学院,学院简介">
+
+        <link href="../style.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="../js/jquery.min91.js"></script>
+        <script type="text/javascript" src="../js/responsiveslides.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.SuperSlide.js"></script>
+        <script type="text/javascript" src="../js/jquery.tabso_yeso.js"></script>
+        <script src="../js/dtqh.js"></script>
+        <script src="../js/slide.js"></script>
+    <!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475250545742000400004f55 -->
+<link rel="stylesheet" type="text/css" href="../list_danye.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1009,'/list_danye.jsp',-1,1348322906)</script>
+</head>
+
+    <body>
+        <div class="wrapper" id="header">
+            <div class="inner">
+                <div class="logo">
+                   
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="118-李四光学院" class="logo-l"><img src="../images/logo.png" width="676" height="80" border="0" alt="118-李四光学院" title="118-李四光学院"></a>
+                    <div class="logo-r clearfix">
+                        <div class="logo-rt clearfix">
+                            <ul class="sf">
+                                <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><li class="li1"><a target="_blank" href="#" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1348322906, 66763)">English</a></li>
+
+                            </ul>
+                            <div class="ss">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2">
+    <div id="appu2"><div><input type="text" autocomplete="off" class="ssk"> <input name="submit_button" type="button" value=" " class="ss_btn"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="ssk"  autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="ss_btn" name="submit_button" type="button" value=" " v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1348322906";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                        </div>
+                    </div>
+                </div>
+                <!--汉堡包-->
+                <i class="navi-aside-toggle navi-aside-toggle-show"></i>
+            </div>
+        </div>
+
+        <div class="wrapper" id="nav">
+            <div class="inner">
+                <div class="nav">
+                    <ul class="navList">
+<li><a href="../index.htm">网站首页</a>
+</li>
+<li><a href="xyjj.htm">学院概况</a>
+<ul class="subnav">
+<li>
+<a href="xyjj.htm">学院简介</a></li>
+<li>
+<a href="yzjy.htm">院长寄语</a></li>
+<li>
+<a href="zzjg.htm">组织机构</a></li>
+<li>
+<a href="xywh.htm">学院文化</a></li>
+<li>
+<a href="mtjj.htm">媒体聚焦</a></li>
+<li>
+<a href="szll.htm">师资力量</a></li>
+</ul>
+</li>
+<li><a href="../xtyr/pymb.htm">协同育人</a>
+<ul class="subnav">
+<li>
+<a href="../xtyr/pymb.htm">培养目标</a></li>
+<li>
+<a href="../xtyr/pyfa1.htm">培养方案</a></li>
+<li>
+<a href="../xtyr/pyts.htm">培养特色</a></li>
+<li>
+<a href="../xtyr/lhpy.htm">联合培养</a></li>
+</ul>
+</li>
+<li><a href="../zsjy/zsjz.htm">招生就业</a>
+<ul class="subnav">
+<li>
+<a href="../zsjy/zsjz.htm">招生简章</a></li>
+<li>
+<a href="../zsjy/byqx.htm">毕业去向</a></li>
+</ul>
+</li>
+<li><a href="../dtjs/xsdj.htm">党团建设</a>
+<ul class="subnav">
+<li>
+<a href="../dtjs/xsdj.htm">学生党建</a></li>
+<li>
+<a href="../dtjs/txgz.htm">团学工作</a></li>
+</ul>
+</li>
+<li><a href="../xsgz/xfcj.htm">学生工作</a>
+<ul class="subnav">
+<li>
+<a href="../xsgz/xfcj.htm">学风创建</a></li>
+<li>
+<a href="../xsgz/cxcy.htm">创新创业</a></li>
+<li>
+<a href="../xsgz/gjjl.htm">国际交流</a></li>
+<li>
+<a href="../xsgz/jzdq.htm">奖助贷勤</a></li>
+</ul>
+</li>
+<li><a href="../xyyd.htm">校友园地</a>
+</li>
+<li><a href="../xzzq.htm">下载专区</a>
+</li>
+</ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper" id="mod0">
+            <div class="inner">
+                <div class="slide_container">
+                        <ul class="rslides" id="slider">
+            <li>
+            <a title="" href="" onclick="_addDynClicks(&quot;wbimage&quot;, 1348322906, 59222)"><img alt="" src="../images/fm1.jpg"></a>
+        </li>
+        <li>
+            <a title="" href="#" onclick="_addDynClicks(&quot;wbimage&quot;, 1348322906, 59113)"><img alt="" src="../images/fm2.jpg"></a>
+        </li>
+        <li>
+            <a title="" href="#" onclick="_addDynClicks(&quot;wbimage&quot;, 1348322906, 59112)"><img alt="" src="../images/fm4.jpg"></a>
+        </li>
+        <li>
+            <a title="" href="#" onclick="_addDynClicks(&quot;wbimage&quot;, 1348322906, 59102)"><img alt="" src="../images/fm3.png"></a>
+        </li>
+</ul>
+                </div>
+            </div>
+        </div>
+        <!--aside导航-->
+        <div class="wp-navi-aside" id="wp-navi-aside">
+            <div class="aside-inner">
+    <div class="navi-aside-wrap">
+        <div class="navi-aside-head">
+            <h3 class="navi-aside-title">导航</h3>
+        </div>
+        <ul class="wp-menu clearfix">
+                            <li class="menu-item">
+                    <a title="网站首页" class="menu-link " href="../index.htm" target="_self">网站首页</a>
+                    <i class="menu-switch-arrow"></i>
+                        <ul class="sub-menu">
+                                <li class="sub-item">
+                                    <a title="学院动态" class="sub-link" href="../index/xydt.htm">学院动态</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a title="菁英风采" class="sub-link" href="../index/jyfc.htm">菁英风采</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a title="通知公告" class="sub-link" href="../index/tzgg.htm">通知公告</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a title="信息公示" class="sub-link" href="../index/xxgs.htm">信息公示</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a title="联合培养" class="sub-link" href="../index/lhpy.htm">联合培养</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a title="学术交流" class="sub-link" href="../index/xsjl.htm">学术交流</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a title="青春印记" class="sub-link" href="../index/qcyj.htm">青春印记</a>
+                                </li>
+                        </ul>
+                </li>
+                <li class="menu-item">
+                    <a title="学院概况" class="menu-link " href="xyjj.htm" target="_self">学院概况</a>
+                    <i class="menu-switch-arrow"></i>
+                        <ul class="sub-menu">
+                                <li class="sub-item">
+                                    <a title="学院简介" class="sub-link" href="xyjj.htm">学院简介</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a title="院长寄语" class="sub-link" href="yzjy.htm">院长寄语</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a title="组织机构" class="sub-link" href="zzjg.htm">组织机构</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a title="学院文化" class="sub-link" href="xywh.htm">学院文化</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a title="媒体聚焦" class="sub-link" href="mtjj.htm">媒体聚焦</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a title="师资力量" class="sub-link" href="szll.htm">师资力量</a>
+                                </li>
+                        </ul>
+                </li>
+                <li class="menu-item">
+                    <a title="协同育人" class="menu-link " href="../xtyr/pymb.htm" target="_self">协同育人</a>
+                    <i class="menu-switch-arrow"></i>
+                        <ul class="sub-menu">
+                                <li class="sub-item">
+                                    <a title="培养目标" class="sub-link" href="../xtyr/pymb.htm">培养目标</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a title="培养方案" class="sub-link" href="../xtyr/pyfa1.htm">培养方案</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a title="培养特色" class="sub-link" href="../xtyr/pyts.htm">培养特色</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a title="联合培养" class="sub-link" href="../xtyr/lhpy.htm">联合培养</a>
+                                </li>
+                        </ul>
+                </li>
+                <li class="menu-item">
+                    <a title="招生就业" class="menu-link " href="../zsjy/zsjz.htm" target="_self">招生就业</a>
+                    <i class="menu-switch-arrow"></i>
+                        <ul class="sub-menu">
+                                <li class="sub-item">
+                                    <a title="招生简章" class="sub-link" href="../zsjy/zsjz.htm">招生简章</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a title="毕业去向" class="sub-link" href="../zsjy/byqx.htm">毕业去向</a>
+                                </li>
+                        </ul>
+                </li>
+                <li class="menu-item">
+                    <a title="党团建设" class="menu-link " href="../dtjs/xsdj.htm" target="_self">党团建设</a>
+                    <i class="menu-switch-arrow"></i>
+                        <ul class="sub-menu">
+                                <li class="sub-item">
+                                    <a title="学生党建" class="sub-link" href="../dtjs/xsdj.htm">学生党建</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a title="团学工作" class="sub-link" href="../dtjs/txgz.htm">团学工作</a>
+                                </li>
+                        </ul>
+                </li>
+                <li class="menu-item">
+                    <a title="学生工作" class="menu-link " href="../xsgz/xfcj.htm" target="_self">学生工作</a>
+                    <i class="menu-switch-arrow"></i>
+                        <ul class="sub-menu">
+                                <li class="sub-item">
+                                    <a title="学风创建" class="sub-link" href="../xsgz/xfcj.htm">学风创建</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a title="创新创业" class="sub-link" href="../xsgz/cxcy.htm">创新创业</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a title="国际交流" class="sub-link" href="../xsgz/gjjl.htm">国际交流</a>
+                                </li>
+                                <li class="sub-item">
+                                    <a title="奖助贷勤" class="sub-link" href="../xsgz/jzdq.htm">奖助贷勤</a>
+                                </li>
+                        </ul>
+                </li>
+                <li class="menu-item">
+                    <a title="校友园地" class="menu-link " href="../xyyd.htm" target="_self">校友园地</a>
+                    <i class="menu-switch-arrow"></i>
+                </li>
+                <li class="menu-item">
+                    <a title="下载专区" class="menu-link " href="../xzzq.htm" target="_self">下载专区</a>
+                    <i class="menu-switch-arrow"></i>
+                </li>
+        </ul>
+    </div>
+</div>
+<div class="navi-aside-mask"></div>
+
+        </div>
+        <div class="wrapper" id="container">
+            <div class="inner">
+                <div class="col">
+                    <div class="col-menu">
+                        <div class="col-menu-head">
+                            <span class="col-name">
+                                
+学院概况</span>
+                        </div>
+                        <div class="col-menu-con">
+                            <div class="jb">
+                                <img src="../images/jb.png">
+                            </div>
+                            <ul class="col-list">
+                                <li class="col-item column column-1">
+                                    <a href="xyjj.htm" class="col-item-link" title="学院简介">学院简介</a>
+                                </li>
+                                
+<li class="col-item column column-1">
+                                    <a href="yzjy.htm" class="col-item-link" title="院长寄语">院长寄语</a>
+                                </li>
+                                
+<li class="col-item column column-1">
+                                    <a href="zzjg.htm" class="col-item-link" title="组织机构">组织机构</a>
+                                </li>
+                                
+<li class="col-item column column-1">
+                                    <a href="xywh.htm" class="col-item-link" title="学院文化">学院文化</a>
+                                </li>
+                                
+<li class="col-item column column-1">
+                                    <a href="mtjj.htm" class="col-item-link" title="媒体聚焦">媒体聚焦</a>
+                                </li>
+                                
+<li class="col-item column column-1">
+                                    <a href="szll.htm" class="col-item-link" title="师资力量">师资力量</a>
+                                </li>
+                                
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-news">
+                        <div class="col-news-head">
+                            <span class="col-title">
+                                
+学院简介</span>
+                            <div class="col-path">
+                                <a class="path-name">当前位置：</a>
+                    
+                <a href="../index.htm">网站首页</a>
+            <a>&gt;</a>
+                <a href="xyjj.htm">学院概况</a>
+            <a>&gt;</a>
+                <a href="xyjj.htm">学院简介</a>
+
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="article">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1348322906,'wbnews','u10')</script>
+<script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1348322906,1350)</script>
+<div class="read">
+    <div id="vsb_content_1350_u101"><div id="vsb_content"><p style="margin-top:16px;margin-right:0;margin-bottom:16px;margin-left: 0;text-indent:36px;line-height:150%"><span style="font-size: 18px; font-family: 宋体, SimSun; color: rgb(0, 112, 192);"><strong><span style="font-family: 宋体, SimSun; font-size: 18px; line-height: 150%;">一、成立背景</span></strong></span></p>
+<p style="margin-top:16px;margin-right:0;margin-bottom:16px;margin-left: 0;text-indent:32px;line-height:150%"><span style="color: black; font-size: 16px; font-family: 宋体, SimSun;">李四光学院以中国著名的地质学家、中国科协第一任主席李四光先生名字命名，由中国地质大学（武汉）与中国科学院大学、中国科学院地质与地球物理研究所、精密测量科学与技术创新研究院、地球化学研究所、广州地球化学研究所、古脊椎动物与古人类研究所、南京地质古生物研究所、地球环境研究所、空天信息创新研究院等单位合作共建。旨在通过整合校内外相关优质教学科研资源，培养独立思考、自主表达、崇尚学术、勇于探索的拔尖创新人才，推进知识发现、技术创新、人才培养的协同发展。</span></p>
+<p style="margin-top:16px;margin-right:0;margin-bottom:16px;margin-left: 0;text-indent:36px;line-height:150%"><span style="font-size: 16px; font-family: 宋体, SimSun; color: rgb(0, 112, 192);"><strong><span style="font-size: 18px; line-height: 150%; font-family: 宋体;">二、招生计划与招生专业</span></strong></span></p>
+<p style="margin-top:16px;margin-right:0;margin-bottom:16px;margin-left: 0;text-indent:32px;line-height:150%"><span style="font-size: 16px; font-family: 宋体, SimSun;"><span style="font-family: 宋体, SimSun; font-size: 16px; color: black;">李四光学院地球科学菁英班年度招生计划为60人，其中地质学类招生30人，地球物理学类招生</span><span lang="EN-US" style="font-size: 16px; font-family: calibri, sans-serif; color: black;">30</span><span style="font-family: 宋体, SimSun; font-size: 16px; color: black;">人。地质学类含地质学（</span><span lang="EN-US" style="font-size: 16px; font-family: calibri, sans-serif; color: black;">070901</span><span style="font-family: 宋体, SimSun; font-size: 16px; color: black;">）、地球化学（</span><span lang="EN-US" style="font-size: 16px; font-family: calibri, sans-serif; color: black;">070902</span><span style="font-family: 宋体, SimSun; font-size: 16px; color: black;">）两个专业方向，地球物理学类含地球物理学（</span><span lang="EN-US" style="font-size: 16px; font-family: calibri, sans-serif; color: black;">070801</span><span style="font-family: 宋体, SimSun; font-size: 16px; color: black;">）、遥感科学与技术（</span><span lang="EN-US" style="font-size: 16px; font-family: calibri, sans-serif; color: black;">081202</span><span style="font-family: 宋体, SimSun; font-size: 16px; color: black;">）两个专业方向。</span></span></p>
+<p style="margin-top:16px;margin-right:0;margin-bottom:16px;margin-left: 0;text-indent:32px;line-height:150%"><span style="color: black; font-size: 16px; font-family: 宋体, SimSun;">地球科学菁英班招生录取工作由学校学生工作处招生注册办公室按照教育部、各省级招生主管部门以及学校当年的《招生章程》执行。地球科学菁英班学生入校后，一年级以学习通识教育课程、学科大类平台课和学科基础课程为主；后期根据学业成绩，结合个人意愿、分专业深入学习专业主干课程、实践教育课程和创新创业教育课程。</span></p>
+<p style="margin-top:16px;margin-right:0;margin-bottom:16px;margin-left: 0;text-indent:36px;line-height:150%"><span style="font-size: 16px; font-family: 宋体, SimSun; color: rgb(0, 112, 192);"><strong><span style="font-size: 18px; line-height: 150%; font-family: 宋体;">三、管理机构</span></strong></span></p>
+<p style="margin-top:16px;margin-right:0;margin-bottom:16px;margin-left: 0;text-indent:32px;line-height:150%"><span style="color: black; font-size: 16px; font-family: 宋体, SimSun;">学校成立“地球科学菁英班人才培养指导委员会”，由校长担任组长，分管教学和学生工作的副校长、副书记、中国科学院大学分管研究生招生工作的副校长、相关科研院所副所长担任副组长，参与“科教结合，协同育人”工作的相关学院、部门和科研院所负责人担任组员。“地球科学菁英班人才培养指导委员会”负责研究确定菁英班人才培养教育教学方案，指导菁英班教育教学管理工作。</span></p>
+<p style="margin-top:16px;margin-right:0;margin-bottom:16px;margin-left: 0;text-indent:32px;line-height:150%"><span style="color: black; font-size: 16px; font-family: 宋体, SimSun;">李四光学院负责“地球科学菁英班”的教育教学和日常事务管理，负责与中科院各所共同开展联合培养工作；地球科学学院、地球物理与空间信息学院、地理与信息工程学院协同负责地球科学菁英班的专业教学和实习实践。</span></p>
+<p><br></p>
+<p><span style="font-family: 宋体, SimSun;">&nbsp;</span></p></div></div>
+
+
+    <span id="vsb_content_1350_u10" name="vsb_content_1350_u10"></span><br><br>
+    
+</div>
+</div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper" id="mod7">
+            <div class="inner">
+                <div class="mod7 clearfix">
+                    <div class="mod7l">
+                        <span class="yqlj_tit">
+    友情链接
+</span>
+<ul>
+            <li class="li1"><a href="https://www.cug.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1348322906, 66764)" target="_blank">地大首页</a></li>
+        <li class="li2"><a href="http://www.lib.cug.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1348322906, 66765)" target="_blank">图书馆</a></li>
+        <li class="li3"><a href="http://one.cug.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1348322906, 66766)" target="_blank">信息门户</a></li>
+        <li class="li4"><a href="https://www.xuegong.cug.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1348322906, 66767)" target="_blank">学工处</a></li>
+        <li class="li5"><a href="https://jwc.cug.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1348322906, 66768)" target="_blank">教务处</a></li>
+        <li class="li6"><a href="https://graduate.cug.edu.cn/" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1348322906, 66769)" target="_blank">研究生院</a></li>
+</ul>
+
+                    </div>
+                    <div class="mod7r">
+                            <ul>
+            <li class="li1">
+            <a class="tu" href="#" title="官方微信" onclick="_addDynClicks(&quot;wbimage&quot;, 1348322906, 59093)">
+                <img src="../images/bq4.png"></a>
+            <a class="bt" href="#" title="官方微信" onclick="_addDynClicks(&quot;wbimage&quot;, 1348322906, 59093)">官方微信</a>
+        </li>
+        <li class="li2">
+            <a class="tu" href="#" title="信息平台" onclick="_addDynClicks(&quot;wbimage&quot;, 1348322906, 59094)">
+                <img src="../images/bq5.png"></a>
+            <a class="bt" href="#" title="信息平台" onclick="_addDynClicks(&quot;wbimage&quot;, 1348322906, 59094)">信息平台</a>
+        </li>
+        <li class="li3">
+            <a class="tu" href="#" title="学生党建" onclick="_addDynClicks(&quot;wbimage&quot;, 1348322906, 59095)">
+                <img src="../images/bq6.png"></a>
+            <a class="bt" href="#" title="学生党建" onclick="_addDynClicks(&quot;wbimage&quot;, 1348322906, 59095)">学生党建</a>
+        </li>
+</ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper" id="footer">
+            <div class="inner">
+                <div class="foot">
+                    <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p class="copyright">Copyright© 2013-2017 中国地质大学（武汉）李四光学院 All Rights Reserved　地址：湖北省武汉市鲁磨路388号　邮编：430074</p>
+                </div>
+            </div>
+        </div>
+    
+
+</body></html>

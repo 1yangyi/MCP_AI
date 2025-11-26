@@ -1,0 +1,589 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>学院简介-广州医科大学金域检验学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="广州医科大学金域检验学院,学院简介">
+
+
+<meta name="SiteName" content="广州医科大学金域检验学院">
+<meta name="SiteDomain" content="广州医科大学金域检验学院">
+
+    <link rel="stylesheet" href="../dfiles/11213/css/layout.css">
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../dfiles/11213/_sitegray/_sitegray_d.css">
+<script language="javascript" src="../dfiles/11213/_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747647545350574703090000 -->
+<link rel="stylesheet" type="text/css" href="../dfiles/11213/txt.vsb.css">
+<script type="text/javascript" src="../dfiles/11213/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1002,'/txt.jsp',-1,1559807116)</script>
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307c78475652505742000300014257 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1411,'/dpzw.jsp',-1,1968643321)</script>
+</head>
+<body>
+    <div class="header cleafix dj">
+<div class="header_box">
+  <div class="box_right"><script language="javascript" src="../dfiles/11213/system/resource/js/dynclicks.js"></script><script language="javascript" src="../dfiles/11213/system/resource/js/openlink.js"></script><div><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script>
+
+    <a href="https://www.gzhmu.edu.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1968643321, 90660)" style="font-size:16px">广医主页</a>
+   
+    
+         <span></span>
+
+    <a href="https://www.kingmed.com.cn/" target="_blank" title="" onclick="_addDynClicks(&quot;wburl&quot;, 1968643321, 90661)" style="font-size:16px">金域医学</a>
+   
+    
+        
+    
+
+</div>
+
+
+<!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><div id="divu1" style="margin-top: 32px;">
+    <div id="appu1"><div><input type="text" placeholder="请输入关键字" autocomplete="off" class="search"> <input name="submit_button" type="button" class="btn"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+            <input type="text" class="search" placeholder="请输入关键字" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="btn" style="cursor: hand" name="submit_button" type="button"  v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1968643321";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu1 = document.querySelector("#appu1");
+   if (appElementu1 && appElementu1.__vue__) {
+
+   } else {
+      $("#divu1").html($("#htmlu1").text());
+      var appOwner = "1968643321";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou1 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu1(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu1();
+        }
+      };
+
+      function onSubmitu1(e) {
+        queryInfou1.query.keyWord= $("#appu1  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou1.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script>
+
+<script language="javascript" src="../dfiles/11213/system/resource/js/base64.js"></script><script language="javascript" src="../dfiles/11213/system/resource/js/formfunc.js"></script>
+</div>
+<table width="900" height="92" border="00" cellpadding="00" cellspacing="00">
+  <tbody><tr>
+    <td width="744">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+
+
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="新-金域检验学院"><img src="../images/logo.png" alt="新-金域检验学院" style="border:0px"></a>
+
+
+</td>
+    <td width="350" style="display: block;margin-top: 38px;margin-left: 20px;">    
+
+  
+
+<a href=""><img src="../images/yuanxunyuanhui.png" style="width:68%;padding-left: 40px;"></a>
+
+</td>
+  </tr>
+</tbody></table>
+
+
+</div>
+
+
+
+</div>
+<div class="nav">                <ul class="nav_item">
+       <li class="nav_list"><a href="../index.htm">网站首页<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+       
+            
+            
+                    </li>
+
+
+
+       <li class="nav_list"><a href="xyjj.htm">学院概况<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+       
+       
+            <div class="nav_box">
+                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <ul>
+                    
+
+                        <li><a href="xyjj.htm">学院简介<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        
+
+                        <li><a href="fzlc.htm">发展历程<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        
+
+                        <li><a href="gltd.htm">管理团队<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        
+
+                        <li><a href="zzjg.htm">组织架构<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        
+
+                        <li><a href="hjry.htm">获奖荣誉<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        
+
+                        <li><a href="lxwm.htm">联系我们<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        
+                     
+                    </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+            </div>
+            
+            
+            
+            
+                    </li>
+
+
+
+       <li class="nav_list"><a href="../szdw/jsfzfzx.htm">师资队伍<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+       
+       
+            <div class="nav_box">
+                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <ul>
+                    
+
+                        <li><a href="../szdw/jsfzfzx.htm">教师发展分中心<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        
+
+                        <li><a href="../szdw/yjsds.htm">研究生导师<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        
+
+                        <li><a href="../szdw/kzjs.htm">客座教授<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        
+                     
+                    </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+            </div>
+            
+            
+            
+            
+                    </li>
+
+
+
+       <li class="nav_list"><a href="../bkjx/jxtd.htm">本科教学<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+       
+       
+            <div class="nav_box">
+                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <ul>
+                    
+
+                        <li><a href="../bkjx/jxtd.htm">教学团队<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        
+
+                        <li><a href="../bkjx/jxhd.htm">教学活动<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        
+
+                        <li><a href="../bkjx/zlxz.htm">资料下载<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        
+                     
+                    </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+            </div>
+            
+            
+            
+            
+                    </li>
+
+
+
+       <li class="nav_list"><a href="../kxyj/kygl.htm">科学研究<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+       
+       
+            <div class="nav_box">
+                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <ul>
+                    
+
+                        <li><a href="../kxyj/kygl.htm">科研管理<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        
+
+                        <li><a href="../kxyj/xkjs.htm">学科建设<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        
+
+                        <li><a href="../kxyj/xskw.htm">学术刊物<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        
+                     
+                    </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+            </div>
+            
+            
+            
+            
+                    </li>
+
+
+
+       <li class="nav_list"><a href="../xsfc.htm">学生风采<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+       
+            
+            
+                    </li>
+
+
+
+       <li class="nav_list"><a href="../zsjy/bkszszx.htm">招生与就业<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+       
+       
+            <div class="nav_box">
+                    <!--[if lte IE 6]><table><tr><td><![endif]-->
+                    <ul>
+                    
+
+                        <li><a href="../zsjy/bkszszx.htm">本科生招生资讯<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        
+
+                        <li><a href="../zsjy/yjszszx.htm">研究生招生资讯<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        
+
+                        <li><a href="../zsjy/jyzx.htm">就业资讯<!--[if gte IE 7]><!--></a><!--<![endif]--> 
+                        <!--[if lte IE 6]></a><![endif]-->
+                        </li>
+                        
+                     
+                    </ul>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+            </div>
+            
+            
+            
+            
+                    </li>
+
+
+
+       <li class="nav_list"><a href="../dtgz.htm">党团工作<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+       
+            
+            
+                    </li>
+
+
+
+       <li class="nav_list"><a href="../xyhd.htm">校友活动<!--[if gte IE 7]><!--></a><!--<![endif]-->  
+       
+            
+            
+                    </li>
+
+
+</ul>
+
+
+
+    </div>
+    <div class="back_pic">
+        <img src="../images/nyban.jpg">
+        <div class="about">
+            <p>
+学院概况</p>
+        </div>
+    </div>
+    <div class="content1">
+        <div class="con_r  cleafix">
+            <p class="pad">
+            
+
+
+
+学院简介
+               
+                <span>当前位置: 
+                        
+                 <a href="../index.htm">网站首页</a>
+                 &nbsp; / &nbsp;
+                <a href="xyjj.htm">学院概况</a>
+                 &nbsp; / &nbsp;
+                <a href="xyjj.htm">学院简介</a>
+</span>
+
+
+            </p>
+            
+
+
+
+
+<script language="javascript" src="../dfiles/11213/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1559807116,'wbnews','u7')</script>
+<link rel="stylesheet" content-type="text/css" href="../dfiles/11213/system/resource/style/component/news/content/format2.css"><script>function seeContenta7(contentid,size,displayid){   document.getElementById(contentid).innerHTML = '['; for(var i=0;i<=size;i++){       var allcontentid = contentid+(i+1);     if(allcontentid==displayid){            document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";         document.getElementById(displayid).style.display = 'block';     }else{          document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";          document.getElementById(allcontentid).style.display = 'none';       }   }   document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="../dfiles/11213/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1559807116,1251)</script>
+<p>
+   
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1968643321,'wbnews','u9')</script>
+<script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1968643321,3921)</script>
+ </p><h2 align="center" style="color:#333333;margin-top:15px;font-size:20px;font-weight:800;line-height:30px;">学院简介</h2><br>
+    <div id="vsb_content_2_1251_u71">
+
+    <div id="vsb_content_3921_u91"><div id="vsb_content"><p style="text-align: center"><br></p><p style="text-align:justify;text-indent:30px;text-justify:inter-ideograph;line-height:150%"><span style="line-height: 150%;font-size: 16px"></span></p><p style="text-indent:30px"><strong><span style="font-size: 16px">一、学院概况</span></strong></p><p style="text-align:justify;text-indent:30px;text-justify:inter-ideograph;line-height:150%"><span style="line-height: 150%; font-size: 16px;">广州医科大学金域检验学院</span><span style="line-height: 150%; color: rgb(51, 51, 51); font-size: 16px;">始终致力于医学检验教育领域的创新与发展。</span><span style="line-height: 150%; color: rgb(51, 51, 51); font-size: 16px;">其</span><span style="line-height: 150%; font-size: 16px;">前身</span><span style="line-height: 150%; font-size: 16px;">科追溯至</span><span style="line-height: 150%; font-size: 16px;">1989</span><span style="line-height: 150%; font-size: 16px;">年</span><span style="line-height: 150%; font-size: 16px;">创建</span><span style="line-height: 150%; font-size: 16px;">的医学检验系</span><span style="line-height: 150%; font-size: 16px;">，</span><span style="line-height: 150%; font-size: 16px;">经过数十年的积淀，</span><span style="line-height: 150%; font-size: 16px;">于</span><span style="line-height: 150%; font-size: 16px;">2013</span><span style="line-height: 150%; font-size: 16px;">年</span><span style="line-height: 150%; font-size: 16px;">5</span><span style="line-height: 150%; font-size: 16px;">月，</span><span style="line-height: 150%; font-size: 16px;">与原校办产业、现国内第三方医学检验行业龙头上市企业</span><span style="line-height: 150%; font-size: 16px;">——</span><span style="line-height: 150%; font-size: 16px;">广州金域医学检验集团股份有限公司合作</span><span style="line-height: 150%; font-size: 16px;">共同创办</span><span style="line-height: 150%; font-size: 16px;">金域检验学院，</span><span style="line-height: 150%; font-size: 16px;">以产教融合模式，</span><span style="line-height: 150%; font-size: 16px;">联合培养医学检验</span><span style="line-height: 150%; font-size: 16px;">优秀</span><span style="line-height: 150%; font-size: 16px;">人才。</span><span style="line-height: 150%; font-size: 16px;">金域检验</span><span style="line-height: 150%; font-size: 16px;">学院</span><span style="line-height: 150%; font-size: 16px;">自</span><span style="line-height: 150%; font-size: 16px;">成立以来</span><span style="line-height: 150%; font-size: 16px;">备受瞩目，先后</span><span style="line-height: 150%; font-size: 16px;">入选了国家首批现代产业学院（</span><span style="line-height: 150%; font-size: 16px;">2021</span><span style="line-height: 150%; font-size: 16px;">）、广东省示范性产业学院（</span><span style="line-height: 150%; font-size: 16px;">2020</span><span style="line-height: 150%; font-size: 16px;">）、广东省产业学院（</span><span style="line-height: 150%; font-size: 16px;">2019</span><span style="line-height: 150%; font-size: 16px;">）</span><span style="line-height: 150%; font-size: 16px;">以及</span><span style="line-height: 150%; font-size: 16px;">广东省试点学院（</span><span style="line-height: 150%; font-size: 16px;">2013</span><span style="line-height: 150%; font-size: 16px;">）。</span><span style="line-height: 150%; font-size: 16px;">这些荣誉充分证明了学院在医学检验教育领域的卓越成就与深厚实力。</span><br><span style="line-height: 150%;font-size: 16px"></span></p><p style="text-align:justify;text-indent:30px;text-justify:inter-ideograph;line-height:150%"><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">作为国内医学检验教育界产教融合的先行者，</span><span style="line-height: 150%;font-size: 16px">金域检验学院</span><span style="line-height: 150%;font-size: 16px">充分整合学校、企业和临床学院</span><span style="line-height: 150%;font-size: 16px">的优质</span><span style="line-height: 150%;font-size: 16px">资源，</span><span style="line-height: 150%;font-size: 16px">通过</span><span style="line-height: 150%;font-size: 16px">开设产教融合课程，建设产教融合实践平台</span><span style="line-height: 150%;font-size: 16px">等一系列创新</span><span style="line-height: 150%;font-size: 16px">举措</span><span style="line-height: 150%;font-size: 16px">，</span><span style="line-height: 150%;font-size: 16px">推动医学检验教育创新改革，</span><span style="line-height: 150%;font-size: 16px">全面提升人才和技术的市场竞争力。</span> </p><p style="text-align:justify;margin-top:0;text-indent:32px;text-justify:inter-ideograph;line-height:150%"><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">学院师资力量雄厚，</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">形成由长江学者为核心的富有技术创新能力的特色鲜明、结构合理的</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">中青年</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">师资队伍。</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">现设</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">11</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">个教研室，</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">1</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">个省级教学实验中心，共有</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">125</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">名教师（含企业教师</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">72</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人），生师比为</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">3.8:1</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">，</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">为</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">本科人才培养</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">提供了强有力</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">的</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">保障</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">。教师</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">队伍</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">结构</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">合理，高级职称教师共计</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">61</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人，占比</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">48.8%</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">（正高职称</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">35</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人，占比</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">28%</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">、副高</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">26</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人，占比</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">20.8%</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">）；学历结构水平较高，博士研究生</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">39</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人，占比</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">31.2%</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">，硕士研究生</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">54</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人，占比</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">43.2%</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">。现有博士生导师</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">16</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人，硕士生导师</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">35</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人。学院</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">现</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">有市级及以上教学名师</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">20</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人次，其中长江学者</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">特岗教授</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">2</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人，万人计划领军人才</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">2</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人，国家万名优秀创新创业导师</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">1</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人、首批国家健康科普专家</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">1</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人、国家教学指导委员会委员</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">1</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人、教育部新世纪人才</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">1</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人、成功创业女科学企业家</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">1</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人、广东省南粤优秀教师</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">1</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人、珠江学者特聘教授</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">2</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人、广东省特支计划教学名师</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">1</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人、广东省医学领军人才</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">1</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人、广东省杰出青年医学人才</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">5</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人、广东省教学指导委员会委员</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">1</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">人。教学团队先后入选广东省教学团队、广东省</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">课程思政示范</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">团队。</span></p><p style="text-align:justify;text-indent:30px;text-justify:inter-ideograph;line-height:150%"><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">金域检验学院已形成学士-硕士-博士完整的人才培养体系，现有医学检验技术1个本科专业，招收临床检验诊断学硕士和博士。医学检验技术专业入选了2020年度国家级一流本科专业建设点，同时也是国家特色专业建设点（2008年），临床检验诊断学作为临床医学二级学科，是第八轮广东省普通学校重点扶持学科、第三轮广州市属高校重点学科，也是广州医科大学建设临床医学国家“双一流”学科的重要组成。</span></p><p style="text-align:justify;text-indent:32px;text-justify:inter-ideograph;line-height:150%"><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">在新的历史时期，广州医科大学<span style="color: rgb(51, 51, 51); font-size: 16px; text-align: justify; text-indent: 32px; text-wrap: wrap;">金域检验学院</span>将坚持以习近平新时代中国特色社会主义思想为指导，继续秉承“产教融合、创新发展”的办学理念，不断探索医学检验教育的新模式、新方法，为培养优秀的医学检验人才做出更大的贡献。</span></p><p style="text-align:justify;text-indent:32px;text-justify:inter-ideograph;line-height:150%"><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px"></span></p><p style="text-align:justify;text-indent:30px;text-justify:inter-ideograph;line-height:150%"><strong><span style="line-height: 150%;font-size: 16px">二、招生专业</span></strong></p><p style="text-align:justify;text-indent:30px;text-justify:inter-ideograph;line-height:150%"><span style="line-height: 150%;font-size: 16px">本科招生专业</span><span style="font-family: calibri;line-height: 150%;font-size: 16px">——</span><span style="line-height: 150%;font-size: 16px">医学检验技术</span></p><p style="text-align:justify;text-indent:30px;text-justify:inter-ideograph;line-height:150%"><strong><span style="line-height: 150%;font-size: 16px">三、学科优势</span></strong></p><p style="text-align:justify;margin-top:0;margin-bottom:0;text-indent:30px;text-justify:inter-ideograph;line-height:150%"><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">金域检验学院拥有临床检验诊断学的硕、博士学位授权点以及博士后流动站，也是医学技术学科的牵头单位，</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">展现了其深厚的学术底蕴和卓越的科研实力。</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">值得关注的是</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">与医学检验相关的分子生物学与遗传学、微生物学、免疫学、化学等学科</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">已跻身</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">ESI</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">排名全球前</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">1%</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">。学院学科发展充分整合学校、附属医院、合作企业金域医学资源，</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">拥有</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">包括</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">国家重点实验室、医学检测技术与服务国家地方联合工程实验室等</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">12</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">个国家级平台，以及第三方医学检验技术服务工程实验室、遗传病检验检测新锐技术重点实验室、医学检验联合实验室等</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">8</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">个省级平台。</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">这些平台不仅为学院的科研和教学提供了强有力的支撑，也为学院在医学检验及相关领域内的创新和发展奠定了坚实的基础。</span></p><p><strong><span style="font-size: 16px">四、科研创新</span></strong></p><p style="text-align:justify;text-indent:30px;text-justify:inter-ideograph;line-height:150%"><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">金域检验学院教师</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">积极投身科学研究，</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">近</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">3</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">年承担各级科技项目</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">80</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">余项，其中国家级项目</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">15</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">项，在国际高水平期刊上发表学术论文</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">130</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">余篇。</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">学院教师不仅在科研方面取得了卓越成就，在指导学生方面也成果丰硕。</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px"><span style="font-family:宋体">指导学生在读期间获得国家大学生课外科研挑战杯竞赛国家二等奖、广东省特等奖、二等奖、三等奖，中国国际</span><span style="font-family:宋体">“互联网</span></span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">+</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">”</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">大学生创新创业大赛广东省银奖、铜奖等奖项；学生在其他国家级、省级学科、素质竞赛获奖达</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">200</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">多人次；学生在国内外公开学术期刊上发表学术论文</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">104</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">篇。</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">这一成绩充分展示了学院学生的综合素质和创新能力。</span></p><p style="text-align:justify;text-indent:30px;text-justify:inter-ideograph;line-height:150%"><strong><span style="line-height: 150%;font-size: 16px">五、人才培养</span></strong></p><p style="margin-top:0;margin-bottom:0;text-indent:29px;line-height:150%"><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">学院在人才培养方面展现出了独特而全面的教育理念和模式。学院致力于培养具备人文情怀和国际视野，精于实践、敢于创新的高素质复合型医学检验人才。金域检验为实现这一目标，学院</span><span style="line-height: 150%;font-size: 16px">开设有创新班、形</span><span style="line-height: 150%;font-size: 16px">态学、新技术</span><span style="line-height: 150%;font-size: 16px">应用</span><span style="line-height: 150%;font-size: 16px">3</span><span style="line-height: 150%;font-size: 16px">个方向课程，</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">以满足不同学生的学术兴趣和发展需求。</span></p><p style="text-align:justify;text-indent:30px;text-justify:inter-ideograph;line-height:150%"><br></p><p style="text-align:justify;text-indent:30px;text-justify:inter-ideograph;line-height:150%"><span style="line-height: 150%;font-size: 16px">培养特色：强化</span><span style="line-height: 150%;font-size: 16px">“</span><span style="line-height: 150%;font-size: 16px">早接触检验技术、早进入导师实验室、早接受高新技术教育、早拓宽国际视野</span><span style="line-height: 150%;font-size: 16px">”</span><span style="line-height: 150%;font-size: 16px">的教育熏陶</span><span style="line-height: 150%;font-size: 16px">，</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">旨在让学生尽早接触专业知识和技能，为未来的职业发展奠定坚实基础</span><span style="line-height: 150%;font-size: 16px">；以学生发展为中心，实行本科生全程导师制，创新班配备</span><span style="line-height: 150%;font-size: 16px">1</span><span style="line-height: 150%;font-size: 16px">对</span><span style="line-height: 150%;font-size: 16px">1</span><span style="line-height: 150%;font-size: 16px">导师，为学生提供一流的学习资源</span><span style="line-height: 150%;font-size: 16px">和个性化</span><span style="line-height: 150%;font-size: 16px">指导，帮助挖掘学生潜力和实现自我价值</span><span style="line-height: 150%;font-size: 16px">；</span><span style="line-height: 150%;font-size: 16px">此外，学院积极</span><span style="line-height: 150%;font-size: 16px">建设多样化国际交流项目，与香港理工大学开展学生课程和实习双向交换项目，与英国帝国理工大学、南洋理工大学、新加坡国立大学开展线上联合培训课程</span><span style="line-height: 150%;font-size: 16px">，</span><span style="line-height: 150%;font-size: 16px">为</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px">学生提供丰富的国际学习机会</span><span style="line-height: 150%;font-size: 16px">。</span></p><p style="text-align:justify;text-indent:30px;text-justify:inter-ideograph;line-height:150%"><strong><span style="line-height: 150%;font-size: 16px">六、毕业去向</span></strong></p><p style="text-align:justify;text-indent:30px;text-justify:inter-ideograph;line-height:150%"><span style="line-height: 150%;font-size: 16px;background: rgb(255, 255, 255)"><span style="font-family:宋体">毕业生初次就业率、专业匹配度等指标位居学校前列，人才培养质量广受好评。近三年考研录取率超过</span></span><span style="font-family: calibri;line-height: 150%;font-size: 16px;background: rgb(255, 255, 255)">40%</span><span style="line-height: 150%;font-size: 16px;background: rgb(255, 255, 255)"><span style="font-family:宋体">且逐年上升，</span></span><span style="font-family:calibri;line-height:150%;color:rgb(51,51,51);font-size:16px;background:rgb(255,255,255)">2023</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px;background: rgb(255, 255, 255)"><span style="font-family:宋体">年考研录取率更高达</span></span><span style="font-family:calibri;line-height:150%;color:rgb(51,51,51);font-size:16px;background:rgb(255,255,255)">53%</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px;background: rgb(255, 255, 255)"><span style="font-family:宋体">，</span></span><span style="font-family:calibri;line-height:150%;color:rgb(51,51,51);font-size:16px;background:rgb(255,255,255)">89.66%</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px;background: rgb(255, 255, 255)"><span style="font-family:宋体">以上的考研录取同学进入</span><span style="font-family:宋体">“双一流”建设高校深造。近三年平均就业率超过</span></span><span style="font-family:calibri;line-height:150%;color:rgb(51,51,51);font-size:16px;background:rgb(255,255,255)">95%</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px;background: rgb(255, 255, 255)"><span style="font-family:宋体">，其中</span></span><span style="font-family:calibri;line-height:150%;color:rgb(51,51,51);font-size:16px;background:rgb(255,255,255)">50%</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px;background: rgb(255, 255, 255)"><span style="font-family:宋体">以上毕业生进入医院、第三方医学检验机构，就业单位</span></span><span style="font-family:calibri;line-height:150%;color:rgb(51,51,51);font-size:16px;background:rgb(255,255,255)">90%</span><span style="line-height: 150%;color: rgb(51, 51, 51);font-size: 16px;background: rgb(255, 255, 255)"><span style="font-family:宋体">以上位于珠三角地区。</span></span></p><div align="center"><table border="1" cellspacing="0" style="border-collapse:collapse;border:none"><tbody><tr class="firstRow" style="height:18px"><td width="83" valign="center" style="padding: 0px 7px; border-width: 1px; border-style: solid; border-color: rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-size: 15px">年份</span></p></td><td width="94" valign="center" style="padding: 0px 7px; border-left: none; border-right: 1px solid rgb(0, 0, 0); border-top: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-size: 15px">毕业生总人数</span></p></td><td width="94" valign="center" style="padding: 0px 7px; border-left: none; border-right: 1px solid rgb(0, 0, 0); border-top: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-size: 15px">落实去向人数</span></p></td><td width="141" valign="center" style="padding: 0px 7px; border-left: none; border-right: 1px solid rgb(0, 0, 0); border-top: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-size: 15px">毕业去向落实率</span></p></td><td width="80" valign="center" style="padding: 0px 7px; border-left: none; border-right: 1px solid rgb(0, 0, 0); border-top: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-size: 15px">升学人数</span></p></td><td width="98" valign="center" style="padding: 0px 7px; border-left: none; border-right: 1px solid rgb(0, 0, 0); border-top: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-size: 15px">升学率</span></p></td></tr><tr style="height:19px"><td width="83" valign="bottom" style="padding: 0px 7px; border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-top: none; border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-family: 'times new roman';font-size: 15px">2021</span></p></td><td width="94" valign="center" style="padding: 0px 7px; border-left: none; border-right: 1px solid rgb(0, 0, 0); border-top: none; border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-family: 'times new roman';font-size: 15px">105</span></p></td><td width="94" valign="center" style="padding: 0px 7px; border-left: none; border-right: 1px solid rgb(0, 0, 0); border-top: none; border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-family: 'times new roman';font-size: 15px">103</span></p></td><td width="141" valign="center" style="padding: 0px 7px; border-left: none; border-right: 1px solid rgb(0, 0, 0); border-top: none; border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-family: 'times new roman';font-size: 15px">98.10%</span></p></td><td width="80" valign="center" style="padding: 0px 7px; border-left: none; border-right: 1px solid rgb(0, 0, 0); border-top: none; border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-family: 'times new roman';font-size: 15px">45</span></p></td><td width="98" valign="center" style="padding: 0px 7px; border-left: none; border-right: 1px solid rgb(0, 0, 0); border-top: none; border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-family: 'times new roman';font-size: 15px">42.86%</span></p></td></tr><tr style="height:19px"><td width="83" valign="bottom" style="padding: 0px 7px; border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-top: none; border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-family: 'times new roman';font-size: 15px">2022</span></p></td><td width="94" valign="bottom" style="padding: 0px 7px; border-left: none; border-right: 1px solid rgb(0, 0, 0); border-top: none; border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-family: 'times new roman';font-size: 15px">118</span></p></td><td width="94" valign="bottom" style="padding: 0px 7px; border-left: none; border-right: 1px solid rgb(0, 0, 0); border-top: none; border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-family: 'times new roman';font-size: 15px">113</span></p></td><td width="141" valign="bottom" style="padding: 0px 7px; border-left: none; border-right: 1px solid rgb(0, 0, 0); border-top: none; border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-family: 'times new roman';font-size: 15px">95.76%</span></p></td><td width="80" valign="bottom" style="padding: 0px 7px; border-left: none; border-right: 1px solid rgb(0, 0, 0); border-top: none; border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-family: 'times new roman';font-size: 15px">52</span></p></td><td width="98" valign="bottom" style="padding: 0px 7px; border-left: none; border-right: 1px solid rgb(0, 0, 0); border-top: none; border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-family: 'times new roman';font-size: 15px">44.07%</span></p></td></tr><tr style="height:18px"><td width="83" valign="bottom" style="padding: 0px 7px; border-left: 1px solid rgb(0, 0, 0); border-right: 1px solid rgb(0, 0, 0); border-top: none; border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-family: 'times new roman';font-size: 15px">2023</span></p></td><td width="94" valign="center" style="padding: 0px 7px; border-left: none; border-right: 1px solid rgb(0, 0, 0); border-top: none; border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-family:'times new roman';color:rgb(51,51,51);font-size:15px">109</span></p></td><td width="94" valign="center" style="padding: 0px 7px; border-left: none; border-right: 1px solid rgb(0, 0, 0); border-top: none; border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="color: rgb(51, 51, 51);font-size: 15px"><span style="font-family:Times New Roman">108</span></span></p></td><td width="141" valign="center" style="padding: 0px 7px; border-left: none; border-right: 1px solid rgb(0, 0, 0); border-top: none; border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-family:'times new roman';color:rgb(51,51,51);font-size:15px">9</span><span style="color: rgb(51, 51, 51);font-size: 15px"><span style="font-family:Times New Roman">9.08</span></span><span style="font-family:'times new roman';color:rgb(51,51,51);font-size:15px">%</span></p></td><td width="80" valign="center" style="padding: 0px 7px; border-left: none; border-right: 1px solid rgb(0, 0, 0); border-top: none; border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-family:'times new roman';color:rgb(51,51,51);font-size:15px">58</span></p></td><td width="98" valign="center" style="padding: 0px 7px; border-left: none; border-right: 1px solid rgb(0, 0, 0); border-top: none; border-bottom: 1px solid rgb(0, 0, 0);"><p style="text-align:center;margin-top:0;margin-bottom:0;"><span style="font-family: 'times new roman';font-size: 15px">53.2</span><span style="font-size: 15px"><span style="font-family:Times New Roman">0</span></span><span style="font-family: 'times new roman';font-size: 15px">%</span></p></td></tr></tbody></table></div><p style="text-align:justify;margin-top:0;margin-bottom:0;text-justify:inter-ideograph"><br></p><p><br></p><p style="text-align: right;"><span style="font-family: &quot;Microsoft Yahei&quot;; font-size: 15px; text-align: right; text-indent: 30px; text-wrap: wrap; background-color: rgb(255, 255, 255);">（2024年6月更新）</span></p></div></div>
+    <span id="vsb_content_3921_u9" name="vsb_content_3921_u9"></span>
+    
+</div>
+
+    <span id="vsb_content_2_1251_u7" name="vsb_content_2_1251_u7"></span><br><br>
+    
+<p></p>
+
+        </div>
+        <div class="con_l">
+            <span></span>
+     
+              <ul><li><a href="xyjj.htm">学院简介</a>
+
+   
+</li>
+        
+<li><a href="fzlc.htm">发展历程</a>
+
+   
+</li>
+        
+<li><a href="gltd.htm">管理团队</a>
+
+   
+</li>
+        
+<li><a href="zzjg.htm">组织架构</a>
+
+   
+</li>
+        
+<li><a href="hjry.htm">获奖荣誉</a>
+
+   
+</li>
+        
+<li><a href="lxwm.htm">联系我们</a>
+
+   
+</li>
+        
+</ul>
+
+
+
+        </div>
+    </div>
+    <div style="clear: both"></div>
+    <div class="footer cleafix">
+        <div class="footer_box">
+            <div class="ewm">
+
+
+
+
+            </div>
+            <div class="copy">
+                <!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p style="line-height: 28px"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+</p><div>
+    ©1958-<script>document.write((new Date()).getFullYear());</script>2025&nbsp;广州医科大学
+</div><p></p>
+            </div>
+        </div>
+    </div>
+<script src="../dfiles/11213/js/jquery.min.js"></script>
+<script src="../dfiles/11213/js/slide.js"></script>
+<script src="../dfiles/11213/js/layout.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

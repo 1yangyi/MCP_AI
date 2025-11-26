@@ -1,0 +1,633 @@
+<!DOCTYPE html><html lang="zh"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="">
+    
+    <meta name="author" content="厦门大学体育教学部">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="format-detection" content="telephone=no">
+    <title>教学部简介-厦门大学体育教学部</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="教学部简介">
+
+
+<meta name="keywords" content="厦门大学体育教学部,教学部简介">
+
+    <!-- Bootstrap -->
+    <link href="../style/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <!-- Plugins -->
+    <!-- Icons -->
+    <link href="../style/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style/responsiveslides.css">
+    <!-- Global style (main) -->
+    <link href="../style/main.css" rel="stylesheet">
+    <link href="../style/jq22.css" rel="stylesheet">
+    <link href="../style/content.css" rel="stylesheet">
+    <!-- Core -->
+   
+  
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307778465750545742000400024e5c -->
+<link rel="stylesheet" type="text/css" href="../page.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|mobile|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1003,'/page.jsp',-1,1726816173)</script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="d1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-sm-5 col-xs-6 logo"> <span class="pc"><img src="../images/logo.png"></span>
+                        <span class="mobile"><img src="../images/logo3.png"></span>
+                    </div>
+                    <div class="col-md-7 col-sm-7 col-xs-6 search">
+                        <div class="f-search">
+                            <!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script><style>
+    #appu0 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu0 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu0">
+    <div id="appu0"><div><input type="text" autocomplete="off"> <button><i class="fa fa-search"></i></button></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu0">
+    <div id="appu0">
+        <div v-if="!isError">
+        
+         <input type="text"     autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+         <button   v-on:click="onSubmit()"><i class="fa fa-search"></i>
+        
+           
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu0").html($("#htmlu0").text());
+</script>
+<script>
+    var appOwner = "1726816173";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu0",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu0 = document.querySelector("#appu0");
+   if (appElementu0 && appElementu0.__vue__) {
+
+   } else {
+      $("#divu0").html($("#htmlu0").text());
+      var appOwner = "1726816173";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou0 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu0(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu0();
+        }
+      };
+
+      function onSubmitu0(e) {
+        queryInfou0.query.keyWord= $("#appu0  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou0.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script>
+                        </div> <span class="xmu100"><a href="#"><img src="../images/xm100.png"></a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d2">
+            <img src="../images/logo2.png">
+        </div>
+        <div class="menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div id="cssmenu"><div id="menu-line" style="width: 90px; left: 0px;"></div><div id="menu-button">导航菜单</div>
+                            <ul>
+            <li><a href="../index.htm">首页</a>
+            </li>
+        <li class="has-sub"><span class="submenu-button"></span><a href="jxbjj.htm">部门概况</a>
+                <ul>
+                        <li><a href="jxbjj.htm">教学部简介</a>
+            </li>
+                        <li><a href="jgsz.htm">机构设置</a>
+            </li>
+                        <li><a href="xrld.htm">现任领导</a>
+            </li>
+                        <li><a href="xwdt.htm">新闻动态</a>
+            </li>
+                        <li><a href="lrld.htm">历任领导</a>
+            </li>
+                        <li class="has-sub"><span class="submenu-button"></span><a href="bnty/lsyg.htm">百年体育</a>
+                <ul>
+                        <li><a href="bnty/lsyg.htm">历史沿革</a>
+                        </li>
+                        <li><a href="bnty/bnxc.htm">百年相册</a>
+                        </li>
+                        <li><a href="bnty/sdbntyfz.htm">厦大百年体育发展</a>
+                        </li>
+                </ul>
+            </li>
+                        <li><a href="lxwm.htm">联系我们</a>
+            </li>
+            </ul>
+            </li>
+        <li class="has-sub"><span class="submenu-button"></span><a href="../djsz/dzzjg.htm">党建思政</a>
+                <ul>
+                        <li><a href="../djsz/dzzjg.htm">党组织机构</a>
+            </li>
+                        <li><a href="../djsz/djdt.htm">党建动态</a>
+            </li>
+                        <li><a href="../djsz/djxxjy.htm">党纪学习教育</a>
+            </li>
+                        <li><a href="../djsz/ztjy.htm">主题教育</a>
+            </li>
+                        <li><a href="../djsz/xxyd.htm">学习园地</a>
+            </li>
+                        <li><a href="../djsz/gqtgz.htm">共青团工作</a>
+            </li>
+                        <li><a href="../djsz/ghgz.htm">工会工作</a>
+            </li>
+                        <li><a href="../djsz/fwhgz.htm">妇委会工作</a>
+            </li>
+            </ul>
+            </li>
+        <li class="has-sub"><span class="submenu-button"></span><a href="../jyjx.htm">教育教学</a>
+                <ul>
+                        <li class="has-sub"><span class="submenu-button"></span><a href="../jyjx/szdw.htm">师资队伍</a>
+                <ul>
+                        <li><a href="../jyjx/szdw/hwydjys.htm">户外运动教研室</a>
+                        </li>
+                        <li><a href="../jyjx/szdw/ql1jys.htm">球类1教研室</a>
+                        </li>
+                        <li><a href="../jyjx/szdw/ql2jys.htm">球类2教研室</a>
+                        </li>
+                        <li><a href="../jyjx/szdw/tcjys.htm">体操教研室</a>
+                        </li>
+                        <li><a href="../jyjx/szdw/wsjys.htm">武术教研室</a>
+                        </li>
+                        <li><a href="../jyjx/szdw/wpjl.htm">外聘教练</a>
+                        </li>
+                        <li><a href="../jyjx/szdw/bgs.htm">办公室</a>
+                        </li>
+                </ul>
+            </li>
+                        <li class="has-sub"><span class="submenu-button"></span><a href="../jyjx/ggty.htm">公共体育</a>
+                <ul>
+                        <li><a href="../jyjx/ggty/jx_.htm">教学设置</a>
+                        </li>
+                        <li><a href="../jyjx/ggty/kcjs1.htm">课程介绍</a>
+                        </li>
+                        <li><a href="../jyjx/ggty/lqglqkcz.htm">篮球橄榄球课程组</a>
+                        </li>
+                        <li><a href="../jyjx/ggty/ppqzqblqkcz.htm">乒乓球足球棒垒球课程组</a>
+                        </li>
+                        <li><a href="../jyjx/ggty/ymqpqkcz.htm">羽毛球排球课程组</a>
+                        </li>
+                        <li><a href="../jyjx/ggty/mzctyskcz.htm">民族传统养生课程组</a>
+                        </li>
+                        <li><a href="../jyjx/ggty/gefwqkcz.htm">高尔夫网球课程组</a>
+                        </li>
+                        <li><a href="../jyjx/ggty/wskcz.htm">武术课程组</a>
+                        </li>
+                        <li><a href="../jyjx/ggty/cwkcz.htm">操舞课程组</a>
+                        </li>
+                        <li><a href="../jyjx/ggty/xtkcz.htm">形体课程组</a>
+                        </li>
+                        <li><a href="../jyjx/ggty/hwydkcz.htm">户外运动课程组</a>
+                        </li>
+                        <li><a href="../jyjx/ggty/ssydkcz.htm">水上运动课程组</a>
+                        </li>
+                </ul>
+            </li>
+                        <li class="has-sub"><span class="submenu-button"></span><a href="../jyjx/yjspy.htm">研究生培养</a>
+                <ul>
+                        <li><a href="../jyjx/yjspy/yjsjwxx.htm">研究生教务信息</a>
+                        </li>
+                        <li><a href="../jyjx/yjspy/yjsgz.htm">研究生工作</a>
+                        </li>
+                </ul>
+            </li>
+                        <li class="has-sub"><span class="submenu-button"></span><a href="../jyjx/bkspy.htm">本科生培养</a>
+                <ul>
+                        <li><a href="../jyjx/bkspy/bkjwxx.htm">本科教务信息</a>
+                        </li>
+                        <li><a href="../jyjx/bkspy/bkpg.htm">本科评估</a>
+                        </li>
+                </ul>
+            </li>
+            </ul>
+            </li>
+        <li class="has-sub"><span class="submenu-button"></span><a href="../xsky.htm">学术科研</a>
+                <ul>
+                        <li class="has-sub"><span class="submenu-button"></span><a href="../xsky/kyjg.htm">科研机构</a>
+                <ul>
+                        <li><a href="../xsky/kyjg/ydjkyjycbzx.htm">运动健康研究与传播中心</a>
+                        </li>
+                </ul>
+            </li>
+                        <li><a href="../xsky/kydt.htm">科研动态</a>
+            </li>
+                        <li><a href="../xsky/xssl.htm">学术沙龙</a>
+            </li>
+            </ul>
+            </li>
+        <li class="has-sub"><span class="submenu-button"></span><a href="../qtjs.htm">群体竞赛</a>
+                <ul>
+                        <li class="has-sub"><span class="submenu-button"></span><a href="../qtjs/qthd.htm">群体活动</a>
+                <ul>
+                        <li><a href="../qtjs/qthd/xydh.htm">校运动会</a>
+                        </li>
+                        <li><a href="../qtjs/qthd/xnjs.htm">校内竞赛</a>
+                        </li>
+                        <li><a href="../qtjs/qthd/tyst.htm">体育社团</a>
+                        </li>
+                </ul>
+            </li>
+                        <li><a href="../qtjs/tyss.htm">体育赛事</a>
+            </li>
+                        <li><a href="../qtjs/ydfc.htm">运动风采</a>
+            </li>
+                        <li><a href="../qtjs/tyyx.htm">体育影像</a>
+            </li>
+                        <li class="has-sub"><span class="submenu-button"></span><a href="../qtjs/xydd.htm">校运动队</a>
+                <ul>
+                        <li><a href="../qtjs/xydd/gspydd.htm">高水平运动队</a>
+                        </li>
+                        <li><a href="../qtjs/xydd/ptsydd.htm">普通生运动队</a>
+                        </li>
+                </ul>
+            </li>
+            </ul>
+            </li>
+        <li class="has-sub"><span class="submenu-button"></span><a href="../zszp.htm">招生招聘</a>
+                <ul>
+                        <li class="has-sub"><span class="submenu-button"></span><a href="../zszp/bkszs.htm">本科生招生</a>
+                <ul>
+                        <li><a href="../zszp/bkszs/bkszs.htm">本科生招生</a>
+                        </li>
+                </ul>
+            </li>
+                        <li class="has-sub"><span class="submenu-button"></span><a href="../zszp/yjszs.htm">研究生招生</a>
+                <ul>
+                        <li><a href="../zszp/yjszs/yjszs.htm">研究生招生</a>
+                        </li>
+                </ul>
+            </li>
+                        <li class="has-sub"><span class="submenu-button"></span><a href="../zszp/gjszs.htm">国际生招生</a>
+                <ul>
+                        <li><a href="../zszp/gjszs/gjszs.htm">国际生招生</a>
+                        </li>
+                </ul>
+            </li>
+                        <li><a href="../zszp/rcz_.htm">人才招聘</a>
+            </li>
+            </ul>
+            </li>
+        <li class="has-sub"><span class="submenu-button"></span><a href="../tczx/zxjj.htm">体测中心</a>
+                <ul>
+                        <li><a href="../tczx/zxjj.htm">中心简介</a>
+            </li>
+                        <li><a href="../tczx/gzzd.htm">规章制度</a>
+            </li>
+                        <li><a href="../tczx/gztz.htm">工作通知</a>
+            </li>
+                        <li><a href="../tczx/tcyyycjcx.htm">体测预约与成绩查询</a>
+            </li>
+            </ul>
+            </li>
+        <li class="has-sub"><span class="submenu-button"></span><a href="../cgss1/smxq.htm">场馆设施</a>
+                <ul>
+                        <li><a href="../cgss1/smxq.htm">思明校区</a>
+            </li>
+                        <li><a href="../cgss1/xaxq.htm">翔安校区</a>
+            </li>
+                        <li><a href="../cgss1/lxcg.htm">联系场馆</a>
+            </li>
+            </ul>
+            </li>
+        <li class="has-sub"><span class="submenu-button"></span><a href="../xzq.htm">下载区</a>
+                <ul>
+                        <li><a href="../xzq/tzgg.htm">通知公告</a>
+            </li>
+                        <li><a href="../xzq/tyjx.htm">体育教学</a>
+            </li>
+                        <li><a href="../xzq/tzcs.htm">体质测试</a>
+            </li>
+                        <li><a href="../xzq/yddbs.htm">运动队比赛</a>
+            </li>
+                        <li><a href="../xzq/qthd.htm">群体活动</a>
+            </li>
+                        <li><a href="../xzq/glfw.htm">管理服务</a>
+            </li>
+            </ul>
+            </li>
+</ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <img src="../images/ColumnBanner/banner2.jpg">
+    </div>
+        
+    <div class="main">
+        <div class="container listcolumn">
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <div class="con-top">
+                        <div class="sitemap">        
+                <a href="../index.htm">首页</a>
+
+                &gt;
+                <a href="jxbjj.htm">部门概况</a>
+
+                &gt;
+                <a href="jxbjj.htm">教学部简介</a>
+</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-12 col-xs-12">
+                    <div class="submenu">
+                        <div class="submenu-main">
+                            <div class="submenu-title">
+<i class="fa fa-lg fa-volleyball-ball"></i> 部门概况</div>
+                            <ul class="submenu-con">    <li><a href="jxbjj.htm">教学部简介</a><span></span>
+    </li>
+    <li><a href="jgsz.htm">机构设置</a><span></span>
+    </li>
+    <li><a href="xrld.htm">现任领导</a><span></span>
+    </li>
+    <li><a href="xwdt.htm">新闻动态</a><span></span>
+    </li>
+    <li><a href="lrld.htm">历任领导</a><span></span>
+    </li>
+    <li><a href="bnty/lsyg.htm">百年体育</a><span></span>
+        <ul class="submenu-2">
+            <li><a href="bnty/lsyg.htm">历史沿革</a></li>
+            <li><a href="bnty/bnxc.htm">百年相册</a></li>
+            <li><a href="bnty/sdbntyfz.htm">厦大百年体育发展</a></li>
+        </ul>
+    </li>
+    <li><a href="lxwm.htm">联系我们</a><span></span>
+    </li>
+</ul>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-12 col-xs-12">
+                    <div class="listcolumn-con displayInfo">
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1726816173,'wbnews','u6')</script>
+<script>function seeContenta6(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta6('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1726816173,1001)</script>
+<div class="chapter-title">厦门大学体育教学部概况</div>
+<div class="chapter" style="margin-top:50px"><div id="vsb_content_1001_u61"><div id="vsb_content"><p style="text-indent: 2em;">厦门大学有着重视体育的优良传统，校主陈嘉庚先生“提倡体育，恢复国民健康为振兴教育的先决问题”的思想理念影响了一代代的厦大人，使得学校体育运动蔚然成风，形成了良好的校园体育风气。百年来，厦门大学体育教学部不断发展壮大，在推动学校体育发展、增进学生健康、提高学生体育素养等方面做出了突出贡献。</p>
+<p style="text-indent: 2em;">1921年，厦门大学创办之初就设立了“体育部”，作为学校的直属部门由校长直接领导，负责全校的体育工作。校章明确规定：“本校对于体育特别注意，凡可训练学生身体强健、精神和乐之各种体育组织，无不设备......”。 建校初期，先后主持体育部工作的教师有张子常、金兆钧、彭文余、曾学鲁、廖超照等，他们均为我国早期体育界知名学者、专家。1939年，体育部与卫生组合并为体育卫生组，1952年，改名为文娱体育室，1955年，又改名为体育教研组，1966年，改为革命领导小组，1978年，恢复建立体育教研室。自1927年至1992年，历任主任有张恒、丁人鲲、黄炳坤、陈掌谔、吴金声、陈福清、钱一勤、刘焕章、陈金铭、李连亭、黄渭铭、何德馨。1992年4月，体育教研室更名为体育教学部，至2021年，体育教学部历任主任为何德馨、林建华、林致诚、陈志伟。1956年至2021年，体育教学部党支部（党总支、党委）书记包括：庄振卿、周寿康、庄惠美、林清江、刘正淳、郭琼珠、林致诚、郑树东。</p>
+<p style="text-indent: 2em;">体育教学部现有在职教职工61人，租赁制用工2人，外聘教练4人。专任教师共53人，其中教授4人，副教授24人，助理教授2人，讲师18人。教师队伍中博士10人（其中博士后3人），硕士42人（其中在读博士4人），硕士生导师11人，国际级裁判4人，国家级裁判12人，国家级社会体育指导员3人。</p>
+<p style="text-indent: 2em;">建校至今，厦大体育教学历经变革，不断创新，进入21世纪以来，更是进入一个飞跃式发展的时期。2002年开始试行并逐步推广“三自主”的课程体系，即自主选内容、自主选教师、自主选时间，逐步放开了学生选课，规定大学四年内任何一学期都可以选体育课程，给学生更大的选课自主性和自由度，形成了厦门大学特有的“体育超市”。2009年，设置游泳和马拉松两个特色体育学分，拓宽了学生获取体育学分的渠道。从2011级开始，将游泳列为必修学分，规定学生未取得游泳学分则不能毕业。</p>
+<p style="text-indent: 2em;">“敢为人先，勇于创新”诠释了厦大体育新时期改革的步伐，高尔夫球、攀树运动、潜水等项目率先引入课堂，传统与现代融为一体，充分体现了厦大体育的特色。近5年来，相继开设了赛艇、皮划艇、击剑、三边足球、攀岩、桨板、动感单车、中华射艺、极限飞盘等9门新的课程，使得厦门大学开设的体育课程达到54门。目前，厦门大学的体育课程基本涵盖了竞技体育、休闲体育、时尚体育、民族传统体育和保健体育等各个领域，形成了民族传统体育、形体塑身与健身健美、户外拓展训练、小球类和大球类等系列课程，构建了一个体现时代性、教育性、发展性、实用性、多样性、民族性和中国特色的现代大学体育课程体系。同时，还为全校研究生开设了公共体育选修课。</p>
+<p style="text-indent: 2em;">2020年，厦大体育教学成果获得省级高等教育教学成果一等奖、校级高等教育教学成果特等奖；近5年来还多次获得校级教育教学成果奖。2021年，获得厦门大学首届教师教学创新大赛二、三等奖。</p>
+<p style="text-indent: 2em;">建校后厦门大学每年都组织“校庆运动大会”，发展至今，形成了一年一度规模最大的综合性体育赛事——田径运动会。此外，体育教学部还积极组织开展全校群众性体育活动，展开“年度体育竞赛总积分”评比，每年的竞赛项目达到30多个。学校现有体育社团32个，体育教学部为每个社团安排了指导教师，加入社团的学生有3000多人，每年开展的面向全校的各类体育赛事达20多场。由于厦门大学群众性体育活动开展得卓有成效，连年获得国家级、省级、市级“群众体育先进单位”、“全民健身先进单位”荣誉称号。</p>
+<p style="text-indent: 2em;">厦门大学创办初期就非常重视运动队建设，成立了田径、篮球、足球等运动队，竞技水平较高。1987年，厦门大学开始招收高水平运动员，目前高水平运动队有篮球、武术、足球、健美操、棒垒球5个项目，为一类运动队。此外，还有橄榄球、啦啦操、舟艇、帆船、羽毛球、足球（普通生队）、田径、游泳、跳绳、跆拳道、定向越野、高尔夫球、网球、排球（含沙滩排球）、女子篮球、健身气功、男子篮球（普通生队）等二、三类运动队共17支。其中田径队、男子篮球队、帆船队、舟艇队、啦啦操队等都曾参加国际比赛，在亚运会、世界大学生运动会、世界大学生帆船赛等赛事中取得较好成绩。20多支运动队每年都参加国内各级各类比赛，多次在全国大学生运动会及全国性各单项锦标赛中取得优异的成绩。</p>
+<p style="text-indent: 2em;">体育教学部现有体育学在读硕士研究生15名，截至2020年12月，已有14届共108名毕业生在全国各类学校及企事业单位体育教学和科研、管理等岗位任职。2019年12月，体育教学部与社会与人类学院联合，在社会学一级学科下设置“体育与社会”二级学科硕士点，将体育学与社会学理论相融合，为体育学科发展开启了新的篇章。</p>
+<p style="text-indent: 2em;">近10几年来，体育科学研究也取得了显著的成绩。主持各级各类科研项目约90项，经费达到470多万元。其中国家级、省部级纵向课题31项，经费约112万元。发表论文400多篇，其中核心刊物100多篇。出版专著编著15部，教材4部，获得专利3项。</p>
+<p style="text-indent: 2em;">厦门大学建校时即在郑成功演武场遗址上建成了演武运动场，百年来虽历经翻修与重建，但名称与位置均未曾改变。2017年，经重新改造后的演武运动场面积达到4万多平方米，以崭新的面貌、现代化的设施为全校师生带来了更好的运动体验。目前，学校思明校区、翔安校区、漳州校区运动场面积达到41万多平方米，为体育课教学、运动队训练、师生课外锻炼和比赛提供了较好的条件。</p>
+<p style="text-indent: 2em;">百年厦大，百年体育！站在新的起跑线上，体育教学部全体教职工将继承优良传统，紧跟时代步伐，以习近平总书记“<a href="http://cpc.people.com.cn/n1/2017/0828/c64094-29497365.html" target="http://cpc.people.com.cn/xuexi/n1/2018/0819/_blank">体育强则中国强，国运兴则体育兴</a>”为指导思想，推动厦大体育工作的全面发展，为实现“体育强国梦”贡献力量！</p>
+<p style="text-indent: 2em;">（以上数据截至2021年4月6日）</p>
+<p style="text-align: center;"><img width="1727" height="489" title="4BCEC" alt="" src="/virtual_attach_file.vsb?afc=xMl-JiUzvPUN7Zo0l-4UNlYL7UYLznafoRUZM8LiUmCiUzN0gihFp2hmCIa0oky4MkyDLYyinz-aU4rRU8UsL7L4ozrVMlr7nlM2nl-PLlQFMlVVLzvDU8rFM7WRnlLJqjfjo4OeosnbqjA1gDTJQty0LzGaLYyPLRGPgtA8pUPcc&amp;oid=1726816173&amp;tid=1003&amp;nid=1001&amp;e=.jpg" border="0" vspace="0" hspace="0" vsbhref="vurl" vurl="/_vsl/834635E20C5CCD70C395E5EDECFEB11F/5AE176CE/4BCEC" vheight=" 489px" vwidth=" 1727px" orisrc="/virtual_attach_file.vsb?afc=xMl-JiUzvPUN7Zo0l-4UNlYL7UYLznafoRUZM8LiUmCiUzN0gihFp2hmCIa0oky4MkyDLYyinz-aU4rRU8UsL7L4ozrVMlr7nlM2nl-PLlQFMlVVLzvDU8rFM7WRnlLJqjfjo4OeosnbqjA1gDTJQty0LzGaLYyPLRGPgtA8pUPcc&amp;oid=1726816173&amp;tid=1003&amp;nid=1001&amp;e=.jpg" class="img_vsb_content" style="width: 1727px; height: 489px;"></p>
+<p style="text-align: center;"><img width="1727" height="489" title="" alt="" src="/virtual_attach_file.vsb?afc=xU49J4M8Caol7sU0lW2LNCZL46fLRUa4Lz9bLmfRLlMVoz-0gihFp2hmCIa0LYh7nShVM1hRU4lPM8WfnlQVnRLsLmT7LRWRM8nfLRLbL4nFoRA2U8LZMRTFLzWVUNCigtXaQ4Oeo4x8_IXZC1hXptQ0g47aLRL0LzGaLSbw62P8c&amp;oid=1726816173&amp;tid=1003&amp;nid=1001&amp;e=.jpg" border="0" vspace="0" hspace="0" vsbhref="vurl" vurl="/_vsl/3DEE6CC517BAEFED3729D02C7DA03934/88FCC849/12EBF5" vheight=" 489px" vwidth=" 1727px" orisrc="/virtual_attach_file.vsb?afc=xU49J4M8Caol7sU0lW2LNCZL46fLRUa4Lz9bLmfRLlMVoz-0gihFp2hmCIa0LYh7nShVM1hRU4lPM8WfnlQVnRLsLmT7LRWRM8nfLRLbL4nFoRA2U8LZMRTFLzWVUNCigtXaQ4Oeo4x8_IXZC1hXptQ0g47aLRL0LzGaLSbw62P8c&amp;oid=1726816173&amp;tid=1003&amp;nid=1001&amp;e=.jpg" class="img_vsb_content" style="width: 1727px; height: 489px;"></p>
+<p><br></p>
+<p><br></p></div></div></div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        <div class="footer">
+            <div class="footer-main">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-xs-12 contact">
+                            <div class="footer-title">联系我们</div>
+                            <div class="footer-con">
+                                <li>地址：厦门大学思明校区王清明游泳馆三楼</li>
+                                <li>联系电话：0592-2187793</li>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12 link">
+                            <div class="footer-title">友情链接</div>
+                            <div class="footer-con">
+                                <script language="javascript" src="/system/resource/js/openlink.js"></script>    <li><a href="https://www.xmu.edu.cn" target="_blank">厦门大学</a></li>
+    <li><a href="http://www.sport.gov.cn/" target="_blank">国家体育总局</a></li>
+    <li><a href="https://tyj.fujian.gov.cn/" target="_blank">福建省体育局</a></li>
+    <li><a href="https://ssa.xmu.edu.cn/" target="_blank">厦门大学社会与人类学院</a></li>
+    <li><a href="http://sports.xm.gov.cn/" target="_blank">厦门市体育局</a></li>
+<div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+<p>Copyright © 厦门大学体育教学部&nbsp; &nbsp;&nbsp;<br></p></div>
+            </div>
+        </div>
+        
+        
+      <script type="text/javascript" src="../js/jquery.min.js"></script>
+      <script type="text/javascript" src="../js/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.SuperSlide.js"></script>
+    <!-- Plugins: Sorted A-Z -->
+    <script type="text/javascript" src="../js/jq22.js"></script>
+    <script type="text/javascript" src="../js/responsiveslides.min.js"></script>
+    <script type="text/javascript" src="../js/toTop.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>    
+        
+        
+
+
+<a href="#0" class="cd-top">Top</a>
+<script type="text/javascript">
+    jQuery(".tab-con").slide({ titCell:".tab-hd li", mainCell:".tab-bd",autoPlay:false,effect:"left",delayTime:300 });
+    $("#slider").responsiveSlides({
+        auto: true,
+        pager: false,
+        nav: true,
+        speed: 500,
+        timeout: 4000,
+        pager: true,
+        pauseControls: true,
+        namespace: "callbacks"
+    });
+    jQuery(".focusBox").slide({ titCell:".num li", mainCell:".pic",effect:"fold", autoPlay:true,trigger:"click",
+        //下面startFun代码用于控制文字上下切换
+        startFun:function(i){
+             jQuery(".focusBox .txt li").eq(i).animate({"bottom":0}).siblings().animate({"bottom":-36});
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

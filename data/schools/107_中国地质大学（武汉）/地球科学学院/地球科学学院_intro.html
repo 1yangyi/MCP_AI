@@ -1,0 +1,511 @@
+<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>学院简介-地球科学学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="学院简介">
+<meta name="keywords" content="地球科学学院,学院简介">
+
+        <link href="../style.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="../js/jquery.min.js"></script>
+        <script src="../js/responsiveslides.min.js"></script>
+        <script src="../js/dtqh.js"></script>
+        <script src="../js/slide.js"></script>
+        <script type="text/javascript" src="../js/jquery.SuperSlide.js"></script>
+
+    <!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475250545742000400004f55 -->
+<link rel="stylesheet" type="text/css" href="../list_danye.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1011,'/list_danye.jsp',-1,1360803770)</script>
+</head>
+
+    <body>
+         <div class="wrapper" id="header">
+            <div class="inner">
+                <div class="logo clearfix">
+                    
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a href="../index.htm" title="101-地球科学学院"><img src="../images/logo.png" width="317" height="86" border="0" alt="101-地球科学学院" title="101-地球科学学院"></a>
+                    <div class="logo-r">
+                        <div class="ss">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu1 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu1 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu1">
+    <div id="appu1"><div><input type="text" placeholder="请输入检索内容..." autocomplete="off" class="ssk"><input type="submit" value=" " class="ss_btn"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+
+            
+            <input class="ssk" type="text" placeholder="请输入检索内容..." autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"/><input class="ss_btn" type="submit" value=" " v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1360803770";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+                        <div class="bb"><script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><a href="../English/About_US.htm" target="_blank" onclick="_addDynClicks(&quot;wburl&quot;, 1360803770, 70575)">English</a>
+</div>
+                        <div class="clear"></div>
+                       
+                    </div>
+                </div>
+                 <div class="nav"><ul class="navList">
+            <li class="li1"><a href="../index.htm">首页</a>
+        </li>
+        <li class="li2"><a href="xyjj.htm">学院概况</a>
+                <ul class="subnav">
+                        <li>
+                            <a href="xyjj.htm" target="_blank">学院简介</a>
+                        </li>
+                        <li>
+                            <a href="xrld.htm" target="_blank">现任领导</a>
+                        </li>
+                        <li>
+                            <a href="zzjg.htm" target="_blank">组织机构</a>
+                        </li>
+                </ul>
+        </li>
+        <li class="li3"><a href="../szdw/yxrc.htm">师资队伍</a>
+                <ul class="subnav">
+                        <li>
+                            <a href="../szdw/yxrc.htm" target="_blank">优秀人才</a>
+                        </li>
+                        <li>
+                            <a href="../szdw/jszy1/dqbcxtkxx.htm" target="_blank">教师主页</a>
+                        </li>
+                        <li>
+                            <a href="../szdw/rxjs.htm" target="_blank">荣休教师</a>
+                        </li>
+                </ul>
+        </li>
+        <li class="li4"><a href="../xkjs/_ylxk_js.htm">学科建设</a>
+                <ul class="subnav">
+                        <li>
+                            <a href="../xkjs/_ylxk_js.htm" target="_blank">“一流学科”建设</a>
+                        </li>
+                        <li>
+                            <a href="../xkjs/yjfx.htm" target="_blank">研究方向</a>
+                        </li>
+                        <li>
+                            <a href="../xkjs/kypt.htm" target="_blank">科研平台</a>
+                        </li>
+                        <li>
+                            <a href="../xkjs/cxtd.htm" target="_blank">创新团队</a>
+                        </li>
+                        <li>
+                            <a href="../xkjs/yjcg.htm" target="_blank">研究成果</a>
+                        </li>
+                </ul>
+        </li>
+        <li class="li5"><a href="../rcpy/bkzsypy.htm">人才培养</a>
+                <ul class="subnav">
+                        <li>
+                            <a href="../rcpy/bkzsypy.htm" target="_blank">本科招生与培养</a>
+                        </li>
+                        <li>
+                            <a href="../rcpy/yjsxwsyd.htm" target="_blank">研究生学位授予点</a>
+                        </li>
+                        <li>
+                            <a href="../rcpy/yjszsxx.htm" target="_blank">研究生招生信息</a>
+                        </li>
+                        <li>
+                            <a href="../rcpy/sxjd.htm" target="_blank">实习基地</a>
+                        </li>
+                        <li>
+                            <a href="../rcpy/jxcg.htm" target="_blank">教学成果</a>
+                        </li>
+                        <li>
+                            <a href="../rcpy/fxljy.htm" target="_blank">非学历教育</a>
+                        </li>
+                </ul>
+        </li>
+        <li class="li6"><a href="../syzx/syzxjj.htm">实验中心</a>
+                <ul class="subnav">
+                        <li>
+                            <a href="../syzx/syzxjj.htm" target="_blank">实验中心简介</a>
+                        </li>
+                        <li>
+                            <a href="../syzx/yqsb.htm" target="_blank">仪器设备</a>
+                        </li>
+                        <li>
+                            <a href="../syzx/kfgx.htm" target="_blank">开放共享</a>
+                        </li>
+                        <li>
+                            <a href="../syzx/gzzd.htm" target="_blank">规章制度</a>
+                        </li>
+                        <li>
+                            <a href="../syzx/bksyxljj.htm" target="_blank">本科实验训练基金</a>
+                        </li>
+                </ul>
+        </li>
+        <li class="li7"><a href="../djgz.htm">党建工作</a>
+        </li>
+        <li class="li8"><a href="../rczp.htm">人才招聘</a>
+        </li>
+        <li class="li9"><a href="../zjds.htm">致敬大师</a>
+        </li>
+        <li class="li10"><a href="../xyzj.htm">校友之家</a>
+        </li>
+        <li class="li11"><a href="../cyxz/xxbs.htm">常用下载</a>
+                <ul class="subnav">
+                        <li>
+                            <a href="../cyxz/xxbs.htm" target="_blank">学校标识</a>
+                        </li>
+                        <li>
+                            <a href="../cyxz/qtxz.htm" target="_blank">其它下载</a>
+                        </li>
+                </ul>
+        </li>
+</ul>
+</div>
+                   
+                <!--汉堡包-->
+                <div class="navBtns"></div>
+            </div>
+        </div>
+        <div class="wrapper" id="nav">
+            <div class="inner">
+
+            </div>
+        </div>
+
+        <!--xiang yin shi dao hang-->
+       <div class="welcome" style="display:none;">
+            <div class="welBox">
+                <ul class="welList">    <li class="selAct2s">
+        <a>首页</a>
+            <dl class="comeList">
+                    <dd>
+                        <a href="../index/zhxw.htm">综合新闻</a>
+                    </dd>
+                    <dd>
+                        <a href="../index/tzgg.htm">通知公告</a>
+                    </dd>
+                    <dd>
+                        <a href="../index/xshd.htm">学术活动</a>
+                    </dd>
+                    <dd>
+                        <a href="../index/yjjz.htm">研究进展</a>
+                    </dd>
+                    <dd>
+                        <a href="../index/xsgz.htm">学生工作</a>
+                    </dd>
+                    <dd>
+                        <a href="../index/wskc.htm">网上课程</a>
+                    </dd>
+                    <dd>
+                        <a href="../index/xskw.htm">学术刊物</a>
+                    </dd>
+            </dl>
+    </li>
+    <li class="selAct2s">
+        <a>学院概况</a>
+            <dl class="comeList">
+                    <dd>
+                        <a href="xyjj.htm">学院简介</a>
+                    </dd>
+                    <dd>
+                        <a href="xrld.htm">现任领导</a>
+                    </dd>
+                    <dd>
+                        <a href="zzjg.htm">组织机构</a>
+                    </dd>
+            </dl>
+    </li>
+    <li class="selAct2s">
+        <a>师资队伍</a>
+            <dl class="comeList">
+                    <dd>
+                        <a href="../szdw/yxrc.htm">优秀人才</a>
+                    </dd>
+                    <dd>
+                        <a href="../szdw/jszy1/dqbcxtkxx.htm">教师主页</a>
+                    </dd>
+                    <dd>
+                        <a href="../szdw/rxjs.htm">荣休教师</a>
+                    </dd>
+            </dl>
+    </li>
+    <li class="selAct2s">
+        <a>学科建设</a>
+            <dl class="comeList">
+                    <dd>
+                        <a href="../xkjs/_ylxk_js.htm">“一流学科”建设</a>
+                    </dd>
+                    <dd>
+                        <a href="../xkjs/yjfx.htm">研究方向</a>
+                    </dd>
+                    <dd>
+                        <a href="../xkjs/kypt.htm">科研平台</a>
+                    </dd>
+                    <dd>
+                        <a href="../xkjs/cxtd.htm">创新团队</a>
+                    </dd>
+                    <dd>
+                        <a href="../xkjs/yjcg.htm">研究成果</a>
+                    </dd>
+            </dl>
+    </li>
+    <li class="selAct2s">
+        <a>人才培养</a>
+            <dl class="comeList">
+                    <dd>
+                        <a href="../rcpy/bkzsypy.htm">本科招生与培养</a>
+                    </dd>
+                    <dd>
+                        <a href="../rcpy/yjsxwsyd.htm">研究生学位授予点</a>
+                    </dd>
+                    <dd>
+                        <a href="../rcpy/yjszsxx.htm">研究生招生信息</a>
+                    </dd>
+                    <dd>
+                        <a href="../rcpy/sxjd.htm">实习基地</a>
+                    </dd>
+                    <dd>
+                        <a href="../rcpy/jxcg.htm">教学成果</a>
+                    </dd>
+                    <dd>
+                        <a href="../rcpy/fxljy.htm">非学历教育</a>
+                    </dd>
+            </dl>
+    </li>
+    <li class="selAct2s">
+        <a>实验中心</a>
+            <dl class="comeList">
+                    <dd>
+                        <a href="../syzx/syzxjj.htm">实验中心简介</a>
+                    </dd>
+                    <dd>
+                        <a href="../syzx/yqsb.htm">仪器设备</a>
+                    </dd>
+                    <dd>
+                        <a href="../syzx/kfgx.htm">开放共享</a>
+                    </dd>
+                    <dd>
+                        <a href="../syzx/gzzd.htm">规章制度</a>
+                    </dd>
+                    <dd>
+                        <a href="../syzx/bksyxljj.htm">本科实验训练基金</a>
+                    </dd>
+            </dl>
+    </li>
+    <li class="selAct2s">
+        <a href="../djgz.htm">党建工作</a>
+    </li>
+    <li class="selAct2s">
+        <a href="../rczp.htm">人才招聘</a>
+    </li>
+    <li class="selAct2s">
+        <a href="../zjds.htm">致敬大师</a>
+    </li>
+    <li class="selAct2s">
+        <a href="../xyzj.htm">校友之家</a>
+    </li>
+    <li class="selAct2s">
+        <a>常用下载</a>
+            <dl class="comeList">
+                    <dd>
+                        <a href="../cyxz/xxbs.htm">学校标识</a>
+                    </dd>
+                    <dd>
+                        <a href="../cyxz/qtxz.htm">其它下载</a>
+                    </dd>
+            </dl>
+    </li>
+</ul>
+            </div>
+        </div>
+        <!--end-->
+        <div class="wrapper" id="dt">
+            <div class="inner">
+                <div class="slide_container">    <ul class="rslides" id="slider">
+            <li>
+            <a title="" href="#" onclick="_addDynClicks(&quot;wbimage&quot;, 1360803770, 57405)">
+                <img alt="" src="../img/list_dt.png">
+            </a>
+        </li>
+</ul></div>
+            </div>
+        </div>
+        <div class="wrapper" id="container">
+            <div class="inner">
+                <div class="col">
+                    <div class="col-menu">
+                        <span class="col-menu-head">
+学院概况</span>
+                        <div class="col-menu-con"><ul class="submain listcolumn">
+            <li class="col-item column column-1">
+            <a href="xyjj.htm" title="学院简介" class="col-item-link">学院简介</a>
+        </li>
+        <li class="col-item column column-1">
+            <a href="xrld.htm" title="现任领导" class="col-item-link">现任领导</a>
+        </li>
+        <li class="col-item column column-1">
+            <a href="zzjg.htm" title="组织机构" class="col-item-link">组织机构</a>
+        </li>
+</ul>
+</div>
+                    </div>
+
+                    <div class="col-news">
+                        <div class="col-news-head">
+                            <span class="col-title">
+学院简介</span>
+                            <div class="col-path"><a class="path-name">当前位置：</a>
+                    
+                <a href="../index.htm">首页</a>
+            <a>&gt;</a>
+                <a href="xyjj.htm">学院概况</a>
+            <a>&gt;</a>
+                <a href="xyjj.htm">学院简介</a>
+</div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="col-news-con">
+                            <div class="infobox">
+                                <div class="article" style="padding:10px 0;">
+
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1360803770,'wbnews','u10')</script>
+<link rel="stylesheet" content-type="text/css" href="/system/resource/style/component/news/content/format2.css"><script>function seeContenta10(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta10('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1360803770,1849)</script>
+<div id="vsb_content_2_1849_u101"><div id="vsb_content_2"><p style="margin: 0px 0px 10px; -ms-layout-grid-mode: both;"><span lang="EN-US" style="font-family: 仿宋;">&nbsp;</span></p><h2 align="center" style="margin: 0px 0px 10px; text-align: center; line-height: 200%;"><span style="line-height: 200%; font-family: 宋体; font-size: 19px;"><span style="color: rgb(0, 0, 0);">奋进中的地球科学学院</span></span></h2><p style="margin: 0px 0px 10px; line-height: 200%; text-indent: 28px;"><strong><span style="line-height: 200%; font-family: 宋体;">历史悠久，底蕴深厚。</span></strong><span style="line-height: 200%; font-family: 宋体;">地球科学</span><span style="line-height: 200%; font-family: 宋体;">学院前身是北京地质学院<span lang="EN-US">1952</span>年<span lang="EN-US">11</span>月成立的矿产地质及勘探系。<span lang="EN-US">1995</span>年，原地质系、地球化学系、地质力学教研室等合并组建地球科学学院。经过<span lang="EN-US">70</span>年的办学积淀与传承，学院已经成为国内地学人才培养和科学研究的高地。现设有地球物质科学系、地球化学系、地球生物学系、构造地质与地球动力学系、地球表层系统科学系，以及行星科学研究所、全球大地构造中心、固体地球科学大数据研究中心和实验教学中心等教学和研究单位。学院的办学目标是：坚持标准，追求卓越，为探求地球与行星科学奥秘，谋求人与自然和谐发展，培养地学拔尖创新人才，建设一流研究型学院。</span></p><p style="margin: 0px 0px 10px; line-height: 200%; text-indent: 28px;"><strong><span style="line-height: 200%; font-family: 宋体;">党建引领，凝心聚力。</span></strong><span style="font-family: 宋体;">学院党委坚持党建工作和业务工作一起谋划、一起部署、一起落实，双融双促，以高质量的党建推进学院高质量发展。</span><span style="line-height: 200%; font-family: 宋体;">学院党委于<span lang="EN-US">2006</span>年、<span lang="EN-US">2016</span>年被评为“湖北省高校先进基层党组织”，<span lang="EN-US">2011</span>年被湖北省委高校工委评为“高校思想政治教育先进集体”；地球化学系党支部<span lang="EN-US">2021</span>年被评为“湖北省高等学校先进基层党组织”；地质学国家基地班本科生党支部<span lang="EN-US">2019</span>年被评为“全国党建工作样板支部”；<span lang="EN-US">010141</span>团支部、<span lang="EN-US">010171</span>团支部分别于<span lang="EN-US">2017</span>年和<span lang="EN-US">2021</span>年被评为“全国活力团支部”。</span></p><p style="margin: 0px 0px 10px; line-height: 200%; text-indent: 28px;"><strong><span style="line-height: 200%; font-family: 宋体;">国内一流，国际知名。</span></strong><span style="line-height: 200%; font-family: 宋体;">学院是国家地质学理科基础科学研究和教学人才培养基地（1994年获批）、国家首批基础学科拔尖学生培养计划2.0基地（2020年获批）</span><span style="font-family: 宋体;">，是教育部“985”优势学科平台、“211”工程重点学科、“双一流学科”建设所在地，地球科学ESI全球机构排名在前</span><span style="font-family: 仿宋; font-size: 14px;">1‱</span><span style="text-indent: 28px; font-family: 宋体;">。拥有国家一级重点学科地质学，国家二级重点学科古生物学与地层学、矿物学岩石学矿床学、地球化学、构造地质学、第四纪地质学。地质学一级学科在2009、2012、2017、2022年教育部高校学科评估中均排名全国第一，2017、2022年获评“A+”学科。现设有地质学一级学科博士后科研流动站，2010年、2015年、2020年连续三届获评全国优秀博士后科研流动站。</span></p><p style="margin: 0px 0px 10px; line-height: 200%; text-indent: 28px;"><strong><span style="line-height: 200%; font-family: 宋体;">名师云集，人才辈出。</span></strong><span style="line-height: 200%; font-family: 宋体;">现有教职员工<span lang="EN-US">141</span>人，其中教授<span lang="EN-US">68</span>人，副教授<span lang="EN-US">43</span>人，博士生指导教师<span lang="EN-US">64</span>人，中国科学院院士<span lang="EN-US">3</span>人，国家杰出青年基金获得者9人，其它国家级高层次人才<span lang="EN-US">38</span>人次。学院秉承“强基务本，追求卓越”的人才培养理念，共培养了<span lang="EN-US">1</span>万多名毕业生，其中涌现出原国务院总理温家宝等党和国家领导人以及“嫦娥工程”首席科学家欧阳自远等<span lang="EN-US">26</span>位两院院士。现有在校本科生<span lang="EN-US">700</span>余人、硕士研究生<span lang="EN-US">700</span>余人、博士研究生<span lang="EN-US">300</span>余人。本科生按大类招生，宽口径培养，设有地质学（国家理科基地班）、地质学（国家拔尖计划）、地质学、地球化学<span lang="EN-US">4</span>个本科专业（方向）。建有地质学一级学科博士点，地质学、资源与环境一级学科硕士点。地质学和地球化学专业先后入选国家一流本科专业建设点。建有国家级教学团队<span lang="EN-US">4</span>个，省级优秀基层教学组织4个和优秀教学团队<span lang="EN-US">1</span>个。<span lang="EN-US">2000</span>年来获国家级教学成果二等奖<span lang="EN-US">7</span>项（含参与<span lang="EN-US">2</span>项），拥有国家名师<span lang="EN-US">1</span>人、湖北省名师<span lang="EN-US">4</span>人。</span></p><p style="margin: 0px 0px 10px; line-height: 200%; text-indent: 28px;"><strong><span style="line-height: 200%; font-family: 宋体;">资源丰富，实力雄厚</span></strong><span style="line-height: 200%; font-family: 宋体;">。学院建有“壳幔交换动力学”、“重大地质突变期生物与环境协同演化”、<span lang="EN-US">“</span>地球生物学<span lang="EN-US">”3</span>个国家创新研究群体，<span lang="EN-US">2</span>个高等学校创新引智基地（“<span lang="EN-US">111</span>”），主体支撑地质过程与矿产预测全国重点实验室、地质微生物与环境全国重点实验室、流域关键带演化湖北省重点实验室、行星地质与深空探测湖北省重点实验室并协同发展，</span><span style="font-family: 宋体;">共建教育部长江三峡地质灾害研究中心、三峡库区地质灾害国家野外科学观测研究站。建有北戴河、周口店、秭归三大野外地质实践基地，国家级实验教学示范中心</span><span lang="EN-US" style="font-family: 宋体;">2</span><span style="font-family: 宋体;">个，国家级金课</span><span lang="EN-US" style="font-family: 宋体;">9</span><span style="font-family: 宋体;">门，设置和执行国际和国内野外地质联合考察路线</span><span lang="EN-US" style="font-family: 宋体;">10余</span><span style="font-family: 宋体;">条，出版国家规划教材</span><span lang="EN-US" style="font-family: 宋体;">10</span><span style="font-family: 宋体;">本，获评首届全国教材建设先进集体（</span><span lang="EN-US" style="font-family: 宋体;">2021</span><span style="font-family: 宋体;">）。</span></p><p style="margin: 0px 0px 10px; line-height: 200%; text-indent: 28px;"><strong><span style="line-height: 200%; font-family: 宋体;">创新发展，追求卓越。</span></strong><span style="line-height: 200%; font-family: 宋体;">学院积极开展地球物质科学、地球表层科学、地球动力科学、地球信息科学<span lang="EN-US">4</span>大学科群建设，坚持以基础研究为导向，面向地球科学前沿，在区域成矿作用动力学、岩石圈地球化学、地球生物学、壳幔系统岩石学、大陆构造演化和动力学、高温高压岩石流变学等领域的研究具有比较优势。<span lang="EN-US">2000</span>年以来获国家自然科学二等奖<span lang="EN-US">6</span>项（含参与<span lang="EN-US">2</span>项），国家科学技术进步特等奖1项（参与）、二等奖2项（参与）。在《<span lang="EN-US">Nature</span>》（4篇）和《<span lang="EN-US">Science</span>》（5篇）杂志上发表论文<span lang="EN-US">9</span>篇。学院十分重视并积极推动国际学术交流与合作，与十多个国家和地区的数十所大学建立学术交流关系，与美国加州大学河滨分校、亚利桑那州立大学、俄罗斯莫斯科大学、加拿大滑铁卢大学等签订了学生联合培养协议，开展实质性教学与科研合作，每年联合发表<span lang="EN-US">100</span>多篇高水平论文。<span lang="EN-US">6</span>人次任职国际学术组织，<span lang="EN-US">19</span>人次任职《<span lang="EN-US">EPSL</span>》、《<span lang="EN-US">GCA</span>》等国际重要期刊。<span lang="EN-US">2</span>人入选汤森路透全球高被引科学家，<span lang="EN-US">7</span>人入选爱思唯尔中国高被引榜单地球和行星科学学术榜。随着<span lang="EN-US">2012</span>年学校地球科学国际大学联盟的成立和国际化专项经费的设立，学院国际化办学的深度和广度进入了新发展阶段。</span></p><p style="margin: 0px 0px 10px; -ms-layout-grid-mode: both;"><span lang="EN-US" style="font-family: 仿宋;"><span style="font-size: 16px;"><span lang="EN-US" style="font-family: 仿宋;">*</span><span style="font-family: 仿宋;">所有数据统计于<span lang="EN-US">2025</span>年<span lang="EN-US">3</span>月</span></span></span></p></div></div>
+
+</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper" id="footer">
+            <div class="inner">
+                <div class="foot"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<p class="copyright">地址：武汉市洪山区鲁磨路388号 邮编：430074 电子邮箱：dxb@cug.edu.cn 电话：027-67883001						<br>ICP备案：鄂ICP备06018507号 版权所有：中国地质大学地球科学学院办公室					</p></div>
+            </div>
+        </div>
+    
+    <script>
+        $(document).ready(function() {
+            $(".ss .ss_btn").bind("mouseenter", function() {
+                $(".ss .ssk").addClass("active");
+            });
+            $("#header").bind("mouseleave", function() {
+                $(".ss .ssk").removeClass("active");
+            }); //上面是input输入框的展示隐藏效果，由于键入文字时鼠标移出会让input隐藏所以加大了移出的监听范围（为父容器header）
+        });
+    </script>
+
+</body></html>

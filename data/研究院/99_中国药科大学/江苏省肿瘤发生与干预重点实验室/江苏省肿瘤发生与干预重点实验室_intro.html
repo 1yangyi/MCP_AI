@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+		<title>中国药科大学</title>
+<style>
+TD {
+FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+</style>
+<script language="JavaScript">
+function tick() {
+var years,months,days,hours, minutes, seconds;
+var intYears,intMonths,intDays,intHours, intMinutes, intSeconds;
+var today;
+today = new Date(); 
+intYears = today.getFullYear(); 
+intMonths = today.getMonth() + 1; 
+intDays = today.getDate(); 
+intHours = today.getHours(); 
+intMinutes = today.getMinutes(); 
+intSeconds = today.getSeconds(); 
+years = intYears + "-"; 
+ 
+if(intMonths < 10 ){
+months = "0" + intMonths +"-";
+} else {
+months = intMonths +"-";
+}
+if(intDays < 10 ){
+days = "0" + intDays +" ";
+} else {
+days = intDays + " ";
+}
+if (intHours == 0) {
+hours = "00:";
+} else if (intHours < 10) {
+hours = "0" + intHours+":";
+} else {
+hours = intHours + ":";
+}
+if (intMinutes < 10) {
+minutes = "0"+intMinutes+":";
+} else {
+minutes = intMinutes+":";
+}
+if (intSeconds < 10) {
+seconds = "0"+intSeconds+" ";
+} else {
+seconds = intSeconds+" ";
+}
+timeString = years+months+days+hours+minutes+seconds;
+Clock.innerHTML = timeString;
+window.setTimeout("tick();", 1000);
+}
+window.onload = tick;
+</script>
+	</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+<tbody><tr bgcolor="#73a3d4" height="40">
+<td nowrap="" align="middle" width="209"><span id="Clock">2025-10-23 15:37:21 </span></td>
+</tr>
+</tbody></table>
+<div id="timeShow" class="time1"></div>
+	<div align="center">
+		<div class="logo">
+<img class="logo" src="" ,width="255" ,height="110">
+<p>
+<br>
+<br>
+<br>
+<br>
+<big><big><b>中国药科大学</b></big></big></p>
+		</div>
+	<p><b><big><big>温馨提示，该网站仅允许内网访问。</big></big></b></p>
+
+		</div>
+	
+	
+</body></html>

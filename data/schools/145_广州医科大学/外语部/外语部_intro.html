@@ -1,0 +1,513 @@
+<!DOCTYPE html><html><head><title>外语部简介-广州医科大学外语部</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="外语部简介">
+<meta name="keywords" content="广州医科大学外语部,学院简介">
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+
+
+<meta charset="utf-8"><meta name="viewport" content="width=1100"><link rel="stylesheet" type="text/css" href="../css/style.css"><link rel="stylesheet" type="text/css" href="../css/publice.css">
+
+
+
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery.soChange.js"></script>
+<script type="text/javascript">
+$(function(){
+    $(".mainmenu dl").hide();
+    $("li.mainmenu").hover(function(){
+        $(this).find("dl").stop(true,true);
+        $(this).find("dl").slideDown();
+    },function(){
+        $(this).find("dl").stop(true,true);
+        $(this).find("dl").slideUp();
+    });
+})
+</script>
+
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307c78475652505742000300014257 -->
+<link rel="stylesheet" type="text/css" href="../dpzw.vsb.css">
+<script type="text/javascript" src="/system/resource/js/vsbscreen.min.js" id="_vsbscreen" devices="pc|pad"></script>
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1057,'/dpzw.jsp',-1,1654741078)</script>
+</head>
+<body style="position: relative"><!--top s-->
+<div class="topWrap clearfix">
+
+
+
+<div style="width:100%;height:112px;background:url(../img/top-bg.jpg) no-repeat center top">
+<div class="topDiv">
+<div class="logo">
+
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<div class="logo">
+<a href="../index.htm" title="外语部"><img src="../images/wyb.png" width="490" height="72" border="0" alt="外语部" title="外语部"></a>
+</div>
+</div>
+<div class="topR fr"><!-- 3.1.3版本 -->
+
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><script language="javascript" src="/system/resource/openapp/search/js/containsHtmlTags.js"></script><script language="javascript" src="/system/resource/openapp/search/layui/layui.js"></script>
+<div id="divu1" class="Search">
+    <div id="appu1"><div><input type="text" value="请输入关键字搜索" autocomplete="off" onfocus="var vpn_return;eval(vpn_rewrite_js((function () { test3() }).toString().slice(14, -2), 2));return vpn_return;" onblur="var vpn_return;eval(vpn_rewrite_js((function () { test4() }).toString().slice(14, -2), 2));return vpn_return;" class="search_text"> <div class="fdj fr"><input name="submit_button" type="button" value="" class="button pngFix"></div></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu1">
+    <div id="appu1">
+        <div v-if="!isError">
+            <input type="text" class="search_text" value="请输入关键字搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit" onfocus="var vpn_return;eval(vpn_rewrite_js((function () { test3() }).toString().slice(14, -2), 2));return vpn_return;" onblur="var vpn_return;eval(vpn_rewrite_js((function () { test4() }).toString().slice(14, -2), 2));return vpn_return;">
+             <div class="fdj fr"> <input class="button pngFix" name="submit_button" type="button" value="" v-on:click="onSubmit()"/></div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu1").html($("#htmlu1").text());
+</script>
+<script>
+    var appOwner = "1654741078";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu1",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu1 = document.querySelector("#appu1");
+   if (appElementu1 && appElementu1.__vue__) {
+
+   } else {
+      $("#divu1").html($("#htmlu1").text());
+      var appOwner = "1654741078";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou1 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu1(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu1();
+        }
+      };
+
+      function onSubmitu1(e) {
+        queryInfou1.query.keyWord= $("#appu1  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou1.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script></div></div>
+
+
+</div>
+
+</div><!--nav--><div class="navWrap  clearfix">
+    <div class="nav">
+    <ul>
+            <li>
+            <a class="link" href="../index.htm">首页</a>
+                        
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="wybjj.htm">外语部概况</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="wybjj.htm">外语部简介</a></dd>
+                    <dd><a href="jgsz.htm">机构设置</a></dd>
+                    <dd><a href="bmfzr.htm">部门负责人</a></dd>
+                    <dd><a href="dsj.htm">大事记</a></dd>
+                    <dd><a href="lxwm.htm">联系我们</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../szdw/js.htm">师资队伍</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../szdw/js.htm">教授</a></dd>
+                    <dd><a href="../szdw/fjs.htm">副教授</a></dd>
+                    <dd><a href="../szdw/js1.htm">讲师</a></dd>
+                    <dd><a href="../szdw/jsfc.htm">教师风采</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../bkjx/jxdt.htm">本科教学</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../bkjx/jxdt.htm">教学动态</a></dd>
+                    <dd><a href="../bkjx/jxzd.htm">教学制度</a></dd>
+                    <dd><a href="../bkjx/jxcg.htm">教学成果</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../yjsjx/jxdt.htm">研究生教学</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../yjsjx/jxdt.htm">教学动态</a></dd>
+                    <dd><a href="../yjsjx/jxzd.htm">教学制度</a></dd>
+                    <dd><a href="../yjsjx/jxcg.htm">教学成果</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../jxky/kydt.htm">教学科研</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../jxky/kydt.htm">科研动态</a></dd>
+                    <dd><a href="../jxky/jxkycg.htm">教学科研成果</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../djgh/djgz.htm">党建工会</a>
+            <!--如果是导航字数很多，则加上 class="chang"，否则去掉即可-->
+            <dl style="display: none;">
+                    <dd><a href="../djgh/djgz.htm">党建工作</a></dd>
+                    <dd><a href="../djgh/ghgz.htm">工会工作</a></dd>
+            </dl>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="../zlxz.htm">资料下载</a>
+        </li>
+        <li class="mainmenu">
+            <a class="link" href="https://www.gzhmu.edu.cn/" target="_blank">广医主页</a>
+        </li>
+     
+    </ul>
+</div>
+</div>
+<script type="text/javascript">
+
+    $(".mainmenu dl").hide();
+
+</script><!--main-->
+<div class="mainWrap clearfix"><div class="main_tit">
+        <div class="main_titT main_titTa">
+            <img src="../img/bri_icon1.png">
+
+<a href="../index.htm">首页</a>&gt;
+<a href="wybjj.htm" class="cur">外语部概况</a>
+        </div>
+</div>
+
+<div class="main_con">
+<div class="main_conL">
+<div class="main_conLT">
+<dl>
+<dt>外语部概况</dt><dd><a href="wybjj.htm" class="cur">外语部简介</a></dd>
+<dd><a href="jgsz.htm">机构设置</a></dd>
+<dd><a href="bmfzr.htm">部门负责人</a></dd>
+<dd><a href="dsj.htm">大事记</a></dd>
+<dd><a href="lxwm.htm">联系我们</a></dd>
+</dl></div>
+<div class="informBox informBoxb informBoxb1"><!-- 3.1.3版本 -->
+
+
+
+     
+                
+<div id="divu6" class="informBox informBoxb informBoxb1">
+    <div id="appu6"><div><input type="text" value="请输入关键字进行搜索" onfocus="var vpn_return;eval(vpn_rewrite_js((function () { if(this.value=='请输入关键字进行搜索')this.value=''; }).toString().slice(14, -2), 2));return vpn_return;" onblur="var vpn_return;eval(vpn_rewrite_js((function () { if(this.value=='')this.value='请输入关键字进行搜索'; }).toString().slice(14, -2), 2));return vpn_return;" autocomplete="off" class="search_text"> <input name="submit_button" type="button" value="搜索" class="h_button"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu6">
+    <div id="appu6">
+        <div v-if="!isError">
+            <input type="text" class="search_text" value="请输入关键字进行搜索" onfocus="var vpn_return;eval(vpn_rewrite_js((function () { if(this.value=='请输入关键字进行搜索')this.value=''; }).toString().slice(14, -2), 2));return vpn_return;" onblur="var vpn_return;eval(vpn_rewrite_js((function () { if(this.value=='')this.value='请输入关键字进行搜索'; }).toString().slice(14, -2), 2));return vpn_return;" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input class="h_button" name="submit_button" type="button" value="搜索" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu6").html($("#htmlu6").text());
+</script>
+<script>
+    var appOwner = "1654741078";
+    var token = gettoken(10);
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu6",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script>
+
+<script>
+   var appElementu6 = document.querySelector("#appu6");
+   if (appElementu6 && appElementu6.__vue__) {
+
+   } else {
+      $("#divu6").html($("#htmlu6").text());
+      var appOwner = "1654741078";   
+      var urlPrefix = "/aop_component/";
+      var ifLogin="";
+      var token = ifLogin=='true'?gettoken(10, true).trim():'tourist';
+      if (containsHtmlTags(token) || !token) { 
+         token = 'tourist';
+      }
+      jQuery.support.cors = true;
+      $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+      });
+      var queryInfou6 = {
+        query: {
+            keyWord: "",//搜索关键词
+            owner: appOwner,
+            token: token,
+            urlPrefix: urlPrefix,
+            lang:"i18n_zh_CN"
+        },
+        isError: false
+      };
+      function keyUpFunu6(e){
+        var theEvent = e || window.event;
+        var keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
+        if(keyCode == 13){
+          onSubmitu6();
+        }
+      };
+
+      function onSubmitu6(e) {
+        queryInfou6.query.keyWord= $("#appu6  .qwss").val();
+        
+        var url = "/aop_views/search/modules/resultpc/soso.html";      
+        if ("10" == "1" || "10" == "2") {
+           url = "" + url;
+        }
+        var query = queryInfou6.query;
+        if (url.indexOf("?") > -1) {
+            url = url.split("?")[0];
+        }
+        if (query.keyWord) {
+            var query = new Base64().encode(JSON.stringify(query));
+            window.open(url + "?query=" + query);
+        } else {
+            alert("请填写搜索内容")
+        }
+      };
+   }
+</script>
+</div></div>
+
+
+<script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1654741078,'wbnews','u7')</script>
+<script>function seeContenta7(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta7('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1654741078,2367)</script>
+<div class="main_conR">
+            <h2>外语部简介</h2>
+            <div class="main_conRC" style="padding:10px 20px;line-height:30px;font-size:16px;">
+         <div id="vsb_content_2367_u71"><div id="vsb_content"><style><!--         p.MsoNormal, li.MsoNormal, div.MsoNormal{ mso-style-parent:""; margin-top:0.0pt; margin-bottom:0.0pt; text-align:justify; text-justify:inter-ideograph; margin-left:0.0pt; text-indent:0.0pt; line-height:normal; font-size:10.5pt; font-family:等线; font-weight:normal;}                  @list l0{ mso-list-id:268435337; mso-list-type:hybrid; mso-list-template-ids:0;}                  @list l0:level1{ mso-level-number-format:bullet; mso-level-style-link:"列表项目符号"; mso-level-text:"●"; mso-level-tab-stop:18.0pt; mso-level-number-position:left; margin-left:18.0pt; text-indent:-18.0pt; font-family:Dialog;}                  @list l1{ mso-list-id:268435336; mso-list-type:hybrid; mso-list-template-ids:0;}                  @list l1:level1{ mso-level-style-link:"列表编号"; mso-level-text:"%1."; mso-level-tab-stop:18.0pt; mso-level-number-position:left; margin-left:18.0pt; text-indent:-18.0pt;}                  @list l2{ mso-list-id:268435331; mso-list-type:hybrid; mso-list-template-ids:0;}                  @list l2:level1{ mso-level-number-format:bullet; mso-level-style-link:"列表项目符号 2"; mso-level-text:"●"; mso-level-tab-stop:39.0pt; mso-level-number-position:left; margin-left:39.0pt; text-indent:-18.0pt; font-family:Dialog;}                  @list l3{ mso-list-id:268435330; mso-list-type:hybrid; mso-list-template-ids:0;}                  @list l3:level1{ mso-level-number-format:bullet; mso-level-style-link:"列表项目符号 3"; mso-level-text:"●"; mso-level-tab-stop:60.0pt; mso-level-number-position:left; margin-left:60.0pt; text-indent:-18.0pt; font-family:Dialog;}                  @list l4{ mso-list-id:268435329; mso-list-type:hybrid; mso-list-template-ids:0;}                  @list l4:level1{ mso-level-number-format:bullet; mso-level-style-link:"列表项目符号 4"; mso-level-text:"●"; mso-level-tab-stop:81.0pt; mso-level-number-position:left; margin-left:81.0pt; text-indent:-18.0pt; font-family:Dialog;}                  @list l5{ mso-list-id:268435328; mso-list-type:hybrid; mso-list-template-ids:0;}                  @list l5:level1{ mso-level-number-format:bullet; mso-level-style-link:"列表项目符号 5"; mso-level-text:"●"; mso-level-tab-stop:102.0pt; mso-level-number-position:left; margin-left:102.0pt; text-indent:-18.0pt; font-family:Dialog;}                  @list l6{ mso-list-id:268435327; mso-list-type:hybrid; mso-list-template-ids:0;}                  @list l6:level1{ mso-level-style-link:"列表编号 2"; mso-level-text:"%1."; mso-level-tab-stop:39.0pt; mso-level-number-position:left; margin-left:39.0pt; text-indent:-18.0pt;}                  @list l7{ mso-list-id:268435326; mso-list-type:hybrid; mso-list-template-ids:0;}                  @list l7:level1{ mso-level-style-link:"列表编号 3"; mso-level-text:"%1."; mso-level-tab-stop:60.0pt; mso-level-number-position:left; margin-left:60.0pt; text-indent:-18.0pt;}                  @list l8{ mso-list-id:268435325; mso-list-type:hybrid; mso-list-template-ids:0;}                  @list l8:level1{ mso-level-style-link:"列表编号 4"; mso-level-text:"%1."; mso-level-tab-stop:81.0pt; mso-level-number-position:left; margin-left:81.0pt; text-indent:-18.0pt;}                  @list l9{ mso-list-id:268435324; mso-list-type:hybrid; mso-list-template-ids:0;}                  @list l9:level1{ mso-level-style-link:"列表编号 5"; mso-level-text:"%1."; mso-level-tab-stop:102.0pt; mso-level-number-position:left; margin-left:102.0pt; text-indent:-18.0pt;}                  @page{}                  @page Section1{ size:595.3pt 841.9pt; margin:72.0pt 89.0pt 72.0pt 90.0pt; padding:24.0pt 24.0pt 24.0pt 24.0pt; vsb_temp:15.6pt;}                  div.Section1{ page:Section1;}                  @font-face{ font-family:Segoe UI; panose-1:2 11 5 2 4 2 4 2 2 3; mso-font-alt:Lucida Sans; mso-font-charset:0; mso-generic-font-family:swiss; mso-font-pitch:variable; mso-font-signature:-520084737 -1073683329 41 0 479 0;}                  @font-face{ font-family:Dialog; panose-1:0 0 0 0 0 0 0 0 0 0; mso-font-charset:0; mso-generic-font-family:auto; mso-font-pitch:variable; mso-font-signature:0 0 0 0 0 0;}                  @font-face{ font-family:等线; panose-1:0 0 0 0 0 0 0 0 0 0; mso-font-alt:Dialog; mso-font-charset:134; mso-generic-font-family:auto; mso-font-pitch:variable; mso-font-signature:0 953122042 22 0 262159 0;}                  @font-face{ font-family:宋体; panose-1:2 1 6 0 3 1 1 1 1 1; mso-font-alt:Dialog; mso-font-charset:134; mso-generic-font-family:auto; mso-font-pitch:variable; mso-font-signature:3 680460288 22 0 262145 0;}                  @font-face{ font-family:Arial; panose-1:2 11 6 4 2 2 2 2 2 4; mso-font-alt:Lucida Sans; mso-font-charset:0; mso-generic-font-family:auto; mso-font-pitch:variable; mso-font-signature:31367 -2147483648 8 0 1073742335 -65536;}                --></style><div class="Section1"><p class="MsoNormal" style="text-indent:24.0pt; line-height:22.0pt; background:#FDFDFE"><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">广州医科大学</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">外语部</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">成立于</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">2018年，目前下设四个教研室（中心）</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">：</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">大学英语第一教研室、大学英语第二教研室、研究生英语教研室及竞赛与培训中心。</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">外语部</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">主要承担我校本科生</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">、研究生、留学生、预科生</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">以及成教学生</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">语言与文化课程的</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">教学任务。</span></p><p class="MsoNormal" style="text-indent:24.0pt; line-height:22.0pt; background:#FDFDFE"><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">外语部现有教职工</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">2</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">7</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">人，其中</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">教授1人,</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">副教授</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">3</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">人，讲师</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">21</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">人，行政人员</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">1</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">人</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">，教辅人员1人，教师均具有博士或硕士学位且大部分教师具有海外留学或国内重点大学访学进修经历</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">。此外，</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">外语部</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">常年聘请外籍</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">教师1-2人。</span> </p><p class="MsoNormal" style="text-indent:24.0pt; line-height:22.0pt; background:#FDFDFE"><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">外语部</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">强化学科建设，</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">深化</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">教学</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">改革，</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">不断提升教学质量</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">。目前已形成</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">语言学、</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">二语习得、跨文化交际、英美文学、翻译</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">理论与实践、</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">专门用途英语</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">教学</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">以及对外汉语教学等</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">研究方向；</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">开设课程涵盖</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">通用</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">英语、</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">医学</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">英语、</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">学术英语、文化与</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">语言技能</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">、中国文化概况、基础汉语及医学汉语</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">等多个领域。</span></p><p class="MsoNormal" style="text-indent:24.0pt; line-height:22.0pt; background:#FDFDFE"><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">外语部重视科研工作，鼓励</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">教师</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">申报各级</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">课题，</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">参加各类学术会议，</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">取得丰硕成果</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">。近</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">年来，共获批省、市级教研、科研课题近50项，在国内外核心期刊上发表论文近30篇，省级学术期刊上发表论文100余篇，</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">出版各类教材</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">近10</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">部</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">，获广州市教学成果1项、校教学成果二等奖1项。</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">此外，</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">部门聚焦专门用途英语教学研究，</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">成功举办“广东省医学英语教学研讨会”，有效提升了我校在专</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">门用途</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">英语教学领域的学术影响力。</span></p><p class="MsoNormal" style="text-indent:24.0pt; line-height:22.0pt; background:#FDFDFE"><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">外语部重视学科竞赛</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">与师资队伍建设</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">工作</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">。</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">近年来，我校学生在各级各类学科竞赛中表现优异，屡获佳绩</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">，曾获</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt"> “外研社杯”全国英语写作</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">大赛、阅读</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">大赛全国总决赛二等奖</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">，“外研社.国才杯”全国英语演讲大赛全国总决赛铜奖、广东赛区金奖，</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">第</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">三</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">届</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">世界中医药联合会</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">中医翻译大</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">赛</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">团体一等奖</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">等省级及以上奖励100余项</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">。</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">同时，根据学科建设与教学工作需要，部门鼓励教师前往国内外知名大学访学或攻读博士学位，并定期邀请国内知名教授前来讲学。</span></p><p class="MsoNormal" style="text-indent:24.0pt; line-height:22.0pt; background:#FDFDFE"><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">外语部成立以来，</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">全体教师秉持开拓进取的精神，不断探索大学英语教学改革新路径</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">。我校大学英语</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">四、六级</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">考试</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">通过率</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">一直稳超全国平均水平，同时位列广东高校前列</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">。</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">为</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">顺应全国大学英语教学改革新趋势，</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">外语部</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">以《大学英语教学指南</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">(2020版）</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">》为指导</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">，</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">在普通本科中开展基于分级教学的大学英语教学改革工作，充分利用现代教育技术，构建分类、分层、个性化的大学英语教学模式</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">，</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">提高了学生的英语应用能力</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">和</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">自主学习能力，</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">进一步</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">提升了我校大学英语教学水平。</span></p><p class="MsoNormal" style="text-indent:24.0pt; line-height:22.0pt; background:#FDFDFE"><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">为进一步推动教学改革，外语部于2020年制定《广州医科大学大学英语教学改革实施方案》，该方案已融入《广州医科大学本科人才培养方案</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">（</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">2020 版</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">）</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">》中</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">，将推动</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">我校大学英语教</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">学进入</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">崭新的发展阶段</span><span style="font-size:12.0pt; font-family:宋体; color:#05073B; mso-font-kerning:0.0pt">，助力学校“双一流”建设与高质量发展。</span></p><p class="MsoNormal"><span style="font-family:等线"><br></span></p></div></div></div>
+    </div>
+    <span id="vsb_content_2367_u7" name="vsb_content_2367_u7"></span><br><br>
+    
+        </div>
+</div></div>
+<div class="footDiv_three">
+<div class="footDiv_one">
+        <div class="foot_one">
+            <p></p><div>©1958-<script>document.write((new Date()).getFullYear());</script>2025广州医科大学<br>技术支持：信息与数据管理中心<br>学校地址：广州市番禺区新造镇（番禺校区），广州市东风西路195号（越秀校区） 邮编：511436</div><p></p>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+$(function () {
+
+//切换对象为其他，这里为包含图片和标题的层
+    $('#change_32 div.changeDiv').soChange({//对象指向层，层内包含图片及标题
+        thumbObj:'#change_32 .ul_change_a2 span',
+        thumbNowClass:'on'//自定义导航对象当前class为on
+    });
+
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

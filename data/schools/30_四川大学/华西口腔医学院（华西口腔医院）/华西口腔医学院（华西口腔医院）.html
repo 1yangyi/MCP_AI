@@ -1,0 +1,2569 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+ 
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="applicable-device" content="pc,mobile" />
+<title>
+医院概况-四川大学华西口腔医院
+</title>
+<meta name="keywords" content="四川大学华西口腔医院主站,四川大学华西口腔医院,华西口腔医院,口腔医院" />
+<meta name="description" />
+ <link href="/Content/Areas/Common/css/common.css" rel="stylesheet" type="text/css" />
+ <link href="/Content/Areas/Common/css/message.css" rel="stylesheet" type="text/css" />
+ <link href="/Content/Areas/Common/css/article.css" rel="stylesheet" type="text/css" />
+
+ 
+
+
+ <script src="/Scripts/jquery.min.js" type="text/javascript"></script>
+ <script src="/Scripts/Common/control.js" type="text/javascript"></script>
+ <script src="/Content/Areas/Common/scripts/change_fontsize.js" type="text/javascript"></script>
+ <script src="/Content/Areas/Common/scripts/common.js" type="text/javascript"></script>
+ 
+ 
+ <link href="/Content/Awesome/jquery-ui.css" rel="stylesheet" type="text/css" />
+ <link href="/Content/Awesome/Awesome.css" rel="stylesheet" type="text/css" />
+ <script src="/Scripts/Awesome/jquery-ui.min.js" type="text/javascript"></script>
+ <script src="/Scripts/Awesome/jquery.form.js" type="text/javascript"></script>
+ <script src="/Scripts/Awesome/Awesome.js" type="text/javascript"></script>
+ <script src="/Scripts/jquery.unobtrusive-ajax.js" type="text/javascript"></script>
+ <!-- IE响应式 -->
+ <!--[if lt IE 9]>
+ <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+ <![endif]-->
+ 
+
+ 
+ <script src="/Content/Areas/Common/scripts/change_fontsize.js" type="text/javascript"></script>
+
+</head>
+<body> 
+    <img src="/Content/Areas/Common/images/logo/wxShare.jpg" width="0" height="0" style="display: none" />
+        <script type="text/javascript">
+            var urlStr = window.location.href;
+            $(document).ready(function () {
+                var ua = window.navigator.userAgent.toLowerCase();
+                if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+                    $.ajax({
+                        url: "/Mobile/Common/WxShare",
+                        type: "POST",
+                        datatype: "JSON",
+                        data: { url: encodeURIComponent(urlStr) },
+                        success: function (data) {
+                            if (data.status == 1) {
+                                $.getScript("https://res.wx.qq.com/open/js/jweixin-1.6.0.js", function () {
+                                    var appId = data.appId;
+                                    var timestamp = data.timestamp;
+                                    var nonceStr = data.noncestr;
+                                    var signature = data.signature;
+                                    var title = '医院概况'; // 分享标题
+                                    var desc = ''; // 分享描述
+                                    var link = urlStr; // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                                    var imgUrl = 'http://www.hxkq.org//Content/Areas/Common/images/logo/wxShare.jpg'; // 分享图标
+                                    wx.config({
+                                        debug: false,
+                                        appId: appId,
+                                        timestamp: timestamp,
+                                        nonceStr: nonceStr,
+                                        signature: signature,
+                                        jsApiList: [
+                                            'checkJsApi',
+                                            'onMenuShareTimeline',
+                                            'onMenuShareAppMessage',
+                                            'onMenuShareQQ',
+                                            'onMenuShareWeibo',
+                                            'hideMenuItems',
+                                            'showMenuItems',
+                                            'hideAllNonBaseMenuItem',
+                                            'showAllNonBaseMenuItem',
+                                            'translateVoice',
+                                            'startRecord',
+                                            'stopRecord',
+                                            'onRecordEnd',
+                                            'playVoice',
+                                            'pauseVoice',
+                                            'stopVoice',
+                                            'uploadVoice',
+                                            'downloadVoice',
+                                            'chooseImage',
+                                            'previewImage',
+                                            'uploadImage',
+                                            'downloadImage',
+                                            'getNetworkType',
+                                            'openLocation',
+                                            'getLocation',
+                                            'hideOptionMenu',
+                                            'showOptionMenu',
+                                            'closeWindow',
+                                            'scanQRCode',
+                                            'chooseWXPay',
+                                            'openProductSpecificView',
+                                            'addCard',
+                                            'chooseCard',
+                                            'openCard',
+                                            'updateAppMessageShareData',
+                                            'updateTimelineShareData'
+                                        ]
+                                    });
+                                    wx.ready(function () {
+                                        //自定义“分享给朋友”及“分享到QQ”按钮的分享内容
+                                        wx.updateAppMessageShareData({
+                                            title: title, // 分享标题
+                                            desc: desc, // 分享描述
+                                            link: link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                                            imgUrl:imgUrl, // 分享图标
+                                            success: function () {
+                                            // 设置成功
+                                            }
+                                        });
+                                         //自定义“分享到朋友圈”及“分享到QQ空间”按钮的分享内容
+                                        wx.updateTimelineShareData({
+                                            title: title, // 分享标题
+                                            desc: desc, // 分享描述
+                                            link: link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                                            imgUrl:imgUrl, // 分享图标
+                                            success: function () {
+                                            // 设置成功
+                                            }
+                                        });
+                                    });
+                                });
+                            }
+                        },
+                        error: function () {
+                        }
+                    });
+                }
+            });
+
+        </script>
+        <!-- 54Doctor -->
+        <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(["setCookieDomain", "*.hxkq.org"]);
+        _paq.push(["setDomains", ["*.hxkq.org"]]);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function () {
+            var u = "https://tongji.54doctor.net/";
+            _paq.push(['setTrackerUrl', u + '54doctor.php']);
+            _paq.push(['setSiteId', 69]);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + '54doctor.js'; s.parentNode.insertBefore(g, s);
+        })();
+        </script>
+        <noscript><p><img src="https://tongji.54doctor.net/54doctor.php?idsite=69" style="border:0;" alt="" /></p></noscript>
+        <!-- End 54Doctor Code -->
+
+
+
+ <div class="wrap container ">
+
+
+ <!--头部开始-->
+ <div class="header">
+ <link href="/Content/Areas/Common/css/header.css" rel="stylesheet" type="text/css" />
+
+<!-- 图片懒加载js文件 头部调用 不能删除---wz2016-5-18 -->
+<script src="/Content/Areas/Common/scripts/jquery.lazyload.js" type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8">
+ $(function () {
+  $("img").lazyload({ effect: "fadeIn" });
+  });
+</script>
+<script type="text/javascript">
+   $(function(){
+ $(".arrow").hover(function(){
+   $(this).find(".box").stop().slideDown();
+ },function(){
+   $(".box").stop().slideUp()
+   }) 
+   });
+   
+</script>
+<!--头部搜索点击事件-->
+<script type="text/javascript">
+$(document).ready(function(){
+
+  //选择点击事件
+  $('#searchSexChoose').click(function(){
+ if($('#searchSexList').is(':visible')) $('#searchSexList').hide();
+ else {
+   cleanAllSearchList();
+   $('#searchSexList').fadeIn(400);
+   return false;
+ }
+  });
+  
+  //菜单项hover事件
+  $('.searchDownList li').hover(function(){
+ $(this).css({'background-color':'#9c65b2'});
+ $(this).css({'color':'#fff'});
+  }, function(){
+ $(this).css({'color':'#4b4b4b'});
+ $(this).css({'background-color':'#fff'});
+  });
+  
+  //下拉菜单项点击事件
+  $('.searchDownList li').click(function(){
+ var choosen = $(this).attr("value");
+ var choosem = $(this).html();
+ //将选择的内容插入搜索框中
+ $(this).parent().parent().find('.searchChoose').html(choosem);
+ //将选择的内容插入到隐藏的输入框中
+ $(this).parent().parent().find('input').attr("value",choosen);
+  });
+  
+  //全局关闭事件
+  $(document).click(function(){
+ cleanAllSearchList();
+  });
+  
+  
+});
+  
+//全局关闭
+function cleanAllSearchList() {
+  $('#searchSexList').hide();
+}
+</script>
+<!-- 结束 -->
+
+<!--[if IE 6]>
+<script src="/Content/Areas/Common/scripts/DD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('img,a,input,ul.article_list li,.arrow,div,h2,ul.icon-group li.icon-1 a i,ul.icon-group li.icon-2 a.icon-2-1 i,ul.icon-group li.icon-2 a.icon-2-2 i,ul.icon-group li.icon-4 a.icon-4-1 i,ul.icon-group li.icon-4 a.icon-4-2 i,.picFocus .hd ul li span,.scroll-box .con_box,.Scroll_Box .swiper-box ul li h2 a,.Scroll_Box .swiper-box ul li h2');
+</script>
+<![endif]-->
+<script type="text/javascript">
+  
+  $(function(){
+ $(".phone").hover(function(){$(".phone_img").show();},function(){$(".phone_img").hide()});    
+ 
+  });
+
+</script>
+
+<div class="top">
+  <div class="row">    
+ <div id="topBar">
+   <div class="language pull-right">
+ <ul>
+ 
+   <li><a class="phone" href="/" target="_blank">手机版
+   <img class="phone_img" src="/Content/Areas/Hospitals/images/Main/ewm.jpg" style="display: none;"></a></li>
+   <li><a href="https://en.wcss.cn" class="english" target="_blank">English</a></li>
+ </ul>
+   </div>
+   <div class="welcome pull-left">
+ 
+
+ <div class="clearit"></div>
+   </div>
+   <div class="clearit"></div>
+ </div>
+  </div>
+</div>
+
+<!--头部-->
+<div class="header_con">
+  <div class="row">    
+ <div class="pull-left">
+   <div class="logo">
+   <a href="/">
+  <img src="/Json/Commons/file?fid=221&key=cda5cdf688373369" alt="四川大学华西口腔医学院 华西口腔医院">
+   </a>
+   </div>
+   <div class="phone_logo hide-lg"><a href="/"><img src="/Json/Commons/file?fid=221&key=cda5cdf688373369"/></a></div>
+ </div>
+ <div class="pull-right">
+   
+   <div class="form-horizontal">
+<form action="/Hospitals/Search" method="post"> <div id="languages" class="searchType_simulate">
+    <div id="languages" class="searchType">
+   <div class="controler"></div>
+   <div class="searchChoose" id="searchSexChoose">全部</div>
+   <input type="hidden" value="请选择语言" name="searchTypeId" id="searchTypeId">
+   <ul class="searchDownList" id="searchSexList" style="display: none;">
+   <li value="1">全部</li>
+   <li value="2">医生</li>
+   <li value="3">文章</li>
+   <li value="5">视频</li>
+   <li value="6">咨询</li>
+   </ul>
+    </div>
+ </div>
+ <input type="text" placeholder="关键字" name="search" id="search" class="searchtxt">
+ <input name="" value="" class="searchbtn" type="submit" />
+</form>   </div>
+   
+  
+ </div>
+ <div class="clearit"></div>
+  </div>
+</div>   
+  
+ </div>
+ <div class="clearit"></div>
+  <!--头部结束-->
+ <!--PC导航 开始-->
+ <div class="nav">
+ 
+<link href="/Content/Areas/Common/css/nav.css" rel="stylesheet" type="text/css" />
+<script src="/Content/Areas/Common/scripts/common_nav.js" type="text/javascript"></script>
+
+<!--手机导航附加类名-->
+<div class="sy_nav">
+ <a id="open_btn" class="open_btn">
+ <span></span>
+ </a>
+ <div class="phone_container" id="phone_container">
+ <!--手机导航附加类名-->
+<div class="phone_header">
+ <h3><a href="/">网站导航</a></h3>
+ <a id="close_btn" class="close_btn">
+ <span></span>
+ </a>
+</div>
+
+
+  <ul class="sy1_ul">
+ <div class="sy2_inside">
+  <li class="sy1_li homeLi">
+  <a class="homeA sy1_tit" href="/">首 页</a>
+  </li>
+    <li class="sy1_li num0">  
+  <a class="next_open"></a>
+  <a id="2" class="sy1_tit " href="/Html/News/Main/110.html" target="_self"><span class="navspan">学院概况</span></a> 
+
+   <ul class="sy2_ul">
+ <div class="sy2_inside">
+    <li class="sy2_li num0">  
+  <a class="next_open"></a>
+  <a id="12" class="sy2_tit " href="/Html/Hospitals/Main/Description.html" target="_self"><span class="navspan">学院简介</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num1">  
+  <a class="next_open"></a>
+  <a id="6" class="sy2_tit " href="/Html/News/Columns/125/Index.html" target="_self"><span class="navspan">院徽寓意</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num2">  
+  <a class="next_open"></a>
+  <a id="5" class="sy2_tit " href="/Html/News/Columns/124/Index.html" target="_self"><span class="navspan">历/现任院领导</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num3">  
+  <a class="next_open"></a>
+  <a id="209" class="sy2_tit " href="/Html/News/Columns/301/Index.html" target="_self"><span class="navspan">院外门诊</span></a> 
+
+    
+  </li>
+  <div class="clearit"></div>
+ </div>
+ <div class="sy2_ul_div">
+ 
+
+<div class="NavBoxsFirst" style="width: 33.3%">
+ <h2 class="titleStyNav"><a href="/Html/Hospitals/Main/Description.html">学院简介</a></h2>
+ <div class="description BoxContent">
+ 
+
+ <a href="/Html/Hospitals/Main/Description.html">
+ <img src="/Sites/Uploaded/Image/2017/08/036363736294464843752364270.jpg"/>
+ </a>
+ <p class="text">
+  四川大学华西口腔医(学)院始建于1907年的成都仁济牙科诊所，被誉为中国现代口腔医学的发源地和摇篮。1912年扩建为牙症医院；1917年建立华西协合大学牙学院，是中国第一所高等口腔医学院校；1928年仁济牙症医院迁至华西坝，更名为华西协合大学口腔病院1951年更…
+  
+ <a class="details" href="/Html/Hospitals/Main/Description.html">详细&gt;&gt;</a>
+ </p>
+ 
+ </div>
+</div>
+<div class="NavBoxsSecond" style="width: 34.3%">
+   <h2 class="titleStyNav"><a href="/Html/News/Columns/124/Index.html">历/现任院领导</a></h2>
+   
+ <ul class="Leader_ul pd0-20">
+  
+ <li class = "Li_Odd ">
+ 
+ 
+ <span class="img_box" target=_blank title="林则博士（加拿大籍）">
+ <img src="/Sites/Uploaded/UserUpLoad/20170516/20170516150448.jpg" alt="林则博士（加拿大籍）" /></span> 
+  <div class="text_con">
+ <p class="Name">林则博士（加拿大籍）</p>
+ <p class="zhiwu">1907-1950年任院长</p>
+ <p class="XX"></p>
+ </div>
+  <div class="clearit"></div>
+ </li>
+ <li class = "Li_Even last">
+ 
+ 
+ <span class="img_box" target=_blank title="邹海帆">
+ <img src="/Sites/Uploaded/UserUpLoad/20170516/20170516150648.jpg" alt="邹海帆" /></span> 
+  <div class="text_con">
+ <p class="Name">邹海帆</p>
+ <p class="zhiwu">1950-1951年任院长</p>
+ <p class="XX"></p>
+ </div>
+  <div class="clearit"></div>
+ </li>
+  
+  <div class="clearit"></div>
+  </ul>
+</div>
+<div class="NavBoxsThird" style="width: 32.3%">
+ <h2 class="titleStyNav"><a href="/Html/News/Columns/125/Index.html">院徽寓意</a></h2>
+ <div class="BoxContent">
+ <div class="yuanhui">
+			
+ <a href="/Html/News/Articles/3766.html" target=_blank title="院徽寓意" class="img_box">
+ <img src="/Sites/Uploaded/UserUpLoad/20210108/20210108102002.jpg" alt="院徽寓意" /></a> 
+ <div class="article_box_con">  
+ <h2>
+ <a href="/Html/News/Articles/3766.html" target=_blank title="院徽寓意"><font color=""></font></a></h2>
+ <p>
+ 华西口腔的院徽整体为圆形，由四种颜色组成。中心图案、文字采用绿色，寓意为生命之树长青。院徽图案主要结构由两个不同大小、色彩的同心圆叠加构成，表示医患双方心心相印。中央的绿色图案由蛇杖和艺术化的英文字母“D”组…
+ <a class="details" href="/Html/News/Articles/3766.html" target=_blank>
+ 详细>></a>
+ </p>
+</div>
+ 
+ </div>
+ </div>
+</div>
+<div class="clearit"></div>
+ 
+ </div>
+ <div class="bottomOne"></div>
+ 
+ <div class="clearit"></div>
+ </ul>
+  
+  </li>
+  <li class="sy1_li num1">  
+  <a class="next_open"></a>
+  <a id="388" class="sy1_tit " href="/Html/News/Main/502.html" target="_self"><span class="navspan">馆藏资源</span></a> 
+
+   <ul class="sy2_ul">
+ <div class="sy2_inside">
+    <li class="sy2_li num0">  
+  <a class="next_open"></a>
+  <a id="389" class="sy2_tit " href="/Html/News/Columns/436/Index.html" target="_self"><span class="navspan">博物馆简介</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num1">  
+  <a class="next_open"></a>
+  <a id="390" class="sy2_tit " href="/Html/News/Columns/439/Index.html" target="_self"><span class="navspan">华西口腔医学博物馆（四川大学博物馆口腔医学馆）资讯</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num2">  
+  <a class="next_open"></a>
+  <a id="391" class="sy2_tit " href="/Html/News/Columns/440/Index.html" target="_self"><span class="navspan">华西口腔健康教育博物馆资讯</span></a> 
+
+    
+  </li>
+  <div class="clearit"></div>
+ </div>
+ <div class="sy2_ul_div">
+ 
+<div class="clearit"></div>
+<div class="extendMenu">
+	<div class="nav2_cent_div">
+    
+ <li class = "Li_Odd column436"><a href="/Html/News/Columns/436/1.html">博物馆简介</a></li>
+ <li class = "Li_Even column439"><a href="/Html/News/Columns/439/1.html">华西口腔医学博物馆（四川大学博…</a></li>
+ <li class = "Li_Odd column440"><a href="/Html/News/Columns/440/1.html">华西口腔健康教育博物馆资讯</a></li>
+ 	
+    </div>
+	<div class="nav2_cent_div">	
+	
+ <a href="/Html/News/Articles/14430.html" target=_blank title="华西口腔医学博物馆（四川大学博物馆口腔医学馆）">
+ <img src="/Sites/Uploaded/UserUpLoad/20240729/20240729104450.jpg" alt="华西口腔医学博物馆（四川大学博物馆口腔医学馆）" /></a> 
+ <h2>
+ <a href="/Html/News/Articles/14430.html" target=_blank title="华西口腔医学博物馆（四川大学博物馆口腔医学馆）"><font color="">华西口腔医学博物馆（四川大学博…</font></a></h2>
+  
+	</div>
+</div>
+<div class="clearit"></div>
+
+ </div>
+ <div class="bottomOne"></div>
+ 
+ <div class="clearit"></div>
+ </ul>
+  
+  </li>
+  <li class="sy1_li num2">  
+  <a class="next_open"></a>
+  <a id="185" class="sy1_tit " href="/Html/News/Main/468.html" target="_self"><span class="navspan">新闻资讯</span></a> 
+
+   <ul class="sy2_ul">
+ <div class="sy2_inside">
+    <li class="sy2_li num0">  
+  <a class="next_open"></a>
+  <a id="196" class="sy2_tit " href="/Html/News/Main/468.html" target="_self"><span class="navspan">新闻中心</span></a> 
+
+   <ul class="sy3_ul">
+ <div class="sy2_inside">
+    <li class="sy3_li num0">  
+  <a class="next_open"></a>
+  <a id="198" class="sy3_tit " href="/Html/News/Columns/275/Index.html" target="_self"><span class="navspan">重点新闻</span></a> 
+
+    
+  </li>
+  <li class="sy3_li num1">  
+  <a class="next_open"></a>
+  <a id="199" class="sy3_tit " href="/Html/News/Columns/270/Index.html" target="_self"><span class="navspan">院内动态</span></a> 
+
+    
+  </li>
+  <li class="sy3_li num2">  
+  <a class="next_open"></a>
+  <a id="274" class="sy3_tit " href="/Html/News/Columns/410/Index.html" target="_self"><span class="navspan">信息公开</span></a> 
+
+    
+  </li>
+  <div class="clearit"></div>
+ </div>
+ 
+ <div class="clearit"></div>
+ </ul>
+  
+  </li>
+  <li class="sy2_li num1">  
+  <a class="next_open"></a>
+  <a id="197" class="sy2_tit " href="/Html/News/Columns/274/Index.html" target="_self"><span class="navspan">名医科普</span></a> 
+
+    
+  </li>
+  <div class="clearit"></div>
+ </div>
+ <div class="sy2_ul_div">
+ 
+
+<div class="NavBoxsFirst" style="width:50%">
+   <h2 class="titleStyNav"><a href="/Html/News/Columns/275/Index.html">重点新闻</a></h2>
+  <div class="BoxContent">
+ <ul class="article_list mt10">
+ 
+    
+  <li class = "Li_Odd   column_1">
+  
+  
+  <a href="/Html/News/Articles/16983.html"target=_blank title="我院党委理论学习中心组召开学习（扩大）会学习贯彻党的二十届四中全会精神"class="title_type"><font color="">我院党委理论学习中心组召开学习（扩大）会学习贯彻党的二十…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_2">
+  
+  
+  <a href="/Html/News/Articles/16990.html"target=_blank title="我院丁一教授当选为中华口腔医学会第四届口腔激光医学专业委员会主任委员"class="title_type"><font color="">我院丁一教授当选为中华口腔医学会第四届口腔激光医学专业委…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_3">
+  
+  
+  <a href="/Html/News/Articles/16999.html"target=_blank title="我院学子在第四届“丝路杯”国际口腔医学生临床技能邀请赛中荣获佳绩"class="title_type"><font color="">我院学子在第四届“丝路杯”国际口腔医学生临床技能邀请赛中…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_4">
+  
+  
+  <a href="/Html/News/Articles/16878.html"target=_blank title="四川大学口腔医学连续八年荣列“软科中国最好学科排名”全国第一"class="title_type"><font color="">四川大学口腔医学连续八年荣列“软科中国最好学科排名”全国…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_5">
+  
+  
+  <a href="/Html/News/Articles/17000.html"target=_blank title="我院工会主席赵熙一行赴越西县开展乡村振兴定点帮扶工作调研"class="title_type"><font color="">我院工会主席赵熙一行赴越西县开展乡村振兴定点帮扶工作调研</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_6">
+  
+  
+  <a href="/Html/News/Articles/16989.html"target=_blank title="“海外之声·校友论坛”第二期活动成功举办"class="title_type"><font color="">“海外之声·校友论坛”第二期活动成功举办</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_7">
+  
+  
+  <a href="/Html/News/Articles/16886.html"target=_blank title="我院成功入选教育部第三批“人工智能+高等教育”应用场景典型案例"class="title_type"><font color="">我院成功入选教育部第三批“人工智能+高等教育”应用场景典…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_8">
+  
+  
+  <a href="/Html/News/Articles/16988.html"target=_blank title="我院举行“爱在金秋，情暖重阳”离退休欢聚活动"class="title_type"><font color="">我院举行“爱在金秋，情暖重阳”离退休欢聚活动</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_9">
+  
+  
+  <a href="/Html/News/Articles/16896.html"target=_blank title="中华口腔医学会牙周病学专业委员会第17次牙周病学学术会议在蓉举行"class="title_type"><font color="">中华口腔医学会牙周病学专业委员会第17次牙周病学学术会议在…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even last  column_10">
+  
+  
+  <a href="/Html/News/Articles/16916.html"target=_blank title="人民日报客户端、人民网等多家媒体报道我院首创“剧本杀”进课堂，医学生沉浸式学习医患沟通"class="title_type"><font color="">人民日报客户端、人民网等多家媒体报道我院首创“剧本杀”进…</font></a>
+  
+  
+  
+    </li>
+  
+ </ul> 
+ </div>
+</div>
+<div class="NavBoxsThird" style="width:50%">
+  <h2 class="titleStyNav"><a href="/Html/News/Columns/274/Index.html">名医科普</a></h2>
+ 
+   <ul class="article_list pd0-20">
+ 
+    
+  <li class = "Li_Odd   column_1">
+  
+  
+  <a href="/Html/News/Articles/14684.html"target=_blank title="世界口腔健康日|为啥口腔医生也让我戒烟？"class="title_type"><font color="">世界口腔健康日|为啥口腔医生也让我戒烟？</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_2">
+  
+  
+  <a href="/Html/News/Articles/14683.html"target=_blank title="种牙还有“门槛”？有这些身体情况的朋友要注意了！"class="title_type"><font color="">种牙还有“门槛”？有这些身体情况的朋友要注意了！</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_3">
+  
+  
+  <a href="/Html/News/Articles/14682.html"target=_blank title="【女神节特辑】牙齿美白秘籍，送给爱笑的你！"class="title_type"><font color="">【女神节特辑】牙齿美白秘籍，送给爱笑的你！</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even last  column_4">
+  
+  
+  <a href="/Html/News/Articles/14681.html"target=_blank title="儿童早期矫治的常见问题 看完这篇不纠结"class="title_type"><font color="">儿童早期矫治的常见问题 看完这篇不纠结</font></a>
+  
+  
+  
+    </li>
+  
+  </ul>
+  <h2 class="titleStyNav"><a href="/Html/News/Columns/270/Index.html">院内动态</a></h2>
+ 
+   <ul class="article_list pd0-20">
+ 
+    
+  <li class = "Li_Odd   column_1">
+  
+  
+  <a href="/Html/News/Articles/16955.html"target=_blank title="我院在2025年四川大学“读懂中国”活动中获多项殊荣"class="title_type"><font color="">我院在2025年四川大学“读懂中国”活动中获多项殊荣</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_2">
+  
+  
+  <a href="/Html/News/Articles/16910.html"target=_blank title="我院师生参加中华口腔医学会口腔医学科研管理分会第10次学术年会展风采"class="title_type"><font color="">我院师生参加中华口腔医学会口腔医学科研管理分会第10次学术…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_3">
+  
+  
+  <a href="/Html/News/Articles/16817.html"target=_blank title="我院成功举办第十二届青年教师教学技能比赛"class="title_type"><font color="">我院成功举办第十二届青年教师教学技能比赛</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even last  column_4">
+  
+  
+  <a href="/Html/News/Articles/16780.html"target=_blank title="我院设备部获邀参加四川省医院协会医学装备管理分会2025年学术会议并作专题报告"class="title_type"><font color="">我院设备部获邀参加四川省医院协会医学装备管理分会2025年学…</font></a>
+  
+  
+  
+    </li>
+  
+  </ul>
+
+</div>
+<div class="clearit"></div>
+ 
+ </div>
+ <div class="bottomOne"></div>
+ 
+ <div class="clearit"></div>
+ </ul>
+  
+  </li>
+  <li class="sy1_li num3">  
+  <a class="next_open"></a>
+  <a id="3" class="sy1_tit " href="/Html/News/Main/111.html" target="_self"><span class="navspan">党建工作</span></a> 
+
+   <ul class="sy2_ul">
+ <div class="sy2_inside">
+    <li class="sy2_li num0">  
+  <a class="next_open"></a>
+  <a id="13" class="sy2_tit " href="/Html/News/Columns/126/Index.html" target="_self"><span class="navspan">思想建设</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num1">  
+  <a class="next_open"></a>
+  <a id="14" class="sy2_tit " href="/Html/News/Columns/127/Index.html" target="_self"><span class="navspan">组织建设</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num2">  
+  <a class="next_open"></a>
+  <a id="15" class="sy2_tit " href="/Html/News/Columns/128/Index.html" target="_self"><span class="navspan">作风建设</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num3">  
+  <a class="next_open"></a>
+  <a id="16" class="sy2_tit " href="/Html/News/Columns/129/Index.html" target="_self"><span class="navspan">党风廉政</span></a> 
+
+   <ul class="sy3_ul">
+ <div class="sy2_inside">
+    <li class="sy3_li num0">  
+  <a class="next_open"></a>
+  <a id="268" class="sy3_tit " href="https://www.hxkq.org/Html/News/Columns/129/1.html" target="_self"><span class="navspan">综合信息</span></a> 
+
+    
+  </li>
+  <li class="sy3_li num1">  
+  <a class="next_open"></a>
+  <a id="269" class="sy3_tit " href="/Html/News/Columns/221/Index.html" target="_self"><span class="navspan">党纪法规</span></a> 
+
+    
+  </li>
+  <li class="sy3_li num2">  
+  <a class="next_open"></a>
+  <a id="270" class="sy3_tit " href="/Html/News/Columns/222/Index.html" target="_self"><span class="navspan">廉洁教育</span></a> 
+
+    
+  </li>
+  <li class="sy3_li num3">  
+  <a class="next_open"></a>
+  <a id="271" class="sy3_tit " href="/Html/News/Columns/223/Index.html" target="_self"><span class="navspan">专项工作</span></a> 
+
+    
+  </li>
+  <li class="sy3_li num4">  
+  <a class="next_open"></a>
+  <a id="272" class="sy3_tit " href="/Html/News/Columns/224/Index.html" target="_self"><span class="navspan">工作流程</span></a> 
+
+    
+  </li>
+  <li class="sy3_li num5">  
+  <a class="next_open"></a>
+  <a id="273" class="sy3_tit " href="/Html/News/Columns/225/Index.html" target="_self"><span class="navspan">办事指南</span></a> 
+
+    
+  </li>
+  <div class="clearit"></div>
+ </div>
+ 
+ <div class="clearit"></div>
+ </ul>
+  
+  </li>
+  <li class="sy2_li num4">  
+  <a class="next_open"></a>
+  <a id="18" class="sy2_tit " href="/Html/News/Columns/131/Index.html" target="_self"><span class="navspan">统战工作</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num5">  
+  <a class="next_open"></a>
+  <a id="19" class="sy2_tit " href="/Html/News/Main/500.html" target="_self"><span class="navspan">群团工作</span></a> 
+
+   <ul class="sy3_ul">
+ <div class="sy2_inside">
+    <li class="sy3_li num0">  
+  <a class="next_open"></a>
+  <a id="282" class="sy3_tit " href="/Html/News/Columns/424/Index.html" target="_self"><span class="navspan">群团工作</span></a> 
+
+    
+  </li>
+  <li class="sy3_li num1">  
+  <a class="next_open"></a>
+  <a id="283" class="sy3_tit " href="/Html/News/Columns/226/Index.html" target="_self"><span class="navspan">团员青年</span></a> 
+
+    
+  </li>
+  <li class="sy3_li num2">  
+  <a class="next_open"></a>
+  <a id="284" class="sy3_tit " href="/Html/News/Columns/227/Index.html" target="_self"><span class="navspan">职工之家</span></a> 
+
+    
+  </li>
+  <div class="clearit"></div>
+ </div>
+ 
+ <div class="clearit"></div>
+ </ul>
+  
+  </li>
+  <li class="sy2_li num6">  
+  <a class="next_open"></a>
+  <a id="375" class="sy2_tit " href="/Html/News/Columns/154/Index.html" target="_self"><span class="navspan">新闻动态</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num7">  
+  <a class="next_open"></a>
+  <a id="376" class="sy2_tit " href="/Html/News/Columns/155/Index.html" target="_self"><span class="navspan">理论学习</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num8">  
+  <a class="next_open"></a>
+  <a id="377" class="sy2_tit " href="/Html/News/Columns/220/Index.html" target="_self"><span class="navspan">通知公告</span></a> 
+
+    
+  </li>
+  <div class="clearit"></div>
+ </div>
+ <div class="sy2_ul_div">
+ 
+
+<div class="NavBoxsSecond" style="width:29%">
+ <h2 class="titleStyNav"><a href="/Html/News/Columns/154/Index.html">新闻动态</a></h2>
+ <div class="BoxContent">
+ <ul class="article_list">
+    
+    
+  <li class = "Li_Odd   column_1">
+  
+  
+  <a href="/Html/News/Articles/16995.html" title="我院东区门诊党支部开展“重阳暖夕阳，健康伴我行”义诊活动"class="title_type"><font color="">我院东区门诊党支部开展“重…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_2">
+  
+  
+  <a href="/Html/News/Articles/16968.html" title="我院设备部党支部与四川省骨科医院医学装备部开展交流活动"class="title_type"><font color="">我院设备部党支部与四川省骨…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_3">
+  
+  
+  <a href="/Html/News/Articles/16967.html" title="我院财务部党支部和纪审党支部组织参观邓小平同志诞辰121周年专题展"class="title_type"><font color="">我院财务部党支部和纪审党支…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_4">
+  
+  
+  <a href="/Html/News/Articles/16917.html" title="走进川大博物馆，老年口腔科党支部“追光”邓小平同志"class="title_type"><font color="">走进川大博物馆，老年口腔科…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_5">
+  
+  
+  <a href="/Html/News/Articles/16901.html" title="我院口腔疾病防治全国重点实验室第二党支部开展主题党日活动"class="title_type"><font color="">我院口腔疾病防治全国重点实…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_6">
+  
+  
+  <a href="/Html/News/Articles/16900.html" title="我院预防科党支部、预防科研究生党支部联合开展结对共建活动"class="title_type"><font color="">我院预防科党支部、预防科研…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_7">
+  
+  
+  <a href="/Html/News/Articles/16833.html" title="我院口腔黏膜病科党支部开展爱国主义影片观影活动"class="title_type"><font color="">我院口腔黏膜病科党支部开展…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_8">
+  
+  
+  <a href="/Html/News/Articles/16818.html" title="我院全重第二党支部开展深入贯彻中央八项规定精神学习教育"class="title_type"><font color="">我院全重第二党支部开展深入…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd last  column_9">
+  
+  
+  <a href="/Html/News/Articles/16789.html" title="编辑部党支部组织参观四川大学博物馆“我是中国人民的儿子——邓小平同志诞辰121周年专题展”"class="title_type"><font color="">编辑部党支部组织参观四川大…</font></a>
+  
+  
+  
+    </li>
+    
+  
+  
+ </ul> 
+ </div>
+</div>
+<div class="NavBoxsFirst" style="width:42%">
+   <h2 class="titleStyNav"><a href="/Html/News/Columns/129/Index.html">党风廉政</a></h2>
+  <div class="BoxContent">
+    <ul class="dj_box article_box  mt10">
+    
+    
+  <li class = "Li_Odd   column_1">
+  
+  
+  <a class="img_box" href="/Html/News/Articles/15401.html"  title="我院纪委召开第十七届纪律检查委员会第九次全体会议">
+  <img src="/Sites/Uploaded/UserUpLoad/20250123/20250123110813.jpg" alt="我院纪委召开第十七届纪律检查委员会第九次全体会议" /></a> 
+  <a href="/Html/News/Articles/15401.html" title="我院纪委召开第十七届纪律检查委员会第九次全体会议"class="title_type"><font color="">我院纪委召开第十七届纪…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even last  column_2">
+  
+  
+  <a class="img_box" href="/Html/News/Articles/14419.html"  title="我院纪委为2024年新职工讲授廉洁教育第一课">
+  <img src="/Sites/Uploaded/UserUpLoad/20240726/20240726103038.png" alt="我院纪委为2024年新职工讲授廉洁教育第一课" /></a> 
+  <a href="/Html/News/Articles/14419.html" title="我院纪委为2024年新职工讲授廉洁教育第一课"class="title_type"><font color="">我院纪委为2024年新职工…</font></a>
+  
+  
+  
+    </li>
+  
+    
+ <div class="clearit"></div>
+ </ul> 
+ <ul class="article_list mt10">
+   
+    
+  <li class = "Li_Odd   column_1">
+  
+  
+  <a href="/Html/News/Articles/15401.html"target=_blank title="我院纪委召开第十七届纪律检查委员会第九次全体会议"class="title_type"><font color="">我院纪委召开第十七届纪律检查委员会第九…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_2">
+  
+  
+  <a href="/Html/News/Articles/14419.html"target=_blank title="我院纪委为2024年新职工讲授廉洁教育第一课"class="title_type"><font color="">我院纪委为2024年新职工讲授廉洁教育第一…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_3">
+  
+  
+  <a href="/Html/News/Articles/14092.html"target=_blank title="我院纪委委员开展2024年普通招考博士研究生复试面试巡查"class="title_type"><font color="">我院纪委委员开展2024年普通招考博士研究…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even last  column_4">
+  
+  
+  <a href="/Html/News/Articles/14093.html"target=_blank title="我院纪委召开第十七届纪律检查委员会第六次全体会议"class="title_type"><font color="">我院纪委召开第十七届纪律检查委员会第六…</font></a>
+  
+  
+  
+    </li>
+  
+   
+ </ul> 
+ </div>
+</div>
+<div class="NavBoxsThird" style="width:29%">
+  <h2 class="titleStyNav"><a href="/Html/News/Columns/126/Index.html">思想建设</a></h2>
+   
+   <ul class="article_list pd0-20">
+   
+    
+  <li class = "Li_Odd   column_1">
+  
+  
+  <a href="/Html/News/Articles/16842.html"target=_blank title="《求是》杂志发表习近平总书记重要文章　《中华民族共同体的形成和发展是人心所向、大势所趋、历史必然》"class="title_type"><font color="">《求是》杂志发表习近平总…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_2">
+  
+  
+  <a href="/Html/News/Articles/16839.html"target=_blank title="习近平：在庆祝中华人民共和国成立76周年招待会上的讲话"class="title_type"><font color="">习近平：在庆祝中华人民共…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_3">
+  
+  
+  <a href="/Html/News/Articles/16843.html"target=_blank title="教育部召开铸牢中华民族共同体意识工作座谈会"class="title_type"><font color="">教育部召开铸牢中华民族共…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_4">
+  
+  
+  <a href="/Html/News/Articles/16841.html"target=_blank title="习近平：完整准确全面贯彻新时代党的治疆方略 努力建设团结和谐、繁荣富裕、文明进步、安居乐业、生态良好的社会主义现代化新疆"class="title_type"><font color="">习近平：完整准确全面贯彻…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_5">
+  
+  
+  <a href="/Html/News/Articles/16838.html"target=_blank title="习近平在联合国气候变化峰会上的致辞（全文）"class="title_type"><font color="">习近平在联合国气候变化峰…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_6">
+  
+  
+  <a href="/Html/News/Articles/16844.html"target=_blank title="学校召开深入贯彻中央八项规定精神学习教育总结会议"class="title_type"><font color="">学校召开深入贯彻中央八项…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_7">
+  
+  
+  <a href="/Html/News/Articles/16840.html"target=_blank title="习近平回信勉励全国特岗教师代表"class="title_type"><font color="">习近平回信勉励全国特岗教…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_8">
+  
+  
+  <a href="/Html/News/Articles/16837.html"target=_blank title="习近平在金砖国家领导人线上峰会的讲话（全文）"class="title_type"><font color="">习近平在金砖国家领导人线…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd last  column_9">
+  
+  
+  <a href="/Html/News/Articles/16836.html"target=_blank title="习近平：在纪念中国人民抗日战争暨世界反法西斯战争胜利80周年大会上的讲话"class="title_type"><font color="">习近平：在纪念中国人民抗…</font></a>
+  
+  
+  
+    </li>
+  
+  </ul>
+</div>
+<div class="clearit"></div>
+ 
+ </div>
+ <div class="bottomOne"></div>
+ 
+ <div class="clearit"></div>
+ </ul>
+  
+  </li>
+  <li class="sy1_li num4">  
+  <a class="next_open"></a>
+  <a id="7" class="sy1_tit " href="/Html/News/Main/112.html" target="_self"><span class="navspan">学科建设</span></a> 
+
+   <ul class="sy2_ul">
+ <div class="sy2_inside">
+    <li class="sy2_li num0">  
+  <a class="next_open"></a>
+  <a id="278" class="sy2_tit " href="/Html/News/Columns/415/Index.html" target="_self"><span class="navspan">学科动态</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num1">  
+  <a class="next_open"></a>
+  <a id="279" class="sy2_tit " href="/Html/News/Columns/133/Index.html" target="_self"><span class="navspan">学系简介</span></a> 
+
+    
+  </li>
+  <div class="clearit"></div>
+ </div>
+ <div class="sy2_ul_div">
+ 
+
+<div class="NavBoxsFirst" style="width:50%">
+   <h2 class="titleStyNav"><a href="/Html/News/Columns/415/Index.html">学科动态</a></h2>
+  <div class="BoxContent">
+ <ul class="kxyj_box article_box  mt10">
+   
+    
+  <li class = "Li_Odd last  column_1">
+  
+  
+  <a class="img_box" href="/Html/News/Articles/16920.html"  title="四川大学口腔医学连续八年荣列“软科中国最好学科排名”全国第一">
+  <img src="/Sites/Uploaded/UserUpLoad/20251015/20251015115706.jpg" alt="四川大学口腔医学连续八年荣列“软科中国最好学科排名”全国第一" /></a> 
+  <a href="/Html/News/Articles/16920.html" title="四川大学口腔医学连续八年荣列“软科中国最好学科排名”全国第一"class="title_type"><font color="">四川大学口腔医学连续八…</font></a>
+  
+  
+  
+  <p>
+   2025年10月15日，高等教育专业评价机构软科正式发布“2025软科中国最好学科排名”，排名榜单包括98个一级学科和5个专… <a class="detail" href="/Html/News/Articles/16920.html"  title="点击查看详细">详细>></a>
+  </p>
+    </li>
+   
+   <div class="clearit"></div>
+   </ul> 
+ <ul class="article_list mt10">
+ 
+    
+  <li class = "Li_Odd   column_1">
+  
+  
+  <a href="/Html/News/Articles/16920.html"target=_blank title="四川大学口腔医学连续八年荣列“软科中国最好学科排名”全国第一"class="title_type"><font color="">四川大学口腔医学连续八年荣列“软科中国最好学科排名”…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_2">
+  
+  
+  <a href="/Html/News/Articles/15720.html"target=_blank title="四川大学口腔医学位列2025年度QS世界大学学科排行榜全球第十二"class="title_type"><font color="">四川大学口腔医学位列2025年度QS世界大学学科排行榜全球…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_3">
+  
+  
+  <a href="/Html/News/Articles/15046.html"target=_blank title="四川大学华西口腔医学荣获2024年度软科世界一流学科排名世界第四、中国第一"class="title_type"><font color="">四川大学华西口腔医学荣获2024年度软科世界一流学科排名…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_4">
+  
+  
+  <a href="/Html/News/Articles/14931.html"target=_blank title="四川大学口腔医学连续七年荣列“2024软科中国最好学科排名”全国第一"class="title_type"><font color="">四川大学口腔医学连续七年荣列“2024软科中国最好学科排…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_5">
+  
+  
+  <a href="/Html/News/Articles/14302.html"target=_blank title="四川大学口腔医学荣获“2024软科中国大学专业排名”第一"class="title_type"><font color="">四川大学口腔医学荣获“2024软科中国大学专业排名”第一</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_6">
+  
+  
+  <a href="/Html/News/Articles/14028.html"target=_blank title="四川大学口腔医学位列2024年度QS世界大学学科排行榜全球第十二"class="title_type"><font color="">四川大学口腔医学位列2024年度QS世界大学学科排行榜全球…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_7">
+  
+  
+  <a href="/Html/News/Articles/13992.html"target=_blank title="我院11位学者入选爱思唯尔(Elsevier) 2023“中国高被引学者” 榜单"class="title_type"><font color="">我院11位学者入选爱思唯尔(Elsevier) 2023“中国高被引…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_8">
+  
+  
+  <a href="/Html/News/Articles/13535.html"target=_blank title="四川大学口腔医学连续六年荣获软科中国最好学科第一"class="title_type"><font color="">四川大学口腔医学连续六年荣获软科中国最好学科第一</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_9">
+  
+  
+  <a href="/Html/News/Articles/13483.html"target=_blank title="四川大学华西口腔医学荣获2023年度软科世界一流学科排名世界第十位、中国内地第一位"class="title_type"><font color="">四川大学华西口腔医学荣获2023年度软科世界一流学科排名…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even last  column_10">
+  
+  
+  <a href="/Html/News/Articles/12695.html"target=_blank title="我院10位学者入选爱思唯尔(Elsevier) 2022“中国高被引学者” 榜单"class="title_type"><font color="">我院10位学者入选爱思唯尔(Elsevier) 2022“中国高被引…</font></a>
+  
+  
+  
+    </li>
+  
+ </ul> 
+ </div>
+</div>
+<div class="NavBoxsThird" style="width:50%">
+  <h2 class="titleStyNav"><a href="/Html/News/Columns/133/Index.html">学系简介</a></h2>
+ 
+   <ul class="article_list pd0-20">
+ 
+    
+  <li class = "Li_Odd   column_1">
+  
+  
+  <a href="/Html/News/Articles/3773.html"target=_blank title="口腔基础医学系简介"class="title_type"><font color="">口腔基础医学系简介</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_2">
+  
+  
+  <a href="/Html/News/Articles/3772.html"target=_blank title="口腔内科学系简介"class="title_type"><font color="">口腔内科学系简介</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_3">
+  
+  
+  <a href="/Html/News/Articles/3771.html"target=_blank title="口腔颌面外科学系简介"class="title_type"><font color="">口腔颌面外科学系简介</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_4">
+  
+  
+  <a href="/Html/News/Articles/3770.html"target=_blank title="口腔修复学系"class="title_type"><font color="">口腔修复学系</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_5">
+  
+  
+  <a href="/Html/News/Articles/3769.html"target=_blank title="口腔正畸学系简介"class="title_type"><font color="">口腔正畸学系简介</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even last  column_6">
+  
+  
+  <a href="/Html/News/Articles/4651.html"target=_blank title="口腔交叉学科系简介"class="title_type"><font color="">口腔交叉学科系简介</font></a>
+  
+  
+  
+    </li>
+  
+  </ul>
+</div>
+<div class="clearit"></div>
+ 
+ </div>
+ <div class="bottomOne"></div>
+ 
+ <div class="clearit"></div>
+ </ul>
+  
+  </li>
+  <li class="sy1_li num5">  
+  <a class="next_open"></a>
+  <a id="8" class="sy1_tit " href="/Html/News/Main/113.html" target="_self"><span class="navspan">人才培养</span></a> 
+
+   <ul class="sy2_ul">
+ <div class="sy2_inside">
+    <li class="sy2_li num0">  
+  <a class="next_open"></a>
+  <a id="26" class="sy2_tit " href="/Html/News/Columns/135/Index.html" target="_self"><span class="navspan">本科教育</span></a> 
+
+   <ul class="sy3_ul">
+ <div class="sy2_inside">
+    <li class="sy3_li num0">  
+  <a class="next_open"></a>
+  <a id="290" class="sy3_tit " href="/Html/News/Columns/237/Index.html" target="_self"><span class="navspan">工作简报</span></a> 
+
+    
+  </li>
+  <li class="sy3_li num1">  
+  <a class="next_open"></a>
+  <a id="291" class="sy3_tit " href="/Html/News/Columns/238/Index.html" target="_self"><span class="navspan">教学概况</span></a> 
+
+    
+  </li>
+  <li class="sy3_li num2">  
+  <a class="next_open"></a>
+  <a id="292" class="sy3_tit " href="/Html/News/Columns/239/Index.html" target="_self"><span class="navspan">教学新闻</span></a> 
+
+    
+  </li>
+  <li class="sy3_li num3">  
+  <a class="next_open"></a>
+  <a id="293" class="sy3_tit " href="/Html/News/Columns/240/Index.html" target="_self"><span class="navspan">通知公告</span></a> 
+
+    
+  </li>
+  <li class="sy3_li num4">  
+  <a class="next_open"></a>
+  <a id="294" class="sy3_tit " href="/Html/News/Columns/241/Index.html" target="_self"><span class="navspan">资料下载</span></a> 
+
+    
+  </li>
+  <div class="clearit"></div>
+ </div>
+ 
+ <div class="clearit"></div>
+ </ul>
+  
+  </li>
+  <li class="sy2_li num1">  
+  <a class="next_open"></a>
+  <a id="267" class="sy2_tit " href="/Html/News/Columns/335/Index.html" target="_self"><span class="navspan">研究生教育</span></a> 
+
+   <ul class="sy3_ul">
+ <div class="sy2_inside">
+    <li class="sy3_li num0">  
+  <a class="next_open"></a>
+  <a id="303" class="sy3_tit " href="/Html/News/Columns/421/Index.html" target="_self"><span class="navspan">导师简介</span></a> 
+
+    
+  </li>
+  <div class="clearit"></div>
+ </div>
+ 
+ <div class="clearit"></div>
+ </ul>
+  
+  </li>
+  <li class="sy2_li num2">  
+  <a class="next_open"></a>
+  <a id="28" class="sy2_tit " href="/Html/News/Columns/137/Index.html" target="_self"><span class="navspan">毕业后教育</span></a> 
+
+   <ul class="sy3_ul">
+ <div class="sy2_inside">
+    <li class="sy3_li num0">  
+  <a class="next_open"></a>
+  <a id="298" class="sy3_tit " href="/Html/News/Columns/243/Index.html" target="_self"><span class="navspan"> 四川大学华西口腔医院进修</span></a> 
+
+    
+  </li>
+  <li class="sy3_li num1">  
+  <a class="next_open"></a>
+  <a id="299" class="sy3_tit " href="/Html/News/Columns/242/Index.html" target="_self"><span class="navspan">住院医师规范化培训</span></a> 
+
+    
+  </li>
+  <li class="sy3_li num2">  
+  <a class="next_open"></a>
+  <a id="300" class="sy3_tit " href="/Html/News/Columns/255/Index.html" target="_self"><span class="navspan">专科医师规范化培训</span></a> 
+
+    
+  </li>
+  <li class="sy3_li num3">  
+  <a class="next_open"></a>
+  <a id="301" class="sy3_tit " href="/Html/News/Columns/256/Index.html" target="_self"><span class="navspan">护士规范化培训</span></a> 
+
+    
+  </li>
+  <li class="sy3_li num4">  
+  <a class="next_open"></a>
+  <a id="302" class="sy3_tit " href="/Html/News/Columns/417/Index.html" target="_self"><span class="navspan"> 继续医学教育</span></a> 
+
+    
+  </li>
+  <div class="clearit"></div>
+ </div>
+ 
+ <div class="clearit"></div>
+ </ul>
+  
+  </li>
+  <li class="sy2_li num3">  
+  <a class="next_open"></a>
+  <a id="58" class="sy2_tit " href="/Html/News/Main/501.html" target="_self"><span class="navspan">思政工作</span></a> 
+
+   <ul class="sy3_ul">
+ <div class="sy2_inside">
+    <li class="sy3_li num0">  
+  <a class="next_open"></a>
+  <a id="295" class="sy3_tit " href="/Html/News/Columns/228/Index.html" target="_self"><span class="navspan">思政教育</span></a> 
+
+    
+  </li>
+  <li class="sy3_li num1">  
+  <a class="next_open"></a>
+  <a id="296" class="sy3_tit " href="/Html/News/Columns/229/Index.html" target="_self"><span class="navspan">通知公告</span></a> 
+
+    
+  </li>
+  <li class="sy3_li num2">  
+  <a class="next_open"></a>
+  <a id="297" class="sy3_tit " href="/Html/News/Columns/230/Index.html" target="_self"><span class="navspan">学工动态</span></a> 
+
+    
+  </li>
+  <div class="clearit"></div>
+ </div>
+ 
+ <div class="clearit"></div>
+ </ul>
+  
+  </li>
+  <li class="sy2_li num4">  
+  <a class="next_open"></a>
+  <a id="289" class="sy2_tit " href="/Html/News/Columns/335/Index.html" target="_self"><span class="navspan">导师简介</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num5">  
+  <a class="next_open"></a>
+  <a id="57" class="sy2_tit " href="/Html/News/Main/102.html" target="_self"><span class="navspan">华西口腔医学基础国家级实验教学示范中心（四川大学）</span></a> 
+
+    
+  </li>
+  <div class="clearit"></div>
+ </div>
+ <div class="sy2_ul_div">
+ 
+
+ <style type="text/css">
+ #289{
+ font-weight: 600;
+ font-size: 15px;
+}
+</style>
+<div class="NavBoxsFirst" style="width: 33.3%">
+ <h2 class="titleStyNav"><a href="/Html/News/Columns/135/Index.html">本科教育</a></h2>
+   
+  <ul class="article_list  pd0-20">
+   
+    
+  <li class = "Li_Odd   column_1">
+  
+  
+  <a href="/Html/News/Articles/17001.html"target=_blank title="我院学子在首届全国大学生生物材料创新设计大赛中斩获佳绩"class="title_type"><font color="">我院学子在首届全国大学生生物材…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_2">
+  
+  
+  <a href="/Html/News/Articles/16723.html"target=_blank title="2025-2026学年秋季学期开学教学检查工作简报"class="title_type"><font color="">2025-2026学年秋季学期开学教学…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_3">
+  
+  
+  <a href="/Html/News/Articles/16067.html"target=_blank title="2025-2026学年秋季学期华西口腔医学院本科生课程教材使用计划公示"class="title_type"><font color="">2025-2026学年秋季学期华西口腔…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_4">
+  
+  
+  <a href="/Html/News/Articles/13116.html"target=_blank title="口腔医学（八年制）"class="title_type"><font color="">口腔医学（八年制）</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_5">
+  
+  
+  <a href="/Html/News/Articles/13110.html"target=_blank title="四川大学本科生特殊选课申请表"class="title_type"><font color="">四川大学本科生特殊选课申请表</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_6">
+  
+  
+  <a href="/Html/News/Articles/11846.html"target=_blank title="我院成功举办2022年青年教师教学技能比赛"class="title_type"><font color="">我院成功举办2022年青年教师教学…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_7">
+  
+  
+  <a href="/Html/News/Articles/16835.html"target=_blank title="我院口腔医学人文教研室举行课程教研会"class="title_type"><font color="">我院口腔医学人文教研室举行课程…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_8">
+  
+  
+  <a href="/Html/News/Articles/15537.html"target=_blank title="2024-2025学年春季学期开学教学检查简报"class="title_type"><font color="">2024-2025学年春季学期开学教学…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd last  column_9">
+  
+  
+  <a href="/Html/News/Articles/15245.html"target=_blank title="华西口腔医学院关于2025年四川大学“国家级大学生创新创业训练计划”评审结果的公示"class="title_type"><font color="">华西口腔医学院关于2025年四川大…</font></a>
+  
+  
+  
+    </li>
+  
+  </ul>
+  
+</div>
+<div class="NavBoxsSecond" style="width: 33.3%">
+   <h2 class="titleStyNav"><a href="/Html/News/Columns/335/Index.html">研究生教育</a></h2>
+  
+ <ul class="article_list  pd0-20">
+   
+    
+  <li class = "Li_Odd   column_1">
+  
+  
+  <a href="/Html/News/Articles/16709.html"target=_blank title="“学术扬帆，启航国际”研究生IADR奖项申报宣讲会成功举办"class="title_type"><font color="">“学术扬帆，启航国际”研究生IA…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_2">
+  
+  
+  <a href="/Html/News/Articles/16633.html"target=_blank title="“立足基础·聚焦前沿”基础医学系研究生学术沙龙活动圆满举办"class="title_type"><font color="">“立足基础·聚焦前沿”基础医学…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_3">
+  
+  
+  <a href="/Html/News/Articles/16227.html"target=_blank title="“前沿交叉，双擎驱动”修复学系研究生学术沙龙活动圆满举办"class="title_type"><font color="">“前沿交叉，双擎驱动”修复学系…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_4">
+  
+  
+  <a href="/Html/News/Articles/14411.html"target=_blank title="我院成功举办2024华西口腔医学前沿论坛"class="title_type"><font color="">我院成功举办2024华西口腔医学前…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_5">
+  
+  
+  <a href="/Html/News/Articles/14412.html"target=_blank title="我院2024年全国优秀大学生暑期夏令营顺利举行"class="title_type"><font color="">我院2024年全国优秀大学生暑期夏…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_6">
+  
+  
+  <a href="/Html/News/Articles/14781.html"target=_blank title="四川大学华西口腔医学院2024年面向港澳台地区研究生招生拟录取名单公示"class="title_type"><font color="">四川大学华西口腔医学院2024年面…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_7">
+  
+  
+  <a href="/Html/News/Articles/14778.html"target=_blank title="四川大学华西口腔医学院关于举办2024年优秀大学生暑期夏令营的通知"class="title_type"><font color="">四川大学华西口腔医学院关于举办…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_8">
+  
+  
+  <a href="/Html/News/Articles/14779.html"target=_blank title="四川大学华西口腔医学院/口腔疾病防治全国重点实验室2024年博士研究生招生拟录取名单公示"class="title_type"><font color="">四川大学华西口腔医学院/口腔疾…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd last  column_9">
+  
+  
+  <a href="/Html/News/Articles/14780.html"target=_blank title="四川大学华西口腔医学院/口腔疾病防治全国重点实验室2024年博士研究生招生复试成绩公示"class="title_type"><font color="">四川大学华西口腔医学院/口腔疾…</font></a>
+  
+  
+  
+    </li>
+  
+ 
+ </ul>
+  
+</div>
+<div class="NavBoxsThird" style="width: 33.3%">
+ <h2 class="titleStyNav"><a href="/Html/News/Columns/137/Index.html">毕业后教育</a></h2>
+ <div class="BoxContent">
+ <ul class="article_list">
+   
+    
+  <li class = "Li_Odd   column_1">
+  
+  
+  <a href="/Html/News/Articles/16431.html"target=_blank title="我院口腔颌面外科专业基地教学团队荣获2025年四川省住院医师　规范化培训指导医师教学能力竞赛情景模拟教学赛道一等奖"class="title_type"><font color="">我院口腔颌面外科专业基地教学团…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_2">
+  
+  
+  <a href="/Html/News/Articles/15742.html"target=_blank title="四川大学华西口腔医院2025年护士规范化培训招收简章"class="title_type"><font color="">四川大学华西口腔医院2025年护士…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_3">
+  
+  
+  <a href="/Html/News/Articles/15314.html"target=_blank title="四川大学华西口腔医院专科医师规范化培训管理办法（2024年修订版）"class="title_type"><font color="">四川大学华西口腔医院专科医师规…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_4">
+  
+  
+  <a href="/Html/News/Articles/15005.html"target=_blank title="基于患者安全的口腔护理新技术及安全管理培训班"class="title_type"><font color="">基于患者安全的口腔护理新技术及…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_5">
+  
+  
+  <a href="/Html/News/Articles/16403.html"target=_blank title="口腔全科罗锋老师荣获四川省第三届住院医师及助理全科医生　党建征文比赛师资组三等奖"class="title_type"><font color="">口腔全科罗锋老师荣获四川省第三…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_6">
+  
+  
+  <a href="/Html/News/Articles/13470.html"target=_blank title="微创拔牙继续教育培训班"class="title_type"><font color="">微创拔牙继续教育培训班</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_7">
+  
+  
+  <a href="/Html/News/Articles/12971.html"target=_blank title="四川大学华西口腔医院2023年秋季班口腔专科护士招生简章"class="title_type"><font color="">四川大学华西口腔医院2023年秋季…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_8">
+  
+  
+  <a href="/Html/News/Articles/4632.html"target=_blank title="四川大学华西口腔医院进修简介"class="title_type"><font color="">四川大学华西口腔医院进修简介</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd last  column_9">
+  
+  
+  <a href="/Html/News/Articles/16379.html"target=_blank title="我院举办2025 年四川省口腔类专业住院医师规范化培训师资培训班"class="title_type"><font color="">我院举办2025 年四川省口腔类专…</font></a>
+  
+  
+  
+    </li>
+  
+   </ul>
+   
+ </div>
+</div>
+<div class="clearit"></div>
+
+
+ 
+ </div>
+ <div class="bottomOne"></div>
+ 
+ <div class="clearit"></div>
+ </ul>
+  
+  </li>
+  <li class="sy1_li num6">  
+  <a class="next_open"></a>
+  <a id="9" class="sy1_tit " href="/Html/News/Main/114.html" target="_self"><span class="navspan">患者服务</span></a> 
+
+   <ul class="sy2_ul">
+ <div class="sy2_inside">
+    <li class="sy2_li num0">  
+  <a class="next_open"></a>
+  <a id="33" class="sy2_tit " href="/Html/Hospitals/Departments/Overview0.html" target="_self"><span class="navspan">临床科室</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num1">  
+  <a class="next_open"></a>
+  <a id="34" class="sy2_tit " href="/Html/News/Columns/142/Index.html" target="_self"><span class="navspan">患者公告</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num2">  
+  <a class="next_open"></a>
+  <a id="35" class="sy2_tit " href="/Html/Hospitals/Schedulings/OPIndex0_0.html" target="_self"><span class="navspan">出诊信息</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num3">  
+  <a class="next_open"></a>
+  <a id="36" class="sy2_tit " href="/Html/News/Columns/143/Index.html" target="_self"><span class="navspan">就诊指南</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num4">  
+  <a class="next_open"></a>
+  <a id="37" class="sy2_tit " href="/Html/News/Columns/144/Index.html" target="_self"><span class="navspan">就医查询</span></a> 
+
+    
+  </li>
+  <div class="clearit"></div>
+ </div>
+ <div class="sy2_ul_div">
+ 
+
+<div class="NavBoxsFirst" style="width: 46%">
+ <h2 class="titleStyNav"><a href="/Html/Hospitals/Departments/Overview114.html">临床科室</a></h2>
+   
+  <ul class="list_dep  pd0-20">
+   
+    <h3>
+        临床科室</h3>
+    <ul class="menu">
+            <li><a href="/Html/Hospitals/Departments/Index2.html">牙体牙髓病科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index3.html">牙周病科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index4.html">口腔粘膜病科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index5.html">儿童口腔科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index6.html">特约门诊</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index7.html">预防口腔科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index8.html">口腔外科门诊</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index9.html">唇腭裂外科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index10.html">创伤整形外科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index11.html">头颈肿瘤外科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index12.html">正颌及关节外科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index13.html">口腔麻醉科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index14.html">医疗美容科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index15.html">修复I科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index16.html">修复Ⅱ科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index17.html">种植科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index18.html">全科门诊</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index19.html">正畸科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index20.html">颞下颌关节科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index21.html">口腔病理科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index22.html">医学影像科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index23.html">口腔急诊科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index24.html">中医科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index25.html">药剂科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index26.html">检验科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index28.html">感染管理科</a></li>
+            <li><a href="/Html/Hospitals/Departments/Index29.html">消毒供应室</a></li>
+	<div class="clearit"></div>
+    </ul>
+	<div class="clearit"></div>
+
+
+  </ul>
+</div>
+<div class="NavBoxsSecond" style="width: 29%">
+   <h2 class="titleStyNav"><a href="/Html/News/Columns/142/Index.html">患者公告</a></h2>
+ <ul class="article_list  pd0-20">
+   
+    
+  <li class = "Li_Odd   column_1">
+  
+  
+  <a href="/Html/News/Articles/16726.html"target=_blank title="2025年国庆期间门诊安排"class="title_type"><font color="">2025年国庆期间门诊安排</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_2">
+  
+  
+  <a href="/Html/News/Articles/15448.html"target=_blank title="2025年春节期间门诊安排"class="title_type"><font color="">2025年春节期间门诊安排</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_3">
+  
+  
+  <a href="/Html/News/Articles/14851.html"target=_blank title="2024年国庆期间门诊安排"class="title_type"><font color="">2024年国庆期间门诊安排</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_4">
+  
+  
+  <a href="/Html/News/Articles/14665.html"target=_blank title="2024年6月15-16日我院门急诊安排"class="title_type"><font color="">2024年6月15-16日我院门急…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_5">
+  
+  
+  <a href="/Html/News/Articles/14664.html"target=_blank title="2024年春节期间门诊安排"class="title_type"><font color="">2024年春节期间门诊安排</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_6">
+  
+  
+  <a href="/Html/News/Articles/13429.html"target=_blank title="2023年中秋、国庆期间门诊安排"class="title_type"><font color="">2023年中秋、国庆期间门诊…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_7">
+  
+  
+  <a href="/Html/News/Articles/12921.html"target=_blank title="2023年6月3-4日我院门急诊安排"class="title_type"><font color="">2023年6月3-4日我院门急诊…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_8">
+  
+  
+  <a href="/Html/News/Articles/12301.html"target=_blank title="2023年春节期间门诊安排"class="title_type"><font color="">2023年春节期间门诊安排</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd last  column_9">
+  
+  
+  <a href="/Html/News/Articles/11870.html"target=_blank title="2022年7月5日我院锦江门诊部停诊公告"class="title_type"><font color="">2022年7月5日我院锦江门诊…</font></a>
+  
+  
+  
+    </li>
+  
+ </ul>
+</div>
+<div class="NavBoxsThird" style="width: 25%">
+ <h2 class="titleStyNav"><a href="/Html/News/Columns/143/Index.html">就诊指南</a></h2>
+ <div class="BoxContent">
+ <ul class="article_list">
+   
+    
+  <li class = "Li_Odd   column_1">
+  
+  
+  <a href="/Html/News/Articles/13141.html"target=_blank title="急诊流程"class="title_type"><font color="">急诊流程</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_2">
+  
+  
+  <a href="/Html/News/Articles/14663.html"target=_blank title="初诊挂号指南"class="title_type"><font color="">初诊挂号指南</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_3">
+  
+  
+  <a href="/Html/News/Articles/4169.html"target=_blank title="挂号方式"class="title_type"><font color="">挂号方式</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_4">
+  
+  
+  <a href="/Html/News/Articles/13144.html"target=_blank title="门诊流程"class="title_type"><font color="">门诊流程</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_5">
+  
+  
+  <a href="/Html/News/Articles/13145.html"target=_blank title="入出院流程"class="title_type"><font color="">入出院流程</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_6">
+  
+  
+  <a href="/Html/News/Articles/13195.html"target=_blank title="医保相关政策和流程"class="title_type"><font color="">医保相关政策和流程</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd last  column_7">
+  
+  
+  <a href="/Hospitals/Main/Location"target=_blank title="院区分布"class="title_type"><font color="">院区分布</font></a>
+  
+  
+  
+    </li>
+  
+   </ul>
+ </div>
+</div>
+<div class="clearit"></div>
+
+
+ 
+ </div>
+ <div class="bottomOne"></div>
+ 
+ <div class="clearit"></div>
+ </ul>
+  
+  </li>
+  <li class="sy1_li num7">  
+  <a class="next_open"></a>
+  <a id="10" class="sy1_tit " href="/Html/News/Main/115.html" target="_self"><span class="navspan">科学研究</span></a> 
+
+   <ul class="sy2_ul">
+ <div class="sy2_inside">
+    <li class="sy2_li num0">  
+  <a class="next_open"></a>
+  <a id="38" class="sy2_tit " href="/Html/News/Columns/145/Index.html" target="_self"><span class="navspan">科研动态</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num1">  
+  <a class="next_open"></a>
+  <a id="39" class="sy2_tit " href="/Html/News/Columns/146/Index.html" target="_self"><span class="navspan">通知公告</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num2">  
+  <a class="next_open"></a>
+  <a id="41" class="sy2_tit " href="/Html/News/Columns/147/Index.html" target="_self"><span class="navspan">办事指南</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num3">  
+  <a class="next_open"></a>
+  <a id="287" class="sy2_tit " href="/Html/News/Columns/426/Index.html" target="_self"><span class="navspan">科研平台</span></a> 
+
+    
+  </li>
+  <li class="sy2_li num4">  
+  <a class="next_open"></a>
+  <a id="385" class="sy2_tit " href="http://www.sklod.org/" target="_blank"><span class="navspan">全国重点实验室</span></a> 
+
+    
+  </li>
+  <div class="clearit"></div>
+ </div>
+ <div class="sy2_ul_div">
+ 
+
+<div class="NavBoxsFirst" style="width:42%">
+   <h2 class="titleStyNav"><a href="/Html/News/Columns/145/Index.html">科研动态</a></h2>
+  <div class="BoxContent">
+    <ul class="kxyj_box article_box  mt10">
+ 
+    
+  <li class = "Li_Odd last  column_1">
+  
+  
+  <a class="img_box" href="/Html/News/Articles/15354.html"  title="我院廖立研究员/田卫东教授团队在鉴定人颅颌面骨骼干细胞的研究方面取得重要进展">
+  <img src="/Sites/Uploaded/Image/2025/01/176387270718253409902448348.png" alt="我院廖立研究员/田卫东教授团队在鉴定人颅颌面骨骼干细胞的研究方面取得重要进展" /></a> 
+  <a href="/Html/News/Articles/15354.html" title="我院廖立研究员/田卫东教授团队在鉴定人颅颌面骨骼干细胞的研究方面取得重要进展"class="title_type"><font color="">我院廖立研究员/田卫东…</font></a>
+  
+  
+  
+  <p>
+   近日，我院廖立研究员、田卫东教授团队，联合四川大学生命科学学院蔡浩洋教授团队在鉴… <a class="detail" href="/Html/News/Articles/15354.html"  title="点击查看详细">详细>></a>
+  </p>
+    </li>
+   
+ <div class="clearit"></div>
+ </ul> 
+ <ul class="article_list mt10">
+ 
+    
+  <li class = "Li_Odd   column_1">
+  
+  
+  <a href="/Html/News/Articles/15354.html"target=_blank title="我院廖立研究员/田卫东教授团队在鉴定人颅颌面骨骼干细胞的研究方面取得重要进展"class="title_type"><font color="">我院廖立研究员/田卫东教授团队在鉴定人颅颌面骨…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_2">
+  
+  
+  <a href="/Html/News/Articles/14834.html"target=_blank title="我院袁泉教授团队在tRNA修饰对骨骼发育的调控方面取得重要进展"class="title_type"><font color="">我院袁泉教授团队在tRNA修饰对骨骼发育的调控方面…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_3">
+  
+  
+  <a href="/Html/News/Articles/14835.html"target=_blank title="我院教师荣获中华口腔医学会科技奖"class="title_type"><font color="">我院教师荣获中华口腔医学会科技奖</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even last  column_4">
+  
+  
+  <a href="/Html/News/Articles/14836.html"target=_blank title="荣耀时刻！2023年度四川省科学技术奖揭晓 ——我院荣获两项科技进步奖"class="title_type"><font color="">荣耀时刻！2023年度四川省科学技术奖揭晓 ——我院荣…</font></a>
+  
+  
+  
+    </li>
+  
+ </ul> 
+ </div>
+</div>
+<div class="NavBoxsSecond" style="width:29%">
+ <h2 class="titleStyNav"><a href="/Html/News/Columns/146/Index.html">通知公告</a></h2>
+  
+ <ul class="article_list  pd0-20">
+ 
+    
+  <li class = "Li_Odd   column_1">
+  
+  
+  <a href="/Html/News/Articles/16560.html" title="关于四川省卫生健康委员会科技项目外协任务的公示"class="title_type"><font color="">关于四川省卫生健康委员会科…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_2">
+  
+  
+  <a href="/Html/News/Articles/16313.html" title="四川大学华西口腔医院临床研究项目外协任务公示"class="title_type"><font color="">四川大学华西口腔医院临床研…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_3">
+  
+  
+  <a href="/Html/News/Articles/16312.html" title="四川大学华西口腔医院临床研究项目外协任务公示"class="title_type"><font color="">四川大学华西口腔医院临床研…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_4">
+  
+  
+  <a href="/Html/News/Articles/15913.html" title="四川大学华西口腔医院临床研究项目外协任务公示"class="title_type"><font color="">四川大学华西口腔医院临床研…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_5">
+  
+  
+  <a href="/Html/News/Articles/15149.html" title="四川大学华西口腔医院临床研究项目外协任务公示"class="title_type"><font color="">四川大学华西口腔医院临床研…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_6">
+  
+  
+  <a href="/Html/News/Articles/14510.html" title="四川大学华西口腔医院交叉学科创新项目外协任务公示"class="title_type"><font color="">四川大学华西口腔医院交叉学…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_7">
+  
+  
+  <a href="/Html/News/Articles/14432.html" title="四川大学华西口腔医院临床研究项目外协任务公示"class="title_type"><font color="">四川大学华西口腔医院临床研…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even last  column_8">
+  
+  
+  <a href="/Html/News/Articles/14431.html" title="四川大学华西口腔医院临床研究项目外协任务公示"class="title_type"><font color="">四川大学华西口腔医院临床研…</font></a>
+  
+  
+  
+    </li>
+   
+ </ul> 
+
+ 
+</div>
+<div class="NavBoxsThird" style="width:29%">
+  <h2 class="titleStyNav"><a href="/Html/News/Columns/147/Index.html">办事指南</a></h2>
+ 
+   <ul class="article_list pd0-20">
+ 
+    
+  <li class = "Li_Odd   column_1">
+  
+  
+  <a href="/Html/News/Articles/15006.html"target=_blank title="软件著作权登记申请程序"class="title_type"><font color="">软件著作权登记申请程序</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_2">
+  
+  
+  <a href="/Html/News/Articles/13182.html"target=_blank title="专利申请程序"class="title_type"><font color="">专利申请程序</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd   column_3">
+  
+  
+  <a href="/Html/News/Articles/13181.html"target=_blank title="论文投稿程序"class="title_type"><font color="">论文投稿程序</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Even   column_4">
+  
+  
+  <a href="/Html/News/Articles/13180.html"target=_blank title="科技部重点研发计划项目申报程序"class="title_type"><font color="">科技部重点研发计划项目申报程…</font></a>
+  
+  
+  
+    </li>
+  <li class = "Li_Odd last  column_5">
+  
+  
+  <a href="/Html/News/Articles/13179.html"target=_blank title="国家自然科学基金项目申报程序"class="title_type"><font color="">国家自然科学基金项目申报程序</font></a>
+  
+  
+  
+    </li>
+  
+  </ul>
+
+</div>
+<div class="clearit"></div>
+ 
+ </div>
+ <div class="bottomOne"></div>
+ 
+ <div class="clearit"></div>
+ </ul>
+  
+  </li>
+  <div class="clearit"></div>
+ </div>
+ 
+ <div class="clearit"></div>
+ </ul>
+
+ <div class="dl_box">
+ 
+ <a href="https://en.wcss.cn" class="english2" target="_blank">英文版</a>
+ <div class="clearit"></div>
+ </div>
+ <div class="clearit"></div>
+ </div>
+</div>
+ 
+  
+ </div>
+ <!--导航结束-->
+ <div class="wrap_main">
+ <!-- link_Map -->
+ <link href="/Content/Areas/Common/css/linkMap.css" rel="stylesheet" type="text/css" />
+
+<div class="linkmap_box">
+  <div class="linkmap">
+    您所在的位置：
+    <span><a href="/">首页</a>
+            &gt;&gt;<a id="2" class="go " href="/Html/News/Main/110.html" target="_self"><span class="navspan">学院概况</span></a>            &gt;&gt;<a id="12" class="go " href="/Html/Hospitals/Main/Description.html" target="_self"><span class="navspan">学院简介</span></a>        
+    </span>
+  </div>
+</div>
+
+ <!--主体部分-->
+ <div class="main">
+ 
+
+<div class="main_content">
+ <div class="article_left">
+ <div class="side_menu">
+ <script src="/Content/Areas/Common/scripts/side_menu.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        jQuery(function () {
+                
+                if ($('#left_1')) {
+                    $("#left_p_1").addClass("current");
+                    if($("#left_ul_1").length>0)
+					{
+						$("#left_p_1").addClass("show");
+						$("#left_ul_1").show();
+					}
+                }
+                
+                
+                if ($('#left_2')) {
+                    $("#left_p_2").addClass("current");
+                    if($("#left_ul_2").length>0)
+					{
+						$("#left_p_2").addClass("show");
+						$("#left_ul_2").show();
+					}
+                }
+                
+                
+                if ($('#left_12')) {
+                    $("#left_p_12").addClass("current");
+                    if($("#left_ul_12").length>0)
+					{
+						$("#left_p_12").addClass("show");
+						$("#left_ul_12").show();
+					}
+                }
+                
+        });
+     </script>
+
+<h1 class="leftNavTitle 2" title="菜单">
+学院概况</h1>
+<div id="leftNav" class="side_menu_inside">
+   <ul id="left_ul_2" class="lv1_ul">
+ <li class="lv1_li">
+ <p id="left_p_12" class="lv1_p">
+ <a id="12" class="lv1_tit " href="/Html/Hospitals/Main/Description.html" target="_self"><span class="navspan">学院简介</span></a>
+ </p>
+
+ 
+ </li>
+ <li class="lv1_li">
+ <p id="left_p_6" class="lv1_p">
+ <a id="6" class="lv1_tit " href="/Html/News/Columns/125/Index.html" target="_self"><span class="navspan">院徽寓意</span></a>
+ </p>
+
+ 
+ </li>
+ <li class="lv1_li">
+ <p id="left_p_5" class="lv1_p">
+ <a id="5" class="lv1_tit " href="/Html/News/Columns/124/Index.html" target="_self"><span class="navspan">历/现任院领导</span></a>
+ </p>
+
+ 
+ </li>
+ <li class="lv1_li">
+ <p id="left_p_209" class="lv1_p">
+ <a id="209" class="lv1_tit " href="/Html/News/Columns/301/Index.html" target="_self"><span class="navspan">院外门诊</span></a>
+ </p>
+
+ 
+ </li>
+ </ul>
+
+ <div class="clearit">
+ </div>
+</div>
+ 
+ </div>
+ </div>
+ <div class="article_right">
+ <h2 class="title_header"><span>学院简介</span></h2>
+ <div class="Min">
+
+ <div class="article_cont" id="zoom">
+ <p style="text-align: center;"><img title="2.jpg" alt="2.jpg" src="/Sites/Uploaded/Image/2017/08/036363736294464843752364270.jpg"/></p><p><br/></p><p style="text-align: justify;"><span style="text-align: justify;">　　</span>四川大学华西口腔医(学)院始建于1907年的成都仁济牙科诊所，被誉为中国现代口腔医学的发源地和摇篮。1912年扩建为牙症医院；1917年建立华西协合大学牙学院，是中国第一所高等口腔医学院校；1928年仁济牙症医院迁至华西坝，更名为华西协合大学口腔病院1951年更名为华西大学口腔病院；1953年更名为四川医学院口腔医学系、附属口腔医院；1985年更名为华西医科大学口腔医学院、附属口腔医院；2000年华西医科大学和四川大学强强合并后，2001年更名为四川大学华西口腔医(学)院。&nbsp;100多年来，华西口腔医学院始终秉承“选英才、高标准、严要求、淘汰制”的人才培养理念，坚持医教研三位一体的现代管理模式，已发展成为国际知名的口腔医(学)院。</p><p style="text-align: justify;">　　华西口腔医院是中国第一个口腔专科医院，是国家首批三级甲等口腔专科医院，是国家口腔医学中心，是国家口腔疾病临床医学研究中心，是国家部署在中国西部的口腔疾病诊疗中心、国家药物临床试验机构、国家医师资格考试实践技能考试与考官培训基地(口腔类别)、国家住院医师规范化培训基地、四川省口腔医疗质量控制中心，拥有8个国家临床重点专科，实现了主要临床科室国家临床重点专科全覆盖。医院秉承“热忱•关爱”的服务理念，坚持“一切以病人为中心”的服务宗旨，坚持医院的公益性，积极开展临床治疗新技术，同时通过改善就医环境、优化就医流程、提升医疗质量等举措，努力改进人民群众看病就医体验，得到患者和社会的广泛赞誉，成为对外开放的重要窗口和城市名片。先后荣获全国五一劳动奖状、全国党建工作标杆院系、全国文明单位、全国卫生健康系统先进集体、全国科普工作先进集体等称号，连续多年被评为全国最受欢迎口腔医院。</p><p style="text-align: justify;">　　华西口腔医学院坚持“全面素质为基础、专业技能为中心、创新能力培养为核心”的办学方针，以人才培养、科学研究、社会服务、文化传承与创新为己任，以高水平口腔医学人才为培养目标。学院招收四年制、五年制、八年制、硕士研究生、博士研究生以及留学生，构建完善了以口腔基础医学系、口腔内科学系、口腔颌面外科学系、口腔修复学系、口腔正畸学系、交叉学科系6个学科系，36个专业教研室组成的口腔医学学科群，以及涵盖口腔临床医学与口腔基础医学的国家级精品课程群。拥有口腔医学一级学科国家重点学科、口腔临床医学和口腔基础医学二级学科国家重点学科。拥有国家级教学团队、国家级实验教学示范中心和国家级虚拟仿真实验教学中心。全面启动创新人才培养新模式，为学生创新能力培养和人文素质教育搭建国际化平台，着力培养具有深厚人文底蕴、扎实专业知识、强烈创新意识、宽广国际视野的高水平口腔医学人才。已有5篇博士研究生毕业论文获全国百篇优秀博士论文。在教育部全国高校一级学科评估中荣列口腔医学第一名和A+，全国首次口腔医学专业学位水平评估荣列A+，两次入选教育部“双一流建设”一流学科建设名单，并多次荣获全国教育系统先进集体、教育部科技创新团队等称号，是教育部高等学校口腔医学类专业教学指导委员会主任委员单位。</p><p style="text-align: justify;">　　华西口腔医学研究始于1936年成立的华西协合大学医牙研究室，1949年扩建为口腔病研究室，1958年成立口腔医学研究所，1983年成立口腔医学中心实验室，1989年建立卫生部口腔重点实验室，2002年建立教育部和四川省重点实验室。2007年科技部批准建设口腔疾病研究国家重点实验室，2023重组更名为口腔疾病防治全国重点实验室，2012年国家发改委批准建设口腔再生医学国家地方联合工程实验室；2012年科技部认定为国际联合研究中心；2013年教育部批准建设口腔转化医学工程研究中心，形成了从基础探索到转化应用的高水平研究平台；2013年教育部批准建设高等学校学科创新引智基地；2016年科技部、卫计委、中央军委后勤保障部、食品药品监管总局批准建设国家口腔疾病临床医学研究中心 
+。2009年创办International Journal of Oral Science英文杂志,2010年被Science Citation Index Expanded (SCIE) 数据库和PubMed(MEDLINE)收录，成为国内第一本SCI收录口腔医学英文杂志，影响因子位居全球口腔医学SCI期刊Q1区。2013年创办Bone Research 英文杂志，2014年被SCI数据库收录，引领我国骨科学研究领域的发展。同时，两本杂志均为Nature系列合作期刊并双双入选“中国科技期刊卓越行动计划英文领军期刊”。软科中国最好学科排名位列口腔医学全国第一；QS世界大学学科排行榜位列口腔医学全球第十二位，中国内地第一；软科世界一流学科排名位列口腔医学世界第四位，中国第一。</p>
+ </div>
+ <div class="clearit"></div>
+ <!--分享到媒体-->
+ <div class="share">
+ <link rel="stylesheet" href="https://www.54doctor.net/Scripts/Share/css/share.min.css"><script src="https://www.54doctor.net/Scripts/Share/js/jquery.share.min.js"></script><div class="social-share" data-sites="weibo,wechat"><span style="font-size: 12px;" > 分享到：</span></div>
+ <div class="clearit"></div>
+ </div>
+ </div>
+ </div>
+ <div class="clearit"></div>
+</div>
+   
+ </div>
+ <div class="clearit"></div>
+  
+ <!--主体结束-->
+
+  <!--底部开始-->  
+ <link href="/Content/Areas/Common/css/footer.css" rel="stylesheet" type="text/css" />
+ 
+<div class="row  bg_white mt20 hide-sm friend-link"  style="display: none;">
+	<h2 class="title_header"><span>友情链接</span></h2>
+	<div class="In_link">
+		
+				
+	 <div class="row_1 row_div">
+		<li class = "Li_Odd   column_1 第一行">
+		
+		
+		<a href="http://www.moe.gov.cn/"target=_blank title="中华人民共和国教育部"class="title_type"><font color="">中华人民共和国教育部</font></a>
+		
+		
+		
+				</li>
+		<li class = "Li_Even   column_2 第一行">
+		
+		
+		<a href="http://www.nhc.gov.cn/"target=_blank title="中华人民共和国国家卫生健康委员会"class="title_type"><font color="">中华人民共和国国家卫生健康委员会</font></a>
+		
+		
+		
+				</li>
+		<li class = "Li_Odd   column_3 第一行">
+		
+		
+		<a href="https://www.most.gov.cn/index.html"target=_blank title="中华人民共和国科学技术部"class="title_type"><font color="">中华人民共和国科学技术部</font></a>
+		
+		
+		
+				</li>
+		<li class = "Li_Even   column_4 第一行">
+		
+		
+		<a href="http://www.cndent.com/"target=_blank title="中华口腔医学会"class="title_type"><font color="">中华口腔医学会</font></a>
+		
+		
+		
+				</li>
+	 </div>
+	 <div class="row_2 row_div">
+		<li class = "Li_Odd   column_5 第二行">
+		
+		
+		<a href="https://www.scu.edu.cn/"target=_blank title="四川大学"class="title_type"><font color="">四川大学</font></a>
+		
+		
+		
+				</li>
+		<li class = "Li_Even   column_6 第二行">
+		
+		
+		<a href="http://wcums.scu.edu.cn/"target=_blank title="四川大学华西医学中心"class="title_type"><font color="">四川大学华西医学中心</font></a>
+		
+		
+		
+				</li>
+		<li class = "Li_Odd   column_7 第二行">
+		
+		
+		<a href="http://www.wchscu.cn/index.html"target=_blank title="四川大学华西医院"class="title_type"><font color="">四川大学华西医院</font></a>
+		
+		
+		
+				</li>
+		<li class = "Li_Even   column_8 第二行">
+		
+		
+		<a href="https://www.motherchildren.com/"target=_blank title="四川大学华西第二医院"class="title_type"><font color="">四川大学华西第二医院</font></a>
+		
+		
+		
+				</li>
+		<li class = "Li_Odd last  column_9 第二行">
+		
+		
+		<a href="https://www.wcfh.com.cn/"target=_blank title="四川大学华西第四医院"class="title_type"><font color="">四川大学华西第四医院</font></a>
+		
+		
+		
+				</li>
+	 </div>
+	 <div class="row_3 row_div">
+	 </div>
+	 <div class="row_4 row_div">
+	 </div>
+	 <div class="row_5 row_div">
+	 </div>
+ 
+	</div>
+   
+ </div>
+ <div class="clearit"></div>
+ 
+<div class="footer_wrapper">
+  <div class="row">
+ <!-- <p class="footer-nav hide-sm">
+   
+   <a href="/Html/Hospitals/Main/ContactUs.html">联系我们</a><span>|</span>
+   <a href="/Hospitals/Main/Location">乘车路线</a><span>|</span>
+   <a href="/Hospitals/FriendlyLinks">友情链接</a><span>|</span>
+   <a href="/Hospitals/Main/WebMap">网站地图</a><span>|</span>
+   <a href="/Html/News/Articles/3762.html">法律声明</a><span>|</span>
+   <a href="/Html/News/Articles/3763.html">帮助中心</a>
+ </p> -->
+ <!-- <p class="hide-sm">备案序号:<a href="http://www.beian.miit.gov.cn" target="_bank">蜀ICP备09013973-1号</a></p>
+ <p class="hide-sm">四川大学华西口腔医学院版权所有&copy;2002－2020</p>
+ 
+<p>
+
+<span id="ajax_div__VisitCount_1_0_0_8525">
+    <script type="text/javascript">
+        GetAjaxContentByUrl('ajax_div__VisitCount_1_0_0_8525', '/PartialView/_Plugin/_VisitCount?siteId=1');
+    </script>
+</span> </p>
+  -->
+ <div class="topBtn">
+ <img src="/Sites/Uploaded/UserUpLoad/20200628/20200628144131.png">
+ </div>
+ <div class="footer_code">
+ <div class="code_left fl">
+ <div class="micr_img codeImg fl">
+ <img src="/Sites/Uploaded/UserUpLoad/20200628/20200628143613.png">
+ <div class="code_img"><img src="/Sites/Uploaded/UserUpLoad/20200628/20200628161138.png"></div>
+ </div>
+ <div class="WeChat_img codeImg fl">
+ <img src="/Sites/Uploaded/UserUpLoad/20200628/20200628143623.png">
+ <div class="code_img"><img src="/Sites/Uploaded/UserUpLoad/20170525/20170525143036.jpg"></div>
+ </div>
+ <div class="clearit"></div>
+ </div>
+ <div class="code_mid fl">
+ <img src="/Sites/Uploaded/UserUpLoad/20250814/20250814093558.png">
+ </div>
+ <div class="code_right fr">
+ <a class="code_link" href="/Html/News/Columns/171/Index.html">患者投诉</a>
+ <a class="code_link" href="/Html/News/Columns/276/Index.html">院长信箱</a>
+ <a class="code_link" href="/Html/News/Columns/157/Index.html">印象华西</a>
+ </div>
+ <div class="clearit"></div>
+ </div>
+ <div class="footer_info">
+ <div class="info_left fl">
+ <p class="info_add">地址：610041四川省成都市人民南路三段14号</p>
+ <p class="info_phone">电话：028-85501437(医疗咨询)</p>
+ <p class="info_phone1">028-85501445(投诉电话)</p>
+ </div>
+ <div class="info_mid fl">
+ <p class="info_record">备案序号:<a href="https://beian.miit.gov.cn/" target="_bank">蜀ICP备09013973号-1</a></p>
+ <p class="info_record">四川大学华西口腔医学院版权所有&copy;2002－2022</p>
+ <p class="info_record">
+
+<span id="ajax_div__VisitCount_1_0_0_9385">
+    <script type="text/javascript">
+        GetAjaxContentByUrl('ajax_div__VisitCount_1_0_0_9385', '/PartialView/_Plugin/_VisitCount?siteId=1');
+    </script>
+</span></p>
+ </div>
+ <div class="info_right fr">
+ <div class="form-horizontal">
+<form action="/Hospitals/Search" method="post"> <div id="languages" class="searchType_simulate">
+ </div>
+ <input type="text" placeholder="" name="search" id="search" class="searchtxt">
+ <input name="" value="" class="searchbtn" type="submit" />
+</form>   </div>
+ </div>
+ <div class="clearit"></div>
+ </div>
+  </div>
+</div>
+<div id="fixedLayertop">
+ <a class="weixin"><div class="weixin_img" style="display: none"> <img src="/Sites/Uploaded/UserUpLoad/20170525/20170525143036.jpg" ></div></a>
+    
+ <a class="top"></a>
+ <p class="close"></p>
+</div>
+
+<script language="JavaScript">
+$(document).ready(function($){
+ $(".close").click(function(){
+ $(this).parents("#fixedLayertop").hide();
+ })
+});
+$(document).ready(function($){
+$(".weixin").hover(function(){ $(".weixin_img").show()},function(){$(".weixin_img").hide()}); 
+});
+$(document).ready(function($){
+ $('.top,.topBtn').click(function(){
+ $('html,body').stop();
+ $('html,body').animate({
+ scrollTop:$('.header').offset().top
+ },
+ 1000);
+ });
+});
+
+
+</script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?308eb494f108d533e2a8bec137c37cd6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+ 
+ 
+    
+ <!--底部结束--> 
+ </div>
+ </div>
+</body>
+</html>  

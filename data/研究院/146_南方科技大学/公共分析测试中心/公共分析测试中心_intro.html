@@ -1,0 +1,1612 @@
+<!DOCTYPE html><html lang="en-US"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="force-rendering" content="webkit">
+    <meta name="renderer" content="webkit">
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="referrer" content="no-referrer">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover">
+        <title>中心简介</title>
+    <!--[if lt IE 9]>
+    <script src="/static/js/html5shiv.min.js"></script>
+    <script src="/static/js/selectivizr-min.js"></script>
+    <![endif]-->
+    <!--[if lte IE 6]>
+    <script type="text/javascript" src="/static/js/ie6png.js"></script>
+    <script type="text/javascript">
+        DD_belatedPNG.fix('.png,.png:hover');
+    </script>
+    <![endif]-->
+    <script src="https://hm.baidu.com/hm.js?eb092b14eca12a39f88b632af1133f80"></script><script src="/static/js/jquery-1.12.1.js?t=20251023"></script>
+    <script src="/static/js/js-xss.js?t=20251023"></script>
+    <script src="/static/js/bootstrap.min.js?t=20251023"></script>
+    <script src="/static/js/swiper.min.js?t=20251023"></script>
+    <script src="/static/js/template.js?t=20251023"></script>
+    <script src="/static/js/jquery.i18n.js?t=20251023"></script>
+    <script src="/static/js/underscore.js?t=20251023"></script>
+    <script src="/static/js/base.js?t=20251023"></script>
+    <link rel="stylesheet" href="/static/css/animate.min.css">
+    <link href="/static/css/app.css?t=20251023" rel="stylesheet">
+    <link href="/static/css/style.min.css?t=20251023" rel="stylesheet">
+        <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?eb092b14eca12a39f88b632af1133f80";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>    <script type="text/javascript">
+        var api_url = "https://crf.sustech.edu.cn";
+        var domain = ".sustech.edu";
+
+        // lang
+        function languageSelect(defaultLang) {
+            $("[i18n]").i18n({
+                defaultLang: defaultLang,
+                filePath: "/static/i18n/",
+                filePrefix: "i18n_",
+                fileSuffix: "",
+                forever: true,
+                callback: function(res) {
+                    if (defaultLang == 'en') {
+                        $(".footer-item-logo").css('background-image', 'url(' + '"/static/img/sustech-logo-en.png?v-20210714")')
+                        $(".js-header-logo-inner-en").show()
+                        $(".js-header-logo-inner").hide()
+
+                        $(".js-footer-lt-inner-en").show()
+                        $(".js-footer-lt-inner").hide()
+                    } else {
+                        $(".js-footer-lt-inner-en").hide()
+                        $(".js-footer-lt-inner").show()
+                    }
+                }
+            });
+        }
+
+        var defaultLang = ""
+
+        if (window.sessionStorage.getItem("lang") == "en_us") {
+            defaultLang = 'en'
+        } else {
+            defaultLang = 'cn'
+        }
+
+        languageSelect(defaultLang);
+
+        function browserRedirect(content_id, path) {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                //跳转移动端页面
+                var m_url = window.location.origin + '/m/#/'
+                switch (content_id) {
+                    case "center":
+                        m_url = m_url + content_id
+                        break;
+                    case 'platform':
+                        m_url = m_url + content_id
+                        break;
+                    case 'equipment':
+                        m_url = m_url + content_id
+                        break;
+                    case 'test':
+                        m_url = m_url + content_id
+                        break;
+                    case 'down':
+                        if (path.indexOf('/material') != -1) {
+                            m_url = m_url + 'material'
+                        } else if (path.indexOf('/video') != -1) {
+                            m_url = m_url + 'video'
+                        } else if (path.indexOf('/train') != -1) {
+                            m_url = m_url + 'train'
+                        } else {
+                            m_url = m_url + content_id
+                        }
+                        break;
+                    case 'laboratory':
+                        m_url = m_url + content_id
+                        break;
+                    case 'recruit':
+                        m_url = m_url + content_id
+                        break;
+                    case 'contact':
+                        m_url = m_url + content_id
+                        break;
+                    case 'instrument':
+                        m_url = m_url + content_id
+                        break;
+                    case 'party':
+                        m_url = m_url + content_id
+                        break;
+                    case 'achievements':
+                        m_url = m_url + content_id
+                        break;
+                    case 'cma':
+                        m_url = m_url + content_id
+                        break;
+                    case 'news':
+                        if (path.indexOf('news/view') != -1) {
+                            m_url = m_url + 'view?id=' + GetQueryString('id')
+                        } else {
+                            m_url = m_url + content_id
+                        }
+                        break;
+                    case 'train':
+                        if (path.indexOf('train/view') != -1) {
+                            m_url = m_url + 'train-view?alias=' + GetQueryString('alias')
+                        } else {
+                            m_url = m_url + content_id
+                        }
+                        break;
+                    default:
+                        break;
+                }
+                window.location.replace(m_url)
+            }
+        }
+
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+    </script>
+</head>
+
+<body class="page-center body-index" id="page-center-index">
+    
+    <div class="load-container js-load-container" style="display: none;">
+    <div class="content">
+        <div class="boxLoading boxLoading1"></div>
+        <div class="boxLoading boxLoading2"></div>
+        <div class="boxLoading boxLoading3"></div>
+        <div class="boxLoading boxLoading4"></div>
+        <div class="boxLoading boxLoading5"></div>
+    </div>
+</div>
+
+<header class="index-head">
+    <header class="wp-hd clearfix">
+                    <div class="banner js-other-banner" style="background-image: url(&quot;https://static.crf.sustech.edu.cn/thumb.php?s=5&amp;w=1920&amp;h=440&amp;src=upload/image/20200908/15995583039704.jpg&quot;);">
+                <div class="router banner-mask d-flex align-items-center justify-content-center"></div>
+            </div>
+        
+        
+            
+            
+            <header class="row header">
+                <div class="header-item header-logo col-3">
+                    <a class="header-logo-inner" href="/">
+                        <img class="js-header-logo-inner" src="http://crf.sustech.edu.cn/static/img/logo.png" alt="logo">
+                        <img class="js-header-logo-inner-en" style="display:none" src="http://crf.sustech.edu.cn/static/img/logo.png" alt="logo">
+                    </a>
+                </div>
+                <nav class="col-9 header-item header-nav">
+                    <div class="header-nav-item  ">
+                        <a class="header-nav-item-href " href="http://crf.sustech.edu.cn/" i18n="i18n.home">首页</a>
+                    </div>
+                    <div class="header-nav-item header-nav-item-active ">
+                        <a class="header-nav-item-href" href="/center" i18n="i18n.center">中心概况</a>
+                        <div class="header-nav-after">
+                            <a class="header-nav-after-item" href="/center" i18n="i18n.introduction">中心简介</a>
+                            <a class="header-nav-after-item" href="/center/organization" i18n="i18n.framework">组织架构</a>
+                            <a class="header-nav-after-item" href="/center/teachers" i18n="i18n.teachers">人才队伍</a>
+                        </div>
+                    </div>
+                    <div class="header-nav-item  ">
+                        <a class="header-nav-item-href" href="/platform" i18n="i18n.platform">科研平台</a>
+                        <div class="header-nav-after">
+                            <a class="header-nav-after-item" href="/platform" i18n="i18n.material">理化平台</a>
+                            <a class="header-nav-after-item" href="/platform/dianjing" i18n="i18n.dianjing">成像平台</a>
+                            <a class="header-nav-after-item" href="/platform/weina" i18n="i18n.micro">微纳平台</a>
+                            <a class="header-nav-after-item" href="/platform/life" i18n="i18n.life">生命平台</a>
+                        </div>
+                    </div>
+                    <div class="header-nav-item  ">
+                        <a class="header-nav-item-href" href="/equipment" i18n="i18n.equipment">设备&amp;工艺</a>
+                    </div>
+                    <div class="header-nav-item ">
+                        <a class="header-nav-item-href" href="/test" i18n="i18n.test">测试服务</a>
+                        <div class="header-nav-after">
+                            <a class="header-nav-after-item" href="/test" i18n="i18n.resevation">预约服务</a>
+                            <a class="header-nav-after-item" href="/test/notice" i18n="i18n.resevation">测试须知</a>
+                            <a class="header-nav-after-item" href="/test/process" i18n="i18n.process">测试流程</a>
+                            <a class="header-nav-after-item" href="/test/pay" i18n="i18n.pay">收费与转账</a>
+                            <a class="header-nav-after-item" href="/test/laboratory" i18n="i18n.laboratory_safety">实验室安全条例</a>
+                        </div>
+                    </div>
+                    <div class="header-nav-item ">
+                        <a class="header-nav-item-href" href="/down/material" i18n="i18n.download">下载中心</a>
+                        <div class="header-nav-after">
+                            <a class="header-nav-after-item" href="/down/material" i18n="i18n.document">办事材料</a>
+                            <a class="header-nav-after-item" href="/down" i18n="i18n.marterial">设备资料</a>
+                            <a class="header-nav-after-item" href="/down/train" i18n="i18n.train">安全培训</a>
+                            <a class="header-nav-after-item" href="/down/video" i18n="i18n.video">视频资料</a>
+                        </div>
+                    </div>
+                    <div class="header-nav-item  ">
+                        <a class="header-nav-item-href" href="/achievements" i18n="i18n.achievements">科研成果</a>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="header-top clearfix">
+                <nav class="header-top-content d-flex align-items-center justify-content-end">
+                    <a class="header-top-item" href="/instrument" i18n="i18n.Instrument">快速仪器目录</a>
+                    <a class="header-top-item" href="https://openlab.sustech.edu.cn" i18n="i18n.openlab">大型仪器设备共享管理平台</a>
+                    <a class="header-top-item" href="/cma" i18n="i18n.laboratoryAccreditation">资质认定</a>
+                    <a class="header-top-item js-header-top-item-center" href="/party" i18n="i18n.party">中心党建</a>
+                    <a class="header-top-item" href="/contact" i18n="i18n.contact">联系我们</a>
+                    <a class="header-top-item" href="/test/outside-notice" i18n="i18n.outsideTestUser">校外用户</a>
+                    <div class="d-block header-top-we-chat header-top-item header-nav-item" href="javascript:;">
+                        <span i18n="i18n.we_chat">微信公众号</span>
+                        <div class="header-nav-after border-top">
+                            <div class="header-we-chat clearfix">
+                                <div class="header-nav-after-banner">
+                                    <img class="header-nav-after-banner-img" src="http://crf.sustech.edu.cn/static/img/qrcode.jpg" alt="banner">
+                                </div>
+                                <div class="pr-2 pt-3 pb-1 header-we-chat-text">
+                                    <p class="mb-0" i18n="i18n.we_chat_text">扫一扫关注:<br>南方科技大学分析测试中心<br>官方微信</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="header-top-item header-top-lang" data-lang="zh_cn" href="javascript:;">中文版</a>
+                    <a class="header-top-item header-top-lang" data-lang="en_us" href="javascript:;">English</a>
+                    <div class="input-group header-top-group">
+                        <div class="input-group-prepend">
+                            <span class="fa fa-search"></span>
+                        </div>
+                        <input type="text" class="form-control js-header-top-search" placeholder="搜索">
+                    </div>
+                </nav>
+            </div>
+
+                            </header>
+</header>
+
+
+    <div class="wp-container">
+                    <div class="space"></div>
+            <div class="space"></div>
+            <div class="space"></div>
+            <div class="wp-content clearfix">
+                <div class="router-list card js-router-list">
+    
+    <div class="router-item">
+        
+        <div class="router-item-title" i18n="i18n.center">中心概况</div>
+        
+        <div class="router-group list-group js-router-group">
+            
+            <div class="list-group-item list-group-item-active">
+                <a href="/center" i18n="i18n.introduction">中心简介</a>
+                
+            </div>
+            
+            <div class="list-group-item ">
+                <a href="/center/organization" i18n="i18n.framework">组织架构</a>
+                
+            </div>
+            
+            <div class="list-group-item ">
+                <a href="/center/teachers" i18n="i18n.teachers">人才队伍</a>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="router-item">
+        
+        <div class="router-item-title" i18n="i18n.classification">全部仪器分类</div>
+        
+        <div class="router-group list-group js-router-group">
+            
+            <div class="list-group-item ">
+                <a href="/platform" i18n="i18n.material">理化平台</a>
+                
+                <div class="router-list-after">
+                    <div class="router-after-hd d-flex">
+                        <div i18n="i18n.letter_search">按字母搜索：</div>
+                        <div class="flex-fill d-flex flex-wrap router-after-hd-content">
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">A</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">B</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">C</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">D</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">E</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">F</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">G</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">H</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">I</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">J</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">K</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">L</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">M</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">N</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">O</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">P</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">Q</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">R</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">S</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">T</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">U</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">V</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">W</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">X</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">Y</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">Z</a>
+                            
+                        </div>
+                    </div>
+                    <div class="router-after-bd">
+                        <div class="router-after-bd-inner">
+                            <ul class="router-after-list">
+                                
+                                <li class="d-flex router-after-cell" data-key="B">
+                                    <div class="router-after-key">B</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=64&amp;title=表面吸附分析仪">表面吸附分析仪</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="C">
+                                    <div class="router-after-key">C</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=67&amp;title=差示扫描量热仪（DSC）">差示扫描量热仪（DSC）</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="D">
+                                    <div class="router-after-key">D</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=55&amp;title=电子顺磁共振波谱仪（EPR）">电子顺磁共振波谱仪（EPR）</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=102&amp;title=多功能测量平台">多功能测量平台</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=101&amp;title=电化学工作站">电化学工作站</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=145&amp;title=电感耦合等离子体质谱（ICP-MS）">电感耦合等离子体质谱（ICP-MS）</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="F">
+                                    <div class="router-after-key">F</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=153&amp;title=傅里叶变换红外光谱仪">傅里叶变换红外光谱仪</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="G">
+                                    <div class="router-after-key">G</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=156&amp;title=高精度磁学测量平台MPMS3">高精度磁学测量平台MPMS3</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=62&amp;title=光谱响应/量子效率测试仪">光谱响应/量子效率测试仪</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=61&amp;title=光致发光光谱仪">光致发光光谱仪</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="H">
+                                    <div class="router-after-key">H</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=46&amp;title=核磁共振波谱仪NMR-400M">核磁共振波谱仪NMR-400M</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=48&amp;title=核磁共振波谱仪NMR-500M">核磁共振波谱仪NMR-500M</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=56&amp;title=霍尔效应测试仪Hall Effect Measurement System">霍尔效应测试仪Hall Effect Measurement System</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="J">
+                                    <div class="router-after-key">J</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=57&amp;title=激光显微共焦拉曼光谱仪">激光显微共焦拉曼光谱仪</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=59&amp;title=激光光散射仪">激光光散射仪</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="L">
+                                    <div class="router-after-key">L</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=90&amp;title=LCQ-Fleet 离子阱液质联用仪">LCQ-Fleet 离子阱液质联用仪</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="N">
+                                    <div class="router-after-key">N</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=154&amp;title=纳米力学压痕仪（TI950）">纳米力学压痕仪（TI950）</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="O">
+                                    <div class="router-after-key">O</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=94&amp;title=Orbitrap Fusion 高分辨液质联用仪">Orbitrap Fusion 高分辨液质联用仪</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="Q">
+                                    <div class="router-after-key">Q</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=73&amp;title=Q-Exactive高分辨质谱仪">Q-Exactive高分辨质谱仪</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="R">
+                                    <div class="router-after-key">R</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=68&amp;title=热重分析仪（TGA）">热重分析仪（TGA）</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="T">
+                                    <div class="router-after-key">T</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=63&amp;title=太阳光模拟器">太阳光模拟器</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="W">
+                                    <div class="router-after-key">W</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=66&amp;title=微量等温滴定量热仪">微量等温滴定量热仪</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="X">
+                                    <div class="router-after-key">X</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=65&amp;title=旋转流变仪">旋转流变仪</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=77&amp;title=X射线衍射仪">X射线衍射仪</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="Y">
+                                    <div class="router-after-key">Y</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=58&amp;title=圆二色谱仪">圆二色谱仪</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=151&amp;title=圆偏振发光光谱仪Jasco CPL-300">圆偏振发光光谱仪Jasco CPL-300</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="Z">
+                                    <div class="router-after-key">Z</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=60&amp;title=紫外/可见/近红外光谱仪">紫外/可见/近红外光谱仪</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=78&amp;title=综合物性测量系统PPMS">综合物性测量系统PPMS</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="list-group-item ">
+                <a href="/platform/dianjing" i18n="i18n.dianjing">成像平台</a>
+                
+                <div class="router-list-after">
+                    <div class="router-after-hd d-flex">
+                        <div i18n="i18n.letter_search">按字母搜索：</div>
+                        <div class="flex-fill d-flex flex-wrap router-after-hd-content">
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">A</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">B</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">C</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">D</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">E</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">F</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">G</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">H</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">I</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">J</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">K</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">L</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">M</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">N</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">O</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">P</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">Q</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">R</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">S</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">T</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">U</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">V</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">W</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">X</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">Y</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">Z</a>
+                            
+                        </div>
+                    </div>
+                    <div class="router-after-bd">
+                        <div class="router-after-bd-inner">
+                            <ul class="router-after-list">
+                                
+                                <li class="d-flex router-after-cell" data-key="G">
+                                    <div class="router-after-key">G</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=112&amp;title=高分辨透射电子显微镜">高分辨透射电子显微镜</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="H">
+                                    <div class="router-after-key">H</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=147&amp;title=环境球差校正透射电镜">环境球差校正透射电镜</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=152&amp;title=红外原子力显微镜">红外原子力显微镜</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=150&amp;title=氦离子显微镜（HIM）">氦离子显微镜（HIM）</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="J">
+                                    <div class="router-after-key">J</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=113&amp;title=聚焦离子/电子双束系统">聚焦离子/电子双束系统</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="N">
+                                    <div class="router-after-key">N</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=139&amp;title=纳米减薄">纳米减薄</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="S">
+                                    <div class="router-after-key">S</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=148&amp;title=双球差校正透射电子显微镜">双球差校正透射电子显微镜</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=15&amp;title=扫描电子显微镜及辅助设备">扫描电子显微镜及辅助设备</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="T">
+                                    <div class="router-after-key">T</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=149&amp;title=Talos透射电镜">Talos透射电镜</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="Y">
+                                    <div class="router-after-key">Y</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=16&amp;title=原子力显微镜">原子力显微镜</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="list-group-item ">
+                <a href="/platform/weina" i18n="i18n.micro">微纳平台</a>
+                
+                <div class="router-list-after">
+                    <div class="router-after-hd d-flex">
+                        <div i18n="i18n.letter_search">按字母搜索：</div>
+                        <div class="flex-fill d-flex flex-wrap router-after-hd-content">
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">A</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">B</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">C</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">D</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">E</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">F</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">G</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">H</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">I</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">J</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">K</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">L</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">M</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">N</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">O</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">P</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">Q</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">R</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">S</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">T</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">U</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">V</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">W</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">X</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">Y</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">Z</a>
+                            
+                        </div>
+                    </div>
+                    <div class="router-after-bd">
+                        <div class="router-after-bd-inner">
+                            <ul class="router-after-list">
+                                
+                                <li class="d-flex router-after-cell" data-key="B">
+                                    <div class="router-after-key">B</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=137&amp;title=半导体分析测试仪(B1500A)+探针台">半导体分析测试仪(B1500A)+探针台</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="D">
+                                    <div class="router-after-key">D</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=69&amp;title=电子束曝光机">电子束曝光机</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="G">
+                                    <div class="router-after-key">G</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=70&amp;title=光罩曝光机">光罩曝光机</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=134&amp;title=光谱椭偏仪">光谱椭偏仪</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="H">
+                                    <div class="router-after-key">H</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=105&amp;title=HHV电子束蒸镀设备">HHV电子束蒸镀设备</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=126&amp;title=化学刻蚀清洗台">化学刻蚀清洗台</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="I">
+                                    <div class="router-after-key">I</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=103&amp;title=ICP等离子刻蚀机">ICP等离子刻蚀机</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="L">
+                                    <div class="router-after-key">L</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=49&amp;title=Lesker多源集成溅射设备">Lesker多源集成溅射设备</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=123&amp;title=LPCVD">LPCVD</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="P">
+                                    <div class="router-after-key">P</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=53&amp;title=PICOSUN原子层沉积仪（ALD）">PICOSUN原子层沉积仪（ALD）</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=125&amp;title=PECVD">PECVD</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="Q">
+                                    <div class="router-after-key">Q</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=133&amp;title=清洗槽">清洗槽</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=92&amp;title=切割系统">切割系统</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="R">
+                                    <div class="router-after-key">R</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=138&amp;title=RTP">RTP</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=104&amp;title=RIE等离子刻蚀机">RIE等离子刻蚀机</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="S">
+                                    <div class="router-after-key">S</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=106&amp;title=双腔磁控溅射">双腔磁控溅射</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=146&amp;title=四探针-薄膜模块">四探针-薄膜模块</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="X">
+                                    <div class="router-after-key">X</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=124&amp;title=旋转涂胶机">旋转涂胶机</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="Y">
+                                    <div class="router-after-key">Y</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=129&amp;title=氧化扩散炉">氧化扩散炉</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="list-group-item ">
+                <a href="/platform/life" i18n="i18n.life">生命平台</a>
+                
+                <div class="router-list-after">
+                    <div class="router-after-hd d-flex">
+                        <div i18n="i18n.letter_search">按字母搜索：</div>
+                        <div class="flex-fill d-flex flex-wrap router-after-hd-content">
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">A</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">B</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">C</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">D</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">E</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">F</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">G</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">H</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">I</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">J</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">K</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">L</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">M</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">N</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">O</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">P</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">Q</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">R</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">S</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">T</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">U</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">V</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">W</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">X</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">Y</a>
+                            
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">Z</a>
+                            
+                        </div>
+                    </div>
+                    <div class="router-after-bd">
+                        <div class="router-after-bd-inner">
+                            <ul class="router-after-list">
+                                
+                                <li class="d-flex router-after-cell" data-key="">
+                                    <div class="router-after-key"></div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=39&amp;title=7500荧光定量PCR仪">7500荧光定量PCR仪</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="B">
+                                    <div class="router-after-key">B</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=40&amp;title=伯乐荧光定量PCR仪">伯乐荧光定量PCR仪</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=34&amp;title=冰冻切片机（Leica CM1950）">冰冻切片机（Leica CM1950）</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="C">
+                                    <div class="router-after-key">C</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=41&amp;title=Covaris高性能样品处理系统">Covaris高性能样品处理系统</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="D">
+                                    <div class="router-after-key">D</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=26&amp;title=蛋白质液相色谱纯化仪">蛋白质液相色谱纯化仪</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=25&amp;title=等温滴定量热仪">等温滴定量热仪</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="G">
+                                    <div class="router-after-key">G</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=32&amp;title=高分辨微型CT系统（BRUKER Skyscan1172）">高分辨微型CT系统（BRUKER Skyscan1172）</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=29&amp;title=光栅型多功能读板仪">光栅型多功能读板仪</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="H">
+                                    <div class="router-after-key">H</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=107&amp;title=Hitachi HT7700 透射电子显微镜">Hitachi HT7700 透射电子显微镜</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="L">
+                                    <div class="router-after-key">L</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=111&amp;title=Leica UC7 超薄切片机">Leica UC7 超薄切片机</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=110&amp;title=Leica EM AFS2 冷冻替代仪">Leica EM AFS2 冷冻替代仪</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=109&amp;title=Leica EM PACT2 高压冷冻仪">Leica EM PACT2 高压冷冻仪</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=47&amp;title=流式细胞分析仪">流式细胞分析仪</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=45&amp;title=流式细胞分选仪">流式细胞分选仪</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=37&amp;title=轮转式切片机（Leica RM2255）">轮转式切片机（Leica RM2255）</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=30&amp;title=滤光片型多功能读板仪">滤光片型多功能读板仪</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=27&amp;title=落地式超速离心机">落地式超速离心机</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="M">
+                                    <div class="router-after-key">M</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=33&amp;title=Miseq测序仪">Miseq测序仪</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=31&amp;title=膜片钳系统">膜片钳系统</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="N">
+                                    <div class="router-after-key">N</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=144&amp;title=Nikon-SIM超分辨荧光成像系统">Nikon-SIM超分辨荧光成像系统</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=143&amp;title=Nikon-STORM超分辨荧光成像系统">Nikon-STORM超分辨荧光成像系统</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=141&amp;title=尼康激光扫描共聚焦成像系统">尼康激光扫描共聚焦成像系统</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="Q">
+                                    <div class="router-after-key">Q</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=43&amp;title=全自动核酸蛋白纯化仪">全自动核酸蛋白纯化仪</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=36&amp;title=全封闭式脱水机（Leica ASP300S）">全封闭式脱水机（Leica ASP300S）</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="S">
+                                    <div class="router-after-key">S</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=42&amp;title=生化分析仪">生化分析仪</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=35&amp;title=StepOne Plus荧光定量PCR仪">StepOne Plus荧光定量PCR仪</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=24&amp;title=生物大分子相互作用分析仪">生物大分子相互作用分析仪</a>
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=23&amp;title=生物大分子X射线单晶衍射仪">生物大分子X射线单晶衍射仪</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="T">
+                                    <div class="router-after-key">T</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=28&amp;title=台式超速离心机">台式超速离心机</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="Y">
+                                    <div class="router-after-key">Y</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=142&amp;title=荧光寿命成像系统(FLIM)">荧光寿命成像系统(FLIM)</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                                <li class="d-flex router-after-cell" data-key="Z">
+                                    <div class="router-after-key">Z</div>
+                                    <div class="flex-fill router-after-hd-content">
+                                        
+                                        <a class="router-after-btn" href="/equipment/view?id=38&amp;title=自动包埋机（Leica EG1150）">自动包埋机（Leica EG1150）</a>
+                                        
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+    </div>
+                <div class="detail-container card">
+                                            <header class="detail-hd">
+                            <div class="d-flex justify-content-between align-items-center wp-hd-title detail-hd-title">
+                                <div class="wp-hd-title-lt flex-fill w-50 js-detail-i18n" i18n="i18n.introduction">
+                                    <span>中心简介</span>
+                                </div>
+                                <div class="wp-hd-title-rt d-flex align-items-center justify-content-end js-detail-router-line">
+    
+    <a class="d-flex justify-content-between wp-hd-title-else" href="/">
+        <span i18n="i18n.home">首页</span>
+        
+        <span class="icon-arrow icon-arrow-right detail-arrow-right"></span>
+        
+    </a>
+    
+    <a class="d-flex justify-content-between wp-hd-title-else" href="/center">
+        <span i18n="i18n.center">中心概况</span>
+        
+        <span class="icon-arrow icon-arrow-right detail-arrow-right"></span>
+        
+    </a>
+    
+    <a class="d-flex justify-content-between wp-hd-title-else" href="javascript:;">
+        <span i18n="i18n.introduction">中心简介</span>
+        
+    </a>
+    
+    </div>
+                            </div>
+                        </header>
+                                                    <!-- content -->
+                <div class="detail-bd">
+    <div class="situation-text js-detail-bd-list list-bd-card-explain detail-bd-info-container pt-3">
+    <div><p style=""><br></p><p>&nbsp; &nbsp; &nbsp; &nbsp;南方科技大学分析测试中心是学校科研和教学重要的公共实验平台，是前沿分析测试设备、技术和方法的研发中心。中心承担南科大各交叉科研中心、院系等共享科研设备的统一管理工作。秉承面向社会、讲求实效、资源共享的原则，在满足南科大科研和教学需求的基础之上，为华南地区乃至全国的高等院校、科研机构和高新技术企业提供科研、培训及技术开发服务。</p><p><br></p><p>&nbsp; &nbsp; &nbsp; &nbsp;作为学校的大型公共科学实验平台，中心为南科大科研团队完成科研项目提供先进的设备和强有力的技术支撑。中心技术人员利用自身专业知识和技术积累，参与或承担分析测试领域中新设备、新技术和新方法的开发，力求在先进工艺、测试技术标准化等方面获取原始创新成果。中心不仅为校内外科研工作提供一流的研究条件，同时在人才培养中也努力发挥积极作用。在教学方面，中心将配合院系和研究中心，完成公共教学实验室没有条件开展的专业实验课程的教学，并将自主开设分析测试领域的选修课程，培养一批专业水平高、动手能力强的分析测试人才。<br></p><p><br></p><p>&nbsp; &nbsp; &nbsp; &nbsp;测试中心目前有员工37名，具有海内外名校博士学位的员工23名，其中，获聘深圳市“孔雀计划”人才称号17名。中心技术人员具有扎实的理论基础、较强的动手能力以及乐于奉献的服务精神，能为科研需求提供优质的服务。<br></p><p><br></p><p>&nbsp; &nbsp; &nbsp; &nbsp;目前分析测试中心设有4个公共平台，分别是成像平台、理化平台、与微纳平台以及生命平台。设备总值达2.6亿人民币，包括高分辨透射电镜（TEM）、电子扫描电镜（SEM）、原子力显微镜（AFM）、双束系统（SEM/FIB）；质谱、色谱、核磁共振、各式光谱仪、综合物性测量系统；电子束曝光系统、薄膜沉积设备、光刻设备、等离子体刻蚀设备；生物光学显微镜、生物电子显微镜、DNA/蛋白/细胞分析测试设备等大型仪器。</p><p><img src="http://static.crf.sustech.edu.cn/upload/image/20200908/15995583825578.jpg" title="15995583825578.jpg" alt="微信图片_20200908174137.jpg" width="719" height="486" style="width:719px; height:486px;"></p></div>
+</div>
+</div>
+
+<script id="data-explain" type="text/html">
+    <div>{{@ content}}</div>
+</script>
+
+<script>
+    var router_list = [{
+        title: "中心概况",
+        i18n: "i18n.center",
+        items: [{
+            title: "中心简介",
+            i18n: "i18n.introduction",
+            href: "/center",
+            active: true
+        }, {
+            title: "组织架构",
+            i18n: "i18n.framework",
+            href: "/center/organization",
+        }, {
+            title: "人才队伍",
+            i18n: "i18n.teachers",
+            href: "/center/teachers"
+        }]
+    }];
+
+    var router_line = [{
+        title: "首页",
+        i18n: "i18n.home",
+        href: "/"
+    }, {
+        title: "中心概况",
+        i18n: "i18n.center",
+        href: "/center"
+    }, {
+        title: "中心简介",
+        i18n: "i18n.introduction",
+        href: "javascript:;"
+    }]
+
+    function dataDetail(id) {
+        nkGet(api_url + "/page/view", {
+            id: id
+        }, function(res) {
+            if (res.error != 0) {
+                if (res.error == 1000) {
+
+                    return false
+                }
+                alert_toast(res.msg);
+                return false
+            }
+            if (res.data && res.data.content) {
+                res.data.content = filterXSS(res.data.content)
+            }
+            var temp_html = template("data-explain", res.data);
+            $(".list-bd-card-explain").html(temp_html);
+        }, function() {});
+    }
+
+    $(function() {
+        var lang = window.sessionStorage.getItem("lang");
+        var param = (lang == "en_us" ? 32 : 26);
+        dataDetail(param);
+    })
+</script>                <div class="space"></div>
+                <div class="space"></div>
+                <div class="space"></div>
+                <div class="space"></div>
+                <div class="space"></div>
+                <div class="space"></div>
+                <!-- content -->
+
+                                </div>
+            </div>
+            </div>
+        <footer class="footer else-footer">
+        <div class="d-flex justify-content-between align-items-center footer-content">
+            <div class="footer-lt d-block pt-1">
+                <a class="footer-item-logo" href="/"></a>
+                <p class="w-100 footer-lt-item pl-3 js-footer-lt-inner-en" style="display:none">Core Research Facilities</p>
+            </div>
+            <div class="footer-item footer-center d-flex align-items-center justify-content-center">
+                <div class="footer-center-inner">
+                    <p i18n="i18n.footer_text">地址：广东省深圳市南山区学苑大道1088号检测中心楼</p>
+                    <p><span i18n="i18n.footer_email">邮箱</span>：crf@sustech.edu.cn&nbsp;&nbsp;&nbsp;<span i18n="i18n.footer_Postcode">邮编</span>：518055</p>
+                    <p>© 2021 SUSTECH, All Rights Reserved. Powered by <a class="footer-center-href" target="_blank" href="https://www.xingyun.net/">XINGYUN.NET</a></p>
+                </div>
+            </div>
+            <div class="footer-item footer-rt d-flex align-items-center justify-content-end">
+                <div class="footer-qrcode">
+                    <img class="footer-qrcode-img" src="http://crf.sustech.edu.cn/static/img/crf-qrcode.jpg">
+                    <p class="footer-qrcode-text" i18n="i18n.homepage">分析测试中心</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <!-- template -->
+    <script id="router-list" type="text/html">
+    {{each items item i}}
+    <div class="router-item">
+        {{if item}}
+        <div class="router-item-title" i18n="{{item && item.i18n}}">{{item&&item.title}}</div>
+        {{/if}}
+        <div class="router-group list-group js-router-group">
+            {{each item&&item.items&&item.items cell idx}}
+            <div class="list-group-item {{cell.active==true?'list-group-item-active':''}}">
+                <a href="{{cell.href}}" i18n="{{cell.i18n}}">{{cell.title}}</a>
+                {{if cell.items}}
+                <div class='router-list-after'>
+                    <div class="router-after-hd d-flex">
+                        <div i18n="i18n.letter_search">按字母搜索：</div>
+                        <div class='flex-fill d-flex flex-wrap router-after-hd-content'>
+                            {{each AlphabetList hive j}}
+                            <a class="router-after-btn" href="javascript:;" onclick="clickScreen(this)">{{hive}}</a>
+                            {{/each}}
+                        </div>
+                    </div>
+                    <div class='router-after-bd'>
+                        <div class="router-after-bd-inner">
+                            <ul class="router-after-list">
+                                {{each cell.items hive j}}
+                                <li class="d-flex router-after-cell" data-key="{{hive.title}}">
+                                    <div class="router-after-key">{{hive.title}}</div>
+                                    <div class='flex-fill router-after-hd-content'>
+                                        {{each hive.items grid grid_idx}}
+                                        <a class="router-after-btn" href='/equipment/view?id={{grid.id}}&title={{grid.name}}'>{{grid.name}}</a>
+                                        {{/each}}
+                                    </div>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    {{/each}}
+    </script>
+
+    <script id="router-line" type="text/html">
+    {{each items item i}}
+    <a class="d-flex justify-content-between wp-hd-title-else" href="{{item.href}}">
+        <span i18n="{{item.i18n}}">{{item.title}}</span>
+        {{if i!=items.length-1}}
+        <span class="icon-arrow icon-arrow-right detail-arrow-right"></span>
+        {{/if}}
+    </a>
+    {{/each}}
+    </script>
+
+    <script>
+        /**
+         * router_list
+         */
+        var router_item = {
+            title: "全部仪器分类",
+            i18n: "i18n.classification",
+            items: [{
+                title: "理化平台",
+                href: "/platform",
+                i18n: "i18n.material",
+                id: 90,
+                items: [],
+                active: " "
+            }, {
+                title: "成像平台",
+                href: "/platform/dianjing",
+                i18n: "i18n.dianjing",
+                id: 82,
+                items: [],
+                active: " "
+            }, {
+                title: "微纳平台",
+                href: "/platform/weina",
+                i18n: "i18n.micro",
+                id: 91,
+                items: [],
+                active: " "
+            }, {
+                title: "生命平台",
+                href: "/platform/life",
+                i18n: "i18n.life",
+                id: 92,
+                items: [],
+                active: " "
+            }]
+        }
+        /**
+         * 初始化路由
+         */
+        function listPaltform(param, idx) {
+            nkGet(api_url + "/device/list-in-py", {
+                sort_id: param
+            }, function(res) {
+                if (res.error != 0) {
+                    if (res.error == 1000) {
+                        initRouterFn();
+                        return false
+                    }
+                    alert_toast(res.msg);
+                    return false
+                }
+
+                var source_list = _.map(res.data.items, function(o, i) {
+                    return o.name_py
+                })
+                var list = _.uniq(source_list);
+
+                var list_items = _.map(list, function(item, idx) {
+                    var obj = {}
+                    obj.title = item;
+                    var arr = [];
+                    _.map(res.data.items, function(cell, i) {
+                        if (item == cell.name_py) {
+                            arr.push(cell);
+                        }
+                    })
+                    obj.items = arr;
+                    return obj
+                })
+
+                router_item.items[idx].items = list_items;
+
+                initRouterFn();
+
+                var defaultLang = "cn"
+
+                if (window.sessionStorage.getItem("lang") == "en_us") {
+                    defaultLang = 'en'
+                } else {
+                    defaultLang = 'cn'
+                }
+
+                languageSelect(defaultLang);
+
+
+            }, function() {})
+        }
+
+        function initRouterFn() {
+            router_list["1"] = router_item;
+            var obj = {}
+            obj.items = router_list;
+            obj.AlphabetList = generateSmall()
+            var temp_html = template("router-list", obj);
+            $(".js-router-list").html(temp_html);
+        }
+
+        function initRouterlineFn() {
+            var obj = {}
+            obj.items = router_line;
+            var temp_html = template("router-line", obj);
+            $(".js-detail-router-line").html(temp_html);
+        }
+
+        // ready()
+        $(function() {
+            initRouterFn();
+
+            listPaltform(90, 0);
+            listPaltform(82, 1);
+            listPaltform(91, 2);
+            listPaltform(92, 3);
+
+            initRouterlineFn();
+
+        })
+    </script>
+
+        <script id="data-page" type="text/html">
+    {{if page_arr&&page_arr.length>0}}
+    <ul class="pagination justify-content-center">
+        {{if page!=1}}
+        <li class="page-item">
+            <a class="page-link" href="javascript:void(0)" data-page="{{page}}" data-idx="prev" tabindex="-1">&lt;</a>
+        </li>
+        {{/if}}
+        {{if page>=3}}
+        {{/if}}
+        {{each page_arr value i}}
+        {{if (i+2)<(page+3)&&(i+1)>(page-2)}}
+        <li class="{{page==(i+1)?'page-item active':'page-item'}}">
+            <a class="page-link" href="javascript:void(0)" data-page="{{page}}" data-idx="{{value+1}}">{{value+1}}</a>
+        </li>
+        {{/if}}
+        {{/each}}
+        {{if page<totalPage-2}}
+        <li class="page-item">
+            <a class="page-link" href="javascript:void(0)" data-page="{{page+1}}" data-idx="next">...</a>
+        </li>
+        {{/if}}
+        {{if page<totalPage-1}}
+        <li class="page-item">
+            <a class="page-link" href="javascript:void(0)" data-page="{{totalPage}}" data-idx="next">{{totalPage}}</a>
+        </li>
+        {{/if}}
+        {{if page<totalPage}}
+        <li class="page-item">
+            <a class="page-link" href="javascript:void(0)" data-page="{{page}}" data-idx="next">&gt;</a>
+        </li>
+        {{/if}}
+    </ul>
+    {{/if}}
+    </script>
+
+    
+    <script>
+        var AlphabetList = [];
+
+        function generateSmall() {
+            var str = [];
+            for (var i = 97; i < 123; i++) {
+                str.push(String.fromCharCode(i).toUpperCase());
+            }
+            return str;
+        }
+        $(function() {
+            browserRedirect('center', 'center')
+
+            $(".header-top-lang").removeClass('header-top-item-active');
+            $(".header-top-lang[data-lang=" + window.sessionStorage.getItem("lang") + "]").addClass(
+                "header-top-item-active");
+            if (window.sessionStorage.getItem("lang") == 'en_us') {
+                $(".js-header-top-search").attr("placeholder", "search");
+                $(".js-header-top-item-center").attr("hidden", true)
+            }
+
+                            for (var i = 0; i < router_list.length; i++) {
+                    var element = router_list[i];
+                    for (var j = 0; j < (element && element.items && element.items.length); j++) {
+                        var el = element.items[j];
+                        if (el.active == true) {
+                            $(".js-detail-i18n").attr("i18n", el.i18n);
+                        }
+                    }
+                }
+            
+
+            $(document).on("click", '.header-top-lang', function() {
+
+                var lang = $(this).data("lang");
+
+                window.sessionStorage.setItem("lang", lang);
+
+                window.location.replace("/");
+
+            })
+
+            /**顶部搜索 */
+            $(document).on("change", ".js-header-top-search", function() {
+                var value_text = $(this).val();
+                if (value_text != "") {
+                    window.location.href = "/search/view?kw=" +
+                        encodeURIComponent(value_text, true);
+                }
+            });
+
+            
+                var slide_position_alias = "";
+                var content_id = 'center';
+                switch (content_id) {
+                    case "center":
+                        slide_position_alias = "640342c067f5721bfdc35f35579c2906";
+                        break;
+                    case 'platform':
+                        slide_position_alias = "ccb4154f5ef1e9400f3caa906ab71420";
+                        break;
+                    case 'equipment':
+                        slide_position_alias = "4c1bbf3fb95e3380af50a3123df3d4f2";
+                        break;
+                    case 'test':
+                        slide_position_alias = "74025f92b0b0c450ea8d63384a74500e";
+                        break;
+                    case 'down':
+                        slide_position_alias = "841da9e39834a02d43dd6346ff1ed6a1";
+                        break;
+                    case 'laboratory':
+                        slide_position_alias = "dc756045419b5ea22423db9d6500c0e7";
+                        break;
+                    case 'recruit':
+                        slide_position_alias = "32a6a025641e063aac5091f94aa2cbec";
+                        break;
+                    case 'contact':
+                        slide_position_alias = "7be77b30535ee95cec3d896bcfb9c1a4";
+                        break;
+                    case 'instrument':
+                        slide_position_alias = "instrument";
+                        break;
+                    case 'party':
+                        slide_position_alias = "party";
+                        break;
+                    case 'achievements':
+                        slide_position_alias = "achievements";
+                        break;
+                    case 'cma':
+                        slide_position_alias = "cma";
+                        break;
+                    case 'news':
+                        slide_position_alias = "news_center";
+                        break;
+                    case 'train':
+                        slide_position_alias = "training_center";
+                        break;
+                }
+                if (slide_position_alias) {
+                    (function otherBanner(slide_position_alias) {
+                        nkGet(api_url + "/slide/list", {
+                            slide_position_alias: slide_position_alias
+                        }, function(res) {
+                            if (res.error != 0) {
+                                if (res.error == 1000) {
+                                    return false
+                                }
+                                alert_toast(res.msg)
+                                return false
+                            }
+                            if (res.data && res.data.items && res.data.items.length > 0) {
+                                $(".js-other-banner").css("background-image", "url(" + res.data.items[0].img + ")");
+                            }
+                        }, function() {});
+                    })(slide_position_alias)
+                }
+                        setTimeout(function() {
+                $(".js-load-container").hide();
+            }, 500);
+        })
+    </script>
+
+
+
+
+</body></html>

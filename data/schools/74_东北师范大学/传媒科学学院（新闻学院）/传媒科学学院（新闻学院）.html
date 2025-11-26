@@ -1,0 +1,741 @@
+
+<!DOCTYPE html>
+<html><head><title>东北师范大学传媒科学学院</title><meta name="pageType" content="1">
+<meta name="pageTitle" content="东北师范大学传媒科学学院">
+<META Name="keywords" Content="东北师范大学传媒科学学院" />
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+
+<meta charset="utf-8">
+<link rel="stylesheet" href="style/public.css">
+<link rel="stylesheet" href="style/master.css">
+
+
+<style>
+.winstyle127216  a:hover span{color:#680034;text-decoration: underline;}
+
+</style>
+
+
+
+<!--Announced by Visual SiteBuilder 9-->
+<script language="javascript" src="_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:77656262657232307668465750545742000400054754 -->
+<link rel="stylesheet" type="text/css" href="index.vsb.css" />
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1097,'/index.jsp',-1,1511770816)</script>
+</head>
+<body><!--top-->
+
+
+<style> @media (max-width:1200px){
+                .yjjcuo{display: block!important;}
+.yjjcuo img{width:100%;}
+            }
+.yjjcuo{    bottom: 40px!important;
+    right: 40px!important;}
+                        .yjjcuo {
+                                position: fixed;
+                                bottom: 20px;
+                                right: 20px;
+                                z-index: 999;}
+                </style>
+                <div class="yjjcuo">    <script language="javascript" src="/system/resource/js/dynclicks.js"></script>
+
+                        <a href="https://oa.nenu.edu.cn/wui/index.html#/main/portal/portal-1522-1?wfid=97" target="_blank">
+                                <img src="images/yjjc.png">
+                        </a>             
+
+</div>
+
+<div class="stick"></div>
+<div class="header cleafix">
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+<a class="logo" href="index.htm" onfocus="undefined"><img src="images/cmlogo.png"></a>
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><LINK href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><style>
+    #appu2 .qwss{
+        height: 31px;
+        font-size: 12px;
+        min-width: 190px;
+        max-width: 600px;
+        width: 60%;
+        margin-top: -15px;
+        outline: none;
+        padding-left: 10px;
+        border-radius: 2px;
+        border: 1px solid #e4e7ed;}
+    #appu2 .tj{
+        padding-left: 6px;
+        letter-spacing: 5px;
+        color: white;
+        min-width: 53px;
+        max-width: 150px;
+        height: 32px;
+        border: 0;
+        border-radius: 2px;
+        background-color: #1890FF;
+        position: relative;
+        top: 1px;
+        width: 20%;
+        margin-top: -15px;}
+</style>
+<div id="divu2"></div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+        <div class="search fr cleafix"><span><input name="" type="image" src="images/search.png" v-on:click="onSubmit()"/></span><input id="test" type="text" placeholder="请输入关键字进行搜索" onclick="test1()" onblur="test2()" name="textfield" class="searchText" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit"/></div>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1511770816";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/aop_views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div><!--nav-->
+<div class="nav">
+<div class="innav">
+
+<ul class="cleafix">
+
+            <li class="cur"><a class="link" href="index.htm" title="首页">首页</a></li>
+
+
+            <li class="mainmenu">
+                <a class="link" href="#" title="学院概况">学院概况</a>
+                <div id="nav">
+
+
+                    <a href="xygk/xyjj.htm" title="学院简介">学院简介</a>
+                    
+                    
+
+                    <a href="xygk/jgsz.htm" title="机构设置">机构设置</a>
+                    
+                    
+
+                    <a href="xygk/xywh.htm" title="学院文化">学院文化</a>
+                    
+                    
+
+                    <a href="xygk/xyjs.htm" title="学院精神">学院精神</a>
+                    
+                    
+                </div> 
+            </li>
+           
+           
+           
+          
+          
+           
+            <li class="mainmenu">
+                <a class="link" href="" title="专业设置">专业设置</a>
+                <div id="nav">
+
+
+                    <a href="zysz/ysbd.htm" title="影视编导">影视编导</a>
+                    
+                    
+
+                    <a href="zysz/byzc.htm" title="播音主持">播音主持</a>
+                    
+                    
+
+                    <a href="zysz/xwxx.htm" title="新闻学系">新闻学系</a>
+                    
+                    
+
+                    <a href="zysz/ggxx.htm" title="广告学系">广告学系</a>
+                    
+                    
+
+                    <a href="zysz/szmt.htm" title="数字媒体">数字媒体</a>
+                    
+                    
+                </div> 
+            </li>
+           
+           
+           
+          
+          
+           
+            <li class="mainmenu">
+                <a class="link" href="" title="师资队伍">师资队伍</a>
+                <div id="nav">
+
+
+                    <a href="szdw/bssds.htm" title="博士生导师">博士生导师</a>
+                    
+                    
+
+                    <a href="szdw/zrjs.htm" title="专任教师">专任教师</a>
+                    
+                    
+
+                    <a href="szdw/sygl.htm" title="实验管理">实验管理</a>
+                    
+                    
+
+                    <a href="szdw/xzgl.htm" title="行政管理">行政管理</a>
+                    
+                    
+                </div> 
+            </li>
+           
+           
+           
+          
+          
+           
+            <li class="mainmenu">
+                <a class="link" href="" title="教育教学">教育教学</a>
+                <div id="nav">
+
+
+                    <a href="jyjx/bksjx.htm" title="本科生教学">本科生教学</a>
+                    
+                    
+
+                    <a href="jyjx/yjsjx.htm" title="研究生教学">研究生教学</a>
+                    
+                    
+
+                    <a href="jyjx/jpkc.htm" title="精品课程">精品课程</a>
+                    
+                    
+                </div> 
+            </li>
+           
+           
+           
+          
+          
+           
+            <li class="mainmenu">
+                <a class="link" href="syzx.htm" title="实验中心">实验中心</a>
+            </li>
+           
+           
+           
+          
+          
+           
+            <li class="mainmenu">
+                <a class="link" href="" title="科研工作">科研工作</a>
+                <div id="nav">
+
+
+                    <a href="kygz/kypt.htm" title="科研平台">科研平台</a>
+                    
+                    
+
+                    <a href="kygz/xslw.htm" title="学术论文">学术论文</a>
+                    
+                    
+
+                    <a href="kygz/xszz.htm" title="学术著作">学术著作</a>
+                    
+                    
+
+                    <a href="kygz/kyxm.htm" title="科研项目">科研项目</a>
+                    
+                    
+
+                    <a href="kygz/kyjl.htm" title="科研奖励">科研奖励</a>
+                    
+                    
+                </div> 
+            </li>
+           
+           
+           
+          
+          
+           
+            <li class="mainmenu">
+                <a class="link" href="" title="党建工作">党建工作</a>
+                <div id="nav">
+
+
+                    <a href="djgz/dwjs.htm" title="党委介绍">党委介绍</a>
+                    
+                    
+
+                    <a href="djgz/gzzd.htm" title="规章制度">规章制度</a>
+                    
+                    
+
+                    <a href="djgz/djhd.htm" title="党建活动">党建活动</a>
+                    
+                    
+                </div> 
+            </li>
+           
+           
+           
+          
+          
+           
+            <li class="mainmenu">
+                <a class="link" href="" title="学生工作">学生工作</a>
+                <div id="nav">
+
+
+                    <a href="xsgz/xgdw.htm" title="学工队伍">学工队伍</a>
+                    
+                    
+
+                    <a href="xsgz/txzz.htm" title="团学组织">团学组织</a>
+                    
+                    
+
+                    <a href="xsgz/xshd.htm" title="学生活动">学生活动</a>
+                    
+                    
+
+                    <a href="xsgz/bkzs.htm" title="本科招生">本科招生</a>
+                    
+                    
+
+                    <a href="xsgz/yjszs.htm" title="研究生招生">研究生招生</a>
+                    
+                    
+
+                    <a href="xsgz/jytj.htm" title="就业推荐">就业推荐</a>
+                    
+                    
+                </div> 
+            </li>
+           
+           
+           
+          
+          
+           
+            <li class="mainmenu">
+                <a class="link" href="" title="案例教学">案例教学</a>
+                <div id="nav">
+
+
+                    <a href="aljx/jj.htm" title="简介">简介</a>
+                    
+                    
+
+                    <a href="aljx/xwsw.htm" title="新闻实务">新闻实务</a>
+                    
+                    
+
+                    <a href="aljx/gdsw.htm" title="广电实务">广电实务</a>
+                    
+                    
+
+                    <a href="aljx/mjll.htm" title="媒介伦理">媒介伦理</a>
+                    
+                    
+
+                    <a href="aljx/gggx.htm" title="公共关系">公共关系</a>
+                    
+                    
+
+                    <a href="aljx/wlyq.htm" title="网络舆情">网络舆情</a>
+                    
+                    
+
+                    <a href="aljx/ggyx.htm" title="广告营销">广告营销</a>
+                    
+                    
+
+                    <a href="aljx/mjjg.htm" title="媒介经管">媒介经管</a>
+                    
+                    
+
+                    <a href="aljx/dby.htm" title="东北亚">东北亚</a>
+                    
+                    
+                </div> 
+            </li>
+           
+           
+           
+          
+          
+           
+            <li class="mainmenu">
+                <a class="link" href="" title="实验基地">实验基地</a>
+                <div id="nav">
+
+
+                    <a href="syjd/dst.htm" title="电视台">电视台</a>
+                    
+                    
+
+                    <a href="syjd/wlmt.htm" title="网络媒体">网络媒体</a>
+                    
+                    
+                </div> 
+            </li>
+           
+           
+           
+          
+          
+           
+
+ <li class="mainmenu mainmenu1">
+                <a class="link" href="" title="下载专区">下载专区</a>
+
+                <div id="nav">
+
+                    <a href="xzzq/rcgl.htm" title="日常管理">日常管理</a>
+                   
+
+                    <a href="xzzq/jlcc.htm" title="奖励惩处">奖励惩处</a>
+                   
+
+                    <a href="xzzq/dxpy.htm" title="典型培育">典型培育</a>
+                   
+
+                    <a href="xzzq/jytj.htm" title="就业推荐">就业推荐</a>
+                   
+                </div>  
+
+            </li>
+
+
+        </ul>
+
+</div></div><!--banner-->
+<div class="vsb-box">
+<div class="vsb-container a" columns="4" containerid="1">
+<div class="vsb-space" columns="4">
+<div class="slideBox slideBox1">
+<div class="bd">
+<div>    <ul>
+                        <li>
+                            <img src="images/33.jpg" /><div class="tit"><p>东师校园</p></div>
+                        </li>
+                        <li>
+                            <img src="images/lianchuang2025924.jpg" /><div class="tit"><p>学生实践</p></div>
+                        </li>
+                        <li>
+                            <img src="images/7.jpg" /><div class="tit"><p>科研立项</p></div>
+                        </li>
+                        <li>
+                            <img src="images/8.jpg" /><div class="tit"><p>科研立项</p></div>
+                        </li>
+                        <li>
+                            <img src="images/9.jpg" /><div class="tit"><p>教师获奖</p></div>
+                        </li>
+</ul>
+                       
+</div>
+
+</div>
+<div class="btn1"><a class="next" href="javascript:void(0)" onfocus="undefined"></a><a class="prev" href="javascript:void(0)" onfocus="undefined"></a></div></div></div></div>
+<div class="vsb-container a" columns="4" containerid="1">
+</div>
+<div class="vsb-container a" columns="4" containerid="1">
+</div>
+<div class="vsb-container a" columns="4" containerid="1">
+</div>
+<div class="vsb-container a" columns="4" containerid="1">
+</div></div><!-- main部分 -->
+<div class="vsb-box"><!--main_one-->
+<!--main_two-->
+<!--main_three-->
+<!--main_four-->
+<!--main_five-->
+<div class="vsb-container main" columns="4" containerid="2">
+<div class="vsb-space fiveRight" columns="1" style="margin-top: 0px;    float: right;">
+
+
+
+
+<div class="login zxdc">
+
+<div class="tit_lo">学院通知</div>
+
+<ul>
+
+
+<script language="javascript" src="/system/resource/js/centerCutImg.js"></script><script language="javascript" src="/system/resource/js/ajax.js"></script>
+   <li><a href="info/1100/4317.htm" target="_blank" title="关于传媒科学学院（新闻学院）第二十三届团学组织、研究生会换届结果与第二十三届团学组织纳新结果的公示">关于传媒科学学院（新闻学院）第...</a></li>
+   <li><a href="info/1100/4257.htm" target="_blank" title="传媒科学学院(新闻学院)2024-2025学年研究生国家奖学金评审结果公示">传媒科学学院(新闻学院)2024-2025...</a></li>
+   <li><a href="info/1100/4247.htm" target="_blank" title="关于传媒科学学院（新闻学院）2024-2025学年研究生校长奖学金评奖评优获奖学生名单的公示">关于传媒科学学院（新闻学院）202...</a></li>
+   <li><a href="info/1100/4227.htm" target="_blank" title="关于传媒科学学院（新闻学院）2024-2025学年本科生国家励志奖学金评审结果的公示">关于传媒科学学院（新闻学院）202...</a></li>
+   <li><a href="info/1100/4207.htm" target="_blank" title="关于传媒科学学院(新闻学院)2024-2025学年本科生评奖评优评审结果的公示">关于传媒科学学院(新闻学院)2024-...</a></li>
+   <li><a href="info/1100/4237.htm" target="_blank" title="传媒科学学院（新闻学院）2025年度小米奖学金拟推荐名单公示">传媒科学学院（新闻学院）2025年...</a></li>
+   <li><a href="info/1100/4217.htm" target="_blank" title="关于传媒科学学院（新闻学院）2024-2025学年本科生学校励志奖学金评审结果的公示">关于传媒科学学院（新闻学院）202...</a></li>
+   <li><a href="info/1100/4187.htm" target="_blank" title="关于传媒科学学院（新闻学院）2024-2025学年本科生国家奖学金评审结果的公示">关于传媒科学学院（新闻学院）202...</a></li>
+   <li><a href="info/1100/4177.htm" target="_blank" title="关于共青团东北师范大学传媒科学学院（新闻学院）委员会2025年秋季团组织推优结果的公示">关于共青团东北师范大学传媒科学...</a></li>
+   <li><a href="info/1100/4107.htm" target="_blank" title="2025年秋季学期教材选用公示">2025年秋季学期教材选用公示</a></li>
+<script>_showDynClickBatch(['dynclicks_u5_4317','dynclicks_u5_4257','dynclicks_u5_4247','dynclicks_u5_4227','dynclicks_u5_4207','dynclicks_u5_4237','dynclicks_u5_4217','dynclicks_u5_4187','dynclicks_u5_4177','dynclicks_u5_4107'],[4317,4257,4247,4227,4207,4237,4217,4187,4177,4107],"wbnews", 1511770816)</script>
+
+
+<img src="#" width="270" height="95" style="margin:10px auto 0; display:block" />
+</ul>
+
+</div>
+
+
+<div class="login zxdc">
+</div></div>
+<div class="vsb-space fiveMiddle" columns="2">
+<div id="tab" class="tab_five">
+<ul class="tab_menu menu_five cleafix">
+<li class="selected">新闻中心</li>
+</ul>
+<div class="tab_box box_five">
+
+
+<div class="box"><a class="more" href="index/xyxw.htm" onfocus="undefined">更多 <font size="+0">&gt;&gt;</font></a> 
+
+
+<div class="box_fcon cleafix">
+
+<div class="img fl"><img src="/__local/D/FB/CD/147E0B5992C9186D35C85D191EF_9EC3F59C_29201.jpg" width="280" height="180"></div>
+<div class="wen fl"><a class="tit" href="info/1098/4287.htm" target="_blank" onfocus="undefined">走进历史现场，传承红色基因——东...</a> 
+<p>为深入学习贯彻习近平新时代中国特色社会主义思想，引导青年学生在历史现场中感悟初心使命、汲取奋进力量，传媒科学学院（新闻学院）于10月19日上...</p><span class="time">2025-10-19</span> </div>
+
+
+</div><script>_showDynClickBatch(['dynclicks_u6_4287'],[4287],"wbnews", 1511770816)</script>
+
+
+
+<ul class="fivem_list">
+ 
+
+
+  <li><a href="info/1098/4287.htm" target="_blank"><span>2025-10-19</span>走进历史现场，传承红色基因——东北师范大学传媒科学学院（...</a></li>
+
+ 
+
+
+  <li><a href="info/1098/4277.htm" target="_blank"><span>2025-10-19</span>AI赋艺，博论新声|东北师范大学首届艺术学博士论坛暨“AIGC背...</a></li>
+
+ 
+
+
+  <li><a href="info/1098/4297.htm" target="_blank"><span>2025-10-17</span>“职场启航”——传媒科学学院(新闻学院)2025校园招聘系列活...</a></li>
+
+ 
+
+
+  <li><a href="info/1098/4267.htm" target="_blank"><span>2025-10-15</span>“不忘初心，接续奋斗” | 传媒科学学院（新闻学院）召开学生...</a></li>
+
+ 
+
+
+  <li><a href="info/1098/4197.htm" target="_blank"><span>2025-10-11</span>“新时代国防动员发展与当代青年责任”主题报告会顺利举办</a></li>
+
+ 
+
+
+  <li><a href="info/1098/4087.htm" target="_blank"><span>2025-09-28</span>传媒科学学院(新闻学院)党委书记关丰富老师讲授思想政治理论课</a></li>
+
+</ul><script>_showDynClickBatch(['dynclicks_u7_4287','dynclicks_u7_4277','dynclicks_u7_4297','dynclicks_u7_4267','dynclicks_u7_4197','dynclicks_u7_4087'],[4287,4277,4297,4267,4197,4087],"wbnews", 1511770816)</script>
+
+
+</div>
+
+
+
+<div class="box hide"><a class="more" href="<span style='color:red;font-size:9pt'>转换链接错误</span>" onfocus="undefined">更多 <font>&gt;&gt;</font></a> 
+
+
+<div class="box_fcon cleafix">
+</div>
+
+
+
+
+
+
+
+<ul class="fivem_list">
+</ul>
+
+
+</div>
+
+
+
+
+<div class="box hide"><a class="more" href="<span style='color:red;font-size:9pt'>转换链接错误</span>" onfocus="undefined">更多 <font>&gt;&gt;</font></a> 
+
+
+<div class="box_fcon cleafix">
+</div>
+
+
+
+
+
+
+
+<ul class="fivem_list">
+</ul>
+
+
+
+
+</div></div></div></div>
+
+<div class="vsb-space fiveRight" columns="1">
+            <h1 class="Title2"><span>学术活动</span><a href="index/xshd.htm">更多</a></h1>
+            <ul class="fiver_list">
+
+
+                <li class="cleafix" style=" height: 174px;">
+                    <a href="info/1099/3927.htm" target="_blank" class="img fl"><img src="/__local/4/68/2A/D273FC3350248004E4FDD227B47_290A4150_1C8B2.png" width="114" height="109" /></a>
+                    <div class="wen fl">
+                        <a href="info/1099/3927.htm" target="_blank" title="东师传媒海外名师大讲堂 | 爱丁堡艺术节和中国艺术潮流">东师传媒海外名师...</a>
+                        <p>为深化传媒学科与艺术文化的融合，培养传媒学子对艺术的深度认知与传播能力，2025年9月12日13：30，东北师范大学传媒科学学院...</p>
+                    </div>
+                </li>
+                
+
+
+
+            </ul>
+        </div><script>_showDynClickBatch(['dynclicks_u12_3927'],[3927],"wbnews", 1511770816)</script>
+<div class="vsb-space fiveLeft" columns="1">
+
+<div class="vsb-space fiveRight" columns="1" style="    margin-top: -40px;">
+            <h1 class="Title2"><span>学生实践</span><a href="index/xssj.htm">更多</a></h1>
+            <ul class="fiver_list">
+
+
+                <li class="cleafix">
+                    <a href="info/1148/2610.htm" target="_blank" class="img fl"><img src="/__local/2/F3/ED/15380D4AF2FD924B2AEC87EB1B5_BC407BAB_504B3.png" width="114" height="109" /></a>
+                    <div class="wen fl">
+                        <a href="info/1148/2610.htm" target="_blank" title="年年秋见，岁岁如新|东师美景秋季特辑">年年秋见，岁岁如...</a>
+                        <p>金风送爽，秋意盎然从初秋到深秋，万彩斑斓秋日有她独特的美...</p>
+                    </div>
+                </li>
+                
+
+
+
+            </ul>
+        </div><script>_showDynClickBatch(['dynclicks_u13_2610'],[2610],"wbnews", 1511770816)</script>
+</div></div>
+
+<div class="cleafix"></div><!--ad_one-->
+
+
+<!--main_twelve-->
+
+<div class="cleafix"></div></div><!--footer-->
+<div class="footer" style="position:relative;">
+<div class="footone">
+<div class="foot cleafix">
+<script language="javascript" src="/system/resource/js/openlink.js"></script><ul class="ftone_l fl">
+</ul>
+<div class="ftone_r fl">
+<h2>联系我们</h2>
+<ul class="ftone_rlist">
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<p><span>0431-84536486（主任）　　0431-84536313（研究生）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0431-84536480（本科）</span></p>
+<p><span>师德师风监督举报：0431-84536680 chuanmei@nenu.edu.cn</span></p></ul></div></div></div>
+
+ <a href="http://mark.nenu.edu.cn/info/1012/1156.htm"><img src="images/mark_logo.png" style=" float:right;margin-top: -91px;" /></a>
+<!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+<div class="footone_bm">
+<div class="foot"><p>
+    <span style="text-transform: none; background-color: rgb(40,42,46); text-indent: 0px; letter-spacing: normal; display: inline !important; font: 14px/40px 微软雅黑; float: none; color: rgb(171,171,172); word-spacing: 0px; -webkit-text-stroke-width: 0px">版权所有：东北师范大学传媒科学学院     联系电话：0431-84536480      E-mail:chuanmei@nenu.edu.cn
+
+ </span>
+</p></div></div><!--foottwo-->
+<div style="position:absolute; bottom:10px; left:50%; margin-left:550px; color:#fff;">
+   
+		
+
+   
+
+</div>
+<!--footthree-->
+</div>
+<script type="text/javascript" src="js/jquery.bd2.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+
+</body></html>

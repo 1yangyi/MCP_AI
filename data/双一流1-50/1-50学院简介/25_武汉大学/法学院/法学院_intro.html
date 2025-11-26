@@ -1,0 +1,320 @@
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>现任领导-武汉大学法学院</title><meta name="pageType" content="2">
+<meta name="pageTitle" content="现任领导">
+
+
+<meta name="SiteName" content="武汉大学法学院">
+<meta name="SiteDomain" content="law.whu.edu.cn">
+<meta name="ColumnName" content="现任领导">
+
+    
+    <meta name="description" content="描述">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/moblie.css" rel="stylesheet">
+<!--Announced by Visual SiteBuilder 9-->
+<link rel="stylesheet" type="text/css" href="../_sitegray/_sitegray_d.css">
+<script language="javascript" src="../_sitegray/_sitegray.js"></script>
+<!-- CustomerNO:7765626265723230747f475750515742000300014351 -->
+<link rel="stylesheet" type="text/css" href="../about.vsb.css">
+<script type="text/javascript" src="/system/resource/js/counter.js"></script>
+<script type="text/javascript">_jsq_(1193,'/about.jsp',-1,1583400033)</script>
+</head>
+
+
+<body>
+    <div class="header">
+        <div class="container">
+           
+<!-- 网站logo图片地址请在本组件"内容配置-网站logo"处填写 -->
+ <a href="../index.htm" class="logo"><img src="../images/logo.png"></a>
+            <button type="button" class="navbar-toggle">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <script language="javascript" src="/system/resource/js/dynclicks.js"></script><script language="javascript" src="/system/resource/js/openlink.js"></script><div class="clearfix link-top">
+ <a href="http://law.whu.edu.cn/English_new/Home.htm">English</a>
+                
+</div>
+            <!--  搜索开始 -->
+            <div class="search">
+                <div class="searchbox">
+
+
+<script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/jquery/jquery-latest.min.js"></script><script language="javascript" src="/system/resource/vue/vue.js"></script><script language="javascript" src="/system/resource/vue/bluebird.min.js"></script><script language="javascript" src="/system/resource/vue/axios.js"></script><script language="javascript" src="/system/resource/vue/polyfill.js"></script><script language="javascript" src="/system/resource/vue/token.js"></script><link href="/system/resource/vue/static/element/index.css" type="text/css" rel="stylesheet"><script language="javascript" src="/system/resource/vue/static/element/index.js"></script><script language="javascript" src="/system/resource/vue/static/public.js"></script><div id="divu2">
+    <div id="appu2"><div><input type="text" placeholder="全文搜索" autocomplete="off" class="search_kang"> <input type="button" name="submit_button" class="search-button"></div> <!----></div>
+</div>
+<script type="text/html" id="htmlu2">
+    <div id="appu2">
+        <div v-if="!isError">
+            <input type="text" class="search_kang" placeholder="全文搜索" autocomplete=off v-model=query.keyWord @keyup.enter="onSubmit">
+            <input type="button" class="search-button" name="submit_button" v-on:click="onSubmit()"/>
+        </div>
+        <div v-if="isError" style="color: #b30216; font-size:18px;text-align: center;padding:20px;">
+            应用维护中！
+        </div>
+    </div>
+</script>
+<script>
+    $("#divu2").html($("#htmlu2").text());
+</script>
+<script>
+    var appOwner = "1583400033";
+    var token = 'tourist';
+    var urlPrefix = "/aop_component/";
+
+    jQuery.support.cors = true;
+    $.ajaxSetup({
+        beforeSend: function (request, settings) {
+            request.setRequestHeader("Authorization", token);
+            request.setRequestHeader("owner", appOwner);
+        }
+    });
+
+    new Vue({
+        el: "#appu2",
+        data: function () {
+            return {
+                query: {
+                    keyWord: "",//搜索关键词
+                    owner: appOwner,
+                    token: token,
+                    urlPrefix: urlPrefix,
+                    lang:"i18n_zh_CN"
+                },
+                isError: false
+            }
+        },
+        mounted: function () {
+            var _this = this;
+            // _this.init();
+        },
+        methods: {
+            init: function(){
+                $.ajax({
+                    url: "/aop_component//webber/search/test",
+                    type: "get",
+                    success: function (response) {
+                        if (response.code == "0000") {
+                        } else if (response.code == "220") {
+                            _this.isError = true;
+                            console.log(response);
+                        } else if (!response.code) {
+                            _this.isError = true;
+                            console.log(response);
+                        }
+                    },
+                    error: function (response) {
+                        _this.isError = true;
+                    }
+                });
+            },
+            onSubmit: function (e) {
+                var url = "/views/search/modules/resultpc/soso.html";
+                if ("10" == "1" || "10" == "2") {
+                    url = "" + url;
+                }
+                var _this = this;
+                var query = _this.query;
+                if (url.indexOf("?") > -1) {
+                    url = url.split("?")[0];
+                }
+                if (query.keyWord) {
+                    var query = new Base64().encode(JSON.stringify(query));
+                    window.open(url + "?query=" + query);
+                } else {
+                    alert("请填写搜索内容")
+                }
+            },
+        }
+    })
+</script></div>
+            </div>
+            <!-- 搜索结束 -->
+        </div>
+    </div>
+    <!--  网站导航开始 -->
+    <div class="nav">
+        <div class="container">
+
+            <ul class="daohang clearfix">
+
+<li class=" ">
+    <a href="../index.htm">首 页</a>
+</li>
+
+<li class="active ">
+    <a href="xrld.htm">学院概况</a>
+    <ul>
+        <li><a href="lsyjj.htm">历史与简介</a></li>
+        <li><a href="xrld.htm">现任领导</a></li>
+        <li><a href="zywyh.htm">专业委员会</a></li>
+        <li><a href="zzjg1.htm">组织机构</a></li>
+        <li><a href="lxwm.htm">联系我们</a></li>
+      </ul>
+</li>
+
+<li class=" ">
+    <a href="../sztuandu/zrjs_.htm">师资团队</a>
+    <ul class="on1">
+        <li><a href="../sztuandu/zrjs_.htm">在任教师 </a></li>
+        <li><a href="../sztuandu/zzbs.htm">在站博后</a></li>
+        <li><a href="../sztuandu/jzry.htm">兼职人员</a></li>
+        <li><a href="../sztuandu/rxjs.htm">荣休教师</a></li>
+        <li><a href="../sztuandu/yydhn.htm">永远的怀念</a></li>
+      </ul>
+</li>
+
+<li class=" on2">
+    <a href="../rcpy.htm">人才培养</a>
+    <ul>
+        <li><a href="http://hilaw.whu.edu.cn/">本科生教育</a></li>
+        <li><a href="http://golaw.whu.edu.cn/">研究生教育</a></li>
+        <li><a href="../rcpy/jxjyygj_.htm">继续教育与高级培训</a></li>
+      </ul>
+</li>
+
+<li class=" on3">
+    <a href="../kxyj/yjjg.htm">科学研究</a>
+    <ul>
+        <li><a href="../kxyj/yjjg.htm">研究机构</a></li>
+        <li><a href="../kxyj/ptcbw.htm">平台出版物</a></li>
+        <li><a href="../xsdt.htm">学术动态</a></li>
+        <li><a href="../kxyj/gzzd.htm">规章制度</a></li>
+      </ul>
+</li>
+
+<li class=" ">
+    <a href="../jlhz/gjjl/jlgk.htm">交流合作</a>
+    <ul class="on1">
+        <li><a href="../jlhz/gjjl/jlgk.htm">国际交流</a></li>
+        <li><a href="../jlhz/gatjl.htm">港澳台交流</a></li>
+        <li><a href="../jlhz/ndhz.htm">内地合作</a></li>
+      </ul>
+</li>
+
+<li class=" ">
+    <a href="../xyzc/xyfh.htm">校友之窗</a>
+    <ul class="on1">
+        <li><a href="../xyzc/xyfh.htm">校友分会</a></li>
+        <li><a href="../xyzc/xydt.htm">校友动态</a></li>
+      </ul>
+</li>
+ </ul>             
+
+            <!--  网站导航结束 -->
+           
+        </div>
+
+    </div>
+
+
+    <!--内容开始-->
+    <div class="banner">
+            
+<img src="../images/xiaobanner.png">
+
+
+    </div>
+
+   
+    <div class="article-content ">
+        <div class="container clearfix">
+            <div class="left-box col-md-2 col-sm-3 col-xs-12 ">
+                <div class="left-nav">
+                  <h3 class="current">
+学院概况</h3>
+                  <ul>
+<li>
+    <a href="lsyjj.htm">历史与简介</a>
+</li>
+                        
+<li class="active">
+    <a href="xrld.htm">现任领导</a>
+</li>
+                        
+<li>
+    <a href="zywyh.htm">专业委员会</a>
+</li>
+                        
+<li>
+    <a href="zzjg1.htm">组织机构</a>
+</li>
+                        
+<li>
+    <a href="lxwm.htm">联系我们</a>
+</li>
+                        
+</ul>
+                
+                </div>
+
+            </div>
+            
+             <div class="right-box col-md-10 col-sm-9 col-xs-12">
+                <div class="right-list">
+                    <div class="location1">
+
+                        <img src="../images/location.png">&nbsp;&nbsp;您的位置：
+        <a href="../index.htm">首 页</a> &nbsp;&nbsp;&gt;&nbsp;&nbsp;
+        <a href="xrld.htm">学院概况</a> &nbsp;&nbsp;&gt;&nbsp;&nbsp;
+        <a href="xrld.htm" class="on">现任领导</a>
+
+
+
+                       
+                       <h3 class="columntitle"><span>
+</span></h3>
+                           
+
+                    </div>
+
+                     <div class="about">
+
+
+
+
+<script language="javascript" src="/system/resource/js/ajax.js"></script><script language="javascript">_getBatchClickTimes('null',1583400033,'wbnews','u9')</script>
+<script>function seeContenta9(contentid,size,displayid){	document.getElementById(contentid).innerHTML = '[';	for(var i=0;i<=size;i++){		var allcontentid = contentid+(i+1);		if(allcontentid==displayid){			document.getElementById(contentid).innerHTML += " <span id='"+allcontentid+"' name='"+allcontentid+"'  >"+(i+1)+"</span> ";			document.getElementById(displayid).style.display = 'block';		}else{			document.getElementById(contentid).innerHTML += " <span style='cursor:pointer' id='"+allcontentid+"' name='"+allcontentid+"' onclick=seeContenta9('"+contentid+"','"+size+"','"+allcontentid+"')  >"+(i+1)+"</span> ";			document.getElementById(allcontentid).style.display = 'none';		}	}	document.getElementById(contentid).innerHTML += ']';}</script>
+<script language="javascript" src="/system/resource/js/news/mp4video.js"></script>
+<script>_addDynClicks('wbnews',1583400033,110381)</script>
+<div id="vsb_content_110381_u91"><div id="vsb_content"><table align="center" style="border-collapse: collapse; border: 1px solid rgb(0, 0, 0); margin-bottom: 10px; table-layout: fixed; width: 1068px;"><colgroup><col data-offset-left="92.42559814453125" data-offset-right="630.8482666015625" data-resize-pixel="538.4226684570312" data-resize-percent="50.4141075334299" style="width: 50.4141%;"><col data-offset-left="620.8482666015625" data-offset-right="1149.46435546875" data-resize-pixel="528.6160888671875" data-resize-percent="49.49588847071044" style="width: 49.4959%;"></colgroup><tbody><tr class="firstRow"><td height="166" style="border: 1px solid rgb(51, 51, 51); text-indent: 2em; padding: 5px 10px; vertical-align: top; text-align: left;"><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 36px; text-indent: 2em; font-size: 24px; font-family: 黑体, SimHei;">李霄鹍<br></span></p><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 27px; text-indent: 2em; font-size: 18px; font-family: 黑体, SimHei; color: rgb(227, 108, 9);">书记</span></p><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">电话：<span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: &quot;times new roman&quot;;">68752809</span></span></p><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">邮箱：<span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: &quot;times new roman&quot;;">xkli@whu.edu.cn</span></span></p><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">主持法学院党委工作，</span><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">与院长共同负责学院全局工作。</span></p></td><td height="166" style="border: 1px solid rgb(51, 51, 51); text-indent: 2em; padding: 5px 10px; vertical-align: top; text-align: left;"><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 36px; text-indent: 2em; font-size: 24px; font-family: 黑体, SimHei;">秦天宝</span></p><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 27px; text-indent: 2em; font-size: 18px; font-family: 黑体, SimHei; color: rgb(227, 108, 9);">院长</span></p><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">电话：</span><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: &quot;times new roman&quot;;">68753694</span></p><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">邮箱：</span><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: &quot;times new roman&quot;;">fxyqtb@whu.edu.cn</span></p><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;"><span style="font-family: 宋体, SimSun; font-size: 16px; text-align: justify; text-indent: 32px; text-wrap-mode: wrap;">主持法学院行政工作，</span>与党委书记共同负责学院全局工作。</span></p></td></tr><tr><td height="217" style="border: 1px solid rgb(51, 51, 51); text-indent: 2em; padding: 5px 10px; vertical-align: top;"><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 36px; text-indent: 2em; font-size: 24px; font-family: 黑体, SimHei;">蔡 强</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 27px; text-indent: 2em; font-size: 18px; font-family: 黑体, SimHei; color: rgb(227, 108, 9);">党委副书记（中层正职，兼任）</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">电话：</span><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: &quot;times new roman&quot;;">68788663</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">邮箱：</span><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: &quot;times new roman&quot;;">294135759@qq.com</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 32px; font-size: 16px; font-family: 宋体, SimSun;">专项负责国际法治研究院的党务、思政、宣传、意识形态、保密、安全稳定、统战、离退休等工作；完成书记、院长安排的其他工作。</span></p></td><td height="217" style="border: 1px solid rgb(51, 51, 51); text-indent: 2em; padding: 5px 10px; vertical-align: top; text-align: left;"><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 36px; text-indent: 2em; font-size: 24px; font-family: 黑体, SimHei;"></span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap-mode: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 36px; text-indent: 2em; font-size: 24px; font-family: 黑体, SimHei;">武亦文<br></span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap-mode: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 27px; text-indent: 2em; font-size: 18px; font-family: 黑体, SimHei; color: rgb(227, 108, 9);">副院长</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap-mode: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">电话：</span><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: &quot;times new roman&quot;;">68753706</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap-mode: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">邮箱：</span><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: &quot;times new roman&quot;;">wuyiwencivillaw@163.com</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap-mode: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">负责法学院研究生人才培养工作，会同负责研究生工作的副书记做好研究生的招生就业、教学管理、安全稳定等工作；会同分管副书记共同分管研究生工作办公室；完成书记、院长安排的其他工作。</span></p><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;"></span><br></p></td></tr><tr><td height="215" style="border: 1px solid rgb(51, 51, 51); text-indent: 2em; padding: 5px 10px; vertical-align: top;"><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="font-family: 黑体, SimHei; font-size: 24px; text-indent: 2em;">邬明建</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap-mode: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 27px; text-indent: 2em; font-size: 18px; font-family: 黑体, SimHei; color: rgb(227, 108, 9);">党委副书记</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap-mode: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">电话：</span><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: &quot;times new roman&quot;;">68753695</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap-mode: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">邮箱：</span><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: &quot;times new roman&quot;;">mjwu@whu.edu.cn</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap-mode: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">负责法学院研究生的思想政治、安全稳定、招生就业和日常管理工作，负责组织工作、教师工作、统战和离退休工作；与分管副院长共同分管研究生工作办公室；完成书记、院长安排的其他工作。</span></p></td><td height="215" style="border: 1px solid rgb(51, 51, 51); text-indent: 2em; padding: 5px 10px; vertical-align: top;"><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 36px; text-indent: 2em; font-size: 24px; font-family: 黑体, SimHei;">苏金远<br></span></p><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 27px; text-indent: 2em; font-size: 18px; font-family: 黑体, SimHei; color: rgb(227, 108, 9);">副院长</span></p><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">电话</span><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">：</span><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: &quot;times new roman&quot;;">68753761</span></p><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">邮箱：</span><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: &quot;times new roman&quot;;">jinyuan.su@whu.edu.cn</span></p><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">负责法学院本科人才培养工作，会同负责本科生工作的副书记做好本科生的招生就业、教学管理、安全稳定等工作；负责人事、人才工作；与分管副书记共同分管本科生工作办公室；完成书记、院长安排的其他工作。</span></p></td></tr><tr><td height="169" style="border: 1px solid rgb(51, 51, 51); text-indent: 2em; padding: 5px 10px; vertical-align: top;"><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="font-family: 黑体, SimHei; font-size: 24px; text-indent: 2em;">祝 捷</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap-mode: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 27px; text-indent: 2em; font-size: 18px; font-family: 黑体, SimHei; color: rgb(227, 108, 9);">党委副书记</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap-mode: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">电话：</span><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: &quot;times new roman&quot;;">68753656</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap-mode: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: &quot;times new roman&quot;;"><span style="text-align: justify; text-wrap-mode: wrap; line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">邮箱：</span><span style="text-align: justify; text-wrap-mode: wrap; line-height: 24px; text-indent: 2em; font-size: 16px; font-family: &quot;times new roman&quot;;">fxyzjie@whu.edu.cn</span></span></p><p style="line-height: 21px; text-indent: 0em; text-align: justify;"><span style="font-family: 宋体, SimSun; font-size: 16px; text-align: justify; text-indent: 32px; text-wrap-mode: wrap;">负责法学院本科生的思想政治、安全稳定、招生就业和日常管理工作，负责宣传、意识形态、共青团和保密工作；与分管副院长共同分管本科生工作办公室；完成书记、院长安排的其他工作。</span></p></td><td height="169" style="border: 1px solid rgb(51, 51, 51); text-indent: 2em; padding: 5px 10px; vertical-align: top;"><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 36px; text-indent: 2em; font-size: 24px; font-family: 黑体, SimHei;"><span style="font-family: 黑体, SimHei; font-size: 24px; text-align: justify; text-indent: 48px; text-wrap-mode: wrap;">黄明涛</span></span></p><div style="line-height: 21px; text-indent: 0px;"><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 27px; text-indent: 2em; font-size: 18px; font-family: 黑体, SimHei; color: rgb(227, 108, 9);">副院长</span></p><p><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">邮箱：<span style="font-family: &quot;times new roman&quot;; font-size: 16px; text-indent: 32px; text-wrap-mode: wrap;">huangmt@whu.edu.cn</span></span></p><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">负责法学院学科建设、国内合作、国际交流、校友工作，完成书记、院长安排的其他工作。</span></p></div></td></tr><tr><td height="183" style="border: 1px solid rgb(51, 51, 51); text-indent: 2em; padding: 5px 10px; vertical-align: top;"><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="font-family: 黑体, SimHei; font-size: 24px; text-indent: 2em;">项 焱</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 27px; text-indent: 2em; font-size: 18px; font-family: 黑体, SimHei; color: rgb(227, 108, 9);">纪委书记</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">电话：</span><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: &quot;times new roman&quot;;">68753668</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="font-family: 宋体, SimSun; font-size: 16px; text-indent: 2em;">邮箱：</span><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: &quot;times new roman&quot;;">xiangyan@whu.edu.cn</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">负责法学院党委纪检监察工作、巡视整改工作；完成书记、院长安排的其他工作。</span></p><p style="line-height: 21px; text-indent: 0em; text-align: justify;"><br></p></td><td height="183" style="border: 1px solid rgb(51, 51, 51); text-indent: 2em; padding: 5px 10px; vertical-align: top;"><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 36px; text-indent: 2em; font-size: 24px; font-family: 黑体, SimHei;">李本灿<br></span></p><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 27px; text-indent: 2em; font-size: 18px; font-family: 黑体, SimHei; color: rgb(227, 108, 9);">副院长</span></p><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">邮箱：<span style="font-family: &quot;times new roman&quot;; font-size: 16px; text-align: justify; text-indent: 32px; text-wrap-mode: wrap;">bencanli@hotmail.com</span></span></p><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;"><span style="font-family: 宋体, SimSun; font-size: 16px; text-align: justify; text-indent: 32px;">负责法学院科研管理、实验室建设工作；分管实验教学中心；完成书记、院长安排的其他工作。</span></span></p></td></tr><tr><td height="192" style="border: 1px solid rgb(51, 51, 51); text-indent: 2em; padding: 5px 10px; vertical-align: top;"><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; text-wrap: wrap; text-indent: 0em; text-align: justify; line-height: 1.5em;"><br></p></td><td height="192" style="border: 1px solid rgb(51, 51, 51); text-indent: 2em; padding: 5px 10px; vertical-align: top;"><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 36px; text-indent: 2em; font-size: 24px; font-family: 黑体, SimHei;">胡伟</span></p><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 27px; text-indent: 2em; font-size: 18px; font-family: 黑体, SimHei; color: rgb(227, 108, 9);">副院长</span></p><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;"></span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; white-space: normal; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">电话：</span><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: &quot;times new roman&quot;;">68753607</span></p><p style="margin-top: 0px; margin-bottom: 0px; padding: 0px; white-space: normal; text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: 宋体, SimSun;">邮箱：<span style="line-height: 24px; text-indent: 2em; font-family: &quot;times new roman&quot;;">84132491@qq.com</span></span></p><p style="text-indent: 0em; text-align: justify; line-height: 1.5em;"><span style="line-height: 24px; text-indent: 2em; font-size: 16px; font-family: &quot;times new roman&quot;;"></span><span style="font-family: 宋体, SimSun; font-size: 16px; text-align: justify; text-indent: 32px; text-wrap-mode: wrap;">负责法学院行政、财务、工会、国有资产、综合治理、图书资料、档案、信息化建设、继续教育与高级培训等工作；分管党政办公室、继续教育与高级培训办公室、图书馆；完成书记、院长安排的其他工作。</span></p></td></tr></tbody></table><p><br></p></div></div>
+</div>
+       
+                </div>
+            </div>
+
+          </div> 
+    </div>
+
+
+
+    <!--内容结束-->
+
+
+    <!--底部开始-->
+    <div class="footer1">
+
+        <div class="container clearfix"><!-- 版权内容请在本组件"内容配置-版权"处填写 -->
+    <div class="footer-logo">
+                <img src="../images/bottom-logo.png">
+            </div>
+            <div class="footet-adress">
+
+                <p>地址：湖北省武汉市武昌区八一路299号 邮编：430072 </p>
+               
+            </div></div>
+
+
+    </div>
+
+    <!--底部结束-->
+
+
+
+</body></html>
