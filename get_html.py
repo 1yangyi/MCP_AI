@@ -8,7 +8,7 @@ import logging
 # 禁用SSL警告
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-def get_html(url, max_retries=1, base_delay=1, timeout=5):
+def get_html(url, max_retries=1, base_delay=1, timeout=12):
     """
     获取给定URL的HTML源码，支持HTTP/HTTPS，提高鲁棒性处理反爬和错误。
     
@@ -150,7 +150,7 @@ if __name__ == "__main__":
     #     print("错误：指定的路径不存在")
     # else:
     #     read_json_files_from_folder(folder_path)
-    url = "http://www.ynusky.ynu.edu.cn/"
+    url = "https://smse.njust.edu.cn/9180/list.htm"
     htmlTXT = get_html(url)
-    with open("test.html", "w", encoding="utf-8") as f:
+    with open("first.html", "w", encoding="utf-8") as f:
         f.write(htmlTXT)

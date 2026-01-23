@@ -15,6 +15,8 @@ import concurrent.futures
 import threading
 import logging
 from get_html import get_html
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 from src.mcp_servers.extractor import parse_html
 # 中间文件目录
 MIDDLE_FILE_DIR = PROJECT_ROOT / "middle_file2"
@@ -26,7 +28,7 @@ TOKEN_LIMIT = 120000
 使用get_html获取网页原码，使用parse_html解析网页原码
 """
 browser_lock = threading.Lock()
-
+use_parse_html = False
 
 # 配置 logging
 logging.basicConfig(
@@ -56,43 +58,16 @@ def process_college_teachers(university_name: str, college_name: str, college_ur
     sanitized_name = college_name.replace('/', '_').replace('\\', '_')
     teacher_folder = output_dir / sanitized_name
     os.makedirs(teacher_folder, exist_ok=True)
-    if not college_url.endswith("/"):
+    if not college_url.endswith("/") and not college_url.endswith("htm"):
         college_url = college_url + "/"
     logging.info(f"处理学院教师信息: {university_name} {college_name} ({college_url})")
     current_url = college_url
-    # with browser_lock:
-    #     # 导航到学院URL
-    #     logging.info(f"导航到学院URL: {current_url}")
-    #     navigate_response = requests.post(f"{BROWSER_MCP_URL}/navigate", json={"url": current_url, "wait_time": 2})
-    #     if navigate_response.status_code != 200:
-    #         logging.info(f"导航到学院URL失败: {college_url}")
-    #         return []
 
-    #     # 获取HTML并解析
-    #     parse_response = requests.post(f"{HTML_PARSER_URL}/parse", json={"url": college_url, "output_prefix": university_name+'_'+college_name, "output_dir": str(MIDDLE_FILE_DIR)})
-    #     if parse_response.status_code != 200:
-    #         logging.info(f"解析学院HTML失败: {college_url}")
-
-    # try:
-    #     # 读取解析的JSON
-    #     html_obj = read_json_file(f"{MIDDLE_FILE_DIR}/{university_name}_{college_name}.json")
-    #     html_text = _safe_json_dumps(html_obj)
-    # except FileNotFoundError:
-    #     logging.info(f"学院HTML文件不存在: {MIDDLE_FILE_DIR}/{university_name}_{college_name}.json")
-    #     with browser_lock:
-    #         # 获取当前页面的HTML原码
-    #         current_page_response = requests.get(f"{BROWSER_MCP_URL}/current_page")
-    #         if current_page_response.status_code == 200:
-    #             html_content = current_page_response.json()['html']
-    #             html_text = html_content  # 使用HTML原码作为html_text
-    #             logging.info(f"获取HTML成功，HTML长度: {len(html_text)}字符")
-    #             html_text = _limit_text_by_tokens(html_text, TOKEN_LIMIT)
-    #             logging.info(f"限制HTML长度为 {TOKEN_LIMIT} 个token，实际长度: {len(html_text)}字符")
-    #         else:
-    #             logging.info(f"获取学院页面HTML失败: {college_url}")
-    #             return []
     html_text = get_html(current_url)
-    html_text = parse_html(html_text)
+    if use_parse_html:
+        html_text = parse_html(html_text)
+    with open("first.html", "w", encoding="utf-8") as f:
+        f.write(html_text)
     count = 0
     button_url = ""
     is_teacher_list = "False"
@@ -110,11 +85,16 @@ def process_college_teachers(university_name: str, college_name: str, college_ur
         logging.info(f"当前URL: {current_url}")
         logging.info(f"点击URL: {click_url}")
         click_url = urljoin(current_url, click_url)
+        current_url = click_url
+        # click_url = 'https://som.bit.edu.cn/gbszdw/gbjxzy/index.htm'
         logging.info(f"合并后的URL: {click_url}")
         logging.info('-----------------')
 
         html_text = get_html(click_url)
-        html_text = parse_html(html_text)
+        if use_parse_html:
+            html_text = parse_html(html_text)
+        with open("second.html", "w", encoding="utf-8") as f:
+            f.write(html_text)
 
         # 检查是否为教师列表
         decide_result = decide_if_teacher_list(DEEPSEEK_API_KEY, html_text)
@@ -128,12 +108,11 @@ def process_college_teachers(university_name: str, college_name: str, college_ur
     first_html_text = html_text
     first_html_url = current_url
     current_page_teachers = extract_result["teachers"]
-    # print(f"当前页面教师URL: {current_page_teachers[0]}")
-    # print(current_url)
+
     for teacher in current_page_teachers:
         teacher["URL"] = urljoin(current_url, teacher["URL"])
     all_teachers.extend(current_page_teachers)
-    # print(f"合并后的教师URL: {current_page_teachers[0]}")
+
     logging.info(f"第 {page_count} 页: 提取到 {len(current_page_teachers)} 位教师")
 
 
@@ -159,7 +138,8 @@ def process_college_teachers(university_name: str, college_name: str, college_ur
         page_count += 1
       
         html_text = get_html(next_url)
-        html_text = parse_html(html_text)
+        if use_parse_html:
+            html_text = parse_html(html_text)
         # 提取下一页的教师信息
         extract_result = extract_teachers_with_deepseek(DEEPSEEK_API_KEY, html_text)
         current_page_teachers = extract_result["teachers"]
@@ -195,7 +175,8 @@ def process_college_teachers(university_name: str, college_name: str, college_ur
             logging.info(f"发现相似页面 '{similar_name}'，导航到: {similar_url}")
            
             html_text = get_html(similar_url)
-            html_text = parse_html(html_text)
+            if use_parse_html:
+                html_text = parse_html(html_text)
             # 提取相似页面的教师信息
             extract_result = extract_teachers_with_deepseek(DEEPSEEK_API_KEY, html_text)
             similar_teachers = extract_result["teachers"]
@@ -221,7 +202,8 @@ def process_college_teachers(university_name: str, college_name: str, college_ur
                 page_count += 1
                 
                 html_text = get_html(next_url)
-                html_text = parse_html(html_text)
+                if use_parse_html:
+                    html_text = parse_html(html_text)
                 extract_result = extract_teachers_with_deepseek(DEEPSEEK_API_KEY, html_text)
                 current_page_teachers = extract_result["teachers"]
                 for teacher in current_page_teachers:
@@ -302,7 +284,7 @@ def parse_schools_data(filename):
 
 
 if __name__ == "__main__":
-    filename = "empty_items2.txt"
+    filename = "empty_items3.txt"
     result = parse_schools_data(filename)
 
     # Load school websites
@@ -316,7 +298,7 @@ if __name__ == "__main__":
 
     for school in schools_data:
         university_name = school['name']
-        if university_name != "北京大学":
+        if university_name != "北京理工大学":
             continue
         school_website = school['website']
         rank = school['rank']
@@ -341,11 +323,10 @@ if __name__ == "__main__":
 
         with open(json_path, 'r', encoding='utf-8') as f:
             colleges = json.load(f)
-
         output_dir = output_base / f"{rank}_{university_name}"
         os.makedirs(output_dir, exist_ok=True)
 
-        with concurrent.futures.ThreadPoolExecutor(max_workers=err_len) as executor:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
             futures = []
             for college in colleges:
                 college_name = college["name"]
@@ -354,8 +335,8 @@ if __name__ == "__main__":
                     continue
                 if college_url is None:
                     continue
-                # if college_name != "信息与电子工程学院":
-                #     continue
+                if college_name != "经济学院":
+                    continue
                 # if not college_url.startswith("http"):
                 #     college_url = urljoin(school_website, college_url)
                 future = executor.submit(process_college_teachers, university_name, college_name, college_url, output_dir)
