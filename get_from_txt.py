@@ -182,5 +182,5 @@ for item in current_page_teachers:
         item["URL"] = ""
     if item["URL"] is not None:
         if not item["URL"].startswith("http"):
-            item["URL"] = urljoin("https://ngce.sustech.edu.cn/#/tutor?alias=f0a303ea-9f2a-4cee-8454-f966c9ba6896", item["URL"])
+            item["URL"] = urljoin("http://psy.ruc.edu.cn/szdw2/fjs2/index.htm", item["URL"])
 print(json.dumps(current_page_teachers, ensure_ascii=False, indent=2))
