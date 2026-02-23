@@ -162,6 +162,19 @@ def process_teacher(teacher, output_dir):
     if html:
         info = extract_teacher_info_with_ai(html)
         if info:
+            if isinstance(info, list):
+                # If AI returns a list instead of a dict, take the first item if possible, or wrap it
+                logging.warning(f"AI returned a list for {name}, using first element or converting.")
+                if len(info) > 0 and isinstance(info[0], dict):
+                    info = info[0]
+                else:
+                    # Fallback empty structure
+                    info = {}
+            
+            if not isinstance(info, dict):
+                 logging.error(f"AI returned invalid format for {name}: {type(info)}. Expected dict.")
+                 return None
+
             # Generate unique ID
             uni_name = output_dir.parent.name
             # Clean university name (remove leading "1_", "25_" etc if present)
@@ -235,40 +248,63 @@ def main():
     
     # Default to BASE_DIR
     target_path = BASE_DIR
+    slice_start = 0
+    slice_end = None
 
-    # Check for command line argument
+    # Argument parsing logic
+    # Usage: 
+    # 1. python script.py  -> Process all in BASE_DIR
+    # 2. python script.py -15 -> Process last 15 in BASE_DIR
+    # 3. python script.py "1_北京大学" -> Process that folder
+    # 4. python script.py "data/selected_departments" -5 -> Process last 5 in that folder
+    
     if len(sys.argv) > 1:
-        input_path_str = sys.argv[1]
-        
-        # Try resolving as absolute path or relative to CWD
-        possible_path_1 = Path(input_path_str).resolve()
-        
-        # Try resolving relative to BASE_DIR
-        possible_path_2 = (BASE_DIR / input_path_str).resolve()
-        
-        if possible_path_1.exists():
-            target_path = possible_path_1
-        elif possible_path_2.exists():
-            target_path = possible_path_2
+        arg1 = sys.argv[1]
+        # Check if arg1 is a range string "0:15"
+        if ':' in arg1:
+             slice_start = arg1
+             logging.info(f"Range string detected: {slice_start}")
         else:
-            logging.error(f"Path not found: {input_path_str}")
-            return
+             try:
+                 # Check if arg1 is an integer (e.g., -15 or 5)
+                 slice_start = int(arg1)
+                 logging.info(f"Integer argument detected. Processing BASE_DIR with slice start: {slice_start}")
+             except ValueError:
+                 # It's a path
+                 input_path_str = arg1
+                 # Try resolving as absolute path or relative to CWD
+                 possible_path_1 = Path(input_path_str).resolve()
+                 # Try resolving relative to BASE_DIR
+                 possible_path_2 = (BASE_DIR / input_path_str).resolve()
+                 
+                 if possible_path_1.exists():
+                     target_path = possible_path_1
+                 elif possible_path_2.exists():
+                     target_path = possible_path_2
+                 else:
+                     logging.error(f"Path not found: {input_path_str}")
+                     return
+                     
+                 # Check for second argument as slice
+                 if len(sys.argv) > 2:
+                     try:
+                         slice_start = int(sys.argv[2])
+                         logging.info(f"Second argument detected as slice start: {slice_start}")
+                     except ValueError:
+                         pass
 
     logging.info(f"Target path resolved to: {target_path}")
 
     # Determine processing mode based on directory content
     
     # Case 1: It's a single department (Contains specific teacher json file)
-    # Check for any *_teachers.json in the directory
     if list(target_path.glob("*_teachers.json")):
         logging.info(f"Detected single department: {target_path.name}")
         process_department(target_path)
         return
 
     # Case 2: It's a university directory (Contains department directories)
-    # Check if any subdirectory contains *_teachers.json
     is_university_dir = False
-    # Use list() to avoid exhausting iterator if we need it later, though here we just break
     try:
         for sub in target_path.iterdir():
             if sub.is_dir() and list(sub.glob("*_teachers.json")):
@@ -287,7 +323,6 @@ def main():
         return
 
     # Case 3: It's the root directory (Contains university directories)
-    # Check if sub-subdirectories contain *_teachers.json
     is_root_dir = False
     try:
         for sub in target_path.iterdir():
@@ -299,12 +334,33 @@ def main():
             if is_root_dir:
                 break
     except Exception as e:
-        pass # Ignore errors during detection
+        pass 
             
     if is_root_dir:
         logging.info(f"Detected root directory: {target_path.name}")
-        universities = sorted([d for d in target_path.iterdir() if d.is_dir()])
-        for university_dir in universities:
+        # Sort universities numerically if they start with number, else alphabetically
+        universities = sorted([d for d in target_path.iterdir() if d.is_dir()], 
+                              key=lambda x: int(x.name.split('_')[0]) if '_' in x.name and x.name.split('_')[0].isdigit() else float('inf'))
+        
+        # Apply slice logic
+        selected_universities = []
+        if isinstance(slice_start, str) and ':' in slice_start:
+             parts = slice_start.split(':')
+             start = int(parts[0]) if parts[0] else 0
+             end = int(parts[1]) if parts[1] else None
+             selected_universities = universities[start:end]
+             logging.info(f"Processing slice [{start}:{end}]")
+        else:
+             # Fallback to previous simple integer behavior
+             start_idx = int(slice_start) if isinstance(slice_start, (int, float, str)) and str(slice_start).lstrip('-').isdigit() else 0
+             if start_idx != 0:
+                 selected_universities = universities[start_idx:]
+             else:
+                 selected_universities = universities
+             
+        logging.info(f"Found {len(universities)} universities. Processing {len(selected_universities)} of them.")
+
+        for university_dir in selected_universities:
             logging.info(f"Scanning University: {university_dir.name}")
             departments = sorted([d for d in university_dir.iterdir() if d.is_dir()])
             for dept_dir in departments:
